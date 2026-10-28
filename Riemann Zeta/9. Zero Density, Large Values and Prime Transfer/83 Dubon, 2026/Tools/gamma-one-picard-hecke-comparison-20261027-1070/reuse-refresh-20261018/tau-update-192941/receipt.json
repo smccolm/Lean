@@ -1,0 +1,1862 @@
+{
+  "repository": "TauCetiProject/TauCeti",
+  "previousCommit": "be0bb2dd8696f3b805c738860b1c4c4257f759e8",
+  "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+  "date": "2026-10-18T19:29:41Z",
+  "comparisonStatus": "ahead",
+  "commits": 141,
+  "treeEntries": 19491,
+  "treeComplete": true,
+  "previouslyReviewedFiles": [
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Brauer/SumFormula.lean",
+      "previousBlob": "6b394f68d6666d12d95d32bb2a4f77d6a4425196",
+      "currentBlob": "6b394f68d6666d12d95d32bb2a4f77d6a4425196",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/ClassFormation.lean",
+      "previousBlob": "0a71da01f295e597103124feea0971605b092295",
+      "currentBlob": "0a71da01f295e597103124feea0971605b092295",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/CorestrictionLocalization.lean",
+      "previousBlob": "ea47aa0b078a4e7a3d72c5849ebc0a088b53737e",
+      "currentBlob": "ea47aa0b078a4e7a3d72c5849ebc0a088b53737e",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleLocalization.lean",
+      "previousBlob": "7f5326efce22d370717a89c1d093cf174cf9a217",
+      "currentBlob": "7f5326efce22d370717a89c1d093cf174cf9a217",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/LiftingObstruction.lean",
+      "previousBlob": "876c642bc08b34a7a05b98369daaca8fae2ec259",
+      "currentBlob": "876c642bc08b34a7a05b98369daaca8fae2ec259",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/PrescribedInvariant.lean",
+      "previousBlob": "717a48851f29d57e98c6b75c632413ee3daaf717",
+      "currentBlob": "717a48851f29d57e98c6b75c632413ee3daaf717",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/SelmerStructure.lean",
+      "previousBlob": "cd7c633795865655521f955a6bd3ba52a6bf30d4",
+      "currentBlob": "cd7c633795865655521f955a6bd3ba52a6bf30d4",
+      "changed": false
+    },
+    {
+      "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/Cup/Duality/Basic.lean",
+      "previousBlob": "b76874257b4b87b82bd19ce6c291a739485086b3",
+      "currentBlob": "b76874257b4b87b82bd19ce6c291a739485086b3",
+      "changed": false
+    }
+  ],
+  "changedPaths": [
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Derived/PointClosure.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 8
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Derived/Series/PointClosure.lean",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Derived/Tangent.lean",
+      "status": "added",
+      "additions": 175,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/DiagonalizableGroup/Commutative.lean",
+      "status": "modified",
+      "additions": 51,
+      "deletions": 3
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/ClosedImmersion/Ideals.lean",
+      "status": "added",
+      "additions": 77,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/LeviDecomposition/Lie.lean",
+      "status": "added",
+      "additions": 154,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/Points.lean",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/Tangent/Adjoint.lean",
+      "status": "added",
+      "additions": 87,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/Tangent/Coefficients.lean",
+      "status": "added",
+      "additions": 86,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Dynamic/Tangent/Weights.lean",
+      "status": "added",
+      "additions": 232,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Dynamic/Weight/Parabolic/Basic.lean",
+      "status": "modified",
+      "additions": 18,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Dynamic/Weight/Tangent.lean",
+      "status": "added",
+      "additions": 75,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Dynamic/Weight/Unipotent/Basic.lean",
+      "status": "modified",
+      "additions": 18,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/GeneralLinear/Weight/Unipotent/Tangent.lean",
+      "status": "added",
+      "additions": 72,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Hopf/Translation.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/MultiplicativeType/Recognition.lean",
+      "status": "added",
+      "additions": 73,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Reductive/Image.lean",
+      "status": "added",
+      "additions": 52,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Reductive/Isogeny.lean",
+      "status": "modified",
+      "additions": 24,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Comodule/Basic.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/ExteriorStabilizer/Basic.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Faithful/Basic.lean",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/GeometricSemisimplePoint.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/InvariantForm.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/JordanDecomposition/Commutative.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/JordanDecomposition/Naturality.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/JordanDecomposition/ScalarExtension.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Normal/Invariants.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Normal/Weights.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/PointConjugation.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/PointsAction/BaseChange.lean",
+      "status": "added",
+      "additions": 49,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/PointsAction/Basic.lean",
+      "status": "renamed",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/ProjectiveAction/Translation.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/ProjectiveOrbit/Points.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/ScalarExtension.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/SemisimplePoint/BaseChange.lean",
+      "status": "added",
+      "additions": 72,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/SemisimplePoint/Basic.lean",
+      "status": "renamed",
+      "additions": 28,
+      "deletions": 7
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/SemisimplePoint/Faithful.lean",
+      "status": "added",
+      "additions": 51,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Stabilizer.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/Tannaka/SemisimplePoint.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/UnipotentPoint/Basic.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Representation/UnipotentPoint/Faithful.lean",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 10
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Semisimple/BaseChange.lean",
+      "status": "added",
+      "additions": 83,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Semisimple/Center/Criterion.lean",
+      "status": "added",
+      "additions": 92,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Smooth/AlgebraicallyClosed.lean",
+      "status": "modified",
+      "additions": 18,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Solvable/Derived/Series.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Solvable/LieKolchin.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Solvable/Trigonalizable.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/SpecialLinear/Derived.lean",
+      "status": "added",
+      "additions": 102,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Tangent/Conjugation.lean",
+      "status": "added",
+      "additions": 64,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/AlgebraicGroup/Torus/Recognition.lean",
+      "status": "added",
+      "additions": 50,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Category/GradedModuleCat/CartanMap/ExtEuler/Linearity.lean",
+      "status": "modified",
+      "additions": 32,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Category/GradedModuleCat/LinearResolution/Poincare.lean",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Category/ModuleCat/Presheaf/SymmetricPower/Basic.lean",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Category/ModuleCat/Sheaf/SymmetricPower/Mul.lean",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Category/ModuleCat/SymmetricPower/Mul.lean",
+      "status": "modified",
+      "additions": 21,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Coalgebra/Comodule/Finite/Semisimple.lean",
+      "status": "added",
+      "additions": 43,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Coalgebra/Comodule/MatrixCoefficient/PointAction.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Coalgebra/Comodule/PointAction.lean",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3
+    },
+    {
+      "filename": "TauCeti/Algebra/Coalgebra/Comodule/PointsAction.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Group/Subgroup/Map.lean",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5
+    },
+    {
+      "filename": "TauCeti/Algebra/Homology/Curved/Module/Right/Acyclic.lean",
+      "status": "added",
+      "additions": 282,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Homology/Curved/Module/Right/Cone/Basic.lean",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Homology/Curved/Module/Right/Triangulated.lean",
+      "status": "modified",
+      "additions": 56,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Homology/DG/Bimodule/InternalHom/Basic.lean",
+      "status": "renamed",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Homology/DG/Bimodule/InternalHom/Functor.lean",
+      "status": "added",
+      "additions": 284,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Lie/E6/Minuscule/Generated/Positive/StandardComodule.lean",
+      "status": "added",
+      "additions": 221,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Lie/E6/Minuscule/StandardComodule.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Module/LocalizedModule/TwoDivisible.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Order/BigOperators/Fin.lean",
+      "status": "added",
+      "additions": 46,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/OreExtension/Basic.lean",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/OreExtension/Triangular.lean",
+      "status": "added",
+      "additions": 55,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Coeff/ToMvPolynomial.lean",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Eval/OneSided.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Eval/Rat.lean",
+      "status": "added",
+      "additions": 58,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Laurent/Basic.lean",
+      "status": "modified",
+      "additions": 57,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Taylor.lean",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Thom/Basic.lean",
+      "status": "renamed",
+      "additions": 64,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Algebra/Polynomial/Thom/Roots.lean",
+      "status": "added",
+      "additions": 255,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Cohomology/Cech.lean",
+      "status": "added",
+      "additions": 65,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Cohomology/Flasque.lean",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 8
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Cohomology/LongExactSequence.lean",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Curves/DualGraph/Basic.lean",
+      "status": "added",
+      "additions": 473,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Curves/DualGraph/Cycle.lean",
+      "status": "added",
+      "additions": 92,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Invariant.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/NormEDS.lean",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 5
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/Universal.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/EllipticCurve/DivisionPolynomial/ZSMul.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Frobenius/Iterate.lean",
+      "status": "added",
+      "additions": 203,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicGeometry/Modules/Quasicoherent/GradedAlgebra/Basic.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/ClassifyingSpace/Circle.lean",
+      "status": "added",
+      "additions": 132,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/EilenbergMacLane/WeakHomotopyEquivalence.lean",
+      "status": "added",
+      "additions": 71,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Homotopy/CellAttachment.lean",
+      "status": "added",
+      "additions": 165,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Homotopy/Hurewicz/TwoDivisible.lean",
+      "status": "added",
+      "additions": 69,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Homotopy/Whitehead.lean",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 19
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/RelativeCellComplex/AttachCells.lean",
+      "status": "added",
+      "additions": 57,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Singular/Cubical/Comparison/Basic.lean",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Singular/Cubical/Compression/Retraction.lean",
+      "status": "added",
+      "additions": 419,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Singular/Homotopy/WeakHomotopyEquivalence.lean",
+      "status": "added",
+      "additions": 99,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Singular/LocalHomology/Orientation/Chart.lean",
+      "status": "added",
+      "additions": 244,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/AlgebraicTopology/Sphere/CubeQuotient.lean",
+      "status": "modified",
+      "additions": 61,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Analysis/Calculus/ApproximatesLinearOn.lean",
+      "status": "modified",
+      "additions": 38,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Calculus/Morse/Persistence.lean",
+      "status": "added",
+      "additions": 233,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/AtInfinity.lean",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/Conformal/Jordan/Unbounded/ParallelEnd.lean",
+      "status": "added",
+      "additions": 305,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/Conformal/LocalFrontier.lean",
+      "status": "modified",
+      "additions": 56,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/Conformal/Reflection/Principle.lean",
+      "status": "modified",
+      "additions": 37,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/Conformal/SchwarzChristoffel/PolygonalDomain.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 39
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/Fuchsian/DirichletDomain/Polygon.lean",
+      "status": "added",
+      "additions": 90,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/UpperHalfPlane/Geodesic/FromTo.lean",
+      "status": "modified",
+      "additions": 24,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/UpperHalfPlane/HalfPlane.lean",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/UpperHalfPlane/PSL/Height.lean",
+      "status": "modified",
+      "additions": 143,
+      "deletions": 3
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/UpperHalfPlane/Polygon/Convex/GaussBonnet.lean",
+      "status": "modified",
+      "additions": 55,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Complex/UpperHalfPlane/Polygon/HalfPlaneIntersection.lean",
+      "status": "modified",
+      "additions": 872,
+      "deletions": 224
+    },
+    {
+      "filename": "TauCeti/Analysis/Convex/Sequence/FiniteSlopeMultiset.lean",
+      "status": "added",
+      "additions": 108,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Convex/Sequence/Regularity.lean",
+      "status": "added",
+      "additions": 172,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Convex/Sequence/Supporting.lean",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Convex/StrictConvexSpace.lean",
+      "status": "modified",
+      "additions": 21,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Analysis/Fourier/AreaEnergy.lean",
+      "status": "modified",
+      "additions": 66,
+      "deletions": 5
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Lp/PiLp.lean",
+      "status": "modified",
+      "additions": 39,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Lp/Weak.lean",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 18
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Module/BanachMazur.lean",
+      "status": "added",
+      "additions": 287,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Module/Dual/Basic.lean",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Module/Dual/BishopPhelps.lean",
+      "status": "added",
+      "additions": 348,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Operator/AbsolutelySumming.lean",
+      "status": "added",
+      "additions": 379,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Operator/ContinuousLinearEquiv.lean",
+      "status": "added",
+      "additions": 54,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Operator/RingOpNorm.lean",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Operator/RingOpNorm/Banach.lean",
+      "status": "added",
+      "additions": 265,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Ring/Ultra.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Normed/Ring/UnitBall.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/PDE/HopfLax.lean",
+      "status": "added",
+      "additions": 212,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/LipschitzDomain/Basic.lean",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/LipschitzDomain/SurfaceMeasure.lean",
+      "status": "added",
+      "additions": 179,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/LipschitzDomain/Trace/Basic.lean",
+      "status": "modified",
+      "additions": 61,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/LipschitzDomain/Trace/SurfaceMeasure.lean",
+      "status": "added",
+      "additions": 94,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/Trace/Continuous.lean",
+      "status": "added",
+      "additions": 239,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/W1p/Basic.lean",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Analysis/Sobolev/Wkp/CompactSupport.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 15
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/DG/Twisted/Basic.lean",
+      "status": "added",
+      "additions": 301,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Exact/Stable/Opposite/Connecting.lean",
+      "status": "modified",
+      "additions": 39,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Exact/Stable/Opposite/Shift.lean",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Exact/Stable/Opposite/Triangulated.lean",
+      "status": "added",
+      "additions": 250,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Exact/Stable/Shift.lean",
+      "status": "modified",
+      "additions": 43,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/GradedObject/MonObj.lean",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Limits/Shapes/Pullback/Map.lean",
+      "status": "modified",
+      "additions": 51,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Monoidal/Pivotal/Spherical.lean",
+      "status": "added",
+      "additions": 259,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Monoidal/Pivotal/Tensor.lean",
+      "status": "added",
+      "additions": 225,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Monoidal/Pivotal/Trace.lean",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Monoidal/Rigid/Basic.lean",
+      "status": "modified",
+      "additions": 50,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Monoidal/Scalar.lean",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Shift/Autoequivalence.lean",
+      "status": "modified",
+      "additions": 52,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/CategoryTheory/Sites/SheafCohomology/LongExactSequence.lean",
+      "status": "modified",
+      "additions": 75,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Combinatorics/DenseGraphLimits/ExchangeableGraphLaw/Coding.lean",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 18
+    },
+    {
+      "filename": "TauCeti/Combinatorics/Hypergraph/Colored/EditDiscrepancy.lean",
+      "status": "added",
+      "additions": 127,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Combinatorics/Network/Excess.lean",
+      "status": "added",
+      "additions": 299,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Data/Finsupp/Weight.lean",
+      "status": "modified",
+      "additions": 48,
+      "deletions": 8
+    },
+    {
+      "filename": "TauCeti/Examples/Combinatorics/Hypergraph/Colored/EditDiscrepancy.lean",
+      "status": "added",
+      "additions": 48,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Examples/ModelTheory/BackAndForth/Karp.lean",
+      "status": "added",
+      "additions": 55,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/Different/Basic.lean",
+      "status": "modified",
+      "additions": 59,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/Differential/Comparison.lean",
+      "status": "modified",
+      "additions": 33,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/Differential/Kaehler.lean",
+      "status": "modified",
+      "additions": 25,
+      "deletions": 15
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/Differential/Regular.lean",
+      "status": "modified",
+      "additions": 106,
+      "deletions": 9
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/Divisor/ProductFormula.lean",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/RiemannRoch/Basic.lean",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/FieldTheory/FunctionField/RiemannRoch/Pencil.lean",
+      "status": "added",
+      "additions": 174,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/FieldTheory/Galois/Abelian/Maximal.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/FieldTheory/Galois/AbsoluteGaloisGroup/Norm.lean",
+      "status": "modified",
+      "additions": 70,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Convex/Cone/Face/Basic.lean",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Geometry/Lie/Subgroup/CartanChart.lean",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Lie/Subgroup/Weyl/Finite.lean",
+      "status": "added",
+      "additions": 218,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Complex/LeviForm.lean",
+      "status": "added",
+      "additions": 643,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Complex/StructureSheaf/DiscreteValuationRing.lean",
+      "status": "added",
+      "additions": 83,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/IntegralCurve/Monotone.lean",
+      "status": "added",
+      "additions": 69,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/IsManifold/RestrictScalars.lean",
+      "status": "added",
+      "additions": 70,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/MFDeriv/Chart.lean",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Morse/Deformation.lean",
+      "status": "modified",
+      "additions": 68,
+      "deletions": 14
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Morse/Hessian.lean",
+      "status": "modified",
+      "additions": 235,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Morse/NormalizedChart.lean",
+      "status": "modified",
+      "additions": 118,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Morse/PseudoGradient/Basic.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/Riemannian/Laplacian.lean",
+      "status": "modified",
+      "additions": 85,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Manifold/VectorField/ModelChart.lean",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 5
+    },
+    {
+      "filename": "TauCeti/Geometry/RealAlgebraic/Semialgebraic/Thom.lean",
+      "status": "added",
+      "additions": 202,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/RealAlgebraic/SignDetermination/Defs.lean",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/RealAlgebraic/SignDetermination/Thom.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Geometry/RealAlgebraic/Stack/Delineation.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/AffineScheme.lean",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Fan/DenseTorus.lean",
+      "status": "modified",
+      "additions": 35,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Fan/Product/TorusAction.lean",
+      "status": "added",
+      "additions": 128,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Fan/StarSubdivision.lean",
+      "status": "modified",
+      "additions": 308,
+      "deletions": 6
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Product.lean",
+      "status": "modified",
+      "additions": 54,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Ray/Basic.lean",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Ray/Generation.lean",
+      "status": "modified",
+      "additions": 31,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Algebraic/Ray/Primitive.lean",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 2
+    },
+    {
+      "filename": "TauCeti/Geometry/Toric/Analytic/Fan/Map/Subdivision.lean",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/Abelianization/Character.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/FiniteAbelian/CharacterOrthogonality.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/GroupExtension/Character/Basic.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/Presentation/SchreierIndexTwo.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/Solvable.lean",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 6
+    },
+    {
+      "filename": "TauCeti/GroupTheory/SpecificGroups/Cyclic/ActionKernel.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/GroupTheory/Transfer/Commutator.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "filename": "TauCeti/InformationTheory/Coding/Equivalence.lean",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 159
+    },
+    {
+      "filename": "TauCeti/KnotTheory/KnotGroup.lean",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/ExteriorPower/Basic.lean",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/ExteriorPower/Plucker.lean",
+      "status": "added",
+      "additions": 164,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/FiniteBilinearModule/OrthogonalGroup.lean",
+      "status": "added",
+      "additions": 103,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/FreeModule/CardQuotient.lean",
+      "status": "added",
+      "additions": 126,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/Matrix/SpecialLinearGroup/Perfect.lean",
+      "status": "added",
+      "additions": 85,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/Monomial.lean",
+      "status": "added",
+      "additions": 234,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/RootSystem/FiniteType/SimpleGraph.lean",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/RootSystem/SimplyConnectedRootDatum/GeckLattice/Generated/Basic.lean",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/RootSystem/SimplyConnectedRootDatum/GeckLattice/Positive/Generated/BaseChange.lean",
+      "status": "added",
+      "additions": 140,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/LinearAlgebra/RootSystem/SimplyConnectedRootDatum/GeckLattice/Positive/Generated/Basic.lean",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 18
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Function/Lp/One.lean",
+      "status": "added",
+      "additions": 38,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Function/MetricDerivative/ConstantSpeed.lean",
+      "status": "modified",
+      "additions": 149,
+      "deletions": 7
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Function/SchwarzRearrangement.lean",
+      "status": "modified",
+      "additions": 196,
+      "deletions": 13
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Group/LocalFieldScaling.lean",
+      "status": "added",
+      "additions": 177,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Integral/LayerCake.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Measure/Haar/InnerProductSpace.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/MeasureTheory/Measure/Weighted.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/ModelTheory/BackAndForth/AllLevels.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/ModelTheory/BackAndForth/Karp.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Formation/AbsoluteArtinMap.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleClass/Norm.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Global/Ideles/GaloisModule.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Ideles.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Index.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/ClassFieldTheory/Global/SIdeles.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Roth/IndexEstimate.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Roth/KeyInequality.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Roth/Theorem.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Thue/AnalyticBound.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Thue/ArithmeticBound.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Thue/GapPrinciple.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/DiophantineApproximation/Thue/Nonvanishing.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/Complement.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/Descent.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/Invariant/NormEDS.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/NormEDS.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/ReducedInvariant.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/EllipticDivisibilitySequence/Universal.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Height/Arakelov.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Height/MvPolynomial.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Height/Rat.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/LocalField/MassFormula/Countable.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/NumberField/FinitePlace.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/NumberField/Global/Adeles/Norm/Galois.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/NumberField/Global/Ideles/FiniteSIdeles.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/NumberField/Global/Ideles/Norm/Galois.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/NumberField/Units/LocalPowerClass.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Padics/Measure/CompletedGroupAlgebra.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Padics/Measure/ExtendCoefficients.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Padics/Measure/FiniteProjection.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/Padics/MultiplicativeCompletion/RelationModule/Surjection.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/QuadraticForm/OrthogonalGroup/Diagonal/Isometry.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/QuadraticForm/OrthogonalGroup/FiniteAdelic.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/QuadraticForm/OrthogonalGroup/FullAdelic.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/NumberTheory/SiegelsLemma.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Cdf.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Bernoulli/Cdf.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Bernoulli/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Beta/Continuity.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Beta/StochasticOrder.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Beta/Uniform.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/BetaBinomial/Basic.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/BetaBinomial/Moments.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/BetaPrime/Basic.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/BetaPrime/Measurability.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/BetaPrime/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Binomial/Basic.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Binomial/Cdf.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Binomial/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Binomial/StochasticOrder.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Censoring.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/ChiSquared/Basic.lean",
+      "status": "renamed",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/ChiSquared/Continuity.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/ChiSquared/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Exponential/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/FisherSnedecor/ChiSquared.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/FisherSnedecor/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gamma/Continuity.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gamma/Sqrt.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gamma/StochasticOrder.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gaussian/ChiSquared.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gaussian/Independence.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gaussian/Quantile.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Geometric/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gumbel/Basic.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gumbel/Max.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Gumbel/Transforms.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Hypergeometric/Cdf.lean",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Hypergeometric/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/InverseGamma/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Laplace/Basic.lean",
+      "status": "renamed",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Laplace/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Laplace/Support.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/LogNormal/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Logistic/Gumbel.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Logistic/Moments.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/Logistic/Transforms.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "filename": "TauCeti/Probability/Distributions/NegativeBinomial/Quantile.lean",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+import SourceGammaOneHeckeAnalyticPlaces
+import Dubon2026.SourceOriginalModularRatios
+import Dubon2026.SourceOriginalAnalyticOrbitSeparation
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> geometric
+Hecke fibers. Embed the original Gamma0(d*M) field in the actual intersection
+field using its proved two-generator presentation and native integral
+stretch. The analytic germ is unchanged. This permits reuse of the existing
+Gamma0 orbit separation; no intersection-orbit conclusion is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup Filter IntermediateField
+open scoped MatrixGroups Topology
+variable (M d : ℕ) [NeZero M] [NeZero d]
+
+theorem heckeGammaZeroField_le :
+    modularFunctionFieldOver (d * M) ℂ ≤ functionFieldOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ := by
+  rw [original_field_eq_pair_over]
+  apply IntermediateField.adjoin_le_iff.mpr
+  rintro x (rfl | hx)
+  · exact coeffEmb_mem_laurentBaseChange ℂ (jq_mem_qExpFunctionField _)
+  · rcases hx with rfl
+    have hj := gamma1_degeneracy_map_le ℚ 1 (d * M)
+      ⟨jq, jq_mem_qExpFunctionField (Gamma1 1), rfl⟩
+    have hle : Gamma1 M ⊓ Gamma0 (d * M) ≤ Gamma1 1 ⊓ Gamma0 ((d * M) * 1) := by
+      intro g hg
+      refine ⟨?_, ?_⟩
+      · change g ∈ Gamma1 1
+        rw [Gamma1_mem]
+        exact ⟨Subsingleton.elim _ _, Subsingleton.elim _ _, Subsingleton.elim _ _⟩
+      · simpa only [Nat.mul_one] using hg.2
+    exact coeffEmb_mem_laurentBaseChange ℂ (qExpFunctionFieldC_mono ℚ hle hj)
+
+/-- The literal inclusion from the original Gamma0(d*M) field into the Hecke curve field. -/
+def heckeGammaZeroMap :
+    modularFunctionFieldOver (d * M) ℂ →ₐ[ℂ]
+      functionFieldOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ :=
+  IntermediateField.inclusion (heckeGammaZeroField_le M d)
+
+theorem realize_heckeGammaZero_eventuallyEq
+    (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M))
+    (x : modularFunctionFieldOver (d * M) ℂ) (τ : ℍ) :
+    (fun z : ℂ => realize (Gamma1 M ⊓ Gamma0 (d * M))
+      (heckeGammaZeroMap M d x : LaurentSeries ℂ) (ofComplex z))
+      =ᶠ[𝓝[≠] (τ : ℂ)]
+        fun z => SourceFunctionField.realize (d * M) (x : LaurentSeries ℂ) (ofComplex z) := by
+  obtain ⟨k, g, h, hh, hx⟩ := original_field_modular_ratio (d * M) x
+  let hg : (Gamma1 M ⊓ Gamma0 (d * M)).map (mapGL ℝ) ≤
+      (Gamma0 (d * M)).map (mapGL ℝ) := Subgroup.map_mono inf_le_right
+  let g' := ModularNormPolynomial.restrict hg g
+  let h' := ModularNormPolynomial.restrict hg h
+  have hh' : h' ≠ 0 := by
+    intro hz
+    apply hh
+    ext z
+    exact congrArg (fun f => f z) hz
+  have hx' : (heckeGammaZeroMap M d x : LaurentSeries ℂ) *
+      ModularRatios.qL h' = ModularRatios.qL g' := hx
+  filter_upwards [realize_eventuallyEq_of_ratio hH g' h' _ hh' hx' τ,
+    SourceFunctionField.realize_eventuallyEq_of_ratio g h x hh hx τ] with z he hf
+  rw [he, hf]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

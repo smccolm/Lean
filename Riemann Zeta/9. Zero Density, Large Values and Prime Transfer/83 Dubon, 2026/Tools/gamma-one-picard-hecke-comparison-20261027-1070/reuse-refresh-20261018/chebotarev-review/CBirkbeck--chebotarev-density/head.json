@@ -1,0 +1,106 @@
+{
+  "sha": "c64095e6cc6483b401849c7fd9182d983d3bf261",
+  "node_id": "C_kwDOSqfI1toAKGM2NDA5NWU2Y2M2NDgzYjQwMTg0OWM3ZmQ5MTgyZDk4M2QzYmYyNjE",
+  "commit": {
+    "author": {
+      "name": "Xavier Roblot",
+      "email": "46200072+xroblot@users.noreply.github.com",
+      "date": "2026-07-11T16:22:13Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-07-11T16:22:13Z"
+    },
+    "message": "Merge pull request #16 from CBirkbeck/idx-4\n\nfeat(ForMathlib): Lipschitz-frontier boundary-cell count (4/4)",
+    "tree": {
+      "sha": "a7f7aef10f86fdfef16fa4353055f9134b1312aa",
+      "url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/git/trees/a7f7aef10f86fdfef16fa4353055f9134b1312aa"
+    },
+    "url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/git/commits/c64095e6cc6483b401849c7fd9182d983d3bf261",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqUm21CRC1aQ7uu5UhlAAA3BsQAIpfZ1gEFW8IpDj3T00JYPDG\n8gnqc5NkPc4kcEemcVTz+2d6cDo4Hu8eAfHLV7ae8nSVds3++geZHX2xatSepIjm\nPOp0qcEgC5shs6L4sBQouxn6YGtNisJybZm0vfQ7gSw1wBojV0ZH7FWyg7ENG88v\njaoB3W2jifDhkP6uTbDUnXQ/vg2j4O3QGKMF6Xhdx+Z6CWNoPHT3a02YbA4z1jQN\nkeLOIjuJ+xFNM4DATkjgeUKeGlC3/H8CgbMxne9jz3TlupfZ1tIbV+6lbhUmyezx\nZujmNojNkN83fFu9MTnCdRabZ7cAWGV29jXrp9DBa5jRTIm9T3MZ0Mhnbyo6bI+d\nKZ3MQxzGmMI+8G552uHynkDUFLZdVfIDNtT4iyiO7UZFctqHAQjSd6IOP5KQ6KIE\nSi/xLtYk8Hma9ai/K0UVO5gR2+g29tO7iGuX9/a0KWwHAHi3yDx/QCouUtakSDD3\ntMBbg3oH9LSisiQHSEi70TKPg+N+jh5xQH9bmjZzLPQpC1iQmk0b+vYYaV1nvOH4\nRNqJA73kxwogUAaCfkGh8Uhie1qzzfuovhZUv8hVE/I2gHuyB1UYG7d8YSn41G07\nzD7Vu3zAhrSuWXmP1/NiGfzivrkRutv7RcELjKpPwSQngCFKxkm/qpe8cyjJFa3t\nujSsUzt7Gqh9iJJnrGJR\n=F5vm\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree a7f7aef10f86fdfef16fa4353055f9134b1312aa\nparent 0cdd4b41655fd380ad7e433d3425d5b4c96ddf46\nparent 9eacee006a83e923f72a76732172ffe70dfb64c7\nauthor Xavier Roblot <46200072+xroblot@users.noreply.github.com> 1783786933 +0200\ncommitter GitHub <noreply@github.com> 1783786933 +0200\n\nMerge pull request #16 from CBirkbeck/idx-4\n\nfeat(ForMathlib): Lipschitz-frontier boundary-cell count (4/4)",
+      "verified_at": "2026-07-11T16:22:14Z"
+    }
+  },
+  "url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/commits/c64095e6cc6483b401849c7fd9182d983d3bf261",
+  "html_url": "https://github.com/CBirkbeck/chebotarev-density/commit/c64095e6cc6483b401849c7fd9182d983d3bf261",
+  "comments_url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/commits/c64095e6cc6483b401849c7fd9182d983d3bf261/comments",
+  "author": {
+    "login": "xroblot",
+    "id": 46200072,
+    "node_id": "MDQ6VXNlcjQ2MjAwMDcy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46200072?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/xroblot",
+    "html_url": "https://github.com/xroblot",
+    "followers_url": "https://api.github.com/users/xroblot/followers",
+    "following_url": "https://api.github.com/users/xroblot/following{/other_user}",
+    "gists_url": "https://api.github.com/users/xroblot/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/xroblot/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/xroblot/subscriptions",
+    "organizations_url": "https://api.github.com/users/xroblot/orgs",
+    "repos_url": "https://api.github.com/users/xroblot/repos",
+    "events_url": "https://api.github.com/users/xroblot/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/xroblot/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "0cdd4b41655fd380ad7e433d3425d5b4c96ddf46",
+      "url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/commits/0cdd4b41655fd380ad7e433d3425d5b4c96ddf46",
+      "html_url": "https://github.com/CBirkbeck/chebotarev-density/commit/0cdd4b41655fd380ad7e433d3425d5b4c96ddf46"
+    },
+    {
+      "sha": "9eacee006a83e923f72a76732172ffe70dfb64c7",
+      "url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/commits/9eacee006a83e923f72a76732172ffe70dfb64c7",
+      "html_url": "https://github.com/CBirkbeck/chebotarev-density/commit/9eacee006a83e923f72a76732172ffe70dfb64c7"
+    }
+  ],
+  "stats": {
+    "total": 26,
+    "additions": 26,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "58d23f660d76725162e9da4e01039a5a9a4bb78d",
+      "filename": "CebotarevDensity/ForMathlib/IndexImageCount.lean",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 0,
+      "changes": 26,
+      "blob_url": "https://github.com/CBirkbeck/chebotarev-density/blob/c64095e6cc6483b401849c7fd9182d983d3bf261/CebotarevDensity%2FForMathlib%2FIndexImageCount.lean",
+      "raw_url": "https://github.com/CBirkbeck/chebotarev-density/raw/c64095e6cc6483b401849c7fd9182d983d3bf261/CebotarevDensity%2FForMathlib%2FIndexImageCount.lean",
+      "contents_url": "https://api.github.com/repos/CBirkbeck/chebotarev-density/contents/CebotarevDensity%2FForMathlib%2FIndexImageCount.lean?ref=c64095e6cc6483b401849c7fd9182d983d3bf261",
+      "patch": "@@ -188,6 +188,32 @@ theorem ncard_index_image_chart_le [Fintype \u03b9] {\u03ba : Type*} [Fintype \u03ba] {M : \n     simp [Int.card_Icc]\n   rw [hcardT, Nat.cast_id]\n \n+/-- **Boundary-cell count.** If `\u2202s` is covered by `m` images `\u03c6\u2c7c '' [0,1]\u1d48\u207b\u00b9` of\n+`M`-Lipschitz maps, the number of grid cells meeting `\u2202s` is `O(n\u1d48\u207b\u00b9)`, with constant\n+`m \u00b7 (2\u2308M\u2309\u208a+1)\u1d48 \u00b7 2\u1d48\u207b\u00b9`. -/\n+theorem ncard_index_image_frontier_le [Fintype \u03b9] {s : Set (\u03b9 \u2192 \u211d)} {m : \u2115} {M : \u211d\u22650}\n+    {\u03c6 : Fin m \u2192 (Fin (Fintype.card \u03b9 - 1) \u2192 \u211d) \u2192 (\u03b9 \u2192 \u211d)}\n+    (h\u03c6 : \u2200 j, LipschitzWith M (\u03c6 j)) (hcov : frontier s \u2286 \u22c3 j, \u03c6 j '' Set.Icc 0 1)\n+    {n : \u2115} (hn : 1 \u2264 n) :\n+    (index n '' frontier s).ncard\n+      \u2264 (m * (2 * \u2308(M : \u211d)\u2309\u208a + 1) ^ Fintype.card \u03b9 * 2 ^ (Fintype.card \u03b9 - 1))\n+          * n ^ (Fintype.card \u03b9 - 1) := by\n+  have hbdd\u03c6 : \u2200 j, Bornology.IsBounded (\u03c6 j '' Set.Icc 0 1) := fun j \u21a6\n+    (h\u03c6 j).isBounded_image (Metric.isBounded_Icc 0 1)\n+  have hfin : \u2200 j : Fin m, (index n '' (\u03c6 j '' Set.Icc 0 1)).Finite := fun j \u21a6\n+    setFinite_index_image_of_isBounded n (hbdd\u03c6 j)\n+  have hsub : index n '' frontier s \u2286 \u22c3 j, index n '' (\u03c6 j '' Set.Icc 0 1) := by\n+    rw [\u2190 Set.image_iUnion]\n+    exact Set.image_mono hcov\n+  refine (Set.ncard_le_ncard hsub (Set.finite_iUnion hfin)).trans ?_\n+  refine (Set.ncard_iUnion_le_of_fintype _).trans ?_\n+  refine (Finset.sum_le_sum fun j _ \u21a6 ncard_index_image_chart_le (h\u03c6 j) hn).trans ?_\n+  rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul, Nat.cast_id,\n+    Fintype.card_fin, mul_assoc, \u2190 mul_pow, \u2190 mul_assoc]\n+  gcongr\n+  lia\n+\n+\n end Sublemmas\n \n end"
+    }
+  ]
+}

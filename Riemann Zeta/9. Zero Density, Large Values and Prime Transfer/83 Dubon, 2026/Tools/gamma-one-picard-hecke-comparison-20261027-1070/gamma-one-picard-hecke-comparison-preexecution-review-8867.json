@@ -1,0 +1,62 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 46,
+  "queries": 128,
+  "theorems": 100,
+  "constructions": 28,
+  "exhaustiveScratchChecks": 216,
+  "proofValueChecks": 189,
+  "scopes": 8,
+  "receipts": {
+    "source-gamma-one-analytic-abel-kernel-1-scratch-receipt.json": "E0153A1CEABD4E221773F9D0745C74E5063CD9CC62D4160EDC1B029D88C2C2F9",
+    "source-gamma-one-picard-period-equivalence-1d-scratch-receipt.json": "A0D6E1AFA9202CB59E957AA2A5447821798C7D441BAA6CD17750897D2180E915",
+    "source-gamma-one-hecke-analytic-maps-1-scratch-receipt.json": "62DF38F332F2A0C072C6A972B2B62990A147E57D746E18EF332D59FC11CAFB0B",
+    "source-gamma-one-hecke-primitive-trace-1-scratch-receipt.json": "B174BF1883DD620FB8EE4CA08B91B0AAF863B5E34D8469F1CF3144871B649824",
+    "source-gamma-one-holomorphic-h1-hecke-1-scratch-receipt.json": "7B98EE4DC297818A33481D3A557EB45EA46A27EC5E2847D711B4EFD189944DE3",
+    "source-gamma-one-period-lattice-hecke-1b-scratch-receipt.json": "BC598C78165F495868E275C576A2BA605A05DFC5B18569B209F1FA2AFB177A23",
+    "source-gamma-one-hecke-geometric-fibers-1b-scratch-receipt.json": "4A1288D3DD927497801D2D46F720D5A88A91242FC63FF19124EB580B607ED774",
+    "source-gamma-one-picard-period-hecke-1-scratch-receipt.json": "8D629BB414A820E1B6952A0DA3AF5F0C3BDD31C977CDBB48E7E137CE553836F3"
+  },
+  "expectedConsumers": 26085,
+  "expectedConstructions": 2717,
+  "fullGoal": "This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_picard_hecke_comparison_8867.py",
+      "sha256": "1297E1B15525E0A378237ECD11D037771523690217F22730A589F4801E286865"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_hecke_comparison_production_ownership_8867.py",
+      "sha256": "4EC3BC82AA884228BB9832DD74B86B235BE80A7AEE312F4AD10B0C1B27DC089C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_hecke_comparison_global_ownership_8867.py",
+      "sha256": "9A41659DAF5E2184486A540B4FD89CE3DD18C0371272458700AC59E512C050D9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_picard_hecke_comparison_ownership_8867.py",
+      "sha256": "7FF83562B548B316BB559C7235322069C7CA9692A2FA2BF38AC4ED93D053FC47"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_picard_hecke_comparison_8867.py",
+      "sha256": "90DB759CE344AED034CCE37F22CFE3EF5D86285B0662FE23C58238D5F975BFDC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_hecke_comparison_8867.ps1",
+      "sha256": "CD584E8172FF089E95A5712CCE5533347A9B5202E9246F84424B0CB0A1EBF633"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_picard_hecke_comparison_8867.ps1",
+      "sha256": "659190561BAA5D73C066D834AA24574C172D076369CFD17A169B50902D4B8EAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_picard_hecke_comparison_canonical_8867.py",
+      "sha256": "D74692FDF9268DD30C43F005B18FE0617512CCCDFB51AAD6E6CF6B04DD5EB507"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_picard_hecke_comparison_8867.py",
+      "sha256": "E90C5D5730F74A519D42A537E47D524542BA978581E8797B9C5E7E50DE0DD487"
+    }
+  ],
+  "productionMutation": false
+}

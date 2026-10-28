@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "checkedUTC": "2026-10-18T21:28:01.502636+00:00",
+  "files": [
+    {
+      "path": "P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+      "sha": "796af577bfff96f47f5f92401894cf4287f5a098",
+      "size": 34730,
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean.txt",
+      "sha256": "5D13D13D8A16B5F1A507E6F778E546BE356F78BC7AA39102A5F3528F9CC6F527"
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+      "sha": "6b561235f0597e1705e2894cf77dc7602dbd8540",
+      "size": 20608,
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean.txt",
+      "sha256": "4B7C4FDC3B617A8CA45B4AFFE64C2B25579A778737A52E8C9D64540CB1B04D10"
+    }
+  ],
+  "scope": "Two selected source bodies only, not their full dependency closure; no kernel certificate."
+}

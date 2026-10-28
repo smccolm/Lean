@@ -1,0 +1,7 @@
+import SourceGammaOneHeckeComplexDivisors
+import Mathlib.Tactic
+open Lean
+run_elab do
+  let env ? getEnv
+  for (n, _) in env.constants.toList do
+    if n.toString.endsWith "Along_conorm" then logInfo m!"{n}"

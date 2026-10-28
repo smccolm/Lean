@@ -1,0 +1,69 @@
+{
+  "recordedUTC": "2026-10-28T04:50:04.069662+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 homogeneous-coefficient arithmetic realization -> actual Picard/Tate and H1 comparison -> original finite period lattice and complex Picard Tate tensor equivalence.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-abel-kernel-1-scratch-receipt.json",
+      "sha256": "E0153A1CEABD4E221773F9D0745C74E5063CD9CC62D4160EDC1B029D88C2C2F9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-period-equivalence-1d-scratch-receipt.json",
+      "sha256": "A0D6E1AFA9202CB59E957AA2A5447821798C7D441BAA6CD17750897D2180E915"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-analytic-maps-1-scratch-receipt.json",
+      "sha256": "62DF38F332F2A0C072C6A972B2B62990A147E57D746E18EF332D59FC11CAFB0B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-primitive-trace-1-scratch-receipt.json",
+      "sha256": "B174BF1883DD620FB8EE4CA08B91B0AAF863B5E34D8469F1CF3144871B649824"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-h1-hecke-1-scratch-receipt.json",
+      "sha256": "7B98EE4DC297818A33481D3A557EB45EA46A27EC5E2847D711B4EFD189944DE3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-lattice-hecke-1b-scratch-receipt.json",
+      "sha256": "BC598C78165F495868E275C576A2BA605A05DFC5B18569B209F1FA2AFB177A23"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-geometric-fibers-1b-scratch-receipt.json",
+      "sha256": "4A1288D3DD927497801D2D46F720D5A88A91242FC63FF19124EB580B607ED774"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-period-hecke-1-scratch-receipt.json",
+      "sha256": "8D629BB414A820E1B6952A0DA3AF5F0C3BDD31C977CDBB48E7E137CE553836F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-tate-route-1075.json",
+      "sha256": "BF6A98FD95DE79DC2E8BC74B8658156D5F1152831CAEF121C72271EF152F132E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoIntegralPeriods.lean",
+      "sha256": "55792094BF55943629990F390F7EB38AA6844B26DFA694E819ED41B98674914B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusBasis.lean",
+      "sha256": "D182DDC2894EEF31C83E1B40CCD453E6BE1A5625411B675C82CC63105F40268E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusNaturality.lean",
+      "sha256": "F3D95B762178E37B2F32ECE8AFD1E15790715F6BD6386802ABC01BA19A239E57"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateEquivalences.lean",
+      "sha256": "9F89B000BEA1186CAFF6C2165A68B6B4BFFDBBBDB2D8B2D77CBA286B91055231"
+    }
+  ],
+  "shorterRoute": "Native finite-index group finite generation and the exact period-image identity prove finiteness of the original integral lattice. Native torsion-free PID freeness supplies its finite basis. Reuse TateModule.ofAddEquiv, Period.phi2 and phi2_baseChange on the proved original Picard-period equivalence. No second lattice-discreteness proof or new Tate-module infrastructure is required for this exact tensor comparison.",
+  "assumptionsToDischarge": [
+    "The original integer-period lattice is the actual modular-period image, finitely generated and free over the integers.",
+    "The actual complex Gamma1 Picard Tate module is the p-adic scalar extension of that same lattice, with the proved tensor formula.",
+    "The actual prime algebraic Hecke action corresponds to base change of the original integral-period Hecke action, with no coprimality condition on either prime."
+  ],
+  "remaining": "Complex Picard Tate comparison only; no rank-2g or arithmetic Galois association is inferred from finite freeness. Arithmetic/complex torsion descent, finite-coefficient H1, diamond and transpose compatibility, original all-weight association and higher continuation remain. DUB17--20 OPEN; 16/20."
+}

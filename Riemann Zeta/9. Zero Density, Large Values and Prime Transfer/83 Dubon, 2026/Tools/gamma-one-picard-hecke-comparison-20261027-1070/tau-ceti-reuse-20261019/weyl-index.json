@@ -1,0 +1,23 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\weyl-basic.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Basic.lean",
+    "gitBlob": "7710997097f8b01e0cb4d340d9a34b616e393075",
+    "sha256": "71453C21CA9F036404E0C1A5E9C2FDEE4EC41354A3BD1B6FF2F79BB4E7170F0E",
+    "bytes": 29566
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\weyl-rationality.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Rationality.lean",
+    "gitBlob": "f9b71aa0e6ae3da877e71688278b818c12c2668c",
+    "sha256": "A041D35B61FEDF517351960AEB03D2C931DE8571250C6F38E072C3B5BF5CBB50",
+    "bytes": 2885
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\weyl-highest-weight.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/RepresentationTheory/ClassicalGroups/WeylModule/Weight/HighestWeight.lean",
+    "gitBlob": "7ceb982807ba78eb8961c48edfc0732e825b4dee",
+    "sha256": "F4B5761EF2DD7595866CAB221B101AF4176E45DE776380811E22BE046895FE8D",
+    "bytes": 7949
+  }
+]

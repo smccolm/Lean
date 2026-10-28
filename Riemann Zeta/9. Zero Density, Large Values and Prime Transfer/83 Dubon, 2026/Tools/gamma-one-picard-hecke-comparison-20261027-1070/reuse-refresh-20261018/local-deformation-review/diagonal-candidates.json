@@ -1,0 +1,382 @@
+[
+  {
+    "path": "P2M/Sol/S_AlgebraicGeometry_locallyOfFinitePresentation_diagonal_of_locallyOfFiniteType.lean",
+    "sha": "6803679bf44504f7b29ee7232fe55ef043238464",
+    "size": 4450
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_LocalFunctionSpace_exists_mem_forall_diagonal_mul_sub_mem_span_and_mem_span.lean",
+    "sha": "ddf6ab805e549ccb80300c3aacc08c5fb7776d41",
+    "size": 29003
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_TwistedBruhat_apply_unipotent_diagOne_act_eq_zero_of_not_mem_saturated_of_isSemiLocalFactorization_unram.lean",
+    "sha": "0bad87299efd6707512564cddb6abbf4a0abae19",
+    "size": 25804
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_WhittakerModel_eq_zero_of_forall_apply_diagOne_eq_zero_of_mem_span_of_localLevelOne.lean",
+    "sha": "1a42996460f65b3cab56c4b1880b8fbd031f7b19",
+    "size": 7793
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_WhittakerModel_exists_mem_span_forall_diagOne_eq_of_shell_window_of_localLevelOne.lean",
+    "sha": "bc0705555b0897eb3d42db7144e30c9f51df61b9",
+    "size": 4539
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_eq_of_isWeightedOrbitalIntegral_of_isWeightedOrbitalIntegral_diagonal_of_measure_preimage_localIntegralSet_eq_one.lean",
+    "sha": "467c0bd8ec8cb3eace006b4f37c7ac5ad63b4b4e",
+    "size": 6660
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_diagonal_classReps_and_normMap_injOn_of_pairwise_disjoint_sigmaClasses.lean",
+    "sha": "e2eac3da0f37f1c14073b381f503bb663149052a",
+    "size": 14940
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_diagonal_normString_eq_toTensorGL_globalPoints_of_baseChangeGL_eq_globalPoints.lean",
+    "sha": "e80f6f8f45f1e0e5e4021c90da2020a815fd77b2",
+    "size": 11437
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_generator_and_seq_mem_localCentralizer_tendsto_scalar_of_forall_not_diagonal.lean",
+    "sha": "a89968f109904355db1d561f61de49a10e61daef",
+    "size": 37498
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_isCompact_forall_exists_mem_mul_of_inv_mul_globalPoints_mul_sigmaAdelicAct_centralScalar_mul_mem_of_diagonal.lean",
+    "sha": "46e6739096a64b94f85190c063f90b6c9b783e6f",
+    "size": 42818
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_measurable_forall_integral_localCentralizer_toTensorGL_mul_eq_one_of_diagonal.lean",
+    "sha": "ba9540d486659b5ca249f2a7e545a314c7834b9a",
+    "size": 23032
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_nhds_forall_not_exists_isNormOf_diagonal_of_not_isSigmaConjugate_scalar_of_finrank_eq_two.lean",
+    "sha": "4072a267260884aa6f53bb3692e6afb70b3f23f9",
+    "size": 28063
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_nhds_scalar_forall_isOrbitalIntegral_eq_mul_integral_unipotentGL2_conj_of_diagonal.lean",
+    "sha": "566bdab6699e8731bd62a8317967cf83b60cd50c",
+    "size": 17016
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_pos_forall_integral_twistedCentralizer_eq_mul_integral_tensorArch_mul_prod_integral_tensorPlace_of_diagonal.lean",
+    "sha": "db1e9cff116a1df7d15ff75beda007ef8fd0f9b1",
+    "size": 18346
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_pos_forall_isOrbitalIntegralOn_diagonal_complex_eq_mul_integral_unitaryAverage.lean",
+    "sha": "2b3f2d6406518c1170b50f863609b985ef8a91ec",
+    "size": 68794
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_subgroup_isClosed_and_mem_iff_diagonal_and_sigmaAdelicAct_mul_inv_mem_center_and_exists_isHaarMeasure.lean",
+    "sha": "41dd3e70677290a358c3bb7102b2f561e49008aa",
+    "size": 10091
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_twistedConj_eq_diagonal_and_norm_eq_of_conj_normString_eq_diagonal_of_ne.lean",
+    "sha": "d5ca3e3af0f07d0551a960c24d8a6379c4a8aeaa",
+    "size": 10059
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_exists_windowed_section_localCentralizer_toTensorGL_of_diagonal.lean",
+    "sha": "3ebcd4ef5198d1b7fdfd499a4d1b252ec796cad7",
+    "size": 25748
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_finite_sep_exists_apply_inv_mul_globalPoints_mul_sigmaAdelicAct_ne_zero_of_diagonal_of_hasCompactSupport.lean",
+    "sha": "9fc17bd189fabeaa839534413f4ffc9711244059",
+    "size": 28408
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_integrable_twistedOrbital_and_weighted_and_exists_height_mul_le_of_diagonal_of_norm_ne_one.lean",
+    "sha": "af9078b4078aef6af2fdac43c3ac6344dfb818c0",
+    "size": 41669
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_mem_localIntegralSet_mul_singleton_diagonal_mul_localIntegralSet_iff_norm.lean",
+    "sha": "2d0479a564cf3a1205bc0364024deb4e21a808e5",
+    "size": 22291
+  },
+  {
+    "path": "P2M/Sol/S_AutomorphicForm_twistedCentralizer_eq_map_toTensorGL_localCentralizer_and_exists_isHaarMeasure_map_eq_of_diagonal_of_norm_ne.lean",
+    "sha": "2ce37b791667e9fb8ab872277af249d093af284b",
+    "size": 46171
+  },
+  {
+    "path": "P2M/Sol/S_CerednikDrinfeld_CSTower_exists_finiteIdeleDiagonal_mul_inv_mem_levelHeckeUSet_meetOrder_isEichlerOrder_of_dvd.lean",
+    "sha": "d24e2fa5a4b6e6e47b4c518d43753cdd38b11bfc",
+    "size": 76161
+  },
+  {
+    "path": "P2M/Sol/S_CerednikDrinfeld_exists_mul_self_eq_finiteIdeleDiagonal_mul_and_mem_finiteIdeleStabilizer_meetOrder_of_conjByFiniteIdele_mul_eq.lean",
+    "sha": "b3eec73311142e28dad9a8f8fd5b963eae079d20",
+    "size": 56286
+  },
+  {
+    "path": "P2M/Sol/S_GoodReductionJacobian_RelativeGroupLaw_exists_extension_of_diagonal_difference_extension.lean",
+    "sha": "7b90f627ffa0872d6255a6f3f3ae66df82923e69",
+    "size": 21522
+  },
+  {
+    "path": "P2M/Sol/S_GoodReductionJacobian_RelativeGroupLaw_exists_extension_of_diagonal_difference_extension_of_dense.lean",
+    "sha": "107d4fffe7ce9c55e6974e19df97d60dd08be73a",
+    "size": 21714
+  },
+  {
+    "path": "P2M/Sol/S_GoodReductionJacobian_RelativeGroupLaw_exists_opens_diagonal_difference_extension.lean",
+    "sha": "24e502dde556989c6e8407e70ba66c14a4f5063b",
+    "size": 47491
+  },
+  {
+    "path": "P2M/Sol/S_GoodReductionJacobian_RelativeGroupLaw_exists_opens_diagonal_difference_extension_of_forall_ringKrullDim_le_one.lean",
+    "sha": "e6b20e022efa5bb2ccc1040228b7cb86bc780187",
+    "size": 66837
+  },
+  {
+    "path": "P2M/Sol/S_LT_TwistedNorm_exists_eq_inv_mul_mul_map_iff_norm_eq_of_diagonal.lean",
+    "sha": "4132dce70bdf996132509b73bab84066a984fbe4",
+    "size": 11658
+  },
+  {
+    "path": "P2M/Sol/S_LT_TwistedNorm_exists_sigmaConj_diagonal_of_mem_hyperbolicCell_of_normClassMap_eq.lean",
+    "sha": "774d0c2eb5384a82b067e92851c07ac8a4fabad2",
+    "size": 8460
+  },
+  {
+    "path": "P2M/Sol/S_LT_TwistedNorm_exists_subgroup_and_mul_mul_map_inv_mem_center_iff_of_diagonal_of_norm_div_ne_one.lean",
+    "sha": "dc9096a1febe37b8b2559479bd4ab6cede77a86e",
+    "size": 13955
+  },
+  {
+    "path": "P2M/Sol/S_LT_TwistedNorm_setOf_exists_mem_center_subset_and_exists_and_eq_iff_of_diagonal.lean",
+    "sha": "f8c672739ac77810404ece11b467dffc100e6c27",
+    "size": 27285
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_Converse_exists_const_rsArchIntegral_eq_mul_integral_diagonal.lean",
+    "sha": "480ebecf8b239ae766200a3aea3592084aea85ac",
+    "size": 68084
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_eq_upperUnipotent3_mul_diagonal_mul_mem_localMaximalCompact3.lean",
+    "sha": "f0e3f3b8ca62e34aff3ee46a3090709e752726b2",
+    "size": 14596
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_finset_forall_setIntegral_flatSection_antidiagonal_unipotentGL2_addChar_eq_sum_cpow.lean",
+    "sha": "565863a3db866c58986e588dcf78ef59fbfd5d7f",
+    "size": 36372
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_forall_apply_diagonal3_mul_diagonal3_mul_eq_of_isCompact_of_valued_le_fst.lean",
+    "sha": "17187c18227d4c93cbc99e5c5680e427121525b2",
+    "size": 38985
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_forall_apply_diagonal3_mul_diagonal3_mul_eq_of_isCompact_of_valued_le_snd.lean",
+    "sha": "3c5760ec90006acc510d975ada575e012f61c9f9",
+    "size": 38985
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_laurent_localZeta_fe_of_jacquetWhittaker3_mul_antidiagonal3.lean",
+    "sha": "d714e96aa6323d607194654102cfbb0de2b35b3b",
+    "size": 77800
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_mem_principalSeries2_integral_antidiagonal_mul_unipotentGL2_mul_addChar_ne_zero.lean",
+    "sha": "3dd27dd4332b7e74fc315ece46cf02f09a6e58a6",
+    "size": 15691
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_modulus_det_mul_apply_antidiagonal_mul_transposeInvN_mem_principalSeries2.lean",
+    "sha": "ede30c7705c8de90b53fc49e9515dcb87415a688",
+    "size": 11051
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_mul_eq_unipotent_mul_diagonal_mul_compact.lean",
+    "sha": "8faee73d6317bb08f377f56d227e030ebdfcef66",
+    "size": 33167
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_mul_eq_unipotent_mul_diagonal_mul_orthogonal_real.lean",
+    "sha": "109a600736d1779385f6bf8f37f2c799dc3d1f90",
+    "size": 32455
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_principalSeries2_apply_one_eq_zero_apply_antidiagonal2_mul_upperUnipotent2_eq_indicator.lean",
+    "sha": "2eee77c91031947047b793652cbe9dfc801aa548",
+    "size": 12292
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_valued_eq_exp_of_coe_eq_diagonal_of_not_valued_lt.lean",
+    "sha": "3cd0fa32bef5bdf2460bdfd08556d6a822e975e0",
+    "size": 1752
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_integral_godementSection_antidiagonal_mul_unipotentGL2_mul_psiLocal_eq_godementWhittaker2_of_chamber.lean",
+    "sha": "c5edefa1be62ca9621b7ba99c56d80383d4c284b",
+    "size": 38966
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_jacquetWhittaker3_diagonal3_mul_eq_mul_integral_psiLocal_cellSectionOf.lean",
+    "sha": "a9151783ece28771ede474e9fa00a3e9eb3db84f",
+    "size": 9064
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_CubicInduction_localPackage_psiLocal_inv_comp_mul_diagonal_of_localPackage_psiLocal_of_gauge.lean",
+    "sha": "0efbe4cdc565f2c1ccba8d18300c44f9640d9cde",
+    "size": 34815
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_RankinSelberg_exists_forall_integrable_whittaker_iotaGL_mul_principalSeries2_antidiagonal_of_gauge.lean",
+    "sha": "6341b3846b8ff421c5d1b9b1cf1b0f37430244fc",
+    "size": 73401
+  },
+  {
+    "path": "P2M/Sol/S_LanglandsTunnell_RankinSelberg_exists_forall_integrable_whittaker_mul_principalSeries2_antidiagonal2_mul_row_mul_cpow_of_admissible_of_chamber.lean",
+    "sha": "08e6001560a33296d553d28ea9393fc7da4991f8",
+    "size": 52320
+  },
+  {
+    "path": "P2M/Sol/S_LocalGL2_exists_mem_forall_diagonal_mul_sub_mem_span_and_mem_span.lean",
+    "sha": "9a63e0cef21067b9ccd0d65889b291121b017f6f",
+    "size": 24685
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_GeneralLinearGroup_exists_eq_mul_diagonal_natCast_pow_mul_of_forall_mem_adicCompletionIntegers.lean",
+    "sha": "102dd50e8f976f5bb82dcca086d743f11787d323",
+    "size": 25349
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_GeneralLinearGroup_exists_eq_smul_mul_diagonal_mul_of_valuationSubring.lean",
+    "sha": "29e87604bf46a8bcbad3980277f8d2046e757604",
+    "size": 9619
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_SpecialLinearGroup_exists_eq_mul_diagonal_mul_of_gcd_eq_one.lean",
+    "sha": "3d1ae923a26241843c194247182fd491d0e8f84a",
+    "size": 3534
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_exists_eq_iwahori_mul_diagonal_mul_iwahori_or_eq_atkinLehner_mul_of_mem_iwahori.lean",
+    "sha": "1607fc2c55def5b81231273fee2856c4a3ad86fb",
+    "size": 66241
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_exists_eq_mul_diagonal_mul_of_forall_mem_adicCompletionIntegers.lean",
+    "sha": "28684639b7dde0b914cc3b4359bb1c6a8e96197e",
+    "size": 20481
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_exists_iwahori_conj_diagonal_not_mem_of_exists_iwahori_conj_not_mem.lean",
+    "sha": "89ae3f36d5ae5be1a9845ad23c551ca2d49a31ab",
+    "size": 18015
+  },
+  {
+    "path": "P2M/Sol/S_Matrix_exists_list_prod_elementary_eq_diagonal_of_det_map_mul_eq_one.lean",
+    "sha": "271433df118c03c69d976d4658e08f3797b13702",
+    "size": 9030
+  },
+  {
+    "path": "P2M/Sol/S_ModularCurve_exists_smul_one_add_smul_eq_diagonal_mul_of_mem_Gamma0.lean",
+    "sha": "faa16a2542494caf743deab4cc0776f8afe8e9cd",
+    "size": 7784
+  },
+  {
+    "path": "P2M/Sol/S_NumberField_AdelicLevel_diagOne_eq_diagOne_mul_archRealLiftAt_mul_centralScalar.lean",
+    "sha": "08e1b9ac95354a4007df0d0002b6680cabf0bfbf",
+    "size": 9147
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsEichlerOrder_exists_conjByFiniteIdele_finiteIdeleDiagonal_mul_eq_of_squarefree_of_not_dvd_of_ne.lean",
+    "sha": "318964b5127392286a3566bef085d14b20406683",
+    "size": 5099
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsEichlerOrder_exists_eq_finiteIdeleDiagonal_mul_mul.lean",
+    "sha": "506d1efde2a1a783757aec1513ae5441b60c2f59",
+    "size": 92181
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsEichlerOrder_exists_eq_finiteIdeleDiagonal_mul_mul_of_ne.lean",
+    "sha": "7b85c2afc2c1392c6074d34bc12a5c384db2181f",
+    "size": 32359
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsEichlerOrder_exists_eq_finiteIdeleDiagonal_mul_mul_of_squarefree_of_not_dvd.lean",
+    "sha": "d8643cd00cb41098f0578d5558dc6d7e1a023eb5",
+    "size": 75780
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsMaximalOrder_exists_pair_localBox_iff_conj_diagonal_pow_mem_adicCompletionIntegers.lean",
+    "sha": "f6f3dc4b0105172717d496b65fa648eae4c4098d",
+    "size": 20826
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsMaximalOrder_localBoxUnits_and_exists_eq_mul_diagonal_mul_of_relIndex_inf_conjByFiniteIdele_eq.lean",
+    "sha": "45a3a1549d77fc7d4915e8f632e9330a6f5fa6f7",
+    "size": 45509
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_eq_finiteIdeleDiagonal_mul_mul_of_forall_exists_nrd_eq_one_tmul_eq_add_smul.lean",
+    "sha": "76c050b60fe61f91f735c74b307f1ff324b32768",
+    "size": 45640
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_eq_finiteIdeleDiagonal_mul_mul_of_forall_nrd_eq_one.lean",
+    "sha": "fb66957ded6b87b39cd652f90c6c507798970b42",
+    "size": 2952
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_localBox_iff_and_localBox_iff_conj_diagonal_of_linearMap_matrix_zmod.lean",
+    "sha": "6770a2a3eff63ba25b7a1b2603b7f2b9dd2c072c",
+    "size": 51172
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_nrd_eq_one_and_eq_finiteIdeleDiagonal_mul_mul_of_forall_exists_nrd_eq_one_tmul_eq_add_smul.lean",
+    "sha": "12fa23fd0a9f63f102fab3c065cde79e9cfd7384",
+    "size": 45777
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_nrd_eq_one_and_eq_finiteIdeleDiagonal_mul_mul_of_forall_nrd_eq_one.lean",
+    "sha": "0070b9fc0d367c1c0081ae0aff79f899d8f70ad3",
+    "size": 3055
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_nrd_eq_one_and_eq_finiteIdeleDiagonal_mul_mul_of_forall_nrd_eq_one_of_forall_isUnit.lean",
+    "sha": "ff57c56f258234767c136ff51b09c830a8d693fd",
+    "size": 3765
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_IsOrder_exists_nrd_eq_one_and_eq_finiteIdeleDiagonal_mul_of_forall_exists_nrd_eq_one_tmul_eq_add_smul.lean",
+    "sha": "969f30d1ddb9c4f8ea946602ecaed2a0ab14f672",
+    "size": 44092
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_exists_eq_finiteIdeleDiagonal_mul_mul_of_forall_classSet_eq_empty_or_eq_univ.lean",
+    "sha": "5642b54990677d5ebdbad525902f58f7e3a51311",
+    "size": 34790
+  },
+  {
+    "path": "P2M/Sol/S_QuaternionAlgebra_exists_ringEquiv_localBox_iff_evalAt_eq_diagonal_mul_of_mem_primeHeckeSet.lean",
+    "sha": "2339c73b1b40f5238a5a48da21ea5322c3d5f55d",
+    "size": 24343
+  },
+  {
+    "path": "P2M/Sol/S_ResidualGaloisRep_exists_inertia_diagonal_swap_of_eigenvector.lean",
+    "sha": "352cf879b36fc75ddfcac5a598abae1ef847b30e",
+    "size": 5783
+  },
+  {
+    "path": "P2M/Sol/S_Submodule_forall_exists_pow_smul_conj_mem_of_conjByFiniteIdele_finiteIdeleDiagonal_mul_eq_of_mem_asIdeal.lean",
+    "sha": "14298164dc4b9c69569010141fac535603781a1c",
+    "size": 17190
+  }
+]

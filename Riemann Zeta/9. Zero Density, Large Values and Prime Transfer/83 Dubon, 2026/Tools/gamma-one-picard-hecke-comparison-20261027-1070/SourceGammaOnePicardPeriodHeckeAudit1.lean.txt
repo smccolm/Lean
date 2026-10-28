@@ -1,0 +1,75 @@
+import SourceGammaOneCentralStabilizerCard
+import SourceGammaOneHeckeActualStabilizers
+import SourceGammaOneHeckeUpperOrbits
+import SourceGammaOneHeckeCosetMultiplicity
+import SourceGammaOneHeckeAnalyticDivisor
+import SourceGammaOneAnalyticHeckeDivisors
+import SourceGammaOnePicardHeckeDivisors
+import SourceGammaOneEndpointHecke
+import SourceGammaOnePicardPeriodHecke
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneCentralStabilizerCard, `SourceGammaOneHeckeActualStabilizers, `SourceGammaOneHeckeUpperOrbits, `SourceGammaOneHeckeCosetMultiplicity, `SourceGammaOneHeckeAnalyticDivisor, `SourceGammaOneAnalyticHeckeDivisors, `SourceGammaOnePicardHeckeDivisors, `SourceGammaOneEndpointHecke, `SourceGammaOnePicardPeriodHecke]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Picard Period Hecke postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Picard Period Hecke theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE PICARD PERIOD HECKE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneCentralStabilizerCard
+#lint in SourceGammaOneHeckeActualStabilizers
+#lint in SourceGammaOneHeckeUpperOrbits
+#lint in SourceGammaOneHeckeCosetMultiplicity
+#lint in SourceGammaOneHeckeAnalyticDivisor
+#lint in SourceGammaOneAnalyticHeckeDivisors
+#lint in SourceGammaOnePicardHeckeDivisors
+#lint in SourceGammaOneEndpointHecke
+#lint in SourceGammaOnePicardPeriodHecke

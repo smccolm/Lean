@@ -1,0 +1,63 @@
+import Dubon2026.SourceGammaOneRepresentativePeriods
+import Dubon2026.SourceGammaOneRepresentativePeriodCorrection
+import Dubon2026.SourceGammaOneFiniteDivisorReciprocity
+import Dubon2026.SourceIntegralCosetCocycle
+import Dubon2026.SourceIntegralCosetParabolic
+import Dubon2026.SourceIntegralCosetWord
+import Dubon2026.SourceIntegralPeriodCuspLimits
+import Dubon2026.SourceIntegralPeriodGeneratorDual
+import Dubon2026.SourceRealPrimitiveGreenData
+import Dubon2026.SourceIntegralPeriodLatticeDual
+import Dubon2026.SourceRealPeriodPeterssonPairing
+import Dubon2026.SourceClosedPeterssonNondegenerate
+import Dubon2026.SourceSignedPeriodLatticeLift
+import Dubon2026.SourceGammaOneSignedRealPeriods
+import Dubon2026.SourceGammaOnePeterssonIntegralRealPeriods
+import Dubon2026.SourceGammaOneUnitaryDivisorPrincipal
+import Dubon2026.SourceGammaOneMultiplierUnitarization
+import Dubon2026.SourceGammaOneGeneralMultiplierPrincipal
+import Dubon2026.SourceGammaOneTwoPoleDifferential
+import Dubon2026.SourceGammaOneDifferentialResidues
+import Dubon2026.SourceGammaOneSimplePoleBounds
+import Dubon2026.SourceGammaOneTwoPoleResidues
+import Dubon2026.SourceGammaOnePrescribedResidues
+import Dubon2026.SourceGammaOneAnalyticDivisorDifferential
+import Dubon2026.SourceUpperHalfPlaneResidueData
+import Dubon2026.SourceMeromorphicFinitePolarProduct
+import Dubon2026.SourceUpperHalfPlaneDiscExhaustion
+import Dubon2026.SourceMeromorphicDiscPrimitive
+import Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive
+import Dubon2026.SourceGammaOneRealizationDerivation
+import Dubon2026.SourceGammaOneAnalyticDifferentialResidue
+import Dubon2026.SourceMeromorphicPrimitiveSpecification
+import Dubon2026.SourceMeromorphicPrimitiveGroupAction
+import Dubon2026.SourceMeromorphicPrimitiveMultiplier
+import Dubon2026.SourceMeromorphicCuspAnalyticData
+import Dubon2026.SourceMeromorphicCuspPrimitive
+import Dubon2026.SourceMeromorphicCuspPrimitiveDecay
+import Dubon2026.SourceMeromorphicPrimitiveCusps
+import Dubon2026.SourceMeromorphicDifferentialRegularization
+import Dubon2026.SourceGammaOneRawDifferential
+import Dubon2026.SourceGammaOneLocalRegularDifferentialOrder
+import Dubon2026.SourceMeromorphicCuspExponentialDecay
+import Dubon2026.SourceGammaOneRawDifferentialDecay
+import Dubon2026.SourceGammaOnePrescribedResidueCoefficient
+import Dubon2026.SourceGammaOnePrincipalDivisorConverse
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneRepresentativePeriods, `Dubon2026.SourceGammaOneRepresentativePeriodCorrection, `Dubon2026.SourceGammaOneFiniteDivisorReciprocity, `Dubon2026.SourceIntegralCosetCocycle, `Dubon2026.SourceIntegralCosetParabolic, `Dubon2026.SourceIntegralCosetWord, `Dubon2026.SourceIntegralPeriodCuspLimits, `Dubon2026.SourceIntegralPeriodGeneratorDual, `Dubon2026.SourceRealPrimitiveGreenData, `Dubon2026.SourceIntegralPeriodLatticeDual, `Dubon2026.SourceRealPeriodPeterssonPairing, `Dubon2026.SourceClosedPeterssonNondegenerate, `Dubon2026.SourceSignedPeriodLatticeLift, `Dubon2026.SourceGammaOneSignedRealPeriods, `Dubon2026.SourceGammaOnePeterssonIntegralRealPeriods, `Dubon2026.SourceGammaOneUnitaryDivisorPrincipal, `Dubon2026.SourceGammaOneMultiplierUnitarization, `Dubon2026.SourceGammaOneGeneralMultiplierPrincipal, `Dubon2026.SourceGammaOneTwoPoleDifferential, `Dubon2026.SourceGammaOneDifferentialResidues, `Dubon2026.SourceGammaOneSimplePoleBounds, `Dubon2026.SourceGammaOneTwoPoleResidues, `Dubon2026.SourceGammaOnePrescribedResidues, `Dubon2026.SourceGammaOneAnalyticDivisorDifferential, `Dubon2026.SourceUpperHalfPlaneResidueData, `Dubon2026.SourceMeromorphicFinitePolarProduct, `Dubon2026.SourceUpperHalfPlaneDiscExhaustion, `Dubon2026.SourceMeromorphicDiscPrimitive, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive, `Dubon2026.SourceGammaOneRealizationDerivation, `Dubon2026.SourceGammaOneAnalyticDifferentialResidue, `Dubon2026.SourceMeromorphicPrimitiveSpecification, `Dubon2026.SourceMeromorphicPrimitiveGroupAction, `Dubon2026.SourceMeromorphicPrimitiveMultiplier, `Dubon2026.SourceMeromorphicCuspAnalyticData, `Dubon2026.SourceMeromorphicCuspPrimitive, `Dubon2026.SourceMeromorphicCuspPrimitiveDecay, `Dubon2026.SourceMeromorphicPrimitiveCusps, `Dubon2026.SourceMeromorphicDifferentialRegularization, `Dubon2026.SourceGammaOneRawDifferential, `Dubon2026.SourceGammaOneLocalRegularDifferentialOrder, `Dubon2026.SourceMeromorphicCuspExponentialDecay, `Dubon2026.SourceGammaOneRawDifferentialDecay, `Dubon2026.SourceGammaOnePrescribedResidueCoefficient, `Dubon2026.SourceGammaOnePrincipalDivisorConverse]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

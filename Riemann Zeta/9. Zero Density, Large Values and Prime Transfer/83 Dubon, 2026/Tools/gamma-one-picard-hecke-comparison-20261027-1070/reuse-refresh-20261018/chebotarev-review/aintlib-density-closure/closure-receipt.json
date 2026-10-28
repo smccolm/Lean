@@ -1,0 +1,253 @@
+{
+  "repository": "CBirkbeck/aintlib",
+  "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+  "endpointModule": "CebotarevDensity.Main",
+  "files": [
+    {
+      "module": "CebotarevDensity.Main",
+      "path": "projects/Chebotarev/CebotarevDensity/Main.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Main.lean",
+      "gitBlob": "678f99731a3984b00cf38e44a603c6020b01ab69",
+      "sha256": "D2B7B56411B59FCD9900DAA7FDC760CCA28196A9ABEE03EC9303FF13AD97EDF8",
+      "bytes": 28268,
+      "imports": [
+        "CebotarevDensity.Abelian",
+        "CebotarevDensity.FixedFieldDensity",
+        "Mathlib.NumberTheory.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter",
+        "Mathlib.NumberTheory.Cyclotomic.Gal",
+        "Mathlib.RingTheory.Ideal.NatInt",
+        "Mathlib.RingTheory.Ideal.Over"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.Abelian",
+      "path": "projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "gitBlob": "4afb1b22f188b261c209161a2a5fe14452bd75ef",
+      "sha256": "21A49D45E5C6BDFC94EE4E2DED570D3957D79C892D55786B878F2F469B3FDF98",
+      "bytes": 95805,
+      "imports": [
+        "CebotarevDensity.Cyclotomic",
+        "CebotarevDensity.FixedFieldDensity",
+        "Mathlib.NumberTheory.ArithmeticFunction.Carmichael",
+        "Mathlib.NumberTheory.LSeries.PrimesInAP",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Ideal",
+        "Mathlib.RingTheory.ZMod.UnitsCyclic",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.FixedFieldDensity",
+      "path": "projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/FixedFieldDensity.lean",
+      "gitBlob": "7d40bad6a09112255b5bafca096d2f143083fd8c",
+      "sha256": "D1FD19CD8B0DA42D53AA03FC211643D453BFA328D5A5842828183BF96FCA51BD",
+      "bytes": 80657,
+      "imports": [
+        "Mathlib.RingTheory.Ideal.Over",
+        "Mathlib.NumberTheory.RamificationInertia.Basic",
+        "CebotarevDensity.Cyclotomic"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.Cyclotomic",
+      "path": "projects/Chebotarev/CebotarevDensity/Cyclotomic.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Cyclotomic.lean",
+      "gitBlob": "0c070be84b811c059ee86b17fd299c7ef193dd29",
+      "sha256": "C6BA515447F60D75C218F8E4274DFCD75A9E3BE6764DF9CFD5C850B2F01674D5",
+      "bytes": 62573,
+      "imports": [
+        "CebotarevDensity.ZetaProduct",
+        "CebotarevDensity.CyclotomicNormResidue",
+        "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.NumberTheory.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.Ideal.Basic",
+        "Mathlib.Analysis.Calculus.SmoothSeries"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.CyclotomicNormResidue",
+      "path": "projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/CyclotomicNormResidue.lean",
+      "gitBlob": "4cf9574ba4ddb4e5a82976f17d632fce55129b70",
+      "sha256": "4EB734E12D2AC2BD58EB6DE86C1F8367CDE5A34340011E185BDA0E24259402E5",
+      "bytes": 38554,
+      "imports": [
+        "CebotarevDensity.Frobenius",
+        "Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots",
+        "Mathlib.NumberTheory.NumberField.Ideal.Basic"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/CharacterOrthogonality.lean",
+      "gitBlob": "a82fed3f75f964ded6d5aa78ab315f0dad069094",
+      "sha256": "676D91543052E5B07A3CEEEA670E8793E4CE203DF4CFF68221A500BD69C4DE71",
+      "bytes": 6712,
+      "imports": [
+        "Mathlib.Analysis.Complex.Polynomial.Basic",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ZetaProduct",
+      "path": "projects/Chebotarev/CebotarevDensity/ZetaProduct.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ZetaProduct.lean",
+      "gitBlob": "066833f2e42589a4af666f4c7fa3859286cf8492",
+      "sha256": "F0D592F399F07BA9C4BB1B5079E85A82010FE38310FA22D452DEB5C1B22EEC6D",
+      "bytes": 201993,
+      "imports": [
+        "CebotarevDensity.Frobenius",
+        "CebotarevDensity.CyclotomicNormResidue",
+        "CebotarevDensity.ForMathlib.IdealCongruenceCount",
+        "CebotarevDensity.ForMathlib.LatticePointCount",
+        "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+        "Mathlib.NumberTheory.LSeries.DirichletContinuation",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.GroupTheory.FiniteAbelian.Duality",
+        "Mathlib.NumberTheory.Cyclotomic.Gal",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Basic",
+        "Mathlib.RingTheory.RootsOfUnity.CyclotomicUnits",
+        "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+        "Mathlib.Analysis.Asymptotics.SpecificAsymptotics"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.IdealCongruenceCount",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/IdealCongruenceCount.lean",
+      "gitBlob": "96f816150367fc0862b64cb7e339679cc0dcfe57",
+      "sha256": "5D229129E894CDDA4EF89639ADFF76968D01F4E69202FEB63503E4D72ACC86E8",
+      "bytes": 217456,
+      "imports": [
+        "CebotarevDensity.ForMathlib.CharacterOrthogonality",
+        "CebotarevDensity.ForMathlib.LatticePointCount",
+        "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.RingTheory.DedekindDomain.Factorization"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.LatticePointCount",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/LatticePointCount.lean",
+      "gitBlob": "d1ed572f5188dc02cb22334f6c68ec404bae34af",
+      "sha256": "C87C6EDA4A38C79FA0E2C774229ED5902BE3D185ABBABB480060FC2330DC87EC",
+      "bytes": 20671,
+      "imports": [
+        "Mathlib.Analysis.BoxIntegral.UnitPartition",
+        "Mathlib.Data.Pi.Interval",
+        "Mathlib.Data.Set.Card.Arithmetic",
+        "Mathlib.Topology.MetricSpace.Lipschitz"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.NormLeOneLipschitz",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/NormLeOneLipschitz.lean",
+      "gitBlob": "5e16a4bbfbf4fd2cb6bcd66018dd558cd366471c",
+      "sha256": "DED69C86594DCA3A2E5A0E85795F2AF91EE97288C2BDC0639E7C144DF008EEF7",
+      "bytes": 40135,
+      "imports": [
+        "Mathlib.NumberTheory.NumberField.CanonicalEmbedding.NormLeOne"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.Frobenius",
+      "path": "projects/Chebotarev/CebotarevDensity/Frobenius.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Frobenius.lean",
+      "gitBlob": "8af8216d139a744a2650745bf1a729eb482b6482",
+      "sha256": "0DF5817D0F47D8EE77E0588655B754119B8A2306515AC5A1ED9CD5DAE17765D6",
+      "bytes": 23917,
+      "imports": [
+        "Mathlib.FieldTheory.Galois.IsGaloisGroup",
+        "Mathlib.RingTheory.DedekindDomain.Different",
+        "Mathlib.RingTheory.DedekindDomain.Factorization",
+        "Mathlib.RingTheory.Frobenius",
+        "Mathlib.NumberTheory.RamificationInertia.Inertia",
+        "CebotarevDensity.Density",
+        "Mathlib.FieldTheory.Finite.GaloisField"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.Density",
+      "path": "projects/Chebotarev/CebotarevDensity/Density.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Density.lean",
+      "gitBlob": "9b82ea30533bd73b4db2ea02795eb07f5cfde33f",
+      "sha256": "2449797846805D94A8F5AC3466C855CA094D4D749D3DC04913D7037E9EFE88E9",
+      "bytes": 33201,
+      "imports": [
+        "CebotarevDensity.ForMathlib.LogOneDivSubOne",
+        "CebotarevDensity.NumberFieldEulerProduct",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.NumberTheory.NumberField.DedekindZeta",
+        "Mathlib.Topology.Algebra.InfiniteSum.Basic",
+        "Mathlib.Topology.Algebra.InfiniteSum.Order",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Topology.Order.LiminfLimsup"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.ForMathlib.LogOneDivSubOne",
+      "path": "projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/ForMathlib/LogOneDivSubOne.lean",
+      "gitBlob": "05b0497a03c6d7305f5ee5b4305bbd90ebfc6a0a",
+      "sha256": "B1ABF715E1E79041EB61922F7F0EBB323F3BFCB90F6D5541C1161DB3C5B5D5DD",
+      "bytes": 3917,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Topology.Algebra.Order.Field"
+      ],
+      "integrityCandidates": []
+    },
+    {
+      "module": "CebotarevDensity.NumberFieldEulerProduct",
+      "path": "projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/NumberFieldEulerProduct.lean",
+      "gitBlob": "0ca0327911772bfa88455f853ebdec2c216fedea",
+      "sha256": "ABC011E0C70F37FBEACC46B1073AEAADD5DE1AEFA7BC0D75F8F304046BFD6E57",
+      "bytes": 47313,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Data.Finite.Vector",
+        "Mathlib.Data.Finsupp.Multiset",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.NumberTheory.NumberField.Cyclotomic.Basic",
+        "Mathlib.NumberTheory.NumberField.DedekindZeta",
+        "Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind",
+        "Mathlib.NumberTheory.NumberField.Ideal.Asymptotics",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Expand",
+        "Mathlib.RingTheory.Polynomial.Cyclotomic.Factorization",
+        "Mathlib.NumberTheory.EulerProduct.Basic",
+        "Mathlib.NumberTheory.LSeries.SumCoeff",
+        "Mathlib.Algebra.BigOperators.Ring.Nat"
+      ],
+      "integrityCandidates": []
+    }
+  ],
+  "missingExternalImports": [],
+  "mathlibModulesAbsentAtFrozenPin": [],
+  "kernelCheckedHere": false,
+  "status": "Pinned source closure reviewed for port feasibility; not a kernel certificate."
+}

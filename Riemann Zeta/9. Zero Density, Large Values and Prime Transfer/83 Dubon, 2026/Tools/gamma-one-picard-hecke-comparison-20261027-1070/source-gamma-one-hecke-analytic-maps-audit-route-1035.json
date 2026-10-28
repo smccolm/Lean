@@ -1,0 +1,52 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> original all-weight arithmetic association -> arithmetic realization of actual finite Gamma1 homogeneous-coefficient Hecke characters -> actual Picard/H1 Hecke comparison -> actual alpha/beta analytic place maps and ramification.",
+  "shorterRoute": "Use the native equal-weight modular ratio at both subgroup levels, with unchanged q-expansion for alpha and native modularStretch_coeff for beta. Avoid constructing Gamma1 field generators or transferring a Gamma0 theorem without proof.",
+  "assumptionsToDischarge": "Actual alpha/beta analytic realizations, place restrictions and exact ramification ratios; beta fiber exhaustion using the native reverse monic j relation and actual finite-place exhaustion. No global orbit or cusp classification assumed.",
+  "remaining": "Scratch-audited analytic Hecke maps only; promotion/assembled verification, exact coset multiplicities and Hecke-period compatibility, H1/diamond/transpose/arithmetic compatibility, original all-weight association and literal continuation remain. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneMeromorphicRealization.lean",
+      "sha256": "25EFB38C4C22F86FF6ED94D4E405BC68CE23E8AA09BBB0B02B2E1DB0510E5BA3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeDegeneracy.lean",
+      "sha256": "49AD28A56A065A9C2E7D9B98CA042F749A4E3C463D6B631B92DEC0A9AAB46AC7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneModularStretchCoefficients.lean",
+      "sha256": "DB0326717AF5E4A6154A6BA748AF46D79DE08DCA2135E869D48749D1E4141C7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldInclusion.lean",
+      "sha256": "0AFB6D4E026D4BE6190EAA198D91180D43CC1EC001DC18246BF177F0258ADEBA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticPlaces.lean",
+      "sha256": "E23BFF6137CD0725C8548942D84C0151A1816C17FF95DB590441890A1A7B59EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAlphaGerms.lean",
+      "sha256": "B44A319BD0FA40E4323382A72064BD55CCAA19D2F2369F8A12BABF439D91FF37"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeBetaGerms.lean",
+      "sha256": "77BF22FF7787331DAC28EF110FFF0A6A230FE41623B2EC46ADD3AFEDBA04D2F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeAnalyticRamification.lean",
+      "sha256": "5F264CA2BEC65972E1B245FA0AD0A15675A7051991618F7597418F919BE86C5C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "sha256": "A6256F9FB46ABAEE817F5AE8CCA4C5065A357C2DE97E728EA222C5775EACCCDE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeAdjacentRelations.lean",
+      "sha256": "1024A29796DE3DD4FA49E75E0CEEB276D978E6912CEBFF47594DE6F758D58473"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFiniteFiber.lean",
+      "sha256": "E3CD4C64D8A8D2203936AD1E364D6A8BD31FF87E65796F1CBB765750157AD70F"
+    }
+  ]
+}

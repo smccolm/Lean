@@ -1,0 +1,253 @@
+{
+  "checkedUTC": "2026-10-18T11:22:40.030195+00:00",
+  "request": "Fresh search for existing Lean proofs that can substantially shorten the full active Dubon formalization.",
+  "target": "DUB-17: primitive_satoTate_of_higher_continuation_alone, frozen source lines 1616-1687; reverse H1 localization -> exact dual Selmer -> arithmetic patching -> higher symmetric-power continuation. Separate modular association, purity and automorphy remain required. DUB-18: genuine modular-form Theorem 2.6 and level-one Corollary 8.2. DUB-19-20: full semantic and verification gates.",
+  "acceptance": "16/20; DUB-17-20 remain open. This research closes no acceptance gate.",
+  "publicHeads": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "sha": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "date": "2026-09-24T14:06:36Z",
+      "url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "sha": "be0bb2dd8696f3b805c738860b1c4c4257f759e8",
+      "date": "2026-10-18T10:52:44Z",
+      "url": "https://github.com/TauCetiProject/TauCeti/commit/be0bb2dd8696f3b805c738860b1c4c4257f759e8"
+    },
+    {
+      "repository": "n-yamaguchi-0729/ClassFieldTheory",
+      "sha": "b27eed00419a5377124331a68bc8dcf563a28d68",
+      "date": "2026-10-15T11:09:13Z",
+      "url": "https://github.com/n-yamaguchi-0729/ClassFieldTheory/commit/b27eed00419a5377124331a68bc8dcf563a28d68"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "sha": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "date": "2026-10-16T15:52:45Z",
+      "url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5"
+    }
+  ],
+  "additionalRepository": {
+    "repository": "openai/math",
+    "sha": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "date": "2026-10-12T21:55:24Z",
+    "url": "https://github.com/openai/math/commit/1581d4cbdd69a0faf34b2089614fe2a814316a6a"
+  },
+  "sourceReceipts": {
+    "tauCeti": [
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Brauer/SumFormula.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\Brauer\\SumFormula.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/Brauer/SumFormula.lean",
+        "bytes": 7553,
+        "gitBlob": "6b394f68d6666d12d95d32bb2a4f77d6a4425196",
+        "gitBlobVerified": true,
+        "sha256": "C263022F645991690D6BE6A5A74E66365DCE52E0DA1AC1EFE3307DF790360E2C"
+      },
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/ClassFormation.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\ClassFormation.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/ClassFormation.lean",
+        "bytes": 9290,
+        "gitBlob": "0a71da01f295e597103124feea0971605b092295",
+        "gitBlobVerified": true,
+        "sha256": "E5EF2E6C54BCA1702C8FABAE90CEC1C489A13DD8484E37B82DCE3567F51A3A20"
+      },
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/CorestrictionLocalization.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\CorestrictionLocalization.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/CorestrictionLocalization.lean",
+        "bytes": 14440,
+        "gitBlob": "ea47aa0b078a4e7a3d72c5849ebc0a088b53737e",
+        "gitBlobVerified": true,
+        "sha256": "0CA6B854D9553C82CD7CBAE6269B5A1803B1D074351ECE3954CF503DBAE828FD"
+      },
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleLocalization.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\IdeleLocalization.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleLocalization.lean",
+        "bytes": 51116,
+        "gitBlob": "7f5326efce22d370717a89c1d093cf174cf9a217",
+        "gitBlobVerified": true,
+        "sha256": "21B83883EB874CC84483CAD58AC50E95899A5AAE33105C2BA7EFB7FED5077329"
+      },
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/LiftingObstruction.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\LiftingObstruction.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/LiftingObstruction.lean",
+        "bytes": 16543,
+        "gitBlob": "876c642bc08b34a7a05b98369daaca8fae2ec259",
+        "gitBlobVerified": true,
+        "sha256": "6C39A0590638BD5C9AB65A186D017D2F750A9973172D9B0C1AB98CF5864A39D5"
+      },
+      {
+        "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/PrescribedInvariant.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\PrescribedInvariant.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/PrescribedInvariant.lean",
+        "bytes": 31804,
+        "gitBlob": "717a48851f29d57e98c6b75c632413ee3daaf717",
+        "gitBlobVerified": true,
+        "sha256": "BC935EA2BB3634487ECED27981CD4F552ED909CA3FEC07F5C1B34D2E76EA8584"
+      },
+      {
+        "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/SelmerStructure.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\RepresentationTheory\\Homological\\ContCohomology\\SelmerStructure.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/RepresentationTheory/Homological/ContCohomology/SelmerStructure.lean",
+        "bytes": 4999,
+        "gitBlob": "cd7c633795865655521f955a6bd3ba52a6bf30d4",
+        "gitBlobVerified": true,
+        "sha256": "26053C5875EBEDBFC2153A1B394C3889834C7FFD19988E88231F06239E52AF0B"
+      },
+      {
+        "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/Cup/Duality/Basic.lean",
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\RepresentationTheory\\Homological\\ContCohomology\\Cup\\Duality\\Basic.lean.txt",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/RepresentationTheory/Homological/ContCohomology/Cup/Duality/Basic.lean",
+        "bytes": 79556,
+        "gitBlob": "b76874257b4b87b82bd19ce6c291a739485086b3",
+        "gitBlobVerified": true,
+        "sha256": "FD10CACBA9A2306481B69F4984B0A4AA067094D96190C2031C7B9DCD31C51079"
+      }
+    ],
+    "imperialFLT": [
+      {
+        "path": "FLT/Assumptions/KnownIn1980s.lean",
+        "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Assumptions/KnownIn1980s.lean",
+        "bytes": 4334,
+        "sha256": "DDBD0B63B267A31A5DF5467C31FDFD5CB673A512AE27CC712CBB0B1C77DD0C9C"
+      },
+      {
+        "path": "FLT/Assumptions/README.md",
+        "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Assumptions/README.md",
+        "bytes": 2956,
+        "sha256": "BEB73DE70DB6EF774D68F0B8C9267AA204291B6C33B1240DAB2D7FBB3E41163C"
+      },
+      {
+        "path": "lean-toolchain",
+        "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/lean-toolchain",
+        "bytes": 29,
+        "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+      }
+    ],
+    "openaiClassField": [
+      {
+        "path": "DukePrimeDegree/Arithmetic/ClassFieldBridge.lean",
+        "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldBridge.lean",
+        "bytes": 3284,
+        "sha256": "E8AABB1008DB985364EAD411363FEBD3D15EFC98DCB1755956EDD4E1E36ABF97",
+        "gitBlob": "f15bc48f03ba8fb36fd30e0dd52d622d367a0777",
+        "gitBlobVerified": true,
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldBridge.lean.txt"
+      },
+      {
+        "path": "DukePrimeDegree/Arithmetic/ClassFieldCongruences.lean",
+        "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldCongruences.lean",
+        "bytes": 2873,
+        "sha256": "AC6B308D6BC62FFD6907216825A59857E705C789B677D4664E73E3671F94959F",
+        "gitBlob": "c0d2db8367db120a7f294e282fe863863dabd4b0",
+        "gitBlobVerified": true,
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldCongruences.lean.txt"
+      },
+      {
+        "path": "DukePrimeDegree/Arithmetic/ClassFieldKernel.lean",
+        "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldKernel.lean",
+        "bytes": 2198,
+        "sha256": "15F9A5ACA5FEC6F72799A7BB6593ED3D559F108E788CC4029A54EC923FCC256F",
+        "gitBlob": "61caff3d8a5945bd9c2478ec8cb1dd38125c3b5b",
+        "gitBlobVerified": true,
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldKernel.lean.txt"
+      },
+      {
+        "path": "DukePrimeDegree/Arithmetic/ClassFieldModulus.lean",
+        "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldModulus.lean",
+        "bytes": 3406,
+        "sha256": "DA9750ECB98945340C401974346F8C582DDF5CC8AD2A6262557D5D2C3E2A2DB4",
+        "gitBlob": "42afae29b207d93cea35ed5509d43f5c5e37a58b",
+        "gitBlobVerified": true,
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldModulus.lean.txt"
+      },
+      {
+        "path": "DukePrimeDegree/Arithmetic/ClassFieldRealization.lean",
+        "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldRealization.lean",
+        "bytes": 3739,
+        "sha256": "4C4DDCFA43A11E53E5AD74C0E650C8EA23EA4F86209FE1C3E1386B5C3943D920",
+        "gitBlob": "991a81bbd844207cac32dae69cf780d1da2efe72",
+        "gitBlobVerified": true,
+        "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldRealization.lean.txt"
+      }
+    ]
+  },
+  "compatibility": {
+    "native": "Lean 4.30.0; frozen Mathlib/PNT+ pins unchanged",
+    "tauCeti": "Lean 4.36.0-rc1",
+    "imperialFLT": "Lean 4.35.0-rc3",
+    "openaiMath": "Lean 4.34.1; ClassFieldTheory dependency pinned to 2eb22d6485af45f29c5219de6c49f196a61c4f49",
+    "decision": "No wholesale dependency replacement or toolchain migration. Any selected proof would require a faithful local port and its complete dependency audit."
+  },
+  "findings": [
+    {
+      "candidate": "TauCeti SelmerStructure",
+      "inspection": "Full selected source body",
+      "result": "Defines localization, Selmer groups and their membership characterization. Does not prove the reverse H1 localization or exact dual Selmer theorem needed here.",
+      "reuseDecision": "Do not replace the existing native Selmer objects with another definition."
+    },
+    {
+      "candidate": "TauCeti ClassFormation and Brauer/SumFormula",
+      "inspection": "Selected public statements and proofs; ClassFormation body and SumFormula main proof bodies",
+      "result": "ClassFormation supplies zero-sum/kernel and refinement reductions conditional on universal Kummer norm-index and prime-layer generator inputs. SumFormula assumes Hasse injectivity over finite extensions or idele-class H1 vanishing.",
+      "reuseDecision": "Native constructed full-order class and zero-total relation criterion already supply the relevant class-field edge. These reductions do not identify the actual Dubon Cartier cup total or remove the remaining reverse-localization obligation."
+    },
+    {
+      "candidate": "TauCeti PrescribedInvariant",
+      "inspection": "Declaration index, generator/refinement statements and their proofs, and decomposition-character/cyclic-layer statements and proofs",
+      "result": "Constructs absolute H2 prescribed totals, generator classes after refinement, and a same-layer cyclic generator given a surjective decomposition map. The last surjectivity is an explicit hypothesis; it does not automatically discharge every prime-layer input in ClassFormation.",
+      "reuseDecision": "Useful reference, but importing this new object stack would duplicate native original-field generator and norm-root proofs."
+    },
+    {
+      "candidate": "TauCeti LiftingObstruction and CorestrictionLocalization",
+      "inspection": "Selected source bodies and exact public signatures",
+      "result": "Proves idele H2 kernel/range relations, cyclic-layer surjectivity and Mackey localization. The latter explicitly stops before identifying subgroup double cosets with actual extension-field places.",
+      "reuseDecision": "No replacement for the required original-completion/prime normalization comparison. Reuse native original maps and constructed relation criterion."
+    },
+    {
+      "candidate": "TauCeti IdeleLocalization and Cup/Duality/Basic",
+      "inspection": "Headers, declaration indexes and selected statements only; not full proof-body or import-closure audit",
+      "result": "Actual idele localization and finite support; generic duality pairings and conditional bijectivity transport.",
+      "reuseDecision": "Retain as bounded candidates, not certified replacements for global arithmetic duality."
+    },
+    {
+      "candidate": "Anthropic FLT",
+      "inspection": "Live head and primary proof-route document, against earlier cached source review",
+      "result": "Head unchanged from the previous review. Its documented modularity lifting is for the weight-two, semistable and level-conditioned 3/5 route; that is not all higher symmetric powers of every non-CM modular form.",
+      "reuseDecision": "Continue adapting the previously inspected finite relation/localization argument; no newly changed endpoint found in this pass."
+    },
+    {
+      "candidate": "Imperial FLT",
+      "inspection": "Live commit, KnownIn1980s source and assumptions README",
+      "result": "Latest commit is a Mathlib compatibility bump. The selected assumptions source explicitly declares knownin1980s as a proof of an arbitrary proposition, and its README lists Poitou-Tate and automorphic results as assumptions/planned assumptions.",
+      "reuseDecision": "Any individual theorem needs transitive dependency inspection; cannot import the project endpoint under the Dubon proof standards."
+    },
+    {
+      "candidate": "OpenAI math",
+      "inspection": "Live head, primary manuscript map, formalization catalogue, complete NumberTheory subtree, five ClassField source bodies and dependency manifest",
+      "result": "The manuscript map contains modularity claims, but the formalization catalogue has no corresponding modularity/automorphy/Poitou-Tate/Selmer entry under the searched terms. The five selected DukePrimeDegree files construct ray-character realization for totally real cyclic extensions using NYLL class-field theory. They do not prove reverse H1 localization for the trace-dual coefficient or higher symmetric-power continuation.",
+      "reuseDecision": "No direct endpoint replacement. The cyclic Artin/ray-character bridge is a concrete proved-source candidate for an appropriate future character obligation, but it does not advance the currently unresolved chain."
+    }
+  ],
+  "routeDecision": [
+    "Reuse the native canonical-total composition, bottom-prime equivalence and original completion base-change theorem; do not rebuild a class-field library.",
+    "Assemble actual indexed local cup total -> coherent source annihilator gives total zero -> arithmeticSPlaceRelationObstruction_zero_of_total_zero.",
+    "Use originalUnramifiedStage_exists_constructed_relation_criterion directly, avoiding the extra scalar-readout packaging where the zero obstruction is already available.",
+    "Retain the all-local-H1 cup identities for the same existential relation witness; they are needed after extension to recover the prescribed local cohomology classes.",
+    "Reuse originalUnramifiedStageInUnion and its literal inclusion/equivalence lemmas, plus the proved finite-stage trace-action restriction, for the required enlarged-stage comparison."
+  ],
+  "limits": [
+    "A bounded current-source review, not a proof of absence of reusable mathematics on the internet.",
+    "No candidate external import closure was newly kernel-audited or incorporated in this refresh.",
+    "The full OpenAI recursive tree was truncated; the NumberTheory subtree was fetched separately and is complete (23662 entries). Catalogue searches are only as broad as their recorded terms.",
+    "Eight selected TauCeti and five selected OpenAI Lean sources are inert .lean.txt research copies with Git blob checks; their presence is not a local build claim."
+  ],
+  "externalCodeCopiedIntoProduction": false,
+  "pinsChanged": false
+}

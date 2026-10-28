@@ -1,0 +1,45 @@
+{
+  "checkedUTC": "2026-10-18T19:54:08.158876+00:00",
+  "heads": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "previousSHA": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "sha": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "date": "2026-09-24T14:06:36Z",
+      "changed": false,
+      "url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "previousSHA": "be0bb2dd8696f3b805c738860b1c4c4257f759e8",
+      "sha": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "date": "2026-10-18T19:29:41Z",
+      "changed": true,
+      "url": "https://github.com/TauCetiProject/TauCeti/commit/0b4e4720467a7a2bd42af383a284f4246a49aaab"
+    },
+    {
+      "repository": "n-yamaguchi-0729/ClassFieldTheory",
+      "previousSHA": "b27eed00419a5377124331a68bc8dcf563a28d68",
+      "sha": "b27eed00419a5377124331a68bc8dcf563a28d68",
+      "date": "2026-10-15T11:09:13Z",
+      "changed": false,
+      "url": "https://github.com/n-yamaguchi-0729/ClassFieldTheory/commit/b27eed00419a5377124331a68bc8dcf563a28d68"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "previousSHA": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "sha": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+      "date": "2026-10-16T15:52:45Z",
+      "changed": false,
+      "url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5"
+    },
+    {
+      "repository": "openai/math",
+      "previousSHA": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "date": "2026-10-12T21:55:24Z",
+      "changed": false,
+      "url": "https://github.com/openai/math/commit/1581d4cbdd69a0faf34b2089614fe2a814316a6a"
+    }
+  ]
+}

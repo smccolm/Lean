@@ -1,0 +1,27 @@
+﻿from pathlib import Path
+import json
+p=Path(r'E:\Lean\Riemann Zeta\9. Zero Density, Large Values and Prime Transfer\83 Dubon, 2026');d=Path(r'E:\Lean\.tmp\dubon83')
+math='Six further production modules construct the actual smooth algebraic local representation. The original local level group is compact as the genuine continuous image of the full finite adelic level group, and open as its preimage under the continuous one-place insertion. The literal algebraic span of the original local cusp orbit lies in the original full algebraic cusp core; its proved finite smoothness supplies a genuine open local stabilizer for every vector. The actual local fixed orthogonal projector sends each core vector into its own finite compact orbit span, so it preserves every algebraic invariant subspace of that core. Any nonzero vector has a genuine local translate pairing nontrivially with the original generator. Projecting that translate and using the proved cyclic fixed-line theorem forces the original generator into every nonzero invariant subspace. Thus the actual algebraic core is irreducible without a closedness assumption. Restricting the original action to this core yields an explicit smooth representation, nonzero for the original primitive cusp form, and a public theorem proves Mathlib’s IsIrreducible predicate for that genuine representation at every good prime.'
+remaining='The original good-prime local cyclic Hilbert representation and its actual smooth algebraic orbit representation are both proved irreducible. Every vector of the latter has a genuine open stabilizer. Finite dimensionality of invariants under every compact open subgroup, identification with all smooth vectors of the completion, spherical representation/Euler-factor classification and local/global factor compatibility still require proofs. The automorphic non-CM bridge and higher symmetric automorphy/continuation remain open. Full adelic Hilbert irreducibility, the original local radial recurrence and the exact cyclic fixed-vector line remain proved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.'
+pending='Focused production compilation passed; source-consumer compilation, expanded audit, all sixteen linters and sequential foundation/paper verification are pending.'
+status='Original smooth algebraic local representation and irreducibility: '+math+' Six exact consumers expand registered scope to 1113 production modules, 470 exact consumers and 4,872 explicit audit registrations. '+pending+' '+remaining+' Earlier milestone paragraphs retain their historical scope.'
+modules=json.loads((d/'modules1113.json').read_text(encoding='utf-8'))
+section='### Original smooth algebraic local representation and irreducibility — 8 October 2026\n\n'+math+'\n\n'+remaining+'\n\n'+''.join(f'- [{n}](Extension/Dubon2026/{n}.lean).\n' for n in modules)
+(d/'status1113.txt').write_text(status+'\n',encoding='utf-8');(d/'section1113.txt').write_text(section,encoding='utf-8')
+s=json.loads((p/'Tools/scaffold.json').read_text(encoding='utf-8'))
+for name in s['statusDocuments']:
+ f=p/name;t=f.read_text(encoding='utf-8');assert status not in t;pos=t.index('\n');f.write_text(t[:pos+1]+'\n'+status+'\n\n'+t[pos+1:],encoding='utf-8')
+for name in ['Dubon Checklist.md','Dubon Crosswalk.md','Dubon Research Agenda.md','Dubon Source Contract.md']:
+ with (p/name).open('a',encoding='utf-8') as out:out.write('\n'+section)
+f=p/'Dubon Architecture.md';t=f.read_text(encoding='utf-8');old='  LCI --> LCL["OPEN DUB-17: spherical representation/Euler classification, smooth admissibility and local/global compatibility"]';assert old in t
+new='''  LCI --> LSM["Proved actual smooth algebraic local representation and Mathlib irreducibility"]
+  LSM --> LCL["OPEN DUB-17: admissibility, full smooth-vector identification, spherical Euler classification and local/global compatibility"]'''
+f.write_text(t.replace(old,new,1),encoding='utf-8')
+f=p/'Tools/modular_research_20261006.json';j=json.loads(f.read_text(encoding='utf-8'))
+j['adelicLocalSmoothIrreducibilityImplementation20261008']={'status':'Focused production compilation passed; expanded verification pending. DUB-17 remains OPEN.','mathematics':section,'productionModules':modules,'validation':'Registered 1113 production modules, 470 exact consumers and 4872 explicit audit declarations; expanded verification pending.','sourceGate':'DUB-17','remaining':remaining}
+f.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+for q in [p.parent/'README.md',p.parents[1]/'README.md']:
+ t=q.read_text(encoding='utf-8');old='Spherical representation/Euler classification, smooth admissibility and local/global compatibility, the automorphic non-CM bridge and higher symmetric continuations still require proofs.';assert old in t
+ new='The original algebraic local orbit span now carries a genuine smooth representation with proved open stabilizers and Mathlib irreducibility at every good prime (focused compilation passed; expanded verification pending). Local admissibility, full smooth-vector identification, spherical representation/Euler classification and local/global compatibility, the automorphic non-CM bridge and higher symmetric continuations still require proofs.'
+ q.write_text(t.replace(old,new,1),encoding='utf-8')
+print('Synchronized all 15 status documents, architecture, metadata and both overviews for actual smooth local irreducibility.')

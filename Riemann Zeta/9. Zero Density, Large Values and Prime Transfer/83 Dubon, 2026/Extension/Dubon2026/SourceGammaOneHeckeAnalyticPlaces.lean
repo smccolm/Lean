@@ -1,0 +1,92 @@
+import Dubon2026.SourceGammaOneHeckeAlphaGerms
+import Dubon2026.SourceGammaOneHeckeBetaGerms
+import Dubon2026.SourceGammaOneAnalyticResidues
+import Dubon2026.SourceGammaOneHeckeFieldFinite
+import Dubon2026.SourceCurveCorrespondencePlaces
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> analytic
+correspondence with exact multiplicities. Actual germ equalities determine
+restriction of places and the normalized ramification of both finite maps.
+The statements retain every analytic point, including elliptic points. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup
+open scoped MatrixGroups
+variable (M d : ℕ) [NeZero M] [NeZero d]
+  (hT : ModularGroup.T ∈ Gamma1 M)
+  (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M))
+
+include hT hH
+
+omit [NeZero M] [NeZero d] in
+theorem analyticOrder_heckeAlpha (τ : ℍ) (x : functionFieldOver (Gamma1 M) ℂ) :
+    analyticOrder (Gamma1 M ⊓ Gamma0 (d * M)) τ (heckeAlpha ℂ M d x) =
+      analyticOrder (Gamma1 M) τ x :=
+  meromorphicOrderAt_congr (realize_heckeAlpha_eventuallyEq M d hT hH x τ)
+
+omit [NeZero M] in
+theorem analyticOrder_heckeBeta (τ : ℍ) (x : functionFieldOver (Gamma1 M) ℂ) :
+    analyticOrder (Gamma1 M ⊓ Gamma0 (d * M)) τ (heckeBeta ℂ M d x) =
+      analyticOrder (Gamma1 M) (levelRaiseMatrix d • τ) x := by
+  unfold analyticOrder
+  rw [meromorphicOrderAt_congr (realize_heckeBeta_eventuallyEq M d hT hH x τ)]
+  rw [coe_levelRaiseMatrix_smul]
+  have hd : HasDerivAt (fun z : ℂ => (d : ℂ) * z) (d : ℂ) (τ : ℂ) := by
+    simpa using (hasDerivAt_id (τ : ℂ)).const_mul (d : ℂ)
+  have ha : AnalyticAt ℂ (fun z : ℂ => (d : ℂ) * z) (τ : ℂ) :=
+    analyticAt_const.mul analyticAt_id
+  exact meromorphicOrderAt_comp_of_deriv_ne_zero
+    (f := fun z : ℂ => realize (Gamma1 M) (x : LaurentSeries ℂ) (ofComplex z)) ha
+    (by rw [hd.deriv]; exact Nat.cast_ne_zero.mpr (NeZero.ne d))
+
+theorem analyticPlace_restrict_heckeAlpha (τ : ℍ) :
+    Place.restrictAlong (heckeAlpha ℂ M d) (heckeAlpha_finite ℂ M d)
+      (analyticPlace hH τ) = analyticPlace hT τ := by
+  apply Place.ext
+  ext x
+  rw [Place.mem_restrictAlong_iff]
+  have ho : 0 ≤ analyticOrder (Gamma1 M ⊓ Gamma0 (d * M)) τ (heckeAlpha ℂ M d x) ↔
+      0 ≤ analyticOrder (Gamma1 M) τ x := by rw [analyticOrder_heckeAlpha M d hT hH]
+  exact (analyticPlace_mem_iff hH τ (heckeAlpha ℂ M d x)).trans
+    (ho.trans (analyticPlace_mem_iff hT τ x).symm)
+
+theorem analyticPlace_restrict_heckeBeta (τ : ℍ) :
+    Place.restrictAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+      (analyticPlace hH τ) = analyticPlace hT (levelRaiseMatrix d • τ) := by
+  apply Place.ext
+  ext x
+  rw [Place.mem_restrictAlong_iff]
+  have ho : 0 ≤ analyticOrder (Gamma1 M ⊓ Gamma0 (d * M)) τ (heckeBeta ℂ M d x) ↔
+      0 ≤ analyticOrder (Gamma1 M) (levelRaiseMatrix d • τ) x := by
+    rw [analyticOrder_heckeBeta M d hT hH]
+  exact (analyticPlace_mem_iff hH τ (heckeBeta ℂ M d x)).trans
+    (ho.trans (analyticPlace_mem_iff hT (levelRaiseMatrix d • τ) x).symm)
+
+theorem heckeAlpha_analytic_ramification (τ : ℍ) :
+    (analyticRamification hT τ : ℤ) = (analyticRamification hH τ : ℤ) *
+      Place.ramificationAlong (heckeAlpha ℂ M d) (heckeAlpha_finite ℂ M d)
+        (analyticPlace hH τ) := by
+  let v := analyticPlace hT τ
+  have h := analyticPlace_order hH τ (heckeAlpha ℂ M d v.uniformizer)
+    ((map_ne_zero _).mpr v.uniformizer_ne_zero)
+  rw [analyticOrder_heckeAlpha M d hT hH, analyticPlace_order hT τ v.uniformizer
+    v.uniformizer_ne_zero, Place.ord_uniformizer, mul_one] at h
+  rw [Place.ramificationAlong, analyticPlace_restrict_heckeAlpha M d hT hH]
+  exact WithTop.coe_injective h
+
+theorem heckeBeta_analytic_ramification (τ : ℍ) :
+    (analyticRamification hT (levelRaiseMatrix d • τ) : ℤ) =
+      (analyticRamification hH τ : ℤ) *
+        Place.ramificationAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+          (analyticPlace hH τ) := by
+  let v := analyticPlace hT (levelRaiseMatrix d • τ)
+  have h := analyticPlace_order hH τ (heckeBeta ℂ M d v.uniformizer)
+    ((map_ne_zero _).mpr v.uniformizer_ne_zero)
+  rw [analyticOrder_heckeBeta M d hT hH, analyticPlace_order hT
+    (levelRaiseMatrix d • τ) v.uniformizer v.uniformizer_ne_zero,
+    Place.ord_uniformizer, mul_one] at h
+  rw [Place.ramificationAlong, analyticPlace_restrict_heckeBeta M d hT hH]
+  exact WithTop.coe_injective h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

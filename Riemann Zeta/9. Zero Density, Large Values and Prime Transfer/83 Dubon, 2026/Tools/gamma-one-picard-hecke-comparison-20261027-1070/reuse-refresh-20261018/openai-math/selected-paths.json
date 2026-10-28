@@ -1,0 +1,2856 @@
+[
+  {
+    "path": "lean/OAI/Algebra/AuslanderReiten/Bar/ModuleBarAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4d02b355a7b2bce95fcfacd5f717cf9da988ab51",
+    "size": 3303,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4d02b355a7b2bce95fcfacd5f717cf9da988ab51"
+  },
+  {
+    "path": "lean/OAI/Algebra/OddKaplansky/ModularGeneric.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "21f195fe0ba11021fe0e30070745b13181838069",
+    "size": 9138,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/21f195fe0ba11021fe0e30070745b13181838069"
+  },
+  {
+    "path": "lean/OAI/Algebra/OddKaplansky/ModularSource.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f9fd0ac2aa22614d6b0f644e9115d227f9d105a",
+    "size": 5754,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2f9fd0ac2aa22614d6b0f644e9115d227f9d105a"
+  },
+  {
+    "path": "lean/OAI/Algebra/OddKaplansky/OrderedModular.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "113c88b643a9d08e6ee40519d9923762827d3d8b",
+    "size": 9131,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/113c88b643a9d08e6ee40519d9923762827d3d8b"
+  },
+  {
+    "path": "lean/OAI/AlgebraicGeometry/PlaneCurves/Automorphic.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4bdfa2173f0597017f50f8741f88fc015fa9025e",
+    "size": 18382,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4bdfa2173f0597017f50f8741f88fc015fa9025e"
+  },
+  {
+    "path": "lean/OAI/AlgebraicGeometry/SectionFields/GaloisAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "31e9caf908c8216570cc1088cd7e47b6b8236f79",
+    "size": 9653,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/31e9caf908c8216570cc1088cd7e47b6b8236f79"
+  },
+  {
+    "path": "lean/OAI/AlgebraicGeometry/SurfaceCones/KummerGalois.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dac87c7286efc273a9a0f22365a852412dd41d54",
+    "size": 16787,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/dac87c7286efc273a9a0f22365a852412dd41d54"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/FiniteGroupMultimodularity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6726087cef6a6c3ceabc6d8c053b45a9ea95b75b",
+    "size": 6265,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6726087cef6a6c3ceabc6d8c053b45a9ea95b75b"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularCofaces.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43ce32e018684c5363e87ab60458b0c7101ddc2f",
+    "size": 2663,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/43ce32e018684c5363e87ab60458b0c7101ddc2f"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularColumns.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0bc3cffefe5e9e3b2fa87fe8dbeab70319c9d28c",
+    "size": 4805,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0bc3cffefe5e9e3b2fa87fe8dbeab70319c9d28c"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularEndFaces.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "89015832110432b16011b73e03a9f4147331f14d",
+    "size": 4301,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/89015832110432b16011b73e03a9f4147331f14d"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularGenerators.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "831f12d1bdff2bf74083248d725b7e6858518d5e",
+    "size": 4988,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/831f12d1bdff2bf74083248d725b7e6858518d5e"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularInsertion.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bf10b0ddb3fafe14de738f85a97c2a86b10e966e",
+    "size": 4874,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/bf10b0ddb3fafe14de738f85a97c2a86b10e966e"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularMatrixBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d5b02cf6cd3bd8d5f43f5557fc3430c71bcfe780",
+    "size": 5260,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d5b02cf6cd3bd8d5f43f5557fc3430c71bcfe780"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularMergeBalance.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cd905ff2e5d8bc41798746988f2b7ffe6766d7c1",
+    "size": 2671,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/cd905ff2e5d8bc41798746988f2b7ffe6766d7c1"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularMerges.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4510f1af1504093d199741659e2b807edc31aa75",
+    "size": 3132,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4510f1af1504093d199741659e2b807edc31aa75"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularNormalReduction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b5a5326383919eb73ae39b24c386bba29e41ba5",
+    "size": 6321,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7b5a5326383919eb73ae39b24c386bba29e41ba5"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/MultimodularTransport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72503a0a1618a96c6beff4e2dae646cdd17f1699",
+    "size": 6044,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/72503a0a1618a96c6beff4e2dae646cdd17f1699"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/NormalMultimodularClosure.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6fd47f6c34e201b434d1cd0f655c1828653bb692",
+    "size": 5964,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6fd47f6c34e201b434d1cd0f655c1828653bb692"
+  },
+  {
+    "path": "lean/OAI/Analysis/BoundedHochschild/NormalMultimodularity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c87ed5041e5524c94f95b934c12c847d465bb7ad",
+    "size": 6927,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c87ed5041e5524c94f95b934c12c847d465bb7ad"
+  },
+  {
+    "path": "lean/OAI/Analysis/Crouzeix/DiskAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72d7bd70b3256b27eca025568b59d8b40d90b43b",
+    "size": 3816,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/72d7bd70b3256b27eca025568b59d8b40d90b43b"
+  },
+  {
+    "path": "lean/OAI/Analysis/FourierLLogL/Weak/Modular.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "300bca79ddb4dce0dc639ad938945fd3d4a02ef3",
+    "size": 6253,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/300bca79ddb4dce0dc639ad938945fd3d4a02ef3"
+  },
+  {
+    "path": "lean/OAI/Analysis/FreeGroupFactor/LocalAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9cbd232d322861f13da44c5ea45f319244f53762",
+    "size": 13383,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9cbd232d322861f13da44c5ea45f319244f53762"
+  },
+  {
+    "path": "lean/OAI/Analysis/GroupDeterminants/ModularLifting.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2c04ef3523ad73f204f3a0f0b362f7ea94145a80",
+    "size": 4965,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2c04ef3523ad73f204f3a0f0b362f7ea94145a80"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ConstructedModularActionCorrection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3ea2d567988edb7d8c3f6fbe7f70f302eecb38f2",
+    "size": 3696,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3ea2d567988edb7d8c3f6fbe7f70f302eecb38f2"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ConstructedModularData.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03974490120b71685fad15fbb9a76095bf8af8a6",
+    "size": 2791,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/03974490120b71685fad15fbb9a76095bf8af8a6"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ExpectedModularPreparation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a4970df3bed0f2d076287b1da8716c79c8400273",
+    "size": 10135,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a4970df3bed0f2d076287b1da8716c79c8400273"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ExpectedModularRows.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cbac7161a30e800329887cc079cb97ec880ec23a",
+    "size": 6348,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/cbac7161a30e800329887cc079cb97ec880ec23a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/FiniteBimodularBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "94e74dc6efad0733b13ad2b535d10d8a50585fed",
+    "size": 5955,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/94e74dc6efad0733b13ad2b535d10d8a50585fed"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/FiniteFactorAutomorphismProjection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "15e29c47c9d7a358e04f26554f50f41cfc5b33ac",
+    "size": 2422,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/15e29c47c9d7a358e04f26554f50f41cfc5b33ac"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/MatrixCornerAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7d9a0e94305ec91ef0a13bd2973631d904f8953f",
+    "size": 3965,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7d9a0e94305ec91ef0a13bd2973631d904f8953f"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularActionCocycle.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "09d139d72e4472a0c4bd95bec29398f90cec5b93",
+    "size": 4258,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/09d139d72e4472a0c4bd95bec29398f90cec5b93"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularActionCorrection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fef911f3e4f321a3af994e31e853747ba1bb02e2",
+    "size": 3633,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fef911f3e4f321a3af994e31e853747ba1bb02e2"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularActionVector.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9805db1aa258348a069f37e10784be6e76ac0797",
+    "size": 1665,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9805db1aa258348a069f37e10784be6e76ac0797"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularAlgebraAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "27da500eefe5811fa98f28a04294bd77d53612c1",
+    "size": 2453,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/27da500eefe5811fa98f28a04294bd77d53612c1"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularAlgebraicSeparation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "67446d9fa13caf1d131fd1329307ee87675762b1",
+    "size": 2101,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/67446d9fa13caf1d131fd1329307ee87675762b1"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularAlgebraicTestValues.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1727662b9f0fa63f8b02c95df72110c4d0fb1430",
+    "size": 2340,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1727662b9f0fa63f8b02c95df72110c4d0fb1430"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularBoundedEquation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "02bc34c260cf6d0fa520e274d98d9c46bea7466e",
+    "size": 2109,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/02bc34c260cf6d0fa520e274d98d9c46bea7466e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCentralizerFixed.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "568e53f1cd741f23f1357693ea404fd73c4d2678",
+    "size": 1920,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/568e53f1cd741f23f1357693ea404fd73c4d2678"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCoisometryBicentralizer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "00e4543b553df31672fbab7d08840cb6867e2344",
+    "size": 2533,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/00e4543b553df31672fbab7d08840cb6867e2344"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularComparisonGap.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d94773dd7c936ae192d9749273fdce0f3fd7487e",
+    "size": 1460,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d94773dd7c936ae192d9749273fdce0f3fd7487e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularConjugationData.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03484839285e8070d8936df4d52a1b87bae10640",
+    "size": 2030,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/03484839285e8070d8936df4d52a1b87bae10640"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCoreFiniteWindow.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b0add9e2a80a76277cf459ad1b58aee3b764f782",
+    "size": 1904,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b0add9e2a80a76277cf459ad1b58aee3b764f782"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCoreStability.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "63e0776f74a018d161408a2ac5bc9f7b8125da97",
+    "size": 8950,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/63e0776f74a018d161408a2ac5bc9f7b8125da97"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCoreTypeIIInfinity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c9b92e0d1bdc36575216ccea3611631613a201bb",
+    "size": 2348,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c9b92e0d1bdc36575216ccea3611631613a201bb"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCornerNormalization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "728e227dcd7c13b50443638badd5be7a3da0c342",
+    "size": 2715,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/728e227dcd7c13b50443638badd5be7a3da0c342"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCutBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e6c4c98e33b759124533f846824de6f4e6ad531e",
+    "size": 2294,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e6c4c98e33b759124533f846824de6f4e6ad531e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCyclicCuts.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "47d737d1641aae9101bcaa86703063e2175f665a",
+    "size": 3069,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/47d737d1641aae9101bcaa86703063e2175f665a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCyclicGroup.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "614dd9727bb098f9226ee07a9a73d4fc08a6d242",
+    "size": 5777,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/614dd9727bb098f9226ee07a9a73d4fc08a6d242"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularCyclicPhase.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e77b3fc93bd8b9185e4728635c440de4ba20bed",
+    "size": 4837,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/8e77b3fc93bd8b9185e4728635c440de4ba20bed"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularDefectDensity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1894dac5864f803993ae1da64f61cc75af62e2d0",
+    "size": 3229,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1894dac5864f803993ae1da64f61cc75af62e2d0"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularFixedVectors.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7ea4ba76abebde9c8bc5681f92d284ed0c0e2b5a",
+    "size": 5252,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7ea4ba76abebde9c8bc5681f92d284ed0c0e2b5a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularFrequencyBridge.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6294359b7de42f4ac11e999673eb2020adc75e8c",
+    "size": 8675,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6294359b7de42f4ac11e999673eb2020adc75e8c"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularGaugeIdentity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9858b9e4fcb99a9fe7f5a11b4fcfad21118e6ef3",
+    "size": 4023,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9858b9e4fcb99a9fe7f5a11b4fcfad21118e6ef3"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularGaugeTransport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "543f8e422cefe66459c61a45c5a1ef4d8aff489d",
+    "size": 4480,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/543f8e422cefe66459c61a45c5a1ef4d8aff489d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularGraphAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "94317b78f8aa08de7e2f3fc31a1b1ef7319aa920",
+    "size": 5307,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/94317b78f8aa08de7e2f3fc31a1b1ef7319aa920"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularGraphApproximation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b27bd61bc44a5feba8b79f5d4f073ca84ce9682a",
+    "size": 2640,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b27bd61bc44a5feba8b79f5d4f073ca84ce9682a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularGraphInvariance.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4ddd5f12b7f3e8dd914e06a34211be1a087cf64",
+    "size": 3792,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c4ddd5f12b7f3e8dd914e06a34211be1a087cf64"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularHaagerupWitnesses.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efbccbd4a16eea181971554b9b0f406674d0d66a",
+    "size": 2410,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/efbccbd4a16eea181971554b9b0f406674d0d66a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularIsometryCorner.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77b3ef920774b0b7ca9e15a72af3c2aa792a4804",
+    "size": 6265,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/77b3ef920774b0b7ca9e15a72af3c2aa792a4804"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularIsometryTransport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff0033e19ac5327820d69c5cd92044fc66682c76",
+    "size": 2907,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ff0033e19ac5327820d69c5cd92044fc66682c76"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularKMS.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "06e583645d5bbb89e58e56b528f208fbb531a75c",
+    "size": 1748,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/06e583645d5bbb89e58e56b528f208fbb531a75c"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularKMSVectors.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "51be5f411d86ded3aef0d29f857d9cc98f55c6c4",
+    "size": 6599,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/51be5f411d86ded3aef0d29f857d9cc98f55c6c4"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularLocalizedAlgebra.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b58131bd2b03ecd55344c9734f80c495e26cca6c",
+    "size": 2559,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b58131bd2b03ecd55344c9734f80c495e26cca6c"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularLocalizedGraph.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b1415c68b572770604e714d8156b35f1fb0785e6",
+    "size": 3968,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b1415c68b572770604e714d8156b35f1fb0785e6"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularLocalizedPackets.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a643e4ba09d4339ee70fc958c1f7c42cec72df97",
+    "size": 4571,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a643e4ba09d4339ee70fc958c1f7c42cec72df97"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularLogRegularization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3b6742af3ded9fadc1dd2365e73b86855f549537",
+    "size": 4965,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3b6742af3ded9fadc1dd2365e73b86855f549537"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularNormalization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dc2caa1819bc088157b790f095296370b6b35a54",
+    "size": 2158,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/dc2caa1819bc088157b790f095296370b6b35a54"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularOrbit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "09ae25780b47f7c2a0ae535f0496a0fd443b8497",
+    "size": 2373,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/09ae25780b47f7c2a0ae535f0496a0fd443b8497"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularOrbitAverage.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cb7c672e3e1babf09e5da0fa4b2359b336a1237d",
+    "size": 3745,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/cb7c672e3e1babf09e5da0fa4b2359b336a1237d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularOrbitCommutant.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3a2212f76ce20b1582ea645eb1c9428c0cf0cd6d",
+    "size": 3948,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3a2212f76ce20b1582ea645eb1c9428c0cf0cd6d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPacketCoefficient.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da858058706ce442ba360b67e2c468647ce9d18d",
+    "size": 2559,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/da858058706ce442ba360b67e2c468647ce9d18d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPacketSelection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2763e3418cbb52454d9d47ecaab5dc2b8e458480",
+    "size": 4085,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2763e3418cbb52454d9d47ecaab5dc2b8e458480"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPairingComplexification.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7a59be6d3bfb950ea933398f886be6c7dde21c4d",
+    "size": 4463,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7a59be6d3bfb950ea933398f886be6c7dde21c4d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPairingOperator.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "76f8a0a43cbb0a3c8a598f430e2c0b7e43ce062d",
+    "size": 5389,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/76f8a0a43cbb0a3c8a598f430e2c0b7e43ce062d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPairingProducts.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4d89da138bcc52d1d8ed54a5b26ba3da23c57d7e",
+    "size": 1370,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4d89da138bcc52d1d8ed54a5b26ba3da23c57d7e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPairingUniqueness.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dabb437f2c871e3d0fcc7fd262757492604ab8da",
+    "size": 1931,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/dabb437f2c871e3d0fcc7fd262757492604ab8da"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPhaseFunctionalCalculus.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7d2487593cbd29ea3112d7b9f724b7712737708d",
+    "size": 5398,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7d2487593cbd29ea3112d7b9f724b7712737708d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPolarSymmetry.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bd0e1c91e0e614016c978ca93e204c18a5c6d11c",
+    "size": 4901,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/bd0e1c91e0e614016c978ca93e204c18a5c6d11c"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPositiveCone.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eec48d60af5e78cc9fdca97272fb8af0791588a4",
+    "size": 6364,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eec48d60af5e78cc9fdca97272fb8af0791588a4"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPositiveOperator.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ccbea01a26e952d43e40db6b9a1e3c2981add10",
+    "size": 5968,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1ccbea01a26e952d43e40db6b9a1e3c2981add10"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPositiveReal.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1a3233d095addbdebae354bacd2ff70a113604c6",
+    "size": 1986,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1a3233d095addbdebae354bacd2ff70a113604c6"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularPositiveSymmetry.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "91b478b46415c33a871fb512f4a6bfa9c8d73f3a",
+    "size": 5778,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/91b478b46415c33a871fb512f4a6bfa9c8d73f3a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularProductState.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e0d0d483f6d1cdee7ef9ffe599794a143fe7eae6",
+    "size": 3847,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e0d0d483f6d1cdee7ef9ffe599794a143fe7eae6"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularProductTest.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dbfac7d4f1941e325d28918bd2a8926cfb9408ba",
+    "size": 3796,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/dbfac7d4f1941e325d28918bd2a8926cfb9408ba"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRadonNikodym.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e86139f5b54cda4a16d66e0e65c9e43c0db043bd",
+    "size": 4033,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e86139f5b54cda4a16d66e0e65c9e43c0db043bd"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRadonScaling.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3cbd5ec32876e2bc2c26564c9372f877facc9159",
+    "size": 1813,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3cbd5ec32876e2bc2c26564c9372f877facc9159"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRadonSelfAdjoint.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "259bd3702d410494a0c830533700c1aae972c7d3",
+    "size": 5018,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/259bd3702d410494a0c830533700c1aae972c7d3"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularResolventRange.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5411679642a1e434473f024641bcbd5406d99df0",
+    "size": 4478,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5411679642a1e434473f024641bcbd5406d99df0"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRightAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "34c3f7097cc339b5c595917ec9fcf0b94725b26e",
+    "size": 2192,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/34c3f7097cc339b5c595917ec9fcf0b94725b26e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRightScalar.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ba9da6a5d114095998e88cdb02b99c6c046c75f7",
+    "size": 610,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ba9da6a5d114095998e88cdb02b99c6c046c75f7"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularRootCommutation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da6b8b055291f319482accdb17925f40be6736be",
+    "size": 2316,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/da6b8b055291f319482accdb17925f40be6736be"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularScalingDefect.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4d0c4440dda329149109351c3e3a3e52a0d53ec",
+    "size": 1338,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c4d0c4440dda329149109351c3e3a3e52a0d53ec"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSeparatedCuts.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d7221ae7d468b4e4e99d848b2c8045b33e9ee246",
+    "size": 1634,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d7221ae7d468b4e4e99d848b2c8045b33e9ee246"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSiteEigen.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37b493cdd235b464c9be0351d101c0e82eeacb29",
+    "size": 7020,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/37b493cdd235b464c9be0351d101c0e82eeacb29"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSpatialTransport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ec46637c6e607d1e19b18f56c7a147999008c2c1",
+    "size": 3217,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ec46637c6e607d1e19b18f56c7a147999008c2c1"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSpectralConstruction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9e13db0bb368f94a0632dddf1b6b3b6d18198b2",
+    "size": 983,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e9e13db0bb368f94a0632dddf1b6b3b6d18198b2"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSpectralCuts.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a0c13ef1077e43d33b0126cce96650fa21c59a15",
+    "size": 5650,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a0c13ef1077e43d33b0126cce96650fa21c59a15"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSpectralPhase.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "391b7855eb8de086f1316001b7359efb961a258d",
+    "size": 2406,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/391b7855eb8de086f1316001b7359efb961a258d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularSpectralStrip.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f509266138f086aa03b09632b556271cbc3499e4",
+    "size": 3125,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f509266138f086aa03b09632b556271cbc3499e4"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStateAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fb35fb49cbe1f7c2ea3248fa580a2f09f5838731",
+    "size": 2952,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fb35fb49cbe1f7c2ea3248fa580a2f09f5838731"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStateCoefficients.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9e47db29d244b72cd0df8bbdf6797b654b5b0083",
+    "size": 1673,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9e47db29d244b72cd0df8bbdf6797b654b5b0083"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStripBoundary.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ce7bd3d49c34d95b0c122f188b03a0d20e665e10",
+    "size": 1491,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ce7bd3d49c34d95b0c122f188b03a0d20e665e10"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStripBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "529348a1f984af86e58a365049e4f072f6a7a61c",
+    "size": 2335,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/529348a1f984af86e58a365049e4f072f6a7a61c"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStripIntegral.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9b3c49ec88f6e756372dde071aa72dc0732df330",
+    "size": 4426,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9b3c49ec88f6e756372dde071aa72dc0732df330"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStripKernel.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f841ddf75e9220f1f0fc2877d4db1f3d08516bc",
+    "size": 2550,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1f841ddf75e9220f1f0fc2877d4db1f3d08516bc"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStripSpectralBoundary.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a14972a8d25c735c2b66abf07bf6b86be7b05a2",
+    "size": 4945,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9a14972a8d25c735c2b66abf07bf6b86be7b05a2"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStrongContinuity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "db6af371fceb61d005435901cd082ff14e2b3d41",
+    "size": 6518,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/db6af371fceb61d005435901cd082ff14e2b3d41"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularStrongLimit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3def19115b72e90dca1d28d869192a77e95d0787",
+    "size": 8381,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3def19115b72e90dca1d28d869192a77e95d0787"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularThresholdBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f20a0ac4f6d1894ea2f31a0b70e7c256a193de14",
+    "size": 2155,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f20a0ac4f6d1894ea2f31a0b70e7c256a193de14"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/ModularUnitPacketSelection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a47176f79c6bf8eabbee371a6f4793f5edc74db",
+    "size": 2462,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9a47176f79c6bf8eabbee371a6f4793f5edc74db"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/PositiveReferenceModular.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "520466063d886991ef8bae9cf0214d66f76432d1",
+    "size": 2506,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/520466063d886991ef8bae9cf0214d66f76432d1"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/PublishedModularCoreType.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f8553af0a13afd18c43b9b007e14efd59ead4b44",
+    "size": 2628,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f8553af0a13afd18c43b9b007e14efd59ead4b44"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/PublishedModularSpectral.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5030c4b3d80db112295f3adaeaf32a2c10b20366",
+    "size": 3929,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5030c4b3d80db112295f3adaeaf32a2c10b20366"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/RegularizedModularGroup.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2975005647567cb14e1c72271868e741adcb086e",
+    "size": 3732,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2975005647567cb14e1c72271868e741adcb086e"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/RemoteModularCoisometries.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "899a327c9fbde5a1674728de2950f6a5ae8cd3f3",
+    "size": 5100,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/899a327c9fbde5a1674728de2950f6a5ae8cd3f3"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/SimultaneousModularCluster.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab601dd8c3bc75ed5769663a4717e7abd3d4e331",
+    "size": 3126,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ab601dd8c3bc75ed5769663a4717e7abd3d4e331"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/SpatialModularCoisometries.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7dc1d785f591de63a85b34a166f8961562c90142",
+    "size": 5773,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7dc1d785f591de63a85b34a166f8961562c90142"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/StateModularTransport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c2aa31d062cbef346b09761d6ec30845de54176a",
+    "size": 3100,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c2aa31d062cbef346b09761d6ec30845de54176a"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/TracialModularCommutant.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6988894929e8109f23663bd8c24c343522e91c8d",
+    "size": 5200,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6988894929e8109f23663bd8c24c343522e91c8d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/TracialModularResolution.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9fb816b1cebb2bc473f7389465dbb774be1a0f71",
+    "size": 3822,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9fb816b1cebb2bc473f7389465dbb774be1a0f71"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/TwoStateModularAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4040f0ec695cddd803ea1abae9fa579ac11893d",
+    "size": 2469,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c4040f0ec695cddd803ea1abae9fa579ac11893d"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonKastler/TwoStateModularIdentification.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c92bc342bee006ad9debcc4c5c816a701d28163",
+    "size": 3429,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3c92bc342bee006ad9debcc4c5c816a701d28163"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonSimilarity/FreeProduct/FreeProductAutomorphisms.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff3af19b234be9cfb41ae43482a208b9dcc38cf3",
+    "size": 10769,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ff3af19b234be9cfb41ae43482a208b9dcc38cf3"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonSimilarity/FreeProduct/ReducedWordAutomorphisms.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d84180c57935ea71e85681258749e4ad7c75a809",
+    "size": 3321,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d84180c57935ea71e85681258749e4ad7c75a809"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonSimilarity/FreeProduct/TracialAutomorphismWords.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc3b2fa8258b55ba49ba58939293af32ec8f4bc1",
+    "size": 10048,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fc3b2fa8258b55ba49ba58939293af32ec8f4bc1"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonSimilarity/Tracial/MatrixConjugateAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d16e043ea4532a9b7c1f7aed8570ddfe3e762515",
+    "size": 1572,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d16e043ea4532a9b7c1f7aed8570ddfe3e762515"
+  },
+  {
+    "path": "lean/OAI/Analysis/KadisonSimilarity/Tracial/TracialAutomorphisms.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "198895ced78db8ed230acf877cd6a1b7d802eacf",
+    "size": 4506,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/198895ced78db8ed230acf877cd6a1b7d802eacf"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d8155c78a274dd63c098899430f4021f672cc31f",
+    "url": "https://api.github.com/repos/openai/math/git/trees/d8155c78a274dd63c098899430f4021f672cc31f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/CanonicalCalculus.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "68257160e260b420a438cc35aeb4df2ab8852d15",
+    "size": 18880,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/68257160e260b420a438cc35aeb4df2ab8852d15"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/CanonicalGraph.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "70e548872c5b27b185267f2f362342af40015d4c",
+    "size": 17931,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/70e548872c5b27b185267f2f362342af40015d4c"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/CanonicalPolar.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "02ee6ac929e82fbb7eb285fa6b567241183daf73",
+    "size": 9110,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/02ee6ac929e82fbb7eb285fa6b567241183daf73"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/CanonicalTomita.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "784299427a5cc230fa41a61eaf119a24ade8ef85",
+    "size": 11628,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/784299427a5cc230fa41a61eaf119a24ade8ef85"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Centralizer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a4509b3b81570be9935691d004fe9d7f5bad1a9",
+    "size": 8544,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6a4509b3b81570be9935691d004fe9d7f5bad1a9"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Commutant.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fa02531fcfd08a1a26cab3d7fe02e15f9dc55c5f",
+    "size": 8192,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fa02531fcfd08a1a26cab3d7fe02e15f9dc55c5f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/ErgodicAverages.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b9c2728566fbbbd7a56b96f9d57059d03439e544",
+    "size": 20163,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b9c2728566fbbbd7a56b96f9d57059d03439e544"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/FiniteMoments.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4b27e61d16fefd25c91a79fd9976849f0defef42",
+    "size": 5193,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4b27e61d16fefd25c91a79fd9976849f0defef42"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/FourierKernels.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b715c344212049a7783b978fabc326a2a4459988",
+    "size": 13678,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b715c344212049a7783b978fabc326a2a4459988"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/FourierLocalization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7122f369c7a525e929933e3b91a42cf751e3dbfd",
+    "size": 16094,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7122f369c7a525e929933e3b91a42cf751e3dbfd"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/FourierOperators.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "88ba37b67a21c4dff0c1c17d62a23515534b602e",
+    "size": 15761,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/88ba37b67a21c4dff0c1c17d62a23515534b602e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/FourthMoments.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2fd5bf466c1edb80380eee0fd848a116d8dc695e",
+    "size": 17316,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2fd5bf466c1edb80380eee0fd848a116d8dc695e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/GaussianAverages.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "19980b0f8ff613c1fa312af77b74d37f88123431",
+    "size": 16071,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/19980b0f8ff613c1fa312af77b74d37f88123431"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/KernelContinuity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "25db56652904ab8baa58b83ee3c489c4b8650a5d",
+    "size": 13326,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/25db56652904ab8baa58b83ee3c489c4b8650a5d"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Main.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3ef00f674f85ff98157711e925cc117f2517da66",
+    "size": 1918,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3ef00f674f85ff98157711e925cc117f2517da66"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Mean.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50cafd389a53f20534051695f98845e053864761",
+    "size": 16126,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/50cafd389a53f20534051695f98845e053864761"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Model.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efabcfc5dfb59820ec469a55718ebbcd95c6ba79",
+    "size": 3641,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/efabcfc5dfb59820ec469a55718ebbcd95c6ba79"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/ModularCovariance.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9b6b84462da411383d24350ebab70b7abe34580e",
+    "size": 6284,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9b6b84462da411383d24350ebab70b7abe34580e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/PolarCutoff.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f4223091fc638c151d319266eb5097cdb4b67c9b",
+    "size": 13410,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f4223091fc638c151d319266eb5097cdb4b67c9b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/PositiveKernels.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4ff1d78e3782266200aa7f33ff97c0ef4579d1e5",
+    "size": 26066,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4ff1d78e3782266200aa7f33ff97c0ef4579d1e5"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/RealGraph.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "86380e061cb027bee1a3fdf9052e5a72b189d01e",
+    "size": 18607,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/86380e061cb027bee1a3fdf9052e5a72b189d01e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/Recovery.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a8b20c0ad89319e76f348fad3d62d2f0f554523",
+    "size": 12704,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9a8b20c0ad89319e76f348fad3d62d2f0f554523"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/SpectralCalculus.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f29bb10c47a2aa262d8204efc40768212c48762e",
+    "size": 12018,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f29bb10c47a2aa262d8204efc40768212c48762e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/StrongIntegrals.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b4d8802f66fc53021d02a7236d3131da490c4a07",
+    "size": 12528,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b4d8802f66fc53021d02a7236d3131da490c4a07"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/StrongLimits.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "95473ee9935bf616fbc238c3acd39068e7688990",
+    "size": 7479,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/95473ee9935bf616fbc238c3acd39068e7688990"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/TomitaFundamental.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2fdcb0b9d03e9329a2061415ac9d1cf925f101a0",
+    "size": 16054,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2fdcb0b9d03e9329a2061415ac9d1cf925f101a0"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularRecovery/TomitaResolvent.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f0ed9734a8357281aafb5de691dc1f8798297875",
+    "size": 29881,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f0ed9734a8357281aafb5de691dc1f8798297875"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "710d90682f73564a142080a483861f7a6e44dbee",
+    "url": "https://api.github.com/repos/openai/math/git/trees/710d90682f73564a142080a483861f7a6e44dbee"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/AlgebraicAdjoint.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9e26b73a15d7b40b159d77e51b72035787416de8",
+    "size": 2329,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9e26b73a15d7b40b159d77e51b72035787416de8"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/AlgebraicNormalForm.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1a0bc313792f71d1eb777d0fc6687f561df070cc",
+    "size": 6694,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1a0bc313792f71d1eb777d0fc6687f561df070cc"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/AmplifiedModularAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eb815144738d313c0bad7c06093ffd5d8f39fb60",
+    "size": 3861,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eb815144738d313c0bad7c06093ffd5d8f39fb60"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/AmplifiedModularExpectation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e52ae2a4ec490a03a345d557521f7cad9e027b1f",
+    "size": 3299,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e52ae2a4ec490a03a345d557521f7cad9e027b1f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CommutantExpectation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b9e668228e95ce576e5250b74d6e5e21c0ae0a3e",
+    "size": 3290,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b9e668228e95ce576e5250b74d6e5e21c0ae0a3e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CompressedCorners.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7990f2e2ccf113cb601c7c4358ffa2ebb0a0af41",
+    "size": 6035,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7990f2e2ccf113cb601c7c4358ffa2ebb0a0af41"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CoreDualAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "14c9f2633e8e440712192b8558e264af90e1e8ca",
+    "size": 3015,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/14c9f2633e8e440712192b8558e264af90e1e8ca"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CoreIntegrals.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4148dfad3a11b5a00d3fa9b8d1e5ca575f5f807f",
+    "size": 3893,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4148dfad3a11b5a00d3fa9b8d1e5ca575f5f807f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CoreSeparation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6407c963afc7a0e2c86feac19ce282d8154f5e2b",
+    "size": 9010,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6407c963afc7a0e2c86feac19ce282d8154f5e2b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CoreSquareWeight.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "026c409eb63bf461c86085a4947308ce47399c35",
+    "size": 4713,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/026c409eb63bf461c86085a4947308ce47399c35"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CoreTracial.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b8615d4a524269570e8673afde22bf8948218ed",
+    "size": 6729,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7b8615d4a524269570e8673afde22bf8948218ed"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerGNS.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "849a2a4e1f474adeb74a86e009d498dc8a4ba3e9",
+    "size": 3061,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/849a2a4e1f474adeb74a86e009d498dc8a4ba3e9"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerGNSActions.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4caa54f7c942028c9128185ba1ab836dab4aa13a",
+    "size": 2552,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4caa54f7c942028c9128185ba1ab836dab4aa13a"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerGNSRange.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "58e0d8dc2323f3ad159bdb69cf52f2eab401e520",
+    "size": 4088,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/58e0d8dc2323f3ad159bdb69cf52f2eab401e520"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerProductNorm.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6953c6caefdb62b004777b184ea970c7e38a6bcc",
+    "size": 2991,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6953c6caefdb62b004777b184ea970c7e38a6bcc"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerRepresentation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d7efddffc6d972e0cbd2d58db623d06574d8117",
+    "size": 4126,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0d7efddffc6d972e0cbd2d58db623d06574d8117"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerRepresentedBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fe42cacd9a12d0b211ba1ef2652bff3f6f8505d5",
+    "size": 2556,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fe42cacd9a12d0b211ba1ef2652bff3f6f8505d5"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerRightVectors.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6fc91d73ec90c937518ad799f2f9dbed838bf09d",
+    "size": 2770,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6fc91d73ec90c937518ad799f2f9dbed838bf09d"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerTensorBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "829393b746ad04519f19c06537f531d537218c51",
+    "size": 7135,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/829393b746ad04519f19c06537f531d537218c51"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CornerVectors.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a806579e010ceeb44adca92c70cb8de4cb90b42d",
+    "size": 3550,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a806579e010ceeb44adca92c70cb8de4cb90b42d"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CovariantKernel.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "723b761ea00534dd00f34961ceea0fb3d18ca254",
+    "size": 3236,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/723b761ea00534dd00f34961ceea0fb3d18ca254"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CovariantSlices.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "54e565bd96186dffc87fe9d3d6b6b88cfcfb586c",
+    "size": 3207,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/54e565bd96186dffc87fe9d3d6b6b88cfcfb586c"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CrossedProduct.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f8563f569f550c4bf122e58d664633f49a369b4d",
+    "size": 5692,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f8563f569f550c4bf122e58d664633f49a369b4d"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/CutoffTotality.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "39facdb60349022e91d3c45fac9b86a765584620",
+    "size": 6957,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/39facdb60349022e91d3c45fac9b86a765584620"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/DualAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fbf513151f0724f66cf9884626737a403f6e296f",
+    "size": 4476,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fbf513151f0724f66cf9884626737a403f6e296f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/DualKernelPairing.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "11a50d74ae0f056941fdfe4390bb558e8cad91a7",
+    "size": 3668,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/11a50d74ae0f056941fdfe4390bb558e8cad91a7"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/DualRegularization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6b677db1d17d24ef013f3a8c03769bcb2ca693ff",
+    "size": 5411,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6b677db1d17d24ef013f3a8c03769bcb2ca693ff"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/DualUnitary.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fda420fb33eb83ec564336e9a1ca31bd0c6dded3",
+    "size": 5129,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fda420fb33eb83ec564336e9a1ca31bd0c6dded3"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FieldPairing.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2a3f7bd4bcf06cdefd3c77243e0e8d508cb2e4e2",
+    "size": 3953,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2a3f7bd4bcf06cdefd3c77243e0e8d508cb2e4e2"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteAdjoint.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "942d5aa035db3772b4a1659e4cc4fdceb1ef4ffe",
+    "size": 8342,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/942d5aa035db3772b4a1659e4cc4fdceb1ef4ffe"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteProjections.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6ae0837353bcc5dfa1510a4703d14a1204d0d7d6",
+    "size": 6299,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6ae0837353bcc5dfa1510a4703d14a1204d0d7d6"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteStates.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6b32135976c1ec1920442d0baf8278f216b97fab",
+    "size": 3299,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6b32135976c1ec1920442d0baf8278f216b97fab"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteTrace.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "49a2359be72956844ad02ea2f6d72ee9b58e3663",
+    "size": 6913,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/49a2359be72956844ad02ea2f6d72ee9b58e3663"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteWeightDensity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d31d7afc8c8d252f6810de027e4cd14ca999b505",
+    "size": 2740,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d31d7afc8c8d252f6810de027e4cd14ca999b505"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FiniteWeightSpace.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b6f291a024a8c4263866820185181b3811e6b802",
+    "size": 3937,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b6f291a024a8c4263866820185181b3811e6b802"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FixedPointExpectation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "45da42181220cd6b5e58db213e2a81480e9d5d2e",
+    "size": 2399,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/45da42181220cd6b5e58db213e2a81480e9d5d2e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FixedPointIdentification.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "75c8e8fef986e4783e30c8e4dd34a32dee06f286",
+    "size": 4109,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/75c8e8fef986e4783e30c8e4dd34a32dee06f286"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FourierCompression.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "079464564c9009640d752462d8802c71f6dae5df",
+    "size": 7242,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/079464564c9009640d752462d8802c71f6dae5df"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FourierOrbit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "52ea58c863c3427e81856c1d4f0621535eae595b",
+    "size": 2081,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/52ea58c863c3427e81856c1d4f0621535eae595b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/FourierTranslation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a669afb10968ff923dadcac058d2435d5e89a2b",
+    "size": 3965,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0a669afb10968ff923dadcac058d2435d5e89a2b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/GaussianRegularizers.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed47711f790444cbb32550a3a58eed12c3f39fb8",
+    "size": 5462,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ed47711f790444cbb32550a3a58eed12c3f39fb8"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/HalfGraphCutoff.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8df4618374fa4e36e9ccbacc0c37e5a248322b4f",
+    "size": 2891,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/8df4618374fa4e36e9ccbacc0c37e5a248322b4f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/KernelIdentification.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e68ba43f039e102d4034765f76f2415ae6249a6c",
+    "size": 9688,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e68ba43f039e102d4034765f76f2415ae6249a6c"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/KernelRegularization.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "991560c26824686d805db684391922464bdc9964",
+    "size": 2553,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/991560c26824686d805db684391922464bdc9964"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/LpFaithful.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7f5db5968f50ddbf96cc9853872700677513be88",
+    "size": 3015,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7f5db5968f50ddbf96cc9853872700677513be88"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/LpGauge.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c2387c7abdad74c46505f82a50590cbb18168b2",
+    "size": 5253,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4c2387c7abdad74c46505f82a50590cbb18168b2"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/LpRepresentation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "752b809782f0b058c3c7927a240a378e74356048",
+    "size": 3204,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/752b809782f0b058c3c7927a240a378e74356048"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/LpTranslation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d82b61da3fc64a98b510b2340e66fa8c9fa5c507",
+    "size": 3377,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d82b61da3fc64a98b510b2340e66fa8c9fa5c507"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/NormalAdjoint.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3eedd71554422d1cd9b4041c8d1236a1baa85ff4",
+    "size": 4672,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3eedd71554422d1cd9b4041c8d1236a1baa85ff4"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/NormalAdjointMap.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5f59ddde68e660690008270a4f9eee3967d0f710",
+    "size": 4775,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5f59ddde68e660690008270a4f9eee3967d0f710"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/NormalAdjointWeight.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f9048870cc26f7de35a0b39a8e4e8145694c40a",
+    "size": 3709,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9f9048870cc26f7de35a0b39a8e4e8145694c40a"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/NormalWeightTotality.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "181f14e62c992df7cba90f256e587ddf8fe376dc",
+    "size": 6481,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/181f14e62c992df7cba90f256e587ddf8fe376dc"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/OperatorTensorBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f025c578caaf18f91ffd6a90b6274b722db3d58f",
+    "size": 1404,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f025c578caaf18f91ffd6a90b6274b722db3d58f"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/OriginalNorm.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ac692f7483aaf420bb82e9b8bbd4648962641a56",
+    "size": 3396,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ac692f7483aaf420bb82e9b8bbd4648962641a56"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/OriginalRightAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "420b4eb7fbd49e38a9f24ccd8b49a643e3e446a0",
+    "size": 2645,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/420b4eb7fbd49e38a9f24ccd8b49a643e3e446a0"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/ProjectionExhaustion.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0eeef7d03572900d6aae6869fd9ec0546017316b",
+    "size": 6108,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0eeef7d03572900d6aae6869fd9ec0546017316b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/RightContinuity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d32d8a20287dc371dbf0be4a7a56a7f85093cd5",
+    "size": 4019,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0d32d8a20287dc371dbf0be4a7a56a7f85093cd5"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/RightTranslation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f5b127f4935fdf14e675191cd196ef3654f66fa7",
+    "size": 7217,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f5b127f4935fdf14e675191cd196ef3654f66fa7"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/ScalarCompression.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9003aa87301978712839856e9def04c8ab9a6a7",
+    "size": 9226,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e9003aa87301978712839856e9def04c8ab9a6a7"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/SpectralFourier.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c43615df2aa4280dd3b99298ac74f1ec9de9949",
+    "size": 5374,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3c43615df2aa4280dd3b99298ac74f1ec9de9949"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/SpectralGaussian.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "09b8e1aa8427c826514dcfea963dc93433882897",
+    "size": 6052,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/09b8e1aa8427c826514dcfea963dc93433882897"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/SpectralShift.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6e836b486a16fa7695bea4f879d2bfe04c7e323b",
+    "size": 4479,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6e836b486a16fa7695bea4f879d2bfe04c7e323b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/StandardTensorBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b770f518f1eab8278eac2260d60c2ca3c35e6c94",
+    "size": 3947,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b770f518f1eab8278eac2260d60c2ca3c35e6c94"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TomitaLp.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fa91f3b9b18b298e205083dae9889470b0348ee2",
+    "size": 8236,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fa91f3b9b18b298e205083dae9889470b0348ee2"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TomitaOrbit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d1f6f61e3291d9eff73f416ea7c9c523691718be",
+    "size": 5031,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d1f6f61e3291d9eff73f416ea7c9c523691718be"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TomitaRegularizer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3c9a9f4fc9bd7a22c3bd1e7552601e27e0058f1",
+    "size": 5234,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f3c9a9f4fc9bd7a22c3bd1e7552601e27e0058f1"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TomitaTime.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a60de7bdbe722386c351c9343214573a949f3795",
+    "size": 4925,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a60de7bdbe722386c351c9343214573a949f3795"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TraceConjugation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e60e92c42407231d6b7480cde3a888d904376ffa",
+    "size": 2888,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e60e92c42407231d6b7480cde3a888d904376ffa"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TraceExplicitConjugation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "71fa80be1e8c8aa448cb17d7934f1ac62dece0b1",
+    "size": 1821,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/71fa80be1e8c8aa448cb17d7934f1ac62dece0b1"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TraceNormalConjugation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ff030566aab44174f2de7b6bfd3e4574e7c8b4c",
+    "size": 4009,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1ff030566aab44174f2de7b6bfd3e4574e7c8b4c"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TracialCompression.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97c0abcda43bde6ed0e0a9b049df72bf0c2d219b",
+    "size": 2478,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/97c0abcda43bde6ed0e0a9b049df72bf0c2d219b"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TracialCorners.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c6ecd22b506f2b3db47ca00a37e7c461b5f95897",
+    "size": 4514,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c6ecd22b506f2b3db47ca00a37e7c461b5f95897"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TracialRightAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "24041ef708491bb7469ffe9080d3c8aa07c950e7",
+    "size": 5966,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/24041ef708491bb7469ffe9080d3c8aa07c950e7"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TranslationCalculus.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0abff1c03b1052c81af2a8f76740d88a83cb717",
+    "size": 6435,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c0abff1c03b1052c81af2a8f76740d88a83cb717"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/TranslationWeight.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5d937a3722d41f266d90d1622371aea7b0a1224c",
+    "size": 4329,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5d937a3722d41f266d90d1622371aea7b0a1224c"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightAdjointMap.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a02f01f53e0b104c55ce9669eb9dec4a8f02129e",
+    "size": 2857,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a02f01f53e0b104c55ce9669eb9dec4a8f02129e"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightClosed.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5f4e862f655d87dda01341fbbd636120b464d2d2",
+    "size": 1622,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5f4e862f655d87dda01341fbbd636120b464d2d2"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightCutoffs.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed7a50edce19d5e91f2cbcd781058999cd34d666",
+    "size": 4758,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ed7a50edce19d5e91f2cbcd781058999cd34d666"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightFaithful.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "83560b37362f738ab2da4dfed20b04d5f309b009",
+    "size": 6235,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/83560b37362f738ab2da4dfed20b04d5f309b009"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightGNS.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cd69cb13be6bcac30b31789372160d2edd294843",
+    "size": 3766,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/cd69cb13be6bcac30b31789372160d2edd294843"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightGram.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f810598bc7561f47e289abc4faaa7535198b61a2",
+    "size": 7896,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f810598bc7561f47e289abc4faaa7535198b61a2"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightMonomials.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f078b4e026ac7bcf5a508afc6f88df66e9e18b37",
+    "size": 6917,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f078b4e026ac7bcf5a508afc6f88df66e9e18b37"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightMonotone.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b8717d12ddbea85f4bc2ef6f3e40c0924c4373c4",
+    "size": 3102,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b8717d12ddbea85f4bc2ef6f3e40c0924c4373c4"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightRightMultiplier.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b0f05439cb11e73ec710cba2855bf790eca1eca7",
+    "size": 3580,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b0f05439cb11e73ec710cba2855bf790eca1eca7"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightedDensity.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "84e00205372241a6663b2fc16db153cc0f066dc9",
+    "size": 4333,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/84e00205372241a6663b2fc16db153cc0f066dc9"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightedFourierBound.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bfb468f7fc9d5c611cf228bd7dfab1531218fc43",
+    "size": 5065,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/bfb468f7fc9d5c611cf228bd7dfab1531218fc43"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightedFourierLimit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a55918044d4097baa40584b34050e4b28b58a257",
+    "size": 3246,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a55918044d4097baa40584b34050e4b28b58a257"
+  },
+  {
+    "path": "lean/OAI/Analysis/ModularTheory/WeightedGaussianKernel.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "60d71d362762583d7a9233f42cbf1c6e9588afc3",
+    "size": 2686,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/60d71d362762583d7a9233f42cbf1c6e9588afc3"
+  },
+  {
+    "path": "lean/OAI/Analysis/OperatorAlgebra/IntegratedModularField.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77a2382d815500aa87a25ef1af714eaf41a9d44e",
+    "size": 3159,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/77a2382d815500aa87a25ef1af714eaf41a9d44e"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/DimensionTen/GaloisCertificate.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "773a4ddd313229b0da0808ed7fbf1b5f9497cb9b",
+    "size": 7112,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/773a4ddd313229b0da0808ed7fbf1b5f9497cb9b"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/DimensionTen/GaloisField.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1db07f4c425a776314121b5ec3d5727004b29681",
+    "size": 3679,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1db07f4c425a776314121b5ec3d5727004b29681"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/DimensionTen/ModularPermutations.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eeab96993c715bc3491cbe6a2e366cba855352b0",
+    "size": 5381,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eeab96993c715bc3491cbe6a2e366cba855352b0"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/PPTSquare/EigenGalois.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "813c683219fdc692288b3abc697663256a14d192",
+    "size": 2567,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/813c683219fdc692288b3abc697663256a14d192"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/PPTSquare/GaloisAction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "349ba142144435f5b764c5688626d159700eed18",
+    "size": 21937,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/349ba142144435f5b764c5688626d159700eed18"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/PPTSquare/Modular.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6859c5d93c99f531f283196a2b06bf0d1cf28913",
+    "size": 207,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6859c5d93c99f531f283196a2b06bf0d1cf28913"
+  },
+  {
+    "path": "lean/OAI/Analysis/Quantum/PPTSquare/ModularSupport.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eb956e0f323e894a7201affecaa26a6cb21931b7",
+    "size": 23485,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eb956e0f323e894a7201affecaa26a6cb21931b7"
+  },
+  {
+    "path": "lean/OAI/Analysis/StrictMeans/DiskAutomorphisms.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e4f55cce795ed1a9fc9141e45bb6f4db920047d5",
+    "size": 11343,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e4f55cce795ed1a9fc9141e45bb6f4db920047d5"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/ActionAutomorphismHomRange.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efcd70e90dac3c32d1a0cbd031e6598a7d46c766",
+    "size": 7163,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/efcd70e90dac3c32d1a0cbd031e6598a7d46c766"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/AutChartUnimodularJacobian.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a102a3e21e8036b726941d917340628de9dfe51",
+    "size": 5941,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6a102a3e21e8036b726941d917340628de9dfe51"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/DivisibleAutomorphismsSubsequence.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3853e6738910d7e028eaa8b794c022aeb5be43e6",
+    "size": 8174,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/3853e6738910d7e028eaa8b794c022aeb5be43e6"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/LocalAutomorphismODEGroup.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7a387340c48b6dc80ee07648999ee5ef9cf172f9",
+    "size": 5478,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7a387340c48b6dc80ee07648999ee5ef9cf172f9"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/LocalAutomorphismODEGroup2.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "39e65e027d2158aba24ef279a6253cf0f4b94003",
+    "size": 4453,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/39e65e027d2158aba24ef279a6253cf0f4b94003"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/NormalizedAutomorphismLimitComplete.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "259b72a6de6dbca8e4c6f82470ccf963b5c48d12",
+    "size": 5668,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/259b72a6de6dbca8e4c6f82470ccf963b5c48d12"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/NormalizedAutomorphismLocalLimit.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ca6618c90cb4870b91aed94b77fe31669eddaa3",
+    "size": 6354,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5ca6618c90cb4870b91aed94b77fe31669eddaa3"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/NormalizedAutomorphismsHaveNonzero.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5fb4604fc13d78cfb620fec0f9fee73f05a92902",
+    "size": 7444,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5fb4604fc13d78cfb620fec0f9fee73f05a92902"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/ProductCurveLocalAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8debba6e72c699bed4a3c40bba07b40648c2631a",
+    "size": 7569,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/8debba6e72c699bed4a3c40bba07b40648c2631a"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/SmallAutomorphismsHaveNonzero.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b9d87a84a88f44227f056ce36093646209029e42",
+    "size": 4002,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b9d87a84a88f44227f056ce36093646209029e42"
+  },
+  {
+    "path": "lean/OAI/Analysis/SymmetricDomains/VariableEulerAutomorphismFamily.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "20e2d7a0f916996dd7833f8501af8332571759af",
+    "size": 8975,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/20e2d7a0f916996dd7833f8501af8332571759af"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/LowSpaceSubsetSum/Counting/SliceModular.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "670172fc65574deada20778c2a568c355b155a78",
+    "size": 4726,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/670172fc65574deada20778c2a568c355b155a78"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/LowSpaceSubsetSum/Streams/ModularCursor.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "42f8ae611e641b702d3bbc5cdc18fc3e79958903",
+    "size": 4568,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/42f8ae611e641b702d3bbc5cdc18fc3e79958903"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/LowSpaceSubsetSum/Streams/ModularFilters.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "283d75fef1721b1711b3348fc6b4637cf8cf88cd",
+    "size": 2230,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/283d75fef1721b1711b3348fc6b4637cf8cf88cd"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/LowSpaceSubsetSum/Streams/ModularRows.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "85d77f07adf14095291855b8042b7114d9679e7d",
+    "size": 6130,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/85d77f07adf14095291855b8042b7114d9679e7d"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/ModularDecayBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d8e8a5380f29858910e8638cb8a65db189e0fe89",
+    "size": 4437,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d8e8a5380f29858910e8638cb8a65db189e0fe89"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/ModularWitnessWidthBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e45e6ead8b8e266a1338b5bf858fac1913d9939f",
+    "size": 2028,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e45e6ead8b8e266a1338b5bf858fac1913d9939f"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularCanonicalDetectorBudgetedConsumer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "553d7a4001225c8ee87d025f9415661d91d93a58",
+    "size": 24962,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/553d7a4001225c8ee87d025f9415661d91d93a58"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularCanonicalDetectorPeriodBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1d259efe3d9d26a1064c5fe18dc51105d859bc85",
+    "size": 22916,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1d259efe3d9d26a1064c5fe18dc51105d859bc85"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularCanonicalDetectorResourceBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dcb71e86c799ce50943752baf70d419ecd935360",
+    "size": 7830,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/dcb71e86c799ce50943752baf70d419ecd935360"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularGeneralDetectorBudgetedConsumer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f2e98ec5c144686f8782ec70d97accecab8debf9",
+    "size": 25100,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f2e98ec5c144686f8782ec70d97accecab8debf9"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularGeneralLateFloorScaleBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "595032a7dff25cd30ce5e0ce6f0616f080e1a07c",
+    "size": 1774,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/595032a7dff25cd30ce5e0ce6f0616f080e1a07c"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularGeneralNativeBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da796b0991678ff16dd9660f1ac985da112347ff",
+    "size": 25057,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/da796b0991678ff16dd9660f1ac985da112347ff"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularGeneralUniformResourceBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97b8c7679f25149e9385b2ea4db6ab95737b4b5d",
+    "size": 2490,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/97b8c7679f25149e9385b2ea4db6ab95737b4b5d"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Dynamics/PreparedModularProductivityBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed5753b11a0f6b5d1a0535c06a706a411f1c2cb8",
+    "size": 1401,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ed5753b11a0f6b5d1a0535c06a706a411f1c2cb8"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/AllocatedSlicedModularSeparateTailContinuousSource.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eda0216881d3e627649e58f3c8d81c4fb49a3441",
+    "size": 10812,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eda0216881d3e627649e58f3c8d81c4fb49a3441"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularDesignatedCoefficientMarkov.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b22d6e37497e2fa00309bf12c4f29369a143acbe",
+    "size": 3153,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b22d6e37497e2fa00309bf12c4f29369a143acbe"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularHalfExponentExceptions.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ea3f44e79fa412865f5b942c7406c7ce4c1bc617",
+    "size": 1728,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ea3f44e79fa412865f5b942c7406c7ce4c1bc617"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularMultilinearAmbientSublevel.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5b2c14b42c31ac9798799107d727785007bab3f",
+    "size": 14885,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c5b2c14b42c31ac9798799107d727785007bab3f"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularMultilinearSublevelFiber.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b3bb3520df3dc8d54352cfa75a0ed1819b46b87e",
+    "size": 5665,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b3bb3520df3dc8d54352cfa75a0ed1819b46b87e"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularMultilinearSublevelNumerics.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "16696510f0626181b9dcea8e85167155012492e9",
+    "size": 2244,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/16696510f0626181b9dcea8e85167155012492e9"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularTagGap.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "90b91006df46068ab144248908006a951d8cc49d",
+    "size": 5142,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/90b91006df46068ab144248908006a951d8cc49d"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularUnitGCD.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d66bd2affe2bd74170e3c27799b02c372753fac6",
+    "size": 532,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d66bd2affe2bd74170e3c27799b02c372753fac6"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularVectorCoefficientDecomposition.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fe10aeb805418ee4ae94080ccb9d654d81017e55",
+    "size": 1497,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fe10aeb805418ee4ae94080ccb9d654d81017e55"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/ModularVectorCoefficientExceptions.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "52650214814c868fc4c45cbc2be927b480b9f921",
+    "size": 6721,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/52650214814c868fc4c45cbc2be927b480b9f921"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedEnlargedModularAllocation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c19aad39ddea152dda8a8a193a91d81414d89f18",
+    "size": 4753,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c19aad39ddea152dda8a8a193a91d81414d89f18"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularCanonicalDetectorAmbientConsumer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "98fbac382439d4a3f5bee224ee989779bf1e280a",
+    "size": 51604,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/98fbac382439d4a3f5bee224ee989779bf1e280a"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularCanonicalDetectorPositive.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4b414ec855f5c3490d57714f1314b9b99bb75de3",
+    "size": 81437,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4b414ec855f5c3490d57714f1314b9b99bb75de3"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularCanonicalDetectorPositiveBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b5b81210aefbb7a933f11931d13d13d94f67d8a",
+    "size": 18472,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7b5b81210aefbb7a933f11931d13d13d94f67d8a"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularCanonicalDetectorThreshold.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "40f554d6dff6e120dc4cc9855d4e12a25b6a2864",
+    "size": 6856,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/40f554d6dff6e120dc4cc9855d4e12a25b6a2864"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularCanonicalNativeSource.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "44146b871c9a2ee8809cbe2d1ab86b8f91049ea1",
+    "size": 5585,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/44146b871c9a2ee8809cbe2d1ab86b8f91049ea1"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularDetectorBadProduct.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97f47ba8ff3a42a0ef54f4ace3da6a79c570ef8b",
+    "size": 60876,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/97f47ba8ff3a42a0ef54f4ace3da6a79c570ef8b"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularDetectorCertifiedBadProduct.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6bd555f2cff3fa06562b8a6f0ff53d8ccd7a0016",
+    "size": 15218,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6bd555f2cff3fa06562b8a6f0ff53d8ccd7a0016"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralCenteredDetection.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6e084115d088ef40443bf313b93440ae5d9df553",
+    "size": 15820,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6e084115d088ef40443bf313b93440ae5d9df553"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDetectorLateCoarseConsumer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d6ea00bc42bc3cb56826f869cd5448e920e8ec26",
+    "size": 70955,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/d6ea00bc42bc3cb56826f869cd5448e920e8ec26"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDetectorLateFloor.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2cbaf68524a1632a75d72b5b2e163fa19907775b",
+    "size": 45525,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2cbaf68524a1632a75d72b5b2e163fa19907775b"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDetectorNativeBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4e616f4c1fe7066c689328d680be826a41fd9570",
+    "size": 23504,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4e616f4c1fe7066c689328d680be826a41fd9570"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDetectorProductive.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73dfb194eb184237fc8d4e09600bbb1de42c93d9",
+    "size": 49622,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/73dfb194eb184237fc8d4e09600bbb1de42c93d9"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDetectorThreshold.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "593cabb2ca02cfd650ea88f3a4360c81218358b2",
+    "size": 4547,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/593cabb2ca02cfd650ea88f3a4360c81218358b2"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralDirectDetectionLateFloor.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1cf2a06853b29ce88aca92482e47a8b50d982270",
+    "size": 83875,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1cf2a06853b29ce88aca92482e47a8b50d982270"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularGeneralProductivityEarlyGain.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ebe6df403fee76e25905b2caad1548e76921287a",
+    "size": 65060,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ebe6df403fee76e25905b2caad1548e76921287a"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularProductivityPrecision.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "63aa0d4ab0b446ee870bdb4aaf382af6cc0b41c1",
+    "size": 6239,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/63aa0d4ab0b446ee870bdb4aaf382af6cc0b41c1"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/PreparedModularWitnessCanonicalGeometry.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "49596f9dc4a545129ef453a1a30193a9d4dff386",
+    "size": 36919,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/49596f9dc4a545129ef453a1a30193a9d4dff386"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Estimates/SharedWidthPreparedModularGeneralDirectDetectionFreeTrim.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "71636e069e127ae0c25fb7f865cd4d461d80da86",
+    "size": 78327,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/71636e069e127ae0c25fb7f865cd4d461d80da86"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/CenteredFiniteSpatialModularGoodSet.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bbccc2ddf8b3c49cb4bf24750ab502fb1411d367",
+    "size": 2477,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/bbccc2ddf8b3c49cb4bf24750ab502fb1411d367"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularCanonicalDetectorFullBoxConsumer.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "385d3552c16016bccf5b049a4986bdf934a92395",
+    "size": 30658,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/385d3552c16016bccf5b049a4986bdf934a92395"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularCanonicalDetectorFullBoxConsumerGeneral.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f0ffaedad9498af30623c43ec2c1a40c90cb831",
+    "size": 30709,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/6f0ffaedad9498af30623c43ec2c1a40c90cb831"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularCanonicalDetectorGeometricBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1e4cf9acb4d3d39b270039e65a7a40c9ceceaa32",
+    "size": 11667,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1e4cf9acb4d3d39b270039e65a7a40c9ceceaa32"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularCanonicalDetectorGeometricBoundsGeneral.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "81e5769d6c1a652ed8c959bface4e37d0f4d8ab0",
+    "size": 12090,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/81e5769d6c1a652ed8c959bface4e37d0f4d8ab0"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularCanonicalDetectorSpatialBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eddff382ae93c1641e45cb71d95e04fed61d6eaf",
+    "size": 3944,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eddff382ae93c1641e45cb71d95e04fed61d6eaf"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularGeneralDetectorFreeSpatialBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a7ccfa238d7ea1d678677d4e9536c07fb52f4657",
+    "size": 3778,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a7ccfa238d7ea1d678677d4e9536c07fb52f4657"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Geometry/PreparedModularGeneralProductivityFreeSpatialBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e03643cf4aab7f8ecbe443ec636180639859a952",
+    "size": 8941,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e03643cf4aab7f8ecbe443ec636180639859a952"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/AllocatedModularRankAffineFullWitness.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2a08be6992b46bb35bf19c2d6a57041de51e879",
+    "size": 29423,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b2a08be6992b46bb35bf19c2d6a57041de51e879"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/AllocatedModularRankAffineProbability.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e932f34e077dda64e56eaceb30eabc85ce27be66",
+    "size": 41279,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e932f34e077dda64e56eaceb30eabc85ce27be66"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/AllocatedModularRankIntegerDecay.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2cf8632cf3d604e8f947e4e256672aba1beaec24",
+    "size": 17091,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/2cf8632cf3d604e8f947e4e256672aba1beaec24"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/ModularAffineSpatialGCD.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e60bba37a7778c28fd911b8e7438d90022617beb",
+    "size": 1198,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e60bba37a7778c28fd911b8e7438d90022617beb"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/ModularCoefficientBadPrimeProduct.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "914016c743faaa4a99f0db36e56f555cc924e2e1",
+    "size": 8572,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/914016c743faaa4a99f0db36e56f555cc924e2e1"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Lattices/ModularMultilinearAffineCost.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "063f96ae675b4c2494b736ab8eaec9095110b5b0",
+    "size": 3453,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/063f96ae675b4c2494b736ab8eaec9095110b5b0"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankActualRead.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab4c0644f1af18d5939516be18e0a76399c033de",
+    "size": 8770,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ab4c0644f1af18d5939516be18e0a76399c033de"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankActualRefreshBad.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b123e609141f6f50eae1ddc5189e8bab1994f191",
+    "size": 15736,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b123e609141f6f50eae1ddc5189e8bab1994f191"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankBadProduct.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bb82e8b28de0d94d83391e9efd9d21d23caf8552",
+    "size": 50112,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/bb82e8b28de0d94d83391e9efd9d21d23caf8552"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankCongruenceOutput.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b414d7b2dc1349e67a4e3e6a91a9d2635a2e13c0",
+    "size": 43917,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b414d7b2dc1349e67a4e3e6a91a9d2635a2e13c0"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankFullProductLaw.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f4ff3f209744f530f13b490e9f3bf4028627ac98",
+    "size": 23442,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f4ff3f209744f530f13b490e9f3bf4028627ac98"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankFullWitness.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc8ecef8aa289c6f42ce5c2f190237ce758825e0",
+    "size": 18068,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/fc8ecef8aa289c6f42ce5c2f190237ce758825e0"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankMixedUniform.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "973e454cab47264668abbc2371e9733b1de20cbc",
+    "size": 46699,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/973e454cab47264668abbc2371e9733b1de20cbc"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankPreparedBlocks.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "91e60313a27d02c7953a3a06b2732bb8a9a3457a",
+    "size": 5702,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/91e60313a27d02c7953a3a06b2732bb8a9a3457a"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankRationalDecay.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7e6ff48622b2e16961c6df82ee8cf2d3b9c36f36",
+    "size": 3557,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7e6ff48622b2e16961c6df82ee8cf2d3b9c36f36"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankSmoothWidthBudget.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "89bafa72068fe2549435cb30df70efef6fd71faf",
+    "size": 3647,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/89bafa72068fe2549435cb30df70efef6fd71faf"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/AllocatedModularRankUniformRow.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1fc8198b58d1d3dff5ec17a3e4c184bda7724f24",
+    "size": 5118,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1fc8198b58d1d3dff5ec17a3e4c184bda7724f24"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/ModularDesignatedCoefficientRank.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8b774c38d431e3a6166cdfbb1e369ecb6a7ccada",
+    "size": 8270,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/8b774c38d431e3a6166cdfbb1e369ecb6a7ccada"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Linear/ModularVectorCoefficientRank.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4105200af3ce42e7875895397bc2596637ce7a8b",
+    "size": 3991,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/4105200af3ce42e7875895397bc2596637ce7a8b"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Polynomial/AllocatedModularRankTaggedPolynomials.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ca1056fcf80c431279b989d5ebcfaac9af52645",
+    "size": 8318,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/1ca1056fcf80c431279b989d5ebcfaac9af52645"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Polynomial/ModularMultilinearSublevelPolynomial.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "85065c8cb758ccda140e4b77239274241a91f5fa",
+    "size": 1913,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/85065c8cb758ccda140e4b77239274241a91f5fa"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Probability/PreparedModularGeneralCenteredLaw.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "372894723397c20bc1ce8b2c9879d92ee1839784",
+    "size": 49479,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/372894723397c20bc1ce8b2c9879d92ee1839784"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Sampling/AllocatedModularForecastRationalSource.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "144f75982b8daf23d18cc01557dec2c3cfc72d16",
+    "size": 8785,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/144f75982b8daf23d18cc01557dec2c3cfc72d16"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Sampling/AllocatedSlicedModularForecastContinuousSource.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0d1e108bfa76ecdc386d39a1a5fb464383d4350",
+    "size": 9688,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/c0d1e108bfa76ecdc386d39a1a5fb464383d4350"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Sampling/ForecastModularCutoff.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a56e4567758dff96760e575acbe0c15ec3096a5e",
+    "size": 19476,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a56e4567758dff96760e575acbe0c15ec3096a5e"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Sampling/PreparedModularCanonicalDetectorSamplingBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eef308ed47abe722e67399fa42f4f20ebaf87037",
+    "size": 16179,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/eef308ed47abe722e67399fa42f4f20ebaf87037"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/Progressions/Sampling/PreparedModularGeneralDetectorSamplingBounds.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e3b1224be108a945e16959c8eff5b73ffe209cb6",
+    "size": 16580,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/e3b1224be108a945e16959c8eff5b73ffe209cb6"
+  },
+  {
+    "path": "lean/OAI/Combinatorics/TriangleRemoval/Process/HistoryCompensator.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a2212d47a6a362ed322a4d203d911f20c20d2fde",
+    "size": 4823,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/a2212d47a6a362ed322a4d203d911f20c20d2fde"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/OrdinalCodes/NumericalAutomorphism.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5f8e32868e766f13e0b13c4a1e92c84ded148673",
+    "size": 3815,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5f8e32868e766f13e0b13c4a1e92c84ded148673"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/Representation/AutomorphismName.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c983734713e2a9fa757aeae59b0c0ad9809fb46",
+    "size": 3556,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/9c983734713e2a9fa757aeae59b0c0ad9809fb46"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/Representation/AutomorphismOutputSentence.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0fae7d9cc9888bc8587578e71d8a0e9e15a9cc4b",
+    "size": 2925,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/0fae7d9cc9888bc8587578e71d8a0e9e15a9cc4b"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/Representation/AutomorphismUnion.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b8c7b8bc052fd8ba6a234a79a0b7875556d81886",
+    "size": 5126,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/b8c7b8bc052fd8ba6a234a79a0b7875556d81886"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/Representation/SetAutomorphismReconstruction.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "244afe41bd4a72b4fb318fed29f41cadee1d8b90",
+    "size": 3302,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/244afe41bd4a72b4fb318fed29f41cadee1d8b90"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/SetModels/ModelAutomorphismInterpretation.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7a5b64470abe53b9721b47239545c4af7784c7ae",
+    "size": 3690,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/7a5b64470abe53b9721b47239545c4af7784c7ae"
+  },
+  {
+    "path": "lean/OAI/Computability/DegreeRigidity/Syntax/BoundedAutomorphismOutput.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5e436a1ca8a5e89b3cdfad40233a0b06e9cdb374",
+    "size": 1937,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/5e436a1ca8a5e89b3cdfad40233a0b06e9cdb374"
+  },
+  {
+    "path": "lean/OAI/Computability/DeterministicSum/ModularInverses.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "983ab97c376410115bbaa313c8d566e39703abd9",
+    "size": 19037,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/983ab97c376410115bbaa313c8d566e39703abd9"
+  },
+  {
+    "path": "lean/OAI/Computability/QuantumFactoring/ModularMultiply.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ca0b95ac9b482f2e5ef843081dd3ee3de0af9d1b",
+    "size": 3001,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/ca0b95ac9b482f2e5ef843081dd3ee3de0af9d1b"
+  },
+  {
+    "path": "lean/OAI/Computability/QuantumFactoring/ModularPower.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "16a6f0f3f8d7636cd1939c1286785c8f7fe7408f",
+    "size": 7972,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/16a6f0f3f8d7636cd1939c1286785c8f7fe7408f"
+  },
+  {
+    "path": "lean/OAI/Computability/QuantumFactoring/ModularSumEmission.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "56a41e3803b8bda1d747ff19cf901b9da0029132",
+    "size": 3759,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/56a41e3803b8bda1d747ff19cf901b9da0029132"
+  },
+  {
+    "path": "lean/OAI/Computability/QuantumFactoring/NetworkModularEmission.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "57cb70284d7f9bd92f902273599314daf2e5bd24",
+    "size": 4056,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/57cb70284d7f9bd92f902273599314daf2e5bd24"
+  },
+  {
+    "path": "lean/OAI/Computability/QuantumFactoring/NetworkModularPowerEmission.lean",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f16ecfa4ea21779295766897816aa5e5a6a01646",
+    "size": 2122,
+    "url": "https://api.github.com/repos/openai/math/git/blobs/f16ecfa4ea21779295766897816aa5e5a6a01646"
+  }
+]

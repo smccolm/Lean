@@ -1,0 +1,72 @@
+import SourceGammaOneCentralStabilizerCard
+import SourceGammaOneHeckeExactRamification
+import Dubon2026.SourceGammaOneHeckeGeometricSubgroup
+import Dubon2026.SourceGammaOneExactRamification
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> literal coset
+multiplicities. Native upper/geometric conjugation identifies stabilizers.
+The central-sign factors agree for Gamma1 and its intersection with Gamma0,
+so the proved analytic ramification ratio equals the ratio of the actual
+unstretched and upper-subgroup stabilizer cardinalities. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup
+open scoped MatrixGroups Classical StabilizerCharacter SubgroupStabilizer
+variable (M d : ℕ) [NeZero M] [NeZero d]
+
+omit [NeZero M] in
+theorem hecke_stabilizer_card (w : ℍ) :
+    Nat.card (MulAction.stabilizer ↥(Gamma1 M ⊓ Gamma0 (d * M)) w) =
+      Nat.card (MulAction.stabilizer (sourceGammaOneHeckeUpper M d)
+        (levelRaiseMatrix d • w)) := by
+  symm
+  refine Nat.card_congr (Equiv.subtypeEquiv (heckeUpperGeometricEquiv M d) ?_)
+  intro g
+  change g.val.val • (levelRaiseMatrix d • w) = levelRaiseMatrix d • w ↔
+    (upperToGeometric M d g).val • w = w
+  rw [← upperToGeometric_smul, smul_left_cancel_iff]
+
+theorem heckeBeta_stabilizer_ramification
+    (hT : ModularGroup.T ∈ Gamma1 M)
+    (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M)) (w : ℍ) :
+    (Nat.card (MulAction.stabilizer (Gamma1 M) (levelRaiseMatrix d • w)) : ℤ) =
+      (Nat.card (MulAction.stabilizer (sourceGammaOneHeckeUpper M d)
+        (levelRaiseMatrix d • w)) : ℤ) *
+      Place.ramificationAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+        (analyticPlace hH w) := by
+  rw [← hecke_stabilizer_card]
+  let c : ℕ := if (-1 : SL(2, ℤ)) ∈ Gamma1 M then 1 else 2
+  have hc : (c : ℤ) ≠ 0 := by
+    dsimp only [c]
+    split_ifs <;> norm_num
+  have hs : ((-1 : SL(2, ℤ)) ∈ Gamma1 M ⊓ Gamma0 (d * M)) ↔
+      (-1 : SL(2, ℤ)) ∈ Gamma1 M := by
+    constructor
+    · exact fun h => h.1
+    · intro h
+      exact ⟨h, by simp [Gamma0_mem]⟩
+  have hb := two_mul_ramification_eq_stabilizer_card M hT (levelRaiseMatrix d • w)
+  rw [card_stabilizer_plusMinus] at hb
+  have hg := HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card M d hH w
+  rw [card_stabilizer_plusMinus, hs] at hg
+  have hb' : (2 : ℤ) * analyticRamification hT (levelRaiseMatrix d • w) =
+      (c : ℤ) * Nat.card (MulAction.stabilizer (Gamma1 M) (levelRaiseMatrix d • w)) := by
+    exact_mod_cast hb
+  have hg' : (2 : ℤ) * analyticRamification hH w =
+      (c : ℤ) * Nat.card (MulAction.stabilizer ↥(Gamma1 M ⊓ Gamma0 (d * M)) w) := by
+    exact_mod_cast hg
+  apply mul_left_cancel₀ hc
+  calc
+    (c : ℤ) * Nat.card (MulAction.stabilizer (Gamma1 M) (levelRaiseMatrix d • w)) =
+        2 * analyticRamification hT (levelRaiseMatrix d • w) := hb'.symm
+    _ = (2 * (analyticRamification hH w : ℤ)) *
+        Place.ramificationAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+          (analyticPlace hH w) := by
+      rw [heckeBeta_analytic_ramification M d hT hH]
+      ring
+    _ = (c : ℤ) * ((Nat.card (MulAction.stabilizer ↥(Gamma1 M ⊓ Gamma0 (d * M)) w) : ℤ) *
+        Place.ramificationAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+          (analyticPlace hH w)) := by rw [hg']; ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

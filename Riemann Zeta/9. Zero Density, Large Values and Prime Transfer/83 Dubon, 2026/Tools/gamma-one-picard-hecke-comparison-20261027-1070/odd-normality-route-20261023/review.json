@@ -1,0 +1,11 @@
+{
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing.lean",
+  "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-normality-route-20261023\\CoordinateRing.lean.txt",
+  "sha": "e35b5302842f1598d40e0bf32537cdf9c78937be",
+  "sha256": "B0C0FAF892FB0EE8D4F575BEF954827A992840921CE261164EC69C33D9B06D4B",
+  "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing.lean",
+  "decision": "Tau Ceti proves normality over arbitrary fields using conjugation, integral trace/norm and prime-divisibility arguments. The exact next explicit quotient-map contract is over an algebraically closed field. Reuse the frozen FLT local-principal-ideal/DVR proof instead, replacing its coordinate classification and vanishing helpers with cohort 279. No arbitrary-field normality claim is made and no characteristic is excluded.",
+  "dependency": "DUB-17/18 -> continuation -> automorphy -> Frobenius/inertia -> good reduction -> reverse genus/inertia census -> cyclic quotient roots -> explicit quotient homomorphism -> ideal norm point map -> actual coordinate-ring Dedekind domain",
+  "evidenceBoundary": "Exact external source blob inspected only, not built or transitively audited."
+}

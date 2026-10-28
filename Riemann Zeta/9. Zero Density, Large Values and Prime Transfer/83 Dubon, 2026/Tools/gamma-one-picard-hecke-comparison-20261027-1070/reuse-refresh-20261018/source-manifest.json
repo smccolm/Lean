@@ -1,0 +1,74 @@
+[
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Brauer/SumFormula.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\Brauer\\SumFormula.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/Brauer/SumFormula.lean",
+    "bytes": 7553,
+    "gitBlob": "6b394f68d6666d12d95d32bb2a4f77d6a4425196",
+    "gitBlobVerified": true,
+    "sha256": "C263022F645991690D6BE6A5A74E66365DCE52E0DA1AC1EFE3307DF790360E2C"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/ClassFormation.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\ClassFormation.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/ClassFormation.lean",
+    "bytes": 9290,
+    "gitBlob": "0a71da01f295e597103124feea0971605b092295",
+    "gitBlobVerified": true,
+    "sha256": "E5EF2E6C54BCA1702C8FABAE90CEC1C489A13DD8484E37B82DCE3567F51A3A20"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/CorestrictionLocalization.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\CorestrictionLocalization.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/CorestrictionLocalization.lean",
+    "bytes": 14440,
+    "gitBlob": "ea47aa0b078a4e7a3d72c5849ebc0a088b53737e",
+    "gitBlobVerified": true,
+    "sha256": "0CA6B854D9553C82CD7CBAE6269B5A1803B1D074351ECE3954CF503DBAE828FD"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleLocalization.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\IdeleLocalization.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleLocalization.lean",
+    "bytes": 51116,
+    "gitBlob": "7f5326efce22d370717a89c1d093cf174cf9a217",
+    "gitBlobVerified": true,
+    "sha256": "21B83883EB874CC84483CAD58AC50E95899A5AAE33105C2BA7EFB7FED5077329"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/LiftingObstruction.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\LiftingObstruction.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/LiftingObstruction.lean",
+    "bytes": 16543,
+    "gitBlob": "876c642bc08b34a7a05b98369daaca8fae2ec259",
+    "gitBlobVerified": true,
+    "sha256": "6C39A0590638BD5C9AB65A186D017D2F750A9973172D9B0C1AB98CF5864A39D5"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/PrescribedInvariant.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\PrescribedInvariant.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/NumberTheory/ClassFieldTheory/Global/PrescribedInvariant.lean",
+    "bytes": 31804,
+    "gitBlob": "717a48851f29d57e98c6b75c632413ee3daaf717",
+    "gitBlobVerified": true,
+    "sha256": "BC935EA2BB3634487ECED27981CD4F552ED909CA3FEC07F5C1B34D2E76EA8584"
+  },
+  {
+    "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/SelmerStructure.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\RepresentationTheory\\Homological\\ContCohomology\\SelmerStructure.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/RepresentationTheory/Homological/ContCohomology/SelmerStructure.lean",
+    "bytes": 4999,
+    "gitBlob": "cd7c633795865655521f955a6bd3ba52a6bf30d4",
+    "gitBlobVerified": true,
+    "sha256": "26053C5875EBEDBFC2153A1B394C3889834C7FFD19988E88231F06239E52AF0B"
+  },
+  {
+    "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/Cup/Duality/Basic.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sources\\TauCeti\\RepresentationTheory\\Homological\\ContCohomology\\Cup\\Duality\\Basic.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/TauCeti/RepresentationTheory/Homological/ContCohomology/Cup/Duality/Basic.lean",
+    "bytes": 79556,
+    "gitBlob": "b76874257b4b87b82bd19ce6c291a739485086b3",
+    "gitBlobVerified": true,
+    "sha256": "FD10CACBA9A2306481B69F4984B0A4AA067094D96190C2031C7B9DCD31C51079"
+  }
+]

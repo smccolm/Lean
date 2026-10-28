@@ -1,0 +1,17 @@
+### Original local Cartan factorization and spherical coefficients — 8 October 2026
+
+Eleven further production modules prove an actual local Cartan factorization from the original matrix entries. An entry of maximal valuation divides every original entry in the actual local integer ring. Literal integral row and column swaps move it to the first pivot, and genuine scalar normalization makes that pivot exactly one while retaining entry integrality. Explicit original upper and lower unipotent factors then give the actual diagonal factorization. Mathlib’s proved equivalence with the p-adic integer ring supplies a genuine integral unit times a nonnegative power of the original prime. Exact diagonal multiplication and scalar-map identities identify the remaining diagonal with a power of the original local Hecke matrix. Thus every original local GL2 element is an actual scalar times two genuine integral matrices around a nonnegative power of that Hecke diagonal. The original unitary cusp action and its already-proved trivial central character give an exact consumer: every actual spherical matrix coefficient reduces to the corresponding coefficient at a nonnegative power of the original Hecke diagonal.
+
+Actual local Cartan existence and the original spherical matrix-coefficient reduction are proved. The exact radial Hecke recurrence, local cyclic irreducibility and spherical representation/Euler-factor classification still require proofs. The full source automorphic identification includes remaining smooth admissibility and local/global factor compatibility obligations; the automorphic non-CM bridge and higher symmetric automorphy/continuation also remain open. Full adelic Hilbert irreducibility and the original self-adjoint local spherical Hecke action remain proved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicLocalCartanCoefficient](Extension/Dubon2026/AdelicLocalCartanCoefficient.lean).
+- [FinitePlaceGL2Cartan](Extension/Dubon2026/FinitePlaceGL2Cartan.lean).
+- [FinitePlaceGL2DiagonalReduction](Extension/Dubon2026/FinitePlaceGL2DiagonalReduction.lean).
+- [FinitePlaceGL2IntegralReduction](Extension/Dubon2026/FinitePlaceGL2IntegralReduction.lean).
+- [FinitePlaceHeckeDiagonalPowers](Extension/Dubon2026/FinitePlaceHeckeDiagonalPowers.lean).
+- [FinitePlaceIntegralElementary](Extension/Dubon2026/FinitePlaceIntegralElementary.lean).
+- [FinitePlaceUniformizer](Extension/Dubon2026/FinitePlaceUniformizer.lean).
+- [GL2CoordinatePivot](Extension/Dubon2026/GL2CoordinatePivot.lean).
+- [GL2UnitDiagonalPair](Extension/Dubon2026/GL2UnitDiagonalPair.lean).
+- [UnitaryDoubleCosetCoefficient](Extension/Dubon2026/UnitaryDoubleCosetCoefficient.lean).
+- [ValuationGL2Pivot](Extension/Dubon2026/ValuationGL2Pivot.lean).

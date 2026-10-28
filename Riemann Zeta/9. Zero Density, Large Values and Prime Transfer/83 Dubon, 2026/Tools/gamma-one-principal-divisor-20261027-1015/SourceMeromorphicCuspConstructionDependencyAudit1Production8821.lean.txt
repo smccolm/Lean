@@ -1,0 +1,34 @@
+import Dubon2026.SourceMeromorphicPrimitiveSpecification
+import Dubon2026.SourceMeromorphicPrimitiveGroupAction
+import Dubon2026.SourceMeromorphicPrimitiveMultiplier
+import Dubon2026.SourceMeromorphicCuspAnalyticData
+import Dubon2026.SourceMeromorphicCuspPrimitive
+import Dubon2026.SourceMeromorphicCuspPrimitiveDecay
+import Dubon2026.SourceMeromorphicPrimitiveCusps
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_meromorphic_multiplier_cusp_orders]
+  let localModules : Array Name := #[`Dubon2026.SourceMeromorphicPrimitiveSpecification, `Dubon2026.SourceMeromorphicPrimitiveGroupAction, `Dubon2026.SourceMeromorphicPrimitiveMultiplier, `Dubon2026.SourceMeromorphicCuspAnalyticData, `Dubon2026.SourceMeromorphicCuspPrimitive, `Dubon2026.SourceMeromorphicCuspPrimitiveDecay, `Dubon2026.SourceMeromorphicPrimitiveCusps, `Dubon2026.SourceUpperHalfPlaneResidueData, `Dubon2026.SourceMeromorphicFinitePolarProduct, `Dubon2026.SourceUpperHalfPlaneDiscExhaustion, `Dubon2026.SourceMeromorphicDiscPrimitive, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive]
+  let required : Array Name := #[`Dubon2026.SourceMeromorphicPrimitiveMultiplier.mC_of_im_pos, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.mC_coe, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.coe_ofComplex_of_im_pos, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.res_lift, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_GSpec, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.eq_zero_iff, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.ne_zero_iff, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.eventually_ne_zero, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.analyticAt, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.hasDerivAt, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.eventuallyEq_ofComplex, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.meromorphicAt_ofComplex, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.meromorphicOrderAt_ofComplex, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.μ_coe, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.μ_im_pos, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.μ_of_im_pos, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.hasDerivAt_μ, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.continuousAt_μ, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.slash_two_apply, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.eventually_μ_ne, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.tendsto_μ_nhdsNE, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.μ_inv_μ, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.hasDerivAt_comp_μ, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.goodSet_subset, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.eventually_mem_goodSet, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.isOpen_goodSet, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.countable_zeroSet, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.upperHalfPlane_eq_range, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.isPreconnected_upperHalfPlane_diff, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.isPreconnected_goodSet, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.exists_multiplier, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_meromorphic_multiplier, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.analyticAt_omega, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.tendsto_norm_omega_atTop, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_cuspBound, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.continuous_denom, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.differentiableAt_denom, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_primitive_halfPlane, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.norm_sub_le_of_exp_decay, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_uniform_limit_of_exp_decay, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.m_smul_eq_zero_of_lt_im, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec.exists_limit_cusp, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_meromorphic_multiplier_cusp_orders, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.mC, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.GSpec, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.μ, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.goodSet, `Dubon2026.SourceMeromorphicPrimitiveMultiplier.CuspBound, `Dubon2026.sourceHolomorphic_hasDerivAt_wedgeIntegral, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_range_diff_of_countable]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MEROMORPHIC CUSP CONSTRUCTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual meromorphic multiplier, cusp-limit and order construction. Local integer-residue expansions, slash invariance and exponential decay produce the function with its multiplier, exact orders and all nonzero translated cusp limits. The native wedge-integral primitive replaces a second disk construction. The actual prescribed differential must still discharge the input conditions; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

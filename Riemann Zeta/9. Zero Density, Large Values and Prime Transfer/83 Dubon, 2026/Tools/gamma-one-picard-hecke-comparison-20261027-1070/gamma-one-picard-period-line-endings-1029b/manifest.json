@@ -1,0 +1,25 @@
+{
+  "reason": "The docstring writer doubled CR in CRLF input. Normalize line endings only.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointImage.lean",
+      "beforeSha256": "40BA46A5053A8C7D7BCDC4CB74720349B34DDF0BA6A435374802236DCAEC28A8",
+      "afterSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPicardPresentation.lean",
+      "beforeSha256": "9DD07413BFFE27CDE31FEA3190862648155E926F6EFBA8DBA9E85E476BC4D40F",
+      "afterSha256": "0A0562470AB7AF8C3D91291CF643D7D96470A4B2E71D487D699B362D28B7DD60"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodKernel.lean",
+      "beforeSha256": "F39673BD7D36101EF2F1D44A9A34527CC49C0F5877CC29BDE765303AC00775D1",
+      "afterSha256": "C5AA9152F8AB3930FA20A01DC2FAB0635AC11AA8C8A2B7BA634F307E81A8804B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquiv.lean",
+      "beforeSha256": "2BA6E525C3868904AB15A301D884E98C84BA1CFACA24F55FDDF6378B12064396",
+      "afterSha256": "D88F0BD2DF1128BDC4A258F860B96C4A9E6266E9F49D97DEB1D5C25E0A514D7B"
+    }
+  ]
+}

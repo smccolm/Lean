@@ -1,0 +1,4 @@
+{
+  "reason": "Shorter rigorous route found before audit: use the existing fully proved sourceUpperHalfPlane_primitive_difference instead of repeating its local-uniqueness and connectedness proof. Prior source compiled without diagnostics; preserve it as superseded evidence.",
+  "sourceSha256": "A850E3E2FE0FB6706CC9529F1D3B97FF98FD49A4A5A59951835EA5E1636CBFC8"
+}

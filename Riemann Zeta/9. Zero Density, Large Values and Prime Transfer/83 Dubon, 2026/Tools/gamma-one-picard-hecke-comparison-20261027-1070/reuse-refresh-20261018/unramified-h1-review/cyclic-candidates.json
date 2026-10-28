@@ -1,0 +1,27 @@
+[
+  {
+    "path": "P2M/Sol/S_Representation_norm_eq_zero_of_dvd_card.lean",
+    "sha": "6db6fb66b5825d9b374963c3dc09482c1e04de7e",
+    "size": 6609
+  },
+  {
+    "path": "P2M/Sol/S_groupCohomology_exists_cocycles1_unramified_iff_mem_inflationImage_sup.lean",
+    "sha": "0bfae127553717a0b78a21ce5d71e770eeeb7627",
+    "size": 1930
+  },
+  {
+    "path": "P2M/Sol/S_groupCohomology_finiteDimensional_inflationImage.lean",
+    "sha": "31591b35c7ceeefa8bc9d4c0126923228d3e6f31",
+    "size": 819
+  },
+  {
+    "path": "P2M/Sol/S_groupCohomology_finrank_inflationImage_eq_finrank_invariants_of_norm_eq_zero.lean",
+    "sha": "9ab0e557b1bc17221217b4604f26faa0ced62bf7",
+    "size": 2161
+  },
+  {
+    "path": "P2M/Sol/S_groupCohomology_finrank_inflationImage_le_finrank_invariants.lean",
+    "sha": "b6a2889a8882d978da2492b92a4f202233d2699d",
+    "size": 2132
+  }
+]

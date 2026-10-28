@@ -1,0 +1,30 @@
+{
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 and Hecke/diamond comparison -> literal Picard group versus original period quotient.",
+  "shorterRoute": "The finite-divisor Abel-Jacobi kernel is proved in both directions, and direct upper-half-plane Jacobi inversion supplies surjectivity. The existing actual divisor moving lemma presents every literal Picard class by a finite analytic divisor. Apply the native quotient-kernel isomorphism theorem to the two actual surjective maps with equal kernels. This avoids reconstructing global differential-coordinate charts or substituting the existing Gamma0 Picard equivalence.",
+  "assumptionsToDischarge": "Surjectivity of the actual analytic divisor-class presentation; equality of the two actual kernels; actual additive Picard-period equivalence and its endpoint formula.",
+  "remaining": "The arithmetic Picard action and Hecke correspondence already exist on the actual field. Their compatibility with the new period equivalence, full/parabolic and transpose comparison, arithmetic realization, all-weight association and higher continuation remain. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticDivisorMoving.lean",
+      "sha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardAbelMap.lean",
+      "sha256": "7890BE46139EB5D9F453A7386A6C0770C7F9E830DAD7A2054493BA7E3613F2C3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPicard.lean",
+      "sha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePicard.lean",
+      "sha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173"
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

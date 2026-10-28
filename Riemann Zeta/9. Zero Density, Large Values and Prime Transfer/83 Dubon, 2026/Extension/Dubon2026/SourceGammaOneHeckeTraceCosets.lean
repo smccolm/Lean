@@ -1,0 +1,63 @@
+import Dubon2026.SourceGammaOneWeightTwoHeckeCosets
+import Mathlib.NumberTheory.ModularForms.NormTrace
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 Hecke comparison -> native cusp
+trace. Identify the actual integral upper-subgroup cosets with the real
+matrix cosets consumed by Mathlib's trace. This preserves the literal
+matrices and avoids rebuilding holomorphy and cusp vanishing of traces. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M d : ℕ)
+
+/-- The real matrix image of the actual Gamma1 upper Hecke subgroup. -/
+def heckeGLUpper : Subgroup (GL (Fin 2) ℝ) :=
+  (sourceGammaOneHeckeUpper M d).map ((mapGL ℝ).comp (Gamma1 M).subtype)
+
+/-- The faithful real matrix realization of the actual Gamma1 group. -/
+def realGroupEquiv : Gamma1 M ≃* (Gamma1 M).map (mapGL ℝ) :=
+  (Gamma1 M).equivMapOfInjective (mapGL ℝ) mapGL_injective
+
+theorem mem_heckeGLUpper_iff (g : Gamma1 M) :
+    mapGL ℝ g.val ∈ heckeGLUpper M d ↔ g ∈ sourceGammaOneHeckeUpper M d := by
+  constructor
+  · rintro ⟨h, hh, he⟩
+    have hg : h = g := Subtype.ext (mapGL_injective he)
+    exact hg ▸ hh
+  · intro hg
+    exact ⟨g, hg, rfl⟩
+
+/-- The literal coset identification used by the native cusp trace. -/
+def heckeCosetGLEquiv :
+    (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) ≃
+      ((Gamma1 M).map (mapGL ℝ) ⧸ (heckeGLUpper M d).subgroupOf ((Gamma1 M).map (mapGL ℝ))) :=
+  Quotient.congr (realGroupEquiv M).toEquiv (by
+    intro a b
+    simp only [QuotientGroup.leftRel_apply]
+    change a⁻¹ * b ∈ sourceGammaOneHeckeUpper M d ↔
+      (realGroupEquiv M a)⁻¹ * realGroupEquiv M b ∈
+        (heckeGLUpper M d).subgroupOf ((Gamma1 M).map (mapGL ℝ))
+    rw [← map_inv (realGroupEquiv M), ← map_mul (realGroupEquiv M)]
+    exact (mem_heckeGLUpper_iff M d (a⁻¹ * b)).symm)
+
+theorem heckeCosetGLEquiv_mk (g : Gamma1 M) :
+    heckeCosetGLEquiv M d (QuotientGroup.mk g) =
+      QuotientGroup.mk (realGroupEquiv M g) := rfl
+
+theorem heckeGLUpper_finiteRelIndex [NeZero d] :
+    (heckeGLUpper M d).IsFiniteRelIndex ((Gamma1 M).map (mapGL ℝ)) := by
+  let phi := (mapGL ℝ).comp (Gamma1 M).subtype
+  have hinj : Function.Injective phi := mapGL_injective.comp Subtype.val_injective
+  have hc := Subgroup.index_comap (heckeGLUpper M d) phi
+  have hpre : (heckeGLUpper M d).comap phi = sourceGammaOneHeckeUpper M d :=
+    Subgroup.comap_map_eq_self_of_injective hinj (sourceGammaOneHeckeUpper M d)
+  have hrange : phi.range = (Gamma1 M).map (mapGL ℝ) := by
+    rw [MonoidHom.range_comp, Subgroup.range_subtype]
+  rw [hpre, hrange] at hc
+  constructor
+  rw [← hc]
+  exact (sourceGammaOneHeckeUpper_finiteIndex M d).index_ne_zero
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

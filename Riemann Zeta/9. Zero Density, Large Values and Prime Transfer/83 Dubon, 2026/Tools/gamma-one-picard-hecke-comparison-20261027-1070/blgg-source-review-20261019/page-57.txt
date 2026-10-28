@@ -1,0 +1,86 @@
+SATO-TATE 57
+(Symn−1
+rl,ι(π))|GFj
+. By Brauer’s theorem, we can write
+1 = X
+j
+aj IndGF
+GFj
+χj
+with aj ∈ Z and χj : GFj → C
+× a homomorphism. Then by the above discussion
+(applied to the representations π
+j
+), we have
+L(ι(Symn−1
+rl,ι(π) ⊗ rl,ι(ψ)), s) = Y
+j
+L(π
+j ⊗ (χj ◦ ArtFj
+) ⊗ ψ, s)
+aj
+.
+The result follows. 
+We now deduce the Sato-Tate conjecture for π, following the formulation of
+[Gee09] (see also section 8 of [BLGHT09]). Recall wπ is the common value of the
+λv,1 + λv,2, v|∞. Let ψ be the product of the central character of π with | · |wπ ,
+so that ψ has finite order. Let a denote the order of ψ, and let U(2)a denote the
+subgroup of U(2) consisting of those matrices g ∈ U(2) with det(g)
+a = 1. Let
+U(2)a/ ∼ denote the set of conjugacy classes of U(2)a. By “the Haar measure on
+U(2)a/ ∼” we mean the push forward of the Haar measure on U(2)a with total
+measure 1.
+The Ramanujan conjecture is known to hold at all finite places of π (see [Bla06]),
+so for all v for which πv is unramified, the matrix (Nv)
+−wπ /2
+rec(πv)(Frobv) lies in
+U(2)a. Let [πv] denote its conjugacy class in U(2)a/ ∼.
+Theorem 7.1.6. Suppose that F is a totally real field, and that π is a non-CM
+regular algebraic cuspidal automorphic representation of GL2(AF ). Then the classes
+[πv] are equidistributed with respect to the Haar measure on U(2)a/ ∼.
+Proof. This follows from Corollary 7.1.5, together with the corollary to Theorem
+I.A.2 of [Ser68] (note that the irreducible representations of U(2)a are the repre￾sentations detc ⊗ Symd C
+2
+for 0 ≤ c < a, d ≥ 0). 
+This may be reformulated in a somewhat more explicit fashion as follows. Note
+that the space U(2)a/ ∼ is disconnected if a 6= 1, so that to make an explicit
+statement we choose a connected component, which amounts to choosing ζ as in
+the statement below (of course, one may replace ζ by −ζ, and it is only the choice
+of ζ
+2 which determines a component).
+Corollary 7.1.7. Suppose that F is a totally real field, and that π is a non-CM
+regular algebraic cuspidal automorphic representation of GL2(AF ). Let ψ be the
+product of the central character of π with |·|wπ , so that ψ is a finite order character.
+Let ζ be a root of unity with ζ
+2
+in the image of ψ. For any place v of F such that
+πv is unramified, let tv denote the eigenvalue of the Hecke operator
+
+GL2(OFv
+)
+
+̟v 0
+0 1
+GL2(OFv
+)
+
+(where ̟v is a uniformiser of OFv
+) on π
+GL2(OFv
+)
+v . Note that if ψv(̟v) = ζ
+2
+then
+tv/(2(Nv)
+(1+wπ)/2
+ζ) ∈ [−1, 1] ⊂ R.
+Then as v ranges over the places of F with πv unramified and ψv(̟v) = ζ
+2
+, the
+values tv/(2(Nv)
+(1+wπ)/2
+ζ) are equidistributed in [−1, 1] with respect to the measure
+(2/π)
+√
+1 − t
+2dt.

@@ -1,0 +1,8 @@
+import Mathlib
+import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_Affine_hasPrincipalDivisors_of_isAlgClosed
+attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation WeierstrassCurve.Affine.CoordinateRing.moduleFinite WeierstrassCurve.Affine.instDecidableEqFunctionField WeierstrassCurve.Affine.CoordinateRing.isIntegral
+attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint WeierstrassCurve.Affine.pointHom_mk_C_C WeierstrassCurve.Affine.Point.yc_some WeierstrassCurve.Affine.Point.xc_some WeierstrassCurve.Affine.pointPull_algebraMap WeierstrassCurve.Affine.pointHom_mk_C_X WeierstrassCurve.Affine.pointHom_mk_Y WeierstrassCurve.Affine.placeOf_asIdeal
+
+theorem WeierstrassCurve.Affine.hasPrincipalDivisors_of_isAlgClosed {F : Type*} [Field F] [IsAlgClosed F] (W : WeierstrassCurve.Affine F) [W.IsElliptic] : AlgebraicCurve.HasPrincipalDivisors F W.FunctionField := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Affine_hasPrincipalDivisors_of_isAlgClosed.solution

@@ -1,0 +1,35 @@
+import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+import P2M.Util
+namespace P2MW.S_AlgebraicCurve_Place_exists_ord_pos
+
+open IsDedekindDomain WithZero IsLocalRing
+
+noncomputable section
+
+namespace AlgebraicCurve
+p2m_export "AlgebraicCurve" "Place"
+p2m_open "AlgebraicCurve"
+
+namespace Place
+p2m_export "AlgebraicCurve.Place" "ord ord_coe_irreducible toValuationSubring"
+p2m_open "AlgebraicCurve.Place"
+
+variable {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
+
+private theorem rowMain : ∃ f : F, f ≠ 0 ∧ 0 < v.ord f := by
+  obtain ⟨π, hπ⟩ := IsDiscreteValuationRing.exists_irreducible v.toValuationSubring
+  refine ⟨(π : F), ?_, ?_⟩
+  · simpa [ne_eq, ZeroMemClass.coe_eq_zero] using hπ.ne_zero
+  · rw [v.ord_coe_irreducible hπ]
+    exact one_pos
+
+end Place
+
+end AlgebraicCurve
+
+end
+
+open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_Place_exists_ord_pos.AlgebraicCurve in
+theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) :
+    ∃ f : F, f ≠ 0 ∧ 0 < v.ord f :=
+  AlgebraicCurve.Place.rowMain v

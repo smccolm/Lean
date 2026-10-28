@@ -1,0 +1,243 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor_apply"
+  ],
+  "recordedUTC": "2026-10-28T05:41:10.528401+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneComplexConstantAutomorphisms",
+    "SourceGammaOneComplexTranslations",
+    "SourceGammaOneOffImageValues",
+    "SourceGammaOneTranslationOrbits",
+    "SourceGammaOneReducedRiemannRochSpace",
+    "SourceGammaOnePrincipalDivisors",
+    "SourceGammaOnePrincipalDivisorIdentities",
+    "SourceGammaOneFiniteTorsionAction",
+    "SourceGammaOneReducedDivisorInvariance",
+    "SourceGammaOneFixedReducedDivisor",
+    "SourceGammaOneInvariantSupport",
+    "SourceGammaOneTorsionDivisorDescent",
+    "SourceGammaOneTorsionComparison",
+    "SourceGammaOneTateComparison",
+    "SourceGammaOneArithmeticTatePeriods"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexConstantAutomorphisms.lean",
+      "sha256": "1C8434D46FD3540B0E9F432501A950C06C0C90FC0B6DE2E2D461D30454CDFC83",
+      "oleanSha256": "765DFE553052E6C4EE8FBD8D244A3ED96FD0DF436F889274189264C7F3586D79",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexConstantAutomorphisms1099a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexConstantAutomorphisms1099a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTranslations.lean",
+      "sha256": "CB64AA1B297BAA6080D92F424CFD5E3100E504BF689C03ACB666B211343F4456",
+      "oleanSha256": "583255D14DEC678D80AF7D66F198CED46E0D563302B049417F254687DC70065B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTranslations1100a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTranslations1100a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOffImageValues.lean",
+      "sha256": "76DEB79D14A212A1E977FD3A4038092B03650BAC0CFE80D31C36B48FAE7DDA76",
+      "oleanSha256": "D91791B315F16AB83E812DB26DC55C2B580A66C0DCC455F7501E4A22A7B1136E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOffImageValues1101b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOffImageValues1101b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslationOrbits.lean",
+      "sha256": "235EAB197EE2EBF8D686B4B3705BB5B91E9891DB4BD758C5B92CE6311B8F0BDD",
+      "oleanSha256": "E6E159442105325F1B49EB4808516D99060F16D4917210BBA20B63ABE8447873",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslationOrbits1102b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslationOrbits1102b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedRiemannRochSpace.lean",
+      "sha256": "3E864D17DDC8C171A1F4354C3F6CAE5A9C92A426302756C924F484D7FAE826F6",
+      "oleanSha256": "3E7577384F15A58F3FC7284082FBC8B20B15CF68C3C5A1BDC9F39CEFB8B4DBA8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedRiemannRochSpace1103a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedRiemannRochSpace1103a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisors.lean",
+      "sha256": "BE42C664DBE0829A3C4E4BB753215D2449A67881A096BD4F55E848FCBEA235FE",
+      "oleanSha256": "781F376B50E160B56101DF56514BFE6DDFBB0AB18DCC14273740F69176307531",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisors1104a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisors1104a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorIdentities.lean",
+      "sha256": "40DCD87F4A1685EB6EE9E0FDA980778886D0A06AEAECE3468C23C1580AA774EF",
+      "oleanSha256": "7D165E8BD3CA84EAF48E823328ABC7E83D279CE016245D2D7D6BAEA475401E44",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorIdentities1105a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorIdentities1105a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTorsionAction.lean",
+      "sha256": "C35070ABCCB0B399676E3BFEB41ED7382C7FF275EA8FAC2009D2D2C057C6BAF5",
+      "oleanSha256": "5AB7FA37394022EBDAC746522758C8A252FFB8D70FA48C8D1A0A41D9F5C14D2A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTorsionAction1106b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTorsionAction1106b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedDivisorInvariance.lean",
+      "sha256": "50EE3C671EF5F59C521D7149403CD273C3F5F5F606FA412B2AAE7CAC85B0FA94",
+      "oleanSha256": "79FA95A5EF8DC52DD9A8A8600E42D9360C5B0CD3396896D5BB877452ACD62984",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedDivisorInvariance1107a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReducedDivisorInvariance1107a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedReducedDivisor.lean",
+      "sha256": "7C18A52D66EF36BA0A0172A93BC629BE26C97F7341477DD19C9E9816908A42AF",
+      "oleanSha256": "F59E9156C1B65FCD679BD74393C9D40B1A05A80419806EEF16EA98B1AAA3485D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedReducedDivisor1108a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFixedReducedDivisor1108a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantSupport.lean",
+      "sha256": "50EBA7125737A781C932093076DCC18D4962A05E79FFCB1F2BE7C97C4CF745DC",
+      "oleanSha256": "DFF9208974AA94E018F80F489B6A0252A277B55CEE2A9CB11066C4B52C763744",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantSupport1109a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantSupport1109a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionDivisorDescent.lean",
+      "sha256": "88688A0D1FB750768EBF067CCCE689B8D33EAF818EDDEEED5D8A4EB618DDAED3",
+      "oleanSha256": "2FD790CB3C6706A03215E6275B00C445322F61BA41C6C51F4339806DF41ECA47",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionDivisorDescent1110a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionDivisorDescent1110a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionComparison.lean",
+      "sha256": "5690BA3C253E01F3A12AAC5C657574E7DD741D17FA27177F51E544999636B24C",
+      "oleanSha256": "248B9697F57209E03CEBFEA66E18DC0931494804F3ABF7CC07ECEAA4A81A7C84",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionComparison1111a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionComparison1111a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateComparison.lean",
+      "sha256": "F5055B743CBC85612866F51137E5B5F91264DE0AC42BB878AED12E5DA6170025",
+      "oleanSha256": "7E45B91C64623B7FEB6E30012EF13F984EFAF938C1F9DD05AE788065FC0B7463",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateComparison1112a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateComparison1112a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTatePeriods.lean",
+      "sha256": "863A4800111C110E766958EA433FE753D20C21046A83870FBB28D9C8937861CF",
+      "oleanSha256": "0C45C56F6CD254858EBA484389AFCBC11965A4DD51D3C6E6F977F78FF4C3FF5C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTatePeriods1113a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTatePeriods1113a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_liftPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.off_image_exists_nonarithmetic_j_value",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.j_value_arithmetic_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.translation_orbit_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.divisor_pow_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_reduced_space",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_principal_support",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_principalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_add_principal_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_arithmetic_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_action_factorial",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_divisor_factorial_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.reduced_divisor_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_lift_single",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_fixed_reduced_divisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.invariant_support_lifts",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_conorm_of_support_lifts",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_divisor_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.picard_principal_eq_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_preimage",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.torsion_cardinality_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_torsion_cardinality_period_rank",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_order_mem_complexPicardMap_range",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_naturality",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_symm_tmul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_liftPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.off_image_exists_nonarithmetic_j_value",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.j_value_arithmetic_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.translation_orbit_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.divisor_pow_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_reduced_space",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_principal_support",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_principalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_add_principal_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_arithmetic_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_action_factorial",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_divisor_factorial_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.reduced_divisor_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_lift_single",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_fixed_reduced_divisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.invariant_support_lifts",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_conorm_of_support_lifts",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_divisor_descent",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.picard_principal_eq_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_preimage",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.torsion_cardinality_eq_complex",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_torsion_cardinality_period_rank",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_order_mem_complexPicardMap_range",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_naturality",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_symm_tmul"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTorsionTateAudit1.log",
+  "logSha256": "47996AF50E6CA6B2485343FAA3C3CEA8E954CED6009E4AA16056B3DBFC576A76",
+  "auditSha256": "584302901A0BE0D27E70FB5FF79B05EA5AEF932B19E840B0812EA4B31A083FFE",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTorsionTateScratchOwnership1114.log",
+  "ownershipSha256": "488887833B17E1E9CCEC97587B6DE69C0D355B4946B245202175FA30FDB44E1A",
+  "exhaustiveTheorems": 75,
+  "linterScopes": 15,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 43,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTorsionTateDependencyAudit1b.log",
+  "dependencyAuditSha256": "B97B3645A0CF40136FD64E3BD11EB1AB923E83B86E6875BEF9F87E8348316596",
+  "dependencyAuditSourceSha256": "E26BBB8DD6C68B2FAF9E62EA5244543E6D525BA23A19388B1F9369D9C0D2BB19",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_torsion_cardinality_period_rank",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_naturality",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_symm_tmul"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic realization -> arithmetic/complex Picard torsion comparison -> surjectivity -> reduced divisor fixed by finite torsion action -> support descends to lifted arithmetic places.",
+  "discharged": [
+    "Actual complex constant automorphisms fix arithmetic functions and lifted places.",
+    "Finite torsion supplies a fixed reduced representative; its support consists of lifted arithmetic places.",
+    "Every nonzero-order actual complex Gamma1 torsion class has an arithmetic torsion preimage, and the actual arithmetic and complex torsion cardinalities agree.",
+    "The actual arithmetic Gamma1 Picard Tate module is p-adically linearly equivalent to the actual complex Tate module and to the p-adic extension of the original integral period lattice."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual arithmetic Hecke compatibility remains. The generic Tate naturality consumer is conditional on its explicit commuting-map equation, not a proof of that geometric equation. Finite-coefficient H1, diamond/transpose comparisons, arithmetic Galois realization, original all-weight association and higher symmetric-power continuation remain. No rank-versus-genus identity is asserted. DUB17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-torsion-tate-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "D7A603E2D4C821CA6A7293EDF2C7A70F097710E86F3CB13C5856ED97AF427E8F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

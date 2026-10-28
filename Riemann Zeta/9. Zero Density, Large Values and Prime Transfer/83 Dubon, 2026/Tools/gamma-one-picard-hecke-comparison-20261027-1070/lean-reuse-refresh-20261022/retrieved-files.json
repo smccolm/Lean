@@ -1,0 +1,83 @@
+[
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "lean-toolchain",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/lean-toolchain.txt",
+    "blobSha1": "2afd38716ad6182657562d3dac3c98461c1385f2",
+    "bytes": 29,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/lean-toolchain"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "LICENSE",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/LICENSE.txt",
+    "blobSha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "bytes": 11357,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/LICENSE"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "TauCeti/NumberTheory/ModularForms/Newforms/Satake.lean",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/TauCeti/NumberTheory/ModularForms/Newforms/Satake.lean.txt",
+    "blobSha1": "e50ec794556bb4e76ef45182eef0bff1567f9c96",
+    "bytes": 17895,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/TauCeti/NumberTheory/ModularForms/Newforms/Satake.lean"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "TauCeti/Algebra/Module/Torsion/TateModule.lean",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/TauCeti/Algebra/Module/Torsion/TateModule.lean.txt",
+    "blobSha1": "62e7fac1cb918662dde0e644e61060d4428e9942",
+    "bytes": 36248,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/TauCeti/Algebra/Module/Torsion/TateModule.lean"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean.txt",
+    "blobSha1": "2637371ac3f65f180e8d06b2cd10a79ec0b40d12",
+    "bytes": 7585,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "8d89e8acfbca8b343e6449c3bf561c76f24ac072",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/Galois.lean",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/Galois.lean.txt",
+    "blobSha1": "653008eddc52e0ddbe0f33c5beedddf14a0533eb",
+    "bytes": 10932,
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/8d89e8acfbca8b343e6449c3bf561c76f24ac072/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/Galois.lean"
+  },
+  {
+    "repository": "CBirkbeck/tauceti-explorer",
+    "commit": "51b6dd37fa8ee84c4b222ae39d07348e315e86eb",
+    "path": "README.md",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/CBirkbeck/tauceti-explorer/README.md.txt",
+    "blobSha1": "617453e91ec719432c06aa5c02a430dfc284a4b3",
+    "bytes": 22153,
+    "url": "https://github.com/CBirkbeck/tauceti-explorer/blob/51b6dd37fa8ee84c4b222ae39d07348e315e86eb/README.md"
+  },
+  {
+    "repository": "CBirkbeck/tauceti-explorer",
+    "commit": "51b6dd37fa8ee84c4b222ae39d07348e315e86eb",
+    "path": "research/blueprint/packages/ModularityAndLanglandsExtensions/README.md",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/CBirkbeck/tauceti-explorer/research/blueprint/packages/ModularityAndLanglandsExtensions/README.md.txt",
+    "blobSha1": "7cbb9b5e9405c703fecd6f1af1f48160f3956451",
+    "bytes": 349769,
+    "url": "https://github.com/CBirkbeck/tauceti-explorer/blob/51b6dd37fa8ee84c4b222ae39d07348e315e86eb/research/blueprint/packages/ModularityAndLanglandsExtensions/README.md"
+  },
+  {
+    "repository": "CBirkbeck/tauceti-explorer",
+    "commit": "51b6dd37fa8ee84c4b222ae39d07348e315e86eb",
+    "path": "research/blueprint/packages/ModularityAndLanglandsExtensions/Suggested.lean",
+    "file": "E:/Lean/.tmp/dubon83/lean-reuse-refresh-20261022/CBirkbeck/tauceti-explorer/research/blueprint/packages/ModularityAndLanglandsExtensions/Suggested.lean.txt",
+    "blobSha1": "d20b4528ea9ffc3ab711827f0b4196c76663e2ea",
+    "bytes": 16584,
+    "url": "https://github.com/CBirkbeck/tauceti-explorer/blob/51b6dd37fa8ee84c4b222ae39d07348e315e86eb/research/blueprint/packages/ModularityAndLanglandsExtensions/Suggested.lean"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  "AdelicBoundedHeckeTrace",
+  "AdelicGoodPrimeSpherical",
+  "AdelicHeckeLocalBridge",
+  "AdelicHeckeRealComponent",
+  "AdelicLocalRepresentation",
+  "AdelicNormalizedHecke",
+  "FiniteAdelicHeckeLocalSupport",
+  "FiniteAdelicLocalGL2",
+  "FiniteAdelicLocalHom",
+  "FiniteAdelicLocalIntegral",
+  "FiniteAdelicLocalTopology",
+  "FiniteAdelicPlaceRemoval",
+  "FinitePlaceLevel",
+  "HeckeUnitaryScalarNormalization",
+  "RationalPrimePlace"
+]

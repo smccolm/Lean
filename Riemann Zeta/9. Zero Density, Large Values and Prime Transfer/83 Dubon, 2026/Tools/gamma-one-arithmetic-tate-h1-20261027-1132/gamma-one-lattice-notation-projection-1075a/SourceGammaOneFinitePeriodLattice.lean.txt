@@ -1,0 +1,51 @@
+import SourceGammaOnePicardPeriodEquiv
+import Dubon2026.SourceIntegralCohomologyFinite
+import Mathlib.LinearAlgebra.FreeModule.PID
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+Gamma1 Picard/Tate comparison -> finite original period lattice. The
+lattice is the actual image of modular-group periods. Finite generation
+of Gamma1 and native image finiteness give the finite integral module
+needed by the existing Tate-torus comparison, without a discreteness
+or a finite-basis assumption. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M]
+local notation "V" => Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)
+
+/-- The original dual periods as an additive homomorphism from the actual modular group. -/
+def dualPeriodHom : Additive (Gamma1 M) →+ V where
+  toFun γ := sourceWeightTwoDualPeriod (Gamma1 M) γ.toMul
+  map_zero' := by
+    ext f
+    rw [sourceWeightTwoDualPeriod_apply]
+    exact (sourceWeightTwoPeriodHom (Gamma1 M) f).map_zero
+  map_add' γ δ := by
+    ext f
+    simp only [sourceWeightTwoDualPeriod_apply, LinearMap.add_apply]
+    exact (sourceWeightTwoPeriodHom (Gamma1 M) f).map_add γ δ
+
+theorem integralLattice_eq_dualPeriodHom_range :
+    sourceWeightTwoIntegralLattice (Gamma1 M) = (dualPeriodHom M).range.toIntSubmodule := by
+  apply le_antisymm
+  · apply Submodule.span_le.mpr
+    rintro _ ⟨γ, rfl⟩
+    exact ⟨Additive.ofMul γ, rfl⟩
+  · rintro _ ⟨γ, rfl⟩
+    exact sourceWeightTwoDualPeriod_mem (Gamma1 M) γ.toMul
+
+theorem integralLattice_finite :
+    Module.Finite ℤ (sourceWeightTwoIntegralLattice (Gamma1 M)) := by
+  letI : Group.FG SL(2, ℤ) :=
+    Group.fg_iff.mpr ⟨{ModularGroup.S, ModularGroup.T},
+      SpecialLinearGroup.SL2Z_generators, Set.toFinite _⟩
+  letI : Group.FG (Gamma1 M) := inferInstance
+  letI : AddGroup.FG (Additive (Gamma1 M)) := inferInstance
+  letI : AddGroup.FG (dualPeriodHom M).range := inferInstance
+  rw [integralLattice_eq_dualPeriodHom_range]
+  exact Module.Finite.iff_addGroup_fg.mpr inferInstance
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

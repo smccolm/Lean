@@ -1,0 +1,124 @@
+import SourceGammaOneComplexCoefficientMap
+import SourceGammaOneComplexFieldExtension
+import SourceGammaOneComplexFieldIndependence
+import SourceGammaOneComplexSpanSeparation
+import SourceGammaOneConstantFieldValuationExtension
+import SourceGammaOneConstantFieldPlaces
+import SourceGammaOneExtendedPlaceMap
+import SourceGammaOneDivisorConorm
+import SourceGammaOneComplexPicardMap
+import SourceGammaOneComplexTorsionFinite
+import SourceGammaOneDegreeBaseChange
+import SourceGammaOneNewCoordinatePlaces
+import SourceGammaOneComplexCoordinateBasis
+import SourceGammaOneComplexCoordinateTrace
+import SourceGammaOneCoordinateDescent
+import SourceGammaOneComplexSpanDescent
+import SourceGammaOnePrincipalDescent
+import SourceGammaOneComplexPicardInjectivity
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coeffMap_sigma_mem_gammaOne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_j
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticFieldScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.adjoin_range_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_linearIndependent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.sum_ne_of_not_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extending_valuation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extended_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_liftPlace_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_eq_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_phi_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_ne_liftPlace_of_comap_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_comap_ne_of_ne_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mem_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complex_torsion_cardinality
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finite_complex_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_baseChange
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.new_of_mem_coordinate_localRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_coordinate_basis
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_j_fiber_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_mem_span_of_regular
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_degree_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_of_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexFieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.laurentLinearMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conormDegZero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneComplexCoefficientMap, `SourceGammaOneComplexFieldExtension, `SourceGammaOneComplexFieldIndependence, `SourceGammaOneComplexSpanSeparation, `SourceGammaOneConstantFieldValuationExtension, `SourceGammaOneConstantFieldPlaces, `SourceGammaOneExtendedPlaceMap, `SourceGammaOneDivisorConorm, `SourceGammaOneComplexPicardMap, `SourceGammaOneComplexTorsionFinite, `SourceGammaOneDegreeBaseChange, `SourceGammaOneNewCoordinatePlaces, `SourceGammaOneComplexCoordinateBasis, `SourceGammaOneComplexCoordinateTrace, `SourceGammaOneCoordinateDescent, `SourceGammaOneComplexSpanDescent, `SourceGammaOnePrincipalDescent, `SourceGammaOneComplexPicardInjectivity]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.coeffMap_sigma_mem_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_constants, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_rational, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_j, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexScalarTower, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticFieldScalarTower, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.adjoin_range_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_linearIndependent, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.sum_ne_of_not_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extending_valuation, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extended_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_liftPlace_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_unique, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_eq_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_phi_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_ne_liftPlace_of_comap_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_comap_ne_of_ne_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_single, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mk, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mem_torsion, `Dubon2026.SourceFunctionField.GammaOne.complex_torsion_cardinality, `Dubon2026.SourceFunctionField.GammaOne.finite_complex_torsion, `Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_baseChange, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.new_of_mem_coordinate_localRing, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_coordinate_basis, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_j_fiber_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_mem_span_of_regular, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_degree_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_of_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexFieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.laurentLinearMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conormDegZero, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Hecke Geometric Fibers postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Hecke Geometric Fibers theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC PICARD INJECTIVITY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneComplexCoefficientMap
+#lint in SourceGammaOneComplexFieldExtension
+#lint in SourceGammaOneComplexFieldIndependence
+#lint in SourceGammaOneComplexSpanSeparation
+#lint in SourceGammaOneConstantFieldValuationExtension
+#lint in SourceGammaOneConstantFieldPlaces
+#lint in SourceGammaOneExtendedPlaceMap
+#lint in SourceGammaOneDivisorConorm
+#lint in SourceGammaOneComplexPicardMap
+#lint in SourceGammaOneComplexTorsionFinite
+#lint in SourceGammaOneDegreeBaseChange
+#lint in SourceGammaOneNewCoordinatePlaces
+#lint in SourceGammaOneComplexCoordinateBasis
+#lint in SourceGammaOneComplexCoordinateTrace
+#lint in SourceGammaOneCoordinateDescent
+#lint in SourceGammaOneComplexSpanDescent
+#lint in SourceGammaOnePrincipalDescent
+#lint in SourceGammaOneComplexPicardInjectivity

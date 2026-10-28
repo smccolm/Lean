@@ -1,0 +1,78 @@
+{
+  "recordedUTC": "2026-10-23T08:15:55.163650+00:00",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean",
+      "sha": "adfff91183f70019a3b5e881b16001eba7fe3e24",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\Point\\ToClass.lean.txt",
+      "sha256": "1FFA04406128A75910CFF0DA0C60C0180CBDC9C5286B9DCF62093A9AA0D3AA0B"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean",
+      "sha": "6ceed88c480c399df3845cd457c3390970ca0922",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\XYIdealMaximal.lean.txt",
+      "sha256": "050C16730AADFF6D390697F9EB667340C85F9E9E720032811D455EF15DD0DACA"
+    },
+    {
+      "path": "TauCeti/RingTheory/ClassGroup/Basic.lean",
+      "sha": "7b63e5ebe35329d369240a5935a5d6bf44e14cbd",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/Basic.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\ClassGroup\\Basic.lean.txt",
+      "sha256": "0DC10F15C477C9D87C9FDD614BBBD6F6A58E4FAD8D2C43EC35D538C57F7C9240"
+    },
+    {
+      "path": "TauCeti/RingTheory/FractionalIdeal/Divisibility.lean",
+      "sha": "43c7537f02bb1e34f03665c233b623872ad8a3e4",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\FractionalIdeal\\Divisibility.lean.txt",
+      "sha256": "793E61CE14783A3CA6B5D97737CC22062617BAD6B1C56FE159A7713418708EDC"
+    },
+    {
+      "path": "TauCeti/RingTheory/FractionalIdeal/Operations.lean",
+      "sha": "22445b58b0a847e7db9a5f837a9da58f796e12a5",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Operations.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\FractionalIdeal\\Operations.lean.txt",
+      "sha256": "E28B4F892AF3D8881B2332040FF816C3557F8F27C9C5619FCA8F168F1C736B0D"
+    },
+    {
+      "path": "TauCeti/RingTheory/Ideal/Quotient/Invertible.lean",
+      "sha": "fba682947e46cdc3f61d94eb1a97f82757fea917",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\Ideal\\Quotient\\Invertible.lean.txt",
+      "sha256": "472B89116EEB4A7EBA91B67D01F9CC67F7F38C7DAEDE6B5B7CA086FB68B74E4F"
+    },
+    {
+      "path": "TauCeti/RingTheory/PicardGroup/Quotient.lean",
+      "sha": "e5815c6af22d663496ba1d9626711f08e51ccee9",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/PicardGroup/Quotient.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\PicardGroup\\Quotient.lean.txt",
+      "sha256": "9819C725D7F0AC7646375C2B4054CA407BD1C85EE4A204CEFB97C330A3E420EC"
+    },
+    {
+      "path": "TauCeti/RingTheory/Ideal/Quotient/Finite.lean",
+      "sha": "ff1a4059bf3c694ce37da4237aa43836a4ed3f9c",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Finite.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\RingTheory\\Ideal\\Quotient\\Finite.lean.txt",
+      "sha256": "ED90D53DA4AEB0BB103FEE28EF04DEF80FC2D9244E41836B9284BEE45E6E4BC7"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Dimension/Tower.lean",
+      "sha": "21999b5522eab94ba36b653daef23f42bdf61c37",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/LinearAlgebra/Dimension/Tower.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\LinearAlgebra\\Dimension\\Tower.lean.txt",
+      "sha256": "217B065FC65CA2577DF57B5552FCEA7A1FBD5DAC9B94101E0240F5BDF2E62A09"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "sha": "18b25c4b921aa48d54688a1e2ab8f69c566adf91",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\Eval.lean.txt",
+      "sha256": "33A38582BD0577C47D4A7CD5587A1C14F6D83A013623539676C1FF11FC5ED9B7"
+    }
+  ],
+  "evidenceBoundary": "Exact Git blobs; source inspection only. No external build or transitive axiom audit."
+}

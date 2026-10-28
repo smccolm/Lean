@@ -1,0 +1,49 @@
+
+/-- Exact original-object consumer of `adelicNormalizedHecke_real_component`. -/
+theorem actual_normalized_Hecke_real_component_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (f : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (v : AdelicCyclicHilbert f.toCuspForm) (hv : v ∈ adelicRealCyclicClosedSpan f.toCuspForm) :
+    adelicNormalizedHecke f.toCuspForm p hpN v = normalizedCuspCoefficients f.toCuspForm p • v :=
+  adelicNormalizedHecke_real_component f hpN v hv
+
+/-- Exact original-object consumer of `finiteAdelicLocalGL2Hom_injective`. -/
+theorem actual_finite_place_embedding_source (v : HeightOneSpectrum ℤ) :
+    Function.Injective (finiteAdelicLocalGL2Hom v) :=
+  finiteAdelicLocalGL2Hom_injective v
+
+/-- Exact original-object consumer of `finiteAdelicLocalGL2_continuous`. -/
+theorem actual_finite_place_continuity_source (v : HeightOneSpectrum ℤ) :
+    Continuous (finiteAdelicLocalGL2Hom v) :=
+  finiteAdelicLocalGL2_continuous v
+
+/-- Exact original-object consumer of `adelicPrimitive_good_prime_spherical`. -/
+theorem actual_good_prime_spherical_source {N p : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N) :
+    adelicCyclicHilbertGenerator f.toCuspForm ≠ 0 ∧
+      ∀ g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletionIntegers ℚ),
+        adelicCyclicLocalRepresentation f.toCuspForm (rationalPrimePlace p hp)
+          (GeneralLinearGroup.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype g)
+          (adelicCyclicHilbertGenerator f.toCuspForm) = adelicCyclicHilbertGenerator f.toCuspForm :=
+  adelicPrimitive_good_prime_spherical f hp hpN
+
+/-- Actual original bounded finite-adelic Hecke trace with its full p+1 unitary bound. -/
+theorem actual_bounded_Hecke_trace_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] (hpN : p.Coprime N)
+    (v : AdelicCyclicHilbert f) :
+    ‖adelicBoundedHeckeTrace f p hpN v‖ ≤ (p + 1 : ℝ) * ‖v‖ :=
+  adelicBoundedHeckeTrace_norm_le f p hpN v
+
+/-- Exact equality of the original adelic Hecke operator with the actual local-place sum on every original level-fixed vector. -/
+theorem actual_Hecke_localization_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] (hp : p.Prime) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLevelFixedSpace f) :
+    adelicNormalizedHecke f p hpN x = adelicLocalNormalizedHecke f p hp hpN x :=
+  adelicNormalizedHecke_eq_local f p hp hpN x hx
+
+/-- The genuine localized Hecke sum has precisely the original primitive Fourier coefficient as its eigenvalue. -/
+theorem actual_local_Hecke_eigenvalue_source {N p : ℕ} [NeZero N] [NeZero p] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N) :
+    adelicLocalNormalizedHecke F.toCuspForm p hp hpN (adelicCyclicHilbertGenerator F.toCuspForm) =
+      normalizedCuspCoefficients F.toCuspForm p • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalNormalizedHecke_primitive_generator F hp hpN
+

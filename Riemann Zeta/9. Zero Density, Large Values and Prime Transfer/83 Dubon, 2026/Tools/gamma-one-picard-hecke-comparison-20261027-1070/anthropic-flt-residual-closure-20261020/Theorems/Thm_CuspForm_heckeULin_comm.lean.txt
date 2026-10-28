@@ -1,0 +1,7 @@
+import Mathlib
+import Definitions.Def_ModularForm_HeckeOperatorForms
+import P2M.Util
+import P2M.Sol.S_CuspForm_heckeULin_comm
+
+theorem CuspForm.heckeULin_comm {N : ℕ} [NeZero N] (k : ℤ) {p q : ℕ} (hpN : p ∣ N) (hqN : q ∣ N) :
+    Commute (CuspForm.heckeULin k hpN) (CuspForm.heckeULin k hqN) := by p2m_exact_reverting @_root_.P2MW.S_CuspForm_heckeULin_comm.solution

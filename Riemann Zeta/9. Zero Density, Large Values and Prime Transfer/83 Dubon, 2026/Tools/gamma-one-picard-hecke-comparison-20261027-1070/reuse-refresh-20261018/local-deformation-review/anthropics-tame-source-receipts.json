@@ -1,0 +1,74 @@
+[
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_ExtCitation_exists_tame_generator_at_level.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ExtCitation_exists_tame_generator_at_level.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ExtCitation_exists_tame_generator_at_level.lean.txt",
+    "gitBlob": "4aa2854f799dd1d66918f2f9e924b6e4b907a13e",
+    "gitBlobVerified": true,
+    "sha256": "47F83052BE1F04D2D9852D6EF9861639EEA6A8B75F1D137C165DCB3A04D28D3F",
+    "bytes": 19838,
+    "review": "Full body read"
+  },
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_ExtCitation_exists_tame_generator_at_level_of_dvd.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ExtCitation_exists_tame_generator_at_level_of_dvd.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ExtCitation_exists_tame_generator_at_level_of_dvd.lean.txt",
+    "gitBlob": "f22952ce78a9d96f098857fb56415276de0761ba",
+    "gitBlobVerified": true,
+    "sha256": "BC58A25AFFA06E9898A3A3293B391BE30D58BDF2E8733395557DF067D18D688A",
+    "bytes": 13782,
+    "review": "Full body read"
+  },
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_Ideal_conj_smul_sub_mul_pow_mem_sq_of_frobenius.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Ideal_conj_smul_sub_mul_pow_mem_sq_of_frobenius.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_Ideal_conj_smul_sub_mul_pow_mem_sq_of_frobenius.lean.txt",
+    "gitBlob": "314d615affd5c0e9059ba98a20965785940cfb28",
+    "gitBlobVerified": true,
+    "sha256": "03BE34608DB1D2F6279D952C8A5082C4A17F380BF784C043D323C9D6EF2A4530",
+    "bytes": 18925,
+    "review": "Full body read"
+  },
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_Ideal_exists_monoidHom_inertia_residueFieldUnits_ker_iff_of_uniformizer.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Ideal_exists_monoidHom_inertia_residueFieldUnits_ker_iff_of_uniformizer.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_Ideal_exists_monoidHom_inertia_residueFieldUnits_ker_iff_of_uniformizer.lean.txt",
+    "gitBlob": "5134c7c7b244fcd714d0a9f6c911b33430ac235e",
+    "gitBlobVerified": true,
+    "sha256": "6268C20B1C7F094F1C6FD9F04F3A5DEC0744F40C16DEE28F3BB6F78BA759A0FB",
+    "bytes": 19031,
+    "review": "Full body read"
+  },
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_Subgroup_exists_wild_tame_cyclic_unramified_chain_of_le.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Subgroup_exists_wild_tame_cyclic_unramified_chain_of_le.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_Subgroup_exists_wild_tame_cyclic_unramified_chain_of_le.lean.txt",
+    "gitBlob": "db2edcfcc4929b5c06e26badc272bea25229f8d3",
+    "gitBlobVerified": true,
+    "sha256": "ACF492F9787D54140083CF900A5511433D2471A238C05FB3765C4FD066439F50",
+    "bytes": 17691,
+    "review": "Full body read"
+  },
+  {
+    "repository": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "source": "P2M/Sol/S_ValuationSubring_exists_ideal_ringOfIntegers_inertia_eq_map_restrictNormalHom.lean",
+    "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ValuationSubring_exists_ideal_ringOfIntegers_inertia_eq_map_restrictNormalHom.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\anthropics__S_ValuationSubring_exists_ideal_ringOfIntegers_inertia_eq_map_restrictNormalHom.lean.txt",
+    "gitBlob": "2c5489294ab41fc3c2dacc6af2efbe5924e138d4",
+    "gitBlobVerified": true,
+    "sha256": "E9844CD3B34CC600B8C92CB9555EF9FFBB5884B6FD47DBEFC6D3B3F240031510",
+    "bytes": 99677,
+    "review": "Selected Wild and KUM uniformizer/higher-congruence sections read; full 93k-character body not reviewed"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 homogeneous-coefficient Hecke character realization -> actual Picard/H1 Hecke compatibility -> literal weight-two coset trace and endpoint primitive identity.",
+  "shorterRoute": "Reuse the exact native Gamma1 integral conjugation, slash laws, sourceHasDerivAt_comp_smul and normalized primitive. Mathlib CuspForm.trace supplies finite trace packaging; do not rebuild holomorphy, cusp bounds, or primitive uniqueness. The Gamma0 good-prime trace theorem is not a Gamma1 theorem.",
+  "assumptionsToDischarge": [
+    "Representative independence of the actual Gamma1 slash terms.",
+    "Exact chain-rule derivative of the inverse-dilation coset primitive.",
+    "Endpoint differences agree with the actual analytic trace."
+  ],
+  "remaining": "Analytic Hecke fiber multiplicities and compatibility with actual Picard action; H1/diamond/transpose/arithmetic comparison; full original all-weight association and literal higher continuation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoHeckeCosetTrace.lean",
+      "sha256": "DC4CBF7C5EEFFCB55FFAF5FBAEE25C012B192A393AF5668570274D6BC42A5372"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeCosetPrimitiveDerivative.lean",
+      "sha256": "0186BD3507B00CF9173804E9C37394C1757E1AA8B5AB136B7CFF31A829554372"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrimitiveTrace.lean",
+      "sha256": "F40CDFDB13A9C2471B6097D689C45DA7902B4731201E20FE12A496BF7F76E126"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoAnalyticPrimitive.lean",
+      "sha256": "4126D904242F9DAA0F37A71B8B8FDC51D8D8BCA5DB439EBFE45D55A08AEA75F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodSlash.lean",
+      "sha256": "B01E771DDCC832C4A6C871C52AE1F9635D1FC386915D42268D162920217969C6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\NormTrace.lean",
+      "sha256": "83D70D1EEB5224B86AA4BBC21A0E165E559D300DD7EA87624518DE9C290DAC52"
+    }
+  ]
+}

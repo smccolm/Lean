@@ -1,0 +1,74 @@
+
+/-- Exact original-object consumer of `finiteAdelicSublevelIntegerGroup_finiteIndex`. -/
+theorem actual_sublevel_integer_finite_source (N : ℕ) [NeZero N]
+    (L : Subgroup (finiteAdeleGL2Gamma0 N)) [L.FiniteIndex] :
+    (finiteAdelicSublevelIntegerGroup N L).FiniteIndex :=
+  finiteAdelicSublevelIntegerGroup_finiteIndex N L
+
+/-- Exact original-object consumer of `adelicSublevelClassicalFamily_injective`. -/
+theorem actual_sublevel_classical_family_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (L : Subgroup (finiteAdeleGL2Gamma0 N)) :
+    Function.Injective (adelicSublevelClassicalFamily f L) :=
+  adelicSublevelClassicalFamily_injective f L
+
+/-- Exact original-object consumer of `adelicSublevelFixedLowest_finiteDimensional`. -/
+theorem actual_sublevel_lowest_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (L : Subgroup (finiteAdeleGL2Gamma0 N)) (hL : IsOpen (L : Set (finiteAdeleGL2Gamma0 N))) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicSublevelFixedSpace f L :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicSublevelFixedLowest_finiteDimensional f hf hk L hL
+
+/-- Exact original-object consumer of `adelicLocalCyclic_level_action`. -/
+theorem actual_local_sublevel_action_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) (a : finiteAdeleGL2Gamma0 N)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicClosedSpan f v) :
+    adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a.val) x =
+      adelicCyclicLocalRepresentation f v (GeneralLinearGroup.map (finiteAdelePlace v) a.val) x :=
+  adelicLocalCyclic_level_action f v a x hx
+
+/-- Exact original-object consumer of `adelicLocalCyclic_open_fixed_finiteDimensional`. -/
+theorem actual_local_open_fixed_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ ↥(adelicLocalCyclicClosedSpan f v ⊓ adelicLocalSubgroupFixedSpace f v J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicLocalCyclic_open_fixed_finiteDimensional f hf hk v J hJ
+
+/-- Exact original-object consumer of `adelicLocalCyclic_smooth_iff_core`. -/
+theorem actual_local_smooth_completion_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicClosedSpan f v) :
+    (∃ J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ J, adelicCyclicLocalRepresentation f v g x = x) ↔ x ∈ adelicLocalCyclicCore f v :=
+  adelicLocalCyclic_smooth_iff_core f hf hk v x hx
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_admissible`. -/
+theorem actual_local_smooth_admissible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicLocalSmoothRepresentation f v).comp J.subtype)) :=
+  adelicLocalSmoothRepresentation_admissible f hf hk v J hJ
+
+/-- Exact original-object consumer of `adelicLocalCyclicRepresentation_admissible`. -/
+theorem actual_local_cyclic_admissible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (J : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicLocalCyclicRepresentation f v).comp J.subtype)) :=
+  adelicLocalCyclicRepresentation_admissible f hf hk v J hJ
+
+/-- Exact primitive source consumer combining genuine good-prime smooth irreducibility and proved admissibility of the original local representation. -/
+theorem actual_primitive_local_admissible_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (hpN : p.Coprime N) :
+    (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible ∧
+      ∀ J : Subgroup (GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)),
+        IsOpen (J : Set (GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))) →
+          FiniteDimensional ℂ (Representation.invariants
+            ((adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).comp J.subtype)) :=
+  ⟨adelicLocalSmoothRepresentation_irreducible F hpN,
+    fun J hJ => adelicLocalSmoothRepresentation_admissible F.toCuspForm (primitiveCuspForm_ne_zero F) hk _ J hJ⟩
+

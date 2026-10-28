@@ -1,0 +1,56 @@
+
+/-- Exact original-object consumer of `integralGamma0_finite_dense`. -/
+theorem actual_finite_level_density_source (N : ℕ) [NeZero N]
+    (g : SL(2, FiniteAdeleRing ℤ ℚ)) (hg : g ∈ finiteAdeleGamma0 N) :
+    g ∈ closure (Set.range (fun γ : Gamma0 N =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom (FiniteAdeleRing ℤ ℚ)) γ.val)) :=
+  integralGamma0_finite_dense N g hg
+
+/-- Exact original-object consumer of `finiteAdelicHeckeUpperCoset_surjective`. -/
+theorem actual_full_finite_Hecke_cosets_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) : Function.Surjective (finiteAdelicHeckeUpperCoset N p hpN) :=
+  finiteAdelicHeckeUpperCoset_surjective N p hpN
+
+/-- Exact original-object consumer of `adelicHilbertHeckeTrace_primitive_generator`. -/
+theorem actual_full_adelic_Hecke_eigen_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (f : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicHilbertHeckeTrace f.toCuspForm p hpN (adelicCyclicHilbertGenerator f.toCuspForm) =
+      ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) * cuspCoefficients f.toCuspForm p) •
+        adelicCyclicHilbertGenerator f.toCuspForm :=
+  adelicHilbertHeckeTrace_primitive_generator f hpN
+
+/-- Exact original-object consumer of `primitiveCuspForm_good_prime_eigensystem_scalar`. -/
+theorem actual_classical_prime_multiplicity_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (g : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (hg : ∀ p, p.Prime → p.Coprime N →
+      cuspHeckeLinear N k p g = cuspCoefficients f.toCuspForm p • g) :
+    g = cuspCoefficients g 1 • f.toCuspForm :=
+  primitiveCuspForm_good_prime_eigensystem_scalar f g hg
+
+/-- Exact original-object consumer of `adelicPrimitiveIntertwiner_scalar`. -/
+theorem actual_full_adelic_scalar_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hk : 0 < k)
+    (A : AdelicCyclicHilbert f.toCuspForm →L[ℂ] AdelicCyclicHilbert f.toCuspForm)
+    (hA : ∀ g v, A (adelicCyclicHilbertRepresentation f.toCuspForm g v) =
+      adelicCyclicHilbertRepresentation f.toCuspForm g (A v)) :
+    ∃ c : ℂ, ∀ v, A v = c • v :=
+  adelicPrimitiveIntertwiner_scalar f hk A hA
+
+/-- Exact original-object consumer of `adelicPrimitiveHilbert_irreducible`. -/
+theorem actual_full_adelic_irreducible_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : PrimitiveCuspForm N k) (hk : 0 < k)
+    (p : Submodule ℂ (AdelicCyclicHilbert f.toCuspForm))
+    (hclosed : IsClosed (p : Set (AdelicCyclicHilbert f.toCuspForm)))
+    (hp : ∀ g v, v ∈ p → adelicCyclicHilbertRepresentation f.toCuspForm g v ∈ p) :
+    p = ⊥ ∨ p = ⊤ :=
+  adelicPrimitiveHilbert_irreducible f hk p hclosed hp
+
+/-- The full actual adelic Hecke trace equals the canonical lift of the classical Hecke operator with its exact determinant factor. -/
+theorem actual_full_adelic_Hecke_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (p : ℕ) [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hF : v.val = canonicalAdelicGL2CuspLift N k F) :
+    (adelicAlgebraicHeckeTrace f p hpN v).val = canonicalAdelicGL2CuspLift N k
+      ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) • cuspHecke p F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) :=
+  adelicAlgebraicHeckeTrace_classical_full f p hpN v F hF
+

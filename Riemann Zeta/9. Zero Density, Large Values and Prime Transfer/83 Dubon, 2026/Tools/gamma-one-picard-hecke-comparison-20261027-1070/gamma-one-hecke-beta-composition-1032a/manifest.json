@@ -1,0 +1,4 @@
+{
+  "reason": "Normalize composed eventually-equal functions before rewriting their values.",
+  "sourceSha256": "A9BECE7F59840CC8338F5EFB7EDE147CA96C87CD35E4C63F1568E19278A547B6"
+}

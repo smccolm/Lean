@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "checkedUTC": "2026-10-18T21:28:01.502636+00:00",
+  "files": [
+    {
+      "path": "P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+      "sha": "796af577bfff96f47f5f92401894cf4287f5a098",
+      "size": 34730,
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean.txt",
+      "sha256": "5D13D13D8A16B5F1A507E6F778E546BE356F78BC7AA39102A5F3528F9CC6F527"
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+      "sha": "6b561235f0597e1705e2894cf77dc7602dbd8540",
+      "size": 20608,
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-image-review\\S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean.txt",
+      "sha256": "4B7C4FDC3B617A8CA45B4AFFE64C2B25579A778737A52E8C9D64540CB1B04D10"
+    }
+  ],
+  "scope": "Two selected source bodies only, not their full dependency closure; no kernel certificate.",
+  "reviewedUTC": "2026-10-18T21:28:58.286425+00:00",
+  "exactDependency": "DUB-17 primitive_satoTate_of_higher_continuation_alone <- higher continuation <- potential automorphy and descent <- arithmetic lifting/patching <- auxiliary primes detecting dual Selmer classes <- detecting global elements.",
+  "findings": [
+    {
+      "source": "P2M/Sol/S_Module_End_exists_charpoly_eq_and_commute_and_trace_eq_zero_and_notMem_of_irreducible.lean",
+      "scope": "Pure linear algebra, but explicitly finrank k V = 2, characteristic not 2, irreducibility, split degree-two characteristic polynomials, and a proper conjugation-stable additive subgroup of endomorphisms. It produces a distinct-eigenvalue element with a commuting trace-zero witness outside that subgroup."
+    },
+    {
+      "source": "P2M/Sol/S_ResidualGaloisRep_exists_apply_eq_self_and_adZeroRep_eq_one_and_cocycles_apply_ne_zero.lean",
+      "scope": "Actual absolute rational Galois group, rank-two residual representation, finite characteristic-p coefficients, odd p, absolute irreducibility and absolute irreducibility on every index-two subgroup. Nonzero dual adjoint H1 yields a root-fixing element acting trivially on the adjoint with nonzero cocycle value. The proof imports finite-image cohomology vanishing and further irreducibility/invariant results whose full closure has not been certified here."
+    }
+  ],
+  "decision": "Do not import these rank-two endpoints as arbitrary-dimensional auxiliary-prime detection. Preserve the concrete decomposition for possible later native adaptation; first establish the residual-image hypotheses required by the selected higher symmetric-power route. Native continuous H1 and the newly compiled actual local-detection bridge avoid duplicating source cohomology and Frobenius infrastructure. No acceptance gate closes.",
+  "rootPinsChanged": false
+}

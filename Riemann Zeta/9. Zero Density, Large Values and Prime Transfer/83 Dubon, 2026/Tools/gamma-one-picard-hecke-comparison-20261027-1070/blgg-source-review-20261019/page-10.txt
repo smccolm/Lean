@@ -1,0 +1,134 @@
+10 THOMAS BARNET-LAMB, TOBY GEE, AND DAVID GERAGHTY
+through R
+vλ′ ,cr
+ρ|GM′
+(using the fact that R
+vλ,cr
+ρ
+is reduced and l-torsion free). The
+result now follows from the formal smoothness of Spec R
+vλ′ ,cr
+ρ|GM′
+[1/l], which implies
+that the image of any irreducible component of Spec R
+vλ,cr
+ρ
+[1/l] is contained in a
+unique irreducible component of Spec R
+vλ′ ,cr
+ρ|GM′
+[1/l].
+In a similar vein, it follows that if n = 2 and ρ1 ∼ ρ2, then Symk−1
+ρ1 ∼
+Symk−1
+ρ2 for all k ≥ 1, where we take the O-basis on the Symk−1
+ρi
+inherited
+from the bases we have on the ρi
+, in the sense of Definition 3.3.1. [The same is true
+if n > 2, with an appropriate modification of Definition 3.3.1.]
+We will make one final variation on this theme. Suppose ρ
+′
+: GM → GLm(O) is
+crystalline of l-adic Hodge type vλ′ for some m and some λ
+′ ∈ (Z
+m
++ )
+Hom(M,K)
+, and
+ρ1 ∼ ρ2 are as above. (Note n need no longer be 2.) Then ρ1⊗O ρ
+′ ∼ ρ2⊗O ρ
+′
+, where
+we take as O-basis on the ρi ⊗O ρ
+′
+the inherited bases in the sense of Definition
+3.3.2.
+Lemma 3.3.6. Let ρ : GM → GLn(k) be a continuous homomorphism. Suppose
+ρ1, ρ2 : GM → GLn(O) are two lifts of ρ with ρ1 ∼ ρ2. If O′ denotes the ring of
+integers in a finite extension of K with residue field k
+′
+, then ρ1 ∼ ρ2, regarded as
+lifts of ρ ⊗k k
+′
+to GLn(O′
+).
+Proof. Let λ ∈ (Z
+n
++)
+Hom(M,K) be such that ρ1 and ρ2 have l-adic Hodge type vλ.
+Let R = R
+vλ,cr
+ρ
+and R′ = R ⊗O O′
+. We need to show that ρ1 and ρ2 give rise
+to closed points of Spec R′
+[1/l] lying on a common component. Note that if C
+′
+is an irreducible component of Spec R′
+[1/l], then the image of C
+′
+in Spec R[1/l]
+is an irreducible component. Indeed, the image of C
+′
+in Spec R[1/l] is irreducible
+and closed (as R → R′
+is finite). If x
+′
+is a closed point of Spec R′
+[1/l] lying in
+C
+′ with image x in Spec R[1/l], then the completed local rings of Spec R′
+[1/l] and
+Spec R[1/l] at x
+′ and x respectively are isomorphic. We deduce that the image of
+C
+′ has the same dimension as C
+′ and hence is an irreducible component.
+Now, let x1 and x2 denote the closed points of Spec R[1/l] corresponding to ρ1
+and ρ2 and let C denote the irreducible component of Spec R[1/l] containing x1 and
+x2. Then we claim that the preimage of C in Spec R′
+[1/l] is irreducible. Indeed,
+suppose there are two distinct irreducible components C
+′ and C
+′′ of Spec R′
+[1/l]
+mapping to C. Then there are points x
+′
+1
+and x
+′′
+1
+of C
+′ and C
+′′ respectively mapping
+to x1. However, the preimage of x1 in Spec R′
+[1/l] consists of a single point (let
+m denote the maximal ideal of R[1/l] corresponding to x1. Then the fibre over
+x1 is given by the spectrum of (R[1/l]/m) ⊗O O′ ∼= K ⊗O O′ ∼= K′
+.) Thus x
+′
+1 =
+x
+′′
+1
+lies in the intersection of C
+′ and C
+′′, contradicting the formal smoothness of
+Spec R′
+[1/l]. 
+3.3.2. Local deformations (p 6= l case). Suppose now that p 6= l. By Theorem 2.1.6
+of [Gee10], Spec R
+ρ
+[1/l] is equidimensional of dimension n
+2
+.
+Definition 3.3.7. Let ρ1, ρ2 : GM → GLn(O) be two lifts of ρ. We say that
+ρ1 O ρ2 if the following hold.
+(1) For each minimal prime ideal ℘ of R, the quotient R/℘ is geometrically
+irreducible.
+(2) ρ1 corresponds to a closed point of Spec R
+ρ
+[1/l] which is contained in a
+unique irreducible component and this irreducible component also contains
+the closed point corresponding to ρ2.

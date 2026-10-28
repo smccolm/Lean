@@ -1,0 +1,27 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite homogeneous-coefficient Gamma1 Hecke realization -> finite parabolic H1 and Tate comparison.",
+  "shorterRoute": "Factor integer parabolic characters through the actual period lattice using proved real-period surjectivity, then use the proved integral lift for finite characters. This avoids a second integral Poincare-duality construction. Actual coset formulas prove the transpose action. Finite-order vanishing remains explicit until derived for the application.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "sha256": "EA2BE01343B9FB427D5AC677F8BE3342116D922544B2FC4A2063AC14FFCC1E27"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneIntegralParabolicLift.lean",
+      "sha256": "FD0DF1370CBAB07CA9720441719798C1C56EB3EE3053F5E5787442E1B6BEDC08"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePeriodLattice.lean",
+      "sha256": "D23E2B69333F3DC600F997B4342B256F624B388DA269E8134197C586CEC87095"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCharacters.lean",
+      "sha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodTateHecke.lean",
+      "sha256": "ED19FB00C7932651C57375A0B675B787FE16BBE1BBD68AD13266C84F5EEE075F"
+    }
+  ],
+  "remaining": "Full/parabolic passage, finite-order discharge for application, coefficient and diamond realization, arithmetic Galois association and higher continuation remain. 16/20; DUB17--20 open."
+}

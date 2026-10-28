@@ -1,0 +1,7 @@
+{
+  "reason": "The periodHeckeLinear_apply and periodQuotientHecke_mk proofs are definitional rfl accessors. They remain explicitly axiom-checked with all declarations. The dual operator, underlying cusp operator, lattice proof and exact endpoint identity remain required in the actual VALUE closures; no nondefinitional dependency removed.",
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply"
+  ]
+}

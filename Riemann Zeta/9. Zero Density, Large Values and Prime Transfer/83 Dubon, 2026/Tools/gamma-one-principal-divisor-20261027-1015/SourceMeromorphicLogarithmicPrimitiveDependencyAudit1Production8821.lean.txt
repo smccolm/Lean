@@ -1,0 +1,32 @@
+import Dubon2026.SourceUpperHalfPlaneResidueData
+import Dubon2026.SourceMeromorphicFinitePolarProduct
+import Dubon2026.SourceUpperHalfPlaneDiscExhaustion
+import Dubon2026.SourceMeromorphicDiscPrimitive
+import Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative]
+  let localModules : Array Name := #[`Dubon2026.SourceUpperHalfPlaneResidueData, `Dubon2026.SourceMeromorphicFinitePolarProduct, `Dubon2026.SourceUpperHalfPlaneDiscExhaustion, `Dubon2026.SourceMeromorphicDiscPrimitive, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive]
+  let required : Array Name := #[`Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.int_eq_zero_of_div_eventuallyEq_analytic, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.analyticAt, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_imp_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.finite_support_inter, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_ne_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_polarPart, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_range_diff_of_countable, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_ball_diff_of_countable, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad_pos, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_im, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_re, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht_sub_rad, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_closedBall, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_ball, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.dist_ctr_succ, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono_succ, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_mem_ball, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.mem_poles, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho'_of_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.differentiableOn_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_primitive_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_exp_Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_apply, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_ne_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base_mem, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.m_base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_eq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_agree, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eventuallyEq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_spec, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.polarPart, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.poles, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MEROMORPHIC LOGARITHMIC PRIMITIVE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the global meromorphic logarithmic primitive. Local integer-residue expansions produce a global meromorphic function with exact orders and the logarithmic derivative off the divisor. Multiplier covariance, cusp limits and the actual differential input remain. DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

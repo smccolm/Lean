@@ -1,0 +1,45 @@
+import SourceGammaOneComplexCoefficientMap
+import SourceGammaOneComplexFieldExtension
+import SourceGammaOneComplexFieldIndependence
+import SourceGammaOneComplexSpanSeparation
+import SourceGammaOneConstantFieldValuationExtension
+import SourceGammaOneConstantFieldPlaces
+import SourceGammaOneExtendedPlaceMap
+import SourceGammaOneDivisorConorm
+import SourceGammaOneComplexPicardMap
+import SourceGammaOneComplexTorsionFinite
+import SourceGammaOneDegreeBaseChange
+import SourceGammaOneNewCoordinatePlaces
+import SourceGammaOneComplexCoordinateBasis
+import SourceGammaOneComplexCoordinateTrace
+import SourceGammaOneCoordinateDescent
+import SourceGammaOneComplexSpanDescent
+import SourceGammaOnePrincipalDescent
+import SourceGammaOneComplexPicardInjectivity
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion]
+  let localModules : Array Name := #[`SourceGammaOneComplexCoefficientMap, `SourceGammaOneComplexFieldExtension, `SourceGammaOneComplexFieldIndependence, `SourceGammaOneComplexSpanSeparation, `SourceGammaOneConstantFieldValuationExtension, `SourceGammaOneConstantFieldPlaces, `SourceGammaOneExtendedPlaceMap, `SourceGammaOneDivisorConorm, `SourceGammaOneComplexPicardMap, `SourceGammaOneComplexTorsionFinite, `SourceGammaOneDegreeBaseChange, `SourceGammaOneNewCoordinatePlaces, `SourceGammaOneComplexCoordinateBasis, `SourceGammaOneComplexCoordinateTrace, `SourceGammaOneCoordinateDescent, `SourceGammaOneComplexSpanDescent, `SourceGammaOnePrincipalDescent, `SourceGammaOneComplexPicardInjectivity, `SourceGammaOneFinitePeriodLattice, `SourceGammaOneComplexTatePeriods, `SourceGammaOnePeriodTateHecke, `SourceGammaOneComplexTateHecke, `SourceGammaOneInvariantDivisorPeriod, `SourceGammaOnePrincipalMeromorphicRealization, `SourceGammaOneAnalyticAbelKernel, `SourceWeightTwoEvaluationFrame, `SourceWeightTwoEndpointImage, `SourceWeightTwoEndpointOpenImage, `SourceWeightTwoJacobiInversion, `SourceGammaOneJacobiInversion, `SourceGammaOneAnalyticPicardPresentation, `SourceGammaOnePicardPeriodKernel, `SourceGammaOnePicardPeriodEquiv, `SourceGammaOneHeckeAlphaGerms, `SourceGammaOneHeckeStretchLaurent, `SourceGammaOneHeckeBetaGerms, `SourceGammaOneHeckeAnalyticPlaces, `SourceGammaOneHeckeAnalyticFiber, `SourceGammaOneWeightTwoHeckeCosets, `SourceGammaOneHeckePrimitiveDerivative, `SourceGammaOneHeckeTraceCosets, `SourceGammaOneCuspHeckeTrace, `SourceGammaOneHeckePrimitiveTrace, `SourceGammaOneHeckePointTransition, `SourceGammaOnePeriodNormalization, `SourceGammaOneScalarHeckePeriods, `SourceGammaOneHeckeCharacters, `SourceGammaOneHolomorphicH1Hecke, `SourceGammaOneCuspHeckeLinear, `SourceGammaOnePeriodHeckeLattice, `SourceGammaOneHeckeGammaZeroMap, `SourceGammaOneHeckeGammaZeroPlaces, `SourceGammaOneHeckeGenericOrbits, `SourceGammaOneHeckeFiberPresentation, `SourceGammaOneHeckeGenericFiber, `SourceGammaOneHeckeJDegree, `SourceGammaOneHeckeAllFibers, `SourceGammaOneHeckeExactRamification, `SourceGammaOneHeckePlaceOrbits, `SourceGammaOneCentralStabilizerCard, `SourceGammaOneHeckeActualStabilizers, `SourceGammaOneHeckeUpperOrbits, `SourceGammaOneHeckeCosetMultiplicity, `SourceGammaOneHeckeAnalyticDivisor, `SourceGammaOneAnalyticHeckeDivisors, `SourceGammaOnePicardHeckeDivisors, `SourceGammaOneEndpointHecke, `SourceGammaOnePicardPeriodHecke]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.coeffMap_sigma_mem_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_constants, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_rational, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_j, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.adjoin_range_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.sum_ne_of_not_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extending_valuation, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extended_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_liftPlace_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_eq_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_phi_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mk, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mem_torsion, `Dubon2026.SourceFunctionField.GammaOne.complex_torsion_cardinality, `Dubon2026.SourceFunctionField.GammaOne.finite_complex_torsion, `Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_baseChange, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.new_of_mem_coordinate_localRing, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_coordinate_basis, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_j_fiber_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_mem_span_of_regular, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_degree_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_of_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.laurentLinearMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conormDegZero, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap, `Dubon2026.SourceCurve.ConstantField.extension_order_and_unique, `Dubon2026.SourceCurve.ConstantField.exists_extending_valuation_of_proper_ideal, `Dubon2026.SourceFunctionField.mem_span_of_coeffMap_mem_span, `Dubon2026.SourceFunctionField.DegreeTransport.relfinrank_eq_of_finite, `Dubon2026.SourceCurve.ConstantField.exists_coordinate_basis_of_finrank_eq, `Dubon2026.SourceCurve.ConstantField.mem_span_of_coordinate_regular, `Dubon2026.SourceCurve.ConstantField.eq_sum_trace_mul, `Dubon2026.SourceCurve.ConstantField.ord_sum_le, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv, `Dubon2026.ComplexLatticeTorsion.natCard_torsion_quotient]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC PICARD INJECTIVITY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual arithmetic torsion finiteness VALUE closure through the original complex Picard map, principal descent and exact place orders. Torsion surjectivity, arithmetic Tate and Galois realization remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

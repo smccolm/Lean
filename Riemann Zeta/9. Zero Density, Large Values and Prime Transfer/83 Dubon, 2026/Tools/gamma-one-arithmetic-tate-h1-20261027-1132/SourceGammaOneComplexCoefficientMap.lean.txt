@@ -1,0 +1,59 @@
+import Dubon2026.SourceGammaOneFunctionFieldBaseChange
+import Dubon2026.SourceOriginalComplexCoefficientMap
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> Gamma1
+arithmetic/complex Picard torsion comparison -> actual constant-field
+map. Reuse the fixed original algebraic-closure embedding and its Laurent
+coefficient identities. Closure induction proves preservation of the
+literal Gamma1 integral-ratio field; no alternative function field is used.
+The native original coefficient-map argument is adapted from the pinned
+Apache-2.0 FLT source at 6e837e75355538c7f80bab5b956861e86c4eacc2. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open CongruenceSubgroup
+open OriginalConstantField (coeffMap_sigma_constants coeffMap_sigma_rational)
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ)
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+
+theorem coeffMap_sigma_mem_gammaOne {x : LaurentSeries Qbar} (hx : x ∈ FQ) :
+    coeffMap OriginalConstantField.sigma.toRingHom x ∈ FC := by
+  change x ∈ Subfield.closure (Set.range (algebraMap Qbar (LaurentSeries Qbar)) ∪
+    (coeffEmb Qbar '' (qExpFunctionFieldC ℚ (Gamma1 N) : Set (LaurentSeries ℚ)))) at hx
+  induction hx using Subfield.closure_induction with
+  | mem y hy =>
+    rcases hy with ⟨a, rfl⟩ | ⟨z, hz, rfl⟩
+    · rw [coeffMap_sigma_constants]
+      exact (functionFieldOver (Gamma1 N) ℂ).algebraMap_mem _
+    · rw [coeffMap_sigma_rational]
+      exact coeffEmb_mem_laurentBaseChange ℂ hz
+  | one => simp
+  | add x y _ _ hx hy => simpa only [map_add] using add_mem hx hy
+  | neg x _ hx => simpa only [map_neg] using neg_mem hx
+  | inv x _ hx => simpa only [map_inv₀] using inv_mem hx
+  | mul x y _ _ hx hy => simpa only [map_mul] using mul_mem hx hy
+
+/-- The actual Gamma1 arithmetic field embedded into its complex field by Laurent coefficients. -/
+def fieldMap : FQ →+* FC where
+  toFun x := ⟨coeffMap OriginalConstantField.sigma.toRingHom x.val, coeffMap_sigma_mem_gammaOne N x.property⟩
+  map_one' := Subtype.ext (map_one _)
+  map_mul' _ _ := Subtype.ext (map_mul _ _ _)
+  map_zero' := Subtype.ext (map_zero _)
+  map_add' _ _ := Subtype.ext (map_add _ _ _)
+
+theorem fieldMap_constants (a : Qbar) :
+    fieldMap N (algebraMap Qbar FQ a) = algebraMap ℂ FC (OriginalConstantField.sigma a) :=
+  Subtype.ext (coeffMap_sigma_constants a)
+
+theorem fieldMap_rational (x : qExpFunctionFieldC ℚ (Gamma1 N)) :
+    fieldMap N ⟨coeffEmb Qbar x.val, coeffEmb_mem_laurentBaseChange Qbar x.property⟩ =
+      ⟨coeffEmb ℂ x.val, coeffEmb_mem_laurentBaseChange ℂ x.property⟩ :=
+  Subtype.ext (coeffMap_sigma_rational x.val)
+
+theorem fieldMap_j : fieldMap N (jCoordinateOver (Gamma1 N) Qbar) =
+    jCoordinateOver (Gamma1 N) ℂ :=
+  Subtype.ext (coeffMap_sigma_rational _)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

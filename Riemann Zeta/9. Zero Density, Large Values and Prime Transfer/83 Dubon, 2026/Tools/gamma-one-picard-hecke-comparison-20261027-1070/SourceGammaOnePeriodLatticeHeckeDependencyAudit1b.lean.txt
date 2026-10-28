@@ -1,0 +1,29 @@
+import SourceGammaOneCuspHeckeLinear
+import SourceGammaOnePeriodHeckeLattice
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along]
+  let localModules : Array Name := #[`SourceGammaOneCuspHeckeLinear, `SourceGammaOnePeriodHeckeLattice, `SourceGammaOneHeckePointTransition, `SourceGammaOnePeriodNormalization, `SourceGammaOneScalarHeckePeriods, `SourceGammaOneHeckeCharacters, `SourceGammaOneHolomorphicH1Hecke, `SourceGammaOneWeightTwoHeckeCosets, `SourceGammaOneHeckePrimitiveDerivative, `SourceGammaOneHeckeTraceCosets, `SourceGammaOneCuspHeckeTrace, `SourceGammaOneHeckePrimitiveTrace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke, `Dubon2026.sourceWeightTwoDualPeriod_mem, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference, `Dubon2026.sourceSmul_slash_of_det_pos, `Dubon2026.sourceWeightTwoIntegralLattice]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE PERIOD LATTICE HECKE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original integer-period quotient operator and endpoint identity VALUE closures. Actual divisor Hecke multiplicities and full Picard/parabolic/diamond/transpose/arithmetic comparisons remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

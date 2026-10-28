@@ -1,0 +1,44 @@
+import SourceGammaOneArithmeticTateHecke
+import Mathlib.RingTheory.IsTensorProduct
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+finite H1/Tate comparison. The inverse of the proved arithmetic
+Tate-period equivalence embeds the original lattice in the literal
+arithmetic Tate module. Native base-change universality, with its
+hypothesis proved from that equivalence, will supply the dual finite
+characters. The original prime Hecke operators commute with this map. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+open scoped TensorProduct
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+
+/-- The original integral periods inside the actual arithmetic Picard Tate module. -/
+def arithmeticPeriodInclusion :
+    sourceWeightTwoIntegralLattice (Gamma1 M) →ₗ[ℤ]
+      TateModule p (Pic0 (AlgebraicClosure ℚ)
+        (functionFieldOver (Gamma1 M) (AlgebraicClosure ℚ))) :=
+  ((arithmeticPicardTatePeriodTensorEquiv M p).symm.toLinearMap.restrictScalars ℤ).comp
+    (TensorProduct.mk ℤ ℤ_[p] (sourceWeightTwoIntegralLattice (Gamma1 M)) 1)
+
+theorem arithmeticPeriodInclusion_isBaseChange :
+    IsBaseChange ℤ_[p] (arithmeticPeriodInclusion M p) :=
+  IsBaseChange.of_equiv (arithmeticPicardTatePeriodTensorEquiv M p).symm (fun _ => rfl)
+
+theorem arithmeticPeriodInclusion_hecke (q : ℕ) [Fact q.Prime]
+    (l : sourceWeightTwoIntegralLattice (Gamma1 M)) :
+    TateModule.tateMap p (heckePicard (AlgebraicClosure ℚ) M q)
+        (arithmeticPeriodInclusion M p l) =
+      arithmeticPeriodInclusion M p (periodLatticeHecke M q l) := by
+  apply (arithmeticPicardTatePeriodTensorEquiv M p).injective
+  rw [arithmeticPicardTatePeriodTensorEquiv_hecke]
+  change (periodLatticeHecke M q).baseChange ℤ_[p]
+      ((arithmeticPicardTatePeriodTensorEquiv M p)
+        ((arithmeticPicardTatePeriodTensorEquiv M p).symm (1 ⊗ₜ l))) =
+    (arithmeticPicardTatePeriodTensorEquiv M p)
+      ((arithmeticPicardTatePeriodTensorEquiv M p).symm
+        (1 ⊗ₜ (periodLatticeHecke M q l)))
+  simp only [LinearEquiv.apply_symm_apply, LinearMap.baseChange_tmul]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

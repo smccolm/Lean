@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneMultiplierUnitarization
+import Dubon2026.SourceGammaOneGeneralMultiplierPrincipal
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneMultiplierUnitarization, `Dubon2026.SourceGammaOneGeneralMultiplierPrincipal, `Dubon2026.SourceIntegralCosetCocycle, `Dubon2026.SourceIntegralCosetParabolic, `Dubon2026.SourceIntegralCosetWord, `Dubon2026.SourceIntegralPeriodCuspLimits, `Dubon2026.SourceIntegralPeriodGeneratorDual, `Dubon2026.SourceRealPrimitiveGreenData, `Dubon2026.SourceIntegralPeriodLatticeDual, `Dubon2026.SourceRealPeriodPeterssonPairing, `Dubon2026.SourceClosedPeterssonNondegenerate, `Dubon2026.SourceSignedPeriodLatticeLift, `Dubon2026.SourceGammaOneSignedRealPeriods, `Dubon2026.SourceGammaOnePeterssonIntegralRealPeriods, `Dubon2026.SourceGammaOneUnitaryDivisorPrincipal, `Dubon2026.SourceGammaOneRepresentativePeriods, `Dubon2026.SourceGammaOneRepresentativePeriodCorrection, `Dubon2026.SourceGammaOneFiniteDivisorReciprocity]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function, `Dubon2026.SourceFunctionField.GammaOne.multiplier_eq_one_of_original_period_mem, `Dubon2026.SourceFunctionField.GammaOne.real_periods_integral_of_petersson_mem_lattice, `Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq, `Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character, `Dubon2026.SourcePeriodUntwist.Ek_smul, `Dubon2026.SourcePeriodUntwist.Ek_exists_cusp_limit]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL GENERAL MULTIPLIER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual original principal-divisor consumer. Native real-period surjectivity normalizes the multiplier while preserving orders and nonzero cusp limits; the original period-class condition then implies multiplier triviality. Construction of the meromorphic function remains; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

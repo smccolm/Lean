@@ -1,0 +1,40 @@
+/-
+Axiom audit for the RiemannRoch headline theorems (coordinate-free + chart layers).
+
+Run from the repo root inside the build container:
+
+    lake env lean AxiomCheck.lean
+
+`#print axioms d` traces the *entire* proof tree behind `d`. A clean result is a
+subset of the three standard Lean/Mathlib axioms `[propext, Classical.choice,
+Quot.sound]`. Any occurrence of `sorryAx` means the theorem transitively depends
+on an unproved placeholder and the formalization is NOT complete; `Lean.ofReduceBool`
+would flag a `native_decide` in the trusted path.
+
+This file is not part of the `RiemannRoch` library target, so it does not affect
+`lake build` / `lake lint` / `lake exe mk_all --check`; it is a standalone auditor.
+-/
+import RiemannRoch
+
+-- Coordinate-free public API (B-01): these names resolve to the intrinsic
+-- `Place`/`Divisor`-based theorems.
+#print axioms FunctionField.riemann_roch
+#print axioms FunctionField.duality
+#print axioms FunctionField.clifford
+#print axioms FunctionField.exists_isCanonical
+
+-- The `PlaceA ≃ Place` bijection and its load-bearing valuation/degree compatibility,
+-- on which the whole coordinate-free transport rests.
+#print axioms FunctionField.chartToPlace
+#print axioms FunctionField.placeValuation_eq
+#print axioms FunctionField.placeValuation_isEquiv
+#print axioms FunctionField.placeDegree_eq
+
+-- Intrinsic one-dimensionality, followed by the chart-side proof kernel that feeds transport.
+#print axioms FunctionField.WeilDifferential.finrank_weilDifferential_eq_one
+#print axioms FunctionField.Chart.riemann_roch
+#print axioms FunctionField.Chart.WeilDifferential.finrank_weilDifferential_eq_one
+
+-- M7 — elliptic downstream: genus one and the degree-one Pic⁰ torsor compatibility.
+#print axioms WeierstrassCurve.Affine.genus_eq_one
+#print axioms WeierstrassCurve.Affine.picTorsor_compat_groupLaw

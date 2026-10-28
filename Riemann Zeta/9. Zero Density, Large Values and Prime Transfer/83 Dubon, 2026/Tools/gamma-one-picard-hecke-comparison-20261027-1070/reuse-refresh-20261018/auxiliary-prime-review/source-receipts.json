@@ -1,0 +1,72 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "Definitions/Def_TaylorWiles_Primes.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_TaylorWiles_Primes.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_TaylorWiles_Primes.lean.txt",
+      "gitBlob": "450dd6e896c8cb43c23b4bd93b04f4e77204deba",
+      "sha256": "F5916220FA1182882878B1AE5AE74173C80C926F57B076C00251663F7949F77B",
+      "bytes": 3848
+    },
+    {
+      "path": "Definitions/Def_DualSelmer_ExtConditions.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_DualSelmer_ExtConditions.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_DualSelmer_ExtConditions.lean.txt",
+      "gitBlob": "f7a5b308e73cd99082de453333b9c7ff29c43150",
+      "sha256": "007355ED7FBB6D276AA0EF3A69E5BCA07452ED47086AA2C85BE6200D55DEF93C",
+      "bytes": 1031
+    },
+    {
+      "path": "Definitions/Def_TaylorWiles_CyclotomicChar.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_TaylorWiles_CyclotomicChar.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\Definitions\\Def_TaylorWiles_CyclotomicChar.lean.txt",
+      "gitBlob": "f4267d519909cfbde6d822ead550aa196b887b01",
+      "sha256": "ED83FE2CEED1D0C1D1B055A1EB4A26607BEF5553E7FED9286270F0862B50C6F1",
+      "bytes": 4780
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_notMem_of_isAbsolutelyIrreducible.lean.txt",
+      "gitBlob": "bc956137f40f235716e4a9a0a8db707d7995957b",
+      "sha256": "1BED8FD2D6D5E1DDB28D22D68CC4715659A8A308E49F1C84F94220830D422638",
+      "bytes": 9333
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_map_H1_ne_zero_of_notMem_range.lean.txt",
+      "gitBlob": "b3b45b3d1c619adf356d1b66c336a1223793cfc4",
+      "sha256": "EE462E3B1C5C6B79AD8E1C52913A93050BA7AFC49331B9173E915374664B8AD3",
+      "bytes": 21625
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrime_map_ne_zero_of_mem_continuousH1S.lean.txt",
+      "gitBlob": "924e428a8ad0139e8e361aa74a280af53009ce4a",
+      "sha256": "4587C316510230CDA9DF8AA3B108D1428F5111FB895E6DAE6927A6F091032BC7",
+      "bytes": 22677
+    },
+    {
+      "path": "P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_ResidualGaloisRep_exists_taylorWilesPrimes_card_eq_finrank_continuousH1S_dualTwist.lean.txt",
+      "gitBlob": "a50c3ecdbe70166aa8d3c5f4481b0f734ce87337",
+      "sha256": "3291BFBCCB8BF3BBBA49EF6D59C074AD7CB6645383F89E4D967775CB875192AE",
+      "bytes": 13370
+    },
+    {
+      "path": "P2M/Sol/S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\auxiliary-prime-review\\P2M\\Sol\\S_TaylorWiles_exists_mem_ker_cycloChar_hasDistinctRationalEigenvalues.lean.txt",
+      "gitBlob": "a65296531d72c8317e5d7049116ef01e0e6a9ffa",
+      "sha256": "EFE6D0DE46D983F8592D738385EABA8FD926B0E4FEE67280A7363A88559EDD0A",
+      "bytes": 1883
+    }
+  ],
+  "scope": "Eight selected files only; the cached repository tree is truncated. No complete closure or local kernel certification is claimed.",
+  "exactDependency": "DUB-17 higher symmetric-power continuation <- arithmetic automorphy lifting <- patching <- actual auxiliary-prime systems detecting dual Selmer classes."
+}

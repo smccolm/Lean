@@ -1,0 +1,88 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeAlphaGerms",
+    "SourceGammaOneHeckeStretchLaurent",
+    "SourceGammaOneHeckeBetaGerms",
+    "SourceGammaOneHeckeAnalyticPlaces",
+    "SourceGammaOneHeckeAnalyticFiber"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite",
+    "Dubon2026.SourceFunctionField.exists_prime_bidirectional_relation",
+    "Dubon2026.SourceFunctionField.relationAtSeed_reverse_substitution_eval",
+    "Dubon2026.SourceFunctionField.tendsto_dilation_nhdsNE",
+    "Dubon2026.SourceFunctionField.ofComplex_dilation"
+  ],
+  "localModules": [
+    "SourceGammaOneHeckeAlphaGerms",
+    "SourceGammaOneHeckeStretchLaurent",
+    "SourceGammaOneHeckeBetaGerms",
+    "SourceGammaOneHeckeAnalyticPlaces",
+    "SourceGammaOneHeckeAnalyticFiber"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneHeckeAlphaGerms": "SourceGammaOneHeckeAlphaGerms1030a",
+    "SourceGammaOneHeckeStretchLaurent": "SourceGammaOneHeckeStretchLaurent1031a",
+    "SourceGammaOneHeckeBetaGerms": "SourceGammaOneHeckeBetaGerms1032b",
+    "SourceGammaOneHeckeAnalyticPlaces": "SourceGammaOneHeckeAnalyticPlaces1033d",
+    "SourceGammaOneHeckeAnalyticFiber": "SourceGammaOneHeckeAnalyticFiber1034d"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "checkedUTC": "2026-10-18T22:13:10.992257+00:00",
+  "files": [
+    {
+      "path": "P2M/Sol/S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean",
+      "sha": "0910066eb8e38cc85ab15b9d62b2257cc056ca1e",
+      "size": 30320,
+      "repository": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\anthropics-S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean.txt",
+      "sha256": "87B4018FA3C5145E78C616F4C67FDCE986F467AD4CE930D19F6D3B726871C0AF"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/ClebschGordan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fdf503b0074c86ccd9e098948fe6d05087884c",
+      "size": 15260,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/ClebschGordan.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-ClebschGordan.lean.txt",
+      "sha256": "ECA4CF18B1297D9402F1BA0856329ED9FE4D777F8783BEDD3D5057E08E441868"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/Standard.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbbbe69a3bc526f2cc377052bcada5a7302578ea",
+      "size": 55431,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/Standard.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-Standard.lean.txt",
+      "sha256": "39E4C1BC356696198E4F487503065E646FB65A0E293A6E05B01D99EEF75EC21C"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/IntegralLattice.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e5dcbea361a0ed4d9984c28d25808d0815dcf3",
+      "size": 18371,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/IntegralLattice.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-IntegralLattice.lean.txt",
+      "sha256": "5DCC256C59058B9B80C6484006EE2F406981593731518CBAC5E75F6F843C3353"
+    }
+  ],
+  "scope": "Four selected primary source bodies; dependency closures and local kernel status not certified."
+}

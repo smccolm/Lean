@@ -1,0 +1,4 @@
+{
+  "reason": "Include the actual translation-membership arguments in germ-order proofs; instantiate place membership explicitly to identify the original field. Remove unused level nonzero assumptions from order identities.",
+  "sourceSha256": "00B5F0855C386A4ECAA8F984625FE4A32B6D06C745C1EA9AE92A77DC58045E61"
+}

@@ -1,0 +1,144 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T03:09:15.418207+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceWeightTwoEvaluationFrame",
+    "SourceWeightTwoEndpointImage",
+    "SourceWeightTwoEndpointOpenImage",
+    "SourceWeightTwoJacobiInversion",
+    "SourceGammaOneJacobiInversion",
+    "SourceGammaOneAnalyticPicardPresentation",
+    "SourceGammaOnePicardPeriodKernel",
+    "SourceGammaOnePicardPeriodEquiv"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEvaluationFrame.lean",
+      "sha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+      "oleanSha256": "47E5D6C082D9AB5C3D0CDB9AA8B8BECE332C490DA692B755D836B83DB6F2D66C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEvaluationFrame1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEvaluationFrame1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointImage.lean",
+      "sha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+      "oleanSha256": "92B63C23166B8D57EEA8B74576D9CF489B21119C39529B2F30E61A5150012586",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointImage1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointImage1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointOpenImage.lean",
+      "sha256": "AB3B2693C7ECDD62E1D303C82F16560A362BBEF5A813CA9DD62A4FB974CFB522",
+      "oleanSha256": "D29187EBD156DCB843ED3E59E6F9584AD55F3A642F9D4B631096375877217ED3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointOpenImage1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointOpenImage1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoJacobiInversion.lean",
+      "sha256": "F250A753380B28F96E3F908DCF10BDF382A2D6761784D437C2DC1179F77FE3D4",
+      "oleanSha256": "E5322FC996E5FB3522C5536829256847C73D219B83F03CC247744C7DE29AC41C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoJacobiInversion1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoJacobiInversion1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJacobiInversion.lean",
+      "sha256": "DA2EFE2489490E110DE709CFEF9A8BD52269C3422BAB4520D2CE619308D30639",
+      "oleanSha256": "81257ACD848BF54A3C0AFD572671D7BD38AA969BFCC0644727D9F54E9B166BCF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJacobiInversion1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJacobiInversion1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPicardPresentation.lean",
+      "sha256": "0A0562470AB7AF8C3D91291CF643D7D96470A4B2E71D487D699B362D28B7DD60",
+      "oleanSha256": "33E95E9B379C25714787B1B017548D8817642D677293593EAFF39C28BD310BA4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPicardPresentation1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPicardPresentation1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodKernel.lean",
+      "sha256": "C5AA9152F8AB3930FA20A01DC2FAB0635AC11AA8C8A2B7BA634F307E81A8804B",
+      "oleanSha256": "601961B6BBD463AABB27268AF87D13FB7513414D512C42B6AC8F8BF704C603CC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodKernel1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodKernel1029c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquiv.lean",
+      "sha256": "D88F0BD2DF1128BDC4A258F860B96C4A9E6266E9F49D97DEB1D5C25E0A514D7B",
+      "oleanSha256": "82EACA12BA54B5DCF0268F2D6F01EEED2A87D5F4EE8DE8E2322F2BF6164376E5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquiv1029c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquiv1029c.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceWeightTwoJacobi.span_cusp_evaluation_eq_top",
+    "Dubon2026.SourceWeightTwoJacobi.analyticDegree_apply",
+    "Dubon2026.SourceWeightTwoJacobi.mem_endpointImage_iff",
+    "Dubon2026.SourceWeightTwoJacobi.endpoint_difference_mem_image",
+    "Dubon2026.SourceWeightTwoJacobi.endpointImage_mem_nhds_of_frame",
+    "Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_coordinates",
+    "Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_functional",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_endpoint_functional",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_ker_eq_periodHom_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor",
+    "Dubon2026.SourceWeightTwoJacobi.analyticDegree",
+    "Dubon2026.SourceWeightTwoJacobi.endpointCoordinates",
+    "Dubon2026.SourceWeightTwoJacobi.endpointImage",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDivisorHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceWeightTwoJacobi.span_cusp_evaluation_eq_top",
+    "Dubon2026.SourceWeightTwoJacobi.analyticDegree_apply",
+    "Dubon2026.SourceWeightTwoJacobi.mem_endpointImage_iff",
+    "Dubon2026.SourceWeightTwoJacobi.endpoint_difference_mem_image",
+    "Dubon2026.SourceWeightTwoJacobi.endpointImage_mem_nhds_of_frame",
+    "Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_coordinates",
+    "Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_functional",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_endpoint_functional",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_ker_eq_periodHom_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceWeightTwoJacobi.analyticDegree",
+    "Dubon2026.SourceWeightTwoJacobi.endpointCoordinates",
+    "Dubon2026.SourceWeightTwoJacobi.endpointImage",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDivisorHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceAudit1d.log",
+  "logSha256": "A6CB777CEA1E5E3780F89E6BD4FEAAF79209A55F4BF37D44B8DE03DB882ADE29",
+  "auditSha256": "B61166CDA092C8F1A9FE975C1A127BED511B4B69F927C7C58FFFE2C9F1DF7301",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceScratchOwnership1029d.log",
+  "ownershipSha256": "DDFB37150475D844A4DECF28487010D6B2E787E0AD65EF2FE6C2315F2AF75BA7",
+  "exhaustiveTheorems": 40,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceDependencyAudit1d.log",
+  "dependencyAuditSha256": "6A261585DB09EF6BCC6558D2855E453442EF99A1EA5A79FC447C9FCDC5B6497C",
+  "dependencyAuditSourceSha256": "EE6403C11725D954B915F8777199A668FFD33DAC39EAAC0F7C11B48760FFE762",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor"
+  ],
+  "dependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 and Hecke/diamond comparison -> literal Picard group versus original period quotient.",
+  "discharged": "DISCHARGED: cusp-evaluation spanning, actual endpoint image openness and surjectivity, actual finite-dimensional Gamma1 specialization, actual Picard presentation, equality of the literal Picard and original period kernels, and an actual additive Picard-period equivalence with its finite-divisor endpoint formula.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch-audited complex Picard-period equivalence only; promotion and assembled verification remain. Hecke/diamond/transpose/H1 and arithmetic compatibility, all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-period-equivalence-1d-reuse-review-20261027.json",
+  "reuseReviewSha256": "2E9D8BE9518A05D6CD54F545795445332402221A85AFE34E7BE1602AC89356CE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

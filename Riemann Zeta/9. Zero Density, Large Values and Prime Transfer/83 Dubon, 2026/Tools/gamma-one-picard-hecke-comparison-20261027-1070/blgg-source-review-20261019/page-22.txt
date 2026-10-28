@@ -1,0 +1,157 @@
+22 THOMAS BARNET-LAMB, TOBY GEE, AND DAVID GERAGHTY
+(a) ρ
+′ ⊗O Ql
+∼= rl,ι(π) : GF + → GLn(Ql
+) and (ρ
+′
+)
+∨ ∼= ρ
+′
+ǫ
+n−1χ
+′
+for some
+character χ
+′
+: GF + → O× with χ
+′ = χ.
+(b) ρ = ρ
+′
+.
+(c) For all places v ∤ l of F
++, either ρ|GF+
+v
+and πv are both unramified, or
+the following both hold:
+• ρ
+′
+|GF+
+v
+ O ρ|GF+
+v
+and ρ|GF+
+v
+ O ρ
+′
+|GF+
+v
+.
+• χ|I
+F
++
+v
+= χ
+′
+|I
+F
++
+v
+.
+(d) For all places v|l, ρ|GFv ∼ ρ
+′
+|GFv
+.
+Then ρ is automorphic.
+Proof. Extending O if necessary, choose a quadratic CM extension F of F
++ and
+algebraic characters ψ, ψ′
+: GF → O× such that the following hold.
+(i) F is linearly disjoint from F +
+ker ¯r
+(ζl) over F
++.
+(ii) Each place of F
++ lying over l and each place at which ρ or π is ramified splits
+completely in F.
+(iii) ψψc = χ|GF
+.
+(iv) ψ and ψ
+′ are crystalline above l.
+(v) ψ
+′
+(ψ
+′
+)
+c = χ
+′
+|GF
+.
+(vi) Let S denote the set of places of F which divide l or which lie over a place of
+F
++ where ρ or π ramifies. Then for all w ∈ S, we have ψ
+′
+|ILw = ψ|ILw
+.
+(vii) ψ = ψ
+′
+.
+(Take F to be a quadratic CM extension of F
++ satisfying (i) and (ii). Use Lemma
+4.1.5 of [CHT08] to construct a ψ which satisfies (iii) and (iv). Note that χ and χ
+′
+are crystalline characters of GF + with the same Hodge-Tate weights. In particular,
+for each place v|l of F
++ we have χ|I
+F +
+v
+= χ
+′
+|I
+F +
+v
+. We can therefore apply Lemma
+4.1.6 of [CHT08] to find a ψ
+′
+satisfying (v), (vi) and (vii).)
+Let r = ψρ|GF and r
+′ = ψ
+′ρ
+′
+|GF
+. Then ¯r = ¯r
+′
+, r
+c ∼= r
+∨ǫ
+1−n and (r
+′
+)
+c ∼=
+(r
+′
+)
+∨ǫ
+1−n. For w ∈ S, Lemma 3.4.6 implies that r|GFw ∼ r
+′
+|GFw
+if v|l and both
+r|GFw O r
+′
+|GFw
+and r
+′
+|GFw O r|GFw
+otherwise.
+The theorem now follows from Theorem 3.6.1 applied to r|GF and r
+′
+|GF
+, together
+with Lemma 1.5 of [BLGHT09]. 
+3.6.3. Finiteness of a deformation ring. We now deduce a result on the finiteness
+of a universal deformation ring. This result is not needed for the main theorem, so
+this section may be skipped by readers interested only in the Sato-Tate conjecture.
+However, we believe that it is of independent interest, and it will prove useful to us
+in future work.
+Let F be an imaginary CM field with totally real subfield F
++ and let c be the
+non-trivial element of Gal(F/F +). Let n ∈ Z≥1 and let l > n be a prime. Let
+K ⊂ Ql denote a finite extension of Ql with ring of integers O and residue field
+k. Assume that K contains the image of every embedding F ֒→ Ql
+. Suppose in
+addition that each place of F
++ dividing l splits in F. Let
+ρ : GF → GLn(k)
+be a continuous homomorphism and suppose
+ρ
+′
+: GF → GLn(O)

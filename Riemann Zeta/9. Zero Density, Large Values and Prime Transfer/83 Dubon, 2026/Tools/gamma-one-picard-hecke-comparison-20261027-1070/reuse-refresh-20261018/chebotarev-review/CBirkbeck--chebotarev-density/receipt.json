@@ -1,0 +1,39 @@
+{
+  "repository": "CBirkbeck/chebotarev-density",
+  "commit": "c64095e6cc6483b401849c7fd9182d983d3bf261",
+  "checkedUTC": "2026-10-18T20:02:26.080081+00:00",
+  "treeComplete": true,
+  "files": [
+    {
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/chebotarev-density/c64095e6cc6483b401849c7fd9182d983d3bf261/lean-toolchain",
+      "sha256": "2C290DC3675A4FAF0BC03545FF71A417D2F9A7C2E60E8BE80ED643FCBCC73E2D",
+      "bytes": 28
+    },
+    {
+      "path": "lakefile.toml",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/chebotarev-density/c64095e6cc6483b401849c7fd9182d983d3bf261/lakefile.toml",
+      "sha256": "A65E9E67A060D32A21778D2444959AAFD96FD13B69C5DDEAF5B705E11B2E9AAC",
+      "bytes": 607
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/chebotarev-density/c64095e6cc6483b401849c7fd9182d983d3bf261/README.md",
+      "sha256": "6F489B178DFAEAE17891152283AA0282A7F2C6822712478358487B69DC0FDE7F",
+      "bytes": 494
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/chebotarev-density/c64095e6cc6483b401849c7fd9182d983d3bf261/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "path": "CebotarevDensity/Main.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/chebotarev-density/c64095e6cc6483b401849c7fd9182d983d3bf261/CebotarevDensity/Main.lean",
+      "sha256": "382D544BDCC03EEC48D2E127600E26CA249D7E81A07200275D6DC3EA520D0B09",
+      "bytes": 1028
+    }
+  ],
+  "kernelCheckedHere": false
+}

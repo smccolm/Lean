@@ -1,0 +1,67 @@
+{
+  "recordedUTC": "2026-10-28T06:00:04.987818+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> all-weight association -> actual finite Gamma1 arithmetic realization -> arithmetic Tate/Hecke comparison -> arithmetic-to-complex Picard map intertwines actual beta-pullback/alpha-pushforward -> exact constant-field place orders on the intersection curve H = Gamma1(M) intersect Gamma0(d*M).",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-hecke-route-1115.json",
+      "sha256": "4C44203A4E22BAC3CE4CFEF01219BCA5C4CD91856D80AD1D4E6C87BB125AEB2F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-torsion-tate-1b-scratch-receipt.json",
+      "sha256": "29FE079EB97DB8546E8FB0E9D529227671DF54A044B782D57BF488AFD2FF4A1F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-picard-injectivity-1-scratch-receipt.json",
+      "sha256": "2014DBA39AD4FDA1BB362505BCE8CF4B5CB743F0E6F37F8159FC794F9A1E26DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-complex-tate-hecke-1-scratch-receipt.json",
+      "sha256": "B0966A06294EEB1254D043F68C2E3750BFAF05A77F9812200C36BD6B5B064F61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldNaturality.lean",
+      "sha256": "E1B2D65C12B37881696B6AA7E73FDCEA648808C199904B17ABEEB45C667B55F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFieldCoefficients.lean",
+      "sha256": "F550DEDBA2E3964FA408DA1E5A0C2FF27C2B4CB17AB3BEAF6604D3C363C47389"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeComplexPlaces.lean",
+      "sha256": "97933F7279EE976B673F708D26E4794286F82A36D9BA142E76A00B92E562BF95"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeComplexDivisors.lean",
+      "sha256": "4949C8960A2DC4758E0EF5DFD14E8E3CAD84018D9A5333AC74907D9BD0BBED15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeComplexPicard.lean",
+      "sha256": "8E0D125585C42F692A0A962EED50193A8765BD7281A81E62D5CB832779D94B74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePicard.lean",
+      "sha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardCorrespondence.lean",
+      "sha256": "6E49CB7E7D49AB7C48D05F7CCF7239FBF13D7576BD7963FC890BEDD88E201BC0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldExtensionOrders.lean",
+      "sha256": "D4CD0608C71FCC068610AB4597594923997BCC50483975DCB31DD0B25AECA4C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldFinite.lean",
+      "sha256": "765E46C3933771F28522D2DA46FAA19BEC2A3ADB1E264BF6FE978A05609893D8"
+    }
+  ],
+  "shorterRoute": "The native fieldCoefficientMap and actual alpha/beta coefficient identities supply the commuting field squares. Only unique place extension, exact orders and finite-support conorm are needed for the intersection field; no Picard descent or period theory is rebuilt there. Existing finite-map restriction and ramification formulas give divisor naturality. Explicit equality composition handles the definitionally equal field presentations. Actual geometric Picard naturality discharges the Tate commuting-map premise, and the proved complex period Hecke comparison supplies the original tensor action.",
+  "assumptionsToDischarge": [
+    "The actual Hecke intersection curve has unique complex extensions of arithmetic places with exact orders.",
+    "The literal conorm commutes with actual beta pullback and alpha pushforward; actual arithmetic and complex Picard Hecke operators intertwine.",
+    "The actual arithmetic-to-complex Tate equivalence intertwines every nonzero-index original Hecke operator.",
+    "At every prime Hecke index, the actual arithmetic Picard Tate module identifies with the p-adic tensor of the original period lattice, with the native dual cusp Hecke action, without requiring either prime to avoid the level."
+  ],
+  "remaining": "Finite-coefficient H1, full/parabolic and diamond/transpose comparisons, coefficient-field and Frobenius/inertia realizations, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+  "preservedFailures": "1120a old consumer name; 1121a/b/c incomplete universe elaboration with four local field notations, followed by 1121d explicit identical field types and the explicit correspondence import; 1122a missing helper declarations and 1122b alias rewriting, followed by 1122c explicit equality composition. Used source snapshots and logs are preserved. No mathematical hypothesis or statement was weakened, and proof limits are unchanged."
+}

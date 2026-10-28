@@ -1,0 +1,17 @@
+[
+  {
+    "path": "P2M/Sol/S_ExtCitation_exists_frobenius_pow_inv_mul_mem_inertia_sup_level.lean",
+    "sha": "fb02268fbd6a793db55c60e61c48f59d86f28d09",
+    "size": 35062
+  },
+  {
+    "path": "P2M/Sol/S_ExtCitation_exists_isFrobeniusAt_apply_primeLocalToGlobal.lean",
+    "sha": "eb124d2a8a9a93b383f433549e83793bb047e5da",
+    "size": 14553
+  },
+  {
+    "path": "P2M/Sol/S_ExtCitation_exists_level_dvd_of_frobenius_pow_mem_inertia_sup.lean",
+    "sha": "2ecc6cb0eabc1fd39a20e3c8393208a1a8782772",
+    "size": 9269
+  }
+]

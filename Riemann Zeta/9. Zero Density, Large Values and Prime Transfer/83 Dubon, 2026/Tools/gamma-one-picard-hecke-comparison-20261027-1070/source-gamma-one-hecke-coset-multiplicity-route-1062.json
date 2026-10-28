@@ -1,0 +1,28 @@
+{
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic Hecke characters -> actual Picard/H1 Hecke comparison -> literal coset multiplicities versus actual algebraic beta pullback.",
+  "shorterRoute": "Adapt the existing Gamma0 coset-fiber counting proof to actual Gamma1. Reuse native upper/geometric conjugation and generic HeckeFiber cardinality. Prove only the additional central-sign cancellation required when negative identity is absent from Gamma1.",
+  "assumptionsToDischarge": "Actual stabilizer cardinality under conjugation; identical central-sign factors; actual beta ramification equals literal coset multiplicity; all analytic fiber terms and algebraic divisor pullback.",
+  "remaining": "Picard Hecke assembly, full/parabolic/diamond/transpose/arithmetic compatibility, all-weight association and literal higher continuation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFiberOrbits.lean",
+      "sha256": "9B6A5B89C8369CE5C4FBBE5E99C82714C3F9A645A796B07CCFA5D87D040A4651"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeCosetMultiplicity.lean",
+      "sha256": "290EE766D1E053A1D2AF921D3C53E3436A50A2C52A139D4010D076897695CB08"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeCosetFiberCount.lean",
+      "sha256": "E55A5920AE20EE43C2C58B198355EF7113919AB19109DE24A31F283BC49DE29D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeGeometricSubgroup.lean",
+      "sha256": "44E8F27046FB5DA0CD4CDDB0E6640C1DBA5A781DB26A728F5E95E846C9D02204"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    }
+  ]
+}

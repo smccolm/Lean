@@ -1,0 +1,7 @@
+{
+  "source": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IsTensorProduct.lean",
+  "sha256": "BF32632358C0967B8C79B856785863580FD61B3EAC6BB69C5DCCD4D4BD6EDDAA",
+  "reuse": "IsBaseChange.of_equiv, lift, lift_eq and algHom_ext: the actual arithmetic Tate-period equivalence proves the base-change hypothesis, so finite dual characters need no new tensor basis argument.",
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> actual finite Gamma1 H1 character realization -> arithmetic Tate dual comparison",
+  "remaining": "Full/parabolic passage, finite-order discharge, homogeneous coefficients, diamonds, original Galois association and higher continuation remain."
+}

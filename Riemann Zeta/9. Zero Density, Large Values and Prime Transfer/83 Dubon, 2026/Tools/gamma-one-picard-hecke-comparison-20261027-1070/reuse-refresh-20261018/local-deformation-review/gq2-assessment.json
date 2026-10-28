@@ -1,0 +1,45 @@
+{
+  "checkedUTC": "2026-10-19T02:26:23.456078+00:00",
+  "head": "3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33",
+  "headUnchangedSince20261015": true,
+  "sources": [
+    {
+      "repository": "roed-math/gq2-lean",
+      "commit": "3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33",
+      "url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/Foundations/LiteratureInputs.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\GQ2__Foundations__LiteratureInputs.lean.txt",
+      "gitBlob": "48fd46b743b87697e85e1f394cb99b2cf2e2cbf1",
+      "gitBlobVerified": true,
+      "bytes": 5518,
+      "sha256": "4580D4B7C32937F03DEE2486894250D24AEBEDE2CFF70E74E2C5EF68D1CE845C"
+    },
+    {
+      "repository": "roed-math/gq2-lean",
+      "commit": "3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33",
+      "url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/TameQuotient.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\GQ2__TameQuotient.lean.txt",
+      "gitBlob": "aea12d0db9ba54c3dadd300bc0b86120579e1ca5",
+      "gitBlobVerified": true,
+      "bytes": 6052,
+      "sha256": "98AF31456876FBFB94B72FF6B52A8F3EDF50575307C4EAD0A016968795CFC68A"
+    },
+    {
+      "repository": "roed-math/gq2-lean",
+      "commit": "3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33",
+      "url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/Tame.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\local-deformation-review\\GQ2__Tame.lean.txt",
+      "gitBlob": "2f085591f53c8cf4eb417e7e7028a6ad9f0125cd",
+      "gitBlobVerified": true,
+      "bytes": 10368,
+      "sha256": "0CD34D539E382184862F3B15F0D764411049139B376BFACAE6C60E57AA869FE3"
+    }
+  ],
+  "queries": [
+    "site:github.com \"Lean\" \"TaylorWiles\"",
+    "site:github.com \"Lean\" \"Taylor-Wiles\" \"deformation\"",
+    "site:github.com \"Lean\" \"unramified\" \"deformation\""
+  ],
+  "finding": "The exact TameQuotientData asserts the actual dyadic tame quotient as data; LiteratureInputs.tameQuotient supplies it as a literature hypothesis. Tame.lean proves iterated conjugation, odd order, cyclic-subgroup normality and normal 2-subgroup centrality in finite groups already satisfying the dyadic tame relation. These do not construct the actual tame quotient for arbitrary selected auxiliary primes.",
+  "decision": "No import. The exact actual-local-field identification is still required. Native prime-local residue inertia, finite unramified restriction and first-order deformation criteria give the shorter proved route for the present baseline unramified condition.",
+  "boundary": "Bounded source review, not an exhaustive absence claim. General tame local-ring geometry, Delta_Q action and arithmetic patching realization remain open."
+}

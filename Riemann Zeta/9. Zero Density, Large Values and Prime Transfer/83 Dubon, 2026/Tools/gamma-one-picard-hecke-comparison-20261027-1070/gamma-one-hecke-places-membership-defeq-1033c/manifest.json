@@ -1,0 +1,4 @@
+{
+  "reason": "Compose exact membership equivalences instead of rewriting across differently unfolded original field types.",
+  "sourceSha256": "94EC2360452D83634DD73B8FEF61CD993CFE459753205006D8E487FAD3C1C2E8"
+}

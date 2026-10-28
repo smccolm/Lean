@@ -1,0 +1,32 @@
+{
+  "checkedUTC": "2026-10-18T19:48:17.092973+00:00",
+  "queries": [
+    "Lean formalization automorphy lifting symmetric powers Sato Tate GitHub 2026",
+    "Lean Taylor Wiles patching Poitou Tate Selmer formalization GitHub"
+  ],
+  "findings": [
+    {
+      "url": "https://github.com/anthropics/fermats-last-theorem/blob/main/formalization.yaml",
+      "assessment": "Returns the already reviewed FLT development; its advertised FLT-specific strength is not evidence for the all-weight higher symmetric-power endpoint."
+    },
+    {
+      "url": "https://github.com/sneed-and-feed/adelic-spectral-zeta",
+      "assessment": "The primary README describes discrete formalizations and exploratory global spectral models. No source-verified higher symmetric-power continuation theorem was identified. The linked BuildingG2LFunction source could not be fetched through the browser cache; no kernel verification or adoption is claimed."
+    },
+    {
+      "url": "https://tianyipeng.github.io/fermats-last-theorem/def/Algebra_PatchingDatum.html",
+      "assessment": "Search snippet describes a commutative algebra patching datum, not an arithmetic realization. Documentation and repository fetches returned cache errors; not treated as verified evidence."
+    },
+    {
+      "url": "https://arxiv.org/abs/0912.1054",
+      "assessment": "Original Hilbert modular Sato-Tate literature, already in the source route. A paper is not a Lean proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/1912.11261",
+      "assessment": "Original symmetric-power functoriality literature. No associated usable Lean proof was identified by this search."
+    }
+  ],
+  "decision": "Continue the separately pinned Imperial generic patching port and native arithmetic chain. No new endpoint replacement certified; no absence claim for the whole internet.",
+  "productionChanges": false,
+  "acceptance": "16/20; DUB-17-20 open."
+}

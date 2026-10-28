@@ -1,0 +1,110 @@
+SATO-TATE 9
+Kn. Let DK,M = DK ⊗Ql M. For each embedding τ : M ֒→ K, we let DK,τ =
+DK,M ⊗K⊗M,1⊗τ K so that DK,M = ⊕τDK,τ . For each τ choose a decreasing
+filtration Fili DK,τ of DK,τ so that dimK gri DK,τ = 0 unless i = (j −1) +λτ,n−j+1
+for some j = 1, . . . , n in which case dimK gri DK,τ = 1. We define a decreasing
+filtration of DK,M by K ⊗Ql M-submodules by setting
+Fili DK,M = ⊕τ Fili DK,τ .
+Let vλ = {DK, Fili DK,M}.
+We now recall some results of Kisin. Let λ be an element of (Z
+n
++)
+Hom(M,K) and
+let vλ be the associated l-adic Hodge type.
+Definition 3.3.4. If B is a finite K-algebra and VB is a free B-module of rank
+n with a continuous action of GM that makes VB into a de Rham representation,
+then we say that VB is of l-adic Hodge type vλ if for each i there is an isomorphism
+of B ⊗Ql M-modules
+gri
+(VB ⊗Ql BdR)
+GM →˜ (gri DK,M ) ⊗K B.
+Corollary 2.7.7 of [Kis08] implies that there is a unique l-torsion free quotient
+R
+vλ,cr
+ρ
+of R
+ρ with the property that for any finite K-algebra B, a homomor￾phism of O-algebras ζ : R
+ρ → B factors through R
+vλ,cr
+ρ
+if and only if ζ ◦ ρ
+
+is crystalline of l-adic Hodge type vλ. Moreover, Theorem 3.3.8 of [Kis08] implies
+that Spec R
+vλ,cr
+ρ
+[1/l] is formally smooth over K and equidimensional of dimension
+n
+2 +
+1
+2
+n(n − 1)[M : Ql
+].
+By Lemma 3.3.3 of [Ger09] there is a quotient R
+△λ,cr
+ρ
+of R
+vλ,cr
+ρ
+corresponding
+to a union of irreducible components such that for any finite extension E of K, a
+homomorphism of O-algebras ζ : R
+vλ,cr
+ρ → E factors through R
+△λ,cr
+ρ
+if and only if
+ζ ◦ ρ
+ is crystalline and ordinary of weight λ.
+We now introduce an equivalence relation on continuous representations GM →
+GLn(O) lifting ρ.
+Definition 3.3.5. Suppose that ρ1, ρ2 : GM → GLn(O) are two continuous lifts of
+ρ. Then we say that ρ1 ∼ ρ2 if the following hold.
+(1) There is a λ ∈ (Z
+n
++)
+Hom(M,K)
+such that ρ1 and ρ2 both correspond to points
+of R
+vλ,cr
+ρ
+(that is, ρ1⊗O K and ρ2⊗O K are both crystalline of l-adic Hodge
+type vλ).
+(2) For every minimal prime ideal ℘ of R
+vλ,cr
+ρ
+, the quotient R
+vλ,cr
+ρ
+/℘ is geo￾metrically integral.
+(3) ρ1 and ρ2 give rise to closed points on a common irreducible component of
+Spec R
+vλ,cr
+ρ
+[1/l].
+In (3) above, note that the irreducible component is uniquely determined by
+either of ρ1, ρ2 because Spec R
+vλ,cr
+ρ
+[1/l] is formally smooth. Note also that we can
+always ensure that (2) holds by replacing O with the ring of integers in a finite
+extension of K.
+Suppose that ρ1 ∼ ρ2 as above and let M′/M be a finite extension. Assume
+that K contains the image of every embedding M′
+֒→ K. Then we claim that
+ρ1|GM′ ∼ ρ2|GM′
+. Indeed, let λ be such that ρ1 and ρ2 have l-adic Hodge type vλ.
+Define λ
+′ ∈ (Z
+n
++)
+Hom(M′
+,K) by λ
+′
+τ = λτ|M for all τ : M′
+֒→ K. Then restriction
+to GM′ gives rise to an O-algebra homomorphism R
+ρ|GM′
+→ R
+vλ,cr
+ρ which factors

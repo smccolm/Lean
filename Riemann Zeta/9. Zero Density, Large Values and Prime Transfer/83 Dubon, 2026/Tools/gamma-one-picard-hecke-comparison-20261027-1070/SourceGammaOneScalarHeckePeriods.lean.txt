@@ -1,0 +1,54 @@
+import SourceGammaOnePeriodNormalization
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 Hecke comparison -> original
+scalar periods. Adapt the native all-prime scalar-period reindexing proof
+to the actual Gamma1 subgroup, conjugation and cusp trace. All positive
+diagonal indices are retained, including those dividing the level. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M d : ℕ) [NeZero M] [NeZero d]
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+theorem periodValue_cuspHeckeTrace
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (γ : Gamma1 M) :
+    sourceWeightTwoPeriodValue (Gamma1 M) (cuspHeckeTrace M d f) γ =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+        sourceWeightTwoPeriodValue (Gamma1 M) f
+          (sourceGammaOneHeckeConjugation M d
+            (cosetTransition (sourceGammaOneHeckeUpper M d) γ q)) := by
+  let G := sourceWeightTwoPrimitive 1 f
+  have ht (q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) :
+      G (heckeCosetPoint M d (γ.val • I) (γ • q)) -
+        G (heckeCosetPoint M d I (γ • q)) =
+      G (heckeCosetPoint M d I q) +
+        sourceWeightTwoPeriodValue (Gamma1 M) f
+          (sourceGammaOneHeckeConjugation M d
+            (cosetTransition (sourceGammaOneHeckeUpper M d) γ q)) -
+        G (heckeCosetPoint M d I (γ • q)) := by
+    dsimp only [G]
+    rw [heckeCosetPoint_transition, primitive_one_period]
+  have hd := heckePrimitiveTrace_difference M d f I (γ.val • I)
+  rw [primitive_one_period, add_sub_cancel_left] at hd
+  have hr := Equiv.sum_comp (MulAction.toPerm γ)
+    (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d => G (heckeCosetPoint M d I q))
+  change (∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+    G (heckeCosetPoint M d I (γ • q))) =
+    ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d, G (heckeCosetPoint M d I q) at hr
+  have he := Equiv.sum_comp (MulAction.toPerm γ)
+    (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d =>
+      G (heckeCosetPoint M d (γ.val • I) q) - G (heckeCosetPoint M d I q))
+  rw [← hd, ← he]
+  change (∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+    (G (heckeCosetPoint M d (γ.val • I) (γ • q)) -
+      G (heckeCosetPoint M d I (γ • q)))) = _
+  rw [Finset.sum_congr rfl (fun q _ => ht q)]
+  rw [Finset.sum_sub_distrib, Finset.sum_add_distrib, hr]
+  exact add_sub_cancel_left _ _
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

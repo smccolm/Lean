@@ -1,0 +1,79 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply"
+  ],
+  "recordedUTC": "2026-10-28T03:43:59.149115+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCuspHeckeLinear",
+    "SourceGammaOnePeriodHeckeLattice"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeLinear.lean",
+      "sha256": "6E408A1D97EADEC2031023EED67E49B7599B68ABE545E93620A56D9CF4BDA773",
+      "oleanSha256": "B1ACCFDF9A7AEF514A408A46E99C61B306C0ED572EDDE510DDDB912A26C806BF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeLinear1048b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeLinear1048b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodHeckeLattice.lean",
+      "sha256": "2D34969A6300EB13FA57CEA2685653120E7D514058301CAEB3D4119AC624D89D",
+      "oleanSha256": "3CD1FAFDFB7AA6C045936601086AAC7AEB67A877DE0D5443802210A93EA7CAED",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodHeckeLattice1049b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodHeckeLattice1049b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeAudit1.log",
+  "logSha256": "6730A1D745954A85A18526E8B949F47C17D06B2EEFA02672FA52B34680E462A1",
+  "auditSha256": "FB80BF82DAD9660740E4C8FD0028B00AD0DE6DC72BAE46223AEB15657468CA5B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b.log",
+  "ownershipSha256": "E1EAAAAAFBB4F48A44D28558A8CF4462AE03CA9EA1125088AF175955B815AFCC",
+  "exhaustiveTheorems": 16,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeDependencyAudit1b.log",
+  "dependencyAuditSha256": "8F3E4275E0CE1CC8C8DE4F3B6BCFC2B0F62764CA65E1017EA8E94C1BF6A80145",
+  "dependencyAuditSourceSha256": "0C5C1139E44527A5246D774E75BB32FBC0532C2C57071348ED88A7D803B3B43C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> original finite Gamma1 arithmetic character realization -> Picard/H1 Hecke comparison -> actual original integer-period quotient Hecke action.",
+  "discharged": "Linearity of actual native cusp trace; stability of the original integer lattice; descent to the exact original period quotient.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch only pending production and assembled verification. The quotient operator must still be compared with actual divisor pull/push, including exact elliptic fiber multiplicities; full parabolic/diamond/transpose/arithmetic and higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-lattice-hecke-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "BA04F61B93B9E0959AB476F5A5FC3169357F3AED879DE37F2DC11EBE0FCEEDA3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

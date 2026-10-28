@@ -1,0 +1,99 @@
+{
+  "recordedUTC": "2026-10-28T05:19:22.645536+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> arithmetic/complex Picard torsion and Tate comparison -> actual constant-field embedding, extended places, conorm, principal and torsion descent.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-complex-route-1080.json",
+      "sha256": "F2A2321AAA682133F1E07B5819E178EE1A3507D814EFC94EBB9B1C4C21E14B1C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-span-descent-reuse-1083.json",
+      "sha256": "158E097266E2E5043E330DC6CCAFDA388C9145376CCE950672A9C2E407456EEF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-principal-descent-route-1090.json",
+      "sha256": "93F0DAEAF7755BF544B858CD03E575E10A7DCB02C1D5F432561203B25EA0B839"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-complex-tate-hecke-1-scratch-receipt.json",
+      "sha256": "B0966A06294EEB1254D043F68C2E3750BFAF05A77F9812200C36BD6B5B064F61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCoefficientMap.lean",
+      "sha256": "67F5A2EE6E82AF3EBCFC7365C2C10CF98833B3B55C65437A3B5B063669E0ADBC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexFieldExtension.lean",
+      "sha256": "E15929E7B7EBB270EA61DD9D0B735E886F8A7103721819119960E8587402D3E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexFieldIndependence.lean",
+      "sha256": "7880516A890587CE911D3160B51D048EDE59477DCAE4E6374F68FCF262F1E282"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexSpanSeparation.lean",
+      "sha256": "FD1F399A2913AB32A15C8CC657DF079CA4CCB36A6810409EA84CBBFDEF82457D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldExtensionOrders.lean",
+      "sha256": "D4CD0608C71FCC068610AB4597594923997BCC50483975DCB31DD0B25AECA4C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldValuationDomination.lean",
+      "sha256": "AFC90E71024F6848ED50F67E5891EA2035ED18280B9888C8E09B88F78379D683"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidues.lean",
+      "sha256": "FF711706A6F1A463FC398C6A7DBEEFE743D1781C561214A8C01C14CE962BFCB3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionComparison.lean",
+      "sha256": "41612CCF2BFC21C11AE01B0FA878B6C3D1B40A15D7D3D4D38912D0CD6ABCF81B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentSpanDescent.lean",
+      "sha256": "259FD975B2681F28DC3FEA8C908D7B1D1F6F9861E53F907CB6950E203BC90424"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransport.lean",
+      "sha256": "0E0030AC82E69E99C02BCEF2115A73D3D4222C657CB2AC97CDBD0727B27E0D55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldCoordinateSpan.lean",
+      "sha256": "2F567EBECC4AC2391404002CE9F80D01DC5F332104B7F0E96AEE5C39A464F5B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNewCoordinatePlaces.lean",
+      "sha256": "5DA24758D5F656013544E71EB2A515E767C205D31C7A852749C7A9DAE835452A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCoordinateTrace.lean",
+      "sha256": "476B1309845E204B621C6103A3A19D64498A7D48DF6C61477422BA0ED4156294"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinateDescent.lean",
+      "sha256": "18E94791C582D88EC0E54FE9D06E5EF10E3C644020C91D45D04976D8851A66E9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexSpanDescent.lean",
+      "sha256": "1D5D6B4A49535342656A969F465ED01ED5A1CE92689F9B4931331142790F48F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDescent.lean",
+      "sha256": "A177B8A73C844F6F70BAFB7D3ACF27B6EE3A8B4F06A8C0681FCDD3AF003AC5F7"
+    }
+  ],
+  "shorterRoute": "Native coefficient-span retraction, constant-field valuation extension and exact orders apply to the literal Gamma1 fields. Existing Laurent coordinate degree transport supplies corresponding bases without a new independence proof. Native coordinate trace descent and independent-coefficient order bounds prove principal descent; degree-zero effective differences vanish. The already proved complex period equivalence supplies finite torsion; no rank-versus-genus identity is needed. The separately checked coefficient-independence lemma is not a dependency of the chosen shorter coordinate-basis route; no expansion of that alternative is planned.",
+  "assumptionsToDischarge": [
+    "Actual coefficient embedding, compatible scalar towers and generation of the complex Gamma1 field.",
+    "Unique complex extension of every actual arithmetic place with exact orders; actual divisor conorm preserves degree and principal divisors.",
+    "The actual Gamma1 coordinate-basis and trace-descent inputs to principal-divisor descent.",
+    "Every arithmetic Gamma1 divisor becoming principal over C is already principal over Qbar.",
+    "The actual arithmetic-to-complex Picard map is injective and actual nonzero-order arithmetic torsion is finite."
+  ],
+  "remaining": "Torsion surjectivity, arithmetic Tate/Hecke comparison, finite-coefficient H1 and diamond/transpose comparisons, arithmetic Galois realization, all-weight association and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20."
+}

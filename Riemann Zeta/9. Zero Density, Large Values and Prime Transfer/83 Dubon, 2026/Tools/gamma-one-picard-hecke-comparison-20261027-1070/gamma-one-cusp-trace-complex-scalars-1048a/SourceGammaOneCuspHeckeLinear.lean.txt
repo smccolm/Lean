@@ -1,0 +1,51 @@
+import SourceGammaOneScalarHeckePeriods
+import Dubon2026.SourceWeightTwoIntegralPeriods
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 Hecke comparison -> original
+integer-period quotient. The native cusp trace is linear; its dual sends
+every actual period generator to the proved integer coset sum. This will
+give a well-defined action on the original period quotient, separately
+from the still-required comparison with the algebraic Picard operator. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup UpperHalfPlane
+open scoped MatrixGroups ModularForm
+variable (M d : ℕ) [NeZero d]
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+theorem cuspHeckeTrace_add
+    (f g : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    cuspHeckeTrace M d (f + g) = cuspHeckeTrace M d f + cuspHeckeTrace M d g := by
+  apply DFunLike.coe_injective
+  simp only [CuspForm.coe_add, cuspHeckeTrace_coe, sourceGammaOneWeightTwoHeckeCoset_out,
+    SlashAction.add_slash, Finset.sum_add_distrib]
+
+theorem cuspHeckeTrace_smul (c : ℂ)
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    cuspHeckeTrace M d (c • f) = c • cuspHeckeTrace M d f := by
+  apply DFunLike.coe_injective
+  simp only [CuspForm.coe_smul, cuspHeckeTrace_coe, sourceGammaOneWeightTwoHeckeCoset_out,
+    ModularForm.smul_slash, Finset.smul_sum]
+
+/-- The linear endomorphism given by the actual native Gamma1 cusp trace. -/
+def cuspHeckeLinear :
+    Module.End ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) where
+  toFun := cuspHeckeTrace M d
+  map_add' := cuspHeckeTrace_add M d
+  map_smul' c f := cuspHeckeTrace_smul M d c f
+
+/-- The dual of the actual native Gamma1 cusp trace on original cusp functionals. -/
+def periodHeckeLinear :
+    Module.End ℂ (Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)) :=
+  (cuspHeckeLinear M d).dualMap
+
+theorem periodHeckeLinear_apply
+    (v : Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2))
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    periodHeckeLinear M d v f = v (cuspHeckeTrace M d f) := rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

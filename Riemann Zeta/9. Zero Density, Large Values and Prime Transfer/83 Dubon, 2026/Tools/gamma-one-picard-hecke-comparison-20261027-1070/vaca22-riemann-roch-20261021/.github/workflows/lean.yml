@@ -1,0 +1,53 @@
+name: Lean
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+        with:
+          build: true
+          lint: true
+          mk_all-check: true
+
+      # lean-action's nanoda wrapper currently expects a `[package]` section
+      # and cannot detect Lake 5 packages with top-level TOML metadata.
+      # Keep the axiom gate explicit until that upstream detector is fixed.
+      - name: Audit headline theorem axioms
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f AxiomCheck.lean ]]; then
+            echo "::error::AxiomCheck.lean is missing"
+            exit 1
+          fi
+
+          axiom_output="$(lake env lean AxiomCheck.lean 2>&1)"
+          printf '%s\n' "$axiom_output"
+
+          unexpected="$(
+            printf '%s\n' "$axiom_output" |
+              sed -E \
+                -e "s/^'[^']+' depends on axioms: //" \
+                -e "s/^'[^']+' does not depend on any axioms$//" \
+                -e 's/\[|\]//g' |
+              tr ',' '\n' |
+              awk '{
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "")
+                if ($0 != "" && $0 != "propext" &&
+                    $0 != "Classical.choice" && $0 != "Quot.sound") print
+              }'
+          )"
+
+          if [[ -n "$unexpected" ]]; then
+            echo "::error::Unexpected axioms in headline theorems: $unexpected"
+            exit 1
+          fi

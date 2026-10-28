@@ -1,0 +1,11 @@
+{
+  "dependency": "DUB17/18 -> actual Gamma1 arithmetic/complex torsion comparison -> place existence -> proper uniformizer ideal -> finite scalar-span separation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentSpanDescent.lean",
+      "sha256": "259FD975B2681F28DC3FEA8C908D7B1D1F6F9861E53F907CB6950E203BC90424"
+    }
+  ],
+  "shorterRoute": "The newer native mem_span_of_coeffMap_mem_span uses a coefficient retraction and directly descends this finite relation. It replaces the older OriginalComplexSpanSeparation basis-extension argument. Existing fieldMap_linearIndependent remains available for the necessary coordinate-basis/trace-descent comparison; it is not claimed as a dependency of this separation proof.",
+  "proofLimitsChanged": false
+}

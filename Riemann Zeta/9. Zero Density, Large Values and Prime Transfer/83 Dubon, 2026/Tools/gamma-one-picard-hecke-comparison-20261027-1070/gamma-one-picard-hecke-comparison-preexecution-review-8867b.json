@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-28T04:29:47.202849+00:00",
+  "reason": "Static review corrected the supplemental promotion-route archive path before any production mutation. Original prepared scripts retained. Fresh preflight verifies that the metadata route is included in pending archives.",
+  "productionMutation": false,
+  "priorReview": "DCE7028F1F2FD144D27EE48F4BFCE0F190D0FABE8ECBC87276E53E41C3EB47AB",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_picard_hecke_comparison_8867b.py",
+      "sha256": "3454F7A4E02C5B06C240C963CC10CF1C90544CB1C01B86218058BA0773D7526D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_picard_hecke_comparison_8867b.py",
+      "sha256": "FE19DEB8A29AABCC0387B299AB1AB17571913BF882855BF0AC9B7C7A1E056A6F"
+    }
+  ]
+}

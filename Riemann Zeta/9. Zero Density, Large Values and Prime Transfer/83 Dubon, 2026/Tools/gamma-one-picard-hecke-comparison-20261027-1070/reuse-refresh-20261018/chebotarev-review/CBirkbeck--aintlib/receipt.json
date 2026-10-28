@@ -1,0 +1,45 @@
+{
+  "repository": "CBirkbeck/aintlib",
+  "commit": "1e63feb21e2dd9e54908d14c9c07058eff3ff1d4",
+  "checkedUTC": "2026-10-18T20:02:26.959814+00:00",
+  "treeComplete": true,
+  "files": [
+    {
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/lean-toolchain",
+      "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4",
+      "bytes": 29
+    },
+    {
+      "path": "lakefile.toml",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/lakefile.toml",
+      "sha256": "D776DD945AC5B2E641287A090B597D61B58A7CE8BDE34ED76104E1093EFE5FCA",
+      "bytes": 3987
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/README.md",
+      "sha256": "C7D58094258F2139B856C7BFE2DA523B7EC42CFCD3F7193807278C12D66DBF35",
+      "bytes": 4943
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "path": "projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Abelian.lean",
+      "sha256": "21A49D45E5C6BDFC94EE4E2DED570D3957D79C892D55786B878F2F469B3FDF98",
+      "bytes": 95805
+    },
+    {
+      "path": "projects/Chebotarev/CebotarevDensity/Main.lean",
+      "url": "https://raw.githubusercontent.com/CBirkbeck/aintlib/1e63feb21e2dd9e54908d14c9c07058eff3ff1d4/projects/Chebotarev/CebotarevDensity/Main.lean",
+      "sha256": "D2B7B56411B59FCD9900DAA7FDC760CCA28196A9ABEE03EC9303FF13AD97EDF8",
+      "bytes": 28268
+    }
+  ],
+  "kernelCheckedHere": false
+}

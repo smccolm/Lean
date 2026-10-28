@@ -1,0 +1,142 @@
+SATO-TATE 53
+Let k denote the residue field of K. We can and do further assume that rl,ι(π)|GF ′
+and rl,ι(π
+′
+) are equal (as homomorphisms) when composed with the natural map
+GLn(O) → GLn(k). Write ¯rl,ι(π)|GF ′ = ¯rl,ι(π
+′
+) for this composition.
+We write r = Symn−1
+rl,ι(π)|GF ′ and r
+′ = Symn−1
+rl,ι(π
+′
+), thought of as repre￾sentations valued in GLn(O) via the bases specified in Definition 3.3.1. We begin
+by applying Lemma 4.2.4 in the following situation (where the field F of Lemma
+4.2.4 is F
+′
+):
+• Sord is the set of places of F
+′ dividing l lying over a place for which π is
+ordinary with respect to ι.
+• For each v|l, thought of as an embedding F
+′
+֒→ Ql
+, av = −λι◦v|F ,2 and
+bv = λι◦v|F ,1 − λι◦v|F ,2 + 1.
+• T is the set of places away from l at which π
+′
+is ramified.
+• (F
+′
+)
+(bad) = F
+ker ¯r
+(ζl).
+We deduce that (after possibly extending K) there is a CM extension M of F
+′ of
+degree m∗
+, and de Rham characters
+θ, θ′
+: GM → O×,
+satisfying various properties that we will now describe. We can fix an element
+τ˜ ∈ GF ′ mapping to a generator τ ∈ Gal(M/F′
+), and we regard IndGF ′
+GM
+θ and
+IndGF ′
+GM
+θ
+′ as representations valued in GLm∗ (O) via their ˜τ -standard bases β =
+{e0, . . . , em∗−1} and β
+′ = {e
+′
+0
+, . . . , e′
+m∗−1
+} respectively, in the sense of Definition
+4.2.3. Note that these two representations become equal when composed with the
+homomorphism GLm∗ (O) → GLm∗ (k). Then, by the conclusions of Lemma 4.2.4,
+the following hold:
+•
+¯θ = ¯θ
+′
+.
+• (r ⊗ IndGF ′
+GM
+θ)|GF ′(ζl
+)
+has big image.
+• F¯
+(ker ad(¯r⊗Ind
+GF ′
+GM
+θ)) does not contain ζl
+.
+• r ⊗ IndGF ′
+GM
+θ and r
+′ ⊗ IndGF ′
+GM
+θ
+′ are both de Rham, and have the same
+Hodge-Tate weights at each place of F
+′ dividing l.
+• r
+′′ := r ⊗ IndGF ′
+GM
+θ is essentially self-dual; that is, there is a character
+χ : GF ′ → Q
+×
+l with χ(cv) independent of v|∞ (where cv denotes a complex
+conjugation at v) such that (r
+′′)
+∨ ∼= r
+′′χ.
+• IndGF ′
+GM
+θ
+′
+is essentially self-dual.
+Applying Theorem 7.1.3 with N = M¯ ker θ¯
+, we find a totally real field F
+′′/F′ with
+r
+′
+|GF ′′ automorphic of level prime to l. By Proposition 5.1.3, the representation
+(r
+′ ⊗ IndGF ′
+GM
+θ
+′
+)|GF ′′ is automorphic. We now choose a solvable extension F
++/F′′
+of totally real fields such that
+• F
++ is linearly disjoint from F¯ker ad ¯r
+′′ (ζl)M over F
+′
+.
+• r
+′′|GF+ = (r ⊗ IndGF ′
+GM
+θ)|GF+ and (r
+′ ⊗ IndGF ′
+GM
+θ
+′
+)|GF+ are both crystalline
+at all places dividing l.
+• (r
+′ ⊗ IndGF ′
+GM
+θ
+′
+)|GF+ is automorphic of level prime to l (note that r
+′
+|GF ′′ is
+automorphic of level prime to l, so this is easily achieved by Lemma 5.1.1
+and Proposition 5.1.3).
+• The extension F
++M/F + is unramified at all finite places, and is split com￾pletely at all places of F
++ lying over places in T .

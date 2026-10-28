@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 and Hecke/diamond comparison -> literal Picard group versus original period quotient.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-period-equivalence-audit-route-1029.json",
+    "sha256": "B530E001C2648D8A4369C6FAE2CD3D8062224D13EB2D5C7C49D22A28B4A4B032",
+    "review": {
+      "chain": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 and Hecke/diamond comparison -> literal Picard group versus original period quotient.",
+      "shorterRoute": "Use upper-half-plane evaluations of actual cusp forms and the existing normalized primitive directly. A basis evaluation frame and the native inverse-function theorem make the finite degree-zero divisor image an open additive subgroup; connectedness yields surjectivity. This adapts the existing original Jacobi inversion proof but avoids constructing a second algebraic-place chart and differential-reading framework. The finite-divisor Abel-Jacobi kernel is proved in both directions, and direct upper-half-plane Jacobi inversion supplies surjectivity. The existing actual divisor moving lemma presents every literal Picard class by a finite analytic divisor. Apply the native quotient-kernel isomorphism theorem to the two actual surjective maps with equal kernels. This avoids reconstructing global differential-coordinate charts or substituting the existing Gamma0 Picard equivalence.",
+      "assumptionsToDischarge": "DISCHARGED: cusp-evaluation spanning, actual endpoint image openness and surjectivity, actual finite-dimensional Gamma1 specialization, actual Picard presentation, equality of the literal Picard and original period kernels, and an actual additive Picard-period equivalence with its finite-divisor endpoint formula.",
+      "remaining": "Scratch-audited complex Picard-period equivalence only; promotion and assembled verification remain. Hecke/diamond/transpose/H1 and arithmetic compatibility, all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationFrame.lean",
+          "sha256": "379553E546C8EC35DF9B7F9132AC994EE77CD20E546DAB7D7C89AF9B9005D06D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiOpenImage.lean",
+          "sha256": "25CB14D4CA3CBC9D81698483B4E7BA280641707D20D93057670ABEDFFBC91C9C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJacobiInversion.lean",
+          "sha256": "75B2ED19D0F24019F705A7AD13C361FE88192DEDD11D0D258994C45773D37E28"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoEndpointPeriods.lean",
+          "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriodUntwist.lean",
+          "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticDivisorMoving.lean",
+          "sha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardAbelMap.lean",
+          "sha256": "7890BE46139EB5D9F453A7386A6C0770C7F9E830DAD7A2054493BA7E3613F2C3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPicard.lean",
+          "sha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePicard.lean",
+          "sha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173"
+        }
+      ],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": "DISCHARGED: cusp-evaluation spanning, actual endpoint image openness and surjectivity, actual finite-dimensional Gamma1 specialization, actual Picard presentation, equality of the literal Picard and original period kernels, and an actual additive Picard-period equivalence with its finite-divisor endpoint formula.",
+  "remaining": "Scratch-audited complex Picard-period equivalence only; promotion and assembled verification remain. Hecke/diamond/transpose/H1 and arithmetic compatibility, all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

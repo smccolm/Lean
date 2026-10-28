@@ -1,0 +1,31 @@
+import Mathlib.NumberTheory.ModularForms.Cusps
+import P2M.Util
+namespace P2MW.S_Subgroup_IsArithmetic_exists_nat_mem_strictPeriods_conj
+
+open Matrix.SpecialLinearGroup ConjAct
+open scoped MatrixGroups Pointwise
+
+noncomputable section
+
+theorem solution (𝒢 : Subgroup (GL (Fin 2) ℝ)) [𝒢.IsArithmetic] : ∃ M : ℕ, 0 < M ∧ ∀ γ : SL(2, ℤ), (M : ℝ) ∈ (ConjAct.toConjAct (Matrix.SpecialLinearGroup.mapGL ℝ γ) • 𝒢).strictPeriods := by
+  haveI : (𝒢.comap (mapGL (R := ℤ) ℝ)).FiniteIndex := Subgroup.IsArithmetic.finiteIndex_comap 𝒢
+  set Λ : Subgroup SL(2, ℤ) := (𝒢.comap (mapGL (R := ℤ) ℝ)).normalCore with hΛ
+  haveI : Λ.FiniteIndex := inferInstance
+  haveI hN : Λ.Normal := inferInstance
+  refine ⟨Λ.index, Nat.pos_of_ne_zero Subgroup.FiniteIndex.index_ne_zero, fun γ ↦ ?_⟩
+  have hT : ModularGroup.T ^ Λ.index ∈ Λ := Λ.pow_index_mem ModularGroup.T
+  have hconj : γ⁻¹ * ModularGroup.T ^ Λ.index * γ ∈ 𝒢.comap (mapGL ℝ) := by
+    apply Subgroup.normalCore_le
+    simpa using hN.conj_mem _ hT γ⁻¹
+  have hU : ∀ m : ℤ, Matrix.GeneralLinearGroup.upperRightHom ((m : ℝ)) =
+      mapGL ℝ (ModularGroup.T ^ m) := by
+    intro m
+    simp only [Units.ext_iff, mapGL_coe_matrix, map_apply_coe]
+    ext i j
+    fin_cases i <;> fin_cases j <;> simp [ModularGroup.coe_T_zpow]
+  have hU' := hU Λ.index
+  rw [zpow_natCast, Int.cast_natCast] at hU'
+  rw [Subgroup.mem_strictPeriods_iff, Subgroup.mem_pointwise_smul_iff_inv_smul_mem, ← toConjAct_inv,
+    toConjAct_smul, inv_inv, hU', ← map_inv, ← map_mul, ← map_mul]
+  exact hconj
+end

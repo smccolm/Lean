@@ -1,0 +1,6 @@
+{
+  "source": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAllPrimeScalarPeriods.lean",
+  "sha256": "52E1B4B92857876D9964721E58CC7C016C221EF1A6A4A40F9156334A4DF58FF1",
+  "adaptation": "Native finite-sum reindexing specialized to actual Gamma1 transition and native cusp trace; removes a new proof design for scalar compatibility. All nonzero diagonal indices retained.",
+  "sourceGate": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 through original all-weight association, actual finite Gamma1 arithmetic characters and Picard/H1 Hecke comparison."
+}

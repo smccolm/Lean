@@ -1,0 +1,48 @@
+import Dubon2026.SourceGammaOneScalarHeckePeriods
+import Dubon2026.SourceGammaOneHeckeCharacters
+
+/-! DUB17/18 -> original all-weight arithmetic association -> original
+Gamma1 Picard/H1 Hecke comparison. The original scalar cusp periods determine
+a class in native constant-coefficient H1. The actual cusp trace intertwines
+the existing native H1 Hecke correspondence, by the exact scalar coset formula.
+No comparison or eigenvalue hypothesis is supplied. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology CategoryTheory
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M]
+
+/-- The original scalar weight-two periods as a class in native Gamma1 H1. -/
+def holomorphicPeriodH1 :
+    CuspForm ((Gamma1 M).map (mapGL ℝ)) 2 →ₗ[ℂ] H1 (Rep.trivial ℂ (Gamma1 M) ℂ) :=
+  (H1IsoOfIsTrivial (Rep.trivial ℂ (Gamma1 M) ℂ)).inv.hom.comp
+    (sourceWeightTwoPeriodHom (Gamma1 M))
+
+theorem holomorphicPeriodH1_hom_apply
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (γ : Gamma1 M) :
+    (H1IsoOfIsTrivial (Rep.trivial ℂ (Gamma1 M) ℂ)).hom
+      (holomorphicPeriodH1 M f) (Additive.ofMul γ) =
+        sourceWeightTwoPeriodValue (Gamma1 M) f γ := by
+  change (H1IsoOfIsTrivial (Rep.trivial ℂ (Gamma1 M) ℂ)).hom
+    ((H1IsoOfIsTrivial (Rep.trivial ℂ (Gamma1 M) ℂ)).inv
+      (sourceWeightTwoPeriodHom (Gamma1 M) f)) (Additive.ofMul γ) = _
+  rw [Iso.inv_hom_id_apply]
+  rfl
+
+theorem holomorphicPeriodH1_cuspHeckeTrace (d : ℕ) [NeZero d]
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    holomorphicPeriodH1 M (cuspHeckeTrace M d f) =
+      sourceGammaOneConstantHeckeH1 ℂ ℂ M d LinearMap.id (holomorphicPeriodH1 M f) := by
+  apply (ConcreteCategory.bijective_of_isIso
+    (H1IsoOfIsTrivial (Rep.trivial ℂ (Gamma1 M) ℂ)).hom).injective
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, holomorphicPeriodH1_hom_apply, sourceGammaOneConstantHeckeH1_hom_apply]
+  refine (periodValue_cuspHeckeTrace M d f γ.toMul).trans ?_
+  apply Finset.sum_congr rfl
+  intro q _
+  exact (holomorphicPeriodH1_hom_apply M f _).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

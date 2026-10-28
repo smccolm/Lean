@@ -1,0 +1,45 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> all-weight arithmetic association -> actual Gamma1 arithmetic realization -> Picard torsion comparison -> injectivity -> principal-divisor descent -> coordinate trace descent and corresponding bases.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransport.lean",
+      "sha256": "0E0030AC82E69E99C02BCEF2115A73D3D4222C657CB2AC97CDBD0727B27E0D55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldCoordinateSpan.lean",
+      "sha256": "2F567EBECC4AC2391404002CE9F80D01DC5F332104B7F0E96AEE5C39A464F5B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNewCoordinatePlaces.lean",
+      "sha256": "5DA24758D5F656013544E71EB2A515E767C205D31C7A852749C7A9DAE835452A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCoordinateTrace.lean",
+      "sha256": "476B1309845E204B621C6103A3A19D64498A7D48DF6C61477422BA0ED4156294"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinateDescent.lean",
+      "sha256": "18E94791C582D88EC0E54FE9D06E5EF10E3C644020C91D45D04976D8851A66E9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexSpanDescent.lean",
+      "sha256": "1D5D6B4A49535342656A969F465ED01ED5A1CE92689F9B4931331142790F48F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDescent.lean",
+      "sha256": "A177B8A73C844F6F70BAFB7D3ACF27B6EE3A8B4F06A8C0681FCDD3AF003AC5F7"
+    }
+  ],
+  "shorterRoute": "Existing Laurent degree transport gives arithmetic/complex coordinate degree equality. Apply native exists_coordinate_basis_of_finrank_eq; no new polynomial independence argument. Existing trace regularity and rational-coordinate descent plus positive finite j-fiber degree give span descent. Principal descent then uses native independent-coefficient orders and principal degree zero.",
+  "assumptionsToDischarge": [
+    "Actual j-coordinate basis comparison",
+    "Place exclusion over constants outside the fixed Qbar embedding",
+    "Regular-coordinate trace descent",
+    "Principal-divisor descent; hence actual Picard map injectivity"
+  ],
+  "deferred": "Arithmetic torsion surjectivity, arithmetic Tate/Hecke, Galois realization, finite-coefficient comparisons, all-weight association and higher continuation. DUB17--20 remain OPEN."
+}

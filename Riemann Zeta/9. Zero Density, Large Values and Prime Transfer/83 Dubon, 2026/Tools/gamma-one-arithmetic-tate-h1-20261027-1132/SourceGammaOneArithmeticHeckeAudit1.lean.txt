@@ -1,0 +1,92 @@
+import SourceGammaOneHeckeConstantField
+import SourceGammaOneHeckeSpanSeparation
+import SourceGammaOneHeckeValuationExtension
+import SourceGammaOneHeckeConstantPlaces
+import SourceGammaOneHeckeConorm
+import SourceGammaOneHeckeComplexPlaces
+import SourceGammaOneHeckeComplexDivisors
+import SourceGammaOneHeckeComplexPicard
+import SourceGammaOneArithmeticTateHecke
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_j
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.arithmeticFieldScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.adjoin_range_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.sum_ne_of_not_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extending_valuation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extended_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_eq_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_phi_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_heckeLiftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ramificationAlong_heckeLiftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_ne_liftPlace_of_ne_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finitePullbackAlong_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.geometricPushforwardAlong_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeAlpha_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeBeta_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_heckeDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_heckePicard
+#print axioms Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexFieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.laurentLinearMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneHeckeConstantField, `SourceGammaOneHeckeSpanSeparation, `SourceGammaOneHeckeValuationExtension, `SourceGammaOneHeckeConstantPlaces, `SourceGammaOneHeckeConorm, `SourceGammaOneHeckeComplexPlaces, `SourceGammaOneHeckeComplexDivisors, `SourceGammaOneHeckeComplexPicard, `SourceGammaOneArithmeticTateHecke]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_constants, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_rational, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_j, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexScalarTower, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.arithmeticFieldScalarTower, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.adjoin_range_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.sum_ne_of_not_mem_span, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extending_valuation, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extended_place, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_comap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_unique, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_injective, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_eq_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_phi_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_single, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_heckeLiftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ramificationAlong_heckeLiftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_ne_liftPlace_of_ne_hecke, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finitePullbackAlong_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.geometricPushforwardAlong_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeAlpha_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeBeta_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_heckePicard, `Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_hecke]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexFieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.laurentLinearMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Hecke Geometric Fibers postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Hecke Geometric Fibers theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC HECKE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneHeckeConstantField
+#lint in SourceGammaOneHeckeSpanSeparation
+#lint in SourceGammaOneHeckeValuationExtension
+#lint in SourceGammaOneHeckeConstantPlaces
+#lint in SourceGammaOneHeckeConorm
+#lint in SourceGammaOneHeckeComplexPlaces
+#lint in SourceGammaOneHeckeComplexDivisors
+#lint in SourceGammaOneHeckeComplexPicard
+#lint in SourceGammaOneArithmeticTateHecke

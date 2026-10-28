@@ -1,0 +1,124 @@
+{
+  "recordedUTC": "2026-10-20T13:38:57.333594+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0; retained LICENSE and NOTICE",
+  "files": [
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean",
+      "gitBlobSha1": "759d14224ee565fdaadbf292eeaec8e5e6623adb",
+      "archive": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean.txt",
+      "bytes": 30133,
+      "sha256": "7EAF71934E8A698F5497C71485AD2CB11D274B95F7811F1A45269B5A608868DC"
+    },
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean",
+      "gitBlobSha1": "c8ebeadfbf152c5cb036b69f6a21eb2742620df5",
+      "archive": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean.txt",
+      "bytes": 29504,
+      "sha256": "952ADD7A6E8B30375958F2B47CC7E738B1E3B91595A29D225391218CC34FE6D6"
+    },
+    {
+      "path": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "gitBlobSha1": "c65b39e123d8fb824c9ce492e8ab6f8a297e9c58",
+      "archive": "Theorems/Thm_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "bytes": 29320,
+      "sha256": "8A1C68CC1F5AFB275A0830CF0CA11373D5B54DC5A6A2ED427E53C7A031EB59C4"
+    },
+    {
+      "path": "Theorems/Thm_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "gitBlobSha1": "7600b569ed478788196fa6dbbf30fc8fc2b13c0e",
+      "archive": "Theorems/Thm_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "bytes": 2675,
+      "sha256": "701733033BAFBAEAF94FFEC57D007300C6B0F466FB97FDC92C5964E8915CE2E1"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean",
+      "gitBlobSha1": "2575fa88afb9f9f8d76bfab4b490f098b9d7272c",
+      "archive": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_eigenchar_and_det_eq_pow_of_three_le.lean.txt",
+      "bytes": 31934,
+      "sha256": "770CA4CA5A35D4B977CB86E515758DE73CCC2DD65DF9832D0AF932A2D6E5FFE7"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean",
+      "gitBlobSha1": "5bd87d26dc032eb76ce4e6adbdbdbda9fe324db5",
+      "archive": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_binaryFormRepSL_of_ringHom.lean.txt",
+      "bytes": 44293,
+      "sha256": "BC7DCED88AC891E24A587E97D67AA974710010B941D2633D093BB54FE269A2FE"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "gitBlobSha1": "5e087ffbd5f25af30c7abf1606b31e9c12e5c148",
+      "archive": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "bytes": 46697,
+      "sha256": "24D0C54234CA1D0A33B2A98FAC560895E2FFAB033CBE8FC0BD4705C50E81567A"
+    },
+    {
+      "path": "Definitions/Def_GaloisRep_Residual.lean",
+      "gitBlobSha1": "9cdbdf68671901e15cedaf03663683d056992b91",
+      "archive": "Definitions/Def_GaloisRep_Residual.lean.txt",
+      "bytes": 4615,
+      "sha256": "CD335782F0B607066BF114F70F892DB500C06D52DFFD2B19827490C513E02537"
+    },
+    {
+      "path": "Definitions/Def_Gamma0CoeffCohomologyEigen.lean",
+      "gitBlobSha1": "e2f319d0a066898ace59ff3a16cec967c01ce222",
+      "archive": "Definitions/Def_Gamma0CoeffCohomologyEigen.lean.txt",
+      "bytes": 4205,
+      "sha256": "8703EF5DFAA06E0D37BFF5F895B32804905CED9AFB27D971694AB0C0576EBAC6"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_one_dvd_mul_sq_of_isEigensystemH1_binaryFormRepSL.lean",
+      "gitBlobSha1": "92e637e6a8cac2ddf20768c1bbccd22e840292b8",
+      "archive": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_one_dvd_mul_sq_of_isEigensystemH1_binaryFormRepSL.lean.txt",
+      "bytes": 11108,
+      "sha256": "134A6654489D5671924CA1505F4A099B4D6797C24A2DA3F5EC03272C07666A20"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_binaryFormRepSL_empty_of_isEigensystemH1_of_ringHom.lean",
+      "gitBlobSha1": "b3ecbdae2297931a8d558aa881aa53c5b327ca85",
+      "archive": "P2M/Sol/S_HeckeEis_exists_isEigensystemH1_binaryFormRepSL_empty_of_isEigensystemH1_of_ringHom.lean.txt",
+      "bytes": 31892,
+      "sha256": "EB98816B078E54A4BDE0221D0E3DFE562CDA3B5E5138916A540F2258534B79A7"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_isEigensystemH1_binaryFormRepSL_of_heckeTLin_eq_smul.lean",
+      "gitBlobSha1": "2ba4ac3b8e8b4f37c28f6cbb528799e053509b1e",
+      "archive": "P2M/Sol/S_HeckeEis_isEigensystemH1_binaryFormRepSL_of_heckeTLin_eq_smul.lean.txt",
+      "bytes": 26192,
+      "sha256": "9EB8AE1EEA4E83AA74F2C9A7DBA1037074333499F517038AA7939D6B1CE6BFA3"
+    },
+    {
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_ringHom_heckeAlgebra_two.lean",
+      "gitBlobSha1": "9f1d05b30c32cd91695c00c0b6696f33bfb39207",
+      "archive": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_ringHom_heckeAlgebra_two.lean.txt",
+      "bytes": 39014,
+      "sha256": "CF27875E6B0C4A9E0EEC30ECBCB13A83262884470D1AC687C20628E5504F7A3F"
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_eichlerShimuraMap_heckeTLin.lean",
+      "gitBlobSha1": "7ece88bb9c13040636478f43b9242b5207dfd7f7",
+      "archive": "P2M/Sol/S_HeckeEis_eichlerShimuraMap_heckeTLin.lean.txt",
+      "bytes": 47012,
+      "sha256": "ABD419A5A5E64F0E0EFC78AEB1DFFF15557C59F14A113140DF78512F664319AF"
+    },
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+      "archive": "LICENSE.txt",
+      "bytes": 11345,
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034"
+    },
+    {
+      "path": "NOTICE",
+      "gitBlobSha1": "5411679f5f1878e72d1622a88c54b8fbb3f29282",
+      "archive": "NOTICE.txt",
+      "bytes": 7128,
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6"
+    }
+  ],
+  "completeImportClosure": false,
+  "kernelReplay": false,
+  "fullSemanticReview": false,
+  "productionProofsCopied": false
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/AuxiliaryPrime.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/AuxiliaryPrime.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\AuxiliaryPrime.lean.txt",
+    "bytes": 3157,
+    "gitBlob": "d0635f62ce33f529f680ad633ba67ec5a785e519",
+    "sha256": "36A2A9023095E8D4A7A2E832B59E7246C33D5AE4EF9B8945DE21648066CB540F"
+  },
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/Density/Chebotarev.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/Density/Chebotarev.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\Density\\Chebotarev.lean.txt",
+    "bytes": 4728,
+    "gitBlob": "ce88aa8b34b9f326ba77743149f362d3e6659a81",
+    "sha256": "C1C3E65D721CD567E1765BC1598561BD24DBA83D930C8EB6E8A88CB01DC9ACC6"
+  },
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/PrimeCounting/Chebotarev.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/PrimeCounting/Chebotarev.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\PrimeCounting\\Chebotarev.lean.txt",
+    "bytes": 14632,
+    "gitBlob": "4a0472ca0829eac58f0916ca60eee9c209b54853",
+    "sha256": "81888BB403FA0E95375D0E073BE97875E1050B7F9AD6B997C404C7951D095470"
+  },
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/GaloisCharacter/Nonvanishing.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/GaloisCharacter/Nonvanishing.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\GaloisCharacter\\Nonvanishing.lean.txt",
+    "bytes": 10452,
+    "gitBlob": "e1fe54eb4ac578a0cf915d5c0a007f5132305da3",
+    "sha256": "33811657DBF40783E625F3AD6C3C7CC245DAB17D6F19CE466AA7A6847AF2D8A1"
+  },
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/Density/Abelian.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/Density/Abelian.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\Density\\Abelian.lean.txt",
+    "bytes": 7892,
+    "gitBlob": "a8cf130346e4a9b7d9f5f38953b811224add7812",
+    "sha256": "587DEC312104FA6182DCAB06C0CFE709D4BF8CCAB6C38B0E67A75F6148DDC32C"
+  },
+  {
+    "path": "TauCeti/NumberTheory/Chebotarev/Density/SplittingType.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/Chebotarev/Density/SplittingType.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\chebotarev-review\\TauCeti\\NumberTheory\\Chebotarev\\Density\\SplittingType.lean.txt",
+    "bytes": 6389,
+    "gitBlob": "324815b66c32348fe8991501ef182cbb529fbfd8",
+    "sha256": "D4211A550913DC78B0781151B197D2E252AA0EF2F6FDDFCF6BB7118F67216D30"
+  }
+]

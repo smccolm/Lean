@@ -1,0 +1,39 @@
+import Dubon2026.SourceGammaOneFiniteParabolicCharacters
+import Dubon2026.SourceGammaOneHeckeCharacters
+import Mathlib.Algebra.Module.Submodule.Equiv
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+finite-coefficient Gamma1 H1. Restrict the native trivial-coefficient H1
+isomorphism and compose it with the proved period-character equivalence.
+The target is the literal submodule cut out by parabolic and finite-order
+vanishing in native H1; neither H1 nor its characters are replaced. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory
+variable (M : ℕ) [NeZero M] (n : ℕ)
+
+/-- Native modulus H1 classes trivial on parabolic and finite-order elements. -/
+def finiteParabolicH1 : Submodule (ZMod n) (H1 (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))) :=
+  (finiteParabolicHoms M n).comap
+    (H1IsoOfIsTrivial (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))).hom.hom
+
+/-- The original period lattice dual realizes the specified submodule of native H1. -/
+def finiteLatticeH1Equiv :
+    (sourceWeightTwoIntegralLattice (Gamma1 M) →+ ZMod n) ≃ₗ[ZMod n]
+      finiteParabolicH1 M n :=
+  (finiteLatticeCharacterEquiv M n).trans
+    ((H1IsoOfIsTrivial (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))).toLinearEquiv.ofSubmodule'
+      (finiteParabolicHoms M n)).symm
+
+theorem finiteLatticeH1Equiv_hom_apply
+    (ψ : sourceWeightTwoIntegralLattice (Gamma1 M) →+ ZMod n) (γ : Gamma1 M) :
+    (H1IsoOfIsTrivial (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))).hom
+      (finiteLatticeH1Equiv M n ψ).val (Additive.ofMul γ) =
+        ψ (latticePeriodHom M (Additive.ofMul γ)) := by
+  change (H1IsoOfIsTrivial (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))).hom
+    ((H1IsoOfIsTrivial (Rep.trivial (ZMod n) (Gamma1 M) (ZMod n))).inv
+      (finiteLatticeCharacterEquiv M n ψ).val) (Additive.ofMul γ) = _
+  rw [Iso.inv_hom_id_apply, finiteLatticeCharacterEquiv_apply]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

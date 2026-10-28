@@ -1,0 +1,35 @@
+{
+  "checkedUTC": "2026-10-18T11:17:52.231614+00:00",
+  "repository": "openai/math",
+  "sha": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "date": "2026-10-12T21:55:24Z",
+  "url": "https://github.com/openai/math/commit/1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/README.md",
+      "bytes": 4190,
+      "sha256": "5E8878EE04866F52EC942852552B9C28DB278F65691C7AB49A87C9E93A9199FD",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\README.md.txt"
+    },
+    {
+      "path": "lean/formalization.yaml",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/formalization.yaml",
+      "bytes": 79482,
+      "sha256": "5A8A164259591208886CD018416E61552665265EC9E20CFF636F9D51117C2278",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\lean__formalization.yaml.txt"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\lean__lean-toolchain.txt"
+    }
+  ],
+  "tree": {
+    "truncated": true,
+    "entries": 58728,
+    "sha256": "39AB34F409C936FE26F96CD7B330CAD634E21559E2597ADF5A4F973EBEEBE56E"
+  }
+}

@@ -1,0 +1,30 @@
+### Original full adelic Hecke bridge and irreducibility — 8 October 2026
+
+Twenty-four further production modules construct the actual finite-adelic residue homomorphism, the full good-prime level-subgroup quotient and its original p+1 Hecke representatives. The genuine coset trace preserves the actual level-fixed vectors and commutes with full adelic intertwiners. Rational diagonal invariance and the original real restriction identify this trace everywhere with the canonical lift of the classical Hecke operator, with the exact factor (sqrt p)^(2-k). The original primitive generator therefore has its actual Hecke eigenvalues in the faithful Hilbert completion. Existing prime-power recurrences and old-eigenform exclusion prove that any original-level classical form with these good-prime eigenvalues is a scalar multiple of the primitive form; newspace membership is derived. The proved fixed-level classical reconstruction applies to the image of the original generator under every bounded full adelic intertwiner. Exact Hecke compatibility and this multiplicity-one theorem force that image onto the original generator line. Actual full cyclic density propagates the scalar to every Hilbert vector. Unitarity makes every closed invariant-subspace orthogonal projector such an intertwiner, proving full adelic Hilbert irreducibility. No Hecke compatibility, newspace preservation, scalar commutant or irreducibility premise is assumed.
+
+Full adelic Hilbert irreducibility and the classical Hecke normalization bridge are proved for the original positive-weight primitive cusp representation. Source-level automorphic identification still requires checking the remaining source hypotheses and normalization interfaces. All higher symmetric continuations, unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicClassicalHeckeEigenBridge](Extension/Dubon2026/AdelicClassicalHeckeEigenBridge.lean).
+- [AdelicCyclicHeckeTrace](Extension/Dubon2026/AdelicCyclicHeckeTrace.lean).
+- [AdelicHeckeClassicalReconstruction](Extension/Dubon2026/AdelicHeckeClassicalReconstruction.lean).
+- [AdelicHeckeClassicalRestriction](Extension/Dubon2026/AdelicHeckeClassicalRestriction.lean).
+- [AdelicHeckeRationalRepresentatives](Extension/Dubon2026/AdelicHeckeRationalRepresentatives.lean).
+- [AdelicIntertwinerClassical](Extension/Dubon2026/AdelicIntertwinerClassical.lean).
+- [AdelicPrimitiveHeckeEigen](Extension/Dubon2026/AdelicPrimitiveHeckeEigen.lean).
+- [AdelicPrimitiveIntertwinerLine](Extension/Dubon2026/AdelicPrimitiveIntertwinerLine.lean).
+- [AdelicPrimitiveIrreducible](Extension/Dubon2026/AdelicPrimitiveIrreducible.lean).
+- [AdelicPrimitiveSchur](Extension/Dubon2026/AdelicPrimitiveSchur.lean).
+- [AdelicRationalTranslateRestriction](Extension/Dubon2026/AdelicRationalTranslateRestriction.lean).
+- [CanonicalAdelicLiftLinear](Extension/Dubon2026/CanonicalAdelicLiftLinear.lean).
+- [FiniteAdeleIntegralResidue](Extension/Dubon2026/FiniteAdeleIntegralResidue.lean).
+- [FiniteAdeleResidueRing](Extension/Dubon2026/FiniteAdeleResidueRing.lean).
+- [FiniteAdelicHeckeConjugation](Extension/Dubon2026/FiniteAdelicHeckeConjugation.lean).
+- [FiniteAdelicHeckeTrace](Extension/Dubon2026/FiniteAdelicHeckeTrace.lean).
+- [FiniteAdelicHeckeUpperCosets](Extension/Dubon2026/FiniteAdelicHeckeUpperCosets.lean).
+- [FiniteAdelicLevelResidue](Extension/Dubon2026/FiniteAdelicLevelResidue.lean).
+- [FiniteLevelSL2Density](Extension/Dubon2026/FiniteLevelSL2Density.lean).
+- [GeneralLinearUpperZero](Extension/Dubon2026/GeneralLinearUpperZero.lean).
+- [IntegralGamma0FiniteResidue](Extension/Dubon2026/IntegralGamma0FiniteResidue.lean).
+- [PrimitivePrimeMultiplicityOne](Extension/Dubon2026/PrimitivePrimeMultiplicityOne.lean).
+- [PrimitiveStrongMultiplicityOne](Extension/Dubon2026/PrimitiveStrongMultiplicityOne.lean).
+- [RepresentationCosetTrace](Extension/Dubon2026/RepresentationCosetTrace.lean).

@@ -1,0 +1,2971 @@
+{
+  "date": "2026-10-20",
+  "files": [
+    {
+      "name": "KN-Deligne.lean.txt",
+      "encoding": "utf-8",
+      "sha": "ebbf6c794fd6b588d50bf95dab1d0d4c90b02aec",
+      "display_url": "https://github.com/loefflerd/KN-scratch/blob/ba97a154bf2550c5210b6adf1a308329ed6bc8cc/Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+      "display_title": "Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+      "characters": 4493,
+      "sha256": "A1214A299850282958D0A9FEDF471039D15A60D13E7F4DAD8A82BCAD2443BFC8"
+    },
+    {
+      "name": "AINTLIB-NewformOrbit.lean.txt",
+      "encoding": "utf-8",
+      "sha": "178f5624258b11a324c38eb5d395a01678234dea",
+      "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/NewformOrbit.lean",
+      "display_title": "NewformOrbit.lean",
+      "characters": 53805,
+      "sha256": "984EFAA3018218EC5F887679CC3ED982CE000491381490A3A6292B8379EE7D33"
+    },
+    {
+      "name": "TauCeti-PrescribedLocalForms.lean.txt",
+      "encoding": "utf-8",
+      "sha": "b6e4d077304682c999d4a0e4fce9e3492c8f09a5",
+      "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+      "display_title": "PrescribedLocalForms.lean",
+      "characters": 10084,
+      "sha256": "D67205A5EF1F722F0C6DFF88421517039216F4628E997ECEC29DBEAB2DCE3D90"
+    },
+    {
+      "name": "FLT-HardlyRamifiedLift.lean.txt",
+      "encoding": "utf-8",
+      "sha": "4265b53a4e4cf1ce8163cbdc6061b9596dc404b8",
+      "display_url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/GaloisRepresentation/HardlyRamified/Lift.lean",
+      "display_title": "Lift.lean",
+      "characters": 1729,
+      "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2"
+    },
+    {
+      "name": "AINTLIB-HeckeAlgFiniteFinal.lean.txt",
+      "encoding": "utf-8",
+      "sha": "7c81e2bc5b1d79179b9cb3f4d8cd50bdbb50dddf",
+      "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/HeckeAlgFiniteFinal.lean",
+      "display_title": "HeckeAlgFiniteFinal.lean",
+      "characters": 4788,
+      "sha256": "D868CCA240F34F8731468A7EDEE44A2D25F73D73602D3041A73A78E3541B597B"
+    },
+    {
+      "name": "AINTLIB-EichlerInjective.lean.txt",
+      "encoding": "utf-8",
+      "sha": "d0cebea6a740de8c82f7908dd2383ad45ca2c1b1",
+      "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/HeckeRIngs/GL2/ModularSymbols/EichlerInjective.lean",
+      "display_title": "EichlerInjective.lean",
+      "characters": 136213,
+      "sha256": "A4913428AC70E37CD61736F7409509F39EA577AAA3D1644AFC8675CDD042ECBF"
+    }
+  ],
+  "searches": [
+    {
+      "kind": "broad",
+      "i": 0,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/CBirkbeck/LeanBridge/blob/2940e336898d7a068c9fd3942e22a91bf2714ecd/blueprint/src/knowls/cmf/cmf.galois_representation",
+            "path": "blueprint/src/knowls/cmf/cmf.galois_representation",
+            "display_url": "https://github.com/CBirkbeck/LeanBridge/blob/2940e336898d7a068c9fd3942e22a91bf2714ecd/blueprint/src/knowls/cmf/cmf.galois_representation",
+            "display_title": "blueprint/src/knowls/cmf/cmf.galois_representation",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\\uses{artin,artin.conductor,artin.parity,cmf.newform,cmf.weight}\nAs shown by Deligne and Serre \\cite{MR:0379379}, every  \\hyperref[cmf.newform]{newform} of \\hyperref[cmf.weight]{weight} one has an associated \\textbf{Galois representation} $\\rho\\colon \\Gal(\\overline{\\Q}/\\Q)\\to \\GL_2(\\C)$.\r\n\r\nThis representation corresponds to an \\hyperref[artin]{Artin representation} of dimension two whose \\hyperref[artin.conductor]{conductor} is the level $N$ of the modular form.\r\n\r\nConversely, every \\hyperref[artin.parity]{odd} irreducible two-dimensional Artin representation of conductor $N$ gives rise to a modular form of weight one and level $N$.\r\n\r",
+                "matches": [
+                  {
+                    "text": "form",
+                    "indices": [
+                      48,
+                      52
+                    ]
+                  },
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      77,
+                      84
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      138,
+                      142
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      147,
+                      151
+                    ]
+                  },
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      216,
+                      222
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      223,
+                      237
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      297,
+                      311
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      353,
+                      367
+                    ]
+                  },
+                  {
+                    "text": "modular",
+                    "indices": [
+                      454,
+                      461
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      462,
+                      466
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      552,
+                      566
+                    ]
+                  },
+                  {
+                    "text": "modular",
+                    "indices": [
+                      600,
+                      607
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      608,
+                      612
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/glenzli/stochastic-parrot-lectures/blob/5a780140a9630adb962b96fa63c90bdb695d9dea/books/langlands-program/T_modular_curves_eichler_shimura_and_deligne_representations.md",
+            "path": "books/langlands-program/T_modular_curves_eichler_shimura_and_deligne_representations.md",
+            "display_url": "https://github.com/glenzli/stochastic-parrot-lectures/blob/5a780140a9630adb962b96fa63c90bdb695d9dea/books/langlands-program/T_modular_curves_eichler_shimura_and_deligne_representations.md",
+            "display_title": "books/langlands-program/T_modular_curves_eichler_shimura_and_deligne_representations.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "$$\n\u4e3a universal elliptic curve\uff1b\u5f53 level \u4e0d\u8db3\u4ee5\u7ed9\u51fa fine moduli scheme \u65f6\uff0c\u6309 modular stack \u53e3\u5f84\u7406\u89e3\u3002\n",
+                "matches": [
+                  {
+                    "text": "modular",
+                    "indices": [
+                      89,
+                      96
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n**\u5916\u90e8\u8f93\u5165\u5b9a\u7406 T.8\uff08Deligne \u8868\u793a\uff09.** \u8bbe $f=\\sum a_nq^n$ \u4e3a\u6743 $k\\ge2$\u3001level $N$\u3001Nebentypus $\\varepsilon$ \u7684\u5f52\u4e00\u5316 cuspidal Hecke eigenform\u3002\u5bf9\u6bcf\u4e2a\u7d20\u6570 $\\ell$ \u548c\u5d4c\u5165 coefficient field \u5230 $\\overline{\\mathbb Q}_\\ell$\uff0c\u5b58\u5728\u8fde\u7eed\u534a\u5355\u8868\u793a\n$$",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      28,
+                      35
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      156,
+                      160
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/jcraig949jfi/Prometheus/blob/a2a0dbbb204cc89ad689f9eb7083fed63a07057f/prometheus_math/MODULAR_FORM_RESULTS.md",
+            "path": "prometheus_math/MODULAR_FORM_RESULTS.md",
+            "display_url": "https://github.com/jcraig949jfi/Prometheus/blob/a2a0dbbb204cc89ad689f9eb7083fed63a07057f/prometheus_math/MODULAR_FORM_RESULTS.md",
+            "display_title": "prometheus_math/MODULAR_FORM_RESULTS.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  domain-transfer signal; we do NOT know yet whether the agent has\n  learned a global a_p law (e.g. some fragment of Sato-Tate / Galois\n  representations) or merely memorized weight + log-level patterns",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      129,
+                      135
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      138,
+                      152
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "### Property (5)\n- Deligne bound ``|a_p| <= 2 p^((weight - 1)/2)`` holds for every\n  (form, prime) pair in the 120-form fixture. (Tightness varies by",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      19,
+                      26
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      86,
+                      90
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      115,
+                      119
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/szylover/knowledge-library/blob/fc1e270e9f5276bf60a72d197e2956d78184a8a5/modular-forms-textbook/chapters/ch09/s4-modular-galois-reps.tex",
+            "path": "modular-forms-textbook/chapters/ch09/s4-modular-galois-reps.tex",
+            "display_url": "https://github.com/szylover/knowledge-library/blob/fc1e270e9f5276bf60a72d197e2956d78184a8a5/modular-forms-textbook/chapters/ch09/s4-modular-galois-reps.tex",
+            "display_title": "modular-forms-textbook/chapters/ch09/s4-modular-galois-reps.tex",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\\]\r\n\u5219\u79f0\u8be5 residual representation \u662f\\textbf{\u6a21\u7684}\u3002\r\n\\end{definition}\r",
+                "matches": [
+                  {
+                    "text": "representation",
+                    "indices": [
+                      23,
+                      37
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\\begin{proposition}[Eichler--Shimura \u7684\u8868\u793a\u8bba\u91cd\u8ff0]\r\n\\label{prop:ch09-eichler-shimura-rep-form}\r\n\u5bf9\u6743 $2$ \u65b0\u5f62\u5f0f $f$ \u4e0e $p\\nmid N\\ell$\uff0c\r",
+                "matches": [
+                  {
+                    "text": "form",
+                    "indices": [
+                      95,
+                      99
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/glenzli/stochastic-parrot-lectures/blob/5a780140a9630adb962b96fa63c90bdb695d9dea/books/langlands-program/09_galois_representations_and_modularity.md",
+            "path": "books/langlands-program/09_galois_representations_and_modularity.md",
+            "display_url": "https://github.com/glenzli/stochastic-parrot-lectures/blob/5a780140a9630adb962b96fa63c90bdb695d9dea/books/langlands-program/09_galois_representations_and_modularity.md",
+            "display_title": "books/langlands-program/09_galois_representations_and_modularity.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "$$\n\u5e76\u79f0\u4e3a $\\rho$ \u7684\u6b8b\u4f59\u8868\u793a\uff08residual representation\uff09\u3002\n",
+                "matches": [
+                  {
+                    "text": "representation",
+                    "indices": [
+                      47,
+                      61
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n**\u5b9a\u4e49 9.13.** \u82e5\u4e8c\u7ef4 $\\ell$-adic \u8868\u793a $\\rho:G_\\mathbb Q\\to\\operatorname{GL}_2(E)$ \u4e0e\u67d0\u4e2a $\\rho_{f,\\lambda}$ \u5728\u7cfb\u6570\u6269\u5f20\u548c\u534a\u5355\u5316\u540e\u540c\u6784\uff0c\u5219\u79f0 $\\rho$ \u662f\u6a21\u7684\uff08modular\uff09\uff0c\u6216\u79f0 $\\rho$ \u6765\u81ea\u6a21\u5f62\u5f0f $f$\u3002\n",
+                "matches": [
+                  {
+                    "text": "modular",
+                    "indices": [
+                      185,
+                      192
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/dancinlab/hexa-meta/blob/ff90238b93437037cded48876e759a81d59da57a/study/p2/pure-p2-1-modular-forms.md",
+            "path": "study/p2/pure-p2-1-modular-forms.md",
+            "display_url": "https://github.com/dancinlab/hexa-meta/blob/ff90238b93437037cded48876e759a81d59da57a/study/p2/pure-p2-1-modular-forms.md",
+            "display_title": "study/p2/pure-p2-1-modular-forms.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  +------------------+      +----------------------+      +------------------+\n  | modular form f   | <--> |  Galois rep \u03c1_f       | <--> | automorphic rep  |\n  | (or automorphic   |      |  Gal(\\bar Q/Q) \u2192 GL_n |      |  \u03c0 of GL_n(A_Q)  |",
+                "matches": [
+                  {
+                    "text": "modular",
+                    "indices": [
+                      83,
+                      90
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      91,
+                      95
+                    ]
+                  },
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      110,
+                      116
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "Adele ring A_Q = R \u00d7 \u220f'_p Q_p. Among infinite-dim unitary reps of GL_n(A_Q), those satisfying the \"automorphic condition\".\nGiven f \u2208 S_k(SL_2(Z)), one can build an automorphic representation \u03c0_f on GL_2(A_Q).\nFourier coeff a_p(f) <-> Satake parameters of p-component \u03c0_{f,p} of \u03c0_f in explicit correspondence.",
+                "matches": [
+                  {
+                    "text": "representation",
+                    "indices": [
+                      181,
+                      195
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/gmadsen/Math-Visualization/blob/a19a140fbd0c6dc411699d2bb10ac79523a63366/galois-representations.html",
+            "path": "galois-representations.html",
+            "display_url": "https://github.com/gmadsen/Math-Visualization/blob/a19a140fbd0c6dc411699d2bb10ac79523a63366/galois-representations.html",
+            "display_title": "galois-representations.html",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  <a href=\"#tate\">4&nbsp;The&nbsp;Tate&nbsp;module&nbsp;of&nbsp;an&nbsp;elliptic&nbsp;curve</a>\n  <a href=\"#frob\">5&nbsp;Frobenius&nbsp;traces&nbsp;and&nbsp;the&nbsp;Hasse&nbsp;bound</a>\n  <a href=\"#lfac\">6&nbsp;Local&nbsp;$L$-factors&nbsp;from&nbsp;Galois&nbsp;representations</a>\n  <a href=\"#mod\">7&nbsp;Modular&nbsp;forms&nbsp;and&nbsp;Deligne's&nbsp;construction</a>\n  <a href=\"#ss\">8&nbsp;Irreducibility&nbsp;and&nbsp;semisimplification</a>\n  <a href=\"#ram\">9&nbsp;Inertia,&nbsp;ramification,&nbsp;and&nbsp;the&nbsp;conductor</a>\n<!-- toc-auto-end -->",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      250,
+                      256
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      262,
+                      276
+                    ]
+                  },
+                  {
+                    "text": "Modular",
+                    "indices": [
+                      306,
+                      313
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      319,
+                      323
+                    ]
+                  },
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      339,
+                      346
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/pratikpoddar/zlemma-pratik-poddar/blob/8f36c4df67b22cf8cf681bdffee1a25ab7687ceb/mathse-large/htmldump/modular-forms",
+            "path": "mathse-large/htmldump/modular-forms",
+            "display_url": "https://github.com/pratikpoddar/zlemma-pratik-poddar/blob/8f36c4df67b22cf8cf681bdffee1a25ab7687ceb/mathse-large/htmldump/modular-forms",
+            "display_title": "mathse-large/htmldump/modular-forms",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    <div class=\"summary\">        \r\n        <h3><a href=\"/questions/527820/galois-representations-attached-to-modular-forms-of-weight-one\" class=\"question-hyperlink\">Galois representations attached to modular forms of weight one</a></h3>\r\n        <div class=\"excerpt\">\r\n            Why are the Galois representations attached to weight one eigenforms by Serre-Deligne complex representations?\n\nIn weight $k\\geq 2$, the Galois representations constructed by Eichler-Shimura and ...\r\n        </div>\r",
+                "matches": [
+                  {
+                    "text": "galois",
+                    "indices": [
+                      74,
+                      80
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      81,
+                      95
+                    ]
+                  },
+                  {
+                    "text": "modular",
+                    "indices": [
+                      109,
+                      116
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      117,
+                      121
+                    ]
+                  },
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      165,
+                      171
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      172,
+                      186
+                    ]
+                  },
+                  {
+                    "text": "modular",
+                    "indices": [
+                      200,
+                      207
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      208,
+                      212
+                    ]
+                  },
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      293,
+                      299
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      300,
+                      314
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      344,
+                      348
+                    ]
+                  },
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      359,
+                      366
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      375,
+                      389
+                    ]
+                  },
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      418,
+                      424
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      425,
+                      439
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/gmadsen/Math-Visualization/blob/a19a140fbd0c6dc411699d2bb10ac79523a63366/audits/math-pass-2026-05/galois-representations.md",
+            "path": "audits/math-pass-2026-05/galois-representations.md",
+            "display_url": "https://github.com/gmadsen/Math-Visualization/blob/a19a140fbd0c6dc411699d2bb10ac79523a63366/audits/math-pass-2026-05/galois-representations.md",
+            "display_title": "audits/math-pass-2026-05/galois-representations.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n**\u00a77 Modular forms.** Eichler\u2013Shimura/Deligne 2-d $\\rho_{f,\\lambda}$, unramified outside $N\\ell$, $\\tr=a_p(f)$, $\\det=\\varepsilon(p)p^{k-1}$: correct. $f_{11}$ q-expansion ($a_2=-2,a_3=-1,a_5=1,a_7=-2,a_{13}=4,\u2026$, LMFDB 11.2.a.a): correct. Ramanujan $\\tau(p)$ values for $p=2,3,5,7,11,13$: correct. $E_4$ \"eigenvalues\" $1+p^3$ ($a_2=9,a_3=28,\u2026$): correct in the un-multiplied normalization.\n",
+                "matches": [
+                  {
+                    "text": "Modular",
+                    "indices": [
+                      7,
+                      14
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      15,
+                      19
+                    ]
+                  },
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      42,
+                      49
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n- **`galois-representations.html:598`** \u2014 \"For $\\rho_{E,\\ell}$ from an elliptic curve, a theorem of Serre guarantees irreducibility for all but finitely many $\\ell$.\" False as stated: Serre's open-image theorem requires $E$ to be **non-CM**. For CM curves, $\\rho_{E,\\ell}$ is reducible at every prime $\\ell$ that splits in the CM field (it becomes a sum of two characters of $G_K$ induced up). The page itself ships a CM example (`y\u00b2=x\u00b3\u2212x`, Widget 6 option A), so the unqualified claim contradicts the corpus. Fix: insert \"non-CM\" before \"elliptic curve.\"\n- **`galois-representations.html:1240`** (Widget 7 readout, disc=0 branch) \u2014 labels the repeated-root case \"supersingular in char p.\" Wrong: supersingular reduction means $a_p\\equiv 0\\pmod p$, which for $p\\ge 5$ forces $a_p=0$ and gives disc $=-4p<0$ (purely imaginary eigenvalues $\\pm i\\sqrt p$), not disc $=0$. The disc=0 case ($a_p^2=4p$) has no integer solutions for prime $p$ anyway (since $4p$ is not a perfect square), so the branch is unreachable for valid slider inputs \u2014 but the labeling is still mathematically backward.",
+                "matches": [
+                  {
+                    "text": "galois",
+                    "indices": [
+                      6,
+                      12
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      13,
+                      27
+                    ]
+                  },
+                  {
+                    "text": "galois",
+                    "indices": [
+                      568,
+                      574
+                    ]
+                  },
+                  {
+                    "text": "representation",
+                    "indices": [
+                      575,
+                      589
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/cool-japan/oxilean/blob/9077af778fe467cba61d9c8385fb2b7e6a8d385f/crates/oxilean-std/src/modular_forms/types.rs",
+            "path": "crates/oxilean-std/src/modular_forms/types.rs",
+            "display_url": "https://github.com/cool-japan/oxilean/blob/9077af778fe467cba61d9c8385fb2b7e6a8d385f/crates/oxilean-std/src/modular_forms/types.rs",
+            "display_title": "crates/oxilean-std/src/modular_forms/types.rs",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "}\n/// A modular symbol {\u03b1, \u03b2} with a sign (\u00b11).\n#[derive(Debug, Clone)]",
+                "matches": [
+                  {
+                    "text": "modular",
+                    "indices": [
+                      8,
+                      15
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "}\n/// Mock modular form data.\n#[allow(dead_code)]",
+                "matches": [
+                  {
+                    "text": "modular",
+                    "indices": [
+                      11,
+                      18
+                    ]
+                  },
+                  {
+                    "text": "form",
+                    "indices": [
+                      19,
+                      23
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exact",
+      "i": 0,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "path": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_title": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "- [HST10] M. Harris, N. Shepherd-Barron, R. Taylor, *A family of Calabi-Yau varieties\n  and potential automorphy*, Annals of Mathematics 171 (2010), no. 2, 779\u2013813.\n  https://doi.org/10.4007/annals.2010.171.779",
+                "matches": [
+                  {
+                    "text": "potential automorphy",
+                    "indices": [
+                      92,
+                      112
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "- [BGHT11] T. Barnet-Lamb, D. Geraghty, M. Harris, R. Taylor, *A family of Calabi-Yau\n  varieties and potential automorphy II*, Publications of the Research Institute\n  for Mathematical Sciences 47 (2011), no. 1, 29\u201398.",
+                "matches": [
+                  {
+                    "text": "potential automorphy",
+                    "indices": [
+                      102,
+                      122
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate.lean",
+            "path": "data/trees/1812.09999/c01/Candidate.lean",
+            "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate.lean",
+            "display_title": "data/trees/1812.09999/c01/Candidate.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "This is the statement of Theorem 6.1.1, label `thm:main_automorphy_lifting_theorem`, of\nAllen et al., *Potential automorphy over CM fields*, arXiv:1812.09999.\n",
+                "matches": [
+                  {
+                    "text": "Potential automorphy",
+                    "indices": [
+                      103,
+                      123
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "/-- **The Fontaine--Laffaille automorphy lifting theorem** (Allen, Calegari, Caraiani, Gee,\nHelm, Le Hung, Newton, Scholze, Taylor and Thorne, *Potential automorphy over CM fields*,\nAnnals of Mathematics 197 (2023), arXiv:1812.09999, Theorem 6.1.1,",
+                "matches": [
+                  {
+                    "text": "Potential automorphy",
+                    "indices": [
+                      144,
+                      164
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/RepresentationTheory/Matrix.lean",
+            "path": "data/trees/1812.09999/c01/Candidate/RepresentationTheory/Matrix.lean",
+            "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/RepresentationTheory/Matrix.lean",
+            "display_title": "data/trees/1812.09999/c01/Candidate/RepresentationTheory/Matrix.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nThis file supplies matrix-coordinate interfaces to Mathlib's representations, irreducibility,\nsemisimplicity and group cohomology. The definition of an enormous subgroup is Definition\n`defn:enormous image` of Allen et al., *Potential automorphy over CM fields*,\narXiv:1812.09999. In particular its last condition concerns fixed vectors in every simple\nsubmodule of the trace-zero adjoint representation, not just the usual adequacy condition.\n-/",
+                "matches": [
+                  {
+                    "text": "Potential automorphy",
+                    "indices": [
+                      225,
+                      245
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/NumberTheory/GlobalGalois.lean",
+            "path": "data/trees/1812.09999/c01/Candidate/NumberTheory/GlobalGalois.lean",
+            "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate/NumberTheory/GlobalGalois.lean",
+            "display_title": "data/trees/1812.09999/c01/Candidate/NumberTheory/GlobalGalois.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "that its inverse is an arithmetic Frobenius in the sense of `IsArithFrobAt`.\n\nThe definition of decomposed genericity is Definition `defn:decomposed_generic` in\nAllen et al., *Potential automorphy over CM fields*, arXiv:1812.09999. Repeated eigenvalues\nare allowed unless the residue cardinality is `1` in the coefficient field.\n-/\n",
+                "matches": [
+                  {
+                    "text": "Potential automorphy",
+                    "indices": [
+                      176,
+                      196
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "broad",
+      "i": 1,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/Submodule/Atom.lean",
+            "path": "TauCeti/Algebra/Lie/Submodule/Atom.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/Submodule/Atom.lean",
+            "display_title": "TauCeti/Algebra/Lie/Submodule/Atom.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "# Irreducible Lie submodules are the atoms of the submodule lattice\n\n`LieModule.IsIrreducible R L N` is a statement about the lattice `LieSubmodule R L N` of the Lie\nsubmodules of `N` itself, whereas `IsAtom N` is a statement about the position of `N` in the\nlattice `LieSubmodule R L M` of the Lie submodules of the ambient module. This file proves that the\ntwo agree, so that a lattice-theoretic decomposition into atoms may be read as a decomposition into\nirreducibles. It also records that every nonzero vector of an irreducible module generates the whole",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      107,
+                      111
+                    ]
+                  },
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      202,
+                      206
+                    ]
+                  },
+                  {
+                    "text": "tate",
+                    "indices": [
+                      217,
+                      221
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Semisimple/MatrixDivisionRing.lean",
+            "path": "TauCeti/RingTheory/Semisimple/MatrixDivisionRing.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Semisimple/MatrixDivisionRing.lean",
+            "display_title": "TauCeti/RingTheory/Semisimple/MatrixDivisionRing.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nNote that `DecidableEq \u03b9` is needed to make `Mat\u1d62(D)` a ring, but not to state the ring-equivalence\ntransport results, whose types mention only the multiplication and addition of `Mat\u1d62(D)`; those are",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      78,
+                      82
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "  obtain \u27e8I, hI\u27e9 := IsAtomic.exists_atom (Submodule R R)\n  rw [\u2190 isSimpleModule_iff_isAtom] at hI\n  obtain \u27e8eD\u27e9 := nonempty_end_algEquiv_of_algEquiv_matrix f I",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      25,
+                      29
+                    ]
+                  },
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      91,
+                      95
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Order/Atoms.lean",
+            "path": "TauCeti/Order/Atoms.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Order/Atoms.lean",
+            "display_title": "TauCeti/Order/Atoms.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nMathlib proves the corresponding statement for a *complete* lattice, where complementedness gives\natomisticity and the decomposition is an arbitrary supremum",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      35,
+                      39
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n* `TauCeti.exists_finset_isAtom_sup_eq`: in a complemented modular lattice satisfying the\n  descending chain condition, every element is the supremum of a finite independent family of",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      27,
+                      31
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Geometry/Hodge/Semisimple.lean",
+            "path": "TauCeti/Geometry/Hodge/Semisimple.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Geometry/Hodge/Semisimple.lean",
+            "display_title": "TauCeti/Geometry/Hodge/Semisimple.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "`TauCeti.Hodge.RationalHodgeSubstructure.orthogonal` for a polarizing form; the decomposition is\nthen the lattice-theoretic `TauCeti.exists_finset_isAtom_sup_eq`, which splits off one atom at a\ntime in any complemented modular lattice with the descending chain condition.\nOnly *some* polarizing form is used, never a chosen one, so the statements are about\n`TauCeti.Hodge.IsPolarizable` structures: this is the semisimplicity of the polarizable Hodge\nstructures, for which the choice of a form is not part of the object. Categorically, every\nmonomorphism of polarizable rational Hodge structures corestricts to an isomorphism onto its",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      148,
+                      152
+                    ]
+                  },
+                  {
+                    "text": "tate",
+                    "indices": [
+                      337,
+                      341
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LowDimTopology/JSJDecomposition.lean",
+            "path": "TauCeti/LowDimTopology/JSJDecomposition.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LowDimTopology/JSJDecomposition.lean",
+            "display_title": "TauCeti/LowDimTopology/JSJDecomposition.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "orientable irreducible 3-manifold has a JSJ decomposition and that any two JSJ decompositions are\ncarried onto each other by an ambient isotopy. The theorem is stated, not proved.\n",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      161,
+                      165
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "* `TauCeti.IsPeripheralTorus S`: the torus `S` is the end of a closed product end `T\u00b2 \u00d7 [0, \u221e)`.\n* `TauCeti.IsAtoroidal N`: every locally flat incompressible torus in `N` is peripheral.\n* `TauCeti.IsTorusDecomposition T`: a finite family of disjoint locally flat incompressible tori",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      113,
+                      117
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Induction/Clifford/Basic.lean",
+            "path": "TauCeti/RepresentationTheory/Induction/Clifford/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Induction/Clifford/Basic.lean",
+            "display_title": "TauCeti/RepresentationTheory/Induction/Clifford/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  obtain \u27e8\u03c3, h\u03c3\u27e9 := _root_.Representation.exists_isAtom (\u03c1.comp N.subtype)\n  exact isSemisimpleRepresentation_comp_subtype_of_isAtom \u03c1 h\u03c3\n",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      56,
+                      60
+                    ]
+                  },
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      134,
+                      138
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-! The next lemma is stated for a Mathlib `Representation`, so it lives in that type's root\nnamespace, where dot notation on `\u03c1` finds it. -/",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      24,
+                      28
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Induction/Clifford/Orbit/Basic.lean",
+            "path": "TauCeti/RepresentationTheory/Induction/Clifford/Orbit/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/Induction/Clifford/Orbit/Basic.lean",
+            "display_title": "TauCeti/RepresentationTheory/Induction/Clifford/Orbit/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "* `TauCeti.Representation.exists_nonempty_linearEquiv_conjSubrep`: **Clifford's theorem, single\n  orbit form.** Any two minimal `N`-stable subspaces of an irreducible representation are\n  translates of one another, up to isomorphism of `N`-representations.\n* `TauCeti.Representation.exists_isAtom_forall_nonempty_linearEquiv_conjSubrep`: the same statement\n  packaged for a finite-dimensional irreducible representation, where the minimal subspace to\n  translate is produced rather than assumed.\n* `TauCeti.Representation.isotypicComponents_eq_range`: the isotypic components of the restriction",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      291,
+                      295
+                    ]
+                  },
+                  {
+                    "text": "tate",
+                    "indices": [
+                      348,
+                      352
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Semisimple/EndAlgebra.lean",
+            "path": "TauCeti/RingTheory/Semisimple/EndAlgebra.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Semisimple/EndAlgebra.lean",
+            "display_title": "TauCeti/RingTheory/Semisimple/EndAlgebra.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nThe identity determines `finrank K (End_R M)` outright, since `finrank K R \u2260 0`; it is stated as a\nproduct rather than a quotient to stay inside `\u2115`. -/",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      91,
+                      95
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "  have : IsArtinianRing R := IsArtinianRing.of_finite K R\n  obtain \u27e8S, hS\u27e9 := IsAtomic.exists_atom (Submodule R R)\n  rw [\u2190 isSimpleModule_iff_isAtom] at hS",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      83,
+                      87
+                    ]
+                  },
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      149,
+                      153
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Probability/HasLaw.lean",
+            "path": "TauCeti/Probability/HasLaw.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Probability/HasLaw.lean",
+            "display_title": "TauCeti/Probability/HasLaw.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "/-- Conditioning a random variable on the preimage of a measurable event gives its law\nconditioned on that event. The statement includes events of zero or infinite mass, when both\nconditional measures vanish. -/",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      119,
+                      123
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "theorem _root_.ProbabilityTheory.HasLaw.exists_measure_atom_le_measure_singleton\n    (h : HasLaw T \u03bd \u03bc) {A : Set X} (hAfin : \u03bc A \u2260 \u22a4) (hAatom : \u03bc.IsAtom A) :\n    \u2203 y : Y, \u03bc A \u2264 \u03bd {y} := by",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      155,
+                      159
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/Sl2/Generated.lean",
+            "path": "TauCeti/Algebra/Lie/Sl2/Generated.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/Sl2/Generated.lean",
+            "display_title": "TauCeti/Algebra/Lie/Sl2/Generated.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "public import TauCeti.Algebra.Lie.Sl2.Casimir\n-- Non-public: `TauCeti.isIrreducible_iff_isAtom`, `TauCeti.lieSubmoduleOfEqTop` and\n-- `TauCeti.lieModuleEquivOfEqTop` are used only inside proofs.",
+                "matches": [
+                  {
+                    "text": "sAto",
+                    "indices": [
+                      89,
+                      93
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "are the standard modules `V(n)`. That classification says nothing about a primitive vector sitting\ninside a larger module. This file supplies the missing statement: over a characteristic-zero field,\nin any finite-dimensional module over a Lie algebra generated by an `sl\u2082` triple, the Lie submodule",
+                "matches": [
+                  {
+                    "text": "tate",
+                    "indices": [
+                      155,
+                      159
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exact",
+      "i": 1,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ClassFieldTheory/Local/GeometricArtinMap.lean",
+            "path": "TauCeti/NumberTheory/ClassFieldTheory/Local/GeometricArtinMap.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/ClassFieldTheory/Local/GeometricArtinMap.lean",
+            "display_title": "TauCeti/NumberTheory/ClassFieldTheory/Local/GeometricArtinMap.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  reciprocity map.\n* P. Deligne, *Les constantes des \u00e9quations fonctionnelles des fonctions L*, in *Modular functions\n  of one variable II*, Lecture Notes in Math. 349 (1973), \u00a72.",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      24,
+                      31
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "Artin maps.** If `\u03c3 \u2208 Gal(AlgebraicClosure K/K)` represents the geometric Artin symbol of `x \u2208 K\u02e3`,\nthen for every finite Galois extension `L/K` embedded in the separable closure by `\u03b9`, the Artin\nsymbol of `x` in `Gal(L/K)^ab` is the inverse of the class of the restriction of `\u03c3` to `L`. -/",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      128,
+                      134
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/Foundations/Axioms.lean",
+            "path": "GQ2/Foundations/Axioms.lean",
+            "display_url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/Foundations/Axioms.lean",
+            "display_title": "GQ2/Foundations/Axioms.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "Citation: **NSW [1], Ch. VII \u00a77.2, Theorem (7.2.6)** (local Tate duality, for any `p`-adic `k`);\nSerre, *Galois Cohomology* II \u00a75.2, Theorem 2; Milne, *ADT* I.2.3.  Induced mod-2 Hilbert-pairing\nnondegeneracy over `G_K`: FV Ch. IV \u00a75 Prop (5.1)(6)/Cor./Thm (5.2), O'Meara",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      106,
+                      112
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "character \u2014 the paper's exact citation) together with local cyclotomic surjectivity from B5;\nclassical origin Deligne, MSRI 16 (1989).  Paper: Lemma 3.6.  `docs/literature-axioms.md` B8. -/\naxiom peripheralCyclotomicAction : PeripheralCyclotomicAction",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      112,
+                      119
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/PeripheralAction.lean",
+            "path": "GQ2/PeripheralAction.lean",
+            "display_url": "https://github.com/roed-math/gq2-lean/blob/3c7b1abaf04ec8424decc2b1eb1b91bfe0ce5a33/GQ2/PeripheralAction.lean",
+            "display_title": "GQ2/PeripheralAction.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nThe paper's Lemma 3.6 records the **group-theoretic output** of the outer Galois action on the\ngeometric maximal pro-2 fundamental group `\u0394 = \u03c0\u2081^{pro-2}(\u2119\u00b9_{\u211a\u0304} \u2216 {0,1,\u221e})`: for the three",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      75,
+                      81
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "group of a rational cusp acts on the procyclic inertia group through the cyclotomic character (the\npaper's exact citation `[8, Section 3.3 and Definition 37]`).  Classical origin: Deligne, MSRI 16\n(1989).  Paper: Lemma 3.6.  `docs/literature-axioms.md` B8.",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      180,
+                      187
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/NewformOrbit.lean",
+            "path": "projects/LeanModularForms/LeanModularForms/Labels/NewformOrbit.lean",
+            "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/LeanModularForms/LeanModularForms/Labels/NewformOrbit.lean",
+            "display_title": "projects/LeanModularForms/LeanModularForms/Labels/NewformOrbit.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "axiom-clean \u2014 `{propext, Classical.choice, Quot.sound}`), so this carries **no**\n`exists_HeckeStableLattice` / Deligne\u2013Serre dependency (that is only the `k < 2` branch of the\nall-weights instance `instNumberFieldCoeffField`).  This is the headline arithmetic consequence",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      113,
+                      120
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-! ### The Galois action and the Hecke orbit\n",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      13,
+                      19
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean",
+            "path": "projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean",
+            "display_url": "https://github.com/CBirkbeck/AINTLIB/blob/2931529d8d72c086f2b5f58c33d25352dc301b16/projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean",
+            "display_title": "projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "/-- **(KM 1.4.2 / Oort\u2013Tate for `N`-isogeny data)** The kernel of an `N`-isogeny datum is\nkilled by `N`. Routed through the registered box `BB-DELIGNE`\n(`HasRank.smul_eq_zero_of_factors`); no new box. -/",
+                "matches": [
+                  {
+                    "text": "DELIGNE",
+                    "indices": [
+                      145,
+                      152
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "projective Weierstrass model \u2014 the elliptic-curve-hood of the quotient (KM 6.7.6). The\nHopf-Galois patch quotients of the glue construction supply the affine models; their\nprojective closures are the Weierstrass presentations. -/",
+                "matches": [
+                  {
+                    "text": "Galois",
+                    "indices": [
+                      94,
+                      100
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/loefflerd/KN-scratch/blob/ba97a154bf2550c5210b6adf1a308329ed6bc8cc/Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+            "path": "Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+            "display_url": "https://github.com/loefflerd/KN-scratch/blob/ba97a154bf2550c5210b6adf1a308329ed6bc8cc/Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+            "display_title": "Theorems/KN/Thm_MTT_Eigenform_exists_continuous_localField_representation.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "public import Mathlib.FieldTheory.KrullTopology\n\n/-!\n# Deligne's continuous representation over the canonical local coefficient field\n\nTheorem statement: `MTT.Eigenform.exists_continuous_localField_representation`\n(`aaec6905-7545-458b-a4ab-b79319ac98bd`), by riccardo.brasca, 2026-09-24.",
+                "matches": [
+                  {
+                    "text": "Deligne",
+                    "indices": [
+                      55,
+                      62
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "broad",
+      "i": 2,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/simon-dedeo/ias-transcripts/blob/e717d20c6a17fd3e683bd71a63a39df121b97552/readable/LaTeX/david-geraghty-potential-automorphy-for-compatible-systems-of-l-adic-galois-representations.tex",
+            "path": "readable/LaTeX/david-geraghty-potential-automorphy-for-compatible-systems-of-l-adic-galois-representations.tex",
+            "display_url": "https://github.com/simon-dedeo/ias-transcripts/blob/e717d20c6a17fd3e683bd71a63a39df121b97552/readable/LaTeX/david-geraghty-potential-automorphy-for-compatible-systems-of-l-adic-galois-representations.tex",
+            "display_title": "readable/LaTeX/david-geraghty-potential-automorphy-for-compatible-systems-of-l-adic-galois-representations.tex",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\\textbf{S2: Weak and strict compatible systems} --- A weakly compatible system is defined by Galois representations with common Frobenius characteristic polynomials away from bad primes and common Hodge\u2013Tate weights, with strict compatibility upgrading this to Weil\u2013Deligne compatibility at every prime.\\par\\smallskip\n\\textbf{S3: Potential automorphy theorems A and B} --- The main theorem for compatible systems states that every irreducible regular totally odd conjugate self-dual weakly compatible system becomes automorphic after a finite CM Galois extension, and a parallel single-representation theorem with residual irreducibility and potential diagonalizability is stated as the input that implies it.\\par\\smallskip\n\\textbf{S4: L-functions, purity, and compatible-system consequences} --- Potential automorphy is used to deduce strict compatibility, strict purity of weight n-1, convergence, meromorphic continuation and functional equation of the associated L-function, and that a single representation satisfying theorem B lies in a strictly compatible pure system.\\par\\smallskip\n\\textbf{S5: Extreme regularity and density-one irreducibility} --- For automorphic systems with extremely regular Hodge\u2013Tate weights, Rankin\u2013Selberg pole-order comparisons combined with potential automorphy of irreducible constituents force r\\_lambda(pi) to be irreducible for a Dirichlet-density-one set of rational primes.\\par\\smallskip\n\\textbf{S6: Potential diagonalizability as the local condition at l} --- Potential diagonalizability is defined by lying, after a finite local extension, on the same crystalline deformation-ring component as a diagonal representation, and the talk records ordinary/upper-triangular and Fontaine\u2013Laffaille criteria that make the condition usable.\\par\\smallskip\n\\textbf{S7: Residual potential automorphy via auxiliary geometry} --- The first proof step for theorem B constructs an auxiliary finite scheme from a family of smooth projective varieties and congruences to an automorphic induction, then finds a CM Galois point and applies modularity lifting to obtain an ordinary automorphic lift of the residual representation.\\par\\smallskip\n\\textbf{S8: Modularity lifting and local component matching} --- The second proof step is a modularity lifting theorem: after arranging local component agreement away from l by Khare\u2013Wintenberger-type lifting and at l by tensoring with induced characters chosen to give diagonal local pieces, the Taylor\u2013Wiles\u2013Kisin method proves the original representation automorphic.\\par\\smallskip",
+                "matches": [
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      334,
+                      343
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      344,
+                      354
+                    ]
+                  },
+                  {
+                    "text": "potential",
+                    "indices": [
+                      646,
+                      655
+                    ]
+                  },
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      801,
+                      810
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      811,
+                      821
+                    ]
+                  },
+                  {
+                    "text": "potential",
+                    "indices": [
+                      1284,
+                      1293
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      1294,
+                      1304
+                    ]
+                  },
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      1449,
+                      1458
+                    ]
+                  },
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      1510,
+                      1519
+                    ]
+                  },
+                  {
+                    "text": "potential",
+                    "indices": [
+                      1820,
+                      1829
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      1830,
+                      1840
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/blog.md",
+            "path": "blog.md",
+            "display_url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/blog.md",
+            "display_title": "blog.md",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nFormalisation of mathematics is the art of translating paper mathematics into a computer programming language rich enough to understand the concepts of theorems and proofs. These programming languages, also called interactive theorem provers (ITPs), have been around for decades. Over the last few years however, the area seems to have captured the attention of parts of the mathematics community. We have now seen several examples of modern mathematics being formalised (by mathematicians, rather than computer scientists) in real time, the most recent of which (at the time of writing) is Tao et al's formalisation of his work with Gowers, Green and Manners resolving the polynomial Freiman--Ruzsa conjecture. Success stories like these might lead casual observers to believe that ITPs such as Lean are now ready to formalise all modern mathematics. However the truth is far more sobering. In *some* areas of mathematics, for example additive combinatorics, we now have extensive evidence that modern breakthroughs can be formalised in real time. However, I attend the London Number Theory Seminar on a regular basis, and most weeks I note that Lean does not know enough modern mathematical definitions to even *state* the results announced in the seminar, let alone to check their proofs.\n\nThe fact that number theory is still \"behind\" in this regard is one of my main motivations to embark on a formalisation of a modern proof of FLT. Once the project is finished, Lean will understand the concepts of automorphic forms and representations, L-functions, Galois representations, potential automorphy, modularity lifting theorems, the arithmetic of varieties, class field theory, arithmetic duality theorems, Shimura varieties and many other concepts used in modern algebraic number theory; formalising the *statements* of what is happening in my own area of expertise will no longer be science fiction. And why might one want to do this? Well, if we are to believe some computer scientists, the exponential growth in AI should one day translate into computers being able to help mathematicians do their work. But what chance does this have of coming true if computers cannot even *understand what we are doing*?\n\n# The FLT project\n",
+                "matches": [
+                  {
+                    "text": "potential",
+                    "indices": [
+                      1583,
+                      1592
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      1593,
+                      1603
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy.tex",
+            "path": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy.tex",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy.tex",
+            "display_title": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy.tex",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "representations, and Proposition~\\ref{res:specialization} gives decomposed\ngenericity and absolute irreducibility over the cyclotomic extension.\nProposition~\\ref{sys:properties} supplies the determinant, finite\nramification, potential semistability, and labeled Hodge--Tate weights.\nLemma~\\ref{aut:transport} makes the previously obtained automorphy\navailable at the coefficient prime of the next row.\n",
+                "matches": [
+                  {
+                    "text": "potential",
+                    "indices": [
+                      225,
+                      234
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      339,
+                      349
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/introduction.tex",
+            "path": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/introduction.tex",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/introduction.tex",
+            "display_title": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/introduction.tex",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "representations over CM fields~\\cite{HLTT}, and Scholze treated torsion\ncohomology as well~\\cite{Scholze}. Calegari--Geraghty developed patching\nfor cohomology in several degrees~\\cite{CalegariGeraghty}.\nThe potential automorphy theorem of\nAllen--Calegari--Caraiani--Gee--Helm--Le Hung--Newton--Scholze--Taylor--Thorne\nimplies potential modularity of every elliptic curve over a CM\nfield~\\cite[Theorem~1.0.1]{ACC}. Boxer--Calegari--Gee--Pilloni also proved",
+                "matches": [
+                  {
+                    "text": "potential",
+                    "indices": [
+                      208,
+                      217
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      218,
+                      228
+                    ]
+                  },
+                  {
+                    "text": "potential",
+                    "indices": [
+                      327,
+                      336
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "path": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_title": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "  Galois representations. II*, Publications Math\u00e9matiques de l'IH\u00c9S\n  108 (2008), 183\u2013239. https://doi.org/10.1007/s10240-008-0015-2\n- [HST10] M. Harris, N. Shepherd-Barron, R. Taylor, *A family of Calabi-Yau varieties\n  and potential automorphy*, Annals of Mathematics 171 (2010), no. 2, 779\u2013813.\n  https://doi.org/10.4007/annals.2010.171.779\n- [BGHT11] T. Barnet-Lamb, D. Geraghty, M. Harris, R. Taylor, *A family of Calabi-Yau\n  varieties and potential automorphy II*, Publications of the Research Institute",
+                "matches": [
+                  {
+                    "text": "potential",
+                    "indices": [
+                      229,
+                      238
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      239,
+                      249
+                    ]
+                  },
+                  {
+                    "text": "potential",
+                    "indices": [
+                      452,
+                      461
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      462,
+                      472
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib",
+            "path": "preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib",
+            "display_title": "preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n@article{BLGGT2014,\n  author = {Barnet-Lamb, Thomas and Gee, Toby and Geraghty, David and Taylor, Richard},\n  title = {Potential Automorphy and Change of Weight},\n  journal = {Annals of Mathematics},\n  series = {2},\n  volume = {179},",
+                "matches": [
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      120,
+                      129
+                    ]
+                  },
+                  {
+                    "text": "Automorphy",
+                    "indices": [
+                      130,
+                      140
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy-inputs.tex",
+            "path": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy-inputs.tex",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy-inputs.tex",
+            "display_title": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/sections/automorphy-inputs.tex",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "$\\rec_{L_v}(\\pi_v)$ has zero monodromy.\n\\item Neither local Galois representation is potentially crystalline,\nand $\\pi$ is $\\iota$-ordinary of weight zero at $v$.",
+                "matches": [
+                  {
+                    "text": "potential",
+                    "indices": [
+                      85,
+                      94
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "$K$ must be considered together to obtain decomposed genericity. Once\nthese properties have been proved, Section~\\ref{sec:automorphy} propagates\nautomorphy along the three congruences and descends to $K$.",
+                "matches": [
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      122,
+                      132
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      145,
+                      155
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026/build/references.bib",
+            "path": "preprints/The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026/build/references.bib",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026/build/references.bib",
+            "display_title": "preprints/The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026/build/references.bib",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n@article{BLGGT14,\n  author = {Barnet-Lamb, Thomas and Gee, Toby and Geraghty, David and Taylor, Richard},\n  title = {Potential automorphy and change of weight},\n  journal = {Annals of Mathematics},\n  series = {2},\n  volume = {179},",
+                "matches": [
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      118,
+                      127
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      128,
+                      138
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib",
+            "path": "preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib",
+            "display_title": "preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n@article{BLGGT2014,\n  author = {Barnet-Lamb, Thomas and Gee, Toby and Geraghty, David and Taylor, Richard},\n  title = {Potential Automorphy and Change of Weight},\n  journal = {Annals of Mathematics},\n  series = {2},\n  volume = {179},",
+                "matches": [
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      120,
+                      129
+                    ]
+                  },
+                  {
+                    "text": "Automorphy",
+                    "indices": [
+                      130,
+                      140
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/references.bib",
+            "path": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/references.bib",
+            "display_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/references.bib",
+            "display_title": "preprints/Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026/build/references.bib",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n@article{ACC,\n  author = {Allen, Patrick B. and Calegari, Frank and Caraiani, Ana and Gee, Toby and Helm, David and Le Hung, Bao V. and Newton, James and Scholze, Peter and Taylor, Richard and Thorne, Jack A.},\n  title = {Potential automorphy over {CM} fields},\n  journal = {Annals of Mathematics},\n  series = {2},\n  volume = {197},",
+                "matches": [
+                  {
+                    "text": "Potential",
+                    "indices": [
+                      223,
+                      232
+                    ]
+                  },
+                  {
+                    "text": "automorphy",
+                    "indices": [
+                      233,
+                      243
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exact",
+      "i": 2,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Kaehler/Localization.lean",
+            "path": "TauCeti/RingTheory/Kaehler/Localization.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Kaehler/Localization.lean",
+            "display_title": "TauCeti/RingTheory/Kaehler/Localization.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "injective. Thus regular differentials can be treated as rational differentials, and their\nregularity can be checked in the local rings. This is the affine-local input to identifying\nthe differential sheaf of a smooth curve with a divisor sheaf in its rational differential space.",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      109,
+                      114
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "* `TauCeti.KaehlerDifferential.mem_range_map_iff_forall_isMaximal`: membership in the global\n  image can be checked using any family of maximal localizations.\n",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      109,
+                      114
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      144,
+                      156
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Localization/Away.lean",
+            "path": "TauCeti/RingTheory/Localization/Away.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Localization/Away.lean",
+            "display_title": "TauCeti/RingTheory/Localization/Away.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "* `TauCeti.Localization.mk'_pow_eq_invSelf_pow_mul`: a fraction `t/s\u207f` is `(1/s)\u207f \u00b7 t`.\n* `TauCeti.Localization.adjoin_invSelf_eq_top`: `S` is generated over `A` by `1/s`.\n* `TauCeti.Localization.adjoin_divBy_eq_top`: as soon as the numerators `T` together with the",
+                "matches": [
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      11,
+                      23
+                    ]
+                  },
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      104,
+                      116
+                    ]
+                  },
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      188,
+                      200
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "`adjoin_invSelf_eq_top` and `adjoin_divBy_eq_top` are **also later additions with no AINTLIB\nanalogue**, checked against the same commit. What that source has is\n`locSubring_isNoetherianRing`, which presents the *ring of definition* `A\u2080[t\u2081/s, \u2026, t\u2099/s]` as an",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      106,
+                      111
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT.lean",
+            "path": "FLT.lean",
+            "display_url": "https://github.com/ImperialCollegeLondon/FLT/blob/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT.lean",
+            "display_title": "FLT.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "public import FLT.AutomorphicForm.QuaternionAlgebra.HeckeOperators.Concrete\npublic import FLT.AutomorphicForm.QuaternionAlgebra.HeckeOperators.Local\npublic import FLT.AutomorphicForm.QuaternionAlgebra.InnerProduct",
+                "matches": [
+                  {
+                    "text": "Hecke",
+                    "indices": [
+                      52,
+                      57
+                    ]
+                  },
+                  {
+                    "text": "Hecke",
+                    "indices": [
+                      128,
+                      133
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "public import FLT.Mathlib.RingTheory.LocalRing.MaximalIdeal.Basic\npublic import FLT.Mathlib.RingTheory.Localization.BaseChange\npublic import FLT.Mathlib.RingTheory.Norm.Quadratic",
+                "matches": [
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      103,
+                      115
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Huber/LocalizationTopology/Iterated.lean",
+            "path": "TauCeti/RingTheory/Huber/LocalizationTopology/Iterated.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Huber/LocalizationTopology/Iterated.lean",
+            "display_title": "TauCeti/RingTheory/Huber/LocalizationTopology/Iterated.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nopen TauCeti.Localization\n",
+                "matches": [
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      14,
+                      26
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "-- both directions and compatible with the structure maps. Each composite is continuous and fixes a\n-- structure map, hence is the identity; for the composite on `B\u27e8TB/\u03c1(s'')\u27e9` this is first checked\n-- after the restriction map, on `B`, where it holds after `A \u2192 B`.",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      197,
+                      202
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Scheme/Normal.lean",
+            "path": "TauCeti/AlgebraicGeometry/Scheme/Normal.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Scheme/Normal.lean",
+            "display_title": "TauCeti/AlgebraicGeometry/Scheme/Normal.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "28.7.1 (033I)). This file defines the class `TauCeti.AlgebraicGeometry.IsNormalScheme` and\nproves its basic properties: normality is local, so it can be checked on the rings of sections\nover affine opens, whose localizations at primes are the local rings of the scheme (Stacks,",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      154,
+                      159
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      211,
+                      223
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nFollowing Stacks, Definition 10.37.11 (00GV), a ring `R` is *normal* when every localization of\n`R` at a prime is an integrally closed domain; `isNormalScheme_Spec_iff_forall_localization`",
+                "matches": [
+                  {
+                    "text": "localization",
+                    "indices": [
+                      81,
+                      93
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      176,
+                      188
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Flat/Monogenic.lean",
+            "path": "TauCeti/RingTheory/Flat/Monogenic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Flat/Monogenic.lean",
+            "display_title": "TauCeti/RingTheory/Flat/Monogenic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    (P : Ideal R) [P.IsMaximal] (i : Fin n) : localizationBasis h\u03b1 hn P i =\n      (1 : Localization.AtPrime P) \u2297\u209c[R] \u03b1 ^ (i : \u2115) := by\n  simp [localizationBasis, IsAdjoinRootMonic.basis_apply, IsAdjoinRootMonic.mkOfAdjoinEqTop'_root,",
+                "matches": [
+                  {
+                    "text": "localization",
+                    "indices": [
+                      46,
+                      58
+                    ]
+                  },
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      88,
+                      100
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      151,
+                      163
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-- In an `R`-algebra generated by `\u03b1` which is finite flat of constant rank `n` (checked at\nmaximal ideals), the powers `\u03b1 ^ i`, `i < n`, are linearly independent over `R`. -/",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      85,
+                      90
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Norm/FullSetOfSections/Basic.lean",
+            "path": "TauCeti/RingTheory/Norm/FullSetOfSections/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RingTheory/Norm/FullSetOfSections/Basic.lean",
+            "display_title": "TauCeti/RingTheory/Norm/FullSetOfSections/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "/-! ### Finite flat algebras\n\nFor `B` finite over `A`, being a full set of sections is local on `Spec A`: it can be checked on\nthe localizations at a family of elements generating the unit ideal\n(`IsFullSetOfSections.of_localizationSpan`). When `B` is moreover flat over `A`, as it is when\n`Spec B \u2192 Spec A` is finite locally free, full sets of sections are stable under arbitrary base\nchange and descend along injective ring maps, so that full sets of sections can be checked",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      117,
+                      122
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      131,
+                      143
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      220,
+                      232
+                    ]
+                  },
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      472,
+                      477
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Modules/ExteriorPower/Affine.lean",
+            "path": "TauCeti/AlgebraicGeometry/Modules/ExteriorPower/Affine.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Modules/ExteriorPower/Affine.lean",
+            "display_title": "TauCeti/AlgebraicGeometry/Modules/ExteriorPower/Affine.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "          ((tilde (M.exteriorPower n)).val.obj U) :=\n        ((tilde (M.exteriorPower n)).val.obj U).isModule\n      -- Linearity over a ring of sections can be checked on the basic-open basis,\n      -- where every `R`-linear map between section modules is localization-linear.\n      apply TopCat.Presheaf.IsSheaf.section_ext (tilde (M.exteriorPower n)).isSheaf\n      intro x hxU\n      obtain \u27e8V, \u27e8_, \u27e8f, rfl\u27e9, rfl\u27e9, hxf, hfU\u27e9 :=",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      161,
+                      166
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      256,
+                      268
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/AdicSpace/PreAdicSpace/Affinoid/Complete.lean",
+            "path": "TauCeti/AlgebraicGeometry/AdicSpace/PreAdicSpace/Affinoid/Complete.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/AdicSpace/PreAdicSpace/Affinoid/Complete.lean",
+            "display_title": "TauCeti/AlgebraicGeometry/AdicSpace/PreAdicSpace/Affinoid/Complete.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "with an isomorphism retaining the structure presheaf and stalk valuations.\nComplete models allow local morphism properties to be checked using\nmaps of complete Huber pairs, even when the original affinoid presentation was incomplete.",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      130,
+                      135
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "    obtain \u27e8A, _, _, _, _, S, P, hP, \u27e8e\u27e9\u27e9 := (isAffinoid_iff X).mp hX\n    let B := Localization.Away (1 : A)\n    have hden := hasDenominatorPower_denom_one P ({1} : Finset A) B",
+                "matches": [
+                  {
+                    "text": "Localization",
+                    "indices": [
+                      91,
+                      103
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Modules/SymmetricPower/Affine.lean",
+            "path": "TauCeti/AlgebraicGeometry/Modules/SymmetricPower/Affine.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/Modules/SymmetricPower/Affine.lean",
+            "display_title": "TauCeti/AlgebraicGeometry/Modules/SymmetricPower/Affine.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "          ((tilde (M.symmetricPower n)).val.obj U) :=\n        ((tilde (M.symmetricPower n)).val.obj U).isModule\n      -- Linearity over a ring of sections can be checked on the basic-open basis,\n      -- where every `R`-linear map between section modules is localization-linear.\n      apply TopCat.Presheaf.IsSheaf.section_ext (tilde (M.symmetricPower n)).isSheaf\n      intro x hxU\n      obtain \u27e8V, \u27e8_, \u27e8f, rfl\u27e9, rfl\u27e9, hxf, hfU\u27e9 :=",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      163,
+                      168
+                    ]
+                  },
+                  {
+                    "text": "localization",
+                    "indices": [
+                      258,
+                      270
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/Basic.lean",
+            "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/Basic.lean",
+            "display_title": "TauCeti/AlgebraicGeometry/EllipticCurve/Projective/Chart/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "`D\u208a(X\u1d62)` of the projective cubic is the spectrum of the degree-zero part `A_(X\u1d62)` of the\nlocalization of the homogeneous coordinate ring `A = R[X\u2080, X\u2081, X\u2082] \u29f8 (W(X\u2080, X\u2081, X\u2082))` away from\n`X\u1d62`. This file identifies `A_(X\u1d62)` with the dehomogenized ring",
+                "matches": [
+                  {
+                    "text": "localization",
+                    "indices": [
+                      95,
+                      107
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "chart by three generators and two relations; this is the form in which the smoothness of the\nprojective model is checked.\n",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      114,
+                      119
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/OperatorIdeal/ApproximationNumber/MinMax.lean",
+            "path": "TauCeti/Analysis/OperatorIdeal/ApproximationNumber/MinMax.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/OperatorIdeal/ApproximationNumber/MinMax.lean",
+            "display_title": "TauCeti/Analysis/OperatorIdeal/ApproximationNumber/MinMax.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "* `ContinuousLinearMap.le_singularValue_of_lt_rank_of_unit_norm`: the same, with the coercivity\n  bound checked on unit vectors.\n* `ContinuousLinearMap.le_singularValue_of_linearIndependent`: the same, for the span of `n + 1`",
+                "matches": [
+                  {
+                    "text": "hecke",
+                    "indices": [
+                      105,
+                      110
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "  `c`-contractive on the orthogonal complement of a subspace of rank at most `n`.\n* `TauCeti.HasMinMaxLowerBound`: the converse min\u2013max localization property of a pair of spaces.\n* `TauCeti.hasMinMaxLowerBound_iff_forall_isLUB`: a pair has this property exactly when, for every",
+                "matches": [
+                  {
+                    "text": "localization",
+                    "indices": [
+                      138,
+                      150
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "broad",
+      "i": 3,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/LocalRealization.lean",
+            "path": "TauCeti/NumberTheory/QuadraticForm/Global/LocalRealization.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/LocalRealization.lean",
+            "display_title": "TauCeti/NumberTheory/QuadraticForm/Global/LocalRealization.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "## References\n\n* O. T. O'Meara, *Introduction to Quadratic Forms*, Springer (1963), 63:23 for the local\n  realization and 72:1 for existence with prescribed local invariants.\n* J.-P. Serre, *A Course in Arithmetic*, Springer (1973), Chapter IV, \u00a72.3, Proposition 6, and\n  \u00a73.3, Theorem 9.\n-/",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      98,
+                      103
+                    ]
+                  },
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      146,
+                      156
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      157,
+                      162
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+            "path": "TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+            "display_title": "TauCeti/NumberTheory/QuadraticForm/Global/PrescribedLocalForms.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "/-!\n# Global forms with prescribed local behavior, up to one representation\n",
+                "matches": [
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      24,
+                      34
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      35,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nLet `I` be an admissible system of local invariants of rank `n` over a number field `K`, and let\n`U_v` (at the finite places) and `R_w` (at the real places) be regular local forms realizing `I`.",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      36,
+                      41
+                    ]
+                  },
+                  {
+                    "text": "field",
+                    "indices": [
+                      79,
+                      84
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      169,
+                      174
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/FieldTheory/GaloisGroups/Reduction.lean",
+            "path": "TauCeti/FieldTheory/GaloisGroups/Reduction.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/FieldTheory/GaloisGroups/Reduction.lean",
+            "display_title": "TauCeti/FieldTheory/GaloisGroups/Reduction.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "Waerden's construction of integral polynomials of every degree with Galois group `S\u2099`, where the\nthree reductions are prescribed modulo `2`, `3` and `5`.\n",
+                "matches": [
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      120,
+                      130
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nattribute [local instance] Gal.splits_\u211a_\u2102\n",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      12,
+                      17
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/StandardComodule.lean",
+            "path": "TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/StandardComodule.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/StandardComodule.lean",
+            "display_title": "TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/StandardComodule.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n/-- The carrier weight torus recovers the prescribed twenty-six weights in the ambient group. -/\n@[reassoc (attr := simp)]",
+                "matches": [
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      43,
+                      53
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nattribute [local instance] GeneralLinear.standardComodule standardComodule\n",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      12,
+                      17
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/Root/Differential.lean",
+            "path": "TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/Root/Differential.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/Root/Differential.lean",
+            "display_title": "TauCeti/Algebra/Lie/F4/ShortRoot/PrimeField/Root/Differential.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "These normalized vectors are the differential data needed for a pinning. Membership in the\nprescribed adjoint weight space does not assert that the vector spans that entire space.\nNeither maximality of the weight torus nor an identification with an independently pinned",
+                "matches": [
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      91,
+                      101
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nlocal instance : Fact (Nat.Prime 2) := \u27e8by decide\u27e9\n",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      1,
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/RankOne.lean",
+            "path": "TauCeti/NumberTheory/QuadraticForm/Global/RankOne.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/NumberTheory/QuadraticForm/Global/RankOne.lean",
+            "display_title": "TauCeti/NumberTheory/QuadraticForm/Global/RankOne.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nvariable {K : Type*} [Field K] [NumberField K]\n",
+                "matches": [
+                  {
+                    "text": "Field",
+                    "indices": [
+                      23,
+                      28
+                    ]
+                  },
+                  {
+                    "text": "Field",
+                    "indices": [
+                      39,
+                      44
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-- **Existence with prescribed local behavior for regular lines.** If every prescribed finite\nand real local line has the image of one global discriminant class `d`, then a global line of",
+                "matches": [
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      22,
+                      32
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      33,
+                      38
+                    ]
+                  },
+                  {
+                    "text": "prescribed",
+                    "indices": [
+                      78,
+                      88
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      105,
+                      110
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/G2/ShortRoot/PrimeField/SpecialIsogeny.lean",
+            "path": "TauCeti/Algebra/Lie/G2/ShortRoot/PrimeField/SpecialIsogeny.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Lie/G2/ShortRoot/PrimeField/SpecialIsogeny.lean",
+            "display_title": "TauCeti/Algebra/Lie/G2/ShortRoot/PrimeField/SpecialIsogeny.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "attribute [local instance 100] LieRing.ofAssociativeRing\nattribute [local instance high] Algebra.toModule\n",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      11,
+                      16
+                    ]
+                  },
+                  {
+                    "text": "local",
+                    "indices": [
+                      68,
+                      73
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-- The special isogeny squared is the prime-field Frobenius on the carrier coordinate ring. -/\n@[simp]",
+                "matches": [
+                  {
+                    "text": "field",
+                    "indices": [
+                      46,
+                      51
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Geometry/Diffeomorphism/Diffeotopy/Flow.lean",
+            "path": "TauCeti/Geometry/Diffeomorphism/Diffeotopy/Flow.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Geometry/Diffeomorphism/Diffeotopy/Flow.lean",
+            "display_title": "TauCeti/Geometry/Diffeomorphism/Diffeotopy/Flow.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nThis converts cut-off local vector fields into ambient motions with controlled support.\nIt does not assert extension of an arbitrary isotopy through embeddings.",
+                "matches": [
+                  {
+                    "text": "local",
+                    "indices": [
+                      23,
+                      28
+                    ]
+                  },
+                  {
+                    "text": "field",
+                    "indices": [
+                      36,
+                      41
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-- Run a complete `C^n` vector field for duration `a`, starting at the identity.\nThe ambient manifold need not be compact, and negative durations are allowed. -/",
+                "matches": [
+                  {
+                    "text": "field",
+                    "indices": [
+                      33,
+                      38
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "exact",
+      "i": 3,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Matrix/HermitianSignature/Basic.lean",
+            "path": "TauCeti/Analysis/Matrix/HermitianSignature/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Matrix/HermitianSignature/Basic.lean",
+            "display_title": "TauCeti/Analysis/Matrix/HermitianSignature/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    fin_cases i <;> fin_cases j <;>\n      simp [P, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Matrix.vecMul,\n        Matrix.vecHead, Matrix.vecTail, h\u2080, h\u2081]",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      124,
+                      126
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\n/-- Conjugating every entry of a Hermitian matrix preserves its signature: it is the congruence\nby the reflection negating the imaginary coordinates. -/",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      34,
+                      43
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/InformationTheory/Coding/GaloisDual/Basic.lean",
+            "path": "TauCeti/InformationTheory/Coding/GaloisDual/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/InformationTheory/Coding/GaloisDual/Basic.lean",
+            "display_title": "TauCeti/InformationTheory/Coding/GaloisDual/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    simpa only [galoisDual_symm_galoisDual] using congrArg (galoisDual \u03c3.symm) h\u27e9\n\n/-- For an involutive automorphism, a matrix generates a code exactly when its conjugate\nchecks the Hermitian dual. -/\ntheorem range_vecMulLinear_eq_iff_ker_map_eq_galoisDual_of_involutive (\u03c3 : K \u2243+* K)\n    (h\u03c3 : Function.Involutive \u03c3) {\u03c1 : Type*} [Fintype \u03c1]\n    (G : Matrix \u03c1 \u03b9 K) (C : Submodule K (\u03b9 \u2192 K)) :",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      186,
+                      195
+                    ]
+                  },
+                  {
+                    "text": "cM",
+                    "indices": [
+                      221,
+                      223
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Matrix/SampleSecondMoment.lean",
+            "path": "TauCeti/Analysis/Matrix/SampleSecondMoment.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Analysis/Matrix/SampleSecondMoment.lean",
+            "display_title": "TauCeti/Analysis/Matrix/SampleSecondMoment.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "    sampleSecondMoment v k l = finiteMean \ud835\udd5c fun i \u21a6 v i k * star (v i l) := by\n  simp [sampleSecondMoment_def, finiteMean_eq_inv_smul_sum, Matrix.sum_apply, vecMulVec_apply]\n\n/-- The empirical second-moment matrix is Hermitian. -/\ntheorem isHermitian_sampleSecondMoment (v : \u03b9 \u2192 n \u2192 \ud835\udd5c) : (sampleSecondMoment v).IsHermitian :=\n  IsHermitian.ext fun k l \u21a6 by\n    simp [finiteMean_eq_inv_smul_sum, star_sum, mul_comm]",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      164,
+                      166
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      222,
+                      231
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      246,
+                      255
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      326,
+                      335
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      343,
+                      352
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Octonion/Basic.lean",
+            "path": "TauCeti/Algebra/Octonion/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/Algebra/Octonion/Basic.lean",
+            "display_title": "TauCeti/Algebra/Octonion/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n/-- The polar form of the norm, read off the entries of the two vector matrices. Stated for\n`QuadraticMap.polar` rather than for `QuadraticMap.polarBilin`, which `simp` unfolds to it. Not a\n`simp` lemma: the polar form and its half `QuadraticMap.associated` are the interface the Hermitian\nmatrix algebras are stated against, and `simp` should not take it apart into coordinates behind\ntheir backs. -/\ntheorem polar_normQuadraticForm (x y : Octonion R) :",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      102,
+                      104
+                    ]
+                  },
+                  {
+                    "text": "cM",
+                    "indices": [
+                      139,
+                      141
+                    ]
+                  },
+                  {
+                    "text": "cM",
+                    "indices": [
+                      242,
+                      244
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      281,
+                      290
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Measure/SymmetricMatrix/PosDef.lean",
+            "path": "TauCeti/MeasureTheory/Measure/SymmetricMatrix/PosDef.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Measure/SymmetricMatrix/PosDef.lean",
+            "display_title": "TauCeti/MeasureTheory/Measure/SymmetricMatrix/PosDef.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "public import TauCeti.Analysis.Matrix.PosDef\npublic import TauCeti.MeasureTheory.Measure.SymmetricMatrix.Basic\npublic import Mathlib.LinearAlgebra.Matrix.PosDef",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      97,
+                      99
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nOn the symmetric subspace, positive definiteness cuts out an open subset: the Hermitian\ncondition holds identically there, so the cone is the preimage of the open set of matrices with",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      79,
+                      88
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/TraceForm.lean",
+            "path": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/TraceForm.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/TraceForm.lean",
+            "display_title": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/TraceForm.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n* W. Scharlau, *Quadratic and Hermitian Forms* (1985), Chapter 2, \u00a75.\n-/",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      31,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nopen QuadraticMap QuadraticForm\n",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      14,
+                      16
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Basic.lean",
+            "path": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Basic.lean",
+            "display_title": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n* W. Scharlau, *Quadratic and Hermitian Forms* (1985), Chapter 2, \u00a75.\n* T. Y. Lam, *Introduction to Quadratic Forms over Fields* (2005), Chapter VII, \u00a71.",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      31,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nnamespace QuadraticMap\n",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      19,
+                      21
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class.lean",
+            "path": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class.lean",
+            "display_title": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n* W. Scharlau, *Quadratic and Hermitian Forms* (1985), Chapter 2, \u00a75.\n* T. Y. Lam, *Introduction to Quadratic Forms over Fields* (2005), Chapter VII, \u00a71.",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      31,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nopen QuadraticMap\n",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      14,
+                      16
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/BaseChange.lean",
+            "path": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/BaseChange.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/BaseChange.lean",
+            "display_title": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/BaseChange.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n* W. Scharlau, *Quadratic and Hermitian Forms* (1985), Chapter 2, \u00a75.\n* T. Y. Lam, *Introduction to Quadratic Forms over Fields* (2005), Chapter VII, \u00a71.",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      31,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nnamespace QuadraticMap\n",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      19,
+                      21
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Measure/SymmetricMatrix/Basic.lean",
+            "path": "TauCeti/MeasureTheory/Measure/SymmetricMatrix/Basic.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/MeasureTheory/Measure/SymmetricMatrix/Basic.lean",
+            "display_title": "TauCeti/MeasureTheory/Measure/SymmetricMatrix/Basic.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nnamespace selfAdjoint\n\n/-- An element of the symmetric subspace is a Hermitian matrix; over `\u211d` this says that it is\nsymmetric, as spelled out by `selfAdjoint.coe_apply_comm`. -/\ntheorem isHermitian_coe {p : \u2115} (A : selfAdjoint.submodule \u211d (Matrix (Fin p) (Fin p) \u211d)) :\n    (A : Matrix (Fin p) (Fin p) \u211d).IsHermitian :=",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      70,
+                      79
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      192,
+                      201
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      318,
+                      327
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class/BaseChange.lean",
+            "path": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class/BaseChange.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class/BaseChange.lean",
+            "display_title": "TauCeti/LinearAlgebra/QuadraticForm/Transfer/Class/BaseChange.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\n* W. Scharlau, *Quadratic and Hermitian Forms* (1985), Chapter 2, \u00a75.\n* T. Y. Lam, *Introduction to Quadratic Forms over Fields* (2005), Chapter VII, \u00a71.",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      31,
+                      40
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "\nopen QuadraticMap QuadraticForm\nopen scoped TensorProduct",
+                "matches": [
+                  {
+                    "text": "cM",
+                    "indices": [
+                      14,
+                      16
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/SU2/TorusConjugacy.lean",
+            "path": "TauCeti/RepresentationTheory/SU2/TorusConjugacy.lean",
+            "display_url": "https://github.com/TauCetiProject/TauCeti/blob/199786c594817a82fdd2fab04d3ae4cc5eb837d5/TauCeti/RepresentationTheory/SU2/TorusConjugacy.lean",
+            "display_title": "TauCeti/RepresentationTheory/SU2/TorusConjugacy.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "theorem exists_conj_mem_torus (g : SU2) : \u2203 u : SU2, u * g * u\u207b\u00b9 \u2208 torus := by\n  set G : Matrix (Fin 2) (Fin 2) \u2102 := (g : Matrix (Fin 2) (Fin 2) \u2102)\n  set H : Matrix (Fin 2) (Fin 2) \u2102 := Complex.I \u2022 (G - star G) with hHdef\n  -- `H` is Hermitian: conjugating negates both `Complex.I` and `G - star G`.\n  have hHerm : H.IsHermitian := by\n    rw [Matrix.isHermitian_iff_isSelfAdjoint, isSelfAdjoint_iff, hHdef, star_smul, star_sub,\n      star_star, Complex.star_def, Complex.conj_I, neg_smul, \u2190 smul_neg, neg_sub]",
+                "matches": [
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      249,
+                      258
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      334,
+                      343
+                    ]
+                  },
+                  {
+                    "text": "Hermitian",
+                    "indices": [
+                      367,
+                      376
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

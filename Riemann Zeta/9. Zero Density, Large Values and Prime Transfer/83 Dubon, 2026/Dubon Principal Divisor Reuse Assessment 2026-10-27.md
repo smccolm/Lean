@@ -2,7 +2,7 @@
 
 Every finite degree-zero analytic divisor on the actual original Gamma1 integral-ratio field with original integral period class is now proved literally principal. Representative correction identifies its original finite period functional; integer cocycles and the actual Petersson pairing prove the required lattice duality. Unitarization removes the unit-modulus assumption. Native Riemann-Roch constructs the actual prescribed algebraic differential, including regularity at all j-poles. Its analytic realization gives the exact ramification-weighted integer residues, slash invariance and exponential cusp decay. Point regularization, meromorphic primitive construction and multiplier gluing give an actual meromorphic function with exact orders and nonzero limits at every translated cusp. Thus no meromorphic function, multiplier, cusp limit, exact-order certificate or analytic residue coefficient remains assumed in the finite-divisor converse.
 
-The forty-five-module actual Gamma1 finite-divisor converse scope passes 242 public axiom queries, 376 exhaustive scratch theorem checks, sixteen linters per module and eight declaration-value audits with 488 required dependency checks, with zero diagnostics. Production aggregate, focused audits and sequential foundation/paper verification of the 8,821-module scope are pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 8,821-module scope: all thirteen retained regressions, 56,121 exhaustive theorem checks, 25,985 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 ## Exact source connection and reuse
 

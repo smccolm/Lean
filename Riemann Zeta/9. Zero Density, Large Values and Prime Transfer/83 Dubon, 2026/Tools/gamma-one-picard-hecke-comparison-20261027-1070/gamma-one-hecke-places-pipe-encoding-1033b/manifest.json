@@ -1,0 +1,4 @@
+{
+  "reason": "Restore four Unicode tokens damaged by shell pipe encoding. Mathematical source intended in prior attempt is unchanged.",
+  "sourceSha256": "3C175E86AC25DF699FB885587953E0CEF739B84ADB6FF0300C7649F58AC2ABD4"
+}

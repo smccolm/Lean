@@ -1,0 +1,155 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T04:27:45.317649+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCentralStabilizerCard",
+    "SourceGammaOneHeckeActualStabilizers",
+    "SourceGammaOneHeckeUpperOrbits",
+    "SourceGammaOneHeckeCosetMultiplicity",
+    "SourceGammaOneHeckeAnalyticDivisor",
+    "SourceGammaOneAnalyticHeckeDivisors",
+    "SourceGammaOnePicardHeckeDivisors",
+    "SourceGammaOneEndpointHecke",
+    "SourceGammaOnePicardPeriodHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralStabilizerCard.lean",
+      "sha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+      "oleanSha256": "93A4CAF9363B2447910BD9D41BF6EDC39F4E41DA8F4BEFA631A2A26DE9557D55",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralStabilizerCard1061b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralStabilizerCard1061b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeActualStabilizers.lean",
+      "sha256": "4E6A58BA9193D1A3DE060BDB25C9507EC5933F0F368E0C6C005139AD8A6250AD",
+      "oleanSha256": "BAAE2334226A3B279105A0B56184B1E1732B7200240F952F34EAA3823D2E39D2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeActualStabilizers1062b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeActualStabilizers1062b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperOrbits.lean",
+      "sha256": "06F6A57EB461F7BC833C2697FEABF485145D3838F00E1D85E0035A0E1EF79324",
+      "oleanSha256": "D7144AAA799CCC176C1BF2FBA898B15E69205F9F20287B20E79CB9358F7F7C38",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperOrbits1063a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperOrbits1063a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetMultiplicity.lean",
+      "sha256": "DC04C60C636B8E0332C77420C44122811A06FC489057E906034EC3095D745FDA",
+      "oleanSha256": "59F0B5548889D388623251379BEAB97ADF106185D06ED66172FE47A6C3BE68E1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetMultiplicity1064b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetMultiplicity1064b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticDivisor.lean",
+      "sha256": "768071A8DA6E09865605ACA65E222DE4587BF71C6991A30709FDEFC9383950EB",
+      "oleanSha256": "8F5586557AEBA584335F1BA92727DEE361ED3F42264D9D9412A1332145C1646D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticDivisor1065c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticDivisor1065c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticHeckeDivisors.lean",
+      "sha256": "30E5B6A3F9246A893BEAB5F1326868E4ED7FCB0D216665C5023E83E3E27BFC6D",
+      "oleanSha256": "562C891ADC5627D0FEEAF6E2B93BB0BBCF69798117BAB1F5A5A72F71E9B04BA7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticHeckeDivisors1066a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticHeckeDivisors1066a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeDivisors.lean",
+      "sha256": "8855A333CEE4C5B11FAC81DE6A9695909FC4CF4150F2E2E894C881D910EBF0ED",
+      "oleanSha256": "11F64FB0BBE68A1E25A2DE954B62791518654ED5112300C5F587EE885C50B4CB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeDivisors1067c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeDivisors1067c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEndpointHecke.lean",
+      "sha256": "D5B378992B56ACE8728879AC931355F1CE6EF27D7657CA6D3F00BCEB26E7584D",
+      "oleanSha256": "B1809825606940E4B9BE7DBD4FDA311A3F192D0451BD72E89D116DE3EEDE5086",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEndpointHecke1068a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEndpointHecke1068a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHecke.lean",
+      "sha256": "F0C817746465027700275A9F6BC37CAE8E8E4F760942B3B3F768114943C36AEA",
+      "oleanSha256": "BFE41C65CD48629B97D5E1004548C9C9F9A721C06E193B803957C1E2EEC8084B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHecke1069a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHecke1069a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeAudit1.log",
+  "logSha256": "E382ACB6535788685CCD59E7F191CB3FEF0E85746C2AD1888BA27A351E430A8F",
+  "auditSha256": "E5677830A8BC9BC798C9A7774B4C55AC2ED5E5D01E40258651B042EAE9E909BB",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeScratchOwnership1070.log",
+  "ownershipSha256": "25A1FD2CC1027D0CC855493B3A5160CA98196C45B987522359073DF4D2579057",
+  "exhaustiveTheorems": 34,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeDependencyAudit1.log",
+  "dependencyAuditSha256": "D28DA2E4DE0085149B81E48EA3091575939C5CD2506D303F5D708F975A8E87A3",
+  "dependencyAuditSourceSha256": "BE0BD10949D6093E083F4374D42F6BA9D42E283137DD4A0B946C0EDBCC363B98",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 homogeneous-coefficient arithmetic realization -> full/parabolic, diamond, transpose and Picard/H1 comparison -> actual Picard-period Hecke compatibility.",
+  "discharged": [
+    "Central-sign cancellation between exact stabilizer orders and actual beta ramification.",
+    "Literal prime beta pullback multiplicities equal the full coset multiplicities, including elliptic fibers.",
+    "Actual algebraic Hecke divisor/Picard action agrees with finite analytic coset summation.",
+    "Endpoint Hecke discrepancy equals divisor degree times an explicit basepoint vector; degree zero discharges it.",
+    "Original Picard-period equivalence intertwines the actual prime algebraic correspondence and dual native cusp trace."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Complex prime Hecke compatibility only. Full parabolic, diamond, transpose and arithmetic compatibility, original all-weight characteristic-zero association, arithmetic automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-period-hecke-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "6C254B41686A212F07FAC089FDC629617496F59AD7B2186A2CDBEA40AA866712",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

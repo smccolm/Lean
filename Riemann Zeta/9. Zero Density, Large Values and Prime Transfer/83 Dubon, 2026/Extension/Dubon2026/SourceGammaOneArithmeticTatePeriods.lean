@@ -1,0 +1,36 @@
+import Dubon2026.SourceGammaOneTateComparison
+import Dubon2026.SourceGammaOneComplexTatePeriods
+
+/-! DUB17/18 -> original all-weight arithmetic association -> actual Gamma1
+arithmetic realization -> arithmetic Tate/period comparison. Compose the
+proved arithmetic-to-complex Tate equivalence with the original complex
+Picard-period tensor equivalence. The formula uses the original integral
+period lattice and actual compatible Picard torsion sequences.
+Arithmetic Hecke naturality remains a separate geometric obligation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+open scoped TensorProduct
+variable (N : ℕ) [NeZero N] (p : ℕ) [Fact p.Prime]
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "Λ" => sourceWeightTwoIntegralLattice (Gamma1 N)
+
+/-- The actual arithmetic Picard Tate module as the p-adic original period lattice. -/
+def arithmeticPicardTatePeriodTensorEquiv :
+    TateModule p (Pic0 Qbar FQ) ≃ₗ[ℤ_[p]] ℤ_[p] ⊗[ℤ] Λ :=
+  (ConstantField.tateComplexEquiv N p).trans
+    (complexPicardTatePeriodTensorEquiv N p (by simp [Gamma1_mem, ModularGroup.T]))
+
+theorem arithmeticPicardTatePeriodTensorEquiv_symm_tmul (a : ℤ_[p]) (l : Λ) :
+    TateModule.ofAddEquiv p (picardPeriodEquiv N (by simp [Gamma1_mem, ModularGroup.T]))
+      (ConstantField.tateComplexEquiv N p
+        ((arithmeticPicardTatePeriodTensorEquiv N p).symm (a ⊗ₜ l))) =
+      a • TateModule.Period.iota ℂ p Λ l := by
+  simp only [arithmeticPicardTatePeriodTensorEquiv, LinearEquiv.trans_symm,
+    LinearEquiv.trans_apply, LinearEquiv.apply_symm_apply]
+  exact complexPicardTatePeriodTensorEquiv_symm_tmul N p
+    (by simp [Gamma1_mem, ModularGroup.T]) a l
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

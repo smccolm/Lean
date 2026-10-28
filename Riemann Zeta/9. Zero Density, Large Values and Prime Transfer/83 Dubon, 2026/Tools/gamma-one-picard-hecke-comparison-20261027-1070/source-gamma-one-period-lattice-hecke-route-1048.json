@@ -1,0 +1,16 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> original finite Gamma1 arithmetic character realization -> Picard/H1 Hecke comparison -> actual original integer-period quotient Hecke action.",
+  "shorterRoute": "Reuse native scalar period trace and the existing span-generator stability argument, without coordinates or new lattice equality.",
+  "assumptionsToDischarge": "Linearity of actual native cusp trace; stability of the original integer lattice; descent to the exact original period quotient.",
+  "remaining": "The quotient operator must still be compared with actual divisor pull/push, including exact elliptic fiber multiplicities; full parabolic/diamond/transpose/arithmetic and higher continuation remain.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodHeckeLattice.lean",
+      "sha256": "0B0DDF841B8CCD0EAA3D757D37D485E7B17BF72086AFE29C392DAA3F89C7CCA3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoIntegralPeriods.lean",
+      "sha256": "55792094BF55943629990F390F7EB38AA6844B26DFA694E819ED41B98674914B"
+    }
+  ]
+}

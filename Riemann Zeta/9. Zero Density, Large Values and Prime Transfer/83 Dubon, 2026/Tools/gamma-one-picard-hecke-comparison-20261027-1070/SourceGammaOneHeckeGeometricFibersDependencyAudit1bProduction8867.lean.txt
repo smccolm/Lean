@@ -1,0 +1,36 @@
+import Dubon2026.SourceGammaOneHeckeGammaZeroMap
+import Dubon2026.SourceGammaOneHeckeGammaZeroPlaces
+import Dubon2026.SourceGammaOneHeckeGenericOrbits
+import Dubon2026.SourceGammaOneHeckeFiberPresentation
+import Dubon2026.SourceGammaOneHeckeGenericFiber
+import Dubon2026.SourceGammaOneHeckeJDegree
+import Dubon2026.SourceGammaOneHeckeAllFibers
+import Dubon2026.SourceGammaOneHeckeExactRamification
+import Dubon2026.SourceGammaOneHeckePlaceOrbits
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneHeckeGammaZeroMap, `Dubon2026.SourceGammaOneHeckeGammaZeroPlaces, `Dubon2026.SourceGammaOneHeckeGenericOrbits, `Dubon2026.SourceGammaOneHeckeFiberPresentation, `Dubon2026.SourceGammaOneHeckeGenericFiber, `Dubon2026.SourceGammaOneHeckeJDegree, `Dubon2026.SourceGammaOneHeckeAllFibers, `Dubon2026.SourceGammaOneHeckeExactRamification, `Dubon2026.SourceGammaOneHeckePlaceOrbits, `Dubon2026.SourceGammaOneHeckeAlphaGerms, `Dubon2026.SourceGammaOneHeckeStretchLaurent, `Dubon2026.SourceGammaOneHeckeBetaGerms, `Dubon2026.SourceGammaOneHeckeAnalyticPlaces, `Dubon2026.SourceGammaOneHeckeAnalyticFiber]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroField_le, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeGammaZero_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeGammaZero, `Dubon2026.SourceFunctionField.GammaOne.mem_heckeGammaZero_analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.originalGammaZeroPlace_eq_of_heckePlace_eq, `Dubon2026.SourceFunctionField.GammaOne.stabilizer_eq_one_or_neg_one_of_card_two, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_orbit_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.j_rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.card_stabilizer_rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finite_orbitQuot, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_surjective, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_injective_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_relative_indices_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.exists_fiber_order_sum_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finrank_over_j_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_bijective, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_analytic_fiber_orders_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_mk_val, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit, `Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.OrbitQuot, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.Fiber, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equivOfGeneric, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equiv, `Dubon2026.SourceFunctionField.original_field_eq_pair_over, `Dubon2026.SourceFunctionField.GammaOne.gamma1_degeneracy_map_le, `Dubon2026.SourceFunctionField.original_field_modular_ratio, `Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_gamma0_orbit, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit, `Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization, `Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index, `Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank, `Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index, `Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE GEOMETRIC FIBERS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual intersection-curve orbit identification and exact stabilizer ramification VALUE closures. Actual coset-to-pullback multiplicity assembly and full Picard/parabolic/diamond/transpose/arithmetic comparisons remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

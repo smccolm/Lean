@@ -1,0 +1,21 @@
+### Original local actions and normalized Hecke localization — 8 October 2026
+
+Fifteen further production modules realize the actual full Hecke trace as a bounded sum of its original p+1 unitary operators. The exact determinant factor divided by sqrt(p) equals the original unitary Fourier normalization, so the normalized bounded operator has eigenvalue lambda_f(p) on the original generator and its entire genuine real cyclic component. Actual one-place GL2 embeddings are constructed in the restricted-product finite adele ring, proved faithful and continuous, and shown to commute at distinct places. Restriction of the original full action gives genuine strongly continuous unitary local actions. The original cusp generator is fixed by local integral GL2 at every rational prime not dividing the original level, and is nonzero for every primitive form. Exact coordinate membership identifies the original global finite level group with its actual local level groups. Removing one local coordinate factors an adelic matrix into its genuine one-place component and its actual remaining coordinates. Every original Hecke representative lies in the level group at every other place. Therefore the normalized full Hecke action equals its literal single-prime local sum on every original level-fixed Hilbert vector, and that local sum has precisely the original normalized primitive Fourier eigenvalue.
+
+The actual local actions, good-prime spherical vectors and exact localization of the original Hecke sum are proved. Intrinsic local double-coset identification, local representation and Euler-factor classification, the automorphic non-CM bridge and higher symmetric automorphy/continuation still require proofs. Full adelic Hilbert irreducibility remains proved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicBoundedHeckeTrace](Extension/Dubon2026/AdelicBoundedHeckeTrace.lean).
+- [AdelicGoodPrimeSpherical](Extension/Dubon2026/AdelicGoodPrimeSpherical.lean).
+- [AdelicHeckeLocalBridge](Extension/Dubon2026/AdelicHeckeLocalBridge.lean).
+- [AdelicHeckeRealComponent](Extension/Dubon2026/AdelicHeckeRealComponent.lean).
+- [AdelicLocalRepresentation](Extension/Dubon2026/AdelicLocalRepresentation.lean).
+- [AdelicNormalizedHecke](Extension/Dubon2026/AdelicNormalizedHecke.lean).
+- [FiniteAdelicHeckeLocalSupport](Extension/Dubon2026/FiniteAdelicHeckeLocalSupport.lean).
+- [FiniteAdelicLocalGL2](Extension/Dubon2026/FiniteAdelicLocalGL2.lean).
+- [FiniteAdelicLocalHom](Extension/Dubon2026/FiniteAdelicLocalHom.lean).
+- [FiniteAdelicLocalIntegral](Extension/Dubon2026/FiniteAdelicLocalIntegral.lean).
+- [FiniteAdelicLocalTopology](Extension/Dubon2026/FiniteAdelicLocalTopology.lean).
+- [FiniteAdelicPlaceRemoval](Extension/Dubon2026/FiniteAdelicPlaceRemoval.lean).
+- [FinitePlaceLevel](Extension/Dubon2026/FinitePlaceLevel.lean).
+- [HeckeUnitaryScalarNormalization](Extension/Dubon2026/HeckeUnitaryScalarNormalization.lean).
+- [RationalPrimePlace](Extension/Dubon2026/RationalPrimePlace.lean).

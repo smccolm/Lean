@@ -1,0 +1,4 @@
+{
+  "reason": "Use explicit polynomial evaluation equalities and transitivity across definitional field aliases; no generic rewrite matching on the target.",
+  "sourceSha256": "861E2A61A646F443AE282A8BF2DB49BCE301E86880743D7ADF0B8A343822F79F"
+}

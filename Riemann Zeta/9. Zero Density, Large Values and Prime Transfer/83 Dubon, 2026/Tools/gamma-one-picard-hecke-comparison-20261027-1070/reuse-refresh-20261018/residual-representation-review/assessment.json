@@ -1,0 +1,73 @@
+{
+  "checkedUTC": "2026-10-18T22:13:10.992257+00:00",
+  "files": [
+    {
+      "path": "P2M/Sol/S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean",
+      "sha": "0910066eb8e38cc85ab15b9d62b2257cc056ca1e",
+      "size": 30320,
+      "repository": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\anthropics-S_groupCohomology_H1pi_dualTwist_adjointTraceZero_eq_zero_of_finite_range.lean.txt",
+      "sha256": "87B4018FA3C5145E78C616F4C67FDCE986F467AD4CE930D19F6D3B726871C0AF"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/ClebschGordan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fdf503b0074c86ccd9e098948fe6d05087884c",
+      "size": 15260,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/ClebschGordan.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-ClebschGordan.lean.txt",
+      "sha256": "ECA4CF18B1297D9402F1BA0856329ED9FE4D777F8783BEDD3D5057E08E441868"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/Standard.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbbbe69a3bc526f2cc377052bcada5a7302578ea",
+      "size": 55431,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/Standard.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-Standard.lean.txt",
+      "sha256": "39E4C1BC356696198E4F487503065E646FB65A0E293A6E05B01D99EEF75EC21C"
+    },
+    {
+      "path": "TauCeti/Algebra/Lie/Sl2/IntegralLattice.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e5dcbea361a0ed4d9984c28d25808d0815dcf3",
+      "size": 18371,
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/Algebra/Lie/Sl2/IntegralLattice.lean",
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "0b4e4720467a7a2bd42af383a284f4246a49aaab",
+      "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\residual-representation-review\\TauCetiProject-IntegralLattice.lean.txt",
+      "sha256": "5DCC256C59058B9B80C6484006EE2F406981593731518CBAC5E75F6F843C3353"
+    }
+  ],
+  "scope": "Four selected primary source bodies; dependency closures and local kernel status not certified.",
+  "reviewedUTC": "2026-10-18T22:17:01.941631+00:00",
+  "exactDependency": "DUB-17 higher symmetric-power continuation <- potential automorphy/descent <- arithmetic patching <- auxiliary primes with cyclotomic-kernel residual image and dual-Selmer detection.",
+  "findings": [
+    {
+      "source": "anthropics finite-image twisted trace-zero H1",
+      "scope": "The main and solution signatures require finrank k V = 2, finite characteristic-p coefficient field, odd p, cyclotomic-kernel irreducibility and a character/kernel compatibility. Imported finite-group classifications and H1 vanishing have not been closure-certified here.",
+      "decision": "Do not apply to the adjoint of an arbitrary higher symmetric power."
+    },
+    {
+      "source": "Tau Ceti Sl2 standard representation and Clebsch-Gordan",
+      "scope": "Operator identities are formulated over commutative rings, but the irreducibility and internal tensor decomposition endpoints require Field K and CharZero K.",
+      "decision": "Not a direct finite-characteristic decomposition or residual adequacy proof. Native homogeneous symmetric-power matrices already supply the required arithmetic representation objects."
+    },
+    {
+      "source": "Tau Ceti Sl2 integral lattice",
+      "scope": "Constructs the integral coordinate lattice in the rational standard Lie module and stability under Kostant operators. The examined file does not establish finite-field group irreducibility or first-cohomology vanishing.",
+      "decision": "Defer the separate Lie-module closure and coefficient/group comparison."
+    }
+  ],
+  "selectedNativeRoute": "Adapt the existing native real SL2 elementary-commutator proof using the existing ring elementary matrices and Gaussian elimination. Prove perfection in characteristics other than 2 and 3, then use the pinned commutator-image theorem to retain the actual symmetric SL2 residual image inside the kernel of the original root character. Finite-image H1 vanishing and regular trace detection remain separate obligations.",
+  "kernelCertification": "No external source closure or new native theorem is certified by this source review."
+}

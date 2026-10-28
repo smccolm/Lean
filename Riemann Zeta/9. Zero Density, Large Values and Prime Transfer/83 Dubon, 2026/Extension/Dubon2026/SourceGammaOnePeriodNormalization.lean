@@ -1,0 +1,34 @@
+import Dubon2026.SourceGammaOneHeckePointTransition
+import Dubon2026.SourceWeightTwoEndpointPeriods
+
+/-! DUB17/18 -> original all-weight association -> actual Gamma1 Picard/H1
+Hecke comparison -> original scalar periods. Primitive uniqueness identifies
+the strict-width normalization with width one without assuming width equality. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M]
+
+theorem along_eq_primitive_one
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (a b : ℍ) :
+    sourceWeightTwoAlong (Gamma1 M) a b f =
+      sourceWeightTwoPrimitive 1 f b - sourceWeightTwoPrimitive 1 f a := by
+  have hT : ModularGroup.T ∈ Gamma1 M := by simp [Gamma1_mem, ModularGroup.T]
+  rw [sourceWeightTwoAlong_apply]
+  exact sourceUpperHalfPlane_primitive_difference
+    (fun z => sourceWeightTwoPrimitive_hasDerivAt f
+      ((Gamma1 M).map (mapGL ℝ)).strictWidthInfty_pos
+      ((Gamma1 M).map (mapGL ℝ)).strictWidthInfty_mem_strictPeriods z)
+    (fun z => sourceWeightTwoPrimitive_hasDerivAt f one_pos (hper hT) z) a b
+
+theorem primitive_one_period
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (γ : Gamma1 M) (z : ℍ) :
+    sourceWeightTwoPrimitive 1 f (γ.val • z) =
+      sourceWeightTwoPrimitive 1 f z + sourceWeightTwoPeriodValue (Gamma1 M) f γ := by
+  have h := sourceWeightTwoAlong_smul (Gamma1 M) γ z f
+  rw [along_eq_primitive_one] at h
+  linear_combination h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-19",
+  "method": "GitHub commit search ordered by committer date, newest indexed commit per repository",
+  "results": [
+    {
+      "commits": [
+        {
+          "sha": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "message": "Merge pull request #9 from anthropics/tianyi-ant-patch-1\n\nUpdate README.md",
+          "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "html_url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "diff": null,
+          "files": null,
+          "repository_full_name": "anthropics/fermats-last-theorem",
+          "comments": null,
+          "author": null,
+          "committer": null,
+          "created_at": "2026-09-24T14:06:36Z",
+          "git_author_email": null,
+          "display_url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "display_title": "Merge pull request #9 from anthropics/tianyi-ant-patch-1"
+        }
+      ]
+    },
+    {
+      "commits": [
+        {
+          "sha": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+          "message": "chore: bump mathlib to 300d0e5, fix breaking changes (#1201)\n\nBumps mathlib from c0da404 to 300d0e5, 159 commits on.\n\n- mathlib#41702 made `v` and `w` explicit in\n`NumberField.LiesOver.completionMap`, `continuous_completionMap` and\n`completionMap_coe`; updated the three call sites in\n`FLT/NumberField/Completion/Infinite.lean`. Every other error in that\nfile came from this one.\n- `Mathlib.Data.Int.SuccPred` is deprecated;\n`FLT/AutomorphicForm/Stuff.lean` now imports\n`Mathlib.Order.SuccPred.Int`.\n- Mathlib now warns when a non-module file imports it, which fails `lake\ntest --iofail`; `FLTTest/MathlibCompatibility.lean` is now a module.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\n---------\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+          "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+          "html_url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+          "diff": null,
+          "files": null,
+          "repository_full_name": "ImperialCollegeLondon/FLT",
+          "comments": null,
+          "author": null,
+          "committer": null,
+          "created_at": "2026-10-16T15:52:45Z",
+          "git_author_email": null,
+          "display_url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+          "display_title": "chore: bump mathlib to 300d0e5, fix breaking changes (#1201)"
+        }
+      ]
+    },
+    {
+      "commits": [
+        {
+          "sha": "197f7f8dcc457f556754f826389d2ec7a0d85b92",
+          "message": "refactor: extract optimization constants for tagging (#7431)\n\nAnother follow on to #4950\n\nThis PR refactors some files so that the constant from the Optimization\nConstants tracking page has its own definition, so we can tag it and\nbetter link the two definitions.\n\nI used Claude Code to assist in identifying candidates for which this\ncould be done easily.",
+          "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+          "diff": null,
+          "files": null,
+          "repository_full_name": "google-deepmind/formal-conjectures",
+          "comments": null,
+          "author": null,
+          "committer": null,
+          "created_at": "2026-10-18T07:16:08Z",
+          "git_author_email": null,
+          "display_url": "https://github.com/google-deepmind/formal-conjectures/commit/197f7f8dcc457f556754f826389d2ec7a0d85b92",
+          "display_title": "refactor: extract optimization constants for tagging (#7431)"
+        }
+      ]
+    }
+  ],
+  "assessment": "The indexed Anthropic FLT, Imperial FLT and Formal Conjectures revisions match the already reviewed pins. This is a revision-bounded check, not a claim about unseen branches or unpublished proofs."
+}

@@ -1,0 +1,53 @@
+import SourceGammaOneHeckeAnalyticDivisor
+import SourceGammaOneAnalyticHeckeDivisors
+
+/-! DUB17/18 -> actual Gamma1 arithmetic realization -> Picard/H1 Hecke
+comparison. Extend the proved literal single-place correspondence by
+additivity to all finite analytic divisors, then pass to actual Picard
+classes. No divisor or Picard compatibility is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup SourceWeightTwoJacobi
+open scoped MatrixGroups
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+  (hT : ModularGroup.T ∈ Gamma1 M)
+  (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (p * M))
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M p) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M p
+  exact Fintype.ofFinite _
+
+include hH
+
+theorem heckeDivisor_mapDomain_analytic (c : ℍ →₀ ℤ) :
+    heckeDivisor ℂ M p (Finsupp.mapDomain (analyticPlace hT) c) =
+      Finsupp.mapDomain (analyticPlace hT) (analyticHeckeLinear M p c) := by
+  let A := (Finsupp.lmapDomain ℤ ℤ (analyticPlace hT)).toAddMonoidHom
+  have he : (heckeDivisor ℂ M p).comp A =
+      A.comp (analyticHeckeLinear M p).toAddMonoidHom := by
+    apply Finsupp.addHom_ext'
+    intro τ
+    apply AddMonoidHom.ext_int
+    change heckeDivisor ℂ M p (Finsupp.mapDomain (analyticPlace hT) (Finsupp.single τ 1)) =
+      Finsupp.mapDomain (analyticPlace hT) (analyticHeckeLinear M p (Finsupp.single τ 1))
+    rw [Finsupp.mapDomain_single, heckeDivisor_single_analytic_cosets M p hT hH,
+      analyticHeckeLinear_single]
+    exact (map_sum A
+      (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p =>
+        Finsupp.single (heckeCosetPoint M p τ q) (1 : ℤ)) Finset.univ).symm.trans
+          (by simp only [A, LinearMap.toAddMonoidHom_coe, Finsupp.lmapDomain_apply,
+            Finsupp.mapDomain_single])
+  exact DFunLike.congr_fun he c
+
+theorem analyticPicardHom_hecke (c : analyticDegree.ker) :
+    analyticPicardHom M hT (analyticHeckeDegreeZero M p c) =
+      heckePicard ℂ M p (analyticPicardHom M hT c) := by
+  change Pic0.mk (analyticDivisorHom M hT (analyticHeckeDegreeZero M p c)) =
+    heckePicard ℂ M p (Pic0.mk (analyticDivisorHom M hT c))
+  rw [heckePicard_mk]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  exact (heckeDivisor_mapDomain_analytic M p hT hH c.val).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

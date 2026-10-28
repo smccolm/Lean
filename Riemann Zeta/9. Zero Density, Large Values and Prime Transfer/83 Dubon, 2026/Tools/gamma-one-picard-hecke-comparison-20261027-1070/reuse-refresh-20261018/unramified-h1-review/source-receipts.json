@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ExtCitation_finrank_unramifiedContinuousClasses_eq_finrank_invariants.lean",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\unramified-h1-review\\S_ExtCitation_finrank_unramifiedContinuousClasses_eq_finrank_invariants.lean.txt",
+    "gitBlob": "f04f38d40056460b5dc22420ac47ac203a51cf92",
+    "bytes": 3106,
+    "sha256": "BF5FF6CB116F92E29A7550D4DC133D46A79A0B52EFDDC95B79D957F96EA83FBB"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ExtCitation_finrank_unramifiedContinuousClasses_eq_finrank_invariants_of_cyclic_of_depth.lean",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\unramified-h1-review\\S_ExtCitation_finrank_unramifiedContinuousClasses_eq_finrank_invariants_of_cyclic_of_depth.lean.txt",
+    "gitBlob": "7b9609afc980c4956fd12a618545942491f43159",
+    "bytes": 11191,
+    "sha256": "221466D1967E5B7670B989A970CBAF532DB059A181A68EFEBD09D914DCF59DC2"
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T04:45:31.116604+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRealPeriodH1Hecke",
+    "SourceGammaOneRealParabolicH1",
+    "SourceGammaOneRealParabolicHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodH1Hecke.lean",
+      "sha256": "0512058B4A029EF1305F035312BA9A7E80014ED72B215D0F780CE322F8D80588",
+      "oleanSha256": "7D3C4A834C1A29695174D0A92D8D958AF0821EA5D3E2863850411D41CFB18566",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodH1Hecke1071e.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodH1Hecke1071e.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicH1.lean",
+      "sha256": "57A62A81895F8B694E09B5EC28A33B25B8DF848C499367D87EB5CE4AD57A47AD",
+      "oleanSha256": "FB7E8A4BA227402DE95A92D6B91EEDB918EF9A269EAB61A3B48281D24FB456BD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicH11072a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicH11072a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHecke.lean",
+      "sha256": "4D13CC51426DB7B1E8BA1E13DE09E271C5355795B9682B6AA46401CB10801E9D",
+      "oleanSha256": "75EF293E7C804F917A180D8D204EC3C07CC5B7054AB787471821B19E0D91E4AA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHecke1073b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHecke1073b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_mem_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_range",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_mem_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_range",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv_cuspHeckeTrace"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHeckeAudit1.log",
+  "logSha256": "0C6C956643370125DFA7FF715FF15AECC587D9D8D809C52B730E9426E7445F55",
+  "auditSha256": "C38031A255C903C00ECC95233AD2F35172522035704412BB13D60324FC244A09",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHeckeScratchOwnership1074.log",
+  "ownershipSha256": "96B65A18B64EC668F3DA4405AA8458B53312032AB96E893B268682857AA19ACE",
+  "exhaustiveTheorems": 17,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicHeckeDependencyAudit1.log",
+  "dependencyAuditSha256": "F7BDC882F9A084DABBDD69AD58E592B1E2D487A2100392EB99D03D46A13C63BF",
+  "dependencyAuditSourceSha256": "B37D598921C57413E3CDD91EC5DC1EF72C2E99A2B383996A06B5A64CDBB4E067",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv_cuspHeckeTrace"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 homogeneous-coefficient arithmetic realization -> full/parabolic H1 comparison -> native real parabolic H1 equivalence and Hecke stability.",
+  "discharged": [
+    "The range of the actual real cusp-period map is exactly native trace-square-four parabolic H1.",
+    "That map is injective and gives an actual real linear equivalence.",
+    "The native H1 Hecke operator preserves the actual parabolic submodule for every nonzero index.",
+    "The actual real-period equivalence intertwines the restricted native Hecke correspondence."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Real scalar parabolic H1 comparison only. Complex/full coefficient, diamond, transpose and arithmetic comparisons, original all-weight characteristic-zero association and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-hecke-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "5BE55B7919DA7167DEFEE7183BA408FEA5F36B83789BFCEBF357ED68DF081AF7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,43 @@
+import Dubon2026.SourceGammaOneDivisorConorm
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual Gamma1 arithmetic/complex Picard torsion comparison.
+The actual conorm descends through the original degree-zero divisor quotients
+to an additive map from the actual arithmetic Gamma1 Picard group to the original complex Picard group.
+It preserves actual n-torsion. Injectivity and surjectivity on torsion still
+require principal-divisor and torsion descent; neither is assumed here.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+
+/-- The actual conorm restricted to original degree-zero divisors. -/
+def conormDegZero :
+    Divisor.degZero (K := Qbar) (F := FQ) →+ Divisor.degZero (K := ℂ) (F := FC) where
+  toFun D := ⟨conorm N D.val, by
+    change Divisor.degree (conorm N D.val) = 0
+    rw [degree_conorm]
+    exact D.property⟩
+  map_zero' := Subtype.ext (map_zero (conorm N))
+  map_add' D E := Subtype.ext (map_add (conorm N) D.val E.val)
+
+/-- The actual original arithmetic-to-complex degree-zero divisor-class map. -/
+def complexPicardMap : Pic0 Qbar FQ →+ Pic0 ℂ FC :=
+  QuotientAddGroup.map _ _ (conormDegZero N) (by
+    intro D hD
+    change Divisor.IsPrincipal (conorm N D.val)
+    exact isPrincipal_conorm N hD)
+
+theorem complexPicardMap_mk (D : Divisor.degZero (K := Qbar) (F := FQ)) :
+    complexPicardMap N (Pic0.mk D) = Pic0.mk (conormDegZero N D) := rfl
+
+theorem complexPicardMap_mem_torsion {n : ℕ} {x : Pic0 Qbar FQ}
+    (hx : x ∈ Pic0.torsion n) : complexPicardMap N x ∈ Pic0.torsion n := by
+  rw [Pic0.mem_torsion_iff] at hx ⊢
+  rw [← map_nsmul, hx, map_zero]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

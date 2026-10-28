@@ -1,0 +1,4 @@
+{
+  "reason": "Disambiguate the group inverse law from Matrix.mul_inv_rev.",
+  "sourceSha256": "6F1AD51D39F915E9EC4154B6AEA240C8052C6DAC6B2E67F52CF54D22BC59C0A3"
+}

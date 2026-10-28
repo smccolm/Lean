@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite homogeneous-coefficient Gamma1 Hecke realization -> finite parabolic H1 and Tate comparison.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-tate-h1-audit-route-1132b.json",
+    "sha256": "6B63FC6EC996E62A24361F904614B26F67F7BC8DCA62222487B04529A5E77DFA",
+    "review": {
+      "recordedUTC": "2026-10-28T06:21:22.945655+00:00",
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite homogeneous-coefficient Gamma1 Hecke realization -> finite parabolic H1 and Tate comparison.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-parabolic-route-1125.json",
+          "sha256": "4DCD07881ACFBE7F81059F3CDDE5C56C063BCE1C29FC72BD2E30F9E72E29D84A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-dual-reuse-1129.json",
+          "sha256": "EFEFCE5E3A9021F6EA570D73ED26729DD5F8CABF3A1F193E162E16C6F0934170"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-hecke-1-scratch-receipt.json",
+          "sha256": "25675B4DE3E5BF4831069124427B1F400C040668346FD4456E7D226774AE5B44"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealPeriodSurjectivity.lean",
+          "sha256": "EA2BE01343B9FB427D5AC677F8BE3342116D922544B2FC4A2063AC14FFCC1E27"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneIntegralParabolicLift.lean",
+          "sha256": "FD0DF1370CBAB07CA9720441719798C1C56EB3EE3053F5E5787442E1B6BEDC08"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePeriodLattice.lean",
+          "sha256": "D23E2B69333F3DC600F997B4342B256F624B388DA269E8134197C586CEC87095"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCharacters.lean",
+          "sha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodTateHecke.lean",
+          "sha256": "ED19FB00C7932651C57375A0B675B787FE16BBE1BBD68AD13266C84F5EEE075F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IsTensorProduct.lean",
+          "sha256": "BF32632358C0967B8C79B856785863580FD61B3EAC6BB69C5DCCD4D4BD6EDDAA"
+        }
+      ],
+      "shorterRoute": "The actual real-period surjectivity kills the kernel of the period map for integer parabolic characters. The existing integral lift then factors finite characters that vanish on parabolic and finite-order elements. Native H1 character equivalence realizes that literal submodule. The actual coset trace gives Hecke transpose. Native IsBaseChange lifts the dual from the integral lattice to the actual arithmetic Tate module using the already proved arithmetic period equivalence. No second integral Poincare-duality proof or tensor-coordinate argument is needed.",
+      "assumptionsToDischarge": [
+        "Every integer parabolic character factors through the actual integral-period lattice.",
+        "Every modulus character trivial on parabolic and finite-order elements is uniquely a character of that lattice.",
+        "The literal native finite H1 submodule with those conditions equals the lattice dual and is stable under every nonzero-index native Hecke operator.",
+        "The actual arithmetic Picard Tate module dual modulo p^n is equivalent to that native H1 submodule, and actual prime Picard Hecke duals intertwine the existing H1 Hecke operator, including primes dividing the level."
+      ],
+      "remaining": "The H1 target explicitly retains parabolic and finite-order vanishing. Full/parabolic passage, discharge of finite-order vanishing for the application, homogeneous coefficients, diamonds, coefficient/Frobenius/inertia realization, original all-weight characteristic-zero association and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+      "preservedFailures": "1125a lattice coercions, 1126a explicit smul binder, 1128a rewrite of native character application; immutable sources and diagnostics retained before correction. No source proposition or proof limit changed.",
+      "auditCorrection": "The all-nonzero-index restricted lattice/H1 identity is an independently audited consumer. The arithmetic Tate comparison uses the underlying H1 identity and then restricts it. Add the all-index restricted theorem as an explicit separate root; no dependency edge is dropped and no mathematical body changes."
+    }
+  },
+  "discharged": [
+    "Every integer parabolic character factors through the actual integral-period lattice.",
+    "Every modulus character trivial on parabolic and finite-order elements is uniquely a character of that lattice.",
+    "The literal native finite H1 submodule with those conditions equals the lattice dual and is stable under every nonzero-index native Hecke operator.",
+    "The actual arithmetic Picard Tate module dual modulo p^n is equivalent to that native H1 submodule, and actual prime Picard Hecke duals intertwine the existing H1 Hecke operator, including primes dividing the level."
+  ],
+  "remaining": "The H1 target explicitly retains parabolic and finite-order vanishing. Full/parabolic passage, discharge of finite-order vanishing for the application, homogeneous coefficients, diamonds, coefficient/Frobenius/inertia realization, original all-weight characteristic-zero association and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

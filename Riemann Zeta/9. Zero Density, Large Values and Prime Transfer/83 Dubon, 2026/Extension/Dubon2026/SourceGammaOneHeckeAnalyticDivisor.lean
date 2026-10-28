@@ -1,0 +1,77 @@
+import Dubon2026.SourceGammaOneHeckeCosetMultiplicity
+import Dubon2026.SourceGammaOneHeckeAnalyticFiber
+import Dubon2026.SourceGammaOneHeckePicard
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 Hecke comparison -> actual
+divisor correspondence. Finite analytic fiber exhaustion and exact coset
+multiplicities identify literal beta pullback with the full coset sum.
+Alpha pushforward gives the existing algebraic Hecke divisor operator. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup
+open scoped MatrixGroups
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+  (hT : ModularGroup.T ∈ Gamma1 M)
+  (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (p * M))
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M p) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M p
+  exact Fintype.ofFinite _
+
+include hT hH
+
+theorem heckeBeta_pullback_single_analytic (τ : ℍ) :
+    Divisor.finitePullbackAlong (heckeBeta ℂ M p) (heckeBeta_finite ℂ M p)
+        (Finsupp.single (analyticPlace hT τ) 1) =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p,
+        Finsupp.single (analyticPlace hH (heckeCosetPoint M p τ q)) 1 := by
+  classical
+  ext W
+  rw [Divisor.finitePullbackAlong_apply]
+  refine Eq.trans ?_ (map_sum (Finsupp.applyAddHom W)
+    (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p =>
+      Finsupp.single (analyticPlace hH (heckeCosetPoint M p τ q)) (1 : ℤ)) Finset.univ).symm
+  by_cases hW : Place.restrictAlong (heckeBeta ℂ M p)
+      (heckeBeta_finite ℂ M p) W = analyticPlace hT τ
+  · rw [hW, Finsupp.single_eq_same, one_mul]
+    obtain ⟨w, rfl⟩ := exists_analytic_place_of_restrict_heckeBeta M p hT hH W τ hW
+    have he : analyticPlace hT (levelRaiseMatrix p • w) = analyticPlace hT τ := by
+      rw [← analyticPlace_restrict_heckeBeta M p hT hH w]
+      exact hW
+    obtain ⟨g₀, hg₀⟩ := (analyticPlace_eq_iff_gamma1_orbit M hT τ
+      (levelRaiseMatrix p • w)).mp he.symm
+    rw [heckeBeta_ramification_eq_coset_card M p hT hH τ w g₀ hg₀]
+    change _ = ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p,
+      (Finsupp.single (analyticPlace hH (heckeCosetPoint M p τ q)) (1 : ℤ)) (analyticPlace hH w)
+    simp only [Finsupp.single_apply, Finset.sum_boole]
+  · rw [Finsupp.single_eq_of_ne hW, zero_mul]
+    symm
+    apply Finset.sum_eq_zero
+    intro q _
+    apply Finsupp.single_eq_of_ne
+    intro hq
+    apply hW
+    rw [hq]
+    exact heckeCosetPoint_restrict_beta M p hT hH τ q
+
+theorem heckeDivisor_single_analytic_cosets (τ : ℍ) :
+    heckeDivisor ℂ M p (Finsupp.single (analyticPlace hT τ) 1) =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p,
+        Finsupp.single (analyticPlace hT (heckeCosetPoint M p τ q)) 1 := by
+  change Divisor.geometricPushforwardAlong (heckeAlpha ℂ M p) (heckeAlpha_finite ℂ M p)
+    (Divisor.finitePullbackAlong (heckeBeta ℂ M p) (heckeBeta_finite ℂ M p)
+      (Finsupp.single (analyticPlace hT τ) 1)) = _
+  rw [heckeBeta_pullback_single_analytic M p hT hH]
+  refine (map_sum (Divisor.geometricPushforwardAlong (heckeAlpha ℂ M p)
+    (heckeAlpha_finite ℂ M p))
+      (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M p =>
+        Finsupp.single (analyticPlace hH (heckeCosetPoint M p τ q)) (1 : ℤ)) Finset.univ).trans ?_
+  apply Finset.sum_congr rfl
+  intro q _
+  refine (Divisor.geometricPushforwardAlong_single (heckeAlpha ℂ M p)
+    (heckeAlpha_finite ℂ M p) (analyticPlace hH (heckeCosetPoint M p τ q)) (1 : ℤ)).trans ?_
+  exact congrArg (fun P => Finsupp.single P (1 : ℤ))
+    (analyticPlace_restrict_heckeAlpha M p hT hH (heckeCosetPoint M p τ q))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

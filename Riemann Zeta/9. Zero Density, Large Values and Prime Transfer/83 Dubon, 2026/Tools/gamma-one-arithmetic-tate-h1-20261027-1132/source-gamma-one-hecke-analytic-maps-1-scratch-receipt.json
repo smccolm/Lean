@@ -1,0 +1,108 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T03:18:51.947798+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeAlphaGerms",
+    "SourceGammaOneHeckeStretchLaurent",
+    "SourceGammaOneHeckeBetaGerms",
+    "SourceGammaOneHeckeAnalyticPlaces",
+    "SourceGammaOneHeckeAnalyticFiber"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAlphaGerms.lean",
+      "sha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+      "oleanSha256": "3450CEB5C21980B2402926E29A563C9A7CB585275DD20CCF19CFB6AF72018C64",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAlphaGerms1030a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAlphaGerms1030a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeStretchLaurent.lean",
+      "sha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+      "oleanSha256": "B647D37C13CF08D3B44B234A4F17FDDE7CBB117FC2B67725B9A1B4FA0ED2FF9B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeStretchLaurent1031a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeStretchLaurent1031a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeBetaGerms.lean",
+      "sha256": "8AD0FF911F2508BFF59ABB753AB5E495649E18CDAB99789545478FF32D3EC216",
+      "oleanSha256": "EF024221365B0D8BD79405ACC2509FC1715CDD509C24C378A10DDC8507BC125A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeBetaGerms1032b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeBetaGerms1032b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticPlaces.lean",
+      "sha256": "C9BE12E38B0BDF2DF1BE0A3ACE0B59B51999EABBEB02225C95060072258E4098",
+      "oleanSha256": "FE9CC77E1C29C38DDCE1751A74CD9AAFAEF151E5C49DF23E3E6310AF6BF45AA5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticPlaces1033d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticPlaces1033d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticFiber.lean",
+      "sha256": "24897DE74DA5C48B9F87EB3E730D89C699E788A93F1BD2E42B13A7A3F860F6DB",
+      "oleanSha256": "C33904EE09B88047A96F8F3D42B78516FEDCFD29EC7DA85F9927008C64B4C38E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticFiber1034d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticFiber1034d.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsAudit1.log",
+  "logSha256": "A6187DCF455021D3B19B88EDD76BAEF9BCB5218638DBF76CC5ED9014C01344B5",
+  "auditSha256": "886066DE300C2249531D29A29C15AD8074A5042971054A77060A60E66F735A3B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsScratchOwnership1035.log",
+  "ownershipSha256": "7FAA9013C86C9B205AC8A60CA35B2614668A8AEE2A9A2CB4CC630815552A11E2",
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsDependencyAudit1.log",
+  "dependencyAuditSha256": "9A2D67255A2B5F8825608846989DD6D60CDCB31ED1D6A67C31C9D5D6ED68863B",
+  "dependencyAuditSourceSha256": "2E476DC68B55D24755C2B8627557E730A353A1BEC44FA9FFCA532A480D2B972E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> original all-weight arithmetic association -> arithmetic realization of actual finite Gamma1 homogeneous-coefficient Hecke characters -> actual Picard/H1 Hecke comparison -> actual alpha/beta analytic place maps and ramification.",
+  "discharged": "Actual alpha/beta analytic realizations, place restrictions and exact ramification ratios; beta fiber exhaustion using the native reverse monic j relation and actual finite-place exhaustion. No global orbit or cusp classification assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch-audited analytic Hecke maps only; promotion/assembled verification, exact coset multiplicities and Hecke-period compatibility, H1/diamond/transpose/arithmetic compatibility, original all-weight association and literal continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-analytic-maps-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "6752E2289F2A904DD5B88F39E4AAB8D538433B41D43CADDDB1239D997EA7A19F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

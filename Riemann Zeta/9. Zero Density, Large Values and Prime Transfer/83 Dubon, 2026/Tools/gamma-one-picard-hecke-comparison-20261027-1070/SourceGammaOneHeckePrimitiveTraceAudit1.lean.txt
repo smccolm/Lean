@@ -1,0 +1,73 @@
+import SourceGammaOneWeightTwoHeckeCosets
+import SourceGammaOneHeckePrimitiveDerivative
+import SourceGammaOneHeckeTraceCosets
+import SourceGammaOneCuspHeckeTrace
+import SourceGammaOneHeckePrimitiveTrace
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneWeightTwoHeckeCosets, `SourceGammaOneHeckePrimitiveDerivative, `SourceGammaOneHeckeTraceCosets, `SourceGammaOneCuspHeckeTrace, `SourceGammaOneHeckePrimitiveTrace]
+  let theorems : Array Name := #[`Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference]
+  let constructions : Array Name := #[`Dubon2026.sourceGammaOneWeightTwoHeckeCoset, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper, `Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Hecke Primitive Trace postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Hecke Primitive Trace theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE HECKE PRIMITIVE TRACE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+
+#lint in SourceGammaOneWeightTwoHeckeCosets
+#lint in SourceGammaOneHeckePrimitiveDerivative
+#lint in SourceGammaOneHeckeTraceCosets
+#lint in SourceGammaOneCuspHeckeTrace
+#lint in SourceGammaOneHeckePrimitiveTrace

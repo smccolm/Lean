@@ -1,0 +1,14 @@
+{
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "inventorySha256": "37CDA6EB39B624140373874E01BF0E307A348FADFDD69266DF5495250FBF1EDC",
+  "sourceFiles": 3072,
+  "gitBlobMatches": 3072,
+  "errors": [],
+  "metadataTrees": {
+    "repository": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "theorems": "cfd423af9efdf8241b65e6ccf79fed213940664e",
+    "theoremsTruncated": false
+  },
+  "method": "Compared every computed Git blob SHA1 and byte size in the exact-revision import closure with GitHub Git tree metadata; the separately retrieved complete Theorems subtree fills the truncated repository tree.",
+  "kernelReplay": false
+}

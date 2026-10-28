@@ -1,0 +1,57 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic realization -> arithmetic/complex Picard torsion comparison -> surjectivity -> reduced divisor fixed by finite torsion action -> support descends to lifted arithmetic places.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFixedReducedDivisor.lean",
+      "sha256": "F9497DC00304E0E283F702AE0C2751DA3DDF29F399F61A99C772D64F45D4F837"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalInvariantSupport.lean",
+      "sha256": "A13952918A62F2616C553BF1B81854A4CB3C69C6840277155D090CFD97117731"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexConstantAutomorphisms.lean",
+      "sha256": "BD1EB9A6006C28E30CCFB843EC493B92E117F3073D892EA7EDBCBBF2EAA9F922"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexTranslations.lean",
+      "sha256": "D01BAF5D9FF8C894ECC589782CC92C22340EC2B194538301CC64D7E148CBA48A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOffImageValues.lean",
+      "sha256": "F701CEA74E484DA7C3FAEA50F73AC73A18A6CB8A3991A32777861359759AC4FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTranslationOrbits.lean",
+      "sha256": "970877F6CB8B577CC97986C64E602344D68EB8D5F028095228FFB18BF8982615"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFiniteTorsionAction.lean",
+      "sha256": "8702F9E6441A3232C5C74A29E11CDF096CE12D5F97BDA03B375078608FB4B241"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalReducedRiemannRochSpace.lean",
+      "sha256": "91A0182819FE8B3C72997EB9DB32222C061C33709AC0C55329703DAD828ACEA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReducedSpaceMinimum.lean",
+      "sha256": "1426547135C32FF495D4E1B443E3CEB9C5B03F12C39FFA60918160AF09B2D5F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateDimensionBounds.lean",
+      "sha256": "EEFF334AC86A99E1B83854881B29B7479523F021290AA7A05551292451256923"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPicard.lean",
+      "sha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46"
+    }
+  ],
+  "shorterRoute": "Reuse the existing fixed Qbar-to-C embedding and complex automorphism restriction. Native Gamma1 coefficient action already acts on fields, places and Picard groups. Generic finite-coordinate dimension bounds and reduced-space minimum avoid a new genus or Riemann-Roch theorem. Native finite-action factorial and translation orbit arguments then descend support. For orbit distinctness, use the existing unique-coordinate-value theorem directly instead of introducing a Gamma1 evaluation abstraction.",
+  "assumptionsToDischarge": [
+    "Actual complex automorphisms fix arithmetic functions and lifted places.",
+    "Finite torsion makes a reduced representative invariant under a common factorial power.",
+    "Nonarithmetic support would have an infinite orbit in a finite divisor support.",
+    "Every complex nonzero-order torsion class has an arithmetic torsion preimage."
+  ],
+  "remaining": "No arithmetic Tate/Hecke or Galois realization follows until subsequent comparison consumers are proved. DUB17--20 remain OPEN."
+}

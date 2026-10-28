@@ -1,0 +1,14 @@
+import Mathlib.FieldTheory.RatFunc.AsPolynomial
+import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
+import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+import Theorems.Thm_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
+import P2M.Util
+namespace P2MW.S_AlgebraicCurve_RationalFunctionField_placeOfPoint_ne_placeInfty
+attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
+attribute [-simp] AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none
+
+open IsDedekindDomain AlgebraicCurve AlgebraicCurve.RationalFunctionField
+
+theorem solution (K : Type*) [Field K] [DecidableEq (RatFunc K)] (a : K) : placeOfPoint K a ≠ placeInfty K := by
+  rw [placeOfPoint_eq_ofHeightOneSpectrum]
+  exact fun h => AlgebraicCurve.RationalFunctionField.placeInfty_ne_ofHeightOneSpectrum K _ h.symm

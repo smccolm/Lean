@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean",
+    "sha": "1ad0b243f8806c06e69df6ef5c062db967cca2c7",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/RingTheory/ClassGroup/RelNorm.lean",
+    "sha": "f782fa7c162271aa52afd00c604014b310e295c6",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/RelNorm.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/RelNorm.lean"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "lake-manifest.json",
+    "sha": "0dbc0ac65a1ee0e98a92fe7f3de3b2a4de847af3",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/TauCetiProject/TauCeti/lake-manifest.json.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/lake-manifest.json"
+  },
+  {
+    "repository": "leanprover-community/mathlib4",
+    "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+    "path": "Mathlib/RingTheory/ClassGroup/ExtendedHom.lean",
+    "sha": "99abb1db0ae629b90a71a75706749edf39c78d01",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/leanprover-community/mathlib4/Mathlib/RingTheory/ClassGroup/ExtendedHom.lean.txt",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/Mathlib/RingTheory/ClassGroup/ExtendedHom.lean"
+  },
+  {
+    "repository": "leanprover-community/mathlib4",
+    "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+    "path": "LICENSE",
+    "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/leanprover-community/mathlib4/LICENSE.txt",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/LICENSE"
+  },
+  {
+    "repository": "leanprover-community/mathlib4",
+    "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+    "path": "lean-toolchain",
+    "sha": "2afd38716ad6182657562d3dac3c98461c1385f2",
+    "localPath": "E:/Lean/.tmp/dubon83/class-norm-reuse-20261023/leanprover-community/mathlib4/lean-toolchain.txt",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/lean-toolchain"
+  }
+]

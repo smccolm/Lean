@@ -1,0 +1,23 @@
+[
+  "AdelicAlgebraicFiniteSpan",
+  "AdelicClassicalReconstruction",
+  "AdelicCyclicLevelDescent",
+  "AdelicFiniteClassicalCusp",
+  "AdelicFiniteClassicalRestriction",
+  "AdelicFixedCoreFiniteDimension",
+  "AdelicFixedLowestClassical",
+  "AdelicFixedLowestDensity",
+  "AdelicInvariantReconstruction",
+  "AdelicLevelFiniteSpan",
+  "AdelicLevelProjection",
+  "AdelicLevelProjectionCore",
+  "ClosedRepresentationInvariants",
+  "CompactInvariantProjection",
+  "CompactOpenOrbitFinite",
+  "FiniteAdelicClassicalTranslate",
+  "InvariantProjectionPreservation",
+  "ProjectionCoreDensity",
+  "RationalCuspSlashSpan",
+  "RealPositiveSlashLift",
+  "RealWeightLiftLinear"
+]

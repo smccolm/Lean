@@ -1,0 +1,10 @@
+[
+  "FinitePlaceIntegralDeterminant",
+  "FinitePlaceGL2UnitReduction",
+  "FinitePlaceGL2ExactDoubleCoset",
+  "FinitePlaceIntegerUnits",
+  "FinitePlaceHeckeRepresentativeEntries",
+  "FinitePlaceHeckeRadialMatrices",
+  "FinitePlaceHeckeRadialDeterminant",
+  "FinitePlaceHeckeRadialCosets"
+]

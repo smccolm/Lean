@@ -1,0 +1,76 @@
+{
+  "retrievedUTC": "2026-10-25T00:14:09.602150+00:00",
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "path": "Nyll/JacobianVarieties/Picard/Representability/AlgEquivZeroCutAlgClosed.lean",
+      "sha256": "55401B94D782368D3E1C5D3F358FA6DAD4FE8A15E09BF3402BFA29A1DC223925",
+      "gitBlob": "b352fa6ea7bc782279db57a827dc612403876e02",
+      "bytes": 67558,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Picard/Representability/AlgEquivZeroCutAlgClosed.lean"
+    },
+    {
+      "path": "Nyll/JacobianVarieties/Pic0/DivisorialWeilPairingDataAlgClosed.lean",
+      "sha256": "C6193C2AB1200A749CEBB6F5F9A16CE1C0CEFCDB13CE67E5A145B0F98F085827",
+      "gitBlob": "a795f2d2ce4d3c55874a55b78d0dc17124559931",
+      "bytes": 10438,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Pic0/DivisorialWeilPairingDataAlgClosed.lean"
+    },
+    {
+      "path": ".github/workflows/proof-check.yml",
+      "sha256": "FBEB5621508004CCC5C03D2F8B87F6290D06F3F5ADDE85FD89707836649275BB",
+      "gitBlob": "a8cf5f4c85d44cca23a348623c84a77be92e1882",
+      "bytes": 5615,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/workflows/proof-check.yml"
+    },
+    {
+      "path": ".github/scripts/proof-manifest-config.json",
+      "sha256": "DB52707EDF163F4485843362FEA8199010EA6B45CD26449E0F135FEEE0890FBD",
+      "gitBlob": "a2a3c6c4a8c20a67af5272d142a33eee23013784",
+      "bytes": 2875,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/proof-manifest-config.json"
+    },
+    {
+      "path": ".github/scripts/publication/verification/README.md",
+      "sha256": "82ED63583FA98BF4B884BC053A28A5BF7EE0326A4AD68A929AD5E25B9164B567",
+      "gitBlob": "e80ffb6e58429d44a3e189f7ff09de6fea6a56df",
+      "bytes": 2405,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/README.md"
+    },
+    {
+      "path": ".github/scripts/publication/verification/scope.py",
+      "sha256": "7B103DAC437958F971609DB9282D43ED00DE0AB0AE06FF650B3ADF6746FBB1BD",
+      "gitBlob": "7e29942429b46f434378a908a389228a3bf88668",
+      "bytes": 4641,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/scope.py"
+    },
+    {
+      "path": ".github/scripts/publication/verification/verify.py",
+      "sha256": "73F6D1B1F13E8FF10984D1FFA51B57D65A153621858B9D6FDA3962A4DD9A0E0F",
+      "gitBlob": "c7b143f7abc94118207fa99ebbaf0e3af2a275b2",
+      "bytes": 27493,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/verify.py"
+    },
+    {
+      "path": ".github/scripts/publication/verification/ReplayKernel.lean",
+      "sha256": "068090945D168CB21C627A3DEEFACE6C27C4D46AB0901071F8CE36070D41A549",
+      "gitBlob": "ce0f184e556ab4ae178b1acf531806ab125a7d22",
+      "bytes": 2803,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/ReplayKernel.lean"
+    },
+    {
+      "path": ".github/scripts/publication/verification/ExportSelected.lean",
+      "sha256": "BA9A2426C26115A1F2843458DE7F8D613225720F592C0C325AAB9F555727F71F",
+      "gitBlob": "95f176d5b62dd67aea304c3e4bed5adeed7031db",
+      "bytes": 3702,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/ExportSelected.lean"
+    },
+    {
+      "path": ".github/scripts/publication/verification/Inventory.lean",
+      "sha256": "4449213056A1CF1C1CB4B7D175E00539B57BE9C2D8F862E04D90E7AD70353FBE",
+      "gitBlob": "d79b8c57df2e9a2bfa568fd97b9b3d8726d79058",
+      "bytes": 21975,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github/scripts/publication/verification/Inventory.lean"
+    }
+  ]
+}

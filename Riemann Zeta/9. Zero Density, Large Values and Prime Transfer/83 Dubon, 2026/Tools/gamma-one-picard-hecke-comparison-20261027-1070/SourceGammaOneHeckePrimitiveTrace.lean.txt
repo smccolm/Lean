@@ -1,0 +1,46 @@
+import SourceGammaOneHeckePrimitiveDerivative
+import SourceGammaOneCuspHeckeTrace
+import Dubon2026.SourceWeightTwoEndpointPeriods
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 Hecke comparison -> exact
+endpoint periods. The literal coset primitive and the normalized primitive
+of the native cusp trace have equal derivatives. Native local uniqueness
+and connectedness identify their endpoint differences. No Hecke-period
+compatibility or integration constant is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Filter Matrix.SpecialLinearGroup
+open scoped Topology MatrixGroups
+variable (M d : ℕ) [NeZero M] [NeZero d]
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+theorem heckePrimitiveTrace_cusp_hasDerivAt
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (τ : ℍ) :
+    HasDerivAt (fun z : ℂ => ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+      sourceWeightTwoPrimitive 1 f (heckeCosetPoint M d (ofComplex z) q))
+      (cuspHeckeTrace M d f τ) (τ : ℂ) := by
+  apply (heckePrimitiveTrace_hasDerivAt M d f τ).congr_deriv
+  simpa only [Finset.sum_apply] using congrFun (cuspHeckeTrace_coe M d f).symm τ
+
+theorem heckePrimitiveTrace_difference
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (τ₀ τ₁ : ℍ) :
+    (∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+      (sourceWeightTwoPrimitive 1 f (heckeCosetPoint M d τ₁ q) -
+        sourceWeightTwoPrimitive 1 f (heckeCosetPoint M d τ₀ q))) =
+      sourceWeightTwoPrimitive 1 (cuspHeckeTrace M d f) τ₁ -
+        sourceWeightTwoPrimitive 1 (cuspHeckeTrace M d f) τ₀ := by
+  have hT : ModularGroup.T ∈ Gamma1 M := by simp [Gamma1_mem, ModularGroup.T]
+  rw [Finset.sum_sub_distrib]
+  exact sourceUpperHalfPlane_primitive_difference
+    (F := fun τ : ℍ => ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+      sourceWeightTwoPrimitive 1 f (heckeCosetPoint M d τ q))
+    (G := sourceWeightTwoPrimitive 1 (cuspHeckeTrace M d f))
+    (fun τ => heckePrimitiveTrace_cusp_hasDerivAt M d f τ)
+    (fun τ => sourceWeightTwoPrimitive_hasDerivAt (cuspHeckeTrace M d f)
+      one_pos (hper hT) τ) τ₀ τ₁
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

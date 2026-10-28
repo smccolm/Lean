@@ -1,0 +1,32 @@
+{
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Basic.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-translation-reuse-20261023/Basic.lean.txt",
+      "sha": "9cdf4bb3a58491d48b8a3622ee10c9447cab2dea",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Basic.lean",
+      "bytes": 22269,
+      "sha256": "E5AB92608F96F702EC67E1FA3CAC1A4BAF992B82C1F615CB06C6CAB766237AE6"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Automorphism.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-translation-reuse-20261023/Automorphism.lean.txt",
+      "sha": "6a918253b033f368e1a4d3c855d5c87c2c2fcd34",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Translation/Automorphism.lean",
+      "bytes": 18364,
+      "sha256": "0A2B56C470257742021EA3E40E9DBA7F2958749020612C40E58D28ABD2346882"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Integrality.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-translation-reuse-20261023/Integrality.lean.txt",
+      "sha": "bb433cdc60b3f84879a732e2ffe6566d0173ea09",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Integrality.lean",
+      "bytes": 9983,
+      "sha256": "E69A02670A05A8ED4BDC8BEA59F15E70E332C4954B691B506EDEAA642F485E64"
+    }
+  ],
+  "verifiedUTC": "2026-10-23T10:17:18.258667+00:00",
+  "license": "Apache-2.0"
+}

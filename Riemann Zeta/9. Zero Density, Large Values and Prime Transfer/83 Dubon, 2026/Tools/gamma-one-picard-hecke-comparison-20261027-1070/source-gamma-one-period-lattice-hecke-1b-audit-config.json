@@ -1,0 +1,73 @@
+{
+  "modules": [
+    "SourceGammaOneCuspHeckeLinear",
+    "SourceGammaOnePeriodHeckeLattice"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference",
+    "Dubon2026.sourceSmul_slash_of_det_pos",
+    "Dubon2026.sourceWeightTwoIntegralLattice"
+  ],
+  "localModules": [
+    "SourceGammaOneCuspHeckeLinear",
+    "SourceGammaOnePeriodHeckeLattice",
+    "SourceGammaOneHeckePointTransition",
+    "SourceGammaOnePeriodNormalization",
+    "SourceGammaOneScalarHeckePeriods",
+    "SourceGammaOneHeckeCharacters",
+    "SourceGammaOneHolomorphicH1Hecke",
+    "SourceGammaOneWeightTwoHeckeCosets",
+    "SourceGammaOneHeckePrimitiveDerivative",
+    "SourceGammaOneHeckeTraceCosets",
+    "SourceGammaOneCuspHeckeTrace",
+    "SourceGammaOneHeckePrimitiveTrace"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneCuspHeckeLinear": "SourceGammaOneCuspHeckeLinear1048b",
+    "SourceGammaOnePeriodHeckeLattice": "SourceGammaOnePeriodHeckeLattice1049b"
+  }
+}

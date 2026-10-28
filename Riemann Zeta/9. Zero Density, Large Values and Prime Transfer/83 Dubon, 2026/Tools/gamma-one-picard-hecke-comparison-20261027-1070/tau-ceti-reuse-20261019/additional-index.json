@@ -1,0 +1,51 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\finite-adele-base-change.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/Global/Adeles/FiniteBaseChange.lean",
+    "gitBlob": "9f46d268a1188e80aec477bd9e92d18035adcee1",
+    "sha256": "962BDF49B811C09CBE0300A16431A4C607282DA3D47B4BC484D0273F62AF1860",
+    "bytes": 17065
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\adele-base-change.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/Global/Adeles/BaseChange.lean",
+    "gitBlob": "19d0dd21f90041386d7f4dfda6145c2c0ee78bf2",
+    "sha256": "89EEAE26FB582670DC24784039C05B9E208BB49D2471A74FFE549A8973FA6079",
+    "bytes": 14806
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-basic.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Basic.lean",
+    "gitBlob": "22be8f00c2a011a33e1934237b7c87ac5144bf14",
+    "sha256": "71286F2AF1A630615C1478989B1666A8470A3959C0C0F82D225A0278621037CC",
+    "bytes": 14126
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-integers.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Integers.lean",
+    "gitBlob": "aad7f9da34cf20d93c9d0402312815d78811a987",
+    "sha256": "9306E734C8A9249E0A2B0C9BB079E137AB6395E3FFB26C9F416F0B0F5D4D4426",
+    "bytes": 15713
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\semilocal-trace.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/NumberTheory/NumberField/LocalGlobal/Semilocal/Norm/Trace.lean",
+    "gitBlob": "f06656bd89354e84f68697f7faf7023ebc94d371",
+    "sha256": "1965156F26ADA8A712C514F1A85134A21A32BBDD6D61079434B950767CC44818",
+    "bytes": 6852
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\positive-lattice-finite.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/IntegralLattice/PosDef/Finite.lean",
+    "gitBlob": "d94812ae07ebfcc97d5f32e8936632d69fa6cb60",
+    "sha256": "4E50FDE8714F3FBB4FDFCB302DA3B7FBC54FDEE74736B7C0639095D03D1579AF",
+    "bytes": 7479
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\quadratic-positive-finite.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/51d586d1cdfd170cd66989af5fda3e6a9e07ca4d/TauCeti/LinearAlgebra/QuadraticForm/PosDef.lean",
+    "gitBlob": "c8782d6a75d94b56e44b8806fe854af60446b286",
+    "sha256": "45CA4B91A7E361EDEAF3E9FE8A2D83ED83593914C77A995A42A79A2646682C65",
+    "bytes": 7028
+  }
+]

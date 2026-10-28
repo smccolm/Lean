@@ -1,0 +1,28 @@
+import Dubon2026.SourceGammaOneNewCoordinatePlaces
+import Dubon2026.SourceConstantFieldTraceRegularity
+
+/-! DUB-17/18 -> arithmetic Picard injectivity -> principal-divisor descent.
+For a function regular at every complex place outside the original arithmetic
+image, its trace to the actual complex j-coordinate field is regular over
+every constant outside Qbar. Actual finite degree, transcendence, residue values and
+place extension discharge the generic trace-regularity premises.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (N : ℕ) [NeZero N]
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+
+theorem coordinate_trace_mem {c : ℂ} (hc : c ∉ Set.range OriginalConstantField.sigma)
+    (v' : Place ℂ FC) (hv' : 0 < v'.ord (jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC c))
+    (w : FC) (hw : ∀ W : Place ℂ FC, (∀ v, W ≠ liftPlace N v) → w ∈ W.toValuationSubring) :
+    ((Algebra.trace (IntermediateField.adjoin ℂ (Set.singleton (jCoordinateOver (Gamma1 N) ℂ))) FC w :
+      IntermediateField.adjoin ℂ (Set.singleton (jCoordinateOver (Gamma1 N) ℂ))) : FC) ∈ v'.toValuationSubring := by
+  letI := finiteDimensional_jCoordinateOver (Γ := Gamma1 N)
+    (by simp [Gamma1_mem, ModularGroup.T]) ℂ
+  apply SourceCurve.ConstantField.trace_mem_of_forall_place (jCoordinateOver (Gamma1 N) ℂ) (transcendental_jCoordinateOver (Gamma1 N) ℂ)
+  intro W hW
+  exact hw W (new_of_mem_coordinate_localRing N hc v' hv' W hW)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

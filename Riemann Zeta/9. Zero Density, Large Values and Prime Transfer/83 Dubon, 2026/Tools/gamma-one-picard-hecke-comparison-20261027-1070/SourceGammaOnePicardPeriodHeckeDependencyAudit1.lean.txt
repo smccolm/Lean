@@ -1,0 +1,36 @@
+import SourceGammaOneCentralStabilizerCard
+import SourceGammaOneHeckeActualStabilizers
+import SourceGammaOneHeckeUpperOrbits
+import SourceGammaOneHeckeCosetMultiplicity
+import SourceGammaOneHeckeAnalyticDivisor
+import SourceGammaOneAnalyticHeckeDivisors
+import SourceGammaOnePicardHeckeDivisors
+import SourceGammaOneEndpointHecke
+import SourceGammaOnePicardPeriodHecke
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke]
+  let localModules : Array Name := #[`SourceGammaOneCentralStabilizerCard, `SourceGammaOneHeckeActualStabilizers, `SourceGammaOneHeckeUpperOrbits, `SourceGammaOneHeckeCosetMultiplicity, `SourceGammaOneHeckeAnalyticDivisor, `SourceGammaOneAnalyticHeckeDivisors, `SourceGammaOnePicardHeckeDivisors, `SourceGammaOneEndpointHecke, `SourceGammaOnePicardPeriodHecke, `SourceGammaOneInvariantDivisorPeriod, `SourceGammaOnePrincipalMeromorphicRealization, `SourceGammaOneAnalyticAbelKernel, `SourceWeightTwoEvaluationFrame, `SourceWeightTwoEndpointImage, `SourceWeightTwoEndpointOpenImage, `SourceWeightTwoJacobiInversion, `SourceGammaOneJacobiInversion, `SourceGammaOneAnalyticPicardPresentation, `SourceGammaOnePicardPeriodKernel, `SourceGammaOnePicardPeriodEquiv, `SourceGammaOneHeckeAlphaGerms, `SourceGammaOneHeckeStretchLaurent, `SourceGammaOneHeckeBetaGerms, `SourceGammaOneHeckeAnalyticPlaces, `SourceGammaOneHeckeAnalyticFiber, `SourceGammaOneWeightTwoHeckeCosets, `SourceGammaOneHeckePrimitiveDerivative, `SourceGammaOneHeckeTraceCosets, `SourceGammaOneCuspHeckeTrace, `SourceGammaOneHeckePrimitiveTrace, `SourceGammaOneHeckePointTransition, `SourceGammaOnePeriodNormalization, `SourceGammaOneScalarHeckePeriods, `SourceGammaOneHeckeCharacters, `SourceGammaOneHolomorphicH1Hecke, `SourceGammaOneCuspHeckeLinear, `SourceGammaOnePeriodHeckeLattice, `SourceGammaOneHeckeGammaZeroMap, `SourceGammaOneHeckeGammaZeroPlaces, `SourceGammaOneHeckeGenericOrbits, `SourceGammaOneHeckeFiberPresentation, `SourceGammaOneHeckeGenericFiber, `SourceGammaOneHeckeJDegree, `SourceGammaOneHeckeAllFibers, `SourceGammaOneHeckeExactRamification, `SourceGammaOneHeckePlaceOrbits]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_surjective, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE PICARD PERIOD HECKE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Picard-period prime Hecke compatibility VALUE closure. Full parabolic/diamond/transpose/arithmetic comparisons and higher symmetric-power continuation remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,124 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T03:28:25.888723+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneWeightTwoHeckeCosets",
+    "SourceGammaOneHeckePrimitiveDerivative",
+    "SourceGammaOneHeckeTraceCosets",
+    "SourceGammaOneCuspHeckeTrace",
+    "SourceGammaOneHeckePrimitiveTrace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneWeightTwoHeckeCosets.lean",
+      "sha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+      "oleanSha256": "7A776919285B4EF13F109485C4CAC6957E5FDD337ED1E44EC9AB7BF0B94819D9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneWeightTwoHeckeCosets1036b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneWeightTwoHeckeCosets1036b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveDerivative.lean",
+      "sha256": "91F9AB63127EBB96F306387202FE42803160896536D417F73694CF0C108E398A",
+      "oleanSha256": "9C5E5C73ED90EBA4C3E5798A84332DA97F65AF072EC05C0C3290BBAF9CFB8E70",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveDerivative1037a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveDerivative1037a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceCosets.lean",
+      "sha256": "9E8B6A5674FF849E1D038E19C15C6F4459535D90000F140ACBA8CE925C30C27A",
+      "oleanSha256": "F2E83E094FFFF70AD07936EF398E9142036758372161C29FE18F8E29BBA0ED05",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceCosets1038b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceCosets1038b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeTrace.lean",
+      "sha256": "4C4E73D86CD07F58695B0D22EBAAFA00DCD75FCE330DC20FC1E50511C8D6427C",
+      "oleanSha256": "75486B6FE0A49830DBFCE676BD07C4E81596639A2FA0BD2256CE8E94002730F6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeTrace1039b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspHeckeTrace1039b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTrace.lean",
+      "sha256": "2D7C918AB0F872DB07087012DC256034F8FED66054E7F4F0E02D2D33CB6732B7",
+      "oleanSha256": "8A3C45B98D3E31EEB043F91EF1002E9BFE6F69BE66BAF473BB39FC826EABFC29",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTrace1040b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTrace1040b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceAudit1.log",
+  "logSha256": "BE70AE0BEBBC9432B61F2673375A007915724F1938633EFDC64A3C864781B900",
+  "auditSha256": "3DA419C29070C9F6C5C1B0BFD6F705C760EC7E8944D0073210BF16CC3661BE2E",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceScratchOwnership1041.log",
+  "ownershipSha256": "266A8BFA089278529F7BC367CC2A1D4C3590A4B1F5C6127813CC89E2C5D8750B",
+  "exhaustiveTheorems": 46,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceDependencyAudit1.log",
+  "dependencyAuditSha256": "1A7E92A63D7EDFA8329E8D73050E9B3C2D4DEBC7222E2537D803BFA3C6EB8543",
+  "dependencyAuditSourceSha256": "59F54D6EAB7FAEFE649D6CF8A0D02C9BDB88ACD46C37D429BF23C38ADC2F528E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference",
+    "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 homogeneous-coefficient Hecke character realization -> actual Picard/H1 Hecke compatibility -> literal weight-two coset trace and endpoint primitive identity.",
+  "discharged": "Representative independence and exact slash equivariance; inverse-dilation chain rule; finite real-coset identification; actual native cusp-trace realization; exact original primitive endpoint differences. No primitive, cusp-trace, or Hecke compatibility premise supplied.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch-audited analytic Hecke endpoint trace only; promotion and assembled verification, actual divisor fiber multiplicities, Picard/H1/diamond/transpose/arithmetic compatibility, original all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-primitive-trace-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "814F24FE467A9776DA3CCDB2F3D306B1AA13F24FEE8D1474C0590C59EC1918C8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

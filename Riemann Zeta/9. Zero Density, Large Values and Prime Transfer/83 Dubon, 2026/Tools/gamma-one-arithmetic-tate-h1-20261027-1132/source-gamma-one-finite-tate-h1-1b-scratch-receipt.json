@@ -1,0 +1,170 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv_apply"
+  ],
+  "recordedUTC": "2026-10-28T06:28:29.336067+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneIntegralCharacterFactor",
+    "SourceGammaOneFiniteParabolicCharacters",
+    "SourceGammaOneFiniteParabolicH1",
+    "SourceGammaOneFiniteParabolicHecke",
+    "SourceGammaOneArithmeticPeriodInclusion",
+    "SourceGammaOneArithmeticTateFiniteH1",
+    "SourceGammaOneArithmeticTateFiniteHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCharacterFactor.lean",
+      "sha256": "D2CFA2D75808346BEA2FAF8990C82F37F5327BD8234BB2AB8E39CFC36BC76F2C",
+      "oleanSha256": "EC617995359419AB9620F86A3925AFEA175D811602F36B95E9493F9C486195E3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCharacterFactor1125b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCharacterFactor1125b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicCharacters.lean",
+      "sha256": "721B30499E7DAE564C0B7B26C1F853E9EDBF64B4E378FB58DD9EC0A1B7520478",
+      "oleanSha256": "C6DBB44BB83A04C353DC1EBB34BAB6EC726A71D44F1722256598F2772D5579EA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicCharacters1126b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicCharacters1126b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicH1.lean",
+      "sha256": "42ACF0CEBF5EBFF193A3C02FC85B65F6E289ED1ED6627D9A785095BDC8AEB925",
+      "oleanSha256": "71B4BFE9D1628720AD3A6A758F3F04A9399AEB825BAB9FBB7F863FD45393D53C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicH11127a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicH11127a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicHecke.lean",
+      "sha256": "35C9183228274F1A2A36ADA64EBE18634A6CB8864B75218A0CA88E67E892B195",
+      "oleanSha256": "70A10CCFCD5948CF6A2546CDE71B1093272CEB316FA82CD6D63C0F03B62938DC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicHecke1128b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteParabolicHecke1128b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticPeriodInclusion.lean",
+      "sha256": "50FA56AB38748754B4114E1E528851F2EC3E047CA47BD5FFB8BD70F53BD7924E",
+      "oleanSha256": "FB880016932925AEC5D28047D775FFB9341860373E998B53F0C5FD21D314D8BE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticPeriodInclusion1129a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticPeriodInclusion1129a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteH1.lean",
+      "sha256": "E21DE5CD0D01B2137FED74C802E38C39171CD56FBD033D503ACF045632F21A10",
+      "oleanSha256": "D3127CC9A9FB843674F3284828FA2857B696818AC42F0586C94A5E1987183151",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteH11130a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteH11130a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteHecke.lean",
+      "sha256": "FD8106558F398F23D3FBC8FDEF3B212B91B5B4C786FBF7C570927BEF7C0CC324",
+      "oleanSha256": "F0C38809193548D339E1CD46E9D33CD7AE16D28707119D1EE77891C43B2DB629",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteHecke1131a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateFiniteHecke1131a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_finite_order",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_ker_le_integer_character",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integer_lattice_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke_restrict",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_isBaseChange",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke_restrict",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_finite_order",
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_ker_le_integer_character",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integer_lattice_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke_restrict",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_isBaseChange",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke_restrict"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateH1Audit1.log",
+  "logSha256": "0B005E9C4ECA45B80D935209D35A6D63525263F6196ECC6D3FFD8AEC676A56F6",
+  "auditSha256": "C6A8B658972E86324A63FAD4372A5A75DA683FA0BDA75C0CFADE1756B14671F1",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateH1ScratchOwnership1132.log",
+  "ownershipSha256": "1A498DA206DC97F5FB7D496070DF2388C9968DC8ADF0E0EB468FA8FBE74F1DFF",
+  "exhaustiveTheorems": 75,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 38,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateH1DependencyAudit1b.log",
+  "dependencyAuditSha256": "3E0C4AF5B8012358D72836E9354529CFC31AC6A078D1A7604CA30543D1580733",
+  "dependencyAuditSourceSha256": "D437609090747123055E58FA6A997B61394915EB46BFA7E17C519A0A7E21441C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke_restrict",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHecke",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke_restrict"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite homogeneous-coefficient Gamma1 Hecke realization -> finite parabolic H1 and Tate comparison.",
+  "discharged": [
+    "Every integer parabolic character factors through the actual integral-period lattice.",
+    "Every modulus character trivial on parabolic and finite-order elements is uniquely a character of that lattice.",
+    "The literal native finite H1 submodule with those conditions equals the lattice dual and is stable under every nonzero-index native Hecke operator.",
+    "The actual arithmetic Picard Tate module dual modulo p^n is equivalent to that native H1 submodule, and actual prime Picard Hecke duals intertwine the existing H1 Hecke operator, including primes dividing the level."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The H1 target explicitly retains parabolic and finite-order vanishing. Full/parabolic passage, discharge of finite-order vanishing for the application, homogeneous coefficients, diamonds, coefficient/Frobenius/inertia realization, original all-weight characteristic-zero association and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-tate-h1-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "F0238438271F6BF4C73ACCBD1F560B6FBDA7F32F7917A69471515C3EED80F5C7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

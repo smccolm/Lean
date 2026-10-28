@@ -1,0 +1,95 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T03:37:27.135163+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckePointTransition",
+    "SourceGammaOnePeriodNormalization",
+    "SourceGammaOneScalarHeckePeriods",
+    "SourceGammaOneHeckeCharacters",
+    "SourceGammaOneHolomorphicH1Hecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePointTransition.lean",
+      "sha256": "1B78FF2D22DCEE80FE9249B7324699A6F5ACF53F69C54747049634555A039355",
+      "oleanSha256": "5F15F365A30F152020BC82CAEF43B5207A01774443DB2C4F575F5A7E7FBD8131",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePointTransition1042a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePointTransition1042a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodNormalization.lean",
+      "sha256": "E7124E94979468E19405CD59AC28EFCF1D596FDB2449FFB971B791B1BC68C561",
+      "oleanSha256": "84B0C1D337FA4AAFB7906BE61766631AED11138256061DB491D5DB177A805762",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodNormalization1043a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodNormalization1043a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarHeckePeriods.lean",
+      "sha256": "9B322CD9FD35FA2E4F8C3CC8364161B8F1006C6828E6A3009744643D604D09E4",
+      "oleanSha256": "BC63096AFF7337547D033951410A6835C9FC8BF169AE66352230DB4B2A234A7D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarHeckePeriods1044a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarHeckePeriods1044a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCharacters.lean",
+      "sha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+      "oleanSha256": "DD9D7CB086CFCAEDE3E2688BF75490B663B97187E02030470FB42BFB93BC087F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCharacters1045a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCharacters1045a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1Hecke.lean",
+      "sha256": "C96C2A0245EDCF7258977615C3E1F29D15978EBFB9CBDE52106F5EFF180F5B19",
+      "oleanSha256": "F28CC530CAF95A8E06A37C9DD35FB80534F44FC1C20F6AD30B898F76260A8933",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1Hecke1046b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1Hecke1046b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition",
+    "Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one",
+    "Dubon2026.SourceFunctionField.GammaOne.primitive_one_period",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition",
+    "Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one",
+    "Dubon2026.SourceFunctionField.GammaOne.primitive_one_period",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeAudit1.log",
+  "logSha256": "4D1675C6AE778F744E1D00FD2436C6E0410FB6D719B2A2DA8B547A091A8876EA",
+  "auditSha256": "EBD7BCB2ED32374BBD6D6264F02B2D7D83903C05248E6DC40C3DAC71088E14EF",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeScratchOwnership1047.log",
+  "ownershipSha256": "ECAFC0478FCE0E49EDE44464F68EA84C145B59FB302E59C0FEC39F508D933719",
+  "exhaustiveTheorems": 21,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeDependencyAudit1.log",
+  "dependencyAuditSha256": "8C0163317F98831DE4BB5CAC33BCC70ECF3C5359ED75401940C99190BAD4AC62",
+  "dependencyAuditSourceSha256": "E22975FC546FF5A727D7AD1ABE8BCD7BA84B20304C63EEFC7855CA1C806BA2E1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 homogeneous-coefficient Hecke character realization -> actual Picard/H1 Hecke compatibility -> original weight-two periods versus native constant-coefficient Gamma1 H1 Hecke.",
+  "discharged": "Exact actual coset point transition; strict-width versus width-one primitive normalization; original scalar period trace; actual native H1 Hecke compatibility of original holomorphic periods. No comparison assumption remains in this consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch only pending production and assembled verification. Full anti-holomorphic/parabolic comparison, actual divisor Hecke fiber multiplicities, Picard/diamond/transpose/arithmetic compatibility, original all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-h1-hecke-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "B2B459916872E2387EEEF298B18E74F40E9057CE8E47F95AC4218FE480D40728",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

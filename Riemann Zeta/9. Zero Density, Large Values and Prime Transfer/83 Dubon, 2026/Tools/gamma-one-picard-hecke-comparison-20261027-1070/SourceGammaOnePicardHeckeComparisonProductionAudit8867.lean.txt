@@ -1,0 +1,303 @@
+import Dubon2026.SourceGammaOneInvariantDivisorPeriod
+import Dubon2026.SourceGammaOnePrincipalMeromorphicRealization
+import Dubon2026.SourceGammaOneAnalyticAbelKernel
+import Dubon2026.SourceWeightTwoEvaluationFrame
+import Dubon2026.SourceWeightTwoEndpointImage
+import Dubon2026.SourceWeightTwoEndpointOpenImage
+import Dubon2026.SourceWeightTwoJacobiInversion
+import Dubon2026.SourceGammaOneJacobiInversion
+import Dubon2026.SourceGammaOneAnalyticPicardPresentation
+import Dubon2026.SourceGammaOnePicardPeriodKernel
+import Dubon2026.SourceGammaOnePicardPeriodEquiv
+import Dubon2026.SourceGammaOneHeckeAlphaGerms
+import Dubon2026.SourceGammaOneHeckeStretchLaurent
+import Dubon2026.SourceGammaOneHeckeBetaGerms
+import Dubon2026.SourceGammaOneHeckeAnalyticPlaces
+import Dubon2026.SourceGammaOneHeckeAnalyticFiber
+import Dubon2026.SourceGammaOneWeightTwoHeckeCosets
+import Dubon2026.SourceGammaOneHeckePrimitiveDerivative
+import Dubon2026.SourceGammaOneHeckeTraceCosets
+import Dubon2026.SourceGammaOneCuspHeckeTrace
+import Dubon2026.SourceGammaOneHeckePrimitiveTrace
+import Dubon2026.SourceGammaOneHeckePointTransition
+import Dubon2026.SourceGammaOnePeriodNormalization
+import Dubon2026.SourceGammaOneScalarHeckePeriods
+import Dubon2026.SourceGammaOneHeckeCharacters
+import Dubon2026.SourceGammaOneHolomorphicH1Hecke
+import Dubon2026.SourceGammaOneCuspHeckeLinear
+import Dubon2026.SourceGammaOnePeriodHeckeLattice
+import Dubon2026.SourceGammaOneHeckeGammaZeroMap
+import Dubon2026.SourceGammaOneHeckeGammaZeroPlaces
+import Dubon2026.SourceGammaOneHeckeGenericOrbits
+import Dubon2026.SourceGammaOneHeckeFiberPresentation
+import Dubon2026.SourceGammaOneHeckeGenericFiber
+import Dubon2026.SourceGammaOneHeckeJDegree
+import Dubon2026.SourceGammaOneHeckeAllFibers
+import Dubon2026.SourceGammaOneHeckeExactRamification
+import Dubon2026.SourceGammaOneHeckePlaceOrbits
+import Dubon2026.SourceGammaOneCentralStabilizerCard
+import Dubon2026.SourceGammaOneHeckeActualStabilizers
+import Dubon2026.SourceGammaOneHeckeUpperOrbits
+import Dubon2026.SourceGammaOneHeckeCosetMultiplicity
+import Dubon2026.SourceGammaOneHeckeAnalyticDivisor
+import Dubon2026.SourceGammaOneAnalyticHeckeDivisors
+import Dubon2026.SourceGammaOnePicardHeckeDivisors
+import Dubon2026.SourceGammaOneEndpointHecke
+import Dubon2026.SourceGammaOnePicardPeriodHecke
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.period_mem_of_invariant_meromorphic_function
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modular_ratio_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modular_ratio_cusp_limit_of_order_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_invariant_meromorphic_of_principal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_period_mem_of_isPrincipal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem
+#print axioms Dubon2026.SourceWeightTwoJacobi.span_cusp_evaluation_eq_top
+#print axioms Dubon2026.SourceWeightTwoJacobi.analyticDegree_apply
+#print axioms Dubon2026.SourceWeightTwoJacobi.mem_endpointImage_iff
+#print axioms Dubon2026.SourceWeightTwoJacobi.endpoint_difference_mem_image
+#print axioms Dubon2026.SourceWeightTwoJacobi.endpointImage_mem_nhds_of_frame
+#print axioms Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_coordinates
+#print axioms Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_functional
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_endpoint_functional
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_ker_eq_periodHom_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor
+#print axioms Dubon2026.SourceWeightTwoJacobi.analyticDegree
+#print axioms Dubon2026.SourceWeightTwoJacobi.endpointCoordinates
+#print axioms Dubon2026.SourceWeightTwoJacobi.endpointImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDivisorHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta
+#print axioms Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference
+#print axioms Dubon2026.sourceGammaOneWeightTwoHeckeCoset
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition
+#print axioms Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.primitive_one_period
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace
+#print axioms Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroField_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_heckeGammaZero_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeGammaZero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.mem_heckeGammaZero_analyticPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.originalGammaZeroPlace_eq_of_heckePlace_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.stabilizer_eq_one_or_neg_one_of_card_two
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_orbit_of_generic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.j_rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.card_stabilizer_rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finite_orbitQuot
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_injective_of_generic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders_of_generic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_relative_indices_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.exists_fiber_order_sum_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finrank_over_j_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_bijective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_analytic_fiber_orders_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_mk_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.OrbitQuot
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.Fiber
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equivOfGeneric
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneInvariantDivisorPeriod, `Dubon2026.SourceGammaOnePrincipalMeromorphicRealization, `Dubon2026.SourceGammaOneAnalyticAbelKernel, `Dubon2026.SourceWeightTwoEvaluationFrame, `Dubon2026.SourceWeightTwoEndpointImage, `Dubon2026.SourceWeightTwoEndpointOpenImage, `Dubon2026.SourceWeightTwoJacobiInversion, `Dubon2026.SourceGammaOneJacobiInversion, `Dubon2026.SourceGammaOneAnalyticPicardPresentation, `Dubon2026.SourceGammaOnePicardPeriodKernel, `Dubon2026.SourceGammaOnePicardPeriodEquiv, `Dubon2026.SourceGammaOneHeckeAlphaGerms, `Dubon2026.SourceGammaOneHeckeStretchLaurent, `Dubon2026.SourceGammaOneHeckeBetaGerms, `Dubon2026.SourceGammaOneHeckeAnalyticPlaces, `Dubon2026.SourceGammaOneHeckeAnalyticFiber, `Dubon2026.SourceGammaOneWeightTwoHeckeCosets, `Dubon2026.SourceGammaOneHeckePrimitiveDerivative, `Dubon2026.SourceGammaOneHeckeTraceCosets, `Dubon2026.SourceGammaOneCuspHeckeTrace, `Dubon2026.SourceGammaOneHeckePrimitiveTrace, `Dubon2026.SourceGammaOneHeckePointTransition, `Dubon2026.SourceGammaOnePeriodNormalization, `Dubon2026.SourceGammaOneScalarHeckePeriods, `Dubon2026.SourceGammaOneHeckeCharacters, `Dubon2026.SourceGammaOneHolomorphicH1Hecke, `Dubon2026.SourceGammaOneCuspHeckeLinear, `Dubon2026.SourceGammaOnePeriodHeckeLattice, `Dubon2026.SourceGammaOneHeckeGammaZeroMap, `Dubon2026.SourceGammaOneHeckeGammaZeroPlaces, `Dubon2026.SourceGammaOneHeckeGenericOrbits, `Dubon2026.SourceGammaOneHeckeFiberPresentation, `Dubon2026.SourceGammaOneHeckeGenericFiber, `Dubon2026.SourceGammaOneHeckeJDegree, `Dubon2026.SourceGammaOneHeckeAllFibers, `Dubon2026.SourceGammaOneHeckeExactRamification, `Dubon2026.SourceGammaOneHeckePlaceOrbits, `Dubon2026.SourceGammaOneCentralStabilizerCard, `Dubon2026.SourceGammaOneHeckeActualStabilizers, `Dubon2026.SourceGammaOneHeckeUpperOrbits, `Dubon2026.SourceGammaOneHeckeCosetMultiplicity, `Dubon2026.SourceGammaOneHeckeAnalyticDivisor, `Dubon2026.SourceGammaOneAnalyticHeckeDivisors, `Dubon2026.SourceGammaOnePicardHeckeDivisors, `Dubon2026.SourceGammaOneEndpointHecke, `Dubon2026.SourceGammaOnePicardPeriodHecke]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.period_mem_of_invariant_meromorphic_function, `Dubon2026.SourceFunctionField.GammaOne.modular_ratio_smul, `Dubon2026.SourceFunctionField.GammaOne.modular_ratio_cusp_limit_of_order_zero, `Dubon2026.SourceFunctionField.GammaOne.exists_invariant_meromorphic_of_principal, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_period_mem_of_isPrincipal, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem, `Dubon2026.SourceWeightTwoJacobi.span_cusp_evaluation_eq_top, `Dubon2026.SourceWeightTwoJacobi.analyticDegree_apply, `Dubon2026.SourceWeightTwoJacobi.mem_endpointImage_iff, `Dubon2026.SourceWeightTwoJacobi.endpoint_difference_mem_image, `Dubon2026.SourceWeightTwoJacobi.endpointImage_mem_nhds_of_frame, `Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_coordinates, `Dubon2026.SourceWeightTwoJacobi.exists_degree_zero_endpoint_functional, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_endpoint_functional, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_surjective, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_surjective, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_ker_eq_periodHom_ker, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta, `Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition, `Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one, `Dubon2026.SourceFunctionField.GammaOne.primitive_one_period, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace, `Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_add, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_smul, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_apply, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_dualPeriod, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_mk, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along, `Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroField_le, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeGammaZero_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeGammaZero, `Dubon2026.SourceFunctionField.GammaOne.mem_heckeGammaZero_analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.originalGammaZeroPlace_eq_of_heckePlace_eq, `Dubon2026.SourceFunctionField.GammaOne.stabilizer_eq_one_or_neg_one_of_card_two, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_orbit_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.j_rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.card_stabilizer_rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finite_orbitQuot, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_surjective, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_injective_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders_of_generic, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_relative_indices_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.exists_fiber_order_sum_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finrank_over_j_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_bijective, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_analytic_fiber_orders_eq_index, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_mk_val, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit, `Dubon2026.SourceFunctionField.GammaOne.card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.hecke_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_stabilizer_ramification, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_upper_orbit, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_restrict_beta, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_ramification_eq_coset_card, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_pullback_single_analytic, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_single_analytic_cosets, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_apply, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear_single, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_mapDomain, `Dubon2026.SourceFunctionField.GammaOne.analyticDegree_hecke, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mapDomain_analytic, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_hecke, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke]
+  let constructions : Array Name := #[`Dubon2026.SourceWeightTwoJacobi.analyticDegree, `Dubon2026.SourceWeightTwoJacobi.endpointCoordinates, `Dubon2026.SourceWeightTwoJacobi.endpointImage, `Dubon2026.SourceFunctionField.GammaOne.analyticDivisorHom, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper, `Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace, `Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke, `Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.OrbitQuot, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.rep, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.Fiber, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equivOfGeneric, `Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equiv, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeLinear, `Dubon2026.SourceFunctionField.GammaOne.analyticHeckeDegreeZero]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE PICARD HECKE COMPARISON AUDIT PASS: {count} theorems including private/generated declarations. Actual original complex Picard-period and prime Hecke compatibility, plus holomorphic H1 Hecke compatibility. Full parabolic/diamond/transpose/arithmetic and all-weight association remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneInvariantDivisorPeriod
+
+#lint in Dubon2026.SourceGammaOnePrincipalMeromorphicRealization
+
+#lint in Dubon2026.SourceGammaOneAnalyticAbelKernel
+
+#lint in Dubon2026.SourceWeightTwoEvaluationFrame
+
+#lint in Dubon2026.SourceWeightTwoEndpointImage
+
+#lint in Dubon2026.SourceWeightTwoEndpointOpenImage
+
+#lint in Dubon2026.SourceWeightTwoJacobiInversion
+
+#lint in Dubon2026.SourceGammaOneJacobiInversion
+
+#lint in Dubon2026.SourceGammaOneAnalyticPicardPresentation
+
+#lint in Dubon2026.SourceGammaOnePicardPeriodKernel
+
+#lint in Dubon2026.SourceGammaOnePicardPeriodEquiv
+
+#lint in Dubon2026.SourceGammaOneHeckeAlphaGerms
+
+#lint in Dubon2026.SourceGammaOneHeckeStretchLaurent
+
+#lint in Dubon2026.SourceGammaOneHeckeBetaGerms
+
+#lint in Dubon2026.SourceGammaOneHeckeAnalyticPlaces
+
+#lint in Dubon2026.SourceGammaOneHeckeAnalyticFiber
+
+#lint in Dubon2026.SourceGammaOneWeightTwoHeckeCosets
+
+#lint in Dubon2026.SourceGammaOneHeckePrimitiveDerivative
+
+#lint in Dubon2026.SourceGammaOneHeckeTraceCosets
+
+#lint in Dubon2026.SourceGammaOneCuspHeckeTrace
+
+#lint in Dubon2026.SourceGammaOneHeckePrimitiveTrace
+
+#lint in Dubon2026.SourceGammaOneHeckePointTransition
+
+#lint in Dubon2026.SourceGammaOnePeriodNormalization
+
+#lint in Dubon2026.SourceGammaOneScalarHeckePeriods
+
+#lint in Dubon2026.SourceGammaOneHeckeCharacters
+
+#lint in Dubon2026.SourceGammaOneHolomorphicH1Hecke
+
+#lint in Dubon2026.SourceGammaOneCuspHeckeLinear
+
+#lint in Dubon2026.SourceGammaOnePeriodHeckeLattice
+
+#lint in Dubon2026.SourceGammaOneHeckeGammaZeroMap
+
+#lint in Dubon2026.SourceGammaOneHeckeGammaZeroPlaces
+
+#lint in Dubon2026.SourceGammaOneHeckeGenericOrbits
+
+#lint in Dubon2026.SourceGammaOneHeckeFiberPresentation
+
+#lint in Dubon2026.SourceGammaOneHeckeGenericFiber
+
+#lint in Dubon2026.SourceGammaOneHeckeJDegree
+
+#lint in Dubon2026.SourceGammaOneHeckeAllFibers
+
+#lint in Dubon2026.SourceGammaOneHeckeExactRamification
+
+#lint in Dubon2026.SourceGammaOneHeckePlaceOrbits
+
+#lint in Dubon2026.SourceGammaOneCentralStabilizerCard
+
+#lint in Dubon2026.SourceGammaOneHeckeActualStabilizers
+
+#lint in Dubon2026.SourceGammaOneHeckeUpperOrbits
+
+#lint in Dubon2026.SourceGammaOneHeckeCosetMultiplicity
+
+#lint in Dubon2026.SourceGammaOneHeckeAnalyticDivisor
+
+#lint in Dubon2026.SourceGammaOneAnalyticHeckeDivisors
+
+#lint in Dubon2026.SourceGammaOnePicardHeckeDivisors
+
+#lint in Dubon2026.SourceGammaOneEndpointHecke
+
+#lint in Dubon2026.SourceGammaOnePicardPeriodHecke

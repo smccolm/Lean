@@ -1,0 +1,73 @@
+import Dubon2026.SourceGammaOneArithmeticDivisors
+import Dubon2026.SourceGammaOnePrincipalDivisors
+import Dubon2026.SourceCurveRiemannRochSpace
+
+/-! DUB-17/18 -> arithmetic torsion surjectivity -> invariant reduced divisors.
+Exact identities for the existing original principal divisor and coefficient
+action allow the unique reduced Riemann--Roch representative to be transported.
+These concern literal normalized orders, not a chosen abstract divisor map.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (N : ℕ) [NeZero N] {L : Type*} [Field L] [Algebra ℚ L]
+local notation "F" => functionFieldOver (Gamma1 N) L
+
+theorem principal_mul {f g : F} (hf : f ≠ 0) (hg : g ≠ 0) :
+    principalDivisor N L (f * g) = principalDivisor N L f + principalDivisor N L g := by
+  ext v
+  exact v.ord_mul hf hg
+
+theorem principal_inv (f : F) :
+    principalDivisor N L f⁻¹ = -principalDivisor N L f := by
+  ext v
+  exact v.ord_inv f
+
+theorem principal_smul {a : L} (ha : a ≠ 0) (f : F) :
+    principalDivisor N L (a • f) = principalDivisor N L f := by
+  ext v
+  change v.ord (a • f) = v.ord f
+  rcases eq_or_ne f 0 with rfl | hf
+  · rw [smul_zero]
+  · rw [Algebra.smul_def, v.ord_mul ((map_ne_zero _).mpr ha) hf, v.ord_algebraMap, zero_add]
+
+theorem principal_arithmetic (τ : L ≃ₐ[ℚ] L) (f : F) :
+    arithmeticDivisorEquiv (Gamma1 N) τ (principalDivisor N L f) =
+      principalDivisor N L (arithmeticRingAut (Gamma1 N) τ f) := by
+  ext w
+  obtain ⟨v, rfl⟩ := (arithmeticPlaceEquiv (Gamma1 N) τ).surjective w
+  change arithmeticDivisorEquiv (Gamma1 N) τ (principalDivisor N L f)
+    (arithmeticPlace (Gamma1 N) τ v) = (arithmeticPlace (Gamma1 N) τ v).ord (arithmeticRingAut (Gamma1 N) τ f)
+  rw [arithmeticDivisorEquiv_apply, arithmeticPlace_ord_action]
+  rfl
+
+theorem mem_lSpace_add_principal_iff {D : Divisor L F} {u f : F} (hu : u ≠ 0) :
+    f ∈ LSpace (D + principalDivisor N L u) ↔ f * u ∈ LSpace D := by
+  rw [mem_lSpace_iff_ord, mem_lSpace_iff_ord]
+  rcases eq_or_ne f 0 with rfl | hf
+  · simp
+  · simp only [hf, mul_ne_zero hf hu, false_or]
+    constructor <;> intro h v <;> have hv := h v
+    all_goals
+      simp only [Finsupp.add_apply, principalDivisor_apply, v.ord_mul hf hu] at *
+      omega
+
+omit [NeZero N] in
+theorem mem_lSpace_arithmetic_iff (τ : L ≃ₐ[ℚ] L) {D : Divisor L F} {f : F} :
+    arithmeticRingAut (Gamma1 N) τ f ∈ LSpace (arithmeticDivisorEquiv (Gamma1 N) τ D) ↔
+      f ∈ LSpace D := by
+  rw [mem_lSpace_iff_ord, mem_lSpace_iff_ord, map_eq_zero_iff _ (arithmeticRingAut (Gamma1 N) τ).injective]
+  apply or_congr Iff.rfl
+  constructor
+  · intro h v
+    have hv := h (arithmeticPlace (Gamma1 N) τ v)
+    rwa [arithmeticDivisorEquiv_apply, arithmeticPlace_ord_action] at hv
+  · intro h w
+    obtain ⟨v, rfl⟩ := (arithmeticPlaceEquiv (Gamma1 N) τ).surjective w
+    change -(arithmeticDivisorEquiv (Gamma1 N) τ D (arithmeticPlace (Gamma1 N) τ v)) ≤
+      (arithmeticPlace (Gamma1 N) τ v).ord (arithmeticRingAut (Gamma1 N) τ f)
+    rw [arithmeticDivisorEquiv_apply, arithmeticPlace_ord_action]
+    exact h v
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

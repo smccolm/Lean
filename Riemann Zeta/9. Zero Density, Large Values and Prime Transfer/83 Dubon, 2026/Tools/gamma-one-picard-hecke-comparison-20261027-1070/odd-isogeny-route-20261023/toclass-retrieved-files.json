@@ -1,0 +1,52 @@
+[
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean",
+    "sha": "adfff91183f70019a3b5e881b16001eba7fe3e24",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean"
+  },
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean",
+    "sha": "6ceed88c480c399df3845cd457c3390970ca0922",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/ClassGroup/Basic.lean",
+    "sha": "7b63e5ebe35329d369240a5935a5d6bf44e14cbd",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/Basic.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/FractionalIdeal/Divisibility.lean",
+    "sha": "43c7537f02bb1e34f03665c233b623872ad8a3e4",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/FractionalIdeal/Operations.lean",
+    "sha": "22445b58b0a847e7db9a5f837a9da58f796e12a5",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Operations.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/Ideal/Quotient/Invertible.lean",
+    "sha": "fba682947e46cdc3f61d94eb1a97f82757fea917",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/PicardGroup/Quotient.lean",
+    "sha": "e5815c6af22d663496ba1d9626711f08e51ccee9",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/PicardGroup/Quotient.lean"
+  },
+  {
+    "path": "TauCeti/RingTheory/Ideal/Quotient/Finite.lean",
+    "sha": "ff1a4059bf3c694ce37da4237aa43836a4ed3f9c",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Finite.lean"
+  },
+  {
+    "path": "TauCeti/LinearAlgebra/Dimension/Tower.lean",
+    "sha": "21999b5522eab94ba36b653daef23f42bdf61c37",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/LinearAlgebra/Dimension/Tower.lean"
+  },
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+    "sha": "18b25c4b921aa48d54688a1e2ab8f69c566adf91",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean"
+  }
+]

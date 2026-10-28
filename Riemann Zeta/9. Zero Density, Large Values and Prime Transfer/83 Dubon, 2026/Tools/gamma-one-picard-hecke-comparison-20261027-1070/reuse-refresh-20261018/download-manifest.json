@@ -1,0 +1,19 @@
+[
+  {
+    "file": "tauceti-tree.json",
+    "url": "https://api.github.com/repos/TauCetiProject/TauCeti/git/trees/be0bb2dd8696f3b805c738860b1c4c4257f759e8?recursive=1",
+    "bytes": 5174753,
+    "sha256": "AA2A9E99FFA45A551A1AC601D3E6158B919DD280056D7A015E4D8E9ED179C933"
+  },
+  {
+    "file": "tauceti-lean-toolchain.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/be0bb2dd8696f3b805c738860b1c4c4257f759e8/lean-toolchain",
+    "bytes": 29,
+    "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4"
+  },
+  {
+    "file": "flt-assumptions.lean.txt",
+    "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Assumptions.lean",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

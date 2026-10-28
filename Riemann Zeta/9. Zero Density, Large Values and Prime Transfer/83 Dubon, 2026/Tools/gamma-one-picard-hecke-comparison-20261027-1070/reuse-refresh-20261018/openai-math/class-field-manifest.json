@@ -1,0 +1,47 @@
+[
+  {
+    "path": "DukePrimeDegree/Arithmetic/ClassFieldBridge.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldBridge.lean",
+    "bytes": 3284,
+    "sha256": "E8AABB1008DB985364EAD411363FEBD3D15EFC98DCB1755956EDD4E1E36ABF97",
+    "gitBlob": "f15bc48f03ba8fb36fd30e0dd52d622d367a0777",
+    "gitBlobVerified": true,
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldBridge.lean.txt"
+  },
+  {
+    "path": "DukePrimeDegree/Arithmetic/ClassFieldCongruences.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldCongruences.lean",
+    "bytes": 2873,
+    "sha256": "AC6B308D6BC62FFD6907216825A59857E705C789B677D4664E73E3671F94959F",
+    "gitBlob": "c0d2db8367db120a7f294e282fe863863dabd4b0",
+    "gitBlobVerified": true,
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldCongruences.lean.txt"
+  },
+  {
+    "path": "DukePrimeDegree/Arithmetic/ClassFieldKernel.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldKernel.lean",
+    "bytes": 2198,
+    "sha256": "15F9A5ACA5FEC6F72799A7BB6593ED3D559F108E788CC4029A54EC923FCC256F",
+    "gitBlob": "61caff3d8a5945bd9c2478ec8cb1dd38125c3b5b",
+    "gitBlobVerified": true,
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldKernel.lean.txt"
+  },
+  {
+    "path": "DukePrimeDegree/Arithmetic/ClassFieldModulus.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldModulus.lean",
+    "bytes": 3406,
+    "sha256": "DA9750ECB98945340C401974346F8C582DDF5CC8AD2A6262557D5D2C3E2A2DB4",
+    "gitBlob": "42afae29b207d93cea35ed5509d43f5c5e37a58b",
+    "gitBlobVerified": true,
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldModulus.lean.txt"
+  },
+  {
+    "path": "DukePrimeDegree/Arithmetic/ClassFieldRealization.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DukePrimeDegree/Arithmetic/ClassFieldRealization.lean",
+    "bytes": 3739,
+    "sha256": "4C4DDCFA43A11E53E5AD74C0E650C8EA23EA4F86209FE1C3E1386B5C3943D920",
+    "gitBlob": "991a81bbd844207cac32dae69cf780d1da2efe72",
+    "gitBlobVerified": true,
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\openai-math\\ClassFieldRealization.lean.txt"
+  }
+]

@@ -1,0 +1,39 @@
+Checked 347 declarations; all 37 sorry occurrences have Prop targets.
+theorem PotentialAutomorphy.automorphy_lifting.{u_1} : ∀ (F : Type u_1) [inst : Field F] [inst_1 : NumberField F],
+  IsCMField F ∨ IsTotallyReal F →
+    ∀ (c : Gal(F/ℚ)),
+      (∀ (τ : F →+* ℂ), ComplexEmbedding.IsConj τ c) →
+        ∀ (p n : ℕ) [inst_2 : Fact (Nat.Prime p)] [inst_3 : NeZero n] (ρ : GaloisRepresentation F (PadicAlgCl p) n)
+          (rbar : GaloisRepresentation F (ResidueField p) n),
+          rbar.toMatrixRep.IsResidualOf ρ.toMatrixRep →
+            ρ.toMatrixRep.IsUnramifiedAlmostEverywhere →
+              (∀ (τ : F →+* PadicAlgCl p), IsCrystallineAt ρ.toMatrixRep τ) →
+                IsUnramifiedPrime F p →
+                  rbar.toMatrixRep.IsAbsolutelyIrreducible →
+                    rbar.toMatrixRep.IsDecomposedGeneric p →
+                      IsEnormous (ResidueField p) n p (Subgroup.map rbar.toMatrixRep (cyclotomicKernel F p)) →
+                        (∃ σ ∉ cyclotomicKernel F p, ∃ a, rbar σ = (Matrix.GeneralLinearGroup.scalar (Fin n)) a) →
+                          n ^ 2 < p →
+                            ∀ (π : CuspidalAutomorphicRepresentation F n) (weight : Weight F n),
+                              π.HasWeight weight →
+                                (∀ (τ : F →+* ℂ),
+                                    ↑weight τ 0 + ↑weight (τ.comp c.toRingEquiv.toRingHom) 0 - ↑weight τ (Fin.rev 0) -
+                                        ↑weight (τ.comp c.toRingEquiv.toRingHom) (Fin.rev 0) <
+                                      ↑p - 2 * ↑n) →
+                                  ∀ (ι : PadicAlgCl p ≃+* ℂ),
+                                    (∃ rπ, IsAssociated rπ π ι ∧ rbar.toMatrixRep.IsResidualOf rπ.toMatrixRep) →
+                                      (∀ (τ : F →+* PadicAlgCl p),
+                                          HasHodgeTateWeights τ ρ.toMatrixRep
+                                            (weight.hodgeTateWeights (ι.toRingHom.comp τ))) →
+                                        (∀ (v : PotentialAutomorphy.FinitePlace F),
+                                            v.LiesAbove p → π.IsUnramifiedAt v) →
+                                          ∃ π',
+                                            π'.HasWeight weight ∧
+                                              IsAssociated ρ π' ι ∧
+                                                ∀ (v : PotentialAutomorphy.FinitePlace F),
+                                                  v.LiesAbove p ∨ ρ.toMatrixRep.IsUnramifiedAt v ∧ π.IsUnramifiedAt v →
+                                                    π'.IsUnramifiedAt v :=
+fun F [Field F] [NumberField F] hF c hc p n [Fact (Nat.Prime p)] [NeZero n] ρ rbar h_reduction h_unramified
+    h_crystalline h_p_unramified h_irreducible h_generic h_enormous h_scalar h_p_large π weight h_weight h_weight_range
+    ι h_residual_automorphy h_hodge_tate h_spherical =>
+  sorry

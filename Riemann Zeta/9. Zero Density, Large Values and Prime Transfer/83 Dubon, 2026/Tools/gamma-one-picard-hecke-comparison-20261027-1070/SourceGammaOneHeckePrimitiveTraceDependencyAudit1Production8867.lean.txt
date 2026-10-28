@@ -1,0 +1,32 @@
+import Dubon2026.SourceGammaOneWeightTwoHeckeCosets
+import Dubon2026.SourceGammaOneHeckePrimitiveDerivative
+import Dubon2026.SourceGammaOneHeckeTraceCosets
+import Dubon2026.SourceGammaOneCuspHeckeTrace
+import Dubon2026.SourceGammaOneHeckePrimitiveTrace
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneWeightTwoHeckeCosets, `Dubon2026.SourceGammaOneHeckePrimitiveDerivative, `Dubon2026.SourceGammaOneHeckeTraceCosets, `Dubon2026.SourceGammaOneCuspHeckeTrace, `Dubon2026.SourceGammaOneHeckePrimitiveTrace]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneWeightTwoDiagonal_invariant, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_mk, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_out, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_dilation, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.mem_heckeGLUpper_iff, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv_mk, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_finiteRelIndex, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace_coe, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_cusp_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference, `Dubon2026.sourceGammaOneWeightTwoHeckeCoset, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint, `Dubon2026.SourceFunctionField.GammaOne.heckeGLUpper, `Dubon2026.SourceFunctionField.GammaOne.realGroupEquiv, `Dubon2026.SourceFunctionField.GammaOne.heckeCosetGLEquiv, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeDiagonal, `Dubon2026.SourceFunctionField.GammaOne.cuspHeckeTrace, `Dubon2026.sourceGammaOneHeckeConjugation_matrix, `Dubon2026.sourceGammaOneHeckeUpper_finiteIndex, `Dubon2026.sourceWeightTwoPrimitive_hasDerivAt, `Dubon2026.sourceHasDerivAt_comp_smul, `Dubon2026.sourceUpperHalfPlane_primitive_difference, `CuspForm.trace, `Dubon2026.SourceFunctionField.GammaOne.hper]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE PRIMITIVE TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual native cusp-trace endpoint difference and coset slash-equivariance VALUE closures. Actual divisor Hecke multiplicities and Picard/H1/arithmetic compatibility remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

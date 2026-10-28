@@ -1,0 +1,13 @@
+[
+  "GL2UnitDiagonalPair",
+  "ValuationGL2Pivot",
+  "GL2CoordinatePivot",
+  "FinitePlaceIntegralElementary",
+  "FinitePlaceGL2IntegralReduction",
+  "FinitePlaceGL2DiagonalReduction",
+  "FinitePlaceUniformizer",
+  "FinitePlaceHeckeDiagonalPowers",
+  "FinitePlaceGL2Cartan",
+  "UnitaryDoubleCosetCoefficient",
+  "AdelicLocalCartanCoefficient"
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Formation/AbsoluteArtinMap.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Formation/AbsoluteArtinMap.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Formation\\AbsoluteArtinMap.lean.txt",
+    "bytes": 23591,
+    "gitBlob": "4c5d5a8508939c344f4d83ba56cf1cc5ae57bd9f",
+    "sha256": "FF7164D9B65DC2F8043D4447012D85BEA3E36B9E17460DA9946ED4D847F833DA"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleClass/Norm.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Global/IdeleClass/Norm.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\IdeleClass\\Norm.lean.txt",
+    "bytes": 22406,
+    "gitBlob": "51d6e99ae0114ebc2e3c2a30dc290d948965ef85",
+    "sha256": "5F19A0A65FC2EA6A2FA614D5BFAC89D53E13927137559A05DDA57D23BB24BB6F"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Ideles/GaloisModule.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Global/Ideles/GaloisModule.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\Ideles\\GaloisModule.lean.txt",
+    "bytes": 5627,
+    "gitBlob": "7fa3e3f815f6188edc2e87569bb985e1426c7164",
+    "sha256": "438F500AE06FABF29DA23E5A9FC4A457408B067E6C5D0CEE72516E50CE4FBC00"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Ideles.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Ideles.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\Kummer\\Ideles.lean.txt",
+    "bytes": 14076,
+    "gitBlob": "a216b81e5f6d33f8b5693bb3896a78ecad109cd2",
+    "sha256": "691B1AA0A249A62CB2F123AD5710AC7EFBF26551E0A3B4A7D069CA787FC9EF0B"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Index.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Global/Kummer/Index.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\Kummer\\Index.lean.txt",
+    "bytes": 11253,
+    "gitBlob": "495c376ee026205bb712fa7e2dbee2b0a2209da4",
+    "sha256": "3FE468FE4AC653C8F18FAC7A6690AAE1D0C510655C3DC347AB046AD58BA1C08F"
+  },
+  {
+    "path": "TauCeti/NumberTheory/ClassFieldTheory/Global/SIdeles.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/NumberTheory/ClassFieldTheory/Global/SIdeles.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\NumberTheory\\ClassFieldTheory\\Global\\SIdeles.lean.txt",
+    "bytes": 21830,
+    "gitBlob": "1994060f6c05f8984def9a96d0a46fb562cdbf26",
+    "sha256": "D20214DF091EC55CA3F73ECD98CDAA37C8766D9CE33764E84360D8E1B419F1D6"
+  },
+  {
+    "path": "TauCeti/RepresentationTheory/Homological/ContCohomology/Resolution/Graded.lean",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/TauCeti/RepresentationTheory/Homological/ContCohomology/Resolution/Graded.lean",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\TauCeti\\RepresentationTheory\\Homological\\ContCohomology\\Resolution\\Graded.lean.txt",
+    "bytes": 29073,
+    "gitBlob": "f998ce8f1eace085001a69848b76d7c2c67e899e",
+    "sha256": "C4D0AFE8E4AF62CEBA9C65B94672AB240B94A95AA49959DE0F090D78EF10C83F"
+  },
+  {
+    "path": "lean-toolchain",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/0b4e4720467a7a2bd42af383a284f4246a49aaab/lean-toolchain",
+    "file": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\tau-update-192941\\lean-toolchain.txt",
+    "bytes": 29,
+    "gitBlob": "2afd38716ad6182657562d3dac3c98461c1385f2",
+    "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4"
+  }
+]

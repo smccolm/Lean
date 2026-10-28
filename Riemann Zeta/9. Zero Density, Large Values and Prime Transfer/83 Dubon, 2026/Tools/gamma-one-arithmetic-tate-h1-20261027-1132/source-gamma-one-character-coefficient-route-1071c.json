@@ -1,0 +1,6 @@
+{
+  "reason": "The two specialized real-coordinate proofs reached the unchanged default whnf heartbeat limit. Factor the native character-coordinate identity over an arbitrary commutative coefficient ring, matching the already proved generic sourceGammaOneConstantHeckeH1_hom_apply. Specialize only for the real-period consumer.",
+  "proofLimitsChanged": false,
+  "sourceContractChanged": false,
+  "dependency": "DUB17/18 -> actual Gamma1 full/parabolic comparison -> real parabolic stability."
+}

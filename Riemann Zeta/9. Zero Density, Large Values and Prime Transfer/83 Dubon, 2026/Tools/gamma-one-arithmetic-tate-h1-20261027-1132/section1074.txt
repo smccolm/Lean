@@ -1,0 +1,14 @@
+### Original self-adjoint local spherical Hecke action — 8 October 2026
+
+Eight further production modules derive exact original unitary coset-trace pairings. A literal matrix identity writes the inverse Hecke diagonal as its coordinate-swap conjugate times the genuine inverse scalar; the swap lies in the actual local level group at good primes. The already-proved trivial local central character therefore yields symmetry of the original intrinsic Hecke trace on actual local fixed vectors. The genuine one-place unitary actions define bounded operators and their original p+1-term trace, with its explicit norm bound. The original local level-fixed space is closed and complete, and the actual cusp generator belongs to it by the proved local insertion into the full finite level group. Restriction of the genuine p^(-1/2)-normalized Hecke operator to this space is consequently a self-adjoint continuous linear operator. For an original primitive cusp form its nonzero fixed-space generator has exactly the original normalized Fourier coefficient as eigenvalue. No symmetry on the entire ambient Hilbert space or local irreducible classification is asserted.
+
+The original local fixed Hilbert space and its genuine bounded self-adjoint normalized Hecke operator are proved, with the original primitive Fourier eigenvector. Local Cartan and spherical representation/Euler-factor classification, the automorphic non-CM bridge and higher symmetric automorphy/continuation still require proofs. Full adelic Hilbert irreducibility remains proved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicLocalBoundedHecke](Extension/Dubon2026/AdelicLocalBoundedHecke.lean).
+- [AdelicLocalFixedSpace](Extension/Dubon2026/AdelicLocalFixedSpace.lean).
+- [AdelicLocalHeckeSymmetric](Extension/Dubon2026/AdelicLocalHeckeSymmetric.lean).
+- [AdelicLocalSphericalHecke](Extension/Dubon2026/AdelicLocalSphericalHecke.lean).
+- [FinitePlaceHeckeSwap](Extension/Dubon2026/FinitePlaceHeckeSwap.lean).
+- [FinitePlaceHeckeSymmetric](Extension/Dubon2026/FinitePlaceHeckeSymmetric.lean).
+- [GL2DiagonalSwap](Extension/Dubon2026/GL2DiagonalSwap.lean).
+- [UnitaryCosetTracePairing](Extension/Dubon2026/UnitaryCosetTracePairing.lean).

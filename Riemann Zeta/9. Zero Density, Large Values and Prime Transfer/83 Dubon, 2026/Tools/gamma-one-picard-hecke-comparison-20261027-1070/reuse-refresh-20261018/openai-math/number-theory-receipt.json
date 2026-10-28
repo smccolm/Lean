@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://api.github.com/repos/openai/math/git/trees/1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "file": "parent-of-lean-tree.json",
+    "bytes": 2263,
+    "sha256": "0647109FAE7A95EDAF248F71FE58EE38D0500D18DEAE25636A3F24BA6F624745"
+  },
+  {
+    "url": "https://api.github.com/repos/openai/math/git/trees/b67b84636537041bf8da1e7263a827a5ab7ffba4",
+    "file": "parent-of-OAI-tree.json",
+    "bytes": 2697,
+    "sha256": "94A586D0EC310F482AE1F0F917D09C69F32A4C62B440FCBB6063CFD1C86C85D7"
+  },
+  {
+    "url": "https://api.github.com/repos/openai/math/git/trees/351061cd373017200b8e08122a9ecdf78ffd2f0c",
+    "file": "parent-of-NumberTheory-tree.json",
+    "bytes": 4851,
+    "sha256": "584E1513957E4CF66E5D547B208B7AF46712E24A5448DCB78C5DCAD8224FFAEC"
+  },
+  {
+    "url": "https://api.github.com/repos/openai/math/git/trees/bd483de1f2aabba45a8fed73ad80fc7edcec6515?recursive=1",
+    "file": "number-theory-tree.json",
+    "bytes": 5935960,
+    "sha256": "32F9CD070CFA7C04E40848C301548F0F9035C4AEBD76F49F48EC1A82FC910684"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/CONTENTS.md",
+    "file": "CONTENTS.md.txt",
+    "bytes": 638727,
+    "sha256": "CC7C0B8A1CDEDD845A777E77CF682657308503DAF8346C1349E06E9259D063C2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/README.md",
+    "file": "lean__README.md.txt",
+    "bytes": 650,
+    "sha256": "292FF9D539F494158DFBF68D989BA85A82782A4343B2FE43088F8FA62525BF1B"
+  }
+]

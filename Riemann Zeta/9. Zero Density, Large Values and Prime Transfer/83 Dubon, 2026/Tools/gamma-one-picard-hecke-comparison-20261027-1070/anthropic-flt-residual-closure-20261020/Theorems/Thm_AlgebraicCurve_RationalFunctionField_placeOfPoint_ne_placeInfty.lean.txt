@@ -1,0 +1,15 @@
+import Mathlib
+import Mathlib.FieldTheory.RatFunc.Degree
+import Mathlib.FieldTheory.IsAlgClosed.Basic
+import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
+import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+import Definitions.Def_AlgebraicCurve_PlaceEvaluation
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_placeOfPoint_ne_placeInfty
+import Definitions.Def_AlgebraicCurve_RatFuncPlaceClassification
+attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
+attribute [-simp] AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none
+
+open AlgebraicCurve AlgebraicCurve.RationalFunctionField
+theorem P2M.Dup.AlgebraicCurve.RationalFunctionField.placeOfPoint_ne_placeInfty (K : Type*) [Field K] [DecidableEq (RatFunc K)] (a : K) : placeOfPoint K a ≠ placeInfty K := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_placeOfPoint_ne_placeInfty.solution
+#p2m_type_eq_warn P2M.Dup.AlgebraicCurve.RationalFunctionField.placeOfPoint_ne_placeInfty AlgebraicCurve.RationalFunctionField.placeOfPoint_ne_placeInfty

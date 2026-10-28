@@ -1,0 +1,30 @@
+{
+  "chain": "DUB17/18 -> higher continuation -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> forward Abel-Jacobi implication.",
+  "shorterRoute": "The existing actual smooth comparison and winding logarithm already permit a prescribed untwisting form. Set this form to zero for invariant meromorphic functions, then reuse the Green boundary, integer winding period and zero Petersson limit directly. This avoids reimplementing the external full Abel-Jacobi proof or introducing new analytic foundations.",
+  "assumptionsToDischarge": "An invariant meromorphic function with the actual finite divisor has original integral period class. Next realize a literal principal field element as that function.",
+  "remaining": "Actual principal field-element analytic realization and all global Picard/Hecke/H1 and arithmetic obligations remain. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDivisorWindingComparison.lean",
+      "sha256": "114DB6D9AD28B1B2C60FFD12BD8FA02CEE8FAF7D60E5942F843776EC391118CA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDivisorWindingBoundary.lean",
+      "sha256": "C7E3EC33AB986681C05ED82924A59EE8F6E4BEAA348D8F307399832A80AFA4F2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicWindingIntegralPeriods.lean",
+      "sha256": "60ACC4A7B7B77BD8827BD1820DF23CEE2E00BD6CC443C1CB549B99479E231D29"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneSmoothedReciprocity.lean",
+      "sha256": "F36958706D388E311CF704C58297422927B206481A66A90EE8E2F1913FC89413"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceUntwistPeterssonLimit.lean",
+      "sha256": "492366186CC548DFB7DACADD096FB64C82FC3233E5BD4BE9EFBEB5297034A17A"
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

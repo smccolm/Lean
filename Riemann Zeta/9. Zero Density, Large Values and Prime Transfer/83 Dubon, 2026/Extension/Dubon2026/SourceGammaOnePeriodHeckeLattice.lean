@@ -1,0 +1,67 @@
+import Dubon2026.SourceGammaOneCuspHeckeLinear
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 comparison -> the original
+integer-period quotient. The exact scalar trace sends original generators
+to integral sums, so the native dual cusp operator descends. Its endpoint
+formula uses the actual inverse-dilation coset points; comparison with
+algebraic divisor pull/push is still a separate multiplicity obligation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (M d : ℕ) [NeZero M] [NeZero d]
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+theorem periodHeckeLinear_dualPeriod (γ : Gamma1 M) :
+    periodHeckeLinear M d (sourceWeightTwoDualPeriod (Gamma1 M) γ) =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+        sourceWeightTwoDualPeriod (Gamma1 M)
+          (sourceGammaOneHeckeConjugation M d
+            (cosetTransition (sourceGammaOneHeckeUpper M d) γ q)) := by
+  ext f
+  simp only [periodHeckeLinear_apply, sourceWeightTwoDualPeriod_apply, LinearMap.sum_apply]
+  exact periodValue_cuspHeckeTrace M d f γ
+
+theorem periodHeckeLinear_preserves_integralLattice
+    {v : Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)}
+    (hv : v ∈ sourceWeightTwoIntegralLattice (Gamma1 M)) :
+    periodHeckeLinear M d v ∈ sourceWeightTwoIntegralLattice (Gamma1 M) := by
+  have hle : sourceWeightTwoIntegralLattice (Gamma1 M) ≤
+      (sourceWeightTwoIntegralLattice (Gamma1 M)).comap
+        ((periodHeckeLinear M d).restrictScalars ℤ) := by
+    apply Submodule.span_le.mpr
+    rintro _ ⟨γ, rfl⟩
+    change periodHeckeLinear M d (sourceWeightTwoDualPeriod (Gamma1 M) γ) ∈
+      sourceWeightTwoIntegralLattice (Gamma1 M)
+    rw [periodHeckeLinear_dualPeriod]
+    exact (sourceWeightTwoIntegralLattice (Gamma1 M)).sum_mem
+      (fun _ _ => sourceWeightTwoDualPeriod_mem (Gamma1 M) _)
+  exact hle hv
+
+/-- The actual dual cusp Hecke action on the original integer-period quotient. -/
+def periodQuotientHecke :
+    Module.End ℤ (Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) ⧸
+      sourceWeightTwoIntegralLattice (Gamma1 M)) :=
+  (sourceWeightTwoIntegralLattice (Gamma1 M)).mapQ
+    (sourceWeightTwoIntegralLattice (Gamma1 M))
+    ((periodHeckeLinear M d).restrictScalars ℤ)
+    (fun _ hv => periodHeckeLinear_preserves_integralLattice M d hv)
+
+theorem periodQuotientHecke_mk
+    (v : Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)) :
+    periodQuotientHecke M d ((sourceWeightTwoIntegralLattice (Gamma1 M)).mkQ v) =
+      (sourceWeightTwoIntegralLattice (Gamma1 M)).mkQ (periodHeckeLinear M d v) := rfl
+
+theorem periodHeckeLinear_along (a b : ℍ) :
+    periodHeckeLinear M d (sourceWeightTwoAlong (Gamma1 M) a b) =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+        sourceWeightTwoAlong (Gamma1 M) (heckeCosetPoint M d a q) (heckeCosetPoint M d b q) := by
+  ext f
+  simp only [periodHeckeLinear_apply, LinearMap.sum_apply, along_eq_primitive_one]
+  exact (heckePrimitiveTrace_difference M d f a b).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

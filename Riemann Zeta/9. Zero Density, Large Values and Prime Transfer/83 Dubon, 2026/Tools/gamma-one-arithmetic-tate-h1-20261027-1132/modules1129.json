@@ -1,0 +1,18 @@
+[
+  "AdelicLevelFamilyFaithful",
+  "AdelicLocalAdmissible",
+  "AdelicLocalAwayFixed",
+  "AdelicLocalOpenFixed",
+  "AdelicLocalSmoothCompletion",
+  "AdelicLocalSubgroupProjection",
+  "AdelicSublevelClassicalCusp",
+  "AdelicSublevelClassicalFamily",
+  "AdelicSublevelDescent",
+  "AdelicSublevelFiniteDimension",
+  "AdelicSublevelFiniteSpan",
+  "AdelicSublevelFixedSpace",
+  "AdelicSublevelLowestFiniteDimension",
+  "AdelicSublevelProjection",
+  "FiniteAdelicSublevel",
+  "FixedCosetRepresentative"
+]

@@ -1,0 +1,9 @@
+import Mathlib
+import Definitions.Def_WeierstrassCurve_GenusOnePic0
+import Definitions.Def_WeierstrassCurve_GenusOnePlaceGateCentred
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_Affine_exists_genusOnePlaceGate_isCentred_abelTheorem
+attribute [-instance] WeierstrassCurve.Affine.CoordinateRing.moduleFinite WeierstrassCurve.Affine.instDecidableEqFunctionField WeierstrassCurve.Affine.CoordinateRing.isIntegral AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
+attribute [-simp] WeierstrassCurve.Affine.pointHom_mk_C_C WeierstrassCurve.Affine.Point.yc_some WeierstrassCurve.Affine.Point.xc_some WeierstrassCurve.Affine.pointPull_algebraMap WeierstrassCurve.Affine.pointHom_mk_C_X WeierstrassCurve.Affine.pointHom_mk_Y WeierstrassCurve.Affine.placeOf_asIdeal AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
+
+theorem WeierstrassCurve.Affine.exists_genusOnePlaceGate_isCentred_abelTheorem {F : Type*} [Field F] [DecidableEq F] [IsAlgClosed F] (W : WeierstrassCurve.Affine F) [W.IsElliptic] : ∃ g : WeierstrassCurve.Affine.GenusOnePlaceGate W, @WeierstrassCurve.Affine.GenusOnePlaceGate.IsCentred F _ W g ∧ @WeierstrassCurve.Affine.AbelTheorem F _ _ W g := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Affine_exists_genusOnePlaceGate_isCentred_abelTheorem.solution

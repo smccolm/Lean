@@ -1,0 +1,74 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T01:04:41.270780+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneInvariantDivisorPeriod",
+    "SourceGammaOnePrincipalMeromorphicRealization",
+    "SourceGammaOneAnalyticAbelKernel"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantDivisorPeriod.lean",
+      "sha256": "F5AE1A74DDAAAF409ACCCE75EEDA52B4E32D2ABB126A1493ED20C6F74C4CF884",
+      "oleanSha256": "1378AA55B33567EA87181FC64DD42059FD370EC61D9344913141594D9D02300D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantDivisorPeriod1016b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantDivisorPeriod1016b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalMeromorphicRealization.lean",
+      "sha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+      "oleanSha256": "B27391FCB679A9CCAABB2E95782F764057A64EFDBBA28E1F1FFB431326A8C0AE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalMeromorphicRealization1017c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalMeromorphicRealization1017c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernel.lean",
+      "sha256": "2D4E4B7425D362994DB8804993A6212CA5B52CE5B351AF0284A4B9BA5F780477",
+      "oleanSha256": "D749B2E1C494164AFA64DE39602C0C760C4DBF152711BE091198180FDBC816C9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernel1018a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernel1018a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.period_mem_of_invariant_meromorphic_function",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_cusp_limit_of_order_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_invariant_meromorphic_of_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_period_mem_of_isPrincipal",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.period_mem_of_invariant_meromorphic_function",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_cusp_limit_of_order_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_invariant_meromorphic_of_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_period_mem_of_isPrincipal",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelAudit1.log",
+  "logSha256": "5EF5C420EC915630759F6F2582C3BBF79A218109EFF95C186B8AAF5F43C3F685",
+  "auditSha256": "46257AAF3320A7AC42C28090435D395E5EEB2A05B72B79E3E9502ED8B004BB76",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelScratchOwnership1019.log",
+  "ownershipSha256": "FF8B27FC2009D931B639E3FB21B72EA179139AE31706A2F9568D01BB2BF043E8",
+  "exhaustiveTheorems": 6,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelDependencyAudit1.log",
+  "dependencyAuditSha256": "E8EA7122F415CD5572AE99AB0B36B2C23ABBFBF5B314AF53505C46AD4970C7B6",
+  "dependencyAuditSourceSha256": "37DED4649DBBEF5CCF49BC4259B52AECFDCBCE5EDE1879B6AA0534546EB6D68C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem"
+  ],
+  "dependency": "DUB17/18 -> higher continuation -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> forward Abel-Jacobi implication.",
+  "discharged": "DISCHARGED: literal principalness constructs an actual invariant modular quotient with exact orders and nonzero translated cusp limits; zero-untwist reciprocity proves its original period class integral. Combined with the constructed converse, this proves the exact original finite degree-zero analytic-divisor Abel-Jacobi kernel in both directions.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch-audited only; full Picard-period surjectivity and Hecke/diamond/H1 comparisons, all-weight arithmetic association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-abel-kernel-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "D0C7F33F58FA88F395004E8A15B0E7A04E933BC9DFE47A16469A5E7D6CA4ABA1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

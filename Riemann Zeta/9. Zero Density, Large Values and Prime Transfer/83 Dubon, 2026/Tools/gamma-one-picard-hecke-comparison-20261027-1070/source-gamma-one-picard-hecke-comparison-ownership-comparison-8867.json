@@ -1,0 +1,452 @@
+{
+  "scratchSum": 216,
+  "scratchDistinct": 216,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneAnalyticHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeLinear._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeTrace._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneEndpointHecke._proof_1": "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeAnalyticDivisor._proof_1": "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCharacters._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCosetMultiplicity._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveDerivative._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveTrace._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePeriodHeckeLattice._proof_1": "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePicardHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+    "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneScalarHeckePeriods._proof_1": "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1"
+  },
+  "productionFocused": 215,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "Dubon2026.sourceWeightTwoDualPeriod.congr_simp": [
+      {
+        "scope": "SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b",
+        "module": "Dubon2026.SourceGammaOnePeriodHeckeLattice"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [
+    "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+  ],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneInvariantDivisorPeriod",
+        "SourceGammaOnePrincipalMeromorphicRealization",
+        "SourceGammaOneAnalyticAbelKernel"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelScratchOwnership1019.log",
+        "sha256": "FF8B27FC2009D931B639E3FB21B72EA179139AE31706A2F9568D01BB2BF043E8",
+        "sourceSha256": "D2D898C351D672455E38D76223F3E880DD0F17F0FDA691B4F9F66E2ED2B64FAD"
+      }
+    },
+    {
+      "modules": [
+        "SourceWeightTwoEvaluationFrame",
+        "SourceWeightTwoEndpointImage",
+        "SourceWeightTwoEndpointOpenImage",
+        "SourceWeightTwoJacobiInversion",
+        "SourceGammaOneJacobiInversion",
+        "SourceGammaOneAnalyticPicardPresentation",
+        "SourceGammaOnePicardPeriodKernel",
+        "SourceGammaOnePicardPeriodEquiv"
+      ],
+      "count": 40,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceScratchOwnership1029d.log",
+        "sha256": "DDFB37150475D844A4DECF28487010D6B2E787E0AD65EF2FE6C2315F2AF75BA7",
+        "sourceSha256": "BE7348A10BF1893C8E92AB77CD9337DBA93DA360CBC64ECE926B5BFED8761E2C"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckeAlphaGerms",
+        "SourceGammaOneHeckeStretchLaurent",
+        "SourceGammaOneHeckeBetaGerms",
+        "SourceGammaOneHeckeAnalyticPlaces",
+        "SourceGammaOneHeckeAnalyticFiber"
+      ],
+      "count": 18,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsScratchOwnership1035.log",
+        "sha256": "7FAA9013C86C9B205AC8A60CA35B2614668A8AEE2A9A2CB4CC630815552A11E2",
+        "sourceSha256": "02652C61369D0B3F5153DB1940101AC72ABA74A2479F5C8A8359CFF50B2779FC"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneWeightTwoHeckeCosets",
+        "SourceGammaOneHeckePrimitiveDerivative",
+        "SourceGammaOneHeckeTraceCosets",
+        "SourceGammaOneCuspHeckeTrace",
+        "SourceGammaOneHeckePrimitiveTrace"
+      ],
+      "count": 46,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceScratchOwnership1041.log",
+        "sha256": "266A8BFA089278529F7BC367CC2A1D4C3590A4B1F5C6127813CC89E2C5D8750B",
+        "sourceSha256": "FDC5F737FBA608FC7E07188D28DBABEFD9AFC952856B4469D859F0A3A6038F43"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckePointTransition",
+        "SourceGammaOnePeriodNormalization",
+        "SourceGammaOneScalarHeckePeriods",
+        "SourceGammaOneHeckeCharacters",
+        "SourceGammaOneHolomorphicH1Hecke"
+      ],
+      "count": 21,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeScratchOwnership1047.log",
+        "sha256": "ECAFC0478FCE0E49EDE44464F68EA84C145B59FB302E59C0FEC39F508D933719",
+        "sourceSha256": "A38596A3B34CAFAE44FE72C990D3F52413BCB80AF1F539FE6C89CD7E121BF50D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCuspHeckeLinear",
+        "SourceGammaOnePeriodHeckeLattice"
+      ],
+      "count": 16,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b.log",
+        "sha256": "E1EAAAAAFBB4F48A44D28558A8CF4462AE03CA9EA1125088AF175955B815AFCC",
+        "sourceSha256": "BEC36E2DFD84B790BE29D0F16CBAA6F4B5585C3C1007630B9E3103EDC1C05CAB"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckeGammaZeroMap",
+        "SourceGammaOneHeckeGammaZeroPlaces",
+        "SourceGammaOneHeckeGenericOrbits",
+        "SourceGammaOneHeckeFiberPresentation",
+        "SourceGammaOneHeckeGenericFiber",
+        "SourceGammaOneHeckeJDegree",
+        "SourceGammaOneHeckeAllFibers",
+        "SourceGammaOneHeckeExactRamification",
+        "SourceGammaOneHeckePlaceOrbits"
+      ],
+      "count": 35,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersScratchOwnership1060b.log",
+        "sha256": "E6A5E5C97F3CE8CC3FF768C2B62A733445CDB226592F08F3CA3C9BF40733068A",
+        "sourceSha256": "A26F819DD0A91185DED0A356A52E5B6FBE1C1F445B9EA1F017EDDA6A2FA35713"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCentralStabilizerCard",
+        "SourceGammaOneHeckeActualStabilizers",
+        "SourceGammaOneHeckeUpperOrbits",
+        "SourceGammaOneHeckeCosetMultiplicity",
+        "SourceGammaOneHeckeAnalyticDivisor",
+        "SourceGammaOneAnalyticHeckeDivisors",
+        "SourceGammaOnePicardHeckeDivisors",
+        "SourceGammaOneEndpointHecke",
+        "SourceGammaOnePicardPeriodHecke"
+      ],
+      "count": 34,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeScratchOwnership1070.log",
+        "sha256": "25A1FD2CC1027D0CC855493B3A5160CA98196C45B987522359073DF4D2579057",
+        "sourceSha256": "75678533F1194F355CBFD04BDC38235219FE49AB838DB2B82B7B67A296CF08B0"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonOwnership8867.log",
+    "sha256": "4DFD7D72B7143FE74ACB0E97D591EB53BC3B170D78F7282578D6A86A5CDAAB76",
+    "sourceSha256": "C4CDE1668527F91976A8990B7AFCF139A10737E24FB48C3434D40DBE6DE73487"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-200915-162.log",
+    "sha256": "CE01D14635FD723D573C9025CA833575B5EACCF7AD8E467F4F40B0A95303AA6B"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 46 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneInvariantDivisorPeriod",
+        "scratchSha256": "F5AE1A74DDAAAF409ACCCE75EEDA52B4E32D2ABB126A1493ED20C6F74C4CF884",
+        "productionSha256": "13CE8F1BACBB4501771AE699D7F6FD79B3C6C131D2F1B22484D26009F464A0F1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePrincipalMeromorphicRealization",
+        "scratchSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+        "productionSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticAbelKernel",
+        "scratchSha256": "2D4E4B7425D362994DB8804993A6212CA5B52CE5B351AF0284A4B9BA5F780477",
+        "productionSha256": "6118064925AEA21B24D1CCE89AEFB9D8C31A3BDC106F7AF09034B7694FE37E7C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoEvaluationFrame",
+        "scratchSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+        "productionSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoEndpointImage",
+        "scratchSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+        "productionSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoEndpointOpenImage",
+        "scratchSha256": "AB3B2693C7ECDD62E1D303C82F16560A362BBEF5A813CA9DD62A4FB974CFB522",
+        "productionSha256": "D33474365C6B468EDC549795E8A9FDC88E360F29A76AB5F2EF1F0BC4EE3BE48E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoJacobiInversion",
+        "scratchSha256": "F250A753380B28F96E3F908DCF10BDF382A2D6761784D437C2DC1179F77FE3D4",
+        "productionSha256": "90FEF70183D6D5DB4F21088FBC66BD61EB72CA0D9DCDDB220A26405F3E0B668E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneJacobiInversion",
+        "scratchSha256": "DA2EFE2489490E110DE709CFEF9A8BD52269C3422BAB4520D2CE619308D30639",
+        "productionSha256": "F53B02EA8659311968EE124CAA457CC553C748656518053F32C05BB9B5687F91",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticPicardPresentation",
+        "scratchSha256": "0A0562470AB7AF8C3D91291CF643D7D96470A4B2E71D487D699B362D28B7DD60",
+        "productionSha256": "6BBAE828A61CD5180186741FD402ED08136F4B5EE05996732818A1CD17A83F38",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardPeriodKernel",
+        "scratchSha256": "C5AA9152F8AB3930FA20A01DC2FAB0635AC11AA8C8A2B7BA634F307E81A8804B",
+        "productionSha256": "B8C6F2B9590D0139117AF12E62EFB9654C6F0A8B2A778A06ED517F34F2F15B33",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardPeriodEquiv",
+        "scratchSha256": "D88F0BD2DF1128BDC4A258F860B96C4A9E6266E9F49D97DEB1D5C25E0A514D7B",
+        "productionSha256": "D8FDB8FFF890650B5E4DC64AAAA026465F858ABCB28E089703FA37AAEF23320F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeAlphaGerms",
+        "scratchSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+        "productionSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeStretchLaurent",
+        "scratchSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+        "productionSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeBetaGerms",
+        "scratchSha256": "8AD0FF911F2508BFF59ABB753AB5E495649E18CDAB99789545478FF32D3EC216",
+        "productionSha256": "94DE58B868397CB96D343A5BD5A7C5C5096F35D13C2DC154EE6A9C41CA89ED74",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeAnalyticPlaces",
+        "scratchSha256": "C9BE12E38B0BDF2DF1BE0A3ACE0B59B51999EABBEB02225C95060072258E4098",
+        "productionSha256": "CDA62B1F3B7F48FEFA779806F072EC4A9FF18EE32C0E6C584EA5DD92A7FACDD7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeAnalyticFiber",
+        "scratchSha256": "24897DE74DA5C48B9F87EB3E730D89C699E788A93F1BD2E42B13A7A3F860F6DB",
+        "productionSha256": "2EFB842163559BDBC6360E911B9A47B877916A04AE1B4F199123971C04487C73",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneWeightTwoHeckeCosets",
+        "scratchSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+        "productionSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckePrimitiveDerivative",
+        "scratchSha256": "91F9AB63127EBB96F306387202FE42803160896536D417F73694CF0C108E398A",
+        "productionSha256": "4D6D87EBCAEEFCB0EDFE451CF9943EC8DFA0F1B5A333ED0CFC46C2E8DF679E72",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeTraceCosets",
+        "scratchSha256": "9E8B6A5674FF849E1D038E19C15C6F4459535D90000F140ACBA8CE925C30C27A",
+        "productionSha256": "4BD35AF1198F874CF83FF493AD8A0F8F173B5BC8AEADC9EC196C7D35389D6468",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspHeckeTrace",
+        "scratchSha256": "4C4E73D86CD07F58695B0D22EBAAFA00DCD75FCE330DC20FC1E50511C8D6427C",
+        "productionSha256": "AB544E54C759BB1FA4CC8F131BB2B474AB9F482F49E04C6375C416B373E25675",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckePrimitiveTrace",
+        "scratchSha256": "2D7C918AB0F872DB07087012DC256034F8FED66054E7F4F0E02D2D33CB6732B7",
+        "productionSha256": "A61DEDB31998135C35E0368BD6D9CA9AF97AD0D72768E189AE81A29F9E312118",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckePointTransition",
+        "scratchSha256": "1B78FF2D22DCEE80FE9249B7324699A6F5ACF53F69C54747049634555A039355",
+        "productionSha256": "C1F46C8EF74EED74848D5F2A13571A5C266B17681435D768E39B24D4095D8845",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePeriodNormalization",
+        "scratchSha256": "E7124E94979468E19405CD59AC28EFCF1D596FDB2449FFB971B791B1BC68C561",
+        "productionSha256": "A51554F78790CE0B705E36BFEE79B8E0A9913465474C3DC9E23E2F2C7A143D2B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneScalarHeckePeriods",
+        "scratchSha256": "9B322CD9FD35FA2E4F8C3CC8364161B8F1006C6828E6A3009744643D604D09E4",
+        "productionSha256": "EC68311203B101EE2B388C880077AAF8D6E4CEA3B9B22E1E2A8574DBE9556393",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeCharacters",
+        "scratchSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+        "productionSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHolomorphicH1Hecke",
+        "scratchSha256": "C96C2A0245EDCF7258977615C3E1F29D15978EBFB9CBDE52106F5EFF180F5B19",
+        "productionSha256": "F04C9E10C103B536F2143951DE10668F5528ABEDFD007A9E11CCC0C8EE8F3E79",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspHeckeLinear",
+        "scratchSha256": "6E408A1D97EADEC2031023EED67E49B7599B68ABE545E93620A56D9CF4BDA773",
+        "productionSha256": "2028BFC1A35FDF3353C78F035DCEE18AAFD48CDE6A5BCC653FD01C36C809014A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePeriodHeckeLattice",
+        "scratchSha256": "2D34969A6300EB13FA57CEA2685653120E7D514058301CAEB3D4119AC624D89D",
+        "productionSha256": "8B8EE3A1F7D0196C80E24D9E2B551E95092CCF4DD8CCF4DB31D8A435D5E421B3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGammaZeroMap",
+        "scratchSha256": "E0FAE670F1059A173E5BD15F569FA1D196C181E87D40AB3CAD83268BF95FA906",
+        "productionSha256": "3B5D182CA649F171549D5406BE81BEF8C01276473EFE35FAF7BEAEB2CF96EB6C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGammaZeroPlaces",
+        "scratchSha256": "209AF33D72FC8A2B5264D05633B9DF157A461ABBB9587F889DC5B60E5E1A8F07",
+        "productionSha256": "DE23FDDC1D21885A7822C589E9B34848C0EB37CA9D78E993FED700B8AE549F06",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGenericOrbits",
+        "scratchSha256": "00D6DCC6CFE4207660BCE067E6D88158F7787F8DB16E7F7F48F3E8471CE1061B",
+        "productionSha256": "DA63A2C9FC9C47A931F9FC6AE7D59BF2B51BF2D4D5038BD717B324137A69AEC5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeFiberPresentation",
+        "scratchSha256": "0ADCD1D1775C1ECEB5ECAAFFC44CDA3FFA6020B8AE6A01F05E222F1033D520F8",
+        "productionSha256": "8E6690E8365B80A60D4F49121E9A1FDC9E03870F74B9C536E883BF7CCA7A5622",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGenericFiber",
+        "scratchSha256": "AD2E21D5C52A0C36C081A2B0B078E167EBC2525A11E18965524FC7E0CF14A835",
+        "productionSha256": "B3C5665F8A69E0DEE62A23D6EEC1EDB7ED18E4AA050C42487967AAB890B608C3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeJDegree",
+        "scratchSha256": "E6804BCCF946534DC20F4290D0AFBB5D697E919AE728EDD05BB67E0A8C3464D0",
+        "productionSha256": "38D371D281184713C83CF963EA4561B7D488AF5892B061044E19800078E25389",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeAllFibers",
+        "scratchSha256": "16EB2D977A949B95424326391CB49D388482C344E1B891538AABF246C50CC749",
+        "productionSha256": "46F5DB8E0A5F9AF1E9E6B41E4B7AC474AFE92CFCF08699B621A7498A8A9A0671",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeExactRamification",
+        "scratchSha256": "A6E530644A01D115F2CEAE89182E3E2418293F983EEA440D9F5F0C67627C37BA",
+        "productionSha256": "BE578913A4D4AB5056E26330AA404F411779D50E2F8BB3FE7D6AB17D309BB5A0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckePlaceOrbits",
+        "scratchSha256": "094705A212C4A43F1D68F0DB97100162C30E4CEF3E9BB9BA99C80C50C3934D13",
+        "productionSha256": "14F1F007D76FCB19C3DBA429C56017DBEE05A051B09A36968FC70792736EFA92",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCentralStabilizerCard",
+        "scratchSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+        "productionSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeActualStabilizers",
+        "scratchSha256": "4E6A58BA9193D1A3DE060BDB25C9507EC5933F0F368E0C6C005139AD8A6250AD",
+        "productionSha256": "B4EDE4640D9DFCCAD4E0199EFCD95B53BBFBBE40D9571959E9B53903AAF9D446",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeUpperOrbits",
+        "scratchSha256": "06F6A57EB461F7BC833C2697FEABF485145D3838F00E1D85E0035A0E1EF79324",
+        "productionSha256": "08305080584661EEA45C08E0E958844E8908BBECD30C7C4A910AC108130F7830",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeCosetMultiplicity",
+        "scratchSha256": "DC04C60C636B8E0332C77420C44122811A06FC489057E906034EC3095D745FDA",
+        "productionSha256": "CBC6AC89EFD60B79F20926FB959B2B63F57B0966EA108A7269EDE9FA07B003B4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeAnalyticDivisor",
+        "scratchSha256": "768071A8DA6E09865605ACA65E222DE4587BF71C6991A30709FDEFC9383950EB",
+        "productionSha256": "D764040B0D47F318E87B05589F489B8AA35473DA93A4633A64AA9BBB27EF5683",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticHeckeDivisors",
+        "scratchSha256": "30E5B6A3F9246A893BEAB5F1326868E4ED7FCB0D216665C5023E83E3E27BFC6D",
+        "productionSha256": "278368C6918210647854A0C5546EC1DC59089941458CBBCE4BD39D0E474D6E30",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardHeckeDivisors",
+        "scratchSha256": "8855A333CEE4C5B11FAC81DE6A9695909FC4CF4150F2E2E894C881D910EBF0ED",
+        "productionSha256": "8AAB5E3152C975B374F119694357D6E50912B2006E07B9F9090A33FC0BE8B36F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneEndpointHecke",
+        "scratchSha256": "D5B378992B56ACE8728879AC931355F1CE6EF27D7657CA6D3F00BCEB26E7584D",
+        "productionSha256": "7D44D71AF2DD52AADB8A9BB46DC5C9D56B69A419D35511775021FEF6E3BD0B1F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardPeriodHecke",
+        "scratchSha256": "F0C817746465027700275A9F6BC37CAE8E8E4F760942B3B3F768114943C36AEA",
+        "productionSha256": "81862DB9ADED8E82E4F326FEAEF7CE69BD1F6EAEDA50CEC14C1CA236E7CD7A5A",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

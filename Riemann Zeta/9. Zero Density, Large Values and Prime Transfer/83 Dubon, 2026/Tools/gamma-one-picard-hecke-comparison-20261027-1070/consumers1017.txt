@@ -1,0 +1,51 @@
+
+open Matrix Matrix.SpecialLinearGroup IsDedekindDomain UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+/-- Exact original-object consumer of `adelicLevelProjection_finiteSpan`. -/
+theorem actual_fixed_level_projection_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicFiniteCyclicSpan f) :
+    adelicLevelProjection f v ∈ adelicFiniteCyclicSpan f :=
+  adelicLevelProjection_finiteSpan f v hv
+
+/-- Exact original-object consumer of `adelicFixedLowest_algebraic_density`. -/
+theorem actual_fixed_lowest_density_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicFiniteCyclicSpan f ⊓ adelicLevelFixedSpace f).topologicalClosure =
+      adelicRotationWeightSpace f ⊓ adelicLevelFixedSpace f :=
+  adelicFixedLowest_algebraic_density f hf hk
+
+/-- Exact original-object consumer of `finiteAdelicClassicalTranslate_real_lift`. -/
+theorem actual_finite_translate_classical_source (N : ℕ) [NeZero N] (k : ℤ) (f : ℍ → ℂ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (g : SL(2, ℝ)) :
+    canonicalAdelicGL2CuspLift N k f (adelicRealSL2Embedding g * rationalAdelicFiniteGL2Embedding a) =
+      realWeightLift k (finiteAdelicClassicalTranslate N k f a) g :=
+  finiteAdelicClassicalTranslate_real_lift N k f a g
+
+/-- Exact original-object consumer of `adelicAlgebraicFiniteSpan_classical_full`. -/
+theorem actual_fixed_finite_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)
+    (v : (adelicLiftCyclicRepresentation N k f).toSubmodule)
+    (hv : v ∈ adelicAlgebraicFiniteSpan f)
+    (hlevel : adelicCyclicHilbertEmbedding f v ∈ adelicLevelFixedSpace f) :
+    ∃! F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k,
+      v.val = canonicalAdelicGL2CuspLift N k F :=
+  adelicAlgebraicFiniteSpan_classical_full f v hv hlevel
+
+/-- Exact original-object consumer of `adelicFixedLowest_finiteDimensional`. -/
+theorem actual_fixed_lowest_finite_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicLevelFixedSpace f :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicFixedLowest_finiteDimensional f hf hk
+
+/-- Exact original-object consumer of `adelicFixedLowest_classical_reconstruction`. -/
+theorem actual_fixed_lowest_classical_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRotationWeightSpace f)
+    (hlevel : v ∈ adelicLevelFixedSpace f) :
+    ∃ w ∈ adelicAlgebraicFiniteSpan f, adelicCyclicHilbertEmbedding f w = v ∧
+      ∃! F : CuspForm ((Gamma0 N).map (mapGL ℝ)) k,
+        w.val = canonicalAdelicGL2CuspLift N k F :=
+  adelicFixedLowest_classical_reconstruction f hf hk v hv hlevel
+

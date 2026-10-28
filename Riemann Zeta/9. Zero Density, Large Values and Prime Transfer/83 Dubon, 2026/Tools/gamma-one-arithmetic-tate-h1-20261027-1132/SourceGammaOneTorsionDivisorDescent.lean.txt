@@ -1,0 +1,57 @@
+import SourceGammaOneInvariantSupport
+import SourceGammaOneComplexPicardInjectivity
+
+/-! DUB-17/18 -> exact original arithmetic torsion -> surjectivity of the constant-field Picard comparison. A fixed reduced representative has support
+on lifted arithmetic places. Native finite-support pullback descends it;
+subtracting the lifted base-point term leaves the original torsion divisor
+equal to a conorm modulo an actual principal divisor.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+
+theorem exists_conorm_of_support_lifts (B : Divisor ℂ FC)
+    (hB : ∀ W ∈ B.support, ∃ P, W = liftPlace N P) :
+    ∃ E : Divisor Qbar FQ, conorm N E = B := by
+  refine ⟨Finsupp.comapDomain (liftPlace N) B (liftPlace_injective N).injOn, ?_⟩
+  apply Finsupp.mapDomain_comapDomain _ (liftPlace_injective N)
+  intro W hW
+  obtain ⟨P, hP⟩ := hB W hW
+  exact ⟨P, hP.symm⟩
+
+theorem exists_torsion_divisor_descent (n : ℕ) (hn : n ≠ 0)
+    (D : Divisor.degZero (K := ℂ) (F := FC)) (hD : Pic0.mk D ∈ Pic0.torsion n) :
+    ∃ (E : Divisor Qbar FQ) (f : FC), f ≠ 0 ∧
+      conorm N E = D.val + principalDivisor N ℂ f := by
+  classical
+  letI := finiteDimensional_jCoordinateOver (Γ := Gamma1 N)
+    (by simp [Gamma1_mem, ModularGroup.T]) Qbar
+  obtain ⟨P⟩ := nonempty_place_of_separating_coordinate
+    (jCoordinateOver (Gamma1 N) Qbar) (transcendental_jCoordinateOver (Gamma1 N) Qbar)
+  obtain ⟨r, f, hf0, hfixed⟩ := exists_fixed_reduced_divisor N n hn D hD P
+  let A := D.val + (r : ℤ) • Finsupp.single (liftPlace N P) (1 : ℤ) + principalDivisor N ℂ f
+  have hAsupp := invariant_support_lifts N A
+    (Nat.card (Pic0.torsion (K := ℂ) (F := FC) n)).factorial (Nat.factorial_ne_zero _) hfixed
+  let B := D.val + principalDivisor N ℂ f
+  have hB : ∀ W ∈ B.support, ∃ Q, W = liftPlace N Q := by
+    intro W hW
+    by_contra hoff
+    push Not at hoff
+    have hAW : A W = 0 := by
+      by_contra ha
+      obtain ⟨Q, hQ⟩ := hAsupp W (Finsupp.mem_support_iff.mpr ha)
+      exact hoff Q hQ
+    have hs : Finsupp.single (liftPlace N P) (1 : ℤ) W = 0 := by
+      simp [Ne.symm (hoff P)]
+    have hBW : B W = 0 := by
+      simpa only [A, B, Finsupp.add_apply, Finsupp.smul_apply, hs, smul_zero, add_zero] using hAW
+    exact Finsupp.mem_support_iff.mp hW hBW
+  obtain ⟨E, hE⟩ := exists_conorm_of_support_lifts N B hB
+  exact ⟨E, f, hf0, hE⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

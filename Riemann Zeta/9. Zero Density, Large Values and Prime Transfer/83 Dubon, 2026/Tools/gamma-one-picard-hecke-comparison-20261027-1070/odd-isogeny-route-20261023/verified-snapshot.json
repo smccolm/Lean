@@ -1,0 +1,46 @@
+{
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean",
+      "sha": "edd1feee1282a50318e525b8273ca86686a0ff27",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean",
+      "sha256": "C6A5F85B8BFA9E704DBEE85374893F0D8287170355A13DF5B93CBFA38CA23429",
+      "bytes": 7423
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean",
+      "sha": "4bc4dc701f02481162e7ab6f35a83513edb68463",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\FunctionField.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean",
+      "sha256": "DAC424538BB061B278176B780C55B29789A263E59A6391EED3D95880350E5D73",
+      "bytes": 19428
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean",
+      "sha": "8ed03e5fa56c168874d02752a67e53c730f7fb6c",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\PointHom\\Basic.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean",
+      "sha256": "036B0DB81B0FFED0F21A36A5FD9A9348C1AC33955520DEBEA8D47A886410EBD4",
+      "bytes": 8500
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean",
+      "sha": "4a067e6cb996af9d2887379d2d739cf52aa06e7a",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\PointHom\\Affine.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean",
+      "sha256": "4F00B57B7969A43BC55D70E5AA47C974B50DD95F84F0191A6BEFE239F2BE2C28",
+      "bytes": 13695
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean",
+      "sha": "8273142be58a3e9b527feccac7cf9a9c22627a42",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\PushClass.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean",
+      "sha256": "071BB94A60E6A1379E464591CFF7F0756063FF221D36C5B3D0202BCA70FCD52D",
+      "bytes": 21285
+    }
+  ],
+  "scope": "Five selected point-map source files; no build or transitive dependency audit."
+}

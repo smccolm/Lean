@@ -1,0 +1,35 @@
+{
+  "checkedUTC": "2026-10-23T08:59:26.365437+00:00",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+      "sha": "9cc2476f3b9bd70d278f20a74572a2399df19145",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean.txt",
+      "bytes": 12783,
+      "sha256": "1C2215EEB268D195F47463FBF5ED63ACAABAA663B4D655CD654B9AA517DEA763",
+      "verifiedGitBlob": "9cc2476f3b9bd70d278f20a74572a2399df19145"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+      "sha": "a902e21e60b490502fa640ecaf9afc66128f254c",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean.txt",
+      "bytes": 19029,
+      "sha256": "FA6C78B962D8DE5B9C5BE670CFD756462EF57400EA61E2097D7B91FD90174512",
+      "verifiedGitBlob": "a902e21e60b490502fa640ecaf9afc66128f254c"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+      "sha": "b3b83ad2eef38c31ebc3242905099c6b9ca93feb",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean.txt",
+      "bytes": 13316,
+      "sha256": "5BB186368A57B702B255A8F235398D1A597840E15C4B7B9D4A3E13CD7E199A94",
+      "verifiedGitBlob": "b3b83ad2eef38c31ebc3242905099c6b9ca93feb"
+    }
+  ],
+  "boundary": "Exact Git blobs verified; no external build or dependency closure claimed."
+}

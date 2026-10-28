@@ -1,0 +1,27 @@
+### Original full fixed-level classical reconstruction — 8 October 2026
+
+Twenty-one further production modules construct the actual finite-level orthogonal projector in the original full adelic Hilbert space. Compactness and an original open stabilizer make each algebraic level orbit finite, so this projector preserves the actual finite-adelic algebraic span. Its fixed-level part is therefore dense in the full lowest-weight fixed-level space. Each literal finite-adelic translate is proved to restrict to its original rational slash function with the exact determinant-root factor root^(2-k) required by the pinned slash convention. Finite combinations are holomorphic and vanish at every arithmetic cusp. Faithfulness of the original Hilbert embedding transfers level invariance to the original adelic functions; rational diagonal invariance then proves every original Gamma0 slash equation. This constructs genuine cusp forms at the original level. Proved strong approximation, scalar normalization and rational sign correction identify each such original adelic function everywhere with the full canonical lift of its unique reconstructed classical cusp form, including the negative real component. The actual real restriction is consequently faithful on the fixed-level algebraic core. The already proved finite dimensionality of the genuine classical cusp space makes this actual core finite dimensional and hence closed in the original Hilbert norm. Combining closedness with the proved density identifies the entire lowest-weight fixed-level Hilbert space with its original finite-adelic algebraic core. Every such completed Hilbert vector thus comes from a unique genuine original-level classical cusp lift. No classical reconstruction, finite-dimensionality or full adelic irreducibility premise is assumed.
+
+Fixed-level classical reconstruction of the full original lowest-weight Hilbert space is proved. The actual finite-adelic Hecke compatibility and newspace-preservation bridge needed for primitive multiplicity one remain open. Source-level identification of the full adelic automorphic representation, including its irreducibility, still requires proofs. All higher symmetric continuations, unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicAlgebraicFiniteSpan](Extension/Dubon2026/AdelicAlgebraicFiniteSpan.lean).
+- [AdelicClassicalReconstruction](Extension/Dubon2026/AdelicClassicalReconstruction.lean).
+- [AdelicCyclicLevelDescent](Extension/Dubon2026/AdelicCyclicLevelDescent.lean).
+- [AdelicFiniteClassicalCusp](Extension/Dubon2026/AdelicFiniteClassicalCusp.lean).
+- [AdelicFiniteClassicalRestriction](Extension/Dubon2026/AdelicFiniteClassicalRestriction.lean).
+- [AdelicFixedCoreFiniteDimension](Extension/Dubon2026/AdelicFixedCoreFiniteDimension.lean).
+- [AdelicFixedLowestClassical](Extension/Dubon2026/AdelicFixedLowestClassical.lean).
+- [AdelicFixedLowestDensity](Extension/Dubon2026/AdelicFixedLowestDensity.lean).
+- [AdelicInvariantReconstruction](Extension/Dubon2026/AdelicInvariantReconstruction.lean).
+- [AdelicLevelFiniteSpan](Extension/Dubon2026/AdelicLevelFiniteSpan.lean).
+- [AdelicLevelProjection](Extension/Dubon2026/AdelicLevelProjection.lean).
+- [AdelicLevelProjectionCore](Extension/Dubon2026/AdelicLevelProjectionCore.lean).
+- [ClosedRepresentationInvariants](Extension/Dubon2026/ClosedRepresentationInvariants.lean).
+- [CompactInvariantProjection](Extension/Dubon2026/CompactInvariantProjection.lean).
+- [CompactOpenOrbitFinite](Extension/Dubon2026/CompactOpenOrbitFinite.lean).
+- [FiniteAdelicClassicalTranslate](Extension/Dubon2026/FiniteAdelicClassicalTranslate.lean).
+- [InvariantProjectionPreservation](Extension/Dubon2026/InvariantProjectionPreservation.lean).
+- [ProjectionCoreDensity](Extension/Dubon2026/ProjectionCoreDensity.lean).
+- [RationalCuspSlashSpan](Extension/Dubon2026/RationalCuspSlashSpan.lean).
+- [RealPositiveSlashLift](Extension/Dubon2026/RealPositiveSlashLift.lean).
+- [RealWeightLiftLinear](Extension/Dubon2026/RealWeightLiftLinear.lean).

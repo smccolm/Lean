@@ -1,0 +1,137 @@
+56 THOMAS BARNET-LAMB, TOBY GEE, AND DAVID GERAGHTY
+of
+⊕
+m∗−1
+i=0 Stv ⊗θ
+′τ
+i
+|GF
++
+v
+.
+We may therefore assume that ρ
+′
+|GF+
+v
+is equal to this representation. It is easy to
+check (for example by considering the corresponding Weil-Deligne representation)
+that the representation Stv contains a unique j-dimensional subrepresentation for
+each j. Then a nonzero element of HomGF+
+v
+(ρ
+′
+|GF+
+v
+, ρ′
+|GF+
+v
+(1)) would have to give
+a non-zero map from the unique j-dimensional quotient of Stv ⊗θ
+′τ
+i
+|GF+
+v
+to the
+unique j-dimensional subrepresentation of Stv ⊗θ
+′τ
+i
+′
+(1)|GF
++
+v
+for some i, i
+′ and j.
+This implies that (θ
+′τ
+i
+′
+/θ′τ
+i
+)|GF+
+v
+is a nonzero power of the cyclotomic character,
+which is impossible, because θ
+′τ
+i
+′
+/θ′τ
+i
+is a ratio of algebraic characters of the same
+weight, and is thus pure of weight 0.
+Finally, we can see that ρ|GF+
+v
+ O ρ
+′
+|GF+
+v
+using the same argument. 
+By Theorem 3.6.2, ρ is automorphic (the conditions on the image of ρ follow
+from Lemma 4.2.4 and the choice of F
++, and the remaining conditions follow by
+construction and the two sublemmas just proved). Since F
++/F′′ is solvable and
+ρ = r
+′′|GF+ , r
+′′|GF ′′ is automorphic by Lemma 1.3 of [BLGHT09]. But r
+′′|GF ′′ =
+(Symn−1
+rl,ι(π))|GF ′′⊗(IndGF
+GM
+θ)|GF ′′ = (Symn−1
+rl,ι(π))|GF ′′⊗(IndGF ′′
+GMF ′′
+(θ|GMF ′′ )),
+so by Proposition 5.2.1 (Symn−1
+rl,ι(π))|GF ′′ is automorphic, as required. 
+Corollary 7.1.5. Suppose that F is a totally real field and that π is a non-CM
+regular algebraic cuspidal automorphic representation of GL2(AF ) of weight λ, and
+let wπ be the common value of the numbers λv,1 + λv,2, v|∞. Suppose that n is a
+positive integer and that ψ : F
+×\A
+×
+F → C
+× is a finite order character. Then there
+is a meromorphic function L(Symn−1
+π × ψ, s) on the whole complex plane such
+that:
+• For any prime l and any isomorphism ι : Ql
+∼−→ C we have L(Symn−1
+π ×
+ψ, s) = L(ι(Symn−1
+rl,ι(π) ⊗ rl,ι(ψ)), s).
+• The expected functional equation holds between L(Symn−1
+π × ψ, s) and
+L(Symn−1
+(π
+∨| det|
+−wπ ) × ψ, 1 + (n − 1)wπ − s).
+• If n > 1 or ψ 6= 1 then L(Symn−1
+π × ψ, s) is holomorphic and non-zero in
+ℜs ≥ 1 + (n − 1)wπ/2.
+Proof. This follows from Theorem 7.1.4, as in the proof of Theorem 4.2 of [HSBT10].
+We give the details. The L-function L(ι(Symn−1
+rl,ι(π)⊗rl,ι(ψ)), s) is independent
+of the choice of l, ι by definition, so it is enough to prove the result for the l, ι fixed
+throughout this section. Let πn, F
+′′ be as in the conclusion of Theorem 7.1.4.
+We claim that rec(πn,v) = (Symn−1
+rec(πv))|WF ′′
+v
+for all places v of F
+′′. If
+v ∤ l, this follows from Lemma 7.1.2 and the purity of rl,ι(π) (which follows
+from the main result of [Bla06]). If v|l, then we choose a prime p 6= l and
+an isomorphism ι
+′
+: Qp
+∼−→ C. By the Tchebotarev density theorem we have
+rp,ι′ (πn) = (Symn−1
+rp,ι′ (π))|GF ′′ , and we may argue as before.
+By Lemma 1.3 of [BLGHT09], for any intermediate field F ⊂ Fj ⊂ F
+′′ with
+F
+′′/Fj soluble, there is an automorphic representation π
+j of GLn(AFj
+) with rl,ι(π
+j
+) =

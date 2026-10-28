@@ -1,0 +1,38 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic Hecke characters -> actual Picard/H1 Hecke compatibility -> exact geometric correspondence fibers and multiplicities.",
+  "shorterRoute": "Investigate restriction to the already proved Gamma1(M) and original Gamma0(d*M) fields to separate generic intersection orbits. Then use fixed j-fiber degree and the native termwise ramification bound to force all-fiber orbit separation and exact ramification. Avoid redeveloping integral modular-form separation for the intersection subgroup.",
+  "assumptionsToDischarge": [
+    "Actual original Gamma0 field inclusion and analytic-place restriction.",
+    "Generic intersection orbit separation, retaining central signs.",
+    "Fixed fiber degree equals actual intersection subgroup index.",
+    "All-fiber orbit separation and exact stabilizer ramification.",
+    "Actual coset multiplicities equal algebraic pullback multiplicities."
+  ],
+  "caution": "Gamma1 and Gamma0 orbit equalities alone do not imply intersection orbit equality at elliptic points. The generic stabilizer condition is essential in the first step; all-point equality still needs the degree argument.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticOrbitSeparation.lean",
+      "sha256": "24DB6E31935E6C020ABAA64AF27B6E9985FC0C05CAA91F8FA24BE422B4887D45"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalModularRatios.lean",
+      "sha256": "2ADEABDB68DD725949EF7823DADF69DDA8F559FBE024B101710B642A15F70441"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldInclusion.lean",
+      "sha256": "0AFB6D4E026D4BE6190EAA198D91180D43CC1EC001DC18246BF177F0258ADEBA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRamificationBounds.lean",
+      "sha256": "AC532614D2488EB408F9E2A9CF3FACF7C12B1F2D283161620C8C70541BDE89FC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJFiberDegree.lean",
+      "sha256": "A1FFAD8B3640C91317F528FFED07A1A531404592D729278306D30DA8C7090DC1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGenericFiberCount.lean",
+      "sha256": "35AD3141E085E6B0DFD3753E7C5762F32F6C72E4A44CBE603345A52974E94BC5"
+    }
+  ]
+}

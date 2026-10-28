@@ -1,0 +1,160 @@
+{
+  "queries": [
+    {
+      "i": 0,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/GregoryMorse/SelfModTamper/blob/7ef5d1cf9e955c34d012de8ea6c84f12659eca61/lean/SmcTamper/Threat/Forgery.lean",
+            "path": "lean/SmcTamper/Threat/Forgery.lean",
+            "display_url": "https://github.com/GregoryMorse/SelfModTamper/blob/7ef5d1cf9e955c34d012de8ea6c84f12659eca61/lean/SmcTamper/Threat/Forgery.lean",
+            "display_title": "lean/SmcTamper/Threat/Forgery.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "/-- From the canonical state, no two data quadwords reach `tgt`: its last step must be a CMP step from `(2^63 + 1, CMP)` or a\nnon-CMP step from `(·, CMP xor toggle)`, and neither is reachable in one step from `(0, ADC)`. -/\ntheorem two_not_enough : ∀ v1 v2 : BitVec 64, absRun [v1, v2] (0, 0) ≠ tgt := by",
+                "matches": [
+                  {
+                    "text": "non-CM",
+                    "indices": [
+                      126,
+                      132
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "value (final sum and operation number, from the canonical start) by choosing the last three quadwords, provided the opcode byte is\noutside the region.  The honest image `m0` is arbitrary. -/\ntheorem forgery_memory (m0 m : Mem) (opAddr p0 n : Nat)",
+                "matches": [
+                  {
+                    "text": "image",
+                    "indices": [
+                      163,
+                      168
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate.lean",
+            "path": "data/trees/1812.09999/c01/Candidate.lean",
+            "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/trees/1812.09999/c01/Candidate.lean",
+            "display_title": "data/trees/1812.09999/c01/Candidate.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "\nThis is the statement of Theorem 6.1.1, label `thm:main_automorphy_lifting_theorem`, of\nAllen et al., *Potential automorphy over CM fields*, arXiv:1812.09999.",
+                "matches": [
+                  {
+                    "text": "automorphy_lifting",
+                    "indices": [
+                      57,
+                      75
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "Annals of Mathematics 197 (2023), arXiv:1812.09999, Theorem 6.1.1,\nlabel `thm:main_automorphy_lifting_theorem`).\n",
+                "matches": [
+                  {
+                    "text": "automorphy_lifting",
+                    "indices": [
+                      83,
+                      101
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/scratch/1812.09999/c01/AuditInspect.lean",
+            "path": "data/scratch/1812.09999/c01/AuditInspect.lean",
+            "display_url": "https://github.com/tadamcz/annals-results/blob/e37fac79bedddf40773e5e02dc5f9585247710ce/data/scratch/1812.09999/c01/AuditInspect.lean",
+            "display_title": "data/scratch/1812.09999/c01/AuditInspect.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "open Lean Meta Elab Command\n#check ConstantInfo.value?\n#check ConstantInfo.value!\n#check Expr.getAppFn\nrun_elab do\n  let info ← getConstInfo `PotentialAutomorphy.automorphy_lifting\n  logInfo m!\"{repr (info.value? true)}\"",
+                "matches": [
+                  {
+                    "text": "automorphy_lifting",
+                    "indices": [
+                      164,
+                      182
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 2,
+      "result": {
+        "results": [
+          {
+            "url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "path": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "display_title": "FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+            "text_matches": [
+              {
+                "property": "content",
+                "fragment": "@[category test, AMS 11 14]\ntheorem satoTateMeasure_eq_satoTateIntegral\n    (a b : ℝ) (ha : -1 ≤ a) (hab : a ≤ b) (hb : b ≤ 1) :",
+                "matches": [
+                  {
+                    "text": "satoTate",
+                    "indices": [
+                      36,
+                      44
+                    ]
+                  },
+                  {
+                    "text": "satoTate",
+                    "indices": [
+                      55,
+                      63
+                    ]
+                  }
+                ]
+              },
+              {
+                "property": "content",
+                "fragment": "@[category research solved, AMS 11 14]\ntheorem satoTate_conjecture\n    (E : WeierstrassCurve ℚ) [E.IsElliptic] (hCM : ¬ HasCM E)",
+                "matches": [
+                  {
+                    "text": "satoTate",
+                    "indices": [
+                      47,
+                      55
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "satoTate": {
+    "url": "https://github.com/google-deepmind/formal-conjectures/blob/e30c4c3defa569bb11dd45abfd71bfc2ead85669/FormalConjectures/Wikipedia/SatoTateConjecture.lean",
+    "gitBlob": "6375ba86ae9e87b6c09ac25321e792aefebed965",
+    "review": "Source checked; see archived theorem file. This is no absence claim."
+  }
+}

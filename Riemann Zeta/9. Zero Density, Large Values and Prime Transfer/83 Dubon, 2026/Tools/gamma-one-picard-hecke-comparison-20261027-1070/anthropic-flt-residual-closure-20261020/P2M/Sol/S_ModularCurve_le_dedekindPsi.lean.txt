@@ -1,0 +1,13 @@
+import Definitions.Def_ModularCurve_X0
+import Mathlib.NumberTheory.Divisors
+import Mathlib.Data.Nat.Squarefree
+import P2M.Util
+namespace P2MW.S_ModularCurve_le_dedekindPsi
+
+open ModularCurve Finset
+
+theorem solution (N : ℕ) (hN : N ≠ 0) : N ≤ dedekindPsi N := by
+  rw [dedekindPsi]
+  have h1 : (1 : ℕ) ∈ {d ∈ N.divisors | Squarefree d} :=
+    Finset.mem_filter.mpr ⟨Nat.one_mem_divisors.mpr hN, squarefree_one⟩
+  simpa using Finset.single_le_sum (f := fun d => N / d) (fun d _ => Nat.zero_le _) h1

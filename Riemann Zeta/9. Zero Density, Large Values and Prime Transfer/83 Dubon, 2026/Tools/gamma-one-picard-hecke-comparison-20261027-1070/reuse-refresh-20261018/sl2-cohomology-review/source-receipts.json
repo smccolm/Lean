@@ -1,0 +1,24 @@
+{
+  "checkedUTC": "2026-10-18T23:01:18.507552+00:00",
+  "files": [
+    {
+      "path": "P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "sha": "6bf76ee26babd45703367466be18c6759813943f",
+      "size": 20705,
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sl2-cohomology-review\\S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt",
+      "sha256": "0DF36032335D7EBEEC60DD90D11DBD4F7A3A7E93C99135B5EC51C7A321F0EF04"
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_algebra_of_charP_three.lean",
+      "sha": "8af7f8fd6fcfe4dc9f881bcf4dee53f3c943f653",
+      "size": 9088,
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_algebra_of_charP_three.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261018\\sl2-cohomology-review\\S_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_algebra_of_charP_three.lean.txt",
+      "sha256": "094A5117529FEBC3593A9A41D5AB456B38C90068505AE6B42E9469A2D876D022"
+    }
+  ],
+  "scope": "Selected source bodies only; not a certified dependency closure."
+}

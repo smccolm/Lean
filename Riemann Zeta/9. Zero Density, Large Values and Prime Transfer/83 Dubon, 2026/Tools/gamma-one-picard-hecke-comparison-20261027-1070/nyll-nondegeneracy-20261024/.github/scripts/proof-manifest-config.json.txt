@@ -1,0 +1,126 @@
+{
+  "owners": {
+    "ProCGroups": [
+      "Nyll.ProCGroups"
+    ],
+    "ValuedFieldTheory": [
+      "Nyll.ValuedFieldTheory"
+    ],
+    "GaloisCohomology": [
+      "Nyll.GaloisCohomology"
+    ],
+    "SchemeTheory": [
+      "Nyll.SchemeTheory"
+    ],
+    "ClassFieldTheory": [
+      "Nyll.ClassFieldTheory"
+    ],
+    "AlgebraicCurves": [
+      "Nyll.AlgebraicCurves"
+    ],
+    "EtaleFundamentalGroups": [
+      "Nyll.EtaleFundamentalGroups"
+    ],
+    "EtaleCohomology": [
+      "Nyll.EtaleCohomology"
+    ],
+    "AbelianVarieties": [
+      "Nyll.AbelianVarieties"
+    ],
+    "SawinTotallyRealTowers": [
+      "Nyll.SawinTotallyRealTowers"
+    ],
+    "JacobianVarieties": [
+      "Nyll.JacobianVarieties"
+    ],
+    "Yamaguchi26AbfaithfulGalois": [
+      "Nyll.Yamaguchi26AbfaithfulGalois"
+    ],
+    "Yamaguchi26SolvableCoverings": [
+      "Nyll.Yamaguchi26SolvableCoverings"
+    ],
+    "AnabelianGeometry": [
+      "Nyll.AnabelianGeometry"
+    ],
+    "EntryPoint": [
+      "Nyll"
+    ]
+  },
+  "roots": [
+    "Nyll"
+  ],
+  "leanToolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlibRevision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "mathlibRepository": "https://github.com/leanprover-community/mathlib4",
+  "externalModuleRoots": [
+    "Mathlib",
+    "Lean",
+    "Init",
+    "Std",
+    "Batteries",
+    "Qq",
+    "Aesop",
+    "Plausible"
+  ],
+  "excludedDirectories": [
+    ".git",
+    ".lake",
+    "tmp",
+    "__pycache__"
+  ],
+  "excludedPaths": [
+    ".github",
+    "tools",
+    "progress",
+    "site"
+  ],
+  "enforceSourcePolicy": true,
+  "depths": {
+    "ProCGroups": 1,
+    "ValuedFieldTheory": 1,
+    "GaloisCohomology": 1,
+    "SchemeTheory": 1,
+    "ClassFieldTheory": 2,
+    "AlgebraicCurves": 2,
+    "EtaleFundamentalGroups": 2,
+    "EtaleCohomology": 2,
+    "AbelianVarieties": 2,
+    "SawinTotallyRealTowers": 3,
+    "JacobianVarieties": 3,
+    "Yamaguchi26AbfaithfulGalois": 3,
+    "Yamaguchi26SolvableCoverings": 3,
+    "AnabelianGeometry": 3
+  },
+  "orderedLibraries": [
+    "ProCGroups",
+    "ValuedFieldTheory",
+    "GaloisCohomology",
+    "SchemeTheory",
+    "ClassFieldTheory",
+    "AlgebraicCurves",
+    "EtaleFundamentalGroups",
+    "EtaleCohomology",
+    "AbelianVarieties",
+    "SawinTotallyRealTowers",
+    "JacobianVarieties",
+    "Yamaguchi26AbfaithfulGalois",
+    "Yamaguchi26SolvableCoverings",
+    "AnabelianGeometry"
+  ],
+  "primaryRoots": [
+    "Nyll.ProCGroups.All",
+    "Nyll.ValuedFieldTheory.All",
+    "Nyll.GaloisCohomology.All",
+    "Nyll.SchemeTheory.All",
+    "Nyll.ClassFieldTheory.All",
+    "Nyll.AlgebraicCurves.All",
+    "Nyll.EtaleFundamentalGroups.All",
+    "Nyll.EtaleCohomology.All",
+    "Nyll.AbelianVarieties.All",
+    "Nyll.SawinTotallyRealTowers.All",
+    "Nyll.JacobianVarieties.All",
+    "Nyll.Yamaguchi26AbfaithfulGalois.All",
+    "Nyll.Yamaguchi26SolvableCoverings.All",
+    "Nyll.AnabelianGeometry.All"
+  ]
+}

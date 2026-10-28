@@ -1,0 +1,30 @@
+{
+  "chain": "DUB17/18 -> higher continuation -> original all-weight association -> actual Gamma1 Picard/H1 -> surjectivity of original finite-divisor endpoint map onto period quotient.",
+  "shorterRoute": "Use upper-half-plane evaluations of actual cusp forms and the existing normalized primitive directly. A basis evaluation frame and the native inverse-function theorem make the finite degree-zero divisor image an open additive subgroup; connectedness yields surjectivity. This adapts the existing original Jacobi inversion proof but avoids constructing a second algebraic-place chart and differential-reading framework.",
+  "assumptionsToDischarge": "Derive evaluation-frame spanning from cusp-form function extensionality, then local image openness and actual finite-divisor surjectivity. The actual Gamma1 cusp space is already proved finite-dimensional.",
+  "remaining": "This route is pending; exact finite-divisor kernel has compiled. Full Picard/Hecke/diamond/H1, all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationFrame.lean",
+      "sha256": "379553E546C8EC35DF9B7F9132AC994EE77CD20E546DAB7D7C89AF9B9005D06D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiOpenImage.lean",
+      "sha256": "25CB14D4CA3CBC9D81698483B4E7BA280641707D20D93057670ABEDFFBC91C9C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJacobiInversion.lean",
+      "sha256": "75B2ED19D0F24019F705A7AD13C361FE88192DEDD11D0D258994C45773D37E28"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoEndpointPeriods.lean",
+      "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriodUntwist.lean",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

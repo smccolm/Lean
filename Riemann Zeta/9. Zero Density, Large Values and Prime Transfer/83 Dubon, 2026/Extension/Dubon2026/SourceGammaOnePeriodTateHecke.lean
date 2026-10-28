@@ -1,0 +1,46 @@
+import Dubon2026.SourceGammaOneComplexTatePeriods
+import Dubon2026.SourceGammaOnePeriodHeckeLattice
+import Dubon2026.SourceTateTorusNaturality
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+Gamma1 Picard/Tate comparison -> Hecke action on the same original
+integer-period lattice. Restrict the proved lattice-preserving dual
+cusp operator, identify its quotient action, and instantiate the native
+Tate-torus naturality theorem. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup
+open scoped TensorProduct
+variable (M d : ℕ) [NeZero M] [NeZero d]
+local notation "Λ" => sourceWeightTwoIntegralLattice (Gamma1 M)
+
+/-- The actual dual cusp Hecke operator restricted to the original integral-period lattice. -/
+def periodLatticeHecke : Module.End ℤ Λ where
+  toFun l := ⟨periodHeckeLinear M d l.val, periodHeckeLinear_preserves_integralLattice M d l.property⟩
+  map_add' l m := Subtype.ext ((periodHeckeLinear M d).map_add l.val m.val)
+  map_smul' n l := Subtype.ext (((periodHeckeLinear M d).restrictScalars ℤ).map_smul n l.val)
+
+theorem periodLatticeHecke_val (l : Λ) :
+    (periodLatticeHecke M d l).val = periodHeckeLinear M d l.val := rfl
+
+theorem periodQuotientHecke_eq_quotEnd :
+    (periodQuotientHecke M d).toAddMonoidHom =
+      TateModule.Period.quotEnd ℂ Λ (periodHeckeLinear M d)
+        (fun _ hv => periodHeckeLinear_preserves_integralLattice M d hv) := by
+  apply AddMonoidHom.ext
+  intro x
+  obtain ⟨v, rfl⟩ := Submodule.mkQ_surjective Λ x
+  rfl
+
+theorem periodTateTensor_hecke (p : ℕ) [Fact p.Prime] (z : ℤ_[p] ⊗[ℤ] Λ) :
+    TateModule.Period.phi2 ℂ p Λ (integralPeriodBasis M)
+        ((periodLatticeHecke M d).baseChange ℤ_[p] z) =
+      TateModule.tateMap p (periodQuotientHecke M d).toAddMonoidHom
+        (TateModule.Period.phi2 ℂ p Λ (integralPeriodBasis M) z) := by
+  rw [periodQuotientHecke_eq_quotEnd]
+  exact TateModule.Period.phi2_baseChange ℂ p Λ (integralPeriodBasis M)
+    (periodHeckeLinear M d) (fun _ hv => periodHeckeLinear_preserves_integralLattice M d hv)
+    (periodLatticeHecke M d) (periodLatticeHecke_val M d) z
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

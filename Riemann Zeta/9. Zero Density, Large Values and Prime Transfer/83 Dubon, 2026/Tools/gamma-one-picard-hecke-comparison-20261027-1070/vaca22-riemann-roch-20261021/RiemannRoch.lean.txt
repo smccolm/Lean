@@ -1,0 +1,37 @@
+module  -- shake: keep-all --deprecated_module: ignore
+
+public import RiemannRoch.AdeleSpace.Basic
+public import RiemannRoch.AdeleSpace.FilterChain
+public import RiemannRoch.Basic
+public import RiemannRoch.CoordinateFree.AdeleSpace
+public import RiemannRoch.CoordinateFree.Divisor
+public import RiemannRoch.CoordinateFree.EllipticCurve
+public import RiemannRoch.CoordinateFree.RiemannRoch
+public import RiemannRoch.CoordinateFree.WeilDifferential
+public import RiemannRoch.Divisor
+public import RiemannRoch.EllipticCurve.ConcreteRegression
+public import RiemannRoch.EllipticCurve.Dedekind
+public import RiemannRoch.EllipticCurve.DegreeOneDictionary
+public import RiemannRoch.EllipticCurve.GenusCounting
+public import RiemannRoch.EllipticCurve.GenusOne
+public import RiemannRoch.EllipticCurve.Infinity
+public import RiemannRoch.EllipticCurve.Instances
+public import RiemannRoch.EllipticCurve.PicTorsorCore
+public import RiemannRoch.EllipticCurve.PlaceDictionary
+public import RiemannRoch.FunctionField.Divisor
+public import RiemannRoch.Genus
+public import RiemannRoch.Genus.AdeleQuotient
+public import RiemannRoch.Genus.Basic
+public import RiemannRoch.Genus.Polar
+public import RiemannRoch.Genus.Ramification
+public import RiemannRoch.LinearKneser
+public import RiemannRoch.LocalResidue
+public import RiemannRoch.Place
+public import RiemannRoch.PlaceEquiv
+public import RiemannRoch.RRspace.Basic
+public import RiemannRoch.RiemannRochTheorem.Basic
+public import RiemannRoch.RiemannRochTheorem.Corollaries
+public import RiemannRoch.RiemannRochTheorem.Regression
+public import RiemannRoch.SeparableRelNorm
+public import RiemannRoch.WeilDifferential
+public import RiemannRoch.WeilDifferential.Basic

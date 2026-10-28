@@ -1,0 +1,58 @@
+import SourceGammaOneHeckeCharacters
+import SourceGammaOneScalarHeckePeriods
+import Dubon2026.SourceGammaOneRealPeriodSurjectivity
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> full/parabolic
+Gamma1 H1 comparison. Express the already defined native H1 Hecke operator
+in its actual real-character coordinates, then identify its action on the
+original real cusp periods by the proved full coset formula. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology CategoryTheory
+open scoped MatrixGroups
+variable (M d : ℕ) [NeZero d]
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+/-- The actual native H1 Hecke action in the native trivial-coefficient character coordinates. -/
+def realCharacterHecke : Module.End ℝ (Additive (Gamma1 M) →+ ℝ) :=
+  (H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 M) ℝ)).hom.hom.comp
+    ((sourceGammaOneConstantHeckeH1 ℝ ℝ M d LinearMap.id).comp
+      (H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 M) ℝ)).inv.hom)
+
+theorem realCharacterHecke_apply (φ : Additive (Gamma1 M) →+ ℝ) (γ : Gamma1 M) :
+    realCharacterHecke M d φ (Additive.ofMul γ) =
+      ∑ q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d,
+        φ (Additive.ofMul (sourceGammaOneHeckeConjugation M d
+          (cosetTransition (sourceGammaOneHeckeUpper M d) γ q))) := by
+  dsimp only [realCharacterHecke, LinearMap.comp_apply]
+  refine (sourceGammaOneConstantHeckeH1_hom_apply ℝ M d
+    ((H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 M) ℝ)).inv φ) γ).trans ?_
+  apply Finset.sum_congr rfl
+  intro q _
+  exact congrArg (fun ψ : Additive (Gamma1 M) →+ ℝ => ψ
+    (Additive.ofMul (sourceGammaOneHeckeConjugation M d
+      (cosetTransition (sourceGammaOneHeckeUpper M d) γ q))))
+    (Iso.inv_hom_id_apply (H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 M) ℝ)) φ)
+
+variable [NeZero M]
+
+theorem realCharacterHecke_period (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    realCharacterHecke M d (sourceGamma1RealPeriodHom M f) =
+      sourceGamma1RealPeriodHom M (cuspHeckeTrace M d f) := by
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, realCharacterHecke_apply]
+  simp only [sourceGamma1RealPeriodHom_apply]
+  rw [periodValue_cuspHeckeTrace]
+  exact (map_sum Complex.reAddGroupHom
+    (fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d =>
+      sourceWeightTwoPeriodValue (Gamma1 M) f
+        (sourceGammaOneHeckeConjugation M d
+          (cosetTransition (sourceGammaOneHeckeUpper M d) γ.toMul q))) Finset.univ).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

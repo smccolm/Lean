@@ -1,0 +1,58 @@
+import Dubon2026.SourceGammaOneHeckeComplexDivisors
+import Dubon2026.SourceGammaOneComplexPicardMap
+import Dubon2026.SourceGammaOneHeckePicard
+
+/-! DUB17/18 -> actual Gamma1 arithmetic Tate/Hecke realization.
+The native coefficient identities for the actual alpha and beta maps
+discharge the commuting-square inputs of divisor naturality. The
+literal arithmetic-to-complex Picard map therefore intertwines the
+original Hecke operator for every nonzero correspondence parameter. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M d : ℕ)
+
+theorem heckeAlpha_fieldMap (x : functionFieldOver (Gamma1 M) Qbar) :
+    HeckeConstantField.fieldMap M d (heckeAlpha Qbar M d x) =
+      heckeAlpha ℂ M d (fieldMap M x) :=
+  heckeAlpha_coefficientMap M d OriginalConstantField.sigma x
+
+variable [NeZero d]
+
+theorem heckeBeta_fieldMap (x : functionFieldOver (Gamma1 M) Qbar) :
+    HeckeConstantField.fieldMap M d (heckeBeta Qbar M d x) =
+      heckeBeta ℂ M d (fieldMap M x) :=
+  heckeBeta_coefficientMap M d OriginalConstantField.sigma x
+
+variable [NeZero M]
+
+theorem conorm_heckeDivisor (D : Divisor Qbar (functionFieldOver (Gamma1 M) Qbar)) :
+    conorm M (heckeDivisor Qbar M d D) = heckeDivisor ℂ M d (conorm M D) := by
+  change conorm M (Divisor.geometricPushforwardAlong (heckeAlpha Qbar M d)
+    (heckeAlpha_finite Qbar M d)
+    (Divisor.finitePullbackAlong (heckeBeta Qbar M d)
+      (heckeBeta_finite Qbar M d) D)) = _
+  exact (geometricPushforwardAlong_conorm M d
+    (heckeAlpha Qbar M d) (heckeAlpha ℂ M d)
+    (heckeAlpha_finite Qbar M d) (heckeAlpha_finite ℂ M d)
+    (heckeAlpha_fieldMap M d) _).trans
+      (congrArg (Divisor.geometricPushforwardAlong (heckeAlpha ℂ M d)
+        (heckeAlpha_finite ℂ M d))
+        (finitePullbackAlong_conorm M d
+          (heckeBeta Qbar M d) (heckeBeta ℂ M d)
+          (heckeBeta_finite Qbar M d) (heckeBeta_finite ℂ M d)
+          (heckeBeta_fieldMap M d) D))
+
+theorem complexPicardMap_heckePicard (x : Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar)) :
+    complexPicardMap M (heckePicard Qbar M d x) =
+      heckePicard ℂ M d (complexPicardMap M x) := by
+  obtain ⟨D, rfl⟩ := Pic0.mk_surjective x
+  refine (congrArg (complexPicardMap M) (heckePicard_mk Qbar M d D)).trans ?_
+  refine (complexPicardMap_mk M _).trans ?_
+  refine Eq.trans ?_ (congrArg (heckePicard ℂ M d) (complexPicardMap_mk M D).symm)
+  refine Eq.trans ?_ (heckePicard_mk ℂ M d (conormDegZero M D)).symm
+  exact congrArg Pic0.mk (Subtype.ext (conorm_heckeDivisor M d D.val))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

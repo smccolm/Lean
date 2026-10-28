@@ -1,0 +1,32 @@
+import Dubon2026.SourceGammaOneHeckeAlphaGerms
+import Dubon2026.SourceGammaOneHeckeStretchLaurent
+import Dubon2026.SourceGammaOneHeckeBetaGerms
+import Dubon2026.SourceGammaOneHeckeAnalyticPlaces
+import Dubon2026.SourceGammaOneHeckeAnalyticFiber
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneHeckeAlphaGerms, `Dubon2026.SourceGammaOneHeckeStretchLaurent, `Dubon2026.SourceGammaOneHeckeBetaGerms, `Dubon2026.SourceGammaOneHeckeAnalyticPlaces, `Dubon2026.SourceGammaOneHeckeAnalyticFiber]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.realize_heckeAlpha_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_qL, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_restrict_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification, `Dubon2026.SourceFunctionField.GammaOne.Gamma_le_hecke_geometric, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_reverse_j_relation, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_j_mem_of_restrict_analytic, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_coeff, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite, `Dubon2026.SourceFunctionField.exists_prime_bidirectional_relation, `Dubon2026.SourceFunctionField.relationAtSeed_reverse_substitution_eval, `Dubon2026.SourceFunctionField.tendsto_dilation_nhdsNE, `Dubon2026.SourceFunctionField.ofComplex_dilation]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE ANALYTIC MAPS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual alpha/beta ramification and analytic beta-fiber VALUE closure. Exact coset multiplicities, Hecke-period and arithmetic compatibility remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

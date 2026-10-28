@@ -1,0 +1,32 @@
+import SourceGammaOneComplexCoefficientMap
+import SourceGammaOneComplexFieldExtension
+import SourceGammaOneComplexFieldIndependence
+import SourceGammaOneComplexSpanSeparation
+import SourceGammaOneConstantFieldValuationExtension
+import SourceGammaOneConstantFieldPlaces
+import SourceGammaOneExtendedPlaceMap
+import SourceGammaOneDivisorConorm
+import SourceGammaOneComplexPicardMap
+import SourceGammaOneComplexTorsionFinite
+import SourceGammaOneDegreeBaseChange
+import SourceGammaOneNewCoordinatePlaces
+import SourceGammaOneComplexCoordinateBasis
+import SourceGammaOneComplexCoordinateTrace
+import SourceGammaOneCoordinateDescent
+import SourceGammaOneComplexSpanDescent
+import SourceGammaOnePrincipalDescent
+import SourceGammaOneComplexPicardInjectivity
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneComplexCoefficientMap, `SourceGammaOneComplexFieldExtension, `SourceGammaOneComplexFieldIndependence, `SourceGammaOneComplexSpanSeparation, `SourceGammaOneConstantFieldValuationExtension, `SourceGammaOneConstantFieldPlaces, `SourceGammaOneExtendedPlaceMap, `SourceGammaOneDivisorConorm, `SourceGammaOneComplexPicardMap, `SourceGammaOneComplexTorsionFinite, `SourceGammaOneDegreeBaseChange, `SourceGammaOneNewCoordinatePlaces, `SourceGammaOneComplexCoordinateBasis, `SourceGammaOneComplexCoordinateTrace, `SourceGammaOneCoordinateDescent, `SourceGammaOneComplexSpanDescent, `SourceGammaOnePrincipalDescent, `SourceGammaOneComplexPicardInjectivity]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,86 @@
+{
+  "recordedUTC": "2026-10-28T05:32:41.163825+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic realization -> arithmetic/complex Picard torsion comparison -> surjectivity -> reduced divisor fixed by finite torsion action -> support descends to lifted arithmetic places.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-torsion-descent-route-1099.json",
+      "sha256": "EAF3C9946BD38ED8C01D6D70CD0093CD7EDBC2E005DAE312CFF86B5E91BE4513"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-picard-injectivity-1-scratch-receipt.json",
+      "sha256": "2014DBA39AD4FDA1BB362505BCE8CF4B5CB743F0E6F37F8159FC794F9A1E26DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-complex-tate-hecke-1-scratch-receipt.json",
+      "sha256": "B0966A06294EEB1254D043F68C2E3750BFAF05A77F9812200C36BD6B5B064F61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFixedReducedDivisor.lean",
+      "sha256": "F9497DC00304E0E283F702AE0C2751DA3DDF29F399F61A99C772D64F45D4F837"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalInvariantSupport.lean",
+      "sha256": "A13952918A62F2616C553BF1B81854A4CB3C69C6840277155D090CFD97117731"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexConstantAutomorphisms.lean",
+      "sha256": "BD1EB9A6006C28E30CCFB843EC493B92E117F3073D892EA7EDBCBBF2EAA9F922"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexTranslations.lean",
+      "sha256": "D01BAF5D9FF8C894ECC589782CC92C22340EC2B194538301CC64D7E148CBA48A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOffImageValues.lean",
+      "sha256": "F701CEA74E484DA7C3FAEA50F73AC73A18A6CB8A3991A32777861359759AC4FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTranslationOrbits.lean",
+      "sha256": "970877F6CB8B577CC97986C64E602344D68EB8D5F028095228FFB18BF8982615"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFiniteTorsionAction.lean",
+      "sha256": "8702F9E6441A3232C5C74A29E11CDF096CE12D5F97BDA03B375078608FB4B241"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalReducedRiemannRochSpace.lean",
+      "sha256": "91A0182819FE8B3C72997EB9DB32222C061C33709AC0C55329703DAD828ACEA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReducedSpaceMinimum.lean",
+      "sha256": "1426547135C32FF495D4E1B443E3CEB9C5B03F12C39FFA60918160AF09B2D5F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateDimensionBounds.lean",
+      "sha256": "EEFF334AC86A99E1B83854881B29B7479523F021290AA7A05551292451256923"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPicard.lean",
+      "sha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateFunctor.lean",
+      "sha256": "0C8132F7AE057CC43621870EF0EC5072CCF2D1F6980688921D4889D33AD2217C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionDivisorDescent.lean",
+      "sha256": "EB7D3B3A3BE009322AADEB47B5491569AED314D1470756583143C485C6D4CD64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionComparison.lean",
+      "sha256": "41612CCF2BFC21C11AE01B0FA878B6C3D1B40A15D7D3D4D38912D0CD6ABCF81B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateComparison.lean",
+      "sha256": "E1C153FE7E6F651BD93416FC115DB294E802D73CDB89A143368027AAD5932DA1"
+    }
+  ],
+  "shorterRoute": "The existing coefficient automorphism restriction fixes actual arithmetic Gamma1 functions and their unique lifted places. Native finite-coordinate pole bounds and the reduced-space minimum give a unique reduced representative without a genus identification. Finite torsion gives factorial invariance. Native translations and unique coordinate values exclude nonarithmetic support, so literal conorm descends the divisor. Picard injectivity reflects torsion. Native tateEquivOfInjective then gives the arithmetic/complex Tate equivalence, composed with the already proved original period tensor equivalence.",
+  "assumptionsToDischarge": [
+    "Actual complex constant automorphisms fix arithmetic functions and lifted places.",
+    "Finite torsion supplies a fixed reduced representative; its support consists of lifted arithmetic places.",
+    "Every nonzero-order actual complex Gamma1 torsion class has an arithmetic torsion preimage, and the actual arithmetic and complex torsion cardinalities agree.",
+    "The actual arithmetic Gamma1 Picard Tate module is p-adically linearly equivalent to the actual complex Tate module and to the p-adic extension of the original integral period lattice."
+  ],
+  "remaining": "Actual arithmetic Hecke compatibility remains. The generic Tate naturality consumer is conditional on its explicit commuting-map equation, not a proof of that geometric equation. Finite-coefficient H1, diamond/transpose comparisons, arithmetic Galois realization, original all-weight association and higher symmetric-power continuation remain. No rank-versus-genus identity is asserted. DUB17--20 OPEN; 16/20."
+}

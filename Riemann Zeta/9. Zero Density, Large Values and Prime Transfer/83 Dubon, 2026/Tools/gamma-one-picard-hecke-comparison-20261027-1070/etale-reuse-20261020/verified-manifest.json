@@ -1,0 +1,106 @@
+{
+  "repository": "n-yamaguchi-0729/NYLL",
+  "revision": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "date": "2026-10-20",
+  "sourceLean": "4.35.0-rc2",
+  "sourceMathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "files": [
+    {
+      "path": "Adic.lean.txt",
+      "blobSha1": "da76f3ebe4b176ff6c17f98aa55cf7a0d7fc0496",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/Adic.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/Adic.lean",
+      "sha256": "13D219745BCAD049B6CDAC8066C6E2B77C79322F0854528C0E43B4753C4A9C92"
+    },
+    {
+      "path": "RationalAdic.lean.txt",
+      "blobSha1": "c5c76eef0c064de1f3efe0a1a872f1dd8bf53799",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/RationalAdic.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/RationalAdic.lean",
+      "sha256": "3DB0929E6BB7529343A190B55878BA133C052CC876241F9CB8013E578F453505"
+    },
+    {
+      "path": "SequentialLimit.lean.txt",
+      "blobSha1": "93c74c6b34fde91b235220dd3dbe809caf04b83b",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/SequentialLimit.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/SequentialLimit.lean",
+      "sha256": "C80325A242A36181C7D04A6C4DB7FA232C3AC9CDFBCBE1200AED063E885F99A7"
+    },
+    {
+      "path": "AdditiveCoefficientAction.lean.txt",
+      "blobSha1": "3fb05f1deb5914cfd830c1f569d8e2b593681161",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/AdditiveCoefficientAction.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/AdditiveCoefficientAction.lean",
+      "sha256": "22CD0BD8C3E33D42FCF21E220922BBFE131B8EC29B5F417D8E8153CF4194E305"
+    },
+    {
+      "path": "PullbackCohomology.lean.txt",
+      "blobSha1": "a2c03a86777fbab4add8e210fc11a53d79c9fe62",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/PullbackCohomology.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/PullbackCohomology.lean",
+      "sha256": "72626D9249E3300F8CBF47E525A196AC7F5F1D86B4243C44653DA3550354045B"
+    },
+    {
+      "path": "ConstantPullbackFunctoriality.lean.txt",
+      "blobSha1": "2b5d76a4829c2cb73c5ff9de9c801df09b9fb4dd",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleCohomology/Classical/ConstantPullbackFunctoriality.lean",
+      "sourcePath": "Nyll/EtaleCohomology/Classical/ConstantPullbackFunctoriality.lean",
+      "sha256": "CAB7C7B806C706115C0B8762B6D8A1EEAD987AFD370E3F05253E7DF784A56EAD"
+    },
+    {
+      "path": "FullTateModule.lean.txt",
+      "blobSha1": "7a362452c8e8825321a9ef690ce95d4171c947af",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AbelianVarieties/Tate/FullTateModule.lean",
+      "sourcePath": "Nyll/AbelianVarieties/Tate/FullTateModule.lean",
+      "sha256": "A49081274C947055A0E683E19A71380B51F01FABBC51602CAD8F150F8BC5E583"
+    },
+    {
+      "path": "LICENSE.txt",
+      "blobSha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/LICENSE",
+      "sourcePath": "LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "lean-toolchain.txt",
+      "blobSha1": "acc704ffe6eefbbe8ec09452a276202748aac923",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/lean-toolchain",
+      "sourcePath": "lean-toolchain",
+      "sha256": "8DC8D6F560141069D9073E370611716EF77ADA0DA8FFA37E2149F44B2E63AC7A"
+    },
+    {
+      "path": "lake-manifest.json",
+      "blobSha1": "ccba651b0243520961663c1a3780d0808dbe0c16",
+      "url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/lake-manifest.json",
+      "sourcePath": "lake-manifest.json",
+      "sha256": "AD850380B47B59868A88C7B76F8775A3FA5A55E432E1D111A007FF2EBF056DED"
+    }
+  ],
+  "selectedCompleteNyllImportClosure": [
+    "Adic.lean.txt",
+    "RationalAdic.lean.txt",
+    "SequentialLimit.lean.txt",
+    "AdditiveCoefficientAction.lean.txt"
+  ],
+  "rootFilesInspectedWithoutFullClosure": [
+    "PullbackCohomology.lean.txt",
+    "ConstantPullbackFunctoriality.lean.txt",
+    "FullTateModule.lean.txt"
+  ],
+  "verification": "Sources retrieved and inspected; no port or transitive kernel-audit claim.",
+  "dependency": "DUB-17/18 -> modular Galois association -> actual etale cohomological realization and its integral/rational coefficient actions.",
+  "routeDecision": "Preserve as candidates. The small classical adic coefficient closure avoids a proetale comparison, but the original modular geometric object and its comparison with the original primitive form must be specified before promotion. Do not import unrelated generalizations.",
+  "limitations": [
+    "The classical adic files construct inverse limits of constant-coefficient etale cohomology and scalar extension, not the associated modular representation.",
+    "Pullback maps act on actual sheaf cohomology, but the inspected functoriality file treats constant coefficients.",
+    "The full Tate module file derives finiteness and compactness for actual proper smooth commutative group schemes in characteristic zero. It does not construct the modular Jacobian or identify its eigenspaces.",
+    "The untruncated repository tree contains no Lean path named Modular, Eichler, Deligne or Shimura; this filename search is not proof of absence of relevant results."
+  ],
+  "alternative": {
+    "repository": "chrisflav/proetale",
+    "revision": "c815a07678fc5937809e6d4c8af78a107b064056",
+    "lean": "4.30.0",
+    "review": "README and untruncated tree inspected. Work in progress on the proetale site; no named cohomology/Galois/adic module was found by the limited filename search. No proof closure audited."
+  },
+  "rootPinsChanged": false
+}

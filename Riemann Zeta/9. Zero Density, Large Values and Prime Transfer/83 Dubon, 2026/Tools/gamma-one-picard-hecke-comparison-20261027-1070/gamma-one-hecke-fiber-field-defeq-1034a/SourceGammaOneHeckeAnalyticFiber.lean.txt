@@ -1,0 +1,78 @@
+import SourceGammaOneHeckeAnalyticPlaces
+import Dubon2026.SourceGammaOneFinitePlaceExhaustion
+import Dubon2026.SourcePrimeAdjacentRelations
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> analytic fiber
+exhaustion. The native reverse monic j relation forces j to be regular
+above an analytic beta-image. The existing finite-place exhaustion for
+congruence subgroups then supplies an actual upper-half-plane point. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve Polynomial CongruenceSubgroup
+open scoped MatrixGroups
+
+theorem Gamma_le_hecke_geometric (M d : ℕ) :
+    Gamma (d * M) ≤ Gamma1 M ⊓ Gamma0 (d * M) := by
+  intro A hA
+  have ha := Gamma_mem.mp hA
+  have hred : ∀ a : ℤ, (a : ZMod (d * M)) = 0 → (a : ZMod M) = 0 := by
+    intro a hz
+    apply (ZMod.intCast_zmod_eq_zero_iff_dvd a M).mpr
+    exact dvd_trans (by exact_mod_cast (dvd_mul_left M d))
+      ((ZMod.intCast_zmod_eq_zero_iff_dvd a (d * M)).mp hz)
+  refine ⟨(Gamma1_mem M A).mpr ⟨?_, ?_, hred _ ha.2.2.1⟩, ha.2.2.1⟩
+  · have h := hred (A 0 0 - 1) (by simpa only [Int.cast_sub, Int.cast_one, sub_eq_zero] using ha.1)
+    simpa only [Int.cast_sub, Int.cast_one, sub_eq_zero] using h
+  · have h := hred (A 1 1 - 1) (by simpa only [Int.cast_sub, Int.cast_one, sub_eq_zero] using ha.2.2.2)
+    simpa only [Int.cast_sub, Int.cast_one, sub_eq_zero] using h
+
+theorem heckeBeta_reverse_j_relation (M d : ℕ) [NeZero d]
+    (P : Polynomial (Polynomial ℤ))
+    (hP : P.eval₂ ((qExpand ℚ d).comp evalAtJ) jq = 0) :
+    (relationAtSeed P (heckeBeta ℂ M d (jCoordinateOver (Gamma1 M) ℂ))).eval
+      (jCoordinateOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ) = 0 := by
+  let v := (functionFieldOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ).val.toRingHom
+  apply v.injective
+  rw [map_zero, ← Polynomial.eval₂_hom, ← Polynomial.eval_map, relationAtSeed_map]
+  change (relationAtSeed P
+    (heckeBeta ℂ M d (jCoordinateOver (Gamma1 M) ℂ) : LaurentSeries ℂ)).eval
+      (coeffEmb ℂ jq) = 0
+  have he : (heckeBeta ℂ M d (jCoordinateOver (Gamma1 M) ℂ) : LaurentSeries ℂ) =
+      coeffEmb ℂ (qExpand ℚ d jq) := (coeffMap_qExpand (algebraMap ℚ ℂ) d jq).symm
+  rw [he]
+  have h : (relationAtSeed P (qExpand ℚ d jq)).eval jq = 0 := by
+    simpa only [one_mul, qExpand_one_apply] using
+      relationAtSeed_reverse_substitution_eval P hP 1
+  rw [← relationAtSeed_map, Polynomial.eval_map, Polynomial.eval₂_hom, h, map_zero]
+
+theorem heckeBeta_j_mem_of_restrict_analytic (M p : ℕ) [NeZero M] [Fact p.Prime]
+    (hT : ModularGroup.T ∈ Gamma1 M)
+    (W : Place ℂ (functionFieldOver (Gamma1 M ⊓ Gamma0 (p * M)) ℂ)) (τ : ℍ)
+    (hW : Place.restrictAlong (heckeBeta ℂ M p) (heckeBeta_finite ℂ M p) W =
+      analyticPlace hT τ) :
+    jCoordinateOver (Gamma1 M ⊓ Gamma0 (p * M)) ℂ ∈ W.toValuationSubring := by
+  obtain ⟨P, hPm, -, -, hP⟩ := exists_prime_bidirectional_relation p
+  have hβj : heckeBeta ℂ M p (jCoordinateOver (Gamma1 M) ℂ) ∈ W.toValuationSubring := by
+    rw [← Place.mem_restrictAlong_iff _ (heckeBeta_finite ℂ M p), hW]
+    simpa only [sub_add_cancel] using add_mem
+      ((analyticPlace hT τ).mem_of_ord_nonneg (analyticPlace_j_sub_pos hT τ).le)
+      ((analyticPlace hT τ).algebraMap_mem' (JMultiplicity.jf τ))
+  apply W.mem_of_eval_monic_eq_zero (hPm.map _)
+    (fun i => ?_) (heckeBeta_reverse_j_relation M p P hP)
+  rw [Polynomial.coeff_map]
+  change Polynomial.eval₂ (Int.castRingHom _) _ (P.coeff i) ∈ W.toValuationSubring
+  rw [Polynomial.eval₂_eq_sum, Polynomial.sum]
+  exact Subring.sum_mem _ (fun j _ => mul_mem (intCast_mem _ _) (pow_mem hβj j))
+
+theorem exists_analytic_place_of_restrict_heckeBeta (M p : ℕ) [NeZero M] [Fact p.Prime]
+    (hT : ModularGroup.T ∈ Gamma1 M)
+    (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (p * M))
+    (W : Place ℂ (functionFieldOver (Gamma1 M ⊓ Gamma0 (p * M)) ℂ)) (τ : ℍ)
+    (hW : Place.restrictAlong (heckeBeta ℂ M p) (heckeBeta_finite ℂ M p) W =
+      analyticPlace hT τ) :
+    ∃ w : ℍ, analyticPlace hH w = W :=
+  exists_analytic_place_eq (p * M) (Gamma_le_hecke_geometric M p) hH W
+    (heckeBeta_j_mem_of_restrict_analytic M p hT W τ hW)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

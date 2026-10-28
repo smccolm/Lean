@@ -1,0 +1,62 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 45,
+  "queries": 242,
+  "theorems": 200,
+  "constructions": 42,
+  "exhaustiveScratchChecks": 376,
+  "proofValueChecks": 488,
+  "scopes": 8,
+  "receipts": {
+    "source-original-finite-divisor-reciprocity-1-scratch-receipt.json": "B23F1B902FB2BE302835303B62448B78FA7D696A96E13EF012F3A15BA8584D8A",
+    "source-original-integral-period-duality-1b-scratch-receipt.json": "29A50919A8B2652B13105122A89E8616E3093FEB63AF3ABBF0009A48FB0715AA",
+    "source-original-general-multiplier-1-scratch-receipt.json": "5DEFEC3393F7ED949D5BB2DADD544417113222FE327F13A51DD33D9B9292C1B0",
+    "source-original-prescribed-residues-1b-scratch-receipt.json": "564A87FC0ECF527C42D886B1DD0DD5D73AD031A92FB14103A61AB40F6BA1EB3C",
+    "source-meromorphic-logarithmic-primitive-1-scratch-receipt.json": "E318C329DA7622734C42033AE98E9A61F4B0B4BE4708B433452DD21C2F050F5D",
+    "source-gamma-one-analytic-residue-1-scratch-receipt.json": "043F53AB67A33BF9BE696CD5B64AD3EFC00474A9312778F53ADFE2DFAF6B636E",
+    "source-meromorphic-cusp-construction-1-scratch-receipt.json": "882433DFDA33D6C84F11D2EEB70044F92529A78A1267833BA388CC742A7200C7",
+    "source-gamma-one-principal-divisor-converse-1-scratch-receipt.json": "D1999BCF1FBF9564C57398EDC6BD3242BD80BA4742C5A45425F221CE44E05F55"
+  },
+  "expectedConsumers": 25985,
+  "expectedConstructions": 2689,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_principal_divisor_8821.py",
+      "sha256": "BEB4B698D685E0D49DBAFD6A76D59D320B5939EFFD748D164F9F6136BE9DDECC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_principal_divisor_production_ownership_8821.py",
+      "sha256": "C0265CA435B04AD5F7975FCA26AD498C05D501350F6CB24C04DC037D91DB1E85"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_principal_divisor_global_ownership_8821.py",
+      "sha256": "CDC05D963D62D53CC6047705B1C52970B801705941E4F17F11D521427EACB89F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_principal_divisor_ownership_8821.py",
+      "sha256": "968EDA48B0E488E409C5CCA5114A1A912DA5D080175385C7CF77670F41E24C44"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_principal_divisor_8821.py",
+      "sha256": "5762F5F1713A7A29DD3A5E2AA2971B0323E38856355B854D6AE237270A12CE2A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_principal_divisor_8821.ps1",
+      "sha256": "BCB8DF274D3901B2616E3DE30597E112AF04F172AF260BB865FA384E8C2B6685"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_principal_divisor_8821.ps1",
+      "sha256": "3F85DD041B48EDF24C313ED4BE30A89DCCFDE1D3F08A8A3345478119088E436E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_principal_divisor_canonical_8821.py",
+      "sha256": "3079F2010BE09921CD43797213B661E9864E3A3391D00D2CF66427858A4288B1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_principal_divisor_8821.py",
+      "sha256": "0D44F8190D44C8C9E40C40AB6BC2D7ECC9A3F8DE2AEFC7AAC6174E805526DAF2"
+    }
+  ],
+  "productionMutation": false
+}

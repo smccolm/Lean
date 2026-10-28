@@ -1,0 +1,39 @@
+import Dubon2026.SourceWeightTwoPeriodUntwist
+import Mathlib.LinearAlgebra.Dual.Lemmas
+
+/-! DUB17/18 -> actual Gamma1 Picard-period comparison -> Jacobi inversion.
+Point evaluations of a basis of actual cusp forms span the whole coordinate
+space, because a cusp form vanishing at every upper-half-plane point is zero.
+This reuses the existing evaluation-frame argument without algebraic-curve
+charts or a new differential-separation theorem. -/
+namespace Dubon2026.SourceWeightTwoJacobi
+noncomputable section
+open UpperHalfPlane Set Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ))
+
+theorem span_cusp_evaluation_eq_top {n : ℕ}
+    (b : Module.Basis (Fin n) ℂ (CuspForm (Γ.map (mapGL ℝ)) 2)) :
+    Submodule.span ℂ (range fun τ : ℍ => fun i => b i τ) = ⊤ := by
+  classical
+  by_contra htop
+  obtain ⟨f, hf0, hker⟩ := Submodule.exists_le_ker_of_lt_top _ (lt_top_iff_ne_top.mpr htop)
+  let c : Fin n → ℂ := fun i => f (fun j => if i = j then 1 else 0)
+  have hfx : ∀ x : Fin n → ℂ, f x = ∑ i, x i * c i := fun x => by
+    rw [LinearMap.pi_apply_eq_sum_univ f x]
+    rfl
+  let form : CuspForm (Γ.map (mapGL ℝ)) 2 := ∑ i, c i • b i
+  have hz : form = 0 := by
+    ext τ
+    have hv : f (fun i => b i τ) = 0 := hker (Submodule.subset_span ⟨τ, rfl⟩)
+    rw [hfx] at hv
+    change (CuspForm.coeHom (∑ i, c i • b i)) τ = 0
+    rw [map_sum]
+    simpa only [Finset.sum_apply, CuspForm.coeHom_apply, CuspForm.IsGLPos.smul_apply, smul_eq_mul, mul_comm] using hv
+  have hc : ∀ i, c i = 0 := Fintype.linearIndependent_iff.mp b.linearIndependent c hz
+  apply hf0
+  ext x
+  simp [hfx, hc]
+
+end
+end Dubon2026.SourceWeightTwoJacobi

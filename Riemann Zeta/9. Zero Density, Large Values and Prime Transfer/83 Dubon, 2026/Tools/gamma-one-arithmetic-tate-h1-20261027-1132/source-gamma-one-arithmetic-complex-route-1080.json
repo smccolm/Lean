@@ -1,0 +1,49 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> arithmetic/complex Picard torsion and Tate comparison -> actual constant-field embedding, extended places, conorm, principal and torsion descent.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCoefficientMap.lean",
+      "sha256": "67F5A2EE6E82AF3EBCFC7365C2C10CF98833B3B55C65437A3B5B063669E0ADBC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexFieldExtension.lean",
+      "sha256": "E15929E7B7EBB270EA61DD9D0B735E886F8A7103721819119960E8587402D3E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexFieldIndependence.lean",
+      "sha256": "7880516A890587CE911D3160B51D048EDE59477DCAE4E6374F68FCF262F1E282"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexSpanSeparation.lean",
+      "sha256": "FD1F399A2913AB32A15C8CC657DF079CA4CCB36A6810409EA84CBBFDEF82457D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldExtensionOrders.lean",
+      "sha256": "D4CD0608C71FCC068610AB4597594923997BCC50483975DCB31DD0B25AECA4C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldValuationDomination.lean",
+      "sha256": "AFC90E71024F6848ED50F67E5891EA2035ED18280B9888C8E09B88F78379D683"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidues.lean",
+      "sha256": "FF711706A6F1A463FC398C6A7DBEEFE743D1781C561214A8C01C14CE962BFCB3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionComparison.lean",
+      "sha256": "41612CCF2BFC21C11AE01B0FA878B6C3D1B40A15D7D3D4D38912D0CD6ABCF81B"
+    }
+  ],
+  "shorterRoute": "Reuse the existing OriginalConstantField.sigma and coefficient identities. The literal Gamma1 Laurent scalar-extension generators replace the Gamma0 two-j-generator presentation; no identification with a Gamma0 field is assumed. Generic constant-field valuation domination, exact-order uniqueness, coefficient independence and divisor descent are already proved locally and will be specialized after deriving their precise Gamma1 field-generation and independence inputs. Existing complex Picard Tate tensor equivalence supplies the later finite torsion input; no arithmetic association follows yet.",
+  "assumptionsToDischarge": [
+    "The actual Gamma1 coefficient embedding and compatible scalar towers.",
+    "Generation of the actual complex Gamma1 field by complex constants and the arithmetic field image.",
+    "Coefficient independence, actual place extension and exact orders for the conorm.",
+    "Principal and torsion descent for the actual arithmetic-to-complex Picard comparison."
+  ],
+  "remaining": "The map alone does not prove Picard injectivity, torsion descent, Galois realization, finite-coefficient H1/diamond/transpose comparison, all-weight association or higher continuation. DUB17--20 OPEN; 16/20."
+}

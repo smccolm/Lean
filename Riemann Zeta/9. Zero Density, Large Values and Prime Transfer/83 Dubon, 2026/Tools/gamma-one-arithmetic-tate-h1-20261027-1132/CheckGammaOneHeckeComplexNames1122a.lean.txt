@@ -1,0 +1,5 @@
+import SourceGammaOneHeckeComplexDivisors
+import Dubon2026.SourceGammaOneHeckePicard
+#check Dubon2026.SourceFunctionField.GammaOne.ConstantField.geometricPushforwardAlong_conorm
+#check Dubon2026.SourceFunctionField.GammaOne.ConstantField.finitePullbackAlong_conorm
+#check Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk

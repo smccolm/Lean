@@ -1,0 +1,82 @@
+SATO-TATE 21
+• for each i, we can and do choose an isomorphism of R∞⊗b OS∞-modules
+γi
+: H
+T
+1,QMi+1
+/bNi
+∼= H
+T
+1,QMi
+/bNi
+.
+Taking the inverse limit of the φi gives rise to a surjection
+R∞ ։ R
+univ
+S .
+Define
+HT ∞ := lim
+←−
+i
+H
+T
+1,QMi
+/bNi
+where the limit is taken with respect to the γi
+. Then HT ∞ is a module for R∞⊗b OS∞
+which is finite free over S∞. Note that the image of S∞ in EndS∞(HT ∞ ) is contained
+in the image of R∞ (indeed, the image of R∞ is closed and the corresponding
+statement is true for each H
+T
+1,QMi
+/bNi
+). Since S∞ is formally smooth over O, we
+can and do factor the action of S∞ on HT ∞ through R∞ (note that it suffices to
+define the factorisation on a set of topological generators of S∞ over O). Note that
+we have
+H
+T ∞ /a ∼= H
+compatible with the surjection R∞ ։ Runiv
+S
+. Since R∞ is equidimensional of
+dimension
+1 +n
+2#T + [L
++ : Q]n(n−1)/2 +q−q0 = 1 +q +n
+2#T −[L
++ : Q]n(1−(−1)µ−n
+)/2
+and HT ∞ has mR∞-depth at least
+1 + q + n
+2#T
+(the dimension of S∞) we deduce from Lemma 2.3 of [Tay08] that µ ≡ n mod 2.
+Hence
+1 + q + n
+2#T = dim R
+loc + g
+and taking M∞ = HT ∞ , the sublemma is proved. 
+Since proving the sublemma was our only remaining task, the automorphy lifting
+theorem is proven. 
+3.6.2. Totally real fields.
+Theorem 3.6.2. Let F
++ be a totally real field. Let l > n be a prime and let K ⊂ Ql
+denote a finite extension of Ql with ring of integers O and residue field k. Assume
+that K contains the image of every embedding F
++ ֒→ Ql
+. Let
+ρ : GF + → GLn(O)
+be a continuous representation and let ρ = ρ mod mO. Suppose that ρ enjoys the
+following properties:
+(1) ρ
+∨ ∼= ρǫn−1χ for some character χ : GF + → O× with χ(cv) independent of
+v|∞ (where cv denotes a complex conjugation at v).
+(2) The reduction ρ is absolutely irreducible and ρ(GF +(ζl)) ⊂ GLn(k) is big
+(see Definition 4.1.1).
+(3) (F +)
+ker ad ρ does not contain ζl.
+(4) There is a continuous representation ρ
+′
+: GF + → GLn(O), a RAESDC
+automorphic representation π of GLn(AF + ) which is unramified above l
+and ι : Ql
+∼−→ C such that

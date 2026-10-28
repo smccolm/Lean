@@ -1,0 +1,71 @@
+import Dubon2026.SourceGammaOneHeckeGenericOrbits
+import Dubon2026.SourceGammaOneHeckeAnalyticFiber
+import Dubon2026.SourceGammaOneJFiberOrbits
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> geometric Hecke fibers.
+Adapt the native orbit-fiber presentation to the actual intersection subgroup.
+Surjectivity uses native finite-place exhaustion. Injectivity and exact weighted
+fiber sums remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceCurve
+open scoped MatrixGroups StabilizerCharacter GammaOne
+
+/-- Subgroup orbits inside the actual full modular orbit. -/
+abbrev OrbitQuot (M d : ℕ) (τ : ℍ) :=
+  MulAction.orbitRel.Quotient (plusMinus (Gamma1 M ⊓ Gamma0 (d * M))) (MulAction.orbit SL(2, ℤ) τ)
+
+/-- The actual upper-half-plane representative of an orbit class. -/
+def rep (M d : ℕ) (τ : ℍ) (q : OrbitQuot M d τ) : ℍ :=
+  ((q.out : MulAction.orbit SL(2, ℤ) τ) : ℍ)
+
+theorem j_rep (M d : ℕ) (τ : ℍ) (q : OrbitQuot M d τ) :
+    JMultiplicity.jf (rep M d τ q) = JMultiplicity.jf τ := by
+  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp
+    (q.out : MulAction.orbit SL(2, ℤ) τ).property
+  change JMultiplicity.jf (q.out : ℍ) = _
+  rw [← hg, JMultiplicity.jf_smul]
+
+theorem card_stabilizer_rep (M d : ℕ) (τ : ℍ) (q : OrbitQuot M d τ) :
+    Nat.card (MulAction.stabilizer SL(2, ℤ) (rep M d τ q)) =
+      Nat.card (MulAction.stabilizer SL(2, ℤ) τ) := by
+  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp
+    (q.out : MulAction.orbit SL(2, ℤ) τ).property
+  change Nat.card (MulAction.stabilizer SL(2, ℤ) (q.out : ℍ)) = _
+  rw [← hg, JMultiplicity.natCard_stabilizer_smul]
+
+theorem finite_orbitQuot (M d : ℕ) [NeZero M] [NeZero d] (τ : ℍ) : Finite (OrbitQuot M d τ) :=
+  OrbitCounting.finite_orbitRelQuotient_orbit (plusMinus (Gamma1 M ⊓ Gamma0 (d * M))) τ
+
+/-- The literal positive-order fiber of the original j coordinate. -/
+abbrev Fiber (M d : ℕ) (τ : ℍ) :=
+  {P : Place ℂ (functionFieldOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ) //
+    0 < P.ord (jCoordinateOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ -
+      algebraMap ℂ (functionFieldOver (Gamma1 M ⊓ Gamma0 (d * M)) ℂ) (JMultiplicity.jf τ))}
+
+/-- The actual analytic place of the orbit representative. -/
+def toFiber (M d : ℕ) (hT : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M))
+    (τ : ℍ) (q : OrbitQuot M d τ) : Fiber M d τ :=
+  ⟨analyticPlace hT (rep M d τ q), by
+    rw [← j_rep M d τ q]
+    exact analyticPlace_j_sub_pos hT (rep M d τ q)⟩
+
+theorem toFiber_surjective (M d : ℕ) [NeZero M] [NeZero d] (hT : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M)) (τ : ℍ) :
+    Function.Surjective (toFiber M d hT τ) := by
+  rintro ⟨P, hP⟩
+  obtain ⟨σ, hσ, hj⟩ := finite_fiber_realization (d * M) (Gamma_le_hecke_geometric M d) hT P (JMultiplicity.jf τ) hP
+  obtain ⟨g, hg⟩ := JOrbitSeparation.exists_smul_eq_of_j_eq τ σ hj.symm
+  have horb : σ ∈ MulAction.orbit SL(2, ℤ) τ := MulAction.mem_orbit_iff.mpr ⟨g, hg⟩
+  let q : OrbitQuot M d τ := Quotient.mk _ ⟨σ, horb⟩
+  obtain ⟨δ, hδ, hδσ⟩ :=
+    OrbitCounting.exists_smul_out_eq (plusMinus (Gamma1 M ⊓ Gamma0 (d * M))) τ ⟨σ, horb⟩
+  refine ⟨q, Subtype.ext ?_⟩
+  change analyticPlace hT (rep M d τ q) = P
+  calc analyticPlace hT (rep M d τ q) = analyticPlace hT (δ • rep M d τ q) :=
+      (analyticPlace_smul_plusMinus hT hδ _).symm
+    _ = analyticPlace hT σ := by rw [show δ • rep M d τ q = σ from hδσ]
+    _ = P := hσ
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits

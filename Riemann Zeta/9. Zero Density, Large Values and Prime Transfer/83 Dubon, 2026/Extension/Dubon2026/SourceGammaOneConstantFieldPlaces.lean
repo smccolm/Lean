@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneConstantFieldValuationExtension
+import Dubon2026.SourceConstantFieldExtensionOrders
+import Dubon2026.SourceCurveFiniteCoordinateValuations
+import Dubon2026.SourceGammaOneResidues
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> Gamma1
+arithmetic/complex Picard torsion comparison -> actual divisor conorm.
+The constructed valuation ring, the proved actual finite j coordinate,
+closed arithmetic residues and field-image generation give a unique
+complex place above every arithmetic place, with exact integer orders.
+No place existence, uniqueness or ramification premise is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+attribute [local instance] complexAlgebra fieldAlgebra complexFieldAlgebra
+  complexScalarTower arithmeticFieldScalarTower
+
+theorem exists_extended_place (P : Place Qbar FQ) :
+    ∃ Q : Place ℂ FC,
+      Q.toValuationSubring.comap (fieldMap N) = P.toValuationSubring ∧
+      (∀ f : FQ, Q.ord (fieldMap N f) = P.ord f) ∧
+      ∀ Q' : Place ℂ FC,
+        Q'.toValuationSubring.comap (fieldMap N) = P.toValuationSubring → Q' = Q := by
+  obtain ⟨V, hV, hC, hP⟩ := exists_extending_valuation N P
+  letI := finiteDimensional_jCoordinateOver (Γ := Gamma1 N)
+    (by simp [Gamma1_mem, ModularGroup.T]) ℂ
+  obtain ⟨Q, hQ⟩ := SourceCurve.ConstantField.exists_place_of_finite_coordinate
+    (jCoordinateOver (Gamma1 N) ℂ) (transcendental_jCoordinateOver (Gamma1 N) ℂ) V hC hV
+  have hover : Q.toValuationSubring.comap (fieldMap N) = P.toValuationSubring := by
+    rw [hQ]
+    exact hP
+  letI : Module.Finite Qbar P.ResidueField :=
+    Module.Finite.of_surjective (Algebra.linearMap Qbar P.ResidueField)
+      (gamma1_place_residue_bijective Qbar N P).surjective
+  obtain ⟨hord, huniq⟩ := SourceCurve.ConstantField.extension_order_and_unique FC P
+    (adjoin_range_fieldMap N)
+  exact ⟨Q, hover, hord Q hover, fun Q' hQ' => huniq Q' Q hQ' hover⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

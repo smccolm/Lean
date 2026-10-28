@@ -1,0 +1,93 @@
+
+/-- Exact original-object consumer of `finitePlaceGL2_unit_entry_hecke_power`. -/
+theorem actual_local_exact_double_coset_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletion ℚ))
+    (hint : ∀ i j, g.val i j ∈ (rationalPrimePlace p hp).adicCompletionIntegers ℚ)
+    (i j : Fin 2) (a b : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ)
+    (ha : g.val i j = (a.val : (rationalPrimePlace p hp).adicCompletion ℚ))
+    (m : ℕ)
+    (hdet : GeneralLinearGroup.det g =
+      Units.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype.toMonoidHom b *
+        (finitePlacePrimeUnit p (rationalPrimePlace p hp)) ^ m) :
+    ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp),
+      g = l.val * (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp))
+        (finiteAdelicHeckeDiagonal p)) ^ m * r.val :=
+  finitePlaceGL2_unit_entry_hecke_power p hp g hint i j a b ha m hdet
+
+/-- Exact original-object consumer of `finitePlaceHeckeRadial_some_forward`. -/
+theorem actual_local_radial_forward_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) (n : ℕ) (a : ZMod p) (ha : a ≠ 0) :
+    ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      finitePlaceHeckeRadialMatrix N p hpN (rationalPrimePlace p (Fact.out : p.Prime)) n (some a) =
+        l.val * (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+          (finiteAdelicHeckeDiagonal p)) ^ (n + 1) * r.val :=
+  finitePlaceHeckeRadial_some_forward N p hpN n a ha
+
+/-- Exact original-object consumer of `adelicLocalHeckeTrace_primitive_generator`. -/
+theorem actual_local_radial_trace_eigen_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    @finitePlaceHeckeTrace (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance N p
+      inferInstance inferInstance inferInstance hpN
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicCyclicHilbertGenerator F.toCuspForm) =
+    ((Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p) •
+      adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalHeckeTrace_primitive_generator F hpN
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_radial_recurrence`. -/
+theorem actual_local_radial_recurrence_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    let φ := @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      x (adelicCyclicHilbertGenerator F.toCuspForm)
+    let μ := (Real.sqrt p : ℂ) * normalizedCuspCoefficients F.toCuspForm p
+    μ * φ 0 = ((p : ℂ) + 1) * φ 1 ∧
+      ∀ n, μ * φ (n + 1) = φ n + (p : ℂ) * φ (n + 2) :=
+  adelicCyclicLocal_primitive_radial_recurrence F hpN x hx
+
+/-- Exact original-object consumer of `adelicCyclicLocal_orbit_orthogonal_zero`. -/
+theorem actual_local_orbit_orthogonal_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (horth : inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) = 0)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    inner ℂ x (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g (adelicCyclicHilbertGenerator F.toCuspForm)) = 0 :=
+  adelicCyclicLocal_orbit_orthogonal_zero F hpN x hx horth g
+
+/-- Exact original-object consumer of `adelicLocalCyclic_fixed_eq_generator_line`. -/
+theorem actual_local_cyclic_fixed_line_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊓
+      adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) =
+        Submodule.span ℂ {adelicCyclicHilbertGenerator F.toCuspForm} :=
+  adelicLocalCyclic_fixed_eq_generator_line F hpN
+
+/-- Exact original-object consumer of `adelicLocalCyclic_intertwiner_scalar`. -/
+theorem actual_local_cyclic_Schur_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (T : AdelicCyclicHilbert F.toCuspForm →L[ℂ] AdelicCyclicHilbert F.toCuspForm)
+    (hT : ∀ g x, T (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x) =
+        adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g (T x))
+    (hcyclic : T (adelicCyclicHilbertGenerator F.toCuspForm) ∈
+      adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    ∃ c : ℂ, ∀ x ∈ adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)),
+      T x = c • x :=
+  adelicLocalCyclic_intertwiner_scalar F hpN T hT hcyclic
+
+/-- Exact original-object consumer of `adelicLocalCyclicClosedSpan_irreducible`. -/
+theorem actual_local_cyclic_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (S : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hclosed : IsClosed (S : Set (AdelicCyclicHilbert F.toCuspForm)))
+    (hle : S ≤ adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (hinv : ∀ g x, x ∈ S → adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x ∈ S) :
+    S = ⊥ ∨ S = adelicLocalCyclicClosedSpan F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalCyclicClosedSpan_irreducible F hpN S hclosed hle hinv
+

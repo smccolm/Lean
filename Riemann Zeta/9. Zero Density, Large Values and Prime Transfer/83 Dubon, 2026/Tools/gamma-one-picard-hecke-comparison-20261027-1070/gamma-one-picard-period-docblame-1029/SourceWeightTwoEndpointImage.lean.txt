@@ -1,0 +1,53 @@
+import Dubon2026.SourceWeightTwoPeriodUntwist
+import Mathlib.LinearAlgebra.Finsupp.LinearCombination
+
+/-! DUB17/18 -> actual Gamma1 Picard-period comparison -> Jacobi inversion.
+The image consists of actual finite integer divisors of degree zero, under
+the existing original endpoint functional evaluated on cusp forms. Explicit
+differences of upper-half-plane points supply the local primitive image. -/
+namespace Dubon2026.SourceWeightTwoJacobi
+noncomputable section
+open UpperHalfPlane Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+def analyticDegree : (ℍ →₀ ℤ) →ₗ[ℤ] ℤ :=
+  Finsupp.linearCombination ℤ (fun _ : ℍ => (1 : ℤ))
+
+theorem analyticDegree_apply (c : ℍ →₀ ℤ) :
+    analyticDegree c = c.sum (fun _ a => a) := by
+  simp only [analyticDegree, Finsupp.linearCombination_apply, smul_eq_mul, mul_one]
+
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+
+def endpointCoordinates {n : ℕ} (b : Fin n → CuspForm (Γ.map (mapGL ℝ)) 2) :
+    (ℍ →₀ ℤ) →ₗ[ℤ] (Fin n → ℂ) :=
+  Finsupp.linearCombination ℤ (fun τ => fun i => sourceWeightTwoAlong Γ UpperHalfPlane.I τ (b i))
+
+def endpointImage {n : ℕ} (b : Fin n → CuspForm (Γ.map (mapGL ℝ)) 2) :
+    AddSubgroup (Fin n → ℂ) :=
+  ((endpointCoordinates Γ b).comp analyticDegree.ker.subtype).range.toAddSubgroup
+
+theorem mem_endpointImage_iff {n : ℕ} (b : Fin n → CuspForm (Γ.map (mapGL ℝ)) 2)
+    (x : Fin n → ℂ) :
+    x ∈ endpointImage Γ b ↔ ∃ c : ℍ →₀ ℤ,
+      c.sum (fun _ a => a) = 0 ∧ endpointCoordinates Γ b c = x := by
+  constructor
+  · rintro ⟨c, hc⟩
+    exact ⟨c.val, by simpa only [LinearMap.mem_ker, analyticDegree_apply] using c.property, hc⟩
+  · rintro ⟨c, hc, hx⟩
+    exact ⟨⟨c, by simpa only [LinearMap.mem_ker, analyticDegree_apply] using hc⟩, hx⟩
+
+theorem endpoint_difference_mem_image {n : ℕ}
+    (b : Fin n → CuspForm (Γ.map (mapGL ℝ)) 2) (a t : ℍ) :
+    (fun i => sourceWeightTwoAlong Γ UpperHalfPlane.I a (b i) -
+      sourceWeightTwoAlong Γ UpperHalfPlane.I t (b i)) ∈ endpointImage Γ b := by
+  classical
+  apply (mem_endpointImage_iff Γ b _).mpr
+  refine ⟨Finsupp.single a 1 - Finsupp.single t 1, ?_, ?_⟩
+  · rw [← analyticDegree_apply]
+    simp [analyticDegree]
+  · simp only [endpointCoordinates, map_sub, Finsupp.linearCombination_single, one_smul]
+    rfl
+
+end
+end Dubon2026.SourceWeightTwoJacobi

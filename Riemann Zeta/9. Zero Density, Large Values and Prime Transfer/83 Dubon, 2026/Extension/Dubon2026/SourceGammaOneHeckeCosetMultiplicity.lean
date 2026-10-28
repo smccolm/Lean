@@ -1,0 +1,59 @@
+import Dubon2026.SourceGammaOneHeckeActualStabilizers
+import Dubon2026.SourceGammaOneHeckeUpperOrbits
+import Dubon2026.SourceGammaOneHeckePrimitiveDerivative
+import Dubon2026.SourceHeckeCosetFiberCount
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> literal divisor
+multiplicities. Native finite-coset counting and the proved actual stabilizer
+ratio identify each analytic beta-fiber multiplicity with the algebraic
+ramification order, including elliptic points and central signs. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup
+open scoped MatrixGroups Classical StabilizerCharacter SubgroupStabilizer
+variable (M d : ℕ) [NeZero M] [NeZero d]
+  (hT : ModularGroup.T ∈ Gamma1 M)
+  (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M))
+
+private local instance : Fintype (Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex M d
+  exact Fintype.ofFinite _
+
+include hT hH
+
+theorem heckeCosetPoint_restrict_beta (τ : ℍ)
+    (q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d) :
+    Place.restrictAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+      (analyticPlace hH (heckeCosetPoint M d τ q)) = analyticPlace hT τ := by
+  rw [analyticPlace_restrict_heckeBeta M d hT hH, heckeCosetPoint_dilation]
+  exact analyticPlace_smul hT q.out⁻¹ τ
+
+theorem heckeBeta_ramification_eq_coset_card (τ w : ℍ)
+    (g₀ : Gamma1 M) (hg₀ : g₀ • τ = levelRaiseMatrix d • w) :
+    Place.ramificationAlong (heckeBeta ℂ M d) (heckeBeta_finite ℂ M d)
+        (analyticPlace hH w) =
+      ((Finset.univ.filter fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d =>
+        analyticPlace hH (heckeCosetPoint M d τ q) = analyticPlace hH w).card : ℤ) := by
+  have hc := HeckeFiber.card_stabilizer_eq_coset_filter_mul
+    (sourceGammaOneHeckeUpper M d) τ (levelRaiseMatrix d • w) g₀ hg₀
+  have he : (Finset.univ.filter fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d =>
+      analyticPlace hH (heckeCosetPoint M d τ q) = analyticPlace hH w) =
+      Finset.univ.filter fun q : Gamma1 M ⧸ sourceGammaOneHeckeUpper M d =>
+        q.out⁻¹ • τ ∈ MulAction.orbit (sourceGammaOneHeckeUpper M d) (levelRaiseMatrix d • w) := by
+    apply Finset.filter_congr
+    intro q _
+    rw [analyticHeckePlace_eq_iff_upper_orbit, heckeCosetPoint_dilation]
+    rfl
+  rw [he]
+  have hr := heckeBeta_stabilizer_ramification M d hT hH w
+  have hp : 0 < (Nat.card (MulAction.stabilizer (sourceGammaOneHeckeUpper M d)
+      (levelRaiseMatrix d • w)) : ℤ) := by
+    rw [← hecke_stabilizer_card]
+    exact_mod_cast (Nat.card_pos (α := MulAction.stabilizer
+      ↥(Gamma1 M ⊓ Gamma0 (d * M)) w))
+  have hc' := congrArg (fun n : ℕ => (n : ℤ)) hc
+  push_cast at hc'
+  nlinarith
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

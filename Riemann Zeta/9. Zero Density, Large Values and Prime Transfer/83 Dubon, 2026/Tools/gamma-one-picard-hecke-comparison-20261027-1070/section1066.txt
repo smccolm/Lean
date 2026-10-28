@@ -1,0 +1,16 @@
+### Original intrinsic local Hecke cosets and central character — 8 October 2026
+
+Ten further production modules prove that actual finite-place evaluation is a split surjective homomorphism from the original full finite level group to its genuine local level group, with the literal one-place insertion as section. The original full Hecke upper subgroup is exactly the preimage of the intrinsic local subgroup defined by conjugation into the actual local level group. A proved general coset-map bijection transports the original full adelic transversal to this genuine local quotient. Its original p+1 classical representatives are therefore exactly the distinct local Hecke cosets. At every good prime the actual local K0(N) equals K0(1); original matrix and inverse integrality reconstruct a genuine invertible matrix over the local integer ring. The single-prime Hecke sum is thus the intrinsic local coset trace, and it preserves the actual local level-fixed space for every original vector. Inserting a local unit into the actual finite adele ring gives an original idele, and its scalar matrix is precisely the genuine local scalar insertion. The original global central-character theorem then proves trivial scalar action for every local action, without a supplied local-character hypothesis.
+
+Intrinsic local Hecke cosets, the exact p+1 transversal, good-prime integral local group identification, the original local trace action and its trivial central character are proved. Local representation and Euler-factor classification, the automorphic non-CM bridge and higher symmetric automorphy/continuation still require proofs. Full adelic Hilbert irreducibility remains proved. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicIntrinsicLocalHecke](Extension/Dubon2026/AdelicIntrinsicLocalHecke.lean).
+- [AdelicLocalCentralCharacter](Extension/Dubon2026/AdelicLocalCentralCharacter.lean).
+- [FiniteAdelicLevelLocalization](Extension/Dubon2026/FiniteAdelicLevelLocalization.lean).
+- [FiniteAdelicLocalUnits](Extension/Dubon2026/FiniteAdelicLocalUnits.lean).
+- [FinitePlaceHeckeCosets](Extension/Dubon2026/FinitePlaceHeckeCosets.lean).
+- [FinitePlaceHeckeTrace](Extension/Dubon2026/FinitePlaceHeckeTrace.lean).
+- [FinitePlaceHeckeUpper](Extension/Dubon2026/FinitePlaceHeckeUpper.lean).
+- [FinitePlaceSphericalLevel](Extension/Dubon2026/FinitePlaceSphericalLevel.lean).
+- [RepresentationConjugateFixed](Extension/Dubon2026/RepresentationConjugateFixed.lean).
+- [SurjectiveCosetEquiv](Extension/Dubon2026/SurjectiveCosetEquiv.lean).

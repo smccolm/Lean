@@ -1,0 +1,38 @@
+import Dubon2026.SourceGammaOneHeckeStretchLaurent
+import Dubon2026.SourceGammaOneHeckeDegeneracy
+import Dubon2026.SourceGammaOneMeromorphicRealization
+import Dubon2026.SourceOriginalHeckeBetaGerms
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> beta analytic
+degeneracy map. Native q-dilation and equal-weight modular ratios prove
+the literal field map realizes dilation of the upper-half-plane point.
+No analytic place or generator dictionary is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups Topology
+
+theorem realize_heckeBeta_eventuallyEq (M d : ℕ) [NeZero d]
+    (hT : ModularGroup.T ∈ Gamma1 M)
+    (hH : ModularGroup.T ∈ Gamma1 M ⊓ Gamma0 (d * M))
+    (x : functionFieldOver (Gamma1 M) ℂ) (τ : ℍ) :
+    (fun z : ℂ => realize (Gamma1 M ⊓ Gamma0 (d * M))
+      (heckeBeta ℂ M d x : LaurentSeries ℂ) (ofComplex z))
+      =ᶠ[𝓝[≠] (τ : ℂ)]
+        fun z => realize (Gamma1 M) (x : LaurentSeries ℂ) (ofComplex ((d : ℂ) * z)) := by
+  obtain ⟨k, g, h, hh, hx⟩ := functionFieldOver_modular_ratio hT x
+  have hx' : (heckeBeta ℂ M d x : LaurentSeries ℂ) *
+      ModularRatios.qL (modularStretch M d h) = ModularRatios.qL (modularStretch M d g) := by
+    rw [heckeBeta_coe, modularStretch_qL, modularStretch_qL, ← map_mul, hx]
+  have hr := (realize_eventuallyEq_of_ratio hT g h x hh hx (levelRaiseMatrix d • τ)).comp_tendsto
+    (SourceFunctionField.tendsto_dilation_nhdsNE d τ)
+  filter_upwards [realize_eventuallyEq_of_ratio hH
+    (modularStretch M d g) (modularStretch M d h) _
+    (modularStretch_ne_zero M d hT h hh) hx' τ, hr,
+    mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)] with z he hf hz
+  simp only [Function.comp_apply] at hf
+  rw [he, hf, modularStretch_apply, modularStretch_apply,
+    SourceFunctionField.ofComplex_dilation d hz]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

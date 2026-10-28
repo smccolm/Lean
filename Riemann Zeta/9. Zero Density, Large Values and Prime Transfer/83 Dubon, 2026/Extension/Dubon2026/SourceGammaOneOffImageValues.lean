@@ -1,0 +1,46 @@
+import Dubon2026.SourceGammaOneComplexTranslations
+import Dubon2026.SourceCurveCoordinateValues
+
+/-! DUB-17/18 -> torsion surjectivity -> exclusion of nonarithmetic support.
+Every complex place outside the arithmetic image has a finite j-value outside
+Qbar. Existing exact orders off the image and the original residue-value
+bijection prove both assertions; no generic-place specification is introduced.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (N : ℕ) [NeZero N]
+local notation "FQ" => functionFieldOver (Gamma1 N) Qbar
+local notation "FC" => functionFieldOver (Gamma1 N) ℂ
+
+theorem off_image_exists_nonarithmetic_j_value (W : Place ℂ FC)
+    (hW : ∀ P, W ≠ liftPlace N P) :
+    ∃ t : ℂ, t ∉ Set.range OriginalConstantField.sigma ∧ 0 < W.ord (jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC t) := by
+  have hj : W.ord (jCoordinateOver (Gamma1 N) ℂ) = 0 := by
+    rw [← fieldMap_j N]
+    exact ord_phi_of_forall_ne N hW (jCoordinateOver (Gamma1 N) Qbar)
+  obtain ⟨t, ht, _⟩ := W.exists_unique_coordinate_value
+    (gamma1_place_residue_bijective ℂ N W).surjective
+    (transcendental_jCoordinateOver (Gamma1 N) ℂ) (W.mem_of_ord_nonneg hj.ge)
+  refine ⟨t, ?_, ht⟩
+  rintro ⟨a, rfl⟩
+  have he : jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC (OriginalConstantField.sigma a) =
+      fieldMap N (jCoordinateOver (Gamma1 N) Qbar - algebraMap Qbar FQ a) := by
+    rw [map_sub, fieldMap_j, fieldMap_constants]
+  rw [he, ord_phi_of_forall_ne N hW] at ht
+  exact (lt_irrefl 0) ht
+
+omit [NeZero N] in
+theorem j_value_arithmetic_pos (τ : ℂ ≃ₐ[ℚ] ℂ) (W : Place ℂ FC) {t : ℂ}
+    (ht : 0 < W.ord (jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC t)) :
+    0 < (arithmeticPlace (Gamma1 N) τ W).ord
+      (jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC (τ t)) := by
+  have h := arithmeticPlace_ord_action (Gamma1 N) τ W
+    (jCoordinateOver (Gamma1 N) ℂ - algebraMap ℂ FC t)
+  rw [map_sub, arithmeticRingAut_j, arithmeticRingAut_constants] at h
+  rw [h]
+  exact ht
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+    "sha": "9cc2476f3b9bd70d278f20a74572a2399df19145",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+    "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean.txt"
+  },
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+    "sha": "a902e21e60b490502fa640ecaf9afc66128f254c",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+    "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean.txt"
+  },
+  {
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+    "sha": "b3b83ad2eef38c31ebc3242905099c6b9ca93feb",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+    "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean.txt"
+  }
+]

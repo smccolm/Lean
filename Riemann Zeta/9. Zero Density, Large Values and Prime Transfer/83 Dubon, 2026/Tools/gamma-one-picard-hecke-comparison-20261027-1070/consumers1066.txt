@@ -1,0 +1,42 @@
+
+/-- Exact original-object consumer of `finiteAdelicLevelAt_surjective`. -/
+theorem actual_local_level_surjection_source (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ) :
+    Function.Surjective (finiteAdelicLevelAt N v) :=
+  finiteAdelicLevelAt_surjective N v
+
+/-- Exact original-object consumer of `finitePlaceHeckeCosets_card`. -/
+theorem actual_intrinsic_local_Hecke_cosets_source (N p : ℕ) [NeZero N] [NeZero p] [Fact p.Prime]
+    (hpN : p.Coprime N) :
+    Nat.card (finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)) ⧸
+      finitePlaceHeckeUpper N p (Fact.out : p.Prime)) = p + 1 :=
+  finitePlaceHeckeCosets_card N p hpN
+
+/-- Exact original-object consumer of `finitePlaceGL2Gamma0_good_eq_one`. -/
+theorem actual_good_prime_full_integral_group_source (N p : ℕ) (hp : p.Prime) (hpN : p.Coprime N) :
+    finitePlaceGL2Gamma0 N (rationalPrimePlace p hp) = finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp) :=
+  finitePlaceGL2Gamma0_good_eq_one N p hp hpN
+
+/-- Exact original-object consumer of `finitePlaceIntegralMatrix_map`. -/
+theorem actual_integral_local_matrix_source (v : HeightOneSpectrum ℤ) (g : finitePlaceGL2Gamma0 1 v) :
+    GeneralLinearGroup.map (v.adicCompletionIntegers ℚ).subtype (finitePlaceIntegralMatrix v g) = g.val :=
+  finitePlaceIntegralMatrix_map v g
+
+/-- Exact original-object consumer of `adelicLocalNormalizedHecke_local_fixed`. -/
+theorem actual_intrinsic_local_Hecke_preservation_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert f)
+    (hx : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val x = x)
+    (g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val
+      (adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN x) =
+        adelicLocalNormalizedHecke f p (Fact.out : p.Prime) hpN x :=
+  adelicLocalNormalizedHecke_local_fixed f hpN x hx g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_scalar_action`. -/
+theorem actual_local_central_character_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (u : (v.adicCompletion ℚ)ˣ) (x : AdelicCyclicHilbert f) :
+    adelicCyclicLocalRepresentation f v (GeneralLinearGroup.scalar (Fin 2) u) x = x :=
+  adelicCyclicLocal_scalar_action f v u x
+

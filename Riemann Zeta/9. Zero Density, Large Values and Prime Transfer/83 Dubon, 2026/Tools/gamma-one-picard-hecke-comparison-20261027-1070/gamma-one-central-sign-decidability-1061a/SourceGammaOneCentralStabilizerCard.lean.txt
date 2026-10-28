@@ -1,0 +1,85 @@
+import Dubon2026.SourceGammaOnePlusMinus
+
+/-! DUB17/18 -> actual Gamma1 Picard/Hecke comparison -> literal coset
+multiplicities. The central-sign enlargement multiplies a point stabilizer
+by one or two according to membership of negative identity. The same factor
+will cancel for Gamma1 and its geometric Hecke subgroup. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups StabilizerCharacter SubgroupStabilizer
+
+theorem card_stabilizer_plusMinus (Γ : Subgroup SL(2, ℤ)) (τ : ℍ) :
+    Nat.card (MulAction.stabilizer (plusMinus Γ) τ) =
+      (if (-1 : SL(2, ℤ)) ∈ Γ then 1 else 2) * Nat.card (MulAction.stabilizer Γ τ) := by
+  classical
+  by_cases hn : (-1 : SL(2, ℤ)) ∈ Γ
+  · have he : plusMinus Γ = Γ := by
+      ext g
+      rw [mem_plusMinus_iff]
+      constructor
+      · rintro (h | h)
+        · exact h
+        · simpa only [neg_one_mul, neg_neg] using Γ.mul_mem hn h
+      · exact Or.inl
+    rw [he, if_pos hn, one_mul]
+  · rw [if_neg hn]
+    let f : MulAction.stabilizer Γ τ ⊕ MulAction.stabilizer Γ τ →
+        MulAction.stabilizer (plusMinus Γ) τ :=
+      Sum.elim
+        (fun g => ⟨⟨g.val.val, le_plusMinus Γ g.val.property⟩, g.property⟩)
+        (fun g => ⟨⟨-g.val.val, (mem_plusMinus_iff Γ _).mpr
+          (Or.inr (by simpa only [neg_neg] using g.val.property))⟩, by
+            change (-g.val.val) • τ = τ
+            rw [ModularGroup.SL_neg_smul]
+            exact g.property⟩)
+    have hi : Function.Injective f := by
+      intro a b he
+      have hv := congrArg (fun g : MulAction.stabilizer (plusMinus Γ) τ => g.val.val) he
+      cases a with
+      | inl a =>
+        cases b with
+        | inl b =>
+          apply congrArg Sum.inl
+          apply Subtype.ext
+          apply Subtype.ext
+          exact hv
+        | inr b =>
+          have h : a.val.val = -b.val.val := hv
+          have hm : -b.val.val ∈ Γ := h ▸ a.val.property
+          have hb := Γ.mul_mem hm (Γ.inv_mem b.val.property)
+          have hc : (-1 : SL(2, ℤ)) ∈ Γ := by
+            simpa only [neg_mul, mul_inv_cancel] using hb
+          exact (hn hc).elim
+      | inr a =>
+        cases b with
+        | inl b =>
+          have h : -a.val.val = b.val.val := hv
+          have hm : -a.val.val ∈ Γ := h.symm ▸ b.val.property
+          have hb := Γ.mul_mem hm (Γ.inv_mem a.val.property)
+          have hc : (-1 : SL(2, ℤ)) ∈ Γ := by
+            simpa only [neg_mul, mul_inv_cancel] using hb
+          exact (hn hc).elim
+        | inr b =>
+          apply congrArg Sum.inr
+          apply Subtype.ext
+          apply Subtype.ext
+          exact neg_injective hv
+    have hs : Function.Surjective f := by
+      intro g
+      rcases (mem_plusMinus_iff Γ g.val.val).mp g.val.property with h | h
+      · exact ⟨Sum.inl ⟨⟨g.val.val, h⟩, g.property⟩, rfl⟩
+      · let a : MulAction.stabilizer Γ τ := ⟨⟨-g.val.val, h⟩, by
+          change (-g.val.val) • τ = τ
+          rw [ModularGroup.SL_neg_smul]
+          exact g.property⟩
+        refine ⟨Sum.inr a, ?_⟩
+        apply Subtype.ext
+        apply Subtype.ext
+        exact neg_neg g.val.val
+    have hc := Nat.card_congr (Equiv.ofBijective f ⟨hi, hs⟩)
+    rw [Nat.card_sum] at hc
+    omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

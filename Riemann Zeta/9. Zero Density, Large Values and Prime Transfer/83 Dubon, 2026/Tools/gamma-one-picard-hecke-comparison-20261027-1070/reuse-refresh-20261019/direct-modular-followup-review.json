@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-19",
+  "scope": "Fresh targeted search for direct modular Galois, purity and higher symmetric-power continuation proofs that could shorten DUB-17/18. Research only; no dependency added.",
+  "repositoryHeads": {
+    "ramanujanPetersson": {
+      "sha": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "message": "Add files via upload",
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/commits/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "html_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "diff": null,
+      "files": null,
+      "repository_full_name": "lioristhmus/ramanujan-petersson",
+      "comments": null,
+      "author": null,
+      "committer": null,
+      "created_at": "2026-03-20T15:35:54Z",
+      "git_author_email": null,
+      "display_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "display_title": "Add files via upload"
+    },
+    "adelicSpectralZeta": {
+      "sha": "0c3e98c144796f99534f372b4aba977e6b76ee19",
+      "message": "chore: trim AI/ML sparse attention packages, preprints, benchmarks, circuits, and Lean lemmas moved to sparse-ai",
+      "url": "https://api.github.com/repos/sneed-and-feed/adelic-spectral-zeta/commits/0c3e98c144796f99534f372b4aba977e6b76ee19",
+      "html_url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/commit/0c3e98c144796f99534f372b4aba977e6b76ee19",
+      "diff": null,
+      "files": null,
+      "repository_full_name": "sneed-and-feed/adelic-spectral-zeta",
+      "comments": null,
+      "author": null,
+      "committer": null,
+      "created_at": "2026-09-16T10:10:52Z",
+      "git_author_email": null,
+      "display_url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/commit/0c3e98c144796f99534f372b4aba977e6b76ee19",
+      "display_title": "chore: trim AI/ML sparse attention packages, preprints, benchmarks, circuits, and Lean lemmas moved to sparse-ai"
+    }
+  },
+  "reviewedFiles": [
+    {
+      "file": "adelic-spectral-zeta__RamanujanTau.lean.txt",
+      "gitBlob": "876c468ccbdcac328302e04512977903b3d03342",
+      "url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/blob/0c3e98c144796f99534f372b4aba977e6b76ee19/formalization/Formalization/Spectral/RamanujanTau.lean",
+      "coverage": "Entire file",
+      "finding": "Defines a truncated-power-series tau coefficient and proves a modulo-691 congruence conditional on an abstract power-series modular-form space, its dimension/span property and an integral form with specified first coefficients. No Deligne bound, attached Galois representation or symmetric-power continuation is proved in this file. Its final unlimited heartbeat setting is not adopted.",
+      "sha256": "7fff32a8ec8d3533ac3a303ab0151c52c37b528b8d950efcf096aace12ad9617",
+      "bytes": 4982,
+      "gitBlobVerified": true
+    },
+    {
+      "file": "adelic-spectral-zeta__CLAIMS.md.txt",
+      "gitBlob": "fb4a417e4514fc8b4ab6ce5d360ae753f2b73192",
+      "url": "https://github.com/sneed-and-feed/adelic-spectral-zeta/blob/0c3e98c144796f99534f372b4aba977e6b76ee19/docs/CLAIMS.md",
+      "coverage": "Entire claims file",
+      "finding": "The tau entry reports computational verification for n=1..4. No endpoint reuse is justified by that claim.",
+      "sha256": "ac98c924844ba56b381ac03bd0ac62d04a2132471f18e02794fcff40c5bfcdd7",
+      "bytes": 18465,
+      "gitBlobVerified": true
+    }
+  ],
+  "otherChecks": [
+    {
+      "url": "https://anr-false.github.io/",
+      "finding": "Still describes attached Deligne representations as a project objective, not a proof package."
+    },
+    {
+      "url": "https://github.com/mkaratarakis/CICM24_Deligne",
+      "finding": "Repository describes partial formalization of the statement of Deligne's theorem."
+    },
+    {
+      "query": "symmetric power Lean automorphy",
+      "provider": "GitHub repository search",
+      "returnedRepositories": 0,
+      "limitation": "Search result only; not a global absence claim."
+    }
+  ],
+  "decision": "No new direct modular endpoint adopted. The previously reviewed Ramanujan-Petersson repository head is unchanged. Continue actual native coefficient classification and augmentation comparison; reuse existing generic patching when its arithmetic hypotheses are discharged.",
+  "proofStatus": "External candidates not built or audited transitively. Root pins unchanged."
+}

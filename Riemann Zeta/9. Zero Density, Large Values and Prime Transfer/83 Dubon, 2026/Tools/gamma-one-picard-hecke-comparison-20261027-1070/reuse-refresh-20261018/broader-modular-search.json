@@ -1,0 +1,45 @@
+{
+  "checkedUTC": "2026-10-18T20:47:56.635321+00:00",
+  "method": "Public web search and primary repository descriptions; source-level triage only, not a complete repository search or kernel certificate.",
+  "queries": [
+    "Lean formalization Sato Tate symmetric power automorphy GitHub 2026",
+    "Lean theorem Deligne Weil conjectures purity modular form GitHub",
+    "Lean Taylor Wiles auxiliary primes dual Selmer GitHub",
+    "site:github.com \"SatoTate\" \"lean\"",
+    "site:github.com \"Sato-Tate\" \"Lean\" automorphy",
+    "site:github.com \"symmetric power\" \"automorphy\" \"lean\""
+  ],
+  "findings": [
+    {
+      "url": "https://github.com/mkaratarakis/CICM24_Deligne",
+      "decision": "The author describes a partial formalization of the statement of Deligne association, not a proved association or purity theorem. No replacement for the open Dubon endpoint."
+    },
+    {
+      "url": "https://github.com/teal-sea/zeta-lab/blob/main/docs/25-the-director-run.md",
+      "decision": "The described Lean results are the first two vertical finite-field moments over all Weierstrass pairs, including singular pairs. This is a different averaging domain from prime equidistribution for a fixed non-CM modular form."
+    },
+    {
+      "url": "https://github.com/aster2024/openai-math-followups",
+      "decision": "The described Sato-Tate/symmetric-power consequences concern CM curves and CM newforms. They do not match the required non-CM full modular branch; no dependency closure certified here."
+    },
+    {
+      "url": "https://github.com/CBirkbeck/ModularForms",
+      "decision": "Older Lean 3 modular-form definitions and Eisenstein work; author description explicitly leaves modularity unfinished. Native completed modular infrastructure remains preferable."
+    }
+  ],
+  "conclusion": "This additional bounded search yielded no verified direct non-CM Sato-Tate, full modular Galois association/purity, or all-higher-symmetric-power continuation endpoint. The certified patching and Chebotarev ports remain the concrete reusable gains; no global nonexistence claim is made.",
+  "adequacyFollowup": {
+    "checkedUTC": "2026-10-18T21:27:12.652708+00:00",
+    "queries": [
+      "Lean formalization adequate Galois representation symmetric power Taylor Wiles GitHub",
+      "Lean \"automorphy lifting\" proof \"symmetric\" GitHub"
+    ],
+    "assessment": "These bounded queries located the previously reviewed rank-two FLT sources and classical research papers, but no locally certified arbitrary-rank adequacy or symmetric-power automorphy proof. This is not a global absence claim.",
+    "primaryReferences": [
+      "https://github.com/anthropics/fermats-last-theorem/blob/main/formalization.yaml",
+      "https://arxiv.org/abs/2205.05062",
+      "https://arxiv.org/abs/1912.11261"
+    ],
+    "nativeRouteReview": "PrimitiveHigherContinuationReduction.lean proves primitive_prime_bound_of_higher_symmetric_holomorphy and primitive_satoTate_of_higher_continuation_alone. Exact higher holomorphic nonvanishing continuation suffices for both required purity and Sato-Tate; retain potential automorphy and analytic descent as the selected arithmetic route, without adding an independent Weil-conjectures development."
+  }
+}

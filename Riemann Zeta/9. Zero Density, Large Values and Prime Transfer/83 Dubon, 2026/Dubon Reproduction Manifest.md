@@ -1,6 +1,14 @@
 # Dubon 2026 — reproduction manifest
 
-Actual original Gamma1 finite-divisor converse (27 October 2026): Every finite degree-zero analytic divisor on the actual original Gamma1 integral-ratio field with original integral period class is now proved literally principal. Representative correction identifies its original finite period functional; integer cocycles and the actual Petersson pairing prove the required lattice duality. Unitarization removes the unit-modulus assumption. Native Riemann-Roch constructs the actual prescribed algebraic differential, including regularity at all j-poles. Its analytic realization gives the exact ramification-weighted integer residues, slash invariance and exponential cusp decay. Point regularization, meromorphic primitive construction and multiplier gluing give an actual meromorphic function with exact orders and nonzero limits at every translated cusp. Thus no meromorphic function, multiplier, cusp limit, exact-order certificate or analytic residue coefficient remains assumed in the finite-divisor converse. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse. The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged. The forty-five-module actual Gamma1 finite-divisor converse scope passes 242 public axiom queries, 376 exhaustive scratch theorem checks, sixteen linters per module and eight declaration-value audits with 488 required dependency checks, with zero diagnostics. Production aggregate, focused audits and sequential foundation/paper verification of the 8,821-module scope are pending. The preceding 8,776-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The October 27 pinned external search is now used through selected locally kernel-checked proofs. Native actual Gamma1 Riemann-Roch, residue surjectivity, realization germs, uniformizer logarithmic expansion, original period surjectivity and Petersson positivity discharge the geometric inputs. Native normalized wedge primitives avoid a second disk exhaustion; native q-parameter normal forms give decay from positive cusp order directly. The final converse has 240 declarations in its proof-VALUE closure, covering every public declaration of this 45-module scope except two separately axiom-checked definitional accessors optimized away by elaboration. No unrelated generalizations, external closure, root pin changes or proof-limit changes are introduced.
+Actual original Gamma1 arithmetic Tate and finite H1 comparison (27 October 2026): The actual arithmetic Gamma1 Picard group injects into the complex Picard group, and every nonzero-modulus complex torsion class descends. The resulting arithmetic-to-complex Tate equivalence preserves the actual Hecke operators. Its composition with the original Picard-period equivalence identifies the arithmetic Tate module with the p-adic tensor of the original finite free integral-period lattice. Prime Hecke operators act by the actual dual cusp operator, including primes dividing the level. Integer parabolic characters factor through that lattice by the proved real-period surjectivity. The proved integral lift gives an equivalence between its modulus dual and the literal native H1 submodule whose characters vanish on parabolic and finite-order elements. Native base-change universality identifies this same H1 submodule with finite characters of the actual arithmetic Tate module. This equivalence intertwines arithmetic Picard prime Hecke duals and native H1 Hecke operators. The real parabolic H1 comparison and stability are also proved. No arithmetic torsion descent, Tate comparison, lattice-dual realization or Hecke compatibility premise remains in these stated comparisons. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond and arithmetic Picard/H1 comparison -> actual finite arithmetic Tate dual and native H1 Hecke comparison. The finite H1 target explicitly retains parabolic and finite-order vanishing. The full/parabolic passage, discharge of finite-order vanishing for the application, original homogeneous coefficients and diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. No rank-equals-twice-genus claim is inferred from the lattice-rank torsion cardinality. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged. The fifty-six-module arithmetic Tate and finite H1 comparison passes 178 public axiom queries, 357 exhaustive scratch theorem checks, sixteen linters per module and six declaration-value audits with 207 required dependency checks, with zero diagnostics. Production aggregate, focused audits and sequential foundation/paper verification of the 8,923-module scope are pending. The preceding 8,867-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the fixed-revision October 27 search and proved local arithmetic curves, constant-field places, finite Riemann-Roch spaces, period surjectivity, integral character lifting and native tensor universal properties. Coefficient-span descent and equality of coordinate degrees prove Picard injectivity; finite torsion actions and translation orbits prove torsion descent. Only place extension and divisor conorm are developed for the Hecke intersection field. The finite H1 route factors integer characters through the actual period kernel and uses the existing integral lift, avoiding a second integral Poincare-duality argument. IsBaseChange from the proved arithmetic Tate equivalence avoids a new tensor basis construction. Frozen mathematical bodies are promoted by import qualification only.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original Gamma1 Picard and Hecke comparison (27 October 2026): The actual original complex Gamma1 Picard group is now identified with the original integer-period quotient by a proved additive equivalence. The forward Abel implication and finite Jacobi inversion discharge its kernel and surjectivity assumptions. The native holomorphic H1 period map intertwines the actual constant-coefficient Hecke operator for every nonzero index. The dual cusp trace preserves the original integer-period lattice. Actual intersection-curve orbit separation, exact ramification and coset multiplicity identify literal prime beta pullback followed by alpha pushforward with the analytic coset divisor sum, including elliptic fibers. The degree-zero hypothesis cancels the explicitly computed endpoint basepoint term. Consequently the original Picard-period equivalence intertwines the literal algebraic prime Hecke correspondence and the native dual cusp action, including primes dividing the level. No Picard equivalence, Hecke compatibility, fiber multiplicity, lattice stability or degree-zero cancellation certificate remains assumed in these complex comparisons. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond and Picard/H1 comparison -> actual Picard-period equivalence and prime Hecke compatibility. This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged. Sequential foundation/paper verification passes with zero diagnostics for the 8,867-module scope: all thirteen retained regressions, 56,334 exhaustive theorem checks, 26,085 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,821-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the October 27 fixed-revision source assessment and the existing local foundations. Native endpoint primitives and Jacobi inversion, literal divisor pull/push, positive ramification-weight counting, exact coset stabilizer counting, native cusp traces and H1 cocycles provide the required chain. The short all-fiber route uses generic separation and exact field degree to force every positive ramification bound to equality. Additive Finsupp extensionality extends the point formula, and degree zero removes the basepoint term. No separate intersection-curve modular-form separation theory, general quotient atlas or incidental correspondence abstraction is introduced. All used and failed evidence is retained; frozen mathematical bodies are promoted by import qualification only.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original Gamma1 finite-divisor converse (27 October 2026): Every finite degree-zero analytic divisor on the actual original Gamma1 integral-ratio field with original integral period class is now proved literally principal. Representative correction identifies its original finite period functional; integer cocycles and the actual Petersson pairing prove the required lattice duality. Unitarization removes the unit-modulus assumption. Native Riemann-Roch constructs the actual prescribed algebraic differential, including regularity at all j-poles. Its analytic realization gives the exact ramification-weighted integer residues, slash invariance and exponential cusp decay. Point regularization, meromorphic primitive construction and multiplier gluing give an actual meromorphic function with exact orders and nonzero limits at every translated cusp. Thus no meromorphic function, multiplier, cusp limit, exact-order certificate or analytic residue coefficient remains assumed in the finite-divisor converse. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse. The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged. Sequential foundation/paper verification passes with zero diagnostics for the 8,821-module scope: all thirteen retained regressions, 56,121 exhaustive theorem checks, 25,985 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,776-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The October 27 pinned external search is now used through selected locally kernel-checked proofs. Native actual Gamma1 Riemann-Roch, residue surjectivity, realization germs, uniformizer logarithmic expansion, original period surjectivity and Petersson positivity discharge the geometric inputs. Native normalized wedge primitives avoid a second disk exhaustion; native q-parameter normal forms give decay from positive cusp order directly. The final converse has 240 declarations in its proof-VALUE closure, covering every public declaration of this 45-module scope except two separately axiom-checked definitional accessors optimized away by elaboration. No unrelated generalizations, external closure, root pin changes or proof-limit changes are introduced.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -65975,5 +65983,2116 @@ The original meromorphic function, its exact prescribed divisor orders, nonzero 
   },
   "scratchToProductionCountReason": "All 533 distinct names from 533 exhaustive scratch checks are retained: 531 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
   "boundary": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain explicit upstream inputs. The representative divisor functional must be related to the original finite divisor class. Integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Global Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+}
+```
+
+## Production actual original Gamma1 finite-divisor converse pending full run - 27 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,821-module scope: all thirteen retained regressions, 56,121 exhaustive theorem checks, 25,985 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDivisorReciprocityDependencyAudit1Production8821.log",
+      "sha256": "36A859461784E55069BDA71590C87F769741B00EFC0653A7BD86C092D8659B30",
+      "requiredProofValueEdges": 6,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_finite_divisor_reciprocity"
+      ],
+      "sourceSha256": "737D334366932427CB809F1C51A12E0AC0340A8433F7862072C1AA73A04F23A0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodDualityDependencyAudit1bProduction8821.log",
+      "sha256": "1D53C021B1E5A2176C8A4F4CE159C6C4A5EB54A68AB901F09F74970AEAF70EA9",
+      "requiredProofValueEdges": 79,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function"
+      ],
+      "sourceSha256": "B696537107D3305BCEBC4CFE378F90C66B114EEA2EA522F682A537D6252DB348"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierDependencyAudit1Production8821.log",
+      "sha256": "536A3C2427643A25B53BD57608169DC36B7DA8D71C0A3F2A179E06B7C472ADD7",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+      ],
+      "sourceSha256": "DB26C61468B9F7E0F42758FB6B1A74060066D4FA064C0F8DCC8155AC33A08138"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesDependencyAudit1bProduction8821.log",
+      "sha256": "55AC61CB41EBF54EF3E693FDDC69725A8A9B5C9AE441C5530E920B487E6CEDA6",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential"
+      ],
+      "sourceSha256": "E505736241EACDF35188AAA77B5F55406CF3D4CED4CC5753572B038B5C1923CA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLogarithmicPrimitiveDependencyAudit1Production8821.log",
+      "sha256": "A9F824895F0D51303250B9CB65864CA5A59CE5BAF3F3550074FA7498937D5F87",
+      "requiredProofValueEdges": 60,
+      "consumers": [
+        "Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative"
+      ],
+      "sourceSha256": "7E91A8480DE364A3D561A16BC6896558ABB3C787318F850E17FB14FDFF19FA6D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueDependencyAudit1Production8821.log",
+      "sha256": "0502BDBEED55BE07758A8CB872CB53317D49342E5F391C483AFEBB6720428DF7",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion"
+      ],
+      "sourceSha256": "8EF23F29E96FD5BECA0D645AFC5D7A12ABA152F31574F8866842A7E8DFE41BEF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspConstructionDependencyAudit1Production8821.log",
+      "sha256": "AFED4EF76BBDCF01D74C4E6536A597B6A329FC19B62F2DFE17B02B8DC68E301E",
+      "requiredProofValueEdges": 51,
+      "consumers": [
+        "Dubon2026.SourceMeromorphicPrimitiveMultiplier.exists_meromorphic_multiplier_cusp_orders"
+      ],
+      "sourceSha256": "105C55C925172424165C7CF8CA102CF75AC02A5559F8D8C30791CC6E1635A35F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseDependencyAudit1Production8821.log",
+      "sha256": "562A7A3A3110FDBAED1554F22F2894C143852331A50AA7A4199ED70C0193B90F",
+      "requiredProofValueEdges": 240,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_period_mem"
+      ],
+      "sourceSha256": "85CEBC5690D20342DC430A04A1B9976E92B709160FBEDF69B952A11A359B445B"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorProductionAudit8821.log",
+  "sha256": "580C222650FB42341200ECD5DECC85A5C9E13F105DB7439CA3AA88297F393422",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-principal-divisor-production-build-8821.log",
+  "aggregateSha256": "CB190F4904E0183A6B56B6C779F04FC3BB98C31EA1F59A174F802AAC96629B1F",
+  "productionModules": 8821,
+  "incrementModules": 45,
+  "axiomChecks": 242,
+  "exhaustiveIncrementTheorems": 372,
+  "linterScopes": 45,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 376,
+  "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 376,
+    "scratchDistinct": 376,
+    "generatedNameRenamings": {},
+    "productionFocused": 372,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp": [
+        {
+          "scope": "SourceGammaOneAnalyticResidueScratchOwnership1003",
+          "module": "Dubon2026.SourceGammaOneAnalyticDifferentialResidue"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend.congr_simp": [
+        {
+          "scope": "SourceOriginalIntegralPeriodDualityScratchOwnership972",
+          "module": "Dubon2026.SourceClosedPeterssonNondegenerate"
+        }
+      ],
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp": [
+        {
+          "scope": "SourceOriginalIntegralPeriodDualityScratchOwnership972",
+          "module": "Dubon2026.SourceIntegralPeriodLatticeDual"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.GammaOne.placeEval.eq_1": [
+        {
+          "scope": "SourceGammaOnePrincipalDivisorConverseScratchOwnership1014",
+          "module": "Dubon2026.SourceGammaOnePrescribedResidueCoefficient"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend.congr_simp",
+      "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp",
+      "Dubon2026.SourceFunctionField.GammaOne.placeEval.eq_1",
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneRepresentativePeriods",
+          "SourceGammaOneRepresentativePeriodCorrection",
+          "SourceGammaOneFiniteDivisorReciprocity"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDivisorReciprocityScratchOwnership956.log",
+          "sha256": "4EF728D9E40BAD64699DA7E22276E243FA511B19DA7BD2577D934FC32B94D721",
+          "sourceSha256": "9569A52C11EE209BCD9F90BC6BA3548692BACD41FFA5622EBCB1127D5E294F6C"
+        }
+      },
+      {
+        "modules": [
+          "SourceIntegralCosetCocycle",
+          "SourceIntegralCosetParabolic",
+          "SourceIntegralCosetWord",
+          "SourceIntegralPeriodCuspLimits",
+          "SourceIntegralPeriodGeneratorDual",
+          "SourceRealPrimitiveGreenData",
+          "SourceIntegralPeriodLatticeDual",
+          "SourceRealPeriodPeterssonPairing",
+          "SourceClosedPeterssonNondegenerate",
+          "SourceSignedPeriodLatticeLift",
+          "SourceGammaOneSignedRealPeriods",
+          "SourceGammaOnePeterssonIntegralRealPeriods",
+          "SourceGammaOneUnitaryDivisorPrincipal"
+        ],
+        "count": 112,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodDualityScratchOwnership972.log",
+          "sha256": "748D81F6FDD078BA1C9473721819A39E3078BD018E53276658F998935EDA4BA3",
+          "sourceSha256": "9D6C8109357971B1C1E12EB340BFD14B539A50517E1C5903970F1A5DB4FFF834"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneMultiplierUnitarization",
+          "SourceGammaOneGeneralMultiplierPrincipal"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierScratchOwnership975.log",
+          "sha256": "03B882FC2A034AD70D8E41DA3E11A03D7C6498736B3CA16E77CC4EB7AF04BE82",
+          "sourceSha256": "462FEA988AB2E4AAC7BF9E6D8C84243461249067C1EC1918C220E9A1408230FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneTwoPoleDifferential",
+          "SourceGammaOneDifferentialResidues",
+          "SourceGammaOneSimplePoleBounds",
+          "SourceGammaOneTwoPoleResidues",
+          "SourceGammaOnePrescribedResidues",
+          "SourceGammaOneAnalyticDivisorDifferential"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesScratchOwnership983.log",
+          "sha256": "A92EFFA6B916ADEA75261DF4CA19805A58E6333B467C084EBA1E18474A725A14",
+          "sourceSha256": "A3FEDA9E87EECB019699BC404F385BEB60DFD85E5CC32D6C18DC0D29378265E2"
+        }
+      },
+      {
+        "modules": [
+          "SourceUpperHalfPlaneResidueData",
+          "SourceMeromorphicFinitePolarProduct",
+          "SourceUpperHalfPlaneDiscExhaustion",
+          "SourceMeromorphicDiscPrimitive",
+          "SourceUpperHalfPlaneMeromorphicPrimitive"
+        ],
+        "count": 67,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLogarithmicPrimitiveScratchOwnership992.log",
+          "sha256": "39615D41315782EE1BB931372F0F6529876E458FD6B91B9B933A06947381C015",
+          "sourceSha256": "B314369B5CF2E77421B5185E33E2F1614454BD0062AC924E6DE4E03B079C07F6"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneRealizationDerivation",
+          "SourceGammaOneAnalyticDifferentialResidue"
+        ],
+        "count": 32,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueScratchOwnership1003.log",
+          "sha256": "0BAF8546A359FF6C0264404BC6D9124A9600DE8B3A6EC08FADF2401D73219DE8",
+          "sourceSha256": "B4EF39C609E9E885EE1DBF8E0E8925056745A997841062609B0957284B401419"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicPrimitiveSpecification",
+          "SourceMeromorphicPrimitiveGroupAction",
+          "SourceMeromorphicPrimitiveMultiplier",
+          "SourceMeromorphicCuspAnalyticData",
+          "SourceMeromorphicCuspPrimitive",
+          "SourceMeromorphicCuspPrimitiveDecay",
+          "SourceMeromorphicPrimitiveCusps"
+        ],
+        "count": 66,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspConstructionScratchOwnership1005.log",
+          "sha256": "930F01ADD4D6857FA69CA93D66239CDA084EB67F2870DEF225A7D187EF013955",
+          "sourceSha256": "4A2C1306B17165A8EBF28CB50EC42D29CF827A3AE05922059E77DB4B28E4CBB5"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicDifferentialRegularization",
+          "SourceGammaOneRawDifferential",
+          "SourceGammaOneLocalRegularDifferentialOrder",
+          "SourceMeromorphicCuspExponentialDecay",
+          "SourceGammaOneRawDifferentialDecay",
+          "SourceGammaOnePrescribedResidueCoefficient",
+          "SourceGammaOnePrincipalDivisorConverse"
+        ],
+        "count": 46,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseScratchOwnership1014.log",
+          "sha256": "17AF2C99784D7E58B4EB92FD1714B70007AAD148F8B611B096BB2B43F5ABA406",
+          "sourceSha256": "A4C0EFAC15D7A4786566A415E809E23EE36C038FF469B70A8261D9C508639522"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorOwnership8821.log",
+      "sha256": "90F17108DF3C8AB7871182EB4DA0364ADF34DA6BF988D009F67B61350111EE85",
+      "sourceSha256": "93A0E5E311C65B3E4E1CEAAF89710F9C6B9D19AFA6A442353D07120124792226"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-153011-740.log",
+      "sha256": "9615FE422F92D78F5942BF661353EAA40E4C88AB2E9AA8B62FDCA62B0D21078C"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 45 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneRepresentativePeriods",
+          "scratchSha256": "56384B243420E2D080F3A893A8CDA1D05ADBC1438915203C1C1A605A2989928F",
+          "productionSha256": "595532638E1172B115153BA93A649180D6FEFBB9E9ECA8AFA0374E42DB40995C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRepresentativePeriodCorrection",
+          "scratchSha256": "09B26F98B09611D96363F92D482A81873A34C6AB64581E083AA2E6AB8C738CAE",
+          "productionSha256": "8FA8777EDD5E151E1494F9C5815D99656B37116B48171F030FE986B0412999B9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFiniteDivisorReciprocity",
+          "scratchSha256": "D7831C12A30414DAAAFA1227412B9DCEC9DA4423BC6B0832229D4EA45540BE92",
+          "productionSha256": "F1AC5B1A55AAE5F8CEF7C4FD3DCF330D9FB10FEEA3F1549A5BC0F46C72FC5922",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetCocycle",
+          "scratchSha256": "3298C229EEBBEB88C2052BE6DE76101154E7ADB58168235AE46F641BFEDFFCC5",
+          "productionSha256": "3298C229EEBBEB88C2052BE6DE76101154E7ADB58168235AE46F641BFEDFFCC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetParabolic",
+          "scratchSha256": "CBCE4B9D3B847A93A5D8A5A85CB148380879FF9FF7438289F75FABBB176181C6",
+          "productionSha256": "1FB436EA7BF8204E71871F1D9A5971F3323C633D618B7BB01C544DD33D026699",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetWord",
+          "scratchSha256": "CAFC4B6DFA04052D8A3B2FF11D7A177A63C721B347AB156EF991154E9DA9A39F",
+          "productionSha256": "BF0B0CFF0D94719F1537C5786520BD14928BB77C8EA849A694D94A3C39ADF489",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodCuspLimits",
+          "scratchSha256": "F3AF71B9599F93406FE679BC30B00FAFBCA1B68FBA7090A808A64DDDF61DF5FA",
+          "productionSha256": "F3AF71B9599F93406FE679BC30B00FAFBCA1B68FBA7090A808A64DDDF61DF5FA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodGeneratorDual",
+          "scratchSha256": "32641D4BCD7D59FA90717FE42AB534D6383EBA869CC7607B0CD3D7C648C1D494",
+          "productionSha256": "B4350A39695E308C361ECAE35B0FC36F9903907B0CF760C022F0B97F929A9ACF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRealPrimitiveGreenData",
+          "scratchSha256": "09168E18D10F05A05BFC30F4FB0C9074136D67FC4FF5BB1DF6DB01EBD9D63184",
+          "productionSha256": "09168E18D10F05A05BFC30F4FB0C9074136D67FC4FF5BB1DF6DB01EBD9D63184",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodLatticeDual",
+          "scratchSha256": "9F2261917D981CA439A48AB398AFDAEB857B022EA0C8EB8CDB98CCF87A961F11",
+          "productionSha256": "59D07E993F44406DA280703DF75AF74EDD72656199BB7ECFF85D63F730204EDC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRealPeriodPeterssonPairing",
+          "scratchSha256": "E704E67FD2A0E1B0624070CC85A3FA3E59A93CACC74961BD3A760CE850EAA073",
+          "productionSha256": "5A950464A69EC616662E81469E5757EFE79CDF55CB6A8D68952FAB4794FFAC0A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceClosedPeterssonNondegenerate",
+          "scratchSha256": "FD7509C727D33C88239B61A1E6364A0D692F2F815FB491CA21C11401C1A9A9E5",
+          "productionSha256": "FD7509C727D33C88239B61A1E6364A0D692F2F815FB491CA21C11401C1A9A9E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceSignedPeriodLatticeLift",
+          "scratchSha256": "32C8C30104A12E218396861489AEE047F8C34563FAA34ACF2022A622461CD168",
+          "productionSha256": "12EDB1713E1096BEF92E6F04888153832DC3552AA13D0BB3524B50EF1253F38C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSignedRealPeriods",
+          "scratchSha256": "93D80DD229B1B6FF811722C597B400527781BE86F9D27ADDF7A7CE64DD5843D4",
+          "productionSha256": "F6E52070E4C5152D7A1874FC532626A3C5191C7E1D4596A934F1E2A734466F1E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeterssonIntegralRealPeriods",
+          "scratchSha256": "FC47E58E8ADFAF05A137231D9E1F65430CDE3BBEDA6C6A770049B5CED8228C70",
+          "productionSha256": "CCE8B90DF4C086C74458163F9B0685B9EE8ABA2B986B4A1AA9C8FD0DA48880C6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneUnitaryDivisorPrincipal",
+          "scratchSha256": "4E8C5F86521D70146FD1982D9784207763048CBD96DAF62B4062DA386D80A871",
+          "productionSha256": "E87508AD58966808B43C6600961021FF2F01D6C41D0BFF2A88E770906878FFBD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneMultiplierUnitarization",
+          "scratchSha256": "45074A2029519B04BBA108F88CFC07ECCF18F34997D45B4298657BF08D8217B3",
+          "productionSha256": "B3C1D8D6CCCE6C2CA39CFD239C257055F57A46E602E74891E1BC21A2C519C708",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneGeneralMultiplierPrincipal",
+          "scratchSha256": "1D09A6355B7013E36838432425EB8DB31ABCA326E6FF31D9C623E9DA59B6E28D",
+          "productionSha256": "9F31B3EA4FBC92AEDA069731DA7662F0D1FBDA45A86BECEB97BA2299D4511D03",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTwoPoleDifferential",
+          "scratchSha256": "F93B3F7CB5DFC5AAB72BC00D1C7DC41708FEDD87CC92D666C13B980ABB34D9EB",
+          "productionSha256": "F93B3F7CB5DFC5AAB72BC00D1C7DC41708FEDD87CC92D666C13B980ABB34D9EB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialResidues",
+          "scratchSha256": "3C709373B70B925C9BF44B00F51EEEE135F030C6390DBEFDD09E1CF32F5F7A8A",
+          "productionSha256": "3C709373B70B925C9BF44B00F51EEEE135F030C6390DBEFDD09E1CF32F5F7A8A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSimplePoleBounds",
+          "scratchSha256": "54421E0F3C0E3519C94306469DE4CEA4EC7FD9E5AE63588C60F3D923741383F8",
+          "productionSha256": "DD7C1D2FA68CA7EEDDD1BC58A10BF789DE84C07985AB45975B7AE8AD025E320D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTwoPoleResidues",
+          "scratchSha256": "96DF80B562D6406639FC3C84DB62CC186F756C205C082AEF0C85A53E500A321E",
+          "productionSha256": "29EE6BA3700324C4F5DCD436DA8A4980C97D635CFA9B2EF2A7B7381226F22551",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrescribedResidues",
+          "scratchSha256": "DD48CB2DF3678C301D83DF2170438A36607CDCAC423FD79BAC2DE145B6D02AEC",
+          "productionSha256": "D9D37C6868BEB907629F5CF1EB4A2041807BD79CCF7C18B9957DC86B98E9DEFF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticDivisorDifferential",
+          "scratchSha256": "34920BEBD771CC55A393A99035C4B5A37079359B2CC95477212FB431ACD5E37D",
+          "productionSha256": "AE77DC7D4F1959C082975B17F5509B317987D5CF4D5B7FDCB2764D691C16CCD0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneResidueData",
+          "scratchSha256": "A6F9866F625894A9AC31DF728300EBABDB449FB4391454BBC968DD2015844409",
+          "productionSha256": "A6F9866F625894A9AC31DF728300EBABDB449FB4391454BBC968DD2015844409",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicFinitePolarProduct",
+          "scratchSha256": "28FEB52F255A6E14159AB9B90F730C691A16D51DBF28D1FC2785B8D8E0A4F034",
+          "productionSha256": "28FEB52F255A6E14159AB9B90F730C691A16D51DBF28D1FC2785B8D8E0A4F034",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneDiscExhaustion",
+          "scratchSha256": "823E33B38051CFC1B5F2544159CA3D3022E4FE582F2C4A3554B4B4AA83B9DEFE",
+          "productionSha256": "823E33B38051CFC1B5F2544159CA3D3022E4FE582F2C4A3554B4B4AA83B9DEFE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicDiscPrimitive",
+          "scratchSha256": "7391CFC60D27D049912A25A1C4A0E0F40850F9447D9BF9B707016CCD445C0A41",
+          "productionSha256": "7488EBA59A252346EA896987C13E48900F1CD0B3929DD9FE02B710CC4F16BDE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneMeromorphicPrimitive",
+          "scratchSha256": "DC0C5BAD47171633E41BFF8516CEAD56335CE6B7BAF148DFC39027BDCA896243",
+          "productionSha256": "FC04F1F4FE93D6932C53C44843CBF897653A5B59DA689817AB52AF61C4E0722D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRealizationDerivation",
+          "scratchSha256": "C06747FEF5A75E080A9C5FF8710A21DD211A444E8D9F4393D130BAF9E916A39E",
+          "productionSha256": "C06747FEF5A75E080A9C5FF8710A21DD211A444E8D9F4393D130BAF9E916A39E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticDifferentialResidue",
+          "scratchSha256": "72703150A3DE40606EFDF9E01DA63FFADB4F5325C2E0EF0AE967AA4374DC689B",
+          "productionSha256": "DF891D1EC9A01AF9FC050D86F896487537A130E61FEF72A437B37EC54227452F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveSpecification",
+          "scratchSha256": "81EA087BA6D26224D49C7D40AF7FF4D1B9BA4126D108FA3740B9CD29599A0030",
+          "productionSha256": "81D9C909BF81E3C61BCAC41CF60C23D3D2A45F0E07FE3056C87D1700CC122B6B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveGroupAction",
+          "scratchSha256": "F8B27893D663C4D662B8896A5F4B2E2CFFB4C7FEF3B6A1E4C8F8B5FFC97F7E34",
+          "productionSha256": "27BDC2359717CF5967D180A9EA9DBB4B8487EBA06DC6666217BA4AC4CEAC175F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveMultiplier",
+          "scratchSha256": "2C0D92131CB034E20C988FFD6FBDB7823BEF8CDFC40AD619F48DD8B4775B53E2",
+          "productionSha256": "F51C1B50CEF93B081D953D7F6C7A90C5B2D91D244C215B2DFA4066601471AD77",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspAnalyticData",
+          "scratchSha256": "9A97F82EDE80B4CDAE85E07217F1D3F48EA607AC9BDA7408A7C0B11A14C54991",
+          "productionSha256": "791DD5BC8315DC51DDA0FC891F5727A7849424FFE19C75ED60BCCC41561C0603",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspPrimitive",
+          "scratchSha256": "4004A242CCFBD3FA4B6290FB936E73F3F3C0D6BE3C789AB58FBB5E012DCC5229",
+          "productionSha256": "4004A242CCFBD3FA4B6290FB936E73F3F3C0D6BE3C789AB58FBB5E012DCC5229",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspPrimitiveDecay",
+          "scratchSha256": "1F29FFC09114EBB269C2C9B6D10196398D74D2E0CEF8E8DEB99716436909E446",
+          "productionSha256": "F0EE5AE8B314CE342077A594572D2A26240584E8B6F573A74151390B4EF27AB0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveCusps",
+          "scratchSha256": "D4F59E3207516D16EF78C5F21EBE76AEC35CD44BB4D2CDC368F3DF3D88255D41",
+          "productionSha256": "3616CB9E58372B3F0F534D27B2C249EBF9ACE232B178C19F64F9CEC5BB554524",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicDifferentialRegularization",
+          "scratchSha256": "ECE943E2ECC675B0004EBD7C6A09038104F88BC9CDF0A9F55A60CC600CD7EC2F",
+          "productionSha256": "3CDEAA46DEE4CD8A4B33FE726624C957AB3D20B26E1FDE9FD67B676396C05F86",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRawDifferential",
+          "scratchSha256": "7B86DB0D6423A6B364FF80EE65309B7D2D571B4F88B8A87CBA5792081F8A436C",
+          "productionSha256": "7B28208678F4558C1D91CF58E9F2DCC699DC27A508D02774DB9FC95BD39501BD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneLocalRegularDifferentialOrder",
+          "scratchSha256": "CC68BC083B67C0845C83585872F8CBFB78D761CE395CD94A0F45A819487850E0",
+          "productionSha256": "EB781AC323A3C456E7F7D1685D9D04ED5242DC9896CC7C04CAC6799AF2A7EB05",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspExponentialDecay",
+          "scratchSha256": "CEC27FF1F56875F4DEBC19771CD55224D72D0E67669F7DCBDCBCC4EE2FB6CB13",
+          "productionSha256": "CEC27FF1F56875F4DEBC19771CD55224D72D0E67669F7DCBDCBCC4EE2FB6CB13",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRawDifferentialDecay",
+          "scratchSha256": "24C4AFEBF5B1E9438EF9EA624BD2246B92A61066ABEB1DAF45FC15ADDB819C2F",
+          "productionSha256": "3DEFD957066C1B04E3253660FA9B669DC83EFD5A720695F004E98D8635DE5E8F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrescribedResidueCoefficient",
+          "scratchSha256": "A4EC2D6D514B0D1CBCFBC4514D399691124D672D8DC50DA5AFDB1453C58E95E5",
+          "productionSha256": "D565CC1803A718DFE3437BD241CBE70B8B8ED4CD9801AE0AA0CC5BB46EE84336",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrincipalDivisorConverse",
+          "scratchSha256": "166E74AF222BD28E8CA3D885F37A669EDE2FEBB25F7056AED9780D9E3CFC45D7",
+          "productionSha256": "93DAA24EDA5646D30BCA2E0254BCB3C002ACD83103567A579ABF391C662CA038",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 376 distinct names from 376 exhaustive scratch checks are retained: 372 in the production focused scope and 4 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+}
+```
+
+## Verified actual original Gamma1 finite-divisor converse - 27 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,821-module scope: all thirteen retained regressions, 56,121 exhaustive theorem checks, 25,985 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.
+
+```json
+{
+  "recordedUTC": "2026-10-28T04:34:53.677865+00:00",
+  "log": "logs/dubon-build-20261027-200915-162.log",
+  "sha256": "CE01D14635FD723D573C9025CA833575B5EACCF7AD8E467F4F40B0A95303AA6B",
+  "bytes": 14482014,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8821,
+  "projectTheorems": 56121,
+  "registeredConsumers": 25985,
+  "registeredConstructions": 2689,
+  "declarations": 34659,
+  "generated": 35048,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261027_200048.log",
+  "foundationSha256": "6A3CB1D9AC10820438987128FA1D904AA45E1F791C07E0276B229D14FF40980F",
+  "countReconciliation": {
+    "previousTheorems": 55749,
+    "focusedTheorems": 372,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 372,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorGlobalOwnership8821b.log",
+    "globalOwnershipSha256": "0EC36EBDA308274FCDDA07708208F343D5D17148A0722C3F396EF40601935CFB",
+    "globalOwnershipSourceSha256": "C91576B07DDC6ECF9DCA2C4D32841DB302CFF5E6987C96836F44AA86DD03FAA4",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorOwnership8821.log",
+    "ownershipSha256": "90F17108DF3C8AB7871182EB4DA0364ADF34DA6BF988D009F67B61350111EE85"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 376,
+    "scratchDistinct": 376,
+    "generatedNameRenamings": {},
+    "productionFocused": 372,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp": [
+        {
+          "scope": "SourceGammaOneAnalyticResidueScratchOwnership1003",
+          "module": "Dubon2026.SourceGammaOneAnalyticDifferentialResidue"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend.congr_simp": [
+        {
+          "scope": "SourceOriginalIntegralPeriodDualityScratchOwnership972",
+          "module": "Dubon2026.SourceClosedPeterssonNondegenerate"
+        }
+      ],
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp": [
+        {
+          "scope": "SourceOriginalIntegralPeriodDualityScratchOwnership972",
+          "module": "Dubon2026.SourceIntegralPeriodLatticeDual"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.GammaOne.placeEval.eq_1": [
+        {
+          "scope": "SourceGammaOnePrincipalDivisorConverseScratchOwnership1014",
+          "module": "Dubon2026.SourceGammaOnePrescribedResidueCoefficient"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend.congr_simp",
+      "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp",
+      "Dubon2026.SourceFunctionField.GammaOne.placeEval.eq_1",
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneRepresentativePeriods",
+          "SourceGammaOneRepresentativePeriodCorrection",
+          "SourceGammaOneFiniteDivisorReciprocity"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDivisorReciprocityScratchOwnership956.log",
+          "sha256": "4EF728D9E40BAD64699DA7E22276E243FA511B19DA7BD2577D934FC32B94D721",
+          "sourceSha256": "9569A52C11EE209BCD9F90BC6BA3548692BACD41FFA5622EBCB1127D5E294F6C"
+        }
+      },
+      {
+        "modules": [
+          "SourceIntegralCosetCocycle",
+          "SourceIntegralCosetParabolic",
+          "SourceIntegralCosetWord",
+          "SourceIntegralPeriodCuspLimits",
+          "SourceIntegralPeriodGeneratorDual",
+          "SourceRealPrimitiveGreenData",
+          "SourceIntegralPeriodLatticeDual",
+          "SourceRealPeriodPeterssonPairing",
+          "SourceClosedPeterssonNondegenerate",
+          "SourceSignedPeriodLatticeLift",
+          "SourceGammaOneSignedRealPeriods",
+          "SourceGammaOnePeterssonIntegralRealPeriods",
+          "SourceGammaOneUnitaryDivisorPrincipal"
+        ],
+        "count": 112,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodDualityScratchOwnership972.log",
+          "sha256": "748D81F6FDD078BA1C9473721819A39E3078BD018E53276658F998935EDA4BA3",
+          "sourceSha256": "9D6C8109357971B1C1E12EB340BFD14B539A50517E1C5903970F1A5DB4FFF834"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneMultiplierUnitarization",
+          "SourceGammaOneGeneralMultiplierPrincipal"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierScratchOwnership975.log",
+          "sha256": "03B882FC2A034AD70D8E41DA3E11A03D7C6498736B3CA16E77CC4EB7AF04BE82",
+          "sourceSha256": "462FEA988AB2E4AAC7BF9E6D8C84243461249067C1EC1918C220E9A1408230FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneTwoPoleDifferential",
+          "SourceGammaOneDifferentialResidues",
+          "SourceGammaOneSimplePoleBounds",
+          "SourceGammaOneTwoPoleResidues",
+          "SourceGammaOnePrescribedResidues",
+          "SourceGammaOneAnalyticDivisorDifferential"
+        ],
+        "count": 48,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesScratchOwnership983.log",
+          "sha256": "A92EFFA6B916ADEA75261DF4CA19805A58E6333B467C084EBA1E18474A725A14",
+          "sourceSha256": "A3FEDA9E87EECB019699BC404F385BEB60DFD85E5CC32D6C18DC0D29378265E2"
+        }
+      },
+      {
+        "modules": [
+          "SourceUpperHalfPlaneResidueData",
+          "SourceMeromorphicFinitePolarProduct",
+          "SourceUpperHalfPlaneDiscExhaustion",
+          "SourceMeromorphicDiscPrimitive",
+          "SourceUpperHalfPlaneMeromorphicPrimitive"
+        ],
+        "count": 67,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLogarithmicPrimitiveScratchOwnership992.log",
+          "sha256": "39615D41315782EE1BB931372F0F6529876E458FD6B91B9B933A06947381C015",
+          "sourceSha256": "B314369B5CF2E77421B5185E33E2F1614454BD0062AC924E6DE4E03B079C07F6"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneRealizationDerivation",
+          "SourceGammaOneAnalyticDifferentialResidue"
+        ],
+        "count": 32,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueScratchOwnership1003.log",
+          "sha256": "0BAF8546A359FF6C0264404BC6D9124A9600DE8B3A6EC08FADF2401D73219DE8",
+          "sourceSha256": "B4EF39C609E9E885EE1DBF8E0E8925056745A997841062609B0957284B401419"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicPrimitiveSpecification",
+          "SourceMeromorphicPrimitiveGroupAction",
+          "SourceMeromorphicPrimitiveMultiplier",
+          "SourceMeromorphicCuspAnalyticData",
+          "SourceMeromorphicCuspPrimitive",
+          "SourceMeromorphicCuspPrimitiveDecay",
+          "SourceMeromorphicPrimitiveCusps"
+        ],
+        "count": 66,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspConstructionScratchOwnership1005.log",
+          "sha256": "930F01ADD4D6857FA69CA93D66239CDA084EB67F2870DEF225A7D187EF013955",
+          "sourceSha256": "4A2C1306B17165A8EBF28CB50EC42D29CF827A3AE05922059E77DB4B28E4CBB5"
+        }
+      },
+      {
+        "modules": [
+          "SourceMeromorphicDifferentialRegularization",
+          "SourceGammaOneRawDifferential",
+          "SourceGammaOneLocalRegularDifferentialOrder",
+          "SourceMeromorphicCuspExponentialDecay",
+          "SourceGammaOneRawDifferentialDecay",
+          "SourceGammaOnePrescribedResidueCoefficient",
+          "SourceGammaOnePrincipalDivisorConverse"
+        ],
+        "count": 46,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseScratchOwnership1014.log",
+          "sha256": "17AF2C99784D7E58B4EB92FD1714B70007AAD148F8B611B096BB2B43F5ABA406",
+          "sourceSha256": "A4C0EFAC15D7A4786566A415E809E23EE36C038FF469B70A8261D9C508639522"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorOwnership8821.log",
+      "sha256": "90F17108DF3C8AB7871182EB4DA0364ADF34DA6BF988D009F67B61350111EE85",
+      "sourceSha256": "93A0E5E311C65B3E4E1CEAAF89710F9C6B9D19AFA6A442353D07120124792226"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-153011-740.log",
+      "sha256": "9615FE422F92D78F5942BF661353EAA40E4C88AB2E9AA8B62FDCA62B0D21078C"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 45 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneRepresentativePeriods",
+          "scratchSha256": "56384B243420E2D080F3A893A8CDA1D05ADBC1438915203C1C1A605A2989928F",
+          "productionSha256": "595532638E1172B115153BA93A649180D6FEFBB9E9ECA8AFA0374E42DB40995C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRepresentativePeriodCorrection",
+          "scratchSha256": "09B26F98B09611D96363F92D482A81873A34C6AB64581E083AA2E6AB8C738CAE",
+          "productionSha256": "8FA8777EDD5E151E1494F9C5815D99656B37116B48171F030FE986B0412999B9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFiniteDivisorReciprocity",
+          "scratchSha256": "D7831C12A30414DAAAFA1227412B9DCEC9DA4423BC6B0832229D4EA45540BE92",
+          "productionSha256": "F1AC5B1A55AAE5F8CEF7C4FD3DCF330D9FB10FEEA3F1549A5BC0F46C72FC5922",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetCocycle",
+          "scratchSha256": "3298C229EEBBEB88C2052BE6DE76101154E7ADB58168235AE46F641BFEDFFCC5",
+          "productionSha256": "3298C229EEBBEB88C2052BE6DE76101154E7ADB58168235AE46F641BFEDFFCC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetParabolic",
+          "scratchSha256": "CBCE4B9D3B847A93A5D8A5A85CB148380879FF9FF7438289F75FABBB176181C6",
+          "productionSha256": "1FB436EA7BF8204E71871F1D9A5971F3323C633D618B7BB01C544DD33D026699",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralCosetWord",
+          "scratchSha256": "CAFC4B6DFA04052D8A3B2FF11D7A177A63C721B347AB156EF991154E9DA9A39F",
+          "productionSha256": "BF0B0CFF0D94719F1537C5786520BD14928BB77C8EA849A694D94A3C39ADF489",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodCuspLimits",
+          "scratchSha256": "F3AF71B9599F93406FE679BC30B00FAFBCA1B68FBA7090A808A64DDDF61DF5FA",
+          "productionSha256": "F3AF71B9599F93406FE679BC30B00FAFBCA1B68FBA7090A808A64DDDF61DF5FA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodGeneratorDual",
+          "scratchSha256": "32641D4BCD7D59FA90717FE42AB534D6383EBA869CC7607B0CD3D7C648C1D494",
+          "productionSha256": "B4350A39695E308C361ECAE35B0FC36F9903907B0CF760C022F0B97F929A9ACF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRealPrimitiveGreenData",
+          "scratchSha256": "09168E18D10F05A05BFC30F4FB0C9074136D67FC4FF5BB1DF6DB01EBD9D63184",
+          "productionSha256": "09168E18D10F05A05BFC30F4FB0C9074136D67FC4FF5BB1DF6DB01EBD9D63184",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralPeriodLatticeDual",
+          "scratchSha256": "9F2261917D981CA439A48AB398AFDAEB857B022EA0C8EB8CDB98CCF87A961F11",
+          "productionSha256": "59D07E993F44406DA280703DF75AF74EDD72656199BB7ECFF85D63F730204EDC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRealPeriodPeterssonPairing",
+          "scratchSha256": "E704E67FD2A0E1B0624070CC85A3FA3E59A93CACC74961BD3A760CE850EAA073",
+          "productionSha256": "5A950464A69EC616662E81469E5757EFE79CDF55CB6A8D68952FAB4794FFAC0A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceClosedPeterssonNondegenerate",
+          "scratchSha256": "FD7509C727D33C88239B61A1E6364A0D692F2F815FB491CA21C11401C1A9A9E5",
+          "productionSha256": "FD7509C727D33C88239B61A1E6364A0D692F2F815FB491CA21C11401C1A9A9E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceSignedPeriodLatticeLift",
+          "scratchSha256": "32C8C30104A12E218396861489AEE047F8C34563FAA34ACF2022A622461CD168",
+          "productionSha256": "12EDB1713E1096BEF92E6F04888153832DC3552AA13D0BB3524B50EF1253F38C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSignedRealPeriods",
+          "scratchSha256": "93D80DD229B1B6FF811722C597B400527781BE86F9D27ADDF7A7CE64DD5843D4",
+          "productionSha256": "F6E52070E4C5152D7A1874FC532626A3C5191C7E1D4596A934F1E2A734466F1E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeterssonIntegralRealPeriods",
+          "scratchSha256": "FC47E58E8ADFAF05A137231D9E1F65430CDE3BBEDA6C6A770049B5CED8228C70",
+          "productionSha256": "CCE8B90DF4C086C74458163F9B0685B9EE8ABA2B986B4A1AA9C8FD0DA48880C6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneUnitaryDivisorPrincipal",
+          "scratchSha256": "4E8C5F86521D70146FD1982D9784207763048CBD96DAF62B4062DA386D80A871",
+          "productionSha256": "E87508AD58966808B43C6600961021FF2F01D6C41D0BFF2A88E770906878FFBD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneMultiplierUnitarization",
+          "scratchSha256": "45074A2029519B04BBA108F88CFC07ECCF18F34997D45B4298657BF08D8217B3",
+          "productionSha256": "B3C1D8D6CCCE6C2CA39CFD239C257055F57A46E602E74891E1BC21A2C519C708",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneGeneralMultiplierPrincipal",
+          "scratchSha256": "1D09A6355B7013E36838432425EB8DB31ABCA326E6FF31D9C623E9DA59B6E28D",
+          "productionSha256": "9F31B3EA4FBC92AEDA069731DA7662F0D1FBDA45A86BECEB97BA2299D4511D03",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTwoPoleDifferential",
+          "scratchSha256": "F93B3F7CB5DFC5AAB72BC00D1C7DC41708FEDD87CC92D666C13B980ABB34D9EB",
+          "productionSha256": "F93B3F7CB5DFC5AAB72BC00D1C7DC41708FEDD87CC92D666C13B980ABB34D9EB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialResidues",
+          "scratchSha256": "3C709373B70B925C9BF44B00F51EEEE135F030C6390DBEFDD09E1CF32F5F7A8A",
+          "productionSha256": "3C709373B70B925C9BF44B00F51EEEE135F030C6390DBEFDD09E1CF32F5F7A8A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSimplePoleBounds",
+          "scratchSha256": "54421E0F3C0E3519C94306469DE4CEA4EC7FD9E5AE63588C60F3D923741383F8",
+          "productionSha256": "DD7C1D2FA68CA7EEDDD1BC58A10BF789DE84C07985AB45975B7AE8AD025E320D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTwoPoleResidues",
+          "scratchSha256": "96DF80B562D6406639FC3C84DB62CC186F756C205C082AEF0C85A53E500A321E",
+          "productionSha256": "29EE6BA3700324C4F5DCD436DA8A4980C97D635CFA9B2EF2A7B7381226F22551",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrescribedResidues",
+          "scratchSha256": "DD48CB2DF3678C301D83DF2170438A36607CDCAC423FD79BAC2DE145B6D02AEC",
+          "productionSha256": "D9D37C6868BEB907629F5CF1EB4A2041807BD79CCF7C18B9957DC86B98E9DEFF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticDivisorDifferential",
+          "scratchSha256": "34920BEBD771CC55A393A99035C4B5A37079359B2CC95477212FB431ACD5E37D",
+          "productionSha256": "AE77DC7D4F1959C082975B17F5509B317987D5CF4D5B7FDCB2764D691C16CCD0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneResidueData",
+          "scratchSha256": "A6F9866F625894A9AC31DF728300EBABDB449FB4391454BBC968DD2015844409",
+          "productionSha256": "A6F9866F625894A9AC31DF728300EBABDB449FB4391454BBC968DD2015844409",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicFinitePolarProduct",
+          "scratchSha256": "28FEB52F255A6E14159AB9B90F730C691A16D51DBF28D1FC2785B8D8E0A4F034",
+          "productionSha256": "28FEB52F255A6E14159AB9B90F730C691A16D51DBF28D1FC2785B8D8E0A4F034",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneDiscExhaustion",
+          "scratchSha256": "823E33B38051CFC1B5F2544159CA3D3022E4FE582F2C4A3554B4B4AA83B9DEFE",
+          "productionSha256": "823E33B38051CFC1B5F2544159CA3D3022E4FE582F2C4A3554B4B4AA83B9DEFE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicDiscPrimitive",
+          "scratchSha256": "7391CFC60D27D049912A25A1C4A0E0F40850F9447D9BF9B707016CCD445C0A41",
+          "productionSha256": "7488EBA59A252346EA896987C13E48900F1CD0B3929DD9FE02B710CC4F16BDE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceUpperHalfPlaneMeromorphicPrimitive",
+          "scratchSha256": "DC0C5BAD47171633E41BFF8516CEAD56335CE6B7BAF148DFC39027BDCA896243",
+          "productionSha256": "FC04F1F4FE93D6932C53C44843CBF897653A5B59DA689817AB52AF61C4E0722D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRealizationDerivation",
+          "scratchSha256": "C06747FEF5A75E080A9C5FF8710A21DD211A444E8D9F4393D130BAF9E916A39E",
+          "productionSha256": "C06747FEF5A75E080A9C5FF8710A21DD211A444E8D9F4393D130BAF9E916A39E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticDifferentialResidue",
+          "scratchSha256": "72703150A3DE40606EFDF9E01DA63FFADB4F5325C2E0EF0AE967AA4374DC689B",
+          "productionSha256": "DF891D1EC9A01AF9FC050D86F896487537A130E61FEF72A437B37EC54227452F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveSpecification",
+          "scratchSha256": "81EA087BA6D26224D49C7D40AF7FF4D1B9BA4126D108FA3740B9CD29599A0030",
+          "productionSha256": "81D9C909BF81E3C61BCAC41CF60C23D3D2A45F0E07FE3056C87D1700CC122B6B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveGroupAction",
+          "scratchSha256": "F8B27893D663C4D662B8896A5F4B2E2CFFB4C7FEF3B6A1E4C8F8B5FFC97F7E34",
+          "productionSha256": "27BDC2359717CF5967D180A9EA9DBB4B8487EBA06DC6666217BA4AC4CEAC175F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveMultiplier",
+          "scratchSha256": "2C0D92131CB034E20C988FFD6FBDB7823BEF8CDFC40AD619F48DD8B4775B53E2",
+          "productionSha256": "F51C1B50CEF93B081D953D7F6C7A90C5B2D91D244C215B2DFA4066601471AD77",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspAnalyticData",
+          "scratchSha256": "9A97F82EDE80B4CDAE85E07217F1D3F48EA607AC9BDA7408A7C0B11A14C54991",
+          "productionSha256": "791DD5BC8315DC51DDA0FC891F5727A7849424FFE19C75ED60BCCC41561C0603",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspPrimitive",
+          "scratchSha256": "4004A242CCFBD3FA4B6290FB936E73F3F3C0D6BE3C789AB58FBB5E012DCC5229",
+          "productionSha256": "4004A242CCFBD3FA4B6290FB936E73F3F3C0D6BE3C789AB58FBB5E012DCC5229",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspPrimitiveDecay",
+          "scratchSha256": "1F29FFC09114EBB269C2C9B6D10196398D74D2E0CEF8E8DEB99716436909E446",
+          "productionSha256": "F0EE5AE8B314CE342077A594572D2A26240584E8B6F573A74151390B4EF27AB0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicPrimitiveCusps",
+          "scratchSha256": "D4F59E3207516D16EF78C5F21EBE76AEC35CD44BB4D2CDC368F3DF3D88255D41",
+          "productionSha256": "3616CB9E58372B3F0F534D27B2C249EBF9ACE232B178C19F64F9CEC5BB554524",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicDifferentialRegularization",
+          "scratchSha256": "ECE943E2ECC675B0004EBD7C6A09038104F88BC9CDF0A9F55A60CC600CD7EC2F",
+          "productionSha256": "3CDEAA46DEE4CD8A4B33FE726624C957AB3D20B26E1FDE9FD67B676396C05F86",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRawDifferential",
+          "scratchSha256": "7B86DB0D6423A6B364FF80EE65309B7D2D571B4F88B8A87CBA5792081F8A436C",
+          "productionSha256": "7B28208678F4558C1D91CF58E9F2DCC699DC27A508D02774DB9FC95BD39501BD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneLocalRegularDifferentialOrder",
+          "scratchSha256": "CC68BC083B67C0845C83585872F8CBFB78D761CE395CD94A0F45A819487850E0",
+          "productionSha256": "EB781AC323A3C456E7F7D1685D9D04ED5242DC9896CC7C04CAC6799AF2A7EB05",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMeromorphicCuspExponentialDecay",
+          "scratchSha256": "CEC27FF1F56875F4DEBC19771CD55224D72D0E67669F7DCBDCBCC4EE2FB6CB13",
+          "productionSha256": "CEC27FF1F56875F4DEBC19771CD55224D72D0E67669F7DCBDCBCC4EE2FB6CB13",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRawDifferentialDecay",
+          "scratchSha256": "24C4AFEBF5B1E9438EF9EA624BD2246B92A61066ABEB1DAF45FC15ADDB819C2F",
+          "productionSha256": "3DEFD957066C1B04E3253660FA9B669DC83EFD5A720695F004E98D8635DE5E8F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrescribedResidueCoefficient",
+          "scratchSha256": "A4EC2D6D514B0D1CBCFBC4514D399691124D672D8DC50DA5AFDB1453C58E95E5",
+          "productionSha256": "D565CC1803A718DFE3437BD241CBE70B8B8ED4CD9801AE0AA0CC5BB46EE84336",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrincipalDivisorConverse",
+          "scratchSha256": "166E74AF222BD28E8CA3D885F37A669EDE2FEBB25F7056AED9780D9E3CFC45D7",
+          "productionSha256": "93DAA24EDA5646D30BCA2E0254BCB3C002ACD83103567A579ABF391C662CA038",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 376 distinct names from 376 exhaustive scratch checks are retained: 372 in the production focused scope and 4 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The forward principal-divisor period implication and full original Gamma1 Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+}
+```
+
+## Production actual original Gamma1 Picard and Hecke comparison pending full run - 27 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,867-module scope: all thirteen retained regressions, 56,334 exhaustive theorem checks, 26,085 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelDependencyAudit1Production8867.log",
+      "sha256": "E8EA7122F415CD5572AE99AB0B36B2C23ABBFBF5B314AF53505C46AD4970C7B6",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_iff_period_mem"
+      ],
+      "sourceSha256": "E165CB197C14425C8D9FD41726658FA3ABB9BFED99C4928A9A90A518769B32A6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceDependencyAudit1dProduction8867.log",
+      "sha256": "6A261585DB09EF6BCC6558D2855E453442EF99A1EA5A79FC447C9FCDC5B6497C",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_analytic_divisor"
+      ],
+      "sourceSha256": "6A09F5FC9DE31DDBD375D18F1D10B33C57AF1F8AAE0CA97DDD9E72BF504BA1B5"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsDependencyAudit1Production8867.log",
+      "sha256": "9A2D67255A2B5F8825608846989DD6D60CDCB31ED1D6A67C31C9D5D6ED68863B",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_analytic_ramification",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_analytic_ramification",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_of_restrict_heckeBeta"
+      ],
+      "sourceSha256": "4213ABF89BB8CE27D9DD11B01F2615BAB08951251ABF7811125157387DB44395"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceDependencyAudit1Production8867.log",
+      "sha256": "1A7E92A63D7EDFA8329E8D73050E9B3C2D4DEBC7222E2537D803BFA3C6EB8543",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference",
+        "Dubon2026.sourceGammaOneWeightTwoHeckeCoset_slash"
+      ],
+      "sourceSha256": "B071BD2DA925FDEE14C10E78517104E6D656A923FEB483DB72B48803C1FD2FA9"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeDependencyAudit1Production8867.log",
+      "sha256": "8C0163317F98831DE4BB5CAC33BCC70ECF3C5359ED75401940C99190BAD4AC62",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace"
+      ],
+      "sourceSha256": "F452D37E10A6025AFC6CC3BFD7A2C78128EEFDD294EDC6673655B835AD27FBA5"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeDependencyAudit1bProduction8867.log",
+      "sha256": "8F3E4275E0CE1CC8C8DE4F3B6BCFC2B0F62764CA65E1017EA8E94C1BF6A80145",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke",
+        "Dubon2026.SourceFunctionField.GammaOne.periodHeckeLinear_along"
+      ],
+      "sourceSha256": "237E2A3E1A4E491E2E7A3016ECE072D2BDE959F639AD9CBD21726B997DF071C3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersDependencyAudit1bProduction8867.log",
+      "sha256": "8B0992B60E17BD50E575F6BE711A8FF40EFD18A3A1222FEF962344DD34AC3671",
+      "requiredProofValueEdges": 41,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card",
+        "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit"
+      ],
+      "sourceSha256": "FEDB84E0BC2C3513C6CAB94D97D0DF54794CAB38FF5179896EBC3F6C58CFF4BA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeDependencyAudit1Production8867.log",
+      "sha256": "D28DA2E4DE0085149B81E48EA3091575939C5CD2506D303F5D708F975A8E87A3",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_hecke"
+      ],
+      "sourceSha256": "8BC3E3F4C474FC4CDFBE49AD2AD6D505334DE7ECA5B4C17CA6F9D6F6023C7DFA"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonProductionAudit8867.log",
+  "sha256": "29859AC5018E818CA699A48C5A24D9F5084FB5FDCE8CEAC73BFE33C37F5845D2",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-picard-hecke-comparison-production-build-8867.log",
+  "aggregateSha256": "7F7DDAFFC49F2F0BA2313BE5C3FA2BA6F0EECA5B114F9F9A22A9CDC271776BA3",
+  "productionModules": 8867,
+  "incrementModules": 46,
+  "axiomChecks": 128,
+  "exhaustiveIncrementTheorems": 215,
+  "linterScopes": 46,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 216,
+  "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 216,
+    "scratchDistinct": 216,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneAnalyticHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeLinear._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeTrace._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneEndpointHecke._proof_1": "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeAnalyticDivisor._proof_1": "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCharacters._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCosetMultiplicity._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveDerivative._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveTrace._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePeriodHeckeLattice._proof_1": "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePicardHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneScalarHeckePeriods._proof_1": "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1"
+    },
+    "productionFocused": 215,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp": [
+        {
+          "scope": "SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b",
+          "module": "Dubon2026.SourceGammaOnePeriodHeckeLattice"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneInvariantDivisorPeriod",
+          "SourceGammaOnePrincipalMeromorphicRealization",
+          "SourceGammaOneAnalyticAbelKernel"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelScratchOwnership1019.log",
+          "sha256": "FF8B27FC2009D931B639E3FB21B72EA179139AE31706A2F9568D01BB2BF043E8",
+          "sourceSha256": "D2D898C351D672455E38D76223F3E880DD0F17F0FDA691B4F9F66E2ED2B64FAD"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoEvaluationFrame",
+          "SourceWeightTwoEndpointImage",
+          "SourceWeightTwoEndpointOpenImage",
+          "SourceWeightTwoJacobiInversion",
+          "SourceGammaOneJacobiInversion",
+          "SourceGammaOneAnalyticPicardPresentation",
+          "SourceGammaOnePicardPeriodKernel",
+          "SourceGammaOnePicardPeriodEquiv"
+        ],
+        "count": 40,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceScratchOwnership1029d.log",
+          "sha256": "DDFB37150475D844A4DECF28487010D6B2E787E0AD65EF2FE6C2315F2AF75BA7",
+          "sourceSha256": "BE7348A10BF1893C8E92AB77CD9337DBA93DA360CBC64ECE926B5BFED8761E2C"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeAlphaGerms",
+          "SourceGammaOneHeckeStretchLaurent",
+          "SourceGammaOneHeckeBetaGerms",
+          "SourceGammaOneHeckeAnalyticPlaces",
+          "SourceGammaOneHeckeAnalyticFiber"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsScratchOwnership1035.log",
+          "sha256": "7FAA9013C86C9B205AC8A60CA35B2614668A8AEE2A9A2CB4CC630815552A11E2",
+          "sourceSha256": "02652C61369D0B3F5153DB1940101AC72ABA74A2479F5C8A8359CFF50B2779FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneWeightTwoHeckeCosets",
+          "SourceGammaOneHeckePrimitiveDerivative",
+          "SourceGammaOneHeckeTraceCosets",
+          "SourceGammaOneCuspHeckeTrace",
+          "SourceGammaOneHeckePrimitiveTrace"
+        ],
+        "count": 46,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceScratchOwnership1041.log",
+          "sha256": "266A8BFA089278529F7BC367CC2A1D4C3590A4B1F5C6127813CC89E2C5D8750B",
+          "sourceSha256": "FDC5F737FBA608FC7E07188D28DBABEFD9AFC952856B4469D859F0A3A6038F43"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckePointTransition",
+          "SourceGammaOnePeriodNormalization",
+          "SourceGammaOneScalarHeckePeriods",
+          "SourceGammaOneHeckeCharacters",
+          "SourceGammaOneHolomorphicH1Hecke"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeScratchOwnership1047.log",
+          "sha256": "ECAFC0478FCE0E49EDE44464F68EA84C145B59FB302E59C0FEC39F508D933719",
+          "sourceSha256": "A38596A3B34CAFAE44FE72C990D3F52413BCB80AF1F539FE6C89CD7E121BF50D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCuspHeckeLinear",
+          "SourceGammaOnePeriodHeckeLattice"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b.log",
+          "sha256": "E1EAAAAAFBB4F48A44D28558A8CF4462AE03CA9EA1125088AF175955B815AFCC",
+          "sourceSha256": "BEC36E2DFD84B790BE29D0F16CBAA6F4B5585C3C1007630B9E3103EDC1C05CAB"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeGammaZeroMap",
+          "SourceGammaOneHeckeGammaZeroPlaces",
+          "SourceGammaOneHeckeGenericOrbits",
+          "SourceGammaOneHeckeFiberPresentation",
+          "SourceGammaOneHeckeGenericFiber",
+          "SourceGammaOneHeckeJDegree",
+          "SourceGammaOneHeckeAllFibers",
+          "SourceGammaOneHeckeExactRamification",
+          "SourceGammaOneHeckePlaceOrbits"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersScratchOwnership1060b.log",
+          "sha256": "E6A5E5C97F3CE8CC3FF768C2B62A733445CDB226592F08F3CA3C9BF40733068A",
+          "sourceSha256": "A26F819DD0A91185DED0A356A52E5B6FBE1C1F445B9EA1F017EDDA6A2FA35713"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCentralStabilizerCard",
+          "SourceGammaOneHeckeActualStabilizers",
+          "SourceGammaOneHeckeUpperOrbits",
+          "SourceGammaOneHeckeCosetMultiplicity",
+          "SourceGammaOneHeckeAnalyticDivisor",
+          "SourceGammaOneAnalyticHeckeDivisors",
+          "SourceGammaOnePicardHeckeDivisors",
+          "SourceGammaOneEndpointHecke",
+          "SourceGammaOnePicardPeriodHecke"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeScratchOwnership1070.log",
+          "sha256": "25A1FD2CC1027D0CC855493B3A5160CA98196C45B987522359073DF4D2579057",
+          "sourceSha256": "75678533F1194F355CBFD04BDC38235219FE49AB838DB2B82B7B67A296CF08B0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonOwnership8867.log",
+      "sha256": "4DFD7D72B7143FE74ACB0E97D591EB53BC3B170D78F7282578D6A86A5CDAAB76",
+      "sourceSha256": "C4CDE1668527F91976A8990B7AFCF139A10737E24FB48C3434D40DBE6DE73487"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-200915-162.log",
+      "sha256": "CE01D14635FD723D573C9025CA833575B5EACCF7AD8E467F4F40B0A95303AA6B"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 46 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneInvariantDivisorPeriod",
+          "scratchSha256": "F5AE1A74DDAAAF409ACCCE75EEDA52B4E32D2ABB126A1493ED20C6F74C4CF884",
+          "productionSha256": "13CE8F1BACBB4501771AE699D7F6FD79B3C6C131D2F1B22484D26009F464A0F1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrincipalMeromorphicRealization",
+          "scratchSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+          "productionSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticAbelKernel",
+          "scratchSha256": "2D4E4B7425D362994DB8804993A6212CA5B52CE5B351AF0284A4B9BA5F780477",
+          "productionSha256": "6118064925AEA21B24D1CCE89AEFB9D8C31A3BDC106F7AF09034B7694FE37E7C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEvaluationFrame",
+          "scratchSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+          "productionSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEndpointImage",
+          "scratchSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+          "productionSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEndpointOpenImage",
+          "scratchSha256": "AB3B2693C7ECDD62E1D303C82F16560A362BBEF5A813CA9DD62A4FB974CFB522",
+          "productionSha256": "D33474365C6B468EDC549795E8A9FDC88E360F29A76AB5F2EF1F0BC4EE3BE48E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoJacobiInversion",
+          "scratchSha256": "F250A753380B28F96E3F908DCF10BDF382A2D6761784D437C2DC1179F77FE3D4",
+          "productionSha256": "90FEF70183D6D5DB4F21088FBC66BD61EB72CA0D9DCDDB220A26405F3E0B668E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneJacobiInversion",
+          "scratchSha256": "DA2EFE2489490E110DE709CFEF9A8BD52269C3422BAB4520D2CE619308D30639",
+          "productionSha256": "F53B02EA8659311968EE124CAA457CC553C748656518053F32C05BB9B5687F91",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticPicardPresentation",
+          "scratchSha256": "0A0562470AB7AF8C3D91291CF643D7D96470A4B2E71D487D699B362D28B7DD60",
+          "productionSha256": "6BBAE828A61CD5180186741FD402ED08136F4B5EE05996732818A1CD17A83F38",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodKernel",
+          "scratchSha256": "C5AA9152F8AB3930FA20A01DC2FAB0635AC11AA8C8A2B7BA634F307E81A8804B",
+          "productionSha256": "B8C6F2B9590D0139117AF12E62EFB9654C6F0A8B2A778A06ED517F34F2F15B33",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodEquiv",
+          "scratchSha256": "D88F0BD2DF1128BDC4A258F860B96C4A9E6266E9F49D97DEB1D5C25E0A514D7B",
+          "productionSha256": "D8FDB8FFF890650B5E4DC64AAAA026465F858ABCB28E089703FA37AAEF23320F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAlphaGerms",
+          "scratchSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+          "productionSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeStretchLaurent",
+          "scratchSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+          "productionSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeBetaGerms",
+          "scratchSha256": "8AD0FF911F2508BFF59ABB753AB5E495649E18CDAB99789545478FF32D3EC216",
+          "productionSha256": "94DE58B868397CB96D343A5BD5A7C5C5096F35D13C2DC154EE6A9C41CA89ED74",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticPlaces",
+          "scratchSha256": "C9BE12E38B0BDF2DF1BE0A3ACE0B59B51999EABBEB02225C95060072258E4098",
+          "productionSha256": "CDA62B1F3B7F48FEFA779806F072EC4A9FF18EE32C0E6C584EA5DD92A7FACDD7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticFiber",
+          "scratchSha256": "24897DE74DA5C48B9F87EB3E730D89C699E788A93F1BD2E42B13A7A3F860F6DB",
+          "productionSha256": "2EFB842163559BDBC6360E911B9A47B877916A04AE1B4F199123971C04487C73",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneWeightTwoHeckeCosets",
+          "scratchSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+          "productionSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePrimitiveDerivative",
+          "scratchSha256": "91F9AB63127EBB96F306387202FE42803160896536D417F73694CF0C108E398A",
+          "productionSha256": "4D6D87EBCAEEFCB0EDFE451CF9943EC8DFA0F1B5A333ED0CFC46C2E8DF679E72",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeTraceCosets",
+          "scratchSha256": "9E8B6A5674FF849E1D038E19C15C6F4459535D90000F140ACBA8CE925C30C27A",
+          "productionSha256": "4BD35AF1198F874CF83FF493AD8A0F8F173B5BC8AEADC9EC196C7D35389D6468",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspHeckeTrace",
+          "scratchSha256": "4C4E73D86CD07F58695B0D22EBAAFA00DCD75FCE330DC20FC1E50511C8D6427C",
+          "productionSha256": "AB544E54C759BB1FA4CC8F131BB2B474AB9F482F49E04C6375C416B373E25675",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePrimitiveTrace",
+          "scratchSha256": "2D7C918AB0F872DB07087012DC256034F8FED66054E7F4F0E02D2D33CB6732B7",
+          "productionSha256": "A61DEDB31998135C35E0368BD6D9CA9AF97AD0D72768E189AE81A29F9E312118",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePointTransition",
+          "scratchSha256": "1B78FF2D22DCEE80FE9249B7324699A6F5ACF53F69C54747049634555A039355",
+          "productionSha256": "C1F46C8EF74EED74848D5F2A13571A5C266B17681435D768E39B24D4095D8845",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeriodNormalization",
+          "scratchSha256": "E7124E94979468E19405CD59AC28EFCF1D596FDB2449FFB971B791B1BC68C561",
+          "productionSha256": "A51554F78790CE0B705E36BFEE79B8E0A9913465474C3DC9E23E2F2C7A143D2B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneScalarHeckePeriods",
+          "scratchSha256": "9B322CD9FD35FA2E4F8C3CC8364161B8F1006C6828E6A3009744643D604D09E4",
+          "productionSha256": "EC68311203B101EE2B388C880077AAF8D6E4CEA3B9B22E1E2A8574DBE9556393",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCharacters",
+          "scratchSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+          "productionSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHolomorphicH1Hecke",
+          "scratchSha256": "C96C2A0245EDCF7258977615C3E1F29D15978EBFB9CBDE52106F5EFF180F5B19",
+          "productionSha256": "F04C9E10C103B536F2143951DE10668F5528ABEDFD007A9E11CCC0C8EE8F3E79",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspHeckeLinear",
+          "scratchSha256": "6E408A1D97EADEC2031023EED67E49B7599B68ABE545E93620A56D9CF4BDA773",
+          "productionSha256": "2028BFC1A35FDF3353C78F035DCEE18AAFD48CDE6A5BCC653FD01C36C809014A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeriodHeckeLattice",
+          "scratchSha256": "2D34969A6300EB13FA57CEA2685653120E7D514058301CAEB3D4119AC624D89D",
+          "productionSha256": "8B8EE3A1F7D0196C80E24D9E2B551E95092CCF4DD8CCF4DB31D8A435D5E421B3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGammaZeroMap",
+          "scratchSha256": "E0FAE670F1059A173E5BD15F569FA1D196C181E87D40AB3CAD83268BF95FA906",
+          "productionSha256": "3B5D182CA649F171549D5406BE81BEF8C01276473EFE35FAF7BEAEB2CF96EB6C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGammaZeroPlaces",
+          "scratchSha256": "209AF33D72FC8A2B5264D05633B9DF157A461ABBB9587F889DC5B60E5E1A8F07",
+          "productionSha256": "DE23FDDC1D21885A7822C589E9B34848C0EB37CA9D78E993FED700B8AE549F06",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGenericOrbits",
+          "scratchSha256": "00D6DCC6CFE4207660BCE067E6D88158F7787F8DB16E7F7F48F3E8471CE1061B",
+          "productionSha256": "DA63A2C9FC9C47A931F9FC6AE7D59BF2B51BF2D4D5038BD717B324137A69AEC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFiberPresentation",
+          "scratchSha256": "0ADCD1D1775C1ECEB5ECAAFFC44CDA3FFA6020B8AE6A01F05E222F1033D520F8",
+          "productionSha256": "8E6690E8365B80A60D4F49121E9A1FDC9E03870F74B9C536E883BF7CCA7A5622",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGenericFiber",
+          "scratchSha256": "AD2E21D5C52A0C36C081A2B0B078E167EBC2525A11E18965524FC7E0CF14A835",
+          "productionSha256": "B3C5665F8A69E0DEE62A23D6EEC1EDB7ED18E4AA050C42487967AAB890B608C3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeJDegree",
+          "scratchSha256": "E6804BCCF946534DC20F4290D0AFBB5D697E919AE728EDD05BB67E0A8C3464D0",
+          "productionSha256": "38D371D281184713C83CF963EA4561B7D488AF5892B061044E19800078E25389",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAllFibers",
+          "scratchSha256": "16EB2D977A949B95424326391CB49D388482C344E1B891538AABF246C50CC749",
+          "productionSha256": "46F5DB8E0A5F9AF1E9E6B41E4B7AC474AFE92CFCF08699B621A7498A8A9A0671",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeExactRamification",
+          "scratchSha256": "A6E530644A01D115F2CEAE89182E3E2418293F983EEA440D9F5F0C67627C37BA",
+          "productionSha256": "BE578913A4D4AB5056E26330AA404F411779D50E2F8BB3FE7D6AB17D309BB5A0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePlaceOrbits",
+          "scratchSha256": "094705A212C4A43F1D68F0DB97100162C30E4CEF3E9BB9BA99C80C50C3934D13",
+          "productionSha256": "14F1F007D76FCB19C3DBA429C56017DBEE05A051B09A36968FC70792736EFA92",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCentralStabilizerCard",
+          "scratchSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+          "productionSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeActualStabilizers",
+          "scratchSha256": "4E6A58BA9193D1A3DE060BDB25C9507EC5933F0F368E0C6C005139AD8A6250AD",
+          "productionSha256": "B4EDE4640D9DFCCAD4E0199EFCD95B53BBFBBE40D9571959E9B53903AAF9D446",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperOrbits",
+          "scratchSha256": "06F6A57EB461F7BC833C2697FEABF485145D3838F00E1D85E0035A0E1EF79324",
+          "productionSha256": "08305080584661EEA45C08E0E958844E8908BBECD30C7C4A910AC108130F7830",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCosetMultiplicity",
+          "scratchSha256": "DC04C60C636B8E0332C77420C44122811A06FC489057E906034EC3095D745FDA",
+          "productionSha256": "CBC6AC89EFD60B79F20926FB959B2B63F57B0966EA108A7269EDE9FA07B003B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticDivisor",
+          "scratchSha256": "768071A8DA6E09865605ACA65E222DE4587BF71C6991A30709FDEFC9383950EB",
+          "productionSha256": "D764040B0D47F318E87B05589F489B8AA35473DA93A4633A64AA9BBB27EF5683",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticHeckeDivisors",
+          "scratchSha256": "30E5B6A3F9246A893BEAB5F1326868E4ED7FCB0D216665C5023E83E3E27BFC6D",
+          "productionSha256": "278368C6918210647854A0C5546EC1DC59089941458CBBCE4BD39D0E474D6E30",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardHeckeDivisors",
+          "scratchSha256": "8855A333CEE4C5B11FAC81DE6A9695909FC4CF4150F2E2E894C881D910EBF0ED",
+          "productionSha256": "8AAB5E3152C975B374F119694357D6E50912B2006E07B9F9090A33FC0BE8B36F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneEndpointHecke",
+          "scratchSha256": "D5B378992B56ACE8728879AC931355F1CE6EF27D7657CA6D3F00BCEB26E7584D",
+          "productionSha256": "7D44D71AF2DD52AADB8A9BB46DC5C9D56B69A419D35511775021FEF6E3BD0B1F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodHecke",
+          "scratchSha256": "F0C817746465027700275A9F6BC37CAE8E8E4F760942B3B3F768114943C36AEA",
+          "productionSha256": "81862DB9ADED8E82E4F326FEAEF7CE69BD1F6EAEDA50CEC14C1CA236E7CD7A5A",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 216 distinct names from 216 exhaustive scratch checks are retained: 215 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+}
+```
+
+## Verified actual original Gamma1 Picard and Hecke comparison - 27 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,867-module scope: all thirteen retained regressions, 56,334 exhaustive theorem checks, 26,085 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.
+
+```json
+{
+  "recordedUTC": "2026-10-28T06:30:11.836332+00:00",
+  "log": "logs/dubon-build-20261027-215936-342.log",
+  "sha256": "8D4D5E4F3A01F917910D95484B8E70CDA739EBE8CDB3713A459A0065C5E8B67D",
+  "bytes": 14549461,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8867,
+  "projectTheorems": 56334,
+  "registeredConsumers": 26085,
+  "registeredConstructions": 2717,
+  "declarations": 34787,
+  "generated": 35185,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261027_215224.log",
+  "foundationSha256": "F7FB11499E70B7B9E7E3BC7DE211E05EB8CCD0E94D8FFF598C367070F79BC116",
+  "countReconciliation": {
+    "previousTheorems": 56121,
+    "focusedTheorems": 215,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceCurve.Place.ramificationAlong.eq_1",
+      "Dubon2026.sourceGammaOneHeckeConjugation.congr_simp"
+    ],
+    "addedTheorems": 213,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonGlobalOwnership8867.log",
+    "globalOwnershipSha256": "14C52B6142D9A499CC0F7ED447D1238BE786176EF01310ECAF1BBA793C65E287",
+    "globalOwnershipSourceSha256": "769EFFCF340796F3B0141943A9AB3F14EDFA0A680D2FE8B08D436806EBCF5B2F",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonOwnership8867.log",
+    "ownershipSha256": "4DFD7D72B7143FE74ACB0E97D591EB53BC3B170D78F7282578D6A86A5CDAAB76"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 216,
+    "scratchDistinct": 216,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneAnalyticHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOneAnalyticHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeLinear._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeLinear.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneCuspHeckeTrace._proof_1": "_private.Dubon2026.SourceGammaOneCuspHeckeTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneEndpointHecke._proof_1": "_private.Dubon2026.SourceGammaOneEndpointHecke.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeAnalyticDivisor._proof_1": "_private.Dubon2026.SourceGammaOneHeckeAnalyticDivisor.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCharacters._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCharacters.0.Dubon2026.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckeCosetMultiplicity._proof_1": "_private.Dubon2026.SourceGammaOneHeckeCosetMultiplicity.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveDerivative._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveDerivative.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneHeckePrimitiveTrace._proof_1": "_private.Dubon2026.SourceGammaOneHeckePrimitiveTrace.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePeriodHeckeLattice._proof_1": "_private.Dubon2026.SourceGammaOnePeriodHeckeLattice.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOnePicardHeckeDivisors._proof_1": "_private.Dubon2026.SourceGammaOnePicardHeckeDivisors.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1",
+      "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper_sourceGammaOneScalarHeckePeriods._proof_1": "_private.Dubon2026.SourceGammaOneScalarHeckePeriods.0.Dubon2026.SourceFunctionField.GammaOne.instFintypeQuotientSubtypeSpecialLinearGroupFinOfNatNatIntMemSubgroupGamma1SourceGammaOneHeckeUpper._proof_1"
+    },
+    "productionFocused": 215,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp": [
+        {
+          "scope": "SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b",
+          "module": "Dubon2026.SourceGammaOnePeriodHeckeLattice"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneInvariantDivisorPeriod",
+          "SourceGammaOnePrincipalMeromorphicRealization",
+          "SourceGammaOneAnalyticAbelKernel"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticAbelKernelScratchOwnership1019.log",
+          "sha256": "FF8B27FC2009D931B639E3FB21B72EA179139AE31706A2F9568D01BB2BF043E8",
+          "sourceSha256": "D2D898C351D672455E38D76223F3E880DD0F17F0FDA691B4F9F66E2ED2B64FAD"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoEvaluationFrame",
+          "SourceWeightTwoEndpointImage",
+          "SourceWeightTwoEndpointOpenImage",
+          "SourceWeightTwoJacobiInversion",
+          "SourceGammaOneJacobiInversion",
+          "SourceGammaOneAnalyticPicardPresentation",
+          "SourceGammaOnePicardPeriodKernel",
+          "SourceGammaOnePicardPeriodEquiv"
+        ],
+        "count": 40,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodEquivalenceScratchOwnership1029d.log",
+          "sha256": "DDFB37150475D844A4DECF28487010D6B2E787E0AD65EF2FE6C2315F2AF75BA7",
+          "sourceSha256": "BE7348A10BF1893C8E92AB77CD9337DBA93DA360CBC64ECE926B5BFED8761E2C"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeAlphaGerms",
+          "SourceGammaOneHeckeStretchLaurent",
+          "SourceGammaOneHeckeBetaGerms",
+          "SourceGammaOneHeckeAnalyticPlaces",
+          "SourceGammaOneHeckeAnalyticFiber"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAnalyticMapsScratchOwnership1035.log",
+          "sha256": "7FAA9013C86C9B205AC8A60CA35B2614668A8AEE2A9A2CB4CC630815552A11E2",
+          "sourceSha256": "02652C61369D0B3F5153DB1940101AC72ABA74A2479F5C8A8359CFF50B2779FC"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneWeightTwoHeckeCosets",
+          "SourceGammaOneHeckePrimitiveDerivative",
+          "SourceGammaOneHeckeTraceCosets",
+          "SourceGammaOneCuspHeckeTrace",
+          "SourceGammaOneHeckePrimitiveTrace"
+        ],
+        "count": 46,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimitiveTraceScratchOwnership1041.log",
+          "sha256": "266A8BFA089278529F7BC367CC2A1D4C3590A4B1F5C6127813CC89E2C5D8750B",
+          "sourceSha256": "FDC5F737FBA608FC7E07188D28DBABEFD9AFC952856B4469D859F0A3A6038F43"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckePointTransition",
+          "SourceGammaOnePeriodNormalization",
+          "SourceGammaOneScalarHeckePeriods",
+          "SourceGammaOneHeckeCharacters",
+          "SourceGammaOneHolomorphicH1Hecke"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicH1HeckeScratchOwnership1047.log",
+          "sha256": "ECAFC0478FCE0E49EDE44464F68EA84C145B59FB302E59C0FEC39F508D933719",
+          "sourceSha256": "A38596A3B34CAFAE44FE72C990D3F52413BCB80AF1F539FE6C89CD7E121BF50D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCuspHeckeLinear",
+          "SourceGammaOnePeriodHeckeLattice"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodLatticeHeckeScratchOwnership1050b.log",
+          "sha256": "E1EAAAAAFBB4F48A44D28558A8CF4462AE03CA9EA1125088AF175955B815AFCC",
+          "sourceSha256": "BEC36E2DFD84B790BE29D0F16CBAA6F4B5585C3C1007630B9E3103EDC1C05CAB"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeGammaZeroMap",
+          "SourceGammaOneHeckeGammaZeroPlaces",
+          "SourceGammaOneHeckeGenericOrbits",
+          "SourceGammaOneHeckeFiberPresentation",
+          "SourceGammaOneHeckeGenericFiber",
+          "SourceGammaOneHeckeJDegree",
+          "SourceGammaOneHeckeAllFibers",
+          "SourceGammaOneHeckeExactRamification",
+          "SourceGammaOneHeckePlaceOrbits"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersScratchOwnership1060b.log",
+          "sha256": "E6A5E5C97F3CE8CC3FF768C2B62A733445CDB226592F08F3CA3C9BF40733068A",
+          "sourceSha256": "A26F819DD0A91185DED0A356A52E5B6FBE1C1F445B9EA1F017EDDA6A2FA35713"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCentralStabilizerCard",
+          "SourceGammaOneHeckeActualStabilizers",
+          "SourceGammaOneHeckeUpperOrbits",
+          "SourceGammaOneHeckeCosetMultiplicity",
+          "SourceGammaOneHeckeAnalyticDivisor",
+          "SourceGammaOneAnalyticHeckeDivisors",
+          "SourceGammaOnePicardHeckeDivisors",
+          "SourceGammaOneEndpointHecke",
+          "SourceGammaOnePicardPeriodHecke"
+        ],
+        "count": 34,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHeckeScratchOwnership1070.log",
+          "sha256": "25A1FD2CC1027D0CC855493B3A5160CA98196C45B987522359073DF4D2579057",
+          "sourceSha256": "75678533F1194F355CBFD04BDC38235219FE49AB838DB2B82B7B67A296CF08B0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardHeckeComparisonOwnership8867.log",
+      "sha256": "4DFD7D72B7143FE74ACB0E97D591EB53BC3B170D78F7282578D6A86A5CDAAB76",
+      "sourceSha256": "C4CDE1668527F91976A8990B7AFCF139A10737E24FB48C3434D40DBE6DE73487"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-200915-162.log",
+      "sha256": "CE01D14635FD723D573C9025CA833575B5EACCF7AD8E467F4F40B0A95303AA6B"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 46 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneInvariantDivisorPeriod",
+          "scratchSha256": "F5AE1A74DDAAAF409ACCCE75EEDA52B4E32D2ABB126A1493ED20C6F74C4CF884",
+          "productionSha256": "13CE8F1BACBB4501771AE699D7F6FD79B3C6C131D2F1B22484D26009F464A0F1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePrincipalMeromorphicRealization",
+          "scratchSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+          "productionSha256": "FBF885F826CC8FF8EC9756B1772F298CDBA25FDFD611240AF4A6C476F2ACC99B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticAbelKernel",
+          "scratchSha256": "2D4E4B7425D362994DB8804993A6212CA5B52CE5B351AF0284A4B9BA5F780477",
+          "productionSha256": "6118064925AEA21B24D1CCE89AEFB9D8C31A3BDC106F7AF09034B7694FE37E7C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEvaluationFrame",
+          "scratchSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+          "productionSha256": "356F864DD311304083A07C5F18047F6CB0F2E113CA481C3669B43604C17DB580",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEndpointImage",
+          "scratchSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+          "productionSha256": "C67042F72FEB97CBD2348CBA116EE0CD0E22F1A9602EE691AF7E76F0F134B1AB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEndpointOpenImage",
+          "scratchSha256": "AB3B2693C7ECDD62E1D303C82F16560A362BBEF5A813CA9DD62A4FB974CFB522",
+          "productionSha256": "D33474365C6B468EDC549795E8A9FDC88E360F29A76AB5F2EF1F0BC4EE3BE48E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoJacobiInversion",
+          "scratchSha256": "F250A753380B28F96E3F908DCF10BDF382A2D6761784D437C2DC1179F77FE3D4",
+          "productionSha256": "90FEF70183D6D5DB4F21088FBC66BD61EB72CA0D9DCDDB220A26405F3E0B668E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneJacobiInversion",
+          "scratchSha256": "DA2EFE2489490E110DE709CFEF9A8BD52269C3422BAB4520D2CE619308D30639",
+          "productionSha256": "F53B02EA8659311968EE124CAA457CC553C748656518053F32C05BB9B5687F91",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticPicardPresentation",
+          "scratchSha256": "0A0562470AB7AF8C3D91291CF643D7D96470A4B2E71D487D699B362D28B7DD60",
+          "productionSha256": "6BBAE828A61CD5180186741FD402ED08136F4B5EE05996732818A1CD17A83F38",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodKernel",
+          "scratchSha256": "C5AA9152F8AB3930FA20A01DC2FAB0635AC11AA8C8A2B7BA634F307E81A8804B",
+          "productionSha256": "B8C6F2B9590D0139117AF12E62EFB9654C6F0A8B2A778A06ED517F34F2F15B33",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodEquiv",
+          "scratchSha256": "D88F0BD2DF1128BDC4A258F860B96C4A9E6266E9F49D97DEB1D5C25E0A514D7B",
+          "productionSha256": "D8FDB8FFF890650B5E4DC64AAAA026465F858ABCB28E089703FA37AAEF23320F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAlphaGerms",
+          "scratchSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+          "productionSha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeStretchLaurent",
+          "scratchSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+          "productionSha256": "4D713A78984DC357E057E0967C0ED42C5FE743E8210E9235649A155FC07A13CB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeBetaGerms",
+          "scratchSha256": "8AD0FF911F2508BFF59ABB753AB5E495649E18CDAB99789545478FF32D3EC216",
+          "productionSha256": "94DE58B868397CB96D343A5BD5A7C5C5096F35D13C2DC154EE6A9C41CA89ED74",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticPlaces",
+          "scratchSha256": "C9BE12E38B0BDF2DF1BE0A3ACE0B59B51999EABBEB02225C95060072258E4098",
+          "productionSha256": "CDA62B1F3B7F48FEFA779806F072EC4A9FF18EE32C0E6C584EA5DD92A7FACDD7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticFiber",
+          "scratchSha256": "24897DE74DA5C48B9F87EB3E730D89C699E788A93F1BD2E42B13A7A3F860F6DB",
+          "productionSha256": "2EFB842163559BDBC6360E911B9A47B877916A04AE1B4F199123971C04487C73",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneWeightTwoHeckeCosets",
+          "scratchSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+          "productionSha256": "50EB2B8552B41163A6018BEBC685BCCB2D97FF8C8E43B890D2BE4C190B3CD866",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePrimitiveDerivative",
+          "scratchSha256": "91F9AB63127EBB96F306387202FE42803160896536D417F73694CF0C108E398A",
+          "productionSha256": "4D6D87EBCAEEFCB0EDFE451CF9943EC8DFA0F1B5A333ED0CFC46C2E8DF679E72",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeTraceCosets",
+          "scratchSha256": "9E8B6A5674FF849E1D038E19C15C6F4459535D90000F140ACBA8CE925C30C27A",
+          "productionSha256": "4BD35AF1198F874CF83FF493AD8A0F8F173B5BC8AEADC9EC196C7D35389D6468",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspHeckeTrace",
+          "scratchSha256": "4C4E73D86CD07F58695B0D22EBAAFA00DCD75FCE330DC20FC1E50511C8D6427C",
+          "productionSha256": "AB544E54C759BB1FA4CC8F131BB2B474AB9F482F49E04C6375C416B373E25675",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePrimitiveTrace",
+          "scratchSha256": "2D7C918AB0F872DB07087012DC256034F8FED66054E7F4F0E02D2D33CB6732B7",
+          "productionSha256": "A61DEDB31998135C35E0368BD6D9CA9AF97AD0D72768E189AE81A29F9E312118",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePointTransition",
+          "scratchSha256": "1B78FF2D22DCEE80FE9249B7324699A6F5ACF53F69C54747049634555A039355",
+          "productionSha256": "C1F46C8EF74EED74848D5F2A13571A5C266B17681435D768E39B24D4095D8845",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeriodNormalization",
+          "scratchSha256": "E7124E94979468E19405CD59AC28EFCF1D596FDB2449FFB971B791B1BC68C561",
+          "productionSha256": "A51554F78790CE0B705E36BFEE79B8E0A9913465474C3DC9E23E2F2C7A143D2B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneScalarHeckePeriods",
+          "scratchSha256": "9B322CD9FD35FA2E4F8C3CC8364161B8F1006C6828E6A3009744643D604D09E4",
+          "productionSha256": "EC68311203B101EE2B388C880077AAF8D6E4CEA3B9B22E1E2A8574DBE9556393",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCharacters",
+          "scratchSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+          "productionSha256": "659BD933A1D125CB36EAF8D5BAD6E34E424B95FA55710ADA3C0EA6E9A3E70FC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHolomorphicH1Hecke",
+          "scratchSha256": "C96C2A0245EDCF7258977615C3E1F29D15978EBFB9CBDE52106F5EFF180F5B19",
+          "productionSha256": "F04C9E10C103B536F2143951DE10668F5528ABEDFD007A9E11CCC0C8EE8F3E79",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspHeckeLinear",
+          "scratchSha256": "6E408A1D97EADEC2031023EED67E49B7599B68ABE545E93620A56D9CF4BDA773",
+          "productionSha256": "2028BFC1A35FDF3353C78F035DCEE18AAFD48CDE6A5BCC653FD01C36C809014A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePeriodHeckeLattice",
+          "scratchSha256": "2D34969A6300EB13FA57CEA2685653120E7D514058301CAEB3D4119AC624D89D",
+          "productionSha256": "8B8EE3A1F7D0196C80E24D9E2B551E95092CCF4DD8CCF4DB31D8A435D5E421B3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGammaZeroMap",
+          "scratchSha256": "E0FAE670F1059A173E5BD15F569FA1D196C181E87D40AB3CAD83268BF95FA906",
+          "productionSha256": "3B5D182CA649F171549D5406BE81BEF8C01276473EFE35FAF7BEAEB2CF96EB6C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGammaZeroPlaces",
+          "scratchSha256": "209AF33D72FC8A2B5264D05633B9DF157A461ABBB9587F889DC5B60E5E1A8F07",
+          "productionSha256": "DE23FDDC1D21885A7822C589E9B34848C0EB37CA9D78E993FED700B8AE549F06",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGenericOrbits",
+          "scratchSha256": "00D6DCC6CFE4207660BCE067E6D88158F7787F8DB16E7F7F48F3E8471CE1061B",
+          "productionSha256": "DA63A2C9FC9C47A931F9FC6AE7D59BF2B51BF2D4D5038BD717B324137A69AEC5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFiberPresentation",
+          "scratchSha256": "0ADCD1D1775C1ECEB5ECAAFFC44CDA3FFA6020B8AE6A01F05E222F1033D520F8",
+          "productionSha256": "8E6690E8365B80A60D4F49121E9A1FDC9E03870F74B9C536E883BF7CCA7A5622",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeGenericFiber",
+          "scratchSha256": "AD2E21D5C52A0C36C081A2B0B078E167EBC2525A11E18965524FC7E0CF14A835",
+          "productionSha256": "B3C5665F8A69E0DEE62A23D6EEC1EDB7ED18E4AA050C42487967AAB890B608C3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeJDegree",
+          "scratchSha256": "E6804BCCF946534DC20F4290D0AFBB5D697E919AE728EDD05BB67E0A8C3464D0",
+          "productionSha256": "38D371D281184713C83CF963EA4561B7D488AF5892B061044E19800078E25389",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAllFibers",
+          "scratchSha256": "16EB2D977A949B95424326391CB49D388482C344E1B891538AABF246C50CC749",
+          "productionSha256": "46F5DB8E0A5F9AF1E9E6B41E4B7AC474AFE92CFCF08699B621A7498A8A9A0671",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeExactRamification",
+          "scratchSha256": "A6E530644A01D115F2CEAE89182E3E2418293F983EEA440D9F5F0C67627C37BA",
+          "productionSha256": "BE578913A4D4AB5056E26330AA404F411779D50E2F8BB3FE7D6AB17D309BB5A0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePlaceOrbits",
+          "scratchSha256": "094705A212C4A43F1D68F0DB97100162C30E4CEF3E9BB9BA99C80C50C3934D13",
+          "productionSha256": "14F1F007D76FCB19C3DBA429C56017DBEE05A051B09A36968FC70792736EFA92",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCentralStabilizerCard",
+          "scratchSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+          "productionSha256": "C1F1D908512C2E5150ACB6074822B6101914CBEC862D5184C6463CB82DE36E36",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeActualStabilizers",
+          "scratchSha256": "4E6A58BA9193D1A3DE060BDB25C9507EC5933F0F368E0C6C005139AD8A6250AD",
+          "productionSha256": "B4EDE4640D9DFCCAD4E0199EFCD95B53BBFBBE40D9571959E9B53903AAF9D446",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperOrbits",
+          "scratchSha256": "06F6A57EB461F7BC833C2697FEABF485145D3838F00E1D85E0035A0E1EF79324",
+          "productionSha256": "08305080584661EEA45C08E0E958844E8908BBECD30C7C4A910AC108130F7830",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCosetMultiplicity",
+          "scratchSha256": "DC04C60C636B8E0332C77420C44122811A06FC489057E906034EC3095D745FDA",
+          "productionSha256": "CBC6AC89EFD60B79F20926FB959B2B63F57B0966EA108A7269EDE9FA07B003B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeAnalyticDivisor",
+          "scratchSha256": "768071A8DA6E09865605ACA65E222DE4587BF71C6991A30709FDEFC9383950EB",
+          "productionSha256": "D764040B0D47F318E87B05589F489B8AA35473DA93A4633A64AA9BBB27EF5683",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneAnalyticHeckeDivisors",
+          "scratchSha256": "30E5B6A3F9246A893BEAB5F1326868E4ED7FCB0D216665C5023E83E3E27BFC6D",
+          "productionSha256": "278368C6918210647854A0C5546EC1DC59089941458CBBCE4BD39D0E474D6E30",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardHeckeDivisors",
+          "scratchSha256": "8855A333CEE4C5B11FAC81DE6A9695909FC4CF4150F2E2E894C881D910EBF0ED",
+          "productionSha256": "8AAB5E3152C975B374F119694357D6E50912B2006E07B9F9090A33FC0BE8B36F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneEndpointHecke",
+          "scratchSha256": "D5B378992B56ACE8728879AC931355F1CE6EF27D7657CA6D3F00BCEB26E7584D",
+          "productionSha256": "7D44D71AF2DD52AADB8A9BB46DC5C9D56B69A419D35511775021FEF6E3BD0B1F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOnePicardPeriodHecke",
+          "scratchSha256": "F0C817746465027700275A9F6BC37CAE8E8E4F760942B3B3F768114943C36AEA",
+          "productionSha256": "81862DB9ADED8E82E4F326FEAEF7CE69BD1F6EAEDA50CEC14C1CA236E7CD7A5A",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 216 distinct names from 216 exhaustive scratch checks are retained: 215 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "This proves the complex additive Picard-period and prime Hecke comparison and the holomorphic constant-coefficient H1 comparison. Full parabolic, diamond, transpose and arithmetic compatibility, coefficient-field transport, Frobenius/inertia, arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
 }
 ```

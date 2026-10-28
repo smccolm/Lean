@@ -1,0 +1,10 @@
+[
+  "AdelicLocalBoundedHecke",
+  "AdelicLocalFixedSpace",
+  "AdelicLocalHeckeSymmetric",
+  "AdelicLocalSphericalHecke",
+  "FinitePlaceHeckeSwap",
+  "FinitePlaceHeckeSymmetric",
+  "GL2DiagonalSwap",
+  "UnitaryCosetTracePairing"
+]

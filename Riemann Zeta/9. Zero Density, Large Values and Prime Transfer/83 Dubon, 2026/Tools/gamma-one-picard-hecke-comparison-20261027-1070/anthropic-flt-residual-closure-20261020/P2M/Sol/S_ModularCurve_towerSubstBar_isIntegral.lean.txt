@@ -1,0 +1,15 @@
+import Definitions.Def_ModularCurve_DegeneracyTower
+import Theorems.Thm_ModularCurve_towerInclBar_isIntegral
+import Theorems.Thm_ModularCurve_heckeBetaBarIntegral_of_prime
+import P2M.Util
+namespace P2MW.S_ModularCurve_towerSubstBar_isIntegral
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.jqNModC_one ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
+
+set_option autoImplicit false
+
+open ModularCurve AlgebraicCurve
+
+theorem solution (L : Type*) [Field L] [Algebra ℚ L] {N M : ℕ} [NeZero N] [NeZero M] (ℓ : ℕ) [Fact ℓ.Prime] (h : N * ℓ ∣ M) : (towerSubstBar L N ℓ h).toRingHom.IsIntegral :=
+  RingHom.IsIntegral.trans _ _ (ModularCurve.heckeBetaBarIntegral_of_prime L N ℓ)
+    (ModularCurve.towerInclBar_isIntegral L h)

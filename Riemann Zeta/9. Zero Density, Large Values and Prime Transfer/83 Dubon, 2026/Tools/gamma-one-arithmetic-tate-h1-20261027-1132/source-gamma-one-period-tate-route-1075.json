@@ -1,0 +1,40 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 homogeneous-coefficient arithmetic realization -> actual Picard/Tate and H1 comparison -> finite original integer-period lattice and native Tate-torus comparison.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoIntegralPeriods.lean",
+      "sha256": "55792094BF55943629990F390F7EB38AA6844B26DFA694E819ED41B98674914B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusBasis.lean",
+      "sha256": "D182DDC2894EEF31C83E1B40CCD453E6BE1A5625411B675C82CC63105F40268E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusNaturality.lean",
+      "sha256": "F3D95B762178E37B2F32ECE8AFD1E15790715F6BD6386802ABC01BA19A239E57"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePeriod.lean",
+      "sha256": "B51C9841BA4C165775E8842C575EC4DFC0341EEBBE60B4785F60C135CB7AEFB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPeriodHecke.lean",
+      "sha256": "F0C817746465027700275A9F6BC37CAE8E8E4F760942B3B3F768114943C36AEA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodHeckeLattice.lean",
+      "sha256": "2D34969A6300EB13FA57CEA2685653120E7D514058301CAEB3D4119AC624D89D"
+    }
+  ],
+  "shorterRoute": "The original integer span is the actual range of the modular-group period homomorphism. Native finite-index group finite generation and image finiteness yield a finite integral module. Native torsion-free PID freeness supplies a finite basis. Existing TateModule.Period.phi2 and phi2_baseChange then apply directly to the proved original Picard-period equivalence and lattice-preserving Hecke action. A second period-lattice discreteness theory is unnecessary for this precise tensor equivalence.",
+  "assumptionsToDischarge": [
+    "Finite generation and freeness of the actual original integer-period lattice.",
+    "Actual complex Picard Tate-module identification with the scalar extension of the same lattice.",
+    "Native algebraic prime Hecke compatibility of that identification."
+  ],
+  "remaining": "No rank-2g assertion or arithmetic Galois association follows merely from this finite basis. Arithmetic/complex torsion descent, finite-coefficient H1, diamonds, transpose, original all-weight association and higher continuation remain. DUB17--20 OPEN; 16/20."
+}

@@ -1,0 +1,302 @@
+{
+  "repository": "ImperialCollegeLondon/FLT",
+  "commit": "1ab58c167e4fc60bef518cc02caa3fc15c9590d5",
+  "endpoint": "ker_RtoT_le_nilradical",
+  "files": [
+    {
+      "path": "FLT/Patching/REqualsT.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/REqualsT.lean",
+      "gitBlob": "f64fa1bca71e62e48c6119060608e1f81ca81151",
+      "sha256": "07193D1CE609F4F769D214A4A20D59655472234E8AC9DF775B0FF6C581E7A0FA",
+      "bytes": 5067,
+      "imports": [
+        "FLT.Patching.System"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/System.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/System.lean",
+      "gitBlob": "014112b52160e1bd2a6a8719320116bc5668f275",
+      "sha256": "BCE45A4397075670EB01CC091ACC6D9EDFF70389FB4301965B1B1A1F933510BB",
+      "bytes": 22293,
+      "imports": [
+        "FLT.Patching.Over",
+        "FLT.Patching.Utils.Depth",
+        "Mathlib.RingTheory.Length"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Over.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Over.lean",
+      "gitBlob": "176b856a3783fe19e6585bbd4e4af30ddbd7d247",
+      "sha256": "C527306E23384034D0DAC539F18F5DDC8A74F1642AD00408517F3948AB564A77",
+      "bytes": 21552,
+      "imports": [
+        "FLT.Patching.Algebra",
+        "FLT.Patching.Module",
+        "FLT.Patching.Utils.AdicTopology",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "Mathlib.Topology.Algebra.Ring.Compact"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/Depth.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/Depth.lean",
+      "gitBlob": "ce316a88b5da25900f3d6c6c97f8c02fb1a1c731",
+      "sha256": "AA866BCB3847D14E8AFE5AD32FB34E28385953FDC0129FF933CDB94D418CDF97",
+      "bytes": 11249,
+      "imports": [
+        "Mathlib.RingTheory.Regular.RegularSequence",
+        "Mathlib.RingTheory.Support",
+        "Mathlib.RingTheory.KrullDimension.Basic",
+        "Mathlib.GroupTheory.GroupAction.Ring",
+        "Mathlib.RingTheory.Flat.FaithfullyFlat.Basic",
+        "Mathlib.RingTheory.KrullDimension.NonZeroDivisors",
+        "Mathlib.RingTheory.Spectrum.Prime.RingHom",
+        "Mathlib.RingTheory.TensorProduct.Free",
+        "Mathlib.Tactic.Continuity.Init",
+        "Mathlib.Tactic.Positivity.Finset"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Algebra.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Algebra.lean",
+      "gitBlob": "cc351446f6b0c812320b14aaa07dcae07b0aff0d",
+      "sha256": "2B30FB9A24C4AD091859E6A6F0DC15B1CB344083166A16F82AD1EFABCB7DEF2B",
+      "bytes": 24045,
+      "imports": [
+        "FLT.Patching.Utils.AdicTopology",
+        "FLT.Patching.Ultraproduct",
+        "FLT.Deformations.Lemmas",
+        "Mathlib.CategoryTheory.Types.Basic",
+        "Mathlib.RingTheory.Filtration",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.Topology.Algebra.Group.ClosedSubgroup",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Module.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Module.lean",
+      "gitBlob": "418ac87388e46502494b674448e67707d40c7941",
+      "sha256": "815DE625E7118C3525F0B95052AC73483E20A6E1F6FBCF958747BFDE21DEE6FA",
+      "bytes": 30228,
+      "imports": [
+        "FLT.Patching.Ultraproduct",
+        "FLT.Patching.Utils.AdicTopology",
+        "Mathlib.Algebra.Module.Torsion.Basic",
+        "Mathlib.CategoryTheory.Types.Basic",
+        "Mathlib.LinearAlgebra.Dimension.Finrank",
+        "Mathlib.RingTheory.Filtration",
+        "Mathlib.RingTheory.FractionalIdeal.Basic",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "FLT.Patching.Utils.InverseLimit",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Compactness.Paracompact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/AdicTopology.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/AdicTopology.lean",
+      "gitBlob": "081f65b35c49e7daaa612acb6f087c39dfc19313",
+      "sha256": "08E8CD670A2D7F2D10A6EF5436553156AEF857B3660225A44D210A623FB89A62",
+      "bytes": 10641,
+      "imports": [
+        "Mathlib.RingTheory.AdicCompletion.Basic",
+        "Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology",
+        "Mathlib.RingTheory.Artinian.Defs",
+        "Mathlib.RingTheory.LocalRing.ResidueField.Defs",
+        "Mathlib.RingTheory.Noetherian.Defs",
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Algebra.Ring.Ideal",
+        "FLT.Patching.Utils.InverseLimit",
+        "FLT.Patching.Utils.Lemmas",
+        "Mathlib.RingTheory.LocalRing.Quotient",
+        "Mathlib.Topology.Algebra.Algebra",
+        "Mathlib.Topology.Algebra.Ring.Compact",
+        "Mathlib.Topology.Connected.Separation"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/InverseLimit.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/InverseLimit.lean",
+      "gitBlob": "b55a8367716229fe61b69c453be77a94cfc2a40f",
+      "sha256": "7FA0B175248295E2DB3C588DFC73081F40767A02872764F6D1F4A26E8CAE39A2",
+      "bytes": 3085,
+      "imports": [
+        "Mathlib.Topology.Constructions",
+        "Mathlib.CategoryTheory.CofilteredSystem",
+        "Mathlib.Data.Finset.Order"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Ultraproduct.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Ultraproduct.lean",
+      "gitBlob": "fa45223d60e685991891cc8d1b1794e107f59c81",
+      "sha256": "6FFBB29CFD3DCE17A5EBE14478E9995EE56CDFB5041DFAA406EEDD237B65DC44",
+      "bytes": 20293,
+      "imports": [
+        "FLT.Patching.Utils.Lemmas",
+        "FLT.Patching.Utils.TopologicallyFG",
+        "FLT.Patching.Utils.StructureFiniteness",
+        "Mathlib.Tactic.ContinuousFunctionalCalculus"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Deformations/Lemmas.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Deformations/Lemmas.lean",
+      "gitBlob": "53be3d4284a4df37263ef2c146ee7d79c408d985",
+      "sha256": "0C7440FC74B4103F63D11F6EFD91AD3B6A91651FDAD234E59C10B8AD35925B10",
+      "bytes": 14876,
+      "imports": [
+        "FLT.Mathlib.GroupTheory.Index",
+        "FLT.Mathlib.Topology.Algebra.Group.Basic",
+        "FLT.Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+        "Mathlib.NumberTheory.NumberField.Basic",
+        "Mathlib.RingTheory.Valuation.ValuationSubring",
+        "Mathlib.Topology.Algebra.Algebra.Equiv",
+        "Mathlib.Topology.Algebra.LinearTopology",
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Instances.Matrix"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/Lemmas.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/Lemmas.lean",
+      "gitBlob": "492073a29bb2c0a1de56b6d6febeb23a4246c5e4",
+      "sha256": "544982B9E02737FD4AB3C950EA3619ACF532EB7A6D3D38FCB549C6E99D0DF3F5",
+      "bytes": 18872,
+      "imports": [
+        "Mathlib.Topology.Algebra.Module.ModuleTopology",
+        "Mathlib.Topology.Algebra.Ring.Ideal",
+        "Mathlib.RingTheory.Ideal.MinimalPrime.Basic",
+        "Mathlib.RingTheory.Jacobson.Ideal",
+        "Mathlib.RingTheory.LocalRing.MaximalIdeal.Defs",
+        "Mathlib.RingTheory.Noetherian.Defs",
+        "Mathlib.Data.Set.Card",
+        "Mathlib.Data.SetLike.Fintype",
+        "Mathlib.RingTheory.Filtration",
+        "Mathlib.RingTheory.Localization.AtPrime.Basic",
+        "Mathlib.Topology.Algebra.Module.Compact",
+        "Mathlib.Topology.Algebra.OpenSubgroup",
+        "Mathlib.Topology.Separation.Profinite"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/TopologicallyFG.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/TopologicallyFG.lean",
+      "gitBlob": "f126bb65e417f76116e1decf05ff0a668cd4879e",
+      "sha256": "46EA27018ECABCA7822B9507344D35DFBB81E863014ADA7B478B75383211A03D",
+      "bytes": 2354,
+      "imports": [
+        "Mathlib.RingTheory.FiniteType",
+        "Mathlib.Topology.Algebra.Ring.Basic"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Patching/Utils/StructureFiniteness.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Patching/Utils/StructureFiniteness.lean",
+      "gitBlob": "c323d3590cbe2122f1a46b59d8da2eee32733efa",
+      "sha256": "7D0CF2D0FD7B06EB6AF31EA0AD382EF2FD3DDC6B4B8770D6E1C7B648EE738529",
+      "bytes": 13658,
+      "imports": [
+        "FLT.Patching.Utils.TopologicallyFG",
+        "Mathlib.Topology.Algebra.Module.Equiv.Basic",
+        "Mathlib.Algebra.Algebra.TransferInstance",
+        "FLT.Mathlib.Algebra.Module.TransferInstance",
+        "Mathlib.Algebra.Group.Ext",
+        "Mathlib.Algebra.Ring.Ext"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Mathlib/GroupTheory/Index.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/GroupTheory/Index.lean",
+      "gitBlob": "4b7a2fb31f90997e556b570bf81f720cadfc3e12",
+      "sha256": "BE285001E017B4C0ABA8E798D61E322CA3111E695F18BC7FD0A6501C2BEA32DA",
+      "bytes": 1275,
+      "imports": [
+        "Mathlib.GroupTheory.Index",
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Tactic.Bound.Init",
+        "Mathlib.Tactic.Finiteness.Attr",
+        "Mathlib.Tactic.ScopedNS",
+        "Mathlib.Tactic.SetLike"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Mathlib/Topology/Algebra/Group/Basic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Topology/Algebra/Group/Basic.lean",
+      "gitBlob": "7cb9166fd0d163cdab0ca04be3ca96d69f8a5e44",
+      "sha256": "E982DE4EEF66F8B956B5BB2320DB7F44F4B7412017561B98D9DC87332C4BA29C",
+      "bytes": 1491,
+      "imports": [
+        "Mathlib.Topology.Algebra.Group.Neighborhood"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Topology/Algebra/IsUniformGroup/Basic.lean",
+      "gitBlob": "4393528bab6c72c3b5b64037a2cc307e1855b37e",
+      "sha256": "093C79C417AF28C4FEBA6C67DF5C29537D92A75C26999D06C7B5675252721599",
+      "bytes": 1299,
+      "imports": [
+        "Mathlib.Topology.Algebra.IsUniformGroup.Basic",
+        "FLT.Mathlib.GroupTheory.Index"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    },
+    {
+      "path": "FLT/Mathlib/Algebra/Module/TransferInstance.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Mathlib/Algebra/Module/TransferInstance.lean",
+      "gitBlob": "0e0cfc71bb95798fdff84844397658c8ed48e959",
+      "sha256": "71D558D813A52198A79AC1F9DAAF0B50EC8AC8FACAEB6A2D25E76E0FA6970979",
+      "bytes": 1772,
+      "imports": [
+        "Mathlib.Algebra.Module.TransferInstance"
+      ],
+      "sameAsOctober15": true,
+      "integrityCandidates": []
+    }
+  ],
+  "treeComplete": true,
+  "kernelCheckedHere": false,
+  "purpose": "DUB-17 higher symmetric-power continuation <- arithmetic automorphy lifting <- patching with actual deformation rings and Hecke modules. Assess this generic proved closure for porting at the unchanged Dubon pin; arithmetic system realization remains separate."
+}

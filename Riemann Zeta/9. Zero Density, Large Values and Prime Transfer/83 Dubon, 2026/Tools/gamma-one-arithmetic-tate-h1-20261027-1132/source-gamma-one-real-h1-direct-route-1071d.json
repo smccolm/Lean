@@ -1,0 +1,7 @@
+{
+  "reason": "The specialized and generic character-coordinate endomorphism proofs repeatedly exceed the unchanged default whnf limit. The intervening endomorphism is unnecessary: adapt the already audited holomorphicPeriodH1 comparison directly to real cusp periods and restrict native H1 itself to its actual parabolic submodule. This also removes an incidental coordinate construction.",
+  "reuse": "SourceGammaOneHolomorphicH1Hecke.lean and existing real-period surjectivity; exact native H1 Hecke correspondence retained.",
+  "proofLimitsChanged": false,
+  "sourceContractChanged": false,
+  "dependency": "DUB17/18 -> actual Gamma1 full/parabolic comparison -> native real parabolic stability."
+}

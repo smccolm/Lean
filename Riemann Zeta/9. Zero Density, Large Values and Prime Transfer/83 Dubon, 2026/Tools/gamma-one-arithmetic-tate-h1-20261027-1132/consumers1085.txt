@@ -1,0 +1,61 @@
+
+/-- Exact original-object consumer of `rationalPrimePlaceInteger_unit_power`. -/
+theorem actual_local_uniformizer_source (p : ℕ) (hp : p.Prime)
+    (x : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) (hx : x ≠ 0) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ, ∃ n : ℕ,
+      x = (u : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) *
+        (p : (rationalPrimePlace p hp).adicCompletionIntegers ℚ) ^ n :=
+  rationalPrimePlaceInteger_unit_power p hp x hx
+
+/-- Exact original-object consumer of `finitePlaceGL2_integral_pivot`. -/
+theorem actual_local_integral_pivot_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ u : (v.adicCompletion ℚ)ˣ, ∃ l r : finitePlaceGL2Gamma0 1 v,
+      (GeneralLinearGroup.scalar (Fin 2) u⁻¹ * (l.val * g * r.val)).val 0 0 = 1 ∧
+      ∀ i j : Fin 2, (GeneralLinearGroup.scalar (Fin 2) u⁻¹ * (l.val * g * r.val)).val i j ∈
+        v.adicCompletionIntegers ℚ :=
+  finitePlaceGL2_integral_pivot v g
+
+/-- Exact original-object consumer of `finitePlaceGL2_integral_diagonal`. -/
+theorem actual_local_integral_diagonal_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ u t : (v.adicCompletion ℚ)ˣ, ∃ l r : finitePlaceGL2Gamma0 1 v,
+      (t : v.adicCompletion ℚ) ∈ v.adicCompletionIntegers ℚ ∧
+      g = GeneralLinearGroup.scalar (Fin 2) u * l.val * gl2UnitDiagonalPair 1 t * r.val :=
+  finitePlaceGL2_integral_diagonal v g
+
+/-- Exact original-object consumer of `finitePlace_integral_diagonal_hecke_power`. -/
+theorem actual_local_diagonal_Hecke_power_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (t : ((rationalPrimePlace p hp).adicCompletion ℚ)ˣ)
+    (ht : (t : (rationalPrimePlace p hp).adicCompletion ℚ) ∈ (rationalPrimePlace p hp).adicCompletionIntegers ℚ) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletionIntegers ℚ)ˣ, ∃ n : ℕ,
+      gl2UnitDiagonalPair 1 t =
+        GeneralLinearGroup.map ((rationalPrimePlace p hp).adicCompletionIntegers ℚ).subtype
+          (gl2UnitDiagonalPair 1 u) *
+        (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp)) (finiteAdelicHeckeDiagonal p)) ^ n :=
+  finitePlace_integral_diagonal_hecke_power p hp t ht
+
+/-- Exact original-object consumer of `finitePlaceGL2_cartan`. -/
+theorem actual_local_Cartan_source (p : ℕ) [NeZero p] (hp : p.Prime)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p hp).adicCompletion ℚ)) :
+    ∃ u : ((rationalPrimePlace p hp).adicCompletion ℚ)ˣ, ∃ n : ℕ,
+      ∃ l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p hp),
+        g = GeneralLinearGroup.scalar (Fin 2) u * l.val *
+          (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p hp)) (finiteAdelicHeckeDiagonal p)) ^ n * r.val :=
+  finitePlaceGL2_cartan p hp g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_matrixCoefficient_cartan`. -/
+theorem actual_local_Cartan_coefficient_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hpN : p.Coprime N)
+    (x y : AdelicCyclicHilbert f)
+    (hx : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val x = x)
+    (hy : ∀ g : finitePlaceGL2Gamma0 N (rationalPrimePlace p (Fact.out : p.Prime)),
+      adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g.val y = y)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ∃ n : ℕ, inner ℂ x (adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime)) g y) =
+      inner ℂ x (adelicCyclicLocalRepresentation f (rationalPrimePlace p (Fact.out : p.Prime))
+        ((GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+          (finiteAdelicHeckeDiagonal p)) ^ n) y) :=
+  adelicCyclicLocal_matrixCoefficient_cartan f hpN x y hx hy g
+

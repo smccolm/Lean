@@ -1,0 +1,170 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T04:10:42.645929+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeGammaZeroMap",
+    "SourceGammaOneHeckeGammaZeroPlaces",
+    "SourceGammaOneHeckeGenericOrbits",
+    "SourceGammaOneHeckeFiberPresentation",
+    "SourceGammaOneHeckeGenericFiber",
+    "SourceGammaOneHeckeJDegree",
+    "SourceGammaOneHeckeAllFibers",
+    "SourceGammaOneHeckeExactRamification",
+    "SourceGammaOneHeckePlaceOrbits"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroMap.lean",
+      "sha256": "E0FAE670F1059A173E5BD15F569FA1D196C181E87D40AB3CAD83268BF95FA906",
+      "oleanSha256": "46951CE1100CBA9B7D716EC04CC6E5C1C8B73A90E81494769EEAA033271531F0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroMap1051c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroMap1051c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroPlaces.lean",
+      "sha256": "209AF33D72FC8A2B5264D05633B9DF157A461ABBB9587F889DC5B60E5E1A8F07",
+      "oleanSha256": "8FA77DC3445C5DF643C9BF5468914F1A2EF4D16D2E921294C80160BA5E693ADC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroPlaces1052a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGammaZeroPlaces1052a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericOrbits.lean",
+      "sha256": "00D6DCC6CFE4207660BCE067E6D88158F7787F8DB16E7F7F48F3E8471CE1061B",
+      "oleanSha256": "6B8DAB8F45D9CDDD2808593B2D273720077E47FE2E7CFDCF84C00F60E764CE31",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericOrbits1053b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericOrbits1053b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFiberPresentation.lean",
+      "sha256": "0ADCD1D1775C1ECEB5ECAAFFC44CDA3FFA6020B8AE6A01F05E222F1033D520F8",
+      "oleanSha256": "8592C756B127D36017A376609F2D0E4B3381843631ECA12FA894BAAA41A2CE9D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFiberPresentation1054a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFiberPresentation1054a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericFiber.lean",
+      "sha256": "AD2E21D5C52A0C36C081A2B0B078E167EBC2525A11E18965524FC7E0CF14A835",
+      "oleanSha256": "5CE2E38191B39B36250BBCC94A8F657A50917500D0C0CCC28A70181672A217E6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericFiber1055a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGenericFiber1055a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeJDegree.lean",
+      "sha256": "E6804BCCF946534DC20F4290D0AFBB5D697E919AE728EDD05BB67E0A8C3464D0",
+      "oleanSha256": "BA10729AA312BBC1806E6562DF135E0E8D6BEC80B03D9B7A55354DC621A8A41B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeJDegree1056a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeJDegree1056a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAllFibers.lean",
+      "sha256": "16EB2D977A949B95424326391CB49D388482C344E1B891538AABF246C50CC749",
+      "oleanSha256": "D5165D38CD8A9D4A2601FE2B7431FC044FB08053DBF0B0892B814B379497E1DB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAllFibers1057a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeAllFibers1057a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeExactRamification.lean",
+      "sha256": "A6E530644A01D115F2CEAE89182E3E2418293F983EEA440D9F5F0C67627C37BA",
+      "oleanSha256": "CE346311206DABA83D6ABB98E9725F4B4093C0F4C50BE75CBE3D0323CFB313DA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeExactRamification1058a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeExactRamification1058a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePlaceOrbits.lean",
+      "sha256": "094705A212C4A43F1D68F0DB97100162C30E4CEF3E9BB9BA99C80C50C3934D13",
+      "oleanSha256": "EDB7C400A5E6BD763EA062162153EF5ECB3CD73B73BED685D5C03CD6A4CA23F8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePlaceOrbits1059c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePlaceOrbits1059c.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroField_le",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeGammaZero_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeGammaZero",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_heckeGammaZero_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaZeroPlace_eq_of_heckePlace_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_eq_one_or_neg_one_of_card_two",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_orbit_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.j_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.card_stabilizer_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finite_orbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_injective_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.exists_fiber_order_sum_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_mk_val",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.OrbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.Fiber",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equivOfGeneric",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroField_le",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_heckeGammaZero_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_heckeGammaZero",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_heckeGammaZero_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaZeroPlace_eq_of_heckePlace_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_eq_one_or_neg_one_of_card_two",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticHeckePlace_eq_iff_orbit_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.j_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.card_stabilizer_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finite_orbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_injective_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.exists_fiber_order_sum_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber_mk_val",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeGammaZeroMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.OrbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.rep",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.Fiber",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.toFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equivOfGeneric",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.equiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersAudit1b.log",
+  "logSha256": "186E13EC7D76CD5ED0F5FD3C3246FB8FC6EFD72D6353AB68F745B6AE6FFC400C",
+  "auditSha256": "8F972BD4F3BC055A6F21DB1BFB5BBA0FE10C54FE0EBBD175D7E0D159DB3CC841",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersScratchOwnership1060b.log",
+  "ownershipSha256": "E6A5E5C97F3CE8CC3FF768C2B62A733445CDB226592F08F3CA3C9BF40733068A",
+  "exhaustiveTheorems": 35,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 41,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricFibersDependencyAudit1b.log",
+  "dependencyAuditSha256": "8B0992B60E17BD50E575F6BE711A8FF40EFD18A3A1222FEF962344DD34AC3671",
+  "dependencyAuditSourceSha256": "841A12E9EDF5BDB0AE4742593D73280BFE6292358C66E7124E4D48E64085B96B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeFiberOrbits.analyticHeckePlace_eq_iff_orbit"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 arithmetic Hecke characters -> actual Picard/H1 Hecke compatibility -> exact geometric correspondence fibers and multiplicities.",
+  "discharged": "Actual original Gamma0 field inclusion and unchanged germs; generic intersection orbit identification; exact j degree; all-fiber orbit bijection; exact stabilizer normalization including elliptic points. No orbit, degree or ramification premise remains beyond actual subgroup, nonzero levels and translation membership.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch only pending production and assembled verification. Actual coset-to-divisor pullback multiplicity assembly, Picard/H1/diamond/transpose/arithmetic compatibility, original all-weight association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-geometric-fibers-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "471A227EA3BF7A83248773A6796BCE557D0BEC7CFB1C3C91BB47BF105F91B81A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

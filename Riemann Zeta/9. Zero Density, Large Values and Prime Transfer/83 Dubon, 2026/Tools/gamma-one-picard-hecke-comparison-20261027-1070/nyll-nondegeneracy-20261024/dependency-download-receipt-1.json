@@ -1,0 +1,217 @@
+{
+  "retrievedUTC": "2026-10-25T00:08:53.145591+00:00",
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "path": "Nyll/JacobianVarieties/Pic0/ZsmulEqFiniteDimensionalRatFunc.lean",
+      "sha256": "C0FA33AFC3179259D2158DB91BB8C80EA7B86C637CA16A0C27504E68597D9B7E",
+      "gitBlob": "7e62d0a7d9469da790ad1440662ac2d0dc80871b",
+      "bytes": 53477,
+      "depth": 0
+    },
+    {
+      "path": "Nyll/JacobianVarieties/Pic0/JacobianPackAlgClosed.lean",
+      "sha256": "9A38DCB61BD39A8D40DCBCA9A3F7314369104CBB1E1BEABFE3CF371CC011AC73",
+      "gitBlob": "8fa001b6b4184231e2f46ce396547ffd201547c7",
+      "bytes": 50998,
+      "depth": 0
+    },
+    {
+      "path": "Nyll/JacobianVarieties/Pic0/NsmulEqJacobianPack.lean",
+      "sha256": "D23758FC54690001BBA3C00025584466CC200EE098ADB656139AED131A7C1E2A",
+      "gitBlob": "8ef592579b2a910990bde49dba1c4a8d8340ce3c",
+      "bytes": 50936,
+      "depth": 0
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisibleCoprime.lean",
+      "sha256": "384697868F31F43CC1635D466C0D8FC34F4697FC723016175A4E2E3576BA7F6B",
+      "gitBlob": "f0cbb1209a9b420b511dfd3574050c3b5f13bfb6",
+      "bytes": 30102,
+      "depth": 0
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/ClassGroup/ClassGroup.lean",
+      "sha256": "B5FEC14592B7BD4CF94BFF9FC8C18250DD5E44BA2964382E75155EDC374A9FD1",
+      "gitBlob": "609edbcfc4a755d8746c769dbc8eac00c66799aa",
+      "bytes": 8955,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveOver.lean",
+      "sha256": "25DB5AB8155AE7290CC991C38553F76FDD224C694BAD7AAB4E08BD6FABE57FD5",
+      "gitBlob": "65bfc4734952684cbdc2ea3ab0bd2754bcd8f061",
+      "bytes": 3464,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveTranscendentalSeparable.lean",
+      "sha256": "14049230D8F9790D7133DD9DA38CFF41216B96F1D2BCBF3AE3CABFCE06780A08",
+      "gitBlob": "c3b3ee2a46ceda9938d66087f9e5de234a9a1c7a",
+      "bytes": 3589,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/SeparatingTranscendental.lean",
+      "sha256": "17A7A2FF981E25C0ED9C15130518E8E4C5D597B64345FD0CFA0E87044E858ECC",
+      "gitBlob": "d2ef1544033d00cdfaf5b727070ca72ef42cc082",
+      "bytes": 7594,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/GroupLaw/RelativeGroupLaw.lean",
+      "sha256": "A6ECB82430E8FCB3F78544FA5BA0C6418B9940C99E5DC668930DD7F70E1719EE",
+      "gitBlob": "9f36f2b78e9c549c90fbf015ebd82840271ed8e3",
+      "bytes": 7534,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Models/Construction/Basic.lean",
+      "sha256": "EE0318AC49A1FC74FD7862E71448A3F844633ADE1E9BF3360BD0D0183DB63084",
+      "gitBlob": "3a310dcae83270733f2f016f19f31046f51a9843",
+      "bytes": 4643,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/RelSubPic/Group.lean",
+      "sha256": "D0F61B35AAECCB310B23FE71DC79B1A6C63427CE9EF6ABD5043FC12DE6CDAD61",
+      "gitBlob": "0a9af7a2183bc86409e3e1f70a65244a525c8021",
+      "bytes": 10198,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Models/Construction/BasicPerfectField.lean",
+      "sha256": "44D989D697BF2FCD3072628F0AFE26D55FABB2D048B6DE4C83111522212F7F68",
+      "gitBlob": "9cfb294637f0bfb5da70bcfcb13ea7f9d48def54",
+      "bytes": 10894,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/JacobianVarieties/Picard/Representability/CurveModelPicardRepresentabilityAbelJacobi.lean",
+      "sha256": "FD0AB36A96C70FF085F4A90CF39AB9804BF3339EA14F18D1F84CB6E8A058E556",
+      "gitBlob": "cf9ad102b226d6f30bc3df2a399fdba2d6172a8c",
+      "bytes": 52784,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/Representability/RepresentsRelSubPicGroup.lean",
+      "sha256": "4B5D17302ACEDF00E3C67B223E33A7A463C0F9430ACBC3616D7C3C4777D97C8A",
+      "gitBlob": "9974e0c88c333976b16aeaa638576f655aec264a",
+      "bytes": 8177,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/SchemeTheory/Morphisms/ReducedSmooth.lean",
+      "sha256": "FD3BCB2A557DDEEC9A3721F1F3EDDDF37937A2D0F580B4929AE19E6152E6896F",
+      "gitBlob": "7b195dce967fe3c875b4aaa4b74cbf8c8d068855",
+      "bytes": 2843,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Geometry/Schemes/Smooth/EtaleFormallyUnramifiedStalkMap.lean",
+      "sha256": "B14B9E65682BB7DA9F7919920034209DAEFC1E7A7C685E77EED40E3D0206F290",
+      "gitBlob": "3491277e05d7328d635efa13fd152de77b4f12a3",
+      "bytes": 17228,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/Divisorial.lean",
+      "sha256": "2A558AC95D2C6F3E0DFA8FEE508367440643D4AE81630FC19EFEC82D3D2BA82C",
+      "gitBlob": "c39a09641937521aa1dce764179fd159c5214a24",
+      "bytes": 31654,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/Maps.lean",
+      "sha256": "79C37699F5016E1AF7DD1B0F3447AE3D101448B5549B58B10F631CE0D26808B7",
+      "gitBlob": "b6c91a04d61826508f5b8e4358113c6986a0c9d8",
+      "bytes": 30040,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/Semilinear.lean",
+      "sha256": "AAD8882E91E0F2803C3B2B88A52849303AF782848CD68047B63653CFA5718F06",
+      "gitBlob": "f2da51100c8334f2e8fe363abef57cf8353fa50d",
+      "bytes": 14500,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Places/Restriction/RestrictionComposition.lean",
+      "sha256": "412D89197128E9FBEBC6DF32DEB2C91E5DDA211B64309AA5E1F7306E3EDD7585",
+      "gitBlob": "93db74728b5582b92e490c916861ec3f83a7cd5b",
+      "bytes": 16499,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/Semilinear/AlgAutSmulPlace.lean",
+      "sha256": "E3433D30A35679AD80DFAD90CF7E186CB24266368CFC1F418D49398F2E705437",
+      "gitBlob": "c4bc38e12889b4a950bf99d34452776195cd3084",
+      "bytes": 2066,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Places/Restriction/RestrictEq.lean",
+      "sha256": "ECD8A90A8332B2ABCA51CB21E3E2D932CC5E4B4534EE8668ACE64FFE92B4C76D",
+      "gitBlob": "6c1ce678fe78bb17842ee60227cabddbb4c9fca8",
+      "bytes": 3429,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/ClassGroup/PicardZero.lean",
+      "sha256": "6B259923F9D9F284DBD72FDFA8224E811F909BB08E9CF7A0449AA5BD18D2ED13",
+      "gitBlob": "850631e3b31813b36eeb474d05c8e4e9662aa324",
+      "bytes": 5768,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/EvaluationMaps.lean",
+      "sha256": "F8FA201BDDF18BDF73865FB2178062B5BA4E7667A56841B80296A390AFD126BD",
+      "gitBlob": "d5dd292ef50e03a6f96ddc785f3aedd856d39870",
+      "bytes": 6798,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Divisors/Norm/PushforwardDivSeparable.lean",
+      "sha256": "C52D6F02C875E3096B3C5C6BA79170CFB28154FA8FB9B99FD743DD772DE5B71B",
+      "gitBlob": "2d7856f7b1d3f4cbaf4e53dea4e46de172568f37",
+      "bytes": 1690,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Places/Ramification/InertiaDegEqOneIsRational.lean",
+      "sha256": "66C7399F17B8DFD9935B8615FE250182212D933A5901878344DB8F8A087E6DE2",
+      "gitBlob": "255b70b41a6da88d09e12202860a83926de7fa34",
+      "bytes": 1610,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Places/Degree/IsRationalAlgClosed.lean",
+      "sha256": "5F5EBFD18164D0D042BA497787A5F2BA6FB4839B0D52B8B92FFACCCC4CD41589",
+      "gitBlob": "27c80c194d845b58f9502c8c0edd1bc8b5be0215",
+      "bytes": 7678,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/AlgebraicCurves/Geometry/WeilReciprocityAlgClosed.lean",
+      "sha256": "5E76F8D15E1E7E11CAF1DFF9EE2713C747FEE3D2B7C45426AB8B6E4DF31B1037",
+      "gitBlob": "faa5ea0da9ec2bceebf03df0dc13464991860cde",
+      "bytes": 15306,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/HasPrincipalDivisorsFiniteDimensional.lean",
+      "sha256": "AD31556DDDD8E826E76E69F63FE89E31C7EB814F105C2F679983A20314B36E14",
+      "gitBlob": "c30d8c7556bebeb401df06004489b89b21bf0792",
+      "bytes": 8339,
+      "depth": 1
+    },
+    {
+      "path": "Nyll/JacobianVarieties/Pic0/OrdEqMulPowNeNeZero.lean",
+      "sha256": "BC1766C922D7DB3ED29E9CE190A71791EC8077C451E553FC437D325226582931",
+      "gitBlob": "fc8c5500842724e2ba8be7fc8dc8e2f8fef7f116",
+      "bytes": 5670,
+      "depth": 1
+    }
+  ],
+  "externalBuildClaim": false
+}

@@ -1,0 +1,17 @@
+import Definitions.Def_ModularCurve_DegeneracyTower
+import Theorems.Thm_ModularCurve_towerInclBar_finiteAlong
+import Theorems.Thm_AlgebraicCurve_finiteAlong_comp
+import Theorems.Thm_ModularCurve_finiteAlong_heckeBetaBar_of_prime
+import P2M.Util
+namespace P2MW.S_ModularCurve_towerSubstBar_finiteAlong
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.jqNModC_one ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
+
+set_option autoImplicit false
+
+open ModularCurve AlgebraicCurve
+
+theorem solution (L : Type*) [Field L] [Algebra ℚ L] {N M : ℕ} [NeZero N] [NeZero M] (ℓ : ℕ) [Fact ℓ.Prime] (h : N * ℓ ∣ M) : FiniteAlong L (towerSubstBar L N ℓ h) := by
+  rw [towerSubstBar]
+  exact AlgebraicCurve.finiteAlong_comp _ _ (ModularCurve.finiteAlong_heckeBetaBar_of_prime L N ℓ)
+    (ModularCurve.towerInclBar_finiteAlong L h)

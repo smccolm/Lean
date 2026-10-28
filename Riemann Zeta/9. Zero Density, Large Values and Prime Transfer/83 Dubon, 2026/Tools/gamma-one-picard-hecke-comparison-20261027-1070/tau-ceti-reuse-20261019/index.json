@@ -1,0 +1,72 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-finite-classes.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearForm/FiniteClasses.lean",
+    "gitBlob": "811a3bcea42aa13803e7c788449ebe5358be93ce",
+    "sha256": "2086B2EEF6969E33935E2364E46149D75B8FCAF4CE3DFDB0788885595855E87E",
+    "bytes": 14000
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-hermite.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearForm/Hermite.lean",
+    "gitBlob": "735d4724e3916f1e4840b71324af979e4840ca1f",
+    "sha256": "A0F37D8D9316B749FC26C3142862EC2F0D6B12E606598331EA0BBEAD3E7B31A9",
+    "bytes": 12099
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-gram-congruence.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/BilinearMap/GramCongruence.lean",
+    "gitBlob": "1bb7d868e201a558a1ce8aac849b51fd54fdfee1",
+    "sha256": "EDFC36AD609099316436E1B4289647085C718A187BEE228E418742A726E8677C",
+    "bytes": 11747
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-condensation.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/Matrix/Condensation.lean",
+    "gitBlob": "0264aa2b2b76a98f26e585fdade72ff55bcfd6c7",
+    "sha256": "0F527A9307F3321E145ABB30E71A2279DE417336C55BE8BC685E0CF22CC501A0",
+    "bytes": 2970
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-primitive.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/Algebra/Module/Primitive.lean",
+    "gitBlob": "7a3e3491256625d910623a83f3bc8ef443988f85",
+    "sha256": "1C68DEE8E2DB26C09997B8122CE6C828DEB2C6B2C6F245DF7500A47C5D0C1DA8",
+    "bytes": 11793
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-round.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/Data/Int/Round.lean",
+    "gitBlob": "382d54ecd8bd076e0c1621d2e2d3f68a1e48a68c",
+    "sha256": "AB09C90F7C3A94FAFAE4967C6AEA6DF2FD3C38E1B852AA8E111835DE3BAF6F6F",
+    "bytes": 1284
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-lattice-classes.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/LinearAlgebra/IntegralLattice/PosDef/Classes.lean",
+    "gitBlob": "11b3f1607d64270bed39fc8231c58ea82b6f7b19",
+    "sha256": "2830AF74F6E5279B277A050536044EB6617D930B7F86EB8F70C93B7AFC1DFB04",
+    "bytes": 3962
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tau-ceti-lattice-genus.lean.txt",
+    "url": "https://github.com/TauCetiProject/TauCeti/blob/9fc5d5a87d00cb696e606ccdae66420cc837c05e/TauCeti/NumberTheory/IntegralLattice/Genus.lean",
+    "gitBlob": "fa0e04c1112c2c121cbf43fb1c533d00e3bf4941",
+    "sha256": "EC803AA91644D3B9DB8E3D895EE15911F14AF3BCA1775A700263EE89A578F1B3",
+    "bytes": 6298
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\tauceti-explorer-proposal.lean.txt",
+    "url": "https://github.com/CBirkbeck/tauceti-explorer/blob/0f18b3a7fceed5854be7d232482d158c981448f8/research/blueprint/suggested/PotentialAutomorphyInfrastructurePartII--PL.7.lean",
+    "gitBlob": "ffe9df987e8f5a30306ff349c9db49c1f79968e0",
+    "sha256": "C52E23099106E04507D104B3BB4C62C6A292ABD79064815A2F482379BE90817C",
+    "bytes": 18814
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\tau-ceti-reuse-20261019\\brockian-sato-tate.lean.txt",
+    "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/sato_tate.lean",
+    "gitBlob": "cff8e3705ea29ddde873674d64a26448ade7e127",
+    "sha256": "AA6D28C5D160AA435D145DFFFB7E1749DBBCB922F686B866A724BB9CE9B30A7D",
+    "bytes": 4683
+  }
+]

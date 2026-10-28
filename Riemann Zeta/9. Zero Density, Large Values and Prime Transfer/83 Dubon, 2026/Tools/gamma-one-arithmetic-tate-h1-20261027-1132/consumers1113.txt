@@ -1,0 +1,48 @@
+
+/-- Exact original-object consumer of genuine local compactness and openness. -/
+theorem actual_local_level_topology_source (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ) :
+    IsCompact (finitePlaceGL2Gamma0 N v : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+      IsOpen (finitePlaceGL2Gamma0 N v : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) :=
+  ⟨finitePlaceGL2Gamma0_isCompact N v, finitePlaceGL2Gamma0_isOpen N v⟩
+
+/-- Exact original-object consumer of `adelicLocalCyclicCore_smooth`. -/
+theorem actual_local_smooth_core_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicLocalCyclicCore f v) :
+    ∃ H : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (H : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ H, adelicCyclicLocalRepresentation f v g x = x :=
+  adelicLocalCyclicCore_smooth f v x hx
+
+/-- Exact original-object consumer of `adelicLocalFixedProjection_mem_invariantCore`. -/
+theorem actual_local_core_projection_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ)
+    (W : Submodule ℂ (AdelicCyclicHilbert f)) (hW : W ≤ adelicLocalCyclicCore f v)
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation f v g x ∈ W)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ W) : adelicLocalFixedProjection f v x ∈ W :=
+  adelicLocalFixedProjection_mem_invariantCore f v W hW hinv x hx
+
+/-- Exact original-object consumer of `adelicLocalCyclicCore_irreducible`. -/
+theorem actual_local_algebraic_irreducible_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (W : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hW : W ≤ adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g x ∈ W) :
+    W = ⊥ ∨ W = adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) :=
+  adelicLocalCyclicCore_irreducible F hpN W hW hinv
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_smooth`. -/
+theorem actual_local_smooth_representation_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : HeightOneSpectrum ℤ) (x : adelicLocalCyclicCore f v) :
+    ∃ H : Subgroup (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)),
+      IsOpen (H : Set (GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))) ∧
+        ∀ g ∈ H, adelicLocalSmoothRepresentation f v g x = x :=
+  adelicLocalSmoothRepresentation_smooth f v x
+
+/-- Exact original-object consumer of `adelicLocalSmoothRepresentation_irreducible`. -/
+theorem actual_local_smooth_irreducible_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible :=
+  adelicLocalSmoothRepresentation_irreducible F hpN
+

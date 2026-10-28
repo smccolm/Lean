@@ -1,0 +1,73 @@
+{
+  "modules": [
+    "SourceGammaOneHeckePointTransition",
+    "SourceGammaOnePeriodNormalization",
+    "SourceGammaOneScalarHeckePeriods",
+    "SourceGammaOneHeckeCharacters",
+    "SourceGammaOneHolomorphicH1Hecke"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition",
+    "Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one",
+    "Dubon2026.SourceFunctionField.GammaOne.primitive_one_period",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition",
+    "Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one",
+    "Dubon2026.SourceFunctionField.GammaOne.primitive_one_period",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_transition",
+    "Dubon2026.SourceFunctionField.GammaOne.along_eq_primitive_one",
+    "Dubon2026.SourceFunctionField.GammaOne.primitive_one_period",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspHeckeTrace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1_cuspHeckeTrace",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphicPeriodH1",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles_apply",
+    "Dubon2026.sourceWeightTwoAlong_smul",
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoPeriodHom",
+    "Dubon2026.sourceWeightTwoPeriodValue",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePrimitiveTrace_difference",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeCosetPoint_eq_triangular",
+    "Dubon2026.sourceGammaOneHeckeConjugation_matrix"
+  ],
+  "localModules": [
+    "SourceGammaOneHeckePointTransition",
+    "SourceGammaOnePeriodNormalization",
+    "SourceGammaOneScalarHeckePeriods",
+    "SourceGammaOneHeckeCharacters",
+    "SourceGammaOneHolomorphicH1Hecke",
+    "SourceGammaOneWeightTwoHeckeCosets",
+    "SourceGammaOneHeckePrimitiveDerivative",
+    "SourceGammaOneHeckeTraceCosets",
+    "SourceGammaOneCuspHeckeTrace",
+    "SourceGammaOneHeckePrimitiveTrace"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneHeckePointTransition": "SourceGammaOneHeckePointTransition1042a",
+    "SourceGammaOnePeriodNormalization": "SourceGammaOnePeriodNormalization1043a",
+    "SourceGammaOneScalarHeckePeriods": "SourceGammaOneScalarHeckePeriods1044a",
+    "SourceGammaOneHeckeCharacters": "SourceGammaOneHeckeCharacters1045a",
+    "SourceGammaOneHolomorphicH1Hecke": "SourceGammaOneHolomorphicH1Hecke1046b"
+  }
+}

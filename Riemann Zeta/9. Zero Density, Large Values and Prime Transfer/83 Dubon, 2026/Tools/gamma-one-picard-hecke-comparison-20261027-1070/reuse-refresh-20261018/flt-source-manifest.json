@@ -1,0 +1,20 @@
+[
+  {
+    "path": "FLT/Assumptions/KnownIn1980s.lean",
+    "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Assumptions/KnownIn1980s.lean",
+    "bytes": 4334,
+    "sha256": "DDBD0B63B267A31A5DF5467C31FDFD5CB673A512AE27CC712CBB0B1C77DD0C9C"
+  },
+  {
+    "path": "FLT/Assumptions/README.md",
+    "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/FLT/Assumptions/README.md",
+    "bytes": 2956,
+    "sha256": "BEB73DE70DB6EF774D68F0B8C9267AA204291B6C33B1240DAB2D7FBB3E41163C"
+  },
+  {
+    "path": "lean-toolchain",
+    "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/1ab58c167e4fc60bef518cc02caa3fc15c9590d5/lean-toolchain",
+    "bytes": 29,
+    "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+  }
+]

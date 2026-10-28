@@ -1,0 +1,102 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T04:56:40.578711+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneFinitePeriodLattice",
+    "SourceGammaOneComplexTatePeriods",
+    "SourceGammaOnePeriodTateHecke",
+    "SourceGammaOneComplexTateHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePeriodLattice.lean",
+      "sha256": "D23E2B69333F3DC600F997B4342B256F624B388DA269E8134197C586CEC87095",
+      "oleanSha256": "C5A6D1A00D4B293BFB74C97E1663715C27E7BCDBEFE520B099724BAD8CB69EAA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePeriodLattice1075c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePeriodLattice1075c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTatePeriods.lean",
+      "sha256": "F8D625A788260D11D9C1E3FCA9C635409F6FDD114DC72DDC4872F2730DAF9D5E",
+      "oleanSha256": "BDA149C1440834C678ECB99F5E5F9B35D83E37A60B60ED4F4C84E988A5B86A60",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTatePeriods1076a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTatePeriods1076a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodTateHecke.lean",
+      "sha256": "ED19FB00C7932651C57375A0B675B787FE16BBE1BBD68AD13266C84F5EEE075F",
+      "oleanSha256": "81DF5273B5CD15F968E870BC9CBB2317F1022A6C0A75AA1067A594CF865E1F44",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodTateHecke1077b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodTateHecke1077b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHecke.lean",
+      "sha256": "07A8AE2D691C22DCF0FCC398D60D7A6A2525C35B530A35CC4A094A11199D4353",
+      "oleanSha256": "98AAA5660F5160EDCF66EC9F54D882E300AC420535888F7F7057E14E00722CEE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHecke1078a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHecke1078a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_eq_dualPeriodHom_range",
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_free",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_symm_tmul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_val",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.dualPeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.integralPeriodBasis",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_eq_dualPeriodHom_range",
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.integralLattice_free",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_symm_tmul",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_val",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_hecke"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.dualPeriodHom",
+    "Dubon2026.SourceFunctionField.GammaOne.integralPeriodBasis",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHeckeAudit1.log",
+  "logSha256": "863425C06B7777E130756FD3F8716A8175E3F990686BC866079F63B14468831B",
+  "auditSha256": "3624F14BD906CE0D7ACD6AB4BD282E83CBABB7D880F14E3ED2BDC8D2F42F2F20",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHeckeScratchOwnership1079.log",
+  "ownershipSha256": "6B145E3AA2164C3F582B71F73E8D45494429A78CB27CDD0986CDED04D0182470",
+  "exhaustiveTheorems": 33,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplexTateHeckeDependencyAudit1.log",
+  "dependencyAuditSha256": "3CEC1D6B5D181EAF7B2AC85519F57763C505192EF4F48357E38B8C77C6DA5165",
+  "dependencyAuditSourceSha256": "52C7064FC183267AB98F43034D87C44A1C2D3E6687982103B66661DA1B5ED0F0",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_symm_tmul"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 homogeneous-coefficient arithmetic realization -> actual Picard/Tate and H1 comparison -> original finite period lattice and complex Picard Tate tensor equivalence.",
+  "discharged": [
+    "The original integer-period lattice is the actual modular-period image, finitely generated and free over the integers.",
+    "The actual complex Gamma1 Picard Tate module is the p-adic scalar extension of that same lattice, with the proved tensor formula.",
+    "The actual prime algebraic Hecke action corresponds to base change of the original integral-period Hecke action, with no coprimality condition on either prime."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Complex Picard Tate comparison only; no rank-2g or arithmetic Galois association is inferred from finite freeness. Arithmetic/complex torsion descent, finite-coefficient H1, diamond and transpose compatibility, original all-weight association and higher continuation remain. DUB17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-complex-tate-hecke-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "9C586BE52B4843FB0A942F3CDF5FA4925252072EFC36F178771174FE62F2FD29",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

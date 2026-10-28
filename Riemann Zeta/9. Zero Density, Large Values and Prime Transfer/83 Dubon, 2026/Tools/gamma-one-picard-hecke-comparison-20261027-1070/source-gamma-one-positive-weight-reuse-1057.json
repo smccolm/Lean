@@ -1,0 +1,6 @@
+{
+  "source": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOrbitFiberBijection.lean",
+  "sha256": "218D37893939CD2EC11F783453398FD427B5D6880CB1DE00DB0D53808004B873",
+  "adaptation": "Native private positive-weight proof adapted to the inequality needed for actual intersection fibers. The source sum is bounded by the actual subgroup index; the target sum equals it by the proved generic degree. This proves all-fiber injectivity without separate integral modular-form separation.",
+  "gates": "DUB17/18 actual original Gamma1 Picard/Hecke comparison and exact fiber multiplicities."
+}

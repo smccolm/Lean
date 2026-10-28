@@ -1,0 +1,25 @@
+{
+  "reason": "Eight missing declaration docstrings reported by the full 16-linter audit. Mathematical statements and proof bodies unchanged.",
+  "files": [
+    {
+      "module": "SourceWeightTwoEndpointImage",
+      "beforeSha256": "296DEBF4EF147943E389ABFCC67A827193DB49AD54B15E4744E8E32878859AAC",
+      "afterSha256": "40BA46A5053A8C7D7BCDC4CB74720349B34DDF0BA6A435374802236DCAEC28A8"
+    },
+    {
+      "module": "SourceGammaOneAnalyticPicardPresentation",
+      "beforeSha256": "6D223C420005D8F8071B9150C5DF128269D2B39CF62602426BF5080B36E78AD6",
+      "afterSha256": "9DD07413BFFE27CDE31FEA3190862648155E926F6EFBA8DBA9E85E476BC4D40F"
+    },
+    {
+      "module": "SourceGammaOnePicardPeriodKernel",
+      "beforeSha256": "55B1985F6F43DB343C37D9B953E8498855F1A8A677A9D37BFD8EEFDD17F205AE",
+      "afterSha256": "F39673BD7D36101EF2F1D44A9A34527CC49C0F5877CC29BDE765303AC00775D1"
+    },
+    {
+      "module": "SourceGammaOnePicardPeriodEquiv",
+      "beforeSha256": "A7264FFC5A496F5F065299B9B9CA7804BB2A0A131205EBC39DB7592FD9044528",
+      "afterSha256": "2BA6E525C3868904AB15A301D884E98C84BA1CFACA24F55FDDF6378B12064396"
+    }
+  ]
+}
