@@ -1,0 +1,22 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "logarithmic-derivative residue identity",
+    "holomorphic compact-support integration by parts"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_zero_of_differentiableOn.lean.txt",
+      "sha256": "8764F28ACA4AF05C7DA83DB73F56A7CD6F3F300678C066CEE3A2646FCD15143A",
+      "review": "Full primary proof read. Native continuous_of_tsupport shortens its local-to-global support argument; native integral_mul_fderiv_eq_neg_fderiv_mul_of_integrable supplies both real-coordinate integration-by-parts identities."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "holomorphic compact-support dbar integral vanishes, derived from holomorphicity and actual compact support"
+  ],
+  "remaining": "Simple-pole kernel integral and finite residue decomposition, actual smoothed winding/period limit, Petersson reciprocity, principal-divisor converse and full arithmetic chain remain. This foundational lemma alone closes no DUB gate."
+}

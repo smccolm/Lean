@@ -1,0 +1,1689 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-inputs-promotion-route-870.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-inputs-promotion-route-870.json",
+      "sha256": "CE6DE5205E759D66F6FA7A974D6B5219A69208D53A00DDE0E6D848DA8BB10548"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexCauchyPompeiu.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexCauchyPompeiu.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexCauchyPompeiu.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexCauchyPompeiu.lean.txt",
+      "sha256": "18E03AD3D7A51E82867DF60E4F5963CE6B5D3B6DE83120AF48ED43282EFBD91C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexCauchyPompeiu.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexCauchyPompeiu.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexCauchyPompeiu869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexCauchyPompeiu869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexCauchyPompeiu869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexCauchyPompeiu869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarCutoff.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarCutoff.lean.txt",
+      "sha256": "45430E3B5C94CFC3AC2100CB8003A25392F9705B298735D7B87F72C4E140CE4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarCutoff.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarCutoff869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarCutoff869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarKernelIntegrability.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarKernelIntegrability.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarKernelIntegrability.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarKernelIntegrability.lean.txt",
+      "sha256": "2886EEAAFB1F23DBC33862A9894DA3768F50F650AA5E77724FE6F68CC16C50E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarKernelIntegrability.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarKernelIntegrability.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarKernelIntegrability869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarKernelIntegrability869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarKernelIntegrability869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarKernelIntegrability869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarRadialNormalization.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarRadialNormalization.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarRadialNormalization.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarRadialNormalization.lean.txt",
+      "sha256": "A6C0EDC86B7A059CE84E272913925934C9214234E6D70B5181C4663534E8BE64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarRadialNormalization.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarRadialNormalization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarRadialNormalization869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarRadialNormalization869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarRadialNormalization869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexDbarRadialNormalization869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexHolomorphicStokes.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexHolomorphicStokes.lean.txt",
+      "sha256": "8AFBAE8620F1BAD53A8A6DB8896EBF6389671004FB8B432AD00E32C121A906BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexHolomorphicStokes.log",
+      "sha256": "39CEF459D7B69C794A9C0255550961760D3DB0390F7650851D823B0A0261ACA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes863b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexHolomorphicStokes863b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes863b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexHolomorphicStokes863b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues.lean.txt",
+      "sha256": "F982B297CE2E02062539EC83B6029E8A3C905EB3A10B4F088516BAA8A1DB5401"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues.log",
+      "sha256": "E3F4E847F1B0ED37B70F04F7FD5787675080562743D301F38A9C3293BC4B5F8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues867b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues867b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues867b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues867b.log",
+      "sha256": "6D03C39973819E3D8C2872E1430F3905DC354E73218A0111FA05D7CC5021BF14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues867c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues867c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues867c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues867c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexLogDerivativeResidues869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexLogDerivativeResidues869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueIntegral.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueIntegral.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueIntegral.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueIntegral.lean.txt",
+      "sha256": "98FCD6B5C7BE447B63C5366BE8D674655368C15AD944367DE47CAEDD7BB7B1AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueIntegral.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueIntegral869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueIntegral869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueIntegral869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueIntegral869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueLocalModels.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueLocalModels.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueLocalModels.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueLocalModels.lean.txt",
+      "sha256": "11053324379EFA4220797B17E10F1DB42D283A6159420410F0A9E020B50FC9CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueLocalModels.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueLocalModels.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueLocalModels869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueLocalModels869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueLocalModels869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceComplexResidueLocalModels869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDerivativeDecay.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceCuspDerivativeDecay.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDerivativeDecay.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceCuspDerivativeDecay.lean.txt",
+      "sha256": "C1CDEC4BC6C0935BA4FA0BF1D8897CEF25652451CB7F72091B9B1E49C868E679"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspDerivativeDecay.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceCuspDerivativeDecay.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityData.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityData.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityData.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityData.lean.txt",
+      "sha256": "87E4C50419B293698EC36B4394EF4BBEF1C1DD0A9DFEE1B5AA84602776C20D52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityData.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityData.log",
+      "sha256": "5B3FFD51A120DCF0C5C9F087745421024C145C9561C53294FA87BD6F40F06A3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityData859b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityData859b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityData859b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityData859b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataAudit1.lean.txt",
+      "sha256": "02924EC0DEE4CE58C6375D8048C4A76D6D46D08323C99AA3C9C66509FAE82672"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataAudit1.log",
+      "sha256": "37E276AAA06EEA35C58D08AA679289F2D29F540BEC863A3FA3C67505FCD4A0D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1.lean.txt",
+      "sha256": "84B3BD82DA7BDA72078D969478FEBB5B4D9BFFB24D69549C4756DC3A61B7D7D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1.log",
+      "sha256": "3336A0308D49CD435C5CCC8E72AC0E002D52C8F6082C6EF3FD034972AC5A2786"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataScratchOwnership860.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataScratchOwnership860.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataScratchOwnership860.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataScratchOwnership860.lean.txt",
+      "sha256": "95508E7A2FFCB5A2FC3A3EE2FD1DDB790D5071853731E035E6B4E40E7DD639AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataScratchOwnership860.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataScratchOwnership860.log",
+      "sha256": "45F24ABA75B1202028C6BA636DD007F792A143F7B1C0DA195FA94C9790557094"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwist.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwist.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwist.lean.txt",
+      "sha256": "43744D5D40E624E2FFC9B6704A54DBD3C47ADDC30C21DD2EE48E3692920C54AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwist.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistAudit1.lean.txt",
+      "sha256": "B0F512DD20EAD33D7CB1F204D90DDA7D664592C60C24A5C59126FC74AE637E73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistAudit1.log",
+      "sha256": "E70369FED0F71EA5100DF498A86461497FB049FE2580154C046EB72668F88749"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1.lean.txt",
+      "sha256": "F042D901183000F3FB66B32D0E8E532BA5C76C63A6C24A8C3648D756D0441294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1.log",
+      "sha256": "80CD8D9742F46CDB7199B1F14906B3952E82F803FB0E37794DB55CF623AF05C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistScratchOwnership858.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistScratchOwnership858.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistScratchOwnership858.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistScratchOwnership858.lean.txt",
+      "sha256": "06DCD3D3A79515532FC58E7DB0D05B675369182829AA9A412479A32DE64B71D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistScratchOwnership858.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistScratchOwnership858.log",
+      "sha256": "E867E1283F498CF6C0502FAB8B8373C1E774E4E7E206EC9BE7366D4AD166D937"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues.lean.txt",
+      "sha256": "053224697B02AB2F0F2262E508F98BEDE265A10DCC49FD3DB274FCAED2F1B4BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues.log",
+      "sha256": "80AFF1EA6720A9468D1FC2507CABAE5AF5F9011F4EDD9D51B814C7B87E5578E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues868b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues868b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues868b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues868b.log",
+      "sha256": "D02E44F9704C752C5D58373E4324938AA694000E89503FE0879D60623F7CE2FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues868c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues868c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues868c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues868c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues869b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues869b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResidues869b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResidues869b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesAudit1b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesAudit1b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesAudit1b.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesAudit1b.lean.txt",
+      "sha256": "DEBDF19CF06E2A2AA7544EC17CBE04CCB881BE27E4DACDB3382C3A3BEA68FD82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesAudit1b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesAudit1b.log",
+      "sha256": "D8E5818B3F1E47E5B40F5B97A252CB46DD1E16454B936B8F49BF4DE4AE51F2FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1.lean.txt",
+      "sha256": "8D76087AC880CAF04A3AEE5F3954545718D5CAB5D5B70FD69EE619FD549E834E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1.log",
+      "sha256": "6FDBA0AD36A148098321118636BB4BF1C274C9C69F2492F9DEBEFA294775D30E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesScratchOwnership869.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesScratchOwnership869.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesScratchOwnership869.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesScratchOwnership869.lean.txt",
+      "sha256": "5882204BB276629648CA8719994DA0FE6B6A0F6365A56DA996B647CFF165F854"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesScratchOwnership869.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesScratchOwnership869.log",
+      "sha256": "72BE30D05A5FDCFBD406BE38CE6D195DB09B0222F6FC94C4808E4B938AB1ED9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityAudit1.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityAudit1.lean.txt",
+      "sha256": "A56796217E716AA1B94E9959EA259F7FFAC5B7B5A8EDD8AE95784DD097723F09"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityAudit1.log",
+      "sha256": "DDE8FFFBD7499BD891D8A34E1DA71D57E962B5A70352AF0160524D2F0DE9856B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1.lean.txt",
+      "sha256": "47ED8A5269E85162807974029D36F217713BAECEF48D83113E08E7AC1BE51D5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1.log",
+      "sha256": "EE7898AC3207469D66ACDB1305D83CD20E50FE8488A6FEEB5D28BC83EAD8B796"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityScratchOwnership864.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityScratchOwnership864.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityScratchOwnership864.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityScratchOwnership864.lean.txt",
+      "sha256": "EE6812EFFD951817B3B215FA11191AC666B93827C26A99B104A394ED694334BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityScratchOwnership864.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityScratchOwnership864.log",
+      "sha256": "94A794089EADF246D892551FF64BF7E5C2EEA8286298A320F15BC5A56B1C6813"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist.lean.txt",
+      "sha256": "92BD751D76E30AFEC0F04884FA961D1F40C75EC077E1C37545D7E594034C2B0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist.log",
+      "sha256": "B227E58BC19184FCFA2D75AB602CB7E287B4D365B54E0033D5F4DDBE3AA5375A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist853b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist853b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist853b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist853b.log",
+      "sha256": "64F038A412ED80F034217D10067C204555AAC09A8A4573E36D6BC0F275DFE404"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist853c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist853c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspUntwist853c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicCuspUntwist853c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicNormalUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicNormalUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicNormalUntwist.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicNormalUntwist.lean.txt",
+      "sha256": "34272290955CF033038F7D0BC52B2596FE2CC8899260FDBF39300F9996C2DD05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicNormalUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicNormalUntwist.log",
+      "sha256": "F87CF179982DB1A19F4FB795D9BEF5B0A7011C619E701054288809F6ACD107EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicNormalUntwist850b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicNormalUntwist850b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicNormalUntwist850b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicNormalUntwist850b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist.lean.txt",
+      "sha256": "41B98A9670C8A6B743273D566CB89C30025DBF7D7FEC0D49864EC3F92FADE563"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist.log",
+      "sha256": "2913813FB9BE185AFD80D91E544F59D8CE18B6C18F9803EE7313EA697CABC150"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851b.log",
+      "sha256": "829CC7409C7FB07944AEDC0F26E94428F42733620CAA17761CD9D47AB5032BB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851c.log",
+      "sha256": "85AA1ADA3CA7B594A9B7D6B8D7817371226E766A071E9E60EA627EE35BFB3479"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851d.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicPeriodUntwist851d.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicPeriodUntwist851d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms.lean.txt",
+      "sha256": "9E4353A97B13442BCE25D14139E70A09BD94640C454BC05CA6A199C1DC9CCAF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms.log",
+      "sha256": "885B04591AD80DE5CE032E6FFF6610839615E00FBAC5128280560DC907856EC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms852b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms852b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms852b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms852b.log",
+      "sha256": "E8C471960395BD6571CE324C7ECC93372A0BC9786F2155757B3035BF7BC0DC8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms852c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms852c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicTranslatedGerms852c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicTranslatedGerms852c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDecay.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDecay.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDecay.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDecay.lean.txt",
+      "sha256": "17D808B4E8F6DAE7FF510687EB1DDA310FA75611699C2CBEB4F1E6879ED79A11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDecay.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDecay.log",
+      "sha256": "32DF505D918EC8B608C29F9CF13864717C7816F449F186A513AB5418113449D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDecay855b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDecay855b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDecay855b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDecay855b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDerivative.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDerivative.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDerivative.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDerivative.lean.txt",
+      "sha256": "6BB8FC8FEEA7F780C42E9FBCB8C699A1F333B6CFDBB322BFA3D11E6F8C4791F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDerivative.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceMeromorphicUntwistDerivative.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoPeriodUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoPeriodUntwist.lean.txt",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoPeriodUntwist.log",
+      "sha256": "91DFB8CE12786234E3BC093DE6BD3DA4D98EAFB7100DA26BF518642B4E589C7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist849b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoPeriodUntwist849b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist849b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoPeriodUntwist849b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms.lean.txt",
+      "sha256": "32F10201BA45B0F4C52BCF726D537880D3EB7C04389157A2D2A1BE3ECA48DC06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms.log",
+      "sha256": "FBF5F6D3B4A02693AF7511AA153C1A150AEF1784FD7082676C8CB90551C14AAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms861b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms861b.log",
+      "sha256": "3EA432F1E2B6769C0CC917C4951625B5885925DBC9460D9A72E83A84ADD240B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms861c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedForms861c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity.lean.txt",
+      "sha256": "398CF459CF2BB9D8A7EC9EA03E6AE32FCC048DD2C123C4E5A4F3918136A444A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity.log",
+      "sha256": "AF8A84AFE67D24E58B08D558AB8BBD51936A6B6B0B30F153E3F0995914DB11A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity862b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity862b.log",
+      "sha256": "063A9B49689626AA863B0128F0D3793DC7E1BC69D0C38A5F315E9A106907F2D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity862c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceWeightTwoSignedReciprocity862c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_inv_sub_mul_dbar_eq_neg_pi_mul.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/anthropic-flt-residual-closure-20261020/P2M/Sol/S_Complex_integral_inv_sub_mul_dbar_eq_neg_pi_mul.lean.txt",
+      "sha256": "47E2501F72ECB61CAA702EF89CFC8476695DA377CCF773C0504B96A57F936393"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_neg_pi_mul_finsum_residue.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/anthropic-flt-residual-closure-20261020/P2M/Sol/S_Complex_integral_mul_dbar_eq_neg_pi_mul_finsum_residue.lean.txt",
+      "sha256": "2AF0342DD0EF9DF1FC517BD00B2A4CB4EFEBC43F3107ED3D34B81E570249BE3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_zero_of_differentiableOn.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/anthropic-flt-residual-closure-20261020/P2M/Sol/S_Complex_integral_mul_dbar_eq_zero_of_differentiableOn.lean.txt",
+      "sha256": "8764F28ACA4AF05C7DA83DB73F56A7CD6F3F300678C066CEE3A2646FCD15143A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_logDeriv_mul_dbar_eq_neg_pi_mul_finsum.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/anthropic-flt-residual-closure-20261020/P2M/Sol/S_Complex_integral_mul_logDeriv_mul_dbar_eq_neg_pi_mul_finsum.lean.txt",
+      "sha256": "4F8EDD1B9624732A7E1D47CD7B9437F8491CC7E076F291FEB2D03E4EAE14791E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-cauchy-pompeiu-route-865.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/complex-cauchy-pompeiu-route-865.json",
+      "sha256": "09D7AB54B995895809E52981F6CE60454BAA8E782A2031FE4D11429289B1B1C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-holomorphic-stokes-route-863.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/complex-holomorphic-stokes-route-863.json",
+      "sha256": "857CD224F46D4B4D31BD72CDE038B81C31257C2B1E65DA55D4028DC421C6590F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-log-derivative-residues-route-867.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/complex-log-derivative-residues-route-867.json",
+      "sha256": "28C243AAAAE8CA1AFCD8C9B46F7C25417F362578AE38A922F588E8753B3B753A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-residue-integral-route-866.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/complex-residue-integral-route-866.json",
+      "sha256": "399EDE71748FB02DDCCFD3F2B3594C5F9018C14B39611214054C2210679B3F2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers850.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/consumers850.txt",
+      "sha256": "40D59B3590B3C94F134A6DA121AA53C7531545E31FCD0C7D7A0FD10D7E313228"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers857.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/consumers857.txt",
+      "sha256": "C166183ED02A76F7301D1600E123299CD27F45840EBE86D307647DEF93C570CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_reciprocity_848.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/download_gamma_one_reciprocity_848.py",
+      "sha256": "060955E15C97F87DA5055C24AFFF560B979B235427A01032D55234B0264FA143"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fix_log_derivative_residue_docs_869b.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/fix_log_derivative_residue_docs_869b.py",
+      "sha256": "F050F48020A66A7139568CE3846DCF0E63AD991AB3E204CE39541EABFACBEA2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fix_log_derivative_residues_867b.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/fix_log_derivative_residues_867b.py",
+      "sha256": "9E383E46A48581F1773EF56491A46FE630C6293EB1521D4127A280D8A1A23613"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation850-console.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/foundation850-console.log",
+      "sha256": "DF78C6559D6CEB40324A9C1F622BB451F08A500492E358B77D1D0091D96EC179"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation857-console.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/foundation857-console.log",
+      "sha256": "4E9D4F07544151097656AB2BCD5E488D1DDA8EC688764E926240E24EA9CBFDA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-derivative-route-854.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-cusp-derivative-route-854.json",
+      "sha256": "046E65608307CBD2B68F79B583B355F23034C8037BFB0C8FE60D3C59E45543F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-untwist-route-853.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-cusp-untwist-route-853.json",
+      "sha256": "AAFF9CB64F354D1ED9A606E4E8F05FAB4A3D584B3EE3F93105F4FA5BDCAD29DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-reciprocity-data-route-859.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-divisor-reciprocity-data-route-859.json",
+      "sha256": "E8FA05955881AF36AD656393761DFBE40605766EC472C6CC5C888DC3F95F8829"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-invariant-untwist-route-857.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-invariant-untwist-route-857.json",
+      "sha256": "1408835D57ADCEFCCDB4C8B92022EF6794179007F2790922C1B0E5C269D42B87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-derivative-residues-route-868.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-derivative-residues-route-868.json",
+      "sha256": "F71B34640A10219274C9363B8296D3EF1B23154889B19E2920996C545575AB49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-untwist-route-851.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-meromorphic-untwist-route-851.json",
+      "sha256": "8067B0E3BD44C8F0103ED39668ED0EABD4220371876AFB5209BCFBA144448A79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normal-untwist-route-850.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-normal-untwist-route-850.json",
+      "sha256": "8A312BBF1DC41F0CA9BA0812A0266D35B68B412807C0CF59EB4E43EF6CB54A8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-untwist-route-849.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-period-untwist-route-849.json",
+      "sha256": "B6C5EAD2307ED3EBF45B33330B48A0300799CE16DC4512AED39FEBCE3AFA7B3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-reuse-848/S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "C77197817692A6C793F112DFF3DD16266D8351B3F195FBA92C787E6F66DF4C84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-reuse-848/S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "D8B47B849B61CB9E717BD82ED7DAEF4138517FB51AA367FF7D86AC2DA4C57E2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-forms-route-861.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-signed-forms-route-861.json",
+      "sha256": "1A4F112D9F443174323C3E13DC5BB8409EA5C933B123E3648C1BEE63E158C200"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-reciprocity-route-862.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-signed-reciprocity-route-862.json",
+      "sha256": "D2985AD8F0EA0CCCEC60080FBEB38935467A5BB1A26501D9BFE92EF680162F10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-translated-germs-route-852.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-translated-germs-route-852.json",
+      "sha256": "CD0CF078064BEA8FCE786582A2E49B646C0C7D38856C447B8DC7058724282B97"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-untwist-decay-route-855.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-untwist-decay-route-855.json",
+      "sha256": "CD67C0BD4B0C9D6369135920FC052ABB9AD5E0321393767566FE0467B7CF9921"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-untwist-derivative-route-856.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-untwist-derivative-route-856.json",
+      "sha256": "AAA1B80EED6CE85FC70957D4D2A60B5D8673BB37E3F28A2EB0BD9F69E4F3E67D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-doc-review-869b.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-doc-review-869b.json",
+      "sha256": "A0636C83749C825896DF125AE3C3E3B9EB35A975CD3F39D8927C2CBF54C46EA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules850.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/modules850.json",
+      "sha256": "6208C663B8EDFDD727510D9DD6F5F49A33977DA1DAB7ED8D516004B684AB957C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules857.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/modules857.json",
+      "sha256": "D2B9ED3752FB4627810ECDDECF4C4F980CB01FC14A7BD81E15D667C4E790F2F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper850-console.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/paper850-console.log",
+      "sha256": "6F6D9E2622A5E646A23EF34BD02A8C4493FF4D8E43EEBF7DCEC9BD98212D2675"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper857-console.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/paper857-console.log",
+      "sha256": "6349F49F2343242A2D6B124ABE0B722DB239377664B4389F840E6CDED5D88AB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cauchy_pompeiu_865.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_cauchy_pompeiu_865.py",
+      "sha256": "7EB136066A96FF25F18515E4F3F6F663208D6B6FA9F878C334E7643137C2B8AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_derivative_854.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_cusp_derivative_854.py",
+      "sha256": "DC5D0B6376245386E1E9EE0A98EA623BD6CC0A60AA9A6CEA92745FEE12DF19E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_untwist_853.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_cusp_untwist_853.py",
+      "sha256": "FDA6E9F14D89714BE7A3FA53E078F570803A7931042EC266D1866B43343F0F5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_divisor_reciprocity_data_859.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_divisor_reciprocity_data_859.py",
+      "sha256": "B82CCC45997AE9E1952B90FE4535711C549681A9E9132F684C695019F5644028"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_data_audit_860.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_divisor_reciprocity_data_audit_860.py",
+      "sha256": "83C060ECC2A09C5385DFF61EE7516ED91B8944574CDDF1D9CD018A7C5045AD0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_invariant_untwist_audit_858.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_invariant_untwist_audit_858.py",
+      "sha256": "501E9934C6B35ECC54A8A98C1623EB70331A1E26F10D10E7219CE5E882DD53FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_log_derivative_residues_868.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_log_derivative_residues_868.py",
+      "sha256": "26C5D9EBE64D6B15F8B6480C8EE03A95A0CECEE6210D5D13BA3586CA0AFB1701"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_log_derivative_residues_audit_869.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_log_derivative_residues_audit_869.py",
+      "sha256": "E0477007EA7995CD75E888056DD4F721E076E3E5B2F92485D363DCF65AFF7477"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_signed_reciprocity_audit_864.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_signed_reciprocity_audit_864.py",
+      "sha256": "3E8D98320692903BF5A41A66CE5D121C4D64CFFACC45FC28319B33037D8CAB5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_holomorphic_stokes_863.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_holomorphic_stokes_863.py",
+      "sha256": "7168790BB46E4FAC89BB96AAC57511109E5B68D10B06991D6009E5AF73600392"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_invariant_untwist_857.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_invariant_untwist_857.py",
+      "sha256": "A64BC2A2FB7C91AB232F7ECD011B07BE5F9736FC10A603E794D8D4E1983288F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_log_derivative_residues_867.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_log_derivative_residues_867.py",
+      "sha256": "FCC4780C2F99EA58AB9EF922D2FD9A45CA00B769816B8CB0DC22C00D963598B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_meromorphic_untwist_851.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_meromorphic_untwist_851.py",
+      "sha256": "7EF93F00434915E4D83ACD7422EE06871E9FB1E6DC821ED1E268FFE0D92FDD03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_normal_untwist_850.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_normal_untwist_850.py",
+      "sha256": "97FDAC49606A2C60E55B67053633D745294E12FCAC1618F137A9E95830BA03C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_period_untwist_849.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_period_untwist_849.py",
+      "sha256": "8954398CD995F1B71CA46D338293A69E3689996198F940F67983CE489D3CD0A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_residue_integral_866.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_residue_integral_866.py",
+      "sha256": "C5EA66AB99DE62E0585E113E745A65E6D0AB13BCA9DA86AD408013D7F563ECF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_signed_forms_861.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_signed_forms_861.py",
+      "sha256": "DA8326414F67DF419AD7DF0CC7495391C8551292532239CFD408E49992878868"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_signed_reciprocity_862.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_signed_reciprocity_862.py",
+      "sha256": "82FA9F53AC9FE9A9680DEDF03CE68728DB2AB9D8F50A26DC7B1A26CAD28E8531"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_translated_germs_852.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_translated_germs_852.py",
+      "sha256": "3445049958022C5CEBB74382D7C53136F2AA7BF9467748734007282CEBA9213A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_untwist_decay_855.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_untwist_decay_855.py",
+      "sha256": "40691D94C42E5C7EAB27F561D38C79CA47CFA3B7B41A8CECDD8734C12748887A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_untwist_derivative_856.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_untwist_derivative_856.py",
+      "sha256": "0A228AE58A012AD9966EA871720F58825FF0F8FAC3FB023C657E12C900D2E350"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record850.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record850.py",
+      "sha256": "251A54167F699F380EC66029BA35062BD2C00E7C7A98A302A95764CCED80EE40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record857.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record857.py",
+      "sha256": "EA0955C383F3EA89E4E195475E16839EB16063C9E1E071DDA4396D9583A6B177"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_divisor_reciprocity_data_860.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_divisor_reciprocity_data_860.py",
+      "sha256": "33BBF22CF739A34BD37967F3F52B8C2CA97D6B3D0E9C911656A7B9A89F7B1A56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_invariant_untwist_858.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_invariant_untwist_858.py",
+      "sha256": "8523837FF515F8191CE9CD6958945BB513923EA3138B33B4FBDF7091411A5762"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_log_derivative_residues_869.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_log_derivative_residues_869.py",
+      "sha256": "C365EBC19B47D2BF11B1B5F7D17E2CA63F5B20DE77BAE53E218320C3129982F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_log_derivative_residues_869b.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_log_derivative_residues_869b.py",
+      "sha256": "F5D44352D977CAAE91482F78DFD5EAC705951E814862B3E62C6BF1E20A902DBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_signed_reciprocity_864.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_signed_reciprocity_864.py",
+      "sha256": "8C41A4F6C3A34D0B32BF830EEEE5CC4CA21B10B1C54E750198FE3851AD78CD94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register850.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/register850.py",
+      "sha256": "294C0DF62973441CC09CD7B56491BF573CAC6448BE7EEC0D19B738EF1C3DDBB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register857.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/register857.py",
+      "sha256": "859410054E409552337D124B23B12D38F317BEFCFE67FBA893FB2D026970821F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations850.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/registrations850.json",
+      "sha256": "2227CEFC23CB7F15576B8987CFA50B9FD4AA75F07853E8CF3F7846DB2C752DF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations857.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/registrations857.json",
+      "sha256": "F3D3BD9267D62ED39049C5A6194AEBB5FCC5B76EEC66D673FBC4D6FFDC44A918"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section850.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/section850.txt",
+      "sha256": "1ADD5A6FF681E42248A9B899EBE81B221597B9DB828F2016347E0E76F167F5E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section857.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/section857.txt",
+      "sha256": "E12DB371C54318C523C95B652763F3237C7B2C4EB85B1B5E4D81EAF1E9F12388"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-data-1-audit-config.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-divisor-reciprocity-data-1-audit-config.json",
+      "sha256": "5A3683BF60828CFAFE59C10A2DAA39BFC6BC506B342CAA3AA4646EF007B962DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-data-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-divisor-reciprocity-data-1-reuse-review-20261027.json",
+      "sha256": "EE36B698944FDA4C441998644D162FD0EB8F723F1BF7E0A8D80A423A40FF86B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-data-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-divisor-reciprocity-data-1-scratch-receipt.json",
+      "sha256": "984D203B5BE1D70A272EEE13244BD6DE4C85B798979DD8771617931017BA3CBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-data-audit-route-860.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-divisor-reciprocity-data-audit-route-860.json",
+      "sha256": "32A90999DBAC913CAFB9827565821A09D0B1C296585EA18BA37ED62048F12E0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-audit-config.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-invariant-untwist-1-audit-config.json",
+      "sha256": "1EF5E9470932BA22EB5350B59CE9BE3ACCCC189A2BF3737DC88CF3A2DCDCC35A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-invariant-untwist-1-reuse-review-20261027.json",
+      "sha256": "0E5CDFAEBD9EFFAEC5CAAB9C56B53FC5EF2111F539DD6336D651A20CBFF97AC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+      "sha256": "F16ECD3CCDA791603BAD7BEFAB553590188376BCBCA1BB0DCDD0440E84831B20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-audit-route-858.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-invariant-untwist-audit-route-858.json",
+      "sha256": "7B1DEC04A56DA0E52A69725399A622391CCE6975729B9DE09A9D5A86347AFB26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-1b-audit-config.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-log-derivative-residues-1b-audit-config.json",
+      "sha256": "08633A8A326BD92BE2EFED6F39590B3D2932344DF9F08AD92CE697D1D89F33EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-log-derivative-residues-1b-reuse-review-20261027.json",
+      "sha256": "6D7CB080C066EF0CF0BF1FC8C0460BD7891A017DABAD710B68FAD680B1A04032"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-log-derivative-residues-1b-scratch-receipt.json",
+      "sha256": "978439697AD7EAB0AFEB18AD2DE7C8790FA74DEA3A9773E654EA20CC89D70208"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-audit-route-869.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-log-derivative-residues-audit-route-869.json",
+      "sha256": "8CDD1785DE3130456BCE4829EDF31226589F293F449DB9080D73F64FE5AF3012"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-audit-config.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-signed-reciprocity-1-audit-config.json",
+      "sha256": "3334080722532CAA8A54D3F5216E3EC15342BBC1E917D698DAA928819B8949B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-signed-reciprocity-1-reuse-review-20261027.json",
+      "sha256": "1D64D255C66BD6881A54B3FDA4209D728A0904483EE051F8CEF71AE8A617BC7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-signed-reciprocity-1-scratch-receipt.json",
+      "sha256": "2EFDDFE0B99E63D2256BF2EAEBF30B3DAE319D85C1B3589499C480BCE8ECEFB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-audit-route-864.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-signed-reciprocity-audit-route-864.json",
+      "sha256": "89C68A7009288695B9B77D370037297DC462C4CEF26E69367B2A110FA226C1E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status850.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/status850.txt",
+      "sha256": "F370B2ABEB9C1AF11902DC60411CA534C234777F032F76942A8486B564A3E5E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status857.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/status857.txt",
+      "sha256": "1F6C5916E063C7F9CA767F108A3140EE6DC9C57605DE2E34A8AC4BD3C82EE334"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853a\\SourceMeromorphicCuspUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853a/SourceMeromorphicCuspUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853a\\SourceMeromorphicCuspUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853a/SourceMeromorphicCuspUntwist.lean.txt",
+      "sha256": "8FC4AA3D5B648DC10CF7EA2321A2338F6096176EF744B997D7A9495BA9932618"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853a\\SourceMeromorphicCuspUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853a/SourceMeromorphicCuspUntwist.log",
+      "sha256": "B227E58BC19184FCFA2D75AB602CB7E287B4D365B54E0033D5F4DDBE3AA5375A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853b\\SourceMeromorphicCuspUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853b/SourceMeromorphicCuspUntwist.lean.txt",
+      "sha256": "3008666B1F9AA7F3ED3C0D11A1841CE6D5843305ABA86B0FCA483A6253E21175"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853b\\SourceMeromorphicCuspUntwist853b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853b/SourceMeromorphicCuspUntwist853b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-untwist-failed-853b\\SourceMeromorphicCuspUntwist853b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/cusp-untwist-failed-853b/SourceMeromorphicCuspUntwist853b.log",
+      "sha256": "64F038A412ED80F034217D10067C204555AAC09A8A4573E36D6BC0F275DFE404"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\divisor-reciprocity-data-failed-859a\\SourceGammaOneDivisorReciprocityData.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/divisor-reciprocity-data-failed-859a/SourceGammaOneDivisorReciprocityData.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\divisor-reciprocity-data-failed-859a\\SourceGammaOneDivisorReciprocityData.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/divisor-reciprocity-data-failed-859a/SourceGammaOneDivisorReciprocityData.lean.txt",
+      "sha256": "7752B5DE98A01181682BF8437E43C145149CA648676B11C6FAE0AD7F9EBF1B43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\divisor-reciprocity-data-failed-859a\\SourceGammaOneDivisorReciprocityData.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/divisor-reciprocity-data-failed-859a/SourceGammaOneDivisorReciprocityData.log",
+      "sha256": "5B3FFD51A120DCF0C5C9F087745421024C145C9561C53294FA87BD6F40F06A3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868a\\SourceGammaOneLogDerivativeResidues.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868a/SourceGammaOneLogDerivativeResidues.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868a\\SourceGammaOneLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868a/SourceGammaOneLogDerivativeResidues.lean.txt",
+      "sha256": "40738F6D969733CAD2E134656271288355A0300056CA587D9F26050376AA40D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868a\\SourceGammaOneLogDerivativeResidues.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868a/SourceGammaOneLogDerivativeResidues.log",
+      "sha256": "80AFF1EA6720A9468D1FC2507CABAE5AF5F9011F4EDD9D51B814C7B87E5578E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868b\\SourceGammaOneLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868b/SourceGammaOneLogDerivativeResidues.lean.txt",
+      "sha256": "98BB685711E14673AC21C7226070FDD0B6679A9738520767AED3F7E6175E114F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868b\\SourceGammaOneLogDerivativeResidues868b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868b/SourceGammaOneLogDerivativeResidues868b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-residues-failed-868b\\SourceGammaOneLogDerivativeResidues868b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-log-residues-failed-868b/SourceGammaOneLogDerivativeResidues868b.log",
+      "sha256": "D02E44F9704C752C5D58373E4324938AA694000E89503FE0879D60623F7CE2FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\manifest.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-reuse-848/manifest.json",
+      "sha256": "B5DE77BA197EE368BF8138131918DF68CA1F168B54D357759F3B0031EFAE8E8A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-reuse-848/S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "sha256": "63556CBEF1EEDE8F6381B2F89A1E4BA4CDBBD9AEF626C5044F4BFB9CC881E9F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_meromorphicOrderAt_smul_eq_and_card_stabilizer_dvd_of_multiplier_eq_exp_periodOf.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-reuse-848/S_ModularCurve_meromorphicOrderAt_smul_eq_and_card_stabilizer_dvd_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "6FB9B40398C40B1D1E1AC73F258F84CB65DFF22D1D3AB76CA68B2097F7E0C757"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\holomorphic-stokes-failed-863a\\SourceComplexHolomorphicStokes.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/holomorphic-stokes-failed-863a/SourceComplexHolomorphicStokes.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\holomorphic-stokes-failed-863a\\SourceComplexHolomorphicStokes.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/holomorphic-stokes-failed-863a/SourceComplexHolomorphicStokes.lean.txt",
+      "sha256": "17C63FDED8112D8046022CC79FFE5DFD038F2C176F4A77A62543AFEE8F4A05D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\holomorphic-stokes-failed-863a\\SourceComplexHolomorphicStokes.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/holomorphic-stokes-failed-863a/SourceComplexHolomorphicStokes.log",
+      "sha256": "39CEF459D7B69C794A9C0255550961760D3DB0390F7650851D823B0A0261ACA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867a\\SourceComplexLogDerivativeResidues.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867a/SourceComplexLogDerivativeResidues.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867a\\SourceComplexLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867a/SourceComplexLogDerivativeResidues.lean.txt",
+      "sha256": "14995513BAEA2DDA4B68CEA796C3E269260F47C9D0EB689A92819EB3E031400E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867a\\SourceComplexLogDerivativeResidues.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867a/SourceComplexLogDerivativeResidues.log",
+      "sha256": "E3F4E847F1B0ED37B70F04F7FD5787675080562743D301F38A9C3293BC4B5F8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867b\\SourceComplexLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867b/SourceComplexLogDerivativeResidues.lean.txt",
+      "sha256": "79389EB5797F78A50FF8EA0F9477DD9B4E22AF85543B31B1612AB6A6196C3C4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867b\\SourceComplexLogDerivativeResidues867b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867b/SourceComplexLogDerivativeResidues867b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-failed-867b\\SourceComplexLogDerivativeResidues867b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-failed-867b/SourceComplexLogDerivativeResidues867b.log",
+      "sha256": "6D03C39973819E3D8C2872E1430F3905DC354E73218A0111FA05D7CC5021BF14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\source-gamma-one-log-derivative-residues-1-audit-config.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/source-gamma-one-log-derivative-residues-1-audit-config.json",
+      "sha256": "28CA05CD6646754ED3C8C247186F424CCA42C9203B403AB56D78D4498134540E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexCauchyPompeiu.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexCauchyPompeiu.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexCauchyPompeiu.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexCauchyPompeiu.lean.txt",
+      "sha256": "18E03AD3D7A51E82867DF60E4F5963CE6B5D3B6DE83120AF48ED43282EFBD91C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexCauchyPompeiu.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexCauchyPompeiu.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarCutoff.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarCutoff.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarCutoff.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarCutoff.lean.txt",
+      "sha256": "24C6DC322EA1095F6AF981D385C6C673018B931150CB318F5528C54123B5C44C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarCutoff.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarCutoff.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarKernelIntegrability.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarKernelIntegrability.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarKernelIntegrability.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarKernelIntegrability.lean.txt",
+      "sha256": "2886EEAAFB1F23DBC33862A9894DA3768F50F650AA5E77724FE6F68CC16C50E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarKernelIntegrability.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarKernelIntegrability.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarRadialNormalization.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarRadialNormalization.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarRadialNormalization.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarRadialNormalization.lean.txt",
+      "sha256": "A6C0EDC86B7A059CE84E272913925934C9214234E6D70B5181C4663534E8BE64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexDbarRadialNormalization.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexDbarRadialNormalization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexHolomorphicStokes.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexHolomorphicStokes.lean.txt",
+      "sha256": "8AFBAE8620F1BAD53A8A6DB8896EBF6389671004FB8B432AD00E32C121A906BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexHolomorphicStokes863b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexHolomorphicStokes863b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexHolomorphicStokes863b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexHolomorphicStokes863b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexLogDerivativeResidues.lean.txt",
+      "sha256": "F982B297CE2E02062539EC83B6029E8A3C905EB3A10B4F088516BAA8A1DB5401"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexLogDerivativeResidues867c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexLogDerivativeResidues867c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexLogDerivativeResidues867c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexLogDerivativeResidues867c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueIntegral.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueIntegral.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueIntegral.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueIntegral.lean.txt",
+      "sha256": "98FCD6B5C7BE447B63C5366BE8D674655368C15AD944367DE47CAEDD7BB7B1AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueIntegral.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueLocalModels.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueLocalModels.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueLocalModels.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueLocalModels.lean.txt",
+      "sha256": "DF61CADFD1C75480637EFBADDB2C873FAC64F1B41C74EFC1F64F16EC19791856"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceComplexResidueLocalModels.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceComplexResidueLocalModels.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResidues.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResidues.lean.txt",
+      "sha256": "053224697B02AB2F0F2262E508F98BEDE265A10DCC49FD3DB274FCAED2F1B4BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResidues868c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResidues868c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResidues868c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResidues868c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResiduesAudit1.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResiduesAudit1.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResiduesAudit1.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResiduesAudit1.lean.txt",
+      "sha256": "DEBDF19CF06E2A2AA7544EC17CBE04CCB881BE27E4DACDB3382C3A3BEA68FD82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\log-derivative-residues-lint-failed-869a\\SourceGammaOneLogDerivativeResiduesAudit1.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/log-derivative-residues-lint-failed-869a/SourceGammaOneLogDerivativeResiduesAudit1.log",
+      "sha256": "1A0603734E6CCB263FA2ABAE5EE41CF68563B45B8EB4CB2027B890986C4B0586"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851a\\SourceMeromorphicPeriodUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851a/SourceMeromorphicPeriodUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851a\\SourceMeromorphicPeriodUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851a/SourceMeromorphicPeriodUntwist.lean.txt",
+      "sha256": "7ABE5BF056E036944D83F8FEB78574CF20E13ADCBB1B1A5C0A7F52D73A6084B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851a\\SourceMeromorphicPeriodUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851a/SourceMeromorphicPeriodUntwist.log",
+      "sha256": "2913813FB9BE185AFD80D91E544F59D8CE18B6C18F9803EE7313EA697CABC150"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851b\\SourceMeromorphicPeriodUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851b/SourceMeromorphicPeriodUntwist.lean.txt",
+      "sha256": "6EA976EF6AC60F2B4DCF3330FCFF54B4CC62973D1C5DD33D644D7FF710F58640"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851b\\SourceMeromorphicPeriodUntwist851b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851b/SourceMeromorphicPeriodUntwist851b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851b\\SourceMeromorphicPeriodUntwist851b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851b/SourceMeromorphicPeriodUntwist851b.log",
+      "sha256": "829CC7409C7FB07944AEDC0F26E94428F42733620CAA17761CD9D47AB5032BB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851c\\SourceMeromorphicPeriodUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851c/SourceMeromorphicPeriodUntwist.lean.txt",
+      "sha256": "6A09633A41A6994DAED3C01DB05762452F2C738D93A79446048C847D98FFF08E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851c\\SourceMeromorphicPeriodUntwist851c.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851c/SourceMeromorphicPeriodUntwist851c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-untwist-failed-851c\\SourceMeromorphicPeriodUntwist851c.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/meromorphic-untwist-failed-851c/SourceMeromorphicPeriodUntwist851c.log",
+      "sha256": "85AA1ADA3CA7B594A9B7D6B8D7817371226E766A071E9E60EA627EE35BFB3479"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normal-untwist-failed-850a\\SourceMeromorphicNormalUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/normal-untwist-failed-850a/SourceMeromorphicNormalUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normal-untwist-failed-850a\\SourceMeromorphicNormalUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/normal-untwist-failed-850a/SourceMeromorphicNormalUntwist.lean.txt",
+      "sha256": "BDB9C194A240A4E2D4ECED707B5594C894047336CC4EE6F6EC9706AB7F5B4D3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normal-untwist-failed-850a\\SourceMeromorphicNormalUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/normal-untwist-failed-850a/SourceMeromorphicNormalUntwist.log",
+      "sha256": "F87CF179982DB1A19F4FB795D9BEF5B0A7011C619E701054288809F6ACD107EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-untwist-failed-849a\\SourceWeightTwoPeriodUntwist.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/period-untwist-failed-849a/SourceWeightTwoPeriodUntwist.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-untwist-failed-849a\\SourceWeightTwoPeriodUntwist.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/period-untwist-failed-849a/SourceWeightTwoPeriodUntwist.lean.txt",
+      "sha256": "C05C1E5B0CF64BA0FD461E2BE87A4FB6E6940AA6F3DD9612320F979454BA204B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-untwist-failed-849a\\SourceWeightTwoPeriodUntwist.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/period-untwist-failed-849a/SourceWeightTwoPeriodUntwist.log",
+      "sha256": "91DFB8CE12786234E3BC093DE6BD3DA4D98EAFB7100DA26BF518642B4E589C7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861a\\SourceWeightTwoSignedForms.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861a/SourceWeightTwoSignedForms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861a\\SourceWeightTwoSignedForms.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861a/SourceWeightTwoSignedForms.lean.txt",
+      "sha256": "7E723ECCEF422A197F668886505979E9A0B33033B824CBC211A793AF28846425"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861a\\SourceWeightTwoSignedForms.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861a/SourceWeightTwoSignedForms.log",
+      "sha256": "FBF5F6D3B4A02693AF7511AA153C1A150AEF1784FD7082676C8CB90551C14AAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861b\\SourceWeightTwoSignedForms.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861b/SourceWeightTwoSignedForms.lean.txt",
+      "sha256": "C9DE342D772964CE8F33FCF6123CC3EA2A001BDE62255E109F89BCA79469FC0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861b\\SourceWeightTwoSignedForms861b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861b/SourceWeightTwoSignedForms861b.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-forms-failed-861b\\SourceWeightTwoSignedForms861b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-forms-failed-861b/SourceWeightTwoSignedForms861b.log",
+      "sha256": "3EA432F1E2B6769C0CC917C4951625B5885925DBC9460D9A72E83A84ADD240B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862a\\SourceWeightTwoSignedReciprocity.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862a/SourceWeightTwoSignedReciprocity.exit",
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862a\\SourceWeightTwoSignedReciprocity.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862a/SourceWeightTwoSignedReciprocity.lean.txt",
+      "sha256": "9200D8E38989423B7DC46731DF2668F38B33A2B3EC5D32B15056295D0F47D8C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862a\\SourceWeightTwoSignedReciprocity.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862a/SourceWeightTwoSignedReciprocity.log",
+      "sha256": "AF8A84AFE67D24E58B08D558AB8BBD51936A6B6B0B30F153E3F0995914DB11A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862b\\SourceWeightTwoSignedReciprocity.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862b/SourceWeightTwoSignedReciprocity.lean.txt",
+      "sha256": "0E16FF2ECED6D703B1C6E1132BFDD3EB2CD95576AB8214E9A32C02DE11EE2C3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862b\\SourceWeightTwoSignedReciprocity862b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862b/SourceWeightTwoSignedReciprocity862b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\signed-reciprocity-failed-862b\\SourceWeightTwoSignedReciprocity862b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/signed-reciprocity-failed-862b/SourceWeightTwoSignedReciprocity862b.log",
+      "sha256": "063A9B49689626AA863B0128F0D3793DC7E1BC69D0C38A5F315E9A106907F2D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852a\\SourceMeromorphicTranslatedGerms.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852a/SourceMeromorphicTranslatedGerms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852a\\SourceMeromorphicTranslatedGerms.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852a/SourceMeromorphicTranslatedGerms.lean.txt",
+      "sha256": "4D64CF57AC6CE16B1EAC2D78E62EDC574ED8C04D6898626D7A7642D7C220A877"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852a\\SourceMeromorphicTranslatedGerms.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852a/SourceMeromorphicTranslatedGerms.log",
+      "sha256": "885B04591AD80DE5CE032E6FFF6610839615E00FBAC5128280560DC907856EC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852b\\SourceMeromorphicTranslatedGerms.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852b/SourceMeromorphicTranslatedGerms.lean.txt",
+      "sha256": "C551CC75078C0F59795C869E064C6AC203A7FFEA4B1A992E0BA84BDC303A2DCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852b\\SourceMeromorphicTranslatedGerms852b.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852b/SourceMeromorphicTranslatedGerms852b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\translated-germs-failed-852b\\SourceMeromorphicTranslatedGerms852b.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/translated-germs-failed-852b/SourceMeromorphicTranslatedGerms852b.log",
+      "sha256": "E8C471960395BD6571CE324C7ECC93372A0BC9786F2155757B3035BF7BC0DC8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\untwist-decay-failed-855a\\SourceMeromorphicUntwistDecay.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/untwist-decay-failed-855a/SourceMeromorphicUntwistDecay.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\untwist-decay-failed-855a\\SourceMeromorphicUntwistDecay.lean.txt",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/untwist-decay-failed-855a/SourceMeromorphicUntwistDecay.lean.txt",
+      "sha256": "DAFFA539A64EC5D980E3927F50000AC2A43531930EDAB583DA61EE2D854795B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\untwist-decay-failed-855a\\SourceMeromorphicUntwistDecay.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/untwist-decay-failed-855a/SourceMeromorphicUntwistDecay.log",
+      "sha256": "32DF505D918EC8B608C29F9CF13864717C7816F449F186A513AB5418113449D5"
+    }
+  ]
+}

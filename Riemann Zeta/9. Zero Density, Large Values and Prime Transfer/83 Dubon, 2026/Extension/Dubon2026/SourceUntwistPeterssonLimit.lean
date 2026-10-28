@@ -1,0 +1,81 @@
+import Dubon2026.SourceMeromorphicUntwistDerivative
+import Dubon2026.SourceGammaOnePeterssonSmoothLimit
+import Dubon2026.SourceComplexDipolePairing
+
+/-! DUB-17/18 -> original arithmetic association -> Gamma1 Picard/H1 ->
+Abel-Jacobi converse -> analytic reciprocity -> identify the untwist integral.
+Reuse the actual almost-everywhere derivative and the proved source-normalized
+Petersson limit. The exact conjugation, minus sign and central factor are
+retained; the limiting pairing is not an assumption. -/
+namespace Dubon2026.SourcePeriodUntwist
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex CongruenceSubgroup Matrix.SpecialLinearGroup
+open SourceSmoothedFundamental SourceSmoothedUnfolding
+open SourceFunctionField.GammaOne SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology Real ComplexConjugate
+
+theorem Φ_dbar_ae {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+    (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hfinite : ∀ τ : ℍ, ∃ n : ℤ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) = (n : WithTop ℤ)) :
+    ∀ᵐ z : ℂ, 0 < z.im →
+      dbarL (fderiv ℝ (Φ F k) z) / Φ F k z = -π * I * conj (k (ofComplex z)) := by
+  filter_upwards [Φ_ae (F := F) (hF := hF) (hfinite := hfinite) (k := k)] with z hz hi
+  obtain ⟨h0, -, hx, hy⟩ := hz hi
+  have hd : dbarL (fderiv ℝ (Φ F k) z) = Φ F k z * (-π * I * conj (k (ofComplex z))) := by
+    have hc : conj (k (ofComplex z)) = ((k (ofComplex z)).re : ℂ) -
+        ((k (ofComplex z)).im : ℂ) * I := by
+      apply Complex.ext <;> simp
+    simp only [dbarL, hx, hy, hc]
+    ring_nf
+    simp [Complex.I_sq]
+  rw [hd, mul_div_cancel_left₀ _ h0]
+
+theorem petersson_plane_density (N : ℕ) [NeZero N]
+    (k g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) (T : ℝ) (z : ℂ) :
+    petersson 2 k g (ofComplex z) *
+      (((z.im ^ 2)⁻¹ * smoothedFundamental (plusMinus (Gamma1 N)) T z : ℝ) : ℂ) =
+      g (ofComplex z) * conj (k (ofComplex z)) *
+        (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) := by
+  by_cases hz : 0 < z.im
+  · have hi : (ofComplex z).im = z.im := by rw [ofComplex_apply_of_im_pos hz]; rfl
+    have h0 : (z.im : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr hz.ne'
+    simp only [petersson, hi, zpow_ofNat, Complex.ofReal_mul, Complex.ofReal_inv,
+      Complex.ofReal_pow]
+    field_simp
+  · rw [smooth_eq_zero_of_im_nonpos (plusMinus (Gamma1 N)) hz]
+    simp
+
+theorem tendsto_Φ_smoothed_petersson (N : ℕ) [NeZero N]
+    (F : ℍ → ℂ) (k g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hfinite : ∀ τ : ℍ, ∃ n : ℤ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) = (n : WithTop ℤ)) :
+    Tendsto (fun T : ℝ => 2 / (π : ℂ) * ∫ z : ℂ,
+      g (ofComplex z) * (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+        (dbarL (fderiv ℝ (Φ F k) z) / Φ F k z)) atTop
+      (𝓝 (-I * ∫ τ in closedDomain (plusMinus (Gamma1 N)), petersson 2 k g τ)) := by
+  have he : ∀ T : ℝ,
+      (fun z : ℂ => g (ofComplex z) * (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+        (dbarL (fderiv ℝ (Φ F k) z) / Φ F k z)) =ᵐ[volume]
+      fun z => (-π * I) * (petersson 2 k g (ofComplex z) *
+        (((z.im ^ 2)⁻¹ * smoothedFundamental (plusMinus (Gamma1 N)) T z : ℝ) : ℂ)) := by
+    intro T
+    filter_upwards [Φ_dbar_ae F k hF hfinite] with z hz
+    rw [petersson_plane_density]
+    by_cases hi : 0 < z.im
+    · rw [hz hi]
+      ring
+    · rw [smooth_eq_zero_of_im_nonpos (plusMinus (Gamma1 N)) hi]
+      simp
+  have hp : (π : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr Real.pi_ne_zero
+  have h := (sourceGamma1_petersson_smoothed_limit N k g).const_mul (-2 * I)
+  have hv : (-2 * I) * ((1 / 2 : ℂ) * ∫ τ in closedDomain (plusMinus (Gamma1 N)),
+      petersson 2 k g τ) = -I * ∫ τ in closedDomain (plusMinus (Gamma1 N)), petersson 2 k g τ := by ring
+  rw [hv] at h
+  refine h.congr fun T => ?_
+  rw [integral_congr_ae (he T), integral_const_mul]
+  field_simp
+
+end
+end Dubon2026.SourcePeriodUntwist

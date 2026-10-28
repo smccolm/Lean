@@ -1,0 +1,50 @@
+import SourceGammaOneSmoothedReciprocity
+import SourceUntwistPeterssonLimit
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity. Two proved limits of the
+same normalized untwist integral give the actual original divisor/period/
+Petersson identity. No limiting identity or integer-period certificate remains
+as a parameter. The original meromorphic function, its prescribed orders and
+unitary multiplier remain explicit upstream inputs to this analytic theorem. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open Matrix.SpecialLinearGroup SourcePeriodUntwist SourceSmoothedUnfolding
+open scoped MatrixGroups Topology Real Classical ComplexConjugate GammaOne
+
+theorem exists_original_divisor_petersson_reciprocity (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0)
+    (F : ℍ → ℂ) (χ : Gamma1 N → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) = χ γ * F τ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) *
+        (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    let D := Finsupp.mapDomain (analyticPlace hT) c
+    ∃ k : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      (∀ γ : Gamma1 N, χ γ = Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue (Gamma1 N) k γ).re : ℂ))) ∧
+    ∃ S : Finset ℍ, (S : Set ℍ) ⊆ c.support ∧
+      (∀ s ∈ S, ∀ t ∈ S, (∃ γ : Gamma1 N, γ.val • s = t) → s = t) ∧
+      (∀ τ : ℍ, D (analyticPlace hT τ) ≠ 0 →
+        ∃ s ∈ S, ∃ γ : Gamma1 N, γ.val • s = τ) ∧
+    ∃ Λ ∈ sourceWeightTwoIntegralLattice (Gamma1 N),
+      ∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        Λ g + (∑ s ∈ S, (D (analyticPlace hT s) : ℂ) *
+          sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g) =
+            -Complex.I * ∫ τ in closedDomain (plusMinus (Gamma1 N)), petersson 2 k g τ := by
+  classical
+  dsimp only
+  obtain ⟨k, hk, S, hsub, hinj, hcov, Λ, hΛ, hlim⟩ :=
+    exists_original_divisor_smoothed_reciprocity N hT c hc F χ hF hχ hunit hcusp ho
+  refine ⟨k, hk, S, hsub, hinj, hcov, Λ, hΛ, fun g => ?_⟩
+  exact tendsto_nhds_unique (hlim g) (tendsto_Φ_smoothed_petersson N F k g hF
+    (fun τ => ⟨(analyticRamification hT τ : ℤ) *
+      (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ), ho τ⟩))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

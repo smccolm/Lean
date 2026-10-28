@@ -1,0 +1,153 @@
+import SourceModularSmoothCutoff
+import SourceModularSmoothGeometry
+import SourceModularSmoothCosetSum
+import SourceModularSmoothCover
+import SourceModularSmoothedFundamentalSupport
+import SourceModularSmoothedFundamental
+import SourceGammaOneSmoothPartition
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceSmoothedFundamental.coe_smul
+#print axioms Dubon2026.SourceSmoothedFundamental.mob_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_box
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box
+#print axioms Dubon2026.SourceSmoothedFundamental.support_bump_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.recip_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le
+#print axioms Dubon2026.SourceSmoothedFundamental.mul_recip_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pu_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.support_pu_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_le_pu
+#print axioms Dubon2026.SourceSmoothedFundamental.support_puCut_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum
+#print axioms Dubon2026.SourceSmoothedFundamental.denom_eq
+#print axioms Dubon2026.SourceSmoothedFundamental.analyticAt_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.mob_contDiffAt
+#print axioms Dubon2026.SourceSmoothedFundamental.im_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos
+#print axioms Dubon2026.SourceSmoothedFundamental.finite_moving
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_le_inv
+#print axioms Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_le_max
+#print axioms Dubon2026.SourceSmoothedFundamental.exists_smul_nice
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_sum_coset
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.recip_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage
+#print axioms Dubon2026.SourceSmoothedFundamental.box_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_boxH
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_le_cover
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.half_le_cover
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_pu_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_contDiffAt
+#print axioms Dubon2026.SourceSmoothedFundamental.pu_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_piece
+#print axioms Dubon2026.SourceSmoothedFundamental.piece_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.carrier_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.hasCompactSupport
+#print axioms Dubon2026.SourceSmoothedFundamental.tsupport_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_eq
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_carrierH
+#print axioms Dubon2026.SourceSmoothedFundamental.finite_support_smul
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint
+#print axioms Dubon2026.SourceSmoothedFundamental.smooth_partition
+#print axioms Dubon2026.sourceGamma1_smooth_partition
+#print axioms Dubon2026.SourceSmoothedFundamental.mob
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo
+#print axioms Dubon2026.SourceSmoothedFundamental.bump
+#print axioms Dubon2026.SourceSmoothedFundamental.box
+#print axioms Dubon2026.SourceSmoothedFundamental.recip
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut
+#print axioms Dubon2026.SourceSmoothedFundamental.cover
+#print axioms Dubon2026.SourceSmoothedFundamental.pu
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental
+#print axioms Dubon2026.SourceSmoothedFundamental.cosetEquiv
+#print axioms Dubon2026.SourceSmoothedFundamental.boxH
+#print axioms Dubon2026.SourceSmoothedFundamental.piece
+#print axioms Dubon2026.SourceSmoothedFundamental.carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.carrierH
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceModularSmoothCutoff, `SourceModularSmoothGeometry, `SourceModularSmoothCosetSum, `SourceModularSmoothCover, `SourceModularSmoothedFundamentalSupport, `SourceModularSmoothedFundamental, `SourceGammaOneSmoothPartition]
+  let theorems : Array Name := #[`Dubon2026.SourceSmoothedFundamental.coe_smul, `Dubon2026.SourceSmoothedFundamental.mob_mob, `Dubon2026.SourceSmoothedFundamental.pOne_nonneg, `Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le, `Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge, `Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero, `Dubon2026.SourceSmoothedFundamental.pTwo_nonneg, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_one, `Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero, `Dubon2026.SourceSmoothedFundamental.bump_nonneg, `Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero, `Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero, `Dubon2026.SourceSmoothedFundamental.isCompact_box, `Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box, `Dubon2026.SourceSmoothedFundamental.support_bump_subset, `Dubon2026.SourceSmoothedFundamental.recip_nonneg, `Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le, `Dubon2026.SourceSmoothedFundamental.mul_recip_le_one, `Dubon2026.SourceSmoothedFundamental.gcut_eq_one, `Dubon2026.SourceSmoothedFundamental.gcut_nonneg, `Dubon2026.SourceSmoothedFundamental.gcut_le_one, `Dubon2026.SourceSmoothedFundamental.cover_nonneg, `Dubon2026.SourceSmoothedFundamental.pu_nonneg, `Dubon2026.SourceSmoothedFundamental.support_pu_subset, `Dubon2026.SourceSmoothedFundamental.puCut_nonneg, `Dubon2026.SourceSmoothedFundamental.puCut_le_pu, `Dubon2026.SourceSmoothedFundamental.support_puCut_subset, `Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum, `Dubon2026.SourceSmoothedFundamental.denom_eq, `Dubon2026.SourceSmoothedFundamental.analyticAt_mob, `Dubon2026.SourceSmoothedFundamental.mob_contDiffAt, `Dubon2026.SourceSmoothedFundamental.im_mob, `Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos, `Dubon2026.SourceSmoothedFundamental.finite_moving, `Dubon2026.SourceSmoothedFundamental.im_smul_le_inv, `Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.im_smul_le_max, `Dubon2026.SourceSmoothedFundamental.exists_smul_nice, `Dubon2026.SourceSmoothedFundamental.finsum_sum_coset, `Dubon2026.SourceSmoothedFundamental.pOne_contDiff, `Dubon2026.SourceSmoothedFundamental.pTwo_contDiff, `Dubon2026.SourceSmoothedFundamental.bump_contDiff, `Dubon2026.SourceSmoothedFundamental.recip_contDiff, `Dubon2026.SourceSmoothedFundamental.gcut_contDiff, `Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage, `Dubon2026.SourceSmoothedFundamental.box_subset, `Dubon2026.SourceSmoothedFundamental.isCompact_boxH, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob, `Dubon2026.SourceSmoothedFundamental.bump_le_cover, `Dubon2026.SourceSmoothedFundamental.cover_mob, `Dubon2026.SourceSmoothedFundamental.half_le_cover, `Dubon2026.SourceSmoothedFundamental.finsum_pu_mob, `Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one, `Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum, `Dubon2026.SourceSmoothedFundamental.cover_contDiffAt, `Dubon2026.SourceSmoothedFundamental.pu_contDiff, `Dubon2026.SourceSmoothedFundamental.puCut_contDiff, `Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero, `Dubon2026.SourceSmoothedFundamental.isCompact_piece, `Dubon2026.SourceSmoothedFundamental.piece_subset, `Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero, `Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff, `Dubon2026.SourceSmoothedFundamental.isCompact_carrier, `Dubon2026.SourceSmoothedFundamental.carrier_subset, `Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero, `Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier, `Dubon2026.SourceSmoothedFundamental.hasCompactSupport, `Dubon2026.SourceSmoothedFundamental.tsupport_subset, `Dubon2026.SourceSmoothedFundamental.contDiff, `Dubon2026.SourceSmoothedFundamental.finsum_smul_eq, `Dubon2026.SourceSmoothedFundamental.isCompact_carrierH, `Dubon2026.SourceSmoothedFundamental.finite_support_smul, `Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one, `Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one, `Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint, `Dubon2026.SourceSmoothedFundamental.smooth_partition, `Dubon2026.sourceGamma1_smooth_partition]
+  let constructions : Array Name := #[`Dubon2026.SourceSmoothedFundamental.mob, `Dubon2026.SourceSmoothedFundamental.pOne, `Dubon2026.SourceSmoothedFundamental.pTwo, `Dubon2026.SourceSmoothedFundamental.bump, `Dubon2026.SourceSmoothedFundamental.box, `Dubon2026.SourceSmoothedFundamental.recip, `Dubon2026.SourceSmoothedFundamental.gcut, `Dubon2026.SourceSmoothedFundamental.cover, `Dubon2026.SourceSmoothedFundamental.pu, `Dubon2026.SourceSmoothedFundamental.puCut, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental, `Dubon2026.SourceSmoothedFundamental.cosetEquiv, `Dubon2026.SourceSmoothedFundamental.boxH, `Dubon2026.SourceSmoothedFundamental.piece, `Dubon2026.SourceSmoothedFundamental.carrier, `Dubon2026.SourceSmoothedFundamental.carrierH]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Smooth Partition postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Smooth Partition theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE SMOOTH PARTITION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceModularSmoothCutoff
+#lint in SourceModularSmoothGeometry
+#lint in SourceModularSmoothCosetSum
+#lint in SourceModularSmoothCover
+#lint in SourceModularSmoothedFundamentalSupport
+#lint in SourceModularSmoothedFundamental
+#lint in SourceGammaOneSmoothPartition

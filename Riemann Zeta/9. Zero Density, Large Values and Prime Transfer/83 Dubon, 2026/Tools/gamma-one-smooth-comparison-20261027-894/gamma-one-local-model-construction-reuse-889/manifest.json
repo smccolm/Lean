@@ -1,0 +1,18 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+      "bytes": 60373,
+      "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8",
+      "gitBlob": "8351fe5e343fbcd94ecab419268d9e310c42b37d",
+      "retrievedUTC": "2026-10-27T18:52:57.160585+00:00"
+    }
+  ]
+}

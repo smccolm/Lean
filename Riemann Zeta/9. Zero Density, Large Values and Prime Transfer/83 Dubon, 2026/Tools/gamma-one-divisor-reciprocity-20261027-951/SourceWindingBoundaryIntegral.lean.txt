@@ -1,0 +1,79 @@
+import SourceModularSmoothedGreenLimit
+import SourceWindingLogCuspBounds
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> reciprocity -> winding-period identity.
+Consume the actual logarithm, its integer quasiperiods and the quotient cusp
+limits. Green's derivative continuity and translated bounds are derived.
+The exact source normalized edge sum follows. Its integral-period membership
+still requires the parabolic character argument, not assumed here. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set SourceSmoothDivisor SourceModularSidePairing
+open SourceSmoothedUnfolding SourceSmoothedFundamental SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology Real ComplexConjugate
+
+/-- Actual subgroup element relating the fixed coset representatives under a modular generator. -/
+def transition (Γ : Subgroup SL(2, ℤ)) (a : SL(2, ℤ)) (q : SL(2, ℤ) ⧸ Γ) : Γ :=
+  ⟨pairElt Γ a q, pairElt_mem a q⟩
+
+theorem winding_scalar_identity (A B : ℂ) :
+    2 / (π : ℂ) * (1 / 2 * (1 / (2 * I) *
+      (I * (2 * π * I * A) + 1 / 2 * (2 * π * I * B)))) =
+      I * A + 1 / 2 * B := by
+  have hπ : (π : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
+  field_simp
+
+theorem winding_boundary_limit (Γ : Subgroup SL(2, ℤ))
+    [Fintype (SL(2, ℤ) ⧸ Γ)] (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (L Q : ℂ → ℂ) (m : Additive Γ →+ ℤ)
+    (hQ : ∀ τ : ℍ, DifferentiableAt ℝ Q (τ : ℂ))
+    (hLcd : ∀ τ : ℍ, ContDiffAt ℝ 1 L τ)
+    (hLd : ∀ τ : ℍ, HasFDerivAt L ((Q τ)⁻¹ • fderiv ℝ Q τ) τ)
+    (hLper : ∀ (γ : Γ) (τ : ℍ), L (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+      L τ + 2 * π * I * (m (Additive.ofMul γ) : ℂ))
+    (hLcusp : ∀ σ : SL(2, ℤ), ∃ c : ℂ,
+      Tendsto (fun τ : ℍ => L ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c))
+    (hQcusp : ∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => Q ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c) ∧
+      Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => Q (sm σ u)) τ) atImInfty (𝓝 0))
+    (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) :
+    IntegrableOn (Pd (fderiv ℝ L) g) (closedDomain Γ) ∧
+    Tendsto (fun T : ℝ => 2 / (π : ℂ) * ∫ z : ℂ,
+      g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) * dbarL (fderiv ℝ L z)) atTop
+      (𝓝 (I * (∑ q : SL(2, ℤ) ⧸ Γ, (m (Additive.ofMul (transition Γ ModularGroup.T q)) : ℂ) *
+          (∫ y in Ioi (Real.sqrt 3 / 2), tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * I))) +
+        1 / 2 * (∑ q : SL(2, ℤ) ⧸ Γ, (m (Additive.ofMul (transition Γ ModularGroup.S q)) : ℂ) *
+          (∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+            tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * I)) *
+              (I * Complex.exp (θ * I)))))) := by
+  classical
+  let c : SL(2, ℤ) → ℂ := fun γ =>
+    if h : γ ∈ Γ then 2 * π * I * (m (Additive.ofMul (⟨γ, h⟩ : Γ)) : ℂ) else 0
+  have hLc : ∀ γ ∈ Γ, ∀ τ : ℍ, L ((γ • τ : ℍ) : ℂ) = L τ + c γ := by
+    intro γ hγ τ
+    rw [show c γ = 2 * π * I * (m (Additive.ofMul (⟨γ, hγ⟩ : Γ)) : ℂ) from dif_pos hγ]
+    exact hLper ⟨γ, hγ⟩ τ
+  have hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (fderiv ℝ L z) z :=
+    fun z hz => ((hLcd ⟨z, hz⟩).differentiableAt (by norm_num)).hasFDerivAt
+  have hL' : ContinuousOn (fderiv ℝ L) {z : ℂ | 0 < z.im} :=
+    fun z hz => ((hLcd ⟨z, hz⟩).continuousAt_fderiv (by norm_num)).continuousWithinAt
+  have hbd : ∀ σ : SL(2, ℤ), ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+      ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧
+      ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C := by
+    intro σ
+    obtain ⟨cL, hcl⟩ := hLcusp σ
+    obtain ⟨cQ, hcQ, hq, hd⟩ := hQcusp σ
+    exact cusp_bound_of_quotient_limits hQ hLd σ hcl hcQ hq hd
+  have ht := tendsto_smoothed_dbar_integral Γ hΓ L (fderiv ℝ L) hL hL' c hLc hbd g
+  have hscale (a : SL(2, ℤ)) (E : SL(2, ℤ) ⧸ Γ → ℂ) :
+      ∑ q, c (pairElt Γ a q) * E q =
+      2 * π * I * ∑ q, (m (Additive.ofMul (transition Γ a q)) : ℂ) * E q := by
+    rw [Finset.mul_sum]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    simp only [c, dif_pos (pairElt_mem a q), transition, mul_assoc]
+  simpa only [hscale, winding_scalar_identity] using ht
+
+end
+end Dubon2026.SourceModularGreenPairing

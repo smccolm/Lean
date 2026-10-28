@@ -1,0 +1,148 @@
+import SourceMeromorphicDiscPrimitive
+
+/-! DUB-17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+construct a meromorphic function with the prescribed divisor. The local
+integer-residue expansion gives finite polar products on an exhaustion
+by disks; analytic primitives of the regular part are exponentiated and
+normalized to agree on overlaps. Local residue expansions remain an
+explicit upstream analytic obligation, not a function-existence premise.
+Adapted from anthropics/fermats-last-theorem,
+commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_ModularCurve_exists_meromorphic_logDeriv_eq_of_int_residue.lean,
+Apache-2.0; retained LICENSE and NOTICE. -/
+
+namespace Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive
+open scoped Topology
+open Filter Set Metric
+
+variable {m : ℂ → ℤ} {ω : ℂ → ℂ}
+
+section Glue
+
+variable (H : ResidueHyp m ω)
+include H
+
+theorem exists_base : ∃ z : ℂ, z ∈ ball (ctr 0) (rad 0) ∧ m z = 0 := by
+  have h0 : 0 < (ctr 0).im := by
+    rw [ctr_im]; unfold cht; norm_num
+  have h1 : ∀ᶠ z in 𝓝[≠] ctr 0, z ∈ ball (ctr 0) (rad 0) :=
+    mem_nhdsWithin_of_mem_nhds (ball_mem_nhds _ (rad_pos 0))
+  exact (h1.and (H.eventually_eq_zero h0)).exists
+
+/-- A common regular base point for normalization on all exhausting disks. -/
+noncomputable def base : ℂ := Classical.choose (exists_base H)
+
+theorem base_mem (n : ℕ) : base H ∈ ball (ctr n) (rad n) :=
+  ball_mono (Nat.zero_le n) (Classical.choose_spec (exists_base H)).1
+
+theorem m_base : m (base H) = 0 := (Classical.choose_spec (exists_base H)).2
+
+/-- Local meromorphic functions normalized to value one at the common base point. -/
+noncomputable def Fn (n : ℕ) (z : ℂ) : ℂ := Fpre H n z / Fpre H n (base H)
+
+theorem Fn_eq (n : ℕ) : Fn H n = (fun _ => (Fpre H n (base H))⁻¹) * Fpre H n := by
+  funext z; simp [Fn, div_eq_inv_mul]
+
+theorem Fn_agree {n k : ℕ} (hnk : n ≤ k) {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) :
+    Fn H n z = Fn H k z := by
+  classical
+  by_cases hm : m z = 0
+  swap
+  · simp only [Fn, Fpre_eq_zero H hz hm, Fpre_eq_zero H (ball_mono hnk hz) hm, zero_div]
+
+  let V : Set ℂ := ball (ctr n) (rad n) \ (poles H n : Set ℂ)
+  have hVo : IsOpen V := isOpen_ball.sdiff (poles H n).finite_toSet.isClosed
+  have hVc : IsPreconnected V :=
+    isPreconnected_ball_diff_of_countable _ (rad_pos n) (poles H n).finite_toSet.countable
+  have hVm : ∀ w ∈ V, m w = 0 := by
+    rintro w ⟨hw1, hw2⟩
+    by_contra hmw
+    exact hw2 ((mem_poles H).mpr ⟨ball_subset_closedBall hw1, hmw⟩)
+  let q : ℂ → ℂ := fun w => Fpre H k w / Fpre H n w
+  have hq : ∀ w ∈ V, HasDerivAt q 0 w := by
+    intro w hw
+    have hmw := hVm w hw
+    have h1 := hasDerivAt_Fpre H (ball_mono hnk hw.1) hmw
+    have h2 := hasDerivAt_Fpre H hw.1 hmw
+    have h3 := h1.div h2 (Fpre_ne_zero H hmw)
+    convert h3 using 1
+    · rfl
+    · rfl
+    · ring
+  have hqd : DifferentiableOn ℂ q V := fun w hw => (hq w hw).differentiableAt.differentiableWithinAt
+  have hq0 : V.EqOn (deriv q) 0 := fun w hw => (hq w hw).deriv
+  have hzV : z ∈ V := ⟨hz, fun h => ((mem_poles H).mp h).2 hm⟩
+  have hbV : base H ∈ V := ⟨base_mem H n, fun h => ((mem_poles H).mp h).2 (m_base H)⟩
+  have hconst := hVo.is_const_of_deriv_eq_zero hVc hqd hq0 hzV hbV
+
+  simp only [q] at hconst
+  simp only [Fn]
+  have ha := Fpre_ne_zero H (n := n) hm
+  have hb := Fpre_ne_zero H (n := n) (m_base H)
+  have hc := Fpre_ne_zero H (n := k) (m_base H)
+  rw [div_eq_div_iff ha hb] at hconst
+  rw [div_eq_div_iff hb hc]
+  linear_combination -hconst
+
+/-- The meromorphic function obtained by gluing the normalized disk functions. -/
+noncomputable def G (z : ℂ) : ℂ :=
+  if h : 0 < z.im then Fn H (Classical.choose (exists_mem_ball h)) z else 0
+
+theorem G_eq {n : ℕ} {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) : G H z = Fn H n z := by
+  have h : 0 < z.im := im_pos_of_mem_ball hz
+  rw [G, dif_pos h]
+  have hspec := Classical.choose_spec (exists_mem_ball h)
+  rcases le_total (Classical.choose (exists_mem_ball h)) n with hle | hle
+  · exact Fn_agree H hle hspec
+  · exact (Fn_agree H hle hz).symm
+
+theorem G_eventuallyEq {n : ℕ} {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) :
+    G H =ᶠ[𝓝 z] Fn H n :=
+  Filter.eventuallyEq_of_mem (isOpen_ball.mem_nhds hz) fun _ hw => G_eq H hw
+
+theorem G_spec {a : ℂ} (ha : 0 < a.im) :
+    MeromorphicAt (G H) a ∧ meromorphicOrderAt (G H) a = (m a : WithTop ℤ) ∧
+      (m a ≠ 0 → G H a = 0) ∧
+      (m a = 0 → AnalyticAt ℂ (G H) a ∧ G H a ≠ 0 ∧ HasDerivAt (G H) (ω a * G H a) a) := by
+  obtain ⟨n, hn⟩ := exists_mem_ball ha
+  have hev := G_eventuallyEq H hn
+  have hev' : G H =ᶠ[𝓝[≠] a] Fn H n := hev.filter_mono nhdsWithin_le_nhds
+  have hcst : AnalyticAt ℂ (fun _ : ℂ => (Fpre H n (base H))⁻¹) a := analyticAt_const
+  have hcst0 : (Fpre H n (base H))⁻¹ ≠ 0 := inv_ne_zero (Fpre_ne_zero H (m_base H))
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · refine MeromorphicAt.congr ?_ hev'.symm
+    rw [Fn_eq]
+    exact hcst.meromorphicAt.mul (meromorphicAt_Fpre H hn)
+  · rw [meromorphicOrderAt_congr hev', Fn_eq, meromorphicOrderAt_mul_of_ne_zero hcst hcst0,
+      meromorphicOrderAt_Fpre H hn]
+  · intro hm
+    rw [G_eq H hn, Fn, Fpre_eq_zero H hn hm, zero_div]
+  · intro hm
+    have han : AnalyticAt ℂ (Fn H n) a := by
+      rw [Fn_eq]; exact hcst.mul (analyticAt_Fpre H hn hm)
+    have hne : Fn H n a ≠ 0 := by
+      rw [Fn]; exact div_ne_zero (Fpre_ne_zero H hm) (Fpre_ne_zero H (m_base H))
+    have hder : HasDerivAt (Fn H n) (ω a * Fn H n a) a := by
+      have := (hasDerivAt_Fpre H hn hm).div_const (Fpre H n (base H))
+      simp only [Fn]
+      convert this using 1
+      · rfl
+      · rfl
+      · ring
+    refine ⟨han.congr hev.symm, by rwa [G_eq H hn], ?_⟩
+    rw [G_eq H hn]
+    exact hder.congr_of_eventuallyEq hev
+
+end Glue
+
+theorem exists_meromorphic_logDerivative
+    (m : ℂ → ℤ) (ω : ℂ → ℂ)
+    (hres : ∀ a : ℂ, 0 < a.im → ∃ g : ℂ → ℂ, AnalyticAt ℂ g a ∧
+      (∀ᶠ z in 𝓝[≠] a, ω z = (m a : ℂ) / (z - a) + g z) ∧ (m a = 0 → ω a = g a)) :
+    ∃ G : ℂ → ℂ, ∀ a : ℂ, 0 < a.im →
+      MeromorphicAt G a ∧ meromorphicOrderAt G a = (m a : WithTop ℤ) ∧
+      (m a ≠ 0 → G a = 0) ∧
+      (m a = 0 → AnalyticAt ℂ G a ∧ G a ≠ 0 ∧ HasDerivAt G (ω a * G a) a) :=
+  ⟨G hres, fun _ ha => G_spec hres ha⟩
+
+end Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive

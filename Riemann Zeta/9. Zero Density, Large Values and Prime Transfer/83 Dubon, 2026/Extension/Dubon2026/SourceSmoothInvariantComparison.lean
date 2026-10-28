@@ -1,0 +1,81 @@
+import Dubon2026.SourceSmoothDivisorLogDerivative
+import Dubon2026.SourceUpperHalfPlaneDipole
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant smooth comparison V.
+Construct V from the actual invariant finite integer-order data. Compact
+dipoles, local finite products, exact projective stabilizer counts and zero
+weighted degree discharge all local orders, invariance, cusp normalization
+and logarithmic derivative requirements. Its compact coefficient functions
+retain the exact integral pi times endpoint difference.
+Adapted from the pinned Apache-2.0 scope-889 primary with native projective
+fibers and existing local analytic facts. No global V property is assumed. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set
+open scoped MatrixGroups Topology Real Classical ComplexConjugate
+
+theorem exists_invariant_comparison (Γ : Subgroup SL(2, ℤ)) (hneg : (-1 : SL(2, ℤ)) ∈ Γ) (S : Finset ℍ) (n : ℍ → ℤ)
+    (hn : ∀ (γ : Γ) (τ : ℍ), n ((γ : SL(2, ℤ)) • τ) = n τ)
+    (hcov : ∀ τ : ℍ, n τ ≠ 0 → ∃ s ∈ S, ∃ γ : Γ, (γ : SL(2, ℤ)) • s = τ)
+    (hinj : ∀ s ∈ S, ∀ t ∈ S, (∃ γ : Γ, (γ : SL(2, ℤ)) • s = t) → s = t)
+    (hdvd : ∀ s ∈ S, (Nat.card (MulAction.stabilizer (Γ) s) : ℤ) ∣ 2 * n s)
+    (hdeg : ∑ s ∈ S, (n s : ℂ) / (Nat.card (MulAction.stabilizer (Γ) s) : ℂ) = 0) :
+    ∃ (V : ℂ → ℂ) (b : ℍ) (m : ℍ → ℤ) (F : ℍ → ℂ → ℂ),
+      (∀ (γ : Γ) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z => (z - τ) ^ (n τ) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ s ∈ S, Continuous (F s) ∧ HasCompactSupport (F s) ∧ tsupport (F s) ⊆ {z : ℂ | 0 < z.im} ∧
+        ∀ E E' : ℂ → ℂ, (∀ z : ℂ, 0 < z.im → HasDerivAt E (E' z) z) →
+          Integrable (fun z : ℂ => E' z * F s z) ∧
+            ∫ z : ℂ, E' z * F s z = Real.pi * (E s - E b)) ∧
+      (∀ s ∈ S, (Nat.card (MulAction.stabilizer (Γ) s) : ℤ) * m s = 2 * n s) ∧
+      ∀ᵐ z : ℂ, 0 < z.im →
+        (fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z =
+          ∑ s ∈ S, (m s : ℂ) / 2 * ∑ᶠ γ : Γ,
+            F s (((γ : SL(2, ℤ)) • ofComplex z : ℍ) : ℂ) *
+              conj (1 / denom ((γ : SL(2, ℤ)) : GL (Fin 2) ℝ) (ofComplex z) ^ 2) := by
+  classical
+  obtain ⟨b, hb⟩ := exists_basePoint S
+  have hbs : ∀ s ∈ S, (b : ℂ) ≠ (s : ℂ) := fun s hs h =>
+    hb s hs 1 (by rw [one_smul]; exact UpperHalfPlane.ext h.symm)
+  choose! dip Fk Kk hKc hKU hd1 hloc hFc hFcs hFt hFeq hpair using
+    fun (s : ℍ) (hs : (b : ℂ) ≠ (s : ℂ)) =>
+      SourceComplexReciprocity.Dipole.exists_localModel_pair (b : ℂ) (s : ℂ)
+        b.im_pos s.im_pos hs
+
+  set c : ℍ → ℤ := fun s => (Nat.card (MulAction.stabilizer (Γ) s) : ℤ) with hc
+  set mS : ℍ → ℤ := fun s => 2 * n s / c s with hmSdef
+  have hc0 : ∀ s, c s ≠ 0 := fun s => by
+    simp only [hc]
+    exact_mod_cast (Nat.card_pos (α := MulAction.stabilizer (Γ) s)).ne'
+  have hmS : ∀ s ∈ S, c s * mS s = 2 * n s := fun s hs => Int.mul_ediv_cancel' (hdvd s hs)
+  have hsum : ∑ s ∈ S, mS s = 0 := by
+    have h1 : ∀ s ∈ S, (mS s : ℂ) = 2 * ((n s : ℂ) / (c s : ℂ)) := by
+      intro s hs
+      have h := congrArg (fun k : ℤ => (k : ℂ)) (hmS s hs)
+      push_cast at h
+      have : (c s : ℂ) ≠ 0 := by exact_mod_cast hc0 s
+      field_simp
+      linear_combination h
+    have h2 : ((∑ s ∈ S, mS s : ℤ) : ℂ) = 0 := by
+      push_cast
+      rw [Finset.sum_congr rfl h1, ← Finset.mul_sum]
+      simp only [hc, Int.cast_natCast] at hdeg ⊢
+      rw [hdeg, mul_zero]
+    exact_mod_cast h2
+  set D : Data Γ :=
+    { hneg := hneg, S := S, n := n, b := b, mS := mS, dip := dip, Fk := Fk, Kk := Kk, hn := hn, hcov := hcov,
+      hinj := hinj, hmS := hmS, hsum := hsum, hb := hb,
+      hKc := fun s hs => hKc s (hbs s hs), hKU := fun s hs => hKU s (hbs s hs),
+      hd1 := fun s hs => hd1 s (hbs s hs), hloc := fun s hs => hloc s (hbs s hs),
+      hFt := fun s hs => hFt s (hbs s hs), hFeq := fun s hs => hFeq s (hbs s hs) } with hD
+  refine ⟨D.V, b, mS, Fk, D.V_sm, D.V_model, fun σ => D.V_cusp σ, fun s hs => ?_, hmS,
+    D.ae_logDeriv⟩
+  exact ⟨hFc s (hbs s hs), hFcs s (hbs s hs), (hFt s (hbs s hs)).trans (hKU s (hbs s hs)),
+    fun E E' hE => hpair s (hbs s hs) E E' hE⟩
+
+end
+end Dubon2026.SourceSmoothDivisor

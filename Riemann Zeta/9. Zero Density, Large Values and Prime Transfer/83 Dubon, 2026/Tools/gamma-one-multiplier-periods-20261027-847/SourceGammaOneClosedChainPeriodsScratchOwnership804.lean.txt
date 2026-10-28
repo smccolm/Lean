@@ -1,0 +1,19 @@
+import SourceWeightTwoEndpointPeriods
+import SourceWeightTwoIntegralPeriods
+import SourceWeightTwoClosedChainPeriods
+import SourceWeightTwoSegmentPeriods
+import SourceGammaOneClosedChainIntegral
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceWeightTwoEndpointPeriods, `SourceWeightTwoIntegralPeriods, `SourceWeightTwoClosedChainPeriods, `SourceWeightTwoSegmentPeriods, `SourceGammaOneClosedChainIntegral]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

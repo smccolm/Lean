@@ -1,0 +1,77 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T00:07:51.517702+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRealizationDerivation",
+    "SourceGammaOneAnalyticDifferentialResidue"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationDerivation.lean",
+      "sha256": "C06747FEF5A75E080A9C5FF8710A21DD211A444E8D9F4393D130BAF9E916A39E",
+      "oleanSha256": "EB4594783A46F3070F040D4D0FCD68AC55C680DB65831BEC2833DC2C7F072C65",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationDerivation989b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationDerivation989b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialResidue.lean",
+      "sha256": "72703150A3DE40606EFDF9E01DA63FFADB4F5325C2E0EF0AE967AA4374DC689B",
+      "oleanSha256": "B98877B83B4023212200D4F47EA5545054C4EDF6DBFBD695D8B7158098FB8150",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialResidue990g.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialResidue990g.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_scalarTower",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventually_differentiableAt_rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventuallyEq_of_smul_D_eq_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germAlgebra",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeDerivation"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_scalarTower",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventually_differentiableAt_rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventuallyEq_of_smul_D_eq_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germAlgebra",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeDerivation"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueAudit1.log",
+  "logSha256": "AE6378FC36CEE7E999A2017D356072E9A6DDF379F0BD6F1C9895F212E8E0519F",
+  "auditSha256": "E69671BF99A3978E841A821300640D2502424B680F2DC1C8D9884E032A8101C0",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueScratchOwnership1003.log",
+  "ownershipSha256": "0BAF8546A359FF6C0264404BC6D9124A9600DE8B3A6EC08FADF2401D73219DE8",
+  "exhaustiveTheorems": 32,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidueDependencyAudit1.log",
+  "dependencyAuditSha256": "0502BDBEED55BE07758A8CB872CB53317D49342E5F391C483AFEBB6720428DF7",
+  "dependencyAuditSourceSha256": "FC1E07A776C29642EBC6D940BD1D72552FD0AF6889085CC3E31C79AA2FDF0715",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion"
+  ],
+  "dependency": "DUB17/18 -> original all-weight association -> actual Gamma1 Picard/H1 -> principal-divisor converse -> meromorphic function construction -> analytic residue realization of the constructed actual algebraic differential.",
+  "discharged": "Derive the exact analytic residue equal to actual ramification times the actual place residue of a given simple-pole differential. The actual prescribed-residue differential was constructed in scope983; no analytic residue comparison is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact analytic residue expansion compiles and is being scratch audited. Actual point regularization, slash invariance and cusp exponential decay remain, then consume actual meromorphic construction and principal-divisor theorem. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residue-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "1C639B8F7348764EC8F0ABEC0F45BBFDA26DE7EE13F5358C04B83BFBEDE69E06",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

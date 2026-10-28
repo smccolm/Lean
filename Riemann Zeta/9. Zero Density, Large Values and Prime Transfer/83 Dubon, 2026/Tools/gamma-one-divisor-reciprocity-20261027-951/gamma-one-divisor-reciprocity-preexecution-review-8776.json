@@ -1,0 +1,61 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 55,
+  "queries": 341,
+  "theorems": 308,
+  "constructions": 33,
+  "exhaustiveScratchChecks": 533,
+  "proofValueChecks": 413,
+  "scopes": 7,
+  "receipts": {
+    "source-gamma-one-smooth-divisor-1b-scratch-receipt.json": "E1FED85BC3E76CF4CE3D0395F754205F4E0405D0B8059F2E4A709CE6084B9897",
+    "source-gamma-one-smooth-divisor-period-1b-scratch-receipt.json": "AFA3D58464D6BA1438DD115F2DCC7A02B7B5F1C48F27AC0EE87184233A8C706C",
+    "source-gamma-one-divisor-winding-1-scratch-receipt.json": "25E989665DF46ED0A363578B879EA4E96AD9ADDDF4E724191C97F8B1B2724899",
+    "source-modular-green-boundary-1-scratch-receipt.json": "37818972A1262AFF7EF31631ACA869239D3F2B061511260F609C2F50AB023567",
+    "source-original-divisor-winding-boundary-1-scratch-receipt.json": "FE3580B611787E70DF7DF3758E97101F67D95ABE86AEB2043BCFCC6B29A397C5",
+    "source-original-winding-integral-period-1b-scratch-receipt.json": "2B8EB76B77A496A6BA79B45DD5FE9CD1A6714C64A3FC4407E55FA83BBB1F2CAB",
+    "source-original-petersson-reciprocity-1-scratch-receipt.json": "72BB2D8192FFB646DBBA2588D643F00DEBAD7F0CC78CB20BF4AE616EE4FBA05F"
+  },
+  "expectedConsumers": 25785,
+  "expectedConstructions": 2647,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "171832558150153FF42EE1E8413C7572C7EFE541413D178CF81B84BAC9312F5B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_production_ownership_8776.py",
+      "sha256": "370DB756F439042F8E768A6F7B65336138A3864D3E6F8C0010A24BAE19935E0A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_global_ownership_8776.py",
+      "sha256": "E4D8AF5A8933DB8C2016BB8B39856B2F2F877E6CFB9C03CC36F9AC36C470BE9B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_divisor_reciprocity_ownership_8776.py",
+      "sha256": "F09CCE28382FF42BC20FB87DAC0DDE55D0C59AEEB03C0886330D1600D5D198A5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "103C23A89F4744B74EFDEB45AA0546EB52B6C260D2F02519ADF2B70857C23ADA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_divisor_reciprocity_8776.ps1",
+      "sha256": "7C4996CF50E907C424C5EBA56A1754C4F17AFFFA43A23510E5EF3E84DF1A595F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_divisor_reciprocity_8776.ps1",
+      "sha256": "3BC987ADBCE03724BBA6CFCA2CC77C6DD13D2EE047213E6BA92F8A14BA0BDBE0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_divisor_reciprocity_canonical_8776.py",
+      "sha256": "D9FB465F5480480B879447A1843DA8EA9FDD65F1990717B0D957E04EF5F24884"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "28024716F619A4F76594E6CB65D1C9F86B65FDB8E049CA968C862F04D70E1530"
+    }
+  ],
+  "productionMutation": false
+}

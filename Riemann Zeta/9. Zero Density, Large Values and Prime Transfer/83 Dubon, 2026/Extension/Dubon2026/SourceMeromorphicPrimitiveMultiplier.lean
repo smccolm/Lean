@@ -1,0 +1,225 @@
+import Dubon2026.SourceMeromorphicPrimitiveGroupAction
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse ->
+actual meromorphic function -> multiplier covariance. Adapt only the necessary
+integer-residue integration consumer and multiplier argument, reusing the
+proved global primitive, native analytic action and punctured-domain connectivity.
+Actual analytic differential input and nonzero cusp limits remain. -/
+namespace Dubon2026.SourceMeromorphicPrimitiveMultiplier
+noncomputable section
+open scoped MatrixGroups Topology ModularForm
+open UpperHalfPlane Filter Set Metric
+
+section Multiplier
+
+variable {m : ℍ → ℤ} {ω : ℍ → ℂ} {G : ℂ → ℂ} (hG : GSpec m ω G)
+include hG
+
+theorem GSpec.hasDerivAt_comp_μ (γ : SL(2, ℤ)) (τ : ℍ) (hm : m (γ • τ) = 0) :
+    HasDerivAt (fun z => G (μ γ z)) ((ω ∣[(2 : ℤ)] γ) τ * G (μ γ τ)) ↑τ := by
+  have hd : HasDerivAt G (ω (γ • τ) * G ↑(γ • τ)) (μ γ ↑τ) := by
+    rw [μ_coe]; exact hG.hasDerivAt hm
+  have hc := hd.comp (↑τ : ℂ) (hasDerivAt_μ γ τ)
+  convert hc using 1
+  rw [slash_two_apply, μ_coe]
+  ring
+
+/-- The open set on which the actual multiplier quotient is defined and nonzero. -/
+def goodSet (G : ℂ → ℂ) (γ : SL(2, ℤ)) : Set ℂ := {z | 0 < z.im ∧ G z ≠ 0 ∧ G (μ γ z) ≠ 0}
+
+omit hG in
+theorem goodSet_subset (γ : SL(2, ℤ)) : goodSet G γ ⊆ {z : ℂ | 0 < z.im} := fun _ hz => hz.1
+
+theorem GSpec.eventually_mem_goodSet (γ : SL(2, ℤ)) (τ : ℍ) :
+    ∀ᶠ z in 𝓝[≠] (τ : ℂ), z ∈ goodSet G γ := by
+  have h1 : ∀ᶠ z in 𝓝[≠] (τ : ℂ), 0 < z.im :=
+    mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)
+  have h2 := hG.eventually_ne_zero τ
+  have h3 : ∀ᶠ z in 𝓝[≠] (τ : ℂ), G (μ γ z) ≠ 0 :=
+    (tendsto_μ_nhdsNE γ τ).eventually (hG.eventually_ne_zero (γ • τ))
+  filter_upwards [h1, h2, h3] with z hz1 hz2 hz3
+  exact ⟨hz1, hz2, hz3⟩
+
+theorem GSpec.isOpen_goodSet (γ : SL(2, ℤ)) : IsOpen (goodSet G γ) := by
+  rw [isOpen_iff_mem_nhds]
+  rintro z ⟨hz, hG1, hG2⟩
+  set τ : ℍ := ⟨z, hz⟩
+  have hm1 : m τ = 0 := (hG.ne_zero_iff τ).mp hG1
+  have hG2' : G ↑(γ • τ) ≠ 0 := by rwa [← μ_coe]
+  have hm2 : m (γ • τ) = 0 := (hG.ne_zero_iff (γ • τ)).mp hG2'
+  have e1 : ∀ᶠ w in 𝓝 z, 0 < w.im := isOpen_upperHalfPlaneSet.mem_nhds hz
+  have e2 : ∀ᶠ w in 𝓝 z, G w ≠ 0 := (hG.analyticAt hm1).continuousAt.eventually_ne hG1
+  have e3 : ∀ᶠ w in 𝓝 z, G (μ γ w) ≠ 0 := by
+    have hc : ContinuousAt (μ γ) z := continuousAt_μ γ τ
+    have hGc : ContinuousAt G (μ γ z) := by
+      rw [show μ γ z = ↑(γ • τ) from μ_coe γ τ]
+      exact (hG.analyticAt hm2).continuousAt
+    exact hc.eventually (hGc.eventually_ne hG2)
+  filter_upwards [e1, e2, e3] with w h1 h2 h3
+  exact ⟨h1, h2, h3⟩
+
+theorem GSpec.countable_zeroSet : {z : ℂ | 0 < z.im ∧ G z = 0}.Countable := by
+  set Z : Set ℂ := {z : ℂ | 0 < z.im ∧ G z = 0}
+
+  let K : ℕ → Set ℂ := fun n => {z : ℂ | 1 / ((n : ℝ) + 1) ≤ z.im} ∩ closedBall 0 ((n : ℝ) + 1)
+  have hKc : ∀ n, IsCompact (K n) := fun n =>
+    (isCompact_closedBall _ _).inter_left (isClosed_le continuous_const Complex.continuous_im)
+  have hKU : ∀ n, ∀ z ∈ K n, 0 < z.im := by
+    rintro n z ⟨hz, -⟩
+    exact lt_of_lt_of_le (by positivity) hz
+  have hfin : ∀ n, (Z ∩ K n).Finite := by
+    intro n
+    let U : ℂ → Set ℂ := fun x => {w | w ≠ x → G w ≠ 0}
+    have hU : ∀ x ∈ K n, U x ∈ 𝓝 x := by
+      intro x hx
+      have := hG.eventually_ne_zero ⟨x, hKU n x hx⟩
+      exact eventually_nhdsWithin_iff.mp this
+    obtain ⟨t, -, hcov⟩ := (hKc n).elim_nhds_subcover U hU
+    refine t.finite_toSet.subset ?_
+    rintro z ⟨⟨-, hGz⟩, hzK⟩
+    obtain ⟨x, hx, hzx⟩ := mem_iUnion₂.mp (hcov hzK)
+    have : z = x := by
+      by_contra hne
+      exact hzx hne hGz
+    rw [this]
+    exact hx
+  have hcover : Z ⊆ ⋃ n, (Z ∩ K n) := by
+    rintro z ⟨hz, hGz⟩
+    obtain ⟨n, hn⟩ := exists_nat_ge (max (1 / z.im) ‖z‖)
+    refine mem_iUnion.mpr ⟨n, ⟨hz, hGz⟩, ?_, ?_⟩
+    · change 1 / ((n : ℝ) + 1) ≤ z.im
+      rw [div_le_iff₀ (by positivity)]
+      have h1 : 1 / z.im ≤ n := (le_max_left _ _).trans hn
+      rw [div_le_iff₀ hz] at h1
+      nlinarith
+    · rw [mem_closedBall, dist_zero_right]
+      exact ((le_max_right _ _).trans hn).trans (by linarith)
+  exact (countable_iUnion fun n => (hfin n).countable).mono hcover
+
+omit hG in
+
+theorem upperHalfPlane_eq_range :
+    {z : ℂ | 0 < z.im} = range (fun w : ℂ => (w.re : ℂ) + Real.exp w.im * Complex.I) := by
+  ext z
+  constructor
+  · intro hz
+    refine ⟨(z.re : ℂ) + Real.log z.im * Complex.I, ?_⟩
+    apply Complex.ext <;> simp [Real.exp_log hz]
+  · rintro ⟨w, rfl⟩
+    show 0 < ((w.re : ℂ) + Real.exp w.im * Complex.I).im
+    simp only [Complex.add_im, Complex.ofReal_im, Complex.mul_im, Complex.ofReal_re,
+      Complex.I_re, Complex.I_im, mul_zero, mul_one, zero_add, add_zero]
+    exact Real.exp_pos _
+
+omit hG in
+theorem isPreconnected_upperHalfPlane_diff {S : Set ℂ} (hS : S.Countable) :
+    IsPreconnected ({z : ℂ | 0 < z.im} \ S) := by
+  rw [upperHalfPlane_eq_range]
+  refine SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_range_diff_of_countable (by fun_prop) ?_ hS
+  intro w₁ w₂ h
+  have hre := congrArg Complex.re h
+  have him := congrArg Complex.im h
+  simp only [Complex.add_re, Complex.ofReal_re, Complex.mul_re, Complex.I_re, Complex.I_im,
+    Complex.ofReal_im, mul_zero, mul_one, sub_zero, add_zero, Complex.add_im, Complex.mul_im,
+    zero_add] at hre him
+  exact Complex.ext hre (Real.exp_eq_exp.mp him)
+
+theorem GSpec.isPreconnected_goodSet (γ : SL(2, ℤ)) : IsPreconnected (goodSet G γ) := by
+  have hsub : {z : ℂ | 0 < z.im} \ goodSet G γ ⊆
+      {z : ℂ | 0 < z.im ∧ G z = 0} ∪ (μ γ⁻¹) '' {z : ℂ | 0 < z.im ∧ G z = 0} := by
+    rintro z ⟨hz, hzV⟩
+    simp only [goodSet, mem_setOf_eq, not_and, not_not] at hzV
+    by_cases hGz : G z = 0
+    · exact Or.inl ⟨hz, hGz⟩
+    · right
+      refine ⟨μ γ z, ⟨μ_im_pos γ z, hzV hz hGz⟩, ?_⟩
+      rw [μ_of_im_pos γ hz, ← μ_coe, μ_inv_μ]
+  have hc : ({z : ℂ | 0 < z.im} \ goodSet G γ).Countable :=
+    (hG.countable_zeroSet.union (hG.countable_zeroSet.image _)).mono hsub
+  have := isPreconnected_upperHalfPlane_diff hc
+  rwa [diff_diff_cancel_left (goodSet_subset γ)] at this
+
+theorem GSpec.exists_multiplier (γ : SL(2, ℤ)) (hγ : ω ∣[(2 : ℤ)] γ = ω) :
+    ∃ c : ℂ, c ≠ 0 ∧ (∀ τ : ℍ, m (γ • τ) = m τ) ∧ ∀ τ : ℍ, G ↑(γ • τ) = c * G ↑τ := by
+  classical
+  set V := goodSet G γ with hV
+
+  let R : ℂ → ℂ := fun z => G (μ γ z) / G z
+  have hR : ∀ z ∈ V, HasDerivAt R 0 z := by
+    rintro z ⟨hz, hG1, hG2⟩
+    set τ : ℍ := ⟨z, hz⟩
+    have hm1 : m τ = 0 := (hG.ne_zero_iff τ).mp hG1
+    have hG2' : G ↑(γ • τ) ≠ 0 := by rwa [← μ_coe]
+    have hm2 : m (γ • τ) = 0 := (hG.ne_zero_iff (γ • τ)).mp hG2'
+    have h1 := hG.hasDerivAt_comp_μ γ τ hm2
+    rw [hγ] at h1
+    have h2 := hG.hasDerivAt hm1
+    have h3 := h1.div h2 hG1
+    convert h3 using 1
+    simp only [τ]
+    ring
+  have hRd : DifferentiableOn ℂ R V := fun z hz => (hR z hz).differentiableAt.differentiableWithinAt
+  have hR0 : V.EqOn (deriv R) 0 := fun z hz => (hR z hz).deriv
+  have hconst : ∀ z ∈ V, ∀ w ∈ V, R z = R w := fun z hz w hw =>
+    (hG.isOpen_goodSet γ).is_const_of_deriv_eq_zero (hG.isPreconnected_goodSet γ) hRd hR0 hz hw
+
+  obtain ⟨z₀, hz₀⟩ := (hG.eventually_mem_goodSet γ UpperHalfPlane.I).exists
+  refine ⟨R z₀, div_ne_zero hz₀.2.2 hz₀.2.1, ?_⟩
+  have hV_eq : ∀ z ∈ V, G (μ γ z) = R z₀ * G z := by
+    intro z hz
+    rw [← hconst z hz z₀ hz₀]
+    simp only [R]
+    field_simp [hz.2.1]
+
+  have hm : ∀ τ : ℍ, m (γ • τ) = m τ := by
+    intro τ
+    have hpos : (0 : ℝ) < ((Matrix.SpecialLinearGroup.mapGL ℝ γ : GL (Fin 2) ℝ) :
+        Matrix (Fin 2) (Fin 2) ℝ).det := by
+      rw [← Matrix.GeneralLinearGroup.val_det_apply, Matrix.SpecialLinearGroup.det_mapGL,
+        Units.val_one]
+      norm_num
+    have h1 := UpperHalfPlane.meromorphicOrderAt_comp_smul (f := fun σ : ℍ => G ↑σ) (τ := τ) hpos
+    have e1 : (fun z : ℂ => (fun σ : ℍ => G ↑σ)
+        ((Matrix.SpecialLinearGroup.mapGL ℝ γ : GL (Fin 2) ℝ) • ofComplex z)) =
+        fun z => G (μ γ z) := by
+      funext z
+      simp only [μ, MulAction.compHom_smul_def]
+    have e2 : ((Matrix.SpecialLinearGroup.mapGL ℝ γ : GL (Fin 2) ℝ) • τ) = γ • τ := by
+      rw [MulAction.compHom_smul_def]
+    rw [e1, e2] at h1
+    change meromorphicOrderAt (fun z => G (μ γ z)) ↑τ =
+      meromorphicOrderAt (fun z : ℂ => G ↑(ofComplex z)) ↑(γ • τ) at h1
+    rw [hG.meromorphicOrderAt_ofComplex (γ • τ)] at h1
+
+    have e3 : (fun z => G (μ γ z)) =ᶠ[𝓝[≠] (τ : ℂ)] (fun _ => R z₀) * G := by
+      filter_upwards [hG.eventually_mem_goodSet γ τ] with z hz
+      rw [Pi.mul_apply, hV_eq z hz]
+    rw [meromorphicOrderAt_congr e3, meromorphicOrderAt_mul_of_ne_zero analyticAt_const
+      (div_ne_zero hz₀.2.2 hz₀.2.1), (hG τ).2.1] at h1
+    exact_mod_cast h1.symm
+  refine ⟨hm, fun τ => ?_⟩
+  by_cases hmτ : m τ = 0
+  · have hG1 : G ↑τ ≠ 0 := (hG.ne_zero_iff τ).mpr hmτ
+    have hG2 : G ↑(γ • τ) ≠ 0 := (hG.ne_zero_iff (γ • τ)).mpr ((hm τ).trans hmτ)
+    have hτV : (τ : ℂ) ∈ V := ⟨τ.im_pos, hG1, by rwa [μ_coe]⟩
+    have := hV_eq τ hτV
+    rwa [μ_coe] at this
+  · rw [(hG.eq_zero_iff τ).mpr hmτ, (hG.eq_zero_iff (γ • τ)).mpr (by rwa [hm τ]), mul_zero]
+
+end Multiplier
+
+theorem exists_meromorphic_multiplier {Γ : Subgroup SL(2, ℤ)}
+    (m : ℍ → ℤ) (ω : ℍ → ℂ)
+    (hres : ∀ τ : ℍ, ∃ g : ℂ → ℂ, AnalyticAt ℂ g (τ : ℂ) ∧
+      (∀ᶠ z in 𝓝[≠] (τ : ℂ), ω (ofComplex z) = (m τ : ℂ) / (z - τ) + g z) ∧
+      (m τ = 0 → ω τ = g τ))
+    (hinv : ∀ γ : Γ, ω ∣[(2 : ℤ)] (γ : SL(2, ℤ)) = ω) :
+    ∃ (G : ℂ → ℂ) (χ : Γ → ℂ), GSpec m ω G ∧
+      (∀ γ, χ γ ≠ 0) ∧ ∀ (γ : Γ) (τ : ℍ), G ↑((γ : SL(2, ℤ)) • τ) = χ γ * G ↑τ := by
+  classical
+  obtain ⟨G, hG⟩ := exists_GSpec hres
+  choose χ hχ using fun γ : Γ => hG.exists_multiplier (γ : SL(2, ℤ)) (hinv γ)
+  exact ⟨G, χ, hG, fun γ => (hχ γ).1, fun γ => (hχ γ).2.2⟩
+
+end
+end Dubon2026.SourceMeromorphicPrimitiveMultiplier

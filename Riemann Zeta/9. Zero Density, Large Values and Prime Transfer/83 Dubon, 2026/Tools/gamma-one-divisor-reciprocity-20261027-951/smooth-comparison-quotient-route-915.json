@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17/18 -> all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual filled quotient -> parabolic winding logarithm",
+  "source": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+    "sha256": "63556CBEF1EEDE8F6381B2F89A1E4BA4CDBBD9AEF626C5044F4BFB9CC881E9F2",
+    "sectionsRead": "LocalModels, Divisor and CuspTransfer (lines 269-465); remaining sections not copied here."
+  },
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization.lean",
+      "sha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps.lean",
+      "sha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog.lean",
+      "sha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA"
+    }
+  ],
+  "shorterRoute": "Reuse regularize_eventuallyEq at order zero and existing punctured action-limit transport. Prove equality with source limUnder at each upper-half-plane point. Meromorphic normal forms do not apply to the merely C1 smooth quotient.",
+  "assumptionsToDischarge": [
+    "Equal original integer local orders imply a nonvanishing C1 filled quotient",
+    "Both actual invariances imply quotient invariance",
+    "Source punctured-limit convention is exactly preserved"
+  ],
+  "remaining": "Cusp transfer and actual original-object consumer must discharge winding-log hypotheses; then side-pairing/period/Petersson assembly and the full source chain. 16/20; DUB-17--20 OPEN."
+}

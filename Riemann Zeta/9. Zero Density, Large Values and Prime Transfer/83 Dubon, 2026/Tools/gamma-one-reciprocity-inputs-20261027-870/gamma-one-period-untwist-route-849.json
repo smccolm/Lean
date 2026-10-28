@@ -1,0 +1,25 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite homogeneous-coefficient Gamma1 Hecke characters -> Picard/H1, Hecke, diamond, full/parabolic and transpose comparisons -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> invariant untwisting.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoEndpointPeriods.lean",
+      "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean",
+      "sha256": "5628D0F3EA57748E9108482A68BE4C9057E3B750C305C2D1A51896540C624A6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveCusps.lean",
+      "sha256": "2C8AE73A6B8419A38F761566F5175C3B41F96AE236FFCBD43331B39522C73A56"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "C77197817692A6C793F112DFF3DD16266D8351B3F195FBA92C787E6F66DF4C84"
+    }
+  ],
+  "shorterRoute": "Use actual normalized endpoint primitives, existing Eichler derivative and every translated cusp limit. Replace the primary repeated segment FTC and primitive-existence proof. Use native meromorphic normal forms for the next regularization dependency instead of introducing the primary limUnder regularization.",
+  "assumptionsToDischarge": "Derive the untwisting factor, its nonvanishing, norm, transformation and real derivatives from the actual cusp form. These feed the invariant meromorphic local model, its cusp behavior and the analytic reciprocity identity.",
+  "remaining": "Invariant normalized meromorphic local models, cusp derivative decay, analytic reciprocity and meromorphic construction from the actual Abel-Jacobi condition remain. No higher gate closes; 16/20, DUB17--20 OPEN.",
+  "externalClosureBuilt": false
+}

@@ -1,0 +1,98 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T22:02:27.811773+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceSmoothComparisonDbar",
+    "SourceSmoothedWindingIntegralSplit",
+    "SourceGammaOneSmoothedReciprocity",
+    "SourceUntwistPeterssonLimit",
+    "SourceGammaOnePeterssonReciprocity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar.lean",
+      "sha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0",
+      "oleanSha256": "09F640CA365BCB7EA880FE3EE35E29BCEF65B6A893933A3F05C43E3ABF4CD767",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit.lean",
+      "sha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A",
+      "oleanSha256": "E8C84B30BD1C03813B6C4639E09175544897845E632C814C4C229FC5204D7EC6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity.lean",
+      "sha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5",
+      "oleanSha256": "52AA8E5CEF7DA7A86C5D946D4F837DEB1E9E6DDBB4A9FE5409C6AD7AFE06BEAE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit.lean",
+      "sha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126",
+      "oleanSha256": "2F4E6B5D0C6AC4817BC25587A13757C0BDAD247C525F88565E028828611DA061",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity.lean",
+      "sha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5",
+      "oleanSha256": "AE7E44A011F02C2C37FCE43BB7E07CD35820C6972FB9BFC17531DAF367AD6D94",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceSmoothComparison.order_eq_zero_of_ne_zero",
+    "Dubon2026.SourceSmoothComparison.differentiableAt_of_zero_order",
+    "Dubon2026.SourceSmoothComparison.dbar_quotient_split",
+    "Dubon2026.SourceSmoothComparison.weighted_dbar_quotient_split_ae",
+    "Dubon2026.SourceSmoothComparison.integrable_smoothed_dbar",
+    "Dubon2026.SourceSmoothComparison.smoothed_integral_quotient_split",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smoothed_reciprocity",
+    "Dubon2026.SourcePeriodUntwist.\u03a6_dbar_ae",
+    "Dubon2026.SourcePeriodUntwist.petersson_plane_density",
+    "Dubon2026.SourcePeriodUntwist.tendsto_\u03a6_smoothed_petersson",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceSmoothComparison.order_eq_zero_of_ne_zero",
+    "Dubon2026.SourceSmoothComparison.differentiableAt_of_zero_order",
+    "Dubon2026.SourceSmoothComparison.dbar_quotient_split",
+    "Dubon2026.SourceSmoothComparison.weighted_dbar_quotient_split_ae",
+    "Dubon2026.SourceSmoothComparison.integrable_smoothed_dbar",
+    "Dubon2026.SourceSmoothComparison.smoothed_integral_quotient_split",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smoothed_reciprocity",
+    "Dubon2026.SourcePeriodUntwist.\u03a6_dbar_ae",
+    "Dubon2026.SourcePeriodUntwist.petersson_plane_density",
+    "Dubon2026.SourcePeriodUntwist.tendsto_\u03a6_smoothed_petersson",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityAudit1.log",
+  "logSha256": "8FDF2E153DE94000A37DC603C65EFD21EEE83625933FE0B2A15927FEEDABAEF1",
+  "auditSha256": "CA64D589B8014FF49D0C70F22E82A2E169DB0D7F7BA060215F81DFBC2A402AF5",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 26,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1.log",
+  "dependencyAuditSha256": "85DF9B4CD0576BFCA7736E2621C42E771F6936811A19EA76BB55D214DBA48128",
+  "dependencyAuditSourceSha256": "37F8815AE31D29769F8B91AF08922832EC3DA10DBE3E4A0F8CE30946607128F7",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+  "discharged": "The exact original-divisor/Petersson/integer-period reciprocity identity follows from two proved limits of the same normalized untwist integral. Equal local orders give the filled-quotient dbar split, existing almost-everywhere untwist nonvanishing supplies the null-set input, and compact support supplies integrability. The existing actual winding integral period and smooth-divisor period limit give one limit. The already proved untwist derivative and original normalized Petersson limit give the other, including conjugation, sign and central one-half factor. No limit or period certificate remains as a parameter.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain upstream inputs. Reconciliation of the representative divisor functional with the original finite divisor class, integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "39CFDB8C3A9C2B6C3E41F454C738E8D357A80DA555EDCEA1110872A7DC7C52B2",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

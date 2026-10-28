@@ -1,0 +1,1554 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-multiplier-periods-promotion-route-847.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-multiplier-periods-promotion-route-847.json",
+      "sha256": "BE85DD3176541D8760AA2510B6FFA0D16ECDA31B6816F9D00661C290F33CE2CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionAudit1.lean.txt",
+      "sha256": "748A505FFD5A1E106A675E18E48298A4BEEF39F5636CA8CDE5F15439157F69D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionAudit1.log",
+      "sha256": "885FB584CF7FA8831CCC03FD63EA04ECBC4DAF7931767B8A7D055130924661CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCosetChains.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCosetChains.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCosetChains.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCosetChains.lean.txt",
+      "sha256": "C4F8538C2C41DD87350071CC3F3B36FA1F266D7232A135D1D382A4443A884976"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCosetChains.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCosetChains.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCyclicCosets.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCyclicCosets.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCyclicCosets.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCyclicCosets.lean.txt",
+      "sha256": "89199E147F03C20DAAE4D3940D1ABBB5A7CCE8A623E38883D7471333A995B35B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCyclicCosets.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionCyclicCosets.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionDependencyAudit1.lean.txt",
+      "sha256": "AFCFBFEF5475FC52A0BD3732F26C6A2CD7E98B193FB5D6D970119B477FB97128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionDependencyAudit1.log",
+      "sha256": "42327C2D1F227C6015D474ADEC0B9CC363AEB72E522EB4EE8C38286F8E163117"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeChains.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeChains.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeChains.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeChains.lean.txt",
+      "sha256": "3E5930BC1EBB5B087004396B4A20F08BC35F8C0CF68124740AFFC0BC7294D9DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeChains.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeChains.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeCharacters.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeCharacters.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeCharacters.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeCharacters.lean.txt",
+      "sha256": "801D7DC60678DF1148A1D6D8274742E906FD19B93C9585CEFBA6A6D1A716AEDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeCharacters.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionEdgeCharacters.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionGenerators.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionGenerators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionGenerators.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionGenerators.lean.txt",
+      "sha256": "5696D450E555A34C59B193A160E1605144E10C60B69C2B7740F08B8BDD732DAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionGenerators.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionGenerators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionRealization.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionRealization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionRealization.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionRealization.lean.txt",
+      "sha256": "D3BABE424433C4079839DED426A0B06BC29F727775D53BC96859FB2A9FB96540"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionRealization.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionRealization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionScratchOwnership817.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionScratchOwnership817.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionScratchOwnership817.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionScratchOwnership817.lean.txt",
+      "sha256": "24404439D3D455A3081E717C1C99FEF2CA15BC5BD5BAD0C895EB9D27B3A1C1EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionScratchOwnership817.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceCuspCorrectionScratchOwnership817.log",
+      "sha256": "BBD8A3293E55547A06BD6BE2A7E20F559E8B5EDB5FD1165A0AF52BA0CC99C5FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainIntegral.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainIntegral.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainIntegral.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainIntegral.lean.txt",
+      "sha256": "1F2BCB032ADF23F72D944E30E5EA37126A387302BC538819D780927B169B57C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainIntegral.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsAudit1.lean.txt",
+      "sha256": "76E1A361903D3F5B87E3D94682F57E0624E9C8AD23540C829E14578EAB8D95BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsAudit1.log",
+      "sha256": "8527295DC38A2C72100AED48F830230AD705182900C99CA9A7C88A4099A40D94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsDependencyAudit1.lean.txt",
+      "sha256": "D103182DB88DDB298FF7DEA885704E9713EC575F939BEE3140F31AC51D17B016"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsDependencyAudit1.log",
+      "sha256": "FE66B3EC03E8E28765125750A3117BA1F69C4D5D987D583A4541815C07ADC90C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsScratchOwnership804.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsScratchOwnership804.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsScratchOwnership804.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsScratchOwnership804.lean.txt",
+      "sha256": "4806F220FE82F00476358FA6E18FA9727B38287E14C8781E5B851BA402AA5534"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsScratchOwnership804.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneClosedChainPeriodsScratchOwnership804.log",
+      "sha256": "9E27C5F5234A46675291B9CCB006C6D84B247E0CB1316D6DD3ABFFEF46C7C977"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralParabolicLift.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneIntegralParabolicLift.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralParabolicLift.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneIntegralParabolicLift.lean.txt",
+      "sha256": "7E1448C43DB1D335F4C0F9C5B6719A14EDA0808DC313CDB823EB13C8CC44F3FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralParabolicLift.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneIntegralParabolicLift.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierElliptic.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierElliptic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierElliptic.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierElliptic.lean.txt",
+      "sha256": "887223CE81E94D3330A64932033263BB1478F4959AC3E19EFACB1E04167D288D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierElliptic.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierElliptic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriods.lean.txt",
+      "sha256": "7B2777EE07EE05E00DD1A4C8A3EDEF1E3FD65F85BF91249179C26EE66638E275"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsAudit1.lean.txt",
+      "sha256": "B942E220EB6701285D1F376CD95F59D48A33994F122FC594E12B507E6FF361D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsAudit1.log",
+      "sha256": "5A6408D86B3DD7780C678D36939F75AE9101018D4AEF539D60AA77B2E9DC4AA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.lean.txt",
+      "sha256": "DDBAD9FA0F788995785EFEA098034029E6BCC0326620ABEEB0787933EFD91186"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.log",
+      "sha256": "490DDFC5C55B8751A131A843E8C1D40662E206A0D98FF898140C06CA4F6FCE3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.lean.txt",
+      "sha256": "AFCBA99D1CA52328F77AEC28D274B029498E3BA13B972C08B25B9C0E2DE30D22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.log",
+      "sha256": "BE857F0B9BF42D8123DCF38C4F7914122D40B0F007F0C55EC16338814D7F475D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriods.lean.txt",
+      "sha256": "4CC6BA2053D796DD7E716BE025E09817B2BAC13999D01B0C1768566F89DA43B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1.lean.txt",
+      "sha256": "B6722DCC8E6B303B926263ED04D6144BB18907E64EAD959792472C5D86E0EB86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1.log",
+      "sha256": "E547A2E6D8A60736AAA0AA2CD7809CEF80B52249C231C682C1C5D2B6B7CF8CB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1b.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1b.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1b.lean.txt",
+      "sha256": "79763E96D3750B687DA72C69D5700F1EC59FD8A9BEA4171C9CE617A169373836"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1b.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1b.log",
+      "sha256": "C416A028786E767FFAB425EF2886307EF9331C0E09DF134A9ADD3783F8A5466A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1c.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1c.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1c.lean.txt",
+      "sha256": "F25FB2E4DB54006E91053E2C3719B3FCCB10D49CBFA09608EC6EDAABB45C666A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1c.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsAudit1c.log",
+      "sha256": "AC36EE1F90CC7CEF86E1D81385670418CF369722445BF954BD816A1302767BFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.lean.txt",
+      "sha256": "5E36CDCD9AE1A6BD1CD89ACF122D1E4B27061AAF0FDAB976D042CECF50E8E78D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.log",
+      "sha256": "2B29616EEC9638C360F48B17E394DC96C72FDDBE88263CA07382F5A6BF5C3A1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.lean.txt",
+      "sha256": "58E18779A8655AF41748B93C9A957FA80A6DB53CD9218F886F56CE29FFEBD544"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.log",
+      "sha256": "9397A259AA8183B20DECF95B4172EFF45C3AD50622F106BF54D3FCFD242322E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCorrection.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCorrection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCorrection.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCorrection.lean.txt",
+      "sha256": "DAEA97EFBA77374AEBF665850F2C226AF76441A959829CDCA02CC3C9B261273B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCorrection.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCorrection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCrossed.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCrossed.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCrossed.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCrossed.lean.txt",
+      "sha256": "980E658B1F3DDA2D1316D3E01DE9AF8270C0DFED009C0E77F175A15CA768D9B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCrossed.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCrossed.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspConjugacy.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspConjugacy.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspConjugacy.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspConjugacy.lean.txt",
+      "sha256": "D8A721B6D85A3AD5DEE3CBB75C5C81A87B627162EAA0DA444630940D3C3E69E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspConjugacy.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspConjugacy.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspSum.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspSum.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspSum.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspSum.lean.txt",
+      "sha256": "48CDC79242FA7B664881DD0A25105449AC7B9A70E59F6732E6E1695266F08B27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspSum.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterCuspSum.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterFreeProduct.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterFreeProduct.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterFreeProduct.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterFreeProduct.lean.txt",
+      "sha256": "15518282113E329971BE6B68FEFE30A0F65B61C2EC32815D338E89600FFFE0A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterFreeProduct.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterFreeProduct.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterInitialLift.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterInitialLift.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterInitialLift.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterInitialLift.lean.txt",
+      "sha256": "EA13F38FFBB4526110D158301CD4B7F3B47F1E5C06A289FB9EF2D38E90275DC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterInitialLift.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterInitialLift.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularBridge.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularBridge.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularBridge.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularBridge.lean.txt",
+      "sha256": "CBB14F25C2726A4BEE4B56E68935A7845A5C88513958A1FD4C07BDF1D061007A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularBridge.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularBridge.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularFacts.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularFacts.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularFacts.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularFacts.lean.txt",
+      "sha256": "C021D3DEA3933279456E873401A912BD3B86AD9907A23C468C467D042A7224A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularFacts.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterModularFacts.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterPotential.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterPotential.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterPotential.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterPotential.lean.txt",
+      "sha256": "71286A0F32CB10715EDC3B23CBE8B2E5976F39A38C56EB3ACCC854EC98D7AD43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterPotential.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterPotential.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterShapiro.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterShapiro.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterShapiro.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterShapiro.lean.txt",
+      "sha256": "787D4907AA78B8B703A5E474542112EAE4354A542B11E2CC34569B992EF064C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterShapiro.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralCharacterShapiro.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLift.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLift.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLift.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLift.lean.txt",
+      "sha256": "C5AC7EB5BEA0C79FF5D5200AD88EC60865CDCE8144754752D3D1A4F489348195"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLift.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLift.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftAudit1.lean.txt",
+      "sha256": "CFD926494D2C07A261542A213262153CC2DE49709E1B7F6AAAC1651844C500F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftAudit1.log",
+      "sha256": "4CFDF4014A27962A3C28F5728B0177F5620B410B6668A60BBAE5D0651A2E21D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftDependencyAudit1.lean.txt",
+      "sha256": "6D39228CADD61111E7CCB774FE9522A8351E8352ADB8472DB081C5F752718E62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftDependencyAudit1.log",
+      "sha256": "F21233C80AA610F64DF47DDE189AC159E256288932924E27D139CEA2A76539BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftScratchOwnership830.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftScratchOwnership830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftScratchOwnership830.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftScratchOwnership830.lean.txt",
+      "sha256": "8D6C1E50BA89A61635B4A1900FECF0B5255CEB1062876A0370C461AAA11354A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftScratchOwnership830.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceIntegralParabolicCharacterLiftScratchOwnership830.log",
+      "sha256": "79C3079F0A5FD44003676F2719F8BE5D71A0849742D027006437EC58B09A7710"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierGerm.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierGerm.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierGerm.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierGerm.lean.txt",
+      "sha256": "36D0C9BF228C90F76C0AC26A7A68517B90F8658FBFE37ECF215BA9751EB51928"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierGerm.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierGerm.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierParabolic.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierParabolic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierParabolic.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierParabolic.lean.txt",
+      "sha256": "EDDE5FC329004FEE120B3A3A981FAFF80ADDE4B12073346840069FC0802FABC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierParabolic.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceMeromorphicMultiplierParabolic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularEllipticFixedPoint.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularEllipticFixedPoint.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularEllipticFixedPoint.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularEllipticFixedPoint.lean.txt",
+      "sha256": "186DD6B4F0BAF53874F82A7125ABBD3001E3A9E0A6E9BB4FEAE4F0175D74884C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularEllipticFixedPoint.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularEllipticFixedPoint.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProduct.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProduct.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProduct.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProduct.lean.txt",
+      "sha256": "7CF1312FC2F4A55E96560004B5853085D4517C33E705F1F61FA52E9CE057BA66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProduct.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProduct.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1.lean.txt",
+      "sha256": "09C47E2707D7C1DECF0972F2507B243BB53540454DB03D212AC03A08AA4E24BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1.log",
+      "sha256": "E25F12A93604F2EA9649749048937D578952E8693510AB89DECA11833E8E7CF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1b.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1b.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1b.lean.txt",
+      "sha256": "8C09FE3FB2B302D3EE935AB6FF64FDB6F4236F970E0F38E70ABE2AF57E405004"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1b.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductAudit1b.log",
+      "sha256": "2431376F24464D17E731E494FFD7F11619C4FCB0FC75818E0B4D62857E4827EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductDependencyAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductDependencyAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductDependencyAudit1.lean.txt",
+      "sha256": "D77D6E8C7604076FD30F0D2C59EBB59FFF00590D47DAC959A4A54A2C94E1FD2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductDependencyAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductDependencyAudit1.log",
+      "sha256": "C161E589E2EB52CA7BFEC9BA7176ADC255CA39D571E3B671D9588173BA10E6E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductInjection.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductInjection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductInjection.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductInjection.lean.txt",
+      "sha256": "5F991521A533B110D6AC66147996C612C80C7770858753C122923C38C2B60C0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductInjection.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductInjection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductScratchOwnership810.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductScratchOwnership810.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductScratchOwnership810.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductScratchOwnership810.lean.txt",
+      "sha256": "6BB95285CD0F60AB8107D1CF13BDEB7AF254D6D3703B89E6B1BE5185B56B942C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductScratchOwnership810.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularFreeProductScratchOwnership810.log",
+      "sha256": "13151C312AD546B738CA73F806953F61EEF9B15F741A271203902607E7F65222"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularIrrationalAction.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularIrrationalAction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularIrrationalAction.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularIrrationalAction.lean.txt",
+      "sha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularIrrationalAction.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularIrrationalAction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPingPongSets.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularPingPongSets.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPingPongSets.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularPingPongSets.lean.txt",
+      "sha256": "45DCEB6EE127B34586D280AC4337CB3FE4EEC9203A7C78A5193F931783CF4480"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPingPongSets.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularPingPongSets.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveKernel.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularProjectiveKernel.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveKernel.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularProjectiveKernel.lean.txt",
+      "sha256": "CACC848948FDDAACDF291D3779BCEF08701B3CB61E12678F430DBA949546494B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveKernel.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceModularProjectiveKernel.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterAbelianQuotient.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterAbelianQuotient.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterAbelianQuotient.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterAbelianQuotient.lean.txt",
+      "sha256": "AB90E4829761E1483967825DC9B6012B8EA319ECE758C841433AA32030AD5A71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterAbelianQuotient.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterAbelianQuotient.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterBasisExt.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterBasisExt.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterBasisExt.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterBasisExt.lean.txt",
+      "sha256": "D1FE00D8095B630BD01EA16B7E14A773C536B2D311ED47E45BFF62E7B3042298"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterBasisExt.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterBasisExt.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterFiniteOrder.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterFiniteOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterFiniteOrder.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterFiniteOrder.lean.txt",
+      "sha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterFiniteOrder.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterFiniteOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterLogarithm.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterLogarithm.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterLogarithm.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterLogarithm.lean.txt",
+      "sha256": "544999E53259891F247398319A2C3E5D93030114525D03FD964DF444115A0423"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterLogarithm.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterLogarithm.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterRecurrence.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterRecurrence.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterRecurrence.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterRecurrence.lean.txt",
+      "sha256": "3679136F346F84CD37F760E52E09CA3B8E65F5D5C6AB8AE235DA31BF0B55DFCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterRecurrence.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterRecurrence.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTorsion.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTorsion.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTorsion.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTorsion.lean.txt",
+      "sha256": "F896431C969BE01C3EC23248D0A4A2BBD885D3D9BE1432660C48B78DA2D9D6FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTorsion.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTorsion.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTraceBound.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTraceBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTraceBound.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTraceBound.lean.txt",
+      "sha256": "48FF76188261C5FC4906940532968D23366B660334C3F63B5808AAEF27913F1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTraceBound.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCharacterTraceBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCircleCharacter.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCircleCharacter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCircleCharacter.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCircleCharacter.lean.txt",
+      "sha256": "77CC089CDFAD49C6BB5E147A7ED103FCFFEF4A730C4EEC1784F48522A18F3C51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCircleCharacter.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceUnitaryCircleCharacter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoClosedChainPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoClosedChainPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoClosedChainPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoClosedChainPeriods.lean.txt",
+      "sha256": "F262AE4391F010FC1122B97BD31614DA8A502B682323FC007BB0E8407F58E9C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoClosedChainPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoClosedChainPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoEndpointPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoEndpointPeriods.lean.txt",
+      "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoEndpointPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoIntegralPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoIntegralPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoIntegralPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoIntegralPeriods.lean.txt",
+      "sha256": "1A6058ECF4F2E0C559D1D843B78D3A98F80747DD32C890B2F9F48ED61E2ACE35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoIntegralPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoIntegralPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSegmentPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoSegmentPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSegmentPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoSegmentPeriods.lean.txt",
+      "sha256": "85F9369A102875F39DA5EFB99606E109406630F4630BAA59CDF66B8CB8D8DB87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSegmentPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/SourceWeightTwoSegmentPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-correction-declaration-inventory-817.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/cusp-correction-declaration-inventory-817.json",
+      "sha256": "180D02D8E0A4F0818D887B385D39A2E8CE0F35732AE7106FAC3AD0F5B1C1AAF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_integral_lift_dependencies_802.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/download_gamma_one_integral_lift_dependencies_802.py",
+      "sha256": "D67491072CF5D72DEB5BCAC9D8909512C85627C70BF10006BCBBA53D100EF1A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_796.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/download_gamma_one_period_core_796.py",
+      "sha256": "6F545048813E409C49B76A26FB340A86F20717514EDB7547C82F2EDC04DD49B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-audit-route-804.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-audit-route-804.json",
+      "sha256": "4BF778FCD254A4BACDE288BBB8FEF4D054B8545FA42E1BB3D32EC1347BA98A0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-route-797.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-route-797.json",
+      "sha256": "167B3F6C4BF194608AA8A7493FFB20EA99E363141E9CD6A4855C0EE9FF496762"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-correction-route-823.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-character-correction-route-823.json",
+      "sha256": "5E3EF920DD910203F057170EAC734CEB0B4E20B6E429509E0C2EE22248A978CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-lift-route-818.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-character-lift-route-818.json",
+      "sha256": "F909F017D86D25380562A0C1DE4FE16A5C4FB63DF2283F6B67946691292E2476"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-modular-route-826.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-character-modular-route-826.json",
+      "sha256": "33E673D6BA3E17C0E77019B5D1DB2F605B3A03BA449A5FA9DE4B84E7CF04F2F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-cusp-correction-route-811.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-lift-cusp-correction-route-811.json",
+      "sha256": "AB7D1F06D14B0E7745EB2689D18767426C4BF3C1381B3821DC24F97D5DBF8611"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-presentation-route-805.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-lift-presentation-route-805.json",
+      "sha256": "BD8771EFDB17AB3088246FF08A3BFE78E74B0B1332B1151EC3DF5A1716CEDB21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-multiplier-route-841.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-meromorphic-multiplier-route-841.json",
+      "sha256": "41A752725B30F825F643F5E221D9F3CFF5CF9D27909AE28B29AAE563D82D61DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unitary-logarithm-route-831.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-unitary-logarithm-route-831.json",
+      "sha256": "6EF5F90CE95E1465E2C2FE0C8E3465E720F039BD2F5F4FC8A28C52B0903B8537"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_closed_chain_audit_804.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_closed_chain_audit_804.py",
+      "sha256": "8F2373CC5E6F420D82D4D6EE0C4AB4DC60C283B9B1B449CAA8D3D4709BE6C4BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_correction_811.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_cusp_correction_811.py",
+      "sha256": "7EBC883C2FB6C4548606C8220C191BD768D9DB177FBD27EFC691FC4D11CAA8BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_character_818.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_integral_character_818.py",
+      "sha256": "76B3C561D3561B3F9C6B79367311014A2F26435C66818B64BDDA2F5501D757D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_character_correction_823.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_integral_character_correction_823.py",
+      "sha256": "267F5254FED8EAC1756B3DAE1EE49FBA51688B9DD9EC26D7175122CA5CEC634A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_character_free_product_821.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_integral_character_free_product_821.py",
+      "sha256": "F2FB5719521C3CCB84CBFE588B3297D4F0A43795EFCF1A6B7BDB733103B4677B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_character_modular_826.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_integral_character_modular_826.py",
+      "sha256": "D6B23681FC853E19F56DE0F7A22A6BF7107C1B3115B850387F1E053587114DCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_lift_presentation_805.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_integral_lift_presentation_805.py",
+      "sha256": "6968E09CE185AFBEB945DB84CE3421CACD2F7CF6E5BF6FD18EF50ECC35A81290"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_multiplier_841.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_meromorphic_multiplier_841.py",
+      "sha256": "CDF12065EB5F82B2855C5AA9B27FC0575FD3C6D461C287B84918BEF08A4DEBB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_multiplier_consumer_844.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_meromorphic_multiplier_consumer_844.py",
+      "sha256": "00DF68EA13403EB9FB71E71BF7CDA29E931DE0AAF1ED7EAE6F3B34CC935504F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_multiplier_periods_audit_846.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_meromorphic_multiplier_periods_audit_846.py",
+      "sha256": "EF019262642D2DE0F96D5C001CE01AC3ED731818CF0DD3FB53D69ABF92246A52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_unitary_character_periods_audit_840.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_unitary_character_periods_audit_840.py",
+      "sha256": "B890AEEA8B6FE1EA86F8293D8A6082B70B23F0A7FB7034189BF34CE6A5773073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_unitary_logarithm_836.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_unitary_logarithm_836.py",
+      "sha256": "33ACD1F7A16C476BCCA372E3356DDED66FE68095B923C8AA72D4CB975612A964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_unitary_logarithm_foundations_831.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_gamma_one_unitary_logarithm_foundations_831.py",
+      "sha256": "7B835C5B7B4F5A1CC6D7642071A3B323D30FB8658D958048FCE89A35AD034FD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_parabolic_character_lift_audit_830.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_integral_parabolic_character_lift_audit_830.py",
+      "sha256": "1E4664A604ED21A60A75C6F4E4D9426C4325CDCDCA8EB25DCAC3380BC852B9F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_source_cusp_correction_audit_817.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_source_cusp_correction_audit_817.py",
+      "sha256": "737DCC5C4B83CC913BD2E138E6DA63694E398252B6D2ABBA004E6940251B9E8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_source_modular_free_product_audit_810.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/prepare_source_modular_free_product_audit_810.py",
+      "sha256": "341409A7347FCB1D435FDC4DEB09A6CB44A3F53DCCFF0A7377D2963A2AE3439B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_closed_chain_periods_804.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_gamma_one_closed_chain_periods_804.py",
+      "sha256": "BA8191B1A71951F112E1DA98DA3B993F07955113896DCDFA78230C0B8DAD5998"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_cusp_correction_817.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_cusp_correction_817.py",
+      "sha256": "7D9E76A727E8558199F5297C20BB501EBA185FF659084BED2068D13B5315A42D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_meromorphic_multiplier_periods_846.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_gamma_one_meromorphic_multiplier_periods_846.py",
+      "sha256": "D4B5E9B3A26386022A304F85D09A05336D64A1E56B491DE3BFB0C52B1BD14569"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_unitary_character_periods_840.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_gamma_one_unitary_character_periods_840.py",
+      "sha256": "E9AD0EA32D0A32D2ED1CA1DC4FAAF61DB734BC9C7069F578FAC22A6B06FD7C65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_unitary_character_periods_840b.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_gamma_one_unitary_character_periods_840b.py",
+      "sha256": "4F8E7856120439036808925A02D17BF86D26F21715DB356EFA29C7B46C11F2DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_unitary_character_periods_840c.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_gamma_one_unitary_character_periods_840c.py",
+      "sha256": "AA01B5337D66EA4620410FCB89DDD63010B01F37DB7B0EBF13701B7FC10E69E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_integral_parabolic_character_lift_830.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_integral_parabolic_character_lift_830.py",
+      "sha256": "A07A1F4C5484232400DDFB5B898E506CF6715C091622014948ABC257A56118D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_modular_free_product_810.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_modular_free_product_810.py",
+      "sha256": "053C98CBA9CFB66DB0DC120B89A3DEA54116D65BA012B5D43C4376FB5581C5B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_modular_free_product_810b.py",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/record_source_modular_free_product_810b.py",
+      "sha256": "718D6F0E103FFDF497F4150DA2ED9B2F092C74C57534965C0358D87FE027E8B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-cusp-correction-1-audit-config.json",
+      "sha256": "A3A77A70D801097DD8ABAE14BF7E0FC0FD0292719D53EE1A18F953023A0CBF84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-cusp-correction-1-reuse-review-20261027.json",
+      "sha256": "45BD24A40800809A081368FF8DF6F93D95AD0AF3A5D649FC28F4108EBBB11BFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-cusp-correction-1-scratch-receipt.json",
+      "sha256": "E84B9DC7BBB941D303A9AE19BB7E415C7E3C32E483689901BDC7C16E1A16446B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-audit-route-817.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-cusp-correction-audit-route-817.json",
+      "sha256": "6BDBF7D4667B3D456A8055EB2147A8F89B478E06CEE1DE73B38E22ADE5251CFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-closed-chain-periods-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-closed-chain-periods-1-audit-config.json",
+      "sha256": "A9F1A6319FCB13FF27EF6059070C96DBED9AF57666E668C9A7BBD3E4DE6C5BFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-closed-chain-periods-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-closed-chain-periods-1-reuse-review-20261027.json",
+      "sha256": "04DD791B1E2B3A195EF783CAE40290018633B0D906D3DE3504D3C789EC00E7A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-closed-chain-periods-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-closed-chain-periods-1-scratch-receipt.json",
+      "sha256": "E2697646D6D1953384FA5C10AA8743EA73BDED3A4AD1820B660B0651AE1AF67B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-meromorphic-multiplier-periods-1-audit-config.json",
+      "sha256": "763482764F1165E959AB360DD244A4F1E9F83ABAFBD98A06F86828D02D5026C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-meromorphic-multiplier-periods-1-reuse-review-20261027.json",
+      "sha256": "98BF45D7AA807F6A7D573E3381F19AEE6442B2326A4A3C8F5CBE892AC660ADF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-meromorphic-multiplier-periods-1-scratch-receipt.json",
+      "sha256": "F777D01F63B92C278B10B37A3B90F6D1BCA4F6BFE2F3EA17C98F8D757D5D3E0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-audit-route-846.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-meromorphic-multiplier-periods-audit-route-846.json",
+      "sha256": "93872730FA16D60E2808B5186EE41085A0173753AC7155DAFD71C19EE73EE833"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1-audit-config.json",
+      "sha256": "706863DEA8ECDEB22693B78494010621A5B5162A963B0C20427DD9292BFC1055"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1-reuse-review-20261027.json",
+      "sha256": "441A669BC5D5A5F10044ECF178C9446282D842C2357D738E47E681B313EF63AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1-scratch-receipt.json",
+      "sha256": "443F1217CD2F16E8A9EBDBB1BF539333A0C34284D18B52FD0794827BD61155B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1b-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1b-audit-config.json",
+      "sha256": "C2A473DAD35F2514ED28E5D43B86A0B3E1A7B30C6EA1C9F011F39739CFFD05E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1c-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1c-audit-config.json",
+      "sha256": "0BFF6EE9466CF763DEACB39BA6AF791A80B9B65BAAF99A3EF2B6CB70DD52E1AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1c-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1c-reuse-review-20261027.json",
+      "sha256": "441A669BC5D5A5F10044ECF178C9446282D842C2357D738E47E681B313EF63AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1c-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-1c-scratch-receipt.json",
+      "sha256": "3F98EF6171E950E6A807E30137A8C53C883FE222B613C0CE102F487537B00E16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-audit-route-840.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-gamma-one-unitary-character-periods-audit-route-840.json",
+      "sha256": "7AC9994FB69E9E9424494515A92B99782328FF51C7D53CFDD8EA563EFB477445"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-integral-parabolic-character-lift-1-audit-config.json",
+      "sha256": "4304274A47721DEF8EDC69E633090D218EC9DFA78CE86625AE4FB7A67598C91C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-integral-parabolic-character-lift-1-reuse-review-20261027.json",
+      "sha256": "5021AF8C75BA50441C1E79789DC29F1A4746E7C14B6A2005EE42011D607B3088"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-integral-parabolic-character-lift-1-scratch-receipt.json",
+      "sha256": "3D1D02285ABF36559365D7B6C0F49A47E8513F90ED49D004A1A62C0BAE18A40A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-audit-route-830.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-integral-parabolic-character-lift-audit-route-830.json",
+      "sha256": "5226763B874EEB97C4F725BDBCE19BB09CC6034D10341CA9DAF565B737A54FF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-audit-config.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-modular-free-product-1-audit-config.json",
+      "sha256": "0B4101DF7AE0EA084F2146D2BBFC18E7FB5BBA76F3B260B2EFAA54B684C8B1AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-modular-free-product-1-reuse-review-20261027.json",
+      "sha256": "78DCC4F281F2E66C86F3444AC93CE023E549799BF2FE7D3B8F599715A64B4462"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-modular-free-product-1-scratch-receipt.json",
+      "sha256": "289323F43C4D06438774F2B981891A52B95AE22056F49A5F3D6A3F43504C1A39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-audit-route-810.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/source-modular-free-product-audit-route-810.json",
+      "sha256": "3087A1402C23B3DD93E0EFA0017C5E0A13F1BA42C4974610F697F242910A5E19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\unitary-period-registration-review-840b.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/unitary-period-registration-review-840b.json",
+      "sha256": "9F7DF1CA6D6D593ABBCB5339F9DB9FE577A1B059E85008E0ED2C49A236EE655E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\unitary-period-registration-review-840c.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/unitary-period-registration-review-840c.json",
+      "sha256": "12D37365E711A5A3941207822B67AA7D48782B47921FB03D8C11DEE0BC4AA425"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-correction-cyclic-cosets-failed-814a\\SourceCuspCorrectionCyclicCosets.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/cusp-correction-cyclic-cosets-failed-814a/SourceCuspCorrectionCyclicCosets.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-correction-cyclic-cosets-failed-814a\\SourceCuspCorrectionCyclicCosets.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/cusp-correction-cyclic-cosets-failed-814a/SourceCuspCorrectionCyclicCosets.lean.txt",
+      "sha256": "FCE4C4DA2F52D4F5516A38A052FF60201E679AF6B49B609D36873E57EFD8E8C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-correction-cyclic-cosets-failed-814a\\SourceCuspCorrectionCyclicCosets.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/cusp-correction-cyclic-cosets-failed-814a/SourceCuspCorrectionCyclicCosets.log",
+      "sha256": "C2FC78882283F5CC43015A9C6287534DB553792B4470FF05D1547582295497BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799a\\SourceWeightTwoClosedChainPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799a/SourceWeightTwoClosedChainPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799a\\SourceWeightTwoClosedChainPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799a/SourceWeightTwoClosedChainPeriods.lean.txt",
+      "sha256": "9585CCDEB6F34850360C3016DE02312F6DA02DD9071719A448DD5C18D1E8F697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799a\\SourceWeightTwoClosedChainPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799a/SourceWeightTwoClosedChainPeriods.log",
+      "sha256": "CEF3E1970E61A51132237FCFB53714D07D5557D38D6B530CB10493C034CC6311"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799b\\SourceWeightTwoClosedChainPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799b/SourceWeightTwoClosedChainPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799b\\SourceWeightTwoClosedChainPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799b/SourceWeightTwoClosedChainPeriods.lean.txt",
+      "sha256": "081C2BBD06B51155429F91FF0F11982442EE9CBBA9F9F45F81A0FF8614ADF915"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799b\\SourceWeightTwoClosedChainPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799b/SourceWeightTwoClosedChainPeriods.log",
+      "sha256": "2D4EF988ADE5C0382C0B4F92DDC075029E0E96C8E58FE912437C899138982AB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799c\\SourceWeightTwoClosedChainPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799c/SourceWeightTwoClosedChainPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799c\\SourceWeightTwoClosedChainPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799c/SourceWeightTwoClosedChainPeriods.lean.txt",
+      "sha256": "A8BDACA1E83E938F22C25547CC83DF53234BCA1E63EAF2D46DAC9C62D95C22D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-periods-failed-799c\\SourceWeightTwoClosedChainPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-closed-chain-periods-failed-799c/SourceWeightTwoClosedChainPeriods.log",
+      "sha256": "4BB0C17E2A33E99FD18440D8883DCF1AF4BBF4BECA00AB7B9E5129BD0BD0FDE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797a\\failure.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797a/failure.json",
+      "sha256": "F864EDA1CAF4BEAEE24B4AC26C9F5BC5BF1E3665ED51644FA49035EA7C5A254C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797a\\SourceWeightTwoEndpointPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797a/SourceWeightTwoEndpointPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797a\\SourceWeightTwoEndpointPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797a/SourceWeightTwoEndpointPeriods.lean.txt",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797a\\SourceWeightTwoEndpointPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797a/SourceWeightTwoEndpointPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797a\\SourceWeightTwoEndpointPeriods.olean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797a/SourceWeightTwoEndpointPeriods.olean",
+      "sha256": "32B5AC3F03BEF7B0BF7FABF2ABF232FD22E2C03CFCB655A08FB7369F5EEE2551"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797b\\SourceWeightTwoEndpointPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797b/SourceWeightTwoEndpointPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797b\\SourceWeightTwoEndpointPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797b/SourceWeightTwoEndpointPeriods.lean.txt",
+      "sha256": "8A89D02872DB55E47A6324A79161B7086616E7E3F06FEEA4BE651B5B3FBE8558"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797b\\SourceWeightTwoEndpointPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797b/SourceWeightTwoEndpointPeriods.log",
+      "sha256": "5C5E8680D94991E5BB1F24694EB2A9A140FA0076669D3153DF783EF3CF922E42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797c\\SourceWeightTwoEndpointPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797c/SourceWeightTwoEndpointPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797c\\SourceWeightTwoEndpointPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797c/SourceWeightTwoEndpointPeriods.lean.txt",
+      "sha256": "C2A731F998FED56BC7DF8373569C233E21CD2CB8D9AD4D6FEE90AF266DB2E9C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-endpoint-periods-failed-797c\\SourceWeightTwoEndpointPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-endpoint-periods-failed-797c/SourceWeightTwoEndpointPeriods.log",
+      "sha256": "E82962DBAA1B9D886DFA3D83592404C72D002A73EA99D2C118E8AA91BB18D8D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-periods-failed-798a\\SourceWeightTwoIntegralPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-periods-failed-798a/SourceWeightTwoIntegralPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-periods-failed-798a\\SourceWeightTwoIntegralPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-periods-failed-798a/SourceWeightTwoIntegralPeriods.lean.txt",
+      "sha256": "9BFAE451AFB03C248275AB91A968206FA392D41F430526D45A8057246493811F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-periods-failed-798a\\SourceWeightTwoIntegralPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-integral-periods-failed-798a/SourceWeightTwoIntegralPeriods.log",
+      "sha256": "0580E85C0F7E0CFD4B88010BADD3A23F3257755E55EDD518DE13C3B4F37B083C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-796/manifest.json",
+      "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\S_ModularCurve_exists_mem_periodLatticeOf_sum_periodAlongOf_add_petersson_eq_of_multiplier_eq_exp.lean.txt",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-796/S_ModularCurve_exists_mem_periodLatticeOf_sum_periodAlongOf_add_petersson_eq_of_multiplier_eq_exp.lean.txt",
+      "sha256": "08CC77999E9DFCB70F6793864FC0B0C6E9C2D5B9583B9B9101EF7AF9CB5C49AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean.txt",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-796/S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean.txt",
+      "sha256": "AF9F423A8D487EC37F8DC24E08E0095A8DB20A0BCFF753E54A1DDB1BDACFE0A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\manifest.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-802/manifest.json",
+      "sha256": "C28742FC92817909112FB8FC0AE5EE46DC97F19352E7CA34FE19D1E91D0EDED9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean.txt",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-802/S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean.txt",
+      "sha256": "C137566A1EDFDA0C7307CEECE055B49A5E0E633020F198BDB53AE9C51EBDC0A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean.txt",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-period-core-reuse-802/S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean.txt",
+      "sha256": "A67A633238E2BAF294E7C8303A5201C95195BEB7223C7E841FACD3D248263F79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-segment-periods-failed-800a\\SourceWeightTwoSegmentPeriods.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-segment-periods-failed-800a/SourceWeightTwoSegmentPeriods.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-segment-periods-failed-800a\\SourceWeightTwoSegmentPeriods.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-segment-periods-failed-800a/SourceWeightTwoSegmentPeriods.lean.txt",
+      "sha256": "9347924424808D35F971A49FC1AD47F5165C77CB6DBD031F7E6489CC430A5F2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-segment-periods-failed-800a\\SourceWeightTwoSegmentPeriods.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-segment-periods-failed-800a/SourceWeightTwoSegmentPeriods.log",
+      "sha256": "281FD59D9B3F22C3D4BFC26CAA0438AD6D68E793AA26A5E63B751B2EED25ECBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-initial-lift-failed-822a\\SourceIntegralCharacterInitialLift.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-initial-lift-failed-822a/SourceIntegralCharacterInitialLift.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-initial-lift-failed-822a\\SourceIntegralCharacterInitialLift.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-initial-lift-failed-822a/SourceIntegralCharacterInitialLift.lean.txt",
+      "sha256": "CCB8EA9FC46923272D03626DB543F4790BC4C3B985C02C5E3FFE718CE3006B70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-initial-lift-failed-822a\\SourceIntegralCharacterInitialLift.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-initial-lift-failed-822a/SourceIntegralCharacterInitialLift.log",
+      "sha256": "AEC9B77590E3B2A985538964E517024FEBC6055A2C568BB3C848821CA264511B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-shapiro-failed-820a\\SourceIntegralCharacterShapiro.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-shapiro-failed-820a/SourceIntegralCharacterShapiro.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-shapiro-failed-820a\\SourceIntegralCharacterShapiro.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-shapiro-failed-820a/SourceIntegralCharacterShapiro.lean.txt",
+      "sha256": "A9A7C3A738B279DB38637F6A5CCC39E6E692B959233032AA0BE8003F4E55AC0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-character-shapiro-failed-820a\\SourceIntegralCharacterShapiro.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-character-shapiro-failed-820a/SourceIntegralCharacterShapiro.log",
+      "sha256": "F730FEA20AAEE2392EFFBFD85BEBC9C3B88AA05E9383BB2AAF723745CBA346E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-parabolic-character-lift-failed-828a\\SourceIntegralParabolicCharacterLift.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-parabolic-character-lift-failed-828a/SourceIntegralParabolicCharacterLift.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-parabolic-character-lift-failed-828a\\SourceIntegralParabolicCharacterLift.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-parabolic-character-lift-failed-828a/SourceIntegralParabolicCharacterLift.lean.txt",
+      "sha256": "526C8B92715377488E76F09C3E8768D1378172DB2B6A461E95EE34E44C55A215"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-parabolic-character-lift-failed-828a\\SourceIntegralParabolicCharacterLift.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/integral-parabolic-character-lift-failed-828a/SourceIntegralParabolicCharacterLift.log",
+      "sha256": "E760CCC68036B16A9C5DD08B8889E2F2B0A81954B5C599AAF4D30CBD9E1CC68E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\failure.json",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/failure.json",
+      "sha256": "23001A3C3F33A4A3D7F6E6FF4088785C7F83368C3DB1B8526080BCA754D84530"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularFreeProductAudit1.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularFreeProductAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularFreeProductAudit1.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularFreeProductAudit1.lean.txt",
+      "sha256": "09C47E2707D7C1DECF0972F2507B243BB53540454DB03D212AC03A08AA4E24BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularFreeProductAudit1.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularFreeProductAudit1.log",
+      "sha256": "E25F12A93604F2EA9649749048937D578952E8693510AB89DECA11833E8E7CF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularIrrationalAction.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularIrrationalAction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularIrrationalAction.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularIrrationalAction.lean.txt",
+      "sha256": "F155AC20015F14237F58B93F0FD8080E0B8F72359D87534BEB8E7D2A6DE14F6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-free-product-lint-failed-810a\\SourceModularIrrationalAction.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/modular-free-product-lint-failed-810a/SourceModularIrrationalAction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\unitary-character-finite-order-failed-831a\\SourceUnitaryCharacterFiniteOrder.exit",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/unitary-character-finite-order-failed-831a/SourceUnitaryCharacterFiniteOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\unitary-character-finite-order-failed-831a\\SourceUnitaryCharacterFiniteOrder.lean",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/unitary-character-finite-order-failed-831a/SourceUnitaryCharacterFiniteOrder.lean.txt",
+      "sha256": "7ABF65CD600F2630B1517CF612F36AFC91604655AE6A497F28C2AE3A047CCBC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\unitary-character-finite-order-failed-831a\\SourceUnitaryCharacterFiniteOrder.log",
+      "path": "Tools/gamma-one-multiplier-periods-20261027-847/unitary-character-finite-order-failed-831a/SourceUnitaryCharacterFiniteOrder.log",
+      "sha256": "0E5C7A594AC459A5F16A193FF91314BE4C042DB8DE906C3E16D001D8930499CF"
+    }
+  ]
+}

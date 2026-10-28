@@ -1,0 +1,156 @@
+import SourceSmoothLocalModelRegularization
+import SourceSmoothLocalModelProducts
+import SourceModularSmoothProjectiveRepresentatives
+import SourceSmoothModularGeometry
+import SourceSmoothProjectiveOrbitSum
+import SourceSmoothDivisorOrbitData
+import SourceSmoothModularLogDerivative
+import SourceSmoothDivisorProduct
+import SourceSmoothDivisorLocalProduct
+import SourceSmoothDivisorLocalOrders
+import SourceSmoothDivisorInvarianceCusps
+import SourceSmoothDivisorLogDerivative
+import SourceSmoothInvariantComparison
+import SourceGammaOneSmoothDivisorComparison
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceSmoothLocalModel.regularize_eq_of_tendsto
+#print axioms Dubon2026.SourceSmoothLocalModel.regularize_eq_zero
+#print axioms Dubon2026.SourceSmoothLocalModel.not_tendsto_of_neg
+#print axioms Dubon2026.SourceSmoothLocalModel.regularize_eventuallyEq
+#print axioms Dubon2026.SourceSmoothLocalModel.eventually_continuousAt
+#print axioms Dubon2026.SourceSmoothLocalModel.contDiffAt_zpow
+#print axioms Dubon2026.SourceSmoothLocalModel.model_mul
+#print axioms Dubon2026.SourceSmoothLocalModel.model_prod
+#print axioms Dubon2026.SourceSmoothLocalModel.model_comp
+#print axioms Dubon2026.SourceSmoothProjective.projectionEquiv_symm_projection
+#print axioms Dubon2026.SourceSmoothProjective.projection_representative
+#print axioms Dubon2026.SourceSmoothProjective.representative_injective
+#print axioms Dubon2026.SourceSmoothProjective.representative_smul
+#print axioms Dubon2026.SourceSmoothProjective.two_mul_card_projective_fibre
+#print axioms Dubon2026.SourceSmoothDivisor.coe_ofComplex
+#print axioms Dubon2026.SourceSmoothDivisor.ofComplex_coe
+#print axioms Dubon2026.SourceSmoothDivisor.sm_coe
+#print axioms Dubon2026.SourceSmoothDivisor.im_sm_pos
+#print axioms Dubon2026.SourceSmoothDivisor.det_coe'
+#print axioms Dubon2026.SourceSmoothDivisor.det_pos
+#print axioms Dubon2026.SourceSmoothDivisor.dsm_coe
+#print axioms Dubon2026.SourceSmoothDivisor.dsm_ne_zero
+#print axioms Dubon2026.SourceSmoothDivisor.hasDerivAt_sm
+#print axioms Dubon2026.SourceSmoothDivisor.analyticAt_sm
+#print axioms Dubon2026.SourceSmoothDivisor.hasFDerivAt_sm
+#print axioms Dubon2026.SourceSmoothDivisor.continuousAt_sm
+#print axioms Dubon2026.SourceSmoothDivisor.sm_mul
+#print axioms Dubon2026.SourceSmoothDivisor.sm_one
+#print axioms Dubon2026.SourceSmoothDivisor.sm_inv_sm
+#print axioms Dubon2026.SourceSmoothDivisor.sm_inj
+#print axioms Dubon2026.SourceSmoothDivisor.im_le_of_sm_mem
+#print axioms Dubon2026.SourceSmoothDivisor.finite_moving'
+#print axioms Dubon2026.SourceSmoothDivisor.finsum_projection
+#print axioms Dubon2026.SourceSmoothDivisor.sm_representative_projection
+#print axioms Dubon2026.SourceSmoothDivisor.dsm_representative_projection
+#print axioms Dubon2026.SourceSmoothDivisor.exists_basePoint
+#print axioms Dubon2026.SourceSmoothDivisor.card_fibre_eq_card_stabilizer
+#print axioms Dubon2026.SourceSmoothDivisor.card_fibre_eq_zero
+#print axioms Dubon2026.SourceSmoothDivisor.dbarL_comp_smul
+#print axioms Dubon2026.SourceSmoothDivisor.dbar_comp_sm
+#print axioms Dubon2026.SourceSmoothDivisor.dbar_zpow_div
+#print axioms Dubon2026.SourceSmoothDivisor.dbar_mul_div
+#print axioms Dubon2026.SourceSmoothDivisor.dbar_prod_div
+#print axioms Dubon2026.SourceSmoothDivisor.dbar_congr
+#print axioms Dubon2026.SourceSmoothDivisor.Data.s_ne_b
+#print axioms Dubon2026.SourceSmoothDivisor.Data.dip_s
+#print axioms Dubon2026.SourceSmoothDivisor.Data.dip_b
+#print axioms Dubon2026.SourceSmoothDivisor.Data.sK
+#print axioms Dubon2026.SourceSmoothDivisor.Data.bK
+#print axioms Dubon2026.SourceSmoothDivisor.Data.heights
+#print axioms Dubon2026.SourceSmoothDivisor.Data.fac_sm
+#print axioms Dubon2026.SourceSmoothDivisor.Data.Vraw_sm
+#print axioms Dubon2026.SourceSmoothDivisor.Data.closedBall_subset
+#print axioms Dubon2026.SourceSmoothDivisor.Data.locfin
+#print axioms Dubon2026.SourceSmoothDivisor.Data.finprod_fac_eq
+#print axioms Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_prod
+#print axioms Dubon2026.SourceSmoothDivisor.Data.fac_model
+#print axioms Dubon2026.SourceSmoothDivisor.Data.local_structure
+#print axioms Dubon2026.SourceSmoothDivisor.Data.sm_eq_coe_iff
+#print axioms Dubon2026.SourceSmoothDivisor.Data.card_filter_eq
+#print axioms Dubon2026.SourceSmoothDivisor.Data.degree_eq
+#print axioms Dubon2026.SourceSmoothDivisor.Data.V_model
+#print axioms Dubon2026.SourceSmoothDivisor.Data.tendsto_sm_nhdsNE
+#print axioms Dubon2026.SourceSmoothDivisor.Data.tendsto_of_tendsto_sm
+#print axioms Dubon2026.SourceSmoothDivisor.Data.V_sm
+#print axioms Dubon2026.SourceSmoothDivisor.Data.exists_height
+#print axioms Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_one_of_high
+#print axioms Dubon2026.SourceSmoothDivisor.Data.V_cusp
+#print axioms Dubon2026.SourceSmoothDivisor.Data.dip_ne_zero
+#print axioms Dubon2026.SourceSmoothDivisor.Data.bad_countable
+#print axioms Dubon2026.SourceSmoothDivisor.Data.generic
+#print axioms Dubon2026.SourceSmoothDivisor.Data.fac_logDeriv
+#print axioms Dubon2026.SourceSmoothDivisor.Data.logDeriv_eq
+#print axioms Dubon2026.SourceSmoothDivisor.Data.ae_logDeriv
+#print axioms Dubon2026.SourceSmoothDivisor.exists_invariant_comparison
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_smul_signed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison
+#print axioms Dubon2026.SourceSmoothLocalModel.regularize
+#print axioms Dubon2026.SourceSmoothProjective.projectionEquiv
+#print axioms Dubon2026.SourceSmoothProjective.representative
+#print axioms Dubon2026.SourceSmoothProjective.orbitFiberEquiv
+#print axioms Dubon2026.SourceSmoothDivisor.sm
+#print axioms Dubon2026.SourceSmoothDivisor.dsm
+#print axioms Dubon2026.SourceSmoothDivisor.finiteStabilizer
+#print axioms Dubon2026.SourceSmoothDivisor.Data.ex
+#print axioms Dubon2026.SourceSmoothDivisor.Data.fac
+#print axioms Dubon2026.SourceSmoothDivisor.Data.Vraw
+#print axioms Dubon2026.SourceSmoothDivisor.Data.V
+#print axioms Dubon2026.SourceSmoothDivisor.Data.bad
+#print axioms Dubon2026.SourceSmoothDivisor.Data
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceSmoothLocalModelRegularization, `SourceSmoothLocalModelProducts, `SourceModularSmoothProjectiveRepresentatives, `SourceSmoothModularGeometry, `SourceSmoothProjectiveOrbitSum, `SourceSmoothDivisorOrbitData, `SourceSmoothModularLogDerivative, `SourceSmoothDivisorProduct, `SourceSmoothDivisorLocalProduct, `SourceSmoothDivisorLocalOrders, `SourceSmoothDivisorInvarianceCusps, `SourceSmoothDivisorLogDerivative, `SourceSmoothInvariantComparison, `SourceGammaOneSmoothDivisorComparison]
+  let theorems : Array Name := #[`Dubon2026.SourceSmoothLocalModel.regularize_eq_of_tendsto, `Dubon2026.SourceSmoothLocalModel.regularize_eq_zero, `Dubon2026.SourceSmoothLocalModel.not_tendsto_of_neg, `Dubon2026.SourceSmoothLocalModel.regularize_eventuallyEq, `Dubon2026.SourceSmoothLocalModel.eventually_continuousAt, `Dubon2026.SourceSmoothLocalModel.contDiffAt_zpow, `Dubon2026.SourceSmoothLocalModel.model_mul, `Dubon2026.SourceSmoothLocalModel.model_prod, `Dubon2026.SourceSmoothLocalModel.model_comp, `Dubon2026.SourceSmoothProjective.projectionEquiv_symm_projection, `Dubon2026.SourceSmoothProjective.projection_representative, `Dubon2026.SourceSmoothProjective.representative_injective, `Dubon2026.SourceSmoothProjective.representative_smul, `Dubon2026.SourceSmoothProjective.two_mul_card_projective_fibre, `Dubon2026.SourceSmoothDivisor.coe_ofComplex, `Dubon2026.SourceSmoothDivisor.ofComplex_coe, `Dubon2026.SourceSmoothDivisor.sm_coe, `Dubon2026.SourceSmoothDivisor.im_sm_pos, `Dubon2026.SourceSmoothDivisor.det_coe', `Dubon2026.SourceSmoothDivisor.det_pos, `Dubon2026.SourceSmoothDivisor.dsm_coe, `Dubon2026.SourceSmoothDivisor.dsm_ne_zero, `Dubon2026.SourceSmoothDivisor.hasDerivAt_sm, `Dubon2026.SourceSmoothDivisor.analyticAt_sm, `Dubon2026.SourceSmoothDivisor.hasFDerivAt_sm, `Dubon2026.SourceSmoothDivisor.continuousAt_sm, `Dubon2026.SourceSmoothDivisor.sm_mul, `Dubon2026.SourceSmoothDivisor.sm_one, `Dubon2026.SourceSmoothDivisor.sm_inv_sm, `Dubon2026.SourceSmoothDivisor.sm_inj, `Dubon2026.SourceSmoothDivisor.im_le_of_sm_mem, `Dubon2026.SourceSmoothDivisor.finite_moving', `Dubon2026.SourceSmoothDivisor.finsum_projection, `Dubon2026.SourceSmoothDivisor.sm_representative_projection, `Dubon2026.SourceSmoothDivisor.dsm_representative_projection, `Dubon2026.SourceSmoothDivisor.exists_basePoint, `Dubon2026.SourceSmoothDivisor.card_fibre_eq_card_stabilizer, `Dubon2026.SourceSmoothDivisor.card_fibre_eq_zero, `Dubon2026.SourceSmoothDivisor.dbarL_comp_smul, `Dubon2026.SourceSmoothDivisor.dbar_comp_sm, `Dubon2026.SourceSmoothDivisor.dbar_zpow_div, `Dubon2026.SourceSmoothDivisor.dbar_mul_div, `Dubon2026.SourceSmoothDivisor.dbar_prod_div, `Dubon2026.SourceSmoothDivisor.dbar_congr, `Dubon2026.SourceSmoothDivisor.Data.s_ne_b, `Dubon2026.SourceSmoothDivisor.Data.dip_s, `Dubon2026.SourceSmoothDivisor.Data.dip_b, `Dubon2026.SourceSmoothDivisor.Data.sK, `Dubon2026.SourceSmoothDivisor.Data.bK, `Dubon2026.SourceSmoothDivisor.Data.heights, `Dubon2026.SourceSmoothDivisor.Data.fac_sm, `Dubon2026.SourceSmoothDivisor.Data.Vraw_sm, `Dubon2026.SourceSmoothDivisor.Data.closedBall_subset, `Dubon2026.SourceSmoothDivisor.Data.locfin, `Dubon2026.SourceSmoothDivisor.Data.finprod_fac_eq, `Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_prod, `Dubon2026.SourceSmoothDivisor.Data.fac_model, `Dubon2026.SourceSmoothDivisor.Data.local_structure, `Dubon2026.SourceSmoothDivisor.Data.sm_eq_coe_iff, `Dubon2026.SourceSmoothDivisor.Data.card_filter_eq, `Dubon2026.SourceSmoothDivisor.Data.degree_eq, `Dubon2026.SourceSmoothDivisor.Data.V_model, `Dubon2026.SourceSmoothDivisor.Data.tendsto_sm_nhdsNE, `Dubon2026.SourceSmoothDivisor.Data.tendsto_of_tendsto_sm, `Dubon2026.SourceSmoothDivisor.Data.V_sm, `Dubon2026.SourceSmoothDivisor.Data.exists_height, `Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_one_of_high, `Dubon2026.SourceSmoothDivisor.Data.V_cusp, `Dubon2026.SourceSmoothDivisor.Data.dip_ne_zero, `Dubon2026.SourceSmoothDivisor.Data.bad_countable, `Dubon2026.SourceSmoothDivisor.Data.generic, `Dubon2026.SourceSmoothDivisor.Data.fac_logDeriv, `Dubon2026.SourceSmoothDivisor.Data.logDeriv_eq, `Dubon2026.SourceSmoothDivisor.Data.ae_logDeriv, `Dubon2026.SourceSmoothDivisor.exists_invariant_comparison, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_smul_signed, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison, `Dubon2026.SourceSmoothDivisor.finiteStabilizer]
+  let constructions : Array Name := #[`Dubon2026.SourceSmoothLocalModel.regularize, `Dubon2026.SourceSmoothProjective.projectionEquiv, `Dubon2026.SourceSmoothProjective.representative, `Dubon2026.SourceSmoothProjective.orbitFiberEquiv, `Dubon2026.SourceSmoothDivisor.sm, `Dubon2026.SourceSmoothDivisor.dsm, `Dubon2026.SourceSmoothDivisor.Data.ex, `Dubon2026.SourceSmoothDivisor.Data.fac, `Dubon2026.SourceSmoothDivisor.Data.Vraw, `Dubon2026.SourceSmoothDivisor.Data.V, `Dubon2026.SourceSmoothDivisor.Data.bad, `Dubon2026.SourceSmoothDivisor.Data]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Smooth Divisor postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Smooth Divisor theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE SMOOTH DIVISOR AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceSmoothLocalModelRegularization
+#lint in SourceSmoothLocalModelProducts
+#lint in SourceModularSmoothProjectiveRepresentatives
+#lint in SourceSmoothModularGeometry
+#lint in SourceSmoothProjectiveOrbitSum
+#lint in SourceSmoothDivisorOrbitData
+#lint in SourceSmoothModularLogDerivative
+#lint in SourceSmoothDivisorProduct
+#lint in SourceSmoothDivisorLocalProduct
+#lint in SourceSmoothDivisorLocalOrders
+#lint in SourceSmoothDivisorInvarianceCusps
+#lint in SourceSmoothDivisorLogDerivative
+#lint in SourceSmoothInvariantComparison
+#lint in SourceGammaOneSmoothDivisorComparison

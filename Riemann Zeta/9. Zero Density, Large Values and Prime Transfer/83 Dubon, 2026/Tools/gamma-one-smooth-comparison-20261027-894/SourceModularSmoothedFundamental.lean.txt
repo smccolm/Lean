@@ -1,0 +1,111 @@
+import SourceModularSmoothedFundamentalSupport
+import SourceModularSmoothCosetSum
+
+/-! Adapted from anthropics/fermats-last-theorem (Apache-2.0), frozen primary
+Def_ModularCurve_SmoothedFundamental and
+S_ModularCurve_contDiff_and_finsum_smoothedFundamental_eq_one;
+exact hashes are recorded in modular-smooth-partition-route-875.json.
+DUB-17/18 -> actual Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> winding-period limit -> compact smooth modular
+partition. The native group/coset equivalence preserves the exact chosen
+coset representatives; no separate bijection or orbit-sum assumption is
+introduced. The integral normalization remains a separate obligation. -/
+namespace Dubon2026.SourceSmoothedFundamental
+noncomputable section
+open UpperHalfPlane hiding I coe_smul
+open Filter Complex MulAction Set
+open scoped MatrixGroups Topology ContDiff Pointwise
+local notation "𝕌" => UpperHalfPlane.upperHalfPlaneSet
+
+section Sums
+
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] (T : ℝ)
+
+theorem finsum_smul_eq (τ : ℍ) :
+    ∑ᶠ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+      ∑ᶠ δ : SL(2, ℤ), puCut T (mob δ τ) := by
+  have h1 : ∀ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+      ∑ q : SL(2, ℤ) ⧸ Γ, puCut T (mob (Quotient.out q * (γ : SL(2, ℤ))) τ) := by
+    intro γ
+    rw [smoothedFundamental_eq_sum]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    rw [coe_smul, mob_mob]
+  simp_rw [h1]
+  exact finsum_sum_coset Γ (fun δ => puCut T (mob δ τ)) (hasFiniteSupport_puCut_mob T τ)
+
+/-- Upper-half-plane carrier of the actual smoothed fundamental family. -/
+def carrierH : Set ℍ := ((↑) : ℍ → ℂ) ⁻¹' carrier Γ T
+
+theorem isCompact_carrierH : IsCompact (carrierH Γ T) :=
+  isCompact_coe_preimage (isCompact_carrier Γ T) (carrier_subset Γ T)
+
+theorem finite_support_smul (τ : ℍ) :
+    (Function.support fun γ : Γ =>
+      smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ)).Finite := by
+  have hfin := finite_moving {τ} (carrierH Γ T) isCompact_singleton (isCompact_carrierH Γ T)
+  refine (hfin.preimage Subtype.val_injective.injOn).subset ?_
+  intro γ hγ
+  refine ⟨(γ : SL(2, ℤ)) • τ, ⟨τ, rfl, rfl⟩, ?_⟩
+  exact mem_carrier_of_ne_zero Γ T hγ
+
+theorem finsum_smul_le_one (τ : ℍ) :
+    ∑ᶠ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) ≤ 1 := by
+  rw [finsum_smul_eq]
+  refine le_trans ?_ (finsum_pu_mob_le_one T τ)
+  have hf := hasFiniteSupport_puCut_mob T τ
+  have hg := hasFiniteSupport_pu_mob T τ
+  rw [finsum_eq_sum_of_support_subset _
+      (show Function.support (fun γ : SL(2, ℤ) => puCut T (mob γ τ)) ⊆
+        ↑(hf.toFinset ∪ hg.toFinset) by
+        intro γ hγ; simp only [Finset.coe_union, Set.Finite.coe_toFinset]; exact Or.inl hγ),
+    finsum_eq_sum_of_support_subset _
+      (show Function.support (fun γ : SL(2, ℤ) => pu T (mob γ τ)) ⊆
+        ↑(hf.toFinset ∪ hg.toFinset) by
+        intro γ hγ; simp only [Finset.coe_union, Set.Finite.coe_toFinset]; exact Or.inr hγ)]
+  exact Finset.sum_le_sum fun γ _ => puCut_le_pu T _
+
+theorem finsum_smul_eq_one {τ : ℍ} (hτ : max τ.im τ.im⁻¹ ≤ T) :
+    ∑ᶠ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = 1 := by
+  rw [finsum_smul_eq]
+  have h1 : τ.im ≤ T + 3 := by linarith [le_max_left τ.im τ.im⁻¹]
+  have h2 : τ.im⁻¹ ≤ T + 3 := by linarith [le_max_right τ.im τ.im⁻¹]
+  rw [← finsum_pu_mob τ (half_le_cover τ h1 h2)]
+  refine finsum_congr fun δ => puCut_eq_pu_of_im_le ?_
+  rw [← coe_smul, UpperHalfPlane.coe_im]
+  exact (im_smul_le_max δ τ).trans hτ
+
+theorem exists_finset_disjoint :
+    ∃ G : Finset SL(2, ℤ), ∀ δ : SL(2, ℤ), δ ∉ G → ∀ τ : ℍ,
+      smoothedFundamental Γ T τ ≠ 0 →
+        smoothedFundamental Γ T ((δ • τ : ℍ) : ℂ) = 0 := by
+  have hfin := finite_moving (carrierH Γ T) (carrierH Γ T) (isCompact_carrierH Γ T)
+    (isCompact_carrierH Γ T)
+  refine ⟨hfin.toFinset, fun δ hδ τ hτ => ?_⟩
+  by_contra h
+  refine hδ (hfin.mem_toFinset.2 ⟨δ • τ, ⟨τ, ?_, rfl⟩, ?_⟩)
+  · exact mem_carrier_of_ne_zero Γ T hτ
+  · exact mem_carrier_of_ne_zero Γ T h
+
+end Sums
+
+theorem smooth_partition
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] (T : ℝ) :
+    (∀ n : ℕ∞, ContDiff ℝ n (smoothedFundamental Γ T)) ∧
+    HasCompactSupport (smoothedFundamental Γ T) ∧
+    tsupport (smoothedFundamental Γ T) ⊆ {z : ℂ | 0 < z.im} ∧
+    (∀ z : ℂ, 0 ≤ smoothedFundamental Γ T z) ∧
+    (∀ τ : ℍ, (Function.support fun γ : Γ =>
+        smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ)).Finite) ∧
+    (∀ τ : ℍ,
+      ∑ᶠ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) ≤ 1) ∧
+    (∀ τ : ℍ, max τ.im τ.im⁻¹ ≤ T →
+      ∑ᶠ γ : Γ, smoothedFundamental Γ T (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = 1) ∧
+    (∃ G : Finset SL(2, ℤ), ∀ δ : SL(2, ℤ), δ ∉ G → ∀ τ : ℍ,
+      smoothedFundamental Γ T τ ≠ 0 →
+        smoothedFundamental Γ T ((δ • τ : ℍ) : ℂ) = 0) :=
+  ⟨contDiff Γ T, hasCompactSupport Γ T, tsupport_subset Γ T,
+    smoothedFundamental_nonneg Γ T, finite_support_smul Γ T,
+    finsum_smul_le_one Γ T, fun _ hτ => finsum_smul_eq_one Γ T hτ, exists_finset_disjoint Γ T⟩
+
+end
+end Dubon2026.SourceSmoothedFundamental

@@ -1,0 +1,37 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic association -> original Gamma1 finite Hecke characters -> Picard/H1 comparison -> Abel-Jacobi -> reciprocity -> closed integral chain periods.",
+  "assumptionsToDischarge": "A finite integer chain in the upper half-plane whose boundary vanishes on the actual subgroup orbit quotient has its actual cusp-form period in the integer span of original modular periods. Primitive derivative and equivariance will be derived from the existing normalized Eichler primitive. No closed-chain period premise.",
+  "shorterRoute": "Reuse the existing scalar period linear map and primitive derivative/transformation, local primitive uniqueness and native Finsupp identities. Define the dual endpoint functional using the literal primitive; verify orientation against original cusp-integral values. Adapt the pinned closed-chain proof, avoiding a new polygon or smooth fundamental set for this algebraic step.",
+  "deferred": "Integral parabolic-character lifting and analytic reciprocity remain necessary independent inputs. External unitary lifting uses integral torsion-freeness; real period surjectivity is insufficient. Existing Gamma0 integral H1 Hecke characters do not lift original Gamma1 parabolic ZMod characters. Existing original Weil-cover reciprocity is not applied to a ramified Gamma1/Gamma0 cover without a valid bridge. No external import closure is claimed checked.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean",
+      "sha256": "5628D0F3EA57748E9108482A68BE4C9057E3B750C305C2D1A51896540C624A6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoAnalyticPrimitive.lean",
+      "sha256": "4126D904242F9DAA0F37A71B8B8FDC51D8D8BCA5DB439EBFE45D55A08AEA75F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexPrimitiveGluing.lean",
+      "sha256": "E2F9079ACFF451019F15165420075289F91152A2A584356513DD2A00BE059DF1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrimitiveTrace.lean",
+      "sha256": "F40CDFDB13A9C2471B6097D689C45DA7902B4731201E20FE12A496BF7F76E126"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspPeriodLattice.lean",
+      "sha256": "CAFF30C8B98A5507ED01D639B3FD027BAE81FB3BBD40A03A6168F2E4A870A218"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\manifest.json",
+      "sha256": "99A5E3EC5E17231AF9D80AA26102DF9C3E3F328DD572BF5C8DF379515375509D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+      "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+    }
+  ],
+  "remaining": "16/20; DUB-17--20 OPEN. No change to source contract or assumptions for full completion."
+}

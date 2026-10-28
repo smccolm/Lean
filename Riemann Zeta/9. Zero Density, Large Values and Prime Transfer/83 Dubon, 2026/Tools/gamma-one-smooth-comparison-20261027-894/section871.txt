@@ -1,0 +1,20 @@
+### Actual full sl2 brackets and original quadratic operator commutation — 8 October 2026
+
+Fourteen further production modules derive the original geodesic conjugation laws and their actual mixed Hilbert derivative brackets. Exact Gaussian coordinates show that every smooth orbit derivative is determined by its original matrix-entry tangent. Genuine conjugated matrix curves then give the remaining upper/lower commutator, so the actual smooth-space endomorphisms satisfy [A,U]=U, [A,F]=-F and [U,F]=2A. The original compact operator is exactly U-F on every genuine smooth vector. Consequently the original displayed second-order endomorphism equals minus A squared plus A minus U F, and it commutes with all three original infinitesimal generators on the entire actual smooth subspace. Its previously proved original generator eigenvalue remains k/2 times (1-k/2). These are identities for the original norm derivatives of the original adelic representation, with no assumed Lie brackets or replacement operators. Identification with the source's central universal-enveloping-algebra element and regular-algebraic representation, irreducibility and higher symmetric continuations remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [MixedCoordinateDerivatives](Extension/Dubon2026/MixedCoordinateDerivatives.lean).
+- [MixedExponentialScaling](Extension/Dubon2026/MixedExponentialScaling.lean).
+- [RealInfinitesimalGroupRelations](Extension/Dubon2026/RealInfinitesimalGroupRelations.lean).
+- [RealSmoothSemidirectBracket](Extension/Dubon2026/RealSmoothSemidirectBracket.lean).
+- [AdelicSmoothGeodesicBrackets](Extension/Dubon2026/AdelicSmoothGeodesicBrackets.lean).
+- [RealGaussSmoothCoordinates](Extension/Dubon2026/RealGaussSmoothCoordinates.lean).
+- [RealSmoothOrbitDifferential](Extension/Dubon2026/RealSmoothOrbitDifferential.lean).
+- [RealInfinitesimalEntryTangents](Extension/Dubon2026/RealInfinitesimalEntryTangents.lean).
+- [RealSmoothInfinitesimalTangents](Extension/Dubon2026/RealSmoothInfinitesimalTangents.lean).
+- [RealConjugatedCurveTangents](Extension/Dubon2026/RealConjugatedCurveTangents.lean).
+- [RealSmoothSl2Brackets](Extension/Dubon2026/RealSmoothSl2Brackets.lean).
+- [Sl2CasimirAlgebra](Extension/Dubon2026/Sl2CasimirAlgebra.lean).
+- [AdelicSmoothSl2Brackets](Extension/Dubon2026/AdelicSmoothSl2Brackets.lean).
+- [AdelicSmoothCasimirCommutation](Extension/Dubon2026/AdelicSmoothCasimirCommutation.lean).
+
+Exact consumers: `actual_adelic_smooth_sl2_source`, `actual_adelic_smooth_compact_source` and `actual_adelic_smooth_casimir_commutation_source`.

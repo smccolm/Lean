@@ -1,0 +1,36 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier logarithm -> original integral parabolic-character lifting -> initial integral lift of a character vanishing on conjugates of finite factors.",
+  "assumptionsToDischarge": "Construct a permutation-valued crossed cocycle from an actual subgroup character; trivial stabilizer evaluations give factorwise potentials. Lift their values through the surjective integer-to-ZMod homomorphism and use the free-product universal property to obtain an actual integer character. This removes the initial character-lift assumption before the already compiled cusp correction is applied.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean.txt",
+      "sha256": "AF9F423A8D487EC37F8DC24E08E0095A8DB20A0BCFF753E54A1DDB1BDACFE0A2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CosetTransitionCoordinates.lean",
+      "sha256": "27D2C48957402E998ACA50F5E0C4492E927EE22141C1D56EEC338B1901514EC9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCosetReconstruction.lean",
+      "sha256": "6488D76975D3793BAA6A3F98FE099A1EF2A6FDE0065AA991A3D35C3734A05DA1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedShapiroCochains.lean",
+      "sha256": "8424991FBE5257727CBB004236F473B3455213ED34BA2FF995CA71D4D5EB41CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedShapiroCoordinateValues.lean",
+      "sha256": "930758F5336A7EC2404FD1BA35787BCCC00326D0888C52FEF1A8C3C6D9A30F09"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceShapiroH1CocycleComparison.lean",
+      "sha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-scratch-receipt.json",
+      "sha256": "289323F43C4D06438774F2B981891A52B95AE22056F49A5F3D6A3F43504C1A39"
+    }
+  ],
+  "shorterRoute": "The repository already proves literal cosetTransition multiplication, coinduced reconstruction and Shapiro. Use the existing cosetTransition directly in the new scalar Shapiro cocycle, rather than rebuilding coset representative membership and coordinate multiplication from the primary file. Reuse native group/semidirect/free-product APIs. The required coefficient groups are actual integers and ZMod, so the scalar cocycle interface is sufficient; no new resolution or continuous-cohomology machinery is needed.",
+  "remaining": "This work does not by itself prove parabolic vanishing, torsion-free parabolic abelianization, unitary logarithms, analytic reciprocity or arithmetic association. The required correction and exact original Gamma1 consumer will be assembled before those assumptions are claimed discharged. 16/20; DUB-17--20 OPEN."
+}

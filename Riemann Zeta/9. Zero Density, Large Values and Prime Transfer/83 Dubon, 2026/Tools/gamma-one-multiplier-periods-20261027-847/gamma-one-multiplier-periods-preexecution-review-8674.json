@@ -1,0 +1,56 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 42,
+  "queries": 273,
+  "theorems": 207,
+  "constructions": 66,
+  "exhaustiveScratchChecks": 352,
+  "proofValueChecks": 350,
+  "scopes": 6,
+  "receipts": {
+    "source-gamma-one-closed-chain-periods-1-scratch-receipt.json": "E2697646D6D1953384FA5C10AA8743EA73BDED3A4AD1820B660B0651AE1AF67B",
+    "source-modular-free-product-1-scratch-receipt.json": "289323F43C4D06438774F2B981891A52B95AE22056F49A5F3D6A3F43504C1A39",
+    "source-cusp-correction-1-scratch-receipt.json": "E84B9DC7BBB941D303A9AE19BB7E415C7E3C32E483689901BDC7C16E1A16446B",
+    "source-integral-parabolic-character-lift-1-scratch-receipt.json": "3D1D02285ABF36559365D7B6C0F49A47E8513F90ED49D004A1A62C0BAE18A40A",
+    "source-gamma-one-unitary-character-periods-1c-scratch-receipt.json": "3F98EF6171E950E6A807E30137A8C53C883FE222B613C0CE102F487537B00E16",
+    "source-gamma-one-meromorphic-multiplier-periods-1-scratch-receipt.json": "F777D01F63B92C278B10B37A3B90F6D1BCA4F6BFE2F3EA17C98F8D757D5D3E0D"
+  },
+  "expectedConsumers": 25193,
+  "expectedConstructions": 2570,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_multiplier_periods_8674.py",
+      "sha256": "475EB12FA92E417D36874DEF40E9D6A7BC92A7ABAB62E43CA0141F6C7FF2D482"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_multiplier_periods_production_ownership_8674.py",
+      "sha256": "6AE3892169D18D372CB0D281F464058E458FF643F1ED49E27EC5C0F1CA957B50"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_multiplier_periods_global_ownership_8674.py",
+      "sha256": "8921A9913779722DE77F24F2B20ED8FBC5FA7DA9ABFED447234FFB7851AFBAE3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_multiplier_periods_ownership_8674.py",
+      "sha256": "CEE59D0AE00D10BDBCA87E593D219842E9F45DDCD6EC2055280D81A260FBF392"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_multiplier_periods_8674.py",
+      "sha256": "ADD3D23F53AD22447E690A453B66C70EB50711BD0954264E401797465952FA0C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_multiplier_periods_8674.ps1",
+      "sha256": "02C0105DCA9426460C75EEFD9CFCB4735367A0F66E8B1F7ED44630123AB3AC28"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_multiplier_periods_8674.ps1",
+      "sha256": "DD29F592A5B8ED5247304B4C0C0E4730BD1F3D0DDF1B1EEFF750A8E78B6FAB8B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_multiplier_periods_canonical_8674.py",
+      "sha256": "F9E614CBEACAAE1B3A68CA8CD3A9BDD88367845F6A32157837BD44E895F7B677"
+    }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,15 @@
+{
+  "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_integral_dbar_mul_cuspForm_gammaFundamentalSet_eq_sidePairing.lean.txt",
+  "sourceSha256": "02103607D92552FC48693647448111A2A320E555325697178DBF9EBFA28CB789",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "read": "Entire 830-line primary solution read, including cusp bounds, Green tiles, side pairing, unfolding and final formula.",
+  "reuse": [
+    "Native CuspForm.translate and exp_decay_atImInfty, native Cauchy estimate",
+    "Existing actual sm/dsm, continuity and differential composition from smooth divisor scopes",
+    "Existing native tilePull eliminates another slashC and duplicate cocycle proofs",
+    "Existing closed/open modular-domain equality, finite volume and a.e. disjoint tiling replace external domain definitions"
+  ],
+  "bounds": "SourceCuspDerivativeDecay and SourceModularDerivativeCuspBounds inspected; their boundedness/vanishing conclusions do not provide the exponential bound on every positive-height strip needed here.",
+  "serves": "DUB17/18 -> all-weight arithmetic -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> reciprocity -> winding integral boundary formula. This scope discharges translated cusp decay; no arithmetic association, reciprocity, or original meromorphic realization is assumed proved."
+}

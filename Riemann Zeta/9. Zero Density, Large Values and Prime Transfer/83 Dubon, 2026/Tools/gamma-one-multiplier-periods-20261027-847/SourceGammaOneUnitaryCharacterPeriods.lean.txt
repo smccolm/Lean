@@ -1,0 +1,30 @@
+import SourceUnitaryCharacterLogarithm
+import Dubon2026.SourceGammaOneRealPeriodSurjectivity
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier correction. The proved integer lift and torsion elimination
+supply a real logarithm; the proved actual Gamma1 real-period surjectivity
+realizes it by a weight-two cusp form. Triviality on elliptic/parabolic
+elements remains an explicit upstream multiplier property. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+theorem sourceGamma1_unitary_character_eq_exp_real_period (N : ℕ) [NeZero N]
+    (χ : Gamma1 N → ℂ)
+    (hmul : ∀ γ δ, χ (γ * δ) = χ γ * χ δ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (htriv : ∀ γ : Gamma1 N, γ.val.val.trace ^ 2 ≤ 4 → χ γ = 1) :
+    ∃ f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      ∀ γ : Gamma1 N, χ γ =
+        Complex.exp (2 * Real.pi * Complex.I *
+          ((sourceWeightTwoPeriodValue (Gamma1 N) f γ).re : ℂ)) := by
+  obtain ⟨φ, hφ0, hφ⟩ :=
+    SourceUnitaryCharacterLift.exists_real_logarithm (Gamma1 N) χ hmul hunit htriv
+  obtain ⟨f, hf⟩ := sourceGamma1_exists_cuspForm_of_real_parabolic_character N φ
+    (fun γ hγ => hφ0 γ hγ.le)
+  exact ⟨f, fun γ => by rw [hf γ]; exact hφ γ⟩
+
+end
+end Dubon2026

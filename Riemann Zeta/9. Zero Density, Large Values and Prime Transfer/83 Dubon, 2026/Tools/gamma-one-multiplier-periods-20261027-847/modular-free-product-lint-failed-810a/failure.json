@@ -1,0 +1,29 @@
+{
+  "status": "The exhaustive axiom check passed for 76 theorems, but two scoped instances lacked documentation. Audit1 failed and remains immutable. Only docstrings are added to the instances; no statement, proof or audit criterion changes.",
+  "files": [
+    {
+      "path": "SourceModularFreeProductAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "path": "SourceModularFreeProductAudit1.lean",
+      "sha256": "09C47E2707D7C1DECF0972F2507B243BB53540454DB03D212AC03A08AA4E24BD"
+    },
+    {
+      "path": "SourceModularFreeProductAudit1.log",
+      "sha256": "E25F12A93604F2EA9649749048937D578952E8693510AB89DECA11833E8E7CF7"
+    },
+    {
+      "path": "SourceModularIrrationalAction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "SourceModularIrrationalAction.lean",
+      "sha256": "F155AC20015F14237F58B93F0FD8080E0B8F72359D87534BEB8E7D2A6DE14F6C"
+    },
+    {
+      "path": "SourceModularIrrationalAction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

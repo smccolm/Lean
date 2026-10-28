@@ -1,0 +1,19 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "smooth invariant comparison V",
+    "compact dipole"
+  ],
+  "primary": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_UpperHalfPlane_exists_localModel_pair_integral_mul_dbarLogDeriv_eq.lean.txt",
+    "sha256": "6C1947A59CFD3A77F3A3355BA6EDEB21601E31508A653D33CD3F8BC6C9A670E8",
+    "read": "Entire primary read before adaptation."
+  },
+  "reuse": "Existing DbarFundamental.D and D_eq_zero_of_notMem_tsupport reused. Existing audited Wedge.integral_wedge_residue_identity proves exact pairing; native convex_halfSpace_im_gt discharges segment containment. Native smooth Urysohn cutoff supplies compact support. The unused source segment helpers are omitted.",
+  "scope": "Construct actual smooth dipole with orders +1 at s and -1 at b and exact integral pi*(E(s)-E(b)); these are the factors of the required invariant comparison function.",
+  "remaining": "Orbit product, removable regularization, exact stabilizer multiplicity and degree-zero cancellation for V; quotient, winding-period comparison, reciprocity, principal-divisor converse and full all-weight chain remain. 16/20; DUB-17--20 OPEN."
+}

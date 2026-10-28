@@ -1,0 +1,111 @@
+import SourceUpperHalfPlaneResidueData
+import SourceMeromorphicFinitePolarProduct
+import SourceUpperHalfPlaneDiscExhaustion
+import SourceMeromorphicDiscPrimitive
+import SourceUpperHalfPlaneMeromorphicPrimitive
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.int_eq_zero_of_div_eventuallyEq_analytic
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.analyticAt
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_eq_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_imp_eq_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.finite_support_inter
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_ne_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_eq_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_zprod
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_polarPart
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_zprod
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_zprod
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_range_diff_of_countable
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_ball_diff_of_countable
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad_pos
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_im
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_re
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht_sub_rad
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_closedBall
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_ball
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.dist_ctr_succ
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono_succ
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_mem_ball
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.mem_poles
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho'_of_eq_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_rho'
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.differentiableOn_rho'
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_primitive_rho'
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Phi
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_exp_Phi
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_apply
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicAt_Fpre
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_Fpre
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_eq_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_Fpre
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_ne_zero
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Fpre
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_base
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base_mem
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.m_base
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_eq
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_agree
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eq
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eventuallyEq
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_spec
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.polarPart
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.poles
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho'
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Phi
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn
+#print axioms Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G
+
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceUpperHalfPlaneResidueData, `SourceMeromorphicFinitePolarProduct, `SourceUpperHalfPlaneDiscExhaustion, `SourceMeromorphicDiscPrimitive, `SourceUpperHalfPlaneMeromorphicPrimitive]
+  let theorems : Array Name := #[`Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.int_eq_zero_of_div_eventuallyEq_analytic, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.analyticAt, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.eventually_imp_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp.finite_support_inter, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_ne_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_polarPart, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_range_diff_of_countable, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.isPreconnected_ball_diff_of_countable, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad_pos, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_im, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr_re, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht_sub_rad, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_closedBall, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.im_pos_of_mem_ball, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.dist_ctr_succ, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono_succ, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ball_mono, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_mem_ball, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.mem_poles, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho'_of_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.differentiableOn_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_primitive_rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_exp_Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_apply, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.meromorphicOrderAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_eq_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.analyticAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre_ne_zero, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.hasDerivAt_Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base_mem, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.m_base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_eq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn_agree, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_eventuallyEq, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G_spec, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative]
+  let constructions : Array Name := #[`Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ResidueHyp, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.zprod, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.polarPart, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.cht, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.ctr, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rad, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.poles, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.rho', `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Phi, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fpre, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.base, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.Fn, `Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive.G]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Meromorphic Logarithmic Primitive postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Meromorphic Logarithmic Primitive theorems discovered"
+  logInfo m!"SOURCE MEROMORPHIC LOGARITHMIC PRIMITIVE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+#lint in SourceUpperHalfPlaneResidueData
+#lint in SourceMeromorphicFinitePolarProduct
+#lint in SourceUpperHalfPlaneDiscExhaustion
+#lint in SourceMeromorphicDiscPrimitive
+#lint in SourceUpperHalfPlaneMeromorphicPrimitive

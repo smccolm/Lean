@@ -1,0 +1,45 @@
+import Dubon2026.SourceCuspCorrectionEdgeCharacters
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier lifting -> integral parabolic-character lifting -> actual cusp
+value correction. Adapted from anthropics/fermats-last-theorem, Apache-2.0,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.
+The native finite edge-chain construction supplies the named dependency.
+No external compatibility shim or linter suppression is imported. -/
+namespace Dubon2026.SourceCuspCorrection
+noncomputable section
+open Subgroup Monoid Monoid.CoprodI MulAction
+theorem engine (H : Subgroup Gp) [H.FiniteIndex] (R : Type*) [AddCommGroup R]
+    (a : Cu H → R) (ha : ∑ᶠ c, a c = 0) :
+    ∃ φ : Additive H →+ R, ∀ g : Gp, φ (Additive.ofMul (genAt H g)) = a (cusp H (g : X H)) := by
+  classical
+  haveI : Fintype (Cu H) := Fintype.ofFinite _
+  rw [finsum_eq_sum_of_fintype] at ha
+  have c₀ : Cu H := cusp H ((1 : Gp) : X H)
+
+  have hreal : ∀ c : Cu H, ∃ φ : Additive H →+ ℤ,
+      ∀ g : Gp, φ (Additive.ofMul (genAt H g))
+        = (Pi.single c 1 - Pi.single c₀ 1 : Cu H → ℤ) (cusp H (g : X H)) :=
+    fun c => exists_addChar_of_mem_span H (single_sub_single_mem_span_cuspDiffAt H c₀ c)
+  choose φ hφ using hreal
+  refine ⟨∑ c, (zmultiplesHom R (a c)).comp (φ c), fun g => ?_⟩
+  rw [AddMonoidHom.finsetSum_apply]
+  have hterm : ∀ c, ((zmultiplesHom R (a c)).comp (φ c)) (Additive.ofMul (genAt H g))
+      = (if cusp H (g : X H) = c then a c else 0)
+        - (if cusp H (g : X H) = c₀ then a c else 0) := by
+    intro c
+    rw [AddMonoidHom.comp_apply, hφ, zmultiplesHom_apply, Pi.sub_apply, Pi.single_apply,
+      Pi.single_apply, sub_smul, ite_smul, ite_smul, one_smul, zero_smul]
+  rw [Finset.sum_congr rfl fun c _ => hterm c, Finset.sum_sub_distrib, Finset.sum_ite_eq,
+    if_pos (Finset.mem_univ _)]
+  by_cases h : cusp H (g : X H) = c₀
+  · have h2 : (∑ c, if cusp H (g : X H) = c₀ then a c else 0) = ∑ c, a c :=
+      Finset.sum_congr rfl fun c _ => if_pos h
+    rw [h2, ha, sub_zero]
+  · have h2 : (∑ c, if cusp H (g : X H) = c₀ then a c else 0) = 0 :=
+      Finset.sum_eq_zero fun c _ => if_neg h
+    rw [h2, sub_zero]
+
+end
+end Dubon2026.SourceCuspCorrection

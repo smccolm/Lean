@@ -1,0 +1,41 @@
+
+/-- The actual rotation subgroup exhausts the original compact stabilizer. -/
+theorem actual_adelic_compact_stabilizer_source (g : realCompactSubgroup) :
+    ∃ t : ℝ, g.val = realRotationCurve t := realCompactSubgroup_eq_rotation g
+
+/-- Every literal raising derivative has the exact original rotation character. -/
+theorem actual_adelic_raising_rotation_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (t : ℝ) :
+    adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realRotationCurve t))
+      (adelicRaisingJet f n).val =
+        Complex.exp ((t : ℂ) * (Complex.I * ((k : ℂ) + 2 * n))) • (adelicRaisingJet f n).val :=
+  adelicRaisingJet_rotation f hf n t
+
+/-- In the genuine original real cyclic Hilbert space, K-finiteness is exactly finite original raising expansion. -/
+theorem actual_real_kfinite_identification_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f) :
+    FiniteDimensional ℂ (adelicCompactOrbitSpan f v) ↔
+      v ∈ Submodule.span ℂ (Set.range (fun n : ℕ => (adelicRaisingJet f n).val)) :=
+  adelicRealCyclic_KFinite_iff f hf hk v hv
+
+/-- Every original real K-finite Hilbert vector is genuinely smooth, without an added smoothness premise. -/
+theorem actual_real_kfinite_smooth_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v)] : v ∈ adelicRealSmoothSubmodule f :=
+  adelicRealKFinite_mem_smooth f hf hk v hv
+
+/-- The entire actual GL₂ center has the same original scalar on every real K-finite cusp vector and every vector of the genuine algebraic determinant twist. -/
+theorem actual_real_kfinite_full_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (m : ℕ) (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v.val ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v.val)]
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v ∧
+      homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicRealKFinite_algebraic_character f hf m hk z v hv p
+

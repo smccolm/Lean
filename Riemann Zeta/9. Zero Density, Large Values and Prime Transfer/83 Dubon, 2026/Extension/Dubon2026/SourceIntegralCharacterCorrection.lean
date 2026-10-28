@@ -1,0 +1,79 @@
+import Dubon2026.SourceIntegralCharacterCuspSum
+import Dubon2026.SourceCuspCorrectionRealization
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms -> integral parabolic-character lifting. The native
+transfer formula proves zero total cusp value; the audited actual edge-chain
+correction then removes all parabolic values without changing reduction
+modulo n. Adapted from the Apache-2.0 integral-lift primary in scope 796,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2.
+The original modular-group transport remains a separate obligation. -/
+namespace Dubon2026.SourceIntegralCharacterLift
+noncomputable section
+open Subgroup
+section Cusp
+
+/-- The actual cyclic factors of the modular free-product presentation. -/
+abbrev M23 : Fin 2 → Type := SourceModularFreeProduct.G23
+
+/-- The actual modular free product. -/
+abbrev G23 : Type := Monoid.CoprodI M23
+
+/-- The actual parabolic generator used by the audited cusp correction. -/
+abbrev tP : G23 := SourceCuspCorrection.τ
+
+theorem isOfFinOrder_of_M23 {i : Fin 2} (x : M23 i) : IsOfFinOrder (Monoid.CoprodI.of (M := M23) x) :=
+  (Monoid.CoprodI.of).isOfFinOrder (isOfFinOrder_of_finite x)
+
+variable (H : Subgroup G23) [H.FiniteIndex]
+
+theorem exists_sub_smul_apply_conj_zpow_eq_zero (χ : Additive H →+ ℤ) (n : ℕ)
+    (hdvd : ∀ (g : G23) (k : ℤ) (h : g * tP ^ k * g⁻¹ ∈ H), (n : ℤ) ∣ χ (Additive.ofMul ⟨_, h⟩)) :
+    ∃ φ' : Additive H →+ ℤ, ∀ (g : G23) (k : ℤ) (h : g * tP ^ k * g⁻¹ ∈ H),
+      (χ - (n : ℤ) • φ') (Additive.ofMul ⟨_, h⟩) = 0 := by
+  classical
+  haveI : Fintype (G23 ⧸ H) := Subgroup.fintypeQuotientOfFiniteIndex
+  let Q := Quotient (MulAction.orbitRel (Subgroup.zpowers tP) (G23 ⧸ H))
+  let p : Q → G23 := fun q => q.out.out⁻¹ * tP ^ Function.minimalPeriod (tP • ·) q.out * q.out.out
+  have hp : ∀ q, p q ∈ H := fun q => QuotientGroup.out_conj_pow_minimalPeriod_mem H tP q.out
+  let a : Q → ℤ := fun q => χ (Additive.ofMul ⟨p q, hp q⟩) / n
+  have hdvd' : ∀ q, (n : ℤ) ∣ χ (Additive.ofMul ⟨p q, hp q⟩) := by
+    intro q
+    have hmem : q.out.out⁻¹ * tP ^ ((Function.minimalPeriod (tP • ·) q.out : ℕ) : ℤ) * q.out.out⁻¹⁻¹ ∈ H := by
+      rw [zpow_natCast, inv_inv]; exact hp q
+    have := hdvd (q.out.out⁻¹) (Function.minimalPeriod (tP • ·) q.out : ℕ) hmem
+    rwa [char_congr χ hmem (hp q) (by rw [zpow_natCast, inv_inv])] at this
+  have ha1 : ∀ q, (n : ℤ) * a q = χ (Additive.ofMul ⟨p q, hp q⟩) := fun q => Int.mul_ediv_cancel' (hdvd' q)
+  have hsum : ∑ q : Q, χ (Additive.ofMul ⟨p q, hp q⟩) = 0 :=
+    sum_char_cuspGen_eq_zero H (isOfFinOrder_of_M23 _) (isOfFinOrder_of_M23 _) χ
+  have ha0 : ∑ᶠ q, a q = 0 := by
+    rw [finsum_eq_sum_of_fintype]
+    rcases eq_or_ne n 0 with rfl | hn
+    · simp [a]
+    · have h1 : (n : ℤ) * ∑ q, a q = 0 := by
+        rw [Finset.mul_sum]
+        simp_rw [ha1]
+        exact hsum
+      exact (mul_eq_zero.mp h1).resolve_left (by exact_mod_cast hn)
+  obtain ⟨φ', hφ'⟩ :=
+    SourceCuspCorrection.engine H ℤ a ha0
+  refine ⟨φ', ?_⟩
+  have hgen : ∀ q : Q, (χ - (n : ℤ) • φ') (Additive.ofMul ⟨p q, hp q⟩) = 0 := by
+    intro q
+    have hp' : q.out.out⁻¹ * tP ^ Function.minimalPeriod (tP • ·) ((q.out.out : G23) : G23 ⧸ H) * q.out.out
+        ∈ H := by
+      rw [QuotientGroup.out_eq']; exact hp q
+    have h1 := hφ' q.out.out
+    change φ' (Additive.ofMul ⟨_, hp'⟩) = a (Quotient.mk (MulAction.orbitRel (Subgroup.zpowers tP) (G23 ⧸ H)) (q.out.out : G23 ⧸ H)) at h1
+    have h2 : Quotient.mk (MulAction.orbitRel (Subgroup.zpowers tP) (G23 ⧸ H)) (q.out.out : G23 ⧸ H) = q := by
+      rw [QuotientGroup.out_eq', Quotient.out_eq]
+    rw [h2, char_congr φ' hp' (hp q) (by rw [QuotientGroup.out_eq'])] at h1
+    rw [AddMonoidHom.sub_apply, AddMonoidHom.zsmul_apply, smul_eq_mul]
+    change χ (Additive.ofMul ⟨p q, hp q⟩) - (n : ℤ) * φ' (Additive.ofMul ⟨p q, hp q⟩) = 0
+    rw [h1, ha1, sub_self]
+  exact char_conj_zpow_eq_zero H tP _ hgen
+
+end Cusp
+
+end
+end Dubon2026.SourceIntegralCharacterLift

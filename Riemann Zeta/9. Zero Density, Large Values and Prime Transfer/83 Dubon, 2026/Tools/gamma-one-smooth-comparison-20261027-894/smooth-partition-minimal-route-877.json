@@ -1,0 +1,8 @@
+{
+  "deferred": [
+    "mob_one_apply",
+    "isClosed_box"
+  ],
+  "reason": "Not used after the native Mobius identity replaced the explicit calculation and unused topological-support helpers were removed. Original successful text is preserved.",
+  "localReuse": "CongruenceTraceDomain.isFundamentalDomain_integralSubgroup already supplies the generic projective subgroup domain; no duplicate domain construction will be introduced."
+}

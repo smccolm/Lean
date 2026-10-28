@@ -1,0 +1,2335 @@
+{
+  "date": "27 October 2026",
+  "modules": [
+    "Dubon2026.SourceWeightTwoEndpointPeriods",
+    "Dubon2026.SourceWeightTwoIntegralPeriods",
+    "Dubon2026.SourceWeightTwoClosedChainPeriods",
+    "Dubon2026.SourceWeightTwoSegmentPeriods",
+    "Dubon2026.SourceGammaOneClosedChainIntegral",
+    "Dubon2026.SourceModularIrrationalAction",
+    "Dubon2026.SourceModularPingPongSets",
+    "Dubon2026.SourceModularFreeProductInjection",
+    "Dubon2026.SourceModularProjectiveKernel",
+    "Dubon2026.SourceModularFreeProduct",
+    "Dubon2026.SourceCuspCorrectionEdgeChains",
+    "Dubon2026.SourceCuspCorrectionCosetChains",
+    "Dubon2026.SourceCuspCorrectionGenerators",
+    "Dubon2026.SourceCuspCorrectionCyclicCosets",
+    "Dubon2026.SourceCuspCorrectionEdgeCharacters",
+    "Dubon2026.SourceCuspCorrectionRealization",
+    "Dubon2026.SourceIntegralCharacterCrossed",
+    "Dubon2026.SourceIntegralCharacterPotential",
+    "Dubon2026.SourceIntegralCharacterShapiro",
+    "Dubon2026.SourceIntegralCharacterFreeProduct",
+    "Dubon2026.SourceIntegralCharacterInitialLift",
+    "Dubon2026.SourceIntegralCharacterCuspConjugacy",
+    "Dubon2026.SourceIntegralCharacterCuspSum",
+    "Dubon2026.SourceIntegralCharacterCorrection",
+    "Dubon2026.SourceIntegralCharacterModularFacts",
+    "Dubon2026.SourceIntegralCharacterModularBridge",
+    "Dubon2026.SourceIntegralParabolicCharacterLift",
+    "Dubon2026.SourceGammaOneIntegralParabolicLift",
+    "Dubon2026.SourceUnitaryCharacterFiniteOrder",
+    "Dubon2026.SourceUnitaryCharacterRecurrence",
+    "Dubon2026.SourceUnitaryCharacterTraceBound",
+    "Dubon2026.SourceUnitaryCharacterAbelianQuotient",
+    "Dubon2026.SourceUnitaryCharacterBasisExt",
+    "Dubon2026.SourceUnitaryCharacterTorsion",
+    "Dubon2026.SourceUnitaryCircleCharacter",
+    "Dubon2026.SourceUnitaryCharacterLogarithm",
+    "Dubon2026.SourceGammaOneUnitaryCharacterPeriods",
+    "Dubon2026.SourceModularEllipticFixedPoint",
+    "Dubon2026.SourceMeromorphicMultiplierParabolic",
+    "Dubon2026.SourceMeromorphicMultiplierGerm",
+    "Dubon2026.SourceGammaOneMeromorphicMultiplierElliptic",
+    "Dubon2026.SourceGammaOneMeromorphicMultiplierPeriods"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse.",
+  "discharged": "Actual closed integer chains in the original Gamma1 orbit quotient have periods in the actual integral period lattice, with literal segment integrals. Every finite-index modular subgroup has an integral parabolic lift of each ZMod n parabolic character vanishing on finite-order elements, for every natural n including zero. The actual projective modular group is identified with C2*C3; native scalar Shapiro and transfer arguments and actual cusp-character correction construct the lift. This eliminates the torsion factors of the actual parabolic abelianization and yields a real additive logarithm of each unitary character trivial on elliptic/parabolic elements. For an ACTUAL meromorphic function with original Gamma1 divisor orders and nonzero translated cusp limits, multiplicativity and elliptic/parabolic triviality are derived, and its specific unitary multiplier is realized by actual weight-two cusp-form real periods. The signed stabilizer ramification normalization retains every nonzero level. No closed-chain period theorem, modular presentation, integral lift, cusp correction, logarithm, torsion-free quotient, multiplier character law/triviality or cusp-form-realization premise remains in these consumers.",
+  "boundary": "Analytic reciprocity and construction of meromorphic functions from the original Abel-Jacobi period condition remain. The meromorphic-multiplier consumer assumes the actual meromorphic function, its original divisor orders, unit-modulus multiplier and nonzero translated cusp limits; it does not construct that function. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,674-module scope: all thirteen retained regressions, 54,791 exhaustive theorem checks, 25,193 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoAlong_apply",
+    "Dubon2026.sourceWeightTwoAlong_smul",
+    "Dubon2026.sourceWeightTwoAlong_eq_sub",
+    "Dubon2026.sourceWeightTwoDualPeriod_apply",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.sourceWeightTwoAlong_smul_sub",
+    "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+    "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+    "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+    "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+    "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+    "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+    "Dubon2026.sourceWeightTwoAlong",
+    "Dubon2026.sourceWeightTwoDualPeriod",
+    "Dubon2026.sourceWeightTwoIntegralLattice",
+    "Dubon2026.sourceWeightTwoOrbitPeriod",
+    "Dubon2026.sourceWeightTwoOrbitBoundary",
+    "Dubon2026.SourceModularFreeProduct.det_entries",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.ext",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg",
+    "Dubon2026.SourceModularFreeProduct.det_entries_real",
+    "Dubon2026.SourceModularFreeProduct.mul_entry",
+    "Dubon2026.SourceModularFreeProduct.den_ne_zero",
+    "Dubon2026.SourceModularFreeProduct.irrational_moebius",
+    "Dubon2026.SourceModularFreeProduct.moebius_mul",
+    "Dubon2026.SourceModularFreeProduct.moebius_one",
+    "Dubon2026.SourceModularFreeProduct.smul_coe",
+    "Dubon2026.SourceModularFreeProduct.pos_nonempty",
+    "Dubon2026.SourceModularFreeProduct.neg_nonempty",
+    "Dubon2026.SourceModularFreeProduct.disjoint_pos_neg",
+    "Dubon2026.SourceModularFreeProduct.S_smul_coe",
+    "Dubon2026.SourceModularFreeProduct.ST_smul_coe",
+    "Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe",
+    "Dubon2026.SourceModularFreeProduct.neg_one_smul_eq",
+    "Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos",
+    "Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg",
+    "Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg",
+    "Dubon2026.SourceModularFreeProduct.toPerm_apply",
+    "Dubon2026.SourceModularFreeProduct.toPerm_neg_one",
+    "Dubon2026.SourceModularFreeProduct.permS_sq",
+    "Dubon2026.SourceModularFreeProduct.permU_pow_three",
+    "Dubon2026.SourceModularFreeProduct.gen_zero",
+    "Dubon2026.SourceModularFreeProduct.gen_one",
+    "Dubon2026.SourceModularFreeProduct.gen_pow_eq_one",
+    "Dubon2026.SourceModularFreeProduct.incl_ofAdd_one",
+    "Dubon2026.SourceModularFreeProduct.incl_zero_eq",
+    "Dubon2026.SourceModularFreeProduct.incl_one_eq",
+    "Dubon2026.SourceModularFreeProduct.pingPongSet_zero",
+    "Dubon2026.SourceModularFreeProduct.pingPongSet_one",
+    "Dubon2026.SourceModularFreeProduct.pingPong",
+    "Dubon2026.SourceModularFreeProduct.three_le_card_factor_one",
+    "Dubon2026.SourceModularFreeProduct.lift_injective",
+    "Dubon2026.SourceModularFreeProduct.range_lift_eq",
+    "Dubon2026.SourceModularFreeProduct.irrational_sqrt_three",
+    "Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation",
+    "Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation",
+    "Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one",
+    "Dubon2026.SourceModularFreeProduct.mem_center_iff_eq",
+    "Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center",
+    "Dubon2026.SourceModularFreeProduct.equivRange_apply_coe",
+    "Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq",
+    "Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero",
+    "Dubon2026.SourceModularFreeProduct.mulEquiv_of_one",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo",
+    "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo",
+    "Dubon2026.SourceModularFreeProduct.moebius",
+    "Dubon2026.SourceModularFreeProduct.Pos",
+    "Dubon2026.SourceModularFreeProduct.Neg",
+    "Dubon2026.SourceModularFreeProduct.toPerm",
+    "Dubon2026.SourceModularFreeProduct.permS",
+    "Dubon2026.SourceModularFreeProduct.permU",
+    "Dubon2026.SourceModularFreeProduct.G23",
+    "Dubon2026.SourceModularFreeProduct.gen",
+    "Dubon2026.SourceModularFreeProduct.incl",
+    "Dubon2026.SourceModularFreeProduct.pingPongSet",
+    "Dubon2026.SourceModularFreeProduct.equivRange",
+    "Dubon2026.SourceModularFreeProduct.mulEquiv",
+    "Dubon2026.SourceCuspCorrection.engine",
+    "Dubon2026.sourceGamma1_integral_parabolic_character_lift",
+    "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period",
+    "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T14:52:04.287133+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceWeightTwoEndpointPeriods",
+        "SourceWeightTwoIntegralPeriods",
+        "SourceWeightTwoClosedChainPeriods",
+        "SourceWeightTwoSegmentPeriods",
+        "SourceGammaOneClosedChainIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointPeriods.lean",
+          "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+          "oleanSha256": "96B0A130F6115C1A7D5CE5203CFBE28633E092B76B55120EB08552FA39977F42"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoIntegralPeriods.lean",
+          "sha256": "1A6058ECF4F2E0C559D1D843B78D3A98F80747DD32C890B2F9F48ED61E2ACE35",
+          "oleanSha256": "31FAF02AA4DFED336A89735DB50342EC7FF7556BEDF94D1EA728DDF35C90838B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoClosedChainPeriods.lean",
+          "sha256": "F262AE4391F010FC1122B97BD31614DA8A502B682323FC007BB0E8407F58E9C2",
+          "oleanSha256": "D31BB5EB69B892900F7D735B22E3732489939F4B7E0D27758F4DB34C21427C8C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSegmentPeriods.lean",
+          "sha256": "85F9369A102875F39DA5EFB99606E109406630F4630BAA59CDF66B8CB8D8DB87",
+          "oleanSha256": "6EBAF488C802C2B32D058BFC6AF9EE8E37654EFBFFB902BA9CA5480109D6499A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainIntegral.lean",
+          "sha256": "1F2BCB032ADF23F72D944E30E5EA37126A387302BC538819D780927B169B57C6",
+          "oleanSha256": "9E8306DE2C7B9BA049CA0D22C2E0B61456A37A36BB86C71EE715BDAF92DECC52"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+        "Dubon2026.sourceWeightTwoAlong_apply",
+        "Dubon2026.sourceWeightTwoAlong_smul",
+        "Dubon2026.sourceWeightTwoAlong_eq_sub",
+        "Dubon2026.sourceWeightTwoDualPeriod_apply",
+        "Dubon2026.sourceWeightTwoDualPeriod_mem",
+        "Dubon2026.sourceWeightTwoAlong_smul_sub",
+        "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+        "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+        "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+        "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+        "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+        "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+        "Dubon2026.sourceWeightTwoAlong",
+        "Dubon2026.sourceWeightTwoDualPeriod",
+        "Dubon2026.sourceWeightTwoIntegralLattice",
+        "Dubon2026.sourceWeightTwoOrbitPeriod",
+        "Dubon2026.sourceWeightTwoOrbitBoundary"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+        "Dubon2026.sourceWeightTwoAlong_apply",
+        "Dubon2026.sourceWeightTwoAlong_smul",
+        "Dubon2026.sourceWeightTwoAlong_eq_sub",
+        "Dubon2026.sourceWeightTwoDualPeriod_apply",
+        "Dubon2026.sourceWeightTwoDualPeriod_mem",
+        "Dubon2026.sourceWeightTwoAlong_smul_sub",
+        "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+        "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+        "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+        "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+        "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+        "Dubon2026.sourceGamma1_closed_chain_integrals_mem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceWeightTwoAlong",
+        "Dubon2026.sourceWeightTwoDualPeriod",
+        "Dubon2026.sourceWeightTwoIntegralLattice",
+        "Dubon2026.sourceWeightTwoOrbitPeriod",
+        "Dubon2026.sourceWeightTwoOrbitBoundary"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsAudit1.log",
+      "logSha256": "8527295DC38A2C72100AED48F830230AD705182900C99CA9A7C88A4099A40D94",
+      "auditSha256": "76E1A361903D3F5B87E3D94682F57E0624E9C8AD23540C829E14578EAB8D95BB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1.log",
+      "dependencyAuditSha256": "FE66B3EC03E8E28765125750A3117BA1F69C4D5D987D583A4541815C07ADC90C",
+      "dependencyAuditSourceSha256": "D103182DB88DDB298FF7DEA885704E9713EC575F939BEE3140F31AC51D17B016",
+      "consumers": [
+        "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+        "Dubon2026.sourceWeightTwoAlong_apply",
+        "Dubon2026.sourceWeightTwoAlong_smul",
+        "Dubon2026.sourceWeightTwoAlong_eq_sub",
+        "Dubon2026.sourceWeightTwoDualPeriod_apply",
+        "Dubon2026.sourceWeightTwoDualPeriod_mem",
+        "Dubon2026.sourceWeightTwoAlong_smul_sub",
+        "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+        "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+        "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+        "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+        "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+        "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+        "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+        "Dubon2026.sourceWeightTwoAlong",
+        "Dubon2026.sourceWeightTwoDualPeriod",
+        "Dubon2026.sourceWeightTwoIntegralLattice",
+        "Dubon2026.sourceWeightTwoOrbitPeriod",
+        "Dubon2026.sourceWeightTwoOrbitBoundary"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic association -> original Gamma1 finite Hecke characters -> Picard/H1 comparison -> Abel-Jacobi -> reciprocity -> closed integral chain periods.",
+      "discharged": "For every nonzero level, an actual finite integer chain with zero orbit boundary has its literal straight-segment integrals of original Gamma1 weight-two cusp forms represented by an element of the integer span of the original scalar modular periods. Derive primitive linearity, exact subgroup shifts, orbit-quotient descent and the segment FTC normalization; no period-lattice inclusion or analytic normalization is assumed. The zero-boundary condition remains the source condition, not an assumed conclusion.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Promote and run assembled verification. Integral parabolic-character lifting, analytic reciprocity and meromorphic construction from Abel-Jacobi periods, Picard/Hecke/diamond/H1, all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-closed-chain-periods-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "04DD791B1E2B3A195EF783CAE40290018633B0D906D3DE3504D3C789EC00E7A8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T15:10:42.962103+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularIrrationalAction",
+        "SourceModularPingPongSets",
+        "SourceModularFreeProductInjection",
+        "SourceModularProjectiveKernel",
+        "SourceModularFreeProduct"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularIrrationalAction.lean",
+          "sha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0",
+          "oleanSha256": "D20A0085491D93FCEEED8F81864A3CD5CBCF7D4D9426A19F96E2B35BC2E6D958"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularPingPongSets.lean",
+          "sha256": "45DCEB6EE127B34586D280AC4337CB3FE4EEC9203A7C78A5193F931783CF4480",
+          "oleanSha256": "6DC22EA1E139159BBB017D48B1274830868EB4CFB121FEED81B1239493DA113D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductInjection.lean",
+          "sha256": "5F991521A533B110D6AC66147996C612C80C7770858753C122923C38C2B60C0C",
+          "oleanSha256": "E36555DC6BDDBA2C4787996988E9FCBF98FD234FD25EF1C765AF331186171F92"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveKernel.lean",
+          "sha256": "CACC848948FDDAACDF291D3779BCEF08701B3CB61E12678F430DBA949546494B",
+          "oleanSha256": "58B7C7A7DCD6731B58005AEA1CE8E9099C170E7091141AE989F409CFB22B1D2B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProduct.lean",
+          "sha256": "7CF1312FC2F4A55E96560004B5853085D4517C33E705F1F61FA52E9CE057BA66",
+          "oleanSha256": "A80C7EAD4F02DA267C5561D3F385472CBE430DFB6A295542B7A987942C8B1D11"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceModularFreeProduct.det_entries",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.ext",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg",
+        "Dubon2026.SourceModularFreeProduct.det_entries_real",
+        "Dubon2026.SourceModularFreeProduct.mul_entry",
+        "Dubon2026.SourceModularFreeProduct.den_ne_zero",
+        "Dubon2026.SourceModularFreeProduct.irrational_moebius",
+        "Dubon2026.SourceModularFreeProduct.moebius_mul",
+        "Dubon2026.SourceModularFreeProduct.moebius_one",
+        "Dubon2026.SourceModularFreeProduct.smul_coe",
+        "Dubon2026.SourceModularFreeProduct.pos_nonempty",
+        "Dubon2026.SourceModularFreeProduct.neg_nonempty",
+        "Dubon2026.SourceModularFreeProduct.disjoint_pos_neg",
+        "Dubon2026.SourceModularFreeProduct.S_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.neg_one_smul_eq",
+        "Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm_apply",
+        "Dubon2026.SourceModularFreeProduct.toPerm_neg_one",
+        "Dubon2026.SourceModularFreeProduct.permS_sq",
+        "Dubon2026.SourceModularFreeProduct.permU_pow_three",
+        "Dubon2026.SourceModularFreeProduct.gen_zero",
+        "Dubon2026.SourceModularFreeProduct.gen_one",
+        "Dubon2026.SourceModularFreeProduct.gen_pow_eq_one",
+        "Dubon2026.SourceModularFreeProduct.incl_ofAdd_one",
+        "Dubon2026.SourceModularFreeProduct.incl_zero_eq",
+        "Dubon2026.SourceModularFreeProduct.incl_one_eq",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_zero",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_one",
+        "Dubon2026.SourceModularFreeProduct.pingPong",
+        "Dubon2026.SourceModularFreeProduct.three_le_card_factor_one",
+        "Dubon2026.SourceModularFreeProduct.lift_injective",
+        "Dubon2026.SourceModularFreeProduct.range_lift_eq",
+        "Dubon2026.SourceModularFreeProduct.irrational_sqrt_three",
+        "Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation",
+        "Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation",
+        "Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one",
+        "Dubon2026.SourceModularFreeProduct.mem_center_iff_eq",
+        "Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center",
+        "Dubon2026.SourceModularFreeProduct.equivRange_apply_coe",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_one",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.moebius",
+        "Dubon2026.SourceModularFreeProduct.Pos",
+        "Dubon2026.SourceModularFreeProduct.Neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm",
+        "Dubon2026.SourceModularFreeProduct.permS",
+        "Dubon2026.SourceModularFreeProduct.permU",
+        "Dubon2026.SourceModularFreeProduct.G23",
+        "Dubon2026.SourceModularFreeProduct.gen",
+        "Dubon2026.SourceModularFreeProduct.incl",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet",
+        "Dubon2026.SourceModularFreeProduct.equivRange",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceModularFreeProduct.det_entries",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.ext",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg",
+        "Dubon2026.SourceModularFreeProduct.det_entries_real",
+        "Dubon2026.SourceModularFreeProduct.mul_entry",
+        "Dubon2026.SourceModularFreeProduct.den_ne_zero",
+        "Dubon2026.SourceModularFreeProduct.irrational_moebius",
+        "Dubon2026.SourceModularFreeProduct.moebius_mul",
+        "Dubon2026.SourceModularFreeProduct.moebius_one",
+        "Dubon2026.SourceModularFreeProduct.smul_coe",
+        "Dubon2026.SourceModularFreeProduct.pos_nonempty",
+        "Dubon2026.SourceModularFreeProduct.neg_nonempty",
+        "Dubon2026.SourceModularFreeProduct.disjoint_pos_neg",
+        "Dubon2026.SourceModularFreeProduct.S_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.neg_one_smul_eq",
+        "Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm_apply",
+        "Dubon2026.SourceModularFreeProduct.toPerm_neg_one",
+        "Dubon2026.SourceModularFreeProduct.permS_sq",
+        "Dubon2026.SourceModularFreeProduct.permU_pow_three",
+        "Dubon2026.SourceModularFreeProduct.gen_zero",
+        "Dubon2026.SourceModularFreeProduct.gen_one",
+        "Dubon2026.SourceModularFreeProduct.gen_pow_eq_one",
+        "Dubon2026.SourceModularFreeProduct.incl_ofAdd_one",
+        "Dubon2026.SourceModularFreeProduct.incl_zero_eq",
+        "Dubon2026.SourceModularFreeProduct.incl_one_eq",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_zero",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_one",
+        "Dubon2026.SourceModularFreeProduct.pingPong",
+        "Dubon2026.SourceModularFreeProduct.three_le_card_factor_one",
+        "Dubon2026.SourceModularFreeProduct.lift_injective",
+        "Dubon2026.SourceModularFreeProduct.range_lift_eq",
+        "Dubon2026.SourceModularFreeProduct.irrational_sqrt_three",
+        "Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation",
+        "Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation",
+        "Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one",
+        "Dubon2026.SourceModularFreeProduct.mem_center_iff_eq",
+        "Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center",
+        "Dubon2026.SourceModularFreeProduct.equivRange_apply_coe",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_one"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.moebius",
+        "Dubon2026.SourceModularFreeProduct.Pos",
+        "Dubon2026.SourceModularFreeProduct.Neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm",
+        "Dubon2026.SourceModularFreeProduct.permS",
+        "Dubon2026.SourceModularFreeProduct.permU",
+        "Dubon2026.SourceModularFreeProduct.G23",
+        "Dubon2026.SourceModularFreeProduct.gen",
+        "Dubon2026.SourceModularFreeProduct.incl",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet",
+        "Dubon2026.SourceModularFreeProduct.equivRange",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductAudit1b.log",
+      "logSha256": "2431376F24464D17E731E494FFD7F11619C4FCB0FC75818E0B4D62857E4827EB",
+      "auditSha256": "8C09FE3FB2B302D3EE935AB6FF64FDB6F4236F970E0F38E70ABE2AF57E405004",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 76,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 66,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductDependencyAudit1.log",
+      "dependencyAuditSha256": "C161E589E2EB52CA7BFEC9BA7176ADC255CA39D571E3B671D9588173BA10E6E7",
+      "dependencyAuditSourceSha256": "D77D6E8C7604076FD30F0D2C59EBB59FFF00590D47DAC959A4A54A2C94E1FD2D",
+      "consumers": [
+        "Dubon2026.SourceModularFreeProduct.det_entries",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.ext",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg",
+        "Dubon2026.SourceModularFreeProduct.det_entries_real",
+        "Dubon2026.SourceModularFreeProduct.mul_entry",
+        "Dubon2026.SourceModularFreeProduct.den_ne_zero",
+        "Dubon2026.SourceModularFreeProduct.irrational_moebius",
+        "Dubon2026.SourceModularFreeProduct.moebius_mul",
+        "Dubon2026.SourceModularFreeProduct.moebius_one",
+        "Dubon2026.SourceModularFreeProduct.smul_coe",
+        "Dubon2026.SourceModularFreeProduct.pos_nonempty",
+        "Dubon2026.SourceModularFreeProduct.neg_nonempty",
+        "Dubon2026.SourceModularFreeProduct.disjoint_pos_neg",
+        "Dubon2026.SourceModularFreeProduct.S_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe",
+        "Dubon2026.SourceModularFreeProduct.neg_one_smul_eq",
+        "Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos",
+        "Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm_apply",
+        "Dubon2026.SourceModularFreeProduct.toPerm_neg_one",
+        "Dubon2026.SourceModularFreeProduct.permS_sq",
+        "Dubon2026.SourceModularFreeProduct.permU_pow_three",
+        "Dubon2026.SourceModularFreeProduct.gen_zero",
+        "Dubon2026.SourceModularFreeProduct.gen_one",
+        "Dubon2026.SourceModularFreeProduct.gen_pow_eq_one",
+        "Dubon2026.SourceModularFreeProduct.incl_ofAdd_one",
+        "Dubon2026.SourceModularFreeProduct.incl_zero_eq",
+        "Dubon2026.SourceModularFreeProduct.incl_one_eq",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_zero",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet_one",
+        "Dubon2026.SourceModularFreeProduct.pingPong",
+        "Dubon2026.SourceModularFreeProduct.three_le_card_factor_one",
+        "Dubon2026.SourceModularFreeProduct.lift_injective",
+        "Dubon2026.SourceModularFreeProduct.range_lift_eq",
+        "Dubon2026.SourceModularFreeProduct.irrational_sqrt_three",
+        "Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation",
+        "Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation",
+        "Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one",
+        "Dubon2026.SourceModularFreeProduct.mem_center_iff_eq",
+        "Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center",
+        "Dubon2026.SourceModularFreeProduct.equivRange_apply_coe",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv_of_one",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo",
+        "Dubon2026.SourceModularFreeProduct.moebius",
+        "Dubon2026.SourceModularFreeProduct.Pos",
+        "Dubon2026.SourceModularFreeProduct.Neg",
+        "Dubon2026.SourceModularFreeProduct.toPerm",
+        "Dubon2026.SourceModularFreeProduct.permS",
+        "Dubon2026.SourceModularFreeProduct.permU",
+        "Dubon2026.SourceModularFreeProduct.G23",
+        "Dubon2026.SourceModularFreeProduct.gen",
+        "Dubon2026.SourceModularFreeProduct.incl",
+        "Dubon2026.SourceModularFreeProduct.pingPongSet",
+        "Dubon2026.SourceModularFreeProduct.equivRange",
+        "Dubon2026.SourceModularFreeProduct.mulEquiv"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> original Gamma1 finite Hecke-character realization -> Picard/H1 -> Abel-Jacobi -> unitary multiplier correction -> real additive lift -> integral parabolic-character lift -> PSL2(Z) free-product presentation and cusp-period correction.",
+      "discharged": "The actual group SL2(Z)/center is explicitly isomorphic to C2 * C3, with the two standard generators mapping to S and S*T. The Mobius action, nonvanishing denominators, irrationality preservation, signed ping-pong domains, injectivity, generation and exact central kernel are derived. No group-presentation premise remains for the planned integral parabolic-character lift.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Promote and run assembled verification. Cusp-period correction and integral parabolic-character lifting, unitary exponential lifting, analytic reciprocity, original Gamma1 Picard/H1 and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "78DCC4F281F2E66C86F3444AC93CE023E549799BF2FE7D3B8F599715A64B4462",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceCuspCorrection.lTransl_single",
+        "Dubon2026.SourceCuspCorrection.lTransl_one_apply",
+        "Dubon2026.SourceCuspCorrection.lTransl_mul_apply",
+        "Dubon2026.SourceCuspCorrection.toAdd_lTranslMulAut",
+        "Dubon2026.SourceCuspCorrection.chainSect_right",
+        "Dubon2026.SourceCuspCorrection.edgeChain_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_inv",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero_mul_of_one",
+        "Dubon2026.SourceCuspCorrection.projChain_single",
+        "Dubon2026.SourceCuspCorrection.projChain_lTransl_of_mem",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_apply",
+        "Dubon2026.SourceCuspCorrection.edgeChain_conj_expand",
+        "Dubon2026.SourceCuspCorrection.sA_mul_sA",
+        "Dubon2026.SourceCuspCorrection.eq_ofAdd_one_pow",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_of_sA",
+        "Dubon2026.SourceCuspCorrection.of_sA_inv",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ_pow",
+        "Dubon2026.SourceCuspCorrection.cusp_surjective",
+        "Dubon2026.SourceCuspCorrection.cusp_eq_iff",
+        "Dubon2026.SourceCuspCorrection.cusp_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.flip_mk",
+        "Dubon2026.SourceCuspCorrection.flip_flip",
+        "Dubon2026.SourceCuspCorrection.wd_pos",
+        "Dubon2026.SourceCuspCorrection.τ_pow_wd_smul",
+        "Dubon2026.SourceCuspCorrection.τ_zpow_smul_eq_iff",
+        "Dubon2026.SourceCuspCorrection.gen_mem",
+        "Dubon2026.SourceCuspCorrection.genAt_coe",
+        "Dubon2026.SourceCuspCorrection.enum_eq_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_enum",
+        "Dubon2026.SourceCuspCorrection.enum_zero",
+        "Dubon2026.SourceCuspCorrection.enum_width",
+        "Dubon2026.SourceCuspCorrection.sum_enum_succ",
+        "Dubon2026.SourceCuspCorrection.lTranslAddAut",
+        "Dubon2026.SourceCuspCorrection.ChainCarrier",
+        "Dubon2026.SourceCuspCorrection.factorOneSect",
+        "Dubon2026.SourceCuspCorrection.projChain",
+        "Dubon2026.SourceCuspCorrection.Gp",
+        "Dubon2026.SourceCuspCorrection.sA",
+        "Dubon2026.SourceCuspCorrection.uA",
+        "Dubon2026.SourceCuspCorrection.τ",
+        "Dubon2026.SourceCuspCorrection.X",
+        "Dubon2026.SourceCuspCorrection.Cu",
+        "Dubon2026.SourceCuspCorrection.cusp",
+        "Dubon2026.SourceCuspCorrection.flip",
+        "Dubon2026.SourceCuspCorrection.wd",
+        "Dubon2026.SourceCuspCorrection.genAt",
+        "Dubon2026.SourceCuspCorrection.enum",
+        "Dubon2026.SourceCuspCorrection.cuspDiffAt",
+        "Dubon2026.SourceCuspCorrection.edgeChar"
+      ],
+      "recordedUTC": "2026-10-27T15:18:29.742726+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceCuspCorrectionEdgeChains",
+        "SourceCuspCorrectionCosetChains",
+        "SourceCuspCorrectionGenerators",
+        "SourceCuspCorrectionCyclicCosets",
+        "SourceCuspCorrectionEdgeCharacters",
+        "SourceCuspCorrectionRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeChains.lean",
+          "sha256": "3E5930BC1EBB5B087004396B4A20F08BC35F8C0CF68124740AFFC0BC7294D9DB",
+          "oleanSha256": "F150E44BB5E3308832255AE383157226CB3F17A6209C7825D9910ECA4AA717B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCosetChains.lean",
+          "sha256": "C4F8538C2C41DD87350071CC3F3B36FA1F266D7232A135D1D382A4443A884976",
+          "oleanSha256": "526A3877A2E183125C386478E8E1F565B462DB19F9D9C610CDF5E174AEF66DA3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionGenerators.lean",
+          "sha256": "5696D450E555A34C59B193A160E1605144E10C60B69C2B7740F08B8BDD732DAF",
+          "oleanSha256": "1188EF81BD4BFDB30AB8F1FAA5212C5AB3AB35D1F1D2DBED037C187642445C28"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionCyclicCosets.lean",
+          "sha256": "89199E147F03C20DAAE4D3940D1ABBB5A7CCE8A623E38883D7471333A995B35B",
+          "oleanSha256": "E697EA1DB49ED189E6814C448922012AD89A41E59F1ADB899AB14BB6B6D7D4C1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionEdgeCharacters.lean",
+          "sha256": "801D7DC60678DF1148A1D6D8274742E906FD19B93C9585CEFBA6A6D1A716AEDD",
+          "oleanSha256": "49BEF8DC2AD354D6B1A017B43FFD2E0FAC71A7A7317741EFA3CB115D7DAB7D61"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionRealization.lean",
+          "sha256": "D3BABE424433C4079839DED426A0B06BC29F727775D53BC96859FB2A9FB96540",
+          "oleanSha256": "07A98FDD70FE9309792B9E57C4C6254AC20F26916C7E5C2D246B00B0D92614FA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCuspCorrection.lTransl_single",
+        "Dubon2026.SourceCuspCorrection.lTransl_one_apply",
+        "Dubon2026.SourceCuspCorrection.lTransl_mul_apply",
+        "Dubon2026.SourceCuspCorrection.toAdd_lTranslMulAut",
+        "Dubon2026.SourceCuspCorrection.chainSect_right",
+        "Dubon2026.SourceCuspCorrection.edgeChain_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_mul",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_inv",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero_mul_of_one",
+        "Dubon2026.SourceCuspCorrection.projChain_single",
+        "Dubon2026.SourceCuspCorrection.projChain_lTransl_of_mem",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_apply",
+        "Dubon2026.SourceCuspCorrection.edgeChain_conj_expand",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_conj",
+        "Dubon2026.SourceCuspCorrection.sA_mul_sA",
+        "Dubon2026.SourceCuspCorrection.eq_ofAdd_one_pow",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_of_sA",
+        "Dubon2026.SourceCuspCorrection.of_sA_inv",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_τ",
+        "Dubon2026.SourceCuspCorrection.closure_sA_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ_pow",
+        "Dubon2026.SourceCuspCorrection.cusp_surjective",
+        "Dubon2026.SourceCuspCorrection.cusp_eq_iff",
+        "Dubon2026.SourceCuspCorrection.cusp_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.flip_mk",
+        "Dubon2026.SourceCuspCorrection.flip_flip",
+        "Dubon2026.SourceCuspCorrection.wd_pos",
+        "Dubon2026.SourceCuspCorrection.τ_pow_wd_smul",
+        "Dubon2026.SourceCuspCorrection.τ_zpow_smul_eq_iff",
+        "Dubon2026.SourceCuspCorrection.gen_mem",
+        "Dubon2026.SourceCuspCorrection.genAt_coe",
+        "Dubon2026.SourceCuspCorrection.enum_eq_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_enum",
+        "Dubon2026.SourceCuspCorrection.enum_zero",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_raw",
+        "Dubon2026.SourceCuspCorrection.enum_injOn_range",
+        "Dubon2026.SourceCuspCorrection.enum_width",
+        "Dubon2026.SourceCuspCorrection.sum_enum_succ",
+        "Dubon2026.SourceCuspCorrection.exists_enum_eq_of_cusp_eq",
+        "Dubon2026.SourceCuspCorrection.sum_ite_enum_eq",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_apply",
+        "Dubon2026.SourceCuspCorrection.edgeChar_genAt",
+        "Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_of_smul",
+        "Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_cuspDiffAt",
+        "Dubon2026.SourceCuspCorrection.exists_addChar_of_mem_span",
+        "Dubon2026.SourceCuspCorrection.engine",
+        "Dubon2026.SourceCuspCorrection.lTransl",
+        "Dubon2026.SourceCuspCorrection.lTranslAddAut",
+        "Dubon2026.SourceCuspCorrection.lTranslMulAut",
+        "Dubon2026.SourceCuspCorrection.ChainCarrier",
+        "Dubon2026.SourceCuspCorrection.factorOneSect",
+        "Dubon2026.SourceCuspCorrection.chainSect",
+        "Dubon2026.SourceCuspCorrection.edgeChain",
+        "Dubon2026.SourceCuspCorrection.projChain",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom",
+        "Dubon2026.SourceCuspCorrection.Gp",
+        "Dubon2026.SourceCuspCorrection.sA",
+        "Dubon2026.SourceCuspCorrection.uA",
+        "Dubon2026.SourceCuspCorrection.τ",
+        "Dubon2026.SourceCuspCorrection.X",
+        "Dubon2026.SourceCuspCorrection.Cu",
+        "Dubon2026.SourceCuspCorrection.cusp",
+        "Dubon2026.SourceCuspCorrection.flip",
+        "Dubon2026.SourceCuspCorrection.wd",
+        "Dubon2026.SourceCuspCorrection.genAt",
+        "Dubon2026.SourceCuspCorrection.enum",
+        "Dubon2026.SourceCuspCorrection.cuspDiffAt",
+        "Dubon2026.SourceCuspCorrection.edgeChar"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCuspCorrection.lTransl_single",
+        "Dubon2026.SourceCuspCorrection.lTransl_one_apply",
+        "Dubon2026.SourceCuspCorrection.lTransl_mul_apply",
+        "Dubon2026.SourceCuspCorrection.toAdd_lTranslMulAut",
+        "Dubon2026.SourceCuspCorrection.chainSect_right",
+        "Dubon2026.SourceCuspCorrection.edgeChain_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_mul",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_one",
+        "Dubon2026.SourceCuspCorrection.edgeChain_inv",
+        "Dubon2026.SourceCuspCorrection.edgeChain_of_zero_mul_of_one",
+        "Dubon2026.SourceCuspCorrection.projChain_single",
+        "Dubon2026.SourceCuspCorrection.projChain_lTransl_of_mem",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_apply",
+        "Dubon2026.SourceCuspCorrection.edgeChain_conj_expand",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_conj",
+        "Dubon2026.SourceCuspCorrection.sA_mul_sA",
+        "Dubon2026.SourceCuspCorrection.eq_ofAdd_one_pow",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_of_sA",
+        "Dubon2026.SourceCuspCorrection.of_sA_inv",
+        "Dubon2026.SourceCuspCorrection.of_sA_mul_τ",
+        "Dubon2026.SourceCuspCorrection.closure_sA_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ",
+        "Dubon2026.SourceCuspCorrection.edgeChain_τ_pow",
+        "Dubon2026.SourceCuspCorrection.cusp_surjective",
+        "Dubon2026.SourceCuspCorrection.cusp_eq_iff",
+        "Dubon2026.SourceCuspCorrection.cusp_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_τ_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.flip_mk",
+        "Dubon2026.SourceCuspCorrection.flip_flip",
+        "Dubon2026.SourceCuspCorrection.wd_pos",
+        "Dubon2026.SourceCuspCorrection.τ_pow_wd_smul",
+        "Dubon2026.SourceCuspCorrection.τ_zpow_smul_eq_iff",
+        "Dubon2026.SourceCuspCorrection.gen_mem",
+        "Dubon2026.SourceCuspCorrection.genAt_coe",
+        "Dubon2026.SourceCuspCorrection.enum_eq_zpow_smul",
+        "Dubon2026.SourceCuspCorrection.cusp_enum",
+        "Dubon2026.SourceCuspCorrection.enum_zero",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_raw",
+        "Dubon2026.SourceCuspCorrection.enum_injOn_range",
+        "Dubon2026.SourceCuspCorrection.enum_width",
+        "Dubon2026.SourceCuspCorrection.sum_enum_succ",
+        "Dubon2026.SourceCuspCorrection.exists_enum_eq_of_cusp_eq",
+        "Dubon2026.SourceCuspCorrection.sum_ite_enum_eq",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_apply",
+        "Dubon2026.SourceCuspCorrection.edgeChar_genAt",
+        "Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_of_smul",
+        "Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_cuspDiffAt",
+        "Dubon2026.SourceCuspCorrection.exists_addChar_of_mem_span",
+        "Dubon2026.SourceCuspCorrection.engine"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCuspCorrection.lTransl",
+        "Dubon2026.SourceCuspCorrection.lTranslAddAut",
+        "Dubon2026.SourceCuspCorrection.lTranslMulAut",
+        "Dubon2026.SourceCuspCorrection.ChainCarrier",
+        "Dubon2026.SourceCuspCorrection.factorOneSect",
+        "Dubon2026.SourceCuspCorrection.chainSect",
+        "Dubon2026.SourceCuspCorrection.edgeChain",
+        "Dubon2026.SourceCuspCorrection.projChain",
+        "Dubon2026.SourceCuspCorrection.edgeChainHom",
+        "Dubon2026.SourceCuspCorrection.Gp",
+        "Dubon2026.SourceCuspCorrection.sA",
+        "Dubon2026.SourceCuspCorrection.uA",
+        "Dubon2026.SourceCuspCorrection.τ",
+        "Dubon2026.SourceCuspCorrection.X",
+        "Dubon2026.SourceCuspCorrection.Cu",
+        "Dubon2026.SourceCuspCorrection.cusp",
+        "Dubon2026.SourceCuspCorrection.flip",
+        "Dubon2026.SourceCuspCorrection.wd",
+        "Dubon2026.SourceCuspCorrection.genAt",
+        "Dubon2026.SourceCuspCorrection.enum",
+        "Dubon2026.SourceCuspCorrection.cuspDiffAt",
+        "Dubon2026.SourceCuspCorrection.edgeChar"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionAudit1.log",
+      "logSha256": "885FB584CF7FA8831CCC03FD63EA04ECBC4DAF7931767B8A7D055130924661CA",
+      "auditSha256": "748A505FFD5A1E106A675E18E48298A4BEEF39F5636CA8CDE5F15439157F69D1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 70,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionDependencyAudit1.log",
+      "dependencyAuditSha256": "42327C2D1F227C6015D474ADEC0B9CC363AEB72E522EB4EE8C38286F8E163117",
+      "dependencyAuditSourceSha256": "AFCFBFEF5475FC52A0BD3732F26C6A2CD7E98B193FB5D6D970119B477FB97128",
+      "consumers": [
+        "Dubon2026.SourceCuspCorrection.engine"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier lift -> integral parabolic-character lift -> correction of cusp values of an integral character.",
+      "discharged": "Construct an actual additive character with arbitrary prescribed values of zero total sum on the primitive parabolic generators of any finite-index subgroup of C2*C3. The finite edge-chain cocycle, actual coset cycles, exact generator evaluations and span realization are proved. No character-realization premise remains in this correction theorem.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Promote and run assembled verification. Initial integral character lifting, zero-sum cusp values for an arbitrary lift, composition into original Gamma1 parabolic lifting, unitary logarithms, analytic reciprocity and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "45BD24A40800809A081368FF8DF6F93D95AD0AF3A5D649FC28F4108EBBB11BFB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceIntegralCharacterLift.tr_apply",
+        "Dubon2026.SourceIntegralCharacterLift.tr_one",
+        "Dubon2026.SourceIntegralCharacterLift.tr_mul",
+        "Dubon2026.SourceIntegralCharacterLift.tr_add",
+        "Dubon2026.SourceIntegralCharacterLift.tr_sub",
+        "Dubon2026.SourceIntegralCharacterLift.tr_neg",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zero",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv_apply",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.add",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.neg",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.sub",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.cob_apply",
+        "Dubon2026.SourceIntegralCharacterLift.cob_map",
+        "Dubon2026.SourceIntegralCharacterLift.trAut_apply",
+        "Dubon2026.SourceIntegralCharacterLift.trHom_apply",
+        "Dubon2026.SourceIntegralCharacterLift.smul_coe",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_eq_bs_iff",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_of_mem",
+        "Dubon2026.SourceIntegralCharacterLift.char_congr",
+        "Dubon2026.SourceIntegralCharacterLift.char_mul",
+        "Dubon2026.SourceIntegralCharacterLift.char_inv",
+        "Dubon2026.SourceIntegralCharacterLift.char_conj",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_apply",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_map",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_sub",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.conj_mem_iff_smul",
+        "Dubon2026.SourceIntegralCharacterLift.shapiro_apply",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_M23",
+        "Dubon2026.SourceIntegralCharacterLift.neg_one_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.S_mul_S",
+        "Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.rho_neg",
+        "Dubon2026.SourceIntegralCharacterLift.eq_or_eq_neg_of_rho_eq",
+        "Dubon2026.SourceIntegralCharacterLift.tr",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.cob",
+        "Dubon2026.SourceIntegralCharacterLift.trAut",
+        "Dubon2026.SourceIntegralCharacterLift.bs",
+        "Dubon2026.SourceIntegralCharacterLift.M23",
+        "Dubon2026.SourceIntegralCharacterLift.G23",
+        "Dubon2026.SourceIntegralCharacterLift.tP"
+      ],
+      "recordedUTC": "2026-10-27T15:42:10.436146+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceIntegralCharacterCrossed",
+        "SourceIntegralCharacterPotential",
+        "SourceIntegralCharacterShapiro",
+        "SourceIntegralCharacterFreeProduct",
+        "SourceIntegralCharacterInitialLift",
+        "SourceIntegralCharacterCuspConjugacy",
+        "SourceIntegralCharacterCuspSum",
+        "SourceIntegralCharacterCorrection",
+        "SourceIntegralCharacterModularFacts",
+        "SourceIntegralCharacterModularBridge",
+        "SourceIntegralParabolicCharacterLift",
+        "SourceGammaOneIntegralParabolicLift"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCrossed.lean",
+          "sha256": "980E658B1F3DDA2D1316D3E01DE9AF8270C0DFED009C0E77F175A15CA768D9B8",
+          "oleanSha256": "760599CE3A8B23E5158C91521E42BEA9BE766D6C96EA4BF90B2763F7F1DD0F73"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterPotential.lean",
+          "sha256": "71286A0F32CB10715EDC3B23CBE8B2E5976F39A38C56EB3ACCC854EC98D7AD43",
+          "oleanSha256": "BDF7FB0D9A466A4F6331A86D0B39BBB00ACE5BE2C5F852017E6445F14ABD77BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterShapiro.lean",
+          "sha256": "787D4907AA78B8B703A5E474542112EAE4354A542B11E2CC34569B992EF064C8",
+          "oleanSha256": "0C6C75BF41CFD0CC82B45EB487C9398DEB30F7CDD665875E57608BB59ECF4E63"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterFreeProduct.lean",
+          "sha256": "15518282113E329971BE6B68FEFE30A0F65B61C2EC32815D338E89600FFFE0A9",
+          "oleanSha256": "93F547954AC91B600851EF19F7DBDA12FCA474C7D9BF60102B01B0F1039374BA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterInitialLift.lean",
+          "sha256": "EA13F38FFBB4526110D158301CD4B7F3B47F1E5C06A289FB9EF2D38E90275DC3",
+          "oleanSha256": "E6B81079B13046D7644EFB89D259CE80206C9ACE1C3BF9036E21F7AD2D5A2950"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspConjugacy.lean",
+          "sha256": "D8A721B6D85A3AD5DEE3CBB75C5C81A87B627162EAA0DA444630940D3C3E69E3",
+          "oleanSha256": "685F8E7373D166CF2D3C335CDBF2239C28F3627874AA89C269AF54C1815BCC80"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCuspSum.lean",
+          "sha256": "48CDC79242FA7B664881DD0A25105449AC7B9A70E59F6732E6E1695266F08B27",
+          "oleanSha256": "E5AA138DA91E42F35F6A30E666DAB8E6929980396C49C79E7BE1E16D8B40F5B2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterCorrection.lean",
+          "sha256": "DAEA97EFBA77374AEBF665850F2C226AF76441A959829CDCA02CC3C9B261273B",
+          "oleanSha256": "9DFFC1BCCDBDF852EF4131B8B07602C44225EFFA2184E904358FD0B0CE3707EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularFacts.lean",
+          "sha256": "C021D3DEA3933279456E873401A912BD3B86AD9907A23C468C467D042A7224A4",
+          "oleanSha256": "A70F44CBBB741182377EBE9778BAA4106208D1D8A2C99884DF6B25C7C4152C59"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCharacterModularBridge.lean",
+          "sha256": "CBB14F25C2726A4BEE4B56E68935A7845A5C88513958A1FD4C07BDF1D061007A",
+          "oleanSha256": "5434D88E1FBC6A0D7A6BEDD488AA9596AAA45594CF6B27079CA0A0297EF16ACE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLift.lean",
+          "sha256": "C5AC7EB5BEA0C79FF5D5200AD88EC60865CDCE8144754752D3D1A4F489348195",
+          "oleanSha256": "6AC341614E4D9E5E6E8297FB30F35AF5E570D50CDF81B7DB1E0233F12C875544"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralParabolicLift.lean",
+          "sha256": "7E1448C43DB1D335F4C0F9C5B6719A14EDA0808DC313CDB823EB13C8CC44F3FC",
+          "oleanSha256": "724986EF8FF1AE5BD0E104032A489BC64EABBE978133A1B6AEC167D134FF49B4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceIntegralCharacterLift.tr_apply",
+        "Dubon2026.SourceIntegralCharacterLift.tr_one",
+        "Dubon2026.SourceIntegralCharacterLift.tr_mul",
+        "Dubon2026.SourceIntegralCharacterLift.tr_add",
+        "Dubon2026.SourceIntegralCharacterLift.tr_sub",
+        "Dubon2026.SourceIntegralCharacterLift.tr_neg",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zero",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_one",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv_apply",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.conj_apply",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.add",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.neg",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.sub",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map",
+        "Dubon2026.SourceIntegralCharacterLift.cob_apply",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_cob",
+        "Dubon2026.SourceIntegralCharacterLift.cob_apply_of_smul_eq",
+        "Dubon2026.SourceIntegralCharacterLift.cob_map",
+        "Dubon2026.SourceIntegralCharacterLift.exists_potential",
+        "Dubon2026.SourceIntegralCharacterLift.trAut_apply",
+        "Dubon2026.SourceIntegralCharacterLift.trHom_apply",
+        "Dubon2026.SourceIntegralCharacterLift.smul_coe",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_eq_bs_iff",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_of_mem",
+        "Dubon2026.SourceIntegralCharacterLift.char_congr",
+        "Dubon2026.SourceIntegralCharacterLift.char_mul",
+        "Dubon2026.SourceIntegralCharacterLift.char_inv",
+        "Dubon2026.SourceIntegralCharacterLift.char_conj",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_apply",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_map",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_sub",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_conj",
+        "Dubon2026.SourceIntegralCharacterLift.conj_mem_iff_smul",
+        "Dubon2026.SourceIntegralCharacterLift.shapiro_apply",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.ext_of",
+        "Dubon2026.SourceIntegralCharacterLift.totalHom_right",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_liftCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.liftCrossed_of",
+        "Dubon2026.SourceIntegralCharacterLift.exists_char_comp_eq_of_forall_conj_of",
+        "Dubon2026.SourceIntegralCharacterLift.char_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.char_conj_zpow_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.sum_char_cuspGen_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_M23",
+        "Dubon2026.SourceIntegralCharacterLift.exists_sub_smul_apply_conj_zpow_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.neg_one_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.S_mul_S",
+        "Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.rho_neg",
+        "Dubon2026.SourceIntegralCharacterLift.eq_or_eq_neg_of_rho_eq",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho_eq_conj_of",
+        "Dubon2026.SourceIntegralCharacterLift.exists_rho_eq_conj_tP_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.trace_sq_of_rho_eq_conj_tP_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.exists_int_lift",
+        "Dubon2026.sourceGamma1_integral_parabolic_character_lift",
+        "Dubon2026.SourceIntegralCharacterLift.tr",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.cob",
+        "Dubon2026.SourceIntegralCharacterLift.trAut",
+        "Dubon2026.SourceIntegralCharacterLift.trHom",
+        "Dubon2026.SourceIntegralCharacterLift.bs",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase",
+        "Dubon2026.SourceIntegralCharacterLift.shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.genHom",
+        "Dubon2026.SourceIntegralCharacterLift.totalHom",
+        "Dubon2026.SourceIntegralCharacterLift.liftCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.M23",
+        "Dubon2026.SourceIntegralCharacterLift.G23",
+        "Dubon2026.SourceIntegralCharacterLift.tP"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceIntegralCharacterLift.tr_apply",
+        "Dubon2026.SourceIntegralCharacterLift.tr_one",
+        "Dubon2026.SourceIntegralCharacterLift.tr_mul",
+        "Dubon2026.SourceIntegralCharacterLift.tr_add",
+        "Dubon2026.SourceIntegralCharacterLift.tr_sub",
+        "Dubon2026.SourceIntegralCharacterLift.tr_neg",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zero",
+        "Dubon2026.SourceIntegralCharacterLift.tr_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_one",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv_apply",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.conj_apply",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.add",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.neg",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.sub",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.map",
+        "Dubon2026.SourceIntegralCharacterLift.cob_apply",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_cob",
+        "Dubon2026.SourceIntegralCharacterLift.cob_apply_of_smul_eq",
+        "Dubon2026.SourceIntegralCharacterLift.cob_map",
+        "Dubon2026.SourceIntegralCharacterLift.exists_potential",
+        "Dubon2026.SourceIntegralCharacterLift.trAut_apply",
+        "Dubon2026.SourceIntegralCharacterLift.trHom_apply",
+        "Dubon2026.SourceIntegralCharacterLift.smul_coe",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_eq_bs_iff",
+        "Dubon2026.SourceIntegralCharacterLift.smul_bs_of_mem",
+        "Dubon2026.SourceIntegralCharacterLift.char_congr",
+        "Dubon2026.SourceIntegralCharacterLift.char_mul",
+        "Dubon2026.SourceIntegralCharacterLift.char_inv",
+        "Dubon2026.SourceIntegralCharacterLift.char_conj",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_apply",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_map",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_sub",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_zsmul",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_conj",
+        "Dubon2026.SourceIntegralCharacterLift.conj_mem_iff_smul",
+        "Dubon2026.SourceIntegralCharacterLift.shapiro_apply",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase_shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed.ext_of",
+        "Dubon2026.SourceIntegralCharacterLift.totalHom_right",
+        "Dubon2026.SourceIntegralCharacterLift.isCrossed_liftCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.liftCrossed_of",
+        "Dubon2026.SourceIntegralCharacterLift.exists_char_comp_eq_of_forall_conj_of",
+        "Dubon2026.SourceIntegralCharacterLift.char_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.char_conj_zpow_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.sum_char_cuspGen_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_M23",
+        "Dubon2026.SourceIntegralCharacterLift.exists_sub_smul_apply_conj_zpow_eq_zero",
+        "Dubon2026.SourceIntegralCharacterLift.neg_one_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center",
+        "Dubon2026.SourceIntegralCharacterLift.S_mul_S",
+        "Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.rho_neg",
+        "Dubon2026.SourceIntegralCharacterLift.eq_or_eq_neg_of_rho_eq",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho",
+        "Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho_eq_conj_of",
+        "Dubon2026.SourceIntegralCharacterLift.exists_rho_eq_conj_tP_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.trace_sq_of_rho_eq_conj_tP_zpow",
+        "Dubon2026.SourceIntegralCharacterLift.exists_int_lift",
+        "Dubon2026.sourceGamma1_integral_parabolic_character_lift"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceIntegralCharacterLift.tr",
+        "Dubon2026.SourceIntegralCharacterLift.IsCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.cob",
+        "Dubon2026.SourceIntegralCharacterLift.trAut",
+        "Dubon2026.SourceIntegralCharacterLift.trHom",
+        "Dubon2026.SourceIntegralCharacterLift.bs",
+        "Dubon2026.SourceIntegralCharacterLift.evalBase",
+        "Dubon2026.SourceIntegralCharacterLift.shapiro",
+        "Dubon2026.SourceIntegralCharacterLift.genHom",
+        "Dubon2026.SourceIntegralCharacterLift.totalHom",
+        "Dubon2026.SourceIntegralCharacterLift.liftCrossed",
+        "Dubon2026.SourceIntegralCharacterLift.M23",
+        "Dubon2026.SourceIntegralCharacterLift.G23",
+        "Dubon2026.SourceIntegralCharacterLift.tP"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftAudit1.log",
+      "logSha256": "4CFDF4014A27962A3C28F5728B0177F5620B410B6668A60BBAE5D0651A2E21D4",
+      "auditSha256": "CFD926494D2C07A261542A213262153CC2DE49709E1B7F6AAAC1651844C500F4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 118,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 58,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftDependencyAudit1.log",
+      "dependencyAuditSha256": "F21233C80AA610F64DF47DDE189AC159E256288932924E27D139CEA2A76539BE",
+      "dependencyAuditSourceSha256": "6D39228CADD61111E7CCB774FE9522A8351E8352ADB8472DB081C5F752718E62",
+      "consumers": [
+        "Dubon2026.sourceGamma1_integral_parabolic_character_lift"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary logarithms -> integral parabolic-character lifting -> actual modular-group transport.",
+      "discharged": "Derive the actual integral parabolic lift for every finite-index subgroup of SL2(Z), every natural modulus n including zero, and every ZMod n character that is parabolic and vanishes on finite-order elements. No presentation, character lift, divisibility correction or parabolic classification premise remains.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Unitary real logarithms, analytic reciprocity, Abel-Jacobi, original all-weight arithmetic association and full DUB17--20 closure remain.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "5021AF8C75BA50441C1E79789DC29F1A4746E7C14B6A2005EE42011D607B3088",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+        "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+        "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.Ell",
+        "Dubon2026.SourceUnitaryCharacterLift.Msub",
+        "Dubon2026.SourceUnitaryCharacterLift.Qm",
+        "Dubon2026.SourceUnitaryCharacterLift.Q",
+        "Dubon2026.SourceUnitaryCharacterLift.piM",
+        "Dubon2026.SourceUnitaryCharacterLift.piA"
+      ],
+      "recordedUTC": "2026-10-27T15:59:36.343776+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceUnitaryCharacterFiniteOrder",
+        "SourceUnitaryCharacterRecurrence",
+        "SourceUnitaryCharacterTraceBound",
+        "SourceUnitaryCharacterAbelianQuotient",
+        "SourceUnitaryCharacterBasisExt",
+        "SourceUnitaryCharacterTorsion",
+        "SourceUnitaryCircleCharacter",
+        "SourceUnitaryCharacterLogarithm",
+        "SourceGammaOneUnitaryCharacterPeriods"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterFiniteOrder.lean",
+          "sha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+          "oleanSha256": "CE94ADDDE9BA0E971ECC3C086D988D656805F81D3AC788521ABD425E15644562"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterRecurrence.lean",
+          "sha256": "3679136F346F84CD37F760E52E09CA3B8E65F5D5C6AB8AE235DA31BF0B55DFCD",
+          "oleanSha256": "F890602FFF99E6FC4D4EC519677BF64DC45E5D4B7B0793BC0B9ECFFC4282DA92"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTraceBound.lean",
+          "sha256": "48FF76188261C5FC4906940532968D23366B660334C3F63B5808AAEF27913F1A",
+          "oleanSha256": "992F324428A30862770D099F0112DB4B6DAE1A4343354D93B5C2B8B95462A556"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterAbelianQuotient.lean",
+          "sha256": "AB90E4829761E1483967825DC9B6012B8EA319ECE758C841433AA32030AD5A71",
+          "oleanSha256": "C803BF69462440029327BF55EB4C601323B8E5FF8637BE4EA4C1C393F67C4B23"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterBasisExt.lean",
+          "sha256": "D1FE00D8095B630BD01EA16B7E14A773C536B2D311ED47E45BFF62E7B3042298",
+          "oleanSha256": "B449CD174CF90611BFC37CD12B1E5BA449479C43C13EDB645AB7D94D9635373B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTorsion.lean",
+          "sha256": "F896431C969BE01C3EC23248D0A4A2BBD885D3D9BE1432660C48B78DA2D9D6FC",
+          "oleanSha256": "1DFAE808640613730F3D40618048CA1C656DD8B15500202670CA31D737842822"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCircleCharacter.lean",
+          "sha256": "77CC089CDFAD49C6BB5E147A7ED103FCFFEF4A730C4EEC1784F48522A18F3C51",
+          "oleanSha256": "BA25BC58F32E3C13CA734C5CB59C517C519D9D8CF6C433B54ED0BA42505797FE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterLogarithm.lean",
+          "sha256": "544999E53259891F247398319A2C3E5D93030114525D03FD964DF444115A0423",
+          "oleanSha256": "1995D9A0A1B19B1BB1D9461AD8C96C338DF70DEBB391B954BB97F9E9E7BEC40A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriods.lean",
+          "sha256": "4CC6BA2053D796DD7E716BE025E09817B2BAC13999D01B0C1768566F89DA43B7",
+          "oleanSha256": "90ADAD2B967FC877DB5B49411D1DA1DD9585AB6F2BCE6EAD52FBC91E2D62BD96"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one",
+        "Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one",
+        "Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb",
+        "Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge",
+        "Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder",
+        "Dubon2026.SourceUnitaryCharacterLift.piM_surjective",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_surjective",
+        "Dubon2026.SourceUnitaryCharacterLift.piM_eq_one",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+        "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+        "Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z",
+        "Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis",
+        "Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm",
+        "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period",
+        "Dubon2026.SourceUnitaryCharacterLift.cheb",
+        "Dubon2026.SourceUnitaryCharacterLift.Ell",
+        "Dubon2026.SourceUnitaryCharacterLift.Msub",
+        "Dubon2026.SourceUnitaryCharacterLift.Qm",
+        "Dubon2026.SourceUnitaryCharacterLift.Q",
+        "Dubon2026.SourceUnitaryCharacterLift.piM",
+        "Dubon2026.SourceUnitaryCharacterLift.piA",
+        "Dubon2026.SourceUnitaryCharacterLift.desc",
+        "Dubon2026.SourceUnitaryCharacterLift.descA",
+        "Dubon2026.SourceUnitaryCharacterLift.unitChar",
+        "Dubon2026.SourceUnitaryCharacterLift.fgQ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one",
+        "Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one",
+        "Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb",
+        "Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge",
+        "Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder",
+        "Dubon2026.SourceUnitaryCharacterLift.piM_surjective",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_surjective",
+        "Dubon2026.SourceUnitaryCharacterLift.piM_eq_one",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+        "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+        "Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z",
+        "Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis",
+        "Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero",
+        "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+        "Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm",
+        "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period",
+        "Dubon2026.SourceUnitaryCharacterLift.fgQ"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceUnitaryCharacterLift.cheb",
+        "Dubon2026.SourceUnitaryCharacterLift.Ell",
+        "Dubon2026.SourceUnitaryCharacterLift.Msub",
+        "Dubon2026.SourceUnitaryCharacterLift.Qm",
+        "Dubon2026.SourceUnitaryCharacterLift.Q",
+        "Dubon2026.SourceUnitaryCharacterLift.piM",
+        "Dubon2026.SourceUnitaryCharacterLift.piA",
+        "Dubon2026.SourceUnitaryCharacterLift.desc",
+        "Dubon2026.SourceUnitaryCharacterLift.descA",
+        "Dubon2026.SourceUnitaryCharacterLift.unitChar"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1c.log",
+      "logSha256": "AC36EE1F90CC7CEF86E1D81385670418CF369722445BF954BD816A1302767BFC",
+      "auditSha256": "F25FB2E4DB54006E91053E2C3719B3FCCB10D49CBFA09608EC6EDAABB45C666A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 45,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 83,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.log",
+      "dependencyAuditSha256": "2B29616EEC9638C360F48B17E394DC96C72FDDBE88263CA07382F5A6BF5C3A1D",
+      "dependencyAuditSourceSha256": "5E36CDCD9AE1A6BD1CD89ACF122D1E4B27061AAF0FDAB976D042CECF50E8E78D",
+      "consumers": [
+        "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period"
+      ],
+      "dependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier correction -> additive real logarithm trivial on actual elliptic/parabolic elements.",
+      "discharged": "Every actual Gamma1 unitary character trivial on squared trace at most four is the exponential of the real periods of an actual weight-two cusp form, at every nonzero level. The real logarithm and torsion-free quotient are derived using the proved integral parabolic lift, native finite abelian decomposition and the actual real-period surjectivity. No logarithm, torsion-free quotient, basis or cusp-form realization hypothesis remains.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Derive multiplicativity and elliptic/parabolic triviality for the actual meromorphic multiplier with the original Gamma1 central-stabilizer normalization; analytic reciprocity, Abel-Jacobi and original all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1c-reuse-review-20261027.json",
+      "reuseReviewSha256": "441A669BC5D5A5F10044ECF178C9446282D842C2357D738E47E681B313EF63AF",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_one"
+      ],
+      "recordedUTC": "2026-10-27T16:05:38.645834+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularEllipticFixedPoint",
+        "SourceMeromorphicMultiplierParabolic",
+        "SourceMeromorphicMultiplierGerm",
+        "SourceGammaOneMeromorphicMultiplierElliptic",
+        "SourceGammaOneMeromorphicMultiplierPeriods"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularEllipticFixedPoint.lean",
+          "sha256": "186DD6B4F0BAF53874F82A7125ABBD3001E3A9E0A6E9BB4FEAE4F0175D74884C",
+          "oleanSha256": "C820B650BD8C213A52839F027AE888EE88F72BF3038154A6DECA43010609EF43"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierParabolic.lean",
+          "sha256": "EDDE5FC329004FEE120B3A3A981FAFF80ADDE4B12073346840069FC0802FABC1",
+          "oleanSha256": "43261BF50642EC1347D308F65248CA2FC235BFD5FE4CDF28C3C051129A333F94"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierGerm.lean",
+          "sha256": "36D0C9BF228C90F76C0AC26A7A68517B90F8658FBFE37ECF215BA9751EB51928",
+          "oleanSha256": "298139F59060B9D51378CFA52C7D79EBA9438DA810861ADA166FE9DC373D0101"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierElliptic.lean",
+          "sha256": "887223CE81E94D3330A64932033263BB1478F4959AC3E19EFACB1E04167D288D",
+          "oleanSha256": "DDA34AA3651DB4F8C09DB1033C4E89BDFBA7A8D045E1B5368F38E537650D4E3A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriods.lean",
+          "sha256": "7B2777EE07EE05E00DD1A4C8A3EDEF1E3FD65F85BF91249179C26EE66638E275",
+          "oleanSha256": "EEE91B696F6109F78F93DF3A3C12DAF78C3065BD25703FF3D3F09AB9D31922DA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceMeromorphicMultiplier.exists_smul_eq_self_of_trace_sq_lt_four",
+        "Dubon2026.SourceMeromorphicMultiplier.tendsto_vadd_atImInfty",
+        "Dubon2026.SourceMeromorphicMultiplier.conj_T_zpow_smul",
+        "Dubon2026.SourceMeromorphicMultiplier.exists_apply_ne_zero",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_one",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_mul",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_denom_zpow",
+        "Dubon2026.SourceMeromorphicMultiplier.gammaOne_multiplier_eq_one_of_trace_sq_lt",
+        "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceMeromorphicMultiplier.exists_smul_eq_self_of_trace_sq_lt_four",
+        "Dubon2026.SourceMeromorphicMultiplier.tendsto_vadd_atImInfty",
+        "Dubon2026.SourceMeromorphicMultiplier.conj_T_zpow_smul",
+        "Dubon2026.SourceMeromorphicMultiplier.exists_apply_ne_zero",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_one",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_mul",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq",
+        "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_denom_zpow",
+        "Dubon2026.SourceMeromorphicMultiplier.gammaOne_multiplier_eq_one_of_trace_sq_lt",
+        "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsAudit1.log",
+      "logSha256": "5A6408D86B3DD7780C678D36939F75AE9101018D4AEF539D60AA77B2E9DC4AA3",
+      "auditSha256": "B942E220EB6701285D1F376CD95F59D48A33994F122FC594E12B507E6FF361D9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 101,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.log",
+      "dependencyAuditSha256": "490DDFC5C55B8751A131A843E8C1D40662E206A0D98FF898140C06CA4F6FCE3A",
+      "dependencyAuditSourceSha256": "DDBAD9FA0F788995785EFEA098034029E6BCC0326620ABEEB0787933EFD91186",
+      "consumers": [
+        "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+      ],
+      "dependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi -> actual meromorphic multiplier -> unitary cusp-form period representation.",
+      "discharged": "A unitary multiplier of an actual meromorphic function, with prescribed original Gamma1 divisor orders and nonzero limits at every translated cusp, is realized by actual weight-two cusp-form real periods. Multiplicativity is derived from a nonzero cusp limit; elliptic triviality consumes actual finite germ orders and the exact signed stabilizer formula; parabolic triviality consumes signed translation classification and cusp limits. No character law, triviality, logarithm or cusp-form-realization premise remains.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Construct the actual meromorphic function from the original Abel-Jacobi condition; prove analytic reciprocity; finish original Picard/H1/Hecke/diamond/full-parabolic/transpose comparison and original all-weight arithmetic association. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "98BF45D7AA807F6A7D573E3381F19AEE6442B2326A4A3C8F5CBE892AC660ADF5",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-closed-chain-periods-1-reuse-review-20261027.json",
+    "Tools/source-modular-free-product-1-reuse-review-20261027.json",
+    "Tools/source-cusp-correction-1-reuse-review-20261027.json",
+    "Tools/source-integral-parabolic-character-lift-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-unitary-character-periods-1c-reuse-review-20261027.json",
+    "Tools/source-gamma-one-meromorphic-multiplier-periods-1-reuse-review-20261027.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-multiplier-periods-20261027-847/gamma-one-multiplier-periods-promotion-route-847.json",
+    "sha256": "BE85DD3176541D8760AA2510B6FFA0D16ECDA31B6816F9D00661C290F33CE2CA"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-multiplier-periods-20261027-847/archive-manifest.json",
+    "sha256": "B1A7F78D8169F358CEA1318018FDA1F5F9D56DD6E17A371E66ECC6478499C411",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8674": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1Production8674.log",
+        "sha256": "FE66B3EC03E8E28765125750A3117BA1F69C4D5D987D583A4541815C07ADC90C",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+          "Dubon2026.sourceWeightTwoAlong_apply",
+          "Dubon2026.sourceWeightTwoAlong_smul",
+          "Dubon2026.sourceWeightTwoAlong_eq_sub",
+          "Dubon2026.sourceWeightTwoDualPeriod_apply",
+          "Dubon2026.sourceWeightTwoDualPeriod_mem",
+          "Dubon2026.sourceWeightTwoAlong_smul_sub",
+          "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+          "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+          "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+          "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+          "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+          "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+          "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+          "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+          "Dubon2026.sourceWeightTwoAlong",
+          "Dubon2026.sourceWeightTwoDualPeriod",
+          "Dubon2026.sourceWeightTwoIntegralLattice",
+          "Dubon2026.sourceWeightTwoOrbitPeriod",
+          "Dubon2026.sourceWeightTwoOrbitBoundary"
+        ],
+        "sourceSha256": "2345AE7A6B50AD40F2CF67BDA16E9F206A5F4DF6BBEF82650E32BB9AB9C0FE9B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductDependencyAudit1Production8674.log",
+        "sha256": "C161E589E2EB52CA7BFEC9BA7176ADC255CA39D571E3B671D9588173BA10E6E7",
+        "requiredProofValueEdges": 66,
+        "consumers": [
+          "Dubon2026.SourceModularFreeProduct.det_entries",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.ext",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg",
+          "Dubon2026.SourceModularFreeProduct.det_entries_real",
+          "Dubon2026.SourceModularFreeProduct.mul_entry",
+          "Dubon2026.SourceModularFreeProduct.den_ne_zero",
+          "Dubon2026.SourceModularFreeProduct.irrational_moebius",
+          "Dubon2026.SourceModularFreeProduct.moebius_mul",
+          "Dubon2026.SourceModularFreeProduct.moebius_one",
+          "Dubon2026.SourceModularFreeProduct.smul_coe",
+          "Dubon2026.SourceModularFreeProduct.pos_nonempty",
+          "Dubon2026.SourceModularFreeProduct.neg_nonempty",
+          "Dubon2026.SourceModularFreeProduct.disjoint_pos_neg",
+          "Dubon2026.SourceModularFreeProduct.S_smul_coe",
+          "Dubon2026.SourceModularFreeProduct.ST_smul_coe",
+          "Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe",
+          "Dubon2026.SourceModularFreeProduct.neg_one_smul_eq",
+          "Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos",
+          "Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg",
+          "Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg",
+          "Dubon2026.SourceModularFreeProduct.toPerm_apply",
+          "Dubon2026.SourceModularFreeProduct.toPerm_neg_one",
+          "Dubon2026.SourceModularFreeProduct.permS_sq",
+          "Dubon2026.SourceModularFreeProduct.permU_pow_three",
+          "Dubon2026.SourceModularFreeProduct.gen_zero",
+          "Dubon2026.SourceModularFreeProduct.gen_one",
+          "Dubon2026.SourceModularFreeProduct.gen_pow_eq_one",
+          "Dubon2026.SourceModularFreeProduct.incl_ofAdd_one",
+          "Dubon2026.SourceModularFreeProduct.incl_zero_eq",
+          "Dubon2026.SourceModularFreeProduct.incl_one_eq",
+          "Dubon2026.SourceModularFreeProduct.pingPongSet_zero",
+          "Dubon2026.SourceModularFreeProduct.pingPongSet_one",
+          "Dubon2026.SourceModularFreeProduct.pingPong",
+          "Dubon2026.SourceModularFreeProduct.three_le_card_factor_one",
+          "Dubon2026.SourceModularFreeProduct.lift_injective",
+          "Dubon2026.SourceModularFreeProduct.range_lift_eq",
+          "Dubon2026.SourceModularFreeProduct.irrational_sqrt_three",
+          "Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation",
+          "Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation",
+          "Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one",
+          "Dubon2026.SourceModularFreeProduct.mem_center_iff_eq",
+          "Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center",
+          "Dubon2026.SourceModularFreeProduct.equivRange_apply_coe",
+          "Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq",
+          "Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero",
+          "Dubon2026.SourceModularFreeProduct.mulEquiv_of_one",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo",
+          "Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo",
+          "Dubon2026.SourceModularFreeProduct.moebius",
+          "Dubon2026.SourceModularFreeProduct.Pos",
+          "Dubon2026.SourceModularFreeProduct.Neg",
+          "Dubon2026.SourceModularFreeProduct.toPerm",
+          "Dubon2026.SourceModularFreeProduct.permS",
+          "Dubon2026.SourceModularFreeProduct.permU",
+          "Dubon2026.SourceModularFreeProduct.G23",
+          "Dubon2026.SourceModularFreeProduct.gen",
+          "Dubon2026.SourceModularFreeProduct.incl",
+          "Dubon2026.SourceModularFreeProduct.pingPongSet",
+          "Dubon2026.SourceModularFreeProduct.equivRange",
+          "Dubon2026.SourceModularFreeProduct.mulEquiv"
+        ],
+        "sourceSha256": "916ECA546060C8788F6D2970BACB0E693451A28E25C001800CF79BC8E06648C6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionDependencyAudit1Production8674.log",
+        "sha256": "42327C2D1F227C6015D474ADEC0B9CC363AEB72E522EB4EE8C38286F8E163117",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceCuspCorrection.engine"
+        ],
+        "sourceSha256": "A206DD24716A1416E224B1B3BC766C0DB64C441E5D1A95C1F9EF0869C4C7280F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftDependencyAudit1Production8674.log",
+        "sha256": "F21233C80AA610F64DF47DDE189AC159E256288932924E27D139CEA2A76539BE",
+        "requiredProofValueEdges": 58,
+        "consumers": [
+          "Dubon2026.sourceGamma1_integral_parabolic_character_lift"
+        ],
+        "sourceSha256": "F1349AE5A995641E7DE436FDC17B471B169D194A2C622F4685ABAA410F361699"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1Production8674.log",
+        "sha256": "2B29616EEC9638C360F48B17E394DC96C72FDDBE88263CA07382F5A6BF5C3A1D",
+        "requiredProofValueEdges": 83,
+        "consumers": [
+          "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period"
+        ],
+        "sourceSha256": "F363EDD8E4053439B0C14F4E16D432DC36067137AB974FFD745AE5647F595587"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1Production8674.log",
+        "sha256": "490DDFC5C55B8751A131A843E8C1D40662E206A0D98FF898140C06CA4F6FCE3A",
+        "requiredProofValueEdges": 101,
+        "consumers": [
+          "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+        ],
+        "sourceSha256": "AD6641EED1C8F97FF3376E917F97E721D472F19ED4D80BD63ED9D020C4FE4AB9"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierPeriodsProductionAudit8674.log",
+    "sha256": "A4E26DF3FF9886E3F3B63C5778F4DCD5747EC9D4D4A114298A4504ECE26F6EF9",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-multiplier-periods-production-build-8674.log",
+    "aggregateSha256": "54C2E84F4B15733A012079C2A480C6E594A632C61FD201FCF38484533E8E2AAF",
+    "productionModules": 8674,
+    "incrementModules": 42,
+    "axiomChecks": 273,
+    "exhaustiveIncrementTheorems": 352,
+    "linterScopes": 42,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 352,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. The original Gamma1 field, all nonzero levels, literal segment periods, all natural moduli, actual modular group and signed stabilizer normalization are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 352,
+      "scratchDistinct": 352,
+      "generatedNameRenamings": {},
+      "productionFocused": 352,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceWeightTwoEndpointPeriods",
+            "SourceWeightTwoIntegralPeriods",
+            "SourceWeightTwoClosedChainPeriods",
+            "SourceWeightTwoSegmentPeriods",
+            "SourceGammaOneClosedChainIntegral"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsScratchOwnership804.log",
+            "sha256": "9E27C5F5234A46675291B9CCB006C6D84B247E0CB1316D6DD3ABFFEF46C7C977",
+            "sourceSha256": "4806F220FE82F00476358FA6E18FA9727B38287E14C8781E5B851BA402AA5534"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularIrrationalAction",
+            "SourceModularPingPongSets",
+            "SourceModularFreeProductInjection",
+            "SourceModularProjectiveKernel",
+            "SourceModularFreeProduct"
+          ],
+          "count": 76,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductScratchOwnership810.log",
+            "sha256": "13151C312AD546B738CA73F806953F61EEF9B15F741A271203902607E7F65222",
+            "sourceSha256": "6BB95285CD0F60AB8107D1CF13BDEB7AF254D6D3703B89E6B1BE5185B56B942C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCuspCorrectionEdgeChains",
+            "SourceCuspCorrectionCosetChains",
+            "SourceCuspCorrectionGenerators",
+            "SourceCuspCorrectionCyclicCosets",
+            "SourceCuspCorrectionEdgeCharacters",
+            "SourceCuspCorrectionRealization"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionScratchOwnership817.log",
+            "sha256": "BBD8A3293E55547A06BD6BE2A7E20F559E8B5EDB5FD1165A0AF52BA0CC99C5FE",
+            "sourceSha256": "24404439D3D455A3081E717C1C99FEF2CA15BC5BD5BAD0C895EB9D27B3A1C1EC"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralCharacterCrossed",
+            "SourceIntegralCharacterPotential",
+            "SourceIntegralCharacterShapiro",
+            "SourceIntegralCharacterFreeProduct",
+            "SourceIntegralCharacterInitialLift",
+            "SourceIntegralCharacterCuspConjugacy",
+            "SourceIntegralCharacterCuspSum",
+            "SourceIntegralCharacterCorrection",
+            "SourceIntegralCharacterModularFacts",
+            "SourceIntegralCharacterModularBridge",
+            "SourceIntegralParabolicCharacterLift",
+            "SourceGammaOneIntegralParabolicLift"
+          ],
+          "count": 118,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftScratchOwnership830.log",
+            "sha256": "79C3079F0A5FD44003676F2719F8BE5D71A0849742D027006437EC58B09A7710",
+            "sourceSha256": "8D6C1E50BA89A61635B4A1900FECF0B5255CEB1062876A0370C461AAA11354A4"
+          }
+        },
+        {
+          "modules": [
+            "SourceUnitaryCharacterFiniteOrder",
+            "SourceUnitaryCharacterRecurrence",
+            "SourceUnitaryCharacterTraceBound",
+            "SourceUnitaryCharacterAbelianQuotient",
+            "SourceUnitaryCharacterBasisExt",
+            "SourceUnitaryCharacterTorsion",
+            "SourceUnitaryCircleCharacter",
+            "SourceUnitaryCharacterLogarithm",
+            "SourceGammaOneUnitaryCharacterPeriods"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.log",
+            "sha256": "9397A259AA8183B20DECF95B4172EFF45C3AD50622F106BF54D3FCFD242322E1",
+            "sourceSha256": "58E18779A8655AF41748B93C9A957FA80A6DB53CD9218F886F56CE29FFEBD544"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularEllipticFixedPoint",
+            "SourceMeromorphicMultiplierParabolic",
+            "SourceMeromorphicMultiplierGerm",
+            "SourceGammaOneMeromorphicMultiplierElliptic",
+            "SourceGammaOneMeromorphicMultiplierPeriods"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.log",
+            "sha256": "BE857F0B9BF42D8123DCF38C4F7914122D40B0F007F0C55EC16338814D7F475D",
+            "sourceSha256": "AFCBA99D1CA52328F77AEC28D274B029498E3BA13B972C08B25B9C0E2DE30D22"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierPeriodsOwnership8674.log",
+        "sha256": "A7180349D87D4220B6AE643F38E534CC15E76B0AAAAFCDA2A88260F248D9B0BD",
+        "sourceSha256": "7CC6CE403DDE6A27EB9BB185D907F1F02040D386A568850D3B21B0C7ACA67989"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-074543-632.log",
+        "sha256": "A9B0BFDD654031106B62E4BACE9C5F38EE25B1DB6538877CA54A43BE557E1285"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 42 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceWeightTwoEndpointPeriods",
+            "scratchSha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+            "productionSha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoIntegralPeriods",
+            "scratchSha256": "1A6058ECF4F2E0C559D1D843B78D3A98F80747DD32C890B2F9F48ED61E2ACE35",
+            "productionSha256": "55792094BF55943629990F390F7EB38AA6844B26DFA694E819ED41B98674914B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoClosedChainPeriods",
+            "scratchSha256": "F262AE4391F010FC1122B97BD31614DA8A502B682323FC007BB0E8407F58E9C2",
+            "productionSha256": "A96828BF9F4CE939527682B0FD304FF62190EFD887BCFCECBE0FA976DED725E8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoSegmentPeriods",
+            "scratchSha256": "85F9369A102875F39DA5EFB99606E109406630F4630BAA59CDF66B8CB8D8DB87",
+            "productionSha256": "72FA0611A2FC20A338022D3981C71F83F7C2C9DEAFC5AA303570AB4DA64ACCE5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneClosedChainIntegral",
+            "scratchSha256": "1F2BCB032ADF23F72D944E30E5EA37126A387302BC538819D780927B169B57C6",
+            "productionSha256": "3BFCC5D3EBAD3FA594FD38816ABF8A78BD2E19287309303AABE5550480811027",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularIrrationalAction",
+            "scratchSha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0",
+            "productionSha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularPingPongSets",
+            "scratchSha256": "45DCEB6EE127B34586D280AC4337CB3FE4EEC9203A7C78A5193F931783CF4480",
+            "productionSha256": "E7B4C77B9701788289AFBC1B4A25011045B3FBA32E21959BB2314EB89104B674",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularFreeProductInjection",
+            "scratchSha256": "5F991521A533B110D6AC66147996C612C80C7770858753C122923C38C2B60C0C",
+            "productionSha256": "2F0D1270F3CC87C56422194283239EB39CAE7E3C3366111333FA57CF553D3C1A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularProjectiveKernel",
+            "scratchSha256": "CACC848948FDDAACDF291D3779BCEF08701B3CB61E12678F430DBA949546494B",
+            "productionSha256": "BBC3E4A80FD298F4FA4145AE611F893455635088FC6C55F8CF92CC38034F651C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularFreeProduct",
+            "scratchSha256": "7CF1312FC2F4A55E96560004B5853085D4517C33E705F1F61FA52E9CE057BA66",
+            "productionSha256": "245CC7A100B887F341460E86265E79F8EBF60FA3B515D610E4AE834264591F27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionEdgeChains",
+            "scratchSha256": "3E5930BC1EBB5B087004396B4A20F08BC35F8C0CF68124740AFFC0BC7294D9DB",
+            "productionSha256": "658E5789868641F51582A311B21A0FB84966078B3FEEFF4BDA28CE32678E5115",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionCosetChains",
+            "scratchSha256": "C4F8538C2C41DD87350071CC3F3B36FA1F266D7232A135D1D382A4443A884976",
+            "productionSha256": "4CAC9C745AE509348E6B6EE916C2417F0E2FA4869EC510C62CEFB6D150D08B1C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionGenerators",
+            "scratchSha256": "5696D450E555A34C59B193A160E1605144E10C60B69C2B7740F08B8BDD732DAF",
+            "productionSha256": "3C6114610FA0AFC165F1E84BCDA443FCF4153F8EF524A184A6DD1548306E81AD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionCyclicCosets",
+            "scratchSha256": "89199E147F03C20DAAE4D3940D1ABBB5A7CCE8A623E38883D7471333A995B35B",
+            "productionSha256": "28DEDA4E178E99044B4C263C5102CAB9FE612363B1E2F0615A2519679225A37F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionEdgeCharacters",
+            "scratchSha256": "801D7DC60678DF1148A1D6D8274742E906FD19B93C9585CEFBA6A6D1A716AEDD",
+            "productionSha256": "17D2ECDEFF4B12B83838C7409474F428AF2DAF39193A07BBEB744BA3C6B57D87",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionRealization",
+            "scratchSha256": "D3BABE424433C4079839DED426A0B06BC29F727775D53BC96859FB2A9FB96540",
+            "productionSha256": "E4441B7BED33308DEE1C9E0EAFF53004B4C29FB1640C6B3AAE434125EBD9E1B0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCrossed",
+            "scratchSha256": "980E658B1F3DDA2D1316D3E01DE9AF8270C0DFED009C0E77F175A15CA768D9B8",
+            "productionSha256": "E7A10A952EBF76A9674B978ABD7CDF701C895661AAC81632981D52C005C9EA15",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterPotential",
+            "scratchSha256": "71286A0F32CB10715EDC3B23CBE8B2E5976F39A38C56EB3ACCC854EC98D7AD43",
+            "productionSha256": "824D4A355F0B9A42EDEE80DDC926415B4761ABB9C221E71CEF2EAB06E56A9913",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterShapiro",
+            "scratchSha256": "787D4907AA78B8B703A5E474542112EAE4354A542B11E2CC34569B992EF064C8",
+            "productionSha256": "2BF990CCCD8900693BE5114C0F651C3B14C5EEE1E9280D305F4C4A81FDF5E682",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterFreeProduct",
+            "scratchSha256": "15518282113E329971BE6B68FEFE30A0F65B61C2EC32815D338E89600FFFE0A9",
+            "productionSha256": "546434416392CAF95C240E692DE590FE294EF93F4F3CE56367B35D53DFB4E218",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterInitialLift",
+            "scratchSha256": "EA13F38FFBB4526110D158301CD4B7F3B47F1E5C06A289FB9EF2D38E90275DC3",
+            "productionSha256": "7743C148DEED9A69446113A91D1ED4AA14434038766FD378B0E278B31B89965E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCuspConjugacy",
+            "scratchSha256": "D8A721B6D85A3AD5DEE3CBB75C5C81A87B627162EAA0DA444630940D3C3E69E3",
+            "productionSha256": "D63B6733203E4128E5686A012B537843859846BC0A1EBB75578ED4A0FEC5EF22",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCuspSum",
+            "scratchSha256": "48CDC79242FA7B664881DD0A25105449AC7B9A70E59F6732E6E1695266F08B27",
+            "productionSha256": "1D340F87AD45E48D2C1B29F75CB65165DA661FC0CFE20908A387D7B16081B87F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCorrection",
+            "scratchSha256": "DAEA97EFBA77374AEBF665850F2C226AF76441A959829CDCA02CC3C9B261273B",
+            "productionSha256": "CE0A1DFBB96DB33D36817743DBEF23BE9EA702FCB9EC264F084F58DF6929CC8F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterModularFacts",
+            "scratchSha256": "C021D3DEA3933279456E873401A912BD3B86AD9907A23C468C467D042A7224A4",
+            "productionSha256": "485A00F6297E9BF4D434A482F82A15D6DFDD47976947AD769A3B6DEE24972B0E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterModularBridge",
+            "scratchSha256": "CBB14F25C2726A4BEE4B56E68935A7845A5C88513958A1FD4C07BDF1D061007A",
+            "productionSha256": "685AA8A67204EB701E1219AEC4253FA5B9686654A57C1BF83BA6401482AEE7F5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralParabolicCharacterLift",
+            "scratchSha256": "C5AC7EB5BEA0C79FF5D5200AD88EC60865CDCE8144754752D3D1A4F489348195",
+            "productionSha256": "DFCAC8F68DA9EA2477875A42FF9912296B1ACC13DC0B607BDEBD5D1BBDAFB783",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralParabolicLift",
+            "scratchSha256": "7E1448C43DB1D335F4C0F9C5B6719A14EDA0808DC313CDB823EB13C8CC44F3FC",
+            "productionSha256": "FD0DF1370CBAB07CA9720441719798C1C56EB3EE3053F5E5787442E1B6BEDC08",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterFiniteOrder",
+            "scratchSha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+            "productionSha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterRecurrence",
+            "scratchSha256": "3679136F346F84CD37F760E52E09CA3B8E65F5D5C6AB8AE235DA31BF0B55DFCD",
+            "productionSha256": "536B1472C163BE63A3899638F4EA3B47F682F1D5CE37C781BBF6DEAFA3FE1300",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterTraceBound",
+            "scratchSha256": "48FF76188261C5FC4906940532968D23366B660334C3F63B5808AAEF27913F1A",
+            "productionSha256": "F95081AB06177AD890FADC9D1FCFCEE33D733798ED7CEDACA6FAC529E564F329",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterAbelianQuotient",
+            "scratchSha256": "AB90E4829761E1483967825DC9B6012B8EA319ECE758C841433AA32030AD5A71",
+            "productionSha256": "D645CDA9F3ACC586BFD99FB25930059A863689DC7AFA8C967B4C0EAFA528A789",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterBasisExt",
+            "scratchSha256": "D1FE00D8095B630BD01EA16B7E14A773C536B2D311ED47E45BFF62E7B3042298",
+            "productionSha256": "0900A293EA6B2DEAE8D8B45B72ADCBBF7A3FE5EA2080D1329B1B12A2F9C0F7CB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterTorsion",
+            "scratchSha256": "F896431C969BE01C3EC23248D0A4A2BBD885D3D9BE1432660C48B78DA2D9D6FC",
+            "productionSha256": "76DF1FCCAC4CCA076125D8BD666D773AFDEEF727B9923A0FFA3CFC238394246C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCircleCharacter",
+            "scratchSha256": "77CC089CDFAD49C6BB5E147A7ED103FCFFEF4A730C4EEC1784F48522A18F3C51",
+            "productionSha256": "EF88E22F7AE0FD9B2E1CB02DA01474B359B69D7CB4C94F998497DC453F980D43",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterLogarithm",
+            "scratchSha256": "544999E53259891F247398319A2C3E5D93030114525D03FD964DF444115A0423",
+            "productionSha256": "7C40CD6A0DCE2C1938AD098FCF92BBAC11D14F1F7B055415022E39F010F3C754",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnitaryCharacterPeriods",
+            "scratchSha256": "4CC6BA2053D796DD7E716BE025E09817B2BAC13999D01B0C1768566F89DA43B7",
+            "productionSha256": "B03BAFDFD4CC4B18B5BD02A192AD5F9CE9910DCCD1C8EF16A217B453E6B475C2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularEllipticFixedPoint",
+            "scratchSha256": "186DD6B4F0BAF53874F82A7125ABBD3001E3A9E0A6E9BB4FEAE4F0175D74884C",
+            "productionSha256": "029AA854D32EF6F077BAE53E1EA8392D3DBA4B84E0CFD40452DCD8499934B6D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicMultiplierParabolic",
+            "scratchSha256": "EDDE5FC329004FEE120B3A3A981FAFF80ADDE4B12073346840069FC0802FABC1",
+            "productionSha256": "4ADED325A0FBE001829698A4B1BF635C27F31D39FF1911DFACF8A97264D8F5DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicMultiplierGerm",
+            "scratchSha256": "36D0C9BF228C90F76C0AC26A7A68517B90F8658FBFE37ECF215BA9751EB51928",
+            "productionSha256": "2BF38FB32B8D3049FE18859D12746D4562711C12ADF685834C2DA127669AC669",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicMultiplierElliptic",
+            "scratchSha256": "887223CE81E94D3330A64932033263BB1478F4959AC3E19EFACB1E04167D288D",
+            "productionSha256": "06FB051DEAD6FFEAF164AA54645E45CBB4633F72AC921BAE9E670171AFE03822",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicMultiplierPeriods",
+            "scratchSha256": "7B2777EE07EE05E00DD1A4C8A3EDEF1E3FD65F85BF91249179C26EE66638E275",
+            "productionSha256": "43D38CB7BCA09D131D5F3647EF0375DB315A75C35AACB44158935EC7ABFDBE31",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 352 distinct names from 352 exhaustive scratch checks are retained: 352 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Analytic reciprocity and construction of meromorphic functions from the original Abel-Jacobi period condition remain. The meromorphic-multiplier consumer assumes the actual meromorphic function, its original divisor orders, unit-modulus multiplier and nonzero translated cusp limits; it does not construct that function. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "receipt8674": {
+    "recordedUTC": "2026-10-27T17:57:20.419953+00:00",
+    "log": "logs/dubon-build-20261027-093137-083.log",
+    "sha256": "153384BF2E3F6D4E48A3E882207751C3F67B6308477022F13611855DF6ABA4FE",
+    "bytes": 14136696,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8674,
+    "projectTheorems": 54791,
+    "registeredConsumers": 25193,
+    "registeredConstructions": 2570,
+    "declarations": 33720,
+    "generated": 34398,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_092637.log",
+    "foundationSha256": "586C9E48E11D86CF73CFB6A582EA7433036B440DC2FC6755CC923E6DC434B1B2",
+    "countReconciliation": {
+      "previousTheorems": 54439,
+      "focusedTheorems": 352,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 352,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierPeriodsGlobalOwnership8674.log",
+      "globalOwnershipSha256": "446182AD2B45BD44018DDD4E88350A04DA55EAD7CD49723D190A30D01D42065A",
+      "globalOwnershipSourceSha256": "982D8D8F7E38713A631A9163F099B829F9556087D90BC560E16C666DE3E3C2F4",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierPeriodsOwnership8674.log",
+      "ownershipSha256": "A7180349D87D4220B6AE643F38E534CC15E76B0AAAAFCDA2A88260F248D9B0BD"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 352,
+      "scratchDistinct": 352,
+      "generatedNameRenamings": {},
+      "productionFocused": 352,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceWeightTwoEndpointPeriods",
+            "SourceWeightTwoIntegralPeriods",
+            "SourceWeightTwoClosedChainPeriods",
+            "SourceWeightTwoSegmentPeriods",
+            "SourceGammaOneClosedChainIntegral"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsScratchOwnership804.log",
+            "sha256": "9E27C5F5234A46675291B9CCB006C6D84B247E0CB1316D6DD3ABFFEF46C7C977",
+            "sourceSha256": "4806F220FE82F00476358FA6E18FA9727B38287E14C8781E5B851BA402AA5534"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularIrrationalAction",
+            "SourceModularPingPongSets",
+            "SourceModularFreeProductInjection",
+            "SourceModularProjectiveKernel",
+            "SourceModularFreeProduct"
+          ],
+          "count": 76,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProductScratchOwnership810.log",
+            "sha256": "13151C312AD546B738CA73F806953F61EEF9B15F741A271203902607E7F65222",
+            "sourceSha256": "6BB95285CD0F60AB8107D1CF13BDEB7AF254D6D3703B89E6B1BE5185B56B942C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCuspCorrectionEdgeChains",
+            "SourceCuspCorrectionCosetChains",
+            "SourceCuspCorrectionGenerators",
+            "SourceCuspCorrectionCyclicCosets",
+            "SourceCuspCorrectionEdgeCharacters",
+            "SourceCuspCorrectionRealization"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCorrectionScratchOwnership817.log",
+            "sha256": "BBD8A3293E55547A06BD6BE2A7E20F559E8B5EDB5FD1165A0AF52BA0CC99C5FE",
+            "sourceSha256": "24404439D3D455A3081E717C1C99FEF2CA15BC5BD5BAD0C895EB9D27B3A1C1EC"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralCharacterCrossed",
+            "SourceIntegralCharacterPotential",
+            "SourceIntegralCharacterShapiro",
+            "SourceIntegralCharacterFreeProduct",
+            "SourceIntegralCharacterInitialLift",
+            "SourceIntegralCharacterCuspConjugacy",
+            "SourceIntegralCharacterCuspSum",
+            "SourceIntegralCharacterCorrection",
+            "SourceIntegralCharacterModularFacts",
+            "SourceIntegralCharacterModularBridge",
+            "SourceIntegralParabolicCharacterLift",
+            "SourceGammaOneIntegralParabolicLift"
+          ],
+          "count": 118,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralParabolicCharacterLiftScratchOwnership830.log",
+            "sha256": "79C3079F0A5FD44003676F2719F8BE5D71A0849742D027006437EC58B09A7710",
+            "sourceSha256": "8D6C1E50BA89A61635B4A1900FECF0B5255CEB1062876A0370C461AAA11354A4"
+          }
+        },
+        {
+          "modules": [
+            "SourceUnitaryCharacterFiniteOrder",
+            "SourceUnitaryCharacterRecurrence",
+            "SourceUnitaryCharacterTraceBound",
+            "SourceUnitaryCharacterAbelianQuotient",
+            "SourceUnitaryCharacterBasisExt",
+            "SourceUnitaryCharacterTorsion",
+            "SourceUnitaryCircleCharacter",
+            "SourceUnitaryCharacterLogarithm",
+            "SourceGammaOneUnitaryCharacterPeriods"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsScratchOwnership840.log",
+            "sha256": "9397A259AA8183B20DECF95B4172EFF45C3AD50622F106BF54D3FCFD242322E1",
+            "sourceSha256": "58E18779A8655AF41748B93C9A957FA80A6DB53CD9218F886F56CE29FFEBD544"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularEllipticFixedPoint",
+            "SourceMeromorphicMultiplierParabolic",
+            "SourceMeromorphicMultiplierGerm",
+            "SourceGammaOneMeromorphicMultiplierElliptic",
+            "SourceGammaOneMeromorphicMultiplierPeriods"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsScratchOwnership846.log",
+            "sha256": "BE857F0B9BF42D8123DCF38C4F7914122D40B0F007F0C55EC16338814D7F475D",
+            "sourceSha256": "AFCBA99D1CA52328F77AEC28D274B029498E3BA13B972C08B25B9C0E2DE30D22"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierPeriodsOwnership8674.log",
+        "sha256": "A7180349D87D4220B6AE643F38E534CC15E76B0AAAAFCDA2A88260F248D9B0BD",
+        "sourceSha256": "7CC6CE403DDE6A27EB9BB185D907F1F02040D386A568850D3B21B0C7ACA67989"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-074543-632.log",
+        "sha256": "A9B0BFDD654031106B62E4BACE9C5F38EE25B1DB6538877CA54A43BE557E1285"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 42 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceWeightTwoEndpointPeriods",
+            "scratchSha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+            "productionSha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoIntegralPeriods",
+            "scratchSha256": "1A6058ECF4F2E0C559D1D843B78D3A98F80747DD32C890B2F9F48ED61E2ACE35",
+            "productionSha256": "55792094BF55943629990F390F7EB38AA6844B26DFA694E819ED41B98674914B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoClosedChainPeriods",
+            "scratchSha256": "F262AE4391F010FC1122B97BD31614DA8A502B682323FC007BB0E8407F58E9C2",
+            "productionSha256": "A96828BF9F4CE939527682B0FD304FF62190EFD887BCFCECBE0FA976DED725E8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoSegmentPeriods",
+            "scratchSha256": "85F9369A102875F39DA5EFB99606E109406630F4630BAA59CDF66B8CB8D8DB87",
+            "productionSha256": "72FA0611A2FC20A338022D3981C71F83F7C2C9DEAFC5AA303570AB4DA64ACCE5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneClosedChainIntegral",
+            "scratchSha256": "1F2BCB032ADF23F72D944E30E5EA37126A387302BC538819D780927B169B57C6",
+            "productionSha256": "3BFCC5D3EBAD3FA594FD38816ABF8A78BD2E19287309303AABE5550480811027",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularIrrationalAction",
+            "scratchSha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0",
+            "productionSha256": "1C5B51F7D2572DA7B33A5FB18D207D091B00252C347954C5AD7126D31FABD7A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularPingPongSets",
+            "scratchSha256": "45DCEB6EE127B34586D280AC4337CB3FE4EEC9203A7C78A5193F931783CF4480",
+            "productionSha256": "E7B4C77B9701788289AFBC1B4A25011045B3FBA32E21959BB2314EB89104B674",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularFreeProductInjection",
+            "scratchSha256": "5F991521A533B110D6AC66147996C612C80C7770858753C122923C38C2B60C0C",
+            "productionSha256": "2F0D1270F3CC87C56422194283239EB39CAE7E3C3366111333FA57CF553D3C1A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularProjectiveKernel",
+            "scratchSha256": "CACC848948FDDAACDF291D3779BCEF08701B3CB61E12678F430DBA949546494B",
+            "productionSha256": "BBC3E4A80FD298F4FA4145AE611F893455635088FC6C55F8CF92CC38034F651C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularFreeProduct",
+            "scratchSha256": "7CF1312FC2F4A55E96560004B5853085D4517C33E705F1F61FA52E9CE057BA66",
+            "productionSha256": "245CC7A100B887F341460E86265E79F8EBF60FA3B515D610E4AE834264591F27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionEdgeChains",
+            "scratchSha256": "3E5930BC1EBB5B087004396B4A20F08BC35F8C0CF68124740AFFC0BC7294D9DB",
+            "productionSha256": "658E5789868641F51582A311B21A0FB84966078B3FEEFF4BDA28CE32678E5115",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionCosetChains",
+            "scratchSha256": "C4F8538C2C41DD87350071CC3F3B36FA1F266D7232A135D1D382A4443A884976",
+            "productionSha256": "4CAC9C745AE509348E6B6EE916C2417F0E2FA4869EC510C62CEFB6D150D08B1C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionGenerators",
+            "scratchSha256": "5696D450E555A34C59B193A160E1605144E10C60B69C2B7740F08B8BDD732DAF",
+            "productionSha256": "3C6114610FA0AFC165F1E84BCDA443FCF4153F8EF524A184A6DD1548306E81AD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionCyclicCosets",
+            "scratchSha256": "89199E147F03C20DAAE4D3940D1ABBB5A7CCE8A623E38883D7471333A995B35B",
+            "productionSha256": "28DEDA4E178E99044B4C263C5102CAB9FE612363B1E2F0615A2519679225A37F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionEdgeCharacters",
+            "scratchSha256": "801D7DC60678DF1148A1D6D8274742E906FD19B93C9585CEFBA6A6D1A716AEDD",
+            "productionSha256": "17D2ECDEFF4B12B83838C7409474F428AF2DAF39193A07BBEB744BA3C6B57D87",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspCorrectionRealization",
+            "scratchSha256": "D3BABE424433C4079839DED426A0B06BC29F727775D53BC96859FB2A9FB96540",
+            "productionSha256": "E4441B7BED33308DEE1C9E0EAFF53004B4C29FB1640C6B3AAE434125EBD9E1B0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCrossed",
+            "scratchSha256": "980E658B1F3DDA2D1316D3E01DE9AF8270C0DFED009C0E77F175A15CA768D9B8",
+            "productionSha256": "E7A10A952EBF76A9674B978ABD7CDF701C895661AAC81632981D52C005C9EA15",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterPotential",
+            "scratchSha256": "71286A0F32CB10715EDC3B23CBE8B2E5976F39A38C56EB3ACCC854EC98D7AD43",
+            "productionSha256": "824D4A355F0B9A42EDEE80DDC926415B4761ABB9C221E71CEF2EAB06E56A9913",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterShapiro",
+            "scratchSha256": "787D4907AA78B8B703A5E474542112EAE4354A542B11E2CC34569B992EF064C8",
+            "productionSha256": "2BF990CCCD8900693BE5114C0F651C3B14C5EEE1E9280D305F4C4A81FDF5E682",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterFreeProduct",
+            "scratchSha256": "15518282113E329971BE6B68FEFE30A0F65B61C2EC32815D338E89600FFFE0A9",
+            "productionSha256": "546434416392CAF95C240E692DE590FE294EF93F4F3CE56367B35D53DFB4E218",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterInitialLift",
+            "scratchSha256": "EA13F38FFBB4526110D158301CD4B7F3B47F1E5C06A289FB9EF2D38E90275DC3",
+            "productionSha256": "7743C148DEED9A69446113A91D1ED4AA14434038766FD378B0E278B31B89965E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCuspConjugacy",
+            "scratchSha256": "D8A721B6D85A3AD5DEE3CBB75C5C81A87B627162EAA0DA444630940D3C3E69E3",
+            "productionSha256": "D63B6733203E4128E5686A012B537843859846BC0A1EBB75578ED4A0FEC5EF22",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCuspSum",
+            "scratchSha256": "48CDC79242FA7B664881DD0A25105449AC7B9A70E59F6732E6E1695266F08B27",
+            "productionSha256": "1D340F87AD45E48D2C1B29F75CB65165DA661FC0CFE20908A387D7B16081B87F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterCorrection",
+            "scratchSha256": "DAEA97EFBA77374AEBF665850F2C226AF76441A959829CDCA02CC3C9B261273B",
+            "productionSha256": "CE0A1DFBB96DB33D36817743DBEF23BE9EA702FCB9EC264F084F58DF6929CC8F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterModularFacts",
+            "scratchSha256": "C021D3DEA3933279456E873401A912BD3B86AD9907A23C468C467D042A7224A4",
+            "productionSha256": "485A00F6297E9BF4D434A482F82A15D6DFDD47976947AD769A3B6DEE24972B0E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralCharacterModularBridge",
+            "scratchSha256": "CBB14F25C2726A4BEE4B56E68935A7845A5C88513958A1FD4C07BDF1D061007A",
+            "productionSha256": "685AA8A67204EB701E1219AEC4253FA5B9686654A57C1BF83BA6401482AEE7F5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralParabolicCharacterLift",
+            "scratchSha256": "C5AC7EB5BEA0C79FF5D5200AD88EC60865CDCE8144754752D3D1A4F489348195",
+            "productionSha256": "DFCAC8F68DA9EA2477875A42FF9912296B1ACC13DC0B607BDEBD5D1BBDAFB783",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralParabolicLift",
+            "scratchSha256": "7E1448C43DB1D335F4C0F9C5B6719A14EDA0808DC313CDB823EB13C8CC44F3FC",
+            "productionSha256": "FD0DF1370CBAB07CA9720441719798C1C56EB3EE3053F5E5787442E1B6BEDC08",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterFiniteOrder",
+            "scratchSha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+            "productionSha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterRecurrence",
+            "scratchSha256": "3679136F346F84CD37F760E52E09CA3B8E65F5D5C6AB8AE235DA31BF0B55DFCD",
+            "productionSha256": "536B1472C163BE63A3899638F4EA3B47F682F1D5CE37C781BBF6DEAFA3FE1300",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterTraceBound",
+            "scratchSha256": "48FF76188261C5FC4906940532968D23366B660334C3F63B5808AAEF27913F1A",
+            "productionSha256": "F95081AB06177AD890FADC9D1FCFCEE33D733798ED7CEDACA6FAC529E564F329",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterAbelianQuotient",
+            "scratchSha256": "AB90E4829761E1483967825DC9B6012B8EA319ECE758C841433AA32030AD5A71",
+            "productionSha256": "D645CDA9F3ACC586BFD99FB25930059A863689DC7AFA8C967B4C0EAFA528A789",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterBasisExt",
+            "scratchSha256": "D1FE00D8095B630BD01EA16B7E14A773C536B2D311ED47E45BFF62E7B3042298",
+            "productionSha256": "0900A293EA6B2DEAE8D8B45B72ADCBBF7A3FE5EA2080D1329B1B12A2F9C0F7CB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterTorsion",
+            "scratchSha256": "F896431C969BE01C3EC23248D0A4A2BBD885D3D9BE1432660C48B78DA2D9D6FC",
+            "productionSha256": "76DF1FCCAC4CCA076125D8BD666D773AFDEEF727B9923A0FFA3CFC238394246C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCircleCharacter",
+            "scratchSha256": "77CC089CDFAD49C6BB5E147A7ED103FCFFEF4A730C4EEC1784F48522A18F3C51",
+            "productionSha256": "EF88E22F7AE0FD9B2E1CB02DA01474B359B69D7CB4C94F998497DC453F980D43",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUnitaryCharacterLogarithm",
+            "scratchSha256": "544999E53259891F247398319A2C3E5D93030114525D03FD964DF444115A0423",
+            "productionSha256": "7C40CD6A0DCE2C1938AD098FCF92BBAC11D14F1F7B055415022E39F010F3C754",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnitaryCharacterPeriods",
+            "scratchSha256": "4CC6BA2053D796DD7E716BE025E09817B2BAC13999D01B0C1768566F89DA43B7",
+            "productionSha256": "B03BAFDFD4CC4B18B5BD02A192AD5F9CE9910DCCD1C8EF16A217B453E6B475C2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularEllipticFixedPoint",
+            "scratchSha256": "186DD6B4F0BAF53874F82A7125ABBD3001E3A9E0A6E9BB4FEAE4F0175D74884C",
+            "productionSha256": "029AA854D32EF6F077BAE53E1EA8392D3DBA4B84E0CFD40452DCD8499934B6D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicMultiplierParabolic",
+            "scratchSha256": "EDDE5FC329004FEE120B3A3A981FAFF80ADDE4B12073346840069FC0802FABC1",
+            "productionSha256": "4ADED325A0FBE001829698A4B1BF635C27F31D39FF1911DFACF8A97264D8F5DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicMultiplierGerm",
+            "scratchSha256": "36D0C9BF228C90F76C0AC26A7A68517B90F8658FBFE37ECF215BA9751EB51928",
+            "productionSha256": "2BF38FB32B8D3049FE18859D12746D4562711C12ADF685834C2DA127669AC669",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicMultiplierElliptic",
+            "scratchSha256": "887223CE81E94D3330A64932033263BB1478F4959AC3E19EFACB1E04167D288D",
+            "productionSha256": "06FB051DEAD6FFEAF164AA54645E45CBB4633F72AC921BAE9E670171AFE03822",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicMultiplierPeriods",
+            "scratchSha256": "7B2777EE07EE05E00DD1A4C8A3EDEF1E3FD65F85BF91249179C26EE66638E275",
+            "productionSha256": "43D38CB7BCA09D131D5F3647EF0375DB315A75C35AACB44158935EC7ABFDBE31",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 352 distinct names from 352 exhaustive scratch checks are retained: 352 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Analytic reciprocity and construction of meromorphic functions from the original Abel-Jacobi period condition remain. The meromorphic-multiplier consumer assumes the actual meromorphic function, its original divisor orders, unit-modulus multiplier and nonzero translated cusp limits; it does not construct that function. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  }
+}

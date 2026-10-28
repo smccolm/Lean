@@ -1,0 +1,46 @@
+import Dubon2026.SourceModularGreenArc
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period identity
+-> Green's formula on the actual modular fundamental domain.
+Adapted from pinned Apache-2.0 anthropics/fermats-last-theorem source.
+Native Fubini, one-dimensional FTC and real change-of-variable theorems provide
+the shorter rigorous route for the curved boundary; no boundary identity is
+assumed. No incidental open-neighborhood assumption is retained. -/
+namespace Dubon2026.SourceModularGreen
+noncomputable section
+open Complex MeasureTheory Set Filter Topology
+
+variable (Φ : ℂ → ℂ) (Φ' : ℂ → ℂ →L[ℝ] ℂ) (U : Set ℂ) (δ : ℝ) (hδ : 0 < δ)
+  (hDU : D ⊆ U) (hd : ∀ z ∈ U, HasFDerivAt Φ (Φ' z) z) (hc : ContinuousOn Φ' U)
+  (hΦ : ∃ C : ℝ, ∀ z ∈ U, ‖Φ z‖ ≤ C * Real.exp (-δ * z.im))
+  (hΦ' : ∃ C : ℝ, ∀ z ∈ U, ‖Φ' z‖ ≤ C * Real.exp (-δ * z.im))
+
+include hδ hDU hd hc hΦ hΦ' in
+
+theorem integral_eq_boundary :
+    (∫ z in D, (I • Φ' z 1 - Φ' z I)) =
+      I • (∫ y in Ioi (Real.sqrt 3 / 2), Φ (1 / 2 + y * I))
+        - I • (∫ y in Ioi (Real.sqrt 3 / 2), Φ (-(1 / 2) + y * I))
+        - ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+            Φ (Complex.exp (θ * I)) * (I * Complex.exp (θ * I)) := by
+  have hT := setIntegral_D (fun z => I • Φ' z 1 - Φ' z I)
+  beta_reduce at hT
+  rw [hT]
+  have hA : Integrable (fun p : ℝ × ℝ => Φ' ⟨p.1, p.2⟩ I) (volume.restrict T) :=
+    integrableOn_T_apply Φ' U δ hδ hDU hc hΦ' I
+  have hB : Integrable (fun p : ℝ × ℝ => I • Φ' ⟨p.1, p.2⟩ 1) (volume.restrict T) :=
+    (integrableOn_T_apply Φ' U δ hδ hDU hc hΦ' 1).smul I
+  rw [integral_sub hB hA, integral_smul, integral_T_horiz Φ Φ' U δ hδ hDU hd hc hΦ hΦ',
+    integral_T_vert Φ Φ' U δ hδ hDU hd hc hΦ hΦ', arc_split Φ Φ' U hDU hd,
+    arc_sin Φ, arc_cos Φ Φ' U hDU hd]
+  have e1 : ∀ y : ℝ, ((1 : ℂ) / 2 + y * I) = (⟨1 / 2, y⟩ : ℂ) := fun y =>
+    Complex.ext (by simp) (by simp)
+  have e2 : ∀ y : ℝ, (-((1 : ℂ) / 2) + y * I) = (⟨-(1 / 2), y⟩ : ℂ) := fun y =>
+    Complex.ext (by simp) (by simp)
+  simp_rw [e1, e2]
+  simp only [smul_eq_mul]
+  ring
+
+
+end
+end Dubon2026.SourceModularGreen

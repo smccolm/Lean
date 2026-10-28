@@ -1,0 +1,33 @@
+import SourceModularProjectiveFibers
+import SourceModularSmoothOrbitMass
+import SourceModularInvariantIntegralUnfolding
+import SourceModularSmoothIntegralLimit
+import SourceModularSmoothPlaneIntegral
+import SourceGammaOnePeterssonSmoothLimit
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGamma1_petersson_smoothed_limit]
+  let localModules : Array Name := #[`SourceModularProjectiveFibers, `SourceModularSmoothOrbitMass, `SourceModularInvariantIntegralUnfolding, `SourceModularSmoothIntegralLimit, `SourceModularSmoothPlaneIntegral, `SourceGammaOnePeterssonSmoothLimit, `SourceModularSmoothCutoff, `SourceModularSmoothGeometry, `SourceModularSmoothCosetSum, `SourceModularSmoothCover, `SourceModularSmoothedFundamentalSupport, `SourceModularSmoothedFundamental, `SourceGammaOneSmoothPartition]
+  let required : Array Name := #[`Dubon2026.SourceSmoothedUnfolding.projection_surjective, `Dubon2026.SourceSmoothedUnfolding.mem_projection_ker, `Dubon2026.SourceSmoothedUnfolding.projection_ker_card, `Dubon2026.SourceSmoothedUnfolding.projection_fiber_card, `Dubon2026.SourceSmoothedUnfolding.tsum_projection, `Dubon2026.SourceSmoothedUnfolding.finite_support_projective, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg, `Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half, `Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized, `Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq, `Dubon2026.SourceSmoothedUnfolding.center_le, `Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth, `Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos, `Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane, `Dubon2026.sourceCusp_petersson_integrable_closedDomain, `Dubon2026.sourceGamma1_petersson_smoothed_limit, `Dubon2026.SourceSmoothedUnfolding.projection, `Dubon2026.SourceSmoothedUnfolding.projectiveMass, `Dubon2026.SourceSmoothedUnfolding.closedDomain, `Dubon2026.SourceSmoothedFundamental.contDiff, `Dubon2026.SourceSmoothedFundamental.finite_support_smul, `Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one, `Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one, `Dubon2026.SourceSmoothedFundamental.tsupport_subset, `Dubon2026.integralSubgroupDomain_volume_lt_top, `Dubon2026.isFundamentalDomain_integralSubgroup, `Dubon2026.fd_ae_eq_fdo, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend, `CuspFormClass.petersson_bounded_left, `MeasureTheory.IsFundamentalDomain.lintegral_eq_tsum'', `MeasureTheory.IsFundamentalDomain.integral_eq_tsum'', `MeasureTheory.integral_tsum, `MeasureTheory.tendsto_integral_filter_of_dominated_convergence, `MonoidHom.fiberEquivKerOfSurjective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE PETERSSON SMOOTH LIMIT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual original Gamma1 cusp-form consumer. Native unfolding, fiber equivalence and dominated convergence, existing generic projective domain, finite volume, null boundary and faithful signed cusp forms are consumed. No invariant limit, integrability or central normalization is assumed. Winding-period comparison and full all-weight goal remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

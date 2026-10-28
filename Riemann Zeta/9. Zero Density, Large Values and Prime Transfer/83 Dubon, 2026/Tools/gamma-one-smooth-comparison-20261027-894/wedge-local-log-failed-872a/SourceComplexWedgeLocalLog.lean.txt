@@ -1,0 +1,167 @@
+import SourceComplexWedgeStokes
+import SourceComplexCauchyPompeiu
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> winding-period limit -> smooth local comparison
+function. Its exact local integer orders give the wedge/residue identity
+by compact-support integration by parts, the proved simple-pole kernel,
+and native smooth partition of unity. Holomorphicity of the smooth
+comparison function is not assumed. -/
+namespace Dubon2026.SourceComplexReciprocity.Wedge
+noncomputable section
+open MeasureTheory Filter Complex Metric Set DbarFundamental
+open scoped Topology Real Manifold ContDiff
+
+variable {a : ℂ} {r : ℝ} {n : ℤ} {Ψ Φ E E' k : ℂ → ℂ}
+  (hΨ : ContDiffOn ℝ 1 Ψ (ball a r))
+  (hΨ1 : ∀ z ∈ ball a r, ‖Ψ z * (Ψ a)⁻¹ - 1‖ < 1) (hΨa : Ψ a ≠ 0)
+  (hΦ : ∀ z ∈ ball a r, Φ z = (z - a) ^ n * Ψ z)
+  (hE : ∀ z ∈ ball a r, HasDerivAt E (E' z) z)
+  (hk : ContDiff ℝ 2 k) (hks : HasCompactSupport k) (hkr : tsupport k ⊆ ball a r)
+
+/-- Local logarithm of the normalized nonzero smooth factor. -/
+def Lg (Ψ : ℂ → ℂ) (a z : ℂ) : ℂ := log (Ψ z * (Ψ a)⁻¹)
+
+include hΨ1 in
+theorem mem_slit {z : ℂ} (hz : z ∈ ball a r) : Ψ z * (Ψ a)⁻¹ ∈ slitPlane := by
+  have : Ψ z * (Ψ a)⁻¹ = 1 + (Ψ z * (Ψ a)⁻¹ - 1) := by ring
+  rw [this]; exact mem_slitPlane_of_norm_lt_one (hΨ1 z hz)
+
+include hΨ1 in
+theorem Ψ_ne {z : ℂ} (hz : z ∈ ball a r) : Ψ z ≠ 0 := by
+  have := slitPlane_ne_zero (mem_slit hΨ1 hz)
+  exact left_ne_zero_of_mul this
+
+include hΨ hΨ1 in
+theorem contDiffOn_Lg : ContDiffOn ℝ 1 (Lg Ψ a) (ball a r) := by
+  intro z hz
+  have h1 : ContDiffWithinAt ℝ 1 (fun w => Ψ w * (Ψ a)⁻¹) (ball a r) z :=
+    (hΨ z hz).mul contDiffWithinAt_const
+  have h2 : ContDiffAt ℝ 1 log (Ψ z * (Ψ a)⁻¹) :=
+    (Complex.contDiffAt_log (mem_slit hΨ1 hz)).restrict_scalars ℝ
+  exact h2.comp_contDiffWithinAt z h1
+
+include hΨ1 hΨa in
+theorem exp_Lg {z : ℂ} (hz : z ∈ ball a r) : exp (Lg Ψ a z) = Ψ z * (Ψ a)⁻¹ :=
+  Complex.exp_log (mul_ne_zero (Ψ_ne hΨ1 hz) (inv_ne_zero hΨa))
+
+include hΨ hΨ1 hΨa in
+
+theorem fderiv_Ψ_eq {z : ℂ} (hz : z ∈ ball a r) :
+    fderiv ℝ Ψ z = Ψ z • fderiv ℝ (Lg Ψ a) z := by
+  have hLd : DifferentiableAt ℝ (Lg Ψ a) z :=
+    ((contDiffOn_Lg hΨ hΨ1).differentiableOn one_ne_zero z hz).differentiableAt
+      (isOpen_ball.mem_nhds hz)
+  have hΨd : DifferentiableAt ℝ Ψ z :=
+    ((hΨ.differentiableOn one_ne_zero) z hz).differentiableAt (isOpen_ball.mem_nhds hz)
+  have hcomp : HasFDerivAt (fun w => exp (Lg Ψ a w)) (exp (Lg Ψ a z) • fderiv ℝ (Lg Ψ a) z) z :=
+    (Complex.hasDerivAt_exp _).comp_hasFDerivAt z hLd.hasFDerivAt
+  have hev : (fun w => exp (Lg Ψ a w)) =ᶠ[𝓝 z] fun w => Ψ w * (Ψ a)⁻¹ := by
+    filter_upwards [isOpen_ball.mem_nhds hz] with w hw using exp_Lg hΨ1 hΨa hw
+  have h1 : HasFDerivAt (fun w => Ψ w * (Ψ a)⁻¹) (exp (Lg Ψ a z) • fderiv ℝ (Lg Ψ a) z) z :=
+    hcomp.congr_of_eventuallyEq hev.symm
+  have h2 : HasFDerivAt (fun w => Ψ w * (Ψ a)⁻¹) ((Ψ a)⁻¹ • fderiv ℝ Ψ z) z := by
+    have := hΨd.hasFDerivAt.mul_const (Ψ a)⁻¹
+    simpa [mul_comm] using this
+  have heq := h1.unique h2
+  rw [exp_Lg hΨ1 hΨa hz] at heq
+  have : fderiv ℝ Ψ z = (Ψ a) • ((Ψ a)⁻¹ • fderiv ℝ Ψ z) := by
+    rw [smul_smul, mul_inv_cancel₀ hΨa, one_smul]
+  rw [this, ← heq, smul_smul]
+  congr 1
+  field_simp
+
+include hE in
+theorem analyticOnNhd_E : AnalyticOnNhd ℂ E (ball a r) := by
+  have hd : DifferentiableOn ℂ E (ball a r) := fun z hz =>
+    (hE z hz).differentiableAt.differentiableWithinAt
+  exact hd.analyticOnNhd isOpen_ball
+
+include hE in
+theorem contDiffAt_E {z : ℂ} (hz : z ∈ ball a r) (m : ℕ∞) : ContDiffAt ℝ m E z :=
+  ((analyticOnNhd_E hE z hz).contDiffAt (n := m)).restrict_scalars ℝ
+
+include hE in
+theorem continuousOn_E' : ContinuousOn E' (ball a r) := by
+  have h1 : ContinuousOn (deriv E) (ball a r) := (analyticOnNhd_E hE).deriv.continuousOn
+  refine h1.congr fun z hz => ?_
+  exact ((hE z hz).deriv).symm
+
+/-- The actual holomorphic primitive times the compact test function. -/
+def vEk (E k : ℂ → ℂ) (z : ℂ) : ℂ := E z * k z
+
+include hE hk hkr in
+theorem contDiff_vEk : ContDiff ℝ 2 (vEk E k) := by
+  refine contDiff_iff_contDiffAt.2 fun z => ?_
+  by_cases hz : z ∈ ball a r
+  · exact (contDiffAt_E hE hz 2).mul hk.contDiffAt
+  · have hz' : z ∉ tsupport k := fun h' => hz (hkr h')
+    have h0 : k =ᶠ[𝓝 z] 0 := notMem_tsupport_iff_eventuallyEq.1 hz'
+    have : vEk E k =ᶠ[𝓝 z] fun _ => 0 := by
+      filter_upwards [h0] with w hw
+      simp [vEk, hw]
+    exact contDiffAt_const.congr_of_eventuallyEq this
+
+include hks in
+theorem hasCompactSupport_vEk : HasCompactSupport (vEk E k) := hks.mul_left
+
+theorem tsupport_vEk : tsupport (vEk E k) ⊆ tsupport k :=
+  closure_minimal (fun z hz => subset_tsupport _ (right_ne_zero_of_mul hz)) (isClosed_tsupport _)
+
+include hE hk in
+theorem fderiv_vEk {z : ℂ} (hz : z ∈ ball a r) (w : ℂ) :
+    fderiv ℝ (vEk E k) z w = E z * fderiv ℝ k z w + k z * (E' z * w) := by
+  have h1 : HasFDerivAt E (E' z • (1 : ℂ →L[ℝ] ℂ)) z := (hE z hz).complexToReal_fderiv
+  have h2 : HasFDerivAt k (fderiv ℝ k z) z := (hk.differentiable (by norm_num) z).hasFDerivAt
+  have h3 : HasFDerivAt (vEk E k) (E z • fderiv ℝ k z + k z • E' z • (1 : ℂ →L[ℝ] ℂ)) z :=
+    h1.mul h2
+  rw [h3.fderiv]
+  simp [smul_eq_mul, mul_comm]
+
+include hE hk hkr in
+
+theorem D_vEk (z : ℂ) : D (vEk E k) z = E z * D k z := by
+  by_cases hz : z ∈ ball a r
+  · simp only [D, fderiv_vEk hE hk hz]
+    have : I * I = -1 := Complex.I_mul_I
+    linear_combination (k z * E' z / 2) * this
+  · have hzk : z ∉ tsupport k := fun h' => hz (hkr h')
+    have hzv : z ∉ tsupport (vEk E k) := fun h' => hzk (tsupport_vEk h')
+    rw [D_eq_zero_of_notMem_tsupport hzv, D_eq_zero_of_notMem_tsupport hzk, mul_zero]
+
+include hΨ hΨ1 hΨa hΦ in
+
+theorem fderiv_Φ_div {z : ℂ} (hz : z ∈ ball a r) (hza : z ≠ a) (w : ℂ) :
+    fderiv ℝ Φ z w / Φ z = n * w / (z - a) + fderiv ℝ (Lg Ψ a) z w := by
+  have hd : z - a ≠ 0 := sub_ne_zero.2 hza
+  have hΨz : Ψ z ≠ 0 := Ψ_ne hΨ1 hz
+  have hΨd : DifferentiableAt ℝ Ψ z :=
+    ((hΨ.differentiableOn one_ne_zero) z hz).differentiableAt (isOpen_ball.mem_nhds hz)
+
+  have hp : HasDerivAt (fun w : ℂ => (w - a) ^ n) ((n : ℂ) * (z - a) ^ (n - 1)) z := by
+    have := (hasDerivAt_zpow n (z - a) (Or.inl hd)).comp z ((hasDerivAt_id z).sub_const a)
+    simp at this
+    exact this
+  have hmodel : HasFDerivAt (fun w => (w - a) ^ n * Ψ w)
+      ((z - a) ^ n • fderiv ℝ Ψ z + Ψ z • (((n : ℂ) * (z - a) ^ (n - 1)) • (1 : ℂ →L[ℝ] ℂ))) z :=
+    hp.complexToReal_fderiv.mul hΨd.hasFDerivAt
+  have hev : Φ =ᶠ[𝓝 z] fun w => (w - a) ^ n * Ψ w := by
+    filter_upwards [isOpen_ball.mem_nhds hz] with w hw using hΦ w hw
+  have hΦd : HasFDerivAt Φ _ z := hmodel.congr_of_eventuallyEq hev
+  rw [hΦd.fderiv, hΦ z hz, fderiv_Ψ_eq hΨ hΨ1 hΨa hz]
+  simp only [ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply,
+    ContinuousLinearMap.one_apply, smul_eq_mul]
+  have hp' : (z - a) ^ (n - 1) = (z - a) ^ n / (z - a) := by
+    rw [zpow_sub_one₀ hd, div_eq_mul_inv]
+  rw [hp']
+  have hzn : (z - a) ^ n ≠ 0 := zpow_ne_zero _ hd
+  field_simp
+  ring
+
+include hΨ1 hΦ in
+theorem Φ_ne {z : ℂ} (hz : z ∈ ball a r) (hza : z ≠ a) : Φ z ≠ 0 := by
+  rw [hΦ z hz]
+  exact mul_ne_zero (zpow_ne_zero _ (sub_ne_zero.2 hza)) (Ψ_ne hΨ1 hz)
+
+end
+end Dubon2026.SourceComplexReciprocity.Wedge

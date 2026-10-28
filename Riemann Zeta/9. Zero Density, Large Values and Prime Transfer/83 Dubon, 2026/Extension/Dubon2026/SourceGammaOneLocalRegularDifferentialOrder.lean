@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOneRawDifferential
+import Dubon2026.SourceGammaOneRegularCuspOrder
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+prescribed-residue differential -> exponential cusp decay. Only regularity
+at the actual cusp place is needed for the existing coefficient-order
+calculation. Interior simple poles are allowed and are not assumed away. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve KaehlerDifferential UpperHalfPlane Filter
+open scoped MatrixGroups ModularForm Topology
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+local notation "EE" => functionFieldOver Γ ℂ
+private local instance coefficientCommutes : SMulCommClass ℂ EE EE := ⟨fun c x y => by
+  change algebraMap ℂ EE c * (x * y) = x * (algebraMap ℂ EE c * y)
+  ring⟩
+
+private local instance differentialModule : Module EE Ω[EE⁄ℂ] :=
+  @KaehlerDifferential.module' ℂ EE inferInstance inferInstance inferInstance
+    EE inferInstance inferInstance (coefficientCommutes (Γ := Γ))
+
+
+theorem locally_regular_coefficient_order_bound (hT : ModularGroup.T ∈ Γ)
+    (a : EE) (ha : a ≠ 0) (v : Place ℂ EE)
+    (hreg : 0 ≤ v.ordDifferential (a • D ℂ EE (jCoordinateOver Γ ℂ)))
+    (hj : v.ord (jCoordinateOver Γ ℂ) ≠ 0) :
+    1 - v.ord (jCoordinateOver Γ ℂ) ≤ v.ord a := by
+  letI : v.DCoordGenerates := functionFieldOver_dCoordGenerates Γ ℂ hT v
+  letI := functionFieldOver_localDifferentials Γ ℂ hT v
+  letI : Module.Finite ℂ v.ResidueField :=
+    Module.Finite.of_surjective (Algebra.linearMap ℂ v.ResidueField)
+      (place_residue_bijective hT v).2
+  letI : Algebra.IsSeparable ℂ v.ResidueField := inferInstance
+  have hDj := D_jCoordinateOver_ne_zero Γ ℂ
+  letI : Nontrivial Ω[EE⁄ℂ] := nontrivial_of_ne _ _ hDj
+  have hcoeff := RegularDifferentialsComparison.differentialCoeff_ne_zero hDj v
+  rw [v.ordDifferential_smul ha hcoeff] at hreg
+  have ho := v.ordDifferential_D_eq_ord_sub_one hj
+  omega
+
+theorem rawDifferential_cusp_order_pos (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (a : EE) (ha : a ≠ 0)
+    {k : ℤ} (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (hr : (a : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (γ : SL(2, ℤ))
+    (hreg : 0 ≤ (cuspPlace N hΓ hT γ).ordDifferential
+      (a • D ℂ EE (jCoordinateOver Γ ℂ))) :
+    0 < meromorphicOrderAt (cuspFunction N (rawDifferential g h ∣[(2 : ℤ)] γ)) 0 := by
+  have hj0 : jCoordinateOver Γ ℂ ≠ 0 := by
+    intro hz
+    exact transcendental_jCoordinateOver Γ ℂ (hz ▸ isAlgebraic_zero)
+  have hb := locally_regular_coefficient_order_bound hT a ha _ hreg
+    (cuspPlace_j_neg N hΓ hT γ).ne
+  obtain ⟨hm, ho⟩ := cusp_raw_j_derivative_order N hT γ
+  rw [meromorphicOrderAt_congr (rawDifferential_cusp_germ N hΓ hT g h hh a hr γ),
+    meromorphicOrderAt_mul (meromorphicAt_cuspRealize N hΓ hT a γ) hm, ho]
+  change 0 < cuspOrder Γ N γ a + cuspOrder Γ N γ (jCoordinateOver Γ ℂ)
+  rw [cuspPlace_order N hΓ hT γ a ha, cuspPlace_order N hΓ hT γ _ hj0,
+    ← WithTop.coe_add, ← WithTop.coe_zero, WithTop.coe_lt_coe]
+  have hp : (0 : ℤ) < cuspRamification N hΓ hT γ := by
+    exact_mod_cast cuspRamification_pos N hΓ hT γ
+  have hs : 0 < (cuspPlace N hΓ hT γ).ord a +
+      (cuspPlace N hΓ hT γ).ord (jCoordinateOver Γ ℂ) := by omega
+  simpa only [mul_add] using mul_pos hp hs
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

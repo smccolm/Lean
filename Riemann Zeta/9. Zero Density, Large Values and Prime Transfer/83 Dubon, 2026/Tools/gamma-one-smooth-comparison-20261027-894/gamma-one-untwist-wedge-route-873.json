@@ -1,0 +1,22 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "actual untwist wedge identity"
+  ],
+  "reuse": [
+    "audited actual Phi_local in SourceMeromorphicPeriodUntwist",
+    "audited normalized endpoint primitive Ek_hasDerivAt",
+    "proved native smooth partition and singular-kernel wedge formula"
+  ],
+  "discharges": [
+    "actual original meromorphic divisor provides every local integer-order smooth model",
+    "actual cusp-form primitive provides the holomorphic multiplier and derivative",
+    "integrability and exact wedge/residue identity follow for the actual untwist"
+  ],
+  "remaining": "F and its exact original-divisor orders remain inputs. The separate invariant-untwist consumer proves multiplier invariance and cusp control; actual comparison model and modular winding/period/Petersson limit remain, followed by original principal-divisor converse and all-weight arithmetic chain."
+}

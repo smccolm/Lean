@@ -1,0 +1,61 @@
+import Dubon2026.SourceUnitaryCharacterFiniteOrder
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapt the Apache-2.0 scope-795b primary at revision
+6e837e75355538c7f80bab5b956861e86c4eacc2, using native Cayley-Hamilton
+and finite abelian-group APIs. No finite-order trace bound, torsion-freeness,
+or logarithmic character lift is postulated. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+/-- The actual trace recurrence for powers of a determinant-one matrix. -/
+def cheb (t : ℤ) : ℕ → ℤ
+  | 0 => 0
+  | 1 => 1
+  | (n + 2) => t * cheb t (n + 1) - cheb t n
+
+theorem pow_succ_eq_cheb (M : Matrix (Fin 2) (Fin 2) ℤ) (hdet : M.det = 1) (n : ℕ) :
+    M ^ (n + 1) = cheb M.trace (n + 1) • M - cheb M.trace n • (1 : Matrix (Fin 2) (Fin 2) ℤ) := by
+  induction n using Nat.strong_induction_on with
+  | _ n ih =>
+    match n, ih with
+    | 0, _ => simp [cheb]
+    | 1, _ =>
+      rw [show (1 + 1 : ℕ) = 2 from rfl, sq, mul_self_eq_trace_smul_sub_one M hdet]
+      simp [cheb]
+    | (k + 2), ih =>
+      have h1 := ih (k + 1) (by omega)
+      rw [show k + 1 + 1 = k + 2 from rfl] at h1
+      have hc : cheb M.trace (k + 2 + 1) = M.trace * cheb M.trace (k + 2) - cheb M.trace (k + 1) := rfl
+      rw [pow_succ, h1, sub_mul, smul_mul_assoc, smul_mul_assoc, one_mul,
+        mul_self_eq_trace_smul_sub_one M hdet, smul_sub, smul_smul, hc]
+      module
+
+theorem abs_cheb_succ_ge (t : ℤ) (ht : 3 ≤ |t|) (n : ℕ) :
+    |cheb t n| + 1 ≤ |cheb t (n + 1)| := by
+  induction n using Nat.strong_induction_on with
+  | _ n ih =>
+    match n, ih with
+    | 0, _ => simp [cheb]
+    | (k + 1), ih =>
+      have h1 := ih k (by omega)
+      have hrec : cheb t (k + 1 + 1) = t * cheb t (k + 1) - cheb t k := rfl
+      rw [hrec]
+      have h2 : |t| * |cheb t (k + 1)| - |cheb t k| ≤ |t * cheb t (k + 1) - cheb t k| := by
+        rw [← abs_mul]
+        exact abs_sub_abs_le_abs_sub _ _
+      have h3 : 3 * |cheb t (k + 1)| ≤ |t| * |cheb t (k + 1)| :=
+        mul_le_mul_of_nonneg_right ht (abs_nonneg _)
+      have h0 : 0 ≤ |cheb t k| := abs_nonneg _
+      linarith
+
+theorem cheb_ne_zero (t : ℤ) (ht : 3 ≤ |t|) (n : ℕ) : cheb t (n + 1) ≠ 0 := by
+  have h := abs_cheb_succ_ge t ht n
+  have h0 : 0 ≤ |cheb t n| := abs_nonneg _
+  intro hz
+  rw [hz, abs_zero] at h
+  linarith
+
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

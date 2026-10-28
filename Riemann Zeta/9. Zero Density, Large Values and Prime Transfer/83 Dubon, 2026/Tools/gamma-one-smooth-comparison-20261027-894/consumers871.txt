@@ -1,0 +1,27 @@
+
+/-- All three original smooth-space sl2 brackets are proved for the actual adelic cusp representation. -/
+theorem actual_adelic_smooth_sl2_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff ∧
+    (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = -(adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) ∧
+    (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) = (2 : ℂ) • (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) :=
+  ⟨adelicSmoothInfinitesimal_geodesic_upper f, adelicSmoothInfinitesimal_geodesic_lower f,
+    adelicSmoothInfinitesimal_upper_lower f⟩
+
+/-- The original compact infinitesimal is exactly upper minus lower on the actual smooth space. -/
+theorem actual_adelic_smooth_compact_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    adelicSmoothInfinitesimal f realRotationCurve realRotationCurve_entries_contDiff = (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) - (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) :=
+  adelicSmoothInfinitesimal_compact f
+
+/-- The literal original second-order operator commutes with all three actual infinitesimals and retains its original generator eigenvalue. -/
+theorem actual_adelic_smooth_casimir_commutation_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) = (adelicSmoothInfinitesimal f realGeodesicCurve realGeodesicCurve_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) = (adelicSmoothInfinitesimal f realUpperUnipotent realUpperUnipotent_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f * (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) = (adelicSmoothInfinitesimal f realLowerUnipotent realLowerUnipotent_entries_contDiff) * adelicSmoothCasimirOperator f ∧
+    adelicSmoothCasimirOperator f (adelicSmoothGenerator f) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) • adelicSmoothGenerator f :=
+  ⟨(adelicSmoothCasimirOperator_commutes f).1.eq, (adelicSmoothCasimirOperator_commutes f).2.1.eq,
+    (adelicSmoothCasimirOperator_commutes f).2.2.eq, adelicSmoothGenerator_casimir f⟩
+

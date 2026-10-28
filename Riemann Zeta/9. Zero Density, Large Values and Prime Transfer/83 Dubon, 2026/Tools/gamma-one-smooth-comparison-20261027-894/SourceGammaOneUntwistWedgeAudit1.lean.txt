@@ -1,0 +1,75 @@
+import SourceComplexWedgeStokes
+import SourceComplexWedgeLocalLog
+import SourceComplexWedgeDisc
+import SourceComplexWedgeIntegral
+import SourceGammaOneUntwistWedgeIntegral
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.mem_slit
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.disc_identity
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.exists_disc
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity
+#print axioms Dubon2026.sourceGamma1_untwist_wedge_integral
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.vEk
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceComplexWedgeStokes, `SourceComplexWedgeLocalLog, `SourceComplexWedgeDisc, `SourceComplexWedgeIntegral, `SourceGammaOneUntwistWedgeIntegral]
+  let theorems : Array Name := #[`Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset', `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props, `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply, `Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero, `Dubon2026.SourceComplexReciprocity.Wedge.mem_slit, `Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq, `Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E, `Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E', `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div, `Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.disc_identity, `Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt, `Dubon2026.SourceComplexReciprocity.Wedge.exists_disc, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity, `Dubon2026.sourceGamma1_untwist_wedge_integral]
+  let constructions : Array Name := #[`Dubon2026.SourceComplexReciprocity.Wedge.Lg, `Dubon2026.SourceComplexReciprocity.Wedge.vEk]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Untwist Wedge postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Untwist Wedge theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE UNTWIST WEDGE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceComplexWedgeStokes
+#lint in SourceComplexWedgeLocalLog
+#lint in SourceComplexWedgeDisc
+#lint in SourceComplexWedgeIntegral
+#lint in SourceGammaOneUntwistWedgeIntegral

@@ -1,0 +1,23 @@
+### Original full GL₂ norm derivatives and algebraic central-character comparison — 8 October 2026
+
+Seventeen further production modules place the original homogeneous polynomial space in the genuine coefficient norm of its proved raising basis. Actual separating evaluation forms promote the pointwise matrix derivative to its full finite-dimensional norm derivative. Differentiating the actual determinant character yields the true norm derivative of the original determinant twist; on degree 2m with twist det^-m it is exactly the original traceless projection action. The original real GL₂ embedding is constructed in genuine full adelic coordinates. Triviality of the already proved full adelic scalar action shows that every positive real matrix has exactly the same action on every original Hilbert vector as its determinant-root normalization. The original matrix-entry derivatives of that normalization are proved to be A-tr(A)I/2. Consequently every genuine differentiable real GL₂ curve through the identity has precisely the constructed complexified matrix Lie action as its original Hilbert norm derivative on every original smooth vector. No global smoothness or positive-component premise is required for the curve. The genuine full GL₂ enveloping actions on the original cusp module and the actual determinant twist both factor through the proved trace projection. For k=2m+2, every element of the entire actual GL₂ enveloping center acts on every vector of the degree-2m determinant twist by exactly the original cusp infinitesimal character, which also acts on the entire original raising module.
+
+The full regular-algebraic identification, including the actual algebraic representation and K-finite comparison required by the automorphic source, still requires proofs. Full adelic automorphic irreducibility, all higher symmetric continuations, unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicFullGL2Derivative](Extension/Dubon2026/AdelicFullGL2Derivative.lean).
+- [AdelicGL2AlgebraicCharacter](Extension/Dubon2026/AdelicGL2AlgebraicCharacter.lean).
+- [AdelicGL2Enveloping](Extension/Dubon2026/AdelicGL2Enveloping.lean).
+- [AdelicGL2NormDerivative](Extension/Dubon2026/AdelicGL2NormDerivative.lean).
+- [AdelicRealGL2Normalization](Extension/Dubon2026/AdelicRealGL2Normalization.lean).
+- [AdelicSl2NormDerivative](Extension/Dubon2026/AdelicSl2NormDerivative.lean).
+- [ComplexIdentityMatrixCurve](Extension/Dubon2026/ComplexIdentityMatrixCurve.lean).
+- [ComplexTracelessRealTangent](Extension/Dubon2026/ComplexTracelessRealTangent.lean).
+- [EnvelopingLiftComposition](Extension/Dubon2026/EnvelopingLiftComposition.lean).
+- [FiniteSeparatingDerivative](Extension/Dubon2026/FiniteSeparatingDerivative.lean).
+- [HomogeneousGL2Enveloping](Extension/Dubon2026/HomogeneousGL2Enveloping.lean).
+- [HomogeneousNormDerivative](Extension/Dubon2026/HomogeneousNormDerivative.lean).
+- [HomogeneousNormedSpace](Extension/Dubon2026/HomogeneousNormedSpace.lean).
+- [HomogeneousTwistDerivative](Extension/Dubon2026/HomogeneousTwistDerivative.lean).
+- [RealGL2CurvePositive](Extension/Dubon2026/RealGL2CurvePositive.lean).
+- [RealPositiveNormalizeTangent](Extension/Dubon2026/RealPositiveNormalizeTangent.lean).
+- [RealSl2NormDerivative](Extension/Dubon2026/RealSl2NormDerivative.lean).

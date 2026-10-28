@@ -1,0 +1,136 @@
+import SourceIntegralCosetCocycle
+import SourceIntegralCosetParabolic
+import SourceIntegralCosetWord
+import SourceIntegralPeriodCuspLimits
+import SourceIntegralPeriodGeneratorDual
+import SourceRealPrimitiveGreenData
+import SourceIntegralPeriodLatticeDual
+import SourceRealPeriodPeterssonPairing
+import SourceClosedPeterssonNondegenerate
+import SourceSignedPeriodLatticeLift
+import SourceGammaOneSignedRealPeriods
+import SourceGammaOnePeterssonIntegralRealPeriods
+import SourceGammaOneUnitaryDivisorPrincipal
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceIntegralPeriodDual.smul_identity_coset
+#print axioms Dubon2026.SourceIntegralPeriodDual.smul_identity_coset_of_mem
+#print axioms Dubon2026.SourceIntegralPeriodDual.out_smul_identity_coset
+#print axioms Dubon2026.SourceIntegralPeriodDual.smul_eq_of_conj_mem
+#print axioms Dubon2026.SourceIntegralPeriodDual.S_inv_smul
+#print axioms Dubon2026.SourceIntegralPeriodDual.ST_inv_smul_three
+#print axioms Dubon2026.SourceIntegralPeriodDual.coind_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.exists_adapted_cocycle
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_mul_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_one_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_inv_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_neg_one_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_transition
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_conj
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_eps_mul_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_T_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_transition_S
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_transition_T
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_T_inv_pow_apply
+#print axioms Dubon2026.SourceIntegralPeriodDual.cocycle_T_zpow_eq_zero
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom_parabolic
+#print axioms Dubon2026.SourceIntegralPeriodDual.sum_ind_mul
+#print axioms Dubon2026.SourceIntegralPeriodDual.ind_smul
+#print axioms Dubon2026.SourceIntegralPeriodDual.ell_out
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp_one
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T_inv
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S_inv
+#print axioms Dubon2026.SourceIntegralPeriodDual.wordProp
+#print axioms Dubon2026.SourceIntegralPeriodDual.lim_mul_T
+#print axioms Dubon2026.SourceIntegralPeriodDual.lim_neg
+#print axioms Dubon2026.SourceIntegralPeriodDual.lim_coe_mul
+#print axioms Dubon2026.SourceIntegralPeriodDual.lim_out_smul
+#print axioms Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_period
+#print axioms Dubon2026.SourceRealPrimitive.realMul_apply
+#print axioms Dubon2026.SourceRealPrimitive.norm_realMul_le
+#print axioms Dubon2026.SourceRealPrimitive.dbar_realMul
+#print axioms Dubon2026.SourceRealPrimitive.hasFDerivAt_realEk
+#print axioms Dubon2026.SourceRealPrimitive.continuousOn_realEk_derivative
+#print axioms Dubon2026.SourceRealPrimitive.realEk_smul
+#print axioms Dubon2026.SourceRealPrimitive.hasFDerivAt_realEp
+#print axioms Dubon2026.SourceRealPrimitive.realEk_cusp_bound
+#print axioms Dubon2026.SourceIntegralPeriodDual.pairing_add
+#print axioms Dubon2026.SourceIntegralPeriodDual.pairing_zero
+#print axioms Dubon2026.SourceIntegralPeriodDual.pairing_neg
+#print axioms Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_lattice
+#print axioms Dubon2026.SourceRealPrimitive.petersson_eq_real_period_pairing
+#print axioms Dubon2026.SourcePeterssonClosed.self_re
+#print axioms Dubon2026.SourcePeterssonClosed.eq_zero_of_self_integral_eq_zero
+#print axioms Dubon2026.SourcePeterssonClosed.eq_zero_of_signed_self_integral_eq_zero
+#print axioms Dubon2026.SourcePeterssonClosed.eq_of_signed_petersson_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_member
+#print axioms Dubon2026.SourceFunctionField.GammaOne.SignedForms.exists_signed_integral_lattice_lift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal_representative
+#print axioms Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.exists_original_cuspForm_of_signed_real_character
+#print axioms Dubon2026.SourceFunctionField.GammaOne.real_periods_integral_of_petersson_mem_lattice
+#print axioms Dubon2026.SourceFunctionField.GammaOne.multiplier_eq_one_of_original_period_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function
+#print axioms Dubon2026.SourceIntegralPeriodDual.coind
+#print axioms Dubon2026.SourceIntegralPeriodDual.hom
+#print axioms Dubon2026.SourceIntegralPeriodDual.em
+#print axioms Dubon2026.SourceIntegralPeriodDual.ind
+#print axioms Dubon2026.SourceIntegralPeriodDual.WordProp
+#print axioms Dubon2026.SourceRealPrimitive.realMul
+#print axioms Dubon2026.SourceRealPrimitive.realEk
+#print axioms Dubon2026.SourceIntegralPeriodDual.pairing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal
+
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralCosetCocycle, `SourceIntegralCosetParabolic, `SourceIntegralCosetWord, `SourceIntegralPeriodCuspLimits, `SourceIntegralPeriodGeneratorDual, `SourceRealPrimitiveGreenData, `SourceIntegralPeriodLatticeDual, `SourceRealPeriodPeterssonPairing, `SourceClosedPeterssonNondegenerate, `SourceSignedPeriodLatticeLift, `SourceGammaOneSignedRealPeriods, `SourceGammaOnePeterssonIntegralRealPeriods, `SourceGammaOneUnitaryDivisorPrincipal]
+  let theorems : Array Name := #[`Dubon2026.SourceIntegralPeriodDual.smul_identity_coset, `Dubon2026.SourceIntegralPeriodDual.smul_identity_coset_of_mem, `Dubon2026.SourceIntegralPeriodDual.out_smul_identity_coset, `Dubon2026.SourceIntegralPeriodDual.smul_eq_of_conj_mem, `Dubon2026.SourceIntegralPeriodDual.S_inv_smul, `Dubon2026.SourceIntegralPeriodDual.ST_inv_smul_three, `Dubon2026.SourceIntegralPeriodDual.coind_apply, `Dubon2026.SourceIntegralPeriodDual.exists_adapted_cocycle, `Dubon2026.SourceIntegralPeriodDual.cocycle_mul_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_one_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_inv_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_neg_one_apply, `Dubon2026.SourceIntegralPeriodDual.hom_apply, `Dubon2026.SourceIntegralPeriodDual.hom_transition, `Dubon2026.SourceIntegralPeriodDual.hom_conj, `Dubon2026.SourceIntegralPeriodDual.cocycle_eps_mul_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_apply, `Dubon2026.SourceIntegralPeriodDual.hom_transition_S, `Dubon2026.SourceIntegralPeriodDual.hom_transition_T, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_inv_pow_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_zpow_eq_zero, `Dubon2026.SourceIntegralPeriodDual.hom_parabolic, `Dubon2026.SourceIntegralPeriodDual.sum_ind_mul, `Dubon2026.SourceIntegralPeriodDual.ind_smul, `Dubon2026.SourceIntegralPeriodDual.ell_out, `Dubon2026.SourceIntegralPeriodDual.wordProp_one, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T_inv, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S_inv, `Dubon2026.SourceIntegralPeriodDual.wordProp, `Dubon2026.SourceIntegralPeriodDual.lim_mul_T, `Dubon2026.SourceIntegralPeriodDual.lim_neg, `Dubon2026.SourceIntegralPeriodDual.lim_coe_mul, `Dubon2026.SourceIntegralPeriodDual.lim_out_smul, `Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_period, `Dubon2026.SourceRealPrimitive.realMul_apply, `Dubon2026.SourceRealPrimitive.norm_realMul_le, `Dubon2026.SourceRealPrimitive.dbar_realMul, `Dubon2026.SourceRealPrimitive.hasFDerivAt_realEk, `Dubon2026.SourceRealPrimitive.continuousOn_realEk_derivative, `Dubon2026.SourceRealPrimitive.realEk_smul, `Dubon2026.SourceRealPrimitive.hasFDerivAt_realEp, `Dubon2026.SourceRealPrimitive.realEk_cusp_bound, `Dubon2026.SourceIntegralPeriodDual.pairing_add, `Dubon2026.SourceIntegralPeriodDual.pairing_zero, `Dubon2026.SourceIntegralPeriodDual.pairing_neg, `Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_lattice, `Dubon2026.SourceRealPrimitive.petersson_eq_real_period_pairing, `Dubon2026.SourcePeterssonClosed.self_re, `Dubon2026.SourcePeterssonClosed.eq_zero_of_self_integral_eq_zero, `Dubon2026.SourcePeterssonClosed.eq_zero_of_signed_self_integral_eq_zero, `Dubon2026.SourcePeterssonClosed.eq_of_signed_petersson_eq, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_member, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.exists_signed_integral_lattice_lift, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal_representative, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.exists_original_cuspForm_of_signed_real_character, `Dubon2026.SourceFunctionField.GammaOne.real_periods_integral_of_petersson_mem_lattice, `Dubon2026.SourceFunctionField.GammaOne.multiplier_eq_one_of_original_period_mem, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function]
+  let constructions : Array Name := #[`Dubon2026.SourceIntegralPeriodDual.coind, `Dubon2026.SourceIntegralPeriodDual.hom, `Dubon2026.SourceIntegralPeriodDual.em, `Dubon2026.SourceIntegralPeriodDual.ind, `Dubon2026.SourceIntegralPeriodDual.WordProp, `Dubon2026.SourceRealPrimitive.realMul, `Dubon2026.SourceRealPrimitive.realEk, `Dubon2026.SourceIntegralPeriodDual.pairing, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Integral Period Duality postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Integral Period Duality theorems discovered"
+  logInfo m!"SOURCE ORIGINAL INTEGRAL PERIOD DUALITY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+#lint in SourceIntegralCosetCocycle
+#lint in SourceIntegralCosetParabolic
+#lint in SourceIntegralCosetWord
+#lint in SourceIntegralPeriodCuspLimits
+#lint in SourceIntegralPeriodGeneratorDual
+#lint in SourceRealPrimitiveGreenData
+#lint in SourceIntegralPeriodLatticeDual
+#lint in SourceRealPeriodPeterssonPairing
+#lint in SourceClosedPeterssonNondegenerate
+#lint in SourceSignedPeriodLatticeLift
+#lint in SourceGammaOneSignedRealPeriods
+#lint in SourceGammaOnePeterssonIntegralRealPeriods
+#lint in SourceGammaOneUnitaryDivisorPrincipal

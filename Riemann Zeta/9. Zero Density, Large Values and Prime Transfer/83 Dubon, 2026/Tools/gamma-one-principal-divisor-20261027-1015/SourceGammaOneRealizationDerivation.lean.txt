@@ -1,0 +1,147 @@
+import Dubon2026.SourceGammaOneRealizationAlgebra
+import Dubon2026.SourceGammaOneCurveGeometry
+import Mathlib.Order.Filter.Germ.Basic
+
+/-! DUB-17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+prescribed meromorphic function -> analytic realization of the prescribed
+residue differential. Actual realization gives a derivation on punctured
+germs. The Kaehler universal map then transfers equality of differential
+expressions to equality of the analytic coefficient germs.
+Reuse the native original chart-germ construction and Mathlib's derivative
+congruence on punctured neighborhoods; no new chart structure is needed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative
+noncomputable section
+open UpperHalfPlane Filter KaehlerDifferential
+open scoped Topology MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)}
+local notation "F" => functionFieldOver Γ ℂ
+
+/-- The actual subgroup field element realized in the complex coordinate. -/
+def rz (x : F) (z : ℂ) : ℂ := realize Γ (x : LaurentSeries ℂ) (ofComplex z)
+
+variable (hT : ModularGroup.T ∈ Γ)
+
+/-- The actual realization homomorphism on punctured analytic germs. -/
+def realizeGerm (τ : ℍ) : F →+* Germ (𝓝[≠] (τ : ℂ)) ℂ where
+  toFun x := (rz x : Germ (𝓝[≠] (τ : ℂ)) ℂ)
+  map_zero' := by
+    apply Germ.coe_eq.mpr
+    exact Eventually.of_forall fun z => by
+      simpa only [map_zero] using realize_algebraMap hT 0 (ofComplex z)
+  map_one' := by
+    apply Germ.coe_eq.mpr
+    exact Eventually.of_forall fun z => by
+      simpa only [map_one] using realize_algebraMap hT 1 (ofComplex z)
+  map_add' x y := Germ.coe_eq.mpr (realize_add_eventuallyEq hT x y τ)
+  map_mul' x y := Germ.coe_eq.mpr (realize_mul_eventuallyEq hT x y τ)
+
+theorem realizeGerm_algebraMap (τ : ℍ) (c : ℂ) :
+    realizeGerm hT τ (algebraMap ℂ F c) =
+      ((fun _ : ℂ => c) : Germ (𝓝[≠] (τ : ℂ)) ℂ) := by
+  apply Germ.coe_eq.mpr
+  exact Eventually.of_forall fun z => realize_algebraMap hT c (ofComplex z)
+
+/-- The field acts on analytic germs through its actual realization. -/
+abbrev germAlgebra (τ : ℍ) : Algebra F (Germ (𝓝[≠] (τ : ℂ)) ℂ) :=
+  (realizeGerm hT τ).toAlgebra
+
+theorem germ_smul (τ : ℍ) (x : F) (m : Germ (𝓝[≠] (τ : ℂ)) ℂ) :
+    letI := germAlgebra hT τ
+    letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+    letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+    x • m = realizeGerm hT τ x * m := rfl
+
+theorem germ_scalarTower (τ : ℍ) :
+    letI := germAlgebra hT τ
+    letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+    letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+    IsScalarTower ℂ F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := by
+  letI := germAlgebra hT τ
+  letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+  letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+  refine ⟨fun c x m => ?_⟩
+  refine Germ.inductionOn m fun f => ?_
+  rw [germ_smul, germ_smul, Algebra.smul_def, map_mul, realizeGerm_algebraMap]
+  apply Germ.coe_eq.mpr
+  exact Eventually.of_forall fun z => mul_assoc c _ _
+
+include hT in
+theorem rz_smul (τ : ℍ) (c : ℂ) (x : F) :
+    rz (c • x) =ᶠ[𝓝[≠] (τ : ℂ)] fun z => c * rz x z := by
+  have h := realize_mul_eventuallyEq hT (algebraMap ℂ F c) x τ
+  filter_upwards [h] with z hz
+  change realize Γ ((c • x : F) : LaurentSeries ℂ) (ofComplex z) = _
+  rw [Algebra.smul_def]
+  change realize Γ ((algebraMap ℂ F c * x : F) : LaurentSeries ℂ) (ofComplex z) = _
+  rw [hz, Pi.mul_apply]
+  change realize Γ (algebraMap ℂ (LaurentSeries ℂ) c) (ofComplex z) * rz x z = _
+  rw [realize_algebraMap hT]
+
+include hT in
+theorem eventually_differentiableAt_rz (x : F) (τ : ℍ) :
+    ∀ᶠ z in 𝓝[≠] (τ : ℂ), DifferentiableAt ℂ (rz x) z :=
+  (meromorphicAt_realize hT x τ).eventually_analyticAt.mono fun _ h => h.differentiableAt
+
+/-- Differentiation of the actual meromorphic realization on punctured germs. -/
+def realizeDerivation (τ : ℍ) :
+    letI := germAlgebra hT τ
+    letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+    letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+    Derivation ℂ F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := by
+  letI := germAlgebra hT τ
+  letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+  letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+  exact {
+    toFun := fun x => (deriv (rz x) : Germ (𝓝[≠] (τ : ℂ)) ℂ)
+    map_add' := fun x y => by
+      rw [← Germ.coe_add]
+      apply Germ.coe_eq.mpr
+      filter_upwards [(realize_add_eventuallyEq hT x y τ).nhdsNE_deriv,
+        eventually_differentiableAt_rz hT x τ, eventually_differentiableAt_rz hT y τ] with z hz hx hy
+      change deriv (rz (x + y)) z = deriv (rz x + rz y) z at hz
+      rw [hz, deriv_add hx hy]
+      rfl
+    map_smul' := fun c x => by
+      rw [RingHom.id_apply, ← Germ.coe_smul]
+      apply Germ.coe_eq.mpr
+      filter_upwards [(rz_smul hT τ c x).nhdsNE_deriv] with z hz
+      rw [hz, deriv_const_mul_field]
+      rfl
+    map_one_eq_zero' := by
+      change (deriv (rz (1 : F)) : Germ (𝓝[≠] (τ : ℂ)) ℂ) = 0
+      have he : rz (1 : F) = fun _ => 1 := by
+        funext z
+        simpa only [map_one] using realize_algebraMap hT 1 (ofComplex z)
+      rw [he]
+      apply Germ.coe_eq.mpr
+      exact Eventually.of_forall fun z => deriv_const z (1 : ℂ)
+    leibniz' := fun x y => by
+      rw [germ_smul, germ_smul]
+      change (deriv (rz (x * y)) : Germ (𝓝[≠] (τ : ℂ)) ℂ) =
+        (rz x : Germ (𝓝[≠] (τ : ℂ)) ℂ) * deriv (rz y) +
+        (rz y : Germ (𝓝[≠] (τ : ℂ)) ℂ) * deriv (rz x)
+      rw [← Germ.coe_mul, ← Germ.coe_mul, ← Germ.coe_add]
+      apply Germ.coe_eq.mpr
+      filter_upwards [(realize_mul_eventuallyEq hT x y τ).nhdsNE_deriv,
+        eventually_differentiableAt_rz hT x τ, eventually_differentiableAt_rz hT y τ] with z hz hx hy
+      change deriv (rz (x * y)) z = deriv (rz x * rz y) z at hz
+      rw [hz, deriv_mul hx hy]
+      simp only [Pi.add_apply, Pi.mul_apply]
+      ring }
+
+include hT in
+theorem eventuallyEq_of_smul_D_eq_smul_D (τ : ℍ) {a x b y : F}
+    (h : a • D ℂ F x = b • D ℂ F y) :
+    (fun z => rz a z * deriv (rz x) z) =ᶠ[𝓝[≠] (τ : ℂ)]
+      fun z => rz b z * deriv (rz y) z := by
+  letI := germAlgebra hT τ
+  letI : SMul F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := (germAlgebra hT τ).toSMul
+  letI : Module F (Germ (𝓝[≠] (τ : ℂ)) ℂ) := @Algebra.toModule _ _ _ _ (germAlgebra hT τ)
+  letI := germ_scalarTower hT τ
+  have he := congrArg (realizeDerivation hT τ).liftKaehlerDifferential h
+  rw [map_smul, map_smul, Derivation.liftKaehlerDifferential_comp_D,
+    Derivation.liftKaehlerDifferential_comp_D, germ_smul, germ_smul] at he
+  exact Germ.coe_eq.mp he
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative

@@ -1,0 +1,82 @@
+import SourceMeromorphicMultiplierParabolic
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> actual
+meromorphic multiplier correction. Reuse native elliptic fixed points and
+the repository Mobius-germ and signed parabolic classification results.
+Adapt the remaining actual multiplier calculation from the Apache-2.0
+scope-755b primary at revision 6e837e75355538c7f80bab5b956861e86c4eacc2.
+No congruence level or central-sign normalization is discarded. -/
+namespace Dubon2026.SourceMeromorphicMultiplier
+noncomputable section
+open UpperHalfPlane Filter SourceFunctionField.SubgroupStabilizer
+open scoped MatrixGroups Topology
+theorem multiplier_eq_denom_zpow (F : ℍ → ℂ) (γ₀ : SL(2, ℤ)) (cst : ℂ)
+    (hF : ∀ τ : ℍ, F (γ₀ • τ) = cst * F τ) (τ : ℍ) (hfix : γ₀ • τ = τ) (n : ℤ)
+    (g : ℂ → ℂ) (hg : AnalyticAt ℂ g τ) (hg0 : g τ ≠ 0)
+    (hfg : ∀ᶠ z in 𝓝[≠] (τ : ℂ), F (ofComplex z) = (z - τ) ^ n • g z) :
+    cst = (denom (γ₀ : GL (Fin 2) ℝ) τ * denom (γ₀ : GL (Fin 2) ℝ) τ) ^ (-n) := by
+  have hdτ : denom (γ₀ : GL (Fin 2) ℝ) τ ≠ 0 := denom_ne_zero _ τ
+  have hmoebτ : moeb γ₀ τ = τ := by rw [← coe_smul_eq_moeb, hfix]
+
+  have him : ∀ᶠ z in 𝓝[≠] (τ : ℂ), 0 < z.im :=
+    eventually_nhdsWithin_of_eventually_nhds
+      ((isOpen_lt continuous_const Complex.continuous_im).mem_nhds τ.im_pos)
+
+  have hmt : Tendsto (moeb γ₀) (𝓝[≠] (τ : ℂ)) (𝓝[≠] (τ : ℂ)) := by
+    rw [tendsto_nhdsWithin_iff]
+    refine ⟨?_, ?_⟩
+    · have h := (continuousAt_moeb γ₀ τ).tendsto
+      rw [hmoebτ] at h
+      exact h.mono_left nhdsWithin_le_nhds
+    · filter_upwards [him, self_mem_nhdsWithin] with z hz hne
+      have hdz : denom (γ₀ : GL (Fin 2) ℝ) z ≠ 0 := denom_ne_zero_of_im _ hz.ne'
+      intro (habs : moeb γ₀ z = τ)
+      have := moeb_sub γ₀ τ hfix z hdz
+      rw [habs, sub_self, eq_comm, div_eq_zero_iff] at this
+      rcases this with h | h
+      · exact hne (sub_eq_zero.mp h)
+      · exact mul_ne_zero hdz hdτ h
+
+  have hkey : ∀ᶠ z in 𝓝[≠] (τ : ℂ),
+      cst * g z = (denom (γ₀ : GL (Fin 2) ℝ) z * denom (γ₀ : GL (Fin 2) ℝ) τ) ^ (-n) *
+        g (moeb γ₀ z) := by
+    filter_upwards [hfg, hmt.eventually hfg, him, self_mem_nhdsWithin] with z hz hmz hzi hne
+    have hdz : denom (γ₀ : GL (Fin 2) ℝ) z ≠ 0 := denom_ne_zero_of_im _ hzi.ne'
+    have hzτ : (z : ℂ) - τ ≠ 0 := sub_ne_zero.mpr hne
+
+    have hinv : F (ofComplex (moeb γ₀ z)) = cst * F (ofComplex z) := by
+      have h1 : ofComplex z = (⟨z, hzi⟩ : ℍ) := by
+        ext; exact congrArg _ (ofComplex_apply_of_im_pos hzi)
+      have h2 : moeb γ₀ z = ((γ₀ • (⟨z, hzi⟩ : ℍ) : ℍ) : ℂ) := by
+        rw [coe_smul_eq_moeb]
+      rw [h2, ofComplex_apply, h1]
+      exact hF _
+    rw [hmz, hz, moeb_sub γ₀ τ hfix z hdz, smul_eq_mul, smul_eq_mul, div_zpow,
+      div_mul_eq_mul_div, div_eq_iff (zpow_ne_zero _ (mul_ne_zero hdz hdτ))] at hinv
+    rw [zpow_neg, eq_inv_mul_iff_mul_eq₀ (zpow_ne_zero _ (mul_ne_zero hdz hdτ))]
+    refine mul_left_cancel₀ (zpow_ne_zero n hzτ) ?_
+    rw [hinv]
+    ring
+
+  have hlim1 : Tendsto (fun z => cst * g z) (𝓝[≠] (τ : ℂ)) (𝓝 (cst * g τ)) :=
+    (hg.continuousAt.tendsto.mono_left nhdsWithin_le_nhds).const_mul cst
+  have hlim2 : Tendsto (fun z => (denom (γ₀ : GL (Fin 2) ℝ) z * denom (γ₀ : GL (Fin 2) ℝ) τ)
+        ^ (-n) * g (moeb γ₀ z)) (𝓝[≠] (τ : ℂ))
+      (𝓝 ((denom (γ₀ : GL (Fin 2) ℝ) τ * denom (γ₀ : GL (Fin 2) ℝ) τ) ^ (-n) * g τ)) := by
+    apply Tendsto.mul
+    · have hc : ContinuousAt (fun z => (denom (γ₀ : GL (Fin 2) ℝ) z *
+          denom (γ₀ : GL (Fin 2) ℝ) τ) ^ (-n)) τ := by
+        apply ContinuousAt.zpow₀
+        · exact ((continuous_denom _).mul continuous_const).continuousAt
+        · exact Or.inl (mul_ne_zero hdτ hdτ)
+      exact hc.tendsto.mono_left nhdsWithin_le_nhds
+    · have hm : Tendsto (moeb γ₀) (𝓝[≠] (τ : ℂ)) (𝓝 (τ : ℂ)) := by
+        have h := (continuousAt_moeb γ₀ τ).tendsto
+        rw [hmoebτ] at h
+        exact h.mono_left nhdsWithin_le_nhds
+      exact hg.continuousAt.tendsto.comp hm
+  have heq := tendsto_nhds_unique (hlim1.congr' hkey) hlim2
+  exact mul_right_cancel₀ hg0 heq
+
+end
+end Dubon2026.SourceMeromorphicMultiplier

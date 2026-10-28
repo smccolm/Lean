@@ -1,0 +1,46 @@
+{
+  "scope": 894,
+  "scopeIds": [
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    887,
+    888,
+    890,
+    891,
+    893
+  ],
+  "researchScopes": [
+    886,
+    889
+  ],
+  "receipts": {
+    "source-gamma-one-untwist-wedge-1-scratch-receipt.json": "E31FF19C16AA62B73D59CD75CB8DE9910AD2300CE596941B0F9E20E411CC716C",
+    "source-gamma-one-smooth-partition-1b-scratch-receipt.json": "DD883E90EBF75A3EC420C700597BC850CF2029CB4BEE5B4EAE2DE11D44FF646D",
+    "source-gamma-one-petersson-smooth-limit-1-scratch-receipt.json": "F0CDC72420FF1C5C4BDB12CCF3A202A42D24FEADBD68EFD0CA7060DA729126F9",
+    "source-modular-parabolic-winding-log-1-scratch-receipt.json": "99DB177F0019C0EBD3D4723848F63371146D544F54D3739A1AF7BB36F66CDECF",
+    "source-complex-dipole-1-scratch-receipt.json": "6B0A8EC8E086272A388597C7758651D375134515E8F15D6F6C451419B45FD47B"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse -> analytic reciprocity.",
+  "discharged": "The actual original-divisor untwist satisfies the compact C2 wedge/residue identity through proved local integer orders. The literal smooth modular coset partition is constructed with compact support, finite overlap and exact orbit mass. For original Gamma1 weight-two cusp forms, native fundamental-domain unfolding and two-element central fibers prove the source-normalized planar Petersson limit, including integrability and the factor one half on the literal closed coset domain. For an actual nonvanishing invariant C1 function with nonzero finite translated cusp limits, the logarithm, derivative and integral additive character are constructed, and the existing parabolic classification proves squared-trace-four vanishing. Finally an actual compact smooth dipole has orders +1 at s and -1 at b and exact integral pi times the endpoint difference. None of these analytic conclusions is supplied as a certificate.",
+  "remaining": "The original meromorphic function and its exact divisor orders remain inputs to the untwist consumer. The globally invariant smooth comparison V, exact orbit multiplicities and degree-zero cancellation, filled quotient, winding-period/Petersson assembly, analytic reciprocity and original principal-divisor converse remain. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "route": "The October 27 reuse search is advanced by locally checked adaptations of pinned Apache-2.0 primary proofs. Existing generic projective domains, finite volume and null boundary replace bespoke finite tilings; native fiber equivalence, unfolding and dominated convergence give the exact central factor. Native proper discontinuity and the Mobius imaginary-part identity construct the source partition. Native exponential covering and uniqueness replace extra lift and local-constancy infrastructure, and the existing parabolic classification replaces an external Period wrapper. The existing wedge/residue theorem and antiholomorphic derivative supply the exact dipole pairing. Unused helpers and external linter suppressions are omitted; root pins and proof limits are unchanged. Promotion changes project import qualification only.",
+  "precedingCanonicalScope": 8695,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "productionMutation": false
+}

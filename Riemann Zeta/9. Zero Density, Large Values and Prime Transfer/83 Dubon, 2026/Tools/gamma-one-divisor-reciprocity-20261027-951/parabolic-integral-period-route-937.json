@@ -1,0 +1,11 @@
+{
+  "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-reuse-936\\S_ModularCurve_exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom.lean.txt",
+  "sourceSha256": "545B2E28A9CD11C2368F108CBBBDE0D495FD3CBAB6CF9B174092864E0FC1CF85",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "read": "Entire generic-subgroup primary proof read through final explicit integer-period combination; the earlier Gamma0-specialized solution is not the adaptation contract.",
+  "reuseCheck": "Bounded project search found no existing finite-permutation integer coboundary result. Existing sourceWeightTwo endpoint primitive, derivative, all-cusp limits, native action geometry, slash action and translated decay will replace the primary duplicated analytic infrastructure. The actual original integral-period lattice and signed-to-original bridge remain the target.",
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> original integral-period membership of the parabolic winding edge sum.",
+  "next": "Construct integer coset potentials from actual parabolic character and finite-order S/W transitions; use the existing actual normalized primitive for edge endpoint formulas and form an integer combination of original periods.",
+  "gate": "16/20; DUB17--20 OPEN."
+}

@@ -1,0 +1,21 @@
+import SourceMeromorphicPrimitiveSpecification
+import SourceMeromorphicPrimitiveGroupAction
+import SourceMeromorphicPrimitiveMultiplier
+import SourceMeromorphicCuspAnalyticData
+import SourceMeromorphicCuspPrimitive
+import SourceMeromorphicCuspPrimitiveDecay
+import SourceMeromorphicPrimitiveCusps
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceMeromorphicPrimitiveSpecification, `SourceMeromorphicPrimitiveGroupAction, `SourceMeromorphicPrimitiveMultiplier, `SourceMeromorphicCuspAnalyticData, `SourceMeromorphicCuspPrimitive, `SourceMeromorphicCuspPrimitiveDecay, `SourceMeromorphicPrimitiveCusps]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

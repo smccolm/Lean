@@ -1,0 +1,93 @@
+import SourceModularSidePairingIntegrals
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> reciprocity -> winding-period identity.
+Boundary reindexing at the literal coset representatives, using native slash
+actions. Adapted from pinned Apache-2.0 anthropics source. These equalities do
+not supply the later Green identity or edge integrability. -/
+namespace Dubon2026.SourceModularSidePairing
+noncomputable section
+open UpperHalfPlane Complex MeasureTheory
+open scoped MatrixGroups ModularForm
+variable {Γ : Subgroup SL(2, ℤ)}
+
+theorem boundary_side_pairing
+    (Γ : Subgroup SL(2, ℤ)) [Fintype (SL(2, ℤ) ⧸ Γ)]
+    (φ ψ : ℍ → ℂ) (c : SL(2, ℤ) → ℂ)
+    (hφ : ∀ γ ∈ Γ, ∀ τ : ℍ,
+      φ (γ • τ) / denom (γ : GL (Fin 2) ℝ) τ ^ 2 = φ τ + c γ * ψ τ)
+    (Φ Ψ : SL(2, ℤ) → ℂ → ℂ)
+    (hΦ : ∀ (σ : SL(2, ℤ)) (z : ℂ),
+      Φ σ z = φ (σ • ofComplex z) / denom (σ : GL (Fin 2) ℝ) (ofComplex z) ^ 2)
+    (hΨ : ∀ (σ : SL(2, ℤ)) (z : ℂ),
+      Ψ σ z = ψ (σ • ofComplex z) / denom (σ : GL (Fin 2) ℝ) (ofComplex z) ^ 2)
+    (s : Set ℝ) (hs : MeasurableSet s) (hs0 : s ⊆ Set.Ioi 0)
+    (hΦs : ∀ q : SL(2, ℤ) ⧸ Γ,
+      IntegrableOn (fun y : ℝ => Φ (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I)) s)
+    (hΨs : ∀ q : SL(2, ℤ) ⧸ Γ,
+      IntegrableOn (fun y : ℝ => Ψ (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I)) s)
+    (hΦarc : ∀ q : SL(2, ℤ) ⧸ Γ, IntervalIntegrable (fun θ : ℝ =>
+      Φ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) * (Complex.I * Complex.exp (θ * Complex.I)))
+      volume (Real.pi / 3) (2 * Real.pi / 3))
+    (hΨarc : ∀ q : SL(2, ℤ) ⧸ Γ, IntervalIntegrable (fun θ : ℝ =>
+      Ψ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) * (Complex.I * Complex.exp (θ * Complex.I)))
+      volume (Real.pi / 3) (2 * Real.pi / 3)) :
+    (∑ q : SL(2, ℤ) ⧸ Γ, ∫ y in s, Φ (Quotient.out q)⁻¹ (1 / 2 + y * Complex.I)) =
+        (∑ q : SL(2, ℤ) ⧸ Γ, ∫ y in s, Φ (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I)) +
+          ∑ q : SL(2, ℤ) ⧸ Γ,
+            c ((Quotient.out (ModularGroup.T • q))⁻¹ * ModularGroup.T * Quotient.out q) *
+              ∫ y in s, Ψ (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I) ∧
+      2 * (∑ q : SL(2, ℤ) ⧸ Γ, ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+          Φ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+            (Complex.I * Complex.exp (θ * Complex.I))) =
+        -∑ q : SL(2, ℤ) ⧸ Γ,
+          c ((Quotient.out (ModularGroup.S • q))⁻¹ * ModularGroup.S * Quotient.out q) *
+            ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+              Ψ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+                (Complex.I * Complex.exp (θ * Complex.I)) := by
+
+  have eΦ : Φ = tilePull φ := by funext σ z; rw [hΦ, tilePull_eq_div]
+  have eΨ : Ψ = tilePull ψ := by funext σ z; rw [hΨ, tilePull_eq_div]
+  subst eΦ eΨ
+
+  have key : ∀ (g : SL(2, ℤ)) (q : SL(2, ℤ) ⧸ Γ) (z : ℂ),
+      tilePull ((φ ∣[(2 : ℤ)] pairElt Γ g q)) (Quotient.out q)⁻¹ z =
+        tilePull φ (Quotient.out q)⁻¹ z + c (pairElt Γ g q) * tilePull ψ (Quotient.out q)⁻¹ z := by
+    intro g q z
+    rw [slash_eq_of_twist hφ (pairElt_mem g q), tilePull_add_mul]
+  refine ⟨?_, ?_⟩
+  ·
+    rw [sum_integral_rightRay φ hs hs0, ← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    simp_rw [key]
+    rw [integral_add (hΦs q) ((hΨs q).const_mul _), integral_const_mul]
+    rfl
+  ·
+    have harc := sum_integral_arc (Γ := Γ) φ
+    simp_rw [key, add_mul] at harc
+    have hsplit : ∀ q : SL(2, ℤ) ⧸ Γ,
+        ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+          (tilePull φ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+              (Complex.I * Complex.exp (θ * Complex.I)) +
+            c (pairElt Γ ModularGroup.S q) *
+              tilePull ψ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+              (Complex.I * Complex.exp (θ * Complex.I))) =
+        (∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+          tilePull φ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+              (Complex.I * Complex.exp (θ * Complex.I))) +
+          c (pairElt Γ ModularGroup.S q) *
+            ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+              tilePull ψ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+                (Complex.I * Complex.exp (θ * Complex.I)) := by
+      intro q
+      have hΨ' : IntervalIntegrable (fun θ : ℝ => c (pairElt Γ ModularGroup.S q) *
+          tilePull ψ (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+            (Complex.I * Complex.exp (θ * Complex.I))) volume (Real.pi / 3) (2 * Real.pi / 3) := by
+        simp_rw [mul_assoc]; exact (hΨarc q).const_mul _
+      rw [intervalIntegral.integral_add (hΦarc q) hΨ', ← intervalIntegral.integral_const_mul]
+      simp_rw [mul_assoc]
+    simp_rw [hsplit, Finset.sum_add_distrib] at harc
+    change _ = -∑ q, c (pairElt Γ ModularGroup.S q) * _
+    linear_combination harc
+
+end
+end Dubon2026.SourceModularSidePairing

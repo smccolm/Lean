@@ -1,0 +1,6 @@
+{
+  "reason": "Lean compiles the Prop-valued Finite instance as a theorem, so classify finiteStabilizer in theorem registrations. All original audit logs retained. No mathematical source or audit standard changed.",
+  "theorems": 78,
+  "constructions": 12,
+  "queries": 90
+}

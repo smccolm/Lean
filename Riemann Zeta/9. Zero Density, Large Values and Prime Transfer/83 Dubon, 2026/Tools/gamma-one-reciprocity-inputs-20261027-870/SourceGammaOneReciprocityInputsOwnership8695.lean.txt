@@ -1,0 +1,39 @@
+import Dubon2026.SourceWeightTwoPeriodUntwist
+import Dubon2026.SourceMeromorphicNormalUntwist
+import Dubon2026.SourceMeromorphicPeriodUntwist
+import Dubon2026.SourceMeromorphicTranslatedGerms
+import Dubon2026.SourceMeromorphicCuspUntwist
+import Dubon2026.SourceCuspDerivativeDecay
+import Dubon2026.SourceMeromorphicUntwistDecay
+import Dubon2026.SourceMeromorphicUntwistDerivative
+import Dubon2026.SourceGammaOneInvariantUntwist
+import Dubon2026.SourceGammaOneDivisorReciprocityData
+import Dubon2026.SourceWeightTwoSignedForms
+import Dubon2026.SourceWeightTwoSignedReciprocity
+import Dubon2026.SourceComplexHolomorphicStokes
+import Dubon2026.SourceComplexDbarCutoff
+import Dubon2026.SourceComplexDbarKernelIntegrability
+import Dubon2026.SourceComplexDbarRadialNormalization
+import Dubon2026.SourceComplexCauchyPompeiu
+import Dubon2026.SourceComplexResidueLocalModels
+import Dubon2026.SourceComplexResidueIntegral
+import Dubon2026.SourceComplexLogDerivativeResidues
+import Dubon2026.SourceGammaOneLogDerivativeResidues
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceWeightTwoPeriodUntwist, `Dubon2026.SourceMeromorphicNormalUntwist, `Dubon2026.SourceMeromorphicPeriodUntwist, `Dubon2026.SourceMeromorphicTranslatedGerms, `Dubon2026.SourceMeromorphicCuspUntwist, `Dubon2026.SourceCuspDerivativeDecay, `Dubon2026.SourceMeromorphicUntwistDecay, `Dubon2026.SourceMeromorphicUntwistDerivative, `Dubon2026.SourceGammaOneInvariantUntwist, `Dubon2026.SourceGammaOneDivisorReciprocityData, `Dubon2026.SourceWeightTwoSignedForms, `Dubon2026.SourceWeightTwoSignedReciprocity, `Dubon2026.SourceComplexHolomorphicStokes, `Dubon2026.SourceComplexDbarCutoff, `Dubon2026.SourceComplexDbarKernelIntegrability, `Dubon2026.SourceComplexDbarRadialNormalization, `Dubon2026.SourceComplexCauchyPompeiu, `Dubon2026.SourceComplexResidueLocalModels, `Dubon2026.SourceComplexResidueIntegral, `Dubon2026.SourceComplexLogDerivativeResidues, `Dubon2026.SourceGammaOneLogDerivativeResidues]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

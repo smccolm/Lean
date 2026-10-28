@@ -1,0 +1,44 @@
+import Dubon2026.SourceComplexWedgeStokes
+import Dubon2026.SourceComplexWedgeLocalLog
+import Dubon2026.SourceComplexWedgeDisc
+import Dubon2026.SourceComplexWedgeIntegral
+import Dubon2026.SourceGammaOneUntwistWedgeIntegral
+import Dubon2026.SourceModularSmoothCutoff
+import Dubon2026.SourceModularSmoothGeometry
+import Dubon2026.SourceModularSmoothCosetSum
+import Dubon2026.SourceModularSmoothCover
+import Dubon2026.SourceModularSmoothedFundamentalSupport
+import Dubon2026.SourceModularSmoothedFundamental
+import Dubon2026.SourceGammaOneSmoothPartition
+import Dubon2026.SourceModularProjectiveFibers
+import Dubon2026.SourceModularSmoothOrbitMass
+import Dubon2026.SourceModularInvariantIntegralUnfolding
+import Dubon2026.SourceModularSmoothIntegralLimit
+import Dubon2026.SourceModularSmoothPlaneIntegral
+import Dubon2026.SourceGammaOnePeterssonSmoothLimit
+import Dubon2026.SourceComplexWindingLogLift
+import Dubon2026.SourceModularWindingCharacter
+import Dubon2026.SourceModularWindingCuspLimit
+import Dubon2026.SourceModularParabolicWindingLog
+import Dubon2026.SourceComplexDipoleLocalModel
+import Dubon2026.SourceComplexDipoleLogDerivative
+import Dubon2026.SourceComplexDipolePairing
+import Dubon2026.SourceUpperHalfPlaneDipole
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceComplexWedgeStokes, `Dubon2026.SourceComplexWedgeLocalLog, `Dubon2026.SourceComplexWedgeDisc, `Dubon2026.SourceComplexWedgeIntegral, `Dubon2026.SourceGammaOneUntwistWedgeIntegral, `Dubon2026.SourceModularSmoothCutoff, `Dubon2026.SourceModularSmoothGeometry, `Dubon2026.SourceModularSmoothCosetSum, `Dubon2026.SourceModularSmoothCover, `Dubon2026.SourceModularSmoothedFundamentalSupport, `Dubon2026.SourceModularSmoothedFundamental, `Dubon2026.SourceGammaOneSmoothPartition, `Dubon2026.SourceModularProjectiveFibers, `Dubon2026.SourceModularSmoothOrbitMass, `Dubon2026.SourceModularInvariantIntegralUnfolding, `Dubon2026.SourceModularSmoothIntegralLimit, `Dubon2026.SourceModularSmoothPlaneIntegral, `Dubon2026.SourceGammaOnePeterssonSmoothLimit, `Dubon2026.SourceComplexWindingLogLift, `Dubon2026.SourceModularWindingCharacter, `Dubon2026.SourceModularWindingCuspLimit, `Dubon2026.SourceModularParabolicWindingLog, `Dubon2026.SourceComplexDipoleLocalModel, `Dubon2026.SourceComplexDipoleLogDerivative, `Dubon2026.SourceComplexDipolePairing, `Dubon2026.SourceUpperHalfPlaneDipole]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

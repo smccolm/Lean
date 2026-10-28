@@ -1,0 +1,31 @@
+import Dubon2026.SourceComplexDipoleLocalModel
+import Dubon2026.SourceComplexDipoleLogDerivative
+import Dubon2026.SourceComplexDipolePairing
+import Dubon2026.SourceUpperHalfPlaneDipole
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair]
+  let localModules : Array Name := #[`Dubon2026.SourceComplexDipoleLocalModel, `Dubon2026.SourceComplexDipoleLogDerivative, `Dubon2026.SourceComplexDipolePairing, `Dubon2026.SourceUpperHalfPlaneDipole, `Dubon2026.SourceComplexWedgeStokes, `Dubon2026.SourceComplexWedgeLocalLog, `Dubon2026.SourceComplexWedgeDisc, `Dubon2026.SourceComplexWedgeIntegral, `Dubon2026.SourceGammaOneUntwistWedgeIntegral, `Dubon2026.SourceComplexHolomorphicStokes, `Dubon2026.SourceComplexDbarCutoff, `Dubon2026.SourceComplexDbarKernelIntegrability, `Dubon2026.SourceComplexDbarRadialNormalization, `Dubon2026.SourceComplexCauchyPompeiu, `Dubon2026.SourceComplexResidueLocalModels, `Dubon2026.SourceComplexResidueIntegral, `Dubon2026.SourceComplexLogDerivativeResidues, `Dubon2026.SourceGammaOneLogDerivativeResidues, `Dubon2026.SourceWeightTwoPeriodUntwist, `Dubon2026.SourceMeromorphicNormalUntwist, `Dubon2026.SourceMeromorphicPeriodUntwist]
+  let required : Array Name := #[`Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt, `Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC, `Dubon2026.SourceComplexReciprocity.Dipole.support_χC, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC, `Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun, `Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div, `Dubon2026.SourceComplexReciprocity.Dipole.pairing, `Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff, `Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL, `Dubon2026.SourceComplexReciprocity.Dipole.χC, `Dubon2026.SourceComplexReciprocity.Dipole.dfun, `Dubon2026.SourceComplexReciprocity.Dipole.gfun, `Dubon2026.SourceComplexReciprocity.Dipole.wfun, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.Ffun, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity, `Dubon2026.SourceComplexReciprocity.DbarFundamental.D, `Dubon2026.SourceComplexReciprocity.DbarFundamental.D_eq_zero_of_notMem_tsupport, `exists_contMDiffMap_zero_one_of_isClosed, `convex_halfSpace_im_gt]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE COMPLEX DIPOLE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual compact dipole construction. The existing wedge/residue identity, original antiholomorphic derivative, native smooth cutoff and convexity are consumed. The exact +1/-1 orders and integral pi times endpoint difference are proved. Invariant comparison V, analytic reciprocity and full all-weight goal remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

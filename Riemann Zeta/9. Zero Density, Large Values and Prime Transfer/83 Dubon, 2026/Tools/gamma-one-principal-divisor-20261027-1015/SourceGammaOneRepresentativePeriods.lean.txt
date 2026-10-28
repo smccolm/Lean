@@ -1,0 +1,48 @@
+import Dubon2026.SourceWeightTwoIntegralPeriods
+import Dubon2026.SourceGammaOneAnalyticPlaceOrbits
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> original finite divisor.
+Two finite lifts of the same actual analytic divisor have endpoint functionals
+differing by an original integer period. Reuse the already proved period
+quotient invariance and actual analytic-place/orbit equivalence; no new paths,
+homology comparison or period-membership assumption is introduced. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup
+open scoped MatrixGroups Classical
+
+theorem period_difference_mem_of_mapDomain_eq (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c d : ℍ →₀ ℤ)
+    (h : Finsupp.mapDomain (analyticPlace hT) c = Finsupp.mapDomain (analyticPlace hT) d) :
+    (c.sum (fun τ n => n • sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ) -
+      d.sum (fun τ n => n • sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ)) ∈
+        sourceWeightTwoIntegralLattice (Gamma1 N) := by
+  classical
+  let e := (sourceWeightTwoIntegralLattice (Gamma1 N)).mkQ
+  let E := fun τ : ℍ => e (sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ)
+  have hE (γ : Gamma1 N) (τ : ℍ) : E (γ.val • τ) = E τ :=
+    sourceWeightTwoAlong_quotient_smul (Gamma1 N) γ τ
+  let B := fun P : Place ℂ (functionFieldOver (Gamma1 N) ℂ) =>
+    if hP : ∃ τ : ℍ, analyticPlace hT τ = P then E hP.choose else 0
+  have hB (τ : ℍ) : B (analyticPlace hT τ) = E τ := by
+    dsimp only [B]
+    split_ifs with hP
+    · obtain ⟨γ, hγ⟩ := (analyticPlace_eq_iff_gamma1_orbit N hT hP.choose τ).mp hP.choose_spec
+      exact (hE γ hP.choose).symm.trans (congrArg E hγ)
+    · exact (hP ⟨τ, rfl⟩).elim
+  have hs := congrArg (fun D : Divisor ℂ (functionFieldOver (Gamma1 N) ℂ) =>
+    D.sum (fun P n => n • B P)) h
+  dsimp only at hs
+  rw [Finsupp.sum_mapDomain_index (fun P => zero_smul ℤ (B P))
+      (fun P m n => add_smul m n (B P)),
+    Finsupp.sum_mapDomain_index (fun P => zero_smul ℤ (B P))
+      (fun P m n => add_smul m n (B P))] at hs
+  simp only [hB] at hs
+  apply (Submodule.Quotient.mk_eq_zero (sourceWeightTwoIntegralLattice (Gamma1 N))).mp
+  change e _ = 0
+  rw [map_sub, sub_eq_zero]
+  simpa only [Finsupp.sum, map_sum, map_smul, RingHom.id_apply, E] using hs
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,1764 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-smooth-comparison-promotion-route-894.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-smooth-comparison-promotion-route-894.json",
+      "sha256": "AA3AE13F2F41DFD63ECF3105D128DBA0C2DF520BE96E5C6BC264B83D0A5A2DF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDbarCutoff.lean.txt",
+      "sha256": "45430E3B5C94CFC3AC2100CB8003A25392F9705B298735D7B87F72C4E140CE4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleAudit1.lean.txt",
+      "sha256": "42B8BDA3194EBC49B0BCB9046A7B787E806CEF3258EC73DBFFDDC205A8616FD2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleAudit1.log",
+      "sha256": "98DD9DA5CDF0E929B026EEAC4FB6AA75519AE69F88DB4A6C65893B99D7DAF28A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleDependencyAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleDependencyAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleDependencyAudit1.lean.txt",
+      "sha256": "29580EC48F89FF5EC1DCB3E5D0AB1B59B54F346A5246B33C9D151F5FAA4D9C12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleDependencyAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleDependencyAudit1.log",
+      "sha256": "727E63D02EE97E4C7AF6668C9974B006294A592AAB715397C81641B20DFC29FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel.lean.txt",
+      "sha256": "D31343BBEA532A5A7517D79320B4B5DD22A2E183F592C1A1F2E832AE4AA7AAFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891a.log",
+      "sha256": "A21C45BB2F3F1EB9E2F720066650AC13933C8C371EDE81F73ADB505840BE1E8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLocalModel891c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLogDerivative.lean.txt",
+      "sha256": "9F113873F90632CE880249A728BFE3D3C66FFB7EB10BF625C2A4F703B8946A5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLogDerivative891b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLogDerivative891b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLogDerivative891c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleLogDerivative891c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipolePairing.lean.txt",
+      "sha256": "EB67A6D4FA986C8DC2002A37944F4F8E86CF7947D2AB7D998E9BC3E404254128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipolePairing891b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipolePairing891b.log",
+      "sha256": "B59FA8E59960086D28AC4F9E3846904EB55A1F7E7305EBF2ACA3EB5A843011BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipolePairing891c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipolePairing891c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleScratchOwnership893.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleScratchOwnership893.lean.txt",
+      "sha256": "7D0B371871135B6F11E062D310FA4A9BC494E82F3D34B180AF6FFC3A7326D8BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexDipoleScratchOwnership893.log",
+      "sha256": "68131891653E846DE421C69EB0B3C318BDC4B7E6E246EA2F2EC910EA6F7AE0AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeDisc.lean.txt",
+      "sha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc872b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeDisc872b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc872b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeDisc872b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeDisc874a.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeDisc874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeIntegral.lean.txt",
+      "sha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeIntegral874a.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeIntegral874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog.lean.txt",
+      "sha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog872b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog872b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog872b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog872b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog872c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog872c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog872c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog872c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog874a.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeLocalLog874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeStokes.lean.txt",
+      "sha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeStokes874a.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWedgeStokes874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWindingLogLift.lean.txt",
+      "sha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWindingLogLift887a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceComplexWindingLogLift887a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimit.lean.txt",
+      "sha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimit884a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimit884a.log",
+      "sha256": "5565DE76569CFAC8872EB13FCF2B21AD5FBC77BB4CE315BC0BE8559AB5005454"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimit884b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimit884b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitAudit1.lean.txt",
+      "sha256": "F8B7AC6D8158A7DB76850F474218B58349C6B25358AC53685A9D487E17988AAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitAudit1.log",
+      "sha256": "58080AF16E46EEFCABA8CC92D6555925472431551455036425756C24030A27D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitDependencyAudit1.lean.txt",
+      "sha256": "2F558E098ECEC03E326704F16C4A2E8B8DBA7E32E137F680D59E3CD5A3FCAD86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitDependencyAudit1.log",
+      "sha256": "F0B6631D739BE79116DAD219DE0EC9C9054C00977C673AEEE893EF497F48352B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitScratchOwnership885.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitScratchOwnership885.lean.txt",
+      "sha256": "FBE09BE177C4DC8CFB40B2C79D18171186D9F564CD92B6EBA57D52729A71DA19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOnePeterssonSmoothLimitScratchOwnership885.log",
+      "sha256": "4B3C6119D032C2B42EAB452EF434EFD1ABCAD890DB04087C0CB44A9AE3736CF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartition.lean.txt",
+      "sha256": "E095E055D3FDDC6F8C22F636C51C99FAF1165F762A8F684BFE2C0A4EC57E48EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartition877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartition877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition878b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartition878b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition878b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartition878b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionAudit1b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionAudit1b.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionAudit1b.lean.txt",
+      "sha256": "01B1AF73FA334C45AF15CD8E4CF3A649C13C2CF438F9B8DE6FE61872C55517D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionAudit1b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionAudit1b.log",
+      "sha256": "96A35EE7700DB49E55035472609C2BEA76102DBBD5BDB1AAA5C67EF37BE6F983"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionDependencyAudit1b.lean.txt",
+      "sha256": "280A0579E191B04C68B88101981EFC49AF507B12E9BCA4B75D459DAEA65CE7B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionDependencyAudit1b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionDependencyAudit1b.log",
+      "sha256": "EE7325D922818AB78AEE45E8B5AAAA69B4D32B2737867919FB4A807B67E57DA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionScratchOwnership878b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionScratchOwnership878b.lean.txt",
+      "sha256": "CE3F15D2B230FBD16A05F17D01F07180AF8A09FDD1D424FC9BA9C429DE7ECEC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneSmoothPartitionScratchOwnership878b.log",
+      "sha256": "553658544513039AC98C3A02CFF7C4B42967099A850E4E1572B70C25A8BB2C26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeAudit1.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeAudit1.lean.txt",
+      "sha256": "36581DABB9DD8D32C41D009D95A0537159FFAB00F7DB757A438EC007B5B2DD3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeAudit1.log",
+      "sha256": "15F5EEF34DE9BA7E95CE62FF08BFEDA9FF2CFA8CD3F98F1F1B61E81EB3C5F96A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeDependencyAudit1.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeDependencyAudit1.lean.txt",
+      "sha256": "EBE8D07874B97244A7D8045133BBCD94E6A67DBC8EC042F0505A47127C740A25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeDependencyAudit1.log",
+      "sha256": "C69715ED00B6797739F341698FB6676F78C5AF1F3C0C11AA09ECCF397EF1BCF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeIntegral.lean.txt",
+      "sha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeIntegral874a.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeIntegral874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeScratchOwnership874.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeScratchOwnership874.lean.txt",
+      "sha256": "2A8E9D9E82D31E19BB39439064EEEFC845932AA462FDC4D5BBFDA41E997B6DA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceGammaOneUntwistWedgeScratchOwnership874.log",
+      "sha256": "ADC17F69316D4839A1705D7A7299ADFC504DFB683691EDEE39449E8028D608C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularInvariantIntegralUnfolding.lean.txt",
+      "sha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularInvariantIntegralUnfolding881a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularInvariantIntegralUnfolding881a.log",
+      "sha256": "747E1664B821D2DFD07564C671561E201252C60D7CC55BB321E98122E12C1A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularInvariantIntegralUnfolding881b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularInvariantIntegralUnfolding881b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLog.lean.txt",
+      "sha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLog888a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLog888a.log",
+      "sha256": "A9270006F321A689B0171152C90C0DFBA81F4AE2E34AEF95F244E5AC2A856211"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLog888b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLog888b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogAudit1.lean.txt",
+      "sha256": "8567024AC5B40DDC7A47F999A28FDBCAF2C6922BBC82A13745FCB0EE59D52713"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogAudit1.log",
+      "sha256": "8C0CEA660C91D10BEFE75DA85EFC9EDB32E0D7295808AE36A3EA176565347DBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogDependencyAudit1.lean.txt",
+      "sha256": "A63BA097E25A515950E8FCDBC8A1281C25A1B2F3722F89631350DF55520B501F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogDependencyAudit1.log",
+      "sha256": "1DAFDD42C5190A9C8F530EA126F1C551C16E4091DE50E9355992AF32BCBA2A5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogScratchOwnership890.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogScratchOwnership890.lean.txt",
+      "sha256": "D0B40C95653572DEFDE5945E1AA2A82DCBFC1F071946461E0B7CA29D87380286"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularParabolicWindingLogScratchOwnership890.log",
+      "sha256": "AAFDD2ACB2FB95C3403B2C9AF13062072999437FBBEDB203C11B5B5679265FAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularProjectiveFibers.lean.txt",
+      "sha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularProjectiveFibers879a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularProjectiveFibers879a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum.lean.txt",
+      "sha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876a.log",
+      "sha256": "6760FE17EF9A99E151267BE639F822195CFB63091A8C6BEC8D01064B3DDF08F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876b.log",
+      "sha256": "9F96149AB046443F7CFBDA4B77C7AD88AF505C834C1AE118442BE0CA41B75A06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876c.log",
+      "sha256": "FEE0654355D239EE2D8262512D8FD63C0D70358E6D5BA884255CAF490106CD63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876d.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum876d.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum876d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCosetSum877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCover.lean.txt",
+      "sha256": "A413B35D48BBF38403642E7101EFBB7D83F2234042D396732EDA37115D37BDCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover876d.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCover876d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover876d.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCover876d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCover877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCover877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCutoff.lean.txt",
+      "sha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff875a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCutoff875a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff875a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCutoff875a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCutoff877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothCutoff877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothGeometry.lean.txt",
+      "sha256": "FBD26B1A3F15D2D20E86815097BA705717C7AE87AEDBC4A3E1F1C6771B430EEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry875a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothGeometry875a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry875a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothGeometry875a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothGeometry877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothGeometry877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothIntegralLimit.lean.txt",
+      "sha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothIntegralLimit882a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothIntegralLimit882a.log",
+      "sha256": "B8A393BA4830B3E7C6BB076C0AF58DD85B1AB9EE31E63BD9461F83452913EEDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothIntegralLimit882b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothIntegralLimit882b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass.lean.txt",
+      "sha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880a.log",
+      "sha256": "D1465EB7249FAFB106AFF9AFBEF83303A2D3DF5D4763EFB8231EA26A166A6DCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880b.log",
+      "sha256": "E90F99588CC6F7B58070A8636E9DB305E95673D388284CC115B62419C1CE6A93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothOrbitMass880c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothPlaneIntegral.lean.txt",
+      "sha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothPlaneIntegral883a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothPlaneIntegral883a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental.lean.txt",
+      "sha256": "580556F969B7EC4188A0CEE331A79EA97FE11237093AEB22ACB79DA1CF615638"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental876e.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental876e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental876e.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental876e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental878b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental878b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental878b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamental878b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport.lean.txt",
+      "sha256": "F130009BB7A2B319BA6FB977329A03E3CEB25EA7C76F8B4FBCD49D5F3C6CDC49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport876d.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport876d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport876d.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport876d.log",
+      "sha256": "DE0BEAD99258534CE55DBAB1B19AAEC0A150D1B06BC617670709A96E0DC15643"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport876e.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport876e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport876e.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport876e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport877a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport877a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport878b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport878b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport878b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularSmoothedFundamentalSupport878b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCharacter.lean.txt",
+      "sha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCharacter887a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCharacter887a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCuspLimit.lean.txt",
+      "sha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCuspLimit887a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceModularWindingCuspLimit887a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceUpperHalfPlaneDipole.lean.txt",
+      "sha256": "FEC30DD2B41E442A04BCF821B5E9E18765989F5F7227468C46362EDD542FDE7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceUpperHalfPlaneDipole891c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceUpperHalfPlaneDipole891c.log",
+      "sha256": "D7FDCEC501F75D109A4E4B42AE3BA55A5BE5BB5FF4FD77BF16D71FF6BE04E7CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891d.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceUpperHalfPlaneDipole891d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891d.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/SourceUpperHalfPlaneDipole891d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_SmoothedFundamental.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/Definitions/Def_ModularCurve_SmoothedFundamental.lean.txt",
+      "sha256": "02116525065FE85F341D3D512EF79281A34660560027D1BBB4249AE0A28CDE9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_logDeriv_wedge_add_finsum_eq_integral_dbarLogDeriv.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/P2M/Sol/S_Complex_integral_logDeriv_wedge_add_finsum_eq_integral_dbarLogDeriv.lean.txt",
+      "sha256": "101C5506DCC541F105F02082765C00B78CE6B43E1315B83821045A91EE6AF824"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_FLT_Gamma0FundamentalSet_tendsto_integral_mul_smoothedFundamental.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/P2M/Sol/S_FLT_Gamma0FundamentalSet_tendsto_integral_mul_smoothedFundamental.lean.txt",
+      "sha256": "EDAAF0683A704431541CDD00F660D31F1F0692F1045EBBA50081303D674F2EE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_contDiff_and_finsum_smoothedFundamental_eq_one.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/P2M/Sol/S_ModularCurve_contDiff_and_finsum_smoothedFundamental_eq_one.lean.txt",
+      "sha256": "9AB3E1B695F07FF44F88652F4AD61D0640F212B32CEC00B4ED4950DE1D6F9EE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_exp_eq_of_invariant_ne_zero_isParabolicHom.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/P2M/Sol/S_ModularCurve_exists_exp_eq_of_invariant_ne_zero_isParabolicHom.lean.txt",
+      "sha256": "9FF210E7655F87AD45C18D2DFDCF0388B4B8173B5B1801852493EF7C8437069D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_UpperHalfPlane_exists_localModel_pair_integral_mul_dbarLogDeriv_eq.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/anthropic-flt-residual-closure-20261020/P2M/Sol/S_UpperHalfPlane_exists_localModel_pair_integral_mul_dbarLogDeriv_eq.lean.txt",
+      "sha256": "6C1947A59CFD3A77F3A3355BA6EDEB21601E31508A653D33CD3F8BC6C9A670E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit887-focused.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/audit887-focused.log",
+      "sha256": "B66049E8E057E66666FCDF4E3A544EDDB06FCD52CE2EB9902AC06DC0FB4F694D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-reuse-route-891.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-reuse-route-891.json",
+      "sha256": "7A6F238DD7B5220C7F56A9922443CDCF8307018B8E400E240B2C9B5FE8235BF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-wedge-integral-route-872.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-wedge-integral-route-872.json",
+      "sha256": "EB7325B897630EE62BDD500688B782DE5DFA5A28FF0BC6BE32C6D0F3363FB85C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-wedge-stokes-route-871.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-wedge-stokes-route-871.json",
+      "sha256": "C1E3CF93C87791414A84FBC2905BB9B172A4F98C8C6812C01B2E88DD55A9A790"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers871.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/consumers871.txt",
+      "sha256": "A5A1FD04A6ED61E053549C4DA6AFE00A13E2E2692FBC9113DA008989AC4A1BB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers877.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/consumers877.txt",
+      "sha256": "FB70A5B1E697E98195496B62D844761F78D4D2C132BDA9EF7FD371B44CDD3B41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers887.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/consumers887.txt",
+      "sha256": "9DC13191E694918841AD6C4B412AAD39A83338428D05FF2E610F0DDB617C17CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\document877.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/document877.py",
+      "sha256": "52C3A6AF807E34768E54DD3EC219C78360796F70E610C1043B0F87AE662FA860"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_local_model_construction_889.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/download_gamma_one_local_model_construction_889.py",
+      "sha256": "9A74AF5344B8A75C937A2FD8E8819A8B4800E46CF0358F173B3E36A853AFF40A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_smooth_local_model_886.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/download_gamma_one_smooth_local_model_886.py",
+      "sha256": "CFEDF00CA7BC50B7AEE05370A20A1F579B4473AD678F9B3E37546F9380D41C9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation871-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/foundation871-console.log",
+      "sha256": "888F9E5197E9562F619D28BCF169480594A0D84E6A00D0800F10298FB34D3F83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation877-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/foundation877-console.log",
+      "sha256": "9E35FDE87AFD17B55B1A3F42D0D216635FBCCA849621A53A9A19D4CE9C66C71C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation887-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/foundation887-console.log",
+      "sha256": "D2671D4925538A24F8765175B67ED5076564689B955232A37AC4342E622B47B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-untwist-wedge-route-873.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-untwist-wedge-route-873.json",
+      "sha256": "AC74237B93CBCCEB06A00F098E78EDF4E55715CD750C7D31C2F0F9C0613E9889"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-smooth-partition-route-875.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/modular-smooth-partition-route-875.json",
+      "sha256": "5EF7096E1B82A55A2B9F754AB91C343412C8DB4C67CFA7F75DFC801458612B87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-smooth-partition-route-876.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/modular-smooth-partition-route-876.json",
+      "sha256": "1CC15C85395237490DC28A5567EBD24012431EF9E74C475474CC66A1DFEC0096"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules871.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/modules871.json",
+      "sha256": "37080882439E08EFD4140674AB3D78E781EE4DA4BD63C0B88D840537CB287B12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules877.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/modules877.json",
+      "sha256": "3553A9BEA485DAB1966A23A4AA8990B065A2BA2060A5E9826557A4CB8196218C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules887.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/modules887.json",
+      "sha256": "EFBB63C84539CF1E735B7FFC3A595B12A1DF78FA455A4456CDFABC27C3FA0266"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper871-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/paper871-console.log",
+      "sha256": "F2911EACE800820F6475E0AD9C3E8148CE52D5752A842E3C5E9165F26654C05B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper877-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/paper877-console.log",
+      "sha256": "2F4D6268B48C94BD6E5412179356091365B8D9EFF58F4B5414E5C724E05273FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper887-console.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/paper887-console.log",
+      "sha256": "C1F1754E4FCD9717F347E401045CE2878D0E05CF541D270EF68E579D0E5E4308"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_complex_dipole_891.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_complex_dipole_891.py",
+      "sha256": "1E3C23434AB57D80ABD84A03A45EA66D32B27DA8F0F7BF1F5DC92F010377D39C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_complex_dipole_audit_893.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_complex_dipole_audit_893.py",
+      "sha256": "E727C78CDD2D9D7FC24AC2CCBFC3DF1A1D337587F6C21B716E2081152B95330A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_petersson_smooth_limit_audit_885.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_petersson_smooth_limit_audit_885.py",
+      "sha256": "57119E1B2DDB760E104168A7505E174083F0B80F133EA231133BB46FE332F435"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_partition_877.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_smooth_partition_877.py",
+      "sha256": "4BF1E155A1EE4A196C77FDDAB935E2A158230A091AF28C39D66D8EF618A879E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_partition_audit_878.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_smooth_partition_audit_878.py",
+      "sha256": "96340F7E49121D3238A432A4CB4FFFF2E559DD0B1519A9CBC8A350DBBE36CD8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_partition_audit_878b.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_smooth_partition_audit_878b.py",
+      "sha256": "D7590CF0459DF7172E70D7F5B09DBA987E546F60673E6179AD134CC7BB3E1913"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_untwist_wedge_873.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_untwist_wedge_873.py",
+      "sha256": "F2E15EFE66181060D1499981B13899F217C3F5B3C5B51BD7C67C00B6771EC91C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_untwist_wedge_audit_874.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_gamma_one_untwist_wedge_audit_874.py",
+      "sha256": "72ACAE2BD6C4F5D04A4D9B33EC4D5C5A11B532025B3F50E7646C504BC1F56FAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_modular_smooth_partition_875.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_modular_smooth_partition_875.py",
+      "sha256": "AD61EDC6886850F231583637AE25B2E1548A5D9A1736CC7CDFEE1925946A3FD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_modular_smooth_partition_875b.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_modular_smooth_partition_875b.py",
+      "sha256": "885B785E35FE220F79738926DC359C9F401F796D9DABC67FA9BB8248A5770F68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_modular_smooth_partition_875c.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_modular_smooth_partition_875c.py",
+      "sha256": "13B4D9F5575F304F2E7AE05FE1F2DC78873396B00DCBCCC9035F9581F231858A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_modular_smooth_partition_876.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_modular_smooth_partition_876.py",
+      "sha256": "0004CBB208364972588C9559F4107932BCF7AFAA81F41A2BAAA32545C03D191E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_winding_log_888.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_parabolic_winding_log_888.py",
+      "sha256": "53750529CC6FA7AE2AA92E90499CF7E353392E311E330DF88CEE9FAED52C19F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_winding_log_audit_890.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_parabolic_winding_log_audit_890.py",
+      "sha256": "EB31C387EF85A768FFCE1F636E3C927F8D814F20086181359601DFB1B845A5AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_plane_integral_883.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_smooth_plane_integral_883.py",
+      "sha256": "2B381D294F292B939BD967E526BE90568DDBF928DD86D611B253B6A3F9603FF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_wedge_integral_872.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_wedge_integral_872.py",
+      "sha256": "397183CDAEF63B2D9ABFE583D47A952D1189DB9D28674052C9DCFE30B9A43707"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_wedge_stokes_871.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_wedge_stokes_871.py",
+      "sha256": "1057ADEEA766DAEFE58064CF8DA506D5B49FA4831CA965E830179C059ADCFE09"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_winding_log_887.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/prepare_winding_log_887.py",
+      "sha256": "2A6D3CD9242E6175398B8FC7C5E0E007C5B53CCED2F345CADB15D04C7D9B4646"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\projective-smooth-unfolding-route-879.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/projective-smooth-unfolding-route-879.json",
+      "sha256": "7D79605DDC54A8C887C0808D88D61D79E52E1102FE5EB40E6A43233504CE1FBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record871.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record871.py",
+      "sha256": "C0134E2893C1EDEA44FE827A0F6BCB3F86C1035B89095302D70B96F6A8C36755"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record877.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record877.py",
+      "sha256": "B7D554BD39ADE2AAC098BA0E71BD083059AA0DB1977CB7BDD296B29FD8061EF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record887.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record887.py",
+      "sha256": "7CEF517CA62F571FB09618E6CA187399551A4F92284756C1F71DBA3AF5B4647B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_complex_dipole_893.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_complex_dipole_893.py",
+      "sha256": "19B61EC3FBCFACCDEEC8EC7C732D9E45155B5D181BA080080402571A8A4E968C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_petersson_smooth_limit_885.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_gamma_one_petersson_smooth_limit_885.py",
+      "sha256": "3C29904BF35CAE67187B88908D42C6F8BD74D4B07A61222EDCF3504B70A2FC43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_partition_878.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_gamma_one_smooth_partition_878.py",
+      "sha256": "45E45CA41ED403B6A14065DF1AF7CB8570EC489D3F2DE02B68FE024E6EEA587F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_partition_878b.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_gamma_one_smooth_partition_878b.py",
+      "sha256": "7E473B36A4EA5B8C352C7288549F32EEAB6A6D376D25D1AA018DBD23B8E7BE2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_untwist_wedge_874.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_gamma_one_untwist_wedge_874.py",
+      "sha256": "7A1D8B8F994D7D54D61A261E86D24B3EB26E0D3535078F420D721E0F862DD131"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_modular_parabolic_winding_log_890.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/record_source_modular_parabolic_winding_log_890.py",
+      "sha256": "9CDDD10E1AD26C176A76026D074A185CD07E82D09C2C69DAACEAF2019B056BD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register871.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/register871.py",
+      "sha256": "39D57F537BBEC3A6D0400F53CD5E6991E40863B33234F17756ED26F17990033B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register877.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/register877.py",
+      "sha256": "D7F7B76FAFF77E9ED40D55D1C4B5213F41BA0DFDD3AF468293EA1AF9446D0D04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register887.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/register887.py",
+      "sha256": "4D5C818E9FC912CD4C6BCEEA28AA715326775E6E2E34597B623CE9574EE748DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations871.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/registrations871.json",
+      "sha256": "8DF7C09F7148769026D59F30EF225823117D5711089419D76D4F5221582F59E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations877.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/registrations877.json",
+      "sha256": "77B671BDF7B7FA2AF38559C9360EDC3F9A3412BF9CA2F57B4D61BE204B7485D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations887.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/registrations887.json",
+      "sha256": "53F7083D5B5E2E1D9FA82B67303DB563F31D341BDCC3A2A90C2F912B0F53156F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section871.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/section871.txt",
+      "sha256": "57842A541C923726EEA4B7DAC13EB423D200B78D94CE232A730C33A70D8CC350"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section877.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/section877.txt",
+      "sha256": "93C37B5E44228DCAD1A8E4D2696792C07B9B3E4731B1B122002A9FBEB1591E60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section887.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/section887.txt",
+      "sha256": "DFE79B1AFACC8ED4D4CD8720138B8E32CF145C83278B6EB074126D0A864E7FB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-route-adjustment-876d.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-route-adjustment-876d.json",
+      "sha256": "3DC841FEFB908E140B42349727438A4F8F57C96E19EF62121E492C85EE426C61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-native-unfolding-route-883.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-native-unfolding-route-883.json",
+      "sha256": "C64B025BFBAB1B33B0F7F709BEC1292D380F33FE80997609D6716C1FBF061C2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-generator-failure-875a.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-generator-failure-875a.json",
+      "sha256": "2BEEB5874593814B39E6DB542E02B2B83476DE3FBB2F5806FBFB0FED48759E58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-minimal-route-877.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-minimal-route-877.json",
+      "sha256": "DD04F3546789167DCED7CB8591BB873BD150273A117B0FCCB5ED5BF8A0B7CCEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-audit-config.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-complex-dipole-1-audit-config.json",
+      "sha256": "34F70F452A361D11B9D03883C7A67FD69764A31C0579595C702E90AFCBD26128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-complex-dipole-1-reuse-review-20261027.json",
+      "sha256": "DC9011E62D41E7D340D520E497A32494F126C2A2A73E7ECF4EEC975332B7F181"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-complex-dipole-1-scratch-receipt.json",
+      "sha256": "6B0A8EC8E086272A388597C7758651D375134515E8F15D6F6C451419B45FD47B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-audit-route-893.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-complex-dipole-audit-route-893.json",
+      "sha256": "52459340A84F7BEDBE24974DFD49BBD87FACDC1EF5C65DCEACC78740889E2B14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+      "sha256": "F16ECD3CCDA791603BAD7BEFAB553590188376BCBCA1BB0DCDD0440E84831B20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-log-derivative-residues-1b-scratch-receipt.json",
+      "sha256": "978439697AD7EAB0AFEB18AD2DE7C8790FA74DEA3A9773E654EA20CC89D70208"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-1-audit-config.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-petersson-smooth-limit-1-audit-config.json",
+      "sha256": "FBBD593C89E5DBC60065677F351091E983A8B59E2200F76F0A89AECD6820A313"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-petersson-smooth-limit-1-reuse-review-20261027.json",
+      "sha256": "CEC126E2D7145E395EC6A64E6D7D21CF2B70969999CD7A507941A715BE27656F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-petersson-smooth-limit-1-scratch-receipt.json",
+      "sha256": "F0CDC72420FF1C5C4BDB12CCF3A202A42D24FEADBD68EFD0CA7060DA729126F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-audit-route-885.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-petersson-smooth-limit-audit-route-885.json",
+      "sha256": "D6944CA50BE988A0EA6ECB4283B1F3F388CF6D47FF2C205E6634173748C1A041"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-signed-reciprocity-1-scratch-receipt.json",
+      "sha256": "2EFDDFE0B99E63D2256BF2EAEBF30B3DAE319D85C1B3589499C480BCE8ECEFB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-1b-audit-config.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-smooth-partition-1b-audit-config.json",
+      "sha256": "C91AAF9FA5B5EAA41B08CC5775CADE6E39AAFE14CBAF3CAE67F7A81778E32756"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-smooth-partition-1b-reuse-review-20261027.json",
+      "sha256": "351B1BA3DE622A5B1C45ECADA42E1293E7FD9EDD0D17D885D1A479B8AC535823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-smooth-partition-1b-scratch-receipt.json",
+      "sha256": "DD883E90EBF75A3EC420C700597BC850CF2029CB4BEE5B4EAE2DE11D44FF646D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-audit-route-878.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-smooth-partition-audit-route-878.json",
+      "sha256": "BA7CCB30149CC9AE7031FF30708971F5E68A718D9AD8AFC42B98E68EC92DFE1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-audit-route-878b.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-smooth-partition-audit-route-878b.json",
+      "sha256": "BA7CCB30149CC9AE7031FF30708971F5E68A718D9AD8AFC42B98E68EC92DFE1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-audit-config.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-untwist-wedge-1-audit-config.json",
+      "sha256": "6D83B2AE4A76D264C7E496459EA241C4DE82DEB90E2D225F670B7B54DFB6683F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-untwist-wedge-1-reuse-review-20261027.json",
+      "sha256": "E40784258AF75C3A8FCF931105AA9D06AE848B8DE26E6406F45E7CF991666B75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-untwist-wedge-1-scratch-receipt.json",
+      "sha256": "E31FF19C16AA62B73D59CD75CB8DE9910AD2300CE596941B0F9E20E411CC716C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-audit-route-874.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-gamma-one-untwist-wedge-audit-route-874.json",
+      "sha256": "7D2D454AB8D97195A912DEC628215C05DE36C72F57336042A585E56735B822EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-audit-config.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-modular-parabolic-winding-log-1-audit-config.json",
+      "sha256": "22894EEB2F9DAF057AE934E03548AEE7869CA29E328855E2A8170BF626A7DC28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-modular-parabolic-winding-log-1-reuse-review-20261027.json",
+      "sha256": "0911424AB22565674C7CDA1CCAB2DD293E092C7A4717A662ADA4CA87FECDCF9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-modular-parabolic-winding-log-1-scratch-receipt.json",
+      "sha256": "99DB177F0019C0EBD3D4723848F63371146D544F54D3739A1AF7BB36F66CDECF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-audit-route-890.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/source-modular-parabolic-winding-log-audit-route-890.json",
+      "sha256": "A83715EF747D2ACB826403C4702C9B20C6CF3FF4D9B9D65D5B342731DDB3A7F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status871.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/status871.txt",
+      "sha256": "F65FCE2D8694B44E4AEA9F78ED72DF9CCEDA804C0BCF986DEC5C5D3012170E8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status877.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/status877.txt",
+      "sha256": "D767B68B5B7082F82EDE17CE025FFAFAD9D7C3805AEF539608EB70C72D59B269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status887.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/status887.txt",
+      "sha256": "4F06FD2F4A3F737A07BBD066F4978318AF066C6A66F6E3D320CE8E88D2FB4C97"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\trim_wedge_route_872c.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/trim_wedge_route_872c.py",
+      "sha256": "3BEA548163C96B4B8258DB06C689FF1EA4123BB14CE75E537710A9AE4BBFEC33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\trim_wedge_stokes_874a.py",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/trim_wedge_stokes_874a.py",
+      "sha256": "3F41574FCAC6CAD9EC6A9FCBA95AB7C3113A45A1645D9EC158C4BE9A25818E8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-minimal-route-review-872c.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-minimal-route-review-872c.json",
+      "sha256": "AA7FBDC1EB7685B2B52C816FE1703889AEE4747D9DFB06719C24550A26E96DC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-minimal-route-review-874a.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-minimal-route-review-874a.json",
+      "sha256": "EF29CD23B7894228818ED87BAD1CD7CE1306E05B0C204C769C9490B8FCC94AA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\winding-log-reuse-route-887.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/winding-log-reuse-route-887.json",
+      "sha256": "4C89CECF2448CCBF24B80DB10A8D368BEF7289FF448D3A973AF8BFB9DCA4D71E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-convex-failed-891c\\SourceUpperHalfPlaneDipole.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-convex-failed-891c/SourceUpperHalfPlaneDipole.lean.txt",
+      "sha256": "264BD9007405252F1B31A17B65F42D9F2DD33431EF9D3700293B1FD6595B9D85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-import-failed-891b\\SourceComplexDipoleLocalModel.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-import-failed-891b/SourceComplexDipoleLocalModel.lean.txt",
+      "sha256": "ABB7A08E09261FB7652BA27AFD3D1B3A6F8B9AF75881535B00F90667CB4E3725"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-notation-failed-891a\\SourceComplexDipoleLocalModel.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-notation-failed-891a/SourceComplexDipoleLocalModel.lean.txt",
+      "sha256": "31CD07F14B859E4C18C001AA551ED86C879870CAA499F5B5E3C9E5CA0DC84E1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-notation-failed-891a\\SourceComplexDipoleLogDerivative.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-notation-failed-891a/SourceComplexDipoleLogDerivative.lean.txt",
+      "sha256": "0EE593A374C7341056609D2FF17FAC75E670D7F38761CFE9A3EE4E1420767075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-notation-failed-891a\\SourceComplexDipolePairing.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-notation-failed-891a/SourceComplexDipolePairing.lean.txt",
+      "sha256": "07BBF9532BE05BBE25E4B3B12436CC3086147BADB131B178468AE5E93B769846"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-notation-failed-891a\\SourceUpperHalfPlaneDipole.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/complex-dipole-notation-failed-891a/SourceUpperHalfPlaneDipole.lean.txt",
+      "sha256": "183F53F16D73BB055625711F7988B56D4892D083FF5948868A77365EB2631700"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\manifest.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-local-model-construction-reuse-889/manifest.json",
+      "sha256": "C035EA8411793E4A37FE1CB01FCDB93CF68DA589B793168476F541375208A404"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-local-model-construction-reuse-889/S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+      "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-petersson-smooth-limit-failed-884a\\SourceGammaOnePeterssonSmoothLimit.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-petersson-smooth-limit-failed-884a/SourceGammaOnePeterssonSmoothLimit.lean.txt",
+      "sha256": "365E3982B7DE22CC9A542B1B978457C1FC50FAB0D4E754C8B19B8917440681F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-petersson-smooth-limit-failed-884a\\SourceGammaOnePeterssonSmoothLimit884a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-petersson-smooth-limit-failed-884a/SourceGammaOnePeterssonSmoothLimit884a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-petersson-smooth-limit-failed-884a\\SourceGammaOnePeterssonSmoothLimit884a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-petersson-smooth-limit-failed-884a/SourceGammaOnePeterssonSmoothLimit884a.log",
+      "sha256": "5565DE76569CFAC8872EB13FCF2B21AD5FBC77BB4CE315BC0BE8559AB5005454"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-smooth-local-model-reuse-886\\manifest.json",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-smooth-local-model-reuse-886/manifest.json",
+      "sha256": "5628895AA7EFC69E57E4AF7F5107209775DC2FC0C578CA18F2796406DE73B7DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-smooth-local-model-reuse-886\\S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-smooth-local-model-reuse-886/S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean.txt",
+      "sha256": "7B3FD28E513874FB74C77A10776F383A3EE71416152BD9A44DB345F35262B3F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\invariant-unfolding-failed-881a\\SourceModularInvariantIntegralUnfolding.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/invariant-unfolding-failed-881a/SourceModularInvariantIntegralUnfolding.lean.txt",
+      "sha256": "2BFA0895E1710D806D0545A93712DD57354ECCEBE6D8EC75F79F8C441C83644C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\invariant-unfolding-failed-881a\\SourceModularInvariantIntegralUnfolding881a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/invariant-unfolding-failed-881a/SourceModularInvariantIntegralUnfolding881a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\invariant-unfolding-failed-881a\\SourceModularInvariantIntegralUnfolding881a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/invariant-unfolding-failed-881a/SourceModularInvariantIntegralUnfolding881a.log",
+      "sha256": "747E1664B821D2DFD07564C671561E201252C60D7CC55BB321E98122E12C1A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-winding-log-failed-888a\\SourceModularParabolicWindingLog.lean",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/parabolic-winding-log-failed-888a/SourceModularParabolicWindingLog.lean.txt",
+      "sha256": "1606AB56AD7006DF956E164699EE4C89B86B4ECCB8062CC6CF4738970ACA85E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876a\\SourceModularSmoothCosetSum.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876a/SourceModularSmoothCosetSum.lean.txt",
+      "sha256": "3221F380C6E279913636BE730A04EF816D2AF63046AEBE73970D54C7AEB2ECF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876a\\SourceModularSmoothCosetSum876a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876a/SourceModularSmoothCosetSum876a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876a\\SourceModularSmoothCosetSum876a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876a/SourceModularSmoothCosetSum876a.log",
+      "sha256": "6760FE17EF9A99E151267BE639F822195CFB63091A8C6BEC8D01064B3DDF08F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876b\\SourceModularSmoothCosetSum.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876b/SourceModularSmoothCosetSum.lean.txt",
+      "sha256": "703D26C38590311138F82C0AE3DA7D35D878E728BCD245B989E23DA925B49E2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876b\\SourceModularSmoothCosetSum876b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876b/SourceModularSmoothCosetSum876b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876b\\SourceModularSmoothCosetSum876b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876b/SourceModularSmoothCosetSum876b.log",
+      "sha256": "9F96149AB046443F7CFBDA4B77C7AD88AF505C834C1AE118442BE0CA41B75A06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876c\\SourceModularSmoothCosetSum.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876c/SourceModularSmoothCosetSum.lean.txt",
+      "sha256": "93C828D902B7FFEBD87BA5CA665976DF87668E9A1CCC331100D2C52D356A27A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876c\\SourceModularSmoothCosetSum876c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876c/SourceModularSmoothCosetSum876c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-native-failed-876c\\SourceModularSmoothCosetSum876c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-coset-native-failed-876c/SourceModularSmoothCosetSum876c.log",
+      "sha256": "FEE0654355D239EE2D8262512D8FD63C0D70358E6D5BA884255CAF490106CD63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-integral-limit-failed-882a\\SourceModularSmoothIntegralLimit.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-integral-limit-failed-882a/SourceModularSmoothIntegralLimit.lean.txt",
+      "sha256": "FD1D8EA304FA282882AFE45EF5D427E0A74574BB30B2D15B0A7B39A7743913DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-integral-limit-failed-882a\\SourceModularSmoothIntegralLimit882a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-integral-limit-failed-882a/SourceModularSmoothIntegralLimit882a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-integral-limit-failed-882a\\SourceModularSmoothIntegralLimit882a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-integral-limit-failed-882a/SourceModularSmoothIntegralLimit882a.log",
+      "sha256": "B8A393BA4830B3E7C6BB076C0AF58DD85B1AB9EE31E63BD9461F83452913EEDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880a\\SourceModularSmoothOrbitMass.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880a/SourceModularSmoothOrbitMass.lean.txt",
+      "sha256": "2C56DA93B46C84D27F9B55E7648032287534BAE1FF78FD64980B95787C11771D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880a\\SourceModularSmoothOrbitMass880a.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880a/SourceModularSmoothOrbitMass880a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880a\\SourceModularSmoothOrbitMass880a.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880a/SourceModularSmoothOrbitMass880a.log",
+      "sha256": "D1465EB7249FAFB106AFF9AFBEF83303A2D3DF5D4763EFB8231EA26A166A6DCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880b\\SourceModularSmoothOrbitMass.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880b/SourceModularSmoothOrbitMass.lean.txt",
+      "sha256": "7631AD2B045007B184682DC8F68ACBD051DDD2C7C3A08A83ACBA3820299BF964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880b\\SourceModularSmoothOrbitMass880b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880b/SourceModularSmoothOrbitMass880b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-mass-failed-880b\\SourceModularSmoothOrbitMass880b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-orbit-mass-failed-880b/SourceModularSmoothOrbitMass880b.log",
+      "sha256": "E90F99588CC6F7B58070A8636E9DB305E95673D388284CC115B62419C1CE6A93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-lint-failed-878a\\SourceGammaOneSmoothPartitionAudit1.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-lint-failed-878a/SourceGammaOneSmoothPartitionAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-lint-failed-878a\\SourceGammaOneSmoothPartitionAudit1.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-lint-failed-878a/SourceGammaOneSmoothPartitionAudit1.lean.txt",
+      "sha256": "FD62B66563A980C9B82A0ACD03002A07393C3C0B55328D2C126A6BF511A587DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-lint-failed-878a\\SourceGammaOneSmoothPartitionAudit1.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-lint-failed-878a/SourceGammaOneSmoothPartitionAudit1.log",
+      "sha256": "EA1A81646D1CCDDE62701B73B0F271F6C99B7CD10834EAAEE05833DF0A79B4A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-lint-failed-878a\\SourceModularSmoothedFundamentalSupport.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-lint-failed-878a/SourceModularSmoothedFundamentalSupport.lean.txt",
+      "sha256": "77B90ED5785C7A3595D114E1976207426B137CF731BE8C3F07878A1E5B9BED64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothCosetSum.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothCosetSum.lean.txt",
+      "sha256": "BDC496B4F07ACF8C36C091FE22548E6A6DDA3A4597010E9800EEC46BF3DB9FF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothCover.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothCover.lean.txt",
+      "sha256": "1443CA349C3181CADF43710AD9029B79304D0A7EB19B3748B7B4F218F593E666"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothCutoff.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothCutoff.lean.txt",
+      "sha256": "630840E15C835F9FFCF4F2C6DB8819DFCB2B539E69F38C7ABB6602B29B558BAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothedFundamental.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothedFundamental.lean.txt",
+      "sha256": "211E1F258190F5A5B4070D5E423583A654560240375CFC6DBE3391BC952395F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothedFundamentalSupport.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothedFundamentalSupport.lean.txt",
+      "sha256": "71BDC41B7270397FD4F727D7F797E1C8618D23C9954418FDA1669FBEDD5A25EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-source-before-attribution-877a\\SourceModularSmoothGeometry.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-partition-source-before-attribution-877a/SourceModularSmoothGeometry.lean.txt",
+      "sha256": "8D25A8488D41ACEFE969BE694A95C73DD233271DFD4D2592194FB26FFC86FA74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-support-failed-876d\\SourceModularSmoothedFundamentalSupport.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-support-failed-876d/SourceModularSmoothedFundamentalSupport.lean.txt",
+      "sha256": "2D4B7F324CB4AE9243C3CCBB65DF0A880B83976E109B9D4839A9DEBB20DCFD78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-support-failed-876d\\SourceModularSmoothedFundamentalSupport876d.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-support-failed-876d/SourceModularSmoothedFundamentalSupport876d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-support-failed-876d\\SourceModularSmoothedFundamentalSupport876d.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/smooth-support-failed-876d/SourceModularSmoothedFundamentalSupport876d.log",
+      "sha256": "DE0BEAD99258534CE55DBAB1B19AAEC0A150D1B06BC617670709A96E0DC15643"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-disc-failed-872a\\SourceComplexWedgeDisc.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-disc-failed-872a/SourceComplexWedgeDisc.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-disc-failed-872a\\SourceComplexWedgeDisc.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-disc-failed-872a/SourceComplexWedgeDisc.lean.txt",
+      "sha256": "58CC6D20D3034D18FB6CE871485B6F0345CAEF5BB46E9A7620EEB7A920FC39B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-disc-failed-872a\\SourceComplexWedgeDisc.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-disc-failed-872a/SourceComplexWedgeDisc.log",
+      "sha256": "2D6B7B95E3D000452DBF122246732DB863A7A0FDD3D71BB2D009090D9BE50463"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-failed-872a\\SourceComplexWedgeLocalLog.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-failed-872a/SourceComplexWedgeLocalLog.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-failed-872a\\SourceComplexWedgeLocalLog.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-failed-872a/SourceComplexWedgeLocalLog.lean.txt",
+      "sha256": "4FFD6DC0B027C6D22EF1C35842C548E7999C1629D728D210D8019C2D4730B459"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-failed-872a\\SourceComplexWedgeLocalLog.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-failed-872a/SourceComplexWedgeLocalLog.log",
+      "sha256": "FD7D76EDF03563F2E9A893E2BEAD3DE45B96702142F1076F6C6DC035603367F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-superseded-872b\\SourceComplexWedgeLocalLog.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-superseded-872b/SourceComplexWedgeLocalLog.lean.txt",
+      "sha256": "25801542E044A7A16CB19CDBA6BA49AD8C7087A2CA29A85358EF9B857C574466"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-superseded-872b\\SourceComplexWedgeLocalLog872b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-superseded-872b/SourceComplexWedgeLocalLog872b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-local-log-superseded-872b\\SourceComplexWedgeLocalLog872b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-local-log-superseded-872b/SourceComplexWedgeLocalLog872b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeDisc.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeDisc.lean.txt",
+      "sha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeDisc872b.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeDisc872b.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeDisc872b.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeDisc872b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeIntegral.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeIntegral.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeIntegral.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeIntegral.lean.txt",
+      "sha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeIntegral.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeLocalLog.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeLocalLog.lean.txt",
+      "sha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeLocalLog872c.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeLocalLog872c.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeLocalLog872c.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeLocalLog872c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeStokes.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeStokes.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeStokes.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeStokes.lean.txt",
+      "sha256": "D7306642200237574AB605B3179D0FC11F43B8668405EF0BB1DD3F9E30F49417"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceComplexWedgeStokes.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceComplexWedgeStokes.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceGammaOneUntwistWedgeIntegral.exit",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceGammaOneUntwistWedgeIntegral.exit",
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceGammaOneUntwistWedgeIntegral.lean.txt",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceGammaOneUntwistWedgeIntegral.lean.txt",
+      "sha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\wedge-stokes-superseded-874a\\SourceGammaOneUntwistWedgeIntegral.log",
+      "path": "Tools/gamma-one-smooth-comparison-20261027-894/wedge-stokes-superseded-874a/SourceGammaOneUntwistWedgeIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

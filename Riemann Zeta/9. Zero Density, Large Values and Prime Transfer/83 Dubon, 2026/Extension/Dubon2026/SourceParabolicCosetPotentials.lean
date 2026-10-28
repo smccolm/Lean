@@ -1,0 +1,136 @@
+import Dubon2026.SourceFinitePermutationCoboundary
+import Dubon2026.SourceWindingBoundaryIntegral
+import Dubon2026.SourceCupThreeNormalizedCocycle
+
+/-! DUB-17/18 -> original arithmetic association -> Gamma1 Picard/H1 ->
+Abel-Jacobi converse -> reciprocity -> integer-period membership of the actual
+winding boundary. Construct coset coboundaries from the actual transition
+and parabolic character. Reuse the existing modular S relations.
+Adapted from the pinned generic-subgroup primary in reuse archive 936. -/
+namespace Dubon2026.SourceParabolicEdgePeriod
+noncomputable section
+open UpperHalfPlane Filter Complex MeasureTheory Asymptotics
+open SourceModularGreenPairing
+open scoped MatrixGroups Topology ModularForm Real Pointwise
+variable {Γ : Subgroup SL(2, ℤ)}
+local notation "Q" => SL(2, ℤ) ⧸ Γ
+
+theorem coe_transition (M : SL(2, ℤ)) (q : Q) :
+    ((transition Γ M q : Γ) : SL(2, ℤ)) =
+      (Quotient.out (M • q))⁻¹ * M * Quotient.out q := rfl
+
+theorem transition_mul (M M' : SL(2, ℤ)) (q : Q) : transition Γ (M * M') q = transition Γ M (M' • q) * transition Γ M' q := by
+  ext1
+  simp only [coe_transition, Subgroup.coe_mul, mul_smul]
+  group
+
+theorem transition_one (q : Q) : transition Γ (1 : SL(2, ℤ)) q = 1 := by
+  ext1; simp [coe_transition]
+
+theorem sum_range_phi_gam (φ : Additive Γ →+ ℤ) (M : SL(2, ℤ)) (q : Q) (n : ℕ) :
+    ∑ j ∈ Finset.range n, φ (Additive.ofMul (transition Γ M (M ^ j • q))) =
+      φ (Additive.ofMul (transition Γ (M ^ n) q)) := by
+  induction n with
+  | zero => simp [transition_one]
+  | succ n ih => rw [Finset.sum_range_succ, ih, pow_succ', transition_mul, ofMul_mul, map_add, add_comm]
+
+theorem toPerm_pow_apply (M : SL(2, ℤ)) (j : ℕ) (q : Q) :
+    ((MulAction.toPerm M : Equiv.Perm Q) ^ j) q = M ^ j • q := by
+  induction j generalizing q with
+  | zero => simp
+  | succ j ih => rw [pow_succ, Equiv.Perm.mul_apply, MulAction.toPerm_apply, ih, ← mul_smul, ← pow_succ]
+
+theorem exists_phi_transition_eq_coboundary [Fintype Q] (φ : Additive Γ →+ ℤ) (M : SL(2, ℤ))
+    (hM : ∀ (q : Q) (n : ℕ), 0 < n → M ^ n • q = q → φ (Additive.ofMul (transition Γ (M ^ n) q)) = 0) :
+    ∃ m : Q → ℤ, ∀ q, φ (Additive.ofMul (transition Γ M q)) = m (M • q) - m q := by
+  classical
+  obtain ⟨m, hm⟩ := exists_eq_coboundary (MulAction.toPerm M)
+    (fun q => φ (Additive.ofMul (transition Γ M q))) (fun q n hn hq => by
+      simp only [toPerm_pow_apply] at hq ⊢
+      rw [sum_range_phi_gam, hM q n hn hq])
+  exact ⟨m, fun q => by simpa using hm q⟩
+
+theorem phi_eq_zero_of_pow_eq_one (φ : Additive Γ →+ ℤ) (γ : Γ) {k : ℕ} (hk : 0 < k)
+    (h : γ ^ k = 1) : φ (Additive.ofMul γ) = 0 := by
+  have : k • φ (Additive.ofMul γ) = 0 := by
+    rw [← map_nsmul, ← ofMul_pow, h, ofMul_one, map_zero]
+  simpa [hk.ne'] using this
+
+theorem transition_pow_of_smul_eq (M : SL(2, ℤ)) (q : Q) (h : M • q = q) (k : ℕ) :
+    ((transition Γ M q ^ k : Γ) : SL(2, ℤ)) = (Quotient.out q)⁻¹ * M ^ k * Quotient.out q := by
+  induction k with
+  | zero => simp
+  | succ k ih =>
+    rw [pow_succ, Subgroup.coe_mul, ih, coe_transition, h, pow_succ]
+    group
+
+theorem phi_transition_pow_eq_zero_of_torsion (φ : Additive Γ →+ ℤ) (M : SL(2, ℤ)) {k : ℕ} (hk : 0 < k)
+    (hMk : M ^ k = 1) (q : Q) (n : ℕ) (hq : M ^ n • q = q) :
+    φ (Additive.ofMul (transition Γ (M ^ n) q)) = 0 := by
+  apply phi_eq_zero_of_pow_eq_one φ _ hk
+  ext1
+  rw [transition_pow_of_smul_eq _ q hq, ← pow_mul, mul_comm, pow_mul, hMk, one_pow]
+  simp
+
+theorem phi_transition_T_pow_eq_zero (φ : Additive Γ →+ ℤ) (hφ : (∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0))
+    (q : Q) (n : ℕ) (hq : ModularGroup.T ^ n • q = q) :
+    φ (Additive.ofMul (transition Γ (ModularGroup.T ^ n) q)) = 0 := by
+  apply hφ
+  rw [coe_transition, hq, Matrix.SpecialLinearGroup.coe_mul, Matrix.trace_mul_comm,
+    Matrix.SpecialLinearGroup.coe_mul, ← mul_assoc, Matrix.SpecialLinearGroup.coe_inv,
+    Matrix.mul_adjugate, Matrix.SpecialLinearGroup.det_coe, one_smul, one_mul]
+  have : ((ModularGroup.T ^ n : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ) = !![1, (n : ℤ); 0, 1] := by
+    rw [← zpow_natCast]; exact ModularGroup.coe_T_zpow n
+  rw [this, Matrix.trace_fin_two_of]
+  norm_num
+
+/-- The actual order-three generator T inverse times S used by the period pairing. -/
+def W : SL(2, ℤ) := ModularGroup.T⁻¹ * ModularGroup.S
+
+theorem coe_W : (W : Matrix (Fin 2) (Fin 2) ℤ) = !![-1, -1; 1, 0] := by
+  rw [W, Matrix.SpecialLinearGroup.coe_mul, ModularGroup.coe_T_inv, ModularGroup.coe_S]
+  ext i j; fin_cases i <;> fin_cases j <;> simp [Matrix.mul_apply, Fin.sum_univ_two]
+
+theorem W_pow_three : W ^ 3 = 1 := by
+  ext i j
+  rw [Matrix.SpecialLinearGroup.coe_pow, coe_W]
+  fin_cases i <;> fin_cases j <;>
+    simp [pow_succ, Matrix.mul_apply, Fin.sum_univ_two]
+
+theorem S_pow_two : ModularGroup.S ^ 2 = -1 := by
+  rw [pow_two]
+  exact SourceCupThree.S_mul_S
+
+theorem S_pow_four : ModularGroup.S ^ 4 = 1 := by
+  simpa only [pow_succ, pow_zero, one_mul, SourceCupThree.S] using SourceCupThree.S_pow_four
+
+theorem neg_one_smul (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (q : Q) : (-1 : SL(2, ℤ)) • q = q := by
+  induction q using QuotientGroup.induction_on with
+  | H σ =>
+    rw [MulAction.Quotient.smul_mk, QuotientGroup.eq, smul_eq_mul]
+    simpa using hΓ
+
+theorem S_smul_S_smul (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (q : Q) : ModularGroup.S • ModularGroup.S • q = q := by
+  rw [← mul_smul, ← pow_two, S_pow_two, neg_one_smul hΓ]
+
+theorem trace_neg_one_sq : ((-1 : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 := by
+  rw [Matrix.SpecialLinearGroup.coe_neg, Matrix.SpecialLinearGroup.coe_one, Matrix.trace_neg,
+    Matrix.trace_one]
+  norm_num
+
+theorem coe_transition_S_S_mul (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (q : Q) :
+    ((transition Γ ModularGroup.S (ModularGroup.S • q) * transition Γ ModularGroup.S q : Γ) : SL(2, ℤ)) = -1 := by
+  rw [← transition_mul, coe_transition, ← pow_two, S_pow_two, neg_one_smul hΓ]
+  simp
+
+theorem phi_transition_S_S (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (φ : Additive Γ →+ ℤ) (hφ : (∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0)) (q : Q) :
+    φ (Additive.ofMul (transition Γ ModularGroup.S (ModularGroup.S • q))) =
+      -φ (Additive.ofMul (transition Γ ModularGroup.S q)) := by
+  rw [eq_neg_iff_add_eq_zero, ← map_add, ← ofMul_mul]
+  apply hφ
+  rw [coe_transition_S_S_mul hΓ]
+  exact trace_neg_one_sq
+
+
+end
+end Dubon2026.SourceParabolicEdgePeriod

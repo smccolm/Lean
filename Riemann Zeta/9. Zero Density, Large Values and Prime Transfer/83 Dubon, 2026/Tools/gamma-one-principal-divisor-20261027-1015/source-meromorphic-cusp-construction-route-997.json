@@ -1,0 +1,19 @@
+{
+  "chain": "DUB17/18 -> higher symmetric-power continuation -> automorphy -> original all-weight association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> actual meromorphic function -> multiplier covariance.",
+  "shorterRoute": "Reuse the proved global logarithmic primitive and countable-complement connectivity. The native meromorphic translated-germ APIs preserve orders but do not construct a multiplier; use the quotient derivative zero on the connected punctured domain. Reuse native UpperHalfPlane analytic action and meromorphic order composition. Omit unused coe and denominator wrappers and the duplicate connectivity proof. Native sourceHolomorphic_hasDerivAt_wedgeIntegral translated by A*i replaces the source 75-line second disk-exhaustion primitive. Native SourceCuspIntegral gives vertical/strip limits, whereas this step needs uniformity over all real parts atImInfty; retain only the required exponential-decay bound and uniform-limit argument.",
+  "assumptionsToDischarge": "Actual local integer-residue expansions, slash invariance and exponential decay imply a constructed meromorphic function with exact orders, multiplier covariance and nonzero limits at every translated cusp. No function/multiplier/cusp certificates remain as independent hypotheses.",
+  "remaining": "Actual prescribed algebraic differential analytic realization, point regularization, slash invariance and exponential cusp decay; then original principal-divisor consumer. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_meromorphic_smul_eq_mul_of_slashInvariant_residue.lean.txt",
+      "sha256": "1CEFC99641BCEBA3082D452C3BA6ADBC633F6B7F06C21310322EFC8688BC77C8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPrimitive.lean",
+      "sha256": "6DF5D7ADD99D106D9D6FD5B251E15F7FEA4A7AE18AF473740031E1316ADA2401"
+    }
+  ],
+  "externalWholeClosureBuilt": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

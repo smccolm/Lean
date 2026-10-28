@@ -1,0 +1,109 @@
+import SourceModularSidePairingAction
+import SourceSmoothOrbitIntegralGeometry
+import SourceSmoothModularLogDerivative
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period boundary
+identity. Adapted from pinned Apache-2.0 anthropics source, using existing
+actual Mobius action, differential, native slash action and curved Green
+formula. No limiting, boundary or period identity is assumed. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics
+open SourceModularSidePairing SourceSmoothDivisor SourceSmoothOrbitIntegral
+open SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology ModularForm ComplexConjugate Real NNReal Pointwise
+variable {Γ : Subgroup SL(2, ℤ)}
+
+theorem norm_dbarL_le (T : ℂ →L[ℝ] ℂ) : ‖dbarL T‖ ≤ ‖T‖ := by
+  unfold dbarL
+  rw [norm_div, Complex.norm_two]
+  have h1 : ‖T 1‖ ≤ ‖T‖ := by simpa using T.le_opNorm 1
+  have h2 : ‖I * T I‖ ≤ ‖T‖ := by rw [norm_mul, Complex.norm_I, one_mul]; simpa using T.le_opNorm I
+  have := norm_add_le (T 1) (I * T I)
+  linarith
+
+theorem I_smul_sub_eq (T : ℂ →L[ℝ] ℂ) : I • T 1 - T I = 2 * I * dbarL T := by
+  simp only [dbarL, smul_eq_mul]
+  have : (2 : ℂ) * I * ((T 1 + I * T I) / 2) = I * T 1 + I * I * T I := by ring
+  rw [this, Complex.I_mul_I]; ring
+
+section Quasi
+
+variable (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ)
+  (hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (L' z) z)
+  (hL' : ContinuousOn L' {z : ℂ | 0 < z.im}) (σ : SL(2, ℤ))
+
+/-- The actual modular translate of the winding logarithm. -/
+def Lt (L : ℂ → ℂ) (σ : SL(2, ℤ)) (z : ℂ) : ℂ := L (sm σ z)
+
+/-- Differential of the actual translated winding logarithm. -/
+def Fd (L' : ℂ → ℂ →L[ℝ] ℂ) (σ : SL(2, ℤ)) (z : ℂ) : ℂ →L[ℝ] ℂ :=
+  (L' (sm σ z)).comp (dsm σ z • (1 : ℂ →L[ℝ] ℂ))
+
+include hL in
+theorem hasFDerivAt_Lt {z : ℂ} (hz : 0 < z.im) : HasFDerivAt (Lt L σ) (Fd L' σ z) z :=
+  (hL _ (im_sm_pos σ z)).comp z (hasFDerivAt_sm σ hz)
+
+include hL in
+theorem continuousOn_Lt : ContinuousOn (Lt L σ) {z : ℂ | 0 < z.im} :=
+  fun z hz => (hasFDerivAt_Lt L L' hL σ hz).continuousAt.continuousWithinAt
+
+include hL' in
+theorem continuousOn_Fd : ContinuousOn (Fd L' σ) {z : ℂ | 0 < z.im} := by
+  unfold Fd
+  refine ContinuousOn.clm_comp (hL'.comp (continuousOn_sm σ) (fun z _ => im_sm_pos σ z)) ?_
+  exact (continuousOn_dsm σ).smul continuousOn_const
+
+theorem dbarL_Fd (z : ℂ) : dbarL (Fd L' σ z) = conj (dsm σ z) * dbarL (L' (sm σ z)) := by
+  rw [Fd, dbarL_comp_smul]
+
+theorem isCompact_box (M : ℝ) : IsCompact (Set.Icc (-1 : ℝ) 1 ×ℂ Set.Icc (1 / 2 : ℝ) M) :=
+  Metric.isCompact_of_isClosed_isBounded (isClosed_Icc.reProdIm isClosed_Icc)
+    ((Metric.isBounded_Icc _ _).reProdIm (Metric.isBounded_Icc _ _))
+
+theorem box_subset (M : ℝ) : Set.Icc (-1 : ℝ) 1 ×ℂ Set.Icc (1 / 2 : ℝ) M ⊆ {z : ℂ | 0 < z.im} := by
+  intro z hz
+  have := (Complex.mem_reProdIm.mp hz).2.1
+  show 0 < z.im
+  linarith
+
+theorem bound_of_compact_and_cusp {F : ℂ → ℝ} {C₁ C₂ Y : ℝ}
+    (h1 : ∀ z ∈ Set.Icc (-1 : ℝ) 1 ×ℂ Set.Icc (1 / 2 : ℝ) (max Y 1), F z ≤ C₁)
+    (h2 : ∀ z : ℂ, Y ≤ z.im → F z ≤ C₂) :
+    ∀ z : ℂ, 1 / 2 ≤ z.im → |z.re| ≤ 1 → F z ≤ max C₁ C₂ := by
+  intro z hz hre
+  rcases le_or_gt z.im (max Y 1) with h | h
+  · exact (h1 z (Complex.mem_reProdIm.mpr ⟨abs_le.mp hre, hz, h⟩)).trans (le_max_left _ _)
+  · exact (h2 z ((le_max_left Y 1).trans h.le)).trans (le_max_right _ _)
+
+variable (hbd : ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+    ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧ ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C)
+
+include hL hbd in
+
+theorem Lt_bound : ∃ C, ∀ z : ℂ, 1 / 2 ≤ z.im → |z.re| ≤ 1 → ‖Lt L σ z‖ ≤ C := by
+  obtain ⟨C, Y, hC⟩ := hbd
+  obtain ⟨C₁, hC₁⟩ := (isCompact_box (max Y 1)).exists_bound_of_continuousOn
+    ((continuousOn_Lt L L' hL σ).mono (box_subset _))
+  exact ⟨max C₁ C, bound_of_compact_and_cusp hC₁ fun z hz => (hC z hz).1⟩
+
+include hL hL' hbd in
+
+theorem Fd_bound : ∃ C, ∀ z : ℂ, 1 / 2 ≤ z.im → |z.re| ≤ 1 → ‖Fd L' σ z‖ ≤ C := by
+  obtain ⟨C, Y, hC⟩ := hbd
+  obtain ⟨C₁, hC₁⟩ := (isCompact_box (max (max Y 1) 1)).exists_bound_of_continuousOn
+    ((continuousOn_Fd L' hL' σ).mono (box_subset _))
+  refine ⟨max C₁ C, bound_of_compact_and_cusp hC₁ fun z hz => ?_⟩
+  have hz0 : 0 < z.im := lt_of_lt_of_le (lt_of_lt_of_le one_pos (le_max_right Y 1)) hz
+  have hd : fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z = Fd L' σ z :=
+    (hasFDerivAt_Lt L L' hL σ hz0).fderiv
+  rw [← hd]
+  exact (hC z ((le_max_left _ _).trans hz)).2
+
+end Quasi
+
+
+end
+end Dubon2026.SourceModularGreenPairing

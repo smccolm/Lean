@@ -1,0 +1,27 @@
+import SourceIntegralCosetCocycle
+import SourceIntegralCosetParabolic
+import SourceIntegralCosetWord
+import SourceIntegralPeriodCuspLimits
+import SourceIntegralPeriodGeneratorDual
+import SourceRealPrimitiveGreenData
+import SourceIntegralPeriodLatticeDual
+import SourceRealPeriodPeterssonPairing
+import SourceClosedPeterssonNondegenerate
+import SourceSignedPeriodLatticeLift
+import SourceGammaOneSignedRealPeriods
+import SourceGammaOnePeterssonIntegralRealPeriods
+import SourceGammaOneUnitaryDivisorPrincipal
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralCosetCocycle, `SourceIntegralCosetParabolic, `SourceIntegralCosetWord, `SourceIntegralPeriodCuspLimits, `SourceIntegralPeriodGeneratorDual, `SourceRealPrimitiveGreenData, `SourceIntegralPeriodLatticeDual, `SourceRealPeriodPeterssonPairing, `SourceClosedPeterssonNondegenerate, `SourceSignedPeriodLatticeLift, `SourceGammaOneSignedRealPeriods, `SourceGammaOnePeterssonIntegralRealPeriods, `SourceGammaOneUnitaryDivisorPrincipal]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,33 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient Hecke characters -> original Picard/H1/Hecke/diamond/full-parabolic/transpose comparison -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual finite orbit representatives and weighted degree-zero order sum.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticDivisorMoving.lean",
+      "sha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticPlaceOrbits.lean",
+      "sha256": "335DD0E645DD7D107555DA0DA010E7D7A9DFF744F0B77B2BE5AB976E3818F263"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDivisorDegree.lean",
+      "sha256": "3A0BBD2A36FA22D1BA0F62D1E860DB609D89BBC1A8CA29FEC6C4105EC0CDBC09"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "D8B47B849B61CB9E717BD82ED7DAEF4138517FB51AA367FF7D86AC2DA4C57E2A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-reciprocity-data-route-859.json",
+      "sha256": "E8FA05955881AF36AD656393761DFBE40605766EC472C6CC5C888DC3F95F8829"
+    }
+  ],
+  "shorterRoute": "The Abel-Jacobi consumer already has an actual degree-zero analytic divisor, from the proved divisor-moving theorem. Native finite selection and original analytic-place orbit separation give representatives and coverage. Existing closed residue degrees and exact signed stabilizer ramification give the weighted order sum directly. This avoids importing the primary 34 KB generic logarithmic-residue degree-zero proof and its broader dependencies.",
+  "assumptionsToDischarge": "Actual analytic divisor support representatives, orbit injectivity and coverage, and the factor-one-half weighted order sum, with every nonzero Gamma1 level and original elliptic multiplicity retained.",
+  "remaining": "Analytic reciprocity and construction of the actual meromorphic function from the Abel-Jacobi period condition remain. The central-sign form/period transport must be proved before applying a source theorem to plusMinus Gamma1. Full arithmetic association and DUB17--20 remain OPEN; 16/20.",
+  "externalClosureBuilt": false
+}

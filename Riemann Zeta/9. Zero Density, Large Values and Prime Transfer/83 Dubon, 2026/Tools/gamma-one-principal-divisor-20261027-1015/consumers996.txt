@@ -1,0 +1,39 @@
+
+/-- The original full lowest-weight subspace is defined by the genuine rotation character at every real angle. -/
+theorem actual_lowest_rotation_space_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : AdelicCyclicHilbert f) : v ∈ adelicRotationWeightSpace f ↔ ∀ t : ℝ,
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realRotationCurve t)) v =
+        Complex.exp ((t : ℂ) * (Complex.I * (k : ℂ))) • v :=
+  mem_adelicRotationWeightSpace f v
+
+/-- The actual positive lowest-weight projector annihilates the entire reflected original real component. -/
+theorem actual_reflected_lowest_projection_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (v : AdelicCyclicHilbert f) (hv : v ∈ adelicRealCyclicClosedSpan f) :
+    adelicRotationWeightProjection f
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding (rationalGL2ToReal rationalGL2Reflection)) v) = 0 :=
+  adelicRotationWeightProjection_reflectedReal f hf hk v hv
+
+/-- Every original full adelic orbit vector projects to its actual finite-coordinate orbit line. -/
+theorem actual_full_adelic_lowest_projection_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (g : RationalAdelicGL2) :
+    ∃ c : ℂ, adelicRotationWeightProjection f
+      (adelicCyclicHilbertRepresentation f g (adelicCyclicHilbertGenerator f)) =
+      c • adelicCyclicHilbertRepresentation f
+        (rationalAdelicFiniteGL2Embedding (rationalAdelicGL2RealFiniteEquiv g).2)
+        (adelicCyclicHilbertGenerator f) :=
+  adelicRotationWeightProjection_fullOrbit f hf hk g
+
+/-- The entire full original lowest-weight space is precisely the closed span of the original finite-adelic cusp translates. -/
+theorem actual_full_lowest_space_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    adelicRotationWeightSpace f =
+      (Submodule.span ℂ (Set.range
+        (fun a : Matrix.GeneralLinearGroup (Fin 2) (IsDedekindDomain.FiniteAdeleRing ℤ ℚ) =>
+          adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+            (adelicCyclicHilbertGenerator f)))).topologicalClosure :=
+  adelicRotationWeightSpace_eq_finiteClosure f hf hk
+

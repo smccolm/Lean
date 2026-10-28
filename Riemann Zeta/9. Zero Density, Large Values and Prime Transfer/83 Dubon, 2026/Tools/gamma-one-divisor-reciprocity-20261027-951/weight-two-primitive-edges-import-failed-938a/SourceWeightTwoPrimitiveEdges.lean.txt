@@ -1,0 +1,96 @@
+import SourceModularGreenEdges
+import Dubon2026.SourceWeightTwoPeriodUntwist
+
+/-! DUB-17/18 -> original arithmetic association -> Gamma1 Picard/H1 ->
+Abel-Jacobi converse -> reciprocity -> integer-period membership of the winding
+sum. Apply native FTC to the existing normalized primitive and actual slash.
+All edge integrability is reused from the proved Green boundary infrastructure.
+Adapted from the pinned generic-subgroup primary in reuse archive 936. -/
+namespace Dubon2026.SourceParabolicEdgePeriod
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics
+open SourcePeriodUntwist SourceSmoothDivisor SourceModularSidePairing SourceModularGreenPairing
+open scoped MatrixGroups Topology ModularForm Real Pointwise
+
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+
+/-- The actual normalized endpoint primitive translated by the modular action. -/
+def Ep (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2)
+    (σ : SL(2, ℤ)) (z : ℂ) : ℂ := Ek g (sm σ z)
+
+theorem hasDerivAt_Ep (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2)
+    (σ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) :
+    HasDerivAt (Ep g σ) (tilePull g σ z) z := by
+  have h := (Ek_hasDerivAt g (im_sm_pos σ z)).comp z (hasDerivAt_sm σ ⟨z, hz⟩)
+  simpa only [Ep, Function.comp_def, tilePull_eq_div, sm, ofComplex_apply, dsm,
+    mul_one_div] using h
+
+variable (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) (σ : SL(2, ℤ))
+
+theorem I_mul_integral_ray {L : ℂ}
+    (hL : Tendsto (fun w : ℍ => Ek g ((σ • w : ℍ) : ℂ)) atImInfty (𝓝 L)) :
+    Complex.I * ∫ y in Set.Ioi (Real.sqrt 3 / 2), tilePull g σ (-(1 / 2) + y * Complex.I) =
+      L - Ep g σ (-(1 / 2) + (Real.sqrt 3 / 2 : ℝ) * Complex.I) := by
+  have him : ∀ y : ℝ, (-(1 / 2) + y * Complex.I : ℂ).im = y := fun y => by simp
+  have hpath : ∀ y : ℝ, HasDerivAt (fun u : ℂ => (-(1 / 2) + u * Complex.I : ℂ)) Complex.I y :=
+    fun y => by simpa using ((hasDerivAt_id (y : ℂ)).mul_const Complex.I).const_add (-(1 / 2) : ℂ)
+  have hderiv : ∀ y : ℝ, 0 < y → HasDerivAt (fun y : ℝ => Ep g σ (-(1 / 2) + y * Complex.I))
+      (tilePull g σ (-(1 / 2) + y * Complex.I) * Complex.I) y := by
+    intro y hy
+    have h1 := hasDerivAt_Ep g σ (z := -(1 / 2) + y * Complex.I) (by rw [him]; exact hy)
+    exact (h1.comp (y : ℂ) (hpath y)).comp_ofReal
+  have hcont : ContinuousWithinAt (fun y : ℝ => Ep g σ (-(1 / 2) + y * Complex.I))
+      (Set.Ici (Real.sqrt 3 / 2)) (Real.sqrt 3 / 2) :=
+    (hderiv _ (by positivity : (0 : ℝ) < Real.sqrt 3 / 2)).continuousAt.continuousWithinAt
+
+  obtain ⟨c, hc, C, -, hC⟩ := tilePull_decay g σ (by norm_num : (0 : ℝ) < 1 / 2)
+  have hint : IntegrableOn (fun y : ℝ => tilePull g σ (-(1 / 2) + y * Complex.I) * Complex.I)
+      (Set.Ioi (Real.sqrt 3 / 2)) :=
+    (integrableOn_ray (continuousOn_tilePull g σ) hc
+      (fun z hz => hC z (le_of_lt hz.1))).mul_const _
+
+  have hlim : Tendsto (fun y : ℝ => Ep g σ (-(1 / 2) + y * Complex.I)) atTop (𝓝 L) := by
+    have hto : Tendsto (fun y : ℝ => ofComplex (-(1 / 2) + y * Complex.I)) atTop atImInfty := by
+      rw [atImInfty, tendsto_comap_iff]
+      refine tendsto_id.congr' ?_
+      filter_upwards [eventually_gt_atTop (0 : ℝ)] with y hy
+      simp only [Function.comp_apply, id]
+      rw [ofComplex_apply_of_im_pos (by rw [him]; exact hy)]
+      exact (him y).symm
+    exact hL.comp hto
+  have := integral_Ioi_of_hasDerivAt_of_tendsto hcont
+    (fun y hy => hderiv y ((by positivity : (0 : ℝ) < Real.sqrt 3 / 2).trans hy)) hint hlim
+  rw [integral_mul_const] at this
+  rw [mul_comm, this]
+
+theorem integral_arc :
+    ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+        tilePull g σ (Complex.exp (θ * Complex.I)) * (Complex.I * Complex.exp (θ * Complex.I)) =
+      Ep g σ (Complex.exp ((2 * Real.pi / 3 : ℝ) * Complex.I)) -
+        Ep g σ (Complex.exp ((Real.pi / 3 : ℝ) * Complex.I)) := by
+  have hmem : ∀ θ ∈ Set.uIcc (Real.pi / 3) (2 * Real.pi / 3),
+      0 < (Complex.exp (θ * Complex.I)).im := by
+    intro θ hθ
+    rw [Set.uIcc_of_le (by linarith [Real.pi_pos])] at hθ
+    rw [Complex.exp_ofReal_mul_I_im]
+    exact Real.sin_pos_of_pos_of_lt_pi (by linarith [Real.pi_pos, hθ.1])
+      (by linarith [Real.pi_pos, hθ.2])
+  have hpath : ∀ θ : ℝ, HasDerivAt (fun u : ℂ => Complex.exp (u * Complex.I))
+      (Complex.exp (θ * Complex.I) * Complex.I) θ := fun θ => by
+    simpa using ((hasDerivAt_id (θ : ℂ)).mul_const Complex.I).cexp
+  have hderiv : ∀ θ ∈ Set.uIcc (Real.pi / 3) (2 * Real.pi / 3),
+      HasDerivAt (fun θ : ℝ => Ep g σ (Complex.exp (θ * Complex.I)))
+        (tilePull g σ (Complex.exp (θ * Complex.I)) * (Complex.I * Complex.exp (θ * Complex.I))) θ := by
+    intro θ hθ
+    have h1 := hasDerivAt_Ep g σ (hmem θ hθ)
+    have := (h1.comp (θ : ℂ) (hpath θ)).comp_ofReal
+    convert this using 1
+    all_goals try rfl
+    ring
+  have hint := intervalIntegrable_arc (continuousOn_tilePull g σ)
+  rw [intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint]
+
+
+end
+end Dubon2026.SourceParabolicEdgePeriod

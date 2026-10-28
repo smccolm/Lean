@@ -1,0 +1,56 @@
+import SourceComplexLogDerivativeResidues
+import SourceWeightTwoPeriodUntwist
+import Dubon2026.SourceGammaOneExactRamification
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> original
+Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity.
+The original divisor and its actual ramification-weighted meromorphic
+orders supply the exact compact-support residue sum. The holomorphic
+multiplier is the existing normalized endpoint primitive of a real cusp
+form object, not an independently supplied primitive or residue formula. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane MeasureTheory Filter CongruenceSubgroup Matrix.SpecialLinearGroup
+open SourceCurve SourceFunctionField SourceFunctionField.GammaOne SourcePeriodUntwist
+open scoped MatrixGroups Topology
+
+theorem sourceGamma1_logDerivative_residue_integral (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N)
+    (D : Divisor ℂ (functionFieldOver (Gamma1 N) ℂ)) (F : ℍ → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ) : ℤ) : WithTop ℤ))
+    (g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2)
+    (h : ℂ → ℂ) (hh : ContDiff ℝ 1 h) (hsupp : HasCompactSupport h)
+    (hU : tsupport h ⊆ upperHalfPlaneSet) :
+    ∫ z : ℂ, Ek g z * (deriv (F ∘ ofComplex) z / F (ofComplex z)) *
+      ((fderiv ℝ h z 1 + Complex.I * fderiv ℝ h z Complex.I) / 2) =
+      -(Real.pi : ℂ) * ∑ᶠ a : ℂ,
+        (((analyticRamification hT (ofComplex a) : ℤ) *
+          D (analyticPlace hT (ofComplex a)) : ℤ) : ℂ) * Ek g a * h a := by
+  have hm : ∀ z ∈ upperHalfPlaneSet, MeromorphicAt (F ∘ ofComplex) z := by
+    intro z hz
+    exact hF ⟨z, hz⟩
+  have hf : ∀ z ∈ upperHalfPlaneSet, meromorphicOrderAt (F ∘ ofComplex) z ≠ ⊤ := by
+    intro z hz
+    rw [ho ⟨z, hz⟩]
+    exact WithTop.coe_ne_top
+  have hi := SourceComplexReciprocity.LogDerivStokes.integral_mul_logDeriv_mul_dbar
+    upperHalfPlaneSet isOpen_upperHalfPlaneSet (F ∘ ofComplex) hm hf
+    (Ek g) (differentiableOn_Ek g) h hh hsupp hU
+  change _ = -(Real.pi : ℂ) * _ at hi
+  simp only [Function.comp_apply] at hi
+  rw [hi]
+  congr 1
+  apply finsum_congr
+  intro a
+  by_cases ha : 0 < a.im
+  · have he : ((ofComplex a : ℍ) : ℂ) = a := by rw [ofComplex_apply_of_im_pos ha]
+    have ho' := ho (ofComplex a)
+    rw [he] at ho'
+    simp [ho']
+  · have hz : h a = 0 := image_eq_zero_of_notMem_tsupport (fun ht => ha (hU ht))
+    simp [hz]
+
+end
+end Dubon2026

@@ -1,0 +1,89 @@
+import SourceModularEllipticFixedPoint
+import Dubon2026.SourceParabolicClassification
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> actual
+meromorphic multiplier correction. Reuse native elliptic fixed points and
+the repository Mobius-germ and signed parabolic classification results.
+Adapt the remaining actual multiplier calculation from the Apache-2.0
+scope-755b primary at revision 6e837e75355538c7f80bab5b956861e86c4eacc2.
+No congruence level or central-sign normalization is discarded. -/
+namespace Dubon2026.SourceMeromorphicMultiplier
+noncomputable section
+open UpperHalfPlane Filter SourceFunctionField.SubgroupStabilizer
+open scoped MatrixGroups Topology
+theorem tendsto_vadd_atImInfty (x : ℝ) :
+    Tendsto (fun z : ℍ => x +ᵥ z) atImInfty atImInfty := by
+  simp only [atImInfty, tendsto_comap_iff, Function.comp_def]
+  exact tendsto_comap.congr fun z => (vadd_im x z).symm
+
+theorem conj_T_zpow_smul (δ ε : SL(2, ℤ)) (n : ℤ) (hε : ε = 1 ∨ ε = -1) (w : ℍ) :
+    (ε * (δ * ModularGroup.T ^ n * δ⁻¹)) • ((δ : SL(2, ℤ)) • w)
+      = δ • (((n : ℤ) : ℝ) +ᵥ w) := by
+  have hcentral : (ε * (δ * ModularGroup.T ^ n * δ⁻¹)) • ((δ : SL(2, ℤ)) • w)
+      = (δ * ModularGroup.T ^ n * δ⁻¹) • ((δ : SL(2, ℤ)) • w) := by
+    rcases hε with hε | hε
+    · rw [hε, one_mul]
+    · rw [hε, neg_one_mul]
+      exact ModularGroup.SL_neg_smul _ _
+  rw [hcentral, ← mul_smul, ← UpperHalfPlane.modular_T_zpow_smul, ← mul_smul]
+  congr 1
+  group
+section Multiplier
+
+variable {Γ : Subgroup SL(2, ℤ)} {F : ℍ → ℂ} {χ : Γ → ℂ}
+
+theorem exists_apply_ne_zero
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L)) :
+    ∃ τ : ℍ, F τ ≠ 0 := by
+  obtain ⟨L, hL, hlim⟩ := hcusp 1
+  obtain ⟨τ, hτ⟩ := (hlim.eventually_ne hL).exists
+  exact ⟨τ, by simpa only [one_smul] using hτ⟩
+
+theorem multiplier_one
+    (hχ : ∀ (γ : Γ) (τ : ℍ), F ((γ : SL(2, ℤ)) • τ) = χ γ * F τ)
+    {τ₀ : ℍ} (h0 : F τ₀ ≠ 0) : χ 1 = 1 := by
+  have h := hχ 1 τ₀
+  rw [OneMemClass.coe_one, one_smul] at h
+  exact (mul_right_cancel₀ h0 ((one_mul _).trans h)).symm
+
+theorem multiplier_mul
+    (hχ : ∀ (γ : Γ) (τ : ℍ), F ((γ : SL(2, ℤ)) • τ) = χ γ * F τ)
+    {τ₀ : ℍ} (h0 : F τ₀ ≠ 0) (γ δ : Γ) : χ (γ * δ) = χ γ * χ δ := by
+  have h1 := hχ (γ * δ) τ₀
+  have h2 : F (((γ * δ : Γ) : SL(2, ℤ)) • τ₀) = χ γ * (χ δ * F τ₀) := by
+    rw [show ((γ * δ : Γ) : SL(2, ℤ)) • τ₀ = (γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • τ₀) by
+      rw [← mul_smul]; rfl, hχ, hχ]
+  exact mul_right_cancel₀ h0 ((h1.symm.trans h2).trans (mul_assoc _ _ _).symm)
+
+theorem multiplier_eq_one_of_trace_sq
+    (hχ : ∀ (γ : Γ) (τ : ℍ), F ((γ : SL(2, ℤ)) • τ) = χ γ * F τ)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L))
+    (γ : Γ) (hγ : ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4) : χ γ = 1 := by
+  obtain ⟨ε, δ, n, hε, hγeq⟩ := SourceParabolic.classification (γ : SL(2, ℤ)) hγ
+  obtain ⟨L, hL0, hlim⟩ := hcusp δ
+  have hlim1 : Tendsto (fun w : ℍ => F ((γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • w)))
+      atImInfty (𝓝 L) := by
+    have hfun : (fun w : ℍ => F ((γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • w)))
+        = (fun w : ℍ => F (δ • w)) ∘ fun w : ℍ => ((n : ℤ) : ℝ) +ᵥ w := by
+      funext w
+      rw [Function.comp_apply, hγeq, conj_T_zpow_smul δ ε n hε w]
+    rw [hfun]
+    exact hlim.comp (tendsto_vadd_atImInfty ((n : ℤ) : ℝ))
+  have hlim2 : Tendsto (fun w : ℍ => F ((γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • w)))
+      atImInfty (𝓝 (χ γ * L)) := by
+    have hfun : (fun w : ℍ => F ((γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • w)))
+        = fun w : ℍ => χ γ * F (δ • w) := funext fun w => hχ γ _
+    rw [hfun]
+    exact hlim.const_mul _
+  have h : χ γ * L = L := tendsto_nhds_unique hlim2 hlim1
+  have h' : (χ γ - 1) * L = 0 := by rw [sub_mul, one_mul, h, sub_self]
+  rcases mul_eq_zero.mp h' with h1 | h1
+  · exact sub_eq_zero.mp h1
+  · exact absurd h1 hL0
+
+end Multiplier
+
+end
+end Dubon2026.SourceMeromorphicMultiplier

@@ -1,0 +1,109 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T20:29:46.327222+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceSmoothComparisonQuotient",
+    "SourceSmoothComparisonCusps",
+    "SourceSmoothComparisonWindingLog",
+    "SourceGammaOneDivisorWindingComparison"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient.lean",
+      "sha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056",
+      "oleanSha256": "26043DA6E7318FCFE15B8876B31075DF37C9CB017F44AA49E99B7C7E6380B86C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps.lean",
+      "sha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0",
+      "oleanSha256": "E6D991E4CE49016F31AE8AD63982127A8927189ACC341C49A19481F202337FBF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog.lean",
+      "sha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13",
+      "oleanSha256": "251AD4F1DA65D8848677DC3D79D7397551F5DFA90993D63B37E875943E772F6F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison.lean",
+      "sha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1",
+      "oleanSha256": "2A76A46B51A083E7585F42CA74E60AA541D54A26B9511D701B3559D92759B153",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceSmoothComparison.quot_local",
+    "Dubon2026.SourceSmoothComparison.contDiffAt_quot",
+    "Dubon2026.SourceSmoothComparison.quot_ne_zero",
+    "Dubon2026.SourceSmoothComparison.tendsto_div_quot",
+    "Dubon2026.SourceSmoothComparison.eventually_eq_quot_mul",
+    "Dubon2026.SourceSmoothComparison.quot_smul",
+    "Dubon2026.SourceSmoothComparison.quot_eq_limUnder",
+    "Dubon2026.SourceSmoothComparison.exists_height_n_eq_zero",
+    "Dubon2026.SourceSmoothComparison.eventually_atImInfty",
+    "Dubon2026.SourceSmoothComparison.quot_eq_of_high",
+    "Dubon2026.SourceSmoothComparison.tendsto_quot_smul",
+    "Dubon2026.SourceSmoothComparison.tendsto_fderiv_quot_smul",
+    "Dubon2026.SourceSmoothComparison.quot_cusp_data",
+    "Dubon2026.SourceSmoothComparison.exists_filled_winding_log",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison",
+    "Dubon2026.SourceSmoothComparison.HasLocalModels",
+    "Dubon2026.SourceSmoothComparison.quot"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceSmoothComparison.quot_local",
+    "Dubon2026.SourceSmoothComparison.contDiffAt_quot",
+    "Dubon2026.SourceSmoothComparison.quot_ne_zero",
+    "Dubon2026.SourceSmoothComparison.tendsto_div_quot",
+    "Dubon2026.SourceSmoothComparison.eventually_eq_quot_mul",
+    "Dubon2026.SourceSmoothComparison.quot_smul",
+    "Dubon2026.SourceSmoothComparison.quot_eq_limUnder",
+    "Dubon2026.SourceSmoothComparison.exists_height_n_eq_zero",
+    "Dubon2026.SourceSmoothComparison.eventually_atImInfty",
+    "Dubon2026.SourceSmoothComparison.quot_eq_of_high",
+    "Dubon2026.SourceSmoothComparison.tendsto_quot_smul",
+    "Dubon2026.SourceSmoothComparison.tendsto_fderiv_quot_smul",
+    "Dubon2026.SourceSmoothComparison.quot_cusp_data",
+    "Dubon2026.SourceSmoothComparison.exists_filled_winding_log",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceSmoothComparison.HasLocalModels",
+    "Dubon2026.SourceSmoothComparison.quot"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingAudit1.log",
+  "logSha256": "3D75CE8F6B19959F4FD92740B4382EF8E6596A2189DB27DEA345527F1BC79AAC",
+  "auditSha256": "F8B8D6835FC905A3142C497B262237CA0A7112B47F2905609534EAE49B5C8370",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 31,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 28,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1.log",
+  "dependencyAuditSha256": "321D96A02AAC7441548114BA6493C8E6DD7D6ACB2CD70C7E65C5B06E7429AE54",
+  "dependencyAuditSourceSha256": "819C61DF60E7CB4FEDEF177CC6844CCA4BDD7F5C2B2E19A839DDB961546C93AF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual filled-quotient parabolic winding character",
+  "discharged": [
+    "Derive the actual original cusp form from the unitary multiplier",
+    "Construct the comparison V and its original-divisor period limit",
+    "Derive quotient regularity, nonvanishing, signed invariance and nonzero cusp limits with derivative decay",
+    "Produce the actual logarithm and integer character vanishing on literal trace-squared-four elements",
+    "Preserve source punctured-limit convention via a proved equality"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The meromorphic function with exact orders and a unitary multiplier remains an upstream input. Winding side-pairing/period integral, Petersson comparison, analytic reciprocity, principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "C1ED4FC43483ADD263CA65E497080A10BDEE834D1AAAF6F56C56E1273DAE01C5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

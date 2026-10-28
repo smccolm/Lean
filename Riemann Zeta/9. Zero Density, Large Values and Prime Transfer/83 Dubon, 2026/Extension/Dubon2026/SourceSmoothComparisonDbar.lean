@@ -1,0 +1,71 @@
+import Dubon2026.SourceSmoothComparisonQuotient
+import Dubon2026.SourceComplexHolomorphicStokes
+import Dubon2026.SourceComplexDipolePairing
+
+/-! DUB-17/18 -> original arithmetic association -> Gamma1 Picard/H1 ->
+Abel-Jacobi converse -> reciprocity -> splitting the actual filled quotient.
+The existing almost-everywhere nonvanishing of the meromorphic untwist will
+replace a second exceptional-set/countable-orbit construction. Equal local
+orders and the constructed logarithm give the exact dbar identity. -/
+namespace Dubon2026.SourceSmoothComparison
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Set
+open SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology Real
+variable {Φ V L : ℂ → ℂ} {n : ℍ → ℤ}
+
+theorem order_eq_zero_of_ne_zero (hΦ : HasLocalModels Φ n) (τ : ℍ) (h : Φ τ ≠ 0) :
+    n τ = 0 := by
+  obtain ⟨Ψ, -, -, he⟩ := hΦ τ
+  have hv := he.self_of_nhds
+  by_contra hn
+  apply h
+  simpa [sub_self, zero_zpow _ hn] using hv
+
+theorem differentiableAt_of_zero_order (hV : HasLocalModels V n) (τ : ℍ) (hn : n τ = 0) :
+    DifferentiableAt ℝ V (τ : ℂ) := by
+  obtain ⟨Θ, hΘ, -, he⟩ := hV τ
+  have heq : V =ᶠ[𝓝 (τ : ℂ)] Θ := by simpa only [hn, zpow_zero, one_mul] using he
+  exact (hΘ.differentiableAt (by norm_num)).congr_of_eventuallyEq heq
+
+theorem dbar_quotient_split (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n)
+    (hLd : ∀ τ : ℍ, HasFDerivAt L ((quot Φ V τ)⁻¹ • fderiv ℝ (quot Φ V) τ) τ)
+    (τ : ℍ) (hΦ0 : Φ τ ≠ 0) :
+    dbarL (fderiv ℝ Φ τ) / Φ τ =
+      dbarL (fderiv ℝ L τ) + dbarL (fderiv ℝ V τ) / V τ := by
+  have hn := order_eq_zero_of_ne_zero hΦ τ hΦ0
+  have hev := eventually_eq_quot_mul hΦ hV τ hn
+  have hV0 := hev.self_of_nhds.1
+  have hΦeq : Φ =ᶠ[𝓝 (τ : ℂ)] fun w => quot Φ V w * V w := hev.mono fun _ h => h.2
+  have hQd := (contDiffAt_quot hΦ hV τ).differentiableAt (by norm_num)
+  have hQ0 := quot_ne_zero hΦ hV τ
+  have hfd : fderiv ℝ Φ τ = quot Φ V τ • fderiv ℝ V τ + V τ • fderiv ℝ (quot Φ V) τ := by
+    rw [hΦeq.fderiv_eq]
+    exact fderiv_mul hQd (differentiableAt_of_zero_order hV τ hn)
+  have hfL : fderiv ℝ (quot Φ V) τ = quot Φ V τ • fderiv ℝ L τ := by
+    rw [(hLd τ).fderiv, smul_smul, mul_inv_cancel₀ hQ0, one_smul]
+  have hdb : dbarL (fderiv ℝ Φ τ) = quot Φ V τ * dbarL (fderiv ℝ V τ) +
+      V τ * (quot Φ V τ * dbarL (fderiv ℝ L τ)) := by
+    simp only [dbarL, hfd, hfL, ContinuousLinearMap.add_apply,
+      ContinuousLinearMap.smul_apply, smul_eq_mul]
+    ring
+  rw [hdb, hev.self_of_nhds.2]
+  field_simp
+  ring
+
+theorem weighted_dbar_quotient_split_ae
+    (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n)
+    (hLd : ∀ τ : ℍ, HasFDerivAt L ((quot Φ V τ)⁻¹ • fderiv ℝ (quot Φ V) τ) τ)
+    (hne : ∀ᵐ z : ℂ, 0 < z.im → Φ z ≠ 0)
+    (g h : ℂ → ℂ) (hh : ∀ z : ℂ, ¬ 0 < z.im → h z = 0) :
+    (fun z => g z * h z * (dbarL (fderiv ℝ Φ z) / Φ z)) =ᵐ[volume]
+      fun z => g z * h z * dbarL (fderiv ℝ L z) +
+        g z * h z * (dbarL (fderiv ℝ V z) / V z) := by
+  filter_upwards [hne] with z hz
+  by_cases hi : 0 < z.im
+  · rw [dbar_quotient_split hΦ hV hLd ⟨z, hi⟩ (hz hi), mul_add]
+  · simp only [hh z hi, mul_zero, zero_mul, zero_add]
+
+end
+end Dubon2026.SourceSmoothComparison

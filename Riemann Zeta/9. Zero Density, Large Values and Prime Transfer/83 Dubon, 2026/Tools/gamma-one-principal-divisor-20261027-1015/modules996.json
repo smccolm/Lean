@@ -1,0 +1,11 @@
+[
+  "AdelicFiniteLowestClosure",
+  "AdelicFullOrbitWeightProjection",
+  "AdelicRealFiniteCommute",
+  "AdelicReflectedWeightProjection",
+  "AdelicRotationProjectionReal",
+  "AdelicRotationWeightSpace",
+  "IntegerIrrationalCharacter",
+  "RealRotationReflection",
+  "UnitaryDistinctEigenOrthogonal"
+]

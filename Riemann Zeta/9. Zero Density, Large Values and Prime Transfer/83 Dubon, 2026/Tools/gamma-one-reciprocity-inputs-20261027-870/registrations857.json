@@ -1,0 +1,18 @@
+[
+  "Dubon2026.realSL2_right_mul_entries_contDiff",
+  "Dubon2026.realMatrixSmoothSubmodule_invariant",
+  "Dubon2026.contDiff_parameter_deriv_zero",
+  "Dubon2026.realMatrixSmoothSubmodule_deriv",
+  "Dubon2026.adelicCyclicHilbertGenerator_mem_realSmooth",
+  "Dubon2026.adelicRealSmoothSubmodule_invariant",
+  "Dubon2026.adelicRealSmoothSubmodule_infinitesimal",
+  "Dubon2026.realUpperUnipotent_entries_contDiff",
+  "Dubon2026.realGeodesicCurve_entries_contDiff",
+  "Dubon2026.realRotationCurve_entries_contDiff",
+  "Dubon2026.realMatrixSmoothInfinitesimal_apply",
+  "Dubon2026.adelicSmoothInfinitesimal_apply",
+  "Dubon2026.adelicSmoothCasimirOperator_apply",
+  "Dubon2026.adelicSmoothGenerator_casimir",
+  "Dubon2026.SemanticRegression.actual_adelic_smooth_infinitesimal_source",
+  "Dubon2026.SemanticRegression.actual_adelic_smooth_generator_operator_source"
+]

@@ -1,0 +1,27 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean.txt",
+      "bytes": 21267,
+      "sha256": "C137566A1EDFDA0C7307CEECE055B49A5E0E633020F198BDB53AE9C51EBDC0A4",
+      "gitBlob": "facef64742703631ee1991a9ef258bd50cf34ee4",
+      "retrievedUTC": "2026-10-27T14:45:55.793848+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean.txt",
+      "bytes": 23568,
+      "sha256": "A67A633238E2BAF294E7C8303A5201C95195BEB7223C7E841FACD3D248263F79",
+      "gitBlob": "626f40a7465e6d5056ad5df97216b2a2edc23377",
+      "retrievedUTC": "2026-10-27T14:45:56.038816+00:00"
+    }
+  ]
+}

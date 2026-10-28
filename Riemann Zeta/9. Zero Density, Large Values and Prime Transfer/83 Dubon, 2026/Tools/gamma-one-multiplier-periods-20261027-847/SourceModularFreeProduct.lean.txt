@@ -1,0 +1,50 @@
+import SourceModularFreeProductInjection
+import SourceModularProjectiveKernel
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier correction -> integral parabolic-character lifting -> the actual
+PSL2(Z) free-product presentation. Adapted from
+anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.
+Native Mathlib ping-pong, modular generators and scalar center are reused.
+This module discharges only its named presentation dependency. -/
+namespace Dubon2026.SourceModularFreeProduct
+open Matrix MatrixGroups ModularGroup
+open scoped Pointwise
+open scoped IrrationalPt
+/-- The free product identified with the image of the actual modular Mobius action. -/
+noncomputable def equivRange : Monoid.CoprodI G23 ≃* toPerm.range :=
+  (MonoidHom.ofInjective lift_injective).trans (MulEquiv.subgroupCongr range_lift_eq)
+
+theorem equivRange_apply_coe (w : Monoid.CoprodI G23) :
+    (equivRange w : Equiv.Perm IrrationalPt) = Monoid.CoprodI.lift incl w := rfl
+
+/-- The actual generator-preserving projective modular free-product equivalence. -/
+noncomputable def mulEquiv : Monoid.CoprodI G23 ≃* SL(2, ℤ) ⧸ Subgroup.center SL(2, ℤ) :=
+  equivRange.trans
+    ((QuotientGroup.quotientKerEquivRange toPerm).symm.trans
+      (QuotientGroup.quotientMulEquivOfEq ker_toPerm_eq_center))
+
+theorem mulEquiv_apply_of_eq (i : Fin 2) (x : G23 i) (g : SL(2, ℤ)) (hg : toPerm g = incl i x) :
+    mulEquiv (Monoid.CoprodI.of x) = QuotientGroup.mk g := by
+  unfold mulEquiv
+  rw [MulEquiv.trans_apply, MulEquiv.trans_apply]
+  have h1 : equivRange (Monoid.CoprodI.of x) = ⟨toPerm g, g, rfl⟩ := by
+    apply Subtype.ext
+    rw [equivRange_apply_coe, Monoid.CoprodI.lift_of]
+    exact hg.symm
+  have h2 : (QuotientGroup.quotientKerEquivRange toPerm) (QuotientGroup.mk g) = ⟨toPerm g, g, rfl⟩ := rfl
+  rw [h1, ← h2, MulEquiv.symm_apply_apply]
+  rfl
+
+theorem mulEquiv_of_zero :
+    mulEquiv (Monoid.CoprodI.of (i := 0) (Multiplicative.ofAdd 1)) = QuotientGroup.mk S :=
+  mulEquiv_apply_of_eq 0 _ S (by rw [incl_ofAdd_one, gen_zero, permS])
+
+theorem mulEquiv_of_one :
+    mulEquiv (Monoid.CoprodI.of (i := 1) (Multiplicative.ofAdd 1)) = QuotientGroup.mk (S * T) :=
+  mulEquiv_apply_of_eq 1 _ (S * T) (by rw [incl_ofAdd_one, gen_one, permU])
+
+
+end Dubon2026.SourceModularFreeProduct

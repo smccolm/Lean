@@ -1,0 +1,87 @@
+import SourceUnitaryCharacterFiniteOrder
+import SourceUnitaryCharacterRecurrence
+import SourceUnitaryCharacterTraceBound
+import SourceUnitaryCharacterAbelianQuotient
+import SourceUnitaryCharacterBasisExt
+import SourceUnitaryCharacterTorsion
+import SourceUnitaryCircleCharacter
+import SourceUnitaryCharacterLogarithm
+import SourceGammaOneUnitaryCharacterPeriods
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one
+#print axioms Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one
+#print axioms Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb
+#print axioms Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge
+#print axioms Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero
+#print axioms Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piM_surjective
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piA_surjective
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piM_eq_one
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piA_apply
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero
+#print axioms Dubon2026.SourceUnitaryCharacterLift.desc_piM
+#print axioms Dubon2026.SourceUnitaryCharacterLift.descA_piA
+#print axioms Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z
+#print axioms Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis
+#print axioms Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero
+#print axioms Dubon2026.SourceUnitaryCharacterLift.unitChar_apply
+#print axioms Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm
+#print axioms Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period
+#print axioms Dubon2026.SourceUnitaryCharacterLift.cheb
+#print axioms Dubon2026.SourceUnitaryCharacterLift.Ell
+#print axioms Dubon2026.SourceUnitaryCharacterLift.Msub
+#print axioms Dubon2026.SourceUnitaryCharacterLift.Qm
+#print axioms Dubon2026.SourceUnitaryCharacterLift.Q
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piM
+#print axioms Dubon2026.SourceUnitaryCharacterLift.piA
+#print axioms Dubon2026.SourceUnitaryCharacterLift.desc
+#print axioms Dubon2026.SourceUnitaryCharacterLift.descA
+#print axioms Dubon2026.SourceUnitaryCharacterLift.unitChar
+
+#print axioms Dubon2026.SourceUnitaryCharacterLift.fgQ
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceUnitaryCharacterFiniteOrder, `SourceUnitaryCharacterRecurrence, `SourceUnitaryCharacterTraceBound, `SourceUnitaryCharacterAbelianQuotient, `SourceUnitaryCharacterBasisExt, `SourceUnitaryCharacterTorsion, `SourceUnitaryCircleCharacter, `SourceUnitaryCharacterLogarithm, `SourceGammaOneUnitaryCharacterPeriods]
+  let theorems : Array Name := #[`Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one, `Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one, `Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb, `Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge, `Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero, `Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder, `Dubon2026.SourceUnitaryCharacterLift.piM_surjective, `Dubon2026.SourceUnitaryCharacterLift.piA_surjective, `Dubon2026.SourceUnitaryCharacterLift.piM_eq_one, `Dubon2026.SourceUnitaryCharacterLift.piA_apply, `Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero, `Dubon2026.SourceUnitaryCharacterLift.desc_piM, `Dubon2026.SourceUnitaryCharacterLift.descA_piA, `Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z, `Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis, `Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero, `Dubon2026.SourceUnitaryCharacterLift.unitChar_apply, `Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm, `Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period, `Dubon2026.SourceUnitaryCharacterLift.fgQ]
+  let constructions : Array Name := #[`Dubon2026.SourceUnitaryCharacterLift.cheb, `Dubon2026.SourceUnitaryCharacterLift.Ell, `Dubon2026.SourceUnitaryCharacterLift.Msub, `Dubon2026.SourceUnitaryCharacterLift.Qm, `Dubon2026.SourceUnitaryCharacterLift.Q, `Dubon2026.SourceUnitaryCharacterLift.piM, `Dubon2026.SourceUnitaryCharacterLift.piA, `Dubon2026.SourceUnitaryCharacterLift.desc, `Dubon2026.SourceUnitaryCharacterLift.descA, `Dubon2026.SourceUnitaryCharacterLift.unitChar]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Unitary Character Periods postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Unitary Character Periods theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE UNITARY CHARACTER PERIODS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceUnitaryCharacterFiniteOrder
+#lint in SourceUnitaryCharacterRecurrence
+#lint in SourceUnitaryCharacterTraceBound
+#lint in SourceUnitaryCharacterAbelianQuotient
+#lint in SourceUnitaryCharacterBasisExt
+#lint in SourceUnitaryCharacterTorsion
+#lint in SourceUnitaryCircleCharacter
+#lint in SourceUnitaryCharacterLogarithm
+#lint in SourceGammaOneUnitaryCharacterPeriods

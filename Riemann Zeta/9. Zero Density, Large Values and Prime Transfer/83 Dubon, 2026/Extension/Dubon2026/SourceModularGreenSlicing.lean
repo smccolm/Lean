@@ -1,0 +1,149 @@
+import Dubon2026.SourceModularGreenSliceGeometry
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period identity
+-> Green's formula on the actual modular fundamental domain.
+Adapted from pinned Apache-2.0 anthropics/fermats-last-theorem source.
+Native Fubini, one-dimensional FTC and real change-of-variable theorems provide
+the shorter rigorous route for the curved boundary; no boundary identity is
+assumed. No incidental open-neighborhood assumption is retained. -/
+namespace Dubon2026.SourceModularGreen
+noncomputable section
+open Complex MeasureTheory Set Filter Topology
+
+variable (Φ : ℂ → ℂ) (Φ' : ℂ → ℂ →L[ℝ] ℂ) (U : Set ℂ) (δ : ℝ) (hδ : 0 < δ)
+  (hDU : D ⊆ U) (hd : ∀ z ∈ U, HasFDerivAt Φ (Φ' z) z) (hc : ContinuousOn Φ' U)
+  (hΦ : ∃ C : ℝ, ∀ z ∈ U, ‖Φ z‖ ≤ C * Real.exp (-δ * z.im))
+  (hΦ' : ∃ C : ℝ, ∀ z ∈ U, ‖Φ' z‖ ≤ C * Real.exp (-δ * z.im))
+
+/-- Difference of values at the two circular endpoints of a horizontal slice. -/
+def corr (y : ℝ) : ℂ := Φ ⟨-r y, y⟩ - Φ ⟨r y, y⟩
+
+include hd hDU in
+lemma continuousOn_corr : ContinuousOn (corr Φ) (Icc (Real.sqrt 3 / 2) 1) := by
+  have hΦc : ContinuousOn Φ U := fun z hz => (hd z hz).continuousAt.continuousWithinAt
+  apply ContinuousOn.sub
+  · refine hΦc.comp (continuous_mk2.comp (continuous_r.neg.prodMk continuous_id)).continuousOn ?_
+    exact fun y hy => hDU (mem_D_neg_r hy.1 hy.2)
+  · refine hΦc.comp (continuous_mk2.comp (continuous_r.prodMk continuous_id)).continuousOn ?_
+    exact fun y hy => hDU (mem_D_r hy.1 hy.2)
+
+include hδ hd hDU hΦ in
+
+lemma integrableOn_vert {x : ℝ} (hx : |x| ≤ 1 / 2) :
+    IntegrableOn (fun y : ℝ => Φ ⟨x, y⟩) (Ioi (h x)) := by
+  obtain ⟨C, hC⟩ := hΦ
+  have hΦc : ContinuousOn Φ U := fun z hz => (hd z hz).continuousAt.continuousWithinAt
+  have hmem : ∀ t ∈ Ioi (h x), (⟨x, t⟩ : ℂ) ∈ U := fun t ht => hDU (mk_mem_D hx (le_of_lt ht))
+  have hcont : ContinuousOn (fun t : ℝ => Φ ⟨x, t⟩) (Ioi (h x)) :=
+    hΦc.comp (continuous_mk_left x).continuousOn hmem
+  have hdom : IntegrableOn (fun t : ℝ => C * Real.exp (-δ * t)) (Ioi (h x)) :=
+    (exp_neg_integrableOn_Ioi _ hδ).const_mul C
+  refine Integrable.mono' hdom (hcont.aestronglyMeasurable measurableSet_Ioi) ?_
+  exact (ae_restrict_iff' measurableSet_Ioi).mpr (Eventually.of_forall fun t ht => hC _ (hmem t ht))
+
+include hd hDU hc in
+
+lemma sliceIntegral {y : ℝ} (hy : Real.sqrt 3 / 2 < y) :
+    ∫ x in {x : ℝ | |x| ≤ 1 / 2 ∧ h x ≤ y}, Φ' ⟨x, y⟩ 1 =
+      (Φ ⟨1 / 2, y⟩ - Φ ⟨-(1 / 2), y⟩) + (Iic (1 : ℝ)).indicator (corr Φ) y := by
+  have hy0 : 0 ≤ y := sqrt3_pos.le.trans hy.le
+  rcases lt_or_ge y 1 with hy1 | hy1
+  · rw [indicator_of_mem (show y ∈ Iic (1 : ℝ) from hy1.le), slice_of_lt_one hy0 hy1]
+    have hr := r_pos hy0 hy1
+    have hr' := r_lt_half hy
+    have hmem : ∀ t : ℝ, |t| ≤ 1 / 2 → r y ≤ |t| → (⟨t, y⟩ : ℂ) ∈ U :=
+      fun t ht ht' => hDU (mk_mem_D ht ((h_le_iff hy0).mpr ht'))
+    have hmem₁ : ∀ t ∈ Icc (-(1 / 2 : ℝ)) (-r y), (⟨t, y⟩ : ℂ) ∈ U := fun t ht =>
+      hmem t (abs_le.mpr ⟨ht.1, by linarith [ht.2]⟩) (le_abs'.mpr (Or.inl ht.2))
+    have hmem₂ : ∀ t ∈ Icc (r y) (1 / 2 : ℝ), (⟨t, y⟩ : ℂ) ∈ U := fun t ht =>
+      hmem t (abs_le.mpr ⟨by linarith [ht.1], ht.2⟩) (le_abs'.mpr (Or.inr ht.1))
+    have hcont : ∀ s : Set ℝ, (∀ t ∈ s, (⟨t, y⟩ : ℂ) ∈ U) →
+        ContinuousOn (fun t : ℝ => Φ' ⟨t, y⟩ 1) s := fun s hs =>
+      (hc.comp (continuous_mk_right y).continuousOn hs).clm_apply continuousOn_const
+    rw [setIntegral_union (Set.disjoint_iff.mpr ?_) measurableSet_Icc
+      ((hcont _ hmem₁).integrableOn_Icc) ((hcont _ hmem₂).integrableOn_Icc),
+      integral_Icc_eq_integral_Ioc, integral_Icc_eq_integral_Ioc,
+      ← intervalIntegral.integral_of_le (by linarith), ← intervalIntegral.integral_of_le hr'.le,
+      integral_horiz Φ Φ' U hd (by linarith) hmem₁ hc, integral_horiz Φ Φ' U hd hr'.le hmem₂ hc]
+    · simp only [corr]; ring
+    · rintro t ⟨⟨-, h1⟩, ⟨h2, -⟩⟩; exact absurd (h2.trans h1) (by linarith)
+  · rw [slice_of_one_le hy1, integral_Icc_eq_integral_Ioc,
+      ← intervalIntegral.integral_of_le (by norm_num)]
+    have hmem : ∀ t ∈ Icc (-(1 / 2 : ℝ)) (1 / 2), (⟨t, y⟩ : ℂ) ∈ U := fun t ht =>
+      hDU (mk_mem_D (abs_le.mpr ⟨ht.1, ht.2⟩) ((h_le_one t).trans hy1))
+    rw [integral_horiz Φ Φ' U hd (by norm_num) hmem hc]
+    rcases hy1.lt_or_eq with hy1 | rfl
+    · rw [indicator_of_notMem (show y ∉ Iic (1 : ℝ) from not_le.mpr hy1), add_zero]
+    · simp [corr, r_one]
+
+include hδ hDU hd hc hΦ hΦ' in
+
+lemma integral_T_horiz :
+    ∫ p in T, Φ' ⟨p.1, p.2⟩ 1 =
+      ((∫ y in Ioi (Real.sqrt 3 / 2), Φ ⟨1 / 2, y⟩) - ∫ y in Ioi (Real.sqrt 3 / 2), Φ ⟨-(1 / 2), y⟩)
+        + ∫ y in (Real.sqrt 3 / 2)..1, corr Φ y := by
+  obtain ⟨C', hC'⟩ := hΦ'
+  have hG : IntegrableOn (fun p : ℝ × ℝ => Φ' ⟨p.1, p.2⟩ 1) T := by
+    refine integrableOn_T_of_bound hδ ?_ (C := C') fun p hp => ?_
+    · refine (hc.comp continuous_mk2.continuousOn fun p hp => hDU (mk_mem_D hp.1 hp.2)).clm_apply
+        continuousOn_const
+    · calc ‖Φ' ⟨p.1, p.2⟩ 1‖ ≤ ‖Φ' ⟨p.1, p.2⟩‖ * ‖(1 : ℂ)‖ := ContinuousLinearMap.le_opNorm _ _
+        _ = ‖Φ' ⟨p.1, p.2⟩‖ := by rw [norm_one, mul_one]
+        _ ≤ C' * Real.exp (-δ * p.2) := hC' _ (hDU (mk_mem_D hp.1 hp.2))
+  rw [setIntegral_T_eq_y_x hG]
+
+  have hae : (fun y => ∫ x in {x : ℝ | |x| ≤ 1 / 2 ∧ h x ≤ y}, Φ' ⟨x, y⟩ 1) =ᵐ[volume]
+      (Ioi (Real.sqrt 3 / 2)).indicator fun y =>
+        (Φ ⟨1 / 2, y⟩ - Φ ⟨-(1 / 2), y⟩) + (Iic (1 : ℝ)).indicator (corr Φ) y := by
+    have : ∀ᵐ y : ℝ ∂volume, y ∉ ({Real.sqrt 3 / 2} : Set ℝ) :=
+      measure_eq_zero_iff_ae_notMem.mp Real.volume_singleton
+    filter_upwards [this] with y hy
+    rcases lt_or_gt_of_ne (fun h : y = Real.sqrt 3 / 2 => hy h) with hy | hy
+    · rw [indicator_of_notMem (show y ∉ Ioi (Real.sqrt 3 / 2) from not_lt.mpr hy.le),
+        slice_of_lt hy, Measure.restrict_empty, integral_zero_measure]
+    · rw [indicator_of_mem (show y ∈ Ioi (Real.sqrt 3 / 2) from hy)]
+      exact sliceIntegral Φ Φ' U hDU hd hc hy
+  rw [integral_congr_ae hae, integral_indicator measurableSet_Ioi]
+  have h1 : IntegrableOn (fun y : ℝ => Φ ⟨1 / 2, y⟩) (Ioi (Real.sqrt 3 / 2)) := by
+    have := integrableOn_vert Φ Φ' U δ hδ hDU hd hΦ (x := 1 / 2) (by rw [abs_of_pos (by norm_num)])
+    rwa [h_half] at this
+  have h2 : IntegrableOn (fun y : ℝ => Φ ⟨-(1 / 2), y⟩) (Ioi (Real.sqrt 3 / 2)) := by
+    have := integrableOn_vert Φ Φ' U δ hδ hDU hd hΦ (x := -(1 / 2))
+      (by rw [abs_neg, abs_of_pos (by norm_num)])
+    rwa [h_neg, h_half] at this
+  have h3 : IntegrableOn ((Iic (1 : ℝ)).indicator (corr Φ)) (Ioi (Real.sqrt 3 / 2)) := by
+    rw [IntegrableOn, integrable_indicator_iff measurableSet_Iic, IntegrableOn,
+      Measure.restrict_restrict measurableSet_Iic,
+      show Iic (1 : ℝ) ∩ Ioi (Real.sqrt 3 / 2) = Ioc (Real.sqrt 3 / 2) 1 by
+        rw [inter_comm, Ioi_inter_Iic]]
+    exact ((continuousOn_corr Φ Φ' U hDU hd).integrableOn_Icc).mono_set Ioc_subset_Icc_self
+  have h12 : IntegrableOn (fun y : ℝ => Φ ⟨1 / 2, y⟩ - Φ ⟨-(1 / 2), y⟩) (Ioi (Real.sqrt 3 / 2)) :=
+    h1.sub h2
+  rw [integral_add h12 h3, integral_sub h1 h2, setIntegral_indicator measurableSet_Iic,
+    Ioi_inter_Iic, intervalIntegral.integral_of_le sqrt3_lt_one.le]
+
+include hδ hDU hc hΦ' in
+lemma integrableOn_T_apply (v : ℂ) : IntegrableOn (fun p : ℝ × ℝ => Φ' ⟨p.1, p.2⟩ v) T := by
+  obtain ⟨C', hC'⟩ := hΦ'
+  refine integrableOn_T_of_bound hδ ?_ (C := C' * ‖v‖) fun p hp => ?_
+  · exact (hc.comp continuous_mk2.continuousOn fun p hp => hDU (mk_mem_D hp.1 hp.2)).clm_apply
+      continuousOn_const
+  · calc ‖Φ' ⟨p.1, p.2⟩ v‖ ≤ ‖Φ' ⟨p.1, p.2⟩‖ * ‖v‖ := ContinuousLinearMap.le_opNorm _ _
+      _ ≤ C' * Real.exp (-δ * p.2) * ‖v‖ :=
+          mul_le_mul_of_nonneg_right (hC' _ (hDU (mk_mem_D hp.1 hp.2))) (norm_nonneg _)
+      _ = C' * ‖v‖ * Real.exp (-δ * p.2) := by ring
+
+include hδ hDU hd hc hΦ hΦ' in
+
+lemma integral_T_vert :
+    ∫ p in T, Φ' ⟨p.1, p.2⟩ I = -∫ x in (-(1 / 2 : ℝ))..(1 / 2), Φ ⟨x, h x⟩ := by
+  rw [setIntegral_T_eq_x_y (integrableOn_T_apply Φ' U δ hδ hDU hc hΦ' I),
+    intervalIntegral.integral_of_le (by norm_num), ← integral_Icc_eq_integral_Ioc, ← integral_neg]
+  refine setIntegral_congr_fun measurableSet_Icc fun x hx => ?_
+  have hx' : |x| ≤ 1 / 2 := abs_le.mpr ⟨hx.1, hx.2⟩
+  rw [integral_Ici_eq_integral_Ioi]
+  exact integral_vert Φ Φ' U δ hδ hDU hd hc hΦ hΦ' hx'
+
+
+end
+end Dubon2026.SourceModularGreen

@@ -1,0 +1,66 @@
+import Dubon2026.SourceWeightTwoClosedChainPeriods
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi reciprocity.
+The endpoint functional is the literal straight-segment integral of the
+actual cusp form. This fixes orientation and normalization for the closed
+integer-chain theorem; no integral/primitive identification is assumed. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane Matrix.SpecialLinearGroup Set
+open scoped MatrixGroups
+
+theorem sourceUpperHalfPlane_segment_im_pos (a b : ℍ) {t : ℝ}
+    (ht : t ∈ Icc (0 : ℝ) 1) :
+    0 < ((a : ℂ) + (t : ℂ) * ((b : ℂ) - a)).im := by
+  simp only [Complex.add_im, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
+    Complex.sub_im, zero_mul, add_zero]
+  change 0 < a.im + t * (b.im - a.im)
+  by_cases ht1 : t = 1
+  · rw [ht1, one_mul]
+    linarith [b.im_pos]
+  · have htlt : t < 1 := by grind
+    have ha := mul_pos (sub_pos.mpr htlt) a.im_pos
+    have hb := mul_nonneg ht.1 b.im_pos.le
+    nlinarith
+
+theorem sourceWeightTwoAlong_eq_segment_integral
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+    (a b : ℍ) (f : CuspForm (Γ.map (mapGL ℝ)) 2) :
+    sourceWeightTwoAlong Γ a b f =
+      ∫ t in (0 : ℝ)..1, f (ofComplex ((a : ℂ) + (t : ℂ) * ((b : ℂ) - a))) *
+        ((b : ℂ) - a) := by
+  let F := sourceWeightTwoPrimitive (Γ.map (mapGL ℝ)).strictWidthInfty f
+  let s : ℝ → ℂ := fun t => (a : ℂ) + (t : ℂ) * ((b : ℂ) - a)
+  let g : ℝ → ℂ := (F ∘ ofComplex) ∘ s
+  have hs (t : ℝ) : HasDerivAt s ((b : ℂ) - a) t := by
+    have ht : HasDerivAt (fun x : ℝ => (x : ℂ)) 1 t := Complex.ofRealCLM.hasDerivAt
+    simpa only [one_mul] using (ht.mul_const ((b : ℂ) - a)).const_add (a : ℂ)
+  have hF (t : ℝ) (ht : t ∈ Icc (0 : ℝ) 1) :
+      HasDerivAt (F ∘ ofComplex) (f (ofComplex (s t))) (s t) := by
+    have hp := sourceUpperHalfPlane_segment_im_pos a b ht
+    rw [ofComplex_apply_of_im_pos (show 0 < (s t).im from hp)]
+    exact sourceWeightTwoPrimitive_hasDerivAt f (Γ.map (mapGL ℝ)).strictWidthInfty_pos
+        (Γ.map (mapGL ℝ)).strictWidthInfty_mem_strictPeriods (⟨s t, hp⟩ : ℍ)
+  have hg : ContinuousOn g (Icc (0 : ℝ) 1) := by
+    intro t ht
+    exact ((hF t ht).continuousAt.comp (hs t).continuousAt).continuousWithinAt
+  have hderiv : ∀ t ∈ Ioo (0 : ℝ) 1,
+      HasDerivAt g (f (ofComplex (s t)) * ((b : ℂ) - a)) t := by
+    intro t ht
+    exact (hF t (Ioo_subset_Icc_self ht)).comp t (hs t)
+  have hc : ContinuousOn (fun t => f (ofComplex (s t)) * ((b : ℂ) - a))
+      (Icc (0 : ℝ) 1) := by
+    intro t ht
+    have hp := sourceUpperHalfPlane_segment_im_pos a b ht
+    have hcf : ContinuousAt ((⇑f) ∘ ofComplex) (s t) :=
+      f.holo'.continuous.continuousAt.comp (mdifferentiableAt_ofComplex hp).continuousAt
+    exact ((hcf.comp (hs t).continuousAt).mul_const _).continuousWithinAt
+  have hi := intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le zero_le_one hg hderiv
+    ((hc.mono (by rw [uIcc_of_le zero_le_one])).intervalIntegrable)
+  have h0 : g 0 = F a := by simp [g, s]
+  have h1 : g 1 = F b := by simp [g, s]
+  rw [h0, h1] at hi
+  exact hi.symm
+
+end
+end Dubon2026

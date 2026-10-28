@@ -1,0 +1,9 @@
+[
+  "RealMatrixSmoothSubmodule",
+  "SmoothParameterDerivative",
+  "RealSmoothInfinitesimal",
+  "AdelicRealSmoothSubmodule",
+  "RealInfinitesimalSmoothCurves",
+  "RealSmoothInfinitesimalOperator",
+  "AdelicSmoothInfinitesimalOperators"
+]

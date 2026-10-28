@@ -1,0 +1,66 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T22:26:36.554321+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRepresentativePeriods",
+    "SourceGammaOneRepresentativePeriodCorrection",
+    "SourceGammaOneFiniteDivisorReciprocity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriods.lean",
+      "sha256": "56384B243420E2D080F3A893A8CDA1D05ADBC1438915203C1C1A605A2989928F",
+      "oleanSha256": "081310FAFB7642544B3DF85591E91FD34570EC36B8C08C8A69FC8F8C1D762369",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriods952b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriods952b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriodCorrection.lean",
+      "sha256": "09B26F98B09611D96363F92D482A81873A34C6AB64581E083AA2E6AB8C738CAE",
+      "oleanSha256": "870AC8A41709946D868DBBBEBD2F30D8606B169B089596096DC66C27A02BF4D6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriodCorrection953b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRepresentativePeriodCorrection953b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteDivisorReciprocity.lean",
+      "sha256": "D7831C12A30414DAAAFA1227412B9DCEC9DA4423BC6B0832229D4EA45540BE92",
+      "oleanSha256": "9B9CB076071EA561D443B37DED6F70E763B776FE93820C41F128DB5E0FB6A6E5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteDivisorReciprocity954a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteDivisorReciprocity954a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.period_difference_mem_of_mapDomain_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.representative_period_difference_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_finite_divisor_reciprocity"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.period_difference_mem_of_mapDomain_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.representative_period_difference_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_finite_divisor_reciprocity"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDivisorReciprocityAudit1.log",
+  "logSha256": "42DBAA2D73B14CBBC21E6D50D151B50B08C72231907F0C4BF9BB37BFDE53E4F0",
+  "auditSha256": "4DA5059CB788115CF917CC609BF62CDA93DF69B1AE1DCA5261790E5D05896BAB",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteDivisorReciprocityDependencyAudit1.log",
+  "dependencyAuditSha256": "36A859461784E55069BDA71590C87F769741B00EFC0653A7BD86C092D8659B30",
+  "dependencyAuditSourceSha256": "25C65D275C7BD17752A7157D273E209E0AD35FF3AAB03A156DE024CAC6B6753E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_finite_divisor_reciprocity"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+  "discharged": "Equality of actual analytic-place pushforwards implies equality of the original endpoint functional modulo the original Gamma1 integer period lattice. The constructed orbit representatives have precisely that pushforward, so their correction is absorbed into the reciprocity period. The conclusion uses the original finite divisor directly; no representative correction or lattice-membership certificate is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The meromorphic function with exact prescribed orders, unitary multiplier and nonzero cusp limits remains an upstream input. Integral Petersson/real-period duality and resulting multiplier triviality remain, followed by the actual principal-divisor converse, Picard/Hecke/H1, all-weight characteristic-zero arithmetic realization/association, automorphy and literal higher symmetric-power continuation. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-divisor-reciprocity-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "3F9BE4B4A01B28F4AE85EAD0F21EA6CC46DED89246335D53CC667012C0B627AE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

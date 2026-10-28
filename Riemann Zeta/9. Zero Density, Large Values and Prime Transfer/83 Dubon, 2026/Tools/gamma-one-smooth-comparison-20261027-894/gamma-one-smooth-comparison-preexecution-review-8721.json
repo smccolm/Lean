@@ -1,0 +1,59 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 26,
+  "queries": 220,
+  "theorems": 186,
+  "constructions": 34,
+  "exhaustiveScratchChecks": 273,
+  "proofValueChecks": 258,
+  "scopes": 5,
+  "receipts": {
+    "source-gamma-one-untwist-wedge-1-scratch-receipt.json": "E31FF19C16AA62B73D59CD75CB8DE9910AD2300CE596941B0F9E20E411CC716C",
+    "source-gamma-one-smooth-partition-1b-scratch-receipt.json": "DD883E90EBF75A3EC420C700597BC850CF2029CB4BEE5B4EAE2DE11D44FF646D",
+    "source-gamma-one-petersson-smooth-limit-1-scratch-receipt.json": "F0CDC72420FF1C5C4BDB12CCF3A202A42D24FEADBD68EFD0CA7060DA729126F9",
+    "source-modular-parabolic-winding-log-1-scratch-receipt.json": "99DB177F0019C0EBD3D4723848F63371146D544F54D3739A1AF7BB36F66CDECF",
+    "source-complex-dipole-1-scratch-receipt.json": "6B0A8EC8E086272A388597C7758651D375134515E8F15D6F6C451419B45FD47B"
+  },
+  "expectedConsumers": 25477,
+  "expectedConstructions": 2614,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_smooth_comparison_8721.py",
+      "sha256": "0FFF51882BB79F247B6F692F2098E36809CECF41776A47EC6E746B5B50CA6BBE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_comparison_production_ownership_8721.py",
+      "sha256": "E9EB0C6122A136CECC3E982E652D8276098F79F971CF74C768BECB6DEFC47E71"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_comparison_global_ownership_8721.py",
+      "sha256": "44082B92C51FD28BB846BD54A57628FD5127601C2DFE37A5850CAC7BC470B7CD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_smooth_comparison_ownership_8721.py",
+      "sha256": "59A9DBEC6BC70B3B7295E46463DAE469BBA955304400C98E619A2AD98C41B560"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_comparison_8721.py",
+      "sha256": "F7DDB6C21DB0052B20734A03F63993ECA6E0260C3C5D2C6BA0B172E90EB748B0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_smooth_comparison_8721.ps1",
+      "sha256": "316FAF64DD26FDD31D3197111EF395F76A37A072953F1A9E965CAE33C9748881"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_smooth_comparison_8721.ps1",
+      "sha256": "A01FB792ADB616D6A585D1559103CB565F9D688A61FA261A28ADB1A8539E22C8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_smooth_comparison_canonical_8721.py",
+      "sha256": "204AB1B3F5BF9B914B56B40841C5B5F772DCA6EE815252A95AD6B155CFC26434"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_smooth_comparison_8721.py",
+      "sha256": "144120F923C403B6AA9D1974F1AE6BEB72E029AE0DF7A8DAB5CA65AE7218635E"
+    }
+  ],
+  "productionMutation": false
+}

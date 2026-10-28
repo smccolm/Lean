@@ -1,0 +1,151 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T18:48:14.292724+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceModularProjectiveFibers",
+    "SourceModularSmoothOrbitMass",
+    "SourceModularInvariantIntegralUnfolding",
+    "SourceModularSmoothIntegralLimit",
+    "SourceModularSmoothPlaneIntegral",
+    "SourceGammaOnePeterssonSmoothLimit"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers.lean",
+      "sha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+      "oleanSha256": "544F32DF8CA6868B498446718A1628EBDF0A9F4D68117B58C0F1063E15C77754",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass.lean",
+      "sha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415",
+      "oleanSha256": "4BF7F598B84A8E8746D711038255E91B565847DEBA39B00F42C3CD0EB835AA2C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding.lean",
+      "sha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+      "oleanSha256": "B9D1A05A6E9EB3879A252E9FB938869E13FD176F0FFA2F0AE00A2885343ED87C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit.lean",
+      "sha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80",
+      "oleanSha256": "BF4DF2304F1B713F6E25428EB91E465BC106FD37F3B61CB573DC19A9C18960B1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral.lean",
+      "sha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313",
+      "oleanSha256": "D19C56BA3A3022F033647438E401827BBD0B997A1AB3389CF2163785D328525B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit.lean",
+      "sha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E",
+      "oleanSha256": "B1B76419BB632F0474BFEBEF59B660F655B62F352351E880E487FCF5919C7C21",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceSmoothedUnfolding.projection_surjective",
+    "Dubon2026.SourceSmoothedUnfolding.mem_projection_ker",
+    "Dubon2026.SourceSmoothedUnfolding.projection_ker_card",
+    "Dubon2026.SourceSmoothedUnfolding.projection_fiber_card",
+    "Dubon2026.SourceSmoothedUnfolding.tsum_projection",
+    "Dubon2026.SourceSmoothedUnfolding.finite_support_projective",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg",
+    "Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized",
+    "Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq",
+    "Dubon2026.SourceSmoothedUnfolding.center_le",
+    "Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth",
+    "Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos",
+    "Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane",
+    "Dubon2026.sourceCusp_petersson_integrable_closedDomain",
+    "Dubon2026.sourceGamma1_petersson_smoothed_limit",
+    "Dubon2026.SourceSmoothedUnfolding.projection",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.closedDomain"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceSmoothedUnfolding.projection_surjective",
+    "Dubon2026.SourceSmoothedUnfolding.mem_projection_ker",
+    "Dubon2026.SourceSmoothedUnfolding.projection_ker_card",
+    "Dubon2026.SourceSmoothedUnfolding.projection_fiber_card",
+    "Dubon2026.SourceSmoothedUnfolding.tsum_projection",
+    "Dubon2026.SourceSmoothedUnfolding.finite_support_projective",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg",
+    "Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized",
+    "Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq",
+    "Dubon2026.SourceSmoothedUnfolding.center_le",
+    "Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth",
+    "Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos",
+    "Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp",
+    "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane",
+    "Dubon2026.sourceCusp_petersson_integrable_closedDomain",
+    "Dubon2026.sourceGamma1_petersson_smoothed_limit"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceSmoothedUnfolding.projection",
+    "Dubon2026.SourceSmoothedUnfolding.projectiveMass",
+    "Dubon2026.SourceSmoothedUnfolding.closedDomain"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitAudit1.log",
+  "logSha256": "58080AF16E46EEFCABA8CC92D6555925472431551455036425756C24030A27D7",
+  "auditSha256": "F8B7AC6D8158A7DB76850F474218B58349C6B25358AC53685A9D487E17988AAD",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 37,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 41,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1.log",
+  "dependencyAuditSha256": "F0B6631D739BE79116DAD219DE0EC9C9054C00977C673AEEE893EF497F48352B",
+  "dependencyAuditSourceSha256": "2F558E098ECEC03E326704F16C4A2E8B8DBA7E32E137F680D59E3CD5A3FCAD86",
+  "consumers": [
+    "Dubon2026.sourceGamma1_petersson_smoothed_limit"
+  ],
+  "dependency": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "Petersson comparison",
+    "actual original cusp-form smooth integral limit"
+  ],
+  "discharged": [
+    "Actual projective map has exactly two-element fibers and projective smooth orbit mass tends to one half",
+    "Native fundamental-domain unfolding proves both integrability and weighted integral equality",
+    "Existing null boundary transfers to the literal source closed domain; planar/hyperbolic measure conversion is exact",
+    "Original Gamma1 cusp forms have derived signed invariance, actual Petersson bound and integrability; no analytic limit certificate is supplied"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual smooth comparison local model and winding-period/Petersson reciprocity assembly remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "CEC126E2D7145E395EC6A64E6D7D21CF2B70969999CD7A507941A715BE27656F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,13 @@
+### Actual original Hilbert jets and successive infinitesimal eigenvalue — 8 October 2026
+
+Seven further production modules prove that every actual bounded pointwise jet is precisely the corresponding quotient L2 derivative. Applied to the original unipotent and geodesic orbits, these identities retain the original projective representatives at every order and parameter. Genuine continuous linear maps commute with these smooth jets, so the faithful completed realization transports the exact original second-order relation to the actual Hilbert generator. The original one-parameter group laws identify two successive Hilbert infinitesimal actions with the second derivative of the original orbit. The compact infinitesimal action is exactly i k times the original generator. Consequently the displayed operator minus D_A squared plus D_A minus D_U squared plus D_U D_K, now formed from actual successive Hilbert norm derivatives, has the exact eigenvalue k/2 times (1-k/2) on the original completed generator. Identification with the source's central enveloping-algebra Casimir and regular-algebraic representation, irreducibility and higher symmetric continuations remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [BoundedL2JetIdentification](Extension/Dubon2026/BoundedL2JetIdentification.lean).
+- [LinearMapSmoothJets](Extension/Dubon2026/LinearMapSmoothJets.lean).
+- [AdelicOrbitJetIdentification](Extension/Dubon2026/AdelicOrbitJetIdentification.lean).
+- [AdelicL2SecondOrderIdentity](Extension/Dubon2026/AdelicL2SecondOrderIdentity.lean).
+- [AdelicHilbertSecondOrderIdentity](Extension/Dubon2026/AdelicHilbertSecondOrderIdentity.lean).
+- [AdelicHilbertInfinitesimal](Extension/Dubon2026/AdelicHilbertInfinitesimal.lean).
+- [AdelicHilbertCasimir](Extension/Dubon2026/AdelicHilbertCasimir.lean).
+
+Exact consumers: `actual_adelic_Hilbert_jets_source` and `actual_adelic_Hilbert_second_order_operator_source`.

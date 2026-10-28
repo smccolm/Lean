@@ -1,0 +1,75 @@
+import SourceComplexWindingLogLift
+import SourceModularWindingCharacter
+import SourceModularWindingCuspLimit
+import SourceModularParabolicWindingLog
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt
+#print axioms Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one
+#print axioms Dubon2026.SourceWindingLog.exists_lift
+#print axioms Dubon2026.SourceWindingLog.eventuallyEq_log
+#print axioms Dubon2026.SourceWindingLog.contDiffAt_log_lift
+#print axioms Dubon2026.SourceWindingLog.hasFDerivAt_log_lift
+#print axioms Dubon2026.SourceWindingLog.Lext_coe
+#print axioms Dubon2026.SourceWindingLog.continuousAt_Lext
+#print axioms Dubon2026.SourceWindingLog.exp_Lext_eventually
+#print axioms Dubon2026.SourceWindingLog.contDiffAt_Lext
+#print axioms Dubon2026.SourceWindingLog.hasFDerivAt_Lext
+#print axioms Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane
+#print axioms Dubon2026.SourceWindingLog.coboundary_const
+#print axioms Dubon2026.SourceWindingLog.exists_int_coboundary
+#print axioms Dubon2026.SourceWindingLog.mInt_spec
+#print axioms Dubon2026.SourceWindingLog.two_pi_I_ne_zero
+#print axioms Dubon2026.SourceWindingLog.mInt_mul
+#print axioms Dubon2026.SourceWindingLog.mHom_apply
+#print axioms Dubon2026.SourceWindingLog.Lext_smul
+#print axioms Dubon2026.SourceWindingLog.continuous_retract
+#print axioms Dubon2026.SourceWindingLog.im_retract
+#print axioms Dubon2026.SourceWindingLog.retract_of_le
+#print axioms Dubon2026.SourceWindingLog.exists_tendsto_cusp
+#print axioms Dubon2026.SourceWindingLog.exists_parabolic_log
+#print axioms Dubon2026.SourceWindingLog.toUnits
+#print axioms Dubon2026.SourceWindingLog.Lext
+#print axioms Dubon2026.SourceWindingLog.mInt
+#print axioms Dubon2026.SourceWindingLog.mHom
+#print axioms Dubon2026.SourceWindingLog.retract
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceComplexWindingLogLift, `SourceModularWindingCharacter, `SourceModularWindingCuspLimit, `SourceModularParabolicWindingLog]
+  let theorems : Array Name := #[`Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt, `Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one, `Dubon2026.SourceWindingLog.exists_lift, `Dubon2026.SourceWindingLog.eventuallyEq_log, `Dubon2026.SourceWindingLog.contDiffAt_log_lift, `Dubon2026.SourceWindingLog.hasFDerivAt_log_lift, `Dubon2026.SourceWindingLog.Lext_coe, `Dubon2026.SourceWindingLog.continuousAt_Lext, `Dubon2026.SourceWindingLog.exp_Lext_eventually, `Dubon2026.SourceWindingLog.contDiffAt_Lext, `Dubon2026.SourceWindingLog.hasFDerivAt_Lext, `Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane, `Dubon2026.SourceWindingLog.coboundary_const, `Dubon2026.SourceWindingLog.exists_int_coboundary, `Dubon2026.SourceWindingLog.mInt_spec, `Dubon2026.SourceWindingLog.two_pi_I_ne_zero, `Dubon2026.SourceWindingLog.mInt_mul, `Dubon2026.SourceWindingLog.mHom_apply, `Dubon2026.SourceWindingLog.Lext_smul, `Dubon2026.SourceWindingLog.continuous_retract, `Dubon2026.SourceWindingLog.im_retract, `Dubon2026.SourceWindingLog.retract_of_le, `Dubon2026.SourceWindingLog.exists_tendsto_cusp, `Dubon2026.SourceWindingLog.exists_parabolic_log]
+  let constructions : Array Name := #[`Dubon2026.SourceWindingLog.toUnits, `Dubon2026.SourceWindingLog.Lext, `Dubon2026.SourceWindingLog.mInt, `Dubon2026.SourceWindingLog.mHom, `Dubon2026.SourceWindingLog.retract]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Modular Parabolic Winding Log postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Modular Parabolic Winding Log theorems discovered"
+  logInfo m!"SOURCE MODULAR PARABOLIC WINDING LOG AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceComplexWindingLogLift
+#lint in SourceModularWindingCharacter
+#lint in SourceModularWindingCuspLimit
+#lint in SourceModularParabolicWindingLog

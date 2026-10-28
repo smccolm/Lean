@@ -1,0 +1,32 @@
+import SourceUnitaryCharacterAbelianQuotient
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapt the Apache-2.0 scope-795b primary at revision
+6e837e75355538c7f80bab5b956861e86c4eacc2, using native Cayley-Hamilton
+and finite abelian-group APIs. No finite-order trace bound, torsion-freeness,
+or logarithmic character lift is postulated. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)}
+variable {n : ℕ} {ι : Type} {p e : ι → ℕ}
+  (eqv : Q Γ ≃+ (Fin n →₀ ℤ) × DirectSum ι (fun i => ZMod (p i ^ e i)))
+
+theorem hom_ext_of_basis {A : Type*} [AddCommGroup A] (ψ₁ ψ₂ : Q Γ →+ A)
+    (hb : ∀ j, ψ₁ (eqv.symm (Finsupp.single j 1, 0)) = ψ₂ (eqv.symm (Finsupp.single j 1, 0)))
+    (ht : ∀ t, ψ₁ (eqv.symm (0, t)) = ψ₂ (eqv.symm (0, t))) : ψ₁ = ψ₂ := by
+  have hfree : ψ₁.comp (eqv.symm.toAddMonoidHom.comp (AddMonoidHom.inl _ _)) =
+      ψ₂.comp (eqv.symm.toAddMonoidHom.comp (AddMonoidHom.inl _ _)) := by
+    refine Finsupp.addHom_ext' fun j => AddMonoidHom.ext_int ?_
+    simpa using hb j
+  refine AddMonoidHom.ext fun q => ?_
+  obtain ⟨⟨v, t⟩, rfl⟩ := eqv.symm.surjective q
+  have hsplit : ((v, t) : (Fin n →₀ ℤ) × DirectSum ι (fun i => ZMod (p i ^ e i))) =
+      (v, 0) + (0, t) := by simp
+  rw [hsplit, map_add, map_add, map_add, ht t]
+  congr 1
+  exact DFunLike.congr_fun hfree v
+
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

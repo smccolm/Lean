@@ -1,0 +1,39 @@
+import Dubon2026.SourceIntegralCharacterCrossed
+import Dubon2026.SourceIntegralCharacterPotential
+import Dubon2026.SourceIntegralCharacterShapiro
+import Dubon2026.SourceIntegralCharacterFreeProduct
+import Dubon2026.SourceIntegralCharacterInitialLift
+import Dubon2026.SourceIntegralCharacterCuspConjugacy
+import Dubon2026.SourceIntegralCharacterCuspSum
+import Dubon2026.SourceIntegralCharacterCorrection
+import Dubon2026.SourceIntegralCharacterModularFacts
+import Dubon2026.SourceIntegralCharacterModularBridge
+import Dubon2026.SourceIntegralParabolicCharacterLift
+import Dubon2026.SourceGammaOneIntegralParabolicLift
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGamma1_integral_parabolic_character_lift]
+  let localModules : Array Name := #[`Dubon2026.SourceIntegralCharacterCrossed, `Dubon2026.SourceIntegralCharacterPotential, `Dubon2026.SourceIntegralCharacterShapiro, `Dubon2026.SourceIntegralCharacterFreeProduct, `Dubon2026.SourceIntegralCharacterInitialLift, `Dubon2026.SourceIntegralCharacterCuspConjugacy, `Dubon2026.SourceIntegralCharacterCuspSum, `Dubon2026.SourceIntegralCharacterCorrection, `Dubon2026.SourceIntegralCharacterModularFacts, `Dubon2026.SourceIntegralCharacterModularBridge, `Dubon2026.SourceIntegralParabolicCharacterLift, `Dubon2026.SourceGammaOneIntegralParabolicLift, `Dubon2026.SourceCuspCorrectionEdgeChains, `Dubon2026.SourceCuspCorrectionCosetChains, `Dubon2026.SourceCuspCorrectionGenerators, `Dubon2026.SourceCuspCorrectionCyclicCosets, `Dubon2026.SourceCuspCorrectionEdgeCharacters, `Dubon2026.SourceCuspCorrectionRealization, `Dubon2026.SourceModularIrrationalAction, `Dubon2026.SourceModularPingPongSets, `Dubon2026.SourceModularFreeProductInjection, `Dubon2026.SourceModularProjectiveKernel, `Dubon2026.SourceModularFreeProduct]
+  let required : Array Name := #[`Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_one, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.conj_apply, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.map, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.ext_of, `Dubon2026.SourceIntegralCharacterLift.isCrossed_cob, `Dubon2026.SourceIntegralCharacterLift.cob_apply_of_smul_eq, `Dubon2026.SourceIntegralCharacterLift.exists_potential, `Dubon2026.SourceIntegralCharacterLift.trHom, `Dubon2026.SourceIntegralCharacterLift.evalBase, `Dubon2026.SourceIntegralCharacterLift.evalBase_conj, `Dubon2026.SourceIntegralCharacterLift.shapiro, `Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro, `Dubon2026.SourceIntegralCharacterLift.evalBase_shapiro, `Dubon2026.SourceIntegralCharacterLift.genHom, `Dubon2026.SourceIntegralCharacterLift.totalHom, `Dubon2026.SourceIntegralCharacterLift.totalHom_right, `Dubon2026.SourceIntegralCharacterLift.liftCrossed, `Dubon2026.SourceIntegralCharacterLift.isCrossed_liftCrossed, `Dubon2026.SourceIntegralCharacterLift.liftCrossed_of, `Dubon2026.SourceIntegralCharacterLift.exists_char_comp_eq_of_forall_conj_of, `Dubon2026.SourceIntegralCharacterLift.char_zpow, `Dubon2026.SourceIntegralCharacterLift.char_conj_zpow_eq_zero, `Dubon2026.SourceIntegralCharacterLift.sum_char_cuspGen_eq_zero, `Dubon2026.SourceIntegralCharacterLift.exists_sub_smul_apply_conj_zpow_eq_zero, `Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho, `Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho_eq_conj_of, `Dubon2026.SourceIntegralCharacterLift.exists_rho_eq_conj_tP_zpow, `Dubon2026.SourceIntegralCharacterLift.trace_sq_of_rho_eq_conj_tP_zpow, `Dubon2026.SourceIntegralCharacterLift.exists_int_lift, `Dubon2026.sourceGamma1_integral_parabolic_character_lift, `Dubon2026.cosetTransition_mul, `Dubon2026.SourceParabolic.classification, `MonoidHom.transfer_eq_prod_quotient_orbitRel_zpowers_quot, `Dubon2026.SourceModularFreeProduct.mulEquiv, `Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero, `Dubon2026.SourceModularFreeProduct.mulEquiv_of_one, `Dubon2026.SourceModularFreeProduct.lift_injective, `Dubon2026.SourceModularFreeProduct.range_lift_eq, `Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center, `Dubon2026.SourceModularFreeProduct.mem_center_iff_eq, `Dubon2026.SourceCuspCorrection.lTransl, `Dubon2026.SourceCuspCorrection.lTranslMulAut, `Dubon2026.SourceCuspCorrection.chainSect, `Dubon2026.SourceCuspCorrection.edgeChain, `Dubon2026.SourceCuspCorrection.edgeChain_mul, `Dubon2026.SourceCuspCorrection.edgeChainHom, `Dubon2026.SourceCuspCorrection.edgeChainHom_conj, `Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_raw, `Dubon2026.SourceCuspCorrection.enum_injOn_range, `Dubon2026.SourceCuspCorrection.exists_enum_eq_of_cusp_eq, `Dubon2026.SourceCuspCorrection.sum_ite_enum_eq, `Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_apply, `Dubon2026.SourceCuspCorrection.edgeChar_genAt, `Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_of_smul, `Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_cuspDiffAt, `Dubon2026.SourceCuspCorrection.exists_addChar_of_mem_span, `Dubon2026.SourceCuspCorrection.closure_sA_τ, `Dubon2026.SourceCuspCorrection.engine]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE INTEGRAL PARABOLIC CHARACTER LIFT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual Gamma1 integral lift. Native coset-transition multiplication, native transfer, the actual modular free-product equivalence, actual cusp-character correction and original trace-four classification are consumed. Unitary logarithms, analytic reciprocity and full arithmetic association remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

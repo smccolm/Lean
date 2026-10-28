@@ -1,0 +1,116 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T20:18:08.719112+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceSmoothOrbitIntegralGeometry",
+    "SourceSmoothOrbitIntegralChangeVariables",
+    "SourceSmoothCompactTranslateIntegral",
+    "SourceSmoothDivisorPeriodIntegral",
+    "SourceGammaOneSmoothDivisorPeriodIntegral"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry.lean",
+      "sha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9",
+      "oleanSha256": "9962D096ED9E3420B2B5882090C707AEA8C4045D31964871D4A5E46BC248EFF1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables.lean",
+      "sha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC",
+      "oleanSha256": "771CA12D5C32A1F34D4C130FC26E981DBFE9C01C867E0698E6B42EA11C9F29FB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral.lean",
+      "sha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385",
+      "oleanSha256": "2C16787B08C300487AC940B3FC11EE1AB8489184C6DE4423071C0C495D49B220",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral.lean",
+      "sha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B",
+      "oleanSha256": "0316D7008564EA1B892E2C48485C33B0E2161F09383A77F9F9C5EF8335686915",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral.lean",
+      "sha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0",
+      "oleanSha256": "4A095F3EB753875CEE0FC108024170C17D9F4E04C5DB153A77E6A1B8B1BEAFB4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceSmoothOrbitIntegral.sm_image",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousAt_ofComplex'",
+    "Dubon2026.SourceSmoothOrbitIntegral.hasFDerivAt_sm_matrix",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_sm",
+    "Dubon2026.SourceSmoothOrbitIntegral.denom_ofComplex",
+    "Dubon2026.SourceSmoothOrbitIntegral.denom_ne_zero'",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_dsm",
+    "Dubon2026.SourceSmoothOrbitIntegral.eq_zero_of_notMem",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_goc",
+    "Dubon2026.SourceSmoothOrbitIntegral.det_identity",
+    "Dubon2026.SourceSmoothOrbitIntegral.integral_term",
+    "Dubon2026.SourceSmoothOrbitIntegral.integrable_term",
+    "Dubon2026.SourceSmoothOrbitIntegral.integrable_term'",
+    "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_eventually_eq",
+    "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_limit",
+    "Dubon2026.SourceSmoothDivisor.g_smul",
+    "Dubon2026.SourceSmoothDivisor.exists_comparison_period_limit",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceSmoothOrbitIntegral.sm_image",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousAt_ofComplex'",
+    "Dubon2026.SourceSmoothOrbitIntegral.hasFDerivAt_sm_matrix",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_sm",
+    "Dubon2026.SourceSmoothOrbitIntegral.denom_ofComplex",
+    "Dubon2026.SourceSmoothOrbitIntegral.denom_ne_zero'",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_dsm",
+    "Dubon2026.SourceSmoothOrbitIntegral.eq_zero_of_notMem",
+    "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_goc",
+    "Dubon2026.SourceSmoothOrbitIntegral.det_identity",
+    "Dubon2026.SourceSmoothOrbitIntegral.integral_term",
+    "Dubon2026.SourceSmoothOrbitIntegral.integrable_term",
+    "Dubon2026.SourceSmoothOrbitIntegral.integrable_term'",
+    "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_eventually_eq",
+    "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_limit",
+    "Dubon2026.SourceSmoothDivisor.g_smul",
+    "Dubon2026.SourceSmoothDivisor.exists_comparison_period_limit",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodAudit1.log",
+  "logSha256": "E47781F1A88ECA5BECD5C9060E6CFFD79CE67335826AE32A2F0E3E716411CAC5",
+  "auditSha256": "059372C5803412AA4CDC4F759F4B1B84E58AE864BDD7FC954540C4D62F528470",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 26,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.log",
+  "dependencyAuditSha256": "94638AA53BFEAE9DD1348B346349CB55BDEE93C117BBB754C12C7C38C19DB6F3",
+  "dependencyAuditSourceSha256": "1B15CA36193920BD6FC7AE62569952060833B34839AE106EE0491661FDC258C3",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> original smooth divisor period term",
+  "discharged": [
+    "Integrability of the constructed comparison logarithmic derivative against the canonical smooth cutoff",
+    "Its exact normalized limit with actual original-divisor coefficients and original Gamma1 endpoint periods",
+    "Derive all compact coefficient, degree-zero, order-divisibility and primitive inputs from proved upstream constructions"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The filled quotient, winding-period and Petersson assembly must still establish analytic reciprocity and the original principal-divisor converse. The full all-weight arithmetic realization, automorphy and higher symmetric-power continuation chain remains. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "FBEF6B8C362CD97BD71B3AD164E0CB26384B883499CD18BEA4DBC018507357C2",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

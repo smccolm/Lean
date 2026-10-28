@@ -1,0 +1,20 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> original Gamma1 finite Hecke-character realization -> Picard/H1 -> Abel-Jacobi -> unitary multiplier correction -> real additive lift -> integral parabolic-character lift -> PSL2(Z) free-product presentation and cusp-period correction.",
+  "assumptionsToDischarge": "The actual group SL2(Z)/center is explicitly isomorphic to C2 * C3, with the two standard generators mapping to S and S*T. The Mobius action, nonvanishing denominators, irrationality preservation, signed ping-pong domains, injectivity, generation and exact central kernel are derived. No group-presentation premise remains for the planned integral parabolic-character lift.",
+  "remaining": "Promote and run assembled verification. Cusp-period correction and integral parabolic-character lifting, unitary exponential lifting, analytic reciprocity, original Gamma1 Picard/H1 and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.lean.txt",
+      "sha256": "C137566A1EDFDA0C7307CEECE055B49A5E0E633020F198BDB53AE9C51EBDC0A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+      "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-presentation-route-805.json",
+      "sha256": "BD8771EFDB17AB3088246FF08A3BFE78E74B0B1332B1151EC3DF5A1716CEDB21"
+    }
+  ],
+  "shorterRoute": "Adapt the self-contained pinned proof using native Mathlib ping-pong, SL2Z generators and center theorem. Omit the unused nontriviality and orderOf_permS/orderOf_permU branch (primary lines 231-275); the ping-pong injection only needs the already derived square/cube relations and signed domains. No general Bass-Serre topology is introduced."
+}

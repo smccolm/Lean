@@ -1,0 +1,56 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 33,
+  "queries": 181,
+  "theorems": 142,
+  "constructions": 39,
+  "exhaustiveScratchChecks": 291,
+  "proofValueEdges": 254,
+  "scopes": 10,
+  "receipts": {
+    "source-gamma-one-real-period-injectivity-1-scratch-receipt.json": "93A114CB4E9D70E5A451CB5383C49DFE670E7E4DB702FF83A3F3CFFA8349715A",
+    "source-gamma-one-real-parabolic-periods-1-scratch-receipt.json": "4E47B11D4AC61078C31B8FC1BD0CC369081E78CDD95B679EAB4F397534CE9473",
+    "source-gamma-one-cusp-orbit-invariance-1-scratch-receipt.json": "FC0A369D24F80013562DC0A6E54DDDF77834C4DBC11BEBE6B849BE4314D19437",
+    "source-gamma-one-cusp-width-bound-1-scratch-receipt.json": "B1A53936BB93C534FE13D9A084DA915001D546A3006752ED597B0CB4E81C4010",
+    "source-gamma-one-exact-cusp-orbits-1-scratch-receipt.json": "CE5000CF2CC90359306A813F3FD26B58C8773504537EC97EEA7BCD6425811369",
+    "source-gamma-one-signed-parabolic-1-scratch-receipt.json": "6D3C3243B5FD1B7FCFB20C70D5EDC3F238BB40A9DFD80FB8B070C471320B2EAF",
+    "source-gamma-one-real-manin-1b-scratch-receipt.json": "A50C04818EC3CB957D3EB19AF1A1836A6F4D589F8ACC45AE5604FBD8C79C0D00",
+    "source-gamma-one-real-period-upper-1-scratch-receipt.json": "5FB38D889956491A7EE828B8AE2006CDA1EBE7656F64B6429C62DEFAF1D67909",
+    "source-gamma-one-canonical-genus-lower-1-scratch-receipt.json": "3B0FDADD90B047D3FC7B9B155158CA07A85726F2F40EE66641DC5245EBB29ED3",
+    "source-gamma-one-real-period-surjectivity-1-scratch-receipt.json": "3FE2AF35E6932AD06505601DBFAE89029645967837DAAADDE19651BFC850E49F"
+  },
+  "expectedConsumers": 24986,
+  "expectedConstructions": 2504,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_real_period_surjectivity_8632.py",
+      "sha256": "0B63434B3B4B09CC2CDD9D0D8C13E63A0A1CAD551E040D09449A99111F4DE56C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_period_surjectivity_production_ownership_8632.py",
+      "sha256": "2A160178840131F5C3DEB51A22473BA46081756E4A5B1B4F663FAE3817438D15"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_period_surjectivity_global_ownership_8632.py",
+      "sha256": "B69BF049C4FFB4CBF91784AED5643A007F72073D50D0EF748578BAF275322F95"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_real_period_surjectivity_ownership_8632.py",
+      "sha256": "0CC0EAC32BF456CF28FDFFF98645866301C351FD33A366F1E604A589510227E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_real_period_surjectivity_8632.py",
+      "sha256": "01D7BA20F453849296D1E0FEF1C6252967292F1C1270119C7D398C26EB8D1320"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_real_period_surjectivity_8632.ps1",
+      "sha256": "A04E2A59935FCDFF10D6706713F1FFF47C56AA78FA362F2B2ACE74CCC290FA02"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_real_period_surjectivity_8632.ps1",
+      "sha256": "BF2091F58C07BBE718B7935BD2AF4120D00F7E58016BE6437061CCC3B0ED1440"
+    }
+  ],
+  "productionMutation": false
+}

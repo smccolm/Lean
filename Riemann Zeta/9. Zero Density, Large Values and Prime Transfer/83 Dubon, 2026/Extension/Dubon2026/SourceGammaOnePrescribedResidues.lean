@@ -1,0 +1,70 @@
+import Dubon2026.SourceGammaOneTwoPoleResidues
+import Dubon2026.SourceCurveDivisorDegree
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor
+converse -> meromorphic function construction. A finite linear combination
+of actual normalized two-pole differentials realizes the prescribed
+degree-zero divisor as residues on the actual subgroup field. The degree
+cancels the auxiliary place. No prescribed-residue existence is assumed.
+Adapted from the existing original/cover construction, ultimately from
+anthropics/fermats-last-theorem, Apache-2.0,
+commit 6e837e75355538c7f80bab5b956861e86c4eacc2. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve KaehlerDifferential
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+local notation "EE" => functionFieldOver Γ ℂ
+include hT
+
+theorem divisor_sum_support (D : Divisor ℂ EE) :
+    (∑ v ∈ D.support, D v) = Divisor.degree D := by
+  have hrank : ∀ v : Place ℂ EE, Module.finrank ℂ v.ResidueField = 1 :=
+    fun v => Module.finrank_of_bijective_algebraMap
+      (place_residue_bijective hT v)
+  simp only [Divisor.degree_eq_sum_support, hrank, Nat.cast_one, mul_one]
+
+theorem exists_differential_with_prescribed_residues
+    (D : Divisor ℂ EE) (hD : Divisor.degree D = 0) :
+    ∃ η : Ω[EE⁄ℂ], (∀ v : Place ℂ EE, -1 ≤ v.ordDifferential η) ∧
+      ∀ v : Place ℂ EE, differentialResidue hT v η = (D v : ℂ) := by
+  classical
+  let Q : Place ℂ EE := analyticPlace hT UpperHalfPlane.I
+  have hpair : ∀ P : Place ℂ EE, ∃ η : Ω[EE⁄ℂ],
+      (∀ v : Place ℂ EE, -1 ≤ v.ordDifferential η) ∧
+      ∀ v : Place ℂ EE, differentialResidue hT v η =
+        (if v = P then 1 else 0) - (if v = Q then 1 else 0) := by
+    intro P
+    by_cases hPQ : P = Q
+    · subst P
+      exact ⟨0, simple_pole_zero_bound hT, fun v => by rw [map_zero, sub_self]⟩
+    exact exists_normalized_two_pole_differential hT hPQ
+  choose θ hθ hres using hpair
+  let η : Ω[EE⁄ℂ] := ∑ P ∈ D.support, (D P : ℂ) • θ P
+  refine ⟨η, fun v => simple_pole_sum_bound hT D.support _ v
+    (fun P _ => simple_pole_smul_bound hT v _ (hθ P v)), ?_⟩
+  intro v
+  have htotal : (∑ P ∈ D.support, (D P : ℂ)) = 0 := by
+    exact_mod_cast (divisor_sum_support hT D).trans hD
+  have hfirst : (∑ P ∈ D.support, (D P : ℂ) * (if v = P then 1 else 0)) = (D v : ℂ) := by
+    rw [Finset.sum_eq_single v]
+    · simp
+    · intro P _ hPv
+      simp only [if_neg hPv.symm, mul_zero]
+    · intro hv
+      have hz : D v = 0 := by simpa only [Finsupp.mem_support_iff, not_not] using hv
+      simp only [hz, Int.cast_zero, zero_mul]
+  change differentialResidue hT v (∑ P ∈ D.support, (D P : ℂ) • θ P) = _
+  simp only [map_sum, map_smul, smul_eq_mul, hres, mul_sub, Finset.sum_sub_distrib]
+  rw [hfirst, ← Finset.sum_mul, htotal, zero_mul, sub_zero]
+
+theorem exists_third_kind_differential
+    (D : Divisor ℂ EE) (hD : Divisor.degree D = 0) :
+    ∃ η : Ω[EE⁄ℂ], ∀ v : Place ℂ EE, -1 ≤ v.ordDifferential η ∧
+      v.rationalEval (place_residue_bijective hT v) (v.uniformizer * v.differentialCoeff η) = (D v : ℂ) := by
+  obtain ⟨η, hη, hres⟩ := exists_differential_with_prescribed_residues hT D hD
+  exact ⟨η, fun v => ⟨hη v, (differentialResidue_simplePole hT v η (hη v)).symm.trans (hres v)⟩⟩
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

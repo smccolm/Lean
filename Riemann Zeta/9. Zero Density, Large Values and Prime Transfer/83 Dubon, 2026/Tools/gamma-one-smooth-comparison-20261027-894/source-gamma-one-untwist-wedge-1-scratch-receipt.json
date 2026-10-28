@@ -1,0 +1,144 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T17:58:24.968995+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceComplexWedgeStokes",
+    "SourceComplexWedgeLocalLog",
+    "SourceComplexWedgeDisc",
+    "SourceComplexWedgeIntegral",
+    "SourceGammaOneUntwistWedgeIntegral"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes.lean",
+      "sha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67",
+      "oleanSha256": "EE4DCE4C1CC163CD6AC4059CF555EDDA3C386F8990A65FA5739293C92FDD87B5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog.lean",
+      "sha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E",
+      "oleanSha256": "2EDBE1796F4FBB8E7581A5DB10E5272152A4680B5BD3F9A76AE642E566450E22",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc.lean",
+      "sha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9",
+      "oleanSha256": "43640DDA0FDDB9FA37D4D1056FEB20F20B4A47955D906A244F31189FAC7E2993",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral.lean",
+      "sha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76",
+      "oleanSha256": "A6DA32AD5B4F04826C34A0455C692357054700EC6A61028B39E6DF502D8AEEFA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral.lean",
+      "sha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB",
+      "oleanSha256": "821DA93878825BBA7960EF17640497B5DBEBF92B7F15E147966262B1CE74BE00",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply",
+    "Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm",
+    "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero",
+    "Dubon2026.SourceComplexReciprocity.Wedge.mem_slit",
+    "Dubon2026.SourceComplexReciprocity.Wedge.\u03a8_ne",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_\u03a8_eq",
+    "Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E",
+    "Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_\u03a6_div",
+    "Dubon2026.SourceComplexReciprocity.Wedge.\u03a6_ne",
+    "Dubon2026.SourceComplexReciprocity.Wedge.disc_identity",
+    "Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt",
+    "Dubon2026.SourceComplexReciprocity.Wedge.exists_disc",
+    "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp",
+    "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity",
+    "Dubon2026.sourceGamma1_untwist_wedge_integral",
+    "Dubon2026.SourceComplexReciprocity.Wedge.Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.vEk"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply",
+    "Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm",
+    "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero",
+    "Dubon2026.SourceComplexReciprocity.Wedge.mem_slit",
+    "Dubon2026.SourceComplexReciprocity.Wedge.\u03a8_ne",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_\u03a8_eq",
+    "Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E",
+    "Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'",
+    "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk",
+    "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_\u03a6_div",
+    "Dubon2026.SourceComplexReciprocity.Wedge.\u03a6_ne",
+    "Dubon2026.SourceComplexReciprocity.Wedge.disc_identity",
+    "Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt",
+    "Dubon2026.SourceComplexReciprocity.Wedge.exists_disc",
+    "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp",
+    "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity",
+    "Dubon2026.sourceGamma1_untwist_wedge_integral"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceComplexReciprocity.Wedge.Lg",
+    "Dubon2026.SourceComplexReciprocity.Wedge.vEk"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeAudit1.log",
+  "logSha256": "15F5EEF34DE9BA7E95CE62FF08BFEDA9FF2CFA8CD3F98F1F1B61E81EB3C5F96A",
+  "auditSha256": "36581DABB9DD8D32C41D009D95A0537159FFAB00F7DB757A438EC007B5B2DD3D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 44,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 35,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1.log",
+  "dependencyAuditSha256": "C69715ED00B6797739F341698FB6676F78C5AF1F3C0C11AA09ECCF397EF1BCF5",
+  "dependencyAuditSourceSha256": "EBE8D07874B97244A7D8045133BBCD94E6A67DBC8EC042F0505A47127C740A25",
+  "consumers": [
+    "Dubon2026.sourceGamma1_untwist_wedge_integral"
+  ],
+  "dependency": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "actual untwist wedge identity"
+  ],
+  "discharged": [
+    "Compact-support wedge integration by parts from native derivative symmetry",
+    "C1 local integer-order models imply integrability and exact wedge/residue identity via proved singular kernel and native smooth partition",
+    "Actual original divisor and its meromorphic untwist derive every local model; existing actual cusp-form primitive supplies derivative"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. F and exact original-divisor orders remain inputs. Invariance and cusp control are proved separately by the invariant-untwist consumer. Actual smooth comparison model and modular winding/period/Petersson limit remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "E40784258AF75C3A8FCF931105AA9D06AE848B8DE26E6406F45E7CF991666B75",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

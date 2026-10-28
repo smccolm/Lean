@@ -1,0 +1,120 @@
+import Dubon2026.SourceSmoothOrbitIntegralGeometry
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> smooth divisor integral.
+Adapted from pinned Apache-2.0 anthropics/fermats-last-theorem source.
+Reuse the proved action geometry and compact-support continuity. The finite
+orbit sum is unfolded by native change of variables. Compact support permits
+eventual exact equality instead of a separate dominated-convergence argument.
+No integral identity, comparison function or period identity is assumed. -/
+namespace Dubon2026.SourceSmoothOrbitIntegral
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set Metric SourceSmoothDivisor
+open scoped MatrixGroups Topology Real ComplexConjugate
+local notation "UHP" => UpperHalfPlane.upperHalfPlaneSet
+
+section CoV
+
+variable (Γ : Subgroup SL(2, ℤ)) (F : ℂ → ℂ) (hF : Continuous F) (hFs : HasCompactSupport F)
+  (hFU : tsupport F ⊆ UHP) (g : ℍ → ℂ) (hg : Continuous g)
+  (hgw : ∀ γ ∈ Γ, ∀ τ : ℍ, g (γ • τ) = denom (γ : GL (Fin 2) ℝ) τ ^ 2 * g τ)
+  (h : ℂ → ℂ) (hh : Continuous h) (hhs : HasCompactSupport h) (hhU : tsupport h ⊆ UHP)
+
+include hg in
+theorem continuousOn_goc : ContinuousOn (fun z => g (ofComplex z)) UHP := fun _ hz =>
+  (hg.continuousAt.comp (continuousAt_ofComplex' hz)).continuousWithinAt
+
+theorem det_identity (γ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) :
+    ((|(UpperHalfPlane.smulFDeriv (γ : GL (Fin 2) ℝ) z).det| : ℝ) : ℂ) *
+        denom (γ : GL (Fin 2) ℝ) z ^ 2 = conj (dsm γ z) := by
+  have hdet : ((γ : GL (Fin 2) ℝ).det : ℝ) = 1 := by
+    simp
+  set d := denom (γ : GL (Fin 2) ℝ) z with hd
+  have hd0 : d ≠ 0 := denom_ne_zero' γ hz
+  have hdsm : dsm γ z = 1 / d ^ 2 := by rw [dsm, denom_ofComplex hz]
+  have hn : (0 : ℝ) < ‖d‖ ^ 4 := by positivity
+  have h1 : |(UpperHalfPlane.smulFDeriv (γ : GL (Fin 2) ℝ) z).det| = (‖d‖ ^ 4)⁻¹ := by
+    rw [UpperHalfPlane.det_smulFDeriv, hdet, ← hd]
+    simp [abs_of_pos hn]
+  rw [h1, hdsm]
+  have hkey : ((‖d‖ : ℝ) : ℂ) ^ 4 = d ^ 2 * conj d ^ 2 := by
+    have : (d * conj d) = ((‖d‖ : ℝ) : ℂ) ^ 2 := by
+      rw [Complex.mul_conj, Complex.normSq_eq_norm_sq]; push_cast; ring
+    calc ((‖d‖ : ℝ) : ℂ) ^ 4 = ((((‖d‖ : ℝ) : ℂ)) ^ 2) ^ 2 := by ring
+      _ = (d * conj d) ^ 2 := by rw [this]
+      _ = d ^ 2 * conj d ^ 2 := by ring
+  have hc0 : conj d ≠ 0 := (map_ne_zero _).2 hd0
+  push_cast
+  rw [hkey, map_div₀, map_one, map_pow]
+  field_simp
+
+include hFU hgw hhU in
+
+theorem integral_term (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) :
+    ∫ z, g (ofComplex z) * h z * (F (sm γ z) * conj (dsm γ z)) =
+      ∫ w, g (ofComplex w) * F w * h (sm γ⁻¹ w) := by
+  set G : ℂ → ℂ := fun w => g (ofComplex w) * F w * h (sm γ⁻¹ w) with hG
+
+  have hL : ∫ z, g (ofComplex z) * h z * (F (sm γ z) * conj (dsm γ z)) =
+      ∫ z in UHP, g (ofComplex z) * h z * (F (sm γ z) * conj (dsm γ z)) := by
+    rw [← integral_indicator UpperHalfPlane.isOpen_upperHalfPlaneSet.measurableSet]
+    refine integral_congr_ae (Filter.Eventually.of_forall fun z => ?_)
+    by_cases hz : z ∈ UHP
+    · rw [indicator_of_mem hz]
+    · rw [indicator_of_notMem hz]; dsimp only
+      rw [eq_zero_of_notMem hhU hz]; ring
+  have hR : ∫ w, G w = ∫ w in UHP, G w := by
+    rw [← integral_indicator UpperHalfPlane.isOpen_upperHalfPlaneSet.measurableSet]
+    refine integral_congr_ae (Filter.Eventually.of_forall fun w => ?_)
+    by_cases hw : w ∈ UHP
+    · rw [indicator_of_mem hw]
+    · rw [indicator_of_notMem hw, hG]; dsimp only
+      rw [eq_zero_of_notMem hFU hw]; ring
+  rw [hL, hR, ← sm_image γ]
+  rw [integral_image_eq_integral_abs_det_fderiv_smul volume UpperHalfPlane.isOpen_upperHalfPlaneSet.measurableSet
+    (f' := fun z => UpperHalfPlane.smulFDeriv (γ : GL (Fin 2) ℝ) z)
+    (fun z hz => (hasFDerivAt_sm_matrix γ hz).hasFDerivWithinAt)
+    (fun z hz w hw hzw => sm_inj γ hz hw hzw) G]
+  rw [sm_image]
+  refine setIntegral_congr_fun UpperHalfPlane.isOpen_upperHalfPlaneSet.measurableSet fun z hz => ?_
+  have hz' : 0 < z.im := hz
+  simp only [hG]
+  rw [sm_inv_sm γ hz', Complex.real_smul]
+
+  have hgz : g (ofComplex (sm γ z)) = denom (γ : GL (Fin 2) ℝ) z ^ 2 * g (ofComplex z) := by
+    rw [sm, ofComplex_coe, hgw γ hγ, denom_ofComplex hz']
+  rw [hgz]
+  have := det_identity γ hz'
+  linear_combination -(g (ofComplex z) * F (sm γ z) * h z) * this
+
+include hF hg hh hhs hhU in
+theorem integrable_term (γ : SL(2, ℤ)) :
+    Integrable fun z => g (ofComplex z) * h z * (F (sm γ z) * conj (dsm γ z)) := by
+  have hc : Continuous fun z => (g (ofComplex z) * (F (sm γ z) * conj (dsm γ z))) * h z := by
+    refine SourceComplexReciprocity.continuous_mul_of_tsupport_subset UpperHalfPlane.isOpen_upperHalfPlaneSet ((continuousOn_goc g hg).mul ?_) hh hhU
+    exact ((hF.comp_continuousOn (continuousOn_sm γ)).mul
+      (Complex.continuous_conj.comp_continuousOn (continuousOn_dsm γ)))
+  have : (fun z => g (ofComplex z) * h z * (F (sm γ z) * conj (dsm γ z))) =
+      fun z => (g (ofComplex z) * (F (sm γ z) * conj (dsm γ z))) * h z := by
+    funext z; ring
+  rw [this]
+  exact hc.integrable_of_hasCompactSupport hhs.mul_left
+
+include hF hFs hFU hg hh in
+theorem integrable_term' (γ : SL(2, ℤ)) :
+    Integrable fun w => g (ofComplex w) * F w * h (sm γ⁻¹ w) := by
+  have hc : Continuous fun w => (g (ofComplex w) * h (sm γ⁻¹ w)) * F w :=
+    SourceComplexReciprocity.continuous_mul_of_tsupport_subset UpperHalfPlane.isOpen_upperHalfPlaneSet ((continuousOn_goc g hg).mul
+      (hh.comp_continuousOn (continuousOn_sm γ⁻¹))) hF hFU
+  have : (fun w => g (ofComplex w) * F w * h (sm γ⁻¹ w)) =
+      fun w => (g (ofComplex w) * h (sm γ⁻¹ w)) * F w := by
+    funext w; ring
+  rw [this]
+  exact hc.integrable_of_hasCompactSupport hFs.mul_left
+
+end CoV
+
+
+end
+end Dubon2026.SourceSmoothOrbitIntegral

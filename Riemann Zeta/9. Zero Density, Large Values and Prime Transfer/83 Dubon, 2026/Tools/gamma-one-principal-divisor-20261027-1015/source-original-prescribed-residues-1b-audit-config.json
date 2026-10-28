@@ -1,0 +1,116 @@
+{
+  "modules": [
+    "SourceGammaOneTwoPoleDifferential",
+    "SourceGammaOneDifferentialResidues",
+    "SourceGammaOneSimplePoleBounds",
+    "SourceGammaOneTwoPoleResidues",
+    "SourceGammaOnePrescribedResidues",
+    "SourceGammaOneAnalyticDivisorDifferential"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneTwoPoleDifferential": "SourceGammaOneTwoPoleDifferential976d",
+    "SourceGammaOneDifferentialResidues": "SourceGammaOneDifferentialResidues977a",
+    "SourceGammaOneSimplePoleBounds": "SourceGammaOneSimplePoleBounds978a",
+    "SourceGammaOneTwoPoleResidues": "SourceGammaOneTwoPoleResidues979a",
+    "SourceGammaOnePrescribedResidues": "SourceGammaOnePrescribedResidues980a",
+    "SourceGammaOneAnalyticDivisorDifferential": "SourceGammaOneAnalyticDivisorDifferential981a"
+  },
+  "localModules": [
+    "SourceGammaOneTwoPoleDifferential",
+    "SourceGammaOneDifferentialResidues",
+    "SourceGammaOneSimplePoleBounds",
+    "SourceGammaOneTwoPoleResidues",
+    "SourceGammaOnePrescribedResidues",
+    "SourceGammaOneAnalyticDivisorDifferential"
+  ],
+  "separatelyAxiomChecked": [
+    {
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+      "reason": "Pure reflexive accessor; definitional reduction uses the actual coefficient construction. This accessor is axiom-checked and exhaustively owned, but is not claimed as a retained declaration-VALUE dependency."
+    }
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue",
+    "Dubon2026.SourceCurve.finite_coordinate_index_eq_canonical_complement",
+    "Dubon2026.SourceCurve.finite_coordinate_degree_dimension_maximum",
+    "Dubon2026.SourceCurve.indexOfSpecialty_eq_of_genusReached",
+    "Dubon2026.SourceCurve.two_pole_dimensions_of_riemann_roch",
+    "Dubon2026.SourceCurve.exists_two_pole_function_of_dimensions",
+    "Dubon2026.SourceCurve.exists_two_pole_differential_of_function",
+    "Dubon2026.SourceCurve.finite_coordinate_global_residue_sum_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace"
+  ]
+}

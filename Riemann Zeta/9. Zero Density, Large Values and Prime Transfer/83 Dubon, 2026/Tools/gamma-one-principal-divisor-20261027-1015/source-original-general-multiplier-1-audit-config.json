@@ -1,0 +1,54 @@
+{
+  "modules": [
+    "SourceGammaOneMultiplierUnitarization",
+    "SourceGammaOneGeneralMultiplierPrincipal"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneMultiplierUnitarization": "SourceGammaOneMultiplierUnitarization973a",
+    "SourceGammaOneGeneralMultiplierPrincipal": "SourceGammaOneGeneralMultiplierPrincipal-974a"
+  },
+  "localModules": [
+    "SourceGammaOneMultiplierUnitarization",
+    "SourceGammaOneGeneralMultiplierPrincipal",
+    "SourceIntegralCosetCocycle",
+    "SourceIntegralCosetParabolic",
+    "SourceIntegralCosetWord",
+    "SourceIntegralPeriodCuspLimits",
+    "SourceIntegralPeriodGeneratorDual",
+    "SourceRealPrimitiveGreenData",
+    "SourceIntegralPeriodLatticeDual",
+    "SourceRealPeriodPeterssonPairing",
+    "SourceClosedPeterssonNondegenerate",
+    "SourceSignedPeriodLatticeLift",
+    "SourceGammaOneSignedRealPeriods",
+    "SourceGammaOnePeterssonIntegralRealPeriods",
+    "SourceGammaOneUnitaryDivisorPrincipal",
+    "SourceGammaOneRepresentativePeriods",
+    "SourceGammaOneRepresentativePeriodCorrection",
+    "SourceGammaOneFiniteDivisorReciprocityAssembled"
+  ],
+  "separatelyAxiomChecked": [],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function",
+    "Dubon2026.SourceFunctionField.GammaOne.multiplier_eq_one_of_original_period_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.real_periods_integral_of_petersson_mem_lattice",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq",
+    "Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character",
+    "Dubon2026.SourcePeriodUntwist.Ek_smul",
+    "Dubon2026.SourcePeriodUntwist.Ek_exists_cusp_limit"
+  ]
+}

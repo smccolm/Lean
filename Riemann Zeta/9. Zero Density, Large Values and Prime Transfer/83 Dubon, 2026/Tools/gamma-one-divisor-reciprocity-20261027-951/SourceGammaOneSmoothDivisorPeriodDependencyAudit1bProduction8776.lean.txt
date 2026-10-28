@@ -1,0 +1,32 @@
+import Dubon2026.SourceSmoothOrbitIntegralGeometry
+import Dubon2026.SourceSmoothOrbitIntegralChangeVariables
+import Dubon2026.SourceSmoothCompactTranslateIntegral
+import Dubon2026.SourceSmoothDivisorPeriodIntegral
+import Dubon2026.SourceGammaOneSmoothDivisorPeriodIntegral
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit]
+  let localModules : Array Name := #[`Dubon2026.SourceSmoothOrbitIntegralGeometry, `Dubon2026.SourceSmoothOrbitIntegralChangeVariables, `Dubon2026.SourceSmoothCompactTranslateIntegral, `Dubon2026.SourceSmoothDivisorPeriodIntegral, `Dubon2026.SourceGammaOneSmoothDivisorPeriodIntegral, `Dubon2026.SourceSmoothLocalModelRegularization, `Dubon2026.SourceSmoothLocalModelProducts, `Dubon2026.SourceModularSmoothProjectiveRepresentatives, `Dubon2026.SourceSmoothModularGeometry, `Dubon2026.SourceSmoothProjectiveOrbitSum, `Dubon2026.SourceSmoothDivisorOrbitData, `Dubon2026.SourceSmoothModularLogDerivative, `Dubon2026.SourceSmoothDivisorProduct, `Dubon2026.SourceSmoothDivisorLocalProduct, `Dubon2026.SourceSmoothDivisorLocalOrders, `Dubon2026.SourceSmoothDivisorInvarianceCusps, `Dubon2026.SourceSmoothDivisorLogDerivative, `Dubon2026.SourceSmoothInvariantComparison, `Dubon2026.SourceGammaOneSmoothDivisorComparison, `Dubon2026.SourceComplexDipoleLocalModel, `Dubon2026.SourceComplexDipoleLogDerivative, `Dubon2026.SourceComplexDipolePairing, `Dubon2026.SourceUpperHalfPlaneDipole, `Dubon2026.SourceComplexWedgeStokes, `Dubon2026.SourceComplexWedgeLocalLog, `Dubon2026.SourceComplexWedgeDisc, `Dubon2026.SourceComplexWedgeIntegral, `Dubon2026.SourceGammaOneUntwistWedgeIntegral, `Dubon2026.SourceComplexHolomorphicStokes, `Dubon2026.SourceComplexDbarCutoff, `Dubon2026.SourceComplexDbarKernelIntegrability, `Dubon2026.SourceComplexDbarRadialNormalization, `Dubon2026.SourceComplexCauchyPompeiu, `Dubon2026.SourceComplexResidueLocalModels, `Dubon2026.SourceComplexResidueIntegral, `Dubon2026.SourceComplexLogDerivativeResidues, `Dubon2026.SourceGammaOneLogDerivativeResidues, `Dubon2026.SourceWeightTwoPeriodUntwist, `Dubon2026.SourceMeromorphicNormalUntwist, `Dubon2026.SourceMeromorphicPeriodUntwist, `Dubon2026.SourceModularSmoothCutoff, `Dubon2026.SourceModularSmoothGeometry, `Dubon2026.SourceModularSmoothCosetSum, `Dubon2026.SourceModularSmoothCover, `Dubon2026.SourceModularSmoothedFundamentalSupport, `Dubon2026.SourceModularSmoothedFundamental, `Dubon2026.SourceGammaOneSmoothPartition, `Dubon2026.SourceModularProjectiveFibers, `Dubon2026.SourceModularSmoothOrbitMass, `Dubon2026.SourceModularInvariantIntegralUnfolding, `Dubon2026.SourceModularSmoothIntegralLimit, `Dubon2026.SourceModularSmoothPlaneIntegral, `Dubon2026.SourceGammaOnePeterssonSmoothLimit]
+  let required : Array Name := #[`Dubon2026.SourceSmoothOrbitIntegral.sm_image, `Dubon2026.SourceSmoothOrbitIntegral.continuousAt_ofComplex', `Dubon2026.SourceSmoothOrbitIntegral.hasFDerivAt_sm_matrix, `Dubon2026.SourceSmoothOrbitIntegral.continuousOn_sm, `Dubon2026.SourceSmoothOrbitIntegral.denom_ofComplex, `Dubon2026.SourceSmoothOrbitIntegral.denom_ne_zero', `Dubon2026.SourceSmoothOrbitIntegral.continuousOn_dsm, `Dubon2026.SourceSmoothOrbitIntegral.eq_zero_of_notMem, `Dubon2026.SourceSmoothOrbitIntegral.continuousOn_goc, `Dubon2026.SourceSmoothOrbitIntegral.det_identity, `Dubon2026.SourceSmoothOrbitIntegral.integral_term, `Dubon2026.SourceSmoothOrbitIntegral.integrable_term, `Dubon2026.SourceSmoothOrbitIntegral.integrable_term', `Dubon2026.SourceSmoothOrbitIntegral.compact_translate_eventually_eq, `Dubon2026.SourceSmoothOrbitIntegral.compact_translate_limit, `Dubon2026.SourceSmoothDivisor.g_smul, `Dubon2026.SourceSmoothDivisor.exists_comparison_period_limit, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit, `Dubon2026.SourceSmoothDivisor.exists_invariant_comparison, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_smul_signed, `Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_reciprocity_data, `Dubon2026.SourceFunctionField.GammaOne.weighted_analytic_order_eq_half_coefficient, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend, `Dubon2026.SourcePeriodUntwist.Ek_hasDerivAt, `Dubon2026.SourceSmoothedFundamental.smooth_partition, `Dubon2026.SourceSmoothDivisor.finite_moving', `Dubon2026.SourceComplexReciprocity.continuous_mul_of_tsupport_subset, `MeasureTheory.integral_image_eq_integral_abs_det_fderiv_smul, `IsCompact.bddAbove_image]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE SMOOTH DIVISOR PERIOD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual original Gamma1 divisor period-limit consumer. The constructed V, original degree-zero divisor, exact ramification, original cusp-form functions and endpoint periods are consumed. Native compact boundedness gives eventual exact unfolding. Filled quotient, winding reciprocity and full all-weight chain remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

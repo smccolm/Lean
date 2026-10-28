@@ -1,0 +1,94 @@
+import SourceModularGreenLines
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period identity
+-> Green's formula on the actual modular fundamental domain.
+Adapted from pinned Apache-2.0 anthropics/fermats-last-theorem source.
+Native Fubini, one-dimensional FTC and real change-of-variable theorems provide
+the shorter rigorous route for the curved boundary; no boundary identity is
+assumed. No incidental open-neighborhood assumption is retained. -/
+namespace Dubon2026.SourceModularGreen
+noncomputable section
+open Complex MeasureTheory Set Filter Topology
+
+/-- Horizontal radius at a prescribed imaginary coordinate. -/
+def r (y : ℝ) : ℝ := Real.sqrt (1 - y ^ 2)
+
+lemma r_nonneg (y : ℝ) : 0 ≤ r y := Real.sqrt_nonneg _
+
+lemma r_one : r 1 = 0 := by simp [r]
+
+lemma r_pos {y : ℝ} (hy0 : 0 ≤ y) (hy : y < 1) : 0 < r y := by
+  unfold r; apply Real.sqrt_pos.mpr; nlinarith
+
+lemma r_le_half {y : ℝ} (hy : Real.sqrt 3 / 2 ≤ y) : r y ≤ 1 / 2 := by
+  unfold r
+  rw [Real.sqrt_le_left (by norm_num)]
+  have := sqrt3_sq
+  nlinarith [sqrt3_pos]
+
+lemma r_lt_half {y : ℝ} (hy : Real.sqrt 3 / 2 < y) : r y < 1 / 2 := by
+  unfold r
+  rw [Real.sqrt_lt' (by norm_num)]
+  have := sqrt3_sq
+  nlinarith [sqrt3_pos]
+
+lemma h_half : h (1 / 2) = Real.sqrt 3 / 2 := by
+  unfold h
+  rw [show (1 : ℝ) - (1 / 2) ^ 2 = (Real.sqrt 3 / 2) ^ 2 by rw [sqrt3_sq]; norm_num,
+    Real.sqrt_sq sqrt3_pos.le]
+
+lemma h_neg (x : ℝ) : h (-x) = h x := by simp [h]
+
+lemma h_r {y : ℝ} (hy0 : 0 ≤ y) (hy1 : y ≤ 1) : h (r y) = y := by
+  unfold h r
+  rw [Real.sq_sqrt (by nlinarith), sub_sub_cancel, Real.sqrt_sq hy0]
+
+lemma h_le_iff {x y : ℝ} (hy : 0 ≤ y) : h x ≤ y ↔ r y ≤ |x| := by
+  unfold h r
+  rw [Real.sqrt_le_left hy, Real.sqrt_le_left (abs_nonneg x), sq_abs]
+  constructor <;> intro h <;> linarith
+
+lemma slice_of_one_le {y : ℝ} (hy : 1 ≤ y) :
+    {x : ℝ | |x| ≤ 1 / 2 ∧ h x ≤ y} = Icc (-(1 / 2)) (1 / 2) := by
+  ext x
+  simp only [mem_setOf_eq, mem_Icc, abs_le]
+  exact ⟨fun h => h.1, fun h => ⟨h, (h_le_one x).trans hy⟩⟩
+
+lemma slice_of_lt_one {y : ℝ} (hy0 : 0 ≤ y) (hy : y < 1) :
+    {x : ℝ | |x| ≤ 1 / 2 ∧ h x ≤ y} = Icc (-(1 / 2)) (-r y) ∪ Icc (r y) (1 / 2) := by
+  have hr := r_pos hy0 hy
+  ext x
+  simp only [mem_setOf_eq, mem_union, mem_Icc, h_le_iff hy0, abs_le, le_abs']
+  constructor
+  · rintro ⟨⟨h1, h2⟩, h3 | h3⟩
+    · exact Or.inl ⟨h1, h3⟩
+    · exact Or.inr ⟨h3, h2⟩
+  · rintro (⟨h1, h2⟩ | ⟨h1, h2⟩)
+    · exact ⟨⟨h1, by linarith⟩, Or.inl h2⟩
+    · exact ⟨⟨by linarith, h2⟩, Or.inr h1⟩
+
+lemma slice_of_lt {y : ℝ} (hy : y < Real.sqrt 3 / 2) : {x : ℝ | |x| ≤ 1 / 2 ∧ h x ≤ y} = ∅ := by
+  ext x
+  simp only [mem_setOf_eq, mem_empty_iff_false, iff_false, not_and, not_le]
+  exact fun hx => lt_of_lt_of_le hy (sqrt3_le_h hx)
+
+lemma mem_D_r {y : ℝ} (hy : Real.sqrt 3 / 2 ≤ y) (hy1 : y ≤ 1) : (⟨r y, y⟩ : ℂ) ∈ D := by
+  have hy0 : 0 ≤ y := sqrt3_pos.le.trans hy
+  refine mk_mem_D ?_ (h_r hy0 hy1).le
+  rw [abs_of_nonneg (r_nonneg y)]; exact r_le_half hy
+
+lemma mem_D_neg_r {y : ℝ} (hy : Real.sqrt 3 / 2 ≤ y) (hy1 : y ≤ 1) : (⟨-r y, y⟩ : ℂ) ∈ D := by
+  have hy0 : 0 ≤ y := sqrt3_pos.le.trans hy
+  refine mk_mem_D ?_ (by rw [h_neg]; exact (h_r hy0 hy1).le)
+  rw [abs_neg, abs_of_nonneg (r_nonneg y)]; exact r_le_half hy
+
+lemma continuous_r : Continuous r := Real.continuous_sqrt.comp (continuous_const.sub (continuous_id.pow 2))
+
+lemma continuous_mk2 : Continuous fun p : ℝ × ℝ => (⟨p.1, p.2⟩ : ℂ) := by
+  simp [mk_eq]
+  exact ((Complex.continuous_ofReal.comp continuous_fst).add
+    ((Complex.continuous_ofReal.comp continuous_snd).mul continuous_const))
+
+
+end
+end Dubon2026.SourceModularGreen

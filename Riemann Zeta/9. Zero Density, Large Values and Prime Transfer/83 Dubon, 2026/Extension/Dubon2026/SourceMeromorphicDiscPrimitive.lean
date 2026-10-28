@@ -1,0 +1,165 @@
+import Dubon2026.SourceUpperHalfPlaneResidueData
+import Dubon2026.SourceMeromorphicFinitePolarProduct
+import Dubon2026.SourceUpperHalfPlaneDiscExhaustion
+
+/-! DUB-17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+construct a meromorphic function with the prescribed divisor. The local
+integer-residue expansion gives finite polar products on an exhaustion
+by disks; analytic primitives of the regular part are exponentiated and
+normalized to agree on overlaps. Local residue expansions remain an
+explicit upstream analytic obligation, not a function-existence premise.
+Adapted from anthropics/fermats-last-theorem,
+commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_ModularCurve_exists_meromorphic_logDeriv_eq_of_int_residue.lean,
+Apache-2.0; retained LICENSE and NOTICE. -/
+
+namespace Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive
+open scoped Topology
+open Filter Set Metric
+
+variable {m : ℂ → ℤ} {ω : ℂ → ℂ}
+
+section OneDisc
+
+variable (H : ResidueHyp m ω) (n : ℕ)
+include H
+
+/-- The finite set of nonzero residues in the actual closed disk. -/
+noncomputable def poles : Finset ℂ :=
+  (H.finite_support_inter (isCompact_closedBall (x := ctr n) (r := rad n))
+    (fun _ hz => im_pos_of_mem_closedBall hz)).toFinset
+
+variable {n} in
+theorem mem_poles {z : ℂ} : z ∈ poles H n ↔ z ∈ closedBall (ctr n) (rad n) ∧ m z ≠ 0 := by
+  unfold poles
+  rw [Set.Finite.mem_toFinset]
+  rfl
+
+/-- The differential coefficient after subtracting the finite polar part. -/
+noncomputable def rho (z : ℂ) : ℂ := ω z - polarPart (poles H n) m z
+
+/-- The analytic regularization of the residue-subtracted coefficient. -/
+noncomputable def rho' (z : ℂ) : ℂ :=
+  if m z = 0 then rho H n z else limUnder (𝓝[≠] z) (rho H n)
+
+variable {n} in
+theorem rho'_of_eq_zero {z : ℂ} (hz : m z = 0) :
+    rho' H n z = ω z - polarPart (poles H n) m z := by
+  simp [rho', hz, rho]
+
+variable {n} in
+
+theorem analyticAt_rho' {z : ℂ} (hzB : z ∈ ball (ctr n) (rad n)) : AnalyticAt ℂ (rho' H n) z := by
+  classical
+  have hzU : 0 < z.im := im_pos_of_mem_ball hzB
+  by_cases hm : m z = 0
+  · have hzp : z ∉ poles H n := by
+      rw [mem_poles]; exact fun h => h.2 hm
+    have hρ : AnalyticAt ℂ (rho H n) z :=
+      (H.analyticAt hzU hm).fun_sub (analyticAt_polarPart (poles H n) m hzp)
+    refine hρ.congr ?_
+    filter_upwards [H.eventually_imp_eq_zero hzU] with w hw
+    by_cases hwz : w = z
+    · subst hwz; simp [rho', hm]
+    · simp [rho', hw hwz]
+  · obtain ⟨g, hg, heq, -⟩ := H z hzU
+    have hzp : z ∈ poles H n := (mem_poles H).mpr ⟨ball_subset_closedBall hzB, hm⟩
+    let h : ℂ → ℂ := fun w => g w - polarPart ((poles H n).erase z) m w
+    have hh : AnalyticAt ℂ h z :=
+      hg.fun_sub (analyticAt_polarPart ((poles H n).erase z) m (Finset.notMem_erase z _))
+    have hρh : rho H n =ᶠ[𝓝[≠] z] h := by
+      filter_upwards [heq] with w hw
+      simp only [rho, polarPart, hw, h]
+      rw [← Finset.add_sum_erase _ _ hzp]
+      ring
+    have hlim : limUnder (𝓝[≠] z) (rho H n) = h z :=
+      ((hh.continuousAt.tendsto.mono_left nhdsWithin_le_nhds).congr' hρh.symm).limUnder_eq
+    refine hh.congr ?_
+    have h1 := eventually_nhdsWithin_iff.mp hρh
+    filter_upwards [h1, H.eventually_imp_eq_zero hzU] with w hw1 hw2
+    by_cases hwz : w = z
+    · subst hwz
+      simp only [rho', if_neg hm, hlim]
+    · rw [rho', if_pos (hw2 hwz), hw1 hwz]
+
+theorem differentiableOn_rho' : DifferentiableOn ℂ (rho' H n) (ball (ctr n) (rad n)) :=
+  fun _ hz => (analyticAt_rho' H hz).differentiableAt.differentiableWithinAt
+
+theorem exists_primitive_rho' :
+    ∃ Φ : ℂ → ℂ, ∀ z ∈ ball (ctr n) (rad n), HasDerivAt Φ (rho' H n z) z :=
+  (differentiableOn_rho' H n).isExactOn_ball
+
+/-- An actual analytic primitive of the regularized coefficient on the disk. -/
+noncomputable def Phi : ℂ → ℂ := Classical.choose (exists_primitive_rho' H n)
+
+variable {n} in
+theorem hasDerivAt_Phi {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) :
+    HasDerivAt (Phi H n) (rho' H n z) z :=
+  Classical.choose_spec (exists_primitive_rho' H n) z hz
+
+variable {n} in
+theorem analyticAt_exp_Phi {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) :
+    AnalyticAt ℂ (fun w => Complex.exp (Phi H n w)) z := by
+  have hd : DifferentiableOn ℂ (Phi H n) (ball (ctr n) (rad n)) :=
+    fun w hw => (hasDerivAt_Phi H hw).differentiableAt.differentiableWithinAt
+  exact (hd.analyticAt (isOpen_ball.mem_nhds hz)).cexp
+
+/-- The local meromorphic exponential with its finite polar product. -/
+noncomputable def Fpre : ℂ → ℂ := (fun w => Complex.exp (Phi H n w)) * zprod (poles H n) m
+
+theorem Fpre_apply (z : ℂ) : Fpre H n z = Complex.exp (Phi H n z) * zprod (poles H n) m z := rfl
+
+variable {n} in
+theorem meromorphicAt_Fpre {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) : MeromorphicAt (Fpre H n) z := by
+  unfold Fpre
+  exact (analyticAt_exp_Phi H hz).meromorphicAt.mul (by unfold zprod; fun_prop)
+
+variable {n} in
+theorem meromorphicOrderAt_Fpre {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) :
+    meromorphicOrderAt (Fpre H n) z = (m z : WithTop ℤ) := by
+  classical
+  unfold Fpre
+  rw [meromorphicOrderAt_mul_of_ne_zero (analyticAt_exp_Phi H hz) (Complex.exp_ne_zero _),
+    meromorphicOrderAt_zprod]
+  congr 1
+  by_cases hzp : z ∈ poles H n
+  · rw [if_pos hzp]
+  · rw [if_neg hzp]
+    rw [mem_poles, not_and, not_not] at hzp
+    exact (hzp (ball_subset_closedBall hz)).symm
+
+variable {n} in
+theorem Fpre_eq_zero {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) (hm : m z ≠ 0) : Fpre H n z = 0 := by
+  rw [Fpre_apply, zprod_eq_zero (poles H n) m ((mem_poles H).mpr ⟨ball_subset_closedBall hz, hm⟩) hm,
+    mul_zero]
+
+variable {n} in
+theorem analyticAt_Fpre {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) (hm : m z = 0) :
+    AnalyticAt ℂ (Fpre H n) z := by
+  have hzp : z ∉ poles H n := by rw [mem_poles]; exact fun h => h.2 hm
+  unfold Fpre
+  exact (analyticAt_exp_Phi H hz).mul (analyticAt_zprod (poles H n) m hzp)
+
+variable {n} in
+theorem Fpre_ne_zero {z : ℂ} (hm : m z = 0) : Fpre H n z ≠ 0 := by
+  have hzp : z ∉ poles H n := by rw [mem_poles]; exact fun h => h.2 hm
+  rw [Fpre_apply]
+  exact mul_ne_zero (Complex.exp_ne_zero _) (zprod_ne_zero (poles H n) m hzp)
+
+variable {n} in
+theorem hasDerivAt_Fpre {z : ℂ} (hz : z ∈ ball (ctr n) (rad n)) (hm : m z = 0) :
+    HasDerivAt (Fpre H n) (ω z * Fpre H n z) z := by
+  have hzp : z ∉ poles H n := by rw [mem_poles]; exact fun h => h.2 hm
+  have h1 : HasDerivAt (fun w => Complex.exp (Phi H n w))
+      (Complex.exp (Phi H n z) * rho' H n z) z := (hasDerivAt_Phi H hz).cexp
+  have h2 := hasDerivAt_zprod (poles H n) m hzp
+  have h3 := h1.mul h2
+  unfold Fpre
+  refine h3.congr_deriv (Eq.symm ?_)
+  rw [rho'_of_eq_zero H hm]
+  try rw [Pi.mul_apply]
+  ring
+
+end OneDisc
+
+end Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive

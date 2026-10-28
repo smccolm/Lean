@@ -1,0 +1,45 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_invariant_untwist_of_multiplier_eq_exp_periodOf.lean.txt",
+      "bytes": 41384,
+      "sha256": "C77197817692A6C793F112DFF3DD16266D8351B3F195FBA92C787E6F66DF4C84",
+      "gitBlob": "3a4224d8eed0e1db4117355f9e94e93fcc1ddfb6",
+      "retrievedUTC": "2026-10-27T16:17:53.367410+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "bytes": 46085,
+      "sha256": "63556CBEF1EEDE8F6381B2F89A1E4BA4CDBBD9AEF626C5044F4BFB9CC881E9F2",
+      "gitBlob": "93308c3ebaa10b0c2c2fe175ffcdb96cab2a9e45",
+      "retrievedUTC": "2026-10-27T16:17:53.673462+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_meromorphicOrderAt_smul_eq_and_card_stabilizer_dvd_of_multiplier_eq_exp_periodOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_meromorphicOrderAt_smul_eq_and_card_stabilizer_dvd_of_multiplier_eq_exp_periodOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_meromorphicOrderAt_smul_eq_and_card_stabilizer_dvd_of_multiplier_eq_exp_periodOf.lean.txt",
+      "bytes": 18927,
+      "sha256": "6FB9B40398C40B1D1E1AC73F258F84CB65DFF22D1D3AB76CA68B2097F7E0C757",
+      "gitBlob": "329fd1d90dc2c4adc3206e5d6cd8cde2fb5b79d7",
+      "retrievedUTC": "2026-10-27T16:17:53.929763+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean.txt",
+      "bytes": 34952,
+      "sha256": "D8B47B849B61CB9E717BD82ED7DAEF4138517FB51AA367FF7D86AC2DA4C57E2A",
+      "gitBlob": "b390745cda60291c7468a1b2b740626aa0cd92f6",
+      "retrievedUTC": "2026-10-27T16:17:54.179194+00:00"
+    }
+  ]
+}

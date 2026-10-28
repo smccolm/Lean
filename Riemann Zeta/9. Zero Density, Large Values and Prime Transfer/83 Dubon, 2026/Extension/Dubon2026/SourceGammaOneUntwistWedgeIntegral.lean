@@ -1,0 +1,54 @@
+import Dubon2026.SourceComplexWedgeIntegral
+import Dubon2026.SourceMeromorphicPeriodUntwist
+import Dubon2026.SourceGammaOneExactRamification
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> winding-period limit. The actual untwist of the
+original meromorphic divisor supplies every local smooth-model hypothesis
+of the wedge integral identity. Its multiplier invariance and cusp control
+are proved separately by sourceGamma1_meromorphic_invariant_untwist. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane MeasureTheory Filter CongruenceSubgroup Matrix.SpecialLinearGroup
+open SourceCurve SourceFunctionField SourceFunctionField.GammaOne SourcePeriodUntwist
+open scoped MatrixGroups Topology
+
+theorem sourceGamma1_untwist_wedge_integral (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N)
+    (D : Divisor ℂ (functionFieldOver (Gamma1 N) ℂ)) (F : ℍ → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ) : ℤ) : WithTop ℤ))
+    (k g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2)
+    (h : ℂ → ℂ) (hh : ContDiff ℝ 2 h) (hsupp : HasCompactSupport h)
+    (hU : tsupport h ⊆ upperHalfPlaneSet) :
+    Integrable (fun z : ℂ => Ek g z / Φ F k z *
+      (fderiv ℝ (Φ F k) z 1 * fderiv ℝ h z Complex.I -
+        fderiv ℝ (Φ F k) z Complex.I * fderiv ℝ h z 1)) ∧
+    Integrable (fun z : ℂ => g (ofComplex z) * h z *
+      ((fderiv ℝ (Φ F k) z 1 + Complex.I * fderiv ℝ (Φ F k) z Complex.I) / 2 / Φ F k z)) ∧
+    Complex.I / (Real.pi : ℂ) * (∫ z : ℂ, Ek g z / Φ F k z *
+      (fderiv ℝ (Φ F k) z 1 * fderiv ℝ h z Complex.I -
+        fderiv ℝ (Φ F k) z Complex.I * fderiv ℝ h z 1)) +
+      2 * ∑ᶠ a : ℂ, (((analyticRamification hT (ofComplex a) : ℤ) *
+        D (analyticPlace hT (ofComplex a)) : ℤ) : ℂ) * Ek g a * h a =
+      2 / (Real.pi : ℂ) * ∫ z : ℂ, g (ofComplex z) * h z *
+        ((fderiv ℝ (Φ F k) z 1 + Complex.I * fderiv ℝ (Φ F k) z Complex.I) / 2 / Φ F k z) := by
+  have hl : ∀ z ∈ upperHalfPlaneSet, ∃ Ψ : ℂ → ℂ,
+      ContDiffAt ℝ 1 Ψ z ∧ Ψ z ≠ 0 ∧
+      Φ F k =ᶠ[𝓝 z] fun w => (w - z) ^
+        ((analyticRamification hT (ofComplex z) : ℤ) *
+          D (analyticPlace hT (ofComplex z))) * Ψ w := by
+    intro z hz
+    simpa only [ofComplex_apply_of_im_pos hz] using
+      Φ_local F k hF ⟨z, hz⟩
+        ((analyticRamification hT ⟨z, hz⟩ : ℤ) * D (analyticPlace hT ⟨z, hz⟩))
+        (ho ⟨z, hz⟩)
+  exact SourceComplexReciprocity.Wedge.integral_wedge_residue_identity
+    upperHalfPlaneSet isOpen_upperHalfPlaneSet (Φ F k)
+    (fun z => (analyticRamification hT (ofComplex z) : ℤ) *
+      D (analyticPlace hT (ofComplex z))) hl
+    (Ek g) (fun z => g (ofComplex z)) (fun z hz => Ek_hasDerivAt g hz) h hh hsupp hU
+
+end
+end Dubon2026

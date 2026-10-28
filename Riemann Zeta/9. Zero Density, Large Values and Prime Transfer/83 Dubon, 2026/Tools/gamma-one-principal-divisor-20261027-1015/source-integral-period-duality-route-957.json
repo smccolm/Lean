@@ -1,0 +1,41 @@
+{
+  "chain": "DUB17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> Gamma1 Picard/H1 -> principal-divisor converse -> multiplier triviality -> integral Petersson/real-period duality -> actual period generators represented by integer parabolic characters.",
+  "assumptionsToDischarge": "Construct the integer parabolic character representing each actual period generator, then combine with actual Green period identities, existing real-period surjectivity and Petersson nondegeneracy to derive integral real periods from Petersson lattice membership.",
+  "shorterRoutes": [
+    "Reuse native SL2 cocycle existence instead of an external custom cocycle type or a new group presentation.",
+    "Reuse complete local parabolic classification instead of reproving rational fixed points.",
+    "Reuse actual primitive edges, cusp limits, quotient transitions and finite-sum reindexing from the newly verified reciprocity chain.",
+    "Apply finite-divisor reciprocity directly to the given meromorphic function, avoiding a second function and quotient comparison."
+  ],
+  "remaining": "This route does not supply the prescribed meromorphic function, arithmetic association, automorphy or higher symmetric-power continuation; DUB17--20 remain open.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSL2CocycleExists.lean",
+      "sha256": "3E5052429EB3520C000EB9B8FC2EC26D6FE7352A10AC61BFA42515C6182F97AE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicCosetPotentials.lean",
+      "sha256": "59B819DB0387CEA88C7E06FDED1209AC80E5DA3CD61254AB0F62CED23CD30FB3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoCosetPeriods.lean",
+      "sha256": "E9F895DC16367E07878CF588FC25386418D575952A7C1E28B4A1CC62B0784D5A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "sha256": "EA2BE01343B9FB427D5AC677F8BE3342116D922544B2FC4A2063AC14FFCC1E27"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneMeromorphicPrincipalDivisor.lean",
+      "sha256": "BFC520DEBDB84C434C29A2118559A4DB86211E8491926EA708A0399672BE89EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isParabolicHom_sum_intCast_mul_edgeIntegral_eq_period.lean.txt",
+      "sha256": "05F0E38BAC72E08351261BB4A3D75AFCA604DADFDB02DA2983B1C65418A30889"
+    }
+  ]
+}

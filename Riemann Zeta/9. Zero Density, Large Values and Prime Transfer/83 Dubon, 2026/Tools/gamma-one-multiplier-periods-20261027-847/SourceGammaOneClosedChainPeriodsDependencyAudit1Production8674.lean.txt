@@ -1,0 +1,32 @@
+import Dubon2026.SourceWeightTwoEndpointPeriods
+import Dubon2026.SourceWeightTwoIntegralPeriods
+import Dubon2026.SourceWeightTwoClosedChainPeriods
+import Dubon2026.SourceWeightTwoSegmentPeriods
+import Dubon2026.SourceGammaOneClosedChainIntegral
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceUpperHalfPlane_primitive_difference, `Dubon2026.sourceWeightTwoAlong_apply, `Dubon2026.sourceWeightTwoAlong_smul, `Dubon2026.sourceWeightTwoAlong_eq_sub, `Dubon2026.sourceWeightTwoDualPeriod_apply, `Dubon2026.sourceWeightTwoDualPeriod_mem, `Dubon2026.sourceWeightTwoAlong_smul_sub, `Dubon2026.sourceWeightTwoAlong_quotient_smul, `Dubon2026.sourceWeightTwoOrbitPeriod_mk, `Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero, `Dubon2026.sourceWeightTwoOrbitBoundary_apply, `Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary, `Dubon2026.sourceUpperHalfPlane_segment_im_pos, `Dubon2026.sourceWeightTwoAlong_eq_segment_integral, `Dubon2026.sourceGamma1_closed_chain_integrals_mem, `Dubon2026.sourceWeightTwoAlong, `Dubon2026.sourceWeightTwoDualPeriod, `Dubon2026.sourceWeightTwoIntegralLattice, `Dubon2026.sourceWeightTwoOrbitPeriod, `Dubon2026.sourceWeightTwoOrbitBoundary]
+  let localModules : Array Name := #[`Dubon2026.SourceWeightTwoEndpointPeriods, `Dubon2026.SourceWeightTwoIntegralPeriods, `Dubon2026.SourceWeightTwoClosedChainPeriods, `Dubon2026.SourceWeightTwoSegmentPeriods, `Dubon2026.SourceGammaOneClosedChainIntegral]
+  let required : Array Name := #[`Dubon2026.sourceUpperHalfPlane_primitive_difference, `Dubon2026.sourceWeightTwoAlong_apply, `Dubon2026.sourceWeightTwoAlong_smul, `Dubon2026.sourceWeightTwoAlong_eq_sub, `Dubon2026.sourceWeightTwoDualPeriod_apply, `Dubon2026.sourceWeightTwoDualPeriod_mem, `Dubon2026.sourceWeightTwoAlong_smul_sub, `Dubon2026.sourceWeightTwoAlong_quotient_smul, `Dubon2026.sourceWeightTwoOrbitPeriod_mk, `Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero, `Dubon2026.sourceWeightTwoOrbitBoundary_apply, `Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary, `Dubon2026.sourceUpperHalfPlane_segment_im_pos, `Dubon2026.sourceWeightTwoAlong_eq_segment_integral, `Dubon2026.sourceGamma1_closed_chain_integrals_mem, `Dubon2026.sourceWeightTwoAlong, `Dubon2026.sourceWeightTwoDualPeriod, `Dubon2026.sourceWeightTwoIntegralLattice, `Dubon2026.sourceWeightTwoOrbitPeriod, `Dubon2026.sourceWeightTwoOrbitBoundary, `Dubon2026.sourceWeightTwoPrimitive_period, `Dubon2026.sourceWeightTwoPrimitive_hasDerivAt, `Dubon2026.sourceWeightTwoPeriodValue_apply, `Dubon2026.SourceFunctionField.OriginalPrimitiveGlue.eventually_sub_eq_of_hasDerivAt]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE CLOSED CHAIN PERIODS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual original Gamma1 closed-chain segment integrals, integer modular periods, native primitive derivatives and transformation. Only declaration values are traversed. Integral character lifting, analytic reciprocity, original arithmetic comparison and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

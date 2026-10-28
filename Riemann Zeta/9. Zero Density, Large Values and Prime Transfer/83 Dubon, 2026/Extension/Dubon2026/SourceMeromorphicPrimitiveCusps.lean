@@ -1,0 +1,193 @@
+import Dubon2026.SourceMeromorphicCuspPrimitiveDecay
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+actual meromorphic function -> nonzero translated cusp limits. The actual
+weight-two differential decay rules out poles high in each cusp. Its
+primitive has a uniform limit, and the actual function is a nonzero constant
+times its exponential. The analytic differential input remains. -/
+namespace Dubon2026.SourceMeromorphicPrimitiveMultiplier
+noncomputable section
+open scoped MatrixGroups Topology ModularForm
+open UpperHalfPlane Filter Set Metric
+
+section Cusp
+
+variable {m : ℍ → ℤ} {ω : ℍ → ℂ} {G : ℂ → ℂ} (hG : GSpec m ω G)
+  (hres : ∀ τ : ℍ, ∃ g : ℂ → ℂ, AnalyticAt ℂ g (τ : ℂ) ∧
+    (∀ᶠ z in 𝓝[≠] (τ : ℂ), ω (ofComplex z) = (m τ : ℂ) / (z - τ) + g z) ∧
+    (m τ = 0 → ω τ = g τ))
+include hG hres
+
+omit hG in
+
+theorem m_smul_eq_zero_of_lt_im {σ : SL(2, ℤ)} {C δ A₀ : ℝ} (hb : CuspBound ω σ C δ A₀)
+    (τ : ℍ) (hτ : A₀ < τ.im) : m (σ • τ) = 0 := by
+  by_contra hm
+  have h1 : Tendsto (fun z => ‖ω (ofComplex (μ σ z))‖) (𝓝[≠] (τ : ℂ)) atTop :=
+    (tendsto_norm_omega_atTop hres (σ • τ) hm).comp (tendsto_μ_nhdsNE σ τ)
+  set D : ℂ → ℂ := fun z => denom (Matrix.SpecialLinearGroup.mapGL ℝ σ) z with hD_def
+  have hDc : Continuous D := continuous_denom _
+  set B : ℝ := C * ‖D τ‖ ^ 2 + 1
+  have h2 : ∀ᶠ z in 𝓝 (τ : ℂ), C * ‖D z‖ ^ 2 < B := by
+    have : ContinuousAt (fun z => C * ‖D z‖ ^ 2) τ := by fun_prop
+    exact this.eventually_lt continuousAt_const (lt_add_one _)
+  have h3 : ∀ᶠ z in 𝓝 (τ : ℂ), A₀ < z.im :=
+    (isOpen_lt continuous_const Complex.continuous_im).mem_nhds hτ
+  have h4 : ∀ᶠ z in 𝓝[≠] (τ : ℂ), ‖ω (ofComplex (μ σ z))‖ < B := by
+    filter_upwards [mem_nhdsWithin_of_mem_nhds h2, mem_nhdsWithin_of_mem_nhds h3]
+      with z hz2 hz3
+    have hz : 0 < z.im := hb.A₀_pos.trans hz3
+    set τz : ℍ := ⟨z, hz⟩
+    have hψ : ‖ω (σ • τz) * D z ^ (-2 : ℤ)‖ ≤ C * Real.exp (-δ * z.im) := by
+      have := hb.bound τz hz3.le
+      rwa [slash_two_apply] at this
+    have hD : D z ≠ 0 := denom_ne_zero (Matrix.SpecialLinearGroup.mapGL ℝ σ) τz
+    have hexp : Real.exp (-δ * z.im) ≤ 1 := by
+      rw [Real.exp_le_one_iff]
+      have := hb.δ_pos
+      nlinarith
+    have key : ω (σ • τz) = (ω (σ • τz) * D z ^ (-2 : ℤ)) * D z ^ (2 : ℤ) := by
+      rw [mul_assoc, ← zpow_add₀ hD]
+      norm_num
+    rw [μ_of_im_pos σ hz, ofComplex_apply, key, norm_mul, norm_zpow]
+    calc ‖ω (σ • τz) * D z ^ (-2 : ℤ)‖ * ‖D z‖ ^ (2 : ℤ)
+        ≤ (C * Real.exp (-δ * z.im)) * ‖D z‖ ^ (2 : ℤ) := by gcongr
+      _ ≤ (C * 1) * ‖D z‖ ^ (2 : ℤ) := by gcongr; exact hb.C_nonneg
+      _ = C * ‖D z‖ ^ 2 := by rw [mul_one, zpow_two, sq]
+      _ < B := hz2
+  obtain ⟨z, hz1, hz2⟩ := ((h1.eventually_gt_atTop B).and h4).exists
+  exact lt_asymm hz1 hz2
+
+theorem GSpec.exists_limit_cusp (σ : SL(2, ℤ))
+    (hcuspσ : ∃ δ : ℝ, 0 < δ ∧
+      (ω ∣[(2 : ℤ)] σ) =O[atImInfty] fun τ : ℍ => Real.exp (-δ * τ.im)) :
+    ∃ L : ℂ, L ≠ 0 ∧ Tendsto (fun τ : ℍ => G ↑(σ • τ)) atImInfty (𝓝 L) := by
+  obtain ⟨C, δ, A₀, hb⟩ := exists_cuspBound hcuspσ
+  set ψ := ω ∣[(2 : ℤ)] σ with hψ_def
+  set P : Set ℂ := {z | A₀ < z.im} with hP_def
+  have hPo : IsOpen P := isOpen_lt continuous_const Complex.continuous_im
+  have hP0 : ∀ z ∈ P, 0 < z.im := fun z hz => hb.A₀_pos.trans hz
+  have hm0 : ∀ z (hz : z ∈ P), m (σ • ⟨z, hP0 z hz⟩) = 0 := fun z hz =>
+    m_smul_eq_zero_of_lt_im hres hb _ hz
+
+  set K : ℂ → ℂ := fun z => G (μ σ z) with hK_def
+  set ψt : ℂ → ℂ := fun z => ψ (ofComplex z) with hψt_def
+  have hK : ∀ z (hz : z ∈ P), HasDerivAt K (ψt z * K z) z ∧ K z ≠ 0 := by
+    intro z hz
+    have hz0 := hP0 z hz
+    set τz : ℍ := ⟨z, hz0⟩
+    have h1 := hG.hasDerivAt_comp_μ σ τz (hm0 z hz)
+    refine ⟨?_, ?_⟩
+    · have e : ψt z = ψ τz := by
+        simp only [hψt_def]
+        rw [ofComplex_apply_of_im_pos hz0]
+      rw [e]
+      exact h1
+    · show G (μ σ z) ≠ 0
+      rw [μ_of_im_pos σ hz0]
+      exact (hG.ne_zero_iff _).mpr (hm0 z hz)
+  have hψt : DifferentiableOn ℂ ψt P := by
+    intro z hz
+    have hz0 := hP0 z hz
+    set τz : ℍ := ⟨z, hz0⟩
+    have e : ψt = fun w => ω (ofComplex (μ σ w)) *
+        denom (Matrix.SpecialLinearGroup.mapGL ℝ σ) ↑(ofComplex w) ^ (-2 : ℤ) := by
+      funext w
+      simp only [hψt_def, hψ_def, slash_two_apply, μ, ofComplex_apply]
+    rw [e]
+    apply DifferentiableAt.differentiableWithinAt
+    apply DifferentiableAt.mul
+    · have ha : AnalyticAt ℂ (fun z => ω (ofComplex z)) (μ σ z) := by
+        rw [μ_of_im_pos σ hz0]
+        exact analyticAt_omega hres _ (hm0 z hz)
+      exact ha.differentiableAt.comp z (hasDerivAt_μ σ τz).differentiableAt
+    · have e2 : (fun w => denom (Matrix.SpecialLinearGroup.mapGL ℝ σ) ↑(ofComplex w) ^ (-2 : ℤ))
+          =ᶠ[𝓝 z] fun w => denom (Matrix.SpecialLinearGroup.mapGL ℝ σ) w ^ (-2 : ℤ) := by
+        filter_upwards [isOpen_upperHalfPlaneSet.mem_nhds hz0] with w hw
+        rw [coe_ofComplex_of_im_pos hw]
+      refine (DifferentiableAt.zpow ?_ (Or.inl (denom_ne_zero (Matrix.SpecialLinearGroup.mapGL ℝ σ) τz))).congr_of_eventuallyEq
+        e2
+      exact differentiableAt_denom _ z
+
+  obtain ⟨Ψ, hΨ⟩ := exists_primitive_halfPlane hψt
+  have hq : ∀ z ∈ P, HasDerivAt (fun w => K w * Complex.exp (-Ψ w)) 0 z := by
+    intro z hz
+    have h1 := (hK z hz).1
+    have h2 : HasDerivAt (fun w => Complex.exp (-Ψ w)) (Complex.exp (-Ψ z) * -ψt z) z :=
+      (hΨ z hz).neg.cexp
+    convert h1.mul h2 using 1
+    ring
+  set zb : ℂ := ((A₀ + 1 : ℝ) : ℂ) * Complex.I with hzb_def
+  have hzb : zb ∈ P := by
+    show A₀ < (((A₀ + 1 : ℝ) : ℂ) * Complex.I).im
+    simp
+  set κ : ℂ := K zb * Complex.exp (-Ψ zb) with hκ_def
+  have hκ : κ ≠ 0 := mul_ne_zero (hK zb hzb).2 (Complex.exp_ne_zero _)
+  have hKexp : ∀ z ∈ P, K z = κ * Complex.exp (Ψ z) := by
+    intro z hz
+    have hc := hPo.is_const_of_deriv_eq_zero (convex_halfSpace_im_gt A₀).isPreconnected
+      (fun w hw => (hq w hw).differentiableAt.differentiableWithinAt)
+      (fun w hw => (hq w hw).deriv) hz hzb
+    calc K z = (K z * Complex.exp (-Ψ z)) * Complex.exp (Ψ z) := by
+          rw [mul_assoc, ← Complex.exp_add, neg_add_cancel, Complex.exp_zero, mul_one]
+      _ = κ * Complex.exp (Ψ z) := by rw [hc]
+
+  have hdecay : ∀ z : ℂ, A₀ < z.im → ‖ψt z‖ ≤ C * Real.exp (-δ * z.im) := by
+    intro z hz
+    have hz0 : 0 < z.im := hb.A₀_pos.trans hz
+    have := hb.bound ⟨z, hz0⟩ hz.le
+    simp only [hψt_def]
+    rwa [ofComplex_apply_of_im_pos hz0]
+  obtain ⟨L, M, hLM⟩ := exists_uniform_limit_of_exp_decay hb.δ_pos hΨ hdecay
+
+  have him : Tendsto (fun τ : ℍ => τ.im) atImInfty atTop := Filter.tendsto_comap
+  have hg0 : Tendsto (fun τ : ℍ => M * Real.exp (-δ * τ.im)) atImInfty (𝓝 0) := by
+    have h1 : Tendsto (fun τ : ℍ => -δ * τ.im) atImInfty atBot := by
+      have := (him.const_mul_atTop hb.δ_pos)
+      have h2 := tendsto_neg_atTop_atBot.comp this
+      refine h2.congr fun τ => ?_
+      simp [neg_mul]
+    have h3 := (Real.tendsto_exp_atBot.comp h1).const_mul M
+    rw [mul_zero] at h3
+    exact h3
+  have hΨlim : Tendsto (fun τ : ℍ => Ψ ↑τ) atImInfty (𝓝 L) := by
+    rw [tendsto_iff_norm_sub_tendsto_zero]
+    refine squeeze_zero' (Eventually.of_forall fun _ => norm_nonneg _) ?_ hg0
+    rw [Filter.Eventually, atImInfty_mem]
+    refine ⟨A₀ + 1, fun τ hτ => hLM τ ?_⟩
+    show A₀ < τ.im
+    linarith
+  refine ⟨κ * Complex.exp L, mul_ne_zero hκ (Complex.exp_ne_zero _), ?_⟩
+  have hlim : Tendsto (fun τ : ℍ => κ * Complex.exp (Ψ ↑τ)) atImInfty
+      (𝓝 (κ * Complex.exp L)) :=
+    ((Complex.continuous_exp.tendsto L).comp hΨlim).const_mul κ
+  refine hlim.congr' ?_
+  rw [Filter.EventuallyEq, Filter.Eventually, atImInfty_mem]
+  refine ⟨A₀ + 1, fun τ hτ => ?_⟩
+  have hτP : (τ : ℂ) ∈ P := by
+    show A₀ < τ.im
+    linarith
+  show κ * Complex.exp (Ψ ↑τ) = G ↑(σ • τ)
+  rw [← μ_coe, ← hKexp τ hτP]
+
+end Cusp
+theorem exists_meromorphic_multiplier_cusp_orders
+    (Γ : Subgroup SL(2, ℤ)) (m : ℍ → ℤ) (ω : ℍ → ℂ)
+    (hΓ : ∀ γ ∈ Γ, ω ∣[(2 : ℤ)] γ = ω)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ δ : ℝ, 0 < δ ∧
+      (ω ∣[(2 : ℤ)] σ) =O[atImInfty] fun τ : ℍ => Real.exp (-δ * τ.im))
+    (hres : ∀ τ : ℍ, ∃ g : ℂ → ℂ, AnalyticAt ℂ g (τ : ℂ) ∧
+      (∀ᶠ z in 𝓝[≠] (τ : ℂ), ω (ofComplex z) = (m τ : ℂ) / (z - τ) + g z) ∧
+      (m τ = 0 → ω τ = g τ)) :
+    ∃ (F : ℍ → ℂ) (χ : Γ → ℂ),
+      (∀ τ : ℍ, MeromorphicAt (fun z : ℂ => F (ofComplex z)) (τ : ℂ)) ∧
+      (∀ (γ : Γ) (τ : ℍ), F ((γ : SL(2, ℤ)) • τ) = χ γ * F τ) ∧
+      (∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+        Filter.Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L)) ∧
+      ∀ τ : ℍ, meromorphicOrderAt (fun z : ℂ => F (ofComplex z)) (τ : ℂ) = (m τ : WithTop ℤ) := by
+  obtain ⟨G, χ, hG, -, hχ⟩ := exists_meromorphic_multiplier m ω hres (fun γ => hΓ γ γ.2)
+  exact ⟨fun τ => G τ, χ, fun τ => hG.meromorphicAt_ofComplex τ, hχ,
+    fun σ => hG.exists_limit_cusp hres σ (hcusp σ), fun τ => hG.meromorphicOrderAt_ofComplex τ⟩
+
+end
+end Dubon2026.SourceMeromorphicPrimitiveMultiplier

@@ -1,0 +1,88 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_one"
+  ],
+  "recordedUTC": "2026-10-27T16:05:38.645834+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceModularEllipticFixedPoint",
+    "SourceMeromorphicMultiplierParabolic",
+    "SourceMeromorphicMultiplierGerm",
+    "SourceGammaOneMeromorphicMultiplierElliptic",
+    "SourceGammaOneMeromorphicMultiplierPeriods"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularEllipticFixedPoint.lean",
+      "sha256": "186DD6B4F0BAF53874F82A7125ABBD3001E3A9E0A6E9BB4FEAE4F0175D74884C",
+      "oleanSha256": "C820B650BD8C213A52839F027AE888EE88F72BF3038154A6DECA43010609EF43"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierParabolic.lean",
+      "sha256": "EDDE5FC329004FEE120B3A3A981FAFF80ADDE4B12073346840069FC0802FABC1",
+      "oleanSha256": "43261BF50642EC1347D308F65248CA2FC235BFD5FE4CDF28C3C051129A333F94"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicMultiplierGerm.lean",
+      "sha256": "36D0C9BF228C90F76C0AC26A7A68517B90F8658FBFE37ECF215BA9751EB51928",
+      "oleanSha256": "298139F59060B9D51378CFA52C7D79EBA9438DA810861ADA166FE9DC373D0101"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierElliptic.lean",
+      "sha256": "887223CE81E94D3330A64932033263BB1478F4959AC3E19EFACB1E04167D288D",
+      "oleanSha256": "DDA34AA3651DB4F8C09DB1033C4E89BDFBA7A8D045E1B5368F38E537650D4E3A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriods.lean",
+      "sha256": "7B2777EE07EE05E00DD1A4C8A3EDEF1E3FD65F85BF91249179C26EE66638E275",
+      "oleanSha256": "EEE91B696F6109F78F93DF3A3C12DAF78C3065BD25703FF3D3F09AB9D31922DA"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceMeromorphicMultiplier.exists_smul_eq_self_of_trace_sq_lt_four",
+    "Dubon2026.SourceMeromorphicMultiplier.tendsto_vadd_atImInfty",
+    "Dubon2026.SourceMeromorphicMultiplier.conj_T_zpow_smul",
+    "Dubon2026.SourceMeromorphicMultiplier.exists_apply_ne_zero",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_one",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_mul",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_denom_zpow",
+    "Dubon2026.SourceMeromorphicMultiplier.gammaOne_multiplier_eq_one_of_trace_sq_lt",
+    "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceMeromorphicMultiplier.exists_smul_eq_self_of_trace_sq_lt_four",
+    "Dubon2026.SourceMeromorphicMultiplier.tendsto_vadd_atImInfty",
+    "Dubon2026.SourceMeromorphicMultiplier.conj_T_zpow_smul",
+    "Dubon2026.SourceMeromorphicMultiplier.exists_apply_ne_zero",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_one",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_mul",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_one_of_trace_sq",
+    "Dubon2026.SourceMeromorphicMultiplier.multiplier_eq_denom_zpow",
+    "Dubon2026.SourceMeromorphicMultiplier.gammaOne_multiplier_eq_one_of_trace_sq_lt",
+    "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsAudit1.log",
+  "logSha256": "5A6408D86B3DD7780C678D36939F75AE9101018D4AEF539D60AA77B2E9DC4AA3",
+  "auditSha256": "B942E220EB6701285D1F376CD95F59D48A33994F122FC594E12B507E6FF361D9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 101,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicMultiplierPeriodsDependencyAudit1.log",
+  "dependencyAuditSha256": "490DDFC5C55B8751A131A843E8C1D40662E206A0D98FF898140C06CA4F6FCE3A",
+  "dependencyAuditSourceSha256": "DDBAD9FA0F788995785EFEA098034029E6BCC0326620ABEEB0787933EFD91186",
+  "consumers": [
+    "Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period"
+  ],
+  "dependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi -> actual meromorphic multiplier -> unitary cusp-form period representation.",
+  "discharged": "A unitary multiplier of an actual meromorphic function, with prescribed original Gamma1 divisor orders and nonzero limits at every translated cusp, is realized by actual weight-two cusp-form real periods. Multiplicativity is derived from a nonzero cusp limit; elliptic triviality consumes actual finite germ orders and the exact signed stabilizer formula; parabolic triviality consumes signed translation classification and cusp limits. No character law, triviality, logarithm or cusp-form-realization premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Construct the actual meromorphic function from the original Abel-Jacobi condition; prove analytic reciprocity; finish original Picard/H1/Hecke/diamond/full-parabolic/transpose comparison and original all-weight arithmetic association. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-multiplier-periods-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "98BF45D7AA807F6A7D573E3381F19AEE6442B2326A4A3C8F5CBE892AC660ADF5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

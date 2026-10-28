@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> original smooth divisor period term",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-audit-route-914.json",
+    "sha256": "E4C16AD9A630187A52CA7E7A721369E38A72FD1348C561D2E4391E9F909D9AC0",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> original smooth divisor period term",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-shorter-route-910.json",
+          "sha256": "57AA95A46EF98F15ABAC1F7290B8F1ABC982DAB5CD7D2DE9C44262205DBEB977"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-period-route-912.json",
+          "sha256": "3B1C21E474CE852B174018720C3BEFFF6910C9618D2A9E544467579DF651C588"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-1b-scratch-receipt.json",
+          "sha256": "E1FED85BC3E76CF4CE3D0395F754205F4E0405D0B8059F2E4A709CE6084B9897"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+          "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+        }
+      ],
+      "shorterRoute": "Finite compact overlap plus native change of variables gives exact unfolding. Native compact boundedness and the existing exact partition formula give eventual exact equality, eliminating dominated-convergence bookkeeping. Reuse the normalized endpoint primitive and exact stabilizer/ramification formula; preserve original Gamma1 forms and periods under signed extension.",
+      "assumptionsToDischarge": [
+        "Integrability of the constructed comparison logarithmic derivative against the canonical smooth cutoff",
+        "Its exact normalized limit with actual original-divisor coefficients and original Gamma1 endpoint periods",
+        "Derive all compact coefficient, degree-zero, order-divisibility and primitive inputs from proved upstream constructions"
+      ],
+      "remaining": "The filled quotient, winding-period and Petersson assembly must still establish analytic reciprocity and the original principal-divisor converse. The full all-weight arithmetic realization, automorphy and higher symmetric-power continuation chain remains. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "discharged": [
+    "Integrability of the constructed comparison logarithmic derivative against the canonical smooth cutoff",
+    "Its exact normalized limit with actual original-divisor coefficients and original Gamma1 endpoint periods",
+    "Derive all compact coefficient, degree-zero, order-divisibility and primitive inputs from proved upstream constructions"
+  ],
+  "remaining": "The filled quotient, winding-period and Petersson assembly must still establish analytic reciprocity and the original principal-divisor converse. The full all-weight arithmetic realization, automorphy and higher symmetric-power continuation chain remains. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

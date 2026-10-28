@@ -1,0 +1,444 @@
+{
+  "status": "Canonical PASS of the original Gamma1 untwist, signed periods and compact-support logarithmic residues. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_reciprocity_inputs_8695.ps1",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/build_gamma_one_reciprocity_inputs_8695.ps1",
+      "sha256": "3D715C7E7A78A63D5FA0A18CC1E3C024E415FD7AFA0583EC86E445BAF051BF1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_reciprocity_inputs_ownership_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/compare_gamma_one_reciprocity_inputs_ownership_8695.py",
+      "sha256": "5441B7281995AACC95DC538057C8A97C69DBDCFC87BA9CB539EA99A8C3565422"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-inputs-preexecution-review-8695.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-inputs-preexecution-review-8695.json",
+      "sha256": "BD0851CD87B8B5805B61E9FD33EB82CFA5986215834D970F498F18C63BB6BE43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-inputs-preflight-8695.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/gamma-one-reciprocity-inputs-preflight-8695.json",
+      "sha256": "30602F7D6335319FA3D57BD3A4A0E3A93B4855581558D8490B1F50BAA31B3F11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_reciprocity_inputs_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/integrate_source_gamma_one_reciprocity_inputs_8695.py",
+      "sha256": "B9E899801427D45C77022F09A2724641638DFAF23FA56A545FDD017C9D2DD0F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_reciprocity_inputs_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/preflight_gamma_one_reciprocity_inputs_8695.py",
+      "sha256": "FFB91703E555C3E169A7FCB819A01C19404BE256F5E12EE8078A93590DAB406D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reciprocity_inputs_global_ownership_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_reciprocity_inputs_global_ownership_8695.py",
+      "sha256": "0BD129F6596D4ECC7295ABFE9A5C3AC9173CFBEB14E77697655FA3AFF77036CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reciprocity_inputs_production_ownership_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_reciprocity_inputs_production_ownership_8695.py",
+      "sha256": "4BBA1EEDDC70CCE2DF069F61F5019C1AA98AEA8E8FAC7F7768FB11FE91DC65BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reciprocity_inputs_promotion_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/prepare_gamma_one_reciprocity_inputs_promotion_8695.py",
+      "sha256": "A217399E7CA93BA635C62BB5D80EAF83061A4E7D4F5A2793C32A5A7135987C7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_reciprocity_inputs_8695.py",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/record_source_gamma_one_reciprocity_inputs_8695.py",
+      "sha256": "B439099954AFB51EB0E04A33FC50AA23ECC99446FD7A01A556DD93D24F45593C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reciprocity-inputs-ownership-comparison-8695.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-reciprocity-inputs-ownership-comparison-8695.json",
+      "sha256": "882478E4CF202A9ACF305B48B44B4F53758837C1AB09D6916423793569738A3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reciprocity-inputs-production-build-8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-reciprocity-inputs-production-build-8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reciprocity-inputs-production-build-8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-reciprocity-inputs-production-build-8695.log",
+      "sha256": "B05C76EC79651772556E77EE28A8D193008021B1DADA5A61EB6951CECE3358CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reciprocity-inputs-scratch-ownership-8695.json",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/source-gamma-one-reciprocity-inputs-scratch-ownership-8695.json",
+      "sha256": "5E428C28C836A5CB3AAEC15B60C816520C3E574FFC3915E7FD33F1C0A370ACE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.lean.txt",
+      "sha256": "5B61AAB349D6CF693BDCB862A456987A7680CD8414222971B59730687B172FB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneDivisorReciprocityDataDependencyAudit1Production8695.log",
+      "sha256": "3336A0308D49CD435C5CCC8E72AC0E002D52C8F6082C6EF3FD034972AC5A2786"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1Production8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1Production8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1Production8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1Production8695.lean.txt",
+      "sha256": "4BAD860EBACDA674E3ED44119D8FCFB418392FE7795EDCB72178605A3C8C7346"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistDependencyAudit1Production8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneInvariantUntwistDependencyAudit1Production8695.log",
+      "sha256": "80CD8D9742F46CDB7199B1F14906B3952E82F803FB0E37794DB55CF623AF05C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.lean.txt",
+      "sha256": "69FB7ACECE73AEB764B8D005D4B09EDC74ADA74EBE4816FF088BBDFCB5BFCCBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneLogDerivativeResiduesDependencyAudit1Production8695.log",
+      "sha256": "6FDBA0AD36A148098321118636BB4BF1C274C9C69F2492F9DEBEFA294775D30E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsGlobalOwnership8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsGlobalOwnership8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsGlobalOwnership8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsGlobalOwnership8695.lean.txt",
+      "sha256": "E1BAD7DDB33464CDB5754DEB3C5885ECFD2D13076DAE0147994D635BECD53F94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsGlobalOwnership8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsGlobalOwnership8695.log",
+      "sha256": "91FA8AB639EEDFA1D7FA5B609946D8EA0CC399B6CC0A71668934B24BA4B7C530"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsOwnership8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsOwnership8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsOwnership8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsOwnership8695.lean.txt",
+      "sha256": "4C8F498EB53A0417531C009E775B4CBEF158E379599EAEC822B374D3FC752CDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsOwnership8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsOwnership8695.log",
+      "sha256": "F6000C1F0B0277F0605CCE758D06ABC26B9FED8D0CA4335F62239834DAD2028C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsProductionAudit8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsProductionAudit8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsProductionAudit8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsProductionAudit8695.lean.txt",
+      "sha256": "CDE7882C190461CD28A9D932D7EE93C2A56B58FD3D51598A1A966CAA1C2D237E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsProductionAudit8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneReciprocityInputsProductionAudit8695.log",
+      "sha256": "1EAAC1C8079535C3D380B4F09F9545A81DC349FDCD298BAC2E19E3962A7005A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1Production8695.exit",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1Production8695.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1Production8695.lean",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1Production8695.lean.txt",
+      "sha256": "893D639F34A7FCCDC292C981B5591D8FE2AFD40565DB8B958B2431F8D5F43629"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1Production8695.log",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/SourceGammaOneSignedReciprocityDependencyAudit1Production8695.log",
+      "sha256": "EE7898AC3207469D66ACDB1305D83CD20E50FE8488A6FEEB5D28BC83EAD8B796"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_reciprocity_inputs_8695.ps1",
+      "path": "Tools/gamma-one-reciprocity-inputs-20261027-870/verify_gamma_one_reciprocity_inputs_8695.ps1",
+      "sha256": "593C6E0B11BB59FA5AA3D2BC1B6921128A5F87D737C92C345EF0A82F021D0846"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-27T19:53:51.430293+00:00",
+    "log": "logs/dubon-build-20261027-111852-450.log",
+    "sha256": "D40EAC93C22BA6164ABE3B9B519C6D35022037E6490C7809BD8B788C459CAA1E",
+    "bytes": 14177517,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8695,
+    "projectTheorems": 54947,
+    "registeredConsumers": 25291,
+    "registeredConstructions": 2580,
+    "declarations": 33828,
+    "generated": 34456,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_111230.log",
+    "foundationSha256": "82AC7E5D10CF88A574973479CC99A9B8D120E7F636C60D3D6905EF9D33FB274F",
+    "countReconciliation": {
+      "previousTheorems": 54791,
+      "focusedTheorems": 156,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 156,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsGlobalOwnership8695.log",
+      "globalOwnershipSha256": "91FA8AB639EEDFA1D7FA5B609946D8EA0CC399B6CC0A71668934B24BA4B7C530",
+      "globalOwnershipSourceSha256": "E1BAD7DDB33464CDB5754DEB3C5885ECFD2D13076DAE0147994D635BECD53F94",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsOwnership8695.log",
+      "ownershipSha256": "F6000C1F0B0277F0605CCE758D06ABC26B9FED8D0CA4335F62239834DAD2028C"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 156,
+      "scratchDistinct": 156,
+      "generatedNameRenamings": {},
+      "productionFocused": 156,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceWeightTwoPeriodUntwist",
+            "SourceMeromorphicNormalUntwist",
+            "SourceMeromorphicPeriodUntwist",
+            "SourceMeromorphicTranslatedGerms",
+            "SourceMeromorphicCuspUntwist",
+            "SourceCuspDerivativeDecay",
+            "SourceMeromorphicUntwistDecay",
+            "SourceMeromorphicUntwistDerivative",
+            "SourceGammaOneInvariantUntwist"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwistScratchOwnership858.log",
+            "sha256": "E867E1283F498CF6C0502FAB8B8373C1E774E4E7E206EC9BE7366D4AD166D937",
+            "sourceSha256": "06DCD3D3A79515532FC58E7DB0D05B675369182829AA9A412479A32DE64B71D6"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDivisorReciprocityData"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityDataScratchOwnership860.log",
+            "sha256": "45F24ABA75B1202028C6BA636DD007F792A143F7B1C0DA195FA94C9790557094",
+            "sourceSha256": "95508E7A2FFCB5A2FC3A3EE2FD1DDB790D5071853731E035E6B4E40E7DD639AF"
+          }
+        },
+        {
+          "modules": [
+            "SourceWeightTwoSignedForms",
+            "SourceWeightTwoSignedReciprocity"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityScratchOwnership864.log",
+            "sha256": "94A794089EADF246D892551FF64BF7E5C2EEA8286298A320F15BC5A56B1C6813",
+            "sourceSha256": "EE6812EFFD951817B3B215FA11191AC666B93827C26A99B104A394ED694334BC"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexHolomorphicStokes",
+            "SourceComplexDbarCutoff",
+            "SourceComplexDbarKernelIntegrability",
+            "SourceComplexDbarRadialNormalization",
+            "SourceComplexCauchyPompeiu",
+            "SourceComplexResidueLocalModels",
+            "SourceComplexResidueIntegral",
+            "SourceComplexLogDerivativeResidues",
+            "SourceGammaOneLogDerivativeResidues"
+          ],
+          "count": 67,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLogDerivativeResiduesScratchOwnership869.log",
+            "sha256": "72BE30D05A5FDCFBD406BE38CE6D195DB09B0222F6FC94C4808E4B938AB1ED9A",
+            "sourceSha256": "5882204BB276629648CA8719994DA0FE6B6A0F6365A56DA996B647CFF165F854"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReciprocityInputsOwnership8695.log",
+        "sha256": "F6000C1F0B0277F0605CCE758D06ABC26B9FED8D0CA4335F62239834DAD2028C",
+        "sourceSha256": "4C8F498EB53A0417531C009E775B4CBEF158E379599EAEC822B374D3FC752CDC"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-093137-083.log",
+        "sha256": "153384BF2E3F6D4E48A3E882207751C3F67B6308477022F13611855DF6ABA4FE"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 21 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceWeightTwoPeriodUntwist",
+            "scratchSha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212",
+            "productionSha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicNormalUntwist",
+            "scratchSha256": "34272290955CF033038F7D0BC52B2596FE2CC8899260FDBF39300F9996C2DD05",
+            "productionSha256": "34272290955CF033038F7D0BC52B2596FE2CC8899260FDBF39300F9996C2DD05",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicPeriodUntwist",
+            "scratchSha256": "41B98A9670C8A6B743273D566CB89C30025DBF7D7FEC0D49864EC3F92FADE563",
+            "productionSha256": "A7F882B3FE0A5C34F1BABCE2ACBAAAD5C9A761F34444E866400AD8B6879D7719",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicTranslatedGerms",
+            "scratchSha256": "9E4353A97B13442BCE25D14139E70A09BD94640C454BC05CA6A199C1DC9CCAF5",
+            "productionSha256": "B15C319C3F10B93527BF3CD5FC02CE7E77ED97950ED49A41CF25C2DFAB1AA299",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicCuspUntwist",
+            "scratchSha256": "92BD751D76E30AFEC0F04884FA961D1F40C75EC077E1C37545D7E594034C2B0F",
+            "productionSha256": "9B2B213059A46B22DCBE11E6C967F23730BD57E9464A9389942C9E9AEA2AB5F3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCuspDerivativeDecay",
+            "scratchSha256": "C1CDEC4BC6C0935BA4FA0BF1D8897CEF25652451CB7F72091B9B1E49C868E679",
+            "productionSha256": "C6C4D86E4E60744DDCAA44B3D38F94649C131FDABF37B9ACE1DFFF2557A3C78A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicUntwistDecay",
+            "scratchSha256": "17D808B4E8F6DAE7FF510687EB1DDA310FA75611699C2CBEB4F1E6879ED79A11",
+            "productionSha256": "1B6B6C3123998C983DA1BF97F747B1A8DE3E0FB84ED7D3C150E895298B122D42",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMeromorphicUntwistDerivative",
+            "scratchSha256": "6BB8FC8FEEA7F780C42E9FBCB8C699A1F333B6CFDBB322BFA3D11E6F8C4791F3",
+            "productionSha256": "70DBE1A58F7D8D0214576847F1D670E6E92D90B386EE75826B4B72368060E81A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneInvariantUntwist",
+            "scratchSha256": "43744D5D40E624E2FFC9B6704A54DBD3C47ADDC30C21DD2EE48E3692920C54AE",
+            "productionSha256": "03F307FB870128BF98A881C9297712E25DCB7A2781601C5D38862E2285663140",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorReciprocityData",
+            "scratchSha256": "87E4C50419B293698EC36B4394EF4BBEF1C1DD0A9DFEE1B5AA84602776C20D52",
+            "productionSha256": "87E4C50419B293698EC36B4394EF4BBEF1C1DD0A9DFEE1B5AA84602776C20D52",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoSignedForms",
+            "scratchSha256": "32F10201BA45B0F4C52BCF726D537880D3EB7C04389157A2D2A1BE3ECA48DC06",
+            "productionSha256": "482F25AC6212A074917D7C8277548F7FD7520E7B2E53642E7B6614FBA26AD458",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoSignedReciprocity",
+            "scratchSha256": "398CF459CF2BB9D8A7EC9EA03E6AE32FCC048DD2C123C4E5A4F3918136A444A0",
+            "productionSha256": "8D8D662999AC09A889F8A30389CA22AB9B9C18E136267BE8EE1459802FE250F5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexHolomorphicStokes",
+            "scratchSha256": "8AFBAE8620F1BAD53A8A6DB8896EBF6389671004FB8B432AD00E32C121A906BE",
+            "productionSha256": "2A4A90D8125EC32797845BD819B6FDF65955890CE682BDA139D08D8D5099BF20",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDbarCutoff",
+            "scratchSha256": "45430E3B5C94CFC3AC2100CB8003A25392F9705B298735D7B87F72C4E140CE4A",
+            "productionSha256": "FE7FFB0C8A8CB7088B994558ED64B0E6CB39A059E7F44BF6996AD15BC7162D14",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDbarKernelIntegrability",
+            "scratchSha256": "2886EEAAFB1F23DBC33862A9894DA3768F50F650AA5E77724FE6F68CC16C50E1",
+            "productionSha256": "8BEF530509B593C4DDAEE3A77500534023E3157FA65B2871AE3D02130BF421C7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDbarRadialNormalization",
+            "scratchSha256": "A6C0EDC86B7A059CE84E272913925934C9214234E6D70B5181C4663534E8BE64",
+            "productionSha256": "D43D76A3ADAAF585CD63BC99E793BF305FB69C3C1259AFDA5647CD75506FF370",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexCauchyPompeiu",
+            "scratchSha256": "18E03AD3D7A51E82867DF60E4F5963CE6B5D3B6DE83120AF48ED43282EFBD91C",
+            "productionSha256": "2D944AD9DEAFD9FE47631427042825AEE62543D42560597AA09B459B80B9A1FA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexResidueLocalModels",
+            "scratchSha256": "11053324379EFA4220797B17E10F1DB42D283A6159420410F0A9E020B50FC9CC",
+            "productionSha256": "54CDA94F38938F50E3638237D0BD4B1DA8CB147D7227256EB92AB0B81274A243",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexResidueIntegral",
+            "scratchSha256": "98FCD6B5C7BE447B63C5366BE8D674655368C15AD944367DE47CAEDD7BB7B1AF",
+            "productionSha256": "F09C7D4AD4E943AE92BAABAD257405D2CFD2DFC228A045AE94E5B399B71E52E7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexLogDerivativeResidues",
+            "scratchSha256": "F982B297CE2E02062539EC83B6029E8A3C905EB3A10B4F088516BAA8A1DB5401",
+            "productionSha256": "518C1B0197538E9FA9B21C1739EC15782ADCE05B687657ADF7B3037071BC0769",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLogDerivativeResidues",
+            "scratchSha256": "053224697B02AB2F0F2262E508F98BEDE265A10DCC49FD3DB274FCAED2F1B4BC",
+            "productionSha256": "A429FADD029DBEC9C84FB4F3CCD09DA0193371987B288154CC949132EDB4DAEA",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 156 distinct names from 156 exhaustive scratch checks are retained: 156 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual meromorphic function and its exact original-divisor orders remain inputs; these consumers do not construct that function from the Abel-Jacobi condition. The modular winding-period limit, Petersson comparison, analytic reciprocity and original principal-divisor converse remain. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-8695-console.log",
+      "sha256": "683FAED79CF5B99CB6D52311D314F4E45EC30CB48E5B1684F3FFDA36D6989F40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-8695-console.log",
+      "sha256": "E7BAAE1F3A992EC2FABBB6D78F83C615C9A3AA78C47D12BC1C9DFF9ADA24538F"
+    }
+  ]
+}

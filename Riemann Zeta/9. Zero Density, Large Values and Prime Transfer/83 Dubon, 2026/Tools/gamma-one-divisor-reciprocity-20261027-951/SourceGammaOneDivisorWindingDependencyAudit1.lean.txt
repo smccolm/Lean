@@ -1,0 +1,31 @@
+import SourceSmoothComparisonQuotient
+import SourceSmoothComparisonCusps
+import SourceSmoothComparisonWindingLog
+import SourceGammaOneDivisorWindingComparison
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison]
+  let localModules : Array Name := #[`SourceSmoothComparisonQuotient, `SourceSmoothComparisonCusps, `SourceSmoothComparisonWindingLog, `SourceGammaOneDivisorWindingComparison, `SourceSmoothOrbitIntegralGeometry, `SourceSmoothOrbitIntegralChangeVariables, `SourceSmoothCompactTranslateIntegral, `SourceSmoothDivisorPeriodIntegral, `SourceGammaOneSmoothDivisorPeriodIntegral, `SourceSmoothLocalModelRegularization, `SourceSmoothLocalModelProducts, `SourceModularSmoothProjectiveRepresentatives, `SourceSmoothModularGeometry, `SourceSmoothProjectiveOrbitSum, `SourceSmoothDivisorOrbitData, `SourceSmoothModularLogDerivative, `SourceSmoothDivisorProduct, `SourceSmoothDivisorLocalProduct, `SourceSmoothDivisorLocalOrders, `SourceSmoothDivisorInvarianceCusps, `SourceSmoothDivisorLogDerivative, `SourceSmoothInvariantComparison, `SourceGammaOneSmoothDivisorComparison, `SourceComplexDipoleLocalModel, `SourceComplexDipoleLogDerivative, `SourceComplexDipolePairing, `SourceUpperHalfPlaneDipole, `SourceComplexWedgeStokes, `SourceComplexWedgeLocalLog, `SourceComplexWedgeDisc, `SourceComplexWedgeIntegral, `SourceGammaOneUntwistWedgeIntegral, `SourceComplexHolomorphicStokes, `SourceComplexDbarCutoff, `SourceComplexDbarKernelIntegrability, `SourceComplexDbarRadialNormalization, `SourceComplexCauchyPompeiu, `SourceComplexResidueLocalModels, `SourceComplexResidueIntegral, `SourceComplexLogDerivativeResidues, `SourceGammaOneLogDerivativeResidues, `SourceWeightTwoPeriodUntwist, `SourceMeromorphicNormalUntwist, `SourceMeromorphicPeriodUntwist, `SourceModularSmoothCutoff, `SourceModularSmoothGeometry, `SourceModularSmoothCosetSum, `SourceModularSmoothCover, `SourceModularSmoothedFundamentalSupport, `SourceModularSmoothedFundamental, `SourceGammaOneSmoothPartition, `SourceModularProjectiveFibers, `SourceModularSmoothOrbitMass, `SourceModularInvariantIntegralUnfolding, `SourceModularSmoothIntegralLimit, `SourceModularSmoothPlaneIntegral, `SourceGammaOnePeterssonSmoothLimit, `SourceMeromorphicTranslatedGerms, `SourceMeromorphicCuspUntwist, `SourceCuspDerivativeDecay, `SourceMeromorphicUntwistDecay, `SourceMeromorphicUntwistDerivative, `SourceGammaOneInvariantUntwist, `SourceComplexWindingLogLift, `SourceModularWindingCharacter, `SourceModularWindingCuspLimit, `SourceModularParabolicWindingLog]
+  let required : Array Name := #[`Dubon2026.SourceSmoothComparison.quot_local, `Dubon2026.SourceSmoothComparison.contDiffAt_quot, `Dubon2026.SourceSmoothComparison.quot_ne_zero, `Dubon2026.SourceSmoothComparison.tendsto_div_quot, `Dubon2026.SourceSmoothComparison.eventually_eq_quot_mul, `Dubon2026.SourceSmoothComparison.quot_smul, `Dubon2026.SourceSmoothComparison.quot_eq_limUnder, `Dubon2026.SourceSmoothComparison.exists_height_n_eq_zero, `Dubon2026.SourceSmoothComparison.eventually_atImInfty, `Dubon2026.SourceSmoothComparison.quot_eq_of_high, `Dubon2026.SourceSmoothComparison.tendsto_quot_smul, `Dubon2026.SourceSmoothComparison.tendsto_fderiv_quot_smul, `Dubon2026.SourceSmoothComparison.quot_cusp_data, `Dubon2026.SourceSmoothComparison.exists_filled_winding_log, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison, `Dubon2026.SourceSmoothComparison.HasLocalModels, `Dubon2026.SourceSmoothComparison.quot, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit, `Dubon2026.sourceGamma1_meromorphic_multiplier_eq_exp_real_period, `Dubon2026.SourcePeriodUntwist.Φ_local, `Dubon2026.SourcePeriodUntwist.Φ_smul, `Dubon2026.SourcePeriodUntwist.Φ_cusp, `Dubon2026.SourcePeriodUntwist.Φ_decay, `Dubon2026.SourceSmoothLocalModel.regularize_eventuallyEq, `Dubon2026.SourceSmoothDivisor.Data.tendsto_sm_nhdsNE, `Dubon2026.SourceWindingLog.exists_parabolic_log, `Dubon2026.SourceSmoothedFundamental.im_smul_le_max, `Filter.Tendsto.limUnder_eq]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIVISOR WINDING DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual original-divisor winding consumer. The original multiplier produces the cusp form; the degree-zero divisor produces V and its original period limit. Local cancellation, removable filling and actual cusp transfer produce the nonvanishing invariant quotient and its parabolic integer logarithmic character. Source punctured-limit normalization is preserved. Winding side pairing, analytic reciprocity and the full all-weight goal remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

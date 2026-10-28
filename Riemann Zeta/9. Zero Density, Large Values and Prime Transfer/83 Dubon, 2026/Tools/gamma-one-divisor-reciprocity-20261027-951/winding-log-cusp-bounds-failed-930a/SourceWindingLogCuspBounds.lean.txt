@@ -1,0 +1,60 @@
+import SourceModularGreenPullback
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> reciprocity -> winding integral.
+The derivative of the actual translated logarithm equals the inverse quotient
+times its derivative. Native limit inversion and scalar multiplication prove
+derivative decay, replacing the source's separate inverse-norm majorant.
+The proved finite cusp limits therefore supply the bounds required by Green's
+formula. Adapted from pinned Apache-2.0 reciprocity source 848. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set SourceSmoothDivisor
+open scoped MatrixGroups Topology Real
+
+theorem fderiv_log_comp_sm {L Q : ℂ → ℂ}
+    (hQ : ∀ τ : ℍ, DifferentiableAt ℝ Q (τ : ℂ))
+    (hLd : ∀ τ : ℍ, HasFDerivAt L ((Q τ)⁻¹ • fderiv ℝ Q τ) τ)
+    (σ : SL(2, ℤ)) (τ : ℍ) :
+    fderiv ℝ (fun u : ℂ => L (sm σ u)) τ =
+      (Q ((σ • τ : ℍ) : ℂ))⁻¹ • fderiv ℝ (fun u : ℂ => Q (sm σ u)) τ := by
+  have hQ' : DifferentiableAt ℝ Q (sm σ τ) := by
+    simpa only [sm_coe] using hQ (σ • τ)
+  have hL' : HasFDerivAt L ((Q (sm σ τ))⁻¹ • fderiv ℝ Q (sm σ τ)) (sm σ τ) := by
+    simpa only [sm_coe] using hLd (σ • τ)
+  rw [(hL'.comp (τ : ℂ) (hasFDerivAt_sm σ τ.im_pos)).fderiv,
+    (hQ'.hasFDerivAt.comp (τ : ℂ) (hasFDerivAt_sm σ τ.im_pos)).fderiv,
+    ContinuousLinearMap.smul_comp, sm_coe]
+
+theorem cusp_bound_of_quotient_limits {L Q : ℂ → ℂ}
+    (hQ : ∀ τ : ℍ, DifferentiableAt ℝ Q (τ : ℂ))
+    (hLd : ∀ τ : ℍ, HasFDerivAt L ((Q τ)⁻¹ • fderiv ℝ Q τ) τ)
+    (σ : SL(2, ℤ)) {cL c : ℂ}
+    (hLlim : Tendsto (fun τ : ℍ => L ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 cL))
+    (hc : c ≠ 0)
+    (hQlim : Tendsto (fun τ : ℍ => Q ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c))
+    (hdec : Tendsto (fun τ : ℍ =>
+      fderiv ℝ (fun u : ℂ => Q (sm σ u)) τ) atImInfty (𝓝 0)) :
+    ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+      ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧
+      ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C := by
+  have hdecL : Tendsto (fun τ : ℍ =>
+      fderiv ℝ (fun u : ℂ => L (sm σ u)) τ) atImInfty (𝓝 0) := by
+    simpa only [← fderiv_log_comp_sm hQ hLd σ, smul_zero] using (hQlim.inv₀ hc).smul hdec
+  have hb : ∀ᶠ τ : ℍ in atImInfty,
+      ‖L ((σ • τ : ℍ) : ℂ)‖ ≤ ‖cL‖ + 1 ∧
+      ‖fderiv ℝ (fun u : ℂ => L (sm σ u)) τ‖ ≤ 1 := by
+    have h1 := hLlim.norm.eventually (Iic_mem_nhds (lt_add_one ‖cL‖))
+    have h2 := hdecL.norm.eventually (Iic_mem_nhds (by simp : ‖(0 : ℂ →L[ℝ] ℂ)‖ < 1))
+    exact h1.and h2
+  obtain ⟨A, hA⟩ := (atImInfty_mem _).mp hb
+  refine ⟨max (‖cL‖ + 1) 1, max A 1, fun z hz => ?_⟩
+  have hz0 : 0 < z.im := lt_of_lt_of_le (lt_of_lt_of_le one_pos (le_max_right A 1)) hz
+  have hi : (ofComplex z).im = z.im := by rw [ofComplex_apply_of_im_pos hz0]
+  have hv := hA (ofComplex z) (by rw [hi]; exact (le_max_left A 1).trans hz)
+  rw [coe_ofComplex hz0] at hv
+  exact ⟨hv.1.trans (le_max_left _ _), hv.2.trans (le_max_right _ _)⟩
+
+end
+end Dubon2026.SourceModularGreenPairing

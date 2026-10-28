@@ -1,0 +1,90 @@
+import SourceModularGreenSidePairing
+import SourceModularSmoothPlaneIntegral
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> reciprocity -> winding-period identity.
+The complete Green identity and already proved smooth-partition limit are
+assembled on the same actual density and literal coset domain. The exact
+central factor one half and planar imaginary-part cancellation are proved.
+The final integral-period interpretation of the boundary sum remains open. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set SourceSmoothDivisor SourceModularSidePairing
+open SourceSmoothedUnfolding SourceSmoothedFundamental SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology Real ComplexConjugate
+
+theorem density_invariant {Γ : Subgroup SL(2, ℤ)}
+    (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2)
+    (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ)
+    (hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (L' z) z)
+    (c : SL(2, ℤ) → ℂ)
+    (hLc : ∀ γ ∈ Γ, ∀ τ : ℍ, L ((γ • τ : ℍ) : ℂ) = L τ + c γ)
+    (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) (τ : ℍ) :
+    Pd L' g (γ • τ) = Pd L' g τ := by
+  simp only [Pd]
+  rw [dbarL_smul L L' hL c hLc γ hγ τ,
+    SourceSmoothDivisor.g_smul Γ g hγ τ, ModularGroup.im_smul_eq_div_normSq]
+  have hD : denom (γ : GL (Fin 2) ℝ) τ ≠ 0 := denom_ne_zero _ _
+  have hns : (Complex.normSq (denom (γ : GL (Fin 2) ℝ) τ) : ℂ) =
+      conj (denom (γ : GL (Fin 2) ℝ) τ) * denom (γ : GL (Fin 2) ℝ) τ := by
+    rw [Complex.normSq_eq_conj_mul_self]
+  have hns0 : (Complex.normSq (denom (γ : GL (Fin 2) ℝ) τ) : ℂ) ≠ 0 := by
+    exact_mod_cast (Complex.normSq_pos.2 hD).ne'
+  push_cast
+  rw [hns] at hns0 ⊢
+  field_simp
+
+theorem integral_plane_density_eq (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+    (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2)
+    (L' : ℂ → ℂ →L[ℝ] ℂ) (T : ℝ) :
+    (∫ z : ℂ, Pd L' g (ofComplex z) *
+      (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ)) =
+    ∫ z : ℂ, g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) * dbarL (L' z) := by
+  refine integral_congr_ae (Eventually.of_forall fun z => ?_)
+  dsimp only
+  by_cases hz : 0 < z.im
+  · dsimp only [Pd]
+    rw [coe_ofComplex hz]
+    have hi : (ofComplex z).im = z.im := by rw [ofComplex_apply_of_im_pos hz]; rfl
+    rw [hi]
+    have h0 : (z.im : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr hz.ne'
+    push_cast
+    field_simp
+  · rw [smooth_eq_zero_of_im_nonpos Γ hz]
+    simp
+
+theorem tendsto_smoothed_dbar_integral (Γ : Subgroup SL(2, ℤ))
+    [Fintype (SL(2, ℤ) ⧸ Γ)] (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ)
+    (hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (L' z) z)
+    (hL' : ContinuousOn L' {z : ℂ | 0 < z.im})
+    (c : SL(2, ℤ) → ℂ)
+    (hLc : ∀ γ ∈ Γ, ∀ τ : ℍ, L ((γ • τ : ℍ) : ℂ) = L τ + c γ)
+    (hbd : ∀ σ : SL(2, ℤ), ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+      ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧
+      ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C)
+    (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) :
+    IntegrableOn (Pd L' g) (closedDomain Γ) ∧
+    Tendsto (fun T : ℝ => 2 / (π : ℂ) * ∫ z : ℂ,
+      g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) * dbarL (L' z)) atTop
+      (𝓝 (2 / (π : ℂ) * (1 / 2 * (1 / (2 * I) *
+        (I * (∑ q : SL(2, ℤ) ⧸ Γ, c (pairElt Γ ModularGroup.T q) *
+            (∫ y in Ioi (Real.sqrt 3 / 2), tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * I))) +
+          1 / 2 * (∑ q : SL(2, ℤ) ⧸ Γ, c (pairElt Γ ModularGroup.S q) *
+            (∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+              tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * I)) *
+                (I * Complex.exp (θ * I)))))))) := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_finite_quotient
+  have hp := integral_dbar_cusp_eq_side_pairing Γ hΓ L L' hL hL' c hLc hbd
+    g (fun q => tilePull g (Quotient.out q)⁻¹) (fun q z => tilePull_eq_div g _ z)
+  refine ⟨hp.1, ?_⟩
+  have ht := tendsto_integral_plane Γ hΓ (Pd L' g)
+    (fun γ hγ τ => density_invariant g L L' hL c hLc γ hγ τ)
+    (continuous_Pd g L' hL').aestronglyMeasurable hp.1
+  have he := hp.2
+  change (∫ τ in closedDomain Γ, Pd L' g τ) = _ at he
+  simpa only [integral_plane_density_eq, he, pairElt] using ht.const_mul (2 / (π : ℂ))
+
+end
+end Dubon2026.SourceModularGreenPairing

@@ -1,0 +1,45 @@
+import Dubon2026.SourceGammaOnePrescribedResidueCoefficient
+import Dubon2026.SourceGammaOneGeneralMultiplierPrincipal
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor
+converse. The actual degree-zero finite divisor constructs its meromorphic
+function, multiplier, all cusp limits and exact ramification-weighted
+orders. The original period-lattice condition then implies literal
+principalness in the original Gamma1 integral-ratio field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup Filter
+open scoped MatrixGroups Topology GammaOne
+
+theorem exists_analytic_divisor_meromorphic_multiplier
+    {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (N : ℕ) [NeZero N]
+    (hΓ : Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0) :
+    ∃ (F : ℍ → ℂ) (χ : Γ → ℂ),
+      (∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ)) ∧
+      (∀ (γ : Γ) (τ : ℍ), F (γ.val • τ) = χ γ * F τ) ∧
+      (∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+        Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L)) ∧
+      ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+        (((analyticRamification hT τ : ℤ) *
+          (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ) : ℤ) : WithTop ℤ) := by
+  obtain ⟨ω, hinv, hcusp, hres⟩ := PrescribedMeromorphic.exists_residue_coefficient N hΓ hT c hc
+  exact SourceMeromorphicPrimitiveMultiplier.exists_meromorphic_multiplier_cusp_orders
+    Γ (PrescribedMeromorphic.orders hT c) ω hinv hcusp hres
+
+theorem analytic_divisor_isPrincipal_of_period_mem (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0)
+    (hclass : c.sum (fun τ n => n • sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ) ∈
+      sourceWeightTwoIntegralLattice (Gamma1 N)) :
+    Divisor.IsPrincipal (Finsupp.mapDomain (analyticPlace hT) c) := by
+  have hΓ : Gamma N ≤ Gamma1 N := by
+    intro A hA
+    rw [Gamma_mem] at hA
+    rw [Gamma1_mem]
+    exact ⟨hA.1, hA.2.2.2, hA.2.2.1⟩
+  obtain ⟨F, χ, hF, hχ, hcusp, ho⟩ :=
+    exists_analytic_divisor_meromorphic_multiplier N hΓ hT c hc
+  exact analytic_divisor_isPrincipal_of_meromorphic_multiplier N hT c hc F χ hF hχ hcusp ho hclass
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

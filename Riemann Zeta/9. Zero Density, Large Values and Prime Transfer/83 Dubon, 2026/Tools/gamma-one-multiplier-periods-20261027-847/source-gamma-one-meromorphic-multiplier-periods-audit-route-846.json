@@ -1,0 +1,40 @@
+{
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi -> actual meromorphic multiplier -> unitary cusp-form period representation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean.txt",
+      "sha256": "EFFAA94ED1D6C7889ECDDF67781058EEEBDE475355218B929F2523DC3381CFF7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStabilizerMeromorphicOrder.lean",
+      "sha256": "9BA3276FFC546E3C3ADA909DB22EC6B068905A4BAECFFA1F532E6A1B638D2AF3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSubgroupStabilizerCharacter.lean",
+      "sha256": "7C8B81A7136494B9A96F12DE836AB421D0CAFB18DDD382C6CFC26F2B7A735364"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneMeromorphicPrincipalDivisor.lean",
+      "sha256": "BFC520DEBDB84C434C29A2118559A4DB86211E8491926EA708A0399672BE89EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\UpperHalfPlane\\FixedPoints.lean",
+      "sha256": "10E0B8C41B6DB56ABF30CDA61B721453E46B980B675529EA7AB78A975C7980DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-multiplier-route-841.json",
+      "sha256": "41A752725B30F825F643F5E221D9F3CFF5CF9D27909AE28B29AAE563D82D61DD"
+    }
+  ],
+  "shorterRoute": "Reuse SourceStabilizerMeromorphicOrder moeb_sub, continuity and coordinate identities; reuse SourceParabolic.classification and SubgroupStabilizer.chi. Replace the primary explicit real square-root fixed-point calculation by native UpperHalfPlane.fixedPt and gl_smul_eq_self_iff_eq_fixedPt. The existing two_mul_ramification_eq_stabilizer_card is for plusMinus(Gamma1 N), which supplies the correct central-sign normalization at every nonzero level.",
+  "assumptionsToDischarge": "A unitary multiplier of an actual meromorphic function, with prescribed original Gamma1 divisor orders and nonzero limits at every translated cusp, is realized by actual weight-two cusp-form real periods. Multiplicativity is derived from a nonzero cusp limit; elliptic triviality consumes actual finite germ orders and the exact signed stabilizer formula; parabolic triviality consumes signed translation classification and cusp limits. No character law, triviality, logarithm or cusp-form-realization premise remains.",
+  "remaining": "Construct the actual meromorphic function from the original Abel-Jacobi condition; prove analytic reciprocity; finish original Picard/H1/Hecke/diamond/full-parabolic/transpose comparison and original all-weight arithmetic association. 16/20; DUB-17--20 OPEN."
+}

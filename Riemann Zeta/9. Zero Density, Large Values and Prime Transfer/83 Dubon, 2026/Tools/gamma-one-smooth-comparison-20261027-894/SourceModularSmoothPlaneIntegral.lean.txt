@@ -1,0 +1,65 @@
+import SourceModularSmoothIntegralLimit
+
+/-! Exact source planar/hyperbolic conversion and the smoothed integral limit.
+DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic
+reciprocity. The coordinate conversion is adapted from the frozen Apache-2.0
+anthropics/fermats-last-theorem source
+S_FLT_Gamma0FundamentalSet_tendsto_integral_mul_smoothedFundamental.
+The bespoke finite tiling argument is replaced by the existing local generic
+projective fundamental domain, native unfolding and proved two-element fibers.
+The original subgroup, closed coset domain and factor 1/2 are retained. -/
+namespace Dubon2026.SourceSmoothedUnfolding
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set MeasureTheory SourceSmoothedFundamental
+open scoped MatrixGroups Topology NNReal ENNReal
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+
+theorem smooth_eq_zero_of_im_nonpos {T : ℝ} {z : ℂ} (hz : ¬ 0 < z.im) :
+    smoothedFundamental Γ T z = 0 :=
+  image_eq_zero_of_notMem_tsupport fun h =>
+    hz (SourceSmoothedFundamental.tsupport_subset Γ T h)
+
+theorem integral_plane_eq_integral_uhp (P : ℍ → ℂ) (T : ℝ) :
+    ∫ z : ℂ, P (ofComplex z) * (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ) =
+      ∫ τ : ℍ, P τ * (smoothedFundamental Γ T τ : ℂ) := by
+  have mp : MeasurePreserving UpperHalfPlane.coe (volume.comap UpperHalfPlane.coe)
+      (volume.restrict (Set.range UpperHalfPlane.coe)) :=
+    ⟨measurable_coe, by rw [measurableEmbedding_coe.map_comap]⟩
+  have hmeas : Measurable fun z : ℍ => (1 / NNReal.mk z.im z.im_pos.le : ℝ≥0) ^ 2 := by
+    refine Measurable.pow_const (Measurable.const_div ?_ 1) 2
+    exact UpperHalfPlane.continuous_im.measurable.subtype_mk
+  symm
+  calc ∫ τ : ℍ, P τ * (smoothedFundamental Γ T τ : ℂ)
+      = ∫ τ : ℍ, (1 / NNReal.mk τ.im τ.im_pos.le : ℝ≥0) ^ 2 • (P τ * (smoothedFundamental Γ T τ : ℂ))
+          ∂(volume.comap UpperHalfPlane.coe) := by
+        rw [UpperHalfPlane.volume_def]
+        exact integral_withDensity_eq_integral_smul hmeas _
+    _ = ∫ τ : ℍ, (fun z : ℂ => P (ofComplex z) * (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ)) (τ : ℂ)
+          ∂(volume.comap UpperHalfPlane.coe) := by
+        refine integral_congr_ae (Eventually.of_forall fun τ => ?_)
+        have h0 : (τ.im : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr τ.im_pos.ne'
+        simp only [ofComplex_apply, NNReal.smul_def, Complex.real_smul, UpperHalfPlane.coe_im]
+        push_cast
+        field_simp
+    _ = ∫ z in Set.range UpperHalfPlane.coe,
+          P (ofComplex z) * (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ) :=
+        mp.integral_comp measurableEmbedding_coe
+          (fun z : ℂ => P (ofComplex z) * (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ))
+    _ = ∫ z : ℂ, P (ofComplex z) * (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ) := by
+        refine setIntegral_eq_integral_of_forall_compl_eq_zero fun z hz => ?_
+        rw [UpperHalfPlane.range_coe] at hz
+        rw [smooth_eq_zero_of_im_nonpos Γ hz]
+        simp
+
+theorem tendsto_integral_plane (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (P : ℍ → ℂ) (hP : ∀ γ ∈ Γ, ∀ τ : ℍ, P (γ • τ) = P τ)
+    (hPm : AEStronglyMeasurable P volume) (hPi : IntegrableOn P (closedDomain Γ) volume) :
+    Tendsto (fun T : ℝ => ∫ z : ℂ, P (ofComplex z) *
+      (((z.im ^ 2)⁻¹ * smoothedFundamental Γ T z : ℝ) : ℂ)) atTop
+      (𝓝 ((1 / 2 : ℂ) * ∫ τ in closedDomain Γ, P τ)) := by
+  simp_rw [integral_plane_eq_integral_uhp]
+  exact tendsto_integral_smooth Γ hΓ P hP hPm hPi
+
+end
+end Dubon2026.SourceSmoothedUnfolding

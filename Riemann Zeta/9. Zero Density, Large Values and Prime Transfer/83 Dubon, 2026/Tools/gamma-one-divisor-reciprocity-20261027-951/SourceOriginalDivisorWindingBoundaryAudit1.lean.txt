@@ -1,0 +1,129 @@
+import SourceModularCuspBoundaryDecay
+import SourceModularGreenPullback
+import SourceModularGreenTile
+import SourceModularGreenEdges
+import SourceModularGreenMeasure
+import SourceModularGreenDensity
+import SourceModularGreenSidePairing
+import SourceWindingLogCuspBounds
+import SourceModularSmoothedGreenLimit
+import SourceWindingBoundaryIntegral
+import SourceGammaOneDivisorWindingBoundary
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceModularGreenPairing.differentiableOn_tilePull
+#print axioms Dubon2026.SourceModularGreenPairing.hasDerivAt_tilePull
+#print axioms Dubon2026.SourceModularGreenPairing.continuousOn_tilePull
+#print axioms Dubon2026.SourceModularGreenPairing.continuousOn_deriv_tilePull
+#print axioms Dubon2026.SourceModularGreenPairing.translated_decay
+#print axioms Dubon2026.SourceModularGreenPairing.tilePull_decay
+#print axioms Dubon2026.SourceModularGreenPairing.decay_weaken
+#print axioms Dubon2026.SourceModularGreenPairing.deriv_tilePull_decay
+#print axioms Dubon2026.SourceModularGreenPairing.norm_dbarL_le
+#print axioms Dubon2026.SourceModularGreenPairing.I_smul_sub_eq
+#print axioms Dubon2026.SourceModularGreenPairing.hasFDerivAt_Lt
+#print axioms Dubon2026.SourceModularGreenPairing.continuousOn_Lt
+#print axioms Dubon2026.SourceModularGreenPairing.continuousOn_Fd
+#print axioms Dubon2026.SourceModularGreenPairing.dbarL_Fd
+#print axioms Dubon2026.SourceModularGreenPairing.isCompact_box
+#print axioms Dubon2026.SourceModularGreenPairing.box_subset
+#print axioms Dubon2026.SourceModularGreenPairing.bound_of_compact_and_cusp
+#print axioms Dubon2026.SourceModularGreenPairing.Lt_bound
+#print axioms Dubon2026.SourceModularGreenPairing.Fd_bound
+#print axioms Dubon2026.SourceModularGreenPairing.measurableSet_fdC
+#print axioms Dubon2026.SourceModularGreenPairing.im_gt_of_mem_fdC
+#print axioms Dubon2026.SourceModularGreenPairing.fdC_subset_Ubox
+#print axioms Dubon2026.SourceModularGreenPairing.im_pos_of_mem_Ubox
+#print axioms Dubon2026.SourceModularGreenPairing.hasFDerivAt_Φt
+#print axioms Dubon2026.SourceModularGreenPairing.continuousOn_Φt'
+#print axioms Dubon2026.SourceModularGreenPairing.norm_Gd_le
+#print axioms Dubon2026.SourceModularGreenPairing.I_smul_Φt'_sub
+#print axioms Dubon2026.SourceModularGreenPairing.Φt_bounds
+#print axioms Dubon2026.SourceModularGreenPairing.tile_identity
+#print axioms Dubon2026.SourceModularGreenPairing.sqrt3_div_two_gt
+#print axioms Dubon2026.SourceModularGreenPairing.ray_mem_Ubox
+#print axioms Dubon2026.SourceModularGreenPairing.integrableOn_ray
+#print axioms Dubon2026.SourceModularGreenPairing.intervalIntegrable_arc
+#print axioms Dubon2026.SourceModularGreenPairing.twist_law
+#print axioms Dubon2026.SourceModularGreenPairing.Φt_eq
+#print axioms Dubon2026.SourceModularGreenPairing.side_pairing
+#print axioms Dubon2026.SourceModularGreenPairing.measurableSet_closedDomain
+#print axioms Dubon2026.SourceModularGreenPairing.volume_closedDomain_lt_top
+#print axioms Dubon2026.SourceModularGreenPairing.integral_closedDomain_eq_sum
+#print axioms Dubon2026.SourceModularGreenPairing.measurableSet_fd
+#print axioms Dubon2026.SourceModularGreenPairing.preimage_fdC
+#print axioms Dubon2026.SourceModularGreenPairing.coe_mem_fdC_of_mem_fd
+#print axioms Dubon2026.SourceModularGreenPairing.fdC_subset_range
+#print axioms Dubon2026.SourceModularGreenPairing.setIntegral_fd_mul_im_sq
+#print axioms Dubon2026.SourceModularGreenPairing.dbarL_smul
+#print axioms Dubon2026.SourceModularGreenPairing.Pd_smul
+#print axioms Dubon2026.SourceModularGreenPairing.continuous_Pd
+#print axioms Dubon2026.SourceModularGreenPairing.sq_mul_exp_neg_le
+#print axioms Dubon2026.SourceModularGreenPairing.Pd_bound_tile
+#print axioms Dubon2026.SourceModularGreenPairing.integrableOn_Pd
+#print axioms Dubon2026.SourceModularGreenPairing.lhs_unfold
+#print axioms Dubon2026.SourceModularGreenPairing.integral_dbar_cusp_eq_side_pairing
+#print axioms Dubon2026.SourceModularGreenPairing.fderiv_log_comp_sm
+#print axioms Dubon2026.SourceModularGreenPairing.cusp_bound_of_quotient_limits
+#print axioms Dubon2026.SourceModularGreenPairing.density_invariant
+#print axioms Dubon2026.SourceModularGreenPairing.integral_plane_density_eq
+#print axioms Dubon2026.SourceModularGreenPairing.tendsto_smoothed_dbar_integral
+#print axioms Dubon2026.SourceModularGreenPairing.winding_scalar_identity
+#print axioms Dubon2026.SourceModularGreenPairing.winding_boundary_limit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit
+#print axioms Dubon2026.SourceModularGreenPairing.Lt
+#print axioms Dubon2026.SourceModularGreenPairing.Fd
+#print axioms Dubon2026.SourceModularGreenPairing.Ubox
+#print axioms Dubon2026.SourceModularGreenPairing.Φt
+#print axioms Dubon2026.SourceModularGreenPairing.Gd
+#print axioms Dubon2026.SourceModularGreenPairing.Φt'
+#print axioms Dubon2026.SourceModularGreenPairing.Pd
+#print axioms Dubon2026.SourceModularGreenPairing.Hd
+#print axioms Dubon2026.SourceModularGreenPairing.transition
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceModularCuspBoundaryDecay, `SourceModularGreenPullback, `SourceModularGreenTile, `SourceModularGreenEdges, `SourceModularGreenMeasure, `SourceModularGreenDensity, `SourceModularGreenSidePairing, `SourceWindingLogCuspBounds, `SourceModularSmoothedGreenLimit, `SourceWindingBoundaryIntegral, `SourceGammaOneDivisorWindingBoundary]
+  let theorems : Array Name := #[`Dubon2026.SourceModularGreenPairing.differentiableOn_tilePull, `Dubon2026.SourceModularGreenPairing.hasDerivAt_tilePull, `Dubon2026.SourceModularGreenPairing.continuousOn_tilePull, `Dubon2026.SourceModularGreenPairing.continuousOn_deriv_tilePull, `Dubon2026.SourceModularGreenPairing.translated_decay, `Dubon2026.SourceModularGreenPairing.tilePull_decay, `Dubon2026.SourceModularGreenPairing.decay_weaken, `Dubon2026.SourceModularGreenPairing.deriv_tilePull_decay, `Dubon2026.SourceModularGreenPairing.norm_dbarL_le, `Dubon2026.SourceModularGreenPairing.I_smul_sub_eq, `Dubon2026.SourceModularGreenPairing.hasFDerivAt_Lt, `Dubon2026.SourceModularGreenPairing.continuousOn_Lt, `Dubon2026.SourceModularGreenPairing.continuousOn_Fd, `Dubon2026.SourceModularGreenPairing.dbarL_Fd, `Dubon2026.SourceModularGreenPairing.isCompact_box, `Dubon2026.SourceModularGreenPairing.box_subset, `Dubon2026.SourceModularGreenPairing.bound_of_compact_and_cusp, `Dubon2026.SourceModularGreenPairing.Lt_bound, `Dubon2026.SourceModularGreenPairing.Fd_bound, `Dubon2026.SourceModularGreenPairing.measurableSet_fdC, `Dubon2026.SourceModularGreenPairing.im_gt_of_mem_fdC, `Dubon2026.SourceModularGreenPairing.fdC_subset_Ubox, `Dubon2026.SourceModularGreenPairing.im_pos_of_mem_Ubox, `Dubon2026.SourceModularGreenPairing.hasFDerivAt_Φt, `Dubon2026.SourceModularGreenPairing.continuousOn_Φt', `Dubon2026.SourceModularGreenPairing.norm_Gd_le, `Dubon2026.SourceModularGreenPairing.I_smul_Φt'_sub, `Dubon2026.SourceModularGreenPairing.Φt_bounds, `Dubon2026.SourceModularGreenPairing.tile_identity, `Dubon2026.SourceModularGreenPairing.sqrt3_div_two_gt, `Dubon2026.SourceModularGreenPairing.ray_mem_Ubox, `Dubon2026.SourceModularGreenPairing.integrableOn_ray, `Dubon2026.SourceModularGreenPairing.intervalIntegrable_arc, `Dubon2026.SourceModularGreenPairing.twist_law, `Dubon2026.SourceModularGreenPairing.Φt_eq, `Dubon2026.SourceModularGreenPairing.side_pairing, `Dubon2026.SourceModularGreenPairing.measurableSet_closedDomain, `Dubon2026.SourceModularGreenPairing.volume_closedDomain_lt_top, `Dubon2026.SourceModularGreenPairing.integral_closedDomain_eq_sum, `Dubon2026.SourceModularGreenPairing.measurableSet_fd, `Dubon2026.SourceModularGreenPairing.preimage_fdC, `Dubon2026.SourceModularGreenPairing.coe_mem_fdC_of_mem_fd, `Dubon2026.SourceModularGreenPairing.fdC_subset_range, `Dubon2026.SourceModularGreenPairing.setIntegral_fd_mul_im_sq, `Dubon2026.SourceModularGreenPairing.dbarL_smul, `Dubon2026.SourceModularGreenPairing.Pd_smul, `Dubon2026.SourceModularGreenPairing.continuous_Pd, `Dubon2026.SourceModularGreenPairing.sq_mul_exp_neg_le, `Dubon2026.SourceModularGreenPairing.Pd_bound_tile, `Dubon2026.SourceModularGreenPairing.integrableOn_Pd, `Dubon2026.SourceModularGreenPairing.lhs_unfold, `Dubon2026.SourceModularGreenPairing.integral_dbar_cusp_eq_side_pairing, `Dubon2026.SourceModularGreenPairing.fderiv_log_comp_sm, `Dubon2026.SourceModularGreenPairing.cusp_bound_of_quotient_limits, `Dubon2026.SourceModularGreenPairing.density_invariant, `Dubon2026.SourceModularGreenPairing.integral_plane_density_eq, `Dubon2026.SourceModularGreenPairing.tendsto_smoothed_dbar_integral, `Dubon2026.SourceModularGreenPairing.winding_scalar_identity, `Dubon2026.SourceModularGreenPairing.winding_boundary_limit, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit]
+  let constructions : Array Name := #[`Dubon2026.SourceModularGreenPairing.Lt, `Dubon2026.SourceModularGreenPairing.Fd, `Dubon2026.SourceModularGreenPairing.Ubox, `Dubon2026.SourceModularGreenPairing.Φt, `Dubon2026.SourceModularGreenPairing.Gd, `Dubon2026.SourceModularGreenPairing.Φt', `Dubon2026.SourceModularGreenPairing.Pd, `Dubon2026.SourceModularGreenPairing.Hd, `Dubon2026.SourceModularGreenPairing.transition]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Divisor Winding Boundary postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Divisor Winding Boundary theorems discovered"
+  logInfo m!"SOURCE ORIGINAL DIVISOR WINDING BOUNDARY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceModularCuspBoundaryDecay
+#lint in SourceModularGreenPullback
+#lint in SourceModularGreenTile
+#lint in SourceModularGreenEdges
+#lint in SourceModularGreenMeasure
+#lint in SourceModularGreenDensity
+#lint in SourceModularGreenSidePairing
+#lint in SourceWindingLogCuspBounds
+#lint in SourceModularSmoothedGreenLimit
+#lint in SourceWindingBoundaryIntegral
+#lint in SourceGammaOneDivisorWindingBoundary

@@ -1,0 +1,41 @@
+import SourceGammaOnePrescribedResidues
+import Dubon2026.SourceGammaOneAnalyticDivisorMoving
+import Dubon2026.SourceGammaOneAnalyticJOrders
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> principal-divisor converse ->
+prescribed meromorphic function. Consume the prescribed-residue construction
+on the actual pushforward of the original finite analytic divisor.
+Degree zero and regularity at every j-pole place are derived. The next
+obligation is to realize this differential analytically and integrate it. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve KaehlerDifferential
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+
+theorem exists_analytic_divisor_differential (c : ℍ →₀ ℤ)
+    (hc : c.sum (fun _ n => n) = 0) :
+    ∃ η : Ω[functionFieldOver Γ ℂ⁄ℂ],
+      (∀ v : Place ℂ (functionFieldOver Γ ℂ), -1 ≤ v.ordDifferential η ∧
+        placeEval hT v (v.uniformizer * v.differentialCoeff η) =
+          (Finsupp.mapDomain (analyticPlace hT) c v : ℂ)) ∧
+      ∀ v : Place ℂ (functionFieldOver Γ ℂ),
+        v.ord (jCoordinateOver Γ ℂ) < 0 → 0 ≤ v.ordDifferential η := by
+  obtain ⟨η, hη⟩ := exists_third_kind_differential hT
+    (Finsupp.mapDomain (analyticPlace hT) c)
+    (by rw [degree_mapDomain_analyticPlace, hc])
+  refine ⟨η, hη, fun v hv => ?_⟩
+  have hd : Finsupp.mapDomain (analyticPlace hT) c v = 0 := by
+    apply Finsupp.mapDomain_notin_range
+    rintro ⟨τ, rfl⟩
+    have hj : jCoordinateOver Γ ℂ ∈ (analyticPlace hT τ).toValuationSubring := by
+      have hh := add_mem ((analyticPlace hT τ).mem_of_ord_nonneg
+        (analyticPlace_j_sub_pos hT τ).le)
+        ((analyticPlace hT τ).algebraMap_mem' (JMultiplicity.jf τ))
+      simpa only [sub_add_cancel] using hh
+    exact (not_le_of_gt hv) ((analyticPlace hT τ).mem_iff_ord_nonneg.mp hj)
+  apply simple_pole_regular_of_residue_zero hT v η (hη v).1
+  rw [differentialResidue_simplePole hT v η (hη v).1, (hη v).2, hd, Int.cast_zero]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

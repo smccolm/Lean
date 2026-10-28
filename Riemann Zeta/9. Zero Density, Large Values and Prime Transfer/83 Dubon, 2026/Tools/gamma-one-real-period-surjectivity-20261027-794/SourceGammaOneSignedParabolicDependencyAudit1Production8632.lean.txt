@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneCentralSignCharacters
+import Dubon2026.SourceGammaOneSignedParabolicCharacters
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneCentralSignCharacters, `Dubon2026.SourceGammaOneSignedParabolicCharacters, `Dubon2026.SourceGammaOneRealParabolicPeriods, `Dubon2026.SourceGammaOneRealPeriodMap, `Dubon2026.SourceGammaOneRealPeriodInjectivity, `Dubon2026.SourceGammaOneInvariantRealPart]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift, `Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff, `Dubon2026.sourceH1Finite, `SpecialLinearGroup.SL2Z_generators]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE SIGNED PARABOLIC DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual real parabolic central-sign extension, its injectivity and finite-dimensional target. Only declaration values are traversed. The real period dimension inequality, surjectivity, reciprocity, original arithmetic comparison and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

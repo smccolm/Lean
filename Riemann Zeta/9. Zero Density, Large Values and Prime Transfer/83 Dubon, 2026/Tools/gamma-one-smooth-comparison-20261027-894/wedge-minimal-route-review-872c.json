@@ -1,0 +1,4 @@
+{
+  "change": "Removed the unused D_vEk simp entry and unconsumed helper theorem. The actual local wedge identity is unchanged; its proof already expands D and uses fderiv_vEk. Preserved both earlier successful local proof and failed warning-producing disc evidence.",
+  "deferred": "D_vEk formula is incidental to this dependency closure."
+}

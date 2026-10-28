@@ -1,0 +1,8 @@
+{
+  "reason": "Import-only assembly against the existing 8776 production dependencies while the canonical runner is live; no production source changes. Original 956 scratch receipt remains frozen.",
+  "original": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteDivisorReciprocity.lean",
+  "assembled": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteDivisorReciprocityAssembled.lean",
+  "bodyIdentical": true,
+  "originalSha256": "D7831C12A30414DAAAFA1227412B9DCEC9DA4423BC6B0832229D4EA45540BE92",
+  "assembledSha256": "3930A840639905C79C232A67BACE7CCFFA36E3938F927C65D070B4E808EB9712"
+}

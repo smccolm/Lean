@@ -1,0 +1,62 @@
+import Dubon2026.SourceUnitaryCharacterRecurrence
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapt the Apache-2.0 scope-795b primary at revision
+6e837e75355538c7f80bab5b956861e86c4eacc2, using native Cayley-Hamilton
+and finite abelian-group APIs. No finite-order trace bound, torsion-freeness,
+or logarithmic character lift is postulated. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+theorem trace_sq_le_four_of_isOfFinOrder (γ : SL(2, ℤ)) (hγ : IsOfFinOrder γ) :
+    ((γ : Matrix (Fin 2) (Fin 2) ℤ)).trace ^ 2 ≤ 4 := by
+  by_contra hlt
+  rw [not_le] at hlt
+  set M := (γ : Matrix (Fin 2) (Fin 2) ℤ) with hM
+  set t := M.trace with htdef
+  have ht : 3 ≤ |t| := by
+    by_contra h
+    rw [not_le] at h
+    have : t ^ 2 ≤ 4 := by
+      rw [sq, ← abs_mul_abs_self]
+      nlinarith [abs_nonneg t]
+    exact absurd hlt (not_lt.mpr this)
+  obtain ⟨m, hm, hγm⟩ := hγ.exists_pow_eq_one
+  obtain ⟨n, rfl⟩ : ∃ n, m = n + 1 := ⟨m - 1, by omega⟩
+  have hpow : M ^ (n + 1) = 1 := by
+    rw [hM, ← Matrix.SpecialLinearGroup.coe_pow, hγm, Matrix.SpecialLinearGroup.coe_one]
+  rw [pow_succ_eq_cheb M γ.det_coe n] at hpow
+  have hne := cheb_ne_zero t ht n
+
+  have hent : ∀ i j : Fin 2,
+      cheb t (n + 1) * M i j - cheb t n * (1 : Matrix (Fin 2) (Fin 2) ℤ) i j =
+        (1 : Matrix (Fin 2) (Fin 2) ℤ) i j := by
+    intro i j
+    exact congrFun (congrFun hpow i) j
+  have h01 : M 0 1 = 0 := by
+    have h := hent 0 1
+    simp only [Matrix.one_apply_ne (by decide : (0 : Fin 2) ≠ 1), mul_zero, sub_zero] at h
+    exact (mul_eq_zero.mp h).resolve_left hne
+  have h10 : M 1 0 = 0 := by
+    have h := hent 1 0
+    simp only [Matrix.one_apply_ne (by decide : (1 : Fin 2) ≠ 0), mul_zero, sub_zero] at h
+    exact (mul_eq_zero.mp h).resolve_left hne
+  have hdiag : M 0 0 = M 1 1 := by
+    have h0 := hent 0 0
+    have h1 := hent 1 1
+    simp only [Matrix.one_apply_eq, mul_one] at h0 h1
+    exact mul_left_cancel₀ hne (by linarith)
+  have hdet : M 0 0 * M 1 1 = 1 := by
+    have := γ.det_coe
+    rw [Matrix.det_fin_two] at this
+    rw [← hM, h01, h10] at this
+    linarith
+  have htr : t = M 0 0 + M 1 1 := by rw [htdef, Matrix.trace_fin_two]
+  rw [← hdiag] at hdet
+  rcases mul_self_eq_one_iff.mp hdet with h1 | h1
+  · rw [htr, ← hdiag, h1] at ht; norm_num at ht
+  · rw [htr, ← hdiag, h1] at ht; norm_num at ht
+
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

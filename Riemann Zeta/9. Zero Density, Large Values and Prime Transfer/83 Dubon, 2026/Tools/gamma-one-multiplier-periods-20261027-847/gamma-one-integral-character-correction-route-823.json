@@ -1,0 +1,20 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier logarithms -> integral parabolic-character lifting -> zero total cusp values and actual correction.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\Transfer.lean",
+      "sha256": "1FD65835E78B82E2BD7052C47C0DF14E330120844F2689AA64855910CA70300C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-1-scratch-receipt.json",
+      "sha256": "E84B9DC7BBB941D303A9AE19BB7E415C7E3C32E483689901BDC7C16E1A16446B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-scratch-receipt.json",
+      "sha256": "289323F43C4D06438774F2B981891A52B95AE22056F49A5F3D6A3F43504C1A39"
+    }
+  ],
+  "shorterRoute": "Use the pinned native transfer_eq_prod_quotient_orbitRel_zpowers_quot; no transfer theory is reproved. Apply the already audited SourceCuspCorrection.engine on the identical C2*C3 group and primitive cusp generators.",
+  "assumptionsToDischarge": "Every integer character has zero sum over actual primitive cusp values. Divisibility of its parabolic values by n permits an actual correction n*phi, preserving reduction modulo n and killing every parabolic conjugate. Includes n=0.",
+  "remaining": "Original SL2 and Gamma1 transport, unitary logarithms, analytic reciprocity, and full all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN."
+}

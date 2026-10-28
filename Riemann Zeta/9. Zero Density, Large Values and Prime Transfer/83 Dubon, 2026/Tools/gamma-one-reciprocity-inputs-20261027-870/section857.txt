@@ -1,0 +1,13 @@
+### Actual smooth subspace and original infinitesimal endomorphisms — 8 October 2026
+
+Seven further production modules construct the actual complex subspace of completed vectors whose original real-matrix orbits are smooth along every smooth family of genuine determinant-one matrices. This subspace is proved invariant under every actual real translate. Joint parameter differentiation proves that every original smooth matrix curve defines an infinitesimal derivative preserving the same subspace. The already proved all-family smoothness places the original completed cusp generator in it unconditionally. The original unipotent, geodesic and compact matrix entries are smooth, and their actual derivatives define complex-linear endomorphisms of this genuine smooth subspace. The displayed second-order combination is therefore an actual endomorphism there, retains exactly the previously proved successive Hilbert derivative formula, and has eigenvalue k/2 times (1-k/2) on the original smooth generator. The Lie-bracket identities, identification with the source's central enveloping-algebra Casimir and regular-algebraic representation, irreducibility and higher symmetric continuations remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [RealMatrixSmoothSubmodule](Extension/Dubon2026/RealMatrixSmoothSubmodule.lean).
+- [SmoothParameterDerivative](Extension/Dubon2026/SmoothParameterDerivative.lean).
+- [RealSmoothInfinitesimal](Extension/Dubon2026/RealSmoothInfinitesimal.lean).
+- [AdelicRealSmoothSubmodule](Extension/Dubon2026/AdelicRealSmoothSubmodule.lean).
+- [RealInfinitesimalSmoothCurves](Extension/Dubon2026/RealInfinitesimalSmoothCurves.lean).
+- [RealSmoothInfinitesimalOperator](Extension/Dubon2026/RealSmoothInfinitesimalOperator.lean).
+- [AdelicSmoothInfinitesimalOperators](Extension/Dubon2026/AdelicSmoothInfinitesimalOperators.lean).
+
+Exact consumers: `actual_adelic_smooth_infinitesimal_source` and `actual_adelic_smooth_generator_operator_source`.

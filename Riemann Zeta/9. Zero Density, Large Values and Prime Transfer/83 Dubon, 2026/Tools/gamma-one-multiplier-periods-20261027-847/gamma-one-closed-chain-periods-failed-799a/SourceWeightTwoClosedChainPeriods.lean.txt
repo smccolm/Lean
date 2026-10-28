@@ -1,0 +1,67 @@
+import SourceWeightTwoIntegralPeriods
+import Mathlib.Data.Finsupp.Basic
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi reciprocity ->
+closed-chain periods. The boundary is pushed to the actual orbit quotient.
+Evaluating it in the quotient by original integer modular periods proves
+lattice membership. This shortens the orbit-representative argument in
+anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_sum_periodAlongOf_mem_periodLatticeOf_of_boundary_eq_zero. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+
+/-- Boundary of a finite integer chain, on the actual modular orbit quotient. -/
+def sourceWeightTwoOrbitBoundary (Z : (ℍ × ℍ) →₀ ℤ) :
+    Quotient (MulAction.orbitRel Γ ℍ) →₀ ℤ :=
+  Finsupp.mapDomain (fun e => Quotient.mk (MulAction.orbitRel Γ ℍ) e.2) Z -
+    Finsupp.mapDomain (fun e => Quotient.mk (MulAction.orbitRel Γ ℍ) e.1) Z
+
+theorem sourceWeightTwo_chain_period_mem_of_boundary_eq_zero
+    (Z : (ℍ × ℍ) →₀ ℤ) (hZ : sourceWeightTwoOrbitBoundary Γ Z = 0) :
+    (Z.sum fun e m => m • sourceWeightTwoAlong Γ e.1 e.2) ∈
+      sourceWeightTwoIntegralLattice Γ := by
+  classical
+  have hb := sub_eq_zero.mp hZ
+  have he := congrArg (fun c : Quotient (MulAction.orbitRel Γ ℍ) →₀ ℤ =>
+    c.sum (fun q m => m • sourceWeightTwoOrbitPeriod Γ q)) hb
+  simp only [Finsupp.sum_mapDomain_index (fun _ => zero_smul _ _)
+    (fun _ _ _ => add_smul _ _ _), sourceWeightTwoOrbitPeriod_mk] at he
+  apply (Submodule.Quotient.mk_eq_zero (sourceWeightTwoIntegralLattice Γ)).mp
+  change (sourceWeightTwoIntegralLattice Γ).mkQ
+    (Z.sum fun e m => m • sourceWeightTwoAlong Γ e.1 e.2) = 0
+  simp only [Finsupp.sum, map_sum, map_smul, sourceWeightTwoAlong_eq_sub,
+    map_sub, smul_sub, Finset.sum_sub_distrib, RingHom.id_apply, sub_eq_zero]
+  exact he
+
+theorem sourceWeightTwoOrbitBoundary_apply (Z : (ℍ × ℍ) →₀ ℤ) (τ : ℍ) :
+    sourceWeightTwoOrbitBoundary Γ Z (Quotient.mk (MulAction.orbitRel Γ ℍ) τ) =
+      Z.sum (fun e m =>
+        (if ∃ γ : Γ, γ.val • e.2 = τ then m else 0) -
+          (if ∃ γ : Γ, γ.val • e.1 = τ then m else 0)) := by
+  classical
+  have horb (x : ℍ) :
+      Quotient.mk (MulAction.orbitRel Γ ℍ) x =
+        Quotient.mk (MulAction.orbitRel Γ ℍ) τ ↔ ∃ γ : Γ, γ.val • x = τ := by
+    rw [eq_comm, Quotient.eq, MulAction.orbitRel_apply]
+  simp only [sourceWeightTwoOrbitBoundary, Finsupp.sub_apply, Finsupp.mapDomain,
+    Finsupp.sum_apply, Finsupp.single_apply, Finsupp.sum, Finset.sum_sub_distrib]
+  congr 1 <;> apply Finset.sum_congr rfl <;> intro e he <;> rw [horb]
+
+theorem sourceWeightTwo_chain_period_mem_of_orbit_boundary
+    (Z : (ℍ × ℍ) →₀ ℤ)
+    (hZ : ∀ τ : ℍ, Z.sum (fun e m =>
+      (if ∃ γ : Γ, γ.val • e.2 = τ then m else 0) -
+        (if ∃ γ : Γ, γ.val • e.1 = τ then m else 0)) = 0) :
+    (Z.sum fun e m => m • sourceWeightTwoAlong Γ e.1 e.2) ∈
+      sourceWeightTwoIntegralLattice Γ := by
+  apply sourceWeightTwo_chain_period_mem_of_boundary_eq_zero
+  ext q
+  obtain ⟨τ, rfl⟩ := Quotient.mk_surjective q
+  exact (sourceWeightTwoOrbitBoundary_apply Γ Z τ).trans (hZ τ)
+
+end
+end Dubon2026

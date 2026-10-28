@@ -1,0 +1,260 @@
+{
+  "scratchSum": 273,
+  "scratchDistinct": 273,
+  "generatedNameRenamings": {},
+  "productionFocused": 273,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceComplexWedgeStokes",
+        "SourceComplexWedgeLocalLog",
+        "SourceComplexWedgeDisc",
+        "SourceComplexWedgeIntegral",
+        "SourceGammaOneUntwistWedgeIntegral"
+      ],
+      "count": 44,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.log",
+        "sha256": "ADC17F69316D4839A1705D7A7299ADFC504DFB683691EDEE39449E8028D608C9",
+        "sourceSha256": "2A8E9D9E82D31E19BB39439064EEEFC845932AA462FDC4D5BBFDA41E997B6DA7"
+      }
+    },
+    {
+      "modules": [
+        "SourceModularSmoothCutoff",
+        "SourceModularSmoothGeometry",
+        "SourceModularSmoothCosetSum",
+        "SourceModularSmoothCover",
+        "SourceModularSmoothedFundamentalSupport",
+        "SourceModularSmoothedFundamental",
+        "SourceGammaOneSmoothPartition"
+      ],
+      "count": 102,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.log",
+        "sha256": "553658544513039AC98C3A02CFF7C4B42967099A850E4E1572B70C25A8BB2C26",
+        "sourceSha256": "CE3F15D2B230FBD16A05F17D01F07180AF8A09FDD1D424FC9BA9C429DE7ECEC6"
+      }
+    },
+    {
+      "modules": [
+        "SourceModularProjectiveFibers",
+        "SourceModularSmoothOrbitMass",
+        "SourceModularInvariantIntegralUnfolding",
+        "SourceModularSmoothIntegralLimit",
+        "SourceModularSmoothPlaneIntegral",
+        "SourceGammaOnePeterssonSmoothLimit"
+      ],
+      "count": 37,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.log",
+        "sha256": "4B3C6119D032C2B42EAB452EF434EFD1ABCAD890DB04087C0CB44A9AE3736CF4",
+        "sourceSha256": "FBE09BE177C4DC8CFB40B2C79D18171186D9F564CD92B6EBA57D52729A71DA19"
+      }
+    },
+    {
+      "modules": [
+        "SourceComplexWindingLogLift",
+        "SourceModularWindingCharacter",
+        "SourceModularWindingCuspLimit",
+        "SourceModularParabolicWindingLog"
+      ],
+      "count": 37,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.log",
+        "sha256": "AAFDD2ACB2FB95C3403B2C9AF13062072999437FBBEDB203C11B5B5679265FAA",
+        "sourceSha256": "D0B40C95653572DEFDE5945E1AA2A82DCBFC1F071946461E0B7CA29D87380286"
+      }
+    },
+    {
+      "modules": [
+        "SourceComplexDipoleLocalModel",
+        "SourceComplexDipoleLogDerivative",
+        "SourceComplexDipolePairing",
+        "SourceUpperHalfPlaneDipole"
+      ],
+      "count": 53,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.log",
+        "sha256": "68131891653E846DE421C69EB0B3C318BDC4B7E6E246EA2F2EC910EA6F7AE0AB",
+        "sourceSha256": "7D0B371871135B6F11E062D310FA4A9BC494E82F3D34B180AF6FFC3A7326D8BD"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonOwnership8721.log",
+    "sha256": "B3F277D9E1E113ED541898B6C64AEF40C4D9312DB09734FD2CA37A5CCBAA9F68",
+    "sourceSha256": "B0997FFFC8492D2BEB69A33F79BF4D7F623135E9C776CCC946171FDB912446C7"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-111852-450.log",
+    "sha256": "D40EAC93C22BA6164ABE3B9B519C6D35022037E6490C7809BD8B788C459CAA1E"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceComplexWedgeStokes",
+        "scratchSha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67",
+        "productionSha256": "8675750B32078BCA764AE2ED0402A50D3706238B12C907AF7702406A62348EAD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexWedgeLocalLog",
+        "scratchSha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E",
+        "productionSha256": "8191ED173E9D4AF84D65F2104066D4D397EC50FBA8EB5A241E4D6AFF14233919",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexWedgeDisc",
+        "scratchSha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9",
+        "productionSha256": "B5AD4BA9A3E2A357D81D568862E61CC6680AB9D3DC7082F1980305A79B66A943",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexWedgeIntegral",
+        "scratchSha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76",
+        "productionSha256": "A5FFB5CB418448F99C3CC19C20C95F8DC4FE76D7C7DF467F845802CA13BC0BCE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneUntwistWedgeIntegral",
+        "scratchSha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB",
+        "productionSha256": "5D0572464C13C2740A53DD831C74E4E7A919D783481591FEE2F7406320083512",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothCutoff",
+        "scratchSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+        "productionSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothGeometry",
+        "scratchSha256": "FBD26B1A3F15D2D20E86815097BA705717C7AE87AEDBC4A3E1F1C6771B430EEB",
+        "productionSha256": "626585EDDCC488DFA7B6105F38AF585E0F80C1885A52F6E112B94671CC914B3E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothCosetSum",
+        "scratchSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+        "productionSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothCover",
+        "scratchSha256": "A413B35D48BBF38403642E7101EFBB7D83F2234042D396732EDA37115D37BDCC",
+        "productionSha256": "B20969628EF3FE54B820772D5350642CD3AEDC3CEFEF3E75618710D4E0230189",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothedFundamentalSupport",
+        "scratchSha256": "F130009BB7A2B319BA6FB977329A03E3CEB25EA7C76F8B4FBCD49D5F3C6CDC49",
+        "productionSha256": "D4EC6C15E9623039AA0761A1289CC9D30989FCA2E0C226AD11E3E239F16A8B26",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothedFundamental",
+        "scratchSha256": "580556F969B7EC4188A0CEE331A79EA97FE11237093AEB22ACB79DA1CF615638",
+        "productionSha256": "25D8736D362AB0F14F752F29EB1B570D99376F6FE953B017FFCEC9769F2FB689",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSmoothPartition",
+        "scratchSha256": "E095E055D3FDDC6F8C22F636C51C99FAF1165F762A8F684BFE2C0A4EC57E48EA",
+        "productionSha256": "6CCA8A1A63003DEE327236A8D7F77D766341B6C14190AF86B7E00F715B7C388A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularProjectiveFibers",
+        "scratchSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+        "productionSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothOrbitMass",
+        "scratchSha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415",
+        "productionSha256": "EBF3D770F25D5C669912A76D036FB760922758D9B0D746CB8BF08D1F3017B58B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularInvariantIntegralUnfolding",
+        "scratchSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+        "productionSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothIntegralLimit",
+        "scratchSha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80",
+        "productionSha256": "9119390C66B0C1CE8D3B33A011A0AF37304374CB627C37C14EE5A39758D8FFE7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularSmoothPlaneIntegral",
+        "scratchSha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313",
+        "productionSha256": "9E3270227E5CD5EE817FD6894576429009E588DCEB85F0D2E623D0128F24D942",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePeterssonSmoothLimit",
+        "scratchSha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E",
+        "productionSha256": "B1F4F8E5B4ABCB369CE0994993420E74E24B3F3A278B96FCAD7C3352897F2413",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexWindingLogLift",
+        "scratchSha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3",
+        "productionSha256": "3B6042A393DFCB04639A299DAC27E1F7CF4CD7AA79C8ED6338584615D95CC462",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularWindingCharacter",
+        "scratchSha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA",
+        "productionSha256": "A57BC0C9D660642EF345DD2ACED223BD2A542F53F8EEB13F930A1575F1770C82",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularWindingCuspLimit",
+        "scratchSha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966",
+        "productionSha256": "03F8433DAD894B666B81F47C4125A88BCEE771E2C1F26D386D0DE9F686B2D605",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceModularParabolicWindingLog",
+        "scratchSha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA",
+        "productionSha256": "2702E9F0688B3659D88FA927999AFBDA81DE1A2C1E235F03A873A83D17F75BDB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexDipoleLocalModel",
+        "scratchSha256": "D31343BBEA532A5A7517D79320B4B5DD22A2E183F592C1A1F2E832AE4AA7AAFE",
+        "productionSha256": "ABB7A08E09261FB7652BA27AFD3D1B3A6F8B9AF75881535B00F90667CB4E3725",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexDipoleLogDerivative",
+        "scratchSha256": "9F113873F90632CE880249A728BFE3D3C66FFB7EB10BF625C2A4F703B8946A5E",
+        "productionSha256": "D6DF8EF9AD2825195710164E3680C322BBEE2F98475CFBDCE76924C7D1289436",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexDipolePairing",
+        "scratchSha256": "EB67A6D4FA986C8DC2002A37944F4F8E86CF7947D2AB7D998E9BC3E404254128",
+        "productionSha256": "AC04B965EB71F98850662AFD94A748618A6C37674F2A1D92074DF92F4AD06A5B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceUpperHalfPlaneDipole",
+        "scratchSha256": "FEC30DD2B41E442A04BCF821B5E9E18765989F5F7227468C46362EDD542FDE7D",
+        "productionSha256": "B01B14604CAFEF037623B29ABD80CCFB433CE776FF365E05598D2E14F5D3A10C",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

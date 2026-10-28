@@ -1,0 +1,44 @@
+
+/-- The genuine twisted homogeneous group action has its exact original finite-dimensional norm derivative. -/
+theorem actual_homogeneous_gl2_norm_derivative_source (m : ℕ)
+    (a : Matrix (Fin 2) (Fin 2) ℂ) (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    HasDerivAt (fun t : ℂ => homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexIdentityGLCurve a t) p)
+      (homogeneousNormalizedGL2Action m a p) 0 :=
+  homogeneousNormalizedGL2Action_hasDerivAt m a p
+
+/-- The original positive real general-linear action equals its genuine normalized special-linear action on every completed vector. -/
+theorem actual_adelic_positive_normalization_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (g : GL(2, ℝ)⁺) (v : AdelicCyclicHilbert f) :
+    adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding g.val) v =
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (realPositiveNormalize g)) v :=
+  adelicCyclicHilbert_positive_normalize f g v
+
+/-- The original full real general-linear curve has its actual original Hilbert norm derivative on every genuine smooth vector. -/
+theorem actual_adelic_gl2_norm_derivative_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (v : adelicRealSmoothSubmodule f) (c : ℝ → Matrix.GeneralLinearGroup (Fin 2) ℝ)
+    (hc : c 0 = 1) (a : Matrix (Fin 2) (Fin 2) ℝ)
+    (hd : ∀ i j, HasDerivAt (fun t => (c t).val i j) (a i j) 0) :
+    HasDerivAt (fun t => adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding (c t)) v.val)
+      (adelicComplexGL2Action f (a.map Complex.ofReal) v).val 0 :=
+  adelicComplexGL2Action_hasDerivAt f v c hc a hd
+
+/-- The entire original full GL₂ enveloping center has its genuine scalar action on the actual cusp cyclic Lie module. -/
+theorem actual_adelic_gl2_central_action_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v ∈ adelicRaisingSpan f) :
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v :=
+  adelicGL2InfinitesimalCharacter_span f hf z v hv
+
+/-- The full original cusp GL₂ infinitesimal character equals the actual full central scalar on every vector of its precise degree-(k-2) determinant twist. -/
+theorem actual_adelic_full_gl2_algebraic_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (m : ℕ) (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicGL2InfinitesimalCharacter_algebraic f hf m hk z p
+

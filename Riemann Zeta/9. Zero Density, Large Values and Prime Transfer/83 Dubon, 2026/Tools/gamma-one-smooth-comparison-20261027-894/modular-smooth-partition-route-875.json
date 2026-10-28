@@ -1,0 +1,32 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "actual original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "compact smooth orbit partition"
+  ],
+  "primary": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_SmoothedFundamental.lean.txt",
+      "sha256": "02116525065FE85F341D3D512EF79281A34660560027D1BBB4249AE0A28CDE9B",
+      "read": "Entire source read before adaptation"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_contDiff_and_finsum_smoothedFundamental_eq_one.lean.txt",
+      "sha256": "9AB3E1B695F07FF44F88652F4AD61D0640F212B32CEC00B4ED4950DE1D6F9EE6",
+      "read": "Entire source read before adaptation"
+    }
+  ],
+  "reuse": [
+    "Native ProperlyDiscontinuousSMul.finite_disjoint_inter_image",
+    "Native UpperHalfPlane.moebius_im eliminates determinant-entry algebra",
+    "Native Subgroup.groupEquivQuotientProdSubgroup assessed for exact Quotient.out representatives",
+    "Existing projective fundamental domain and generic transport/unfolding reviewed; existing Gamma0 domain is not silently substituted for Gamma1"
+  ],
+  "scope": "Literal compact cutoff and proper modular geometry; partition and integral limit to follow. Unconsumed elementary bounds and identities deferred.",
+  "remaining": "Analytic reciprocity and actual principal-divisor converse remain, followed by original all-weight arithmetic association, automorphy and literal higher symmetric powers. 16/20; DUB-17--20 OPEN."
+}

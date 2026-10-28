@@ -1,0 +1,79 @@
+import SourceUnitaryCharacterBasisExt
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapted from the Apache-2.0 scope-795b primary at
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2. The actual
+parabolic quotient has no cyclic torsion factors because each coordinate
+character has the proved integer parabolic lift. The resulting logarithm
+is additive and vanishes on the same actual elliptic/parabolic elements.
+No torsion-freeness, character lift, or logarithm premise is assumed. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+variable {n : ℕ} {ι : Type} {p e : ι → ℕ}
+
+/-- Every cyclic torsion factor of the actual parabolic abelianization is trivial,
+as proved by the integral lift of its coordinate character. -/
+theorem torsion_exponent_eq_zero
+    (eqv : Q Γ ≃+ (Fin n →₀ ℤ) × DirectSum ι (fun i => ZMod (p i ^ e i)))
+    (hp : ∀ i, (p i).Prime) : ∀ i, e i = 0 := by
+  classical
+  by_contra hne
+  obtain ⟨i₀, hi₀⟩ := not_forall.mp hne
+  haveI : Fact (1 < p i₀ ^ e i₀) := ⟨Nat.one_lt_pow hi₀ (hp i₀).one_lt⟩
+
+  let tcrd : Q Γ →+ ZMod (p i₀ ^ e i₀) :=
+    (DirectSum.component ℤ ι (fun i => ZMod (p i ^ e i)) i₀).toAddMonoidHom.comp
+      ((AddMonoidHom.snd _ _).comp eqv.toAddMonoidHom)
+  let Φ : Additive Γ →+ ZMod (p i₀ ^ e i₀) := tcrd.comp (piA Γ)
+  have hΦEll : ∀ γ ∈ Ell Γ, Φ (Additive.ofMul γ) = 0 := by
+    intro γ hγ
+    simp [Φ, piA_eq_zero Γ hγ]
+  have hΦpar : ∀ γ : Γ, γ.val.val.trace ^ 2 = 4 → Φ (Additive.ofMul γ) = 0 := fun γ hγ => hΦEll γ (le_of_eq hγ)
+  have hΦfin : ∀ γ : Γ, IsOfFinOrder γ → Φ (Additive.ofMul γ) = 0 := by
+    intro γ hγ
+    refine hΦEll γ ?_
+    exact trace_sq_le_four_of_isOfFinOrder (γ : SL(2, ℤ)) (Γ.subtype.isOfFinOrder hγ)
+
+  obtain ⟨x, hxpar, hx⟩ :=
+    SourceIntegralCharacterLift.exists_int_lift Γ (p i₀ ^ e i₀) Φ hΦpar hΦfin
+
+  have hxEll : ∀ γ ∈ Ell Γ, x (Additive.ofMul γ) = 0 := by
+    intro γ hγ
+    rcases (show ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 ≤ 4 from hγ).lt_or_eq with
+      hlt | heq
+    · have h12 : γ ^ 12 = 1 := Subtype.ext (by
+        rw [Subgroup.coe_pow, Subgroup.coe_one]; exact pow_twelve_eq_one _ hlt)
+      have h : x (Additive.ofMul (γ ^ 12)) =
+          12 • x (Additive.ofMul γ) := by
+        rw [ofMul_pow, map_nsmul]
+      rw [h12, ofMul_one, map_zero] at h
+      simpa using h.symm
+    · exact hxpar γ heq
+
+  obtain ⟨g₀, hg₀⟩ :=
+    piA_surjective Γ (eqv.symm (0, DirectSum.of (fun i => ZMod (p i ^ e i)) i₀ 1))
+  have htor : (p i₀ ^ e i₀) • piA Γ g₀ = 0 := by
+    rw [hg₀, ← map_nsmul, Prod.smul_mk, smul_zero,
+      ← map_nsmul (DirectSum.of (fun i => ZMod (p i ^ e i)) i₀) (p i₀ ^ e i₀) (1 : ZMod (p i₀ ^ e i₀)),
+      nsmul_eq_mul, mul_one, ZMod.natCast_self, map_zero, Prod.mk_zero_zero, map_zero]
+  have hx0 : x g₀ = 0 := by
+    have h := congrArg (descA x hxEll) htor
+    rw [map_nsmul, map_zero] at h
+    have h' : (p i₀ ^ e i₀) • x g₀ = 0 := h
+    rw [nsmul_eq_mul, mul_eq_zero] at h'
+    rcases h' with h' | h'
+    · exact absurd (by exact_mod_cast h' : p i₀ ^ e i₀ = 0) (pow_ne_zero _ (hp i₀).ne_zero)
+    · exact h'
+  have hΦg : Φ g₀ = 1 := by
+    simp [Φ, tcrd, hg₀, ← DirectSum.apply_eq_component, DirectSum.of_eq_same]
+  have hΦg' : Φ g₀ = 0 := by
+    have h := DFunLike.congr_fun hx g₀
+    simp only [AddMonoidHom.coe_comp, Function.comp_apply] at h
+    rw [← h, hx0, map_zero]
+  rw [hΦg'] at hΦg
+  exact zero_ne_one hΦg
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

@@ -1,0 +1,58 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T23:17:52.561422+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneMultiplierUnitarization",
+    "SourceGammaOneGeneralMultiplierPrincipal"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierUnitarization.lean",
+      "sha256": "45074A2029519B04BBA108F88CFC07ECCF18F34997D45B4298657BF08D8217B3",
+      "oleanSha256": "3B818989DEF838DFEDE16037246DF1673434E23D7F9DBA7C3827D7D4A4696131",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierUnitarization973a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMultiplierUnitarization973a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeneralMultiplierPrincipal.lean",
+      "sha256": "1D09A6355B7013E36838432425EB8DB31ABCA326E6FF31D9C623E9DA59B6E28D",
+      "oleanSha256": "D53BA83A022AD95E53931586AFA4C5C5A4108C2C34B4F415006CC22BE6A2227A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeneralMultiplierPrincipal-974a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeneralMultiplierPrincipal-974a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unitary_multiplier_same_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierAudit1.log",
+  "logSha256": "DEA6E947124A5B45BBF90DF50555E6743BDEB2059BE8F0005233BEC72B50CEC3",
+  "auditSha256": "A8B7515B1AEA174FAFBCD4F6B4E71E8B8A6CB593331540F7F6994775C56593F4",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierScratchOwnership975.log",
+  "ownershipSha256": "03B882FC2A034AD70D8E41DA3E11A03D7C6498736B3CA16E77CC4EB7AF04BE82",
+  "exhaustiveTheorems": 2,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeneralMultiplierDependencyAudit1.log",
+  "dependencyAuditSha256": "536A3C2427643A25B53BD57608169DC36B7DA8D71C0A3F2A179E06B7C472ADD7",
+  "dependencyAuditSourceSha256": "101172DF841336F45176870F4C74B030E46A937D4E412F03335847F01FEF8028",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_multiplier"
+  ],
+  "dependency": "DUB17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> principal-divisor converse -> meromorphic function with prescribed orders -> normalize its multiplier.",
+  "discharged": "Unit-modulus hypothesis in the new actual principal-divisor consumer, by multiplying the given meromorphic function by exp(-Ek) from native real-period surjectivity of log norm. All orders and nonzero translated cusp limits remain equal.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Construction of the original meromorphic function with its multiplier, prescribed orders and cusp limits remains. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-general-multiplier-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "22931F222D3E62EE55B547B1F3CFC4C948B15FBB16577CECE8DB1AE01347385F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,73 @@
+import SourceModularProjectiveFibers
+import SourceModularSmoothGeometry
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant smooth comparison V.
+The orbit product is indexed by the actual projective subgroup. Native
+fiber/kernel equivalences and the already proved two-element kernel replace
+the source's additional positive-matrix representative infrastructure.
+No comparison function, local multiplicity or reciprocity is assumed. -/
+namespace Dubon2026.SourceSmoothProjective
+noncomputable section
+open UpperHalfPlane Set
+open SourceSmoothedUnfolding
+open scoped MatrixGroups Pointwise
+
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- The actual integral subgroup decomposed into projective fibers and its kernel. -/
+def projectionEquiv : Γ ≃ projectiveIntegralSubgroup Γ × (projection Γ).ker :=
+  (Equiv.sigmaFiberEquiv (projection Γ)).symm.trans
+    (Equiv.sigmaEquivProdOfEquiv
+      (MonoidHom.fiberEquivKerOfSurjective (projection_surjective Γ)))
+
+theorem projectionEquiv_symm_projection (q : projectiveIntegralSubgroup Γ)
+    (k : (projection Γ).ker) : projection Γ ((projectionEquiv Γ).symm (q, k)) = q := by
+  have h := congrArg Prod.fst ((projectionEquiv Γ).apply_symm_apply (q, k))
+  exact h
+
+/-- A fixed actual matrix representative of each projective group element. -/
+def representative (q : projectiveIntegralSubgroup Γ) : Γ :=
+  (projectionEquiv Γ).symm (q, 1)
+
+theorem projection_representative (q : projectiveIntegralSubgroup Γ) :
+    projection Γ (representative Γ q) = q :=
+  projectionEquiv_symm_projection Γ q 1
+
+theorem representative_injective : Function.Injective (representative Γ) := by
+  intro q r h
+  have := congrArg (projection Γ) h
+  simpa only [projection_representative] using this
+
+theorem representative_smul (q : projectiveIntegralSubgroup Γ) (τ : ℍ) :
+    ((representative Γ q : Γ) : SL(2, ℤ)) • τ = q • τ := by
+  change (projection Γ (representative Γ q)) • τ = q • τ
+  rw [projection_representative]
+
+/-- Exact orbit-fiber decomposition, retaining the two-element central kernel. -/
+def orbitFiberEquiv (τ s : ℍ) :
+    {a : Γ // (a.val • τ : ℍ) = s} ≃
+      {q : projectiveIntegralSubgroup Γ // q • τ = s} × (projection Γ).ker where
+  toFun a := (⟨projection Γ a.val, a.property⟩, (projectionEquiv Γ a.val).2)
+  invFun q := ⟨(projectionEquiv Γ).symm (q.1.val, q.2), by
+    change (projection Γ ((projectionEquiv Γ).symm (q.1.val, q.2))) • τ = s
+    rw [projectionEquiv_symm_projection]
+    exact q.1.property⟩
+  left_inv a := by
+    apply Subtype.ext
+    exact (projectionEquiv Γ).symm_apply_apply a.val
+  right_inv q := by
+    have h := (projectionEquiv Γ).apply_symm_apply (q.1.val, q.2)
+    apply Prod.ext
+    · apply Subtype.ext
+      exact congrArg Prod.fst h
+    · exact congrArg (fun x : projectiveIntegralSubgroup Γ × (projection Γ).ker => x.2) h
+
+theorem two_mul_card_projective_fibre (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (τ s : ℍ) :
+    2 * Nat.card {q : projectiveIntegralSubgroup Γ // q • τ = s} =
+      Nat.card {a : Γ // (a.val • τ : ℍ) = s} := by
+  rw [Nat.card_congr (orbitFiberEquiv Γ τ s), Nat.card_prod,
+    projection_ker_card Γ hΓ, mul_comm]
+
+end
+end Dubon2026.SourceSmoothProjective

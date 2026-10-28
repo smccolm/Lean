@@ -1,0 +1,12 @@
+{
+  "status": "PASS: all immutable source/receipt, exact import-only promotion, evidence archive, registration, existing documents and predecessor canonical checks passed before mutation.",
+  "integrationScriptSha256": "0FFF51882BB79F247B6F692F2098E36809CECF41776A47EC6E746B5B50CA6BBE",
+  "productionMutation": false,
+  "modules": 26,
+  "queries": 220,
+  "exhaustiveScratchChecks": 273,
+  "proofValueChecks": 258,
+  "predecessor": 8695,
+  "expectedProductionModules": 8721,
+  "fullGoal": "16/20; DUB-17--20 OPEN"
+}

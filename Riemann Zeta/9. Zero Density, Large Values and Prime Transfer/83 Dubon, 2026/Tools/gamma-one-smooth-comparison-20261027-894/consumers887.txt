@@ -1,0 +1,38 @@
+
+/-- The original raising derivatives are independent and have the exact original compact weights and lowering coefficients. -/
+theorem actual_adelic_raising_ladder_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    LinearIndependent ℂ (adelicRaisingJet f) ∧
+    (∀ n : ℕ, ⁅compactSl2H, adelicRaisingJet f n⁆ = ((k : ℂ) + 2 * n) • adelicRaisingJet f n) ∧
+    (∀ n : ℕ, ⁅compactSl2F, adelicRaisingJet f (n + 1)⁆ =
+      (((n : ℂ) + 1) * (-(k : ℂ) - n)) • adelicRaisingJet f n) :=
+  ⟨adelicRaisingJet_linearIndependent f hf hk, adelicRaisingJet_weight f hf,
+    adelicRaisingJet_lower f hf⟩
+
+/-- The literal original enveloping cyclic span is the irreducible original lowest-weight Lie module. -/
+theorem actual_adelic_lowest_weight_irreducible_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) :
+    adelicRaisingSpan f = Submodule.span ℂ (Set.range (fun z : UniversalEnvelopingAlgebra ℂ ComplexSl2 =>
+      adelicEnvelopingAction f z (adelicSmoothGenerator f))) ∧
+    LieModule.IsIrreducible ℂ ComplexSl2 (adelicRaisingLieSubmodule f hf) :=
+  ⟨adelicRaisingSpan_eq_enveloping f hf, adelicRaisingLieSubmodule_irreducible f hf hk⟩
+
+/-- The full genuine center acts through the actual infinitesimal character on every original cyclic vector. -/
+theorem actual_adelic_infinitesimal_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2))
+    (v : adelicRealSmoothSubmodule f) (hv : v ∈ adelicRaisingSpan f) :
+    adelicEnvelopingAction f z.val v = adelicInfinitesimalCharacter f hf z • v :=
+  adelicInfinitesimalCharacter_span f hf z v hv
+
+/-- The genuine infinitesimal character has the exact original normalized Casimir value. -/
+theorem actual_adelic_infinitesimal_character_casimir_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    adelicInfinitesimalCharacter f hf
+      ⟨complexSl2EnvelopingCasimir, complexSl2EnvelopingCasimir_mem_center⟩ =
+      ((k : ℂ) / 2) * (1 - (k : ℂ) / 2) :=
+  adelicInfinitesimalCharacter_casimir f hf
+

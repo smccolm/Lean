@@ -1,0 +1,18 @@
+[
+  "AdelicCompactFiniteConverse",
+  "AdelicKFiniteGL2Character",
+  "AdelicKFiniteIdentification",
+  "AdelicRaisingCompactFinite",
+  "AdelicRaisingRotation",
+  "FiniteInvariantAnnihilator",
+  "FiniteOrbitOfEigenSpan",
+  "FiniteUnitaryEigenSpan",
+  "HilbertFiniteCoordinateSpan",
+  "IrrationalRotationCharacter",
+  "PolynomialEndIntertwiner",
+  "PolynomialFiniteEigenSupport",
+  "RealOneParameterEigenvector",
+  "RealRotationGroup",
+  "ScalarVectorODE",
+  "UnitaryEigenCoordinate"
+]

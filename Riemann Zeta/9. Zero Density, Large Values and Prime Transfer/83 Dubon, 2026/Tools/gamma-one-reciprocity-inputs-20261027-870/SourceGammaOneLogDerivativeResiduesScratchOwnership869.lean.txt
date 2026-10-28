@@ -1,0 +1,23 @@
+import SourceComplexHolomorphicStokes
+import SourceComplexDbarCutoff
+import SourceComplexDbarKernelIntegrability
+import SourceComplexDbarRadialNormalization
+import SourceComplexCauchyPompeiu
+import SourceComplexResidueLocalModels
+import SourceComplexResidueIntegral
+import SourceComplexLogDerivativeResidues
+import SourceGammaOneLogDerivativeResidues
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceComplexHolomorphicStokes, `SourceComplexDbarCutoff, `SourceComplexDbarKernelIntegrability, `SourceComplexDbarRadialNormalization, `SourceComplexCauchyPompeiu, `SourceComplexResidueLocalModels, `SourceComplexResidueIntegral, `SourceComplexLogDerivativeResidues, `SourceGammaOneLogDerivativeResidues]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,77 @@
+import Dubon2026.SourceCuspCorrectionCosetChains
+import Dubon2026.SourceModularFreeProduct
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier lifting -> integral parabolic-character lifting -> actual cusp
+value correction. Adapted from anthropics/fermats-last-theorem, Apache-2.0,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.
+The native finite edge-chain construction supplies the named dependency.
+No external compatibility shim or linter suppression is imported. -/
+namespace Dubon2026.SourceCuspCorrection
+noncomputable section
+open Subgroup Monoid Monoid.CoprodI MulAction
+open SourceModularFreeProduct (G23)
+/-- The same free product used in the projective modular presentation. -/
+abbrev Gp : Type := CoprodI G23
+
+/-- The order-two cyclic generator. -/
+def sA : G23 0 := Multiplicative.ofAdd 1
+
+/-- The order-three cyclic generator. -/
+def uA : G23 1 := Multiplicative.ofAdd 1
+
+theorem sA_mul_sA : sA * sA = 1 := by decide
+
+theorem eq_ofAdd_one_pow {n : ℕ} [NeZero n] (x : Multiplicative (ZMod n)) :
+    x = (Multiplicative.ofAdd (1 : ZMod n)) ^ (Multiplicative.toAdd x).val := by
+  rw [← ofAdd_nsmul, nsmul_eq_mul, mul_one, ZMod.natCast_zmod_val]
+  rfl
+
+/-- The standard parabolic word in the two cyclic generators. -/
+def τ : Gp := CoprodI.of sA * CoprodI.of uA
+
+theorem of_sA_mul_of_sA : (CoprodI.of sA : Gp) * CoprodI.of sA = 1 := by
+  rw [← map_mul, sA_mul_sA, map_one]
+
+theorem of_sA_inv : (CoprodI.of sA : Gp)⁻¹ = CoprodI.of sA :=
+  inv_eq_of_mul_eq_one_right of_sA_mul_of_sA
+
+theorem of_sA_mul_τ : (CoprodI.of sA : Gp) * τ = CoprodI.of uA := by
+  rw [τ, ← mul_assoc, of_sA_mul_of_sA, one_mul]
+
+theorem closure_sA_τ :
+    Subgroup.closure {(CoprodI.of sA : Gp), τ} = ⊤ := by
+  rw [eq_top_iff]
+  intro g _
+  induction g using CoprodI.induction_left with
+  | one => exact one_mem _
+  | @mul i a x ih =>
+    refine mul_mem ?_ (ih (mem_top x))
+    have hs : (CoprodI.of sA : Gp) ∈ Subgroup.closure {(CoprodI.of sA : Gp), τ} :=
+      subset_closure (Set.mem_insert _ _)
+    have hu : (CoprodI.of uA : Gp) ∈ Subgroup.closure {(CoprodI.of sA : Gp), τ} := by
+      rw [← of_sA_mul_τ]; exact mul_mem hs (subset_closure (Set.mem_insert_of_mem _ rfl))
+    fin_cases i
+    · rw [eq_ofAdd_one_pow a, map_pow]
+      exact pow_mem hs _
+    · rw [eq_ofAdd_one_pow a, map_pow]
+      exact pow_mem hu _
+
+theorem edgeChain_τ :
+    edgeChain τ = Finsupp.single (CoprodI.of sA) 1 - Finsupp.single τ 1 := by
+  unfold τ
+  rw [edgeChain_of_zero_mul_of_one]
+
+theorem edgeChain_τ_pow (w : ℕ) :
+    edgeChain (τ ^ w)
+      = ∑ j ∈ Finset.range w,
+          (Finsupp.single (τ ^ j * CoprodI.of sA) 1 - Finsupp.single (τ ^ (j + 1)) 1) := by
+  induction w with
+  | zero => simp
+  | succ n ih =>
+    rw [pow_succ, edgeChain_mul, ih, edgeChain_τ, map_sub, lTransl_single, lTransl_single,
+      Finset.sum_range_succ, ← pow_succ]
+
+end
+end Dubon2026.SourceCuspCorrection

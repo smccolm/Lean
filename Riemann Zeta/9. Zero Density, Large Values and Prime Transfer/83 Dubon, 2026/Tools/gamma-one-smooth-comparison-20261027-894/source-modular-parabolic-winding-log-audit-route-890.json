@@ -1,0 +1,48 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period comparison",
+    "logarithm of actual nonvanishing invariant quotient"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\winding-log-reuse-route-887.json",
+      "sha256": "4C89CECF2448CCBF24B80DB10A8D368BEF7289FF448D3A973AF8BFB9DCA4D71E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_exp_eq_of_invariant_ne_zero_isParabolicHom.lean.txt",
+      "sha256": "9FF210E7655F87AD45C18D2DFDCF0388B4B8173B5B1801852493EF7C8437069D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+      "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homotopy\\Lifting.lean",
+      "sha256": "6F43A4D64A7053876A55EE261E37A73044F2DF293CE5A4DB6AFC33ADD3D65B7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\CoveringMap.lean",
+      "sha256": "ADDF1C3B02EDB5D64301CA7DD40A7DAD620575AEC0A722B8CB16A6EB28D2F791"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealParabolicPeriods.lean",
+      "sha256": "2837775BEE9ACA4FFD71416FA1F851CF0FA680B24AF4C4801F9559D299A9B341"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Construct global continuous logarithm by native exponential covering and prove local C1 regularity and logarithmic derivative",
+    "Derive actual integer additive character from exponential invariance; native covering uniqueness supplies constancy",
+    "Prove finite translated logarithm cusp limits from nonzero finite function limits",
+    "Existing signed-translation classification and cusp limits prove literal squared-trace-four character vanishing"
+  ],
+  "remaining": "Input is an actual C1 nonzero invariant function with nonzero translated cusp limits. The smooth comparison local model, filled quotient, winding-period integral, analytic reciprocity, original principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN."
+}

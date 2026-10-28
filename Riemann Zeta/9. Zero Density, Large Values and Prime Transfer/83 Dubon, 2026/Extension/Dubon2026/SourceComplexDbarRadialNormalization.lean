@@ -1,0 +1,76 @@
+import Dubon2026.SourceComplexDbarKernelIntegrability
+
+ /-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> logarithmic-derivative residue identity ->
+the simple-pole dbar kernel. Adapted from the frozen primary FLT proof;
+native radial integration and integration by parts prove the normalization.
+No residue or Cauchy-Pompeiu conclusion is assumed. -/
+namespace Dubon2026.SourceComplexReciprocity.DbarFundamental
+noncomputable section
+open MeasureTheory Filter Complex Metric Set
+open scoped Topology Real InnerProductSpace
+
+variable (a : ℂ) {ε : ℝ}
+
+theorem integral_deriv_φ (hε : 0 < ε) :
+    ∫ z : ℂ, deriv φ (‖z - a‖ ^ 2 / ε ^ 2) / ε ^ 2 = -π := by
+  have h1 := integral_radial a (fun y => deriv φ (y ^ 2 / ε ^ 2) / ε ^ 2)
+  rw [h1]
+
+  have hderiv : ∀ y : ℝ, HasDerivAt (fun y : ℝ => φ (y ^ 2 / ε ^ 2) / 2)
+      (y * (deriv φ (y ^ 2 / ε ^ 2) / ε ^ 2)) y := by
+    intro y
+    have h2 : HasDerivAt (fun y : ℝ => y ^ 2 / ε ^ 2) (2 * y / ε ^ 2) y := by
+      have := (hasDerivAt_pow 2 y).div_const (ε ^ 2)
+      refine this.congr_deriv ?_
+      simp only [Nat.cast_ofNat, Nat.add_one_sub_one, pow_one]
+    have h3 := (((φ_differentiable _).hasDerivAt).comp y h2).div_const 2
+    refine h3.congr_deriv ?_
+    ring
+  have hzero : ∀ y : ℝ, 2 * ε ≤ |y| → deriv φ (y ^ 2 / ε ^ 2) = 0 := by
+    intro y hy
+    apply deriv_φ_of_two_lt
+    rw [lt_div_iff₀ (by positivity)]
+    have h0 : 0 ≤ 2 * ε := by positivity
+    have h4 : (2 * ε) ^ 2 ≤ |y| ^ 2 := pow_le_pow_left₀ h0 hy 2
+    have h5 : |y| ^ 2 = y ^ 2 := sq_abs y
+    nlinarith
+  have hcont : Continuous fun y : ℝ => y * (deriv φ (y ^ 2 / ε ^ 2) / ε ^ 2) :=
+    continuous_id.mul ((deriv_φ_continuous.comp ((continuous_pow 2).div_const _)).div_const _)
+  have hcs : HasCompactSupport fun y : ℝ => y * (deriv φ (y ^ 2 / ε ^ 2) / ε ^ 2) := by
+    refine HasCompactSupport.intro (isCompact_Icc (a := -(2 * ε)) (b := 2 * ε)) fun y hy => ?_
+    rw [mem_Icc, not_and_or, not_le, not_le] at hy
+    have : 2 * ε ≤ |y| := by
+      rcases hy with hy | hy
+      · rw [abs_of_neg (by linarith)]; linarith
+      · rw [abs_of_pos (by linarith)]; linarith
+    rw [hzero y this]
+    simp
+  have htend : Tendsto (fun y : ℝ => φ (y ^ 2 / ε ^ 2) / 2) atTop (𝓝 0) := by
+    refine (tendsto_const_nhds (x := (0 : ℝ))).congr' ?_
+    filter_upwards [eventually_ge_atTop (2 * ε)] with y hy
+    rw [φ_of_two_le, zero_div]
+    rw [le_div_iff₀ (by positivity)]
+    have h0 : 0 ≤ 2 * ε := by positivity
+    have h4 : (2 * ε) ^ 2 ≤ y ^ 2 := pow_le_pow_left₀ h0 hy 2
+    nlinarith
+  have hΦc : Continuous fun y : ℝ => φ (y ^ 2 / ε ^ 2) / 2 :=
+    (φ_differentiable.continuous.comp ((continuous_pow 2).div_const _)).div_const _
+  have hI := integral_Ioi_of_hasDerivAt_of_tendsto (a := 0)
+    hΦc.continuousWithinAt (fun y _ => hderiv y)
+    (hcont.integrable_of_hasCompactSupport hcs).integrableOn htend
+  rw [hI, φ_of_le_one (by norm_num)]
+  ring
+
+theorem integral_inv_sub_mul_D_η (hε : 0 < ε) : ∫ z, (z - a)⁻¹ * D (η a ε) z = -π := by
+  have hae : (fun z => (z - a)⁻¹ * D (η a ε) z)
+      =ᵐ[volume] fun z => ((deriv φ (‖z - a‖ ^ 2 / ε ^ 2) / ε ^ 2 : ℝ) : ℂ) := by
+    filter_upwards [(Set.countable_singleton a).ae_notMem volume] with z hz
+    rw [mem_singleton_iff] at hz
+    rw [D_η a, mul_left_comm, inv_mul_cancel₀ (sub_ne_zero.2 hz), mul_one]
+  rw [integral_congr_ae hae, integral_complex_ofReal, integral_deriv_φ a hε]
+  push_cast
+  ring
+
+end
+end Dubon2026.SourceComplexReciprocity.DbarFundamental

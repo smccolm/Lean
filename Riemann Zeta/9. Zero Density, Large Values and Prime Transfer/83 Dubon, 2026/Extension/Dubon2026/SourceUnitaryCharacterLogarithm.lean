@@ -1,0 +1,66 @@
+import Dubon2026.SourceUnitaryCircleCharacter
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapted from the Apache-2.0 scope-795b primary at
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2. The actual
+parabolic quotient has no cyclic torsion factors because each coordinate
+character has the proved integer parabolic lift. The resulting logarithm
+is additive and vanishes on the same actual elliptic/parabolic elements.
+No torsion-freeness, character lift, or logarithm premise is assumed. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ))
+
+theorem exists_real_logarithm [Γ.FiniteIndex] (χ : Γ → ℂ) (hmul : ∀ γ δ, χ (γ * δ) = χ γ * χ δ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (htriv : ∀ γ : Γ,
+      ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 ≤ 4 → χ γ = 1) :
+    ∃ φ : Additive Γ →+ ℝ,
+      (∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 ≤ 4 →
+        φ (Additive.ofMul γ) = 0) ∧
+      ∀ γ, χ γ = Complex.exp (2 * Real.pi * Complex.I * (φ (Additive.ofMul γ) : ℂ)) := by
+  classical
+  obtain ⟨n, ι, _, p, hp, e, ⟨eqv⟩⟩ := AddCommGroup.equiv_free_prod_directSum_zmod (Q Γ)
+
+  have he : ∀ i, e i = 0 := torsion_exponent_eq_zero Γ eqv hp
+  have hsub : ∀ i, Subsingleton (ZMod (p i ^ e i)) := fun i =>
+    ZMod.subsingleton_iff.mpr (by rw [he i, pow_zero])
+  have htors : ∀ t : DirectSum ι (fun i => ZMod (p i ^ e i)), t = 0 := fun t =>
+    DFinsupp.ext fun i => Subsingleton.elim _ _
+
+  set χc := unitChar Γ χ hmul hunit with hχc_def
+  have hχc : ∀ γ ∈ Ell Γ, χc γ = 1 := fun γ hγ =>
+    Circle.ext (by rw [unitChar_apply, Circle.coe_one]; exact htriv γ hγ)
+  let χQ : Q Γ →+ Additive Circle := MonoidHom.toAdditive (desc χc hχc)
+
+  choose θ hθ using fun j : Fin n =>
+    Circle.exp_surjective (Additive.toMul (χQ (eqv.symm (Finsupp.single j 1, 0))))
+  let ψ : Q Γ →+ ℝ :=
+    { toFun := fun q => ∑ j, ((eqv q).1 j : ℝ) * θ j
+      map_zero' := by simp
+      map_add' := fun a b => by simp [Finset.sum_add_distrib, add_mul] }
+  have hψb : ∀ j, ψ (eqv.symm (Finsupp.single j 1, 0)) = θ j := by
+    intro j
+    simp [ψ, Finsupp.single_apply]
+  have hfactor : χQ = Circle.expHom.comp ψ := by
+    refine hom_ext_of_basis eqv _ _ (fun j => ?_) (fun t => ?_)
+    · rw [AddMonoidHom.comp_apply, hψb, Circle.expHom_apply, Function.comp_apply, hθ]
+      rfl
+    · rw [htors t, Prod.mk_zero_zero, map_zero, map_zero, map_zero]
+  refine ⟨(AddMonoidHom.mulLeft (1 / (2 * Real.pi))).comp (ψ.comp (piA Γ)), fun γ hγ => ?_,
+    fun γ => ?_⟩
+  · simp [piA_eq_zero Γ hγ]
+  · have h1 : χ γ = ((desc χc hχc (piM Γ γ) : Circle) : ℂ) := rfl
+    have h2 : desc χc hχc (piM Γ γ) = Circle.exp (ψ (piA Γ (Additive.ofMul γ))) := by
+      have h := DFunLike.congr_fun hfactor (piA Γ (Additive.ofMul γ))
+      exact Additive.ofMul.injective h
+    have hπ : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
+    rw [h1, h2, Circle.coe_exp]
+    congr 1
+    simp only [AddMonoidHom.coe_comp, Function.comp_apply, AddMonoidHom.coe_mulLeft]
+    push_cast
+    field_simp
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

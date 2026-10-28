@@ -1,0 +1,50 @@
+
+/-- Every actual coefficient of the original determinant twist is an actual polynomial divided by a power of its nonzero determinant. -/
+theorem actual_algebraic_coefficients_source (m : ℕ)
+    (v : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m))
+    (L : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m) →ₗ[ℂ] ℂ) :
+    ∃ q : MvPolynomial (Fin 2 × Fin 2) ℂ, ∀ g : Matrix.GeneralLinearGroup (Fin 2) ℂ,
+      L (homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g v) =
+        MvPolynomial.eval (fun ij => g.val ij.1 ij.2) q / Matrix.det g.val ^ m :=
+  homogeneousDeterminantTwist_regular_coefficient m v L
+
+/-- Actual group invariance forces a subspace of the original determinant twist to be zero or the entire original space. -/
+theorem actual_algebraic_irreducibility_source (m : ℕ)
+    (p : Submodule ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)))
+    (hi : ∀ g v, v ∈ p → homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g v ∈ p) :
+    p = ⊥ ∨ p = ⊤ := homogeneousDeterminantTwist_irreducible m p hi
+
+/-- The original nonzero pure-power vector has the exact highest weight under every original diagonal torus element. -/
+theorem actual_algebraic_highest_weight_source (m : ℕ) (u v : ℂˣ) :
+    homogeneousPurePower (2 * m) (0 : Fin 2) ≠ 0 ∧
+    homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexDiagonalGL u v)
+      (homogeneousPurePower (2 * m) (0 : Fin 2)) =
+      ((u : ℂ) ^ m * (v : ℂ) ^ (-(m : ℤ))) • homogeneousPurePower (2 * m) (0 : Fin 2) :=
+  ⟨homogeneousPurePower_ne_zero _ _, homogeneousDeterminantTwist_highest_weight m u v⟩
+
+/-- The original real K-finite cusp module has the same full central character as its actual irreducible algebraic model with the proved regular shifted highest weight. -/
+theorem actual_regular_algebraic_model_source {N : ℕ} [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) (hf : f ≠ 0) (m : ℕ)
+    (hk : k = (2 * m : ℕ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ)))
+    (v : adelicRealSmoothSubmodule f) (hv : v.val ∈ adelicRealCyclicClosedSpan f)
+    [FiniteDimensional ℂ (adelicCompactOrbitSpan f v.val)]
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    (∀ w : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m),
+      ∀ L : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m) →ₗ[ℂ] ℂ,
+      ∃ q : MvPolynomial (Fin 2 × Fin 2) ℂ, ∀ g : Matrix.GeneralLinearGroup (Fin 2) ℂ,
+        L (homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g w) =
+          MvPolynomial.eval (fun ij => g.val ij.1 ij.2) q / Matrix.det g.val ^ m) ∧
+    (∀ U : Submodule ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)),
+      (∀ g w, w ∈ U → homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) g w ∈ U) →
+        U = ⊥ ∨ U = ⊤) ∧
+    homogeneousPurePower (2 * m) (0 : Fin 2) ≠ 0 ∧
+    (-(m : ℤ) ≤ (m : ℤ) ∧ (m : ℤ) + 1 - (-(m : ℤ)) = 2 * m + 1 ∧
+      0 < (m : ℤ) + 1 - (-(m : ℤ))) ∧
+    (∀ u w : ℂˣ, homogeneousDeterminantTwist (2 * m) (-(m : ℤ)) (complexDiagonalGL u w)
+      (homogeneousPurePower (2 * m) (0 : Fin 2)) =
+      ((u : ℂ) ^ m * (w : ℂ) ^ (-(m : ℤ))) • homogeneousPurePower (2 * m) (0 : Fin 2)) ∧
+    adelicGL2EnvelopingAction f z.val v = adelicGL2InfinitesimalCharacter f hf z • v ∧
+    homogeneousGL2EnvelopingAction m z.val p = adelicGL2InfinitesimalCharacter f hf z • p :=
+  adelicRealKFinite_regular_algebraic_model f hf m hk z v hv p
+

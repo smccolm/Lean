@@ -1,0 +1,27 @@
+{
+  "chain": "DUB17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> principal-divisor converse -> meromorphic function with prescribed orders -> normalize its multiplier.",
+  "discharges": "Unit-modulus hypothesis in the new actual principal-divisor consumer, by multiplying the given meromorphic function by exp(-Ek) from native real-period surjectivity of log norm. All orders and nonzero translated cusp limits remain equal.",
+  "remaining": "Construction of the original meromorphic function with its multiplier, prescribed orders and cusp limits remains. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicMultiplierParabolic.lean",
+      "sha256": "4ADED325A0FBE001829698A4B1BF635C27F31D39FF1911DFACF8A97264D8F5DC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "sha256": "EA2BE01343B9FB427D5AC677F8BE3342116D922544B2FC4A2063AC14FFCC1E27"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriodUntwist.lean",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryDivisorPrincipal.lean",
+      "sha256": "4E8C5F86521D70146FD1982D9784207763048CBD96DAF62B4062DA386D80A871"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ComplexPlaceDictionary_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLattice.lean.txt",
+      "sha256": "14F2E80D9B88DAAD1A639C0B723115988941888E9687FC3553125E10B9B59572"
+    }
+  ]
+}

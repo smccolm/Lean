@@ -1,0 +1,103 @@
+import SourceComplexHolomorphicStokes
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> winding-period limit -> smooth comparison function
+-> local logarithmic wedge identity -> compact-support wedge integration
+by parts. The comparison function is only C1; requiring it to be meromorphic
+would add a new obligation closely related to the desired divisor converse.
+Native symmetry of the second derivative and integration by parts discharge
+the smooth test-function identity; no Stokes conclusion is assumed. -/
+namespace Dubon2026.SourceComplexReciprocity.Wedge
+noncomputable section
+open MeasureTheory Filter Complex Metric Set
+open scoped Topology Real
+
+theorem integrable_mul_of_tsupport_subset' {V : Set ℂ} {f g : ℂ → ℂ} (hV : IsOpen V)
+    (hf : ContinuousOn f V) (hg : Continuous g) (hgs : HasCompactSupport g)
+    (hgV : tsupport g ⊆ V) : Integrable fun z => g z * f z := by
+  simpa only [mul_comm] using integrable_mul_of_tsupport_subset hV hf hg hgs hgV
+
+theorem mul_eq_of_tsupport_subset {V : Set ℂ} {f f' g : ℂ → ℂ} (hgV : tsupport g ⊆ V)
+    (hff' : ∀ z ∈ V, f z = f' z) (z : ℂ) : f z * g z = f' z * g z := by
+  by_cases hz : z ∈ V
+  · rw [hff' z hz]
+  · rw [image_eq_zero_of_notMem_tsupport fun h => hz (hgV h), mul_zero, mul_zero]
+
+theorem fderiv_apply_props {ψ : ℂ → ℂ} (hψ : ContDiff ℝ 1 ψ) (hψs : HasCompactSupport ψ) (v : ℂ) :
+    Continuous (fun z => fderiv ℝ ψ z v) ∧ HasCompactSupport (fun z => fderiv ℝ ψ z v) ∧
+      tsupport (fun z => fderiv ℝ ψ z v) ⊆ tsupport ψ :=
+  ⟨(hψ.continuous_fderiv one_ne_zero).clm_apply continuous_const, hψs.fderiv_apply ℝ v,
+    tsupport_fderiv_apply_subset ℝ v⟩
+
+theorem contDiff_fderiv_apply {v : ℂ → ℂ} (hv : ContDiff ℝ 2 v) (w : ℂ) :
+    ContDiff ℝ 1 fun z => fderiv ℝ v z w := by
+  have h : ContDiff ℝ 1 (fderiv ℝ v) := hv.fderiv_right (m := 1) (by norm_num)
+  exact h.clm_apply contDiff_const
+
+theorem mixed_partials_symm {v : ℂ → ℂ} (hv : ContDiff ℝ 2 v) (z a b : ℂ) :
+    fderiv ℝ (fun w => fderiv ℝ v w a) z b = fderiv ℝ (fun w => fderiv ℝ v w b) z a := by
+  have hd : DifferentiableAt ℝ (fderiv ℝ v) z :=
+    (hv.fderiv_right (m := 1) (by norm_num)).differentiable (by norm_num) z
+  rw [fderiv_clm_apply hd (differentiableAt_const _), fderiv_clm_apply hd (differentiableAt_const _)]
+  simp only [fderiv_fun_const, Pi.zero_apply, ContinuousLinearMap.comp_zero, zero_add,
+    ContinuousLinearMap.flip_apply]
+  have hs : IsSymmSndFDerivAt ℝ v z :=
+    hv.contDiffAt.isSymmSndFDerivAt (by simp [minSmoothness_of_isRCLikeNormedField])
+  exact hs.eq b a
+
+theorem integral_wedge_eq_zero {O : Set ℂ} (hO : IsOpen O) {u v : ℂ → ℂ}
+    (hu : ContDiffOn ℝ 1 u O) (hv : ContDiff ℝ 2 v) (hvs : HasCompactSupport v)
+    (hvO : tsupport v ⊆ O) :
+    ∫ z, (fderiv ℝ u z 1 * fderiv ℝ v z I - fderiv ℝ u z I * fderiv ℝ v z 1) = 0 := by
+
+  set vx : ℂ → ℂ := fun z => fderiv ℝ v z 1 with hvx
+  set vy : ℂ → ℂ := fun z => fderiv ℝ v z I with hvy
+  have hv1 : ContDiff ℝ 1 v := hv.of_le (by norm_num)
+  obtain ⟨hvxc, hvxs, hvxt⟩ := fderiv_apply_props hv1 hvs 1
+  obtain ⟨hvyc, hvys, hvyt⟩ := fderiv_apply_props hv1 hvs I
+  have hvxO : tsupport vx ⊆ O := hvxt.trans hvO
+  have hvyO : tsupport vy ⊆ O := hvyt.trans hvO
+  have hvxd : ContDiff ℝ 1 vx := contDiff_fderiv_apply hv 1
+  have hvyd : ContDiff ℝ 1 vy := contDiff_fderiv_apply hv I
+
+  have huc : ContinuousOn u O := hu.continuousOn
+  have hu' : ContinuousOn (fderiv ℝ u) O := hu.continuousOn_fderiv_of_isOpen hO le_rfl
+  have hux : ContinuousOn (fun z => fderiv ℝ u z 1) O := hu'.clm_apply continuousOn_const
+  have huy : ContinuousOn (fun z => fderiv ℝ u z I) O := hu'.clm_apply continuousOn_const
+  have hud : ∀ z ∈ O, DifferentiableAt ℝ u z := fun z hz =>
+    (hu.differentiableOn one_ne_zero z hz).differentiableAt (hO.mem_nhds hz)
+
+  obtain ⟨hvyxc, hvyxs, hvyxt⟩ := fderiv_apply_props hvyd hvys 1
+  obtain ⟨hvxyc, hvxys, hvxyt⟩ := fderiv_apply_props hvxd hvxs I
+
+  have ibp1 : ∫ z, vy z * fderiv ℝ u z 1 = -∫ z, fderiv ℝ vy z 1 * u z := by
+    apply integral_mul_fderiv_eq_neg_fderiv_mul_of_integrable
+    · exact integrable_mul_of_tsupport_subset' hO huc hvyxc hvyxs (hvyxt.trans hvyO)
+    · exact integrable_mul_of_tsupport_subset' hO hux hvyc hvys hvyO
+    · exact integrable_mul_of_tsupport_subset' hO huc hvyc hvys hvyO
+    · intro x _; exact (hvyd.differentiable one_ne_zero) x
+    · intro x hx; exact hud x (hvyO hx)
+
+  have ibp2 : ∫ z, vx z * fderiv ℝ u z I = -∫ z, fderiv ℝ vx z I * u z := by
+    apply integral_mul_fderiv_eq_neg_fderiv_mul_of_integrable
+    · exact integrable_mul_of_tsupport_subset' hO huc hvxyc hvxys (hvxyt.trans hvxO)
+    · exact integrable_mul_of_tsupport_subset' hO huy hvxc hvxs hvxO
+    · exact integrable_mul_of_tsupport_subset' hO huc hvxc hvxs hvxO
+    · intro x _; exact (hvxd.differentiable one_ne_zero) x
+    · intro x hx; exact hud x (hvxO hx)
+
+  have hsymm : ∀ z, fderiv ℝ vy z 1 = fderiv ℝ vx z I := fun z => mixed_partials_symm hv z I 1
+  have hI1 : Integrable fun z => vy z * fderiv ℝ u z 1 :=
+    integrable_mul_of_tsupport_subset' hO hux hvyc hvys hvyO
+  have hI2 : Integrable fun z => vx z * fderiv ℝ u z I :=
+    integrable_mul_of_tsupport_subset' hO huy hvxc hvxs hvxO
+  calc ∫ z, (fderiv ℝ u z 1 * fderiv ℝ v z I - fderiv ℝ u z I * fderiv ℝ v z 1)
+      = ∫ z, (vy z * fderiv ℝ u z 1 - vx z * fderiv ℝ u z I) := by
+        congr 1; funext z; simp only [hvx, hvy]; ring
+    _ = (∫ z, vy z * fderiv ℝ u z 1) - ∫ z, vx z * fderiv ℝ u z I := integral_sub hI1 hI2
+    _ = 0 := by
+        rw [ibp1, ibp2]
+        simp only [hsymm, sub_self]
+
+end
+end Dubon2026.SourceComplexReciprocity.Wedge

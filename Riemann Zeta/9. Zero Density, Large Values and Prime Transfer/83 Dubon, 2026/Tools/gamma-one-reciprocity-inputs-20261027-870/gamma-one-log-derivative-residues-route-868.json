@@ -1,0 +1,24 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "actual original-divisor compact-support residue identity"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212",
+      "review": "Audited normalized endpoint primitive and its actual holomorphicity reused. Exact original field, analytic place, ramification and finite order formula retained."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "actual finite orders imply local residue identity",
+    "existing actual cusp-form endpoint primitive supplies holomorphic multiplier",
+    "sum uses original divisor coefficients and exact ramification, with outside-upper-half-plane terms vanishing by actual support"
+  ],
+  "remaining": "Actual F, exact divisor orders and compact test support are explicit inputs. The theorem does not construct F from Abel-Jacobi. Modular winding/period/Petersson comparison, original principal-divisor converse and entire all-weight arithmetic chain remain."
+}

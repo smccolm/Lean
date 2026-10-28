@@ -1,0 +1,40 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "smooth invariant comparison V",
+    "compact dipole"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\complex-dipole-reuse-route-891.json",
+      "sha256": "7A6F238DD7B5220C7F56A9922443CDCF8307018B8E400E240B2C9B5FE8235BF4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_UpperHalfPlane_exists_localModel_pair_integral_mul_dbarLogDeriv_eq.lean.txt",
+      "sha256": "6C1947A59CFD3A77F3A3355BA6EDEB21601E31508A653D33CD3F8BC6C9A670E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-scratch-receipt.json",
+      "sha256": "E31FF19C16AA62B73D59CD75CB8DE9910AD2300CE596941B0F9E20E411CC716C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\Convex.lean",
+      "sha256": "7094B8A1D8542D0DF4F5C2DC968BA3A0EC600BA5773259C12091897378C4621C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDbarCutoff.lean",
+      "sha256": "45430E3B5C94CFC3AC2100CB8003A25392F9705B298735D7B87F72C4E140CE4A"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Construct compact C2 cutoff about the actual segment in the upper half-plane",
+    "Actual dipole has exact integer orders +1 at s and -1 at b and equals one outside a compact set",
+    "Derive continuous compactly supported antiholomorphic logarithmic derivative",
+    "Existing audited wedge/residue identity proves integrability and exact pi times endpoint difference"
+  ],
+  "remaining": "Invariant orbit product V, stabilizer multiplicity and degree-zero cancellation, filled quotient and winding-period comparison, analytic reciprocity, original principal-divisor converse and full all-weight chain remain. 16/20; DUB-17--20 OPEN."
+}

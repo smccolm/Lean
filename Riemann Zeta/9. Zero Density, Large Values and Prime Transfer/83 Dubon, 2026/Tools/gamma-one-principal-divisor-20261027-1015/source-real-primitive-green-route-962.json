@@ -1,0 +1,23 @@
+{
+  "parentRoute": "source-integral-period-duality-route-957.json",
+  "shorterRoute": "Apply the existing exact Green formula once to the real part of the native normalized endpoint primitive. Its dbar is conjugate(k)/2, so its side pairing is I times the Petersson integral directly. This replaces separate conjugate-period and holomorphic-zero identities without changing domains, signs or normalization.",
+  "discharges": "Actual derivative, continuity and cusp bounds; then exact real-period/Petersson identity. Integral lattice duality and multiplier triviality remain downstream; no DUB gate closes here.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGreenSidePairing.lean",
+      "sha256": "00D6F84B2A8FF19CBFB8F8A5DB66262159E1D102944FDB6F2DE15FAB24A3DC27"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveEdges.lean",
+      "sha256": "6A4DCA6EFCD88A0B9F1F4F50CBAE98C103A18B53A7D2E29CB74BC54FD3ACCFB7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriodUntwist.lean",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCuspBoundaryDecay.lean",
+      "sha256": "1713655EAA64D3B014E9F90A95FD8B3E428BBE94DF4D327984FB14AA40F9D17A"
+    }
+  ]
+}

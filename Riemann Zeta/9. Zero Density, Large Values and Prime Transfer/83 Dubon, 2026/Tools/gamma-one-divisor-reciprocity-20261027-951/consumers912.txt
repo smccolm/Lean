@@ -1,0 +1,55 @@
+
+/-- Original bounded real intertwiners act by one scalar on the actual raising closure when their original generator image belongs to it. -/
+theorem actual_adelic_closed_intertwiner_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (T : AdelicCyclicHilbert f →L[ℂ] AdelicCyclicHilbert f)
+    (hT : ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v,
+      T (adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v) =
+        adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) (T v))
+    (hv : T (adelicCyclicHilbertGenerator f) ∈ adelicRaisingClosedSpan f) :
+    ∃ a : ℂ, ∀ v ∈ adelicRaisingClosedSpan f, T v = a • v :=
+  adelicIntertwiner_closedSpan_scalar f hf hk T hT hv
+
+open scoped ContDiff in
+/-- Every original all-order Hilbert orbit jet is the power of its original smooth infinitesimal. -/
+theorem actual_adelic_all_order_orbit_jet_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j))
+    (hadd : ∀ s t, c (s + t) = c s * c t) (hc0 : c 0 = 1)
+    (v : adelicRealSmoothSubmodule f) (n : ℕ) :
+    iteratedDeriv n (fun t : ℝ => adelicCyclicHilbertRepresentation f
+      (adelicRealSL2Embedding (c t)) v.val) 0 =
+        (((adelicSmoothInfinitesimal f c hc) ^ n) v).val :=
+  adelicSmoothInfinitesimal_iteratedDeriv_zero f c hc hadd hc0 v n
+
+/-- The actual normalized Hilbert orbit is holomorphic on the full upper half-plane and belongs to its original raising closure there. -/
+theorem actual_adelic_global_holomorphic_orbit_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    DifferentiableOn ℂ (adelicNormalizedAffineHilbertOrbit f) UpperHalfPlane.upperHalfPlaneSet ∧
+      ∀ z : ℂ, 0 < z.im → adelicNormalizedAffineHilbertOrbit f z ∈ adelicRaisingClosedSpan f :=
+  ⟨adelicNormalizedAffineHilbertOrbit_differentiableOn f,
+    fun _ hz => adelicNormalizedAffineHilbertOrbit_mem_closedSpan f hf hz⟩
+
+/-- The actual raising closure is exactly the original nonzero real cyclic Hilbert subspace and is invariant under the original real action. -/
+theorem actual_adelic_real_cyclic_closure_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) :
+    adelicRaisingClosedSpan f = adelicRealCyclicClosedSpan f ∧
+      adelicRealCyclicClosedSpan f ≠ ⊥ ∧
+      ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v ∈ adelicRaisingClosedSpan f,
+        adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v ∈ adelicRaisingClosedSpan f :=
+  ⟨adelicRaisingClosedSpan_eq_realCyclicClosedSpan f hf, adelicRealCyclicClosedSpan_ne_bot f hf,
+    adelicRaisingClosedSpan_real_invariant f hf⟩
+
+/-- The genuine original real cyclic Hilbert representation has no nonzero proper closed invariant subspace. -/
+theorem actual_adelic_real_cyclic_irreducible_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (hk : 0 < k) (p : Submodule ℂ (AdelicCyclicHilbert f))
+    (hp : IsClosed (p : Set (AdelicCyclicHilbert f))) (hle : p ≤ adelicRealCyclicClosedSpan f)
+    (hinv : ∀ g : Matrix.SpecialLinearGroup (Fin 2) ℝ, ∀ v ∈ p,
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding g) v ∈ p) :
+    p = ⊥ ∨ p = adelicRealCyclicClosedSpan f :=
+  adelicRealCyclicClosedSpan_irreducible f hf hk p hp hle hinv
+

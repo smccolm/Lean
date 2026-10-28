@@ -1,0 +1,46 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "actual compact smooth orbit partition"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\modular-smooth-partition-route-875.json",
+      "sha256": "5EF7096E1B82A55A2B9F754AB91C343412C8DB4C67CFA7F75DFC801458612B87"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\modular-smooth-partition-route-876.json",
+      "sha256": "1CC15C85395237490DC28A5567EBD24012431EF9E74C475474CC66A1DFEC0096"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\smooth-coset-route-adjustment-876d.json",
+      "sha256": "3DC841FEFB908E140B42349727438A4F8F57C96E19EF62121E492C85EE426C61"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\smooth-partition-minimal-route-877.json",
+      "sha256": "DD04F3546789167DCED7CB8591BB873BD150273A117B0FCCB5ED5BF8A0B7CCEB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_ModularCurve_SmoothedFundamental.lean.txt",
+      "sha256": "02116525065FE85F341D3D512EF79281A34660560027D1BBB4249AE0A28CDE9B",
+      "read": "Entire source read before adaptation"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_contDiff_and_finsum_smoothedFundamental_eq_one.lean.txt",
+      "sha256": "9AB3E1B695F07FF44F88652F4AD61D0640F212B32CEC00B4ED4950DE1D6F9EE6",
+      "read": "Entire source read before adaptation"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Literal subgroup coset cutoff is smooth with compact support contained in upper half plane",
+    "Its actual Gamma1 orbit sum has finite support, is bounded by one and equals one beyond the exact height threshold",
+    "Only finitely many modular translates meet its support"
+  ],
+  "remaining": "Invariant integral limit with exact central-sign multiplicity, smooth comparison model, modular winding/period/Petersson comparison, original principal-divisor converse and entire all-weight arithmetic chain remain. No DUB gate closed; 16/20; DUB-17--20 OPEN."
+}

@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneCanonicalCoordinates
+import Dubon2026.SourceCurveTwoPoleDifferential
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Picard/H1 -> Abel-Jacobi principal-divisor converse -> prescribed meromorphic
+function -> prescribed-residue differential. Instantiate the already proved
+finite-coordinate residue duality and two-pole dimension argument at the
+actual subgroup function field and its j coordinate. No Riemann-Roch,
+differential existence or numerical genus is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve KaehlerDifferential
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+
+theorem exists_two_pole_differential {P Q : Place ℂ (functionFieldOver Γ ℂ)}
+    (hPQ : P ≠ Q) :
+    ∃ ω : Ω[functionFieldOver Γ ℂ⁄ℂ], ω ≠ 0 ∧
+      P.ordDifferential ω = -1 ∧ Q.ordDifferential ω = -1 ∧
+      ∀ v : Place ℂ (functionFieldOver Γ ℂ),
+        v ≠ P → v ≠ Q → 0 ≤ v.ordDifferential ω := by
+  let t := jCoordinateOver Γ ℂ
+  have ht : Transcendental ℂ t := transcendental_jCoordinateOver Γ ℂ
+  have hDt : D ℂ (functionFieldOver Γ ℂ) t ≠ 0 := D_jCoordinateOver_ne_zero Γ ℂ
+  letI := finiteDimensional_jCoordinateOver hT ℂ
+  letI := hasPrincipalDivisors_closed_of_separating_coordinate t ht
+  letI := functionFieldOver_hasCanonicalDivisor Γ ℂ hT
+  letI : ∀ v : Place ℂ (functionFieldOver Γ ℂ), v.DCoordGenerates :=
+    functionFieldOver_dCoordGenerates Γ ℂ hT
+  letI : Nontrivial Ω[functionFieldOver Γ ℂ⁄ℂ] := nontrivial_of_ne _ _ hDt
+  obtain ⟨g, D₀, hg⟩ := finite_coordinate_degree_dimension_maximum t ht
+  have hRR (D : Divisor ℂ (functionFieldOver Γ ℂ)) :
+      (ell D : ℤ) - ell (jCanonicalDivisor hT - D) = Divisor.degree D + 1 - g := by
+    rw [← finite_coordinate_index_eq_canonical_complement t ht hDt hDt D]
+    exact (indexOfSpecialty_eq_of_genusReached hg D).2
+  have hdim := two_pole_dimensions_of_riemann_roch (jCanonicalDivisor hT) g hRR P Q
+    (Module.finrank_of_bijective_algebraMap (place_residue_bijective hT P))
+    (Module.finrank_of_bijective_algebraMap (place_residue_bijective hT Q))
+  exact exists_two_pole_differential_of_function hDt (jCanonicalDivisor hT)
+    (jCanonicalDivisor_apply hT) hPQ
+    (exists_two_pole_function_of_dimensions (jCanonicalDivisor hT) P Q hdim)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

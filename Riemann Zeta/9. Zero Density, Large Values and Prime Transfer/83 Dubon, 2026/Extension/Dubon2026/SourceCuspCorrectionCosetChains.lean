@@ -1,0 +1,64 @@
+import Dubon2026.SourceCuspCorrectionEdgeChains
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier lifting -> integral parabolic-character lifting -> actual cusp
+value correction. Adapted from anthropics/fermats-last-theorem, Apache-2.0,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.
+The native finite edge-chain construction supplies the named dependency.
+No external compatibility shim or linter suppression is imported. -/
+namespace Dubon2026.SourceCuspCorrection
+noncomputable section
+open Subgroup Monoid Monoid.CoprodI MulAction
+variable {G : Fin 2 → Type*} [∀ i, Group (G i)]
+variable (H : Subgroup (CoprodI G))
+
+/-- Projection of a chain to the actual right-coset coordinates. -/
+def projChain : (CoprodI G →₀ ℤ) →+ (CoprodI G ⧸ H →₀ ℤ) :=
+  Finsupp.mapDomain.addMonoidHom (fun g => (QuotientGroup.mk g⁻¹ : CoprodI G ⧸ H))
+
+@[scoped simp] theorem projChain_single (g : CoprodI G) (n : ℤ) :
+    projChain H (Finsupp.single g n) = Finsupp.single (QuotientGroup.mk g⁻¹) n :=
+  Finsupp.mapDomain_single
+
+theorem projChain_lTransl_of_mem (h : CoprodI G) (hh : h ∈ H) (f : CoprodI G →₀ ℤ) :
+    projChain H (lTransl h f) = projChain H f := by
+  show Finsupp.mapDomain _ (Finsupp.mapDomain _ f) = Finsupp.mapDomain _ f
+  rw [← Finsupp.mapDomain_comp]
+  congr 1
+  ext x
+  show (QuotientGroup.mk (h * x)⁻¹ : CoprodI G ⧸ H) = QuotientGroup.mk x⁻¹
+  rw [eq_comm, QuotientGroup.eq, mul_inv_rev, inv_inv, ← mul_assoc, mul_inv_cancel, one_mul]
+  exact inv_mem hh
+
+/-- The additive edge-chain character of an actual subgroup. -/
+def edgeChainHom : Additive H →+ (CoprodI G ⧸ H →₀ ℤ) where
+  toFun h := projChain H (edgeChain ((Additive.toMul h : H) : CoprodI G))
+  map_zero' := by
+    show projChain H (edgeChain ((1 : H) : CoprodI G)) = 0
+    rw [OneMemClass.coe_one, edgeChain_one, map_zero]
+  map_add' h₁ h₂ := by
+    show projChain H (edgeChain ((Additive.toMul h₁ * Additive.toMul h₂ : H) : CoprodI G)) = _
+    rw [Subgroup.coe_mul, edgeChain_mul, map_add,
+      projChain_lTransl_of_mem H _ (Additive.toMul h₁).2]
+
+theorem edgeChainHom_apply (h : H) :
+    edgeChainHom H (Additive.ofMul h) = projChain H (edgeChain (h : CoprodI G)) := rfl
+
+theorem edgeChain_conj_expand (σ η : CoprodI G) :
+    edgeChain (σ * η * σ⁻¹)
+      = edgeChain σ + lTransl σ (edgeChain η)
+        - lTransl (σ * η * σ⁻¹) (edgeChain σ) := by
+  rw [edgeChain_mul (σ * η) σ⁻¹, edgeChain_mul σ η, edgeChain_inv, map_neg,
+    ← lTransl_mul_apply, sub_eq_add_neg, add_assoc]
+
+theorem edgeChainHom_conj (σ η : CoprodI G) (hmem : σ * η * σ⁻¹ ∈ H) :
+    edgeChainHom H (Additive.ofMul ⟨σ * η * σ⁻¹, hmem⟩)
+      = projChain H (lTransl σ (edgeChain η)) := by
+  rw [edgeChainHom_apply]
+  show projChain H (edgeChain (σ * η * σ⁻¹)) = projChain H (lTransl σ (edgeChain η))
+  rw [edgeChain_conj_expand, map_sub, map_add,
+    projChain_lTransl_of_mem H _ hmem, add_sub_cancel_left]
+
+end
+end Dubon2026.SourceCuspCorrection

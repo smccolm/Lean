@@ -1,0 +1,136 @@
+import Dubon2026.SourceSmoothDivisorLocalProduct
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant comparison V.
+Exact projective orbit-fiber counts identify the local product exponent with
+the prescribed invariant integer order. The finite degree-zero sum cancels
+the auxiliary base-point orders. Removable filling then gives the literal C1
+integer local model of V. No global comparison-function property is assumed.
+Adapted from the pinned Apache-2.0 scope-889 construction with native projective
+fiber/kernel counting replacing its positive-matrix representatives. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set Metric
+open SourceSmoothProjective SourceSmoothLocalModel
+open scoped MatrixGroups Topology Real Classical
+namespace Data
+variable {Γ : Subgroup SL(2, ℤ)} (D : Data Γ)
+
+theorem sm_eq_coe_iff (δ : projectiveIntegralSubgroup Γ) {τ : ℂ} (hτ : 0 < τ.im) (s : ℍ) :
+    sm (representative Γ δ) τ = s ↔ δ • (⟨τ, hτ⟩ : ℍ) = s := by
+  have : ofComplex τ = ⟨τ, hτ⟩ := by
+    apply UpperHalfPlane.ext; rw [coe_ofComplex hτ]
+  simp only [sm, this, representative_smul]
+  exact UpperHalfPlane.ext_iff.symm
+
+theorem card_filter_eq {τ : ℂ} (hτ : 0 < τ.im) {F : ℍ → Finset (projectiveIntegralSubgroup Γ)}
+    (hF : ∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s)
+    {s : ℍ} (hs : s ∈ D.S) (t : ℍ) (ht : (t : ℂ) ∈ D.Kk s) :
+    (((F s).filter fun δ : projectiveIntegralSubgroup Γ => sm (representative Γ δ) τ = t).card : ℤ) =
+      Nat.card {δ : projectiveIntegralSubgroup Γ // δ • (⟨τ, hτ⟩ : ℍ) = t} := by
+  have hτB : τ ∈ closedBall τ (τ.im / 2) := mem_closedBall_self (by linarith)
+  have H : ∀ δ : projectiveIntegralSubgroup Γ,
+      δ ∈ ((F s).filter fun δ : projectiveIntegralSubgroup Γ => sm (representative Γ δ) τ = t) ↔
+      δ • (⟨τ, hτ⟩ : ℍ) = t := by
+    intro δ
+    rw [Finset.mem_filter, ← sm_eq_coe_iff δ hτ t]
+    constructor
+    · exact fun h => h.2
+    · intro h
+      exact ⟨hF s hs τ hτB δ (h ▸ ht), h⟩
+  rw [Nat.subtype_card _ H]
+
+theorem degree_eq {τ : ℂ} (hτ : 0 < τ.im) {F : ℍ → Finset (projectiveIntegralSubgroup Γ)}
+    (hF : ∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s) :
+    ∑ p ∈ D.S.sigma F, D.ex p.1 (sm (representative Γ p.2) τ) * D.mS p.1 = D.n ⟨τ, hτ⟩ := by
+  set τ' : ℍ := ⟨τ, hτ⟩ with hτ'
+
+  set A : ℍ → ℕ := fun s => Nat.card {δ : projectiveIntegralSubgroup Γ // δ • τ' = s}
+  set B : ℕ := Nat.card {δ : projectiveIntegralSubgroup Γ // δ • τ' = D.b}
+  have hrw : ∑ p ∈ D.S.sigma F, D.ex p.1 (sm (representative Γ p.2) τ) * D.mS p.1 =
+      ∑ s ∈ D.S, D.mS s * ((A s : ℤ) - B) := by
+    rw [Finset.sum_sigma]
+    refine Finset.sum_congr rfl fun s hs => ?_
+    dsimp only
+    rw [← Finset.sum_mul, mul_comm]
+    congr 1
+    simp only [ex, Finset.sum_sub_distrib]
+    rw [← Finset.natCast_card_filter, ← Finset.natCast_card_filter,
+      D.card_filter_eq hτ hF hs s (D.sK hs), D.card_filter_eq hτ hF hs D.b (D.bK hs)]
+  rw [hrw]
+  by_cases hcase : ∃ s₀ ∈ D.S, ∃ δ₀ : Γ, (δ₀ : SL(2, ℤ)) • τ' = s₀
+  · obtain ⟨s₀, hs₀, δ₀, hδ₀⟩ := hcase
+
+    have hB : B = 0 := by
+      have h2 := two_mul_card_projective_fibre Γ D.hneg τ' D.b
+      rw [card_fibre_eq_zero] at h2
+      · omega
+      · intro δ hδ
+        apply D.hb s₀ hs₀ ((δ : SL(2, ℤ)) * (δ₀ : SL(2, ℤ))⁻¹)
+        rw [mul_smul, ← hδ₀, inv_smul_smul, hδ]
+
+    have hA : ∀ s ∈ D.S, s ≠ s₀ → A s = 0 := by
+      intro s hs hne
+      have h2 := two_mul_card_projective_fibre Γ D.hneg τ' s
+      rw [card_fibre_eq_zero] at h2
+      · change 2 * A s = 0 at h2; omega
+      · intro δ hδ
+        apply hne
+        refine (D.hinj s₀ hs₀ s hs ⟨δ * δ₀⁻¹, ?_⟩).symm
+        rw [Subgroup.coe_mul, mul_smul, ← hδ₀, Subgroup.coe_inv, inv_smul_smul, hδ]
+
+    have hA0 : (2 : ℤ) * A s₀ = Nat.card (MulAction.stabilizer (Γ) s₀) := by
+      have h2 := two_mul_card_projective_fibre Γ D.hneg τ' s₀
+      rw [card_fibre_eq_card_stabilizer τ' s₀ δ₀ hδ₀] at h2
+      change 2 * A s₀ = _ at h2
+      exact_mod_cast h2
+    have hn : D.n τ' = D.n s₀ := by
+      have : τ' = ((δ₀⁻¹ : Γ) : SL(2, ℤ)) • s₀ := by
+        rw [← hδ₀, Subgroup.coe_inv, inv_smul_smul]
+      rw [this, D.hn]
+    rw [hn, Finset.sum_eq_single_of_mem s₀ hs₀ (fun s hs hne => by rw [hA s hs hne, hB]; simp), hB]
+    have := D.hmS s₀ hs₀
+    rw [← hA0] at this
+    push_cast
+    linarith
+  · push Not at hcase
+    have hA : ∀ s ∈ D.S, A s = 0 := by
+      intro s hs
+      have h2 := two_mul_card_projective_fibre Γ D.hneg τ' s
+      rw [card_fibre_eq_zero τ' s (hcase s hs)] at h2
+      change 2 * A s = 0 at h2; omega
+    have hn : D.n τ' = 0 := by
+      by_contra h
+      obtain ⟨s, hs, γ, hγ⟩ := D.hcov τ' h
+      exact hcase s hs γ⁻¹ (by rw [← hγ, Subgroup.coe_inv, inv_smul_smul])
+    rw [hn, Finset.sum_congr rfl (fun s hs => by rw [hA s hs]), ← Finset.sum_mul]
+    simp [D.hsum]
+
+theorem V_model (τ : ℍ) : ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+    D.V =ᶠ[𝓝 (τ : ℂ)] fun z => (z - τ) ^ (D.n τ) * Ψ z := by
+  have hτ : 0 < (τ : ℂ).im := τ.im_pos
+  obtain ⟨F, Θ, hF, hV, hΘ⟩ := D.local_structure hτ
+  set P := D.S.sigma F with hP
+  obtain ⟨hprod, hΨ, hΨ0⟩ := model_prod P (fun p => D.fac p.1 p.2) Θ
+    (fun p => D.ex p.1 (sm (representative Γ p.2) τ) * D.mS p.1) τ
+    (fun p hp => ((hΘ p hp).2.2).filter_mono nhdsWithin_le_nhds)
+    (fun p hp => (hΘ p hp).1) (fun p hp => (hΘ p hp).2.1)
+  have hdeg := D.degree_eq hτ hF
+  have hτ' : (⟨(τ : ℂ), hτ⟩ : ℍ) = τ := UpperHalfPlane.ext rfl
+  rw [hτ'] at hdeg
+  rw [← hP] at hdeg
+  rw [hdeg] at hprod
+  refine ⟨fun z => ∏ p ∈ P, Θ p z, hΨ, hΨ0, ?_⟩
+  apply regularize_eventuallyEq _ (eventually_continuousAt hΨ) hΨ0
+  have hV' : ∀ᶠ z in 𝓝[≠] (τ : ℂ), D.Vraw z = ∏ p ∈ P, D.fac p.1 p.2 z :=
+    Filter.mem_of_superset (mem_nhdsWithin_of_mem_nhds (closedBall_mem_nhds _ (by linarith)))
+      fun z hz => hV z hz
+  filter_upwards [hV', hprod] with z hz1 hz2
+  rw [hz1, hz2]
+
+end Data
+end
+end Dubon2026.SourceSmoothDivisor

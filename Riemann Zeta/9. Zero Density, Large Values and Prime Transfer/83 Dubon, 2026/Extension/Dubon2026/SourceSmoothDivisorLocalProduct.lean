@@ -1,0 +1,99 @@
+import Dubon2026.SourceSmoothDivisorProduct
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant comparison V.
+Proper discontinuity makes the actual projective dipole product locally finite.
+Native analytic action and the proved local-product calculus give its local
+integer exponent sum. Identifying that sum with the original order n remains
+the exact orbit-counting step in the next module. Adapted from the pinned
+Apache-2.0 scope-889 construction, using the actual projective subgroup. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set Metric
+open SourceSmoothProjective SourceSmoothLocalModel
+open scoped MatrixGroups Topology Real Classical
+namespace Data
+variable {Γ : Subgroup SL(2, ℤ)} (D : Data Γ)
+
+theorem closedBall_subset {τ : ℂ} (hτ : 0 < τ.im) : ∀ z ∈ closedBall τ (τ.im / 2), 0 < z.im := by
+  intro z hz
+  rw [mem_closedBall, dist_eq_norm] at hz
+  have := abs_le.1 ((Complex.abs_im_le_norm (z - τ)).trans hz)
+  simp only [Complex.sub_im] at this
+  linarith [this.1]
+
+theorem locfin {τ : ℂ} (hτ : 0 < τ.im) :
+    ∃ F : ℍ → Finset (projectiveIntegralSubgroup Γ), ∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s := by
+  have key : ∀ s, s ∈ D.S → ∃ F : Finset (projectiveIntegralSubgroup Γ), ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F := by
+    intro s hs
+    have hfin := finite_moving' (isCompact_closedBall τ (τ.im / 2)) (closedBall_subset hτ)
+      (D.hKc s hs) (D.hKU s hs)
+    have hfin' : {δ : projectiveIntegralSubgroup Γ | ∃ z ∈ closedBall τ (τ.im / 2),
+        sm (representative Γ δ) z ∈ D.Kk s}.Finite := by
+      refine hfin.preimage (f := fun δ : projectiveIntegralSubgroup Γ => (representative Γ δ : SL(2, ℤ))) ?_
+      exact (Subtype.val_injective.comp (representative_injective Γ)).injOn
+    refine ⟨hfin'.toFinset, fun z hz δ hδ => ?_⟩
+    rw [Set.Finite.mem_toFinset]
+    exact ⟨z, hz, hδ⟩
+  choose! F hF using key
+  exact ⟨F, hF⟩
+
+theorem finprod_fac_eq {τ : ℂ} {F : ℍ → Finset (projectiveIntegralSubgroup Γ)}
+    (hF : ∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s)
+    {s : ℍ} (hs : s ∈ D.S) {z : ℂ} (hz : z ∈ closedBall τ (τ.im / 2)) :
+    ∏ᶠ δ : projectiveIntegralSubgroup Γ, D.fac s δ z = ∏ δ ∈ F s, D.fac s δ z := by
+  apply finprod_eq_prod_of_mulSupport_subset
+  intro δ hδ
+  rw [Function.mem_mulSupport] at hδ
+  refine hF s hs z hz δ ?_
+  by_contra h
+  exact hδ (by simp only [fac, D.hd1 s hs _ h, one_zpow])
+
+theorem Vraw_eq_prod {τ : ℂ} {F : ℍ → Finset (projectiveIntegralSubgroup Γ)}
+    (hF : ∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+      ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s)
+    {z : ℂ} (hz : z ∈ closedBall τ (τ.im / 2)) :
+    D.Vraw z = ∏ p ∈ D.S.sigma F, D.fac p.1 p.2 z := by
+  rw [Vraw, Finset.prod_sigma]
+  exact Finset.prod_congr rfl fun s hs => D.finprod_fac_eq hF hs hz
+
+theorem fac_model {s : ℍ} (hs : s ∈ D.S) (δ : projectiveIntegralSubgroup Γ) {τ : ℂ} (hτ : 0 < τ.im) :
+    ∃ Θ : ℂ → ℂ, ContDiffAt ℝ 1 Θ τ ∧ Θ τ ≠ 0 ∧
+      ∀ᶠ z in 𝓝 τ, D.fac s δ z =
+        (z - τ) ^ (D.ex s (sm (representative Γ δ) τ) * D.mS s) * Θ z := by
+  set σ : SL(2, ℤ) := (representative Γ δ : SL(2, ℤ)) with hσ
+  obtain ⟨Ψ, hΨ, hΨ0, hd⟩ := D.hloc s hs (sm σ τ) (im_sm_pos σ τ)
+  have hφ : AnalyticAt ℂ (sm σ) τ := analyticAt_sm σ ⟨τ, hτ⟩
+  have hφ' : deriv (sm σ) τ ≠ 0 := by
+    rw [(hasDerivAt_sm σ ⟨τ, hτ⟩).deriv]; exact dsm_ne_zero σ τ
+  obtain ⟨Θ, hΘ, hΘ0, hev⟩ := model_comp (e := D.ex s (sm σ τ)) hφ hφ' hΨ hΨ0 hd
+  refine ⟨fun z => Θ z ^ D.mS s, contDiffAt_zpow hΘ hΘ0 _, zpow_ne_zero _ hΘ0, ?_⟩
+  filter_upwards [hev] with z hz
+  simp only [fac, ← hσ]
+  rw [hz, mul_zpow, zpow_mul]
+
+theorem local_structure {τ : ℂ} (hτ : 0 < τ.im) :
+    ∃ (F : ℍ → Finset (projectiveIntegralSubgroup Γ)) (Θ : (Σ _ : ℍ, projectiveIntegralSubgroup Γ) → ℂ → ℂ),
+      (∀ s ∈ D.S, ∀ z ∈ closedBall τ (τ.im / 2),
+        ∀ δ : projectiveIntegralSubgroup Γ, sm (representative Γ δ) z ∈ D.Kk s → δ ∈ F s) ∧
+      (∀ z ∈ closedBall τ (τ.im / 2), D.Vraw z = ∏ p ∈ D.S.sigma F, D.fac p.1 p.2 z) ∧
+      (∀ p ∈ D.S.sigma F, ContDiffAt ℝ 1 (Θ p) τ ∧ Θ p τ ≠ 0 ∧
+        ∀ᶠ z in 𝓝 τ, D.fac p.1 p.2 z =
+          (z - τ) ^ (D.ex p.1 (sm (representative Γ p.2) τ) * D.mS p.1) * Θ p z) := by
+  obtain ⟨F, hF⟩ := D.locfin hτ
+  have key : ∀ p : (Σ _ : ℍ, projectiveIntegralSubgroup Γ), p ∈ D.S.sigma F → ∃ Θ : ℂ → ℂ,
+      ContDiffAt ℝ 1 Θ τ ∧ Θ τ ≠ 0 ∧ ∀ᶠ z in 𝓝 τ, D.fac p.1 p.2 z =
+        (z - τ) ^ (D.ex p.1 (sm (representative Γ p.2) τ) * D.mS p.1) * Θ z := by
+    intro p hp
+    rw [Finset.mem_sigma] at hp
+    exact D.fac_model hp.1 p.2 hτ
+  choose! Θ hΘ using key
+  exact ⟨F, Θ, hF, fun z hz => D.Vraw_eq_prod hF hz, hΘ⟩
+
+end Data
+end
+end Dubon2026.SourceSmoothDivisor

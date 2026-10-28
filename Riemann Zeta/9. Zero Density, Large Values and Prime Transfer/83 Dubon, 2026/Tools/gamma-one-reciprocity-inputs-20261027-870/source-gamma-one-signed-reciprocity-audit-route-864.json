@@ -1,0 +1,28 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "faithful central-sign transport"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-forms-route-861.json",
+      "sha256": "1A4F112D9F443174323C3E13DC5BB8409EA5C933B123E3648C1BEE63E158C200"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-reciprocity-route-862.json",
+      "sha256": "D2985AD8F0EA0CCCEC60080FBEB38935467A5BB1A26501D9BFE92EF680162F10"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "same actual weight-two cusp function extends to signed subgroup",
+    "normalized endpoint and group periods agree",
+    "signed integer lattice restricts into original integer lattice",
+    "actual multiplier and orbits transport across central sign"
+  ],
+  "remaining": "Analytic winding/period limit, Petersson reciprocity, original principal-divisor converse and full arithmetic chain remain. No gate closed; 16/20; DUB-17--20 OPEN."
+}

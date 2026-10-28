@@ -1,0 +1,65 @@
+{
+  "modules": [
+    "SourceWeightTwoSignedForms",
+    "SourceWeightTwoSignedReciprocity"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.weightTwo_slash_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.dualPeriod_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.weightTwo_slash_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.dualPeriod_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend"
+  ],
+  "compileEvidence": {
+    "SourceWeightTwoSignedForms": "SourceWeightTwoSignedForms861c",
+    "SourceWeightTwoSignedReciprocity": "SourceWeightTwoSignedReciprocity862c"
+  },
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.weightTwo_slash_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.dualPeriod_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend",
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoPrimitive_hasDerivAt",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Submodule.span_induction"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff"
+  ],
+  "scratchImportClosure": [
+    "SourceWeightTwoSignedForms",
+    "SourceWeightTwoSignedReciprocity"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective"
+  ],
+  "separateReason": "Definitional evaluation and injectivity are separately axiom checked; lattice restriction, multiplier transport and orbit comparison consume every other new declaration."
+}

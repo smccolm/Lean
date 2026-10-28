@@ -1,0 +1,54 @@
+import SourceModularSmoothPlaneIntegral
+import Dubon2026.CuspTraceLatticeIntegral
+import Dubon2026.SourceWeightTwoSignedForms
+
+/-! Actual original Gamma1 Petersson specialization of the source-normalized
+smoothed integral limit, serving DUB-17/18 through the Abel-Jacobi/Picard/H1
+chain. The original cusp forms are extended across central sign with their
+functions unchanged. Finite domain volume, integrability and invariance are
+derived from existing local and native results; no Petersson limit or
+integrability certificate is supplied by the caller. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane MeasureTheory Filter Matrix.SpecialLinearGroup CongruenceSubgroup
+open SourceFunctionField.GammaOne SourceSmoothedFundamental SourceSmoothedUnfolding
+open scoped MatrixGroups Topology ModularForm SourceFunctionField.GammaOne
+
+theorem sourceCusp_petersson_integrable_closedDomain
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] {k : ℤ}
+    (f g : CuspForm (Γ.map (mapGL ℝ)) k) :
+    IntegrableOn (petersson k f g) (closedDomain Γ) volume := by
+  letI : Fintype (SL(2, ℤ) ⧸ Γ) := Fintype.ofFinite _
+  have hv : volume (closedDomain Γ) < ⊤ := by
+    rw [measure_congr (closedDomain_ae_eq Γ)]
+    exact integralSubgroupDomain_volume_lt_top Γ
+  obtain ⟨C, hC⟩ := CuspFormClass.petersson_bounded_left k (Γ.map (mapGL ℝ)) f g
+  exact IntegrableOn.of_bound hv
+    ((petersson_continuous k (ModularFormClass.continuous f)
+      (ModularFormClass.continuous g)).aestronglyMeasurable.restrict)
+    C (ae_of_all _ hC)
+
+theorem sourceGamma1_petersson_smoothed_limit (N : ℕ) [NeZero N]
+    (f g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) :
+    Tendsto (fun T : ℝ => ∫ z : ℂ, petersson 2 f g (ofComplex z) *
+      (((z.im ^ 2)⁻¹ * smoothedFundamental (plusMinus (Gamma1 N)) T z : ℝ) : ℂ)) atTop
+      (𝓝 ((1 / 2 : ℂ) * ∫ τ in closedDomain (plusMinus (Gamma1 N)), petersson 2 f g τ)) := by
+  let f' := SignedForms.extend (Gamma1 N) f
+  let g' := SignedForms.extend (Gamma1 N) g
+  have hP : ∀ γ ∈ plusMinus (Gamma1 N), ∀ τ : ℍ,
+      petersson 2 f' g' (γ • τ) = petersson 2 f' g' τ := by
+    intro γ hγ τ
+    rw [← petersson_slash_SL]
+    have hf : (⇑f' ∣[(2 : ℤ)] γ) = ⇑f' :=
+      SlashInvariantFormClass.slash_action_eq f' _ (Subgroup.mem_map_of_mem _ hγ)
+    have hg : (⇑g' ∣[(2 : ℤ)] γ) = ⇑g' :=
+      SlashInvariantFormClass.slash_action_eq g' _ (Subgroup.mem_map_of_mem _ hγ)
+    rw [hf, hg]
+  exact tendsto_integral_plane (plusMinus (Gamma1 N)) (neg_one_mem_plusMinus _)
+    (petersson 2 f' g') hP
+    (petersson_continuous 2 (ModularFormClass.continuous f')
+      (ModularFormClass.continuous g')).aestronglyMeasurable
+    (sourceCusp_petersson_integrable_closedDomain _ f' g')
+
+end
+end Dubon2026

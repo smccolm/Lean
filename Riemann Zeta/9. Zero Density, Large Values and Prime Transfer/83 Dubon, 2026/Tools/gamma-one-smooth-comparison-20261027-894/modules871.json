@@ -1,0 +1,16 @@
+[
+  "MixedCoordinateDerivatives",
+  "MixedExponentialScaling",
+  "RealInfinitesimalGroupRelations",
+  "RealSmoothSemidirectBracket",
+  "AdelicSmoothGeodesicBrackets",
+  "RealGaussSmoothCoordinates",
+  "RealSmoothOrbitDifferential",
+  "RealInfinitesimalEntryTangents",
+  "RealSmoothInfinitesimalTangents",
+  "RealConjugatedCurveTangents",
+  "RealSmoothSl2Brackets",
+  "Sl2CasimirAlgebra",
+  "AdelicSmoothSl2Brackets",
+  "AdelicSmoothCasimirCommutation"
+]

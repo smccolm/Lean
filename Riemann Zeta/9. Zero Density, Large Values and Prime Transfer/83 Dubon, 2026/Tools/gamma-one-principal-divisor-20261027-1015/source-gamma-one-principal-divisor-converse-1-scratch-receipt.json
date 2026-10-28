@@ -1,0 +1,149 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T00:44:55.943251+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceMeromorphicDifferentialRegularization",
+    "SourceGammaOneRawDifferential",
+    "SourceGammaOneLocalRegularDifferentialOrder",
+    "SourceMeromorphicCuspExponentialDecay",
+    "SourceGammaOneRawDifferentialDecay",
+    "SourceGammaOnePrescribedResidueCoefficient",
+    "SourceGammaOnePrincipalDivisorConverse"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicDifferentialRegularization.lean",
+      "sha256": "ECE943E2ECC675B0004EBD7C6A09038104F88BC9CDF0A9F55A60CC600CD7EC2F",
+      "oleanSha256": "AB7B2CD449EA50414050137941FBA3430265408E0D97DD54CFF9844EA245BFAC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicDifferentialRegularization1006a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicDifferentialRegularization1006a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferential.lean",
+      "sha256": "7B86DB0D6423A6B364FF80EE65309B7D2D571B4F88B8A87CBA5792081F8A436C",
+      "oleanSha256": "124B4743E89F93559E3D213490811E13DCCA609554F90B3B9762B662073D4C5E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferential1007b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferential1007b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRegularDifferentialOrder.lean",
+      "sha256": "CC68BC083B67C0845C83585872F8CBFB78D761CE395CD94A0F45A819487850E0",
+      "oleanSha256": "AD0D308331F87926CEC77F2924E15501278D65DEF0C7B8A06C52FB93643CE8B6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRegularDifferentialOrder1008d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalRegularDifferentialOrder1008d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspExponentialDecay.lean",
+      "sha256": "CEC27FF1F56875F4DEBC19771CD55224D72D0E67669F7DCBDCBCC4EE2FB6CB13",
+      "oleanSha256": "73E33AFD1215EAAB9F4C7BB6476B30416F49ED71CA19A94E197C2C46797F9637",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspExponentialDecay1009b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspExponentialDecay1009b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferentialDecay.lean",
+      "sha256": "24C4AFEBF5B1E9438EF9EA624BD2246B92A61066ABEB1DAF45FC15ADDB819C2F",
+      "oleanSha256": "B6EBACAE01A24010FF34ED9CC75F5E5E69F7636E88F1DAAB43EA289018403880",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferentialDecay1010a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRawDifferentialDecay1010a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidueCoefficient.lean",
+      "sha256": "A4EC2D6D514B0D1CBCFBC4514D399691124D672D8DC50DA5AFDB1453C58E95E5",
+      "oleanSha256": "67BB8ED740AD1684A09FEDD897608426AAE891315EAC30507EE75DF0EB7C0DA5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidueCoefficient1011d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidueCoefficient1011d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverse.lean",
+      "sha256": "166E74AF222BD28E8CA3D885F37A669EDE2FEBB25F7056AED9780D9E3CFC45D7",
+      "oleanSha256": "447ACA18DEEEC0360A5909D2C5BF93917470BE35B73E2F92F3BC8EA25DD32E77",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverse1012a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverse1012a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.eventually_im_pos",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.im_ofComplex_of_im_pos",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_eq_of_hasLim",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_eq_of_not",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.hasLim_slash",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.inv_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.cusp_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_ofComplex_eventuallyEq",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.loc_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.exists_regularized_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.locally_regular_coefficient_order_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_order_pos",
+    "Dubon2026.SourceMeromorphicCuspDecay.exp_decay_of_cusp_order_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_exp_decay",
+    "Dubon2026.SourceFunctionField.GammaOne.PrescribedMeromorphic.exists_residue_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_meromorphic_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_period_mem",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Inv",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Cusp",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Loc",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.HasLim",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential",
+    "Dubon2026.SourceFunctionField.GammaOne.PrescribedMeromorphic.orders"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.eventually_im_pos",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.im_ofComplex_of_im_pos",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_eq_of_hasLim",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_eq_of_not",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.hasLim_slash",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.inv_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.cusp_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg_ofComplex_eventuallyEq",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.loc_reg",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.exists_regularized_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.locally_regular_coefficient_order_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_order_pos",
+    "Dubon2026.SourceMeromorphicCuspDecay.exp_decay_of_cusp_order_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential_cusp_exp_decay",
+    "Dubon2026.SourceFunctionField.GammaOne.PrescribedMeromorphic.exists_residue_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_meromorphic_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_period_mem"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Inv",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Cusp",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.Loc",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.HasLim",
+    "Dubon2026.SourceMeromorphicDifferentialRegularization.reg",
+    "Dubon2026.SourceFunctionField.GammaOne.rawDifferential",
+    "Dubon2026.SourceFunctionField.GammaOne.PrescribedMeromorphic.orders"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseAudit1.log",
+  "logSha256": "05C3D2F0958A9432251E27ECCADF2B0868D0FC2A4A52CA945F3BF819FF49B577",
+  "auditSha256": "186A2A66A1C84D630A686D01E629667D3F067471D926471F6E55923F5FA1371D",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseScratchOwnership1014.log",
+  "ownershipSha256": "17AF2C99784D7E58B4EB92FD1714B70007AAD148F8B611B096BB2B43F5ABA406",
+  "exhaustiveTheorems": 46,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 240,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrincipalDivisorConverseDependencyAudit1.log",
+  "dependencyAuditSha256": "562A7A3A3110FDBAED1554F22F2894C143852331A50AA7A4199ED70C0193B90F",
+  "dependencyAuditSourceSha256": "D6AF1FA2DAA8E7E4C994D7A624EAC033145B466D2803BF2219D1ADB64906E276",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_period_mem"
+  ],
+  "dependency": "DUB17/18 -> higher continuation -> automorphy -> original all-weight association -> actual Gamma1 Picard/H1 -> principal-divisor converse -> actual meromorphic multiplier construction -> actual differential input.",
+  "discharged": "DISCHARGED: actual residue coefficient, slash invariance, exponential decay and zero-residue point normalization; actual meromorphic function and multiplier, all nonzero cusp limits and exact ramification-weighted orders. Original integral period class implies literal principal divisor for every finite degree-zero analytic divisor.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Scratch-audited finite analytic-divisor converse is an actual original Gamma1 theorem. Forward principal-divisor period membership, full Picard/H1 comparison and Hecke/diamond compatibility, all-weight arithmetic association and literal higher continuation remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-principal-divisor-converse-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "DA5B430F4E42B39D7248E651184E80BD0F91D32539A99519F0CB7D09F2A50501",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

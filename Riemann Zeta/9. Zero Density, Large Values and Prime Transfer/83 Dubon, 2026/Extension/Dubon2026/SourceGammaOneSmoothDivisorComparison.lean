@@ -1,0 +1,76 @@
+import Dubon2026.SourceSmoothInvariantComparison
+import Dubon2026.SourceGammaOneDivisorReciprocityData
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity.
+Construct the smooth invariant comparison from the actual degree-zero original
+analytic divisor. The exact signed stabilizer formula proves divisibility
+and the weighted degree condition. Original orbit representatives, all levels
+and actual ramification orders are retained. No smooth comparison function,
+logarithmic derivative formula or meromorphic realization is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open scoped MatrixGroups Topology Real Classical ComplexConjugate
+
+theorem analyticRamification_smul_signed (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (γ : plusMinus (Gamma1 N)) (τ : ℍ) :
+    analyticRamification hT (γ.val • τ) = analyticRamification hT τ := by
+  have h := Nat.card_congr
+    (MulAction.stabilizerEquivStabilizer
+      (G := plusMinus (Gamma1 N)) (a := τ) (g := γ) rfl).toEquiv
+  change Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) =
+    Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) (γ.val • τ)) at h
+  rw [← two_mul_ramification_eq_stabilizer_card N hT τ,
+    ← two_mul_ramification_eq_stabilizer_card N hT (γ.val • τ)] at h
+  omega
+
+theorem exists_original_divisor_smooth_comparison (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0) :
+    let D := Finsupp.mapDomain (analyticPlace hT) c
+    let n : ℍ → ℤ := fun τ => (analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)
+    ∃ S : Finset ℍ, (S : Set ℍ) ⊆ c.support ∧
+    ∃ (V : ℂ → ℂ) (b : ℍ) (m : ℍ → ℤ) (F : ℍ → ℂ → ℂ),
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z => (z - τ) ^ (n τ) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ s ∈ S, Continuous (F s) ∧ HasCompactSupport (F s) ∧ tsupport (F s) ⊆ {z : ℂ | 0 < z.im} ∧
+        ∀ E E' : ℂ → ℂ, (∀ z : ℂ, 0 < z.im → HasDerivAt E (E' z) z) →
+          Integrable (fun z : ℂ => E' z * F s z) ∧
+            ∫ z : ℂ, E' z * F s z = Real.pi * (E s - E b)) ∧
+      (∀ s ∈ S, (Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) s) : ℤ) * m s = 2 * n s) ∧
+      ∀ᵐ z : ℂ, 0 < z.im →
+        (fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z =
+          ∑ s ∈ S, (m s : ℂ) / 2 * ∑ᶠ γ : plusMinus (Gamma1 N),
+            F s (((γ : SL(2, ℤ)) • ofComplex z : ℍ) : ℂ) *
+              conj (1 / denom ((γ : SL(2, ℤ)) : GL (Fin 2) ℝ) (ofComplex z) ^ 2) := by
+  classical
+  dsimp only
+  let D := Finsupp.mapDomain (analyticPlace hT) c
+  let n : ℍ → ℤ := fun τ => (analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)
+  obtain ⟨S, hsub, hinj, hcov, hdeg⟩ := exists_degree_zero_reciprocity_data N hT c hc
+  refine ⟨S, hsub, ?_⟩
+  apply SourceSmoothDivisor.exists_invariant_comparison (plusMinus (Gamma1 N))
+    (neg_one_mem_plusMinus (Gamma1 N)) S n
+  · intro γ τ
+    dsimp only [n]
+    rw [analyticRamification_smul_signed N hT γ τ,
+      analyticPlace_smul_plusMinus hT γ.property τ]
+  · intro τ hτ
+    obtain ⟨s, hs, γ, hγ⟩ := hcov τ (fun he => hτ (by simp [n, D, he]))
+    exact ⟨s, hs, ⟨γ.val, le_plusMinus (Gamma1 N) γ.property⟩, hγ⟩
+  · intro s hs t ht hst
+    obtain ⟨γ, hγ⟩ := hst
+    obtain ⟨δ, hδ⟩ := exists_gamma_smul_eq_of_mem_plusMinus (Gamma1 N) γ.property s
+    exact hinj s hs t ht ⟨δ, hδ.trans hγ⟩
+  · intro s _
+    rw [← two_mul_ramification_eq_stabilizer_card N hT s]
+    refine ⟨D (analyticPlace hT s), ?_⟩
+    dsimp only [n]
+    push_cast
+    ring
+  · exact hdeg
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

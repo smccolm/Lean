@@ -1,0 +1,96 @@
+import SourceSmoothDivisorPeriodIntegral
+import SourceGammaOneSmoothDivisorComparison
+import Dubon2026.SourceWeightTwoSignedForms
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> original divisor period term.
+Construct the actual smooth comparison and prove its smoothed logarithmic
+derivative limit for the original Gamma1 cusp forms. Exact ramification
+cancels the stabilizer normalization, leaving the original divisor coefficients.
+Chosen support representatives, distinct original orbits and orbit coverage
+remain explicit. Signed extension preserves the original function and periods.
+No smooth comparison, period integral or meromorphic realization is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open Matrix.SpecialLinearGroup
+open SourceSmoothedFundamental (smoothedFundamental)
+open scoped MatrixGroups Topology Real Classical ComplexConjugate GammaOne
+
+theorem exists_original_divisor_smooth_period_limit (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0) :
+    let D := Finsupp.mapDomain (analyticPlace hT) c
+    ∃ S : Finset ℍ, (S : Set ℍ) ⊆ c.support ∧
+      (∀ s ∈ S, ∀ t ∈ S, (∃ γ : Gamma1 N, γ.val • s = t) → s = t) ∧
+      (∀ τ : ℍ, D (analyticPlace hT τ) ≠ 0 →
+        ∃ s ∈ S, ∃ γ : Gamma1 N, γ.val • s = τ) ∧
+    ∃ V : ℂ → ℂ,
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z =>
+          (z - τ) ^ ((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ (T : ℝ) (g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2),
+        Integrable fun z : ℂ => g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) ∧
+      ∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        Tendsto (fun T : ℝ => 2 / Real.pi * ∫ z : ℂ, g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) atTop
+          (𝓝 (∑ s ∈ S, (D (analyticPlace hT s) : ℂ) *
+            sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g)) := by
+  classical
+  dsimp only
+  let D := Finsupp.mapDomain (analyticPlace hT) c
+  let n : ℍ → ℤ := fun τ => (analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)
+  obtain ⟨S, hsub, hinj, hcov, hdeg⟩ := exists_degree_zero_reciprocity_data N hT c hc
+  have hn : ∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), n (γ.val • τ) = n τ := by
+    intro γ τ
+    dsimp only [n]
+    rw [analyticRamification_smul_signed N hT γ τ,
+      analyticPlace_smul_plusMinus hT γ.property τ]
+  have hcov' : ∀ τ : ℍ, n τ ≠ 0 →
+      ∃ s ∈ S, ∃ γ : plusMinus (Gamma1 N), γ.val • s = τ := by
+    intro τ hτ
+    obtain ⟨s, hs, γ, hγ⟩ := hcov τ (fun he => hτ (by simp [n, D, he]))
+    exact ⟨s, hs, ⟨γ.val, le_plusMinus (Gamma1 N) γ.property⟩, hγ⟩
+  have hinj' : ∀ s ∈ S, ∀ t ∈ S,
+      (∃ γ : plusMinus (Gamma1 N), γ.val • s = t) → s = t := by
+    intro s hs t ht hst
+    obtain ⟨γ, hγ⟩ := hst
+    obtain ⟨δ, hδ⟩ := exists_gamma_smul_eq_of_mem_plusMinus (Gamma1 N) γ.property s
+    exact hinj s hs t ht ⟨δ, hδ.trans hγ⟩
+  have hdvd : ∀ s ∈ S,
+      (Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) s) : ℤ) ∣ 2 * n s := by
+    intro s _
+    rw [← two_mul_ramification_eq_stabilizer_card N hT s]
+    refine ⟨D (analyticPlace hT s), ?_⟩
+    dsimp only [n]
+    push_cast
+    ring
+  obtain ⟨V, hi, hl, hcusp, hint, hlim⟩ :=
+    SourceSmoothDivisor.exists_comparison_period_limit
+      (neg_one_mem_plusMinus (Gamma1 N)) S n hn hcov' hinj' hdvd hdeg
+  refine ⟨S, hsub, hinj, hcov, V, hi, hl, hcusp, ?_, ?_⟩
+  · intro T g
+    exact hint T (SignedForms.extend (Gamma1 N) g)
+  · intro g
+    have h := hlim (SignedForms.extend (Gamma1 N) g)
+    have heq :
+        (∑ s ∈ S, 2 * (n s : ℂ) /
+          (Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) s) : ℂ) *
+          sourceWeightTwoAlong (plusMinus (Gamma1 N)) UpperHalfPlane.I s
+            (SignedForms.extend (Gamma1 N) g)) =
+        ∑ s ∈ S, (D (analyticPlace hT s) : ℂ) *
+          sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g := by
+      apply Finset.sum_congr rfl
+      intro s _
+      rw [mul_div_assoc, weighted_analytic_order_eq_half_coefficient N hT D s,
+        SignedForms.along_extend]
+      ring
+    rw [heq] at h
+    exact h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

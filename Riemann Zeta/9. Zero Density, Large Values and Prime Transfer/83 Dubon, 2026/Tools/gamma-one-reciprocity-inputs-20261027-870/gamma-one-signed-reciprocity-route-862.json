@@ -1,0 +1,27 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 homogeneous-coefficient Hecke characters",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity"
+  ],
+  "discharges": [
+    "signed integral periods belong to original integer lattice after restriction",
+    "actual exponential multiplier transports to signed subgroup",
+    "signed and original orbits agree"
+  ],
+  "reuse": [
+    "SourceWeightTwoSignedForms",
+    "SourceWeightTwoIntegralPeriods",
+    "SourceGammaOneCentralSignCharacters",
+    "native Submodule.span_induction"
+  ],
+  "remaining": [
+    "smoothed winding pairing limit in actual integer lattice",
+    "Petersson reciprocity identity",
+    "actual principal-divisor converse",
+    "arithmetic association and higher symmetric-power continuation"
+  ]
+}

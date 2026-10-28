@@ -1,0 +1,62 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "Petersson comparison",
+    "actual original cusp-form smooth integral limit"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\projective-smooth-unfolding-route-879.json",
+      "sha256": "7D79605DDC54A8C887C0808D88D61D79E52E1102FE5EB40E6A43233504CE1FBE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\smooth-native-unfolding-route-883.json",
+      "sha256": "C64B025BFBAB1B33B0F7F709BEC1292D380F33FE80997609D6716C1FBF061C2D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-1b-scratch-receipt.json",
+      "sha256": "DD883E90EBF75A3EC420C700597BC850CF2029CB4BEE5B4EAE2DE11D44FF646D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-scratch-receipt.json",
+      "sha256": "2EFDDFE0B99E63D2256BF2EAEBF30B3DAE319D85C1B3589499C480BCE8ECEFB1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CongruenceTraceDomain.lean",
+      "sha256": "761C7C0466139786B86480E53D1C170E3973FCB435FD9B8FEFF6C6305582EFF8",
+      "read": "Entire module read"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularCosetProjection.lean",
+      "sha256": "AB956AD140628ED7723FFE1B7649E0B14B66A9A26663B5CF1A42083CAE953781",
+      "read": "Entire module read"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularProjectiveKernel.lean",
+      "sha256": "BBC3E4A80FD298F4FA4145AE611F893455635088FC6C55F8CF92CC38034F651C",
+      "read": "Entire module read"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_FLT_Gamma0FundamentalSet_tendsto_integral_mul_smoothedFundamental.lean.txt",
+      "sha256": "EDAAF0683A704431541CDD00F660D31F1F0692F1045EBBA50081303D674F2EE4",
+      "read": "Definitions, all initial cutoff/mass/measure-conversion/dominated-convergence proofs, declaration inventory and final theorem read. The unused bespoke finite-tiling proof was not fully read or copied."
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspTraceLatticeIntegral.lean",
+      "sha256": "6CC73105C8EEDA40CC6372C46E08FA7631E3CDA6224BFAAE8586FBBA209B6851",
+      "read": "Entire module read; existing generic finite-volume theorem reused."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Actual projective map has exactly two-element fibers and projective smooth orbit mass tends to one half",
+    "Native fundamental-domain unfolding proves both integrability and weighted integral equality",
+    "Existing null boundary transfers to the literal source closed domain; planar/hyperbolic measure conversion is exact",
+    "Original Gamma1 cusp forms have derived signed invariance, actual Petersson bound and integrability; no analytic limit certificate is supplied"
+  ],
+  "remaining": "Actual smooth comparison local model and winding-period/Petersson reciprocity assembly remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN."
+}

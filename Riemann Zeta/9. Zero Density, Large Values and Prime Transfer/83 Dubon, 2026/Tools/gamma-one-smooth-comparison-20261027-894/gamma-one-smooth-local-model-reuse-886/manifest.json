@@ -1,0 +1,18 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-smooth-local-model-reuse-886\\S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean.txt",
+      "bytes": 13346,
+      "sha256": "7B3FD28E513874FB74C77A10776F383A3EE71416152BD9A44DB345F35262B3F3",
+      "gitBlob": "128d9075685523b1a46ae6c76214819764a6bc91",
+      "retrievedUTC": "2026-10-27T18:40:06.136665+00:00"
+    }
+  ]
+}

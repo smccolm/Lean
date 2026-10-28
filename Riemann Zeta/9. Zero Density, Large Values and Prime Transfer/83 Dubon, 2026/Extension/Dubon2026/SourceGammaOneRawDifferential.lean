@@ -1,0 +1,75 @@
+import Dubon2026.SourceGammaOneAnalyticDifferentialResidue
+import Dubon2026.SourceGammaOneDifferentialCuspGerm
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+prescribed-residue differential -> actual analytic input. Use its proved
+equal-weight modular ratio directly. Native modular transformation laws
+give weight-two invariance, and native ratio realization gives exactly the
+residue germ already proved for the original field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter RealizationDerivative
+open scoped MatrixGroups ModularForm Topology
+variable {Γ : Subgroup SL(2, ℤ)} {k : ℤ}
+
+/-- The actual equal-weight modular quotient times the derivative of j. -/
+def rawDifferential (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (τ : ℍ) : ℂ :=
+  g τ / h τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)
+
+theorem rawDifferential_slash
+    (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k)
+    (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) :
+    rawDifferential g h ∣[(2 : ℤ)] γ = rawDifferential g h := by
+  funext τ
+  rw [ModularForm.SL_slash_apply, rawDifferential, rawDifferential,
+    SlashInvariantForm.slash_action_eqn_SL'' g hγ τ,
+    SlashInvariantForm.slash_action_eqn_SL'' h hγ τ,
+    raw_j_derivative_smul,
+    mul_div_mul_left _ _ (zpow_ne_zero k (denom_ne_zero γ τ))]
+  calc
+    _ = (g τ / h τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)) *
+        (denom γ τ ^ (2 : ℤ) * denom γ τ ^ (-2 : ℤ)) := by ring
+    _ = _ := by rw [← zpow_add₀ (denom_ne_zero γ τ)]; norm_num
+
+theorem rawDifferential_germ (hT : ModularGroup.T ∈ Γ)
+    (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (a : functionFieldOver Γ ℂ)
+    (hr : (a : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (τ : ℍ) :
+    (fun z => rawDifferential g h (ofComplex z)) =ᶠ[𝓝[≠] (τ : ℂ)]
+      fun z => rz (Γ := Γ) a z * deriv (JMultiplicity.jf ∘ ofComplex) z := by
+  filter_upwards [realize_eventuallyEq_of_ratio hT g h a hh hr τ,
+    mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)]
+    with z he hz
+  change _ = realize Γ (a : LaurentSeries ℂ) (ofComplex z) * _
+  rw [he, rawDifferential, ofComplex_apply_of_im_pos hz]
+
+theorem rawDifferential_cusp_germ (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (a : functionFieldOver Γ ℂ)
+    (hr : (a : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (γ : SL(2, ℤ)) :
+    cuspFunction N (rawDifferential g h ∣[(2 : ℤ)] γ) =ᶠ[𝓝[≠] (0 : ℂ)]
+      cuspRealize Γ N γ a * cuspFunction N (fun τ : ℍ =>
+        deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)) := by
+  filter_upwards [self_mem_nhdsWithin,
+    eventually_ne_zero_translated_cuspFunction N hΓ h hh γ] with q hq hden
+  simp only [cuspRealize, cuspFunction,
+    Function.Periodic.cuspFunction_eq_of_nonzero _ _ hq,
+    Function.comp_apply, Pi.mul_apply] at hden ⊢
+  let τ : ℍ := ofComplex (Function.Periodic.invQParam N q)
+  change ((rawDifferential g h ∣[(2 : ℤ)] γ) τ) = realize Γ a (γ • τ) *
+    deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)
+  have hτ : h (γ • τ) ≠ 0 := by
+    intro hz
+    apply hden
+    change ((h : ℍ → ℂ) ∣[k] γ) τ = 0
+    rw [ModularForm.SL_slash_apply, hz, zero_mul]
+  rw [realize_eq_div Γ hT g h a hr (γ • τ) hτ,
+    ModularForm.SL_slash_apply, rawDifferential, raw_j_derivative_smul]
+  simp only [zpow_neg, zpow_ofNat]
+  field_simp [denom_ne_zero γ τ]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

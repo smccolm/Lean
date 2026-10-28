@@ -1,0 +1,12 @@
+[
+  "CompactSl2Basis",
+  "AdelicCompactWeightModule",
+  "AdelicLowestWeightJets",
+  "AdelicRaisingLieModule",
+  "AdelicRaisingEnvelopingSpan",
+  "DistinctWeightSubmodule",
+  "WeightLadderIrreducibility",
+  "AdelicLowestWeightIrreducible",
+  "EigenlineCharacter",
+  "AdelicInfinitesimalCharacter"
+]

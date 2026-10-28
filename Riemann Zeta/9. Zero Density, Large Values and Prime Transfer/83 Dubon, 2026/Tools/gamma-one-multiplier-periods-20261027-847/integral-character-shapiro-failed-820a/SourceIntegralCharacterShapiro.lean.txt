@@ -1,0 +1,122 @@
+import SourceIntegralCharacterPotential
+import Dubon2026.CosetTransitionCoordinates
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> integral
+parabolic-character lifting. Reuse the repository cosetTransition and its
+proved multiplication law for the scalar Shapiro cocycle. The character
+is recovered exactly by base evaluation. Remaining scalar identities
+are adapted from the Apache-2.0 pinned integral-lift primary in scope 796.
+Only the universe of the actual modular groups is needed. -/
+namespace Dubon2026.SourceIntegralCharacterLift
+noncomputable section
+open Subgroup
+section Shapiro
+
+variable {G : Type} [Group G] (H : Subgroup G) {A B : Type*} [AddCommGroup A] [AddCommGroup B]
+
+/-- The identity coset of the actual subgroup. -/
+abbrev bs : G ⧸ H := ((1 : G) : G ⧸ H)
+
+theorem smul_coe (g a : G) : g • ((a : G) : G ⧸ H) = ((g * a : G) : G ⧸ H) := rfl
+
+theorem smul_bs (g : G) : g • bs H = (g : G ⧸ H) := by
+  rw [bs, smul_coe, mul_one]
+
+theorem smul_bs_eq_bs_iff (g : G) : g • bs H = bs H ↔ g ∈ H := by
+  rw [smul_bs, bs, eq_comm, QuotientGroup.eq, inv_one, one_mul]
+
+theorem smul_bs_of_mem {g : G} (hg : g ∈ H) : g • bs H = bs H := (smul_bs_eq_bs_iff H g).mpr hg
+
+variable {H}
+
+theorem char_congr (ψ : Additive H →+ B) {P Q : G} (hP : P ∈ H) (hQ : Q ∈ H) (h : P = Q) :
+    ψ (Additive.ofMul ⟨P, hP⟩) = ψ (Additive.ofMul ⟨Q, hQ⟩) := by
+  subst h; rfl
+
+theorem char_mul (ψ : Additive H →+ B) {P Q : G} (hP : P ∈ H) (hQ : Q ∈ H) :
+    ψ (Additive.ofMul ⟨P * Q, mul_mem hP hQ⟩)
+      = ψ (Additive.ofMul ⟨P, hP⟩) + ψ (Additive.ofMul ⟨Q, hQ⟩) := by
+  rw [← map_add]; rfl
+
+theorem char_inv (ψ : Additive H →+ B) {P : G} (hP : P ∈ H) :
+    ψ (Additive.ofMul ⟨P⁻¹, inv_mem hP⟩) = -ψ (Additive.ofMul ⟨P, hP⟩) := by
+  rw [← map_neg]; rfl
+
+theorem char_conj (ψ : Additive H →+ B) {h P : G} (hh : h ∈ H) (hP : P ∈ H) :
+    ψ (Additive.ofMul ⟨h⁻¹ * P * h, mul_mem (mul_mem (inv_mem hh) hP) hh⟩)
+      = ψ (Additive.ofMul ⟨P, hP⟩) := by
+  rw [char_mul ψ (mul_mem (inv_mem hh) hP) hh, char_mul ψ (inv_mem hh) hP, char_inv ψ hh]
+  abel
+
+variable (H)
+
+/-- Evaluate an actual permutation cocycle on the subgroup at the identity coset. -/
+def evalBase (c : G → (G ⧸ H) → A) (hc : IsCrossed c) : Additive H →+ A where
+  toFun γ := c ((Additive.toMul γ : H) : G) (bs H)
+  map_zero' := by
+    show c ((1 : H) : G) (bs H) = 0
+    rw [OneMemClass.coe_one, hc.map_one]; rfl
+  map_add' γ δ := by
+    show c ((Additive.toMul γ * Additive.toMul δ : H) : G) (bs H)
+      = c ((Additive.toMul γ : H) : G) (bs H) + c ((Additive.toMul δ : H) : G) (bs H)
+    rw [Subgroup.coe_mul, hc, Pi.add_apply, tr_apply,
+      smul_bs_of_mem H (inv_mem (Additive.toMul γ).2)]
+
+@[scoped simp] theorem evalBase_apply (c : G → (G ⧸ H) → A) (hc : IsCrossed c) (P : G) (hP : P ∈ H) :
+    evalBase H c hc (Additive.ofMul ⟨P, hP⟩) = c P (bs H) := rfl
+
+theorem evalBase_map (c : G → (G ⧸ H) → A) (hc : IsCrossed c) (π : A →+ B) :
+    π.comp (evalBase H c hc) = evalBase H (fun g x => π (c g x)) (hc.map π) := by
+  ext γ; rfl
+
+theorem evalBase_sub (c c' : G → (G ⧸ H) → A) (hc : IsCrossed c) (hc' : IsCrossed c') :
+    evalBase H (c - c') (hc.sub hc') = evalBase H c hc - evalBase H c' hc' := by
+  ext γ; rfl
+
+theorem evalBase_zsmul (c : G → (G ⧸ H) → A) (hc : IsCrossed c) (n : ℤ) :
+    evalBase H (n • c) (hc.zsmul n) = n • evalBase H c hc := by
+  ext γ; rfl
+
+theorem evalBase_conj (c : G → (G ⧸ H) → A) (hc : IsCrossed c) (g γ : G)
+    (hγ : γ • (g⁻¹ • bs H) = g⁻¹ • bs H) (hmem : g * γ * g⁻¹ ∈ H) :
+    evalBase H c hc (Additive.ofMul ⟨g * γ * g⁻¹, hmem⟩) = c γ (g⁻¹ • bs H) := by
+  rw [evalBase_apply, ← hc.conj_apply g γ (g⁻¹ • bs H) hγ, smul_inv_smul]
+
+theorem conj_mem_iff_smul (g γ : G) : g * γ * g⁻¹ ∈ H ↔ γ • (g⁻¹ • bs H) = g⁻¹ • bs H := by
+  rw [← smul_bs_eq_bs_iff, mul_smul, mul_smul, smul_eq_iff_eq_inv_smul]
+
+
+/-- The actual scalar Shapiro cocycle, using the repository's existing coset transition. -/
+def shapiro (ψ : Additive H →+ B) : G → (G ⧸ H) → B :=
+  fun g x => ψ (Additive.ofMul (cosetTransition H g (g⁻¹ • x)))
+
+theorem shapiro_apply (ψ : Additive H →+ B) (g : G) (x : G ⧸ H) :
+    shapiro H ψ g x = ψ (Additive.ofMul (cosetTransition H g (g⁻¹ • x))) := rfl
+
+theorem isCrossed_shapiro (ψ : Additive H →+ B) : IsCrossed (shapiro H ψ) := by
+  intro g h
+  funext x
+  simp only [shapiro, Pi.add_apply, tr_apply, cosetTransition_mul,
+    mul_inv_rev, mul_smul, smul_inv_smul, Additive.ofMul_mul, map_add]
+
+theorem evalBase_shapiro (ψ : Additive H →+ B) :
+    evalBase H (shapiro H ψ) (isCrossed_shapiro H ψ) = ψ := by
+  refine AddMonoidHom.ext (Additive.ofMul.surjective.forall.mpr ?_)
+  rintro ⟨P, hP⟩
+  rw [evalBase_apply, shapiro_apply]
+  have h0 : ((bs H).out : G) ∈ H := by
+    rw [← smul_bs_eq_bs_iff, smul_bs, QuotientGroup.out_eq']
+  have hfix : P⁻¹ • bs H = bs H := smul_bs_of_mem H (inv_mem hP)
+  rw [hfix]
+  have he : cosetTransition H P (bs H) =
+      ⟨(bs H).out⁻¹ * P * (bs H).out, mul_mem (mul_mem (inv_mem h0) hP) h0⟩ := by
+    apply Subtype.ext
+    dsimp only [cosetTransition]
+    rw [smul_bs_of_mem H hP]
+    group
+  rw [he]
+  exact char_conj ψ h0 hP
+
+end Shapiro
+end
+end Dubon2026.SourceIntegralCharacterLift

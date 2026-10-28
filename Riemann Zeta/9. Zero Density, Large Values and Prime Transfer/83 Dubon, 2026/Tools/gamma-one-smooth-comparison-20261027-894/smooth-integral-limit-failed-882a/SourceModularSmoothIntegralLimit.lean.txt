@@ -1,0 +1,88 @@
+import SourceModularSmoothOrbitMass
+import SourceModularInvariantIntegralUnfolding
+
+/-! The actual invariant integral limit on the literal closed coset domain.
+DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic
+reciprocity. Existing projective domain and null-boundary results discharge
+all domain hypotheses. The source factor 1/2 follows from the proved
+two-element fibers, and dominated convergence uses the actual orbit mass. -/
+namespace Dubon2026.SourceSmoothedUnfolding
+noncomputable section
+open UpperHalfPlane ModularGroup MeasureTheory Filter Set SourceSmoothedFundamental
+open scoped MatrixGroups Topology Pointwise ENNReal
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- The literal source domain, a union of inverse translates of the closed modular domain. -/
+def closedDomain : Set ℍ :=
+  ⋃ q : SL(2, ℤ) ⧸ Γ, (q.out : SL(2, ℤ))⁻¹ • (fd : Set ℍ)
+
+theorem closedDomain_ae_eq : closedDomain Γ =ᵐ[volume] integralSubgroupDomain Γ :=
+  Filter.EventuallyEq.countable_iUnion fun q =>
+    (smul_set_ae_eq (q.out : SL(2, ℤ))⁻¹).mpr fd_ae_eq_fdo
+
+theorem center_le (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) : Subgroup.center SL(2, ℤ) ≤ Γ := by
+  intro a ha
+  rcases (SourceModularFreeProduct.mem_center_iff_eq a).mp ha with rfl | rfl
+  · exact Γ.one_mem
+  · exact hΓ
+
+variable [Γ.FiniteIndex]
+
+theorem integral_smooth_eq_mass (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (P : ℍ → ℂ) (hP : ∀ γ ∈ Γ, ∀ τ : ℍ, P (γ • τ) = P τ)
+    (hPm : AEStronglyMeasurable P volume) (hPi : IntegrableOn P (closedDomain Γ) volume)
+    (T : ℝ) :
+    Integrable (fun τ : ℍ => P τ * (smoothedFundamental Γ T τ : ℂ)) ∧
+      (∫ τ : ℍ, P τ * (smoothedFundamental Γ T τ : ℂ)) =
+        ∫ τ in closedDomain Γ, P τ * (projectiveMass Γ T τ : ℂ) := by
+  have hproj (g : projectiveIntegralSubgroup Γ) (τ : ℍ) : P (g • τ) = P τ := by
+    obtain ⟨γ, hγ, he⟩ := g.property
+    change P ((g : PSL(2, ℤ)) • τ) = _
+    rw [← he]
+    exact hP γ hγ τ
+  have hu := integral_mul_eq_periodized Γ
+    (isFundamentalDomain_integralSubgroup Γ (center_le Γ hΓ)) P hPm hproj
+    (hPi.congr_set_ae (closedDomain_ae_eq Γ).symm)
+    (fun τ : ℍ => smoothedFundamental Γ T τ)
+    (((SourceSmoothedFundamental.contDiff Γ T 0).continuous.measurable).comp
+      continuous_coe.measurable)
+    (fun τ => smoothedFundamental_nonneg Γ T τ)
+    (fun τ => summable_of_hasFiniteSupport (finite_support_projective Γ T τ))
+    (fun τ => (projectiveMass_le_half Γ hΓ T τ).trans (by norm_num))
+  refine ⟨hu.1, hu.2.trans ?_⟩
+  exact setIntegral_congr_set (closedDomain_ae_eq Γ).symm
+
+theorem tendsto_integral_mass (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (P : ℍ → ℂ) (hPm : AEStronglyMeasurable P volume)
+    (hPi : IntegrableOn P (closedDomain Γ) volume) :
+    Tendsto (fun T : ℝ => ∫ τ in closedDomain Γ, P τ * (projectiveMass Γ T τ : ℂ))
+      atTop (𝓝 ((1 / 2 : ℂ) * ∫ τ in closedDomain Γ, P τ)) := by
+  have ht : Tendsto
+      (fun T : ℝ => ∫ τ in closedDomain Γ, P τ * (projectiveMass Γ T τ : ℂ))
+      atTop (𝓝 (∫ τ in closedDomain Γ, P τ * (1 / 2 : ℂ))) := by
+    refine tendsto_integral_filter_of_dominated_convergence (fun τ => ‖P τ‖) ?_ ?_ hPi.norm ?_
+    · exact Eventually.of_forall fun T => hPm.restrict.mul
+        (Complex.continuous_ofReal.measurable.comp
+          (measurable_projectiveMass Γ T)).aestronglyMeasurable
+    · refine Eventually.of_forall fun T => Eventually.of_forall fun τ => ?_
+      rw [norm_mul, Complex.norm_real, Real.norm_eq_abs,
+        abs_of_nonneg (projectiveMass_nonneg Γ T τ)]
+      exact mul_le_of_le_one_right (norm_nonneg _) ((projectiveMass_le_half Γ hΓ T τ).trans
+        (by norm_num))
+    · refine Eventually.of_forall fun τ => ?_
+      have h := ((Complex.continuous_ofReal.tendsto (1 / 2 : ℝ)).comp
+        (tendsto_projectiveMass Γ hΓ τ)).const_mul (P τ)
+      simpa using h
+  simpa only [integral_mul_const, mul_comm] using ht
+
+theorem tendsto_integral_smooth (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (P : ℍ → ℂ) (hP : ∀ γ ∈ Γ, ∀ τ : ℍ, P (γ • τ) = P τ)
+    (hPm : AEStronglyMeasurable P volume) (hPi : IntegrableOn P (closedDomain Γ) volume) :
+    Tendsto (fun T : ℝ => ∫ τ : ℍ, P τ * (smoothedFundamental Γ T τ : ℂ))
+      atTop (𝓝 ((1 / 2 : ℂ) * ∫ τ in closedDomain Γ, P τ)) := by
+  have he (T : ℝ) := (integral_smooth_eq_mass Γ hΓ P hP hPm hPi T).2
+  simp_rw [he]
+  exact tendsto_integral_mass Γ hΓ P hPm hPi
+
+end
+end Dubon2026.SourceSmoothedUnfolding

@@ -1,0 +1,12 @@
+### Actual complex matrix Lie action and central enveloping Casimir — 8 October 2026
+
+Six further production modules construct the actual complex Lie algebra of traceless two-by-two matrices with its original half-diagonal and elementary basis. The proved original Hilbert commutators extend to a genuine complex Lie algebra homomorphism on the actual smooth subspace. For every original smooth real matrix curve through the identity, its literal matrix-entry tangent acts by precisely its original Hilbert norm derivative. Generation induction in the genuine universal enveloping algebra proves that the normalized quadratic element is in its full algebraic center. The original Lie action lifts to an actual algebra homomorphism, and that central element maps exactly to the original successive Hilbert Casimir operator. The original smooth generator and every actual enveloping-algebra translate have the precise eigenvalue k/2 times (1-k/2). No central character, irreducibility or symmetric continuation is assumed to obtain these identities. The source’s regular-algebraic and irreducible automorphic representation identification, and higher symmetric continuations, remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [ComplexSl2Basis](Extension/Dubon2026/ComplexSl2Basis.lean).
+- [UniversalEnvelopingInduction](Extension/Dubon2026/UniversalEnvelopingInduction.lean).
+- [ComplexSl2EnvelopingCasimir](Extension/Dubon2026/ComplexSl2EnvelopingCasimir.lean).
+- [ComplexSl2LieHom](Extension/Dubon2026/ComplexSl2LieHom.lean).
+- [AdelicComplexSl2Action](Extension/Dubon2026/AdelicComplexSl2Action.lean).
+- [AdelicEnvelopingCasimir](Extension/Dubon2026/AdelicEnvelopingCasimir.lean).
+
+Exact consumers: `actual_adelic_matrix_Lie_action_source`, `actual_adelic_enveloping_casimir_source` and `actual_adelic_enveloping_casimir_orbit_source`.

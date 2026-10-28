@@ -1,0 +1,34 @@
+{
+  "chain": "DUB-17/18 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> smooth divisor period limit",
+  "source": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-smooth-local-model-reuse-886\\S_ModularCurve_exists_invariant_localModel_tendsto_integral_dbarLogDeriv_smoothedFundamental_periodAlongOf.lean.txt",
+    "sha256": "7B3FD28E513874FB74C77A10776F383A3EE71416152BD9A44DB345F35262B3F3",
+    "fullSourceRead": true
+  },
+  "reused": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison.lean",
+      "sha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData.lean",
+      "sha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-shorter-route-910.json",
+      "sha256": "57AA95A46EF98F15ABAC1F7290B8F1ABC982DAB5CD7D2DE9C44262205DBEB977"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Construct V rather than assume its existence",
+    "Integrability of its actual logarithmic derivative against the canonical smooth cutoff",
+    "Exact stabilizer-normalized limit expressed in the existing endpoint periods",
+    "Degree-zero cancellation removes the auxiliary base point"
+  ],
+  "shorterRoute": "Reuse Ek and Ek_hasDerivAt, actual finite stabilizers and constructed compact dipoles. The compact translate theorem uses eventual exact equality. No copied affine-path, primitive-existence or finite-stabilizer boilerplate.",
+  "remaining": "Actual original-divisor specialization, filled quotient and winding/Petersson reciprocity, principal-divisor converse and original all-weight arithmetic chain; 16/20; DUB-17--20 OPEN."
+}

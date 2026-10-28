@@ -1,0 +1,21 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "compact-support logarithmic residue identity"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_neg_pi_mul_finsum_residue.lean.txt",
+      "sha256": "2AF0342DD0EF9DF1FC517BD00B2A4CB4EFEBC43F3107ED3D34B81E570249BE3F",
+      "review": "Entire primary proof read. Duplicate dbar, integrability and continuity lemmas removed in favor of already compiled 863/865 results. Native meromorphic normal form was checked, but its zero-at-pole convention does not provide the actual finite part required when subtracting the singular kernel. This proof constructs that finite part and proves finite exceptional support without a supplied residue theorem."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "local actual simple-pole expansions imply finite relevant residues and exact compact-support integral formula"
+  ],
+  "remaining": "Actual logarithmic-derivative specialization, modular winding/period/Petersson comparison, original principal-divisor converse and all-weight arithmetic chain remain."
+}

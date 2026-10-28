@@ -1,0 +1,40 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic association -> original Gamma1 finite Hecke characters -> Picard/H1 comparison -> Abel-Jacobi -> reciprocity -> closed integral chain periods.",
+  "assumptionsToDischarge": "For every nonzero level, an actual finite integer chain with zero orbit boundary has its literal straight-segment integrals of original Gamma1 weight-two cusp forms represented by an element of the integer span of the original scalar modular periods. Derive primitive linearity, exact subgroup shifts, orbit-quotient descent and the segment FTC normalization; no period-lattice inclusion or analytic normalization is assumed. The zero-boundary condition remains the source condition, not an assumed conclusion.",
+  "remaining": "Promote and run assembled verification. Integral parabolic-character lifting, analytic reciprocity and meromorphic construction from Abel-Jacobi periods, Picard/Hecke/diamond/H1, all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean",
+      "sha256": "5628D0F3EA57748E9108482A68BE4C9057E3B750C305C2D1A51896540C624A6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoAnalyticPrimitive.lean",
+      "sha256": "4126D904242F9DAA0F37A71B8B8FDC51D8D8BCA5DB439EBFE45D55A08AEA75F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexPrimitiveGluing.lean",
+      "sha256": "E2F9079ACFF451019F15165420075289F91152A2A584356513DD2A00BE059DF1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrimitiveTrace.lean",
+      "sha256": "F40CDFDB13A9C2471B6097D689C45DA7902B4731201E20FE12A496BF7F76E126"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspPeriodLattice.lean",
+      "sha256": "CAFF30C8B98A5507ED01D639B3FD027BAE81FB3BBD40A03A6168F2E4A870A218"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\manifest.json",
+      "sha256": "99A5E3EC5E17231AF9D80AA26102DF9C3E3F328DD572BF5C8DF379515375509D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+      "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-closed-chain-route-797.json",
+      "sha256": "167B3F6C4BF194608AA8A7493FFB20EA99E363141E9CD6A4855C0EE9FF496762"
+    }
+  ],
+  "shorterRoute": "The pinned external proof expands orbit representatives. Evaluate the pushed finite-chain boundary directly in the quotient by the actual period lattice using existing Finsupp.mapDomain, avoiding extra representatives and summation infrastructure. Reuse local primitive uniqueness and original period transformation. Prove the literal straight-segment normalization by interval FTC."
+}

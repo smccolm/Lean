@@ -1,0 +1,123 @@
+import SourceModularSidePairingAction
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period identity
+-> translated cusp integrability at the modular boundary.
+Adapted from pinned Apache-2.0 anthropics source. Native cusp translation,
+exponential decay and the Cauchy estimate supply the exact positive-height
+uniform bounds. Existing bounded/vanishing derivative lemmas do not supply
+this exponential estimate. The native tilePull slash action is reused. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics SourceModularSidePairing
+open scoped MatrixGroups Topology ModularForm ComplexConjugate Real NNReal Pointwise
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+  (f : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) (σ : SL(2, ℤ))
+
+theorem differentiableOn_tilePull : DifferentiableOn ℂ (tilePull f σ) {z : ℂ | 0 < z.im} := by
+  exact UpperHalfPlane.mdifferentiable_iff.mp (ModularFormClass.holo ((CuspForm.translate f (σ : GL (Fin 2) ℝ))))
+
+theorem hasDerivAt_tilePull {z : ℂ} (hz : 0 < z.im) :
+    HasDerivAt (tilePull f σ) (deriv (tilePull f σ) z) z :=
+  ((differentiableOn_tilePull f σ).differentiableAt
+    (isOpen_upperHalfPlaneSet.mem_nhds hz)).hasDerivAt
+
+theorem continuousOn_tilePull : ContinuousOn (tilePull f σ) {z : ℂ | 0 < z.im} :=
+  (differentiableOn_tilePull f σ).continuousOn
+
+theorem continuousOn_deriv_tilePull :
+    ContinuousOn (deriv (tilePull f σ)) {z : ℂ | 0 < z.im} :=
+  ((differentiableOn_tilePull f σ).analyticOnNhd isOpen_upperHalfPlaneSet).deriv.continuousOn
+
+theorem translated_decay {a : ℝ} (ha : 0 < a) :
+    ∃ c > 0, ∃ C, 0 ≤ C ∧ ∀ τ : ℍ, a ≤ τ.im → ‖(CuspForm.translate f (σ : GL (Fin 2) ℝ)) τ‖ ≤ C * Real.exp (-c * τ.im) := by
+  letI : (ConjAct.toConjAct ((σ : GL (Fin 2) ℝ)⁻¹) •
+      (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ))).IsArithmetic := by
+    have h := Subgroup.IsArithmetic.conj (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ))
+      (Matrix.SpecialLinearGroup.mapGL ℚ σ)⁻¹
+    simpa only [show Rat.castHom ℝ = algebraMap ℚ ℝ from rfl, map_inv,
+      Matrix.SpecialLinearGroup.map_mapGL] using h
+  obtain ⟨c, hc, hO⟩ := CuspFormClass.exp_decay_atImInfty' ((CuspForm.translate f (σ : GL (Fin 2) ℝ)))
+  obtain ⟨C₁, hC₁⟩ := hO.bound
+  obtain ⟨A, hA⟩ := (atImInfty_mem _).mp hC₁
+  obtain ⟨C₂, hC₂⟩ := CuspFormClass.exists_bound ((CuspForm.translate f (σ : GL (Fin 2) ℝ)))
+  refine ⟨c, hc, max (max C₁ 0) (|C₂| / a * Real.exp (c * max A 0)), ?_, fun τ hτ => ?_⟩
+  · exact le_max_of_le_left (le_max_right _ _)
+  rcases le_or_gt A τ.im with h | h
+  · have := hA τ h
+    simp only [Set.mem_setOf_eq, Real.norm_eq_abs, Real.abs_exp] at this
+    refine this.trans ?_
+    gcongr
+    exact le_max_of_le_left (le_max_left _ _)
+  · have h2 := hC₂ τ
+    have hk : ((2 : ℤ) : ℝ) / 2 = 1 := by norm_num
+    rw [hk, Real.rpow_one] at h2
+    have hpos := τ.im_pos
+    calc ‖(CuspForm.translate f (σ : GL (Fin 2) ℝ)) τ‖ ≤ C₂ / τ.im := h2
+      _ ≤ |C₂| / a := by
+        rw [div_le_div_iff₀ hpos ha]
+        calc C₂ * a ≤ |C₂| * a := by gcongr; exact le_abs_self _
+          _ ≤ |C₂| * τ.im := by gcongr
+      _ ≤ |C₂| / a * Real.exp (c * max A 0) * Real.exp (-c * τ.im) := by
+        rw [mul_assoc, ← Real.exp_add]
+        have : 0 ≤ c * max A 0 + -c * τ.im := by
+          have : τ.im ≤ max A 0 := h.le.trans (le_max_left _ _)
+          nlinarith
+        calc |C₂| / a = |C₂| / a * 1 := (mul_one _).symm
+          _ ≤ |C₂| / a * Real.exp (c * max A 0 + -c * τ.im) := by
+            gcongr; exact Real.one_le_exp this
+      _ ≤ _ := by gcongr; exact le_max_right _ _
+
+theorem tilePull_decay {a : ℝ} (ha : 0 < a) :
+    ∃ c > 0, ∃ C, 0 ≤ C ∧ ∀ z : ℂ, a ≤ z.im → ‖tilePull f σ z‖ ≤ C * Real.exp (-c * z.im) := by
+  obtain ⟨c, hc, C, hC0, hC⟩ := translated_decay f σ ha
+  refine ⟨c, hc, C, hC0, fun z hz => ?_⟩
+  have hz0 : 0 < z.im := ha.trans_le hz
+  have him : (ofComplex z).im = z.im := by rw [ofComplex_apply_of_im_pos hz0]; rfl
+  have := hC (ofComplex z) (by rw [him]; exact hz)
+  rw [him] at this
+  exact this
+
+theorem decay_weaken {φ : ℂ → ℂ} {a c δ C : ℝ} (hC : 0 ≤ C) (hδ : δ ≤ c) (ha : 0 ≤ a)
+    (h : ∀ z : ℂ, a ≤ z.im → ‖φ z‖ ≤ C * Real.exp (-c * z.im)) :
+    ∀ z : ℂ, a ≤ z.im → ‖φ z‖ ≤ C * Real.exp (-δ * z.im) := by
+  intro z hz
+  refine (h z hz).trans ?_
+  gcongr
+  nlinarith [ha.trans hz]
+
+theorem deriv_tilePull_decay {a : ℝ} (ha : 0 < a) :
+    ∃ c > 0, ∃ C, 0 ≤ C ∧ ∀ z : ℂ, a ≤ z.im →
+      ‖deriv (tilePull f σ) z‖ ≤ C * Real.exp (-c * z.im) := by
+  have ha2 : 0 < a / 2 := by linarith
+  obtain ⟨c, hc, C, hC0, hC⟩ := tilePull_decay f σ ha2
+  refine ⟨c, hc, C * Real.exp (c * (a / 2)) / (a / 2), by positivity, fun z hz => ?_⟩
+  have hball : Metric.closedBall z (a / 2) ⊆ {w : ℂ | 0 < w.im} := by
+    intro w hw
+    have h1 : |(w - z).im| ≤ ‖w - z‖ := Complex.abs_im_le_norm _
+    rw [Metric.mem_closedBall, dist_eq_norm] at hw
+    have := (abs_le.mp (h1.trans hw)).1
+    simp only [Complex.sub_im] at this
+    show 0 < w.im
+    linarith
+  have hd : DiffContOnCl ℂ (tilePull f σ) (Metric.ball z (a / 2)) :=
+    ((differentiableOn_tilePull f σ).mono hball).diffContOnCl_ball (subset_refl _)
+  have hsph : ∀ w ∈ Metric.sphere z (a / 2),
+      ‖tilePull f σ w‖ ≤ C * Real.exp (c * (a / 2)) * Real.exp (-c * z.im) := by
+    intro w hw
+    have h1 : |(w - z).im| ≤ ‖w - z‖ := Complex.abs_im_le_norm _
+    rw [Metric.mem_sphere, dist_eq_norm] at hw
+    have him := (abs_le.mp (h1.trans hw.le)).1
+    simp only [Complex.sub_im] at him
+    have hwa : a / 2 ≤ w.im := by linarith
+    refine (hC w hwa).trans ?_
+    rw [mul_assoc, ← Real.exp_add]
+    gcongr
+    nlinarith
+  have := Complex.norm_deriv_le_of_forall_mem_sphere_norm_le ha2 hd hsph
+  refine this.trans (le_of_eq ?_)
+  ring
+
+end
+end Dubon2026.SourceModularGreenPairing

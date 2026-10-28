@@ -1,0 +1,147 @@
+import SourceModularCuspBoundaryDecay
+import SourceModularGreenPullback
+import SourceModularGreenFormula
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period boundary
+identity. Adapted from pinned Apache-2.0 anthropics source, using existing
+actual Mobius action, differential, native slash action and curved Green
+formula. No limiting, boundary or period identity is assumed. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics
+open SourceModularSidePairing SourceSmoothDivisor SourceSmoothOrbitIntegral
+open SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology ModularForm ComplexConjugate Real NNReal Pointwise
+variable {Γ : Subgroup SL(2, ℤ)}
+
+section Tile
+
+/-- The fixed strip surrounding the closed modular fundamental domain. -/
+def Ubox : Set ℂ := {z : ℂ | 1 / 2 < z.im ∧ |z.re| < 1}
+
+theorem measurableSet_fdC : MeasurableSet SourceModularGreen.D :=
+  (measurableSet_le (continuous_abs.comp Complex.continuous_re).measurable measurable_const).inter
+    ((measurableSet_le measurable_const continuous_norm.measurable).inter
+      (measurableSet_lt measurable_const Complex.continuous_im.measurable))
+
+theorem im_gt_of_mem_fdC {z : ℂ} (hz : z ∈ SourceModularGreen.D) : 1 / 2 < z.im := by
+  obtain ⟨hre, hn, him⟩ := hz
+  have h1 : 1 ≤ z.re * z.re + z.im * z.im := by
+    have := Complex.normSq_eq_norm_sq z
+    rw [Complex.normSq_apply] at this
+    nlinarith [norm_nonneg z]
+  have h2 : z.re * z.re ≤ 1 / 4 := by
+    have := abs_le.mp hre
+    nlinarith
+  nlinarith
+
+theorem fdC_subset_Ubox : SourceModularGreen.D ⊆ Ubox := fun z hz =>
+  ⟨im_gt_of_mem_fdC hz, by have := hz.1; linarith⟩
+
+theorem im_pos_of_mem_Ubox {z : ℂ} (hz : z ∈ Ubox) : 0 < z.im := by
+  have := hz.1; linarith
+
+variable (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ)
+  (hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (L' z) z)
+  (hL' : ContinuousOn L' {z : ℂ | 0 < z.im}) (σ : SL(2, ℤ))
+  (hbd : ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+    ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧
+      ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C)
+
+/-- Translated logarithm multiplied by the native weight-two slash of a cusp form. -/
+def Φt (L : ℂ → ℂ) (g : ℍ → ℂ) (σ : SL(2, ℤ)) (z : ℂ) : ℂ := Lt L σ z * tilePull g σ z
+
+/-- The real differential induced by the complex derivative of the slashed cusp form. -/
+def Gd (g : ℍ → ℂ) (σ : SL(2, ℤ)) (z : ℂ) : ℂ →L[ℝ] ℂ := deriv (tilePull g σ) z • (1 : ℂ →L[ℝ] ℂ)
+
+/-- Product differential of the actual translated logarithm and cusp form. -/
+def Φt' (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ) (g : ℍ → ℂ) (σ : SL(2, ℤ)) (z : ℂ) : ℂ →L[ℝ] ℂ :=
+  Lt L σ z • Gd g σ z + tilePull g σ z • Fd L' σ z
+
+include hL in
+theorem hasFDerivAt_Φt {z : ℂ} (hz : 0 < z.im) :
+    HasFDerivAt (Φt L g σ) (Φt' L L' g σ z) z :=
+  (hasFDerivAt_Lt L L' hL σ hz).mul (hasDerivAt_tilePull g σ hz).complexToReal_fderiv
+
+include hL hL' in
+theorem continuousOn_Φt' : ContinuousOn (Φt' L L' g σ) {z : ℂ | 0 < z.im} := by
+  have h1 : ContinuousOn (Gd g σ) {z : ℂ | 0 < z.im} :=
+    (continuousOn_deriv_tilePull g σ).smul continuousOn_const
+  exact ((continuousOn_Lt L L' hL σ).smul h1).add
+    ((continuousOn_tilePull g σ).smul (continuousOn_Fd L' hL' σ))
+
+theorem norm_Gd_le (z : ℂ) : ‖Gd g σ z‖ ≤ ‖deriv (tilePull g σ) z‖ := by
+  refine (ContinuousLinearMap.opNorm_smul_le _ _).trans ?_
+  simp
+
+theorem I_smul_Φt'_sub (z : ℂ) :
+    I • Φt' L L' g σ z 1 - Φt' L L' g σ z I =
+      2 * I * (tilePull g σ z * (conj (dsm σ z) * dbarL (L' (sm σ z)))) := by
+  rw [I_smul_sub_eq, ← dbarL_Fd]
+  congr 1
+  simp only [dbarL, Φt', Gd, ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply,
+    ContinuousLinearMap.one_apply, smul_eq_mul, mul_one]
+  have : I * I = -1 := Complex.I_mul_I
+  linear_combination (Lt L σ z * deriv (tilePull g σ) z / 2) * this
+
+variable [Γ.FiniteIndex]
+
+include hL hL' hbd in
+theorem Φt_bounds : ∃ δ > 0,
+    (∃ C : ℝ, ∀ z ∈ Ubox, ‖Φt L g σ z‖ ≤ C * Real.exp (-δ * z.im)) ∧
+    (∃ C : ℝ, ∀ z ∈ Ubox, ‖Φt' L L' g σ z‖ ≤ C * Real.exp (-δ * z.im)) := by
+  have h2 : (0 : ℝ) < 1 / 2 := by norm_num
+  obtain ⟨c₁, hc₁, C₁, hC₁0, hC₁⟩ := tilePull_decay g σ h2
+  obtain ⟨c₂, hc₂, C₂, hC₂0, hC₂⟩ := deriv_tilePull_decay g σ h2
+  obtain ⟨CL, hCL⟩ := Lt_bound L L' hL σ hbd
+  obtain ⟨CF, hCF⟩ := Fd_bound L L' hL hL' σ hbd
+  set δ := min c₁ c₂
+  have hδ₁ : δ ≤ c₁ := min_le_left _ _
+  have hδ₂ : δ ≤ c₂ := min_le_right _ _
+  have hG := decay_weaken hC₁0 hδ₁ h2.le hC₁
+  have hG' := decay_weaken hC₂0 hδ₂ h2.le hC₂
+  refine ⟨δ, lt_min hc₁ hc₂, ⟨CL * C₁, fun z hz => ?_⟩, ⟨CL * C₂ + C₁ * CF, fun z hz => ?_⟩⟩
+  · have hzi : 1 / 2 ≤ z.im := hz.1.le
+    have hV := hCL z hzi hz.2.le
+    rw [Φt, norm_mul, mul_assoc]
+    exact mul_le_mul hV (hG z hzi) (norm_nonneg _) ((norm_nonneg _).trans hV)
+  · have hzi : 1 / 2 ≤ z.im := hz.1.le
+    have hV := hCL z hzi hz.2.le
+    have hF := hCF z hzi hz.2.le
+    have hCL0 : 0 ≤ CL := (norm_nonneg _).trans hV
+    have hCF0 : 0 ≤ CF := (norm_nonneg _).trans hF
+    refine (norm_add_le _ _).trans ?_
+    rw [add_mul]
+    refine add_le_add ?_ ?_
+    · refine (ContinuousLinearMap.opNorm_smul_le _ _).trans ?_
+      rw [mul_assoc]
+      exact mul_le_mul hV ((norm_Gd_le g σ z).trans (hG' z hzi)) (norm_nonneg _) hCL0
+    · refine (ContinuousLinearMap.opNorm_smul_le _ _).trans ?_
+      calc ‖tilePull g σ z‖ * ‖Fd L' σ z‖ ≤ C₁ * Real.exp (-δ * z.im) * CF :=
+            mul_le_mul (hG z hzi) hF (norm_nonneg _) (by positivity)
+        _ = C₁ * CF * Real.exp (-δ * z.im) := by ring
+
+include hL hL' hbd in
+
+theorem tile_identity :
+    (∫ z in SourceModularGreen.D, 2 * I * (tilePull g σ z * (conj (dsm σ z) * dbarL (L' (sm σ z))))) =
+      I • (∫ y in Set.Ioi (Real.sqrt 3 / 2), Φt L g σ (1 / 2 + y * I)) -
+        I • (∫ y in Set.Ioi (Real.sqrt 3 / 2), Φt L g σ (-(1 / 2) + y * I)) -
+        ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+          Φt L g σ (Complex.exp (θ * I)) * (I * Complex.exp (θ * I)) := by
+  obtain ⟨δ, hδ, hΦ, hΦ'⟩ := Φt_bounds g L L' hL hL' σ hbd
+  have hE := SourceModularGreen.integral_eq_boundary (Φt L g σ)
+    (Φt' L L' g σ) Ubox δ hδ fdC_subset_Ubox
+    (fun z hz => hasFDerivAt_Φt g L L' hL σ (im_pos_of_mem_Ubox hz))
+    ((continuousOn_Φt' g L L' hL hL' σ).mono fun z hz => im_pos_of_mem_Ubox hz) hΦ hΦ'
+  rw [← hE]
+  refine setIntegral_congr_fun measurableSet_fdC fun z _ => ?_
+  rw [I_smul_Φt'_sub]
+
+end Tile
+
+
+end
+end Dubon2026.SourceModularGreenPairing

@@ -1,0 +1,153 @@
+import Mathlib
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier correction -> integral parabolic-character lifting -> the actual
+PSL2(Z) free-product presentation. Adapted from
+anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularGroup_exists_mulEquiv_freeProduct_quotient_center.
+Native Mathlib ping-pong, modular generators and scalar center are reused.
+This module discharges only its named presentation dependency. -/
+namespace Dubon2026.SourceModularFreeProduct
+open Matrix MatrixGroups ModularGroup
+open scoped Pointwise
+theorem det_entries (γ : SL(2, ℤ)) : γ 0 0 * γ 1 1 - γ 0 1 * γ 1 0 = 1 := by
+  have h := γ.2
+  rw [Matrix.det_fin_two] at h
+  exact h
+
+/-- The actual irrational real points on which integral Mobius transformations act. -/
+def IrrationalPt : Type := {x : ℝ // Irrational x}
+
+namespace IrrationalPt
+
+scoped instance : CoeOut IrrationalPt ℝ := ⟨Subtype.val⟩
+
+@[scoped ext] theorem ext {x y : IrrationalPt} (h : (x : ℝ) = y) : x = y := Subtype.ext h
+
+theorem irrational (x : IrrationalPt) : Irrational (x : ℝ) := x.2
+
+/-- A positive irrational point witnessing the positive ping-pong domain. -/
+noncomputable def sqrtTwo : IrrationalPt := ⟨Real.sqrt 2, irrational_sqrt_two⟩
+
+theorem sqrtTwo_pos : (0 : ℝ) < (sqrtTwo : ℝ) := by
+  have : (0 : ℝ) < Real.sqrt 2 := Real.sqrt_pos.mpr (by norm_num)
+  exact this
+
+/-- A negative irrational point witnessing the negative ping-pong domain. -/
+noncomputable def negSqrtTwo : IrrationalPt := ⟨-Real.sqrt 2, irrational_sqrt_two.neg⟩
+
+theorem negSqrtTwo_neg : ((negSqrtTwo : ℝ)) < 0 := by
+  have : (0 : ℝ) < Real.sqrt 2 := Real.sqrt_pos.mpr (by norm_num)
+  show -Real.sqrt 2 < 0
+  linarith
+
+end IrrationalPt
+open scoped IrrationalPt
+
+/-- The usual fractional linear transformation of an integral determinant-one matrix. -/
+noncomputable def moebius (γ : SL(2, ℤ)) (x : ℝ) : ℝ :=
+  ((γ 0 0 : ℝ) * x + (γ 0 1 : ℝ)) / ((γ 1 0 : ℝ) * x + (γ 1 1 : ℝ))
+
+theorem det_entries_real (γ : SL(2, ℤ)) :
+    (γ 0 0 : ℝ) * (γ 1 1 : ℝ) - (γ 0 1 : ℝ) * (γ 1 0 : ℝ) = 1 := by
+  exact_mod_cast congrArg (fun n : ℤ => (n : ℝ)) (det_entries γ)
+
+theorem mul_entry (A B : SL(2, ℤ)) (i j : Fin 2) :
+    (A * B) i j = A i 0 * B 0 j + A i 1 * B 1 j := by
+  show ((A * B : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ) i j = _
+  rw [Matrix.SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two]
+
+theorem den_ne_zero (γ : SL(2, ℤ)) {x : ℝ} (hx : Irrational x) :
+    (γ 1 0 : ℝ) * x + (γ 1 1 : ℝ) ≠ 0 := by
+  rcases eq_or_ne (γ 1 0) 0 with h | h
+  · have hdet := det_entries γ
+    rw [h, mul_zero, sub_zero] at hdet
+    rw [h]
+    push_cast
+    rw [zero_mul, zero_add]
+    intro hzero
+    rw [show (γ 1 1 : ℤ) = 0 from by exact_mod_cast hzero, mul_zero] at hdet
+    exact zero_ne_one hdet
+  · intro heq
+    refine hx ⟨-(γ 1 1 : ℚ) / (γ 1 0 : ℚ), ?_⟩
+    have hc : (γ 1 0 : ℝ) ≠ 0 := by exact_mod_cast h
+    push_cast
+    rw [div_eq_iff hc]
+    linarith
+
+theorem irrational_moebius (γ : SL(2, ℤ)) {x : ℝ} (hx : Irrational x) :
+    Irrational (moebius γ x) := by
+  rintro ⟨q, hq⟩
+  have hden := den_ne_zero γ hx
+  rw [moebius, eq_comm, div_eq_iff hden] at hq
+
+  rcases eq_or_ne ((γ 0 0 : ℚ) - q * (γ 1 0 : ℚ)) 0 with h | h
+  ·
+    have hR : (γ 0 0 : ℝ) - (q : ℝ) * (γ 1 0 : ℝ) = 0 := by exact_mod_cast h
+    have hb : (γ 0 1 : ℝ) = (q : ℝ) * (γ 1 1 : ℝ) := by
+      linear_combination hq - x * hR
+    have hdet := det_entries_real γ
+    rw [show (γ 0 0 : ℝ) = (q : ℝ) * (γ 1 0 : ℝ) from by linarith, hb] at hdet
+    have h01 : (0 : ℝ) = 1 := by linear_combination hdet
+    exact zero_ne_one h01
+  ·
+    refine hx ⟨((q : ℚ) * (γ 1 1 : ℚ) - (γ 0 1 : ℚ)) / ((γ 0 0 : ℚ) - q * (γ 1 0 : ℚ)), ?_⟩
+    have hR : (γ 0 0 : ℝ) - (q : ℝ) * (γ 1 0 : ℝ) ≠ 0 := by
+      intro hc
+      exact h (by exact_mod_cast hc)
+    push_cast
+    rw [div_eq_iff hR]
+    linear_combination -hq
+
+private theorem div_div_div_same {P Q D : ℝ} (hD : D ≠ 0) : P / D / (Q / D) = P / Q := by
+  obtain rfl | hQ := eq_or_ne Q 0
+  · simp
+  · field_simp
+
+theorem moebius_mul (A B : SL(2, ℤ)) {x : ℝ} (hx : Irrational x) :
+    moebius (A * B) x = moebius A (moebius B x) := by
+  have hB : ((B 1 0 : ℝ) * x + (B 1 1 : ℝ)) ≠ 0 := den_ne_zero B hx
+  have key : ∀ a b : ℤ, (a : ℝ) * moebius B x + (b : ℝ)
+      = ((a : ℝ) * ((B 0 0 : ℝ) * x + (B 0 1 : ℝ))
+          + (b : ℝ) * ((B 1 0 : ℝ) * x + (B 1 1 : ℝ)))
+        / ((B 1 0 : ℝ) * x + (B 1 1 : ℝ)) := by
+    intro a b
+    rw [moebius, eq_div_iff hB, add_mul, mul_assoc, div_mul_cancel₀ _ hB]
+  rw [moebius, moebius, key (A 0 0) (A 0 1), key (A 1 0) (A 1 1), div_div_div_same hB]
+  have e00 := mul_entry A B 0 0
+  have e01 := mul_entry A B 0 1
+  have e10 := mul_entry A B 1 0
+  have e11 := mul_entry A B 1 1
+  congr 1
+  · rw [show ((A * B) 0 0 : ℝ) = ((A 0 0 * B 0 0 + A 0 1 * B 1 0 : ℤ) : ℝ) from by
+      exact_mod_cast congrArg (fun n : ℤ => (n : ℝ)) e00,
+      show ((A * B) 0 1 : ℝ) = ((A 0 0 * B 0 1 + A 0 1 * B 1 1 : ℤ) : ℝ) from by
+      exact_mod_cast congrArg (fun n : ℤ => (n : ℝ)) e01]
+    push_cast
+    ring
+  · rw [show ((A * B) 1 0 : ℝ) = ((A 1 0 * B 0 0 + A 1 1 * B 1 0 : ℤ) : ℝ) from by
+      exact_mod_cast congrArg (fun n : ℤ => (n : ℝ)) e10,
+      show ((A * B) 1 1 : ℝ) = ((A 1 0 * B 0 1 + A 1 1 * B 1 1 : ℤ) : ℝ) from by
+      exact_mod_cast congrArg (fun n : ℤ => (n : ℝ)) e11]
+    push_cast
+    ring
+
+theorem moebius_one (x : ℝ) : moebius 1 x = x := by
+  have h00 : ((1 : SL(2, ℤ)) 0 0 : ℤ) = 1 := rfl
+  have h01 : ((1 : SL(2, ℤ)) 0 1 : ℤ) = 0 := rfl
+  have h10 : ((1 : SL(2, ℤ)) 1 0 : ℤ) = 0 := rfl
+  have h11 : ((1 : SL(2, ℤ)) 1 1 : ℤ) = 1 := rfl
+  rw [moebius, h00, h01, h10, h11]
+  push_cast
+  rw [one_mul, add_zero, zero_mul, zero_add, div_one]
+
+noncomputable scoped instance : MulAction SL(2, ℤ) IrrationalPt where
+  smul γ x := ⟨moebius γ (x : ℝ), irrational_moebius γ x.2⟩
+  one_smul x := IrrationalPt.ext (moebius_one (x : ℝ))
+  mul_smul A B x := IrrationalPt.ext (moebius_mul A B x.2)
+
+theorem smul_coe (γ : SL(2, ℤ)) (x : IrrationalPt) :
+    ((γ • x : IrrationalPt) : ℝ) = moebius γ (x : ℝ) := rfl
+
+end Dubon2026.SourceModularFreeProduct

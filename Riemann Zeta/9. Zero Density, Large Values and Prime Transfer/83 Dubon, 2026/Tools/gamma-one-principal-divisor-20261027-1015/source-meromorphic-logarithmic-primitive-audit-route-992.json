@@ -1,0 +1,15 @@
+{
+  "chain": "DUB17/18 -> higher symmetric-power continuation -> automorphy -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> actual meromorphic function construction -> integer-residue logarithmic integration.",
+  "shorterRoute": "The current pinned Mathlib/Analysis/Complex and Analysis/Meromorphic search found no direct meromorphic logarithmic primitive existence theorem. Exact native-name search for the source residue-isolation and punctured-disk connectivity lemmas returned no matches. Reuse Mathlib analytic exactness on balls, meromorphic finite products, and countable-complement connectivity; adapt only the required disk construction and gluing.",
+  "assumptionsToDischarge": "From actual local integer-residue expansions on the upper half-plane, construct a global meromorphic function with exact integer orders and the specified logarithmic derivative off the divisor. Next consume slash invariance and cusp decay to derive the multiplier and nonzero cusp limits.",
+  "remaining": "Actual algebraic differential exists; its analytic residue realization and exponential cusp decay, multiplicative covariance and cusp limit assembly remain, then the general-multiplier principal-divisor consumer. This scratch scope compiles and is being audited, not yet production-promoted. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_meromorphic_logDeriv_eq_of_int_residue.lean.txt",
+      "sha256": "A107EDD501DDE0726A975C158D92909D63D1E7007D8EDEA3B6CFBD6FD8B2C533"
+    }
+  ],
+  "externalWholeClosureBuilt": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

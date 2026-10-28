@@ -1,0 +1,19 @@
+
+open scoped ContDiff in
+/-- The genuine smooth-space infinitesimal operator retains the literal original Hilbert orbit derivative. -/
+theorem actual_adelic_smooth_infinitesimal_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (c : ℝ → Matrix.SpecialLinearGroup (Fin 2) ℝ)
+    (hc : ∀ i j : Fin 2, ContDiff ℝ ∞ (fun t => c t i j)) (v : adelicRealSmoothSubmodule f) :
+    (adelicSmoothInfinitesimal f c hc v).val = deriv (fun t : ℝ =>
+      adelicCyclicHilbertRepresentation f (adelicRealSL2Embedding (c t)) v.val) 0 :=
+  adelicSmoothInfinitesimal_apply f c hc v
+
+/-- The actual original generator in the genuine smooth subspace has the exact original second-order eigenvalue. -/
+theorem actual_adelic_smooth_generator_operator_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k) :
+    (adelicSmoothGenerator f).val = adelicCyclicHilbertGenerator f ∧
+    adelicSmoothCasimirOperator f (adelicSmoothGenerator f) =
+      (((k : ℂ) / 2) * (1 - (k : ℂ) / 2)) • adelicSmoothGenerator f :=
+  ⟨rfl, adelicSmoothGenerator_casimir f⟩
+

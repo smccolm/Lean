@@ -1,0 +1,36 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character realization -> Picard/H1 -> Abel-Jacobi principal-divisor converse -> construct meromorphic function -> differential with prescribed residues.",
+  "shorterRoute": "Use already proved native finite-coordinate duality and two-pole dimension/function/differential lemmas on the actual Gamma1 subgroup field. Normalize actual local residues with the proved global residue theorem and sum over the finite divisor. No new curve presentation, adelic theory, or numerical genus computation.",
+  "assumptionsToDischarge": "Actual algebraic differential with simple poles and residues equal to the degree-zero original divisor. Next: analytic local-residue realization, exponential cusp bounds, and meromorphic logarithmic primitive.",
+  "remaining": "Actual meromorphic function construction and full original Picard/H1/full-parabolic/transpose/diamond, arithmetic association, automorphy and higher-power continuation remain. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCanonicalCoordinates.lean",
+      "sha256": "A5027789C505DE50C509729FD4223C1196B3812A6431309F764E0F648ECF9A78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveTwoPoleDimensions.lean",
+      "sha256": "2684102D12C601DD1B02A6B704293D2E10B1861C6F093B1C49D6DCC062B8E000"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveTwoPoleDifferential.lean",
+      "sha256": "4C70883873252B1BF1F209770187D06772B69DDDE9C5B21971445FF042E11DD4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+      "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGlobalResidues.lean",
+      "sha256": "4F62D6BF9784A9C2C935CD5CD4230528907E251E579E351D25F85B8A78532C2D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrescribedResidues.lean",
+      "sha256": "FC7DDDA116747FAB5524991C724F3B2170A7A38EC13791A929B1BCC11CB6197E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "8C1425646969350C3CEA9E79035AC58009431A030BD9DDCEF42251141F8AF17A"
+    }
+  ]
+}

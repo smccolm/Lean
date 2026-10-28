@@ -1,0 +1,63 @@
+import Dubon2026.SourceWeightTwoSignedForms
+import Dubon2026.SourceWeightTwoIntegralPeriods
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity on the signed subgroup. Its integral periods restrict
+to the original integer lattice, and the actual multiplier and orbits
+transport across central sign. The original coefficient action is retained. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.SignedForms
+noncomputable section
+open UpperHalfPlane Matrix.SpecialLinearGroup
+open scoped MatrixGroups GammaOne
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+
+theorem dualPeriod_comp_extend (γ : plusMinus Γ) :
+    (sourceWeightTwoDualPeriod (plusMinus Γ) γ).comp (extend Γ) =
+      sourceWeightTwoDualPeriod Γ (CentralSign.representative Γ γ) := by
+  ext f
+  simp only [LinearMap.comp_apply, sourceWeightTwoDualPeriod_apply]
+  exact period_extend_representative Γ f γ
+
+theorem integralLattice_comp_extend
+    (L : Module.Dual ℂ (CuspForm ((plusMinus Γ).map (mapGL ℝ)) 2))
+    (hL : L ∈ sourceWeightTwoIntegralLattice (plusMinus Γ)) :
+    L.comp (extend Γ) ∈ sourceWeightTwoIntegralLattice Γ := by
+  induction hL using Submodule.span_induction with
+  | mem x hx =>
+    obtain ⟨γ, rfl⟩ := hx
+    rw [dualPeriod_comp_extend]
+    exact sourceWeightTwoDualPeriod_mem Γ _
+  | zero => simp
+  | add x y _ _ hx hy =>
+    simpa using (sourceWeightTwoIntegralLattice Γ).add_mem hx hy
+  | smul n x _ hx =>
+    simpa using (sourceWeightTwoIntegralLattice Γ).smul_mem n hx
+
+theorem multiplier_extend (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (hχ : ∀ (γ : Γ) (τ : ℍ), F (γ.val • τ) =
+      Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue Γ k γ).re : ℂ)) * F τ)
+    (γ : plusMinus Γ) (τ : ℍ) :
+    F (γ.val • τ) = Complex.exp (2 * Real.pi * Complex.I *
+      ((sourceWeightTwoPeriodValue (plusMinus Γ) (extend Γ k) γ).re : ℂ)) * F τ := by
+  rw [period_extend_representative]
+  have he : (CentralSign.representative Γ γ).val • τ = γ.val • τ := by
+    rcases CentralSign.representative_spec Γ γ with h | h
+    · rw [h]
+    · rw [h, ModularGroup.SL_neg_smul]
+  rw [← he, hχ]
+
+omit [Γ.FiniteIndex] in
+theorem orbit_iff (a b : ℍ) :
+    (∃ γ : plusMinus Γ, γ.val • a = b) ↔ (∃ γ : Γ, γ.val • a = b) := by
+  constructor
+  · rintro ⟨γ, hγ⟩
+    refine ⟨CentralSign.representative Γ γ, ?_⟩
+    rcases CentralSign.representative_spec Γ γ with h | h
+    · simpa only [h] using hγ
+    · simpa only [h, ModularGroup.SL_neg_smul] using hγ
+  · rintro ⟨γ, hγ⟩
+    exact ⟨⟨γ.val, le_plusMinus Γ γ.property⟩, hγ⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.SignedForms

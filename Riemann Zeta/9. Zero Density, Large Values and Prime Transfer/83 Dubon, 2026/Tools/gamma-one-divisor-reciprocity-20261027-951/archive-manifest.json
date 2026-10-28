@@ -1,0 +1,2569 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-reciprocity-promotion-route-951.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-divisor-reciprocity-promotion-route-951.json",
+      "sha256": "EE12E29829026A7C625FF08CF902EC717B12F0E08F72E33522F845889FD6B345"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceComplexHolomorphicStokes.lean.txt",
+      "sha256": "8AFBAE8620F1BAD53A8A6DB8896EBF6389671004FB8B432AD00E32C121A906BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceFinitePermutationCoboundary.lean.txt",
+      "sha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary937a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceFinitePermutationCoboundary937a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary937a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceFinitePermutationCoboundary937a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingAudit1.lean.txt",
+      "sha256": "F8B8D6835FC905A3142C497B262237CA0A7112B47F2905609534EAE49B5C8370"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingAudit1.log",
+      "sha256": "3D75CE8F6B19959F4FD92740B4382EF8E6596A2189DB27DEA345527F1BC79AAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingBoundary.lean.txt",
+      "sha256": "38B4CD4CC29ED9890DABE609477C02BDE453B4DAA361371DBBEAFC6CBC6B7AA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary933a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingBoundary933a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary933a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingBoundary933a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingComparison.lean.txt",
+      "sha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingComparison918a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingComparison918a.log",
+      "sha256": "38C18F9576289958C3DC5C9364136235AF55AE46310E800EAA40D1AF5BC6EC4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingComparison918b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingComparison918b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1.lean.txt",
+      "sha256": "819C61DF60E7CB4FEDEF177CC6844CCA4BDD7F5C2B2E19A839DDB961546C93AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1.log",
+      "sha256": "321D96A02AAC7441548114BA6493C8E6DD7D6ACB2CD70C7E65C5B06E7429AE54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod.lean.txt",
+      "sha256": "04D8DEFE1BFEDF677A6C91A72541B318AE709C937D120DF8AE379A5D28AED036"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941a.log",
+      "sha256": "AED1C72C36F83963AB799666395407963C30064AE8C6AFEA129C3E558FE0B9D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingIntegralPeriod941c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingScratchOwnership919.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingScratchOwnership919.lean.txt",
+      "sha256": "885482663271373423DE7901F96995F599FDCA9BEA878FBBB7532AD1D793EFA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingScratchOwnership919.log",
+      "sha256": "0097075A0E95D722B2622C1DD6B632E90AF00D514F3C3FA4E91C52C6E8118A5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOnePeterssonReciprocity.lean.txt",
+      "sha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOnePeterssonReciprocity948a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOnePeterssonReciprocity948a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOnePeterssonSmoothLimit.lean.txt",
+      "sha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorAudit1b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorAudit1b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorAudit1b.lean.txt",
+      "sha256": "48533703F4060D4A7D1D2AB4D878A9D64725D01B267945C1D5847EE97C2C0AF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorAudit1b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorAudit1b.log",
+      "sha256": "E803647AB92E89C12A96FB967AB99AFC57FE707B02CBB280C10A01CCD370AA40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorComparison.lean.txt",
+      "sha256": "6F27F57E2EA46C11E609A0A531BA4C54A154112823D74E718F48DBFFACAC6A11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison906a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorComparison906a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison906a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorComparison906a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorComparison908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorComparison908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1b.lean.txt",
+      "sha256": "F78139AC8DC5446D81FFAFCEC7FC954CD7D6F9C37052516F265F18D465758136"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1b.log",
+      "sha256": "F6635FFCD714D8BA1F5E60D8FCF5018C6043437A0A103757D8726BEDFD3CCF5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodAudit1.lean.txt",
+      "sha256": "059372C5803412AA4CDC4F759F4B1B84E58AE864BDD7FC954540C4D62F528470"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodAudit1.log",
+      "sha256": "E47781F1A88ECA5BECD5C9060E6CFFD79CE67335826AE32A2F0E3E716411CAC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.lean.txt",
+      "sha256": "1B15CA36193920BD6FC7AE62569952060833B34839AE106EE0491661FDC258C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.log",
+      "sha256": "94638AA53BFEAE9DD1348B346349CB55BDEE93C117BBB754C12C7C38C19DB6F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodIntegral.lean.txt",
+      "sha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodIntegral913a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodIntegral913a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodScratchOwnership914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodScratchOwnership914.lean.txt",
+      "sha256": "7E4BAB4636C380B1DEB012B6899F298D6E0E7B733C32A4BB666FE056835496A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodScratchOwnership914.log",
+      "sha256": "6957F1BB2A0105E54446879B2754B997DCEA37CCDF5F7716A50E09B33385D8D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorScratchOwnership909b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorScratchOwnership909b.lean.txt",
+      "sha256": "B382BFB047ED37F54181C6E396DC8A6B4FD29047DC3B3343BEDA30C2E679E86A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorScratchOwnership909b.log",
+      "sha256": "FB6FE91095BA44C44721643B2334B8BB88A3225977CFD693451C0EE9E6FC09A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorValueProbe907.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorValueProbe907.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorValueProbe907.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorValueProbe907.log",
+      "sha256": "09CFE3C29C717C62129A59919159D0581F88B08DEA7BC548402328BEAF79AE82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothedReciprocity.lean.txt",
+      "sha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothedReciprocity946a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothedReciprocity946a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceMeromorphicUntwistDerivative.lean.txt",
+      "sha256": "6BB8FC8FEEA7F780C42E9FBCB8C699A1F333B6CFDBB322BFA3D11E6F8C4791F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularBoundarySidePairing.lean.txt",
+      "sha256": "8B835042496E2F3EBAA984106780F849320E6990EF5060D5D254F8CAD504E8FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing921a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularBoundarySidePairing921a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing921a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularBoundarySidePairing921a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularCuspBoundaryDecay.lean.txt",
+      "sha256": "DFBB87E400FEBFD1EFF68AF6AF81E26FEDC0726210DB0845E88B0E38C35BD9E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularCuspBoundaryDecay924a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularCuspBoundaryDecay924a.log",
+      "sha256": "51C8881D2319B3E8275A6DDF7781B667405E0390B0E3545B6B683086A85E83DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularCuspBoundaryDecay924b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularCuspBoundaryDecay924b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenArc.lean.txt",
+      "sha256": "864C4E4ACEAE495FC75CBF61BCF2596888F8B0666C9876AE0D27D0E47472A03C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenArc922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenArc922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryAudit1.lean.txt",
+      "sha256": "192BCB3F54159DB11946729EBBCAEF2DFD9A9AA7838B92755F0DA9E3374B3815"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryAudit1.log",
+      "sha256": "AC68E042AE8D6EC114B48C89BF150FB3F6BA05A8FF5E364CDB778272AB014ED7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1.lean.txt",
+      "sha256": "DE8756D93B051DCE84B6966E602E223A2E06B34F3D9F3B4796242E57AEB3E7B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1.log",
+      "sha256": "3486C9D1926257DB5AA33EF25F4B0AF2A46A79F93248290B9E3DA725C0EB8C0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryScratchOwnership925.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryScratchOwnership925.lean.txt",
+      "sha256": "71406308BA3F4DC2B18C6BE6B2B6F3D4AD3FDD8A2CB441C2D98B611ABA5C564E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryScratchOwnership925.log",
+      "sha256": "656CCF3EA7176B8B26541CCB19141837F7DC9997E60C18D53D9BDEC33DFDBE1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryValueProbe923.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryValueProbe923.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryValueProbe923.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryValueProbe923.log",
+      "sha256": "F827D4ADFA16F5FD601B091B268193BD080798CF77C1ABBFF515127F493C8910"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDensity.lean.txt",
+      "sha256": "D30CB910A06801041F4CF5D42DEEF682BDF19A3DCF6225EFD58AE08E1A13F894"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity928a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDensity928a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity928a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDensity928a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDomain.lean.txt",
+      "sha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDomain922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenDomain922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenEdges.lean.txt",
+      "sha256": "1EC660CACBBC8B2BE6798FF750C5BEEB267117FC8821034CBDFFF95381662A9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges926c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenEdges926c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges926c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenEdges926c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenFormula.lean.txt",
+      "sha256": "C0DE070F761BA839CED27F93A1781F0207C9AA22863C2E5F3DDC6D7BB9858405"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenFormula922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenFormula922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenLines.lean.txt",
+      "sha256": "EE8DDCB42E6E7FEB3A98848D630CCD72CD0D16F30687ADFD6D79BD6AFB2D3F9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenLines922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenLines922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenMeasure.lean.txt",
+      "sha256": "FE1D490DA75F72B8E9942D50AD62B8B90E7F0607150032E30833577D76E27797"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenMeasure927a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenMeasure927a.log",
+      "sha256": "46C1D6C98381A21A76D8F9B48FC5385DD6F004051185900F244FCB737A72A294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenMeasure927b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenMeasure927b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenPullback.lean.txt",
+      "sha256": "6BD3AB9D9A1DC1377A3FA9AE9A006DCAE80012683186D4AE1FBFA5378F06442F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenPullback926a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenPullback926a.log",
+      "sha256": "92EBDE8F1D2A0D7020690A33505BE8C165EB726C764F3B1808B0F771A63D2A36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenPullback926b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenPullback926b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSidePairing.lean.txt",
+      "sha256": "58970076E036D4F7B3D05ADDD430D780A2EABB5F47ED2E95E5257E0D1B5F2E0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing929a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSidePairing929a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing929a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSidePairing929a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSliceGeometry.lean.txt",
+      "sha256": "A83E93C85D206C58F0DD1D0D83A2D5F0E7B2575DEE03B4C084D18AC35F61A8BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSliceGeometry922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSliceGeometry922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSlicing.lean.txt",
+      "sha256": "816485841AC9937CB993A34B5ECAAE492A10365D453DD5DFB63011F3929C2892"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing922a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSlicing922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing922a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenSlicing922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenTile.lean.txt",
+      "sha256": "CA5E6679AC89EA1C1B0BB30B7C5151E4ADE7C494BE2C2D90EBB630B9A38729C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenTile926b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenTile926b.log",
+      "sha256": "2824E90880260AAA08A590B07E64FEA894A44B5C36DAD61C22AA539083D119DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenTile926c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenTile926c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners.lean.txt",
+      "sha256": "843FA7AB3CCB0E5AF0998296E6D804E09DA4DA078285E5B75808E0B15C78D039"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938c.log",
+      "sha256": "BD341FA76340943DD7D97A72A2E220D604BA6E35F3E92C2B6A3AB9F0FAD1BC07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938d.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938d.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938e.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938e.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularPeriodCorners938e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingAction.lean.txt",
+      "sha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingAction920a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingAction920a.log",
+      "sha256": "38D386082F6038F60A9F9CDDC4436AD546DA30880CE5134886CBEA973703627B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingAction920b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingAction920b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingIntegrals.lean.txt",
+      "sha256": "022E338E68E8C224A9A93086F94ED15C7BEEFEA06A63926BA507FDA402FA2679"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals921a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingIntegrals921a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals921a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSidePairingIntegrals921a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives.lean.txt",
+      "sha256": "D9C29B42204AC2E02862BEC197796A610655C53B897857ABAF7A4757D4B16AEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives895a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives895a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives895a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives895a.log",
+      "sha256": "3F903325654A6160A5D219096A4FD1A5CD31006A24CD763E7CBD6317A12F8CBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives895b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives895b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives895b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives895b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives908b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothProjectiveRepresentatives908b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit.lean.txt",
+      "sha256": "94767C6820A452C8A82D6571A6D5B49DE762F96159955FCE6333669144109199"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931a.log",
+      "sha256": "348DFF49A340B9A742F42BD21BA103A617EA2C39FFC4571F56BE409399A6B489"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931b.log",
+      "sha256": "AA49AAF46CC17A4356618F063005106C8AF2E111EB0D26CCB2F4091EEC968091"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931c.log",
+      "sha256": "0DD0E74AB4E3D9FDEA4943659589953AE13781C293D2A228505F0870C22EA0F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931d.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931d.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularSmoothedGreenLimit931d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryAudit1.lean.txt",
+      "sha256": "9CC4228EDEC5E611159F4AA3DD69E81BC6B3B857CDC494DB5BF978CF6DF03F57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryAudit1.log",
+      "sha256": "5042F341726D232435EF0614D3044C8069FB67F07477A14A8C01B38328B47403"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1.lean.txt",
+      "sha256": "2223B9FF3DD679449CA20B076F59D9F40354D05D559A13E9C0ECDED988EA405B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1.log",
+      "sha256": "FCBAB9CC3A1B0BF8CE7A87BC5B2BD097FD06ADE852E7B5B39992D9817BEA24D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryScratchOwnership935.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryScratchOwnership935.lean.txt",
+      "sha256": "8582A9B40096E75C16C18FCF540409F76AD115E18A274FEB22F007FDCDD88CAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryScratchOwnership935.log",
+      "sha256": "65D347F5A19E4EC706A1794BDCE3716B85EC59DBA43EB511ED05BFB4DAE9E004"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryValueProbe934.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryValueProbe934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryValueProbe934.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryValueProbe934.log",
+      "sha256": "14FF36E4F344816A8300D69BB1A6535B1C4E6299C2E8BA4837BC2D7A5EADFC9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityAudit1.lean.txt",
+      "sha256": "CA64D589B8014FF49D0C70F22E82A2E169DB0D7F7BA060215F81DFBC2A402AF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityAudit1.log",
+      "sha256": "8FDF2E153DE94000A37DC603C65EFD21EEE83625933FE0B2A15927FEEDABAEF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1.lean.txt",
+      "sha256": "37F8815AE31D29769F8B91AF08922832EC3DA10DBE3E4A0F8CE30946607128F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1.log",
+      "sha256": "85DF9B4CD0576BFCA7736E2621C42E771F6936811A19EA76BB55D214DBA48128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityScratchOwnership950.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityScratchOwnership950.lean.txt",
+      "sha256": "750FB693279C1918E47FA660104A9C5FFA95CAD6461AB4E84488B1FE436BCBAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityScratchOwnership950.log",
+      "sha256": "069B9C647D71076193A255F5319C6F0BD6F2EC72B71DDB1BAE8C7F07AAE60465"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityValueProbe949.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityValueProbe949.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityValueProbe949.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityValueProbe949.lean.txt",
+      "sha256": "B19164000109B559529B6BC058F1C675012F119CD8FABB1656B4AB624820B985"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityValueProbe949.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityValueProbe949.log",
+      "sha256": "EF00EED80648EE26AC4B2219BF28DB6BCDF8A6DC595002CDCB9D19E7FCE5F678"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodAudit1b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodAudit1b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodAudit1b.lean.txt",
+      "sha256": "2C3CFC9EFB41FC5C603B67EA6504FEBDF45CF1256552841520763D7101905ABD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodAudit1b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodAudit1b.log",
+      "sha256": "BB001FC05E20FFF2D580D8C9B7161FF80EF749969CEAB8DACED45B56E07ED451"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1b.lean.txt",
+      "sha256": "E3D3FCB3FF243B1DC51C676F0523598D7DDB222E671A980F61696CBA6375255C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1b.log",
+      "sha256": "D3C96955C4AC217BA2869FECD3A963BA3DFC86403D7CE021622CB69923447233"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodScratchOwnership943b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodScratchOwnership943b.lean.txt",
+      "sha256": "CE2F80A991556C66B2BAF25235FC09D04EAA3EFF0276C0ED21A7B9C26DAAD09C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodScratchOwnership943b.log",
+      "sha256": "2604D3D70BCC21771588DD2C42405F2FAAC1F4E1F632167F7FB57D94849D77A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodValueProbe942.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodValueProbe942.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodValueProbe942.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodValueProbe942.lean.txt",
+      "sha256": "D8569ABB024F43696421A346C7F220C70322AFC6CBC72A66D444A34DA7D77127"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodValueProbe942.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodValueProbe942.log",
+      "sha256": "530BE5003E1F9108AFE75ABD9BAE200298EFA5CB48F532E66B54067310DB9570"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials.lean.txt",
+      "sha256": "3732C64725DEC3B12E2CA0A6F539129A25A510C747ACCBCDBE23AED22849D710"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937a.log",
+      "sha256": "656D36A9E887FFCF37AF5CAC2552CE53CCB6029EF7F1EBA2F91BB89354E94DC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicCosetPotentials937c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicWindingIntegralPeriods.lean.txt",
+      "sha256": "709D97386612CDFAE9859419DD6C5DD84BDE58EA9727EDFB4EF6B0FFFDDEC6E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicWindingIntegralPeriods940a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicWindingIntegralPeriods940a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicWindingIntegralPeriods940b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceParabolicWindingIntegralPeriods940b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothCompactTranslateIntegral.lean.txt",
+      "sha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothCompactTranslateIntegral911a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothCompactTranslateIntegral911a.log",
+      "sha256": "92552481D6A49ED37B32F9A4038D7C3065D918BC343D7831D08C696D0C914727"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothCompactTranslateIntegral911b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothCompactTranslateIntegral911b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonCusps.lean.txt",
+      "sha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonCusps916a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonCusps916a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonDbar.lean.txt",
+      "sha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonDbar944a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonDbar944a.log",
+      "sha256": "C1AB95D1FEAC31C62B574B90092ADF696FDC5CEA4EE63E4B6C72FAA1746A020E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonDbar944b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonDbar944b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonQuotient.lean.txt",
+      "sha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonQuotient915a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonQuotient915a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonWindingLog.lean.txt",
+      "sha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonWindingLog917a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothComparisonWindingLog917a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorInvarianceCusps.lean.txt",
+      "sha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps903a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorInvarianceCusps903a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps903a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorInvarianceCusps903a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorInvarianceCusps908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorInvarianceCusps908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalOrders.lean.txt",
+      "sha256": "6023900FD05AF6274D16E4C1DC3564C2C66D91A3ED237CE61850430F90D3BED9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders902a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalOrders902a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders902a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalOrders902a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalOrders908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalOrders908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct.lean.txt",
+      "sha256": "52F17B6EB3A8CC06730A567FB213AE8907E44D274AA3FCD313CA8AA2BFF4C613"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct901a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct901a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct901a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct901a.log",
+      "sha256": "84B74BF8AAAAEDDE88423ADAF4ABFDAA7BF0A21A105FA36FDAD9B6EF1A873B81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct901b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct901b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct901b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct901b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLocalProduct908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative.lean.txt",
+      "sha256": "E1EA0BE4134C0E239E5F2F793EC3A95E77BB3AA693517DCAFE0BDEA13A2039D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative904a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative904a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative904a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative904a.log",
+      "sha256": "8565F2D46ABAC40A248942E1B817EB71B957E25E8E68D333E3C84C513035B23C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative904b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative904b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative904b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative904b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorLogDerivative908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData.lean.txt",
+      "sha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData898a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData898a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData898a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData898a.log",
+      "sha256": "B171BA0A5ECA00B7C59037FEA086536C0BABB51217426AC144C48F962D00E20B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData898b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData898b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData898b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData898b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorOrbitData908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorPeriodIntegral.lean.txt",
+      "sha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorPeriodIntegral912a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorPeriodIntegral912a.log",
+      "sha256": "66F5048CD57C7141362B86D6A6B618F3800AA12F538F38BC786EB0B7C017BF4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorPeriodIntegral912b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorPeriodIntegral912b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct.lean.txt",
+      "sha256": "8D14534E567D760934BC1F979CECBDB9BB205F9F930660E7AA6A715D1504CFD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct900a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct900a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct900a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct900a.log",
+      "sha256": "E41C9499AE9886F203E37E0D19B58AE226905446AA46E84167EDE939F80B6C1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct900b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct900b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct900b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct900b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothDivisorProduct908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothInvariantComparison.lean.txt",
+      "sha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison905a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothInvariantComparison905a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison905a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothInvariantComparison905a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothInvariantComparison908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothInvariantComparison908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelProducts.lean.txt",
+      "sha256": "F29AEF46E8457F756FAA69AE9E0C119EDC050D08108EA482C78789136A6D8FE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts892a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelProducts892a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts892a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelProducts892a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelRegularization.lean.txt",
+      "sha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization892a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelRegularization892a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization892a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothLocalModelRegularization892a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry.lean.txt",
+      "sha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry896a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry896a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry896a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry896a.log",
+      "sha256": "2736FFF3ED8C0EEAC167F7FAB9AF53F30CD0C5ED6A76AF54702927B95E911164"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry896b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry896b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry896b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry896b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularGeometry908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative.lean.txt",
+      "sha256": "B35D4A4D6550A925D28A36714D3EFD733FEBE3DFA08D9187797593FBE9100EF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899a.log",
+      "sha256": "EA23F861FD5FA02987CD9453677FF60E246A572DA80954CCAC422C6A60904DF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899b.log",
+      "sha256": "2B66A89066FC3DECE0F1FD41C02A770FE4225D607CC339851C83A7460D5403BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative899c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative899c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothModularLogDerivative908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables.lean.txt",
+      "sha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910a.log",
+      "sha256": "F2352D86E69CE1A9B9E53A49971C135D892895457D7F47F53A862EF3A0983B47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910b.log",
+      "sha256": "E28976EC08E9F5EA2EDA40E1905DDB2B628964EB9089983DEB14C98C7738C49A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralChangeVariables910c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralGeometry.lean.txt",
+      "sha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralGeometry910a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralGeometry910a.log",
+      "sha256": "D74A60DD355ECF5E92BC331D0B4EF8754B0FE0AF22897409D143EEB01B5E2EEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralGeometry910b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothOrbitIntegralGeometry910b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothProjectiveOrbitSum.lean.txt",
+      "sha256": "2074FC79B094DF75D1589CAF2B314C3D640A76A354DCB1601CBF0BC6E0BD60B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum897a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothProjectiveOrbitSum897a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum897a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothProjectiveOrbitSum897a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum908a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothProjectiveOrbitSum908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum908a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothProjectiveOrbitSum908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit.lean.txt",
+      "sha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945a.log",
+      "sha256": "6E1DA0035EC9B87FF152B705EBC5805DAFFA7BF716A768785F4F85CA2B65497A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945b.log",
+      "sha256": "A559D8137DCC8E62FBE72CC9377AAFE5AC7152308868FE53C4A09D5A28B4D713"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceSmoothedWindingIntegralSplit945c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceUntwistPeterssonLimit.lean.txt",
+      "sha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceUntwistPeterssonLimit947a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceUntwistPeterssonLimit947a.log",
+      "sha256": "FB21C7F9C63E07DBA2BA568CCCFAA1AC4297D8098018DDE78B7B389D25656DB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceUntwistPeterssonLimit947b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceUntwistPeterssonLimit947b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods.lean.txt",
+      "sha256": "01E926C0F2C12D7AC2C07687813564964F0B3317ABE22FF6AD2DCF43F0434D2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939a.log",
+      "sha256": "A722E806058947492015084E301735065F59A486F2F0EE4DAF722A0E19C4817B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoCosetPeriods939c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPeriodUntwist.lean.txt",
+      "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges.lean.txt",
+      "sha256": "513BB6C73766B3A53D7F1842724C6102C51E145F88E3077C16AAA70FD16BD119"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938a.log",
+      "sha256": "8EC3F6AD1C1DD91C94C92C9802A62ABAB25F83B0A138192E5EEB2C896DD3F984"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938b.log",
+      "sha256": "64470CB56F963C3B439CFA645AA52DE873ABABF80A2557E867D2950375A24EDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938c.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938c.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWeightTwoPrimitiveEdges938c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingBoundaryIntegral.lean.txt",
+      "sha256": "745974CE38B9CEA6A1E35E58B24F39AF9631899100D553736CB63B95E68469A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral932a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingBoundaryIntegral932a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral932a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingBoundaryIntegral932a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingLogCuspBounds.lean.txt",
+      "sha256": "118833A28555B6815D950BCBC5C5A1564C7D04CA85214BF1FB4B9170D34D9434"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930a.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingLogCuspBounds930a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930a.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingLogCuspBounds930a.log",
+      "sha256": "44DD546260B33B29D0B48918A1FAE3041675052AD6D16AEAEF7F6DCED41B5DFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930b.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingLogCuspBounds930b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930b.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceWindingLogCuspBounds930b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_divisor_winding_919.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_divisor_winding_919.ps1",
+      "sha256": "C75171AB948E0E7CC787EA7CD2893A72C7F592C2D12B8723C4B31A92CB774024"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_modular_green_boundary_925.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_modular_green_boundary_925.ps1",
+      "sha256": "6CC0046D9B06D5C6018A4FE4FFDC29D4FB3E208CD4CD23C22EF880175CDD9859"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_divisor_winding_boundary_935.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_original_divisor_winding_boundary_935.ps1",
+      "sha256": "CAF4FE5BBC1E03AA3CE26A457E38505F0EF7684FBA1742EC12C900D1B3471138"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_petersson_reciprocity_950.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_original_petersson_reciprocity_950.ps1",
+      "sha256": "864E32344CAFD73A7B0CE7CA8449B9906FD372875A2ED1B53712F7E07A0F9AAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_winding_integral_period_943.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_original_winding_integral_period_943.ps1",
+      "sha256": "200FB600CBA25E7F5E24A26BE06B106BC3AB78559234ACC8E0EDB6A764F740D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_winding_integral_period_943b.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_original_winding_integral_period_943b.ps1",
+      "sha256": "40B8113471C95C8D8736EE21D9DFBE45D4EF671592EA4BEF8C19C5784AF2A328"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_smooth_divisor_909.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_smooth_divisor_909.ps1",
+      "sha256": "223816C9572F5DCF984F73E447CEA1A33594C79061AE59B116E5B56E1E51DDCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_smooth_divisor_909b.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_smooth_divisor_909b.ps1",
+      "sha256": "2535220A2780BD9F6F36BC3A8D2E35326D4F4A33A9E97F859C29AE8C14003051"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_smooth_divisor_period_914.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_smooth_divisor_period_914.ps1",
+      "sha256": "FE656B8DC02DC8EBAD0CA00FBB633A30D120D5B0B3A225599277426BDA8E71D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_smooth_divisor_period_914b.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/audit_smooth_divisor_period_914b.ps1",
+      "sha256": "333C92FB8D497BB85F0983B637BA0400FAFAF6BC6D2854952AB5914AFCBEB185"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_smooth_divisor_pruned_908.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/compile_smooth_divisor_pruned_908.ps1",
+      "sha256": "4EC94F69B71D1277CC93AB4DD1A088A28291596C6A0637CB571F8728013BCBF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers912.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/consumers912.txt",
+      "sha256": "3E4A7D5B649C620828FD24D0F5A76CCA77CABA2555978FE5AE3C99841E35BF0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers934.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/consumers934.txt",
+      "sha256": "479E75BF5047C36C793ADEA87F0AF4D6100A694FF486ED11E0E0439A87AAD3CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers946.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/consumers946.txt",
+      "sha256": "F2DDB2973CBE01E30D689C2D00B967C3F4178790F525BFE210F0D530AAC872D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs934.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/docs934.py",
+      "sha256": "89B8F03534034C4F90C20579BF9C774769C95FAAFB79C3B03CA43624610D70C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs946.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/docs946.py",
+      "sha256": "D6ECB15B797F4AE3750D03FB51D505F34E7DE606A97920000F83B87380CB2111"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation912-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/foundation912-console.log",
+      "sha256": "1742E11A70C8F5A23CC414977206201911E34533A4BBFF79777D97E0F3006F6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation934-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/foundation934-console.log",
+      "sha256": "79275D41094F32BF427A9652AFF7B302B4F120AD49E1AB0079EFFA3A8786CC3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation946-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/foundation946-console.log",
+      "sha256": "0FD4DC5817C32E2CD98A036BD096A0F73270E903983A00F6F4B13C1793AAE437"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-winding-comparison-route-918.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-divisor-winding-comparison-route-918.json",
+      "sha256": "2D0268DE2A07741C2F78E191E93E75F5E8EF9A29A5BCD1ED1E854FC12BA82396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-local-model-construction-reuse-889/S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+      "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-reciprocity-reuse-848/S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "sha256": "63556CBEF1EEDE8F6381B2F89A1E4BA4CDBBD9AEF626C5044F4BFB9CC881E9F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-green-cusp-route-924.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-green-cusp-route-924.json",
+      "sha256": "07FD9651DAEF0FFFFD58E8B7E13FBFD27292D0BB72929766A80F322494B9F700"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-green-reuse-route-922.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-green-reuse-route-922.json",
+      "sha256": "1F381D059E36D66A2835C78EF21F9F925C210E6ED7C0EB2D91D6C689D02615BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-side-pairing-reuse-route-920.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-side-pairing-reuse-route-920.json",
+      "sha256": "04D4B0D3BABA7428185D15C5A9E23A6C69207D243773A2C4FE8C31123BAF429A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules912.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modules912.json",
+      "sha256": "E7F729B705F0D6AC2113893110C5ACA130F05B20128F66FE2FE46B268D900DD6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules934.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modules934.json",
+      "sha256": "801D8B2ECD4B0D8A3B077AD08D923A358A24C61B0CA33328DDCD790E04AD7DA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules946.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modules946.json",
+      "sha256": "C52A0A093351B38E90B93A4988EDD896296DE9F69D3C86C90EF74313AFF0588F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-divisor-winding-boundary-route-933.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/original-divisor-winding-boundary-route-933.json",
+      "sha256": "915C2425B5A605DD895883855443E512A2EA4D0FDB74BFD63A7E4A0B7A7EB9EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-winding-integral-period-candidates-942.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/original-winding-integral-period-candidates-942.json",
+      "sha256": "8EB32A27C6F7E6D376BA6206D86FD144A634A8BDCDE393F51F413A1493375922"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper912-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/paper912-console.log",
+      "sha256": "C7E4DFB22CE40EE226A4E575932EA7D9CAE5F6755F933FBBD11C37BEF8503900"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper934-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/paper934-console.log",
+      "sha256": "E9820D801F0295E65A86286A81502D6C0EB363A22182E736D824153591BA8C7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper946-console.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/paper946-console.log",
+      "sha256": "F268921BB4283DC575B050B94939F12EA1A329E4A2FB2D1D87B8CB9CCA7E824B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-reuse-936\\S_ModularCurve_exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/parabolic-integral-period-reuse-936/S_ModularCurve_exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom.lean.txt",
+      "sha256": "545B2E28A9CD11C2368F108CBBBDE0D495FD3CBAB6CF9B174092864E0FC1CF85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-reuse-936\\manifest.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/parabolic-integral-period-reuse-936/manifest.json",
+      "sha256": "48798E51A00D44E3C3E8240503D52AF829D5D00FC11C07E360A6A7A27845872D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-route-937.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/parabolic-integral-period-route-937.json",
+      "sha256": "1312D52153C068799B41C03CC9EE328054256750496BF4249197040FBF66F655"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_compact_translate_integral_911.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_compact_translate_integral_911.py",
+      "sha256": "70D29DB844C36C46E2C3101F3408AB54DC3548B056E609ED83D5DB2F37DE87BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_divisor_winding_audit_919.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_divisor_winding_audit_919.py",
+      "sha256": "A0325F385DE1128FB2DDE8CE32587F8B4A5B2697C45D0BF60C07464EED750FF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_winding_918.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_divisor_winding_918.py",
+      "sha256": "58C2B822A29532964192CF24F65446FC4576C2124402550F533194A7EE458747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_divisor_comparison_906.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_smooth_divisor_comparison_906.py",
+      "sha256": "3C2D136BCA64C7764B074FE5EDE182884D2B3E1291D42FBCB28BC4E58AE20B0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_smooth_divisor_comparison_906b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_smooth_divisor_comparison_906b.py",
+      "sha256": "4DF419FD31AAE71A043CB1ED98F34EAF2681DD2B87EE59B5E22B1F16FD07E04E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_modular_side_pairing_action_920.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_modular_side_pairing_action_920.py",
+      "sha256": "B3CAC55F24F9C480690654C9793746A9B8DEC02654292E29A4D1E91221F7850B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_comparison_cusps_916.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_comparison_cusps_916.py",
+      "sha256": "E7D59C4DD4340276DBF6CA1870A11EA7E464830B487D314B2A46C111487FDE8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_comparison_quotient_915.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_comparison_quotient_915.py",
+      "sha256": "96FA5487C4E14DDA5AA20F38D020DAB5E9239A25E9EBD1A144AF6515BDEF0D6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_audit_909.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_audit_909.py",
+      "sha256": "200B73445B6621018FEF84AA922B68F5789519277B4A41888422668988725B80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_audit_909b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_audit_909b.py",
+      "sha256": "4607FA0C7840C294A4213AE92E1F94FC30747750E3959E517FC955598DB1DCF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_invariance_cusps_903.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_invariance_cusps_903.py",
+      "sha256": "82294042284F67EB6EFA446DA51356600C304D32D4158C0BD930C2F45E2893CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_local_orders_902.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_local_orders_902.py",
+      "sha256": "7867099403AFB101CF9ADE293966B23D9B0B25ABC27065DB7C77BEE506DB1C36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_local_product_901.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_local_product_901.py",
+      "sha256": "3D043710D86F21D08D9C2035F2BEBFC72D715A924394DB763FA7AFA4A1E269D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_log_derivative_904.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_log_derivative_904.py",
+      "sha256": "F7FDA2ED5205162EB89BC0F39C7F089AEDE48A22D00A43F43552E62881F2677D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_orbit_data_898.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_orbit_data_898.py",
+      "sha256": "EE72FA90B3D65D63EEA620D5924846814B1C895B044D3625CF9FB5FB87BB1E11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_period_912.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_period_912.py",
+      "sha256": "8B88537448C2E741FC4B7B4326FF98DD673443D122A5A024478B9BCD7D8E7178"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_period_audit_914.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_period_audit_914.py",
+      "sha256": "DA5C34EE05F511BBB08FF7F505ECBD02271E6817567733488A406915EE182279"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_period_audit_914b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_period_audit_914b.py",
+      "sha256": "CFD93CBA8C9036C169D0EB6DF4600B7A6E0E1AE6F1D6A26E45B369B130255FA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_product_900.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_product_900.py",
+      "sha256": "91F91C71CEEBE172C08F1BF5EEF51576D9F4B8654768A01CA3390D1880E6D228"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_pruned_908.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_pruned_908.py",
+      "sha256": "0163CEC688DBF98698CC847EE67DD2E3F4D035913928F8DC2E202F286ED80E5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_divisor_value_probe_907.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_divisor_value_probe_907.py",
+      "sha256": "196B5D4AAB813E94584E5AD331DD2671F035A03B8761B9063A38CC5EF0204A42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_invariant_comparison_905.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_invariant_comparison_905.py",
+      "sha256": "E7DEF2F8E29782A55351088DEEE170A0B7DCE3B29A90A9ED55D5BB2318176069"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_modular_geometry_896.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_modular_geometry_896.py",
+      "sha256": "D6784F13E333EF9AAD55D269FC5E428683B4FCD1ECDEE7C9DCA29355A1CA2ED9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_modular_log_derivative_899.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_modular_log_derivative_899.py",
+      "sha256": "8FD5421507B5DDD4056AF70948ACC8F92D2F62989AC9BBF6C9595BF4FDCAF516"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_orbit_integral_910.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_orbit_integral_910.py",
+      "sha256": "6263FE3B73FEC910D60D86CBA688855419AE71FF38679FBFFDE4B0FA56141A17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_projective_orbit_sum_897.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_projective_orbit_sum_897.py",
+      "sha256": "6D467458DABAB79E1F8DDD4439BC4E2FA33249D84C7FF5B6F77958934E5B9851"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_smooth_projective_representatives_895.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_smooth_projective_representatives_895.py",
+      "sha256": "A7B7F84256BC9C0823FAAFBDDC4E052E5EA1677F497779D63ADAD522CC0567CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\rebuild_original_winding_integral_period_943b.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/rebuild_original_winding_integral_period_943b.ps1",
+      "sha256": "94954EDED3F313D57AB06BE3098B7B72F192113CE06258A315E24C6E7DE16ED3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record912.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record912.py",
+      "sha256": "CCB439EB4B7A513A0B52EEC7395ADA1C33B1B062D7CDD797FCAD0EA263E2ADE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record934.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record934.py",
+      "sha256": "CB718CC6696FA32EEF2F1523BAD2D4D804C307BA4C5C93D7C3A068C656290AE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record946.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record946.py",
+      "sha256": "43BE4CB0AECE6FE7A42C518ECFE757AFBE15D1C05D63FA1F846BC253D2DE9986"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_divisor_winding_919.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_divisor_winding_919.py",
+      "sha256": "91827FBB4C0889A615D5DEFC76C6409B7CF1C8A8C246EEFA92EE75322FB6041B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_divisor_909.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_smooth_divisor_909.py",
+      "sha256": "1A5BE98335A3C8038FCA3197BDAD3EA96746C127F29735A5AB296AE10127652F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_divisor_909b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_smooth_divisor_909b.py",
+      "sha256": "D9A00680B9A8581CF2760F25EC5A632A810F6AAF1E80D0EA4E83BC72A0E2ADF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_divisor_period_914.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_smooth_divisor_period_914.py",
+      "sha256": "9A61A53A9E949B75C639BC7801B0CECB1D40D9FF6FC207FFBEFB9EAC9DD40852"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_smooth_divisor_period_914b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_smooth_divisor_period_914b.py",
+      "sha256": "E09FCE2096286CAD121652B107C8567F0676961D69087649DEB34E41CA536BA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_modular_green_boundary_925.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_modular_green_boundary_925.py",
+      "sha256": "434C41FECA90BBC4F7512F2862AC3251AB1E331F226B5CF51D870BBB2A4C7D24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_divisor_winding_boundary_935.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_original_divisor_winding_boundary_935.py",
+      "sha256": "A4C01EBCAEC0A63F749A0134FCF6910C821E36A523D37DBAF2B3C42F34A44E34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_petersson_reciprocity_950.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_original_petersson_reciprocity_950.py",
+      "sha256": "3EDFB838ED8AA7781D653D2D935C8A0C9847412B038AF1E3F395C0851CCD9EDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_winding_integral_period_943.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_original_winding_integral_period_943.py",
+      "sha256": "DDE0A1EB09E35A586C0D0145C21F64F8C63262D50FBE956504E6833E1A2D6EB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_winding_integral_period_943b.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_original_winding_integral_period_943b.py",
+      "sha256": "23C33BB308F419AA8858572CB97AF22953E7043E1BFA1DC736D4135C91FCAC71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register912.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/register912.py",
+      "sha256": "015C1A6A3177B2244AC32661F0F7B04CF17E43B83E8665B2C4C49F7E49982F25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register934.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/register934.py",
+      "sha256": "6CE5C7CB48036E496BB394339F0F2AFC029207191FB0579139A9B27AA1E54927"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register946.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/register946.py",
+      "sha256": "3185799E2BC57C9B60522BC114DFF6B7C35B62C53FA253C8453E2B2847FF7E51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations912.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/registrations912.json",
+      "sha256": "C4BE55695E78BC814B24F6ECDF805177BEEF2D3A2DD5E6A8E26F81AA2DD5060C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations934.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/registrations934.json",
+      "sha256": "58920C7BB66F949D78D4CC7928E0CD907C862ADF844633802740CDA7D8BF60D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations946.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/registrations946.json",
+      "sha256": "B468C58917E3139BFB26079A18A877DA7D05D88EED7C7EA2878E460EF25563BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section912.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/section912.txt",
+      "sha256": "7D1F92E127CDB6D9703283F0C744B0CAEFB3CEF1B137373A0A2496D9D052504F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section934.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/section934.txt",
+      "sha256": "5C8C492382CE88AE8AC5B6EA73CE8A2A2A654013F65E8424CA9B889978CBBCC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section946.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/section946.txt",
+      "sha256": "A5E8239D55C3805EDEDD9BCC455CEAFDD9933FF0B233E5A71A390F0504C48843"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-comparison-quotient-route-915.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-comparison-quotient-route-915.json",
+      "sha256": "A60F6408C6E6432E561CCE007A12F5E3656DC570A0F6AC343879CF2A16E8794E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-audit-kind-correction-909b.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-audit-kind-correction-909b.json",
+      "sha256": "A48520BFAF0D968B8F96760ED7E663A0271E9C14632684BA18EF3D6826D12488"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-period-audit-namespace-correction-914b.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-period-audit-namespace-correction-914b.json",
+      "sha256": "9CCD3CEC9CE755DE5CF10C6BDC343F80B2A52AFDE972FF31853C6907D7B0CB8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-period-route-912.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-period-route-912.json",
+      "sha256": "3B1C21E474CE852B174018720C3BEFFF6910C9618D2A9E544467579DF651C588"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-local-model-route-892.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-local-model-route-892.json",
+      "sha256": "C01A3E921DA023912855683F6763C03692A86EF634B70D04FB8835FDFF08F460"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-shorter-route-910.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-orbit-integral-shorter-route-910.json",
+      "sha256": "57AA95A46EF98F15ABAC1F7290B8F1ABC982DAB5CD7D2DE9C44262205DBEB977"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-projective-orbit-route-898.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-projective-orbit-route-898.json",
+      "sha256": "DFB37B4F0E5D25A87622A3EB2947F7D8105A0940118F5F25425CB8763360BE55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-complex-dipole-1-scratch-receipt.json",
+      "sha256": "6B0A8EC8E086272A388597C7758651D375134515E8F15D6F6C451419B45FD47B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-1-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-winding-1-audit-config.json",
+      "sha256": "87DAE7A51C8C824F156E9EBFA2973D868F1015CA99E25D4928955E89F2719312"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-winding-1-reuse-review-20261027.json",
+      "sha256": "C1ED4FC43483ADD263CA65E497080A10BDEE834D1AAAF6F56C56E1273DAE01C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-winding-1-scratch-receipt.json",
+      "sha256": "25E989665DF46ED0A363578B879EA4E96AD9ADDDF4E724191C97F8B1B2724899"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-audit-route-919.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-winding-audit-route-919.json",
+      "sha256": "980AB4AC0B36EF44F47185B39142063CA48159C64DEBDEF435E26623D0AA4178"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-1b-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-1b-audit-config.json",
+      "sha256": "4CBF42CE937D8CB3183E7A5C15820DCCFB786A375ED488B83C817BE5678D4776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-1b-reuse-review-20261027.json",
+      "sha256": "47AA25CC826906111824D4BE662E2DF92AFDFF548B339922ABC4E2766A5F19B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-1b-scratch-receipt.json",
+      "sha256": "E1FED85BC3E76CF4CE3D0395F754205F4E0405D0B8059F2E4A709CE6084B9897"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-908-compile-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-908-compile-config.json",
+      "sha256": "6F63CCCE262586401F09FA158C54322B5191A3B220B3C812682220D95901A00B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-audit-route-909.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-audit-route-909.json",
+      "sha256": "0ECE0592B1E4A4E2E54218B4AD880800C63104F8C4F3E87D480B0EF3F7F78259"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-1b-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-period-1b-audit-config.json",
+      "sha256": "BD5A0971D65A39B9DCBD32940D8920D4660B2C2FF8C48158E6A35757760BC171"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-period-1b-reuse-review-20261027.json",
+      "sha256": "FBEF6B8C362CD97BD71B3AD164E0CB26384B883499CD18BEA4DBC018507357C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-period-1b-scratch-receipt.json",
+      "sha256": "AFA3D58464D6BA1438DD115F2DCC7A02B7B5F1C48F27AC0EE87184233A8C706C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-audit-route-914.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-period-audit-route-914.json",
+      "sha256": "E4C16AD9A630187A52CA7E7A721369E38A72FD1348C561D2E4391E9F909D9AC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-probe-907.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-smooth-divisor-probe-907.json",
+      "sha256": "889AB6628CC34D8FEF76C2E0B9020EFF06E4FEDA9C751DECAF43A721926E62B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-1-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-green-boundary-1-audit-config.json",
+      "sha256": "0027D54105F2267458FD8D5E3F68B17D8A56F36B425A8B390522316C2B951CF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-green-boundary-1-reuse-review-20261027.json",
+      "sha256": "64B3D90F4FCBB22BF05F4262C9F820F99BF8E3E069DC14E15692F4E671DC0398"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-green-boundary-1-scratch-receipt.json",
+      "sha256": "37818972A1262AFF7EF31631ACA869239D3F2B061511260F609C2F50AB023567"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-audit-route-925.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-green-boundary-audit-route-925.json",
+      "sha256": "1A49EB1D760388DDD9113EFB50F374FF7356DB516BC0F733CA53CB6033ED2FC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-probe-923.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-green-boundary-probe-923.json",
+      "sha256": "34B4FF3F51EFDAEF5E069F5194E25C65EAA9DE046185459F27EE1C9FEBE5996C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-modular-parabolic-winding-log-1-scratch-receipt.json",
+      "sha256": "99DB177F0019C0EBD3D4723848F63371146D544F54D3739A1AF7BB36F66CDECF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-1-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-divisor-winding-boundary-1-audit-config.json",
+      "sha256": "035E6830F65D3A36DB1B0C47C121D46E87784350065AB0DC3676A90CFFD0BC51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-divisor-winding-boundary-1-reuse-review-20261027.json",
+      "sha256": "CC0383A6B963AAA92E78FBAB198B31ABE0A2F344E1936C3D4E6C8387C90521DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-divisor-winding-boundary-1-scratch-receipt.json",
+      "sha256": "FE3580B611787E70DF7DF3758E97101F67D95ABE86AEB2043BCFCC6B29A397C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-audit-route-935.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-divisor-winding-boundary-audit-route-935.json",
+      "sha256": "F10E7D0DE3CCD7A3DE6D5B92FD7E02AEA9936FBC19B72033A7C91FD99EF5B1CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-probe-934.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-divisor-winding-boundary-probe-934.json",
+      "sha256": "A051EA9D8EB2D9C4B6249A26C94D1F8A3D95D16A812D67EE4DDCD381EAE8422E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-1-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-petersson-reciprocity-1-audit-config.json",
+      "sha256": "DA78B36BB4FFBB9DC2AE654140B1986A30C9D6DF229A30F6724E718FC0E651AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-petersson-reciprocity-1-reuse-review-20261027.json",
+      "sha256": "39CFDB8C3A9C2B6C3E41F454C738E8D357A80DA555EDCEA1110872A7DC7C52B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-petersson-reciprocity-1-scratch-receipt.json",
+      "sha256": "72BB2D8192FFB646DBBA2588D643F00DEBAD7F0CC78CB20BF4AE616EE4FBA05F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-audit-route-950.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-petersson-reciprocity-audit-route-950.json",
+      "sha256": "903281FF22092C80E963EF8A6FBD4BBEA728E0B722069DF686DACE393A1EF7DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-1b-audit-config.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-winding-integral-period-1b-audit-config.json",
+      "sha256": "7A22929308734D86350D233BBB9C486A7713F4D9209022300E9EFCC447B8F4A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-winding-integral-period-1b-reuse-review-20261027.json",
+      "sha256": "2D4D40E9391ECB9D5501BDD8936033FAA15EC5702772EA0AB32304739833488A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-winding-integral-period-1b-scratch-receipt.json",
+      "sha256": "2B8EB76B77A496A6BA79B45DD5FE9CD1A6714C64A3FC4407E55FA83BBB1F2CAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-audit-route-943.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-original-winding-integral-period-audit-route-943.json",
+      "sha256": "EB5F8D6181B7B8296C9FE92E3A4E50FF4C5CD1CACF75F89BC41BE0C1AA5F8D5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status912.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/status912.txt",
+      "sha256": "5763F5588832336EC06787DD5C8F82A5D4EE37EC45E024A888E2E2A478A74547"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status934.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/status934.txt",
+      "sha256": "ED656FBD92F00129BF046877DD395FF07848DCD4C840E9AB289D1FC80E50F8D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status946.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/status946.txt",
+      "sha256": "F707E8C13646311BE265A69FBD4373A7A254922B50FD80BC2833E20137821CB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-winding-failed-918a\\SourceGammaOneDivisorWindingComparison.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-divisor-winding-failed-918a/SourceGammaOneDivisorWindingComparison.lean.txt",
+      "sha256": "C7C93F6AF4F1D53D5552A5A50472CEDDB51C6D31F608A8270F687F92F26E5EA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-winding-integral-period-failed-941a\\SourceGammaOneDivisorWindingIntegralPeriod.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-winding-integral-period-failed-941a/SourceGammaOneDivisorWindingIntegralPeriod.lean.txt",
+      "sha256": "EF37DB97E1D95C5A51E7E21B240C1ED0CC22D71568F6C89E75D23FE9FBF3116D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-cusp-boundary-warning-924a\\SourceModularCuspBoundaryDecay.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-cusp-boundary-warning-924a/SourceModularCuspBoundaryDecay.lean.txt",
+      "sha256": "5299C4E9ED4A2509E3DC9D4AC12BA331CD82DF718B8AD8A2C2F963903C223594"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-green-measure-warning-927a\\SourceModularGreenMeasure.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-green-measure-warning-927a/SourceModularGreenMeasure.lean.txt",
+      "sha256": "7687EE22B53C1E62A535175B59882C099D677393B9E5ACEBB5E0A7DAF759A6D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-green-pullback-warning-926a\\SourceModularGreenPullback.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-green-pullback-warning-926a/SourceModularGreenPullback.lean.txt",
+      "sha256": "66A6E4D83E152F279627C0A4124D94F8AE9AB0A63015D09333E24C205C479B68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-green-tile-warning-926b\\SourceModularGreenTile.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-green-tile-warning-926b/SourceModularGreenTile.lean.txt",
+      "sha256": "64B5CC616A7FB64134A0584F3F47FDE6489988662002B2B255B47DFA6CBA10B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-period-corners-failed-938c\\SourceModularPeriodCorners.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-period-corners-failed-938c/SourceModularPeriodCorners.lean.txt",
+      "sha256": "FB5B5E0B2CFF8DAE67616BE290A34A85859CF21E94619F339BD77347AD2ECA76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-side-pairing-action-failed-920a\\SourceModularSidePairingAction.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-side-pairing-action-failed-920a/SourceModularSidePairingAction.lean.txt",
+      "sha256": "5AB290CC5BC2828476DA6DECD88AB79230EF0B2BDCDDA6EC42100BCBDE432D48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-smoothed-green-limit-failed-931a\\SourceModularSmoothedGreenLimit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-smoothed-green-limit-failed-931a/SourceModularSmoothedGreenLimit.lean.txt",
+      "sha256": "F4E77DE0F8A35C15172738744DB2A42EA3B101E84944B469719936C682A02966"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-smoothed-green-paren-count-failed-931c\\SourceModularSmoothedGreenLimit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-smoothed-green-paren-count-failed-931c/SourceModularSmoothedGreenLimit.lean.txt",
+      "sha256": "AA2F71330CCF1810A66FC8396BB3DDF99BBC04E10445F734110E837C63E0B35D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modular-smoothed-green-parentheses-failed-931b\\SourceModularSmoothedGreenLimit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/modular-smoothed-green-parentheses-failed-931b/SourceModularSmoothedGreenLimit.lean.txt",
+      "sha256": "B4920B69F391EBB45E0133E9C483C437F6E973DBDD4085A2F2377D8EAD520D51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-coset-potentials-doclint-943\\SourceParabolicCosetPotentials.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/parabolic-coset-potentials-doclint-943/SourceParabolicCosetPotentials.lean.txt",
+      "sha256": "AB730E8A0858C3FD7F5EBFD6FF5D726329FC6D36F60D86A1C9F5FD539B9E51D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-coset-potentials-failed-937a\\SourceParabolicCosetPotentials.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/parabolic-coset-potentials-failed-937a/SourceParabolicCosetPotentials.lean.txt",
+      "sha256": "A7848B78ADEEC3757D064A79113C3E77E4483A002FE97479906CDCE0FBE5FFCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-compact-translate-failed-911a\\SourceSmoothCompactTranslateIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-compact-translate-failed-911a/SourceSmoothCompactTranslateIntegral.lean.txt",
+      "sha256": "0F1EECF32BDC2668D2344FB1BB8D95772BA0AB0C98ECA758367F51F6C8FC948E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-comparison-dbar-failed-944a\\SourceSmoothComparisonDbar.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-comparison-dbar-failed-944a/SourceSmoothComparisonDbar.lean.txt",
+      "sha256": "30BE5F8544C244CF089F5ABEA6CA4D57707B2890B6CCA5804DF17693E33A3F94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-incidental-lemmas-deferred-908\\SourceModularSmoothProjectiveRepresentatives.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-incidental-lemmas-deferred-908/SourceModularSmoothProjectiveRepresentatives.lean.txt",
+      "sha256": "507C1F28614302AC0B1DCC6E00EF69F697D72460937DA957704522D3F9FCB021"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-incidental-lemmas-deferred-908\\SourceSmoothModularGeometry.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-incidental-lemmas-deferred-908/SourceSmoothModularGeometry.lean.txt",
+      "sha256": "45C3ECDF22DCD4E1E2A3C869E7A30396692CCA140432D9D7512531D05AE6D791"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-log-derivative-failed-904a\\SourceSmoothDivisorLogDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-log-derivative-failed-904a/SourceSmoothDivisorLogDerivative.lean.txt",
+      "sha256": "68087A15BE0FF8C12091C771D2A3ACC4136D5583333B954F0DDC9F741B67F795"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-period-failed-912a\\SourceSmoothDivisorPeriodIntegral.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-period-failed-912a/SourceSmoothDivisorPeriodIntegral.lean.txt",
+      "sha256": "F00A4BC71D64C225283E33CBCD6FE23B3C8FAD05B452017CBBCCF2B46ED63D2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-divisor-product-warning-900a\\SourceSmoothDivisorProduct.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-divisor-product-warning-900a/SourceSmoothDivisorProduct.lean.txt",
+      "sha256": "778675C818E7EE60A461DAB01A8F2DBFDD57B12FC451BFC8F361263A19C74A94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-local-foundation-failed-898a\\SourceSmoothDivisorOrbitData.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-local-foundation-failed-898a/SourceSmoothDivisorOrbitData.lean.txt",
+      "sha256": "D36743D284E4B7942F19D5995C1C7061B533CB3277CA72FFF23BE1A7DEC642A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-local-foundation-failed-899a\\SourceSmoothModularLogDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-local-foundation-failed-899a/SourceSmoothModularLogDerivative.lean.txt",
+      "sha256": "A390B10520FB35275A92E2A226888E395835760F3078F9D580E623811E3B2040"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-local-product-warning-901a\\SourceSmoothDivisorLocalProduct.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-local-product-warning-901a/SourceSmoothDivisorLocalProduct.lean.txt",
+      "sha256": "C50C905A92EEFECD091B68E2276B96D6E55DAEA818FC0D528C6C1EF7A5AB83DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-log-derivative-rewrite-failed-899b\\SourceSmoothModularLogDerivative.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-log-derivative-rewrite-failed-899b/SourceSmoothModularLogDerivative.lean.txt",
+      "sha256": "52B1D8059C0FB5AF9FB15E01ECA3F8B3D30A375F007EFDBCB89A311BC1925CBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-modular-geometry-warning-896a\\SourceSmoothModularGeometry.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-modular-geometry-warning-896a/SourceSmoothModularGeometry.lean.txt",
+      "sha256": "67BFAB304F49278BC78935E1D540FFDD485DA98F76EC3BF33860C0E83EBE0CD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-change-variables-warning-910a\\SourceSmoothOrbitIntegralChangeVariables.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-orbit-integral-change-variables-warning-910a/SourceSmoothOrbitIntegralChangeVariables.lean.txt",
+      "sha256": "1E07134B0C68CC03DACC5F7831EFAC189841719AC4D47391A817596D403F0EAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-change-variables-warning-910b\\SourceSmoothOrbitIntegralChangeVariables.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-orbit-integral-change-variables-warning-910b/SourceSmoothOrbitIntegralChangeVariables.lean.txt",
+      "sha256": "63500E0CD99889D41F903DFDB8D10E9980A9FB94F5431304866FCFFB5367AE9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-orbit-integral-geometry-warning-910a\\SourceSmoothOrbitIntegralGeometry.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-orbit-integral-geometry-warning-910a/SourceSmoothOrbitIntegralGeometry.lean.txt",
+      "sha256": "87CE4D4F14A537C64AB68863A6BE453AF360E7E1425B5E0FE5232107F87EDDCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smooth-projective-representatives-failed-895a\\SourceModularSmoothProjectiveRepresentatives.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smooth-projective-representatives-failed-895a/SourceModularSmoothProjectiveRepresentatives.lean.txt",
+      "sha256": "07ADF5F420A68FAC10691CB9267807E1862B23E8D559680A22A5BDB1CB0495CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smoothed-winding-integral-split-beta-failed-945b\\SourceSmoothedWindingIntegralSplit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smoothed-winding-integral-split-beta-failed-945b/SourceSmoothedWindingIntegralSplit.lean.txt",
+      "sha256": "244F668A2C385DB6F051DD690B2A52B644E0D5A6F9CB48F52DFBCACA6EB79EA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\smoothed-winding-integral-split-failed-945a\\SourceSmoothedWindingIntegralSplit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/smoothed-winding-integral-split-failed-945a/SourceSmoothedWindingIntegralSplit.lean.txt",
+      "sha256": "A6C5188D9E623B760112EAA9EDAF574D2F8485AF27B8511A9D1512948D4F7984"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\untwist-petersson-limit-failed-947a\\SourceUntwistPeterssonLimit.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/untwist-petersson-limit-failed-947a/SourceUntwistPeterssonLimit.lean.txt",
+      "sha256": "43532C44975643708F3BB46ACF3B649F2CF4BA076A29DFDF13BBBD68CD032676"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weight-two-coset-periods-import-failed-939a\\SourceWeightTwoCosetPeriods.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/weight-two-coset-periods-import-failed-939a/SourceWeightTwoCosetPeriods.lean.txt",
+      "sha256": "9CE5372FF48002A392DEEB11E74A2B8B93B6E08C86565255338C1FBC109B6D54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weight-two-primitive-edges-import-failed-938a\\SourceWeightTwoPrimitiveEdges.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/weight-two-primitive-edges-import-failed-938a/SourceWeightTwoPrimitiveEdges.lean.txt",
+      "sha256": "B668165CDD96086887E417C3DC6923324D2015B7EF79B9034E1586814A99F375"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weight-two-primitive-edges-warning-938b\\SourceWeightTwoPrimitiveEdges.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/weight-two-primitive-edges-warning-938b/SourceWeightTwoPrimitiveEdges.lean.txt",
+      "sha256": "40A11CD32A8809CAD91DFC831A66829F5212ABC65A0A1CE86931E27C5FEBDD43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\winding-log-cusp-bounds-failed-930a\\SourceWindingLogCuspBounds.lean.txt",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/winding-log-cusp-bounds-failed-930a/SourceWindingLogCuspBounds.lean.txt",
+      "sha256": "46120DCDF737B333E4D697BD0364BC4D163B1F150134B4550701FE046A85B065"
+    }
+  ]
+}

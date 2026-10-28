@@ -1,0 +1,43 @@
+
+/-- The original universal central polynomial has its proved reflection identity at every complex weight. -/
+theorem actual_verma_full_center_reflection_source
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) (μ : ℂ) :
+    Polynomial.aeval μ (vermaUniversalCentralPolynomial z) = vermaPolynomialCentralValue μ z ∧
+      vermaPolynomialCentralValue μ z = vermaPolynomialCentralValue (-μ - 2) z :=
+  ⟨vermaUniversalCentralPolynomial_aeval μ z, vermaPolynomialCentralValue_reflection μ z⟩
+
+/-- Original polynomial monomials are the literal original cusp raising jets and the entire original enveloping action intertwines. -/
+theorem actual_adelic_verma_intertwiner_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (z : UniversalEnvelopingAlgebra ℂ ComplexSl2) (p : Polynomial ℂ) :
+    adelicVermaMap f (Polynomial.X ^ n) = adelicRaisingJet f n ∧
+      adelicVermaMap f (vermaPolynomialEnvelopingAction (-(k : ℂ)) z p) =
+        adelicEnvelopingAction f z (adelicVermaMap f p) :=
+  ⟨adelicVermaMap_X_pow f n, adelicVermaMap_enveloping f hf z p⟩
+
+/-- Every element of the genuine original cusp center character has the reflected polynomial parameter k-2. -/
+theorem actual_adelic_reflected_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) :
+    adelicInfinitesimalCharacter f hf z =
+      Polynomial.aeval ((k : ℂ) - 2) (vermaUniversalCentralPolynomial z) :=
+  adelicInfinitesimalCharacter_polynomial f hf z
+
+/-- The genuine finite-dimensional homogeneous representation retains actual matrix substitution and a nonzero original compact generator. -/
+theorem actual_homogeneous_matrix_representation_source (n : ℕ) (g : Matrix (Fin 2) (Fin 2) ℂ)
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) :
+    Module.Finite ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) ∧
+      (homogeneousMatrixRepresentation n g p).val = matrixPolynomialAction g p.val ∧
+      homogeneousCompactGenerator n ≠ 0 :=
+  ⟨homogeneousPolynomial_finite n, homogeneousMatrixAction_apply n g p,
+    homogeneousCompactGenerator_ne_zero n⟩
+
+/-- The original cusp character acts exactly on the actual degree-(k-2) algebraic lowest vector for every genuine central element. -/
+theorem actual_adelic_homogeneous_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (hk : k = (n : ℤ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2)) :
+    homogeneousEnvelopingAction n z.val (homogeneousCompactGenerator n) =
+      adelicInfinitesimalCharacter f hf z • homogeneousCompactGenerator n :=
+  adelicInfinitesimalCharacter_homogeneous_generator f hf n hk z
+

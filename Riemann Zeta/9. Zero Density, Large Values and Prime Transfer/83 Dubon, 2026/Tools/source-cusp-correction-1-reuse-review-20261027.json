@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier lift -> integral parabolic-character lift -> correction of cusp values of an integral character.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-cusp-correction-audit-route-817.json",
+    "sha256": "6BDBF7D4667B3D456A8055EB2147A8F89B478E06CEE1DE73B38E22ADE5251CFD",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier lift -> integral parabolic-character lift -> correction of cusp values of an integral character.",
+      "assumptionsToDischarge": "Construct an actual additive character with arbitrary prescribed values of zero total sum on the primitive parabolic generators of any finite-index subgroup of C2*C3. The finite edge-chain cocycle, actual coset cycles, exact generator evaluations and span realization are proved. No character-realization premise remains in this correction theorem.",
+      "remaining": "Promote and run assembled verification. Initial integral character lifting, zero-sum cusp values for an arbitrary lift, composition into original Gamma1 parabolic lifting, unitary logarithms, analytic reciprocity and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean.txt",
+          "sha256": "A67A633238E2BAF294E7C8303A5201C95195BEB7223C7E841FACD3D248263F79"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+          "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-presentation-route-805.json",
+          "sha256": "BD8771EFDB17AB3088246FF08A3BFE78E74B0B1332B1151EC3DF5A1716CEDB21"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-cusp-correction-route-811.json",
+          "sha256": "AB7D1F06D14B0E7745EB2689D18767426C4BF3C1381B3821DC24F97D5DBF8611"
+        }
+      ],
+      "shorterRoute": "Reuse native free-product universal property, semidirect products, finite coset actions, minimal-period identities, Finsupp maps and integer span induction. The prior real Manin bound is not an integer-character lifting theorem. Adapt only the explicit finite edge-chain construction and its cusp-value consumer; no new graph topology, homology theory or arbitrary presentations. Use the same G23 type as the already compiled projective modular presentation."
+    }
+  },
+  "discharged": "Construct an actual additive character with arbitrary prescribed values of zero total sum on the primitive parabolic generators of any finite-index subgroup of C2*C3. The finite edge-chain cocycle, actual coset cycles, exact generator evaluations and span realization are proved. No character-realization premise remains in this correction theorem.",
+  "remaining": "Promote and run assembled verification. Initial integral character lifting, zero-sum cusp values for an arbitrary lift, composition into original Gamma1 parabolic lifting, unitary logarithms, analytic reciprocity and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

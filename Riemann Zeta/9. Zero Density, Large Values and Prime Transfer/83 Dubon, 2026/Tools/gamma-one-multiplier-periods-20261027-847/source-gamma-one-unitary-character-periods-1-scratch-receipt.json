@@ -1,0 +1,160 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+    "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+    "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.Ell",
+    "Dubon2026.SourceUnitaryCharacterLift.Msub",
+    "Dubon2026.SourceUnitaryCharacterLift.Qm",
+    "Dubon2026.SourceUnitaryCharacterLift.Q",
+    "Dubon2026.SourceUnitaryCharacterLift.piM",
+    "Dubon2026.SourceUnitaryCharacterLift.piA"
+  ],
+  "recordedUTC": "2026-10-27T15:52:41.864040+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceUnitaryCharacterFiniteOrder",
+    "SourceUnitaryCharacterRecurrence",
+    "SourceUnitaryCharacterTraceBound",
+    "SourceUnitaryCharacterAbelianQuotient",
+    "SourceUnitaryCharacterBasisExt",
+    "SourceUnitaryCharacterTorsion",
+    "SourceUnitaryCircleCharacter",
+    "SourceUnitaryCharacterLogarithm",
+    "SourceGammaOneUnitaryCharacterPeriods"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterFiniteOrder.lean",
+      "sha256": "1F31AF51E630FB4FED47F9171D8041837503B44BF458F838041596F35AF0B65C",
+      "oleanSha256": "CE94ADDDE9BA0E971ECC3C086D988D656805F81D3AC788521ABD425E15644562"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterRecurrence.lean",
+      "sha256": "3679136F346F84CD37F760E52E09CA3B8E65F5D5C6AB8AE235DA31BF0B55DFCD",
+      "oleanSha256": "F890602FFF99E6FC4D4EC519677BF64DC45E5D4B7B0793BC0B9ECFFC4282DA92"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTraceBound.lean",
+      "sha256": "48FF76188261C5FC4906940532968D23366B660334C3F63B5808AAEF27913F1A",
+      "oleanSha256": "992F324428A30862770D099F0112DB4B6DAE1A4343354D93B5C2B8B95462A556"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterAbelianQuotient.lean",
+      "sha256": "AB90E4829761E1483967825DC9B6012B8EA319ECE758C841433AA32030AD5A71",
+      "oleanSha256": "C803BF69462440029327BF55EB4C601323B8E5FF8637BE4EA4C1C393F67C4B23"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterBasisExt.lean",
+      "sha256": "D1FE00D8095B630BD01EA16B7E14A773C536B2D311ED47E45BFF62E7B3042298",
+      "oleanSha256": "B449CD174CF90611BFC37CD12B1E5BA449479C43C13EDB645AB7D94D9635373B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterTorsion.lean",
+      "sha256": "F896431C969BE01C3EC23248D0A4A2BBD885D3D9BE1432660C48B78DA2D9D6FC",
+      "oleanSha256": "1DFAE808640613730F3D40618048CA1C656DD8B15500202670CA31D737842822"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCircleCharacter.lean",
+      "sha256": "77CC089CDFAD49C6BB5E147A7ED103FCFFEF4A730C4EEC1784F48522A18F3C51",
+      "oleanSha256": "BA25BC58F32E3C13CA734C5CB59C517C519D9D8CF6C433B54ED0BA42505797FE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceUnitaryCharacterLogarithm.lean",
+      "sha256": "544999E53259891F247398319A2C3E5D93030114525D03FD964DF444115A0423",
+      "oleanSha256": "1995D9A0A1B19B1BB1D9461AD8C96C338DF70DEBB391B954BB97F9E9E7BEC40A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriods.lean",
+      "sha256": "4CC6BA2053D796DD7E716BE025E09817B2BAC13999D01B0C1768566F89DA43B7",
+      "oleanSha256": "90ADAD2B967FC877DB5B49411D1DA1DD9585AB6F2BCE6EAD52FBC91E2D62BD96"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one",
+    "Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one",
+    "Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb",
+    "Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge",
+    "Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder",
+    "Dubon2026.SourceUnitaryCharacterLift.piM_surjective",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_surjective",
+    "Dubon2026.SourceUnitaryCharacterLift.piM_eq_one",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+    "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+    "Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z",
+    "Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis",
+    "Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm",
+    "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period",
+    "Dubon2026.SourceUnitaryCharacterLift.cheb",
+    "Dubon2026.SourceUnitaryCharacterLift.Ell",
+    "Dubon2026.SourceUnitaryCharacterLift.Msub",
+    "Dubon2026.SourceUnitaryCharacterLift.Qm",
+    "Dubon2026.SourceUnitaryCharacterLift.Q",
+    "Dubon2026.SourceUnitaryCharacterLift.piM",
+    "Dubon2026.SourceUnitaryCharacterLift.piA",
+    "Dubon2026.SourceUnitaryCharacterLift.desc",
+    "Dubon2026.SourceUnitaryCharacterLift.descA",
+    "Dubon2026.SourceUnitaryCharacterLift.unitChar"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceUnitaryCharacterLift.mul_self_eq_trace_smul_sub_one",
+    "Dubon2026.SourceUnitaryCharacterLift.pow_twelve_eq_one",
+    "Dubon2026.SourceUnitaryCharacterLift.pow_succ_eq_cheb",
+    "Dubon2026.SourceUnitaryCharacterLift.abs_cheb_succ_ge",
+    "Dubon2026.SourceUnitaryCharacterLift.cheb_ne_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.trace_sq_le_four_of_isOfFinOrder",
+    "Dubon2026.SourceUnitaryCharacterLift.piM_surjective",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_surjective",
+    "Dubon2026.SourceUnitaryCharacterLift.piM_eq_one",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.piA_eq_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.desc_piM",
+    "Dubon2026.SourceUnitaryCharacterLift.descA_piA",
+    "Dubon2026.SourceUnitaryCharacterLift.fg_SL2Z",
+    "Dubon2026.SourceUnitaryCharacterLift.hom_ext_of_basis",
+    "Dubon2026.SourceUnitaryCharacterLift.torsion_exponent_eq_zero",
+    "Dubon2026.SourceUnitaryCharacterLift.unitChar_apply",
+    "Dubon2026.SourceUnitaryCharacterLift.exists_real_logarithm",
+    "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceUnitaryCharacterLift.cheb",
+    "Dubon2026.SourceUnitaryCharacterLift.Ell",
+    "Dubon2026.SourceUnitaryCharacterLift.Msub",
+    "Dubon2026.SourceUnitaryCharacterLift.Qm",
+    "Dubon2026.SourceUnitaryCharacterLift.Q",
+    "Dubon2026.SourceUnitaryCharacterLift.piM",
+    "Dubon2026.SourceUnitaryCharacterLift.piA",
+    "Dubon2026.SourceUnitaryCharacterLift.desc",
+    "Dubon2026.SourceUnitaryCharacterLift.descA",
+    "Dubon2026.SourceUnitaryCharacterLift.unitChar"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsAudit1.log",
+  "logSha256": "E547A2E6D8A60736AAA0AA2CD7809CEF80B52249C231C682C1C5D2B6B7CF8CB1",
+  "auditSha256": "B6722DCC8E6B303B926263ED04D6144BB18907E64EAD959792472C5D86E0EB86",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 45,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 83,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitaryCharacterPeriodsDependencyAudit1.log",
+  "dependencyAuditSha256": "2B29616EEC9638C360F48B17E394DC96C72FDDBE88263CA07382F5A6BF5C3A1D",
+  "dependencyAuditSourceSha256": "5E36CDCD9AE1A6BD1CD89ACF122D1E4B27061AAF0FDAB976D042CECF50E8E78D",
+  "consumers": [
+    "Dubon2026.sourceGamma1_unitary_character_eq_exp_real_period"
+  ],
+  "dependency": "DUB17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier correction -> additive real logarithm trivial on actual elliptic/parabolic elements.",
+  "discharged": "Every actual Gamma1 unitary character trivial on squared trace at most four is the exponential of the real periods of an actual weight-two cusp form, at every nonzero level. The real logarithm and torsion-free quotient are derived using the proved integral parabolic lift, native finite abelian decomposition and the actual real-period surjectivity. No logarithm, torsion-free quotient, basis or cusp-form realization hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Derive multiplicativity and elliptic/parabolic triviality for the actual meromorphic multiplier with the original Gamma1 central-stabilizer normalization; analytic reciprocity, Abel-Jacobi and original all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unitary-character-periods-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "441A669BC5D5A5F10044ECF178C9446282D842C2357D738E47E681B313EF63AF",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

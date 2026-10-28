@@ -1,0 +1,6 @@
+{
+  "nativeChecked": "Subgroup.groupEquivQuotientProdSubgroup",
+  "obstacle": "Native inverse transports across subtype-equality casts; its exact Quotient.out formula is not definitional. Three faithful attempts are retained with source/log snapshots.",
+  "decision": "Use the source 17-line explicit bijection and prove both inverse laws. This is shorter than introducing cast-transport infrastructure solely to recover the same exact chosen representatives. No theorem or assumption changed.",
+  "scope": "Only the finite subgroup/coset orbit-sum interchange needed by the smooth partition."
+}

@@ -1,0 +1,69 @@
+import Dubon2026.SourceWeightTwoCosetPeriods
+
+/-! DUB-17/18 -> Gamma1 Picard/H1 -> principal-divisor converse ->
+integer Petersson duality. Read the native normalized primitive's actual
+cusp limits across the modular generators and coset transitions. These
+identities replace the external arbitrary-primitive interface in the
+integer character representing each original period. -/
+namespace Dubon2026.SourceIntegralPeriodDual
+noncomputable section
+open UpperHalfPlane Filter
+open SourcePeriodUntwist SourceParabolicEdgePeriod SourceModularGreenPairing
+open scoped MatrixGroups Topology
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+    (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2)
+local notation "Q" => SL(2, ℤ) ⧸ Γ
+variable {L : SL(2, ℤ) → ℂ}
+    (hL : ∀ σ, Tendsto (fun w : ℍ => Ek g ((σ • w : ℍ) : ℂ)) atImInfty (𝓝 (L σ)))
+include hL
+
+theorem lim_mul_T (X : SL(2, ℤ)) : L (X * ModularGroup.T) = L X := by
+  refine tendsto_nhds_unique (hL _) ?_
+  have hto : Tendsto (fun w : ℍ => ModularGroup.T • w) atImInfty atImInfty := by
+    rw [atImInfty, tendsto_comap_iff]
+    have he : UpperHalfPlane.im ∘ (fun w : ℍ => ModularGroup.T • w) = UpperHalfPlane.im := by
+      funext w
+      change (ModularGroup.T • w).im = w.im
+      rw [UpperHalfPlane.modular_T_smul, UpperHalfPlane.vadd_im]
+    rw [he]
+    exact tendsto_comap
+  have he : (fun w : ℍ => Ek g (((X * ModularGroup.T) • w : ℍ) : ℂ)) =
+      (fun w : ℍ => Ek g ((X • w : ℍ) : ℂ)) ∘ fun w : ℍ => ModularGroup.T • w := by
+    funext w
+    rw [Function.comp_apply, mul_smul]
+  rw [he]
+  exact (hL X).comp hto
+
+theorem lim_neg (X : SL(2, ℤ)) : L (-X) = L X := by
+  refine tendsto_nhds_unique (hL _) ?_
+  have he : (fun w : ℍ => Ek g (((-X) • w : ℍ) : ℂ)) =
+      fun w : ℍ => Ek g ((X • w : ℍ) : ℂ) := by
+    funext w
+    rw [ModularGroup.SL_neg_smul]
+  rw [he]
+  exact hL X
+
+theorem lim_coe_mul (γ : Γ) (X : SL(2, ℤ)) :
+    L ((γ : SL(2, ℤ)) * X) = L X + sourceWeightTwoPeriodValue Γ g γ := by
+  refine tendsto_nhds_unique (hL _) ?_
+  have he : (fun w : ℍ => Ek g ((((γ : SL(2, ℤ)) * X) • w : ℍ) : ℂ)) =
+      fun w : ℍ => Ek g ((X • w : ℍ) : ℂ) + sourceWeightTwoPeriodValue Γ g γ := by
+    funext w
+    rw [mul_smul, Ek_smul]
+  rw [he]
+  exact (hL X).add_const _
+
+theorem lim_out_smul (M : SL(2, ℤ)) (q : Q) :
+    L (Quotient.out (M • q))⁻¹ =
+      L ((Quotient.out q)⁻¹ * M⁻¹) + sourceWeightTwoPeriodValue Γ g (transition Γ M q) := by
+  refine tendsto_nhds_unique (hL _) ?_
+  have he : (fun w : ℍ => Ek g (((Quotient.out (M • q))⁻¹ • w : ℍ) : ℂ)) =
+      fun w : ℍ => Ek g ((((Quotient.out q)⁻¹ * M⁻¹) • w : ℍ) : ℂ) +
+        sourceWeightTwoPeriodValue Γ g (transition Γ M q) := by
+    funext w
+    rw [Ek_out_inv_smul, mul_smul]
+  rw [he]
+  exact (hL _).add_const _
+
+end
+end Dubon2026.SourceIntegralPeriodDual

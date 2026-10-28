@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual smooth invariant comparison V",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-audit-route-909.json",
+    "sha256": "0ECE0592B1E4A4E2E54218B4AD880800C63104F8C4F3E87D480B0EF3F7F78259",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual smooth invariant comparison V",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\smooth-projective-orbit-route-898.json",
+          "sha256": "DFB37B4F0E5D25A87622A3EB2947F7D8105A0940118F5F25425CB8763360BE55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\smooth-local-model-route-892.json",
+          "sha256": "C01A3E921DA023912855683F6763C03692A86EF634B70D04FB8835FDFF08F460"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+          "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-scratch-receipt.json",
+          "sha256": "6B0A8EC8E086272A388597C7758651D375134515E8F15D6F6C451419B45FD47B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-probe-907.json",
+          "sha256": "889AB6628CC34D8FEF76C2E0B9020EFF06E4FEDA9C751DECAF43A721926E62B0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorValueProbe907.log",
+          "sha256": "09CFE3C29C717C62129A59919159D0581F88B08DEA7BC548402328BEAF79AE82"
+        }
+      ],
+      "shorterRoute": "Use actual projective subgroup and native fiber/kernel equivalences with the already proved kernel of order two, replacing the source positive-matrix representative and duplicated two-fiber infrastructure. Reuse existing analytic dslope, finite stabilizers, proper discontinuity and compact dipoles. Defer three unused lemmas identified by the VALUE probe.",
+      "assumptionsToDischarge": [
+        "Construct V from the actual degree-zero original analytic divisor at every nonzero Gamma1 level",
+        "Derive exact integer local orders from original ramification and projective stabilizer counts",
+        "Prove subgroup invariance and value one high in every translated cusp",
+        "Construct compact coefficient functions with exact pi times endpoint integral",
+        "Derive the actual almost-everywhere logarithmic derivative as the stabilizer-normalized translate sum"
+      ],
+      "remaining": "The smooth comparison V is C1 with prescribed integer local models, not the meromorphic realization required by the principal-divisor converse. Its smoothed integral and the filled quotient winding/period identity must still be assembled into analytic reciprocity, then the original principal-divisor converse and all-weight arithmetic chain. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "discharged": [
+    "Construct V from the actual degree-zero original analytic divisor at every nonzero Gamma1 level",
+    "Derive exact integer local orders from original ramification and projective stabilizer counts",
+    "Prove subgroup invariance and value one high in every translated cusp",
+    "Construct compact coefficient functions with exact pi times endpoint integral",
+    "Derive the actual almost-everywhere logarithmic derivative as the stabilizer-normalized translate sum"
+  ],
+  "remaining": "The smooth comparison V is C1 with prescribed integer local models, not the meromorphic realization required by the principal-divisor converse. Its smoothed integral and the filled quotient winding/period identity must still be assembled into analytic reciprocity, then the original principal-divisor converse and all-weight arithmetic chain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

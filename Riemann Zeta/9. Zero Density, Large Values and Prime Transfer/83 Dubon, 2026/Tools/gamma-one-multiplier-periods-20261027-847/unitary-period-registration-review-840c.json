@@ -1,0 +1,7 @@
+{
+  "reason": "The fresh 840b strict kind audit correctly rejected fgQ as a construction: this Prop-valued instance is compiled as a theorem. Register fgQ as a theorem in fresh 840c. Preserve the failed 840b source, log and exit; no audit rules or mathematical source changed. The prior 840 exhaustive check already covered fgQ, and its public axiom query passes.",
+  "theorems": 20,
+  "constructions": 10,
+  "queries": 30,
+  "priorFailure": "SourceGammaOneUnitaryCharacterPeriodsAudit1b.log"
+}

@@ -1,0 +1,4 @@
+{
+  "failure": "Generator regex word boundary did not match an apostrophe-ending declaration; cutoff source had been written, geometry had not. No Lean compile was attempted. Fresh successor checks cutoff text equality before continuing.",
+  "failedScriptSha256": "AD61EDC6886850F231583637AE25B2E1548A5D9A1736CC7CDFEE1925946A3FD1"
+}

@@ -1,0 +1,105 @@
+import Dubon2026.SourceMeromorphicCuspUntwist
+import Dubon2026.SourceCuspDerivativeDecay
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> vanishing real derivative of the invariant untwist
+at every translated cusp. Native analytic action replaces Mobius formulas;
+the primary norm estimate is retained with its actual cusp-form primitive.
+Adapted from the pinned Apache-2.0 scope-848 untwisting source. -/
+namespace Dubon2026.SourcePeriodUntwist
+noncomputable section
+open UpperHalfPlane Filter Matrix.SpecialLinearGroup
+open scoped MatrixGroups Topology
+
+theorem analyticAt_translate (G : ℂ → ℂ) (σ : SL(2, ℤ)) {u : ℂ} (hu : 0 < u.im)
+    (hG : AnalyticAt ℂ G ((σ • ofComplex u : ℍ) : ℂ)) :
+    AnalyticAt ℂ (fun v : ℂ => G ((σ • ofComplex v : ℍ) : ℂ)) u := by
+  have hd1 : (σ : GL (Fin 2) ℝ).val.det = 1 := Matrix.SpecialLinearGroup.det_coe _
+  have hd : 0 < (σ : GL (Fin 2) ℝ).val.det := by rw [hd1]; exact one_pos
+  have hs : AnalyticAt ℂ (fun v : ℂ => ((σ • ofComplex v : ℍ) : ℂ)) u := by
+    simpa [ofComplex_apply_of_im_pos hu] using (ofComplex u).analyticAt_smul hd
+  exact AnalyticAt.comp (f := fun v : ℂ => ((σ • ofComplex v : ℍ) : ℂ)) hG hs
+
+theorem analyticAt_reg_translate (F : ℍ → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (σ : SL(2, ℤ)) {L : ℂ} (hL0 : L ≠ 0)
+    (hL : Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L)) :
+    ∃ A : ℝ, 0 ≤ A ∧ ∀ u : ℂ, A < u.im →
+      AnalyticAt ℂ (fun v : ℂ => reg F ((σ • ofComplex v : ℍ) : ℂ)) u := by
+  obtain ⟨A, hA0, hA⟩ := reg_near_cusp F hF σ hL0 hL one_pos
+  refine ⟨A, hA0, fun u hu => ?_⟩
+  have hu0 : 0 < u.im := lt_of_le_of_lt hA0 hu
+  have ho : meromorphicOrderAt (F ∘ ofComplex) ((σ • ofComplex u : ℍ) : ℂ) = 0 := by
+    simpa only [ofComplex_apply_of_im_pos hu0] using (hA (⟨u, hu0⟩ : ℍ) hu).1
+  exact analyticAt_translate (reg F) σ hu0 (analyticAt_reg_of_order_zero F hF _ ho)
+
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+
+theorem Φ_decay (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (σ : SL(2, ℤ)) {L : ℂ} (hL0 : L ≠ 0)
+    (hL : Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L)) :
+    Tendsto (fun τ : ℍ =>
+      fderiv ℝ (fun u : ℂ => Φ F k ((σ • ofComplex u : ℍ) : ℂ)) (τ : ℂ))
+      atImInfty (𝓝 0) := by
+  obtain ⟨L₂, hL₂⟩ := Ek_exists_cusp_limit k σ
+  set Fσ : ℂ → ℂ := fun u => reg F ((σ • ofComplex u : ℍ) : ℂ) with hFσ
+  set Eσ : ℂ → ℂ := fun u => Ek k ((σ • ofComplex u : ℍ) : ℂ) with hEσ
+  have hFσ_lim : Tendsto Fσ (comap Complex.im atTop) (𝓝 L) :=
+    (tendsto_reg_cusp F hF σ hL0 hL).comp tendsto_comap_im_ofComplex
+  have hEσ_lim : Tendsto Eσ (comap Complex.im atTop) (𝓝 L₂) :=
+    hL₂.comp tendsto_comap_im_ofComplex
+  obtain ⟨A, hA0, hA⟩ := analyticAt_reg_translate F hF σ hL0 hL
+  have hEσ_an : ∀ u : ℂ, 0 < u.im → AnalyticAt ℂ Eσ u := fun u hu =>
+    analyticAt_translate (Ek k) σ hu (analyticAt_Ek k (σ • ofComplex u).im_pos)
+  have hdF : Tendsto (deriv Fσ) (comap Complex.im atTop) (𝓝 0) :=
+    tendsto_deriv_zero (fun u hu => (hA u hu).differentiableAt) hFσ_lim
+  have hdE : Tendsto (deriv Eσ) (comap Complex.im atTop) (𝓝 0) :=
+    tendsto_deriv_zero (A := 0) (fun u hu => (hEσ_an u hu).differentiableAt) hEσ_lim
+  set Φσ : ℂ → ℂ := fun u => Φ F k ((σ • ofComplex u : ℍ) : ℂ) with hΦσ
+  set M : ℂ → ℝ := fun u => ‖Fσ u‖ * (2 * Real.pi * ‖deriv Eσ u‖) + ‖deriv Fσ u‖ with hM
+  have hbound : ∀ u : ℂ, A < u.im → ‖fderiv ℝ Φσ u‖ ≤ M u := by
+    intro u hu
+    have hu0 : 0 < u.im := lt_of_le_of_lt hA0 hu
+    have h1 : HasFDerivAt Fσ (deriv Fσ u • (1 : ℂ →L[ℝ] ℂ)) u :=
+      (hA u hu).differentiableAt.hasDerivAt.complexToReal_fderiv
+    have h2 : HasFDerivAt Eσ (deriv Eσ u • (1 : ℂ →L[ℝ] ℂ)) u :=
+      (hEσ_an u hu0).differentiableAt.hasDerivAt.complexToReal_fderiv
+    have h3 : HasFDerivAt (fun v => ((Eσ v).re : ℂ))
+        (Complex.ofRealCLM.comp (Complex.reCLM.comp (deriv Eσ u • (1 : ℂ →L[ℝ] ℂ)))) u :=
+      Complex.ofRealCLM.hasFDerivAt.comp u (Complex.reCLM.hasFDerivAt.comp u h2)
+    have h4 := (h3.const_mul (-(2 * Real.pi * Complex.I))).cexp
+    have h5 : HasFDerivAt Φσ _ u := h1.mul h4
+    rw [h5.fderiv]
+    refine ContinuousLinearMap.opNorm_le_bound _ (by positivity) fun v => ?_
+    have hexp : ‖Complex.exp (-(2 * Real.pi * Complex.I) * ((Eσ u).re : ℂ))‖ = 1 := by
+      rw [Complex.norm_exp]; simp
+    simp only [ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply,
+      ContinuousLinearMap.coe_comp', Function.comp_apply, ContinuousLinearMap.one_apply,
+      Complex.reCLM_apply, Complex.ofRealCLM_apply, smul_eq_mul]
+    have hre : ‖(((deriv Eσ u * v).re : ℝ) : ℂ)‖ ≤ ‖deriv Eσ u‖ * ‖v‖ := by
+      rw [Complex.norm_real, Real.norm_eq_abs, ← norm_mul]
+      exact Complex.abs_re_le_norm _
+    have hπ : ‖(-(2 * (Real.pi : ℂ) * Complex.I))‖ = 2 * Real.pi := by
+      simp [Complex.norm_real, abs_of_pos Real.pi_pos]
+    calc ‖Fσ u * (Complex.exp (-(2 * Real.pi * Complex.I) * ((Eσ u).re : ℂ)) *
+            (-(2 * Real.pi * Complex.I) * (((deriv Eσ u * v).re : ℝ) : ℂ))) +
+          Complex.exp (-(2 * Real.pi * Complex.I) * ((Eσ u).re : ℂ)) * (deriv Fσ u * v)‖
+        ≤ ‖Fσ u‖ * (1 * (2 * Real.pi * (‖deriv Eσ u‖ * ‖v‖))) + 1 * (‖deriv Fσ u‖ * ‖v‖) := by
+          refine (norm_add_le _ _).trans (add_le_add ?_ ?_)
+          · rw [norm_mul, norm_mul, hexp, norm_mul, hπ]
+            gcongr
+          · rw [norm_mul, hexp, norm_mul]
+      _ = M u * ‖v‖ := by simp only [hM]; ring
+
+  have hM_lim : Tendsto M (comap Complex.im atTop) (𝓝 0) := by
+    have := (hFσ_lim.norm.mul (hdE.norm.const_mul (2 * Real.pi))).add hdF.norm
+    simpa [hM] using this
+  have hlim : Tendsto (fun u => fderiv ℝ Φσ u) (comap Complex.im atTop) (𝓝 0) := by
+    rw [tendsto_zero_iff_norm_tendsto_zero]
+    refine squeeze_zero' (Eventually.of_forall fun u => norm_nonneg _) ?_ hM_lim
+    exact eventually_imInf_iff.2 ⟨A + 1, fun u hu => hbound u (by linarith)⟩
+  exact hlim.comp UpperHalfPlane.tendsto_coe_atImInfty
+
+end
+end Dubon2026.SourcePeriodUntwist

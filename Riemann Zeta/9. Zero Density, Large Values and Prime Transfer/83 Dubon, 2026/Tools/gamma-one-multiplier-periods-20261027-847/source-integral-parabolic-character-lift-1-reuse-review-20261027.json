@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary logarithms -> integral parabolic-character lifting -> actual modular-group transport.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-integral-parabolic-character-lift-audit-route-830.json",
+    "sha256": "5226763B874EEB97C4F725BDBCE19BB09CC6034D10341CA9DAF565B737A54FF8",
+    "review": {
+      "chain": "DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary logarithms -> integral parabolic-character lifting -> actual modular-group transport.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+          "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveKernel.lean",
+          "sha256": "CACC848948FDDAACDF291D3779BCEF08701B3CB61E12678F430DBA949546494B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularFreeProduct.lean",
+          "sha256": "7CF1312FC2F4A55E96560004B5853085D4517C33E705F1F61FA52E9CE057BA66"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-modular-free-product-1-scratch-receipt.json",
+          "sha256": "289323F43C4D06438774F2B981891A52B95AE22056F49A5F3D6A3F43504C1A39"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-lift-route-818.json",
+          "sha256": "F909F017D86D25380562A0C1DE4FE16A5C4FB63DF2283F6B67946691292E2476"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-correction-route-823.json",
+          "sha256": "5E3EF920DD910203F057170EAC734CEB0B4E20B6E429509E0C2EE22248A978CC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-character-modular-route-826.json",
+          "sha256": "33E673D6BA3E17C0E77019B5D1DB2F605B3A03BA449A5FA9DE4B84E7CF04F2F8"
+        }
+      ],
+      "shorterRoute": "Reuse the existing signed trace-four classification and audited scalar-center characterization; do not duplicate primary integer matrix/coprime fixed-vector arguments. Consume the actual generator-preserving C2*C3 equivalence, initial scalar Shapiro lift, native transfer cusp sum and audited cusp correction.",
+      "assumptionsToDischarge": "Derive the actual integral parabolic lift for every finite-index subgroup of SL2(Z), every natural modulus n including zero, and every ZMod n character that is parabolic and vanishes on finite-order elements. No presentation, character lift, divisibility correction or parabolic classification premise remains.",
+      "remaining": "Unitary real logarithms, analytic reciprocity, Abel-Jacobi, original all-weight arithmetic association and full DUB17--20 closure remain."
+    }
+  },
+  "discharged": "Derive the actual integral parabolic lift for every finite-index subgroup of SL2(Z), every natural modulus n including zero, and every ZMod n character that is parabolic and vanishes on finite-order elements. No presentation, character lift, divisibility correction or parabolic classification premise remains.",
+  "remaining": "Unitary real logarithms, analytic reciprocity, Abel-Jacobi, original all-weight arithmetic association and full DUB17--20 closure remain.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

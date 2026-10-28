@@ -1,0 +1,9 @@
+{
+  "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom.lean",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "bytes": 38923,
+  "sha256": "545B2E28A9CD11C2368F108CBBBDE0D495FD3CBAB6CF9B174092864E0FC1CF85",
+  "fetchedUTC": "2026-10-27T21:12:33.517672+00:00",
+  "status": "Downloaded for exact-source review; no external import or build."
+}

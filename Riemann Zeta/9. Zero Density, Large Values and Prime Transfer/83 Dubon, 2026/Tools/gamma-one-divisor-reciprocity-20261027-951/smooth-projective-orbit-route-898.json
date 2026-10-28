@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+    "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8"
+  },
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "invariant comparison V",
+    "exact orbit multiplicities and compact local factors"
+  ],
+  "reuse": "All of scope-889 primary read. Existing two-element projective kernel and native sigma-fiber/kernel equivalence replace positive-matrix representatives and the source two-copy fiber equivalence. Native finite-support sum currying gives exact factor two; native derivative uniqueness identifies representative derivatives. Existing smooth partition geometry replaces repeated height/proper-discontinuity arguments. Existing full integral stabilizer finiteness gives finite subgroup stabilizers. The source direct orbit-fiber/stabilizer equivalence is retained because it is shorter than transporting general orbit-quotient machinery.",
+  "discharged": "Local product/removable filling compiled in scope 892; projective orbit fiber cardinality compiled in scope 895. Geometry, orbit-sum and finite orbit data are being assembled. These are not yet audited or promoted; the invariant comparison V remains unconstructed.",
+  "remaining": "Construct V with exact local orders, global invariance, cusp value one and logarithmic derivative formula, then smooth integral, filled quotient, winding/Petersson comparison, reciprocity, principal-divisor converse and full all-weight chain. 16/20; DUB-17--20 OPEN."
+}

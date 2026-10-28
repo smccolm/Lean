@@ -1,0 +1,9 @@
+{
+  "reason": "Strict docBlame audit found four undocumented constructions. Added only documentation strings; all mathematical tokens identical. Failed audit, sources and successful compile evidence preserved.",
+  "changed": [
+    "SourceComplexDbarCutoff",
+    "SourceComplexResidueLocalModels"
+  ],
+  "failedAudit": "SourceGammaOneLogDerivativeResiduesAudit1.log",
+  "successorAudit": "SourceGammaOneLogDerivativeResiduesAudit1b.lean"
+}

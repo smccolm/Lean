@@ -1,0 +1,6 @@
+{
+  "previous": "modular-smooth-partition-route-875.json",
+  "nativeReuse": "Subgroup.groupEquivQuotientProdSubgroup inverse instead of custom cosetEquiv; exact Quotient.out formula is proved in Lean",
+  "scope": "Local finite orbit sums, smoothness across the boundary, compact support and full subgroup orbit-partition contract. No supplied partition assumption.",
+  "remaining": "Actual invariant integral limit with central-sign factor, winding-period comparison, Abel-Jacobi converse and full original all-weight arithmetic chain. 16/20; DUB-17--20 OPEN."
+}

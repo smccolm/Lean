@@ -1,0 +1,54 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 21,
+  "queries": 108,
+  "theorems": 98,
+  "constructions": 10,
+  "exhaustiveScratchChecks": 156,
+  "proofValueChecks": 234,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-invariant-untwist-1-scratch-receipt.json": "F16ECD3CCDA791603BAD7BEFAB553590188376BCBCA1BB0DCDD0440E84831B20",
+    "source-gamma-one-divisor-reciprocity-data-1-scratch-receipt.json": "984D203B5BE1D70A272EEE13244BD6DE4C85B798979DD8771617931017BA3CBF",
+    "source-gamma-one-signed-reciprocity-1-scratch-receipt.json": "2EFDDFE0B99E63D2256BF2EAEBF30B3DAE319D85C1B3589499C480BCE8ECEFB1",
+    "source-gamma-one-log-derivative-residues-1b-scratch-receipt.json": "978439697AD7EAB0AFEB18AD2DE7C8790FA74DEA3A9773E654EA20CC89D70208"
+  },
+  "expectedConsumers": 25291,
+  "expectedConstructions": 2580,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_reciprocity_inputs_8695.py",
+      "sha256": "B9E899801427D45C77022F09A2724641638DFAF23FA56A545FDD017C9D2DD0F4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reciprocity_inputs_production_ownership_8695.py",
+      "sha256": "4BBA1EEDDC70CCE2DF069F61F5019C1AA98AEA8E8FAC7F7768FB11FE91DC65BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reciprocity_inputs_global_ownership_8695.py",
+      "sha256": "0BD129F6596D4ECC7295ABFE9A5C3AC9173CFBEB14E77697655FA3AFF77036CA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_reciprocity_inputs_ownership_8695.py",
+      "sha256": "5441B7281995AACC95DC538057C8A97C69DBDCFC87BA9CB539EA99A8C3565422"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_reciprocity_inputs_8695.py",
+      "sha256": "B439099954AFB51EB0E04A33FC50AA23ECC99446FD7A01A556DD93D24F45593C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_reciprocity_inputs_8695.ps1",
+      "sha256": "3D715C7E7A78A63D5FA0A18CC1E3C024E415FD7AFA0583EC86E445BAF051BF1A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_reciprocity_inputs_8695.ps1",
+      "sha256": "593C6E0B11BB59FA5AA3D2BC1B6921128A5F87D737C92C345EF0A82F021D0846"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_reciprocity_inputs_canonical_8695.py",
+      "sha256": "13C4095CD1F04E3BD0EA4DE1DE1EC9EE74E2C20920B130BBB7EAAF431CA4B8B1"
+    }
+  ],
+  "productionMutation": false
+}

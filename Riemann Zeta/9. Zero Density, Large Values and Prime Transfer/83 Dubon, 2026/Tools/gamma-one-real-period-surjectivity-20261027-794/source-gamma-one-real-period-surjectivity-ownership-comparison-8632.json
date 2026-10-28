@@ -1,0 +1,359 @@
+{
+  "scratchSum": 291,
+  "scratchDistinct": 291,
+  "generatedNameRenamings": {},
+  "productionFocused": 291,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneInvariantRealPart",
+        "SourceGammaOneRealPeriodInjectivity"
+      ],
+      "count": 21,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityScratchOwnership756.log",
+        "sha256": "577A3E9AA11B72A100B8BC3DDD335A6444B2270E6B952D243C3200AEF5EE7434",
+        "sourceSha256": "9768197C39C6E9F5C213B9B8B61EC59A31A3EC5A15538B941F35C404DDFDB80F"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRealPeriodMap",
+        "SourceGammaOneRealParabolicPeriods"
+      ],
+      "count": 15,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsScratchOwnership758.log",
+        "sha256": "F7CF2014C69FD0F3AB9A04E1C2F51FBEBF2E846E83CBA441075704E1A3A5BDFE",
+        "sourceSha256": "9DF583096C8C7F76A77DBDE0C316267044BF1E40C2A9D436E0F946CFF1D5A3B4"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCuspPlaceLeftInvariance",
+        "SourceGammaOneCuspTranslations",
+        "SourceGammaOneCuspPlaceRightInvariance",
+        "SourceGammaOneRationalCuspPlace"
+      ],
+      "count": 21,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceScratchOwnership762.log",
+        "sha256": "D0B729BCED2D098489A1BEF5F07D58FEE63034A821EC4D8BDCAA4207ECBBA3F8",
+        "sourceSha256": "BAE40B2AD6858BB89FD54117DAC5E2AD2768144F51C9FA6F9B32A23091457F47"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRationalCuspOrbit",
+        "SourceGammaOneCuspJExactOrder",
+        "SourceGammaOneCuspRotationOrder",
+        "SourceGammaOneCuspTranslationRamification"
+      ],
+      "count": 38,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundScratchOwnership767.log",
+        "sha256": "A840A5502D8A35E78CE33D1C30B02B2DCE2444BF20132BABCB5C5B9BE029107B",
+        "sourceSha256": "29EF9958824F99F914B83F191EA3BC0D58222B314769F334DC2F8F4D6C3BF3CA"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCuspCyclicOrbit",
+        "SourceGammaOneCuspCosetPlaces",
+        "SourceGammaOneCuspCosetBound",
+        "SourceGammaOneCuspPoleDegree",
+        "SourceGammaOneCuspPositiveWeight",
+        "SourceGammaOneCuspOrbitBijection",
+        "SourceGammaOneExactCuspOrbits"
+      ],
+      "count": 46,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsScratchOwnership774.log",
+        "sha256": "FC12A73038F0F3FCE1A7262F52BF1E94EE023D7D0AD90400F9CE887BDF3E5F5F",
+        "sourceSha256": "D613A7DE881113FA33BFAD254C27BAE57C82A3305677BA0158E6894754E68121"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCentralSignCharacters",
+        "SourceGammaOneSignedParabolicCharacters"
+      ],
+      "count": 21,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicScratchOwnership777.log",
+        "sha256": "A8C1C53A7F8ACE84C70ECF0091AA3F84889E59683F892CEEF4465171657A48F2",
+        "sourceSha256": "8809A5A1B274CB0CEE19757336A40543D26F87C390536D0B13A3A638D18F76A7"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRealManinCharacter",
+        "SourceGammaOneRealCuspPotential",
+        "SourceGammaOneRealManinDimension"
+      ],
+      "count": 55,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinScratchOwnership781.log",
+        "sha256": "394EB6C011171FD4E382485E8D6927ED9846F79BF2BB892AF1E2F8E11ED2D2A0",
+        "sourceSha256": "D3D60F29D7ABEECB2DB4E4BAF1D12B10222D70F4013A1D40F4A22D24DB725E24"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRationalCyclicCusps",
+        "SourceGammaOneRealPeriodDimensionUpper"
+      ],
+      "count": 15,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperScratchOwnership784.log",
+        "sha256": "4956725BA1A77477B455E677F06103C93790AE92469FA14AEB74A13064B42BBE",
+        "sourceSha256": "8CADCB3440EED861F50AF124DD138B8BA4C2A89E04633CC47BDDFB93FFB1C825"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCanonicalCoordinates",
+        "SourceGammaOneJDegreeFinsets",
+        "SourceGammaOneCanonicalFiberLower",
+        "SourceGammaOneGenusFiberLower"
+      ],
+      "count": 25,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerScratchOwnership789.log",
+        "sha256": "486D672FAE1C065A02BBA8A945A9B3B96A603157FB0695DE0C10D208F3E21ECB",
+        "sourceSha256": "47B91FC6A2CFCCFEDAEF8118DD4C1C5DD276265D904A0419A750B146166D2F61"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneEllipticCosetFiber",
+        "SourceGammaOneEllipticFiberBounds",
+        "SourceGammaOneRealPeriodSurjectivity"
+      ],
+      "count": 34,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityScratchOwnership793.log",
+        "sha256": "D57EDD8BEEAC3599C1E9034AD0D531A2F299238D6BEDA5E4A69B6BA9F2F10DC2",
+        "sourceSha256": "F0C65EFF24FA755FF0EC26E0F4AA0DBC614BA2FD5C733F06E2D643023E0B0FE4"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityOwnership8632.log",
+    "sha256": "941CF8D1C7B036983ADDE594C17BA7787827C44427DAF54C913AD93DA535791F",
+    "sourceSha256": "5D480454EF8B01CA4BF885878804AA8E8FC5A3DEE6C1862E965130C05168B7B1"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-054603-942.log",
+    "sha256": "2F7A6B70D31EBC5C430ADAD15B1686C4241CA8F116E7910F1CC3705302F09FED"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 33 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneInvariantRealPart",
+        "scratchSha256": "DEAF5453D84154349BFE79D821F5CB9EE05F130AB7D09CD205CAD2F829485D60",
+        "productionSha256": "DEAF5453D84154349BFE79D821F5CB9EE05F130AB7D09CD205CAD2F829485D60",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealPeriodInjectivity",
+        "scratchSha256": "D79E746BDEC9F184D6250107AFDA717C3BFD59EB4237698CD4530255C55FB92E",
+        "productionSha256": "4F4E0909516518BE1895E63A104428C3B7EAB50EAACA1C301BECEA4D3365523B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealPeriodMap",
+        "scratchSha256": "B561EC0923BACA616D34ED5F7EBCB42EA3C2EDC5832B095FDFACEC1F652A6225",
+        "productionSha256": "EBD4AE766BF8C8F8899BA624102295029BE3D363323B39FFD3701AB22E0DC1D9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealParabolicPeriods",
+        "scratchSha256": "F28255F16B106E6019118D8E4C714869E334E3C553A3CD0D6835113826E9CFF9",
+        "productionSha256": "2837775BEE9ACA4FFD71416FA1F851CF0FA680B24AF4C4801F9559D299A9B341",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPlaceLeftInvariance",
+        "scratchSha256": "1C68770694D2B343CEB212D76126111F8904C2007660FE9DC7ADCF2951229A72",
+        "productionSha256": "20584441E5908C847E5C62FA9B1B806BA5AF110A44D375CCF28915138B3FB73A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspTranslations",
+        "scratchSha256": "F3B6CD3942F3562321009C26FE0852916A28FFE85195B568DE70E323FED04BD6",
+        "productionSha256": "608CFF7CF6B06442BDAA1E2F018D2BDF8FDF4EE55597F35ACDE5446C4324E118",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPlaceRightInvariance",
+        "scratchSha256": "EC90049BCD900EAEBE9C3BBD4526CB34ED3F450E9ACFE137216F6331B451EE95",
+        "productionSha256": "DFBE6CAD9F0982726A477BDCD6D45253FA32BF2D143CBF9FC52AAD06D36CE43E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRationalCuspPlace",
+        "scratchSha256": "B597E927040E52D4E131CD5C830460F4D7FFF24362F63D1E741122010955DD90",
+        "productionSha256": "A52CA95FF3C8781ADD9804F44BD325F8ADA884F37B447FF0D7E388F4FF1F6749",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRationalCuspOrbit",
+        "scratchSha256": "5529F764D486BDD243ACE54267AB0205972C5B45B1013F21730F440597DB5D00",
+        "productionSha256": "11EA8D8C054CAC0B1ADF500D1196BC2626F605E163B2F5B6500AD5F01431CECC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspJExactOrder",
+        "scratchSha256": "7FE51EE11C1F50050400FE947524D1F6970945979CCA3D730EAC6236AE3F6C5E",
+        "productionSha256": "406738D1286D0DDD12A5471188A8AD6CDA73986741D516EBCF9BB832433CDC3F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspRotationOrder",
+        "scratchSha256": "519A22335B592DB8B85EE63AD6EFEFF098DBB9C984BCE2C798DE67A6A435F6DC",
+        "productionSha256": "F9E3909F6724AB1D5C340A7326725C2D97EAD37185A9BA779BB25E0EE3E233FA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspTranslationRamification",
+        "scratchSha256": "51328F8C1D0AB2AAD038E0EE3238D8F9CE31E05EC0DA11E58FE374A99A8D6EB7",
+        "productionSha256": "269AC776880160D64967AC8862925EE02DF1FF5EA37A6944F777A7009D31F0D9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspCyclicOrbit",
+        "scratchSha256": "35671B03884BA8AB59346927AA14539165D1C171EA666B4A5360CED9E491A5FC",
+        "productionSha256": "62D2814732F183E2C3E9CB34C0A75972D10F36F8BA99618A3997575BE11F4065",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspCosetPlaces",
+        "scratchSha256": "C77F32802B386087676AEFD131D9A6182413BF21FB1CA37DBAB69A4DA3572573",
+        "productionSha256": "F3B409E4879591CCCEA066139F3749CE254403A4F30090DEF6F1048FCD96CE54",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspCosetBound",
+        "scratchSha256": "2A0834B3DA3B8F6F674D975D5A34570B28ECAE6FF7BB5739C5FA9B5238F49CDE",
+        "productionSha256": "1833208EE93E99E7682568B4AEA922342D829ADC0D216566EED8904DEDDCB063",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPoleDegree",
+        "scratchSha256": "08ABB7B65EC425592AA976D0E5C66E6806A1AD1A5CDD1438BA79BBEBA195DE10",
+        "productionSha256": "EF865A723C2E384C12FAB4165F2BACF64678A8A72E67EE58F8FFF2F33AE1DF84",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPositiveWeight",
+        "scratchSha256": "D89209C437E37BF7FE12A7D45D14FA7CC611E2EC28144B795BB62D1E5E57C4F2",
+        "productionSha256": "7026CAD66BC33B9A6520BC841D7775752A896307D607094D95CF507B9B3F8042",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspOrbitBijection",
+        "scratchSha256": "9E1C037FFAD0BB49A23FC5B7352538E0A732038F62409163F15C239D2FC3FAA5",
+        "productionSha256": "BA14562CC62B71AAE71A49AE2EC0727CC09514ABE55A62095B7F316B06C7F865",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneExactCuspOrbits",
+        "scratchSha256": "A8FE05A876EE992BD00E95255BC18A2893C4FA6565BAA4ABC1C26739DB2838D1",
+        "productionSha256": "BD92E7100C6DF23ECFE8E672759A72D87822D77014E8219D67D2877560A3EE00",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCentralSignCharacters",
+        "scratchSha256": "FBBCE8F7ABEC651C67A29B45758D65A1227F47491112C51AF7080249AC2DA529",
+        "productionSha256": "910ED77681D6747D2CB679118F4FC291EF2D8F99BE24B5FBC89BE839C63708DD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSignedParabolicCharacters",
+        "scratchSha256": "5CBE07661A7099E305A986984E91043124C1C2EC315499AB169BB6F6442DD750",
+        "productionSha256": "B952E40608FAF8B95C1F96F1D20EE32AF7D7206DD5BF0E7CAB8CC57CA7B32101",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealManinCharacter",
+        "scratchSha256": "C06020E3FD67CD80E00900CD40F5C88D0E6DC4158647826A62719434554D587D",
+        "productionSha256": "1212D8E6B3034B9990C9C7C90F95B1D2EE7D1B47483C69AE9BAF027E06B89B14",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealCuspPotential",
+        "scratchSha256": "CF2A1AD225DD124176E10F63BDAD9515050D93E735F41C356DA8CBA9618EFAA3",
+        "productionSha256": "D733889A7E98926F7B2100BE71491C2319BCD0CB16CBC581B626B5269B7A6885",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealManinDimension",
+        "scratchSha256": "E7064B836348E8BD1B73F7C9E7185D65C5D58FE1E945BC990FFF076733C5A63A",
+        "productionSha256": "9249B29DBD9968949059AC16AC3E8D6FFE0E95DD3D19433B5FEF43E9C3189913",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRationalCyclicCusps",
+        "scratchSha256": "812AEB44009D87B5B46E61A0F8B766D3467FB68A4D12FE7BF7DC5658231B600B",
+        "productionSha256": "260D5006E3E43B924847B1B304D52EC1702046B9960B31D64F9022903094E71A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealPeriodDimensionUpper",
+        "scratchSha256": "FE5AEDED921C954C369B106A7344DD1F1DF7B7C511024C879E5FC50609D5929F",
+        "productionSha256": "40EC648B51E49115ED929EA616D598124601D0327806BA03D9189F42484D8996",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCanonicalCoordinates",
+        "scratchSha256": "5AF75D4DE63D2E3E7C1E7D3F05C1A9DCA1FB86F5776CE7D2F3044ABBEA417FFC",
+        "productionSha256": "A5027789C505DE50C509729FD4223C1196B3812A6431309F764E0F648ECF9A78",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneJDegreeFinsets",
+        "scratchSha256": "B9D0963DCC2A2592B1B58A30AF2647E44050E3741F71A91851133D7F63A08142",
+        "productionSha256": "315F168F39943CF98441DDA8B27B976EFD1E2B03E1AB4777534C6563ECD86740",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCanonicalFiberLower",
+        "scratchSha256": "FBE6B1F857251413C8445F26A90C791700E50F932248C47F93D4A3829C696BA0",
+        "productionSha256": "D83E47F009448740D12409DE816C97DA303C52D7C163E98E7BF863F5C4BF934E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGenusFiberLower",
+        "scratchSha256": "EDAB490D2BA0F7EF102262A5E80A0BF167B6033D437460AC97DF3BBAD2EDCB2C",
+        "productionSha256": "0339F1449A65945DE436B05D283CA40E9273A560D29F3561425B16AF53BD18AE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneEllipticCosetFiber",
+        "scratchSha256": "C93890F8473D5D1A22C830D9D3B07137AC1AAEDA84C8686DC05A3DE3D21AB110",
+        "productionSha256": "386F2D304195880E3AB54DE336B58C506F005F68F017872FCD61F0D993675319",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneEllipticFiberBounds",
+        "scratchSha256": "14A7DC51F83CC50E97EDFBA9CD4A682C5693C4C603D7072D2F4F14362F3BAE55",
+        "productionSha256": "9A825CF4AF7EDF41E9DFC5FC0835698CD38BB355CF9FF3FBE8BA09E1ECF82E6E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealPeriodSurjectivity",
+        "scratchSha256": "3E9CA101B8E1CABEADF38B7EC9D86A647170BEACB5F162E58AA11AB46CDFC624",
+        "productionSha256": "EA2BE01343B9FB427D5AC677F8BE3342116D922544B2FC4A2063AC14FFCC1E27",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

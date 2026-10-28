@@ -1,0 +1,58 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "actual untwist wedge identity"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\complex-wedge-stokes-route-871.json",
+      "sha256": "C1E3CF93C87791414A84FBC2905BB9B172A4F98C8C6812C01B2E88DD55A9A790"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\complex-wedge-integral-route-872.json",
+      "sha256": "EB7325B897630EE62BDD500688B782DE5DFA5A28FF0BC6BE32C6D0F3363FB85C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-untwist-wedge-route-873.json",
+      "sha256": "AC74237B93CBCCEB06A00F098E78EDF4E55715CD750C7D31C2F0F9C0613E9889"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\wedge-minimal-route-review-872c.json",
+      "sha256": "AA7FBDC1EB7685B2B52C816FE1703889AEE4747D9DFB06719C24550A26E96DC1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\wedge-minimal-route-review-874a.json",
+      "sha256": "EF29CD23B7894228818ED87BAD1CD7CE1306E05B0C204C769C9490B8FCC94AA8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+      "sha256": "F16ECD3CCDA791603BAD7BEFAB553590188376BCBCA1BB0DCDD0440E84831B20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-1b-scratch-receipt.json",
+      "sha256": "978439697AD7EAB0AFEB18AD2DE7C8790FA74DEA3A9773E654EA20CC89D70208"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_logDeriv_wedge_add_finsum_eq_integral_dbarLogDeriv.lean.txt",
+      "sha256": "101C5506DCC541F105F02082765C00B78CE6B43E1315B83821045A91EE6AF824",
+      "review": "Primary declarations, initial wedge proof, local logarithm/product/derivative lemmas and global assembly read. Disc calculation and local order isolation remain to inspect before adapting them. Existing holomorphic compact-support continuity/integrability reused, removing duplicated helpers. Native second-derivative symmetry and integration by parts used directly."
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_logDeriv_wedge_add_finsum_eq_integral_dbarLogDeriv.lean.txt",
+      "sha256": "101C5506DCC541F105F02082765C00B78CE6B43E1315B83821045A91EE6AF824",
+      "review": "Entire primary proof read. Duplicate continuity, dbar and singular-integrability infrastructure removed in favor of 863/865 results. Unused upstream helper parameters removed while the complete local/global statement is retained. Native local logarithm, second-derivative symmetry, smooth partition of unity and the locally proved simple-pole integral replace external axiomatic imports."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Compact-support wedge integration by parts from native derivative symmetry",
+    "C1 local integer-order models imply integrability and exact wedge/residue identity via proved singular kernel and native smooth partition",
+    "Actual original divisor and its meromorphic untwist derive every local model; existing actual cusp-form primitive supplies derivative"
+  ],
+  "remaining": "F and exact original-divisor orders remain inputs. Invariance and cusp control are proved separately by the invariant-untwist consumer. Actual smooth comparison model and modular winding/period/Petersson limit remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN."
+}

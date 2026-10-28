@@ -1,0 +1,2615 @@
+{
+  "date": "27 October 2026",
+  "modules": [
+    "Dubon2026.SourceSmoothLocalModelRegularization",
+    "Dubon2026.SourceSmoothLocalModelProducts",
+    "Dubon2026.SourceModularSmoothProjectiveRepresentatives",
+    "Dubon2026.SourceSmoothModularGeometry",
+    "Dubon2026.SourceSmoothProjectiveOrbitSum",
+    "Dubon2026.SourceSmoothDivisorOrbitData",
+    "Dubon2026.SourceSmoothModularLogDerivative",
+    "Dubon2026.SourceSmoothDivisorProduct",
+    "Dubon2026.SourceSmoothDivisorLocalProduct",
+    "Dubon2026.SourceSmoothDivisorLocalOrders",
+    "Dubon2026.SourceSmoothDivisorInvarianceCusps",
+    "Dubon2026.SourceSmoothDivisorLogDerivative",
+    "Dubon2026.SourceSmoothInvariantComparison",
+    "Dubon2026.SourceGammaOneSmoothDivisorComparison",
+    "Dubon2026.SourceSmoothOrbitIntegralGeometry",
+    "Dubon2026.SourceSmoothOrbitIntegralChangeVariables",
+    "Dubon2026.SourceSmoothCompactTranslateIntegral",
+    "Dubon2026.SourceSmoothDivisorPeriodIntegral",
+    "Dubon2026.SourceGammaOneSmoothDivisorPeriodIntegral",
+    "Dubon2026.SourceSmoothComparisonQuotient",
+    "Dubon2026.SourceSmoothComparisonCusps",
+    "Dubon2026.SourceSmoothComparisonWindingLog",
+    "Dubon2026.SourceGammaOneDivisorWindingComparison",
+    "Dubon2026.SourceModularSidePairingAction",
+    "Dubon2026.SourceModularSidePairingIntegrals",
+    "Dubon2026.SourceModularBoundarySidePairing",
+    "Dubon2026.SourceModularGreenDomain",
+    "Dubon2026.SourceModularGreenLines",
+    "Dubon2026.SourceModularGreenSliceGeometry",
+    "Dubon2026.SourceModularGreenSlicing",
+    "Dubon2026.SourceModularGreenArc",
+    "Dubon2026.SourceModularGreenFormula",
+    "Dubon2026.SourceModularCuspBoundaryDecay",
+    "Dubon2026.SourceModularGreenPullback",
+    "Dubon2026.SourceModularGreenTile",
+    "Dubon2026.SourceModularGreenEdges",
+    "Dubon2026.SourceModularGreenMeasure",
+    "Dubon2026.SourceModularGreenDensity",
+    "Dubon2026.SourceModularGreenSidePairing",
+    "Dubon2026.SourceWindingLogCuspBounds",
+    "Dubon2026.SourceModularSmoothedGreenLimit",
+    "Dubon2026.SourceWindingBoundaryIntegral",
+    "Dubon2026.SourceGammaOneDivisorWindingBoundary",
+    "Dubon2026.SourceFinitePermutationCoboundary",
+    "Dubon2026.SourceParabolicCosetPotentials",
+    "Dubon2026.SourceWeightTwoPrimitiveEdges",
+    "Dubon2026.SourceModularPeriodCorners",
+    "Dubon2026.SourceWeightTwoCosetPeriods",
+    "Dubon2026.SourceParabolicWindingIntegralPeriods",
+    "Dubon2026.SourceGammaOneDivisorWindingIntegralPeriod",
+    "Dubon2026.SourceSmoothComparisonDbar",
+    "Dubon2026.SourceSmoothedWindingIntegralSplit",
+    "Dubon2026.SourceGammaOneSmoothedReciprocity",
+    "Dubon2026.SourceUntwistPeterssonLimit",
+    "Dubon2026.SourceGammaOnePeterssonReciprocity"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse -> analytic reciprocity.",
+  "discharged": "For the actual original degree-zero Gamma1 divisor, an invariant smooth comparison V is constructed with exact ramification-weighted local orders, central stabilizer multiplicities, nonzero cusp behavior and the original endpoint-period limit. The filled quotient supplies the actual logarithm and integral parabolic character. Curved Green, literal coset side pairing and the normalized smooth-domain limit identify its winding boundary sum. Integer coset potentials and the actual normalized primitive express that sum as an integer combination of actual periods; the signed-to-original bridge yields membership in the original Gamma1 integer lattice. Equal local orders split the dbar integral, using existing almost-everywhere nonvanishing. Two proved limits of the same integral yield the exact original divisor/period/Petersson reciprocity identity, including conjugation, minus sign and central normalization. No smooth comparison, winding period or limiting reciprocity identity is assumed as a certificate.",
+  "boundary": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain explicit upstream inputs. The representative divisor functional must be related to the original finite divisor class. Integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Global Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,776-module scope: all thirteen retained regressions, 55,749 exhaustive theorem checks, 25,785 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison",
+    "Dubon2026.SourceModularSidePairing.boundary_side_pairing",
+    "Dubon2026.SourceModularGreen.integral_eq_boundary",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T20:03:34.083989+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceSmoothLocalModelRegularization",
+        "SourceSmoothLocalModelProducts",
+        "SourceModularSmoothProjectiveRepresentatives",
+        "SourceSmoothModularGeometry",
+        "SourceSmoothProjectiveOrbitSum",
+        "SourceSmoothDivisorOrbitData",
+        "SourceSmoothModularLogDerivative",
+        "SourceSmoothDivisorProduct",
+        "SourceSmoothDivisorLocalProduct",
+        "SourceSmoothDivisorLocalOrders",
+        "SourceSmoothDivisorInvarianceCusps",
+        "SourceSmoothDivisorLogDerivative",
+        "SourceSmoothInvariantComparison",
+        "SourceGammaOneSmoothDivisorComparison"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization.lean",
+          "sha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC",
+          "oleanSha256": "29BD779CA61E020F65B1ABF236BF3B1A89338979731D473E4D56AB1335CBEA7D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization892a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelRegularization892a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts.lean",
+          "sha256": "F29AEF46E8457F756FAA69AE9E0C119EDC050D08108EA482C78789136A6D8FE1",
+          "oleanSha256": "C58A5F2E0C0F655FEBD309CB21E7C957953EEDA35D65CA755BD6EFC39545B562",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts892a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothLocalModelProducts892a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives.lean",
+          "sha256": "D9C29B42204AC2E02862BEC197796A610655C53B897857ABAF7A4757D4B16AEA",
+          "oleanSha256": "80954668EE7A2282E1404CB179641407FEB8CBC9DFEEFD314A328ABF62BC016A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothProjectiveRepresentatives908b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry.lean",
+          "sha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38",
+          "oleanSha256": "65827228144AD88852A243A39392AD8C707D8ECC3E7CB864D0C2E1900E69F694",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum.lean",
+          "sha256": "2074FC79B094DF75D1589CAF2B314C3D640A76A354DCB1601CBF0BC6E0BD60B8",
+          "oleanSha256": "6B92308A93BD69E89B1DAE4E9779A3E7CD394CB5D19E8325B19121D4FE1C7B68",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothProjectiveOrbitSum908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData.lean",
+          "sha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B",
+          "oleanSha256": "02542C41A5C4825200ADBB213CF46A92C14755BAC9CA8B717F200665373F8F71",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorOrbitData908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative.lean",
+          "sha256": "B35D4A4D6550A925D28A36714D3EFD733FEBE3DFA08D9187797593FBE9100EF5",
+          "oleanSha256": "ADECD992F8CE3DEBB640A0423920D13C43C12B138BDF9821B8D1096F0FAA4040",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularLogDerivative908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct.lean",
+          "sha256": "8D14534E567D760934BC1F979CECBDB9BB205F9F930660E7AA6A715D1504CFD0",
+          "oleanSha256": "AC533E2565C29EACFD7FD327BF72531D4493547B71C602AEE6191F1F49975320",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorProduct908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct.lean",
+          "sha256": "52F17B6EB3A8CC06730A567FB213AE8907E44D274AA3FCD313CA8AA2BFF4C613",
+          "oleanSha256": "8D15F33C6CA6379436E273F5B798B0FDAEA9F5C9955D776AC8762242AC15612C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalProduct908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders.lean",
+          "sha256": "6023900FD05AF6274D16E4C1DC3564C2C66D91A3ED237CE61850430F90D3BED9",
+          "oleanSha256": "12FC8AE108CF353DEEBA4B6A0EE10BDB6DE28120DF2BBB5F08BE5278CFB71616",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLocalOrders908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps.lean",
+          "sha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E",
+          "oleanSha256": "F8CBB7D5EBB64639754D9405CD51C0EE51F6A3EF39223200BF4B6B942E140484",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorInvarianceCusps908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative.lean",
+          "sha256": "E1EA0BE4134C0E239E5F2F793EC3A95E77BB3AA693517DCAFE0BDEA13A2039D5",
+          "oleanSha256": "35AB4B52B278BF07F17774634A7675E7FE990A0AFE895263F9D055F215FE8862",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorLogDerivative908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison.lean",
+          "sha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6",
+          "oleanSha256": "919AB58D1417C52DAFBD9F0D6D04EB202BC2D33D70027A91AE34CB1D91FCCB9E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothInvariantComparison908a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison.lean",
+          "sha256": "6F27F57E2EA46C11E609A0A531BA4C54A154112823D74E718F48DBFFACAC6A11",
+          "oleanSha256": "347E7383B27BAC4C0E83257F37B50B38548AD16906759590ABA5902EEEBC00E7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison908a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorComparison908a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothLocalModel.regularize_eq_of_tendsto",
+        "Dubon2026.SourceSmoothLocalModel.regularize_eq_zero",
+        "Dubon2026.SourceSmoothLocalModel.not_tendsto_of_neg",
+        "Dubon2026.SourceSmoothLocalModel.regularize_eventuallyEq",
+        "Dubon2026.SourceSmoothLocalModel.eventually_continuousAt",
+        "Dubon2026.SourceSmoothLocalModel.contDiffAt_zpow",
+        "Dubon2026.SourceSmoothLocalModel.model_mul",
+        "Dubon2026.SourceSmoothLocalModel.model_prod",
+        "Dubon2026.SourceSmoothLocalModel.model_comp",
+        "Dubon2026.SourceSmoothProjective.projectionEquiv_symm_projection",
+        "Dubon2026.SourceSmoothProjective.projection_representative",
+        "Dubon2026.SourceSmoothProjective.representative_injective",
+        "Dubon2026.SourceSmoothProjective.representative_smul",
+        "Dubon2026.SourceSmoothProjective.two_mul_card_projective_fibre",
+        "Dubon2026.SourceSmoothDivisor.coe_ofComplex",
+        "Dubon2026.SourceSmoothDivisor.ofComplex_coe",
+        "Dubon2026.SourceSmoothDivisor.sm_coe",
+        "Dubon2026.SourceSmoothDivisor.im_sm_pos",
+        "Dubon2026.SourceSmoothDivisor.det_coe'",
+        "Dubon2026.SourceSmoothDivisor.det_pos",
+        "Dubon2026.SourceSmoothDivisor.dsm_coe",
+        "Dubon2026.SourceSmoothDivisor.dsm_ne_zero",
+        "Dubon2026.SourceSmoothDivisor.hasDerivAt_sm",
+        "Dubon2026.SourceSmoothDivisor.analyticAt_sm",
+        "Dubon2026.SourceSmoothDivisor.hasFDerivAt_sm",
+        "Dubon2026.SourceSmoothDivisor.continuousAt_sm",
+        "Dubon2026.SourceSmoothDivisor.sm_mul",
+        "Dubon2026.SourceSmoothDivisor.sm_one",
+        "Dubon2026.SourceSmoothDivisor.sm_inv_sm",
+        "Dubon2026.SourceSmoothDivisor.sm_inj",
+        "Dubon2026.SourceSmoothDivisor.im_le_of_sm_mem",
+        "Dubon2026.SourceSmoothDivisor.finite_moving'",
+        "Dubon2026.SourceSmoothDivisor.finsum_projection",
+        "Dubon2026.SourceSmoothDivisor.sm_representative_projection",
+        "Dubon2026.SourceSmoothDivisor.dsm_representative_projection",
+        "Dubon2026.SourceSmoothDivisor.exists_basePoint",
+        "Dubon2026.SourceSmoothDivisor.card_fibre_eq_card_stabilizer",
+        "Dubon2026.SourceSmoothDivisor.card_fibre_eq_zero",
+        "Dubon2026.SourceSmoothDivisor.dbarL_comp_smul",
+        "Dubon2026.SourceSmoothDivisor.dbar_comp_sm",
+        "Dubon2026.SourceSmoothDivisor.dbar_zpow_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_mul_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_prod_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_congr",
+        "Dubon2026.SourceSmoothDivisor.Data.s_ne_b",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_s",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_b",
+        "Dubon2026.SourceSmoothDivisor.Data.sK",
+        "Dubon2026.SourceSmoothDivisor.Data.bK",
+        "Dubon2026.SourceSmoothDivisor.Data.heights",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.closedBall_subset",
+        "Dubon2026.SourceSmoothDivisor.Data.locfin",
+        "Dubon2026.SourceSmoothDivisor.Data.finprod_fac_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_prod",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_model",
+        "Dubon2026.SourceSmoothDivisor.Data.local_structure",
+        "Dubon2026.SourceSmoothDivisor.Data.sm_eq_coe_iff",
+        "Dubon2026.SourceSmoothDivisor.Data.card_filter_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.degree_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.V_model",
+        "Dubon2026.SourceSmoothDivisor.Data.tendsto_sm_nhdsNE",
+        "Dubon2026.SourceSmoothDivisor.Data.tendsto_of_tendsto_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.V_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.exists_height",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_one_of_high",
+        "Dubon2026.SourceSmoothDivisor.Data.V_cusp",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_ne_zero",
+        "Dubon2026.SourceSmoothDivisor.Data.bad_countable",
+        "Dubon2026.SourceSmoothDivisor.Data.generic",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_logDeriv",
+        "Dubon2026.SourceSmoothDivisor.Data.logDeriv_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.ae_logDeriv",
+        "Dubon2026.SourceSmoothDivisor.exists_invariant_comparison",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_smul_signed",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison",
+        "Dubon2026.SourceSmoothLocalModel.regularize",
+        "Dubon2026.SourceSmoothProjective.projectionEquiv",
+        "Dubon2026.SourceSmoothProjective.representative",
+        "Dubon2026.SourceSmoothProjective.orbitFiberEquiv",
+        "Dubon2026.SourceSmoothDivisor.sm",
+        "Dubon2026.SourceSmoothDivisor.dsm",
+        "Dubon2026.SourceSmoothDivisor.finiteStabilizer",
+        "Dubon2026.SourceSmoothDivisor.Data.ex",
+        "Dubon2026.SourceSmoothDivisor.Data.fac",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw",
+        "Dubon2026.SourceSmoothDivisor.Data.V",
+        "Dubon2026.SourceSmoothDivisor.Data.bad",
+        "Dubon2026.SourceSmoothDivisor.Data"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothLocalModel.regularize_eq_of_tendsto",
+        "Dubon2026.SourceSmoothLocalModel.regularize_eq_zero",
+        "Dubon2026.SourceSmoothLocalModel.not_tendsto_of_neg",
+        "Dubon2026.SourceSmoothLocalModel.regularize_eventuallyEq",
+        "Dubon2026.SourceSmoothLocalModel.eventually_continuousAt",
+        "Dubon2026.SourceSmoothLocalModel.contDiffAt_zpow",
+        "Dubon2026.SourceSmoothLocalModel.model_mul",
+        "Dubon2026.SourceSmoothLocalModel.model_prod",
+        "Dubon2026.SourceSmoothLocalModel.model_comp",
+        "Dubon2026.SourceSmoothProjective.projectionEquiv_symm_projection",
+        "Dubon2026.SourceSmoothProjective.projection_representative",
+        "Dubon2026.SourceSmoothProjective.representative_injective",
+        "Dubon2026.SourceSmoothProjective.representative_smul",
+        "Dubon2026.SourceSmoothProjective.two_mul_card_projective_fibre",
+        "Dubon2026.SourceSmoothDivisor.coe_ofComplex",
+        "Dubon2026.SourceSmoothDivisor.ofComplex_coe",
+        "Dubon2026.SourceSmoothDivisor.sm_coe",
+        "Dubon2026.SourceSmoothDivisor.im_sm_pos",
+        "Dubon2026.SourceSmoothDivisor.det_coe'",
+        "Dubon2026.SourceSmoothDivisor.det_pos",
+        "Dubon2026.SourceSmoothDivisor.dsm_coe",
+        "Dubon2026.SourceSmoothDivisor.dsm_ne_zero",
+        "Dubon2026.SourceSmoothDivisor.hasDerivAt_sm",
+        "Dubon2026.SourceSmoothDivisor.analyticAt_sm",
+        "Dubon2026.SourceSmoothDivisor.hasFDerivAt_sm",
+        "Dubon2026.SourceSmoothDivisor.continuousAt_sm",
+        "Dubon2026.SourceSmoothDivisor.sm_mul",
+        "Dubon2026.SourceSmoothDivisor.sm_one",
+        "Dubon2026.SourceSmoothDivisor.sm_inv_sm",
+        "Dubon2026.SourceSmoothDivisor.sm_inj",
+        "Dubon2026.SourceSmoothDivisor.im_le_of_sm_mem",
+        "Dubon2026.SourceSmoothDivisor.finite_moving'",
+        "Dubon2026.SourceSmoothDivisor.finsum_projection",
+        "Dubon2026.SourceSmoothDivisor.sm_representative_projection",
+        "Dubon2026.SourceSmoothDivisor.dsm_representative_projection",
+        "Dubon2026.SourceSmoothDivisor.exists_basePoint",
+        "Dubon2026.SourceSmoothDivisor.card_fibre_eq_card_stabilizer",
+        "Dubon2026.SourceSmoothDivisor.card_fibre_eq_zero",
+        "Dubon2026.SourceSmoothDivisor.dbarL_comp_smul",
+        "Dubon2026.SourceSmoothDivisor.dbar_comp_sm",
+        "Dubon2026.SourceSmoothDivisor.dbar_zpow_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_mul_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_prod_div",
+        "Dubon2026.SourceSmoothDivisor.dbar_congr",
+        "Dubon2026.SourceSmoothDivisor.Data.s_ne_b",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_s",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_b",
+        "Dubon2026.SourceSmoothDivisor.Data.sK",
+        "Dubon2026.SourceSmoothDivisor.Data.bK",
+        "Dubon2026.SourceSmoothDivisor.Data.heights",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.closedBall_subset",
+        "Dubon2026.SourceSmoothDivisor.Data.locfin",
+        "Dubon2026.SourceSmoothDivisor.Data.finprod_fac_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_prod",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_model",
+        "Dubon2026.SourceSmoothDivisor.Data.local_structure",
+        "Dubon2026.SourceSmoothDivisor.Data.sm_eq_coe_iff",
+        "Dubon2026.SourceSmoothDivisor.Data.card_filter_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.degree_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.V_model",
+        "Dubon2026.SourceSmoothDivisor.Data.tendsto_sm_nhdsNE",
+        "Dubon2026.SourceSmoothDivisor.Data.tendsto_of_tendsto_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.V_sm",
+        "Dubon2026.SourceSmoothDivisor.Data.exists_height",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw_eq_one_of_high",
+        "Dubon2026.SourceSmoothDivisor.Data.V_cusp",
+        "Dubon2026.SourceSmoothDivisor.Data.dip_ne_zero",
+        "Dubon2026.SourceSmoothDivisor.Data.bad_countable",
+        "Dubon2026.SourceSmoothDivisor.Data.generic",
+        "Dubon2026.SourceSmoothDivisor.Data.fac_logDeriv",
+        "Dubon2026.SourceSmoothDivisor.Data.logDeriv_eq",
+        "Dubon2026.SourceSmoothDivisor.Data.ae_logDeriv",
+        "Dubon2026.SourceSmoothDivisor.exists_invariant_comparison",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_smul_signed",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison",
+        "Dubon2026.SourceSmoothDivisor.finiteStabilizer"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceSmoothLocalModel.regularize",
+        "Dubon2026.SourceSmoothProjective.projectionEquiv",
+        "Dubon2026.SourceSmoothProjective.representative",
+        "Dubon2026.SourceSmoothProjective.orbitFiberEquiv",
+        "Dubon2026.SourceSmoothDivisor.sm",
+        "Dubon2026.SourceSmoothDivisor.dsm",
+        "Dubon2026.SourceSmoothDivisor.Data.ex",
+        "Dubon2026.SourceSmoothDivisor.Data.fac",
+        "Dubon2026.SourceSmoothDivisor.Data.Vraw",
+        "Dubon2026.SourceSmoothDivisor.Data.V",
+        "Dubon2026.SourceSmoothDivisor.Data.bad",
+        "Dubon2026.SourceSmoothDivisor.Data"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorAudit1b.log",
+      "logSha256": "E803647AB92E89C12A96FB967AB99AFC57FE707B02CBB280C10A01CCD370AA40",
+      "auditSha256": "48533703F4060D4A7D1D2AB4D878A9D64725D01B267945C1D5847EE97C2C0AF6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 121,
+      "linterScopes": 14,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 102,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1b.log",
+      "dependencyAuditSha256": "F6635FFCD714D8BA1F5E60D8FCF5018C6043437A0A103757D8726BEDFD3CCF5F",
+      "dependencyAuditSourceSha256": "F78139AC8DC5446D81FFAFCEC7FC954CD7D6F9C37052516F265F18D465758136",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual smooth invariant comparison V",
+      "discharged": [
+        "Construct V from the actual degree-zero original analytic divisor at every nonzero Gamma1 level",
+        "Derive exact integer local orders from original ramification and projective stabilizer counts",
+        "Prove subgroup invariance and value one high in every translated cusp",
+        "Construct compact coefficient functions with exact pi times endpoint integral",
+        "Derive the actual almost-everywhere logarithmic derivative as the stabilizer-normalized translate sum"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The smooth comparison V is C1 with prescribed integer local models, not the meromorphic realization required by the principal-divisor converse. Its smoothed integral and the filled quotient winding/period identity must still be assembled into analytic reciprocity, then the original principal-divisor converse and all-weight arithmetic chain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "47AA25CC826906111824D4BE662E2DF92AFDFF548B339922ABC4E2766A5F19B2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T20:18:08.719112+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceSmoothOrbitIntegralGeometry",
+        "SourceSmoothOrbitIntegralChangeVariables",
+        "SourceSmoothCompactTranslateIntegral",
+        "SourceSmoothDivisorPeriodIntegral",
+        "SourceGammaOneSmoothDivisorPeriodIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry.lean",
+          "sha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9",
+          "oleanSha256": "9962D096ED9E3420B2B5882090C707AEA8C4045D31964871D4A5E46BC248EFF1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry910b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables.lean",
+          "sha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC",
+          "oleanSha256": "771CA12D5C32A1F34D4C130FC26E981DBFE9C01C867E0698E6B42EA11C9F29FB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralChangeVariables910c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral.lean",
+          "sha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385",
+          "oleanSha256": "2C16787B08C300487AC940B3FC11EE1AB8489184C6DE4423071C0C495D49B220",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothCompactTranslateIntegral911b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral.lean",
+          "sha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B",
+          "oleanSha256": "0316D7008564EA1B892E2C48485C33B0E2161F09383A77F9F9C5EF8335686915",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothDivisorPeriodIntegral912b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral.lean",
+          "sha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0",
+          "oleanSha256": "4A095F3EB753875CEE0FC108024170C17D9F4E04C5DB153A77E6A1B8B1BEAFB4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral913a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothOrbitIntegral.sm_image",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousAt_ofComplex'",
+        "Dubon2026.SourceSmoothOrbitIntegral.hasFDerivAt_sm_matrix",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_sm",
+        "Dubon2026.SourceSmoothOrbitIntegral.denom_ofComplex",
+        "Dubon2026.SourceSmoothOrbitIntegral.denom_ne_zero'",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_dsm",
+        "Dubon2026.SourceSmoothOrbitIntegral.eq_zero_of_notMem",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_goc",
+        "Dubon2026.SourceSmoothOrbitIntegral.det_identity",
+        "Dubon2026.SourceSmoothOrbitIntegral.integral_term",
+        "Dubon2026.SourceSmoothOrbitIntegral.integrable_term",
+        "Dubon2026.SourceSmoothOrbitIntegral.integrable_term'",
+        "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_eventually_eq",
+        "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_limit",
+        "Dubon2026.SourceSmoothDivisor.g_smul",
+        "Dubon2026.SourceSmoothDivisor.exists_comparison_period_limit",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothOrbitIntegral.sm_image",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousAt_ofComplex'",
+        "Dubon2026.SourceSmoothOrbitIntegral.hasFDerivAt_sm_matrix",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_sm",
+        "Dubon2026.SourceSmoothOrbitIntegral.denom_ofComplex",
+        "Dubon2026.SourceSmoothOrbitIntegral.denom_ne_zero'",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_dsm",
+        "Dubon2026.SourceSmoothOrbitIntegral.eq_zero_of_notMem",
+        "Dubon2026.SourceSmoothOrbitIntegral.continuousOn_goc",
+        "Dubon2026.SourceSmoothOrbitIntegral.det_identity",
+        "Dubon2026.SourceSmoothOrbitIntegral.integral_term",
+        "Dubon2026.SourceSmoothOrbitIntegral.integrable_term",
+        "Dubon2026.SourceSmoothOrbitIntegral.integrable_term'",
+        "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_eventually_eq",
+        "Dubon2026.SourceSmoothOrbitIntegral.compact_translate_limit",
+        "Dubon2026.SourceSmoothDivisor.g_smul",
+        "Dubon2026.SourceSmoothDivisor.exists_comparison_period_limit",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodAudit1.log",
+      "logSha256": "E47781F1A88ECA5BECD5C9060E6CFFD79CE67335826AE32A2F0E3E716411CAC5",
+      "auditSha256": "059372C5803412AA4CDC4F759F4B1B84E58AE864BDD7FC954540C4D62F528470",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1b.log",
+      "dependencyAuditSha256": "94638AA53BFEAE9DD1348B346349CB55BDEE93C117BBB754C12C7C38C19DB6F3",
+      "dependencyAuditSourceSha256": "1B15CA36193920BD6FC7AE62569952060833B34839AE106EE0491661FDC258C3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> full all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> original smooth divisor period term",
+      "discharged": [
+        "Integrability of the constructed comparison logarithmic derivative against the canonical smooth cutoff",
+        "Its exact normalized limit with actual original-divisor coefficients and original Gamma1 endpoint periods",
+        "Derive all compact coefficient, degree-zero, order-divisibility and primitive inputs from proved upstream constructions"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The filled quotient, winding-period and Petersson assembly must still establish analytic reciprocity and the original principal-divisor converse. The full all-weight arithmetic realization, automorphy and higher symmetric-power continuation chain remains. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-divisor-period-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "FBEF6B8C362CD97BD71B3AD164E0CB26384B883499CD18BEA4DBC018507357C2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T20:29:46.327222+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceSmoothComparisonQuotient",
+        "SourceSmoothComparisonCusps",
+        "SourceSmoothComparisonWindingLog",
+        "SourceGammaOneDivisorWindingComparison"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient.lean",
+          "sha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056",
+          "oleanSha256": "26043DA6E7318FCFE15B8876B31075DF37C9CB017F44AA49E99B7C7E6380B86C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonQuotient915a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps.lean",
+          "sha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0",
+          "oleanSha256": "E6D991E4CE49016F31AE8AD63982127A8927189ACC341C49A19481F202337FBF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonCusps916a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog.lean",
+          "sha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13",
+          "oleanSha256": "251AD4F1DA65D8848677DC3D79D7397551F5DFA90993D63B37E875943E772F6F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonWindingLog917a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison.lean",
+          "sha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1",
+          "oleanSha256": "2A76A46B51A083E7585F42CA74E60AA541D54A26B9511D701B3559D92759B153",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingComparison918b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothComparison.quot_local",
+        "Dubon2026.SourceSmoothComparison.contDiffAt_quot",
+        "Dubon2026.SourceSmoothComparison.quot_ne_zero",
+        "Dubon2026.SourceSmoothComparison.tendsto_div_quot",
+        "Dubon2026.SourceSmoothComparison.eventually_eq_quot_mul",
+        "Dubon2026.SourceSmoothComparison.quot_smul",
+        "Dubon2026.SourceSmoothComparison.quot_eq_limUnder",
+        "Dubon2026.SourceSmoothComparison.exists_height_n_eq_zero",
+        "Dubon2026.SourceSmoothComparison.eventually_atImInfty",
+        "Dubon2026.SourceSmoothComparison.quot_eq_of_high",
+        "Dubon2026.SourceSmoothComparison.tendsto_quot_smul",
+        "Dubon2026.SourceSmoothComparison.tendsto_fderiv_quot_smul",
+        "Dubon2026.SourceSmoothComparison.quot_cusp_data",
+        "Dubon2026.SourceSmoothComparison.exists_filled_winding_log",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison",
+        "Dubon2026.SourceSmoothComparison.HasLocalModels",
+        "Dubon2026.SourceSmoothComparison.quot"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothComparison.quot_local",
+        "Dubon2026.SourceSmoothComparison.contDiffAt_quot",
+        "Dubon2026.SourceSmoothComparison.quot_ne_zero",
+        "Dubon2026.SourceSmoothComparison.tendsto_div_quot",
+        "Dubon2026.SourceSmoothComparison.eventually_eq_quot_mul",
+        "Dubon2026.SourceSmoothComparison.quot_smul",
+        "Dubon2026.SourceSmoothComparison.quot_eq_limUnder",
+        "Dubon2026.SourceSmoothComparison.exists_height_n_eq_zero",
+        "Dubon2026.SourceSmoothComparison.eventually_atImInfty",
+        "Dubon2026.SourceSmoothComparison.quot_eq_of_high",
+        "Dubon2026.SourceSmoothComparison.tendsto_quot_smul",
+        "Dubon2026.SourceSmoothComparison.tendsto_fderiv_quot_smul",
+        "Dubon2026.SourceSmoothComparison.quot_cusp_data",
+        "Dubon2026.SourceSmoothComparison.exists_filled_winding_log",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceSmoothComparison.HasLocalModels",
+        "Dubon2026.SourceSmoothComparison.quot"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingAudit1.log",
+      "logSha256": "3D75CE8F6B19959F4FD92740B4382EF8E6596A2189DB27DEA345527F1BC79AAC",
+      "auditSha256": "F8B8D6835FC905A3142C497B262237CA0A7112B47F2905609534EAE49B5C8370",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 31,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1.log",
+      "dependencyAuditSha256": "321D96A02AAC7441548114BA6493C8E6DD7D6ACB2CD70C7E65C5B06E7429AE54",
+      "dependencyAuditSourceSha256": "819C61DF60E7CB4FEDEF177CC6844CCA4BDD7F5C2B2E19A839DDB961546C93AF",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual filled-quotient parabolic winding character",
+      "discharged": [
+        "Derive the actual original cusp form from the unitary multiplier",
+        "Construct the comparison V and its original-divisor period limit",
+        "Derive quotient regularity, nonvanishing, signed invariance and nonzero cusp limits with derivative decay",
+        "Produce the actual logarithm and integer character vanishing on literal trace-squared-four elements",
+        "Preserve source punctured-limit convention via a proved equality"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The meromorphic function with exact orders and a unitary multiplier remains an upstream input. Winding side-pairing/period integral, Petersson comparison, analytic reciprocity, principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-winding-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "C1ED4FC43483ADD263CA65E497080A10BDEE834D1AAAF6F56C56E1273DAE01C5",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T20:50:53.762787+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularSidePairingAction",
+        "SourceModularSidePairingIntegrals",
+        "SourceModularBoundarySidePairing",
+        "SourceModularGreenDomain",
+        "SourceModularGreenLines",
+        "SourceModularGreenSliceGeometry",
+        "SourceModularGreenSlicing",
+        "SourceModularGreenArc",
+        "SourceModularGreenFormula"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction.lean",
+          "sha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+          "oleanSha256": "E4E3BF4005F672222C02C3EBC23024B9C0689E617402540D7D9D8D2F73EEE30E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingAction920b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals.lean",
+          "sha256": "022E338E68E8C224A9A93086F94ED15C7BEEFEA06A63926BA507FDA402FA2679",
+          "oleanSha256": "BD23BF1454CF30C89659E941A0C00E6BF667757EDD7ECB7AE260CDD4AEDD5700",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals921a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSidePairingIntegrals921a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing.lean",
+          "sha256": "8B835042496E2F3EBAA984106780F849320E6990EF5060D5D254F8CAD504E8FE",
+          "oleanSha256": "02E13449EC67DAD02071713DDBA133A105DE413BC817A7DA634BE69EF44D1855",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing921a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularBoundarySidePairing921a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain.lean",
+          "sha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+          "oleanSha256": "72A84A0AE459A708ED4A4A6D8E155142A529BD75D0798955A54824997E69F71C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDomain922a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines.lean",
+          "sha256": "EE8DDCB42E6E7FEB3A98848D630CCD72CD0D16F30687ADFD6D79BD6AFB2D3F9B",
+          "oleanSha256": "19A03AE4597CA7D21BB371AC00C7E78B0111D132E6511B6B86CD00375F48CFD8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenLines922a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry.lean",
+          "sha256": "A83E93C85D206C58F0DD1D0D83A2D5F0E7B2575DEE03B4C084D18AC35F61A8BF",
+          "oleanSha256": "0A01AE20932CB1893117F6C3CD7CB7620F1915150D797A9757295916B344B345",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSliceGeometry922a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing.lean",
+          "sha256": "816485841AC9937CB993A34B5ECAAE492A10365D453DD5DFB63011F3929C2892",
+          "oleanSha256": "F2C48175D47172468851FC9A2337A10E82AFCB40A59B7EFE5658C03B88A58B6D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSlicing922a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc.lean",
+          "sha256": "864C4E4ACEAE495FC75CBF61BCF2596888F8B0666C9876AE0D27D0E47472A03C",
+          "oleanSha256": "4B856FA307816EEF3184A9EC90B8E040074B58C90507679E67A111EC4418E29E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenArc922a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula.lean",
+          "sha256": "C0DE070F761BA839CED27F93A1781F0207C9AA22863C2E5F3DDC6D7BB9858405",
+          "oleanSha256": "F1F7FBD0F9CF9F7886E6955861DC6605AECE04AE52ECB6BA54596D7FC5DDAAEC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula922a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenFormula922a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceModularSidePairing.pairElt_mem",
+        "Dubon2026.SourceModularSidePairing.inv_mul_eq_pairElt",
+        "Dubon2026.SourceModularSidePairing.sum_comp_smul",
+        "Dubon2026.SourceModularSidePairing.slash_tile_pair",
+        "Dubon2026.SourceModularSidePairing.slash_T_apply",
+        "Dubon2026.SourceModularSidePairing.slash_S_apply",
+        "Dubon2026.SourceModularSidePairing.T_smul_coe",
+        "Dubon2026.SourceModularSidePairing.S_smul_coe",
+        "Dubon2026.SourceModularSidePairing.T_smul_leftRay",
+        "Dubon2026.SourceModularSidePairing.tilePull_T_pt",
+        "Dubon2026.SourceModularSidePairing.exp_arc_im_pos",
+        "Dubon2026.SourceModularSidePairing.S_smul_arc",
+        "Dubon2026.SourceModularSidePairing.tilePull_S_pt",
+        "Dubon2026.SourceModularSidePairing.tilePull_eq_div",
+        "Dubon2026.SourceModularSidePairing.tilePull_add_mul",
+        "Dubon2026.SourceModularSidePairing.slash_eq_of_twist",
+        "Dubon2026.SourceModularSidePairing.sum_integral_rightRay",
+        "Dubon2026.SourceModularSidePairing.sum_integral_arc",
+        "Dubon2026.SourceModularSidePairing.boundary_side_pairing",
+        "Dubon2026.SourceModularGreen.three_quarters_le",
+        "Dubon2026.SourceModularGreen.sqrt3_sq",
+        "Dubon2026.SourceModularGreen.sqrt3_pos",
+        "Dubon2026.SourceModularGreen.sqrt3_lt_one",
+        "Dubon2026.SourceModularGreen.sqrt3_le_h",
+        "Dubon2026.SourceModularGreen.h_pos",
+        "Dubon2026.SourceModularGreen.h_le_one",
+        "Dubon2026.SourceModularGreen.mem_D_iff",
+        "Dubon2026.SourceModularGreen.mk_mem_D",
+        "Dubon2026.SourceModularGreen.preimage_D",
+        "Dubon2026.SourceModularGreen.isClosed_T",
+        "Dubon2026.SourceModularGreen.measurableSet_T",
+        "Dubon2026.SourceModularGreen.T_subset_prod",
+        "Dubon2026.SourceModularGreen.setIntegral_D",
+        "Dubon2026.SourceModularGreen.integrableOn_T_of_bound",
+        "Dubon2026.SourceModularGreen.setIntegral_T_eq_x_y",
+        "Dubon2026.SourceModularGreen.setIntegral_T_eq_y_x",
+        "Dubon2026.SourceModularGreen.mk_eq",
+        "Dubon2026.SourceModularGreen.hasDerivAt_vert",
+        "Dubon2026.SourceModularGreen.hasDerivAt_horiz",
+        "Dubon2026.SourceModularGreen.continuous_mk_left",
+        "Dubon2026.SourceModularGreen.continuous_mk_right",
+        "Dubon2026.SourceModularGreen.tendsto_const_mul_exp",
+        "Dubon2026.SourceModularGreen.integral_vert",
+        "Dubon2026.SourceModularGreen.integral_horiz",
+        "Dubon2026.SourceModularGreen.r_nonneg",
+        "Dubon2026.SourceModularGreen.r_one",
+        "Dubon2026.SourceModularGreen.r_pos",
+        "Dubon2026.SourceModularGreen.r_le_half",
+        "Dubon2026.SourceModularGreen.r_lt_half",
+        "Dubon2026.SourceModularGreen.h_half",
+        "Dubon2026.SourceModularGreen.h_neg",
+        "Dubon2026.SourceModularGreen.h_r",
+        "Dubon2026.SourceModularGreen.h_le_iff",
+        "Dubon2026.SourceModularGreen.slice_of_one_le",
+        "Dubon2026.SourceModularGreen.slice_of_lt_one",
+        "Dubon2026.SourceModularGreen.slice_of_lt",
+        "Dubon2026.SourceModularGreen.mem_D_r",
+        "Dubon2026.SourceModularGreen.mem_D_neg_r",
+        "Dubon2026.SourceModularGreen.continuous_r",
+        "Dubon2026.SourceModularGreen.continuous_mk2",
+        "Dubon2026.SourceModularGreen.continuousOn_corr",
+        "Dubon2026.SourceModularGreen.integrableOn_vert",
+        "Dubon2026.SourceModularGreen.sliceIntegral",
+        "Dubon2026.SourceModularGreen.integral_T_horiz",
+        "Dubon2026.SourceModularGreen.integrableOn_T_apply",
+        "Dubon2026.SourceModularGreen.integral_T_vert",
+        "Dubon2026.SourceModularGreen.exp_mul_I_eq",
+        "Dubon2026.SourceModularGreen.continuous_γ",
+        "Dubon2026.SourceModularGreen.cos_two_pi_div_three",
+        "Dubon2026.SourceModularGreen.sin_two_pi_div_three",
+        "Dubon2026.SourceModularGreen.pi_div_three_le",
+        "Dubon2026.SourceModularGreen.abs_cos_le",
+        "Dubon2026.SourceModularGreen.sin_nonneg_arc",
+        "Dubon2026.SourceModularGreen.h_cos",
+        "Dubon2026.SourceModularGreen.r_sin",
+        "Dubon2026.SourceModularGreen.γ_mem_D",
+        "Dubon2026.SourceModularGreen.continuousOn_Φ",
+        "Dubon2026.SourceModularGreen.continuousOn_arc",
+        "Dubon2026.SourceModularGreen.arc_sin",
+        "Dubon2026.SourceModularGreen.arc_cos",
+        "Dubon2026.SourceModularGreen.arc_integrand",
+        "Dubon2026.SourceModularGreen.arc_split",
+        "Dubon2026.SourceModularGreen.integral_eq_boundary",
+        "Dubon2026.SourceModularSidePairing.pairElt",
+        "Dubon2026.SourceModularSidePairing.tilePull",
+        "Dubon2026.SourceModularGreen.D",
+        "Dubon2026.SourceModularGreen.h",
+        "Dubon2026.SourceModularGreen.T",
+        "Dubon2026.SourceModularGreen.r",
+        "Dubon2026.SourceModularGreen.corr",
+        "Dubon2026.SourceModularGreen.γ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceModularSidePairing.pairElt_mem",
+        "Dubon2026.SourceModularSidePairing.inv_mul_eq_pairElt",
+        "Dubon2026.SourceModularSidePairing.sum_comp_smul",
+        "Dubon2026.SourceModularSidePairing.slash_tile_pair",
+        "Dubon2026.SourceModularSidePairing.slash_T_apply",
+        "Dubon2026.SourceModularSidePairing.slash_S_apply",
+        "Dubon2026.SourceModularSidePairing.T_smul_coe",
+        "Dubon2026.SourceModularSidePairing.S_smul_coe",
+        "Dubon2026.SourceModularSidePairing.T_smul_leftRay",
+        "Dubon2026.SourceModularSidePairing.tilePull_T_pt",
+        "Dubon2026.SourceModularSidePairing.exp_arc_im_pos",
+        "Dubon2026.SourceModularSidePairing.S_smul_arc",
+        "Dubon2026.SourceModularSidePairing.tilePull_S_pt",
+        "Dubon2026.SourceModularSidePairing.tilePull_eq_div",
+        "Dubon2026.SourceModularSidePairing.tilePull_add_mul",
+        "Dubon2026.SourceModularSidePairing.slash_eq_of_twist",
+        "Dubon2026.SourceModularSidePairing.sum_integral_rightRay",
+        "Dubon2026.SourceModularSidePairing.sum_integral_arc",
+        "Dubon2026.SourceModularSidePairing.boundary_side_pairing",
+        "Dubon2026.SourceModularGreen.three_quarters_le",
+        "Dubon2026.SourceModularGreen.sqrt3_sq",
+        "Dubon2026.SourceModularGreen.sqrt3_pos",
+        "Dubon2026.SourceModularGreen.sqrt3_lt_one",
+        "Dubon2026.SourceModularGreen.sqrt3_le_h",
+        "Dubon2026.SourceModularGreen.h_pos",
+        "Dubon2026.SourceModularGreen.h_le_one",
+        "Dubon2026.SourceModularGreen.mem_D_iff",
+        "Dubon2026.SourceModularGreen.mk_mem_D",
+        "Dubon2026.SourceModularGreen.preimage_D",
+        "Dubon2026.SourceModularGreen.isClosed_T",
+        "Dubon2026.SourceModularGreen.measurableSet_T",
+        "Dubon2026.SourceModularGreen.T_subset_prod",
+        "Dubon2026.SourceModularGreen.setIntegral_D",
+        "Dubon2026.SourceModularGreen.integrableOn_T_of_bound",
+        "Dubon2026.SourceModularGreen.setIntegral_T_eq_x_y",
+        "Dubon2026.SourceModularGreen.setIntegral_T_eq_y_x",
+        "Dubon2026.SourceModularGreen.mk_eq",
+        "Dubon2026.SourceModularGreen.hasDerivAt_vert",
+        "Dubon2026.SourceModularGreen.hasDerivAt_horiz",
+        "Dubon2026.SourceModularGreen.continuous_mk_left",
+        "Dubon2026.SourceModularGreen.continuous_mk_right",
+        "Dubon2026.SourceModularGreen.tendsto_const_mul_exp",
+        "Dubon2026.SourceModularGreen.integral_vert",
+        "Dubon2026.SourceModularGreen.integral_horiz",
+        "Dubon2026.SourceModularGreen.r_nonneg",
+        "Dubon2026.SourceModularGreen.r_one",
+        "Dubon2026.SourceModularGreen.r_pos",
+        "Dubon2026.SourceModularGreen.r_le_half",
+        "Dubon2026.SourceModularGreen.r_lt_half",
+        "Dubon2026.SourceModularGreen.h_half",
+        "Dubon2026.SourceModularGreen.h_neg",
+        "Dubon2026.SourceModularGreen.h_r",
+        "Dubon2026.SourceModularGreen.h_le_iff",
+        "Dubon2026.SourceModularGreen.slice_of_one_le",
+        "Dubon2026.SourceModularGreen.slice_of_lt_one",
+        "Dubon2026.SourceModularGreen.slice_of_lt",
+        "Dubon2026.SourceModularGreen.mem_D_r",
+        "Dubon2026.SourceModularGreen.mem_D_neg_r",
+        "Dubon2026.SourceModularGreen.continuous_r",
+        "Dubon2026.SourceModularGreen.continuous_mk2",
+        "Dubon2026.SourceModularGreen.continuousOn_corr",
+        "Dubon2026.SourceModularGreen.integrableOn_vert",
+        "Dubon2026.SourceModularGreen.sliceIntegral",
+        "Dubon2026.SourceModularGreen.integral_T_horiz",
+        "Dubon2026.SourceModularGreen.integrableOn_T_apply",
+        "Dubon2026.SourceModularGreen.integral_T_vert",
+        "Dubon2026.SourceModularGreen.exp_mul_I_eq",
+        "Dubon2026.SourceModularGreen.continuous_γ",
+        "Dubon2026.SourceModularGreen.cos_two_pi_div_three",
+        "Dubon2026.SourceModularGreen.sin_two_pi_div_three",
+        "Dubon2026.SourceModularGreen.pi_div_three_le",
+        "Dubon2026.SourceModularGreen.abs_cos_le",
+        "Dubon2026.SourceModularGreen.sin_nonneg_arc",
+        "Dubon2026.SourceModularGreen.h_cos",
+        "Dubon2026.SourceModularGreen.r_sin",
+        "Dubon2026.SourceModularGreen.γ_mem_D",
+        "Dubon2026.SourceModularGreen.continuousOn_Φ",
+        "Dubon2026.SourceModularGreen.continuousOn_arc",
+        "Dubon2026.SourceModularGreen.arc_sin",
+        "Dubon2026.SourceModularGreen.arc_cos",
+        "Dubon2026.SourceModularGreen.arc_integrand",
+        "Dubon2026.SourceModularGreen.arc_split",
+        "Dubon2026.SourceModularGreen.integral_eq_boundary"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceModularSidePairing.pairElt",
+        "Dubon2026.SourceModularSidePairing.tilePull",
+        "Dubon2026.SourceModularGreen.D",
+        "Dubon2026.SourceModularGreen.h",
+        "Dubon2026.SourceModularGreen.T",
+        "Dubon2026.SourceModularGreen.r",
+        "Dubon2026.SourceModularGreen.corr",
+        "Dubon2026.SourceModularGreen.γ"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryAudit1.log",
+      "logSha256": "AC68E042AE8D6EC114B48C89BF150FB3F6BA05A8FF5E364CDB778272AB014ED7",
+      "auditSha256": "192BCB3F54159DB11946729EBBCAEF2DFD9A9AA7838B92755F0DA9E3374B3815",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 119,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 93,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1.log",
+      "dependencyAuditSha256": "3486C9D1926257DB5AA33EF25F4B0AF2A46A79F93248290B9E3DA725C0EB8C0B",
+      "dependencyAuditSourceSha256": "DE8756D93B051DCE84B6966E602E223A2E06B34F3D9F3B4796242E57AEB3E7B8",
+      "consumers": [
+        "Dubon2026.SourceModularSidePairing.boundary_side_pairing",
+        "Dubon2026.SourceModularGreen.integral_eq_boundary"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> winding-period boundary identity.",
+      "discharged": "The literal modular-domain planar integral is proved equal to its vertical and circular boundary integrals. The fixed-coset boundary terms are reindexed by the exact T and S transitions, with the source orientation signs, using native slash composition. The hypotheses are explicit differentiability, exponential decay and edge integrability, not either resulting identity.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual winding-function consumer must discharge translated cusp bounds and edge integrability and unfold the actual finite coset domain. The resulting parabolic character edge sum must be identified with an original integral period. Reciprocity, principal-divisor converse, Picard/Hecke/H1, all-weight arithmetic association, and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "64B3D90F4FCBB22BF05F4262C9F820F99BF8E3E069DC14E15692F4E671DC0398",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T21:18:38.479485+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularCuspBoundaryDecay",
+        "SourceModularGreenPullback",
+        "SourceModularGreenTile",
+        "SourceModularGreenEdges",
+        "SourceModularGreenMeasure",
+        "SourceModularGreenDensity",
+        "SourceModularGreenSidePairing",
+        "SourceWindingLogCuspBounds",
+        "SourceModularSmoothedGreenLimit",
+        "SourceWindingBoundaryIntegral",
+        "SourceGammaOneDivisorWindingBoundary"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay.lean",
+          "sha256": "DFBB87E400FEBFD1EFF68AF6AF81E26FEDC0726210DB0845E88B0E38C35BD9E7",
+          "oleanSha256": "9DB42C43FEF6E9ABC26D613A909402168CCDBE35A962235D1A7E26F59FFB77A8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularCuspBoundaryDecay924b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback.lean",
+          "sha256": "6BD3AB9D9A1DC1377A3FA9AE9A006DCAE80012683186D4AE1FBFA5378F06442F",
+          "oleanSha256": "479490E3441447972EC0C1FBF2E8E1AF04A4E69D76968BAEB01A3B740C7390FA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenPullback926b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile.lean",
+          "sha256": "CA5E6679AC89EA1C1B0BB30B7C5151E4ADE7C494BE2C2D90EBB630B9A38729C1",
+          "oleanSha256": "29F480E14CAF18D6FC9E62269B2D80D43FFC3E722CCA8859D1987340ADD668F3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenTile926c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges.lean",
+          "sha256": "1EC660CACBBC8B2BE6798FF750C5BEEB267117FC8821034CBDFFF95381662A9A",
+          "oleanSha256": "AC94188DA8C69FE5F70DF5CF2CACB1A43EF4E695D7DDBCDD6C29D0414AB8B9C1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges926c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenEdges926c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure.lean",
+          "sha256": "FE1D490DA75F72B8E9942D50AD62B8B90E7F0607150032E30833577D76E27797",
+          "oleanSha256": "6304F940362EFFC29DB7336E4B673A0CCB4C50B17B25F782EB3176F10118418D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenMeasure927b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity.lean",
+          "sha256": "D30CB910A06801041F4CF5D42DEEF682BDF19A3DCF6225EFD58AE08E1A13F894",
+          "oleanSha256": "D9D53BEF38CFEB0A1269D9192C982CD4D900E3D74A101B054C148A06E6C05574",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity928a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenDensity928a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing.lean",
+          "sha256": "58970076E036D4F7B3D05ADDD430D780A2EABB5F47ED2E95E5257E0D1B5F2E0B",
+          "oleanSha256": "801BEA289B435340DC0D0A1BDA23D933269B93FD304E07124F7A5091DB473971",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing929a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenSidePairing929a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds.lean",
+          "sha256": "118833A28555B6815D950BCBC5C5A1564C7D04CA85214BF1FB4B9170D34D9434",
+          "oleanSha256": "D551AFB694F6B40F6F03657628B6E5DB062615A8D2F3C4731E53DF73F86B18CB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWindingLogCuspBounds930b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit.lean",
+          "sha256": "94767C6820A452C8A82D6571A6D5B49DE762F96159955FCE6333669144109199",
+          "oleanSha256": "110DB2DD07EBB28810EE82B89503C4A339A069AF58C20851DFD6A610E285B532",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedGreenLimit931d.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral.lean",
+          "sha256": "745974CE38B9CEA6A1E35E58B24F39AF9631899100D553736CB63B95E68469A4",
+          "oleanSha256": "BFE0D756334DCBB7F16E4BA850AFFC4FAC07F0352061B64D26406B42EAB44B75",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral932a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWindingBoundaryIntegral932a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary.lean",
+          "sha256": "38B4CD4CC29ED9890DABE609477C02BDE453B4DAA361371DBBEAFC6CBC6B7AA0",
+          "oleanSha256": "D7B5BA39D00B48D5954303DD7A211B83FBC7D5E541199563DDEA68530481DB88",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary933a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingBoundary933a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceModularGreenPairing.differentiableOn_tilePull",
+        "Dubon2026.SourceModularGreenPairing.hasDerivAt_tilePull",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_tilePull",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_deriv_tilePull",
+        "Dubon2026.SourceModularGreenPairing.translated_decay",
+        "Dubon2026.SourceModularGreenPairing.tilePull_decay",
+        "Dubon2026.SourceModularGreenPairing.decay_weaken",
+        "Dubon2026.SourceModularGreenPairing.deriv_tilePull_decay",
+        "Dubon2026.SourceModularGreenPairing.norm_dbarL_le",
+        "Dubon2026.SourceModularGreenPairing.I_smul_sub_eq",
+        "Dubon2026.SourceModularGreenPairing.hasFDerivAt_Lt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Lt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Fd",
+        "Dubon2026.SourceModularGreenPairing.dbarL_Fd",
+        "Dubon2026.SourceModularGreenPairing.isCompact_box",
+        "Dubon2026.SourceModularGreenPairing.box_subset",
+        "Dubon2026.SourceModularGreenPairing.bound_of_compact_and_cusp",
+        "Dubon2026.SourceModularGreenPairing.Lt_bound",
+        "Dubon2026.SourceModularGreenPairing.Fd_bound",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_fdC",
+        "Dubon2026.SourceModularGreenPairing.im_gt_of_mem_fdC",
+        "Dubon2026.SourceModularGreenPairing.fdC_subset_Ubox",
+        "Dubon2026.SourceModularGreenPairing.im_pos_of_mem_Ubox",
+        "Dubon2026.SourceModularGreenPairing.hasFDerivAt_Φt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Φt'",
+        "Dubon2026.SourceModularGreenPairing.norm_Gd_le",
+        "Dubon2026.SourceModularGreenPairing.I_smul_Φt'_sub",
+        "Dubon2026.SourceModularGreenPairing.Φt_bounds",
+        "Dubon2026.SourceModularGreenPairing.tile_identity",
+        "Dubon2026.SourceModularGreenPairing.sqrt3_div_two_gt",
+        "Dubon2026.SourceModularGreenPairing.ray_mem_Ubox",
+        "Dubon2026.SourceModularGreenPairing.integrableOn_ray",
+        "Dubon2026.SourceModularGreenPairing.intervalIntegrable_arc",
+        "Dubon2026.SourceModularGreenPairing.twist_law",
+        "Dubon2026.SourceModularGreenPairing.Φt_eq",
+        "Dubon2026.SourceModularGreenPairing.side_pairing",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_closedDomain",
+        "Dubon2026.SourceModularGreenPairing.volume_closedDomain_lt_top",
+        "Dubon2026.SourceModularGreenPairing.integral_closedDomain_eq_sum",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_fd",
+        "Dubon2026.SourceModularGreenPairing.preimage_fdC",
+        "Dubon2026.SourceModularGreenPairing.coe_mem_fdC_of_mem_fd",
+        "Dubon2026.SourceModularGreenPairing.fdC_subset_range",
+        "Dubon2026.SourceModularGreenPairing.setIntegral_fd_mul_im_sq",
+        "Dubon2026.SourceModularGreenPairing.dbarL_smul",
+        "Dubon2026.SourceModularGreenPairing.Pd_smul",
+        "Dubon2026.SourceModularGreenPairing.continuous_Pd",
+        "Dubon2026.SourceModularGreenPairing.sq_mul_exp_neg_le",
+        "Dubon2026.SourceModularGreenPairing.Pd_bound_tile",
+        "Dubon2026.SourceModularGreenPairing.integrableOn_Pd",
+        "Dubon2026.SourceModularGreenPairing.lhs_unfold",
+        "Dubon2026.SourceModularGreenPairing.integral_dbar_cusp_eq_side_pairing",
+        "Dubon2026.SourceModularGreenPairing.fderiv_log_comp_sm",
+        "Dubon2026.SourceModularGreenPairing.cusp_bound_of_quotient_limits",
+        "Dubon2026.SourceModularGreenPairing.density_invariant",
+        "Dubon2026.SourceModularGreenPairing.integral_plane_density_eq",
+        "Dubon2026.SourceModularGreenPairing.tendsto_smoothed_dbar_integral",
+        "Dubon2026.SourceModularGreenPairing.winding_scalar_identity",
+        "Dubon2026.SourceModularGreenPairing.winding_boundary_limit",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit",
+        "Dubon2026.SourceModularGreenPairing.Lt",
+        "Dubon2026.SourceModularGreenPairing.Fd",
+        "Dubon2026.SourceModularGreenPairing.Ubox",
+        "Dubon2026.SourceModularGreenPairing.Φt",
+        "Dubon2026.SourceModularGreenPairing.Gd",
+        "Dubon2026.SourceModularGreenPairing.Φt'",
+        "Dubon2026.SourceModularGreenPairing.Pd",
+        "Dubon2026.SourceModularGreenPairing.Hd",
+        "Dubon2026.SourceModularGreenPairing.transition"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceModularGreenPairing.differentiableOn_tilePull",
+        "Dubon2026.SourceModularGreenPairing.hasDerivAt_tilePull",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_tilePull",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_deriv_tilePull",
+        "Dubon2026.SourceModularGreenPairing.translated_decay",
+        "Dubon2026.SourceModularGreenPairing.tilePull_decay",
+        "Dubon2026.SourceModularGreenPairing.decay_weaken",
+        "Dubon2026.SourceModularGreenPairing.deriv_tilePull_decay",
+        "Dubon2026.SourceModularGreenPairing.norm_dbarL_le",
+        "Dubon2026.SourceModularGreenPairing.I_smul_sub_eq",
+        "Dubon2026.SourceModularGreenPairing.hasFDerivAt_Lt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Lt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Fd",
+        "Dubon2026.SourceModularGreenPairing.dbarL_Fd",
+        "Dubon2026.SourceModularGreenPairing.isCompact_box",
+        "Dubon2026.SourceModularGreenPairing.box_subset",
+        "Dubon2026.SourceModularGreenPairing.bound_of_compact_and_cusp",
+        "Dubon2026.SourceModularGreenPairing.Lt_bound",
+        "Dubon2026.SourceModularGreenPairing.Fd_bound",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_fdC",
+        "Dubon2026.SourceModularGreenPairing.im_gt_of_mem_fdC",
+        "Dubon2026.SourceModularGreenPairing.fdC_subset_Ubox",
+        "Dubon2026.SourceModularGreenPairing.im_pos_of_mem_Ubox",
+        "Dubon2026.SourceModularGreenPairing.hasFDerivAt_Φt",
+        "Dubon2026.SourceModularGreenPairing.continuousOn_Φt'",
+        "Dubon2026.SourceModularGreenPairing.norm_Gd_le",
+        "Dubon2026.SourceModularGreenPairing.I_smul_Φt'_sub",
+        "Dubon2026.SourceModularGreenPairing.Φt_bounds",
+        "Dubon2026.SourceModularGreenPairing.tile_identity",
+        "Dubon2026.SourceModularGreenPairing.sqrt3_div_two_gt",
+        "Dubon2026.SourceModularGreenPairing.ray_mem_Ubox",
+        "Dubon2026.SourceModularGreenPairing.integrableOn_ray",
+        "Dubon2026.SourceModularGreenPairing.intervalIntegrable_arc",
+        "Dubon2026.SourceModularGreenPairing.twist_law",
+        "Dubon2026.SourceModularGreenPairing.Φt_eq",
+        "Dubon2026.SourceModularGreenPairing.side_pairing",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_closedDomain",
+        "Dubon2026.SourceModularGreenPairing.volume_closedDomain_lt_top",
+        "Dubon2026.SourceModularGreenPairing.integral_closedDomain_eq_sum",
+        "Dubon2026.SourceModularGreenPairing.measurableSet_fd",
+        "Dubon2026.SourceModularGreenPairing.preimage_fdC",
+        "Dubon2026.SourceModularGreenPairing.coe_mem_fdC_of_mem_fd",
+        "Dubon2026.SourceModularGreenPairing.fdC_subset_range",
+        "Dubon2026.SourceModularGreenPairing.setIntegral_fd_mul_im_sq",
+        "Dubon2026.SourceModularGreenPairing.dbarL_smul",
+        "Dubon2026.SourceModularGreenPairing.Pd_smul",
+        "Dubon2026.SourceModularGreenPairing.continuous_Pd",
+        "Dubon2026.SourceModularGreenPairing.sq_mul_exp_neg_le",
+        "Dubon2026.SourceModularGreenPairing.Pd_bound_tile",
+        "Dubon2026.SourceModularGreenPairing.integrableOn_Pd",
+        "Dubon2026.SourceModularGreenPairing.lhs_unfold",
+        "Dubon2026.SourceModularGreenPairing.integral_dbar_cusp_eq_side_pairing",
+        "Dubon2026.SourceModularGreenPairing.fderiv_log_comp_sm",
+        "Dubon2026.SourceModularGreenPairing.cusp_bound_of_quotient_limits",
+        "Dubon2026.SourceModularGreenPairing.density_invariant",
+        "Dubon2026.SourceModularGreenPairing.integral_plane_density_eq",
+        "Dubon2026.SourceModularGreenPairing.tendsto_smoothed_dbar_integral",
+        "Dubon2026.SourceModularGreenPairing.winding_scalar_identity",
+        "Dubon2026.SourceModularGreenPairing.winding_boundary_limit",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceModularGreenPairing.Lt",
+        "Dubon2026.SourceModularGreenPairing.Fd",
+        "Dubon2026.SourceModularGreenPairing.Ubox",
+        "Dubon2026.SourceModularGreenPairing.Φt",
+        "Dubon2026.SourceModularGreenPairing.Gd",
+        "Dubon2026.SourceModularGreenPairing.Φt'",
+        "Dubon2026.SourceModularGreenPairing.Pd",
+        "Dubon2026.SourceModularGreenPairing.Hd",
+        "Dubon2026.SourceModularGreenPairing.transition"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryAudit1.log",
+      "logSha256": "5042F341726D232435EF0614D3044C8069FB67F07477A14A8C01B38328B47403",
+      "auditSha256": "9CC4228EDEC5E611159F4AA3DD69E81BC6B3B857CDC494DB5BF978CF6DF03F57",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 141,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 83,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1.log",
+      "dependencyAuditSha256": "FCBAB9CC3A1B0BF8CE7A87BC5B2BD097FD06ADE852E7B5B39992D9817BEA24D7",
+      "dependencyAuditSourceSha256": "2223B9FF3DD679449CA20B076F59D9F40354D05D559A13E9C0ECDED988EA405B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+      "discharged": "The original-divisor comparison supplies the actual quotient, logarithm, integral character, local models and cusp limits. Native limit inversion derives logarithmic derivative decay and translated bounds. Cusp exponential bounds, curved Green formula, literal coset boundary pairing and existing finite domain prove integrability and the exact normalized smooth integral limit for every original Gamma1 weight-two cusp form.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The parabolic character edge sum must be shown to be an original integral period. The wedge/filled-quotient a.e. identity, reciprocity and principal-divisor converse remain. The original meromorphic function with exact divisor orders and unitary multiplier remains an upstream input. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "CC0383A6B963AAA92E78FBAB198B31ABE0A2F344E1936C3D4E6C8387C90521DA",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T21:53:08.278422+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceFinitePermutationCoboundary",
+        "SourceParabolicCosetPotentials",
+        "SourceWeightTwoPrimitiveEdges",
+        "SourceModularPeriodCorners",
+        "SourceWeightTwoCosetPeriods",
+        "SourceParabolicWindingIntegralPeriods",
+        "SourceGammaOneDivisorWindingIntegralPeriod"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary.lean",
+          "sha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+          "oleanSha256": "8C7AB37A1651A6C7B537E327FECBDE6C7C61B2138E7A7766D3E680E6AF5C96A0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary937a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFinitePermutationCoboundary937a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials.lean",
+          "sha256": "3732C64725DEC3B12E2CA0A6F539129A25A510C747ACCBCDBE23AED22849D710",
+          "oleanSha256": "4EB875EA44A3DA40BB2DE4483896D47A11EB2B0655BA39578C2BE73F0CF88F1F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCosetPotentials937c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges.lean",
+          "sha256": "513BB6C73766B3A53D7F1842724C6102C51E145F88E3077C16AAA70FD16BD119",
+          "oleanSha256": "0634F8A2671B8AAEC34B627DE938C2C307A5511891A49AE3C0191C5381E1BE2B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPrimitiveEdges938c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners.lean",
+          "sha256": "843FA7AB3CCB0E5AF0998296E6D804E09DA4DA078285E5B75808E0B15C78D039",
+          "oleanSha256": "32322601CF4F11F0289BBA1EB1472A8DA724F3A0E4A0C42366787EFEA49C658F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938e.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularPeriodCorners938e.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods.lean",
+          "sha256": "01E926C0F2C12D7AC2C07687813564964F0B3317ABE22FF6AD2DCF43F0434D2E",
+          "oleanSha256": "C83FC698AEFF6DC14EA3DB7FB444E4982B33E7FE6775B7323ACAA46FD2F62615",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoCosetPeriods939c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods.lean",
+          "sha256": "709D97386612CDFAE9859419DD6C5DD84BDE58EA9727EDFB4EF6B0FFFDDEC6E4",
+          "oleanSha256": "8E4E88ECFD7147E98B1316C27DD6C8BF3D7D3714E80731D30630D910A95AE679",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWindingIntegralPeriods940b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod.lean",
+          "sha256": "04D8DEFE1BFEDF677A6C91A72541B318AE709C937D120DF8AE379A5D28AED036",
+          "oleanSha256": "61AB08F304201669FA809D87EBF2902D2B74136EDF96A669594C85ACF1EBA347",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingIntegralPeriod941c.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceParabolicEdgePeriod.exists_eq_coboundary",
+        "Dubon2026.SourceParabolicEdgePeriod.sum_coboundary_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_transition",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_one",
+        "Dubon2026.SourceParabolicEdgePeriod.sum_range_phi_gam",
+        "Dubon2026.SourceParabolicEdgePeriod.toPerm_pow_apply",
+        "Dubon2026.SourceParabolicEdgePeriod.exists_phi_transition_eq_coboundary",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_eq_zero_of_pow_eq_one",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_pow_of_smul_eq",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_pow_eq_zero_of_torsion",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_T_pow_eq_zero",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_W",
+        "Dubon2026.SourceParabolicEdgePeriod.W_pow_three",
+        "Dubon2026.SourceParabolicEdgePeriod.S_pow_two",
+        "Dubon2026.SourceParabolicEdgePeriod.S_pow_four",
+        "Dubon2026.SourceParabolicEdgePeriod.neg_one_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_S_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.trace_neg_one_sq",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_transition_S_S_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_S",
+        "Dubon2026.SourceParabolicEdgePeriod.hasDerivAt_Ep",
+        "Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray",
+        "Dubon2026.SourceParabolicEdgePeriod.integral_arc",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_T_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.exp_two_pi_div_three",
+        "Dubon2026.SourceParabolicEdgePeriod.exp_pi_div_three",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_T_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.W_smul_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.im_T_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.tendsto_T_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.out_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_eq",
+        "Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray_corner",
+        "Dubon2026.SourceParabolicEdgePeriod.integral_arc_corner",
+        "Dubon2026.SourceParabolicEdgePeriod.period_neg_one",
+        "Dubon2026.SourceParabolicEdgePeriod.period_transition_S_S",
+        "Dubon2026.SourceParabolicEdgePeriod.Ek_out_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.lim_T_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.exists_integral_period_eq_winding_edges",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period",
+        "Dubon2026.SourceParabolicEdgePeriod.W",
+        "Dubon2026.SourceParabolicEdgePeriod.Ep"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceParabolicEdgePeriod.exists_eq_coboundary",
+        "Dubon2026.SourceParabolicEdgePeriod.sum_coboundary_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_transition",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_one",
+        "Dubon2026.SourceParabolicEdgePeriod.sum_range_phi_gam",
+        "Dubon2026.SourceParabolicEdgePeriod.toPerm_pow_apply",
+        "Dubon2026.SourceParabolicEdgePeriod.exists_phi_transition_eq_coboundary",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_eq_zero_of_pow_eq_one",
+        "Dubon2026.SourceParabolicEdgePeriod.transition_pow_of_smul_eq",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_pow_eq_zero_of_torsion",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_T_pow_eq_zero",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_W",
+        "Dubon2026.SourceParabolicEdgePeriod.W_pow_three",
+        "Dubon2026.SourceParabolicEdgePeriod.S_pow_two",
+        "Dubon2026.SourceParabolicEdgePeriod.S_pow_four",
+        "Dubon2026.SourceParabolicEdgePeriod.neg_one_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_S_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.trace_neg_one_sq",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_transition_S_S_mul",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_S",
+        "Dubon2026.SourceParabolicEdgePeriod.hasDerivAt_Ep",
+        "Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray",
+        "Dubon2026.SourceParabolicEdgePeriod.integral_arc",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.coe_T_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.exp_two_pi_div_three",
+        "Dubon2026.SourceParabolicEdgePeriod.exp_pi_div_three",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.S_smul_T_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.W_smul_rho",
+        "Dubon2026.SourceParabolicEdgePeriod.im_T_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.tendsto_T_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.out_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_eq",
+        "Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray_corner",
+        "Dubon2026.SourceParabolicEdgePeriod.integral_arc_corner",
+        "Dubon2026.SourceParabolicEdgePeriod.period_neg_one",
+        "Dubon2026.SourceParabolicEdgePeriod.period_transition_S_S",
+        "Dubon2026.SourceParabolicEdgePeriod.Ek_out_inv_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.lim_T_smul",
+        "Dubon2026.SourceParabolicEdgePeriod.exists_integral_period_eq_winding_edges",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceParabolicEdgePeriod.W",
+        "Dubon2026.SourceParabolicEdgePeriod.Ep"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodAudit1b.log",
+      "logSha256": "BB001FC05E20FFF2D580D8C9B7161FF80EF749969CEAB8DACED45B56E07ED451",
+      "auditSha256": "2C3CFC9EFB41FC5C603B67EA6504FEBDF45CF1256552841520763D7101905ABD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 69,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 59,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1b.log",
+      "dependencyAuditSha256": "D3C96955C4AC217BA2869FECD3A963BA3DFC86403D7CE021622CB69923447233",
+      "dependencyAuditSourceSha256": "E3D3FCB3FF243B1DC51C676F0523598D7DDB222E671A980F61696CBA6375255C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+      "discharged": "The actual original-divisor winding character has vanishing parabolic cycles. Finite-permutation potentials and native generator torsion turn the literal boundary sum into an explicit integer combination of actual modular periods simultaneously for every cusp form. Existing normalized primitives, cusp limits, slash action, integrability and native rho replace duplicated analytic foundations. The actual original Gamma1 consumer restricts signed periods to the original integral lattice, without assuming a winding-period certificate.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The filled-quotient a.e. dbar identity and limiting reciprocity assembly remain. The original meromorphic function with its exact orders and unitary multiplier remains an upstream input; the principal-divisor converse is not claimed. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "2D4D40E9391ECB9D5501BDD8936033FAA15EC5702772EA0AB32304739833488A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T22:02:27.811773+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceSmoothComparisonDbar",
+        "SourceSmoothedWindingIntegralSplit",
+        "SourceGammaOneSmoothedReciprocity",
+        "SourceUntwistPeterssonLimit",
+        "SourceGammaOnePeterssonReciprocity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar.lean",
+          "sha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0",
+          "oleanSha256": "09F640CA365BCB7EA880FE3EE35E29BCEF65B6A893933A3F05C43E3ABF4CD767",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothComparisonDbar944b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit.lean",
+          "sha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A",
+          "oleanSha256": "E8C84B30BD1C03813B6C4639E09175544897845E632C814C4C229FC5204D7EC6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothedWindingIntegralSplit945c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity.lean",
+          "sha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5",
+          "oleanSha256": "52AA8E5CEF7DA7A86C5D946D4F837DEB1E9E6DDBB4A9FE5409C6AD7AFE06BEAE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothedReciprocity946a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit.lean",
+          "sha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126",
+          "oleanSha256": "2F4E6B5D0C6AC4817BC25587A13757C0BDAD247C525F88565E028828611DA061",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceUntwistPeterssonLimit947b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity.lean",
+          "sha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5",
+          "oleanSha256": "AE7E44A011F02C2C37FCE43BB7E07CD35820C6972FB9BFC17531DAF367AD6D94",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonReciprocity948a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothComparison.order_eq_zero_of_ne_zero",
+        "Dubon2026.SourceSmoothComparison.differentiableAt_of_zero_order",
+        "Dubon2026.SourceSmoothComparison.dbar_quotient_split",
+        "Dubon2026.SourceSmoothComparison.weighted_dbar_quotient_split_ae",
+        "Dubon2026.SourceSmoothComparison.integrable_smoothed_dbar",
+        "Dubon2026.SourceSmoothComparison.smoothed_integral_quotient_split",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smoothed_reciprocity",
+        "Dubon2026.SourcePeriodUntwist.Φ_dbar_ae",
+        "Dubon2026.SourcePeriodUntwist.petersson_plane_density",
+        "Dubon2026.SourcePeriodUntwist.tendsto_Φ_smoothed_petersson",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothComparison.order_eq_zero_of_ne_zero",
+        "Dubon2026.SourceSmoothComparison.differentiableAt_of_zero_order",
+        "Dubon2026.SourceSmoothComparison.dbar_quotient_split",
+        "Dubon2026.SourceSmoothComparison.weighted_dbar_quotient_split_ae",
+        "Dubon2026.SourceSmoothComparison.integrable_smoothed_dbar",
+        "Dubon2026.SourceSmoothComparison.smoothed_integral_quotient_split",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smoothed_reciprocity",
+        "Dubon2026.SourcePeriodUntwist.Φ_dbar_ae",
+        "Dubon2026.SourcePeriodUntwist.petersson_plane_density",
+        "Dubon2026.SourcePeriodUntwist.tendsto_Φ_smoothed_petersson",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityAudit1.log",
+      "logSha256": "8FDF2E153DE94000A37DC603C65EFD21EEE83625933FE0B2A15927FEEDABAEF1",
+      "auditSha256": "CA64D589B8014FF49D0C70F22E82A2E169DB0D7F7BA060215F81DFBC2A402AF5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1.log",
+      "dependencyAuditSha256": "85DF9B4CD0576BFCA7736E2621C42E771F6936811A19EA76BB55D214DBA48128",
+      "dependencyAuditSourceSha256": "37F8815AE31D29769F8B91AF08922832EC3DA10DBE3E4A0F8CE30946607128F7",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+      "discharged": "The exact original-divisor/Petersson/integer-period reciprocity identity follows from two proved limits of the same normalized untwist integral. Equal local orders give the filled-quotient dbar split, existing almost-everywhere untwist nonvanishing supplies the null-set input, and compact support supplies integrability. The existing actual winding integral period and smooth-divisor period limit give one limit. The already proved untwist derivative and original normalized Petersson limit give the other, including conjugation, sign and central one-half factor. No limit or period certificate remains as a parameter.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain upstream inputs. Reconciliation of the representative divisor functional with the original finite divisor class, integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-petersson-reciprocity-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "39CFDB8C3A9C2B6C3E41F454C738E8D357A80DA555EDCEA1110872A7DC7C52B2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-smooth-divisor-1b-reuse-review-20261027.json",
+    "Tools/source-gamma-one-smooth-divisor-period-1b-reuse-review-20261027.json",
+    "Tools/source-gamma-one-divisor-winding-1-reuse-review-20261027.json",
+    "Tools/source-modular-green-boundary-1-reuse-review-20261027.json",
+    "Tools/source-original-divisor-winding-boundary-1-reuse-review-20261027.json",
+    "Tools/source-original-winding-integral-period-1b-reuse-review-20261027.json",
+    "Tools/source-original-petersson-reciprocity-1-reuse-review-20261027.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-divisor-reciprocity-promotion-route-951.json",
+    "sha256": "EE12E29829026A7C625FF08CF902EC717B12F0E08F72E33522F845889FD6B345"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-divisor-reciprocity-20261027-951/archive-manifest.json",
+    "sha256": "D0C60AC85DD832DF01FECD3502065B8A7D3F68836AB73CAF7AD4BE90DEEB53ED",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8776": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.log",
+        "sha256": "F6635FFCD714D8BA1F5E60D8FCF5018C6043437A0A103757D8726BEDFD3CCF5F",
+        "requiredProofValueEdges": 102,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_comparison"
+        ],
+        "sourceSha256": "8D5C9B67F3217E37A2C48CCAAEC7BE969F35F5030749B23C9C2E5D769E518BFA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.log",
+        "sha256": "94638AA53BFEAE9DD1348B346349CB55BDEE93C117BBB754C12C7C38C19DB6F3",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_smooth_period_limit"
+        ],
+        "sourceSha256": "013A7AB6F81889194BE3FEDF32035C0DC48AE43B87146DC22ED94BC25DE458B6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1Production8776.log",
+        "sha256": "321D96A02AAC7441548114BA6493C8E6DD7D6ACB2CD70C7E65C5B06E7429AE54",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_comparison"
+        ],
+        "sourceSha256": "3F210A70FC3179064FC5CC1D2D011EA4962E5FE9734458904699EDB81B158E15"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1Production8776.log",
+        "sha256": "3486C9D1926257DB5AA33EF25F4B0AF2A46A79F93248290B9E3DA725C0EB8C0B",
+        "requiredProofValueEdges": 93,
+        "consumers": [
+          "Dubon2026.SourceModularSidePairing.boundary_side_pairing",
+          "Dubon2026.SourceModularGreen.integral_eq_boundary"
+        ],
+        "sourceSha256": "8F9DC4CAB7E3B2F062AA7637F6EAB2588632D467D91DB10D1FC0623E7DDD111E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.log",
+        "sha256": "FCBAB9CC3A1B0BF8CE7A87BC5B2BD097FD06ADE852E7B5B39992D9817BEA24D7",
+        "requiredProofValueEdges": 83,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_boundary_limit"
+        ],
+        "sourceSha256": "F99B2B1944A34E4CC7C06F47339573014DE952519615D6BB590D2FD12D9B4796"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.log",
+        "sha256": "D3C96955C4AC217BA2869FECD3A963BA3DFC86403D7CE021622CB69923447233",
+        "requiredProofValueEdges": 59,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period"
+        ],
+        "sourceSha256": "8819546EFF84D309B08744136FC63BBCCB55269463FA247BBA164ADA7D14A329"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.log",
+        "sha256": "85DF9B4CD0576BFCA7736E2621C42E771F6936811A19EA76BB55D214DBA48128",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_petersson_reciprocity"
+        ],
+        "sourceSha256": "48B169E01BE1FAE4AC1CDF60656131E715FEE2BE03B446E3FD22D25081F1ED65"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityProductionAudit8776.log",
+    "sha256": "1820C0D3C257CBD4237EB70E86E100DF5FB42FF6AB4CDFD96DBB481380411C0D",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-production-build-8776.log",
+    "aggregateSha256": "A62EA12EA2E1B7EBA5BDC8009E2754F05DE915F054BBA973793ACC6187F0CA8F",
+    "productionModules": 8776,
+    "incrementModules": 55,
+    "axiomChecks": 341,
+    "exhaustiveIncrementTheorems": 531,
+    "linterScopes": 55,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 533,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 533,
+      "scratchDistinct": 533,
+      "generatedNameRenamings": {},
+      "productionFocused": 531,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "UpperHalfPlane.im.eq_1": [
+          {
+            "scope": "SourceGammaOneDivisorWindingScratchOwnership919",
+            "module": "Dubon2026.SourceSmoothComparisonCusps"
+          }
+        ],
+        "CuspForm.translate.congr_simp": [
+          {
+            "scope": "SourceOriginalDivisorWindingBoundaryScratchOwnership935",
+            "module": "Dubon2026.SourceModularCuspBoundaryDecay"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "CuspForm.translate.congr_simp",
+        "UpperHalfPlane.im.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceSmoothLocalModelRegularization",
+            "SourceSmoothLocalModelProducts",
+            "SourceModularSmoothProjectiveRepresentatives",
+            "SourceSmoothModularGeometry",
+            "SourceSmoothProjectiveOrbitSum",
+            "SourceSmoothDivisorOrbitData",
+            "SourceSmoothModularLogDerivative",
+            "SourceSmoothDivisorProduct",
+            "SourceSmoothDivisorLocalProduct",
+            "SourceSmoothDivisorLocalOrders",
+            "SourceSmoothDivisorInvarianceCusps",
+            "SourceSmoothDivisorLogDerivative",
+            "SourceSmoothInvariantComparison",
+            "SourceGammaOneSmoothDivisorComparison"
+          ],
+          "count": 121,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.log",
+            "sha256": "FB6FE91095BA44C44721643B2334B8BB88A3225977CFD693451C0EE9E6FC09A3",
+            "sourceSha256": "B382BFB047ED37F54181C6E396DC8A6B4FD29047DC3B3343BEDA30C2E679E86A"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothOrbitIntegralGeometry",
+            "SourceSmoothOrbitIntegralChangeVariables",
+            "SourceSmoothCompactTranslateIntegral",
+            "SourceSmoothDivisorPeriodIntegral",
+            "SourceGammaOneSmoothDivisorPeriodIntegral"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.log",
+            "sha256": "6957F1BB2A0105E54446879B2754B997DCEA37CCDF5F7716A50E09B33385D8D6",
+            "sourceSha256": "7E4BAB4636C380B1DEB012B6899F298D6E0E7B733C32A4BB666FE056835496A1"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonQuotient",
+            "SourceSmoothComparisonCusps",
+            "SourceSmoothComparisonWindingLog",
+            "SourceGammaOneDivisorWindingComparison"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.log",
+            "sha256": "0097075A0E95D722B2622C1DD6B632E90AF00D514F3C3FA4E91C52C6E8118A5B",
+            "sourceSha256": "885482663271373423DE7901F96995F599FDCA9BEA878FBBB7532AD1D793EFA4"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularSidePairingAction",
+            "SourceModularSidePairingIntegrals",
+            "SourceModularBoundarySidePairing",
+            "SourceModularGreenDomain",
+            "SourceModularGreenLines",
+            "SourceModularGreenSliceGeometry",
+            "SourceModularGreenSlicing",
+            "SourceModularGreenArc",
+            "SourceModularGreenFormula"
+          ],
+          "count": 119,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.log",
+            "sha256": "656CCF3EA7176B8B26541CCB19141837F7DC9997E60C18D53D9BDEC33DFDBE1C",
+            "sourceSha256": "71406308BA3F4DC2B18C6BE6B2B6F3D4AD3FDD8A2CB441C2D98B611ABA5C564E"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCuspBoundaryDecay",
+            "SourceModularGreenPullback",
+            "SourceModularGreenTile",
+            "SourceModularGreenEdges",
+            "SourceModularGreenMeasure",
+            "SourceModularGreenDensity",
+            "SourceModularGreenSidePairing",
+            "SourceWindingLogCuspBounds",
+            "SourceModularSmoothedGreenLimit",
+            "SourceWindingBoundaryIntegral",
+            "SourceGammaOneDivisorWindingBoundary"
+          ],
+          "count": 141,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.log",
+            "sha256": "65D347F5A19E4EC706A1794BDCE3716B85EC59DBA43EB511ED05BFB4DAE9E004",
+            "sourceSha256": "8582A9B40096E75C16C18FCF540409F76AD115E18A274FEB22F007FDCDD88CAB"
+          }
+        },
+        {
+          "modules": [
+            "SourceFinitePermutationCoboundary",
+            "SourceParabolicCosetPotentials",
+            "SourceWeightTwoPrimitiveEdges",
+            "SourceModularPeriodCorners",
+            "SourceWeightTwoCosetPeriods",
+            "SourceParabolicWindingIntegralPeriods",
+            "SourceGammaOneDivisorWindingIntegralPeriod"
+          ],
+          "count": 69,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.log",
+            "sha256": "2604D3D70BCC21771588DD2C42405F2FAAC1F4E1F632167F7FB57D94849D77A4",
+            "sourceSha256": "CE2F80A991556C66B2BAF25235FC09D04EAA3EFF0276C0ED21A7B9C26DAAD09C"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonDbar",
+            "SourceSmoothedWindingIntegralSplit",
+            "SourceGammaOneSmoothedReciprocity",
+            "SourceUntwistPeterssonLimit",
+            "SourceGammaOnePeterssonReciprocity"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.log",
+            "sha256": "069B9C647D71076193A255F5319C6F0BD6F2EC72B71DDB1BAE8C7F07AAE60465",
+            "sourceSha256": "750FB693279C1918E47FA660104A9C5FFA95CAD6461AB4E84488B1FE436BCBAF"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+        "sha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9",
+        "sourceSha256": "9A5C08271E84637425FA1662F44CC16A30E617E23CE269E9CE31A070E596E255"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-131505-228.log",
+        "sha256": "F6F99E6CE65C6555F211707953E88EB897DF850197F0DEA5CF2670B7CDCA1ED1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 55 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceSmoothLocalModelRegularization",
+            "scratchSha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC",
+            "productionSha256": "EEB3B9FAA10261C85C96BA213B3F32F5DF7854617AF8EE523FCC117BA91C4198",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothLocalModelProducts",
+            "scratchSha256": "F29AEF46E8457F756FAA69AE9E0C119EDC050D08108EA482C78789136A6D8FE1",
+            "productionSha256": "14C917B963CF9F2F7F2FFB26B39DFD3BAB837B65AA3CF25A712C1D8CCFEFF50A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothProjectiveRepresentatives",
+            "scratchSha256": "D9C29B42204AC2E02862BEC197796A610655C53B897857ABAF7A4757D4B16AEA",
+            "productionSha256": "DC160820D4DAC46D92AEF7B6AEDE799D5746392F4A6DEE291A4D0DF6BC02AEA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularGeometry",
+            "scratchSha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38",
+            "productionSha256": "DDB9187F22A1E48032C344131EB9EC9B03EE9D3173B45FAB35606A0F72F9CB36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothProjectiveOrbitSum",
+            "scratchSha256": "2074FC79B094DF75D1589CAF2B314C3D640A76A354DCB1601CBF0BC6E0BD60B8",
+            "productionSha256": "E425A5ACCAD8A4E9143A79B91CEA7D283C070E8B183FAF065BD1C41049063B8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorOrbitData",
+            "scratchSha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B",
+            "productionSha256": "F3CC30E83998BF3EB3DAA4857E767650A1B06F2FC1FAA968EC6DC787D5E5F082",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularLogDerivative",
+            "scratchSha256": "B35D4A4D6550A925D28A36714D3EFD733FEBE3DFA08D9187797593FBE9100EF5",
+            "productionSha256": "C11703985FDC36DAB55FAD5151BD0437446447D2DBED9426D8ECC99ED379D50C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorProduct",
+            "scratchSha256": "8D14534E567D760934BC1F979CECBDB9BB205F9F930660E7AA6A715D1504CFD0",
+            "productionSha256": "CBC0048371E1D44EFF76558B09BFF6A6DB110234CD20774B3E927B54C2DD25D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalProduct",
+            "scratchSha256": "52F17B6EB3A8CC06730A567FB213AE8907E44D274AA3FCD313CA8AA2BFF4C613",
+            "productionSha256": "9F8DF163AE2E01DE6D4F83C1E12D53489512E1CB3574AD754278A75D0FDA1D16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalOrders",
+            "scratchSha256": "6023900FD05AF6274D16E4C1DC3564C2C66D91A3ED237CE61850430F90D3BED9",
+            "productionSha256": "C0A7A5BAF893ACDE23FAEC1EABCA232FB4D6F9548E910AB2BC0B3E37DEC9F493",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorInvarianceCusps",
+            "scratchSha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E",
+            "productionSha256": "9F8170E24A0D623A9034965D1F5501B3383D5D196D66A41FB99F83883F15D9BA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLogDerivative",
+            "scratchSha256": "E1EA0BE4134C0E239E5F2F793EC3A95E77BB3AA693517DCAFE0BDEA13A2039D5",
+            "productionSha256": "EA8C7B32489F84B685C4AB4D458C300D220024224BBCD3B16C2AF08C63ECA2C1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothInvariantComparison",
+            "scratchSha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6",
+            "productionSha256": "E96153DC65111A112A0F7B9D934054442E8320D4E28E9457FA7B4548548D485D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorComparison",
+            "scratchSha256": "6F27F57E2EA46C11E609A0A531BA4C54A154112823D74E718F48DBFFACAC6A11",
+            "productionSha256": "1FAAD75B835C0D1B575BF1498AA5297B7D9B53E65D9E70E8BAD2442CA158DC75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralGeometry",
+            "scratchSha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9",
+            "productionSha256": "8E049AE5D7323D01362CAEB250861F11E140BD2263AF527B90DA76221C41A91F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralChangeVariables",
+            "scratchSha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC",
+            "productionSha256": "F29A3D0EE47BF7268269D45CE0C79946C92582111C040287EF81B73C1E08EF40",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothCompactTranslateIntegral",
+            "scratchSha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385",
+            "productionSha256": "458C0C7E30C79318290C923962401ADC6171A047EADB850B6870C391B0BCA637",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorPeriodIntegral",
+            "scratchSha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B",
+            "productionSha256": "0A0D761153CC6337F6EE3E120A1830C2290C415A52738FF078C56484AA5884E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorPeriodIntegral",
+            "scratchSha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0",
+            "productionSha256": "E4587819E7F40FC225CD6A5845155A282D673C5D998119912E67BCC49ADD16E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonQuotient",
+            "scratchSha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056",
+            "productionSha256": "BDC396A375B49DB4304368E8D7EDE4B93C6740E6E0774FACC38EFCAEB8B7289D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonCusps",
+            "scratchSha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0",
+            "productionSha256": "3CF0715A3B3AEE23F9F4771E01AB107FBA766188E31BAB682F15472A37209708",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonWindingLog",
+            "scratchSha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13",
+            "productionSha256": "C35C21AA17E6E70D5572A42810F01D62562F7E6D625FADD3EC9EEB4A5643F2A2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingComparison",
+            "scratchSha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1",
+            "productionSha256": "114DB6D9AD28B1B2C60FFD12BD8FA02CEE8FAF7D60E5942F843776EC391118CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingAction",
+            "scratchSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "productionSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingIntegrals",
+            "scratchSha256": "022E338E68E8C224A9A93086F94ED15C7BEEFEA06A63926BA507FDA402FA2679",
+            "productionSha256": "EFFC9A708208C0810A7758ED8C5180E9028A56722E0B05159D5FADE8B5D25938",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularBoundarySidePairing",
+            "scratchSha256": "8B835042496E2F3EBAA984106780F849320E6990EF5060D5D254F8CAD504E8FE",
+            "productionSha256": "B989111B9F1894219512F70F4CDDFA59ECFFCE8A3C4914359D6B92FE26BB6F2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDomain",
+            "scratchSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "productionSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenLines",
+            "scratchSha256": "EE8DDCB42E6E7FEB3A98848D630CCD72CD0D16F30687ADFD6D79BD6AFB2D3F9B",
+            "productionSha256": "61955AAEEC64C3302A8477CF2922465FE8BEB739FDD2A36E7822BFFCA7BC3066",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSliceGeometry",
+            "scratchSha256": "A83E93C85D206C58F0DD1D0D83A2D5F0E7B2575DEE03B4C084D18AC35F61A8BF",
+            "productionSha256": "CF0C61BCDC9F7753A4A7A9BD99E7AD3B971ED745B98C1A003D4EE4231F2C10EB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSlicing",
+            "scratchSha256": "816485841AC9937CB993A34B5ECAAE492A10365D453DD5DFB63011F3929C2892",
+            "productionSha256": "AACE99B9CC1B8FA9E85F46468626B0B4D83664E96147AC266E7F454B7520B9CF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenArc",
+            "scratchSha256": "864C4E4ACEAE495FC75CBF61BCF2596888F8B0666C9876AE0D27D0E47472A03C",
+            "productionSha256": "E107E22014786EA60C286169FB958EF8EA5FF8B266442EC7A530E1CB15D288C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenFormula",
+            "scratchSha256": "C0DE070F761BA839CED27F93A1781F0207C9AA22863C2E5F3DDC6D7BB9858405",
+            "productionSha256": "8A4EE55E492A0FDFE8CE8EBD907947DC74ACF6715D3B1E41356A51228823B444",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularCuspBoundaryDecay",
+            "scratchSha256": "DFBB87E400FEBFD1EFF68AF6AF81E26FEDC0726210DB0845E88B0E38C35BD9E7",
+            "productionSha256": "1713655EAA64D3B014E9F90A95FD8B3E428BBE94DF4D327984FB14AA40F9D17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenPullback",
+            "scratchSha256": "6BD3AB9D9A1DC1377A3FA9AE9A006DCAE80012683186D4AE1FBFA5378F06442F",
+            "productionSha256": "FC29EE287F3A2E86C3AE4AEB447EFCF8943BEEC35FEBFD1149483F8B14CF5412",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenTile",
+            "scratchSha256": "CA5E6679AC89EA1C1B0BB30B7C5151E4ADE7C494BE2C2D90EBB630B9A38729C1",
+            "productionSha256": "28E8FB33AD6A7580AAE96E909F428B0DF31248B76A1B4BC4FAE3B6CB52AE1C14",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenEdges",
+            "scratchSha256": "1EC660CACBBC8B2BE6798FF750C5BEEB267117FC8821034CBDFFF95381662A9A",
+            "productionSha256": "B69DEC9FBA5FCEE1A3C5F3819B30358A3A337EC88748C7EC4A1E0A7F0B840004",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenMeasure",
+            "scratchSha256": "FE1D490DA75F72B8E9942D50AD62B8B90E7F0607150032E30833577D76E27797",
+            "productionSha256": "6658E1E40A119C00224A444BD0D6ABE8AFE91226B38D73DF07A43B99AA986D53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDensity",
+            "scratchSha256": "D30CB910A06801041F4CF5D42DEEF682BDF19A3DCF6225EFD58AE08E1A13F894",
+            "productionSha256": "B1D22CDD2EA43BF71E074869479F13C93C4B18397E9C6848EEBA03D5BBC3C2BD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSidePairing",
+            "scratchSha256": "58970076E036D4F7B3D05ADDD430D780A2EABB5F47ED2E95E5257E0D1B5F2E0B",
+            "productionSha256": "00D6F84B2A8FF19CBFB8F8A5DB66262159E1D102944FDB6F2DE15FAB24A3DC27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingLogCuspBounds",
+            "scratchSha256": "118833A28555B6815D950BCBC5C5A1564C7D04CA85214BF1FB4B9170D34D9434",
+            "productionSha256": "F5EB4FFE5F633D7279AA9E555020CA6D926C55F23854090D4C17ACD1AE08EF6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedGreenLimit",
+            "scratchSha256": "94767C6820A452C8A82D6571A6D5B49DE762F96159955FCE6333669144109199",
+            "productionSha256": "71D0AEBA554203F002CC8C2010BD87785DD8A934AE475FC84E6573F1758040DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingBoundaryIntegral",
+            "scratchSha256": "745974CE38B9CEA6A1E35E58B24F39AF9631899100D553736CB63B95E68469A4",
+            "productionSha256": "87110B48BC221D2426157AF1CAEE3A101BA1DFF736F6F61E6584EC8311A8CF8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingBoundary",
+            "scratchSha256": "38B4CD4CC29ED9890DABE609477C02BDE453B4DAA361371DBBEAFC6CBC6B7AA0",
+            "productionSha256": "C7E3EC33AB986681C05ED82924A59EE8F6E4BEAA348D8F307399832A80AFA4F2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFinitePermutationCoboundary",
+            "scratchSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "productionSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCosetPotentials",
+            "scratchSha256": "3732C64725DEC3B12E2CA0A6F539129A25A510C747ACCBCDBE23AED22849D710",
+            "productionSha256": "59B819DB0387CEA88C7E06FDED1209AC80E5DA3CD61254AB0F62CED23CD30FB3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoPrimitiveEdges",
+            "scratchSha256": "513BB6C73766B3A53D7F1842724C6102C51E145F88E3077C16AAA70FD16BD119",
+            "productionSha256": "6A4DCA6EFCD88A0B9F1F4F50CBAE98C103A18B53A7D2E29CB74BC54FD3ACCFB7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularPeriodCorners",
+            "scratchSha256": "843FA7AB3CCB0E5AF0998296E6D804E09DA4DA078285E5B75808E0B15C78D039",
+            "productionSha256": "60C2903FC75E893A17B1C15526366070083330F6DE0FDC85866F2F4C781A1A31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoCosetPeriods",
+            "scratchSha256": "01E926C0F2C12D7AC2C07687813564964F0B3317ABE22FF6AD2DCF43F0434D2E",
+            "productionSha256": "E9F895DC16367E07878CF588FC25386418D575952A7C1E28B4A1CC62B0784D5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicWindingIntegralPeriods",
+            "scratchSha256": "709D97386612CDFAE9859419DD6C5DD84BDE58EA9727EDFB4EF6B0FFFDDEC6E4",
+            "productionSha256": "60ACC4A7B7B77BD8827BD1820DF23CEE2E00BD6CC443C1CB549B99479E231D29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingIntegralPeriod",
+            "scratchSha256": "04D8DEFE1BFEDF677A6C91A72541B318AE709C937D120DF8AE379A5D28AED036",
+            "productionSha256": "8104BB4F327C7F4C48A543451C98AE067C3C7E152291CC943D39F044C7EE01DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonDbar",
+            "scratchSha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0",
+            "productionSha256": "73B5F2A2FF6127BFEC7B9EDDFA3F4577F9EA8841CAB529F8A0DCDFAE063BB28B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothedWindingIntegralSplit",
+            "scratchSha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A",
+            "productionSha256": "8035072D9C3E14F3670C2C4FFF2EBC49615D74D92354A5104DB75BA497420A67",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothedReciprocity",
+            "scratchSha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5",
+            "productionSha256": "F36958706D388E311CF704C58297422927B206481A66A90EE8E2F1913FC89413",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUntwistPeterssonLimit",
+            "scratchSha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126",
+            "productionSha256": "492366186CC548DFB7DACADD096FB64C82FC3233E5BD4BE9EFBEB5297034A17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeterssonReciprocity",
+            "scratchSha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5",
+            "productionSha256": "0BCE0AC639CB1DAED9F918F6AB255C761F3E495771122405D24332C7ACFE2381",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 533 distinct names from 533 exhaustive scratch checks are retained: 531 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain explicit upstream inputs. The representative divisor functional must be related to the original finite divisor class. Integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Global Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "receipt8776": {
+    "recordedUTC": "2026-10-28T00:04:57.136283+00:00",
+    "log": "logs/dubon-build-20261027-153011-740.log",
+    "sha256": "9615FE422F92D78F5942BF661353EAA40E4C88AB2E9AA8B62FDCA62B0D21078C",
+    "bytes": 14373574,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8776,
+    "projectTheorems": 55749,
+    "registeredConsumers": 25785,
+    "registeredConstructions": 2647,
+    "declarations": 34411,
+    "generated": 34813,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_152128.log",
+    "foundationSha256": "41B7DF0EE6A218E387A5B7CCBA4CC5EBBEF982342ACF613A2B9F51FE12229F2B",
+    "countReconciliation": {
+      "previousTheorems": 55220,
+      "focusedTheorems": 531,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourcePeriodUntwist.Φ.congr_simp",
+        "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+      ],
+      "addedTheorems": 529,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityGlobalOwnership8776.log",
+      "globalOwnershipSha256": "3CD36E36B65C82247B2B7B185C9EC5D2EF578F259A0CF8A4F39A40E6B909E20C",
+      "globalOwnershipSourceSha256": "35B016D429198317E4D02482DE80CDC7D465951C0F8A28FC60ED7BC5C587DBC8",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+      "ownershipSha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 533,
+      "scratchDistinct": 533,
+      "generatedNameRenamings": {},
+      "productionFocused": 531,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "UpperHalfPlane.im.eq_1": [
+          {
+            "scope": "SourceGammaOneDivisorWindingScratchOwnership919",
+            "module": "Dubon2026.SourceSmoothComparisonCusps"
+          }
+        ],
+        "CuspForm.translate.congr_simp": [
+          {
+            "scope": "SourceOriginalDivisorWindingBoundaryScratchOwnership935",
+            "module": "Dubon2026.SourceModularCuspBoundaryDecay"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "CuspForm.translate.congr_simp",
+        "UpperHalfPlane.im.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceSmoothLocalModelRegularization",
+            "SourceSmoothLocalModelProducts",
+            "SourceModularSmoothProjectiveRepresentatives",
+            "SourceSmoothModularGeometry",
+            "SourceSmoothProjectiveOrbitSum",
+            "SourceSmoothDivisorOrbitData",
+            "SourceSmoothModularLogDerivative",
+            "SourceSmoothDivisorProduct",
+            "SourceSmoothDivisorLocalProduct",
+            "SourceSmoothDivisorLocalOrders",
+            "SourceSmoothDivisorInvarianceCusps",
+            "SourceSmoothDivisorLogDerivative",
+            "SourceSmoothInvariantComparison",
+            "SourceGammaOneSmoothDivisorComparison"
+          ],
+          "count": 121,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.log",
+            "sha256": "FB6FE91095BA44C44721643B2334B8BB88A3225977CFD693451C0EE9E6FC09A3",
+            "sourceSha256": "B382BFB047ED37F54181C6E396DC8A6B4FD29047DC3B3343BEDA30C2E679E86A"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothOrbitIntegralGeometry",
+            "SourceSmoothOrbitIntegralChangeVariables",
+            "SourceSmoothCompactTranslateIntegral",
+            "SourceSmoothDivisorPeriodIntegral",
+            "SourceGammaOneSmoothDivisorPeriodIntegral"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.log",
+            "sha256": "6957F1BB2A0105E54446879B2754B997DCEA37CCDF5F7716A50E09B33385D8D6",
+            "sourceSha256": "7E4BAB4636C380B1DEB012B6899F298D6E0E7B733C32A4BB666FE056835496A1"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonQuotient",
+            "SourceSmoothComparisonCusps",
+            "SourceSmoothComparisonWindingLog",
+            "SourceGammaOneDivisorWindingComparison"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.log",
+            "sha256": "0097075A0E95D722B2622C1DD6B632E90AF00D514F3C3FA4E91C52C6E8118A5B",
+            "sourceSha256": "885482663271373423DE7901F96995F599FDCA9BEA878FBBB7532AD1D793EFA4"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularSidePairingAction",
+            "SourceModularSidePairingIntegrals",
+            "SourceModularBoundarySidePairing",
+            "SourceModularGreenDomain",
+            "SourceModularGreenLines",
+            "SourceModularGreenSliceGeometry",
+            "SourceModularGreenSlicing",
+            "SourceModularGreenArc",
+            "SourceModularGreenFormula"
+          ],
+          "count": 119,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.log",
+            "sha256": "656CCF3EA7176B8B26541CCB19141837F7DC9997E60C18D53D9BDEC33DFDBE1C",
+            "sourceSha256": "71406308BA3F4DC2B18C6BE6B2B6F3D4AD3FDD8A2CB441C2D98B611ABA5C564E"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCuspBoundaryDecay",
+            "SourceModularGreenPullback",
+            "SourceModularGreenTile",
+            "SourceModularGreenEdges",
+            "SourceModularGreenMeasure",
+            "SourceModularGreenDensity",
+            "SourceModularGreenSidePairing",
+            "SourceWindingLogCuspBounds",
+            "SourceModularSmoothedGreenLimit",
+            "SourceWindingBoundaryIntegral",
+            "SourceGammaOneDivisorWindingBoundary"
+          ],
+          "count": 141,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.log",
+            "sha256": "65D347F5A19E4EC706A1794BDCE3716B85EC59DBA43EB511ED05BFB4DAE9E004",
+            "sourceSha256": "8582A9B40096E75C16C18FCF540409F76AD115E18A274FEB22F007FDCDD88CAB"
+          }
+        },
+        {
+          "modules": [
+            "SourceFinitePermutationCoboundary",
+            "SourceParabolicCosetPotentials",
+            "SourceWeightTwoPrimitiveEdges",
+            "SourceModularPeriodCorners",
+            "SourceWeightTwoCosetPeriods",
+            "SourceParabolicWindingIntegralPeriods",
+            "SourceGammaOneDivisorWindingIntegralPeriod"
+          ],
+          "count": 69,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.log",
+            "sha256": "2604D3D70BCC21771588DD2C42405F2FAAC1F4E1F632167F7FB57D94849D77A4",
+            "sourceSha256": "CE2F80A991556C66B2BAF25235FC09D04EAA3EFF0276C0ED21A7B9C26DAAD09C"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonDbar",
+            "SourceSmoothedWindingIntegralSplit",
+            "SourceGammaOneSmoothedReciprocity",
+            "SourceUntwistPeterssonLimit",
+            "SourceGammaOnePeterssonReciprocity"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.log",
+            "sha256": "069B9C647D71076193A255F5319C6F0BD6F2EC72B71DDB1BAE8C7F07AAE60465",
+            "sourceSha256": "750FB693279C1918E47FA660104A9C5FFA95CAD6461AB4E84488B1FE436BCBAF"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+        "sha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9",
+        "sourceSha256": "9A5C08271E84637425FA1662F44CC16A30E617E23CE269E9CE31A070E596E255"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-131505-228.log",
+        "sha256": "F6F99E6CE65C6555F211707953E88EB897DF850197F0DEA5CF2670B7CDCA1ED1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 55 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceSmoothLocalModelRegularization",
+            "scratchSha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC",
+            "productionSha256": "EEB3B9FAA10261C85C96BA213B3F32F5DF7854617AF8EE523FCC117BA91C4198",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothLocalModelProducts",
+            "scratchSha256": "F29AEF46E8457F756FAA69AE9E0C119EDC050D08108EA482C78789136A6D8FE1",
+            "productionSha256": "14C917B963CF9F2F7F2FFB26B39DFD3BAB837B65AA3CF25A712C1D8CCFEFF50A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothProjectiveRepresentatives",
+            "scratchSha256": "D9C29B42204AC2E02862BEC197796A610655C53B897857ABAF7A4757D4B16AEA",
+            "productionSha256": "DC160820D4DAC46D92AEF7B6AEDE799D5746392F4A6DEE291A4D0DF6BC02AEA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularGeometry",
+            "scratchSha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38",
+            "productionSha256": "DDB9187F22A1E48032C344131EB9EC9B03EE9D3173B45FAB35606A0F72F9CB36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothProjectiveOrbitSum",
+            "scratchSha256": "2074FC79B094DF75D1589CAF2B314C3D640A76A354DCB1601CBF0BC6E0BD60B8",
+            "productionSha256": "E425A5ACCAD8A4E9143A79B91CEA7D283C070E8B183FAF065BD1C41049063B8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorOrbitData",
+            "scratchSha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B",
+            "productionSha256": "F3CC30E83998BF3EB3DAA4857E767650A1B06F2FC1FAA968EC6DC787D5E5F082",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularLogDerivative",
+            "scratchSha256": "B35D4A4D6550A925D28A36714D3EFD733FEBE3DFA08D9187797593FBE9100EF5",
+            "productionSha256": "C11703985FDC36DAB55FAD5151BD0437446447D2DBED9426D8ECC99ED379D50C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorProduct",
+            "scratchSha256": "8D14534E567D760934BC1F979CECBDB9BB205F9F930660E7AA6A715D1504CFD0",
+            "productionSha256": "CBC0048371E1D44EFF76558B09BFF6A6DB110234CD20774B3E927B54C2DD25D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalProduct",
+            "scratchSha256": "52F17B6EB3A8CC06730A567FB213AE8907E44D274AA3FCD313CA8AA2BFF4C613",
+            "productionSha256": "9F8DF163AE2E01DE6D4F83C1E12D53489512E1CB3574AD754278A75D0FDA1D16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalOrders",
+            "scratchSha256": "6023900FD05AF6274D16E4C1DC3564C2C66D91A3ED237CE61850430F90D3BED9",
+            "productionSha256": "C0A7A5BAF893ACDE23FAEC1EABCA232FB4D6F9548E910AB2BC0B3E37DEC9F493",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorInvarianceCusps",
+            "scratchSha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E",
+            "productionSha256": "9F8170E24A0D623A9034965D1F5501B3383D5D196D66A41FB99F83883F15D9BA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLogDerivative",
+            "scratchSha256": "E1EA0BE4134C0E239E5F2F793EC3A95E77BB3AA693517DCAFE0BDEA13A2039D5",
+            "productionSha256": "EA8C7B32489F84B685C4AB4D458C300D220024224BBCD3B16C2AF08C63ECA2C1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothInvariantComparison",
+            "scratchSha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6",
+            "productionSha256": "E96153DC65111A112A0F7B9D934054442E8320D4E28E9457FA7B4548548D485D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorComparison",
+            "scratchSha256": "6F27F57E2EA46C11E609A0A531BA4C54A154112823D74E718F48DBFFACAC6A11",
+            "productionSha256": "1FAAD75B835C0D1B575BF1498AA5297B7D9B53E65D9E70E8BAD2442CA158DC75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralGeometry",
+            "scratchSha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9",
+            "productionSha256": "8E049AE5D7323D01362CAEB250861F11E140BD2263AF527B90DA76221C41A91F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralChangeVariables",
+            "scratchSha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC",
+            "productionSha256": "F29A3D0EE47BF7268269D45CE0C79946C92582111C040287EF81B73C1E08EF40",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothCompactTranslateIntegral",
+            "scratchSha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385",
+            "productionSha256": "458C0C7E30C79318290C923962401ADC6171A047EADB850B6870C391B0BCA637",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorPeriodIntegral",
+            "scratchSha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B",
+            "productionSha256": "0A0D761153CC6337F6EE3E120A1830C2290C415A52738FF078C56484AA5884E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorPeriodIntegral",
+            "scratchSha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0",
+            "productionSha256": "E4587819E7F40FC225CD6A5845155A282D673C5D998119912E67BCC49ADD16E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonQuotient",
+            "scratchSha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056",
+            "productionSha256": "BDC396A375B49DB4304368E8D7EDE4B93C6740E6E0774FACC38EFCAEB8B7289D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonCusps",
+            "scratchSha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0",
+            "productionSha256": "3CF0715A3B3AEE23F9F4771E01AB107FBA766188E31BAB682F15472A37209708",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonWindingLog",
+            "scratchSha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13",
+            "productionSha256": "C35C21AA17E6E70D5572A42810F01D62562F7E6D625FADD3EC9EEB4A5643F2A2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingComparison",
+            "scratchSha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1",
+            "productionSha256": "114DB6D9AD28B1B2C60FFD12BD8FA02CEE8FAF7D60E5942F843776EC391118CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingAction",
+            "scratchSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "productionSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingIntegrals",
+            "scratchSha256": "022E338E68E8C224A9A93086F94ED15C7BEEFEA06A63926BA507FDA402FA2679",
+            "productionSha256": "EFFC9A708208C0810A7758ED8C5180E9028A56722E0B05159D5FADE8B5D25938",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularBoundarySidePairing",
+            "scratchSha256": "8B835042496E2F3EBAA984106780F849320E6990EF5060D5D254F8CAD504E8FE",
+            "productionSha256": "B989111B9F1894219512F70F4CDDFA59ECFFCE8A3C4914359D6B92FE26BB6F2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDomain",
+            "scratchSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "productionSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenLines",
+            "scratchSha256": "EE8DDCB42E6E7FEB3A98848D630CCD72CD0D16F30687ADFD6D79BD6AFB2D3F9B",
+            "productionSha256": "61955AAEEC64C3302A8477CF2922465FE8BEB739FDD2A36E7822BFFCA7BC3066",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSliceGeometry",
+            "scratchSha256": "A83E93C85D206C58F0DD1D0D83A2D5F0E7B2575DEE03B4C084D18AC35F61A8BF",
+            "productionSha256": "CF0C61BCDC9F7753A4A7A9BD99E7AD3B971ED745B98C1A003D4EE4231F2C10EB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSlicing",
+            "scratchSha256": "816485841AC9937CB993A34B5ECAAE492A10365D453DD5DFB63011F3929C2892",
+            "productionSha256": "AACE99B9CC1B8FA9E85F46468626B0B4D83664E96147AC266E7F454B7520B9CF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenArc",
+            "scratchSha256": "864C4E4ACEAE495FC75CBF61BCF2596888F8B0666C9876AE0D27D0E47472A03C",
+            "productionSha256": "E107E22014786EA60C286169FB958EF8EA5FF8B266442EC7A530E1CB15D288C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenFormula",
+            "scratchSha256": "C0DE070F761BA839CED27F93A1781F0207C9AA22863C2E5F3DDC6D7BB9858405",
+            "productionSha256": "8A4EE55E492A0FDFE8CE8EBD907947DC74ACF6715D3B1E41356A51228823B444",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularCuspBoundaryDecay",
+            "scratchSha256": "DFBB87E400FEBFD1EFF68AF6AF81E26FEDC0726210DB0845E88B0E38C35BD9E7",
+            "productionSha256": "1713655EAA64D3B014E9F90A95FD8B3E428BBE94DF4D327984FB14AA40F9D17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenPullback",
+            "scratchSha256": "6BD3AB9D9A1DC1377A3FA9AE9A006DCAE80012683186D4AE1FBFA5378F06442F",
+            "productionSha256": "FC29EE287F3A2E86C3AE4AEB447EFCF8943BEEC35FEBFD1149483F8B14CF5412",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenTile",
+            "scratchSha256": "CA5E6679AC89EA1C1B0BB30B7C5151E4ADE7C494BE2C2D90EBB630B9A38729C1",
+            "productionSha256": "28E8FB33AD6A7580AAE96E909F428B0DF31248B76A1B4BC4FAE3B6CB52AE1C14",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenEdges",
+            "scratchSha256": "1EC660CACBBC8B2BE6798FF750C5BEEB267117FC8821034CBDFFF95381662A9A",
+            "productionSha256": "B69DEC9FBA5FCEE1A3C5F3819B30358A3A337EC88748C7EC4A1E0A7F0B840004",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenMeasure",
+            "scratchSha256": "FE1D490DA75F72B8E9942D50AD62B8B90E7F0607150032E30833577D76E27797",
+            "productionSha256": "6658E1E40A119C00224A444BD0D6ABE8AFE91226B38D73DF07A43B99AA986D53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDensity",
+            "scratchSha256": "D30CB910A06801041F4CF5D42DEEF682BDF19A3DCF6225EFD58AE08E1A13F894",
+            "productionSha256": "B1D22CDD2EA43BF71E074869479F13C93C4B18397E9C6848EEBA03D5BBC3C2BD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSidePairing",
+            "scratchSha256": "58970076E036D4F7B3D05ADDD430D780A2EABB5F47ED2E95E5257E0D1B5F2E0B",
+            "productionSha256": "00D6F84B2A8FF19CBFB8F8A5DB66262159E1D102944FDB6F2DE15FAB24A3DC27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingLogCuspBounds",
+            "scratchSha256": "118833A28555B6815D950BCBC5C5A1564C7D04CA85214BF1FB4B9170D34D9434",
+            "productionSha256": "F5EB4FFE5F633D7279AA9E555020CA6D926C55F23854090D4C17ACD1AE08EF6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedGreenLimit",
+            "scratchSha256": "94767C6820A452C8A82D6571A6D5B49DE762F96159955FCE6333669144109199",
+            "productionSha256": "71D0AEBA554203F002CC8C2010BD87785DD8A934AE475FC84E6573F1758040DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingBoundaryIntegral",
+            "scratchSha256": "745974CE38B9CEA6A1E35E58B24F39AF9631899100D553736CB63B95E68469A4",
+            "productionSha256": "87110B48BC221D2426157AF1CAEE3A101BA1DFF736F6F61E6584EC8311A8CF8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingBoundary",
+            "scratchSha256": "38B4CD4CC29ED9890DABE609477C02BDE453B4DAA361371DBBEAFC6CBC6B7AA0",
+            "productionSha256": "C7E3EC33AB986681C05ED82924A59EE8F6E4BEAA348D8F307399832A80AFA4F2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFinitePermutationCoboundary",
+            "scratchSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "productionSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCosetPotentials",
+            "scratchSha256": "3732C64725DEC3B12E2CA0A6F539129A25A510C747ACCBCDBE23AED22849D710",
+            "productionSha256": "59B819DB0387CEA88C7E06FDED1209AC80E5DA3CD61254AB0F62CED23CD30FB3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoPrimitiveEdges",
+            "scratchSha256": "513BB6C73766B3A53D7F1842724C6102C51E145F88E3077C16AAA70FD16BD119",
+            "productionSha256": "6A4DCA6EFCD88A0B9F1F4F50CBAE98C103A18B53A7D2E29CB74BC54FD3ACCFB7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularPeriodCorners",
+            "scratchSha256": "843FA7AB3CCB0E5AF0998296E6D804E09DA4DA078285E5B75808E0B15C78D039",
+            "productionSha256": "60C2903FC75E893A17B1C15526366070083330F6DE0FDC85866F2F4C781A1A31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoCosetPeriods",
+            "scratchSha256": "01E926C0F2C12D7AC2C07687813564964F0B3317ABE22FF6AD2DCF43F0434D2E",
+            "productionSha256": "E9F895DC16367E07878CF588FC25386418D575952A7C1E28B4A1CC62B0784D5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicWindingIntegralPeriods",
+            "scratchSha256": "709D97386612CDFAE9859419DD6C5DD84BDE58EA9727EDFB4EF6B0FFFDDEC6E4",
+            "productionSha256": "60ACC4A7B7B77BD8827BD1820DF23CEE2E00BD6CC443C1CB549B99479E231D29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingIntegralPeriod",
+            "scratchSha256": "04D8DEFE1BFEDF677A6C91A72541B318AE709C937D120DF8AE379A5D28AED036",
+            "productionSha256": "8104BB4F327C7F4C48A543451C98AE067C3C7E152291CC943D39F044C7EE01DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonDbar",
+            "scratchSha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0",
+            "productionSha256": "73B5F2A2FF6127BFEC7B9EDDFA3F4577F9EA8841CAB529F8A0DCDFAE063BB28B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothedWindingIntegralSplit",
+            "scratchSha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A",
+            "productionSha256": "8035072D9C3E14F3670C2C4FFF2EBC49615D74D92354A5104DB75BA497420A67",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothedReciprocity",
+            "scratchSha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5",
+            "productionSha256": "F36958706D388E311CF704C58297422927B206481A66A90EE8E2F1913FC89413",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUntwistPeterssonLimit",
+            "scratchSha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126",
+            "productionSha256": "492366186CC548DFB7DACADD096FB64C82FC3233E5BD4BE9EFBEB5297034A17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeterssonReciprocity",
+            "scratchSha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5",
+            "productionSha256": "0BCE0AC639CB1DAED9F918F6AB255C761F3E495771122405D24332C7ACFE2381",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 533 distinct names from 533 exhaustive scratch checks are retained: 531 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain explicit upstream inputs. The representative divisor functional must be related to the original finite divisor class. Integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Global Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  }
+}

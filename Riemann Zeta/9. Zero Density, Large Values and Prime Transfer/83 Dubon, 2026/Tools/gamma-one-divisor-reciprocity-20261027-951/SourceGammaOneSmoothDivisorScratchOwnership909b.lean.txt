@@ -1,0 +1,28 @@
+import SourceSmoothLocalModelRegularization
+import SourceSmoothLocalModelProducts
+import SourceModularSmoothProjectiveRepresentatives
+import SourceSmoothModularGeometry
+import SourceSmoothProjectiveOrbitSum
+import SourceSmoothDivisorOrbitData
+import SourceSmoothModularLogDerivative
+import SourceSmoothDivisorProduct
+import SourceSmoothDivisorLocalProduct
+import SourceSmoothDivisorLocalOrders
+import SourceSmoothDivisorInvarianceCusps
+import SourceSmoothDivisorLogDerivative
+import SourceSmoothInvariantComparison
+import SourceGammaOneSmoothDivisorComparison
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceSmoothLocalModelRegularization, `SourceSmoothLocalModelProducts, `SourceModularSmoothProjectiveRepresentatives, `SourceSmoothModularGeometry, `SourceSmoothProjectiveOrbitSum, `SourceSmoothDivisorOrbitData, `SourceSmoothModularLogDerivative, `SourceSmoothDivisorProduct, `SourceSmoothDivisorLocalProduct, `SourceSmoothDivisorLocalOrders, `SourceSmoothDivisorInvarianceCusps, `SourceSmoothDivisorLogDerivative, `SourceSmoothInvariantComparison, `SourceGammaOneSmoothDivisorComparison]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

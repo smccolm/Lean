@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_FLT_Gamma0FundamentalSet_tendsto_integral_mul_smoothedFundamental.lean.txt",
+    "sha256": "EDAAF0683A704431541CDD00F660D31F1F0692F1045EBBA50081303D674F2EE4",
+    "read": "Definitions, all initial cutoff/mass/measure-conversion/dominated-convergence proofs, declaration inventory and final theorem read. The unused bespoke finite-tiling proof was not fully read or copied."
+  },
+  "shorterRoute": "Native measurable tsum replaces the ENNReal measurability construction; existing CongruenceTraceDomain supplies the projective fundamental domain; native linear/nonlinear unfolding plus exact two-element projection fibers replaces bespoke finite-tile enumeration. Existing fd_ae_eq_fdo proves the literal closed-domain transfer.",
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding/Petersson comparison",
+    "source-normalized smoothed invariant integral limit"
+  ],
+  "remaining": "Winding-period limit and actual smooth comparison local model, analytic reciprocity, original principal-divisor converse and full all-weight arithmetic chain. 16/20; DUB-17--20 OPEN."
+}

@@ -1,0 +1,45 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient Hecke characters -> original Picard/H1/Hecke/diamond/full-parabolic/transpose comparison -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual finite orbit representatives and weighted degree-zero order sum.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticDivisorMoving.lean",
+      "sha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticPlaceOrbits.lean",
+      "sha256": "335DD0E645DD7D107555DA0DA010E7D7A9DFF744F0B77B2BE5AB976E3818F263"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDivisorDegree.lean",
+      "sha256": "3A0BBD2A36FA22D1BA0F62D1E860DB609D89BBC1A8CA29FEC6C4105EC0CDBC09"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_sum_meromorphicOrderAt_div_card_stabilizer_eq_zero_of_multiplier_eq_exp_periodOf.lean.txt",
+      "sha256": "D8B47B849B61CB9E717BD82ED7DAEF4138517FB51AA367FF7D86AC2DA4C57E2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCentralSignCharacters.lean",
+      "sha256": "910ED77681D6747D2CB679118F4FC291EF2D8F99BE24B5FBC89BE839C63708DD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoEndpointPeriods.lean",
+      "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveCusps.lean",
+      "sha256": "2C8AE73A6B8419A38F761566F5175C3B41F96AE236FFCBD43331B39522C73A56"
+    }
+  ],
+  "shorterRoute": "Use existing plusMinus membership and central-sign representatives, native arithmetic cusp equivalence and the existing primitive uniqueness theorem. The same function defines the signed weight-two form; uniqueness identifies every endpoint period despite possibly different chosen cusp widths. This is the required original-to-signed comparison, not a replacement of Gamma1 by Gamma0.",
+  "assumptionsToDischarge": "Construct the actual signed cusp-form extension and prove exact function, endpoint-period and group-period equalities. Subsequent lattice transport and original reciprocity must use these equalities.",
+  "remaining": "Analytic reciprocity and construction of the actual meromorphic function from the Abel-Jacobi period condition remain. The central-sign form/period transport must be proved before applying a source theorem to plusMinus Gamma1. Full arithmetic association and DUB17--20 remain OPEN; 16/20.",
+  "externalClosureBuilt": false
+}

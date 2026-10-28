@@ -1,0 +1,39 @@
+import SourceIntegralCosetCocycle
+import SourceIntegralCosetParabolic
+import SourceIntegralCosetWord
+import SourceIntegralPeriodCuspLimits
+import SourceIntegralPeriodGeneratorDual
+import SourceRealPrimitiveGreenData
+import SourceIntegralPeriodLatticeDual
+import SourceRealPeriodPeterssonPairing
+import SourceClosedPeterssonNondegenerate
+import SourceSignedPeriodLatticeLift
+import SourceGammaOneSignedRealPeriods
+import SourceGammaOnePeterssonIntegralRealPeriods
+import SourceGammaOneUnitaryDivisorPrincipal
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function]
+  let localModules : Array Name := #[`SourceIntegralCosetCocycle, `SourceIntegralCosetParabolic, `SourceIntegralCosetWord, `SourceIntegralPeriodCuspLimits, `SourceIntegralPeriodGeneratorDual, `SourceRealPrimitiveGreenData, `SourceIntegralPeriodLatticeDual, `SourceRealPeriodPeterssonPairing, `SourceClosedPeterssonNondegenerate, `SourceSignedPeriodLatticeLift, `SourceGammaOneSignedRealPeriods, `SourceGammaOnePeterssonIntegralRealPeriods, `SourceGammaOneUnitaryDivisorPrincipal, `SourceGammaOneRepresentativePeriods, `SourceGammaOneRepresentativePeriodCorrection, `SourceGammaOneFiniteDivisorReciprocityAssembled]
+  let required : Array Name := #[`Dubon2026.SourceIntegralPeriodDual.smul_identity_coset, `Dubon2026.SourceIntegralPeriodDual.smul_identity_coset_of_mem, `Dubon2026.SourceIntegralPeriodDual.out_smul_identity_coset, `Dubon2026.SourceIntegralPeriodDual.smul_eq_of_conj_mem, `Dubon2026.SourceIntegralPeriodDual.S_inv_smul, `Dubon2026.SourceIntegralPeriodDual.ST_inv_smul_three, `Dubon2026.SourceIntegralPeriodDual.coind_apply, `Dubon2026.SourceIntegralPeriodDual.exists_adapted_cocycle, `Dubon2026.SourceIntegralPeriodDual.cocycle_mul_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_one_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_inv_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_neg_one_apply, `Dubon2026.SourceIntegralPeriodDual.hom_apply, `Dubon2026.SourceIntegralPeriodDual.hom_transition, `Dubon2026.SourceIntegralPeriodDual.hom_conj, `Dubon2026.SourceIntegralPeriodDual.cocycle_eps_mul_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_apply, `Dubon2026.SourceIntegralPeriodDual.hom_transition_S, `Dubon2026.SourceIntegralPeriodDual.hom_transition_T, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_inv_pow_apply, `Dubon2026.SourceIntegralPeriodDual.cocycle_T_zpow_eq_zero, `Dubon2026.SourceIntegralPeriodDual.hom_parabolic, `Dubon2026.SourceIntegralPeriodDual.sum_ind_mul, `Dubon2026.SourceIntegralPeriodDual.ind_smul, `Dubon2026.SourceIntegralPeriodDual.ell_out, `Dubon2026.SourceIntegralPeriodDual.wordProp_one, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_T_inv, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S, `Dubon2026.SourceIntegralPeriodDual.wordProp_mul_S_inv, `Dubon2026.SourceIntegralPeriodDual.wordProp, `Dubon2026.SourceIntegralPeriodDual.lim_mul_T, `Dubon2026.SourceIntegralPeriodDual.lim_neg, `Dubon2026.SourceIntegralPeriodDual.lim_coe_mul, `Dubon2026.SourceIntegralPeriodDual.lim_out_smul, `Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_period, `Dubon2026.SourceRealPrimitive.realMul_apply, `Dubon2026.SourceRealPrimitive.norm_realMul_le, `Dubon2026.SourceRealPrimitive.dbar_realMul, `Dubon2026.SourceRealPrimitive.hasFDerivAt_realEk, `Dubon2026.SourceRealPrimitive.continuousOn_realEk_derivative, `Dubon2026.SourceRealPrimitive.realEk_smul, `Dubon2026.SourceRealPrimitive.hasFDerivAt_realEp, `Dubon2026.SourceRealPrimitive.realEk_cusp_bound, `Dubon2026.SourceIntegralPeriodDual.pairing_add, `Dubon2026.SourceIntegralPeriodDual.pairing_zero, `Dubon2026.SourceIntegralPeriodDual.pairing_neg, `Dubon2026.SourceIntegralPeriodDual.exists_parabolic_character_eq_lattice, `Dubon2026.SourceRealPrimitive.petersson_eq_real_period_pairing, `Dubon2026.SourcePeterssonClosed.self_re, `Dubon2026.SourcePeterssonClosed.eq_zero_of_self_integral_eq_zero, `Dubon2026.SourcePeterssonClosed.eq_zero_of_signed_self_integral_eq_zero, `Dubon2026.SourcePeterssonClosed.eq_of_signed_petersson_eq, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_member, `Dubon2026.SourceFunctionField.GammaOne.SignedForms.exists_signed_integral_lattice_lift, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal_representative, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.exists_original_cuspForm_of_signed_real_character, `Dubon2026.SourceFunctionField.GammaOne.real_periods_integral_of_petersson_mem_lattice, `Dubon2026.SourceFunctionField.GammaOne.multiplier_eq_one_of_original_period_mem, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_unitary_meromorphic_function, `Dubon2026.SourceIntegralPeriodDual.coind, `Dubon2026.SourceIntegralPeriodDual.hom, `Dubon2026.SourceIntegralPeriodDual.em, `Dubon2026.SourceIntegralPeriodDual.ind, `Dubon2026.SourceIntegralPeriodDual.WordProp, `Dubon2026.SourceRealPrimitive.realMul, `Dubon2026.SourceRealPrimitive.realEk, `Dubon2026.SourceIntegralPeriodDual.pairing, `Dubon2026.SourceFunctionField.GammaOne.SignedPeriods.restrictReal, `Dubon2026.sourceSL2Cocycle_exists, `Dubon2026.SourceParabolic.classification, `Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray_corner, `Dubon2026.SourceParabolicEdgePeriod.integral_arc_corner, `Dubon2026.SourceModularGreenPairing.integral_dbar_cusp_eq_side_pairing, `Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character, `Dubon2026.sourceCusp_petersson_integrable_closedDomain, `Dubon2026.SourceFunctionField.GammaOne.exists_original_finite_divisor_reciprocity, `Dubon2026.SourceFunctionField.GammaOne.representative_period_difference_mem, `Dubon2026.SourceFunctionField.GammaOne.period_difference_mem_of_mapDomain_eq, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  logInfo m!"VALUE-CLOSURE PROBE: {required.size} candidates; outside closure: {missing}"
+
+#eval runPlanarPairingDependencyAudit

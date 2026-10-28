@@ -1,0 +1,19 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "invariant smooth comparison V",
+    "regularized locally finite dipole product"
+  ],
+  "primary": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-model-construction-reuse-889\\S_ModularCurve_exists_invariant_localModel_dbarLogDeriv_eq_sum_finsum_translate_of_finiteIndex.lean.txt",
+    "sha256": "3054604234786BD1ABF47DB52F65DE408EE5C44B8F5A243A300002C6241246F8",
+    "read": "Entire construction source read: geometry, signed representatives, regularization, local product, multiplicities, invariance, cusp and derivative formula, main."
+  },
+  "reuse": "Existing SourceFunctionField.CellGeometry.analyticAt_dslope replaces bespoke analytic divided-difference proof. Native zpow pole asymptotics and finite product calculus prove smooth local models. Existing meromorphic normal forms require analyticity, which the required smooth dipoles do not satisfy; no meromorphic realization is introduced as a substitute.",
+  "scope": "These lemmas discharge only the regularized product local-order input of the exact invariant comparison V theorem. Orbit finite support and stabilizer multiplicity remain.",
+  "remaining": "Invariant V, quotient, winding-period/Petersson comparison, analytic reciprocity, principal-divisor converse and original all-weight arithmetic chain. 16/20; DUB-17--20 OPEN."
+}

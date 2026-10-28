@@ -1,0 +1,26 @@
+import SourceIntegralCharacterCrossed
+import SourceIntegralCharacterPotential
+import SourceIntegralCharacterShapiro
+import SourceIntegralCharacterFreeProduct
+import SourceIntegralCharacterInitialLift
+import SourceIntegralCharacterCuspConjugacy
+import SourceIntegralCharacterCuspSum
+import SourceIntegralCharacterCorrection
+import SourceIntegralCharacterModularFacts
+import SourceIntegralCharacterModularBridge
+import SourceIntegralParabolicCharacterLift
+import SourceGammaOneIntegralParabolicLift
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralCharacterCrossed, `SourceIntegralCharacterPotential, `SourceIntegralCharacterShapiro, `SourceIntegralCharacterFreeProduct, `SourceIntegralCharacterInitialLift, `SourceIntegralCharacterCuspConjugacy, `SourceIntegralCharacterCuspSum, `SourceIntegralCharacterCorrection, `SourceIntegralCharacterModularFacts, `SourceIntegralCharacterModularBridge, `SourceIntegralParabolicCharacterLift, `SourceGammaOneIntegralParabolicLift]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

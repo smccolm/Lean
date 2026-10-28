@@ -1,0 +1,45 @@
+import Dubon2026.SourceMeromorphicMultiplierGerm
+import Dubon2026.SourceGammaOneExactRamification
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> actual
+unitary multiplier. The existing exact ramification formula uses the
+signed stabilizer, so no assumption that -1 belongs to Gamma1 is needed. -/
+namespace Dubon2026.SourceMeromorphicMultiplier
+noncomputable section
+open UpperHalfPlane Filter CongruenceSubgroup SourceFunctionField
+open SourceFunctionField.GammaOne
+open scoped MatrixGroups Topology SubgroupStabilizer GammaOne
+
+theorem gammaOne_multiplier_eq_one_of_trace_sq_lt (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (F : ℍ → ℂ) (χ : Gamma1 N → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) = χ γ * F τ)
+    (hord : ∀ τ : ℍ, ∃ m : ℤ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * m : ℤ) : WithTop ℤ))
+    (γ : Gamma1 N) (hγ : γ.val.val.trace ^ 2 < 4) : χ γ = 1 := by
+  obtain ⟨τ, hfix⟩ := exists_smul_eq_self_of_trace_sq_lt_four γ.val hγ
+  obtain ⟨m, hm⟩ := hord τ
+  let n : ℤ := (analyticRamification hT τ : ℤ) * m
+  obtain ⟨g, hg, hg0, hfg⟩ := (meromorphicOrderAt_eq_int_iff (hF τ)).mp hm
+  have hχγ := multiplier_eq_denom_zpow F γ.val (χ γ) (hχ γ) τ hfix n g hg hg0 hfg
+  let γs : MulAction.stabilizer (plusMinus (Gamma1 N)) τ :=
+    ⟨⟨γ.val, le_plusMinus (Gamma1 N) γ.property⟩, hfix⟩
+  have hpow : denom (γ.val : GL (Fin 2) ℝ) τ ^
+      Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) = 1 := by
+    change SubgroupStabilizer.chi (plusMinus (Gamma1 N)) τ γs ^
+      Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) = 1
+    rw [← map_pow, pow_card_eq_one', map_one]
+  have hcard : (Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) : ℤ) =
+      2 * (analyticRamification hT τ : ℤ) := by
+    exact_mod_cast (two_mul_ramification_eq_stabilizer_card N hT τ).symm
+  have hn : 2 * n =
+      (Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) : ℤ) * m := by
+    dsimp only [n]
+    rw [hcard]
+    ring
+  have hd : denom (γ.val : GL (Fin 2) ℝ) τ ≠ 0 := denom_ne_zero _ _
+  rw [hχγ, zpow_neg, inv_eq_one, mul_zpow, ← zpow_add₀ hd, ← two_mul,
+    hn, zpow_mul, zpow_natCast, hpow, one_zpow]
+
+end
+end Dubon2026.SourceMeromorphicMultiplier

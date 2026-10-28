@@ -1,0 +1,44 @@
+import Mathlib
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms. Adapt the Apache-2.0 scope-795b primary at revision
+6e837e75355538c7f80bab5b956861e86c4eacc2, using native Cayley-Hamilton
+and finite abelian-group APIs. No finite-order trace bound, torsion-freeness,
+or logarithmic character lift is postulated. -/
+namespace Dubon2026.SourceUnitaryCharacterLift
+noncomputable section
+open scoped MatrixGroups
+theorem mul_self_eq_trace_smul_sub_one (M : Matrix (Fin 2) (Fin 2) ℤ) (hdet : M.det = 1) :
+    M * M = M.trace • M - 1 := by
+  have h := M.aeval_self_charpoly
+  rw [Matrix.charpoly_fin_two, hdet] at h
+  have he : M * M - M.trace • M + 1 = 0 := by
+    simpa only [map_add, map_sub, map_pow, map_mul, Polynomial.aeval_X, Polynomial.aeval_C,
+      map_one, pow_two, Algebra.smul_def] using h
+  rw [sub_add_eq_add_sub, sub_eq_zero] at he
+  exact eq_sub_iff_add_eq.mpr he
+
+theorem pow_twelve_eq_one (γ : SL(2, ℤ)) (h : (γ : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 < 4) :
+    γ ^ 12 = 1 := by
+  have hM := mul_self_eq_trace_smul_sub_one (γ : Matrix (Fin 2) (Fin 2) ℤ) γ.det_coe
+  generalize ht : (γ : Matrix (Fin 2) (Fin 2) ℤ).trace = t at h hM
+  have h1 : t < 2 := by nlinarith
+  have h2 : -2 < t := by nlinarith
+  apply Subtype.ext
+  rw [Matrix.SpecialLinearGroup.coe_pow, Matrix.SpecialLinearGroup.coe_one]
+  set M := (γ : Matrix (Fin 2) (Fin 2) ℤ)
+  interval_cases t
+  · have h3 : M ^ 3 = 1 := by
+      rw [pow_succ, sq, hM]; simp only [neg_smul, one_smul, Int.reduceNeg]
+      rw [sub_mul, neg_mul, hM]; simp
+    rw [show (12 : ℕ) = 3 * 4 from rfl, pow_mul, h3, one_pow]
+  · have h4 : M ^ 2 = -1 := by rw [sq, hM]; simp
+    rw [show (12 : ℕ) = 2 * 6 from rfl, pow_mul, h4]; norm_num
+  · have h3 : M ^ 3 = -1 := by
+      rw [pow_succ, sq, hM]; simp only [one_smul]
+      rw [sub_mul, hM]; simp
+    rw [show (12 : ℕ) = 3 * 4 from rfl, pow_mul, h3]; norm_num
+
+
+end
+end Dubon2026.SourceUnitaryCharacterLift

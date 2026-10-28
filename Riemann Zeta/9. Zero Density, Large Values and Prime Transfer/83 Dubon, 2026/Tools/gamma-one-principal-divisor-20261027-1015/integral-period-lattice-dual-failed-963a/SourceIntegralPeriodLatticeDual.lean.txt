@@ -1,0 +1,69 @@
+import SourceIntegralPeriodGeneratorDual
+import Dubon2026.SourceWeightTwoIntegralPeriods
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> principal-divisor converse ->
+integral Petersson duality. Extend the proved dual of each actual period
+generator to the original integer span. No finite-index or lattice duality
+certificate is supplied; the induction uses the literal source lattice. -/
+namespace Dubon2026.SourceIntegralPeriodDual
+noncomputable section
+open UpperHalfPlane MeasureTheory SourceModularGreenPairing SourceModularSidePairing
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] [Fintype (SL(2, ℤ) ⧸ Γ)]
+local notation "Q" => SL(2, ℤ) ⧸ Γ
+local notation "V" => CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2
+
+/-- The exact modular ray/arc pairing with an integer subgroup character. -/
+def pairing (φ : Additive Γ →+ ℤ) (g : V) : ℂ :=
+  Complex.I * (∑ q : Q, (φ (Additive.ofMul (transition Γ ModularGroup.T q)) : ℂ) *
+    (∫ y in Set.Ioi (Real.sqrt 3 / 2), tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I))) +
+  1 / 2 * (∑ q : Q, (φ (Additive.ofMul (transition Γ ModularGroup.S q)) : ℂ) *
+    (∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+      tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+        (Complex.I * Complex.exp (θ * Complex.I))))
+
+theorem pairing_add (φ ψ : Additive Γ →+ ℤ) (g : V) :
+    pairing Γ (φ + ψ) g = pairing Γ φ g + pairing Γ ψ g := by
+  simp only [pairing, AddMonoidHom.add_apply, Int.cast_add, add_mul, Finset.sum_add_distrib]
+  ring
+
+theorem pairing_zero (g : V) : pairing Γ 0 g = 0 := by
+  simp [pairing]
+
+theorem pairing_neg (φ : Additive Γ →+ ℤ) (g : V) :
+    pairing Γ (-φ) g = -pairing Γ φ g := by
+  simp only [pairing, AddMonoidHom.neg_apply, Int.cast_neg, neg_mul, Finset.sum_neg_distrib]
+  ring
+
+theorem exists_parabolic_character_eq_lattice
+    (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) (Λ : Module.Dual ℂ V)
+    (hΛ : Λ ∈ sourceWeightTwoIntegralLattice Γ) :
+    ∃ φ : Additive Γ →+ ℤ,
+      (∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 →
+        φ (Additive.ofMul γ) = 0) ∧ ∀ g : V, pairing Γ φ g = Λ g := by
+  induction hΛ using Submodule.span_induction with
+  | mem x hx =>
+    obtain ⟨δ, rfl⟩ := hx
+    obtain ⟨φ, hφ, he⟩ := exists_parabolic_character_eq_period hΓ δ
+    exact ⟨φ, hφ, fun g => he g⟩
+  | zero => exact ⟨0, fun _ _ => rfl, fun g => by rw [pairing_zero]; rfl⟩
+  | add x y _ _ hx hy =>
+    obtain ⟨φ, hφ, he⟩ := hx
+    obtain ⟨ψ, hψ, hf⟩ := hy
+    refine ⟨φ + ψ, fun γ hγ => ?_, fun g => ?_⟩
+    · rw [AddMonoidHom.add_apply, hφ γ hγ, hψ γ hγ, add_zero]
+    · rw [pairing_add, he, hf]; rfl
+  | smul n x _ hx =>
+    obtain ⟨φ, hφ, he⟩ := hx
+    refine ⟨n • φ, fun γ hγ => ?_, fun g => ?_⟩
+    · rw [AddMonoidHom.smul_apply, hφ γ hγ, smul_zero]
+    · rw [LinearMap.smul_apply]
+      induction n using Int.induction_on with
+      | zero => rw [zero_smul, zero_smul, pairing_zero]
+      | succ m ih => rw [add_smul, one_smul, pairing_add, ih, add_smul, one_smul, he]
+      | pred m ih =>
+        rw [sub_smul, one_smul, sub_eq_add_neg, pairing_add, pairing_neg, ih,
+          sub_smul, one_smul, he, sub_eq_add_neg]
+
+end
+end Dubon2026.SourceIntegralPeriodDual

@@ -1,0 +1,39 @@
+
+/-- The exact original homogeneous degree-n representation has dimension n+1 and its literal raising vectors form a basis. -/
+theorem actual_homogeneous_raising_basis_source (n : ℕ) (r : Fin (n + 1)) :
+    Module.finrank ℂ (MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) = n + 1 ∧
+      homogeneousRaisingBasis n r = homogeneousRaisingJet n r.val :=
+  ⟨homogeneousBinary_finrank n, homogeneousRaisingBasis_apply n r⟩
+
+/-- Every original homogeneous vector has the full original cusp central character when its degree is exactly k-2. -/
+theorem actual_adelic_full_homogeneous_character_source (N : ℕ) [NeZero N] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 N).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hf : f ≠ 0) (n : ℕ) (hk : k = (n : ℤ) + 2)
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2))
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ n) :
+    homogeneousEnvelopingAction n z.val p = adelicInfinitesimalCharacter f hf z • p :=
+  adelicInfinitesimalCharacter_homogeneous_scalar f hf n hk z p
+
+/-- The actual polynomial matrix curve and its genuine pointwise derivative retain the original matrix substitution and derivation. -/
+theorem actual_polynomial_matrix_tangent_source (a : Matrix (Fin 2) (Fin 2) ℂ)
+    (p : MvPolynomial (Fin 2) ℂ) (x : Fin 2 → ℂ) (t : ℂ) :
+    Polynomial.eval (MvPolynomial.C t) (matrixPolynomialCurve a p) =
+      matrixPolynomialAction (1 + t • a) p ∧
+    HasDerivAt (fun t : ℂ => MvPolynomial.eval x (matrixPolynomialAction (1 + t • a) p))
+      (MvPolynomial.eval x (matrixPolynomialDerivation a p)) 0 :=
+  ⟨matrixPolynomialCurve_eval a t p, matrixPolynomialOrbit_hasDerivAt a p x⟩
+
+/-- The literal determinant twist of the genuine even-degree homogeneous representation has exactly trivial scalar-matrix action. -/
+theorem actual_homogeneous_determinant_twist_source (m : ℕ) (u : ℂˣ)
+    (p : MvPolynomial.homogeneousSubmodule (Fin 2) ℂ (2 * m)) :
+    homogeneousDeterminantTwist (2 * m) (-(m : ℤ))
+      (Matrix.GeneralLinearGroup.scalar (Fin 2) u) p = p :=
+  homogeneousDeterminantTwist_trivial_center m u p
+
+/-- The original full GL₂ enveloping center projects into the actual SL₂ center through the genuine surjective trace map. -/
+theorem actual_traceless_enveloping_center_source
+    (z : Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ (Matrix (Fin 2) (Fin 2) ℂ))) :
+    Function.Surjective tracelessEnvelopingProjection ∧
+      tracelessEnvelopingProjection z.val ∈ Subalgebra.center ℂ (UniversalEnvelopingAlgebra ℂ ComplexSl2) :=
+  ⟨tracelessEnvelopingProjection_surjective, tracelessEnvelopingProjection_mem_center z⟩
+

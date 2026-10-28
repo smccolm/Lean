@@ -1,0 +1,38 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+  "assumptionsToDischarge": "The actual original-divisor winding character has vanishing parabolic cycles. Finite-permutation potentials and native generator torsion turn the literal boundary sum into an explicit integer combination of actual modular periods simultaneously for every cusp form. Existing normalized primitives, cusp limits, slash action, integrability and native rho replace duplicated analytic foundations. The actual original Gamma1 consumer restricts signed periods to the original integral lattice, without assuming a winding-period certificate.",
+  "remaining": "The filled-quotient a.e. dbar identity and limiting reciprocity assembly remain. The original meromorphic function with its exact orders and unitary multiplier remains an upstream input; the principal-divisor converse is not claimed. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-route-937.json",
+      "sha256": "1312D52153C068799B41C03CC9EE328054256750496BF4249197040FBF66F655"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-reuse-936\\manifest.json",
+      "sha256": "48798E51A00D44E3C3E8240503D52AF829D5D00FC11C07E360A6A7A27845872D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-period-reuse-936\\S_ModularCurve_exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom.lean.txt",
+      "sha256": "545B2E28A9CD11C2368F108CBBBDE0D495FD3CBAB6CF9B174092864E0FC1CF85"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-divisor-winding-boundary-1-scratch-receipt.json",
+      "sha256": "FE3580B611787E70DF7DF3758E97101F67D95ABE86AEB2043BCFCC6B29A397C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodValueProbe942.lean",
+      "sha256": "D8569ABB024F43696421A346C7F220C70322AFC6CBC72A66D444A34DA7D77127"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodValueProbe942.log",
+      "sha256": "530BE5003E1F9108AFE75ABD9BAE200298EFA5CB48F532E66B54067310DB9570"
+    }
+  ],
+  "shorterRoutes": [
+    "Existing actual normalized endpoint primitive, its derivative, period law and all-cusp limits replace a separately postulated primitive.",
+    "Native slash action and prior Green ray/arc integrability replace repeated decay proofs.",
+    "Native rho_sq replaces duplicated square-root corner algebra.",
+    "Existing actual S relations and signed-to-original integer-period transport are reused.",
+    "Every one of the 45 new public declarations lies in the actual original-divisor consumer VALUE closure."
+  ]
+}

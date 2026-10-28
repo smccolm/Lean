@@ -1,0 +1,111 @@
+from pathlib import Path
+import json,hashlib
+s=Path(__file__).parent
+body=r"""import SourceWeightTwoPeriodUntwist
+import SourceMeromorphicNormalUntwist
+import Dubon2026.SourceGammaOnePoleClearedNormalization
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> invariant untwisting. Native order invariance under
+the upper-half-plane action and its homeomorphism on punctured neighborhoods
+replace the primary repeated Mobius-coordinate algebra. -/
+namespace Dubon2026.SourcePeriodUntwist
+noncomputable section
+open UpperHalfPlane Filter Matrix.SpecialLinearGroup
+open scoped MatrixGroups Topology
+
+/-- Native normalization of the original upper-half-plane meromorphic function. -/
+def reg (F : ℍ → ℂ) : ℂ → ℂ :=
+  toMeromorphicNFOn (F ∘ ofComplex) upperHalfPlaneSet
+
+theorem order_smul_of_multiplier (F : ℍ → ℂ) (γ : SL(2, ℤ)) {c : ℂ} (hc : c ≠ 0)
+    (h : ∀ τ : ℍ, F (γ • τ) = c * F τ) (τ : ℍ) :
+    meromorphicOrderAt (F ∘ ofComplex) ((γ • τ : ℍ) : ℂ) =
+      meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) := by
+  have hd : 0 < (γ : GL (Fin 2) ℝ).val.det := by
+    rw [Matrix.SpecialLinearGroup.det_coe]
+    exact one_pos
+  have he := meromorphicOrderAt_comp_smul (f := F) (τ := τ) hd
+  simp only [Function.comp_def, SpecialLinearGroup.mapGL_smul] at he
+  rw [← he]
+  simp only [h]
+  exact meromorphicOrderAt_mul_of_ne_zero (f := F ∘ ofComplex)
+    (g := fun _ => c) analyticAt_const hc
+
+theorem reg_smul_of_multiplier (F : ℍ → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (γ : SL(2, ℤ)) {c : ℂ} (hc : c ≠ 0)
+    (h : ∀ τ : ℍ, F (γ • τ) = c * F τ) (τ : ℍ) :
+    reg F ((γ • τ : ℍ) : ℂ) = c * reg F τ := by
+  have hm : MeromorphicOn (F ∘ ofComplex) upperHalfPlaneSet := fun z hz => hF ⟨z, hz⟩
+  have ho := order_smul_of_multiplier F γ hc h τ
+  by_cases hz : meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) = 0
+  · have han (w : ℍ) (hw : meromorphicOrderAt (F ∘ ofComplex) (w : ℂ) = 0) :
+        AnalyticAt ℂ (reg F) (w : ℂ) := by
+      apply (meromorphicNFOn_toMeromorphicNFOn (F ∘ ofComplex) upperHalfPlaneSet
+        w.im_pos).meromorphicOrderAt_nonneg_iff_analyticAt.mp
+      rw [meromorphicOrderAt_toMeromorphicNFOn hm w.im_pos, hw]
+    have heH (w : ℍ) : (fun z : ℍ => reg F z) =ᶠ[𝓝[≠] w] F := by
+      apply SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp
+      filter_upwards [hm.toMeromorphicNFOn_eq_self_on_nhdsNE w.im_pos,
+        eventually_nhdsWithin_of_eventually_nhds
+          (isOpen_upperHalfPlaneSet.mem_nhds w.im_pos)] with z he him
+      simpa only [Function.comp_apply, ofComplex_apply_of_im_pos him] using he
+    have ht : Tendsto (fun w : ℍ => γ • w) (𝓝[≠] τ) (𝓝[≠] (γ • τ)) :=
+      le_of_eq ((Homeomorph.smul (γ : GL (Fin 2) ℝ)).map_punctured_nhds_eq τ)
+    have hev : (fun w : ℍ => reg F ((γ • w : ℍ) : ℂ)) =ᶠ[𝓝[≠] τ]
+        fun w : ℍ => c * reg F w := by
+      filter_upwards [(heH (γ • τ)).comp_tendsto ht, heH τ] with w hw hw'
+      exact hw.trans ((h w).trans (congrArg (c * ·) hw'.symm))
+    have hleft := (han (γ • τ) (ho.trans hz)).continuousAt.comp
+      (continuous_coe.continuousAt.comp
+        (Homeomorph.smul (γ : GL (Fin 2) ℝ)).continuous.continuousAt)
+    have hright := ((han τ hz).continuousAt.comp continuous_coe.continuousAt).const_mul c
+    exact tendsto_nhds_unique_of_eventuallyEq
+      (hleft.tendsto.mono_left nhdsWithin_le_nhds)
+      (hright.tendsto.mono_left nhdsWithin_le_nhds) hev
+  · have hz' : meromorphicOrderAt (F ∘ ofComplex) ((γ • τ : ℍ) : ℂ) ≠ 0 := by
+      rwa [ho]
+    rw [reg, reg, normalized_eq_zero_of_order_ne_zero hm (γ • τ).im_pos hz',
+      normalized_eq_zero_of_order_ne_zero hm τ.im_pos hz, mul_zero]
+
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+
+/-- The normalized original function with its real-period multiplier cancelled. -/
+def Φ (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2) (z : ℂ) : ℂ :=
+  reg F z * R k z
+
+theorem Φ_smul (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Γ) (τ : ℍ), F (γ.val • τ) =
+      Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue Γ k γ).re : ℂ)) * F τ)
+    (γ : Γ) (τ : ℍ) :
+    Φ F k ((γ.val • τ : ℍ) : ℂ) = Φ F k τ := by
+  rw [Φ, Φ, reg_smul_of_multiplier F hF γ.val (Complex.exp_ne_zero _) (hχ γ) τ]
+  rw [mul_assoc, mul_comm (reg F τ), ← mul_assoc, multiplier_mul_R_smul]
+  exact mul_comm _ _
+
+theorem Φ_local (F : ℍ → ℂ) (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (τ : ℍ) (n : ℤ) (ho : meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) = (n : WithTop ℤ)) :
+    ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+      Φ F k =ᶠ[𝓝 (τ : ℂ)] fun z => (z - τ) ^ n * Ψ z := by
+  have hm : MeromorphicOn (F ∘ ofComplex) upperHalfPlaneSet := fun z hz => hF ⟨z, hz⟩
+  obtain ⟨G, hG, hG0, -, he⟩ := normalized_local_form hm τ.im_pos ho
+  refine ⟨fun z => G z * R k z,
+    ((hG.contDiffAt (n := 1)).restrict_scalars ℝ).mul (contDiffAt_R k τ.im_pos),
+    mul_ne_zero hG0 (R_ne_zero k _), ?_⟩
+  filter_upwards [he] with z hz
+  change reg F z * R k z = _
+  rw [show reg F z = (z - τ) ^ n * G z from hz]
+  ring
+
+end
+end Dubon2026.SourcePeriodUntwist
+"""
+with (s/'SourceMeromorphicPeriodUntwist.lean').open('x',encoding='utf-8',newline='\n') as f:f.write(body)
+route=json.loads((s/'gamma-one-normal-untwist-route-850.json').read_text(encoding='utf-8'))
+route['shorterRoute']='Use native UpperHalfPlane.meromorphicOrderAt_comp_smul and Homeomorph.map_punctured_nhds_eq, as in the existing original analytic-place and pole-cleared-normalization proofs. Do not duplicate 120 lines of Mobius algebra, derivative or punctured-limit infrastructure. Native normalization plus actual period factor gives the invariant local model with the exact prescribed integer order.'
+with (s/'gamma-one-meromorphic-untwist-route-851.json').open('x',encoding='utf-8') as f:json.dump(route,f,indent=2);f.write('\n')
+print('Prepared original normalized multiplier invariance and local order.')

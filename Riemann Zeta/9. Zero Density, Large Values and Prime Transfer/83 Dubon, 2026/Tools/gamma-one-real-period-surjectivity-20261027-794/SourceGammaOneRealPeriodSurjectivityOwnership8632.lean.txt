@@ -1,0 +1,51 @@
+import Dubon2026.SourceGammaOneInvariantRealPart
+import Dubon2026.SourceGammaOneRealPeriodInjectivity
+import Dubon2026.SourceGammaOneRealPeriodMap
+import Dubon2026.SourceGammaOneRealParabolicPeriods
+import Dubon2026.SourceGammaOneCuspPlaceLeftInvariance
+import Dubon2026.SourceGammaOneCuspTranslations
+import Dubon2026.SourceGammaOneCuspPlaceRightInvariance
+import Dubon2026.SourceGammaOneRationalCuspPlace
+import Dubon2026.SourceGammaOneRationalCuspOrbit
+import Dubon2026.SourceGammaOneCuspJExactOrder
+import Dubon2026.SourceGammaOneCuspRotationOrder
+import Dubon2026.SourceGammaOneCuspTranslationRamification
+import Dubon2026.SourceGammaOneCuspCyclicOrbit
+import Dubon2026.SourceGammaOneCuspCosetPlaces
+import Dubon2026.SourceGammaOneCuspCosetBound
+import Dubon2026.SourceGammaOneCuspPoleDegree
+import Dubon2026.SourceGammaOneCuspPositiveWeight
+import Dubon2026.SourceGammaOneCuspOrbitBijection
+import Dubon2026.SourceGammaOneExactCuspOrbits
+import Dubon2026.SourceGammaOneCentralSignCharacters
+import Dubon2026.SourceGammaOneSignedParabolicCharacters
+import Dubon2026.SourceGammaOneRealManinCharacter
+import Dubon2026.SourceGammaOneRealCuspPotential
+import Dubon2026.SourceGammaOneRealManinDimension
+import Dubon2026.SourceGammaOneRationalCyclicCusps
+import Dubon2026.SourceGammaOneRealPeriodDimensionUpper
+import Dubon2026.SourceGammaOneCanonicalCoordinates
+import Dubon2026.SourceGammaOneJDegreeFinsets
+import Dubon2026.SourceGammaOneCanonicalFiberLower
+import Dubon2026.SourceGammaOneGenusFiberLower
+import Dubon2026.SourceGammaOneEllipticCosetFiber
+import Dubon2026.SourceGammaOneEllipticFiberBounds
+import Dubon2026.SourceGammaOneRealPeriodSurjectivity
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneInvariantRealPart, `Dubon2026.SourceGammaOneRealPeriodInjectivity, `Dubon2026.SourceGammaOneRealPeriodMap, `Dubon2026.SourceGammaOneRealParabolicPeriods, `Dubon2026.SourceGammaOneCuspPlaceLeftInvariance, `Dubon2026.SourceGammaOneCuspTranslations, `Dubon2026.SourceGammaOneCuspPlaceRightInvariance, `Dubon2026.SourceGammaOneRationalCuspPlace, `Dubon2026.SourceGammaOneRationalCuspOrbit, `Dubon2026.SourceGammaOneCuspJExactOrder, `Dubon2026.SourceGammaOneCuspRotationOrder, `Dubon2026.SourceGammaOneCuspTranslationRamification, `Dubon2026.SourceGammaOneCuspCyclicOrbit, `Dubon2026.SourceGammaOneCuspCosetPlaces, `Dubon2026.SourceGammaOneCuspCosetBound, `Dubon2026.SourceGammaOneCuspPoleDegree, `Dubon2026.SourceGammaOneCuspPositiveWeight, `Dubon2026.SourceGammaOneCuspOrbitBijection, `Dubon2026.SourceGammaOneExactCuspOrbits, `Dubon2026.SourceGammaOneCentralSignCharacters, `Dubon2026.SourceGammaOneSignedParabolicCharacters, `Dubon2026.SourceGammaOneRealManinCharacter, `Dubon2026.SourceGammaOneRealCuspPotential, `Dubon2026.SourceGammaOneRealManinDimension, `Dubon2026.SourceGammaOneRationalCyclicCusps, `Dubon2026.SourceGammaOneRealPeriodDimensionUpper, `Dubon2026.SourceGammaOneCanonicalCoordinates, `Dubon2026.SourceGammaOneJDegreeFinsets, `Dubon2026.SourceGammaOneCanonicalFiberLower, `Dubon2026.SourceGammaOneGenusFiberLower, `Dubon2026.SourceGammaOneEllipticCosetFiber, `Dubon2026.SourceGammaOneEllipticFiberBounds, `Dubon2026.SourceGammaOneRealPeriodSurjectivity]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

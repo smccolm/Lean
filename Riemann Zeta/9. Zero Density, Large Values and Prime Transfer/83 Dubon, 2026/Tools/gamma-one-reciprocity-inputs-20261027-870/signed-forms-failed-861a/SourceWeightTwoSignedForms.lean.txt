@@ -1,0 +1,73 @@
+import Dubon2026.SourceWeightTwoEndpointPeriods
+import Dubon2026.SourceGammaOneCentralSignCharacters
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> faithful central-sign transport.
+Extend the actual weight-two cusp form to the subgroup containing negative
+identity. Its function, endpoint periods and primitive differences remain
+the original ones; no change of modular curve or coefficient action occurs. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.SignedForms
+noncomputable section
+open UpperHalfPlane Matrix.SpecialLinearGroup
+open scoped MatrixGroups ModularForm GammaOne
+
+theorem weightTwo_slash_neg (f : ℍ → ℂ) (γ : SL(2, ℤ)) :
+    f ∣[(2 : ℤ)] (-γ) = f ∣[(2 : ℤ)] γ := by
+  funext τ
+  rw [ModularForm.SL_slash_apply, ModularForm.SL_slash_apply, ModularGroup.SL_neg_smul]
+  congr 1
+  simp [denom, zpow_neg]
+
+variable (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+
+/-- The same weight-two cusp function on the actual central-sign enlargement. -/
+def extend : CuspForm (Γ.map (mapGL ℝ)) 2 →ₗ[ℂ]
+    CuspForm ((plusMinus Γ).map (mapGL ℝ)) 2 where
+  toFun f :=
+    { toFun := f
+      slash_action_eq' g hg := by
+        obtain ⟨γ, hγ, rfl⟩ := hg
+        change (⇑f ∣[(2 : ℤ)] γ) = ⇑f
+        rcases (mem_plusMinus_iff Γ γ).mp hγ with h | h
+        · exact SlashInvariantFormClass.slash_action_eq f _ (Subgroup.mem_map_of_mem _ h)
+        · rw [← weightTwo_slash_neg (⇑f) γ]
+          exact SlashInvariantFormClass.slash_action_eq f _ (Subgroup.mem_map_of_mem _ h)
+      holo' := CuspFormClass.holo f
+      zero_at_cusps' hc := CuspFormClass.zero_at_cusps f
+        ((Subgroup.IsArithmetic.isCusp_iff_isCusp_SL2Z (Γ.map (mapGL ℝ))).mpr
+          ((Subgroup.IsArithmetic.isCusp_iff_isCusp_SL2Z
+            ((plusMinus Γ).map (mapGL ℝ))).mp hc)) }
+  map_add' f g := by ext τ; rfl
+  map_smul' c f := by ext τ; rfl
+
+theorem extend_apply (f : CuspForm (Γ.map (mapGL ℝ)) 2) (τ : ℍ) :
+    extend Γ f τ = f τ := rfl
+
+theorem extend_injective : Function.Injective (extend Γ) := by
+  intro f g h
+  exact DFunLike.ext f g fun τ => congrArg (fun k => k τ) h
+
+theorem along_extend (f : CuspForm (Γ.map (mapGL ℝ)) 2) (a b : ℍ) :
+    sourceWeightTwoAlong (plusMinus Γ) a b (extend Γ f) = sourceWeightTwoAlong Γ a b f := by
+  exact sourceUpperHalfPlane_primitive_difference
+    (sourceWeightTwoPrimitive_hasDerivAt (extend Γ f)
+      ((plusMinus Γ).map (mapGL ℝ)).strictWidthInfty_pos
+      ((plusMinus Γ).map (mapGL ℝ)).strictWidthInfty_mem_strictPeriods)
+    (sourceWeightTwoPrimitive_hasDerivAt f
+      (Γ.map (mapGL ℝ)).strictWidthInfty_pos
+      (Γ.map (mapGL ℝ)).strictWidthInfty_mem_strictPeriods) a b
+
+theorem period_extend_representative (f : CuspForm (Γ.map (mapGL ℝ)) 2)
+    (γ : plusMinus Γ) :
+    sourceWeightTwoPeriodValue (plusMinus Γ) (extend Γ f) γ =
+      sourceWeightTwoPeriodValue Γ f (CentralSign.representative Γ γ) := by
+  rw [← sourceWeightTwoAlong_smul (plusMinus Γ) γ UpperHalfPlane.I, along_extend]
+  have he : (CentralSign.representative Γ γ).val • UpperHalfPlane.I =
+      γ.val • UpperHalfPlane.I := by
+    rcases CentralSign.representative_spec Γ γ with h | h
+    · rw [h]
+    · rw [h, ModularGroup.SL_neg_smul]
+  rw [← he, sourceWeightTwoAlong_smul]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.SignedForms

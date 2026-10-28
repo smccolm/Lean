@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual filled-quotient parabolic winding character",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\smooth-comparison-quotient-route-915.json",
+      "sha256": "A60F6408C6E6432E561CCE007A12F5E3656DC570A0F6AC343879CF2A16E8794E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodIntegral.lean",
+      "sha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantUntwist.lean",
+      "sha256": "43744D5D40E624E2FFC9B6704A54DBD3C47ADDC30C21DD2EE48E3692920C54AE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog.lean",
+      "sha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "Derive the actual original cusp form from the unitary multiplier",
+    "Construct the comparison V and its original-divisor period limit",
+    "Derive quotient regularity, nonvanishing, signed invariance and nonzero cusp limits with derivative decay",
+    "Produce the actual logarithm and integer character vanishing on literal trace-squared-four elements",
+    "Preserve source punctured-limit convention via a proved equality"
+  ],
+  "remaining": "The meromorphic function with exact orders and a unitary multiplier remains an upstream input. Winding side-pairing/period integral, Petersson comparison, analytic reciprocity, principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN."
+}

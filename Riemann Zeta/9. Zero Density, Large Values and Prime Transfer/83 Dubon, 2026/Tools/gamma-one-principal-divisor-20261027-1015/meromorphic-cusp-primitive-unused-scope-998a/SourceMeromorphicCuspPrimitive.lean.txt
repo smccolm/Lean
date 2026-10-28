@@ -1,0 +1,36 @@
+import Dubon2026.SourcePeriodPrimitive
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> principal-divisor converse ->
+actual meromorphic function -> nonzero translated cusp limits. The actual
+weight-two differential decay rules out poles high in each cusp. Its
+primitive has a uniform limit, and the actual function is a nonzero constant
+times its exponential. The analytic differential input remains. -/
+namespace Dubon2026.SourceMeromorphicPrimitiveMultiplier
+noncomputable section
+open scoped MatrixGroups Topology ModularForm
+open UpperHalfPlane Filter Set Metric
+
+theorem exists_primitive_halfPlane {f : ℂ → ℂ} {A : ℝ}
+    (hf : DifferentiableOn ℂ f {z : ℂ | A < z.im}) :
+    ∃ Ψ : ℂ → ℂ, ∀ z : ℂ, A < z.im → HasDerivAt Ψ (f z) z := by
+  let c : ℂ := (A : ℂ) * Complex.I
+  have him : c.im = A := by simp [c]
+  have hshift : ∀ z : ℂ, z ∈ upperHalfPlaneSet → A < (z + c).im := by
+    intro z hz
+    change 0 < z.im at hz
+    rw [Complex.add_im, him]
+    linarith
+  have hd : DifferentiableOn ℂ (fun z => f (z + c)) upperHalfPlaneSet :=
+    hf.comp (differentiable_id.add_const c).differentiableOn hshift
+  refine ⟨fun z => Complex.wedgeIntegral (UpperHalfPlane.I : ℂ) (z - c)
+    (fun w => f (w + c)), fun z hz => ?_⟩
+  have hz' : z - c ∈ upperHalfPlaneSet := by
+    change 0 < (z - c).im
+    rw [Complex.sub_im, him]
+    exact sub_pos.mpr hz
+  have h := sourceHolomorphic_hasDerivAt_wedgeIntegral hd UpperHalfPlane.I hz'
+  have hc := h.comp z ((hasDerivAt_id z).sub_const c)
+  simpa only [sub_add_cancel, mul_one, Function.comp_def] using hc
+
+end
+end Dubon2026.SourceMeromorphicPrimitiveMultiplier

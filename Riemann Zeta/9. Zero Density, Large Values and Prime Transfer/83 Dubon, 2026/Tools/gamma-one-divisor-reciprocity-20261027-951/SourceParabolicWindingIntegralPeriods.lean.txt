@@ -1,0 +1,156 @@
+import SourceWeightTwoCosetPeriods
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> original integral-period
+membership. An explicit integer combination of actual modular periods
+represents the literal T/S winding edge sum simultaneously for every cusp
+form. The character is assumed only to vanish on actual trace-squared-four
+elements; integer potentials, primitive edges and period membership are derived.
+Adapted from the pinned Apache-2.0 generic-subgroup primary in archive 936. -/
+namespace Dubon2026.SourceParabolicEdgePeriod
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory
+open SourcePeriodUntwist SourceModularSidePairing SourceModularGreenPairing
+open scoped MatrixGroups Topology Real
+
+theorem exists_integral_period_eq_winding_edges
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] (hneg : (-1 : SL(2, ℤ)) ∈ Γ)
+    [Fintype (SL(2, ℤ) ⧸ Γ)] (φ : Additive Γ →+ ℤ)
+    (hφ : ∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 →
+      φ (Additive.ofMul γ) = 0) :
+    ∃ Λ ∈ sourceWeightTwoIntegralLattice Γ,
+      ∀ g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2,
+        Complex.I * (∑ q : SL(2, ℤ) ⧸ Γ,
+          (φ (Additive.ofMul (transition Γ ModularGroup.T q)) : ℂ) *
+            (∫ y in Set.Ioi (Real.sqrt 3 / 2),
+              tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I))) +
+        1 / 2 * (∑ q : SL(2, ℤ) ⧸ Γ,
+          (φ (Additive.ofMul (transition Γ ModularGroup.S q)) : ℂ) *
+            (∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+              tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) *
+                (Complex.I * Complex.exp (θ * Complex.I)))) = Λ g := by
+  classical
+  obtain ⟨mT, hmT⟩ := exists_phi_transition_eq_coboundary φ ModularGroup.T
+    (fun q n _ hq => phi_transition_T_pow_eq_zero φ hφ q n hq)
+  obtain ⟨mW, hmW⟩ := exists_phi_transition_eq_coboundary φ W
+    (fun q n _ hq => phi_transition_pow_eq_zero_of_torsion φ W (by norm_num) W_pow_three q n hq)
+  obtain ⟨mS, hmS⟩ := exists_phi_transition_eq_coboundary φ ModularGroup.S
+    (fun q n _ hq => phi_transition_pow_eq_zero_of_torsion φ ModularGroup.S (by norm_num) S_pow_four q n hq)
+  refine ⟨-(∑ q : SL(2, ℤ) ⧸ Γ,
+        mT (ModularGroup.T • q) • sourceWeightTwoDualPeriod Γ (transition Γ ModularGroup.T q)) -
+      (∑ q : SL(2, ℤ) ⧸ Γ,
+        (mW (W • q) + φ (Additive.ofMul (transition Γ ModularGroup.T (W • q)))) •
+          sourceWeightTwoDualPeriod Γ (transition Γ W q)) -
+      ∑ q : SL(2, ℤ) ⧸ Γ,
+        mS q • sourceWeightTwoDualPeriod Γ (transition Γ ModularGroup.S q), ?_, ?_⟩
+  · refine sub_mem (sub_mem (neg_mem ?_) ?_) ?_ <;>
+      exact sum_mem fun q _ => zsmul_mem (sourceWeightTwoDualPeriod_mem Γ _) _
+  intro g
+  choose L hL using Ek_exists_cusp_limit g
+
+  obtain ⟨ray, hray⟩ : ∃ ray : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      ray q = ∫ y in Set.Ioi (Real.sqrt 3 / 2), tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * Complex.I) := ⟨_, fun _ => rfl⟩
+  obtain ⟨arc, harc⟩ : ∃ arc : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      arc q = ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+        tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * Complex.I)) * (Complex.I * Complex.exp (θ * Complex.I)) :=
+    ⟨_, fun _ => rfl⟩
+  obtain ⟨aT, haT⟩ : ∃ aT : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      aT q = ((φ (Additive.ofMul (transition Γ ModularGroup.T q)) : ℤ) : ℂ) := ⟨_, fun _ => rfl⟩
+  obtain ⟨aS, haS⟩ : ∃ aS : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      aS q = ((φ (Additive.ofMul (transition Γ ModularGroup.S q)) : ℤ) : ℂ) := ⟨_, fun _ => rfl⟩
+  obtain ⟨aW, haW⟩ : ∃ aW : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      aW q = ((φ (Additive.ofMul (transition Γ W q)) : ℤ) : ℂ) := ⟨_, fun _ => rfl⟩
+  obtain ⟨x, hx⟩ : ∃ x : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      x q = Ek g (((Quotient.out q)⁻¹ • ρ : ℍ) : ℂ) := ⟨_, fun _ => rfl⟩
+  obtain ⟨y, hy⟩ : ∃ y : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      y q = Ek g (((Quotient.out q)⁻¹ • (ModularGroup.T • ρ) : ℍ) : ℂ) := ⟨_, fun _ => rfl⟩
+  obtain ⟨Lq, hLq⟩ : ∃ Lq : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      Lq q = L (Quotient.out q)⁻¹ := ⟨_, fun _ => rfl⟩
+  obtain ⟨PT, hPT⟩ : ∃ PT : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      PT q = sourceWeightTwoDualPeriod Γ (transition Γ ModularGroup.T q) g := ⟨_, fun _ => rfl⟩
+  obtain ⟨PW, hPW⟩ : ∃ PW : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      PW q = sourceWeightTwoDualPeriod Γ (transition Γ W q) g := ⟨_, fun _ => rfl⟩
+  obtain ⟨PS, hPS⟩ : ∃ PS : SL(2, ℤ) ⧸ Γ → ℂ, ∀ q,
+      PS q = sourceWeightTwoDualPeriod Γ (transition Γ ModularGroup.S q) g := ⟨_, fun _ => rfl⟩
+  simp only [← hray, ← harc, ← haT, ← haS, LinearMap.sub_apply, LinearMap.neg_apply,
+    LinearMap.sum_apply, LinearMap.smul_apply, zsmul_eq_mul, ← hPT, ← hPW, ← hPS]
+
+  have hrayv : ∀ q, Complex.I * ray q = Lq q - x q := fun q => by
+    rw [hray, hLq, hx]; exact I_mul_integral_ray_corner g _ (hL _)
+  have harcv : ∀ q, arc q = x q - y q := fun q => by
+    rw [harc, hx, hy]; exact integral_arc_corner g _
+  have hxW : ∀ q, x (W • q) = x q + PW q := fun q => by
+    rw [hx, hx, hPW, sourceWeightTwoDualPeriod_apply, Ek_out_inv_smul g W q ρ, inv_smul_eq_iff.mpr W_smul_rho.symm]
+  have hxS : ∀ q, x (ModularGroup.S • q) = y q + PS q := fun q => by
+    rw [hx, hy, hPS, sourceWeightTwoDualPeriod_apply, Ek_out_inv_smul g ModularGroup.S q ρ,
+      inv_smul_eq_iff.mpr S_smul_T_rho.symm]
+  have hLT : ∀ q, Lq (ModularGroup.T • q) = Lq q + PT q := fun q => by
+    rw [hLq, hLq, hPT, sourceWeightTwoDualPeriod_apply]; exact lim_T_smul g hL q
+  have hPSS : ∀ q, PS (ModularGroup.S • q) = -PS q := fun q => by
+    simp only [hPS, sourceWeightTwoDualPeriod_apply]; exact period_transition_S_S g hneg q
+  have haSS : ∀ q, aS (ModularGroup.S • q) = -aS q := fun q => by
+    rw [haS, haS, phi_transition_S_S hneg φ hφ q, Int.cast_neg]
+  have haSW : ∀ q, aS q = aW q + aT (W • q) := fun q => by
+    rw [haS, haW, haT, phi_transition_S_eq φ q, Int.cast_add]
+  have hcT : ∀ q, aT q = (mT (ModularGroup.T • q) : ℂ) - mT q := fun q => by
+    rw [haT, hmT, Int.cast_sub]
+  have hcW : ∀ q, aW q = (mW (W • q) : ℂ) - mW q := fun q => by
+    rw [haW, hmW, Int.cast_sub]
+  have hcS : ∀ q, aS q = (mS (ModularGroup.S • q) : ℂ) - mS q := fun q => by
+    rw [haS, hmS, Int.cast_sub]
+
+  have f1 : Complex.I * ∑ q, aT q * ray q = ∑ q, aT q * Lq q - ∑ q, aT q * x q := by
+    rw [Finset.mul_sum, ← Finset.sum_sub_distrib]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    rw [mul_left_comm, hrayv, mul_sub]
+  have f2 : ∑ q, aS q * arc q =
+      ∑ q, aS q * x q - ∑ q, aS q * x (ModularGroup.S • q) + ∑ q, aS q * PS q := by
+    rw [← Finset.sum_sub_distrib, ← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    rw [harcv, hxS]; ring
+  have fA : ∑ q, aT q * Lq q = -∑ q, (mT (ModularGroup.T • q) : ℂ) * PT q := by
+    simpa only [MulAction.toPerm_apply] using
+      sum_coboundary_mul (MulAction.toPerm ModularGroup.T) aT mT
+        (fun q => by rw [MulAction.toPerm_apply]; exact hcT q) Lq PT
+        (fun q => by rw [MulAction.toPerm_apply]; exact hLT q)
+  have fD1 : ∑ q, aW q * x q = -∑ q, (mW (W • q) : ℂ) * PW q := by
+    simpa only [MulAction.toPerm_apply] using
+      sum_coboundary_mul (MulAction.toPerm W) aW mW
+        (fun q => by rw [MulAction.toPerm_apply]; exact hcW q) x PW
+        (fun q => by rw [MulAction.toPerm_apply]; exact hxW q)
+  have fD2 : ∑ q, aT q * x q = ∑ q, aT (W • q) * x q + ∑ q, aT (W • q) * PW q := by
+    rw [← Equiv.sum_comp (MulAction.toPerm W) (fun q => aT q * x q), ← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    simp only [MulAction.toPerm_apply]
+    rw [hxW]; ring
+  have fE : ∑ q, aS q * x q = ∑ q, aW q * x q + ∑ q, aT (W • q) * x q := by
+    rw [← Finset.sum_add_distrib]
+    exact Finset.sum_congr rfl fun q _ => by rw [haSW, add_mul]
+  have fB1 : ∑ q, aS q * x (ModularGroup.S • q) = -∑ q, aS q * x q := by
+    rw [← Equiv.sum_comp (MulAction.toPerm ModularGroup.S) (fun q => aS q * x (ModularGroup.S • q)),
+      ← Finset.sum_neg_distrib]
+    refine Finset.sum_congr rfl fun q _ => ?_
+    simp only [MulAction.toPerm_apply]
+    rw [S_smul_S_smul hneg, haSS, neg_mul]
+  have fC : ∑ q, aS q * PS q = -2 * ∑ q, (mS q : ℂ) * PS q := by
+    have h1 : ∑ q, (mS (ModularGroup.S • q) : ℂ) * PS q = -∑ q, (mS q : ℂ) * PS q := by
+      rw [← Equiv.sum_comp (MulAction.toPerm ModularGroup.S)
+          (fun q => (mS (ModularGroup.S • q) : ℂ) * PS q), ← Finset.sum_neg_distrib]
+      refine Finset.sum_congr rfl fun q _ => ?_
+      simp only [MulAction.toPerm_apply]
+      rw [S_smul_S_smul hneg, hPSS, mul_neg]
+    have h2 : ∑ q, aS q * PS q =
+        ∑ q, (mS (ModularGroup.S • q) : ℂ) * PS q - ∑ q, (mS q : ℂ) * PS q := by
+      rw [← Finset.sum_sub_distrib]
+      exact Finset.sum_congr rfl fun q _ => by rw [hcS, sub_mul]
+    rw [h2, h1]; ring
+  have fsplit : ∑ q, ((mW (W • q) + φ (Additive.ofMul (transition Γ ModularGroup.T (W • q))) : ℤ) : ℂ) * PW q =
+      ∑ q, (mW (W • q) : ℂ) * PW q + ∑ q, aT (W • q) * PW q := by
+    rw [← Finset.sum_add_distrib]
+    exact Finset.sum_congr rfl fun q _ => by rw [Int.cast_add, ← haT, add_mul]
+  linear_combination f1 + (1 / 2 : ℂ) * f2 + fA - fD2 + fE - (1 / 2 : ℂ) * fB1 +
+    (1 / 2 : ℂ) * fC + fD1 + fsplit
+
+end
+end Dubon2026.SourceParabolicEdgePeriod

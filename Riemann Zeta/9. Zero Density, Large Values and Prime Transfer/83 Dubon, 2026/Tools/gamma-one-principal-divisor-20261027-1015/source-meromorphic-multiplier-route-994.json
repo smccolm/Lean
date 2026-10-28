@@ -1,0 +1,15 @@
+{
+  "chain": "DUB17/18 -> higher symmetric-power continuation -> automorphy -> original all-weight association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> actual meromorphic function -> multiplier covariance.",
+  "shorterRoute": "Reuse the proved global logarithmic primitive and countable-complement connectivity. The native meromorphic translated-germ APIs preserve orders but do not construct a multiplier; use the quotient derivative zero on the connected punctured domain. Reuse native UpperHalfPlane analytic action and meromorphic order composition. Omit unused coe and denominator wrappers and the duplicate connectivity proof.",
+  "assumptionsToDischarge": "Given actual local integer-residue expansions and weight-two slash invariance, construct a meromorphic G and nonzero multiplier with exact orders and covariance, not an assumed GSpec certificate.",
+  "remaining": "Actual differential analytic realization, regularization, slash invariance, exponential cusp decay and nonzero cusp limits; final principal-divisor converse; all arithmetic and automorphy gates unchanged. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_meromorphic_smul_eq_mul_of_slashInvariant_residue.lean.txt",
+      "sha256": "1CEFC99641BCEBA3082D452C3BA6ADBC633F6B7F06C21310322EFC8688BC77C8"
+    }
+  ],
+  "externalWholeClosureBuilt": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

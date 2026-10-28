@@ -1,0 +1,21 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight association -> Gamma1 Picard/H1 -> Abel-Jacobi -> unitary multiplier lift -> integral parabolic-character lift -> correction of cusp values of an integral character.",
+  "assumptionsToDischarge": "For a finite-index subgroup of the actual C2*C3 presentation, construct an additive character with any prescribed values on primitive parabolic cusp generators whose total sum is zero. This corrects an arbitrary integer lift to vanish at parabolics in the reviewed ZMod-character lift. Finite-index and zero-total cusp data remain legitimate source hypotheses.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-802\\S_Monoid_CoprodI_exists_addMonoidHom_conj_pow_minimalPeriod_eq_of_finsum_eq_zero.lean.txt",
+      "sha256": "A67A633238E2BAF294E7C8303A5201C95195BEB7223C7E841FACD3D248263F79"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\manifest.json",
+      "sha256": "7CB8F7CBB42358F7003951D7FBFAF8CBBD3A94F9E5CB3D9953F588FA7A0EB2B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-lift-presentation-route-805.json",
+      "sha256": "BD8771EFDB17AB3088246FF08A3BFE78E74B0B1332B1151EC3DF5A1716CEDB21"
+    }
+  ],
+  "shorterRoute": "Reuse native free-product universal property, semidirect products, finite coset actions, minimal-period identities, Finsupp maps and integer span induction. The prior real Manin bound is not an integer-character lifting theorem. Adapt only the explicit finite edge-chain construction and its cusp-value consumer; no new graph topology, homology theory or arbitrary presentations. Use the same G23 type as the already compiled projective modular presentation.",
+  "externalLimits": "Primary file disables unusedSectionVars and imports a compatibility shim. Neither is imported: local proof must compile and lint at the pinned toolchain with unused hypotheses removed honestly. Exact external statement is retained; its full external closure is not claimed built.",
+  "remaining": "Integer-lift correction alone does not supply the initial integral character lift or unitary logarithm. Analytic reciprocity and all-weight arithmetic association remain. 16/20; DUB-17--20 OPEN."
+}

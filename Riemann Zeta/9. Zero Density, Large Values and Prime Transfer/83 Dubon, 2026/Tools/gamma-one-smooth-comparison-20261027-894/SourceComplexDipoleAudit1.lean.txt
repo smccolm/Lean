@@ -1,0 +1,82 @@
+import SourceComplexDipoleLocalModel
+import SourceComplexDipoleLogDerivative
+import SourceComplexDipolePairing
+import SourceUpperHalfPlaneDipole
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.support_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.pairing
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.wfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Dχ
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Ffun
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceComplexDipoleLocalModel, `SourceComplexDipoleLogDerivative, `SourceComplexDipolePairing, `SourceUpperHalfPlaneDipole]
+  let theorems : Array Name := #[`Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt, `Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC, `Dubon2026.SourceComplexReciprocity.Dipole.support_χC, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC, `Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun, `Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div, `Dubon2026.SourceComplexReciprocity.Dipole.pairing, `Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff, `Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair]
+  let constructions : Array Name := #[`Dubon2026.SourceComplexReciprocity.Dipole.dbarL, `Dubon2026.SourceComplexReciprocity.Dipole.χC, `Dubon2026.SourceComplexReciprocity.Dipole.dfun, `Dubon2026.SourceComplexReciprocity.Dipole.gfun, `Dubon2026.SourceComplexReciprocity.Dipole.wfun, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.Ffun]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Complex Dipole postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Complex Dipole theorems discovered"
+  logInfo m!"SOURCE COMPLEX DIPOLE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceComplexDipoleLocalModel
+#lint in SourceComplexDipoleLogDerivative
+#lint in SourceComplexDipolePairing
+#lint in SourceUpperHalfPlaneDipole

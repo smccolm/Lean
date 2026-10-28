@@ -1,0 +1,19 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period comparison",
+    "logarithm of actual nonvanishing invariant quotient"
+  ],
+  "primary": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_exp_eq_of_invariant_ne_zero_isParabolicHom.lean.txt",
+    "sha256": "9FF210E7655F87AD45C18D2DFDCF0388B4B8173B5B1801852493EF7C8437069D",
+    "read": "Entire source including cusp and final theorem read."
+  },
+  "reuse": "Native Complex.isCoveringMap_exp.existsUnique_continuousMap_lifts constructs the lift. Native IsCoveringMap.const_of_comp replaces the source locally-constant proof. Existing SourceParabolic.classification will replace the external Period wrapper in the exact squared-trace-four conclusion. Existing SourceSimplyConnectedCovering has simply connected BASE and is not applicable to the punctured complex base.",
+  "scope": "Actual C1 nonzero invariant function and nonzero finite translated cusp limits are input. Construct logarithm, its derivative, integer character, finite cusp limits and literal trace-four vanishing. This does not assume or prove realization of the original divisor.",
+  "remaining": "Smooth comparison V, quotient assembly and winding-period integral remain before reciprocity, principal-divisor converse and full all-weight arithmetic association. 16/20; DUB-17--20 OPEN."
+}

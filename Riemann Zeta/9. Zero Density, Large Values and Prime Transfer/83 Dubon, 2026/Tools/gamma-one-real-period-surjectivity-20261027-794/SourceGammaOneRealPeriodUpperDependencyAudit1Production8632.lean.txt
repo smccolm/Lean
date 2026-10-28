@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneRationalCyclicCusps
+import Dubon2026.SourceGammaOneRealPeriodDimensionUpper
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneRationalCyclicCusps, `Dubon2026.SourceGammaOneRealPeriodDimensionUpper, `Dubon2026.SourceGammaOneRationalCuspOrbit, `Dubon2026.SourceGammaOneRationalCuspPlace, `Dubon2026.SourceGammaOneCuspCosetPlaces, `Dubon2026.SourceGammaOneExactCuspOrbits, `Dubon2026.SourceGammaOneRealManinDimension, `Dubon2026.SourceGammaOneRealCuspPotential, `Dubon2026.SourceGammaOneRealManinCharacter, `Dubon2026.SourceGammaOneSignedParabolicCharacters]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper, `Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp, `Dubon2026.SourceManin.smul_infty_eq_iff, `Dubon2026.SourceFunctionField.GammaOne.exists_T_zpow_or_neg_of_lower_left, `Dubon2026.SourceFunctionField.GammaOne.rationalCuspOrbitMk_eq_iff, `Dubon2026.SourceFunctionField.GammaOne.rationalCuspOrbitFromCoset_surjective, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_j_pole_card_eq_translation_orbits, `Dubon2026.SourceFunctionField.GammaOne.RealManin.parabolic_dimension_bound, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE REAL PERIOD UPPER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual rational-cusp and cyclic-orbit bijection and the assembled original real parabolic dimension bound. Only declaration values are traversed. The real period dimension inequality, surjectivity, reciprocity, original arithmetic comparison and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,22 @@
+[
+  "Dubon2026.evenWeight_algebraic_degree",
+  "Dubon2026.homogeneousDeterminantTwist_algebraic_irreducible",
+  "Dubon2026.adelicRealKFinite_regular_algebraic_model",
+  "Dubon2026.finiteWeightLadder_submodule_eq_top",
+  "Dubon2026.homogeneousDeterminantTwist_regular_coefficient",
+  "Dubon2026.homogeneousDeterminantTwist_invariant_lie",
+  "Dubon2026.homogeneousDeterminantTwist_irreducible",
+  "Dubon2026.homogeneousPurePower_upper",
+  "Dubon2026.homogeneousDeterminantTwist_highest_line",
+  "Dubon2026.complexDiagonalGL_val",
+  "Dubon2026.homogeneousDeterminantTwist_highest_weight",
+  "Dubon2026.homogeneousHighestWeight_regular",
+  "Dubon2026.homogeneousSl2_submodule_eq_top",
+  "Dubon2026.homogeneousMatrixCoefficient_polynomial",
+  "Dubon2026.universalMatrixPolynomialAction_eval",
+  "Dubon2026.matrixCoefficientPolynomial_eval",
+  "Dubon2026.SemanticRegression.actual_algebraic_coefficients_source",
+  "Dubon2026.SemanticRegression.actual_algebraic_irreducibility_source",
+  "Dubon2026.SemanticRegression.actual_algebraic_highest_weight_source",
+  "Dubon2026.SemanticRegression.actual_regular_algebraic_model_source"
+]

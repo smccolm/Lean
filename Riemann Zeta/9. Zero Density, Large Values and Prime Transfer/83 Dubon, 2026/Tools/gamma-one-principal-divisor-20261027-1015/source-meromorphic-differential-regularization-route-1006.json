@@ -1,0 +1,15 @@
+{
+  "chain": "DUB17/18 -> actual all-weight association -> original Gamma1 Picard/H1 -> principal-divisor converse -> meromorphic function construction -> actual residue differential point normalization.",
+  "shorterRoute": "Reuse all previously proved modular action, slash and punctured-filter lemmas. Native SourcePeriodUntwist.reg uses meromorphic normal form and handles constant multipliers; the required weight-two variable factor and preservation of exponential cusp bounds do not follow from that interface directly. The inspected point-limit proof preserves these exact properties without constructing new charts. Omit the source finite-sum/two-point machinery because actual algebraic prescribed residues are already proved.",
+  "assumptionsToDischarge": "From actual raw differential residue germs, invariance and cusp decay, construct the point-regularized coefficient with the correct zero-residue point values required by the logarithmic primitive theorem.",
+  "remaining": "Raw actual coefficient invariance and exponential cusp decay, then compose with prescribed residues and the general-multiplier principal-divisor theorem. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ComplexPlaceDictionary_exists_slashInvariant_residue_eq_of_degree_eq_zero.lean.txt",
+      "sha256": "ABE68174E00AA0569ABA20534CD95662DC48E411108226E2FB6585FD5A381835"
+    }
+  ],
+  "externalWholeClosureBuilt": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

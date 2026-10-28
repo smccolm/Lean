@@ -1,0 +1,91 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective"
+  ],
+  "recordedUTC": "2026-10-27T17:17:52.928260+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceWeightTwoSignedForms",
+    "SourceWeightTwoSignedReciprocity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms.lean",
+      "sha256": "32F10201BA45B0F4C52BCF726D537880D3EB7C04389157A2D2A1BE3ECA48DC06",
+      "oleanSha256": "777EEB049CCA32FA6A3BB7BD95434716296B399C6F3E895ADD5936DCB86353F3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedForms861c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity.lean",
+      "sha256": "398CF459CF2BB9D8A7EC9EA03E6AE32FCC048DD2C123C4E5A4F3918136A444A0",
+      "oleanSha256": "4A2B3925C497075786E392A3C1BFB0CB9D0C28E9B426C1A1998C5667A31DE560",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSignedReciprocity862c.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.weightTwo_slash_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.dualPeriod_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.weightTwo_slash_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.along_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.period_extend_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.dualPeriod_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.extend"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityAudit1.log",
+  "logSha256": "DDE8FFFBD7499BD891D8A34E1DA71D57E962B5A70352AF0160524D2F0DE9856B",
+  "auditSha256": "A56796217E716AA1B94E9959EA259F7FFAC5B7B5A8EDD8AE95784DD097723F09",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedReciprocityDependencyAudit1.log",
+  "dependencyAuditSha256": "EE7898AC3207469D66ACDB1305D83CD20E50FE8488A6FEEB5D28BC83EAD8B796",
+  "dependencyAuditSourceSha256": "47ED8A5269E85162807974029D36F217713BAECEF48D83113E08E7AC1BE51D5F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.integralLattice_comp_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.multiplier_extend",
+    "Dubon2026.SourceFunctionField.GammaOne.SignedForms.orbit_iff"
+  ],
+  "dependency": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "faithful central-sign transport"
+  ],
+  "discharged": [
+    "same actual weight-two cusp function extends to signed subgroup",
+    "normalized endpoint and group periods agree",
+    "signed integer lattice restricts into original integer lattice",
+    "actual multiplier and orbits transport across central sign"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Analytic winding/period limit, Petersson reciprocity, original principal-divisor converse and full arithmetic chain remain. No gate closed; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-reciprocity-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "1D64D255C66BD6881A54B3FDA4209D728A0904483EE051F8CEF71AE8A617BC7F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

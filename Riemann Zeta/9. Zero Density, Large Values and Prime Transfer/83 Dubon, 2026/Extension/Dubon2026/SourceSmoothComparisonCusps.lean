@@ -1,0 +1,107 @@
+import Dubon2026.SourceSmoothComparisonQuotient
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> filled quotient cusp control.
+The proved modular height bound makes the actual finite divisor order vanish
+high in every translated cusp. The constructed V is then identically one,
+so the quotient inherits the actual untwist limit and derivative decay.
+This discharges the cusp assumptions needed by the winding log and boundary
+pairing. Adapted from pinned Apache-2.0 source 848; existing geometry reused. -/
+namespace Dubon2026.SourceSmoothComparison
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set SourceSmoothDivisor
+open scoped MatrixGroups Topology Real
+
+section Divisor
+
+variable {Γ : Subgroup SL(2, ℤ)} (S : Finset ℍ) (n : ℍ → ℤ)
+  (hcov : ∀ τ : ℍ, n τ ≠ 0 → ∃ s ∈ S, ∃ γ : Γ, (γ : SL(2, ℤ)) • s = τ)
+include hcov
+
+theorem exists_height_n_eq_zero (σ : SL(2, ℤ)) :
+    ∃ Y : ℝ, 0 < Y ∧ ∀ τ : ℍ, Y < τ.im → n (σ • τ) = 0 := by
+  refine ⟨1 + ∑ s ∈ S, max s.im s.im⁻¹, by positivity, fun τ hτ => ?_⟩
+  by_contra hne
+  obtain ⟨s, hs, γ, hγ⟩ := hcov _ hne
+  have hτeq : τ = (σ⁻¹ * (γ : SL(2, ℤ))) • s := by
+    rw [mul_smul, hγ, inv_smul_smul]
+  have h1 := SourceSmoothedFundamental.im_smul_le_max (σ⁻¹ * (γ : SL(2, ℤ))) s
+  rw [← hτeq] at h1
+  have h2 : max s.im s.im⁻¹ ≤ ∑ t ∈ S, max t.im t.im⁻¹ :=
+    Finset.single_le_sum (f := fun t : ℍ => max t.im t.im⁻¹) (fun t _ => by positivity) hs
+  linarith
+
+
+end Divisor
+
+section CuspTransfer
+
+variable {Φ V : ℂ → ℂ} {n : ℍ → ℤ}
+
+theorem eventually_atImInfty {p : ℍ → Prop} {Y : ℝ} (h : ∀ τ : ℍ, Y < τ.im → p τ) :
+    ∀ᶠ τ in atImInfty, p τ := by
+  rw [Filter.Eventually, UpperHalfPlane.atImInfty_mem]
+  exact ⟨Y + 1, fun τ hτ => h τ (by linarith)⟩
+
+theorem quot_eq_of_high (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n) (σ : SL(2, ℤ))
+    {Y : ℝ} (hY : ∀ τ : ℍ, Y < τ.im → n (σ • τ) = 0)
+    (hV1 : ∀ z : ℂ, Y < z.im → V (sm σ z) = 1) {z : ℂ} (hz0 : 0 < z.im) (hz : Y < z.im) :
+    quot Φ V (sm σ z) = Φ (sm σ z) := by
+  have hn : n (σ • ofComplex z) = 0 := hY _ (by rwa [UpperHalfPlane.im, coe_ofComplex hz0])
+  have := (eventually_eq_quot_mul hΦ hV (σ • ofComplex z) hn).self_of_nhds
+  change V (sm σ z) ≠ 0 ∧ Φ (sm σ z) = quot Φ V (sm σ z) * V (sm σ z) at this
+  rw [this.2, hV1 z hz, mul_one]
+
+theorem tendsto_quot_smul (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n) (σ : SL(2, ℤ))
+    {Y : ℝ} (hY : ∀ τ : ℍ, Y < τ.im → n (σ • τ) = 0)
+    (hV1 : ∀ z : ℂ, Y < z.im → V (sm σ z) = 1) {c : ℂ}
+    (hc : Tendsto (fun τ : ℍ => Φ ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c)) :
+    Tendsto (fun τ : ℍ => quot Φ V ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c) := by
+  refine hc.congr' ?_
+  refine eventually_atImInfty (Y := Y) fun τ hτ => ?_
+  have := quot_eq_of_high hΦ hV σ hY hV1 τ.im_pos hτ
+  rw [sm_coe] at this
+  exact this.symm
+
+theorem tendsto_fderiv_quot_smul (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n)
+    (σ : SL(2, ℤ)) {Y : ℝ} (hY0 : 0 < Y) (hY : ∀ τ : ℍ, Y < τ.im → n (σ • τ) = 0)
+    (hV1 : ∀ z : ℂ, Y < z.im → V (sm σ z) = 1)
+    (hd : Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => Φ (sm σ u)) (τ : ℂ)) atImInfty (𝓝 0)) :
+    Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => quot Φ V (sm σ u)) (τ : ℂ)) atImInfty (𝓝 0) := by
+  refine hd.congr' ?_
+  refine eventually_atImInfty (Y := Y) fun τ hτ => ?_
+  have hopen : IsOpen {u : ℂ | Y < u.im} := isOpen_lt continuous_const Complex.continuous_im
+  have hev : (fun u : ℂ => quot Φ V (sm σ u)) =ᶠ[𝓝 (τ : ℂ)] fun u => Φ (sm σ u) := by
+    filter_upwards [hopen.mem_nhds (show (τ : ℂ) ∈ {u : ℂ | Y < u.im} from hτ)] with u hu
+    exact quot_eq_of_high hΦ hV σ hY hV1 (lt_trans hY0 hu) hu
+  exact (hev.fderiv_eq).symm
+
+end CuspTransfer
+
+theorem quot_cusp_data {Γ : Subgroup SL(2, ℤ)} (S : Finset ℍ) (n : ℍ → ℤ)
+    (hcov : ∀ τ : ℍ, n τ ≠ 0 → ∃ s ∈ S, ∃ γ : Γ, γ.val • s = τ)
+    {Φ V : ℂ → ℂ} (hΦ : HasLocalModels Φ n) (hV : HasLocalModels V n)
+    (hV1 : ∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V (sm σ z) = 1)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => Φ ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c))
+    (hdecay : ∀ σ : SL(2, ℤ), Tendsto
+      (fun τ : ℍ => fderiv ℝ (fun u : ℂ => Φ (sm σ u)) (τ : ℂ)) atImInfty (𝓝 0)) :
+    ∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => quot Φ V ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c) ∧
+      Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => quot Φ V (sm σ u)) (τ : ℂ))
+        atImInfty (𝓝 0) := by
+  intro σ
+  obtain ⟨Yn, hYn0, hYn⟩ := exists_height_n_eq_zero S n hcov σ
+  obtain ⟨Yv, hYv⟩ := hV1 σ
+  obtain ⟨c, hc, hclim⟩ := hcusp σ
+  have hY0 : 0 < max Yn Yv := hYn0.trans_le (le_max_left _ _)
+  have hY : ∀ τ : ℍ, max Yn Yv < τ.im → n (σ • τ) = 0 :=
+    fun τ hτ => hYn τ ((le_max_left _ _).trans_lt hτ)
+  have hW : ∀ z : ℂ, max Yn Yv < z.im → V (sm σ z) = 1 :=
+    fun z hz => hYv z ((le_max_right _ _).trans_lt hz)
+  exact ⟨c, hc, tendsto_quot_smul hΦ hV σ hY hW hclim,
+    tendsto_fderiv_quot_smul hΦ hV σ hY0 hY hW (hdecay σ)⟩
+
+end
+end Dubon2026.SourceSmoothComparison

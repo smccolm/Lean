@@ -1,0 +1,113 @@
+import SourceGammaOneSmoothDivisorPeriodIntegral
+import SourceSmoothComparisonWindingLog
+import SourceGammaOneInvariantUntwist
+
+/-! DUB-17/18 -> full all-weight arithmetic association -> original Gamma1
+Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> actual winding
+comparison. Derive the cusp form from the original unitary multiplier,
+construct V from the original degree-zero divisor, and form the filled
+quotient of the actual meromorphic untwist by V. Its logarithm and parabolic
+integer character are proved, retaining the original divisor period limit.
+The meromorphic function with a unitary multiplier is still an upstream input;
+an invariant principal-divisor realization is not assumed or claimed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open Matrix.SpecialLinearGroup SourceSmoothComparison SourcePeriodUntwist
+open SourceSmoothedFundamental (smoothedFundamental)
+open scoped MatrixGroups Topology Real Classical ComplexConjugate GammaOne
+
+theorem exists_original_divisor_winding_comparison (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0)
+    (F : ℍ → ℂ) (χ : Gamma1 N → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) = χ γ * F τ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) *
+        (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    let D := Finsupp.mapDomain (analyticPlace hT) c
+    ∃ k : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      (∀ γ : Gamma1 N, χ γ = Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue (Gamma1 N) k γ).re : ℂ))) ∧
+    ∃ S : Finset ℍ, (S : Set ℍ) ⊆ c.support ∧
+      (∀ s ∈ S, ∀ t ∈ S, (∃ γ : Gamma1 N, γ.val • s = t) → s = t) ∧
+      (∀ τ : ℍ, D (analyticPlace hT τ) ≠ 0 →
+        ∃ s ∈ S, ∃ γ : Gamma1 N, γ.val • s = τ) ∧
+    ∃ V : ℂ → ℂ,
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z =>
+          (z - τ) ^ ((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ (T : ℝ) (g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2),
+        Integrable fun z : ℂ => g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) ∧
+      (∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        Tendsto (fun T : ℝ => 2 / Real.pi * ∫ z : ℂ, g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) atTop
+          (𝓝 (∑ s ∈ S, (D (analyticPlace hT s) : ℂ) *
+            sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g))) ∧
+    (∀ τ : ℍ, quot (SourcePeriodUntwist.Φ F k) V τ = limUnder (𝓝[≠] (τ : ℂ)) (fun w => SourcePeriodUntwist.Φ F k w / V w)) ∧
+    (∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => quot (SourcePeriodUntwist.Φ F k) V ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c) ∧
+      Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => quot (SourcePeriodUntwist.Φ F k) V (SourceSmoothDivisor.sm σ u)) (τ : ℂ))
+        atImInfty (𝓝 0)) ∧
+    ∃ (L : ℂ → ℂ) (m : Additive (plusMinus (Gamma1 N)) →+ ℤ),
+      (∀ γ : plusMinus (Gamma1 N), γ.val.val.trace ^ 2 = 4 → m (Additive.ofMul γ) = 0) ∧
+      (∀ τ : ℍ, ContDiffAt ℝ 1 L τ) ∧
+      (∀ τ : ℍ, HasFDerivAt L ((quot (SourcePeriodUntwist.Φ F k) V τ)⁻¹ • fderiv ℝ (quot (SourcePeriodUntwist.Φ F k) V) τ) τ) ∧
+      (∀ τ : ℍ, Complex.exp (L τ) = quot (SourcePeriodUntwist.Φ F k) V τ) ∧
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), L (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+        L τ + 2 * π * Complex.I * (m (Additive.ofMul γ) : ℂ)) ∧
+      (∀ σ : SL(2, ℤ), ∃ c : ℂ,
+        Tendsto (fun τ : ℍ => L ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c)) := by
+  classical
+  dsimp only
+  let D := Finsupp.mapDomain (analyticPlace hT) c
+  let n : ℍ → ℤ := fun τ => (analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)
+  obtain ⟨k, hk⟩ := sourceGamma1_meromorphic_multiplier_eq_exp_real_period
+    N hT D F χ hF hχ hunit hcusp ho
+  have hperiod : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) =
+      Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue (Gamma1 N) k γ).re : ℂ)) * F τ := by
+    intro γ τ
+    rw [hχ, hk]
+  have hΦ : HasLocalModels (SourcePeriodUntwist.Φ F k) n :=
+    fun τ => Φ_local F k hF τ (n τ) (ho τ)
+  have hΦinv : ∀ γ ∈ plusMinus (Gamma1 N), ∀ τ : ℍ,
+      SourcePeriodUntwist.Φ F k ((γ • τ : ℍ) : ℂ) = SourcePeriodUntwist.Φ F k τ := by
+    intro γ hγ τ
+    obtain ⟨δ, hδ⟩ := exists_gamma_smul_eq_of_mem_plusMinus (Gamma1 N) hγ τ
+    rw [← hδ]
+    exact Φ_smul F k hF hperiod δ τ
+  have hΦcusp : ∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => SourcePeriodUntwist.Φ F k ((σ • τ : ℍ) : ℂ))
+        atImInfty (𝓝 c) := by
+    intro σ
+    obtain ⟨c, hc, hlim⟩ := hcusp σ
+    exact Φ_cusp F k hF σ hc hlim
+  have hΦdecay : ∀ σ : SL(2, ℤ), Tendsto
+      (fun τ : ℍ => fderiv ℝ (fun u : ℂ =>
+        SourcePeriodUntwist.Φ F k (SourceSmoothDivisor.sm σ u)) (τ : ℂ))
+      atImInfty (𝓝 0) := by
+    intro σ
+    obtain ⟨c, hc, hlim⟩ := hcusp σ
+    exact Φ_decay F k hF σ hc hlim
+  obtain ⟨S, hsub, hinj, hcov, V, hVi, hVl, hVc, hVint, hVlim⟩ :=
+    exists_original_divisor_smooth_period_limit N hT c hc
+  have hcov' : ∀ τ : ℍ, n τ ≠ 0 →
+      ∃ s ∈ S, ∃ γ : plusMinus (Gamma1 N), γ.val • s = τ := by
+    intro τ hτ
+    obtain ⟨s, hs, γ, hγ⟩ := hcov τ (fun he => hτ (by simp [n, D, he]))
+    exact ⟨s, hs, ⟨γ.val, le_plusMinus (Gamma1 N) γ.property⟩, hγ⟩
+  have hq := exists_filled_winding_log (plusMinus (Gamma1 N)) S n hcov' hΦ hVl
+    hΦinv (fun γ hγ τ => hVi ⟨γ, hγ⟩ τ) hVc hΦcusp hΦdecay
+  exact ⟨k, hk, S, hsub, hinj, hcov, V, hVi, hVl, hVc, hVint, hVlim, hq⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

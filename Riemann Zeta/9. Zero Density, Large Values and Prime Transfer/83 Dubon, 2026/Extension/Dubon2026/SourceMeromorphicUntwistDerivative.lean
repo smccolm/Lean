@@ -1,0 +1,86 @@
+import Dubon2026.SourceMeromorphicUntwistDecay
+import Mathlib.MeasureTheory.Measure.Lebesgue.Complex
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> the almost-everywhere logarithmic derivative
+identity of the actual invariant untwist. Native normalized local forms
+give a countable exceptional set. Prescribed original divisor orders
+supply the finite-order input in the assembled Gamma1 consumer.
+Adapted from the pinned Apache-2.0 scope-848 untwisting source. -/
+namespace Dubon2026.SourcePeriodUntwist
+noncomputable section
+open UpperHalfPlane Filter MeasureTheory Matrix.SpecialLinearGroup Set
+open scoped MatrixGroups Topology
+
+/-- Points where the original meromorphic germ is analytic and nonzero. -/
+def Good (F : ℍ → ℂ) (z : ℂ) : Prop :=
+  ((F ∘ ofComplex) =ᶠ[𝓝 z] reg F) ∧ AnalyticAt ℂ (reg F) z ∧ reg F z ≠ 0
+
+variable (F : ℍ → ℂ)
+  (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+  (hfinite : ∀ τ : ℍ, ∃ n : ℤ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) = (n : WithTop ℤ))
+
+include hF hfinite in
+theorem countable_bad : ({z : ℂ | 0 < z.im ∧ ¬ Good F z}).Countable := by
+
+  have hloc : ∀ τ : ℍ, ∃ V : Set ℂ, IsOpen V ∧ (τ : ℂ) ∈ V ∧ ∀ z ∈ V, z ≠ τ → Good F z := by
+    intro τ
+    obtain ⟨m, hm⟩ := hfinite τ
+    have hmer : MeromorphicOn (F ∘ ofComplex) upperHalfPlaneSet := fun z hz => hF ⟨z, hz⟩
+    have hgood := normalized_eventually_regular isOpen_upperHalfPlaneSet hmer τ.im_pos hm
+    rw [eventually_nhdsWithin_iff] at hgood
+    obtain ⟨V, hV, hVo, hτV⟩ := mem_nhds_iff.1 hgood
+    exact ⟨V, hVo, hτV, fun z hz hzτ => hV hz hzτ⟩
+  choose V hVo hτV hV using hloc
+  obtain ⟨T, hTc, hTU⟩ := TopologicalSpace.isOpen_iUnion_countable V hVo
+  refine (hTc.image fun τ : ℍ => (τ : ℂ)).mono ?_
+  rintro z ⟨hz, hbad⟩
+  have hzU : z ∈ ⋃ i, V i := Set.mem_iUnion.2 ⟨⟨z, hz⟩, hτV ⟨z, hz⟩⟩
+  rw [← hTU] at hzU
+  obtain ⟨τ, hτT, hzτ⟩ := Set.mem_iUnion₂.1 hzU
+  refine ⟨τ, hτT, ?_⟩
+  by_contra hne
+  exact hbad (hV τ z hzτ (Ne.symm hne))
+
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+  (k : CuspForm (Γ.map (mapGL ℝ)) 2)
+
+include hF hfinite in
+
+theorem Φ_ae : ∀ᵐ z : ℂ, 0 < z.im → Φ F k z ≠ 0 ∧ DifferentiableAt ℝ (Φ F k) z ∧
+    fderiv ℝ (Φ F k) z 1 = Φ F k z *
+      (deriv (fun w : ℂ => F (ofComplex w)) z / F (ofComplex z) -
+        2 * Real.pi * Complex.I * ((k (ofComplex z)).re : ℂ)) ∧
+    fderiv ℝ (Φ F k) z Complex.I = Φ F k z *
+      (Complex.I * (deriv (fun w : ℂ => F (ofComplex w)) z / F (ofComplex z)) +
+        2 * Real.pi * Complex.I * ((k (ofComplex z)).im : ℂ)) := by
+  filter_upwards [(countable_bad F hF hfinite).ae_notMem volume] with z hz hzim
+  have hgood : Good F z := by
+    by_contra h; exact hz ⟨hzim, h⟩
+  obtain ⟨heq, han, hne⟩ := hgood
+  have hΦ0 : Φ F k z ≠ 0 := mul_ne_zero hne (R_ne_zero k z)
+
+  have h1 : HasFDerivAt (reg F) (deriv (reg F) z • (1 : ℂ →L[ℝ] ℂ)) z :=
+    han.differentiableAt.hasDerivAt.complexToReal_fderiv
+  have h2 := hasFDerivAt_R k hzim
+  have h3 : HasFDerivAt (Φ F k) _ z := h1.mul h2
+  have hval : ∀ v : ℂ, fderiv ℝ (Φ F k) z v =
+      reg F z * (R k z * (-(2 * Real.pi * Complex.I) * ((k (ofComplex z) * v).re : ℂ))) +
+        R k z * (deriv (reg F) z * v) := by
+    intro v
+    rw [h3.fderiv]
+    simp [smul_eq_mul]
+
+  have hderiv : deriv (fun w : ℂ => F (ofComplex w)) z = deriv (reg F) z := heq.deriv_eq
+  have hval0 : F (ofComplex z) = reg F z := heq.eq_of_nhds
+  refine ⟨hΦ0, h3.differentiableAt, ?_, ?_⟩
+  · rw [hval 1, hderiv, hval0, mul_one, Φ]
+    field_simp
+    ring
+  · rw [hval Complex.I, hderiv, hval0, Φ, Complex.mul_I_re]
+    push_cast
+    field_simp
+    ring
+
+end
+end Dubon2026.SourcePeriodUntwist

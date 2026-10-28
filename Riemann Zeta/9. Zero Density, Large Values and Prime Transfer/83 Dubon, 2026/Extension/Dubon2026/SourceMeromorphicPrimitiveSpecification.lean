@@ -1,0 +1,103 @@
+import Dubon2026.SourceUpperHalfPlaneMeromorphicPrimitive
+
+/-! DUB17/18 -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse ->
+actual meromorphic function -> multiplier covariance. Adapt only the necessary
+integer-residue integration consumer and multiplier argument, reusing the
+proved global primitive, native analytic action and punctured-domain connectivity.
+Actual analytic differential input and nonzero cusp limits remain. -/
+namespace Dubon2026.SourceMeromorphicPrimitiveMultiplier
+noncomputable section
+open scoped MatrixGroups Topology ModularForm
+open UpperHalfPlane Filter Set Metric
+
+/-- Extend the actual upper-half-plane integer order function to the complex plane. -/
+def mC (m : ℍ → ℤ) (z : ℂ) : ℤ := if h : 0 < z.im then m ⟨z, h⟩ else 0
+
+theorem mC_of_im_pos (m : ℍ → ℤ) {z : ℂ} (hz : 0 < z.im) : mC m z = m ⟨z, hz⟩ := dif_pos hz
+
+theorem mC_coe (m : ℍ → ℤ) (τ : ℍ) : mC m τ = m τ := by
+  rw [mC_of_im_pos m τ.im_pos]
+
+
+theorem coe_ofComplex_of_im_pos {z : ℂ} (hz : 0 < z.im) : ((ofComplex z : ℍ) : ℂ) = z := by
+  rw [ofComplex_apply_of_im_pos hz]
+
+theorem res_lift {m : ℍ → ℤ} {ω : ℍ → ℂ}
+    (hres : ∀ τ : ℍ, ∃ g : ℂ → ℂ, AnalyticAt ℂ g (τ : ℂ) ∧
+      (∀ᶠ z in 𝓝[≠] (τ : ℂ), ω (ofComplex z) = (m τ : ℂ) / (z - τ) + g z) ∧
+      (m τ = 0 → ω τ = g τ)) :
+    ∀ a : ℂ, 0 < a.im → ∃ g : ℂ → ℂ, AnalyticAt ℂ g a ∧
+      (∀ᶠ z in 𝓝[≠] a, (ω ∘ ofComplex) z = (mC m a : ℂ) / (z - a) + g z) ∧
+      (mC m a = 0 → (ω ∘ ofComplex) a = g a) := by
+  intro a ha
+  obtain ⟨g, hg, hexp, hval⟩ := hres ⟨a, ha⟩
+  refine ⟨g, hg, ?_, ?_⟩
+  · rw [mC_of_im_pos m ha]
+    exact hexp
+  · intro h0
+    rw [mC_of_im_pos m ha] at h0
+    simp only [Function.comp_apply, ofComplex_apply_of_im_pos ha]
+    exact hval h0
+
+/-- Meromorphic orders and logarithmic derivative of the constructed actual function. -/
+def GSpec (m : ℍ → ℤ) (ω : ℍ → ℂ) (G : ℂ → ℂ) : Prop :=
+  ∀ τ : ℍ, MeromorphicAt G τ ∧ meromorphicOrderAt G τ = (m τ : WithTop ℤ) ∧
+    (m τ ≠ 0 → G τ = 0) ∧
+    (m τ = 0 → AnalyticAt ℂ G τ ∧ G τ ≠ 0 ∧ HasDerivAt G (ω τ * G τ) τ)
+
+theorem exists_GSpec {m : ℍ → ℤ} {ω : ℍ → ℂ}
+    (hres : ∀ τ : ℍ, ∃ g : ℂ → ℂ, AnalyticAt ℂ g (τ : ℂ) ∧
+      (∀ᶠ z in 𝓝[≠] (τ : ℂ), ω (ofComplex z) = (m τ : ℂ) / (z - τ) + g z) ∧
+      (m τ = 0 → ω τ = g τ)) :
+    ∃ G : ℂ → ℂ, GSpec m ω G := by
+  obtain ⟨G, hG⟩ :=
+    SourceUpperHalfPlaneMeromorphicPrimitive.exists_meromorphic_logDerivative (mC m) (ω ∘ ofComplex) (res_lift hres)
+  refine ⟨G, fun τ => ?_⟩
+  have h := hG τ τ.im_pos
+  rw [mC_coe] at h
+  simp only [Function.comp_apply, ofComplex_apply] at h
+  exact h
+
+section Spec
+
+variable {m : ℍ → ℤ} {ω : ℍ → ℂ} {G : ℂ → ℂ} (hG : GSpec m ω G)
+include hG
+
+theorem GSpec.eq_zero_iff (τ : ℍ) : G τ = 0 ↔ m τ ≠ 0 := by
+  constructor
+  · intro h hm
+    exact ((hG τ).2.2.2 hm).2.1 h
+  · exact (hG τ).2.2.1
+
+theorem GSpec.ne_zero_iff (τ : ℍ) : G τ ≠ 0 ↔ m τ = 0 := by
+  rw [Ne, hG.eq_zero_iff]; push Not; rfl
+
+theorem GSpec.eventually_ne_zero (τ : ℍ) : ∀ᶠ z in 𝓝[≠] (τ : ℂ), G z ≠ 0 := by
+  rw [← meromorphicOrderAt_ne_top_iff_eventually_ne_zero (hG τ).1, (hG τ).2.1]
+  exact WithTop.coe_ne_top
+
+theorem GSpec.analyticAt {τ : ℍ} (hm : m τ = 0) : AnalyticAt ℂ G τ := ((hG τ).2.2.2 hm).1
+
+theorem GSpec.hasDerivAt {τ : ℍ} (hm : m τ = 0) : HasDerivAt G (ω τ * G τ) τ :=
+  ((hG τ).2.2.2 hm).2.2
+
+omit hG in
+
+theorem eventuallyEq_ofComplex (G : ℂ → ℂ) (τ : ℍ) :
+    (fun z : ℂ => G (ofComplex z)) =ᶠ[𝓝 (τ : ℂ)] G := by
+  filter_upwards [isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos] with z hz
+  rw [coe_ofComplex_of_im_pos hz]
+
+theorem GSpec.meromorphicAt_ofComplex (τ : ℍ) :
+    MeromorphicAt (fun z : ℂ => G (ofComplex z)) (τ : ℂ) :=
+  (hG τ).1.congr ((eventuallyEq_ofComplex G τ).filter_mono nhdsWithin_le_nhds).symm
+
+theorem GSpec.meromorphicOrderAt_ofComplex (τ : ℍ) :
+    meromorphicOrderAt (fun z : ℂ => G (ofComplex z)) (τ : ℂ) = (m τ : WithTop ℤ) := by
+  rw [meromorphicOrderAt_congr ((eventuallyEq_ofComplex G τ).filter_mono nhdsWithin_le_nhds)]
+  exact (hG τ).2.1
+
+end Spec
+
+end
+end Dubon2026.SourceMeromorphicPrimitiveMultiplier

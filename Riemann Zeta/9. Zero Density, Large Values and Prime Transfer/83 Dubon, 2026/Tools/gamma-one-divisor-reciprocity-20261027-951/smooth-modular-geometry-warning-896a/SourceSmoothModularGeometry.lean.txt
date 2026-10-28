@@ -1,0 +1,106 @@
+import SourceModularSmoothCover
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant comparison V.
+These are the actual action and local-finiteness facts needed for the orbit
+product of compact dipoles. The existing smooth-partition geometry supplies
+the height bound, compact preimages and proper discontinuity. Native analytic
+action supplies derivatives, avoiding repeated Mobius calculations.
+Adapted from the pinned Apache-2.0 construction recorded in scope 889. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set
+open scoped MatrixGroups Topology Real
+local notation "𝕌" => UpperHalfPlane.upperHalfPlaneSet
+
+theorem coe_ofComplex {z : ℂ} (hz : 0 < z.im) : ((ofComplex z : ℍ) : ℂ) = z := by
+  rw [ofComplex_apply_of_im_pos hz]
+
+theorem ofComplex_coe (τ : ℍ) : ofComplex (τ : ℂ) = τ := ofComplex_apply τ
+
+/-- Actual upper-half-plane action extended by the standard complex retraction. -/
+def sm (σ : SL(2, ℤ)) (z : ℂ) : ℂ := ((σ • ofComplex z : ℍ) : ℂ)
+
+theorem sm_coe (σ : SL(2, ℤ)) (τ : ℍ) : sm σ τ = ((σ • τ : ℍ) : ℂ) := by simp [sm]
+
+theorem im_sm_pos (σ : SL(2, ℤ)) (z : ℂ) : 0 < (sm σ z).im := (σ • ofComplex z).im_pos
+
+
+theorem det_coe' (σ : SL(2, ℤ)) : ((σ : GL (Fin 2) ℝ) : Matrix (Fin 2) (Fin 2) ℝ).det = 1 :=
+  (Matrix.SpecialLinearGroup.map (Int.castRingHom ℝ) σ).det_coe
+
+theorem det_pos (σ : SL(2, ℤ)) : 0 < ((σ : GL (Fin 2) ℝ) : Matrix (Fin 2) (Fin 2) ℝ).det := by
+  rw [det_coe']; exact one_pos
+
+/-- The actual holomorphic derivative of the determinant-one action. -/
+def dsm (σ : SL(2, ℤ)) (z : ℂ) : ℂ := 1 / denom (σ : GL (Fin 2) ℝ) (ofComplex z) ^ 2
+
+theorem dsm_coe (σ : SL(2, ℤ)) (τ : ℍ) : dsm σ τ = 1 / denom (σ : GL (Fin 2) ℝ) τ ^ 2 := by
+  simp [dsm]
+
+
+theorem dsm_ne_zero (σ : SL(2, ℤ)) (z : ℂ) : dsm σ z ≠ 0 :=
+  div_ne_zero one_ne_zero (pow_ne_zero _ (denom_ne_zero _ _))
+
+theorem hasDerivAt_sm (σ : SL(2, ℤ)) (τ : ℍ) : HasDerivAt (sm σ) (dsm σ τ) τ := by
+  have h := (UpperHalfPlane.hasStrictDerivAt_smul (g := (σ : GL (Fin 2) ℝ)) (det_pos σ) τ).hasDerivAt
+  rw [det_coe'] at h
+  rw [dsm_coe]
+  first | exact h | simpa using h
+
+theorem analyticAt_sm (σ : SL(2, ℤ)) (τ : ℍ) : AnalyticAt ℂ (sm σ) τ :=
+  UpperHalfPlane.analyticAt_smul (det_pos σ) τ
+
+theorem hasFDerivAt_sm (σ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) :
+    HasFDerivAt (sm σ) (dsm σ z • (1 : ℂ →L[ℝ] ℂ)) z :=
+  (hasDerivAt_sm σ ⟨z, hz⟩).complexToReal_fderiv
+
+theorem continuousAt_sm (σ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) : ContinuousAt (sm σ) z :=
+  (hasFDerivAt_sm σ hz).continuousAt
+
+theorem sm_mul (σ σ' : SL(2, ℤ)) (z : ℂ) : sm (σ * σ') z = sm σ (sm σ' z) := by
+  simp only [sm]; rw [ofComplex_coe, mul_smul]
+
+theorem sm_one {z : ℂ} (hz : 0 < z.im) : sm 1 z = z := by simp [sm, coe_ofComplex hz]
+
+theorem sm_inv_sm (σ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) : sm σ⁻¹ (sm σ z) = z := by
+  rw [← sm_mul, inv_mul_cancel, sm_one hz]
+
+theorem sm_inj (σ : SL(2, ℤ)) {z w : ℂ} (hz : 0 < z.im) (hw : 0 < w.im) (h : sm σ z = sm σ w) :
+    z = w := by
+  have : sm σ⁻¹ (sm σ z) = sm σ⁻¹ (sm σ w) := by rw [h]
+  rwa [sm_inv_sm σ hz, sm_inv_sm σ hw] at this
+
+theorem im_le_of_sm_mem {K : Set ℂ} {ε B : ℝ} (hε : 0 < ε) (hK : ∀ w ∈ K, ε ≤ w.im ∧ w.im ≤ B)
+    (γ : SL(2, ℤ)) {z : ℂ} (hz : 0 < z.im) (h : sm γ z ∈ K) : z.im ≤ max B ε⁻¹ := by
+  obtain ⟨h1, h2⟩ := hK _ h
+  have hw : 0 < (sm γ z).im := im_sm_pos γ z
+  have := SourceSmoothedFundamental.im_smul_le_max γ⁻¹ ⟨sm γ z, hw⟩
+  have heq : ((γ⁻¹ • (⟨sm γ z, hw⟩ : ℍ) : ℍ) : ℂ) = z := by
+    have : (⟨sm γ z, hw⟩ : ℍ) = γ • ofComplex z := by
+      apply UpperHalfPlane.ext; rfl
+    rw [this, inv_smul_smul, coe_ofComplex hz]
+  have him : (γ⁻¹ • (⟨sm γ z, hw⟩ : ℍ)).im = z.im := by
+    rw [← UpperHalfPlane.coe_im, heq]
+  rw [him] at this
+  refine this.trans (max_le_max h2 ?_)
+  show (sm γ z).im⁻¹ ≤ ε⁻¹
+  exact inv_anti₀ hε h1
+
+theorem finite_moving' {K L : Set ℂ} (hK : IsCompact K) (hK' : K ⊆ 𝕌) (hL : IsCompact L)
+    (hL' : L ⊆ 𝕌) : {γ : SL(2, ℤ) | ∃ z ∈ K, sm γ z ∈ L}.Finite := by
+  refine (SourceSmoothedFundamental.finite_moving _ _ (SourceSmoothedFundamental.isCompact_coe_preimage hK hK') (SourceSmoothedFundamental.isCompact_coe_preimage hL hL')).subset ?_
+  rintro γ ⟨z, hz, hγz⟩
+  refine ⟨(γ • (⟨z, hK' hz⟩ : ℍ) : ℍ), ⟨⟨z, hK' hz⟩, hz, rfl⟩, ?_⟩
+  show ((γ • (⟨z, hK' hz⟩ : ℍ) : ℍ) : ℂ) ∈ L
+  have : (⟨z, hK' hz⟩ : ℍ) = ofComplex z := (ofComplex_apply_of_im_pos (hK' hz)).symm
+  rw [this]; exact hγz
+
+theorem finite_fibre (τ s : ℍ) : {γ : SL(2, ℤ) | γ • τ = s}.Finite := by
+  refine (SourceSmoothedFundamental.finite_moving {τ} {s} isCompact_singleton isCompact_singleton).subset ?_
+  intro γ hγ
+  exact ⟨s, ⟨τ, rfl, hγ⟩, rfl⟩
+
+end
+end Dubon2026.SourceSmoothDivisor

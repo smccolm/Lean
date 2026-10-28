@@ -1,0 +1,41 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+  "assumptionsToDischarge": "The exact original-divisor/Petersson/integer-period reciprocity identity follows from two proved limits of the same normalized untwist integral. Equal local orders give the filled-quotient dbar split, existing almost-everywhere untwist nonvanishing supplies the null-set input, and compact support supplies integrability. The existing actual winding integral period and smooth-divisor period limit give one limit. The already proved untwist derivative and original normalized Petersson limit give the other, including conjugation, sign and central one-half factor. No limit or period certificate remains as a parameter.",
+  "remaining": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain upstream inputs. Reconciliation of the representative divisor functional with the original finite divisor class, integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-winding-integral-period-1b-scratch-receipt.json",
+      "sha256": "2B8EB76B77A496A6BA79B45DD5FE9CD1A6714C64A3FC4407E55FA83BBB1F2CAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityValueProbe949.lean",
+      "sha256": "B19164000109B559529B6BC058F1C675012F119CD8FABB1656B4AB624820B985"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityValueProbe949.log",
+      "sha256": "EF00EED80648EE26AC4B2219BF28DB6BCDF8A6DC595002CDCB9D19E7FCE5F678"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-reuse-848\\S_ModularCurve_exists_mem_periodLatticeOf_tendsto_windingPairing_smoothedFundamental.lean.txt",
+      "sha256": "63556CBEF1EEDE8F6381B2F89A1E4BA4CDBBD9AEF626C5044F4BFB9CC881E9F2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicUntwistDerivative.lean",
+      "sha256": "6BB8FC8FEEA7F780C42E9FBCB8C699A1F333B6CFDBB322BFA3D11E6F8C4791F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexHolomorphicStokes.lean",
+      "sha256": "8AFBAE8620F1BAD53A8A6DB8896EBF6389671004FB8B432AD00E32C121A906BE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit.lean",
+      "sha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E"
+    }
+  ],
+  "shorterRoutes": [
+    "Existing almost-everywhere nonvanishing replaces another countable divisor-orbit construction.",
+    "Existing compact-support multiplication theorem supplies integrability.",
+    "Direct equality of two limits of the same normalized integral gives reciprocity; the existing wedge identity remains proved and is used upstream by the compact dipole construction.",
+    "All eleven new public theorems occur in the actual original-divisor reciprocity consumer VALUE closure."
+  ]
+}

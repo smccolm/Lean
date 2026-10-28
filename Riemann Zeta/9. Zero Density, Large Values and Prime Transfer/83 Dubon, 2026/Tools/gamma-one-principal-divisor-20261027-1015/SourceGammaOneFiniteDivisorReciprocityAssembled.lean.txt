@@ -1,0 +1,55 @@
+import Dubon2026.SourceGammaOnePeterssonReciprocity
+import SourceGammaOneRepresentativePeriodCorrection
+
+/-! DUB-17/18 -> original arithmetic association -> Gamma1 Picard/H1 ->
+Abel-Jacobi converse -> analytic reciprocity. Replace the chosen orbit-
+representative endpoint functional by the original finite divisor functional,
+absorbing their proved difference into the original integer period lattice.
+All ramification factors, original level and source normalization are retained.
+The meromorphic function with its prescribed orders remains an upstream input. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open Matrix.SpecialLinearGroup SourcePeriodUntwist SourceSmoothedUnfolding
+open scoped MatrixGroups Topology Real Classical ComplexConjugate GammaOne
+
+theorem exists_original_finite_divisor_reciprocity (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0)
+    (F : ℍ → ℂ) (χ : Gamma1 N → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) = χ γ * F τ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) *
+        (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    ∃ k : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      (∀ γ : Gamma1 N, χ γ = Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue (Gamma1 N) k γ).re : ℂ))) ∧
+    ∃ Λ ∈ sourceWeightTwoIntegralLattice (Gamma1 N),
+      ∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        Λ g + (c.sum (fun τ n => n • sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ)) g =
+          -Complex.I * ∫ τ in closedDomain (plusMinus (Gamma1 N)), petersson 2 k g τ := by
+  classical
+  obtain ⟨k, hk, S, hsub, hinj, hcov, Λ, hΛ, hrec⟩ :=
+    exists_original_divisor_petersson_reciprocity N hT c hc F χ hF hχ hunit hcusp ho
+  let C := c.sum (fun τ n => n • sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I τ)
+  let R := ∑ s ∈ S, (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT s) •
+    sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s
+  have hcor : C - R ∈ sourceWeightTwoIntegralLattice (Gamma1 N) :=
+    representative_period_difference_mem N hT c S hinj hcov
+  refine ⟨k, hk, Λ - (C - R), (sourceWeightTwoIntegralLattice (Gamma1 N)).sub_mem hΛ hcor,
+    fun g => ?_⟩
+  have hr : R g = ∑ s ∈ S, ((Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT s) : ℂ) *
+      sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g := by
+    simp only [R, LinearMap.sum_apply, LinearMap.smul_apply, zsmul_eq_mul]
+  change (Λ - (C - R)) g + C g = _
+  calc
+    (Λ - (C - R)) g + C g = Λ g + R g := by
+      simp only [LinearMap.sub_apply]
+      ring
+    _ = _ := by rw [hr]; exact hrec g
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

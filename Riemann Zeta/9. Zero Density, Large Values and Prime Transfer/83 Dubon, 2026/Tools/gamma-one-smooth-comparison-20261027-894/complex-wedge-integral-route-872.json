@@ -1,0 +1,23 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period limit",
+    "smooth local comparison function",
+    "exact wedge/residue identity"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_logDeriv_wedge_add_finsum_eq_integral_dbarLogDeriv.lean.txt",
+      "sha256": "101C5506DCC541F105F02082765C00B78CE6B43E1315B83821045A91EE6AF824",
+      "review": "Entire primary proof read. Duplicate continuity, dbar and singular-integrability infrastructure removed in favor of 863/865 results. Unused upstream helper parameters removed while the complete local/global statement is retained. Native local logarithm, second-derivative symmetry, smooth partition of unity and the locally proved simple-pole integral replace external axiomatic imports."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "actual C1 local integer-order models imply integrability and exact wedge/residue sum for compact C2 tests"
+  ],
+  "remaining": "Actual invariant comparison model and smoothed modular period/Petersson limit, original principal-divisor converse and full all-weight arithmetic association remain. This proof alone closes no DUB gate."
+}

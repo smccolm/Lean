@@ -1,0 +1,1584 @@
+{
+  "date": "27 October 2026",
+  "modules": [
+    "Dubon2026.SourceComplexWedgeStokes",
+    "Dubon2026.SourceComplexWedgeLocalLog",
+    "Dubon2026.SourceComplexWedgeDisc",
+    "Dubon2026.SourceComplexWedgeIntegral",
+    "Dubon2026.SourceGammaOneUntwistWedgeIntegral",
+    "Dubon2026.SourceModularSmoothCutoff",
+    "Dubon2026.SourceModularSmoothGeometry",
+    "Dubon2026.SourceModularSmoothCosetSum",
+    "Dubon2026.SourceModularSmoothCover",
+    "Dubon2026.SourceModularSmoothedFundamentalSupport",
+    "Dubon2026.SourceModularSmoothedFundamental",
+    "Dubon2026.SourceGammaOneSmoothPartition",
+    "Dubon2026.SourceModularProjectiveFibers",
+    "Dubon2026.SourceModularSmoothOrbitMass",
+    "Dubon2026.SourceModularInvariantIntegralUnfolding",
+    "Dubon2026.SourceModularSmoothIntegralLimit",
+    "Dubon2026.SourceModularSmoothPlaneIntegral",
+    "Dubon2026.SourceGammaOnePeterssonSmoothLimit",
+    "Dubon2026.SourceComplexWindingLogLift",
+    "Dubon2026.SourceModularWindingCharacter",
+    "Dubon2026.SourceModularWindingCuspLimit",
+    "Dubon2026.SourceModularParabolicWindingLog",
+    "Dubon2026.SourceComplexDipoleLocalModel",
+    "Dubon2026.SourceComplexDipoleLogDerivative",
+    "Dubon2026.SourceComplexDipolePairing",
+    "Dubon2026.SourceUpperHalfPlaneDipole"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse -> analytic reciprocity.",
+  "discharged": "The actual original-divisor untwist satisfies the compact C2 wedge/residue identity through proved local integer orders. The literal smooth modular coset partition is constructed with compact support, finite overlap and exact orbit mass. For original Gamma1 weight-two cusp forms, native fundamental-domain unfolding and two-element central fibers prove the source-normalized planar Petersson limit, including integrability and the factor one half on the literal closed coset domain. For an actual nonvanishing invariant C1 function with nonzero finite translated cusp limits, the logarithm, derivative and integral additive character are constructed, and the existing parabolic classification proves squared-trace-four vanishing. Finally an actual compact smooth dipole has orders +1 at s and -1 at b and exact integral pi times the endpoint difference. None of these analytic conclusions is supplied as a certificate.",
+  "boundary": "The original meromorphic function and its exact divisor orders remain inputs to the untwist consumer. The globally invariant smooth comparison V, exact orbit multiplicities and degree-zero cancellation, filled quotient, winding-period/Petersson assembly, analytic reciprocity and original principal-divisor converse remain. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,721-module scope: all thirteen retained regressions, 55,220 exhaustive theorem checks, 25,477 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourceGamma1_untwist_wedge_integral",
+    "Dubon2026.sourceGamma1_smooth_partition",
+    "Dubon2026.sourceGamma1_petersson_smoothed_limit",
+    "Dubon2026.SourceWindingLog.exists_parabolic_log",
+    "Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T17:58:24.968995+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceComplexWedgeStokes",
+        "SourceComplexWedgeLocalLog",
+        "SourceComplexWedgeDisc",
+        "SourceComplexWedgeIntegral",
+        "SourceGammaOneUntwistWedgeIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes.lean",
+          "sha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67",
+          "oleanSha256": "EE4DCE4C1CC163CD6AC4059CF555EDDA3C386F8990A65FA5739293C92FDD87B5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeStokes874a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog.lean",
+          "sha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E",
+          "oleanSha256": "2EDBE1796F4FBB8E7581A5DB10E5272152A4680B5BD3F9A76AE642E566450E22",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeLocalLog874a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc.lean",
+          "sha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9",
+          "oleanSha256": "43640DDA0FDDB9FA37D4D1056FEB20F20B4A47955D906A244F31189FAC7E2993",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeDisc874a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral.lean",
+          "sha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76",
+          "oleanSha256": "A6DA32AD5B4F04826C34A0455C692357054700EC6A61028B39E6DF502D8AEEFA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWedgeIntegral874a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral.lean",
+          "sha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB",
+          "oleanSha256": "821DA93878825BBA7960EF17640497B5DBEBF92B7F15E147966262B1CE74BE00",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeIntegral874a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply",
+        "Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm",
+        "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero",
+        "Dubon2026.SourceComplexReciprocity.Wedge.mem_slit",
+        "Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq",
+        "Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E",
+        "Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div",
+        "Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne",
+        "Dubon2026.SourceComplexReciprocity.Wedge.disc_identity",
+        "Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt",
+        "Dubon2026.SourceComplexReciprocity.Wedge.exists_disc",
+        "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp",
+        "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity",
+        "Dubon2026.sourceGamma1_untwist_wedge_integral",
+        "Dubon2026.SourceComplexReciprocity.Wedge.Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.vEk"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply",
+        "Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm",
+        "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero",
+        "Dubon2026.SourceComplexReciprocity.Wedge.mem_slit",
+        "Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq",
+        "Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E",
+        "Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'",
+        "Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk",
+        "Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div",
+        "Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne",
+        "Dubon2026.SourceComplexReciprocity.Wedge.disc_identity",
+        "Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt",
+        "Dubon2026.SourceComplexReciprocity.Wedge.exists_disc",
+        "Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp",
+        "Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity",
+        "Dubon2026.sourceGamma1_untwist_wedge_integral"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceComplexReciprocity.Wedge.Lg",
+        "Dubon2026.SourceComplexReciprocity.Wedge.vEk"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeAudit1.log",
+      "logSha256": "15F5EEF34DE9BA7E95CE62FF08BFEDA9FF2CFA8CD3F98F1F1B61E81EB3C5F96A",
+      "auditSha256": "36581DABB9DD8D32C41D009D95A0537159FFAB00F7DB757A438EC007B5B2DD3D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 44,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 35,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1.log",
+      "dependencyAuditSha256": "C69715ED00B6797739F341698FB6676F78C5AF1F3C0C11AA09ECCF397EF1BCF5",
+      "dependencyAuditSourceSha256": "EBE8D07874B97244A7D8045133BBCD94E6A67DBC8EC042F0505A47127C740A25",
+      "consumers": [
+        "Dubon2026.sourceGamma1_untwist_wedge_integral"
+      ],
+      "dependency": [
+        "DUB-17/18",
+        "all-weight arithmetic association",
+        "original Gamma1 coefficient Hecke realization",
+        "Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "winding-period limit",
+        "actual untwist wedge identity"
+      ],
+      "discharged": [
+        "Compact-support wedge integration by parts from native derivative symmetry",
+        "C1 local integer-order models imply integrability and exact wedge/residue identity via proved singular kernel and native smooth partition",
+        "Actual original divisor and its meromorphic untwist derive every local model; existing actual cusp-form primitive supplies derivative"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. F and exact original-divisor orders remain inputs. Invariance and cusp control are proved separately by the invariant-untwist consumer. Actual smooth comparison model and modular winding/period/Petersson limit remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-untwist-wedge-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "E40784258AF75C3A8FCF931105AA9D06AE848B8DE26E6406F45E7CF991666B75",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T18:37:36.595277+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularSmoothCutoff",
+        "SourceModularSmoothGeometry",
+        "SourceModularSmoothCosetSum",
+        "SourceModularSmoothCover",
+        "SourceModularSmoothedFundamentalSupport",
+        "SourceModularSmoothedFundamental",
+        "SourceGammaOneSmoothPartition"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff.lean",
+          "sha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+          "oleanSha256": "8B277F235457DBF7A1222055A2B1593240D1D12DAADB8C8E5364FC53CD231F5D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff877a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCutoff877a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry.lean",
+          "sha256": "FBD26B1A3F15D2D20E86815097BA705717C7AE87AEDBC4A3E1F1C6771B430EEB",
+          "oleanSha256": "937230D47A194EA1F8725816025B46BDB7095EF5A7F834ABD7BFA9408CD6E40A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry877a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothGeometry877a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum.lean",
+          "sha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+          "oleanSha256": "1D33FD1A731CB4B95892A4326CD7B03DBF1673EC9F723115B93EE7211974EE50",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum877a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCosetSum877a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover.lean",
+          "sha256": "A413B35D48BBF38403642E7101EFBB7D83F2234042D396732EDA37115D37BDCC",
+          "oleanSha256": "BC7FBF0CDD2A300D99B0EAAF8F512234CA6DC2DDFDAA1293AB69F67683A9BA1A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover877a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothCover877a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport.lean",
+          "sha256": "F130009BB7A2B319BA6FB977329A03E3CEB25EA7C76F8B4FBCD49D5F3C6CDC49",
+          "oleanSha256": "F62393F4B5913AA09010A54CC4EC9F44F757A53BD6626D7D17E8B3ED7EA410C3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport878b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamentalSupport878b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental.lean",
+          "sha256": "580556F969B7EC4188A0CEE331A79EA97FE11237093AEB22ACB79DA1CF615638",
+          "oleanSha256": "6D61483256E2640AC8F210E26D7EFB41DB3E5C2FF8AB35EDFC762A441CECEAF7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental878b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothedFundamental878b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition.lean",
+          "sha256": "E095E055D3FDDC6F8C22F636C51C99FAF1165F762A8F684BFE2C0A4EC57E48EA",
+          "oleanSha256": "284059A4E6B80EF199751F18C8EF9364FABC2F297BFE7172F8239DD039CEFBF6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition878b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartition878b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothedFundamental.coe_smul",
+        "Dubon2026.SourceSmoothedFundamental.mob_mob",
+        "Dubon2026.SourceSmoothedFundamental.pOne_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le",
+        "Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge",
+        "Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.bump_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_box",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box",
+        "Dubon2026.SourceSmoothedFundamental.support_bump_subset",
+        "Dubon2026.SourceSmoothedFundamental.recip_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le",
+        "Dubon2026.SourceSmoothedFundamental.mul_recip_le_one",
+        "Dubon2026.SourceSmoothedFundamental.gcut_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.gcut_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.gcut_le_one",
+        "Dubon2026.SourceSmoothedFundamental.cover_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pu_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.support_pu_subset",
+        "Dubon2026.SourceSmoothedFundamental.puCut_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.puCut_le_pu",
+        "Dubon2026.SourceSmoothedFundamental.support_puCut_subset",
+        "Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum",
+        "Dubon2026.SourceSmoothedFundamental.denom_eq",
+        "Dubon2026.SourceSmoothedFundamental.analyticAt_mob",
+        "Dubon2026.SourceSmoothedFundamental.mob_contDiffAt",
+        "Dubon2026.SourceSmoothedFundamental.im_mob",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos",
+        "Dubon2026.SourceSmoothedFundamental.finite_moving",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_le_inv",
+        "Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_le_max",
+        "Dubon2026.SourceSmoothedFundamental.exists_smul_nice",
+        "Dubon2026.SourceSmoothedFundamental.finsum_sum_coset",
+        "Dubon2026.SourceSmoothedFundamental.pOne_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.bump_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.recip_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.gcut_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage",
+        "Dubon2026.SourceSmoothedFundamental.box_subset",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_boxH",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob",
+        "Dubon2026.SourceSmoothedFundamental.bump_le_cover",
+        "Dubon2026.SourceSmoothedFundamental.cover_mob",
+        "Dubon2026.SourceSmoothedFundamental.half_le_cover",
+        "Dubon2026.SourceSmoothedFundamental.finsum_pu_mob",
+        "Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one",
+        "Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum",
+        "Dubon2026.SourceSmoothedFundamental.cover_contDiffAt",
+        "Dubon2026.SourceSmoothedFundamental.pu_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.puCut_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_piece",
+        "Dubon2026.SourceSmoothedFundamental.piece_subset",
+        "Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_carrier",
+        "Dubon2026.SourceSmoothedFundamental.carrier_subset",
+        "Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier",
+        "Dubon2026.SourceSmoothedFundamental.hasCompactSupport",
+        "Dubon2026.SourceSmoothedFundamental.tsupport_subset",
+        "Dubon2026.SourceSmoothedFundamental.contDiff",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_eq",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_carrierH",
+        "Dubon2026.SourceSmoothedFundamental.finite_support_smul",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint",
+        "Dubon2026.SourceSmoothedFundamental.smooth_partition",
+        "Dubon2026.sourceGamma1_smooth_partition",
+        "Dubon2026.SourceSmoothedFundamental.mob",
+        "Dubon2026.SourceSmoothedFundamental.pOne",
+        "Dubon2026.SourceSmoothedFundamental.pTwo",
+        "Dubon2026.SourceSmoothedFundamental.bump",
+        "Dubon2026.SourceSmoothedFundamental.box",
+        "Dubon2026.SourceSmoothedFundamental.recip",
+        "Dubon2026.SourceSmoothedFundamental.gcut",
+        "Dubon2026.SourceSmoothedFundamental.cover",
+        "Dubon2026.SourceSmoothedFundamental.pu",
+        "Dubon2026.SourceSmoothedFundamental.puCut",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental",
+        "Dubon2026.SourceSmoothedFundamental.cosetEquiv",
+        "Dubon2026.SourceSmoothedFundamental.boxH",
+        "Dubon2026.SourceSmoothedFundamental.piece",
+        "Dubon2026.SourceSmoothedFundamental.carrier",
+        "Dubon2026.SourceSmoothedFundamental.carrierH",
+        "Dubon2026.SourceSmoothedFundamental.quotientFintype"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothedFundamental.coe_smul",
+        "Dubon2026.SourceSmoothedFundamental.mob_mob",
+        "Dubon2026.SourceSmoothedFundamental.pOne_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le",
+        "Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge",
+        "Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.bump_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_box",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box",
+        "Dubon2026.SourceSmoothedFundamental.support_bump_subset",
+        "Dubon2026.SourceSmoothedFundamental.recip_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le",
+        "Dubon2026.SourceSmoothedFundamental.mul_recip_le_one",
+        "Dubon2026.SourceSmoothedFundamental.gcut_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.gcut_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.gcut_le_one",
+        "Dubon2026.SourceSmoothedFundamental.cover_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.pu_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.support_pu_subset",
+        "Dubon2026.SourceSmoothedFundamental.puCut_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.puCut_le_pu",
+        "Dubon2026.SourceSmoothedFundamental.support_puCut_subset",
+        "Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum",
+        "Dubon2026.SourceSmoothedFundamental.denom_eq",
+        "Dubon2026.SourceSmoothedFundamental.analyticAt_mob",
+        "Dubon2026.SourceSmoothedFundamental.mob_contDiffAt",
+        "Dubon2026.SourceSmoothedFundamental.im_mob",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos",
+        "Dubon2026.SourceSmoothedFundamental.finite_moving",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_le_inv",
+        "Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero",
+        "Dubon2026.SourceSmoothedFundamental.im_smul_le_max",
+        "Dubon2026.SourceSmoothedFundamental.exists_smul_nice",
+        "Dubon2026.SourceSmoothedFundamental.finsum_sum_coset",
+        "Dubon2026.SourceSmoothedFundamental.pOne_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.pTwo_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.bump_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.recip_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.gcut_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage",
+        "Dubon2026.SourceSmoothedFundamental.box_subset",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_boxH",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob",
+        "Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob",
+        "Dubon2026.SourceSmoothedFundamental.bump_le_cover",
+        "Dubon2026.SourceSmoothedFundamental.cover_mob",
+        "Dubon2026.SourceSmoothedFundamental.half_le_cover",
+        "Dubon2026.SourceSmoothedFundamental.finsum_pu_mob",
+        "Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one",
+        "Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum",
+        "Dubon2026.SourceSmoothedFundamental.cover_contDiffAt",
+        "Dubon2026.SourceSmoothedFundamental.pu_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.puCut_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_piece",
+        "Dubon2026.SourceSmoothedFundamental.piece_subset",
+        "Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_carrier",
+        "Dubon2026.SourceSmoothedFundamental.carrier_subset",
+        "Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero",
+        "Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier",
+        "Dubon2026.SourceSmoothedFundamental.hasCompactSupport",
+        "Dubon2026.SourceSmoothedFundamental.tsupport_subset",
+        "Dubon2026.SourceSmoothedFundamental.contDiff",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_eq",
+        "Dubon2026.SourceSmoothedFundamental.isCompact_carrierH",
+        "Dubon2026.SourceSmoothedFundamental.finite_support_smul",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one",
+        "Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one",
+        "Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint",
+        "Dubon2026.SourceSmoothedFundamental.smooth_partition",
+        "Dubon2026.sourceGamma1_smooth_partition"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceSmoothedFundamental.mob",
+        "Dubon2026.SourceSmoothedFundamental.pOne",
+        "Dubon2026.SourceSmoothedFundamental.pTwo",
+        "Dubon2026.SourceSmoothedFundamental.bump",
+        "Dubon2026.SourceSmoothedFundamental.box",
+        "Dubon2026.SourceSmoothedFundamental.recip",
+        "Dubon2026.SourceSmoothedFundamental.gcut",
+        "Dubon2026.SourceSmoothedFundamental.cover",
+        "Dubon2026.SourceSmoothedFundamental.pu",
+        "Dubon2026.SourceSmoothedFundamental.puCut",
+        "Dubon2026.SourceSmoothedFundamental.smoothedFundamental",
+        "Dubon2026.SourceSmoothedFundamental.cosetEquiv",
+        "Dubon2026.SourceSmoothedFundamental.boxH",
+        "Dubon2026.SourceSmoothedFundamental.piece",
+        "Dubon2026.SourceSmoothedFundamental.carrier",
+        "Dubon2026.SourceSmoothedFundamental.carrierH",
+        "Dubon2026.SourceSmoothedFundamental.quotientFintype"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionAudit1b.log",
+      "logSha256": "96A35EE7700DB49E55035472609C2BEA76102DBBD5BDB1AAA5C67EF37BE6F983",
+      "auditSha256": "01B1AF73FA334C45AF15CD8E4CF3A649C13C2CF438F9B8DE6FE61872C55517D3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 102,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 108,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionDependencyAudit1b.log",
+      "dependencyAuditSha256": "EE7325D922818AB78AEE45E8B5AAAA69B4D32B2737867919FB4A807B67E57DA3",
+      "dependencyAuditSourceSha256": "280A0579E191B04C68B88101981EFC49AF507B12E9BCA4B75D459DAEA65CE7B8",
+      "consumers": [
+        "Dubon2026.sourceGamma1_smooth_partition"
+      ],
+      "dependency": [
+        "DUB-17/18",
+        "original all-weight arithmetic association",
+        "original Gamma1 coefficient Hecke realization",
+        "Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "winding-period limit",
+        "actual compact smooth orbit partition"
+      ],
+      "discharged": [
+        "Literal subgroup coset cutoff is smooth with compact support contained in upper half plane",
+        "Its actual Gamma1 orbit sum has finite support, is bounded by one and equals one beyond the exact height threshold",
+        "Only finitely many modular translates meet its support"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Invariant integral limit with exact central-sign multiplicity, smooth comparison model, modular winding/period/Petersson comparison, original principal-divisor converse and entire all-weight arithmetic chain remain. No DUB gate closed; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-partition-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "351B1BA3DE622A5B1C45ECADA42E1293E7FD9EDD0D17D885D1A479B8AC535823",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T18:48:14.292724+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceModularProjectiveFibers",
+        "SourceModularSmoothOrbitMass",
+        "SourceModularInvariantIntegralUnfolding",
+        "SourceModularSmoothIntegralLimit",
+        "SourceModularSmoothPlaneIntegral",
+        "SourceGammaOnePeterssonSmoothLimit"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers.lean",
+          "sha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+          "oleanSha256": "544F32DF8CA6868B498446718A1628EBDF0A9F4D68117B58C0F1063E15C77754",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularProjectiveFibers879a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass.lean",
+          "sha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415",
+          "oleanSha256": "4BF7F598B84A8E8746D711038255E91B565847DEBA39B00F42C3CD0EB835AA2C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothOrbitMass880c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding.lean",
+          "sha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+          "oleanSha256": "B9D1A05A6E9EB3879A252E9FB938869E13FD176F0FFA2F0AE00A2885343ED87C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularInvariantIntegralUnfolding881b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit.lean",
+          "sha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80",
+          "oleanSha256": "BF4DF2304F1B713F6E25428EB91E465BC106FD37F3B61CB573DC19A9C18960B1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothIntegralLimit882b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral.lean",
+          "sha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313",
+          "oleanSha256": "D19C56BA3A3022F033647438E401827BBD0B997A1AB3389CF2163785D328525B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularSmoothPlaneIntegral883a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit.lean",
+          "sha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E",
+          "oleanSha256": "B1B76419BB632F0474BFEBEF59B660F655B62F352351E880E487FCF5919C7C21",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimit884b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceSmoothedUnfolding.projection_surjective",
+        "Dubon2026.SourceSmoothedUnfolding.mem_projection_ker",
+        "Dubon2026.SourceSmoothedUnfolding.projection_ker_card",
+        "Dubon2026.SourceSmoothedUnfolding.projection_fiber_card",
+        "Dubon2026.SourceSmoothedUnfolding.tsum_projection",
+        "Dubon2026.SourceSmoothedUnfolding.finite_support_projective",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg",
+        "Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized",
+        "Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq",
+        "Dubon2026.SourceSmoothedUnfolding.center_le",
+        "Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth",
+        "Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos",
+        "Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane",
+        "Dubon2026.sourceCusp_petersson_integrable_closedDomain",
+        "Dubon2026.sourceGamma1_petersson_smoothed_limit",
+        "Dubon2026.SourceSmoothedUnfolding.projection",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.closedDomain"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceSmoothedUnfolding.projection_surjective",
+        "Dubon2026.SourceSmoothedUnfolding.mem_projection_ker",
+        "Dubon2026.SourceSmoothedUnfolding.projection_ker_card",
+        "Dubon2026.SourceSmoothedUnfolding.projection_fiber_card",
+        "Dubon2026.SourceSmoothedUnfolding.tsum_projection",
+        "Dubon2026.SourceSmoothedUnfolding.finite_support_projective",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg",
+        "Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized",
+        "Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq",
+        "Dubon2026.SourceSmoothedUnfolding.center_le",
+        "Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth",
+        "Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos",
+        "Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp",
+        "Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane",
+        "Dubon2026.sourceCusp_petersson_integrable_closedDomain",
+        "Dubon2026.sourceGamma1_petersson_smoothed_limit"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceSmoothedUnfolding.projection",
+        "Dubon2026.SourceSmoothedUnfolding.projectiveMass",
+        "Dubon2026.SourceSmoothedUnfolding.closedDomain"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitAudit1.log",
+      "logSha256": "58080AF16E46EEFCABA8CC92D6555925472431551455036425756C24030A27D7",
+      "auditSha256": "F8B7AC6D8158A7DB76850F474218B58349C6B25358AC53685A9D487E17988AAD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 41,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1.log",
+      "dependencyAuditSha256": "F0B6631D739BE79116DAD219DE0EC9C9054C00977C673AEEE893EF497F48352B",
+      "dependencyAuditSourceSha256": "2F558E098ECEC03E326704F16C4A2E8B8DBA7E32E137F680D59E3CD5A3FCAD86",
+      "consumers": [
+        "Dubon2026.sourceGamma1_petersson_smoothed_limit"
+      ],
+      "dependency": [
+        "DUB-17/18",
+        "original all-weight arithmetic association",
+        "original Gamma1 coefficient Hecke realization",
+        "Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "Petersson comparison",
+        "actual original cusp-form smooth integral limit"
+      ],
+      "discharged": [
+        "Actual projective map has exactly two-element fibers and projective smooth orbit mass tends to one half",
+        "Native fundamental-domain unfolding proves both integrability and weighted integral equality",
+        "Existing null boundary transfers to the literal source closed domain; planar/hyperbolic measure conversion is exact",
+        "Original Gamma1 cusp forms have derived signed invariance, actual Petersson bound and integrability; no analytic limit certificate is supplied"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual smooth comparison local model and winding-period/Petersson reciprocity assembly remain, followed by original principal-divisor converse and entire all-weight arithmetic chain. No DUB gate closed; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-petersson-smooth-limit-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "CEC126E2D7145E395EC6A64E6D7D21CF2B70969999CD7A507941A715BE27656F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T19:01:32.011906+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceComplexWindingLogLift",
+        "SourceModularWindingCharacter",
+        "SourceModularWindingCuspLimit",
+        "SourceModularParabolicWindingLog"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift.lean",
+          "sha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3",
+          "oleanSha256": "3D6E9F018119B9C66D8A8F2E75D64E56E1527874DF02EFEFE4B879C784A82DFE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter.lean",
+          "sha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA",
+          "oleanSha256": "4201DFC003B509C6C5A6B9574B7A8135E6B4A5EB52F7432F23E70C37FF10CA34",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit.lean",
+          "sha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966",
+          "oleanSha256": "E8C64F9200BBA3868FB2A04AC904A9D7F2BE902C834558753A879E55570FC7C7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog.lean",
+          "sha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA",
+          "oleanSha256": "8CBF6438C3C95C6557D46F5DF60C039D875B7FFB619693A5054967C61260B13B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt",
+        "Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one",
+        "Dubon2026.SourceWindingLog.exists_lift",
+        "Dubon2026.SourceWindingLog.eventuallyEq_log",
+        "Dubon2026.SourceWindingLog.contDiffAt_log_lift",
+        "Dubon2026.SourceWindingLog.hasFDerivAt_log_lift",
+        "Dubon2026.SourceWindingLog.Lext_coe",
+        "Dubon2026.SourceWindingLog.continuousAt_Lext",
+        "Dubon2026.SourceWindingLog.exp_Lext_eventually",
+        "Dubon2026.SourceWindingLog.contDiffAt_Lext",
+        "Dubon2026.SourceWindingLog.hasFDerivAt_Lext",
+        "Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane",
+        "Dubon2026.SourceWindingLog.coboundary_const",
+        "Dubon2026.SourceWindingLog.exists_int_coboundary",
+        "Dubon2026.SourceWindingLog.mInt_spec",
+        "Dubon2026.SourceWindingLog.two_pi_I_ne_zero",
+        "Dubon2026.SourceWindingLog.mInt_mul",
+        "Dubon2026.SourceWindingLog.mHom_apply",
+        "Dubon2026.SourceWindingLog.Lext_smul",
+        "Dubon2026.SourceWindingLog.continuous_retract",
+        "Dubon2026.SourceWindingLog.im_retract",
+        "Dubon2026.SourceWindingLog.retract_of_le",
+        "Dubon2026.SourceWindingLog.exists_tendsto_cusp",
+        "Dubon2026.SourceWindingLog.exists_parabolic_log",
+        "Dubon2026.SourceWindingLog.toUnits",
+        "Dubon2026.SourceWindingLog.Lext",
+        "Dubon2026.SourceWindingLog.mInt",
+        "Dubon2026.SourceWindingLog.mHom",
+        "Dubon2026.SourceWindingLog.retract"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt",
+        "Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one",
+        "Dubon2026.SourceWindingLog.exists_lift",
+        "Dubon2026.SourceWindingLog.eventuallyEq_log",
+        "Dubon2026.SourceWindingLog.contDiffAt_log_lift",
+        "Dubon2026.SourceWindingLog.hasFDerivAt_log_lift",
+        "Dubon2026.SourceWindingLog.Lext_coe",
+        "Dubon2026.SourceWindingLog.continuousAt_Lext",
+        "Dubon2026.SourceWindingLog.exp_Lext_eventually",
+        "Dubon2026.SourceWindingLog.contDiffAt_Lext",
+        "Dubon2026.SourceWindingLog.hasFDerivAt_Lext",
+        "Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane",
+        "Dubon2026.SourceWindingLog.coboundary_const",
+        "Dubon2026.SourceWindingLog.exists_int_coboundary",
+        "Dubon2026.SourceWindingLog.mInt_spec",
+        "Dubon2026.SourceWindingLog.two_pi_I_ne_zero",
+        "Dubon2026.SourceWindingLog.mInt_mul",
+        "Dubon2026.SourceWindingLog.mHom_apply",
+        "Dubon2026.SourceWindingLog.Lext_smul",
+        "Dubon2026.SourceWindingLog.continuous_retract",
+        "Dubon2026.SourceWindingLog.im_retract",
+        "Dubon2026.SourceWindingLog.retract_of_le",
+        "Dubon2026.SourceWindingLog.exists_tendsto_cusp",
+        "Dubon2026.SourceWindingLog.exists_parabolic_log"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceWindingLog.toUnits",
+        "Dubon2026.SourceWindingLog.Lext",
+        "Dubon2026.SourceWindingLog.mInt",
+        "Dubon2026.SourceWindingLog.mHom",
+        "Dubon2026.SourceWindingLog.retract"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogAudit1.log",
+      "logSha256": "8C0CEA660C91D10BEFE75DA85EFC9EDB32E0D7295808AE36A3EA176565347DBD",
+      "auditSha256": "8567024AC5B40DDC7A47F999A28FDBCAF2C6922BBC82A13745FCB0EE59D52713",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1.log",
+      "dependencyAuditSha256": "1DAFDD42C5190A9C8F530EA126F1C551C16E4091DE50E9355992AF32BCBA2A5B",
+      "dependencyAuditSourceSha256": "A63BA097E25A515950E8FCDBC8A1281C25A1B2F3722F89631350DF55520B501F",
+      "consumers": [
+        "Dubon2026.SourceWindingLog.exists_parabolic_log"
+      ],
+      "dependency": [
+        "DUB-17/18",
+        "original all-weight arithmetic association",
+        "actual Gamma1 Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "winding-period comparison",
+        "logarithm of actual nonvanishing invariant quotient"
+      ],
+      "discharged": [
+        "Construct global continuous logarithm by native exponential covering and prove local C1 regularity and logarithmic derivative",
+        "Derive actual integer additive character from exponential invariance; native covering uniqueness supplies constancy",
+        "Prove finite translated logarithm cusp limits from nonzero finite function limits",
+        "Existing signed-translation classification and cusp limits prove literal squared-trace-four character vanishing"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Input is an actual C1 nonzero invariant function with nonzero translated cusp limits. The smooth comparison local model, filled quotient, winding-period integral, analytic reciprocity, original principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "0911424AB22565674C7CDA1CCAB2DD293E092C7A4717A662ADA4CA87FECDCF9C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T19:13:24.609581+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceComplexDipoleLocalModel",
+        "SourceComplexDipoleLogDerivative",
+        "SourceComplexDipolePairing",
+        "SourceUpperHalfPlaneDipole"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel.lean",
+          "sha256": "D31343BBEA532A5A7517D79320B4B5DD22A2E183F592C1A1F2E832AE4AA7AAFE",
+          "oleanSha256": "2DFFF5A71E375E867F76FF3CC2465BA26B3F3B49298C0597CDD98974AF7A40A7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLocalModel891c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative.lean",
+          "sha256": "9F113873F90632CE880249A728BFE3D3C66FFB7EB10BF625C2A4F703B8946A5E",
+          "oleanSha256": "10147A0D251E46E25B4EEACBC439311294A2DB77DE5A2E6A324E926CA85ED96B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleLogDerivative891c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing.lean",
+          "sha256": "EB67A6D4FA986C8DC2002A37944F4F8E86CF7947D2AB7D998E9BC3E404254128",
+          "oleanSha256": "60F539EB8D222B04732EDFE8BE128EF8079F19BA94A0C425AA5B22B744929829",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipolePairing891c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole.lean",
+          "sha256": "FEC30DD2B41E442A04BCF821B5E9E18765989F5F7227468C46362EDD542FDE7D",
+          "oleanSha256": "BE944E84FABD1CFAAA14BFB46E3442147D8AA0ED7B264D0DAB5B134B8298557D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceUpperHalfPlaneDipole891d.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.support_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset",
+        "Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div",
+        "Dubon2026.SourceComplexReciprocity.Dipole.pairing",
+        "Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff",
+        "Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL",
+        "Dubon2026.SourceComplexReciprocity.Dipole.χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.wfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Dχ",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Ffun"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.support_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset",
+        "Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div",
+        "Dubon2026.SourceComplexReciprocity.Dipole.pairing",
+        "Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff",
+        "Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceComplexReciprocity.Dipole.dbarL",
+        "Dubon2026.SourceComplexReciprocity.Dipole.χC",
+        "Dubon2026.SourceComplexReciprocity.Dipole.dfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.gfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.wfun",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Dχ",
+        "Dubon2026.SourceComplexReciprocity.Dipole.Ffun"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleAudit1.log",
+      "logSha256": "98DD9DA5CDF0E929B026EEAC4FB6AA75519AE69F88DB4A6C65893B99D7DAF28A",
+      "auditSha256": "42B8BDA3194EBC49B0BCB9046A7B787E806CEF3258EC73DBFFDDC205A8616FD2",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 53,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 41,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleDependencyAudit1.log",
+      "dependencyAuditSha256": "727E63D02EE97E4C7AF6668C9974B006294A592AAB715397C81641B20DFC29FB",
+      "dependencyAuditSourceSha256": "29580EC48F89FF5EC1DCB3E5D0AB1B59B54F346A5246B33C9D151F5FAA4D9C12",
+      "consumers": [
+        "Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair"
+      ],
+      "dependency": [
+        "DUB-17/18",
+        "original all-weight arithmetic association",
+        "actual Gamma1 Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "smooth invariant comparison V",
+        "compact dipole"
+      ],
+      "discharged": [
+        "Construct compact C2 cutoff about the actual segment in the upper half-plane",
+        "Actual dipole has exact integer orders +1 at s and -1 at b and equals one outside a compact set",
+        "Derive continuous compactly supported antiholomorphic logarithmic derivative",
+        "Existing audited wedge/residue identity proves integrability and exact pi times endpoint difference"
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Invariant orbit product V, stabilizer multiplicity and degree-zero cancellation, filled quotient and winding-period comparison, analytic reciprocity, original principal-divisor converse and full all-weight chain remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-complex-dipole-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "DC9011E62D41E7D340D520E497A32494F126C2A2A73E7ECF4EEC975332B7F181",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-untwist-wedge-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-smooth-partition-1b-reuse-review-20261027.json",
+    "Tools/source-gamma-one-petersson-smooth-limit-1-reuse-review-20261027.json",
+    "Tools/source-modular-parabolic-winding-log-1-reuse-review-20261027.json",
+    "Tools/source-complex-dipole-1-reuse-review-20261027.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-smooth-comparison-20261027-894/gamma-one-smooth-comparison-promotion-route-894.json",
+    "sha256": "AA3AE13F2F41DFD63ECF3105D128DBA0C2DF520BE96E5C6BC264B83D0A5A2DF6"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-smooth-comparison-20261027-894/archive-manifest.json",
+    "sha256": "7290FE3F0868F6AA9FF17050BE86EAAEE8BC8D35272F16016E839A8D3E3A44A2",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8721": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeDependencyAudit1Production8721.log",
+        "sha256": "C69715ED00B6797739F341698FB6676F78C5AF1F3C0C11AA09ECCF397EF1BCF5",
+        "requiredProofValueEdges": 35,
+        "consumers": [
+          "Dubon2026.sourceGamma1_untwist_wedge_integral"
+        ],
+        "sourceSha256": "B59849921A489A1D2EF2FB31BE0447FDF06510C99AF37DE420F3B01BBF07A664"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionDependencyAudit1bProduction8721.log",
+        "sha256": "EE7325D922818AB78AEE45E8B5AAAA69B4D32B2737867919FB4A807B67E57DA3",
+        "requiredProofValueEdges": 108,
+        "consumers": [
+          "Dubon2026.sourceGamma1_smooth_partition"
+        ],
+        "sourceSha256": "FEB84F84A1A54B2DFD724941D54193B43DBE6B7ECDA65008E30EEE538DFE5D1E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitDependencyAudit1Production8721.log",
+        "sha256": "F0B6631D739BE79116DAD219DE0EC9C9054C00977C673AEEE893EF497F48352B",
+        "requiredProofValueEdges": 41,
+        "consumers": [
+          "Dubon2026.sourceGamma1_petersson_smoothed_limit"
+        ],
+        "sourceSha256": "055D27A5F965F03208009E2773B8D9A096169DB0E277CCC894BDB4345D654A5B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1Production8721.log",
+        "sha256": "1DAFDD42C5190A9C8F530EA126F1C551C16E4091DE50E9355992AF32BCBA2A5B",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceWindingLog.exists_parabolic_log"
+        ],
+        "sourceSha256": "DAD86510FD3AD7E89592AB2FF3BA2F3E68CFF27D6D0ADEE4BA90F46C267B302E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleDependencyAudit1Production8721.log",
+        "sha256": "727E63D02EE97E4C7AF6668C9974B006294A592AAB715397C81641B20DFC29FB",
+        "requiredProofValueEdges": 41,
+        "consumers": [
+          "Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair"
+        ],
+        "sourceSha256": "AECCDFF5C5BC5B8F044C35B364828BC767046290BED97DDAD87AF79CC070B9AB"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonProductionAudit8721.log",
+    "sha256": "1CF23F32BF938777BA5A33403E359CA0EAD3078F6CA0A21518757D0F9FE24830",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-smooth-comparison-production-build-8721.log",
+    "aggregateSha256": "3FB2D2F1356258671B747CED4EC9756ED6AF671C8D098FB388485F1025DB3D43",
+    "productionModules": 8721,
+    "incrementModules": 26,
+    "axiomChecks": 220,
+    "exhaustiveIncrementTheorems": 273,
+    "linterScopes": 26,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 273,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 273,
+      "scratchDistinct": 273,
+      "generatedNameRenamings": {},
+      "productionFocused": 273,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceComplexWedgeStokes",
+            "SourceComplexWedgeLocalLog",
+            "SourceComplexWedgeDisc",
+            "SourceComplexWedgeIntegral",
+            "SourceGammaOneUntwistWedgeIntegral"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.log",
+            "sha256": "ADC17F69316D4839A1705D7A7299ADFC504DFB683691EDEE39449E8028D608C9",
+            "sourceSha256": "2A8E9D9E82D31E19BB39439064EEEFC845932AA462FDC4D5BBFDA41E997B6DA7"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularSmoothCutoff",
+            "SourceModularSmoothGeometry",
+            "SourceModularSmoothCosetSum",
+            "SourceModularSmoothCover",
+            "SourceModularSmoothedFundamentalSupport",
+            "SourceModularSmoothedFundamental",
+            "SourceGammaOneSmoothPartition"
+          ],
+          "count": 102,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.log",
+            "sha256": "553658544513039AC98C3A02CFF7C4B42967099A850E4E1572B70C25A8BB2C26",
+            "sourceSha256": "CE3F15D2B230FBD16A05F17D01F07180AF8A09FDD1D424FC9BA9C429DE7ECEC6"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularProjectiveFibers",
+            "SourceModularSmoothOrbitMass",
+            "SourceModularInvariantIntegralUnfolding",
+            "SourceModularSmoothIntegralLimit",
+            "SourceModularSmoothPlaneIntegral",
+            "SourceGammaOnePeterssonSmoothLimit"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.log",
+            "sha256": "4B3C6119D032C2B42EAB452EF434EFD1ABCAD890DB04087C0CB44A9AE3736CF4",
+            "sourceSha256": "FBE09BE177C4DC8CFB40B2C79D18171186D9F564CD92B6EBA57D52729A71DA19"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexWindingLogLift",
+            "SourceModularWindingCharacter",
+            "SourceModularWindingCuspLimit",
+            "SourceModularParabolicWindingLog"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.log",
+            "sha256": "AAFDD2ACB2FB95C3403B2C9AF13062072999437FBBEDB203C11B5B5679265FAA",
+            "sourceSha256": "D0B40C95653572DEFDE5945E1AA2A82DCBFC1F071946461E0B7CA29D87380286"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexDipoleLocalModel",
+            "SourceComplexDipoleLogDerivative",
+            "SourceComplexDipolePairing",
+            "SourceUpperHalfPlaneDipole"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.log",
+            "sha256": "68131891653E846DE421C69EB0B3C318BDC4B7E6E246EA2F2EC910EA6F7AE0AB",
+            "sourceSha256": "7D0B371871135B6F11E062D310FA4A9BC494E82F3D34B180AF6FFC3A7326D8BD"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonOwnership8721.log",
+        "sha256": "B3F277D9E1E113ED541898B6C64AEF40C4D9312DB09734FD2CA37A5CCBAA9F68",
+        "sourceSha256": "B0997FFFC8492D2BEB69A33F79BF4D7F623135E9C776CCC946171FDB912446C7"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-111852-450.log",
+        "sha256": "D40EAC93C22BA6164ABE3B9B519C6D35022037E6490C7809BD8B788C459CAA1E"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceComplexWedgeStokes",
+            "scratchSha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67",
+            "productionSha256": "8675750B32078BCA764AE2ED0402A50D3706238B12C907AF7702406A62348EAD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeLocalLog",
+            "scratchSha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E",
+            "productionSha256": "8191ED173E9D4AF84D65F2104066D4D397EC50FBA8EB5A241E4D6AFF14233919",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeDisc",
+            "scratchSha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9",
+            "productionSha256": "B5AD4BA9A3E2A357D81D568862E61CC6680AB9D3DC7082F1980305A79B66A943",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeIntegral",
+            "scratchSha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76",
+            "productionSha256": "A5FFB5CB418448F99C3CC19C20C95F8DC4FE76D7C7DF467F845802CA13BC0BCE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUntwistWedgeIntegral",
+            "scratchSha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB",
+            "productionSha256": "5D0572464C13C2740A53DD831C74E4E7A919D783481591FEE2F7406320083512",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCutoff",
+            "scratchSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+            "productionSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothGeometry",
+            "scratchSha256": "FBD26B1A3F15D2D20E86815097BA705717C7AE87AEDBC4A3E1F1C6771B430EEB",
+            "productionSha256": "626585EDDCC488DFA7B6105F38AF585E0F80C1885A52F6E112B94671CC914B3E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCosetSum",
+            "scratchSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+            "productionSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCover",
+            "scratchSha256": "A413B35D48BBF38403642E7101EFBB7D83F2234042D396732EDA37115D37BDCC",
+            "productionSha256": "B20969628EF3FE54B820772D5350642CD3AEDC3CEFEF3E75618710D4E0230189",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedFundamentalSupport",
+            "scratchSha256": "F130009BB7A2B319BA6FB977329A03E3CEB25EA7C76F8B4FBCD49D5F3C6CDC49",
+            "productionSha256": "D4EC6C15E9623039AA0761A1289CC9D30989FCA2E0C226AD11E3E239F16A8B26",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedFundamental",
+            "scratchSha256": "580556F969B7EC4188A0CEE331A79EA97FE11237093AEB22ACB79DA1CF615638",
+            "productionSha256": "25D8736D362AB0F14F752F29EB1B570D99376F6FE953B017FFCEC9769F2FB689",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothPartition",
+            "scratchSha256": "E095E055D3FDDC6F8C22F636C51C99FAF1165F762A8F684BFE2C0A4EC57E48EA",
+            "productionSha256": "6CCA8A1A63003DEE327236A8D7F77D766341B6C14190AF86B7E00F715B7C388A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularProjectiveFibers",
+            "scratchSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+            "productionSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothOrbitMass",
+            "scratchSha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415",
+            "productionSha256": "EBF3D770F25D5C669912A76D036FB760922758D9B0D746CB8BF08D1F3017B58B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularInvariantIntegralUnfolding",
+            "scratchSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+            "productionSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothIntegralLimit",
+            "scratchSha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80",
+            "productionSha256": "9119390C66B0C1CE8D3B33A011A0AF37304374CB627C37C14EE5A39758D8FFE7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothPlaneIntegral",
+            "scratchSha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313",
+            "productionSha256": "9E3270227E5CD5EE817FD6894576429009E588DCEB85F0D2E623D0128F24D942",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeterssonSmoothLimit",
+            "scratchSha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E",
+            "productionSha256": "B1F4F8E5B4ABCB369CE0994993420E74E24B3F3A278B96FCAD7C3352897F2413",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWindingLogLift",
+            "scratchSha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3",
+            "productionSha256": "3B6042A393DFCB04639A299DAC27E1F7CF4CD7AA79C8ED6338584615D95CC462",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularWindingCharacter",
+            "scratchSha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA",
+            "productionSha256": "A57BC0C9D660642EF345DD2ACED223BD2A542F53F8EEB13F930A1575F1770C82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularWindingCuspLimit",
+            "scratchSha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966",
+            "productionSha256": "03F8433DAD894B666B81F47C4125A88BCEE771E2C1F26D386D0DE9F686B2D605",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularParabolicWindingLog",
+            "scratchSha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA",
+            "productionSha256": "2702E9F0688B3659D88FA927999AFBDA81DE1A2C1E235F03A873A83D17F75BDB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipoleLocalModel",
+            "scratchSha256": "D31343BBEA532A5A7517D79320B4B5DD22A2E183F592C1A1F2E832AE4AA7AAFE",
+            "productionSha256": "ABB7A08E09261FB7652BA27AFD3D1B3A6F8B9AF75881535B00F90667CB4E3725",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipoleLogDerivative",
+            "scratchSha256": "9F113873F90632CE880249A728BFE3D3C66FFB7EB10BF625C2A4F703B8946A5E",
+            "productionSha256": "D6DF8EF9AD2825195710164E3680C322BBEE2F98475CFBDCE76924C7D1289436",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipolePairing",
+            "scratchSha256": "EB67A6D4FA986C8DC2002A37944F4F8E86CF7947D2AB7D998E9BC3E404254128",
+            "productionSha256": "AC04B965EB71F98850662AFD94A748618A6C37674F2A1D92074DF92F4AD06A5B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUpperHalfPlaneDipole",
+            "scratchSha256": "FEC30DD2B41E442A04BCF821B5E9E18765989F5F7227468C46362EDD542FDE7D",
+            "productionSha256": "B01B14604CAFEF037623B29ABD80CCFB433CE776FF365E05598D2E14F5D3A10C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 273 distinct names from 273 exhaustive scratch checks are retained: 273 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original meromorphic function and its exact divisor orders remain inputs to the untwist consumer. The globally invariant smooth comparison V, exact orbit multiplicities and degree-zero cancellation, filled quotient, winding-period/Petersson assembly, analytic reciprocity and original principal-divisor converse remain. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "receipt8721": {
+    "recordedUTC": "2026-10-27T21:49:21.354922+00:00",
+    "log": "logs/dubon-build-20261027-131505-228.log",
+    "sha256": "F6F99E6CE65C6555F211707953E88EB897DF850197F0DEA5CF2670B7CDCA1ED1",
+    "bytes": 14248689,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8721,
+    "projectTheorems": 55220,
+    "registeredConsumers": 25477,
+    "registeredConstructions": 2614,
+    "declarations": 34048,
+    "generated": 34567,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_130655.log",
+    "foundationSha256": "70CF1E32C978B6A9962B6A0240F1C2C9ACE85C429FF3EE9C5C894F14A5519FC9",
+    "countReconciliation": {
+      "previousTheorems": 54947,
+      "focusedTheorems": 273,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 273,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonGlobalOwnership8721.log",
+      "globalOwnershipSha256": "55645085BF070A40F310B2ED0ABB8E19BB0172E305AB4431A187F8C7DBC462FA",
+      "globalOwnershipSourceSha256": "AB913F6672045A677A163F25798E53A77C7BDE446FD0561F45C3A9DFE6838BED",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonOwnership8721.log",
+      "ownershipSha256": "B3F277D9E1E113ED541898B6C64AEF40C4D9312DB09734FD2CA37A5CCBAA9F68"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 273,
+      "scratchDistinct": 273,
+      "generatedNameRenamings": {},
+      "productionFocused": 273,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceComplexWedgeStokes",
+            "SourceComplexWedgeLocalLog",
+            "SourceComplexWedgeDisc",
+            "SourceComplexWedgeIntegral",
+            "SourceGammaOneUntwistWedgeIntegral"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUntwistWedgeScratchOwnership874.log",
+            "sha256": "ADC17F69316D4839A1705D7A7299ADFC504DFB683691EDEE39449E8028D608C9",
+            "sourceSha256": "2A8E9D9E82D31E19BB39439064EEEFC845932AA462FDC4D5BBFDA41E997B6DA7"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularSmoothCutoff",
+            "SourceModularSmoothGeometry",
+            "SourceModularSmoothCosetSum",
+            "SourceModularSmoothCover",
+            "SourceModularSmoothedFundamentalSupport",
+            "SourceModularSmoothedFundamental",
+            "SourceGammaOneSmoothPartition"
+          ],
+          "count": 102,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothPartitionScratchOwnership878b.log",
+            "sha256": "553658544513039AC98C3A02CFF7C4B42967099A850E4E1572B70C25A8BB2C26",
+            "sourceSha256": "CE3F15D2B230FBD16A05F17D01F07180AF8A09FDD1D424FC9BA9C429DE7ECEC6"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularProjectiveFibers",
+            "SourceModularSmoothOrbitMass",
+            "SourceModularInvariantIntegralUnfolding",
+            "SourceModularSmoothIntegralLimit",
+            "SourceModularSmoothPlaneIntegral",
+            "SourceGammaOnePeterssonSmoothLimit"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeterssonSmoothLimitScratchOwnership885.log",
+            "sha256": "4B3C6119D032C2B42EAB452EF434EFD1ABCAD890DB04087C0CB44A9AE3736CF4",
+            "sourceSha256": "FBE09BE177C4DC8CFB40B2C79D18171186D9F564CD92B6EBA57D52729A71DA19"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexWindingLogLift",
+            "SourceModularWindingCharacter",
+            "SourceModularWindingCuspLimit",
+            "SourceModularParabolicWindingLog"
+          ],
+          "count": 37,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogScratchOwnership890.log",
+            "sha256": "AAFDD2ACB2FB95C3403B2C9AF13062072999437FBBEDB203C11B5B5679265FAA",
+            "sourceSha256": "D0B40C95653572DEFDE5945E1AA2A82DCBFC1F071946461E0B7CA29D87380286"
+          }
+        },
+        {
+          "modules": [
+            "SourceComplexDipoleLocalModel",
+            "SourceComplexDipoleLogDerivative",
+            "SourceComplexDipolePairing",
+            "SourceUpperHalfPlaneDipole"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexDipoleScratchOwnership893.log",
+            "sha256": "68131891653E846DE421C69EB0B3C318BDC4B7E6E246EA2F2EC910EA6F7AE0AB",
+            "sourceSha256": "7D0B371871135B6F11E062D310FA4A9BC494E82F3D34B180AF6FFC3A7326D8BD"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothComparisonOwnership8721.log",
+        "sha256": "B3F277D9E1E113ED541898B6C64AEF40C4D9312DB09734FD2CA37A5CCBAA9F68",
+        "sourceSha256": "B0997FFFC8492D2BEB69A33F79BF4D7F623135E9C776CCC946171FDB912446C7"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-111852-450.log",
+        "sha256": "D40EAC93C22BA6164ABE3B9B519C6D35022037E6490C7809BD8B788C459CAA1E"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceComplexWedgeStokes",
+            "scratchSha256": "55157685E40B0D5FCFA6C1C22D5567035BEF594280B2D35F282B240CEE610E67",
+            "productionSha256": "8675750B32078BCA764AE2ED0402A50D3706238B12C907AF7702406A62348EAD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeLocalLog",
+            "scratchSha256": "D5D82A98D583390B1BAEEF7CB53FF5416539C22D1EDE7D60F13ED8E0102D834E",
+            "productionSha256": "8191ED173E9D4AF84D65F2104066D4D397EC50FBA8EB5A241E4D6AFF14233919",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeDisc",
+            "scratchSha256": "27070013E607A31004CB33C70667CB5225BB7A13A5D4C0912CB5F27AE6F616D9",
+            "productionSha256": "B5AD4BA9A3E2A357D81D568862E61CC6680AB9D3DC7082F1980305A79B66A943",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWedgeIntegral",
+            "scratchSha256": "A06E11793D04EFDD2CF682BAEC4EB08E0D188D37E38633EC8AB94C796A1D9D76",
+            "productionSha256": "A5FFB5CB418448F99C3CC19C20C95F8DC4FE76D7C7DF467F845802CA13BC0BCE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUntwistWedgeIntegral",
+            "scratchSha256": "18274237EB95E6CA76812BAF615A47B0B121DDB3EBBFF8C55E9AD2788924E8EB",
+            "productionSha256": "5D0572464C13C2740A53DD831C74E4E7A919D783481591FEE2F7406320083512",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCutoff",
+            "scratchSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+            "productionSha256": "760E052337B2A36B5119C0DBE2606A73C2B8C9858085DD77DB5A99EF4747AC98",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothGeometry",
+            "scratchSha256": "FBD26B1A3F15D2D20E86815097BA705717C7AE87AEDBC4A3E1F1C6771B430EEB",
+            "productionSha256": "626585EDDCC488DFA7B6105F38AF585E0F80C1885A52F6E112B94671CC914B3E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCosetSum",
+            "scratchSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+            "productionSha256": "495D5F0BD820E55B04559AF30C2DFD4D1C82F852891C4B9E262E020EC4EAD747",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothCover",
+            "scratchSha256": "A413B35D48BBF38403642E7101EFBB7D83F2234042D396732EDA37115D37BDCC",
+            "productionSha256": "B20969628EF3FE54B820772D5350642CD3AEDC3CEFEF3E75618710D4E0230189",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedFundamentalSupport",
+            "scratchSha256": "F130009BB7A2B319BA6FB977329A03E3CEB25EA7C76F8B4FBCD49D5F3C6CDC49",
+            "productionSha256": "D4EC6C15E9623039AA0761A1289CC9D30989FCA2E0C226AD11E3E239F16A8B26",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedFundamental",
+            "scratchSha256": "580556F969B7EC4188A0CEE331A79EA97FE11237093AEB22ACB79DA1CF615638",
+            "productionSha256": "25D8736D362AB0F14F752F29EB1B570D99376F6FE953B017FFCEC9769F2FB689",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothPartition",
+            "scratchSha256": "E095E055D3FDDC6F8C22F636C51C99FAF1165F762A8F684BFE2C0A4EC57E48EA",
+            "productionSha256": "6CCA8A1A63003DEE327236A8D7F77D766341B6C14190AF86B7E00F715B7C388A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularProjectiveFibers",
+            "scratchSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+            "productionSha256": "5A857791F16DD5DA608AF058E702725686B0D2E957672D74240033F812FAE97D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothOrbitMass",
+            "scratchSha256": "7781A7564B67EB6CBF1D71E34F67D989646EE834E09BBE81EEBAB3402EF58415",
+            "productionSha256": "EBF3D770F25D5C669912A76D036FB760922758D9B0D746CB8BF08D1F3017B58B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularInvariantIntegralUnfolding",
+            "scratchSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+            "productionSha256": "E22E45C294737350EEFC73642156053F9A6B59CD6F7E4AA3039CF917DF69EFF2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothIntegralLimit",
+            "scratchSha256": "868C284AA69AF2960A24FFE7BF0FE5523C0E2B95B90F9169D3CFDC75180CBA80",
+            "productionSha256": "9119390C66B0C1CE8D3B33A011A0AF37304374CB627C37C14EE5A39758D8FFE7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothPlaneIntegral",
+            "scratchSha256": "73AD1CD70028AD86F25D1E63DB4FDC51CF00AEE58F9B8CC9BAE201CFC8526313",
+            "productionSha256": "9E3270227E5CD5EE817FD6894576429009E588DCEB85F0D2E623D0128F24D942",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeterssonSmoothLimit",
+            "scratchSha256": "7552ACF0E5C4137665D9F0687115997AB680777D4E642B6F63EC970248AD130E",
+            "productionSha256": "B1F4F8E5B4ABCB369CE0994993420E74E24B3F3A278B96FCAD7C3352897F2413",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexWindingLogLift",
+            "scratchSha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3",
+            "productionSha256": "3B6042A393DFCB04639A299DAC27E1F7CF4CD7AA79C8ED6338584615D95CC462",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularWindingCharacter",
+            "scratchSha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA",
+            "productionSha256": "A57BC0C9D660642EF345DD2ACED223BD2A542F53F8EEB13F930A1575F1770C82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularWindingCuspLimit",
+            "scratchSha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966",
+            "productionSha256": "03F8433DAD894B666B81F47C4125A88BCEE771E2C1F26D386D0DE9F686B2D605",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularParabolicWindingLog",
+            "scratchSha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA",
+            "productionSha256": "2702E9F0688B3659D88FA927999AFBDA81DE1A2C1E235F03A873A83D17F75BDB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipoleLocalModel",
+            "scratchSha256": "D31343BBEA532A5A7517D79320B4B5DD22A2E183F592C1A1F2E832AE4AA7AAFE",
+            "productionSha256": "ABB7A08E09261FB7652BA27AFD3D1B3A6F8B9AF75881535B00F90667CB4E3725",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipoleLogDerivative",
+            "scratchSha256": "9F113873F90632CE880249A728BFE3D3C66FFB7EB10BF625C2A4F703B8946A5E",
+            "productionSha256": "D6DF8EF9AD2825195710164E3680C322BBEE2F98475CFBDCE76924C7D1289436",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceComplexDipolePairing",
+            "scratchSha256": "EB67A6D4FA986C8DC2002A37944F4F8E86CF7947D2AB7D998E9BC3E404254128",
+            "productionSha256": "AC04B965EB71F98850662AFD94A748618A6C37674F2A1D92074DF92F4AD06A5B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUpperHalfPlaneDipole",
+            "scratchSha256": "FEC30DD2B41E442A04BCF821B5E9E18765989F5F7227468C46362EDD542FDE7D",
+            "productionSha256": "B01B14604CAFEF037623B29ABD80CCFB433CE776FF365E05598D2E14F5D3A10C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 273 distinct names from 273 exhaustive scratch checks are retained: 273 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original meromorphic function and its exact divisor orders remain inputs to the untwist consumer. The globally invariant smooth comparison V, exact orbit multiplicities and degree-zero cancellation, filled quotient, winding-period/Petersson assembly, analytic reciprocity and original principal-divisor converse remain. Global integral period/Picard, Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  }
+}

@@ -1,0 +1,114 @@
+import Dubon2026.SourceIntegralCosetCocycle
+import Dubon2026.SourceParabolicClassification
+
+/-! DUB-17/18 -> Gamma1 Picard/H1 -> Abel-Jacobi converse -> integral
+Petersson duality. The actual coset flux relation makes the native integer
+character vanish on every trace-squared-four matrix. Reuse the existing
+complete integral parabolic classification; no parabolicity certificate is
+assumed for the constructed character.
+Adapted from the pinned Apache-2.0 primary recorded in route 957. -/
+namespace Dubon2026.SourceIntegralPeriodDual
+noncomputable section
+open groupCohomology SourceParabolicEdgePeriod SourceModularGreenPairing
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)}
+local notation "Q" => SL(2, ℤ) ⧸ Γ
+local notation "q₀" => ((1 : SL(2, ℤ)) : Q)
+variable (Z : cocycles₁ (Rep.of (coind Γ)))
+
+theorem cocycle_eps_mul_apply (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    {ε : SL(2, ℤ)} (hε : ε = 1 ∨ ε = -1) (M : SL(2, ℤ)) (p : Q) :
+    Z (ε * M) p = Z M p := by
+  rcases hε with rfl | rfl
+  · rw [one_mul]
+  · rw [cocycle_mul_apply, cocycle_neg_one_apply Z hΓ,
+      show (-1 : SL(2, ℤ))⁻¹ = -1 by simp, neg_one_smul hΓ, zero_add]
+
+variable {Z}
+theorem cocycle_T_apply {c : Q → ℤ} (hS : Z ModularGroup.S = 0)
+    (hU : Z (ModularGroup.S * ModularGroup.T) =
+      coind Γ (ModularGroup.S * ModularGroup.T) c - c) (p : Q) :
+    Z ModularGroup.T p = c (ModularGroup.T⁻¹ • p) - c (ModularGroup.S • p) := by
+  have hT : Z ModularGroup.T p =
+      Z (ModularGroup.S⁻¹ * (ModularGroup.S * ModularGroup.T)) p := by
+    rw [inv_mul_cancel_left]
+  have hs (q : Q) : Z ModularGroup.S q = 0 := congrFun hS q
+  rw [hT, cocycle_mul_apply, cocycle_inv_apply, hs, hU, inv_inv]
+  simp only [neg_zero, zero_add, Pi.sub_apply, coind_apply]
+  rw [← mul_smul, show (ModularGroup.S * ModularGroup.T)⁻¹ * ModularGroup.S =
+    ModularGroup.T⁻¹ by group]
+
+theorem hom_transition_S (hS : Z ModularGroup.S = 0) (q : Q) :
+    hom Z (Additive.ofMul (transition Γ ModularGroup.S q)) =
+      em Z (ModularGroup.S • q) - em Z q := by
+  rw [hom_transition, hS, Pi.zero_apply, zero_add]
+
+theorem hom_transition_T {c : Q → ℤ} (hS : Z ModularGroup.S = 0)
+    (hU : Z (ModularGroup.S * ModularGroup.T) =
+      coind Γ (ModularGroup.S * ModularGroup.T) c - c) (q : Q) :
+    hom Z (Additive.ofMul (transition Γ ModularGroup.T q)) =
+      c q - c ((ModularGroup.S * ModularGroup.T) • q) +
+        em Z (ModularGroup.T • q) - em Z q := by
+  rw [hom_transition, cocycle_T_apply hS hU, inv_smul_smul, ← mul_smul]
+
+theorem cocycle_T_inv_pow_apply {c n : Q → ℤ} (hS : Z ModularGroup.S = 0)
+    (hU : Z (ModularGroup.S * ModularGroup.T) =
+      coind Γ (ModularGroup.S * ModularGroup.T) c - c)
+    (hflux : ∀ q, c (ModularGroup.S • q) - c q = n (ModularGroup.T • q) - n q)
+    (k : ℕ) (p : Q) :
+    Z (ModularGroup.T⁻¹ ^ k) p =
+      (c ((ModularGroup.T ^ k) • p) + n (ModularGroup.T • (ModularGroup.T ^ k) • p)) -
+        (c p + n (ModularGroup.T • p)) := by
+  induction k generalizing p with
+  | zero => simp [cocycle_one_apply]
+  | succ k ih =>
+    rw [pow_succ', cocycle_mul_apply, inv_inv, ih, cocycle_inv_apply,
+      cocycle_T_apply hS hU, inv_smul_smul, pow_succ, mul_smul]
+    linear_combination hflux (ModularGroup.T • p)
+
+theorem cocycle_T_zpow_eq_zero {c n : Q → ℤ} (hS : Z ModularGroup.S = 0)
+    (hU : Z (ModularGroup.S * ModularGroup.T) =
+      coind Γ (ModularGroup.S * ModularGroup.T) c - c)
+    (hflux : ∀ q, c (ModularGroup.S • q) - c q = n (ModularGroup.T • q) - n q)
+    (j : ℤ) (p : Q) (hp : (ModularGroup.T ^ j) • p = p) :
+    Z (ModularGroup.T ^ j) p = 0 := by
+  obtain ⟨k, rfl | rfl⟩ := Int.eq_nat_or_neg j
+  · rw [zpow_natCast] at hp ⊢
+    have h1 : ModularGroup.T ^ k = (ModularGroup.T⁻¹ ^ k)⁻¹ := by
+      rw [inv_pow, inv_inv]
+    have hp' : (ModularGroup.T⁻¹ ^ k) • p = p := by
+      rw [inv_pow, inv_smul_eq_iff, hp]
+    rw [h1, cocycle_inv_apply, hp', cocycle_T_inv_pow_apply hS hU hflux,
+      hp, sub_self, neg_zero]
+  · rw [zpow_neg, zpow_natCast, ← inv_pow] at hp ⊢
+    have hp' : (ModularGroup.T ^ k) • p = p := by
+      rw [inv_pow, inv_smul_eq_iff] at hp; exact hp.symm
+    rw [cocycle_T_inv_pow_apply hS hU hflux, hp', sub_self]
+
+theorem hom_parabolic (hΓ : (-1 : SL(2, ℤ)) ∈ Γ) {c n : Q → ℤ}
+    (hS : Z ModularGroup.S = 0)
+    (hU : Z (ModularGroup.S * ModularGroup.T) =
+      coind Γ (ModularGroup.S * ModularGroup.T) c - c)
+    (hflux : ∀ q, c (ModularGroup.S • q) - c q = n (ModularGroup.T • q) - n q) :
+    ∀ γ : Γ, ((γ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4 →
+      hom Z (Additive.ofMul γ) = 0 := by
+  intro γ hγ
+  obtain ⟨ε, M, j, hε, he⟩ := SourceParabolic.classification (γ : SL(2, ℤ)) hγ
+  have hγeq : (γ : SL(2, ℤ)) = M * (ε * ModularGroup.T ^ j) * M⁻¹ := by
+    rw [he]
+    rcases hε with rfl | rfl <;> simp
+  have hmem : M * (ε * ModularGroup.T ^ j) * M⁻¹ ∈ Γ := hγeq ▸ γ.2
+  have hγ' : γ = ⟨M * (ε * ModularGroup.T ^ j) * M⁻¹, hmem⟩ := Subtype.ext hγeq
+  rw [hγ', hom_conj, cocycle_eps_mul_apply Z hΓ hε]
+  apply cocycle_T_zpow_eq_zero hS hU hflux
+  have hmem' : M * ModularGroup.T ^ j * M⁻¹ ∈ Γ := by
+    rcases hε with rfl | rfl
+    · simpa using hmem
+    · have he' : M * ModularGroup.T ^ j * M⁻¹ =
+          -1 * (M * (-1 * ModularGroup.T ^ j) * M⁻¹) := by simp
+      rw [he']
+      exact mul_mem hΓ hmem
+  exact smul_eq_of_conj_mem hmem'
+
+end
+end Dubon2026.SourceIntegralPeriodDual

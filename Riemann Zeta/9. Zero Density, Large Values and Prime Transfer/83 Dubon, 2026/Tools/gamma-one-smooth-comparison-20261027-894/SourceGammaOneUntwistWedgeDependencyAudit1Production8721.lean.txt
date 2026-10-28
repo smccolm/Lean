@@ -1,0 +1,32 @@
+import Dubon2026.SourceComplexWedgeStokes
+import Dubon2026.SourceComplexWedgeLocalLog
+import Dubon2026.SourceComplexWedgeDisc
+import Dubon2026.SourceComplexWedgeIntegral
+import Dubon2026.SourceGammaOneUntwistWedgeIntegral
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGamma1_untwist_wedge_integral]
+  let localModules : Array Name := #[`Dubon2026.SourceComplexWedgeStokes, `Dubon2026.SourceComplexWedgeLocalLog, `Dubon2026.SourceComplexWedgeDisc, `Dubon2026.SourceComplexWedgeIntegral, `Dubon2026.SourceGammaOneUntwistWedgeIntegral, `Dubon2026.SourceComplexHolomorphicStokes, `Dubon2026.SourceComplexDbarCutoff, `Dubon2026.SourceComplexDbarKernelIntegrability, `Dubon2026.SourceComplexDbarRadialNormalization, `Dubon2026.SourceComplexCauchyPompeiu, `Dubon2026.SourceComplexResidueLocalModels, `Dubon2026.SourceComplexResidueIntegral, `Dubon2026.SourceComplexLogDerivativeResidues, `Dubon2026.SourceGammaOneLogDerivativeResidues, `Dubon2026.SourceWeightTwoPeriodUntwist, `Dubon2026.SourceMeromorphicNormalUntwist, `Dubon2026.SourceMeromorphicPeriodUntwist]
+  let required : Array Name := #[`Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset', `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props, `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply, `Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero, `Dubon2026.SourceComplexReciprocity.Wedge.mem_slit, `Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq, `Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E, `Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E', `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div, `Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.disc_identity, `Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt, `Dubon2026.SourceComplexReciprocity.Wedge.exists_disc, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity, `Dubon2026.sourceGamma1_untwist_wedge_integral, `Dubon2026.SourceComplexReciprocity.Wedge.Lg, `Dubon2026.SourceComplexReciprocity.Wedge.vEk, `Dubon2026.SourceComplexReciprocity.DbarFundamental.integral_inv_sub_mul_dbar, `Dubon2026.SourcePeriodUntwist.Φ_local, `Dubon2026.SourcePeriodUntwist.normalized_local_form, `Dubon2026.SourcePeriodUntwist.Ek_hasDerivAt, `Dubon2026.sourceWeightTwoPrimitive_hasDerivAt, `SmoothPartitionOfUnity.exists_isSubordinate, `ContDiffAt.isSymmSndFDerivAt, `integral_mul_fderiv_eq_neg_fderiv_mul_of_integrable]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE UNTWIST WEDGE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the declaration-VALUE closure of the actual original-divisor untwist consumer. Native smooth partition and derivative symmetry, the proved singular kernel, actual meromorphic normal form and the original cusp-form primitive are consumed. Modular winding/period limit and full all-weight goal remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

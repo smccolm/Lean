@@ -1,0 +1,335 @@
+import Dubon2026.SourceComplexWedgeStokes
+import Dubon2026.SourceComplexWedgeLocalLog
+import Dubon2026.SourceComplexWedgeDisc
+import Dubon2026.SourceComplexWedgeIntegral
+import Dubon2026.SourceGammaOneUntwistWedgeIntegral
+import Dubon2026.SourceModularSmoothCutoff
+import Dubon2026.SourceModularSmoothGeometry
+import Dubon2026.SourceModularSmoothCosetSum
+import Dubon2026.SourceModularSmoothCover
+import Dubon2026.SourceModularSmoothedFundamentalSupport
+import Dubon2026.SourceModularSmoothedFundamental
+import Dubon2026.SourceGammaOneSmoothPartition
+import Dubon2026.SourceModularProjectiveFibers
+import Dubon2026.SourceModularSmoothOrbitMass
+import Dubon2026.SourceModularInvariantIntegralUnfolding
+import Dubon2026.SourceModularSmoothIntegralLimit
+import Dubon2026.SourceModularSmoothPlaneIntegral
+import Dubon2026.SourceGammaOnePeterssonSmoothLimit
+import Dubon2026.SourceComplexWindingLogLift
+import Dubon2026.SourceModularWindingCharacter
+import Dubon2026.SourceModularWindingCuspLimit
+import Dubon2026.SourceModularParabolicWindingLog
+import Dubon2026.SourceComplexDipoleLocalModel
+import Dubon2026.SourceComplexDipoleLogDerivative
+import Dubon2026.SourceComplexDipolePairing
+import Dubon2026.SourceUpperHalfPlaneDipole
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset'
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.mem_slit
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E'
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.disc_identity
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.exists_disc
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity
+#print axioms Dubon2026.sourceGamma1_untwist_wedge_integral
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.Lg
+#print axioms Dubon2026.SourceComplexReciprocity.Wedge.vEk
+#print axioms Dubon2026.SourceSmoothedFundamental.coe_smul
+#print axioms Dubon2026.SourceSmoothedFundamental.mob_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_box
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box
+#print axioms Dubon2026.SourceSmoothedFundamental.support_bump_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.recip_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le
+#print axioms Dubon2026.SourceSmoothedFundamental.mul_recip_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.pu_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.support_pu_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_le_pu
+#print axioms Dubon2026.SourceSmoothedFundamental.support_puCut_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum
+#print axioms Dubon2026.SourceSmoothedFundamental.denom_eq
+#print axioms Dubon2026.SourceSmoothedFundamental.analyticAt_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.mob_contDiffAt
+#print axioms Dubon2026.SourceSmoothedFundamental.im_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos
+#print axioms Dubon2026.SourceSmoothedFundamental.finite_moving
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_le_inv
+#print axioms Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.im_smul_le_max
+#print axioms Dubon2026.SourceSmoothedFundamental.exists_smul_nice
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_sum_coset
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.recip_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage
+#print axioms Dubon2026.SourceSmoothedFundamental.box_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_boxH
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.bump_le_cover
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.half_le_cover
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_pu_mob
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum
+#print axioms Dubon2026.SourceSmoothedFundamental.cover_contDiffAt
+#print axioms Dubon2026.SourceSmoothedFundamental.pu_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_piece
+#print axioms Dubon2026.SourceSmoothedFundamental.piece_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.carrier_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero
+#print axioms Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.hasCompactSupport
+#print axioms Dubon2026.SourceSmoothedFundamental.tsupport_subset
+#print axioms Dubon2026.SourceSmoothedFundamental.contDiff
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_eq
+#print axioms Dubon2026.SourceSmoothedFundamental.isCompact_carrierH
+#print axioms Dubon2026.SourceSmoothedFundamental.finite_support_smul
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one
+#print axioms Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one
+#print axioms Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint
+#print axioms Dubon2026.SourceSmoothedFundamental.smooth_partition
+#print axioms Dubon2026.sourceGamma1_smooth_partition
+#print axioms Dubon2026.SourceSmoothedFundamental.mob
+#print axioms Dubon2026.SourceSmoothedFundamental.pOne
+#print axioms Dubon2026.SourceSmoothedFundamental.pTwo
+#print axioms Dubon2026.SourceSmoothedFundamental.bump
+#print axioms Dubon2026.SourceSmoothedFundamental.box
+#print axioms Dubon2026.SourceSmoothedFundamental.recip
+#print axioms Dubon2026.SourceSmoothedFundamental.gcut
+#print axioms Dubon2026.SourceSmoothedFundamental.cover
+#print axioms Dubon2026.SourceSmoothedFundamental.pu
+#print axioms Dubon2026.SourceSmoothedFundamental.puCut
+#print axioms Dubon2026.SourceSmoothedFundamental.smoothedFundamental
+#print axioms Dubon2026.SourceSmoothedFundamental.cosetEquiv
+#print axioms Dubon2026.SourceSmoothedFundamental.boxH
+#print axioms Dubon2026.SourceSmoothedFundamental.piece
+#print axioms Dubon2026.SourceSmoothedFundamental.carrier
+#print axioms Dubon2026.SourceSmoothedFundamental.carrierH
+#print axioms Dubon2026.SourceSmoothedFundamental.quotientFintype
+#print axioms Dubon2026.SourceSmoothedUnfolding.projection_surjective
+#print axioms Dubon2026.SourceSmoothedUnfolding.mem_projection_ker
+#print axioms Dubon2026.SourceSmoothedUnfolding.projection_ker_card
+#print axioms Dubon2026.SourceSmoothedUnfolding.projection_fiber_card
+#print axioms Dubon2026.SourceSmoothedUnfolding.tsum_projection
+#print axioms Dubon2026.SourceSmoothedUnfolding.finite_support_projective
+#print axioms Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg
+#print axioms Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass
+#print axioms Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half
+#print axioms Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half
+#print axioms Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass
+#print axioms Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass
+#print axioms Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized
+#print axioms Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq
+#print axioms Dubon2026.SourceSmoothedUnfolding.center_le
+#print axioms Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass
+#print axioms Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass
+#print axioms Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth
+#print axioms Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos
+#print axioms Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp
+#print axioms Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane
+#print axioms Dubon2026.sourceCusp_petersson_integrable_closedDomain
+#print axioms Dubon2026.sourceGamma1_petersson_smoothed_limit
+#print axioms Dubon2026.SourceSmoothedUnfolding.projection
+#print axioms Dubon2026.SourceSmoothedUnfolding.projectiveMass
+#print axioms Dubon2026.SourceSmoothedUnfolding.closedDomain
+#print axioms Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt
+#print axioms Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one
+#print axioms Dubon2026.SourceWindingLog.exists_lift
+#print axioms Dubon2026.SourceWindingLog.eventuallyEq_log
+#print axioms Dubon2026.SourceWindingLog.contDiffAt_log_lift
+#print axioms Dubon2026.SourceWindingLog.hasFDerivAt_log_lift
+#print axioms Dubon2026.SourceWindingLog.Lext_coe
+#print axioms Dubon2026.SourceWindingLog.continuousAt_Lext
+#print axioms Dubon2026.SourceWindingLog.exp_Lext_eventually
+#print axioms Dubon2026.SourceWindingLog.contDiffAt_Lext
+#print axioms Dubon2026.SourceWindingLog.hasFDerivAt_Lext
+#print axioms Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane
+#print axioms Dubon2026.SourceWindingLog.coboundary_const
+#print axioms Dubon2026.SourceWindingLog.exists_int_coboundary
+#print axioms Dubon2026.SourceWindingLog.mInt_spec
+#print axioms Dubon2026.SourceWindingLog.two_pi_I_ne_zero
+#print axioms Dubon2026.SourceWindingLog.mInt_mul
+#print axioms Dubon2026.SourceWindingLog.mHom_apply
+#print axioms Dubon2026.SourceWindingLog.Lext_smul
+#print axioms Dubon2026.SourceWindingLog.continuous_retract
+#print axioms Dubon2026.SourceWindingLog.im_retract
+#print axioms Dubon2026.SourceWindingLog.retract_of_le
+#print axioms Dubon2026.SourceWindingLog.exists_tendsto_cusp
+#print axioms Dubon2026.SourceWindingLog.exists_parabolic_log
+#print axioms Dubon2026.SourceWindingLog.toUnits
+#print axioms Dubon2026.SourceWindingLog.Lext
+#print axioms Dubon2026.SourceWindingLog.mInt
+#print axioms Dubon2026.SourceWindingLog.mHom
+#print axioms Dubon2026.SourceWindingLog.retract
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.support_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.pairing
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dbarL
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.χC
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.dfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.gfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.wfun
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Dχ
+#print axioms Dubon2026.SourceComplexReciprocity.Dipole.Ffun
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceComplexWedgeStokes, `Dubon2026.SourceComplexWedgeLocalLog, `Dubon2026.SourceComplexWedgeDisc, `Dubon2026.SourceComplexWedgeIntegral, `Dubon2026.SourceGammaOneUntwistWedgeIntegral, `Dubon2026.SourceModularSmoothCutoff, `Dubon2026.SourceModularSmoothGeometry, `Dubon2026.SourceModularSmoothCosetSum, `Dubon2026.SourceModularSmoothCover, `Dubon2026.SourceModularSmoothedFundamentalSupport, `Dubon2026.SourceModularSmoothedFundamental, `Dubon2026.SourceGammaOneSmoothPartition, `Dubon2026.SourceModularProjectiveFibers, `Dubon2026.SourceModularSmoothOrbitMass, `Dubon2026.SourceModularInvariantIntegralUnfolding, `Dubon2026.SourceModularSmoothIntegralLimit, `Dubon2026.SourceModularSmoothPlaneIntegral, `Dubon2026.SourceGammaOnePeterssonSmoothLimit, `Dubon2026.SourceComplexWindingLogLift, `Dubon2026.SourceModularWindingCharacter, `Dubon2026.SourceModularWindingCuspLimit, `Dubon2026.SourceModularParabolicWindingLog, `Dubon2026.SourceComplexDipoleLocalModel, `Dubon2026.SourceComplexDipoleLogDerivative, `Dubon2026.SourceComplexDipolePairing, `Dubon2026.SourceUpperHalfPlaneDipole]
+  let theorems : Array Name := #[`Dubon2026.SourceComplexReciprocity.Wedge.integrable_mul_of_tsupport_subset', `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_apply_props, `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_fderiv_apply, `Dubon2026.SourceComplexReciprocity.Wedge.mixed_partials_symm, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_eq_zero, `Dubon2026.SourceComplexReciprocity.Wedge.mem_slit, `Dubon2026.SourceComplexReciprocity.Wedge.Ψ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffOn_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.exp_Lg, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Ψ_eq, `Dubon2026.SourceComplexReciprocity.Wedge.analyticOnNhd_E, `Dubon2026.SourceComplexReciprocity.Wedge.contDiffAt_E, `Dubon2026.SourceComplexReciprocity.Wedge.continuousOn_E', `Dubon2026.SourceComplexReciprocity.Wedge.contDiff_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.hasCompactSupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_vEk, `Dubon2026.SourceComplexReciprocity.Wedge.fderiv_Φ_div, `Dubon2026.SourceComplexReciprocity.Wedge.Φ_ne, `Dubon2026.SourceComplexReciprocity.Wedge.disc_identity, `Dubon2026.SourceComplexReciprocity.Wedge.n_eq_zero_of_continuousAt, `Dubon2026.SourceComplexReciprocity.Wedge.exists_disc, `Dubon2026.SourceComplexReciprocity.Wedge.tsupport_ofReal_comp, `Dubon2026.SourceComplexReciprocity.Wedge.integral_wedge_residue_identity, `Dubon2026.sourceGamma1_untwist_wedge_integral, `Dubon2026.SourceSmoothedFundamental.coe_smul, `Dubon2026.SourceSmoothedFundamental.mob_mob, `Dubon2026.SourceSmoothedFundamental.pOne_nonneg, `Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_le, `Dubon2026.SourceSmoothedFundamental.pOne_eq_zero_of_ge, `Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pOne_ne_zero, `Dubon2026.SourceSmoothedFundamental.pTwo_nonneg, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_le, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_zero_of_ge, `Dubon2026.SourceSmoothedFundamental.pTwo_eq_one, `Dubon2026.SourceSmoothedFundamental.mem_Ioo_of_pTwo_ne_zero, `Dubon2026.SourceSmoothedFundamental.bump_nonneg, `Dubon2026.SourceSmoothedFundamental.mem_of_bump_ne_zero, `Dubon2026.SourceSmoothedFundamental.im_pos_of_bump_ne_zero, `Dubon2026.SourceSmoothedFundamental.isCompact_box, `Dubon2026.SourceSmoothedFundamental.im_pos_of_mem_box, `Dubon2026.SourceSmoothedFundamental.support_bump_subset, `Dubon2026.SourceSmoothedFundamental.recip_nonneg, `Dubon2026.SourceSmoothedFundamental.mul_recip_of_half_le, `Dubon2026.SourceSmoothedFundamental.mul_recip_le_one, `Dubon2026.SourceSmoothedFundamental.gcut_eq_one, `Dubon2026.SourceSmoothedFundamental.gcut_nonneg, `Dubon2026.SourceSmoothedFundamental.gcut_le_one, `Dubon2026.SourceSmoothedFundamental.cover_nonneg, `Dubon2026.SourceSmoothedFundamental.pu_nonneg, `Dubon2026.SourceSmoothedFundamental.support_pu_subset, `Dubon2026.SourceSmoothedFundamental.puCut_nonneg, `Dubon2026.SourceSmoothedFundamental.puCut_le_pu, `Dubon2026.SourceSmoothedFundamental.support_puCut_subset, `Dubon2026.SourceSmoothedFundamental.puCut_eq_pu_of_im_le, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental_nonneg, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental_eq_sum, `Dubon2026.SourceSmoothedFundamental.denom_eq, `Dubon2026.SourceSmoothedFundamental.analyticAt_mob, `Dubon2026.SourceSmoothedFundamental.mob_contDiffAt, `Dubon2026.SourceSmoothedFundamental.im_mob, `Dubon2026.SourceSmoothedFundamental.im_pos_of_im_mob_pos, `Dubon2026.SourceSmoothedFundamental.finite_moving, `Dubon2026.SourceSmoothedFundamental.im_smul_le_inv, `Dubon2026.SourceSmoothedFundamental.denom_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.d_sq_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.im_smul_of_c_eq_zero, `Dubon2026.SourceSmoothedFundamental.im_smul_le_max, `Dubon2026.SourceSmoothedFundamental.exists_smul_nice, `Dubon2026.SourceSmoothedFundamental.finsum_sum_coset, `Dubon2026.SourceSmoothedFundamental.pOne_contDiff, `Dubon2026.SourceSmoothedFundamental.pTwo_contDiff, `Dubon2026.SourceSmoothedFundamental.bump_contDiff, `Dubon2026.SourceSmoothedFundamental.recip_contDiff, `Dubon2026.SourceSmoothedFundamental.gcut_contDiff, `Dubon2026.SourceSmoothedFundamental.isCompact_coe_preimage, `Dubon2026.SourceSmoothedFundamental.box_subset, `Dubon2026.SourceSmoothedFundamental.isCompact_boxH, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_bump_mob, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_puCut_mob, `Dubon2026.SourceSmoothedFundamental.hasFiniteSupport_pu_mob, `Dubon2026.SourceSmoothedFundamental.bump_le_cover, `Dubon2026.SourceSmoothedFundamental.cover_mob, `Dubon2026.SourceSmoothedFundamental.half_le_cover, `Dubon2026.SourceSmoothedFundamental.finsum_pu_mob, `Dubon2026.SourceSmoothedFundamental.finsum_pu_mob_le_one, `Dubon2026.SourceSmoothedFundamental.cover_eventuallyEq_sum, `Dubon2026.SourceSmoothedFundamental.cover_contDiffAt, `Dubon2026.SourceSmoothedFundamental.pu_contDiff, `Dubon2026.SourceSmoothedFundamental.puCut_contDiff, `Dubon2026.SourceSmoothedFundamental.im_pos_of_puCut_mob_ne_zero, `Dubon2026.SourceSmoothedFundamental.isCompact_piece, `Dubon2026.SourceSmoothedFundamental.piece_subset, `Dubon2026.SourceSmoothedFundamental.mem_piece_of_ne_zero, `Dubon2026.SourceSmoothedFundamental.puCut_mob_contDiff, `Dubon2026.SourceSmoothedFundamental.isCompact_carrier, `Dubon2026.SourceSmoothedFundamental.carrier_subset, `Dubon2026.SourceSmoothedFundamental.mem_carrier_of_ne_zero, `Dubon2026.SourceSmoothedFundamental.eq_zero_of_notMem_carrier, `Dubon2026.SourceSmoothedFundamental.hasCompactSupport, `Dubon2026.SourceSmoothedFundamental.tsupport_subset, `Dubon2026.SourceSmoothedFundamental.contDiff, `Dubon2026.SourceSmoothedFundamental.finsum_smul_eq, `Dubon2026.SourceSmoothedFundamental.isCompact_carrierH, `Dubon2026.SourceSmoothedFundamental.finite_support_smul, `Dubon2026.SourceSmoothedFundamental.finsum_smul_le_one, `Dubon2026.SourceSmoothedFundamental.finsum_smul_eq_one, `Dubon2026.SourceSmoothedFundamental.exists_finset_disjoint, `Dubon2026.SourceSmoothedFundamental.smooth_partition, `Dubon2026.sourceGamma1_smooth_partition, `Dubon2026.SourceSmoothedUnfolding.projection_surjective, `Dubon2026.SourceSmoothedUnfolding.mem_projection_ker, `Dubon2026.SourceSmoothedUnfolding.projection_ker_card, `Dubon2026.SourceSmoothedUnfolding.projection_fiber_card, `Dubon2026.SourceSmoothedUnfolding.tsum_projection, `Dubon2026.SourceSmoothedUnfolding.finite_support_projective, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_nonneg, `Dubon2026.SourceSmoothedUnfolding.two_mul_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_le_half, `Dubon2026.SourceSmoothedUnfolding.projectiveMass_eq_half, `Dubon2026.SourceSmoothedUnfolding.tendsto_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.measurable_projectiveMass, `Dubon2026.SourceSmoothedUnfolding.integral_mul_eq_periodized, `Dubon2026.SourceSmoothedUnfolding.closedDomain_ae_eq, `Dubon2026.SourceSmoothedUnfolding.center_le, `Dubon2026.SourceSmoothedUnfolding.integral_smooth_eq_mass, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_mass, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_smooth, `Dubon2026.SourceSmoothedUnfolding.smooth_eq_zero_of_im_nonpos, `Dubon2026.SourceSmoothedUnfolding.integral_plane_eq_integral_uhp, `Dubon2026.SourceSmoothedUnfolding.tendsto_integral_plane, `Dubon2026.sourceCusp_petersson_integrable_closedDomain, `Dubon2026.sourceGamma1_petersson_smoothed_limit, `Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt, `Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one, `Dubon2026.SourceWindingLog.exists_lift, `Dubon2026.SourceWindingLog.eventuallyEq_log, `Dubon2026.SourceWindingLog.contDiffAt_log_lift, `Dubon2026.SourceWindingLog.hasFDerivAt_log_lift, `Dubon2026.SourceWindingLog.Lext_coe, `Dubon2026.SourceWindingLog.continuousAt_Lext, `Dubon2026.SourceWindingLog.exp_Lext_eventually, `Dubon2026.SourceWindingLog.contDiffAt_Lext, `Dubon2026.SourceWindingLog.hasFDerivAt_Lext, `Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane, `Dubon2026.SourceWindingLog.coboundary_const, `Dubon2026.SourceWindingLog.exists_int_coboundary, `Dubon2026.SourceWindingLog.mInt_spec, `Dubon2026.SourceWindingLog.two_pi_I_ne_zero, `Dubon2026.SourceWindingLog.mInt_mul, `Dubon2026.SourceWindingLog.mHom_apply, `Dubon2026.SourceWindingLog.Lext_smul, `Dubon2026.SourceWindingLog.continuous_retract, `Dubon2026.SourceWindingLog.im_retract, `Dubon2026.SourceWindingLog.retract_of_le, `Dubon2026.SourceWindingLog.exists_tendsto_cusp, `Dubon2026.SourceWindingLog.exists_parabolic_log, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_eq, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_add, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_smul, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_neg, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL_of_hasDerivAt, `Dubon2026.SourceComplexReciprocity.Dipole.contDiff_χC, `Dubon2026.SourceComplexReciprocity.Dipole.support_χC, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_χC, `Dubon2026.SourceComplexReciprocity.Dipole.wfun_eq_zero_iff, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_gfun_of_ne, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eventuallyEq_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.contDiffAt_dfun, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_ne_zero, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_one, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_eq_near, `Dubon2026.SourceComplexReciprocity.Dipole.dfun_localModel, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ_eq_zero, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_wfun, `Dubon2026.SourceComplexReciprocity.Dipole.continuous_Ffun, `Dubon2026.SourceComplexReciprocity.Dipole.support_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.tsupport_Ffun_subset, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_gfun, `Dubon2026.SourceComplexReciprocity.Dipole.dbar_dfun_div, `Dubon2026.SourceComplexReciprocity.Dipole.pairing, `Dubon2026.SourceComplexReciprocity.Dipole.exists_cutoff, `Dubon2026.SourceComplexReciprocity.Dipole.exists_localModel_pair]
+  let constructions : Array Name := #[`Dubon2026.SourceComplexReciprocity.Wedge.Lg, `Dubon2026.SourceComplexReciprocity.Wedge.vEk, `Dubon2026.SourceSmoothedFundamental.mob, `Dubon2026.SourceSmoothedFundamental.pOne, `Dubon2026.SourceSmoothedFundamental.pTwo, `Dubon2026.SourceSmoothedFundamental.bump, `Dubon2026.SourceSmoothedFundamental.box, `Dubon2026.SourceSmoothedFundamental.recip, `Dubon2026.SourceSmoothedFundamental.gcut, `Dubon2026.SourceSmoothedFundamental.cover, `Dubon2026.SourceSmoothedFundamental.pu, `Dubon2026.SourceSmoothedFundamental.puCut, `Dubon2026.SourceSmoothedFundamental.smoothedFundamental, `Dubon2026.SourceSmoothedFundamental.cosetEquiv, `Dubon2026.SourceSmoothedFundamental.boxH, `Dubon2026.SourceSmoothedFundamental.piece, `Dubon2026.SourceSmoothedFundamental.carrier, `Dubon2026.SourceSmoothedFundamental.carrierH, `Dubon2026.SourceSmoothedFundamental.quotientFintype, `Dubon2026.SourceSmoothedUnfolding.projection, `Dubon2026.SourceSmoothedUnfolding.projectiveMass, `Dubon2026.SourceSmoothedUnfolding.closedDomain, `Dubon2026.SourceWindingLog.toUnits, `Dubon2026.SourceWindingLog.Lext, `Dubon2026.SourceWindingLog.mInt, `Dubon2026.SourceWindingLog.mHom, `Dubon2026.SourceWindingLog.retract, `Dubon2026.SourceComplexReciprocity.Dipole.dbarL, `Dubon2026.SourceComplexReciprocity.Dipole.χC, `Dubon2026.SourceComplexReciprocity.Dipole.dfun, `Dubon2026.SourceComplexReciprocity.Dipole.gfun, `Dubon2026.SourceComplexReciprocity.Dipole.wfun, `Dubon2026.SourceComplexReciprocity.Dipole.Dχ, `Dubon2026.SourceComplexReciprocity.Dipole.Ffun]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE SMOOTH COMPARISON AUDIT PASS: {count} theorems including private/generated declarations. Original Gamma1 smooth partition and Petersson limit, wedge identity, parabolic logarithm and compact dipole are proved. Invariant V, analytic reciprocity and all-weight arithmetic remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceComplexWedgeStokes
+
+#lint in Dubon2026.SourceComplexWedgeLocalLog
+
+#lint in Dubon2026.SourceComplexWedgeDisc
+
+#lint in Dubon2026.SourceComplexWedgeIntegral
+
+#lint in Dubon2026.SourceGammaOneUntwistWedgeIntegral
+
+#lint in Dubon2026.SourceModularSmoothCutoff
+
+#lint in Dubon2026.SourceModularSmoothGeometry
+
+#lint in Dubon2026.SourceModularSmoothCosetSum
+
+#lint in Dubon2026.SourceModularSmoothCover
+
+#lint in Dubon2026.SourceModularSmoothedFundamentalSupport
+
+#lint in Dubon2026.SourceModularSmoothedFundamental
+
+#lint in Dubon2026.SourceGammaOneSmoothPartition
+
+#lint in Dubon2026.SourceModularProjectiveFibers
+
+#lint in Dubon2026.SourceModularSmoothOrbitMass
+
+#lint in Dubon2026.SourceModularInvariantIntegralUnfolding
+
+#lint in Dubon2026.SourceModularSmoothIntegralLimit
+
+#lint in Dubon2026.SourceModularSmoothPlaneIntegral
+
+#lint in Dubon2026.SourceGammaOnePeterssonSmoothLimit
+
+#lint in Dubon2026.SourceComplexWindingLogLift
+
+#lint in Dubon2026.SourceModularWindingCharacter
+
+#lint in Dubon2026.SourceModularWindingCuspLimit
+
+#lint in Dubon2026.SourceModularParabolicWindingLog
+
+#lint in Dubon2026.SourceComplexDipoleLocalModel
+
+#lint in Dubon2026.SourceComplexDipoleLogDerivative
+
+#lint in Dubon2026.SourceComplexDipolePairing
+
+#lint in Dubon2026.SourceUpperHalfPlaneDipole

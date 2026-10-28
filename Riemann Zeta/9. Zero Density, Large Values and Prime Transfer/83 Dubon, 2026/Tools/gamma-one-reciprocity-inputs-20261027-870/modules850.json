@@ -1,0 +1,9 @@
+[
+  "BoundedL2JetIdentification",
+  "LinearMapSmoothJets",
+  "AdelicOrbitJetIdentification",
+  "AdelicL2SecondOrderIdentity",
+  "AdelicHilbertSecondOrderIdentity",
+  "AdelicHilbertInfinitesimal",
+  "AdelicHilbertCasimir"
+]

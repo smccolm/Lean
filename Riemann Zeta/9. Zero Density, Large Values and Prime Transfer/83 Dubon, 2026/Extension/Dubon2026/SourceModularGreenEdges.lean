@@ -1,0 +1,131 @@
+import Dubon2026.SourceModularGreenTile
+import Dubon2026.SourceModularBoundarySidePairing
+import Dubon2026.SourceSmoothDivisorPeriodIntegral
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> winding-period boundary
+identity. Adapted from pinned Apache-2.0 anthropics source, using existing
+actual Mobius action, differential, native slash action and curved Green
+formula. No limiting, boundary or period identity is assumed. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics
+open SourceModularSidePairing SourceSmoothDivisor SourceSmoothOrbitIntegral
+open SourceComplexReciprocity.Dipole
+open scoped MatrixGroups Topology ModularForm ComplexConjugate Real NNReal Pointwise
+variable {Γ : Subgroup SL(2, ℤ)}
+
+section Edges
+
+theorem sqrt3_div_two_gt : (1 : ℝ) / 2 < Real.sqrt 3 / 2 := by
+  have : (1 : ℝ) < Real.sqrt 3 := by
+    rw [show (1 : ℝ) = Real.sqrt 1 by simp]
+    exact Real.sqrt_lt_sqrt (by norm_num) (by norm_num)
+  linarith
+
+theorem ray_mem_Ubox {y : ℝ} (hy : y ∈ Set.Ioi (Real.sqrt 3 / 2)) :
+    (-(1 / 2) + y * I : ℂ) ∈ Ubox := by
+  refine ⟨?_, ?_⟩
+  · show 1 / 2 < (-(1 / 2) + y * I : ℂ).im
+    simpa using sqrt3_div_two_gt.trans hy
+  · show |(-(1 / 2) + y * I : ℂ).re| < 1
+    rw [show (-(1 / 2) + y * I : ℂ).re = -(1 / 2) by simp, abs_neg,
+      abs_of_pos (by norm_num)]
+    norm_num
+
+theorem integrableOn_ray {F : ℂ → ℂ} (hc : ContinuousOn F {z : ℂ | 0 < z.im}) {C δ : ℝ}
+    (hδ : 0 < δ) (hb : ∀ z ∈ Ubox, ‖F z‖ ≤ C * Real.exp (-δ * z.im)) :
+    IntegrableOn (fun y : ℝ => F (-(1 / 2) + y * I)) (Set.Ioi (Real.sqrt 3 / 2)) := by
+  have hpath : Continuous fun y : ℝ => (-(1 / 2) + y * I : ℂ) := by fun_prop
+  have hcont : ContinuousOn (fun y : ℝ => F (-(1 / 2) + y * I))
+      (Set.Ioi (Real.sqrt 3 / 2)) :=
+    hc.comp hpath.continuousOn fun y hy => im_pos_of_mem_Ubox (ray_mem_Ubox hy)
+  refine Integrable.mono' ((exp_neg_integrableOn_Ioi _ hδ).const_mul C)
+    (hcont.aestronglyMeasurable measurableSet_Ioi) ?_
+  refine ae_restrict_of_forall_mem measurableSet_Ioi fun y hy => ?_
+  have := hb _ (ray_mem_Ubox hy)
+  simpa using this
+
+theorem intervalIntegrable_arc {F : ℂ → ℂ} (hc : ContinuousOn F {z : ℂ | 0 < z.im}) :
+    IntervalIntegrable (fun θ : ℝ => F (Complex.exp (θ * I)) *
+      (I * Complex.exp (θ * I))) volume (Real.pi / 3) (2 * Real.pi / 3) := by
+  refine ContinuousOn.intervalIntegrable ?_
+  have hpath : Continuous fun θ : ℝ => Complex.exp (θ * I) := by fun_prop
+  have hmem : ∀ θ ∈ Set.uIcc (Real.pi / 3) (2 * Real.pi / 3),
+      Complex.exp (θ * I) ∈ {z : ℂ | 0 < z.im} := by
+    intro θ hθ
+    rw [Set.uIcc_of_le (by linarith [Real.pi_pos])] at hθ
+    show 0 < (Complex.exp (θ * I)).im
+    rw [Complex.exp_ofReal_mul_I_im]
+    exact Real.sin_pos_of_pos_of_lt_pi (by linarith [Real.pi_pos, hθ.1])
+      (by linarith [Real.pi_pos, hθ.2])
+  have h2 : Continuous fun θ : ℝ => I * Complex.exp (θ * I) := by fun_prop
+  exact (hc.comp hpath.continuousOn hmem).mul h2.continuousOn
+
+end Edges
+
+section Pairing
+
+variable (g : CuspForm (Γ.map (Matrix.SpecialLinearGroup.mapGL ℝ)) 2) (L : ℂ → ℂ) (L' : ℂ → ℂ →L[ℝ] ℂ)
+  (hL : ∀ z : ℂ, 0 < z.im → HasFDerivAt L (L' z) z)
+  (hL' : ContinuousOn L' {z : ℂ | 0 < z.im})
+  (c : SL(2, ℤ) → ℂ) (hLc : ∀ γ ∈ Γ, ∀ τ : ℍ, L ((γ • τ : ℍ) : ℂ) = L τ + c γ)
+  (hbd : ∀ σ : SL(2, ℤ), ∃ C Y : ℝ, ∀ z : ℂ, Y ≤ z.im →
+    ‖L ((σ • ofComplex z : ℍ) : ℂ)‖ ≤ C ∧
+      ‖fderiv ℝ (fun u : ℂ => L ((σ • ofComplex u : ℍ) : ℂ)) z‖ ≤ C)
+
+include hLc in
+
+theorem twist_law (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) (τ : ℍ) :
+    L ((γ • τ : ℍ) : ℂ) * g (γ • τ) / denom (γ : GL (Fin 2) ℝ) τ ^ 2 =
+      L τ * g τ + c γ * g τ := by
+  have hD : denom (γ : GL (Fin 2) ℝ) τ ≠ 0 := UpperHalfPlane.denom_ne_zero _ _
+  rw [hLc γ hγ τ, SourceSmoothDivisor.g_smul Γ g hγ]
+  field_simp
+
+theorem Φt_eq (σ : SL(2, ℤ)) (z : ℂ) :
+    Φt L g σ z = L ((σ • ofComplex z : ℍ) : ℂ) * g (σ • ofComplex z) /
+      denom (σ : GL (Fin 2) ℝ) (ofComplex z) ^ 2 := by
+  rw [Φt, Lt, sm, SourceModularSidePairing.tilePull_eq_div, mul_div_assoc]
+
+variable [Fintype (SL(2, ℤ) ⧸ Γ)] [Γ.FiniteIndex]
+
+include hL hL' hLc hbd in
+
+theorem side_pairing :
+    ((∑ q : SL(2, ℤ) ⧸ Γ, ∫ y in Set.Ioi (Real.sqrt 3 / 2),
+        Φt L g (Quotient.out q)⁻¹ (1 / 2 + y * I)) =
+      (∑ q : SL(2, ℤ) ⧸ Γ, ∫ y in Set.Ioi (Real.sqrt 3 / 2),
+        Φt L g (Quotient.out q)⁻¹ (-(1 / 2) + y * I)) +
+      ∑ q : SL(2, ℤ) ⧸ Γ,
+        c ((Quotient.out (ModularGroup.T • q))⁻¹ * ModularGroup.T * Quotient.out q) *
+          ∫ y in Set.Ioi (Real.sqrt 3 / 2),
+            tilePull g (Quotient.out q)⁻¹ (-(1 / 2) + y * I)) ∧
+    2 * (∑ q : SL(2, ℤ) ⧸ Γ, ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+        Φt L g (Quotient.out q)⁻¹ (Complex.exp (θ * I)) *
+          (I * Complex.exp (θ * I))) =
+      -∑ q : SL(2, ℤ) ⧸ Γ,
+        c ((Quotient.out (ModularGroup.S • q))⁻¹ * ModularGroup.S * Quotient.out q) *
+          ∫ θ in (Real.pi / 3)..(2 * Real.pi / 3),
+            tilePull g (Quotient.out q)⁻¹ (Complex.exp (θ * I)) *
+              (I * Complex.exp (θ * I)) := by
+  refine SourceModularSidePairing.boundary_side_pairing
+    Γ (fun τ => L τ * g τ) g c
+    (fun γ hγ τ => twist_law g L c hLc γ hγ τ) (fun σ z => Φt L g σ z) (fun σ z => tilePull g σ z)
+    (fun σ z => Φt_eq g L σ z) (fun σ z => SourceModularSidePairing.tilePull_eq_div g σ z) (Set.Ioi (Real.sqrt 3 / 2)) measurableSet_Ioi
+    (Set.Ioi_subset_Ioi (by positivity)) (fun q => ?_) (fun q => ?_) (fun q => ?_) (fun q => ?_)
+  · obtain ⟨δ, hδ, ⟨C, hC⟩, -⟩ := Φt_bounds g L L' hL hL' (Quotient.out q)⁻¹ (hbd _)
+    have hc : ContinuousOn (Φt L g (Quotient.out q)⁻¹) {z : ℂ | 0 < z.im} :=
+      (continuousOn_Lt L L' hL _).mul (continuousOn_tilePull g _)
+    exact integrableOn_ray hc hδ hC
+  · obtain ⟨c, hc, C, -, hC⟩ := tilePull_decay g (Quotient.out q)⁻¹ (by norm_num : (0 : ℝ) < 1 / 2)
+    exact integrableOn_ray (continuousOn_tilePull g _) hc fun z hz => hC z hz.1.le
+  · exact intervalIntegrable_arc ((continuousOn_Lt L L' hL _).mul (continuousOn_tilePull g _))
+  · exact intervalIntegrable_arc (continuousOn_tilePull g _)
+
+end Pairing
+
+
+end
+end Dubon2026.SourceModularGreenPairing

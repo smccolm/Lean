@@ -1,0 +1,32 @@
+{
+  "chain": "DUB17/18 -> original all-weight association -> actual Gamma1 Picard/H1 -> principal-divisor converse -> meromorphic function construction -> analytic residue realization of the constructed actual algebraic differential.",
+  "shorterRoute": "Native hloc_logDeriv on the actual uniformizer, with E the existing analytic representative of uniformizer times differential coefficient. This replaces the external source ramified normal-form case split and automatically includes zero differentials. Native realization ring laws, punctured derivative congruence, and Kaehler universal property identify the analytic coefficient independently of its differential expression.",
+  "assumptionsToDischarge": "Derive the exact analytic residue equal to actual ramification times the actual place residue of a given simple-pole differential. The actual prescribed-residue differential was constructed in scope983; no analytic residue comparison is assumed.",
+  "remaining": "Exact analytic residue expansion compiles and is being scratch audited. Actual point regularization, slash invariance and cusp exponential decay remain, then consume actual meromorphic construction and principal-divisor theorem. DUB17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexLogDerivativeResidues.lean",
+      "sha256": "518C1B0197538E9FA9B21C1739EC15782ADCE05B687657ADF7B3037071BC0769"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticResidues.lean",
+      "sha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRealizationAlgebra.lean",
+      "sha256": "B429A45716AED0A153BD06B5F0F4417CAB1C6EE89FE4E76537902C5D8C76B2AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermDerivation.lean",
+      "sha256": "AFB7A72C902D96EC77AB9B17BB6F540C90AAEF38E025A688623C765C922B7FEA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorDifferential.lean",
+      "sha256": "34920BEBD771CC55A393A99035C4B5A37079359B2CC95477212FB431ACD5E37D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ComplexPlaceDictionary_exists_realize_mul_deriv_realize_eq_div_add.lean.txt",
+      "sha256": "D883D96B509796F60AC14EE6B55D466AB0FA43D4334D477898033395A851EFB8"
+    }
+  ]
+}

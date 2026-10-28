@@ -1,0 +1,88 @@
+import Dubon2026.SourceIntegralCharacterInitialLift
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi -> unitary
+multiplier logarithms -> integral parabolic-character lifting. The native
+transfer formula proves zero total cusp value; the audited actual edge-chain
+correction then removes all parabolic values without changing reduction
+modulo n. Adapted from the Apache-2.0 integral-lift primary in scope 796,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2.
+The original modular-group transport remains a separate obligation. -/
+namespace Dubon2026.SourceIntegralCharacterLift
+noncomputable section
+open Subgroup
+section CuspGeneral
+
+variable {G : Type} [Group G] (H : Subgroup G) {B : Type*} [AddCommGroup B]
+
+theorem char_zpow (ψ : Additive H →+ B) {P : G} (hP : P ∈ H) (m : ℤ) :
+    ψ (Additive.ofMul ⟨P ^ m, zpow_mem hP m⟩) = m • ψ (Additive.ofMul ⟨P, hP⟩) := by
+  rw [← map_zsmul, ← ofMul_zpow]; rfl
+
+theorem char_conj_zpow_eq_zero [H.FiniteIndex] (t : G) (ψ : Additive H →+ B)
+    (hψ : ∀ q : Quotient (MulAction.orbitRel (Subgroup.zpowers t) (G ⧸ H)),
+      ψ (Additive.ofMul ⟨q.out.out⁻¹ * t ^ Function.minimalPeriod (t • ·) q.out * q.out.out,
+        QuotientGroup.out_conj_pow_minimalPeriod_mem H t q.out⟩) = 0)
+    (g : G) (k : ℤ) (h : g * t ^ k * g⁻¹ ∈ H) : ψ (Additive.ofMul ⟨g * t ^ k * g⁻¹, h⟩) = 0 := by
+  classical
+  haveI : Fintype (G ⧸ H) := Subgroup.fintypeQuotientOfFiniteIndex
+
+  set e₀ : G ⧸ H := ((g⁻¹ : G) : G ⧸ H) with he₀
+  have hfix : t ^ k • e₀ = e₀ := by
+    rw [he₀]
+    show (((t ^ k * g⁻¹ : G)) : G ⧸ H) = ((g⁻¹ : G) : G ⧸ H)
+    rw [QuotientGroup.eq]
+    have : (t ^ k * g⁻¹)⁻¹ * g⁻¹ = (g * t ^ k * g⁻¹)⁻¹ := by group
+    rw [this]; exact inv_mem h
+
+  set w : ℕ := Function.minimalPeriod (t • ·) e₀ with hw
+  obtain ⟨m, hm⟩ : (w : ℤ) ∣ k := MulAction.zpow_smul_eq_iff_minimalPeriod_dvd.mp hfix
+
+  set q : Quotient (MulAction.orbitRel (Subgroup.zpowers t) (G ⧸ H)) :=
+    Quotient.mk (MulAction.orbitRel (Subgroup.zpowers t) (G ⧸ H)) e₀ with hq
+  set a : G := q.out.out with ha
+  have haq : (a : G ⧸ H) = q.out := QuotientGroup.out_eq' _
+
+  have hrel : q.out ∈ MulAction.orbit (Subgroup.zpowers t) e₀ := by
+    have := Quotient.mk_out (s := MulAction.orbitRel (Subgroup.zpowers t) (G ⧸ H)) e₀
+    rwa [MulAction.orbitRel_apply] at this
+  obtain ⟨⟨u, hu⟩, hue⟩ := MulAction.mem_orbit_iff.mp hrel
+  obtain ⟨j, rfl⟩ := Subgroup.mem_zpowers_iff.mp hu
+  have hj : t ^ j • e₀ = q.out := hue
+
+  have horb : MulAction.orbit (Subgroup.zpowers t) q.out = MulAction.orbit (Subgroup.zpowers t) e₀ :=
+    MulAction.orbit_eq_iff.mpr hrel
+  have hw' : Function.minimalPeriod (t • ·) q.out = w := by
+    rw [hw, MulAction.minimalPeriod_eq_card, MulAction.minimalPeriod_eq_card, Fintype.card_eq_nat_card,
+      Fintype.card_eq_nat_card]
+    exact congrArg (fun s : Set (G ⧸ H) => Nat.card s) horb
+
+  have h₁ : g * t ^ (-j) * a ∈ H := by
+    have h2 : (((t ^ j * g⁻¹ : G)) : G ⧸ H) = (a : G ⧸ H) := by
+      rw [haq, ← hj, he₀]; rfl
+    rw [QuotientGroup.eq] at h2
+    have : (t ^ j * g⁻¹)⁻¹ * a = g * t ^ (-j) * a := by group
+    rwa [this] at h2
+  have hp : a⁻¹ * t ^ w * a ∈ H := by
+    have := QuotientGroup.out_conj_pow_minimalPeriod_mem H t q.out
+    rwa [hw'] at this
+  have hp0 : ψ (Additive.ofMul ⟨a⁻¹ * t ^ w * a, hp⟩) = 0 := by
+    have := hψ q
+
+    have hgen : q.out.out⁻¹ * t ^ Function.minimalPeriod (t • ·) q.out * q.out.out = a⁻¹ * t ^ w * a := by
+      rw [hw']
+    rwa [char_congr ψ _ hp hgen] at this
+
+  have hdec : g * t ^ k * g⁻¹ = (g * t ^ (-j) * a) * (a⁻¹ * t ^ w * a) ^ m * (g * t ^ (-j) * a)⁻¹ := by
+    have e1 : (a⁻¹ * t ^ w * a) ^ m = a⁻¹ * (t ^ w) ^ m * a := by
+      have := (conj_zpow (a := a⁻¹) (b := t ^ w) (i := m))
+      rwa [inv_inv] at this
+    rw [e1, ← zpow_natCast, ← zpow_mul, ← hm]
+    group
+  rw [char_congr ψ h (mul_mem (mul_mem h₁ (zpow_mem hp m)) (inv_mem h₁)) hdec,
+    char_mul ψ (mul_mem h₁ (zpow_mem hp m)) (inv_mem h₁), char_mul ψ h₁ (zpow_mem hp m),
+    char_inv ψ h₁, char_zpow H ψ hp m, hp0, smul_zero]
+  abel
+end CuspGeneral
+
+end
+end Dubon2026.SourceIntegralCharacterLift

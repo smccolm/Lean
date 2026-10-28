@@ -1,0 +1,19 @@
+[
+  "AdelicFullGL2Derivative",
+  "AdelicGL2AlgebraicCharacter",
+  "AdelicGL2Enveloping",
+  "AdelicGL2NormDerivative",
+  "AdelicRealGL2Normalization",
+  "AdelicSl2NormDerivative",
+  "ComplexIdentityMatrixCurve",
+  "ComplexTracelessRealTangent",
+  "EnvelopingLiftComposition",
+  "FiniteSeparatingDerivative",
+  "HomogeneousGL2Enveloping",
+  "HomogeneousNormDerivative",
+  "HomogeneousNormedSpace",
+  "HomogeneousTwistDerivative",
+  "RealGL2CurvePositive",
+  "RealPositiveNormalizeTangent",
+  "RealSl2NormDerivative"
+]

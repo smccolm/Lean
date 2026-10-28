@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> winding-period boundary identity.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-modular-green-boundary-audit-route-925.json",
+    "sha256": "1A49EB1D760388DDD9113EFB50F374FF7356DB516BC0F733CA53CB6033ED2FC5",
+    "review": {
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> winding-period boundary identity.",
+      "assumptionsToDischarge": "The literal modular-domain planar integral is proved equal to its vertical and circular boundary integrals. The fixed-coset boundary terms are reindexed by the exact T and S transitions, with the source orientation signs, using native slash composition. The hypotheses are explicit differentiability, exponential decay and edge integrability, not either resulting identity.",
+      "remaining": "The actual winding-function consumer must discharge translated cusp bounds and edge integrability and unfold the actual finite coset domain. The resulting parabolic character edge sum must be identified with an original integral period. Reciprocity, principal-divisor converse, Picard/Hecke/H1, all-weight arithmetic association, and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\modular-green-reuse-route-922.json",
+          "sha256": "1F381D059E36D66A2835C78EF21F9F925C210E6ED7C0EB2D91D6C689D02615BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\modular-side-pairing-reuse-route-920.json",
+          "sha256": "04D4B0D3BABA7428185D15C5A9E23A6C69207D243773A2C4FE8C31123BAF429A"
+        }
+      ],
+      "routeReviews": [
+        {
+          "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_modularFundamentalDomain_eq_boundary_of_hasFDerivAt.lean.txt",
+          "sha256": "6F011482F2BB06EE30F4B7E38BC8BC2092E1325BA971849FFC231B60C97A9A26",
+          "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "license": "Apache-2.0",
+          "read": "Entire source read, including both Fubini decompositions, FTC slices, arc substitutions and final formula.",
+          "reuseCheck": "Bounded exact-name search of current project finds no existing formula. Native rectangular Stokes does not directly supply the curved modular-domain formula. Use native Fubini/FTC/change of variables as source; reuse native slash action for the separate boundary pairing. No root/package pins changed.",
+          "removed": "Unused h_sq and unused IsOpen U assumption; no arbitrary domain generalization.",
+          "serves": "DUB17/18 via original all-weight association/Picard-H1/Abel-Jacobi converse/analytic reciprocity/winding integral. This formula discharges the planar integral-to-three-boundary-pieces identity; translated cusp bounds, finite-domain unfolding and integral-period chain assembly remain separate.",
+          "modules": [
+            "SourceModularGreenDomain",
+            "SourceModularGreenLines",
+            "SourceModularGreenSliceGeometry",
+            "SourceModularGreenSlicing",
+            "SourceModularGreenArc",
+            "SourceModularGreenFormula"
+          ]
+        },
+        {
+          "chain": "DUB-17/18 -> all-weight arithmetic association -> original Gamma1 Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> winding-period integral -> Green/side-pairing identity",
+          "source": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_gammaFundamentalSet_boundary_sidePairing_of_slash_eq_add.lean.txt",
+            "sha256": "C6DB04EB9ABC4901798361443CEA9A6D5B46FEEEBB091D12C5346BC5264CF86C",
+            "fullMathematicalSourceRead": true
+          },
+          "reuseChecked": [
+            {
+              "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\SlashActions.lean",
+              "sha256": "79FAFE9DEB69F00B10F52431FA6409AFF2111B4D306675B676902E4DC3707035"
+            },
+            {
+              "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CongruenceTraceDomain.lean",
+              "sha256": "761C7C0466139786B86480E53D1C170E3973FCB435FD9B8FEFF6C6305582EFF8"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothModularGeometry.lean",
+              "sha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceSmoothOrbitIntegralGeometry.lean",
+              "sha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9"
+            }
+          ],
+          "shorterRoute": "Native SlashAction.slash_mul replaces the duplicate denominator cocycle and bespoke slash action. Fix actual Quotient.out representatives rather than generalize to arbitrary sections. Existing projective domain tiling and AE-disjointness can replace the separate source finite-domain tiling proof. Existing action/dbar geometry is reused for Green integration.",
+          "assumptionsToDischarge": [
+            "Actual T/S boundary pullback identities",
+            "Finite coset reindexing and exact side-pairing integral formulas",
+            "Subsequent Green identity must discharge boundary integrability and identify the winding period"
+          ],
+          "remaining": "Green integration and actual period-lattice realization of the side pairing; complete winding/Petersson reciprocity and full original arithmetic chain. 16/20; DUB-17--20 OPEN."
+        }
+      ]
+    }
+  },
+  "discharged": "The literal modular-domain planar integral is proved equal to its vertical and circular boundary integrals. The fixed-coset boundary terms are reindexed by the exact T and S transitions, with the source orientation signs, using native slash composition. The hypotheses are explicit differentiability, exponential decay and edge integrability, not either resulting identity.",
+  "remaining": "The actual winding-function consumer must discharge translated cusp bounds and edge integrability and unfold the actual finite coset domain. The resulting parabolic character edge sum must be identified with an original integral period. Reciprocity, principal-divisor converse, Picard/Hecke/H1, all-weight arithmetic association, and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

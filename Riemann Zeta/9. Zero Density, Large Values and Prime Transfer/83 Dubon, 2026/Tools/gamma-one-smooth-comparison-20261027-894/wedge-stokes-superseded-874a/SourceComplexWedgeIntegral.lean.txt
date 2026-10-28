@@ -1,0 +1,203 @@
+import SourceComplexWedgeDisc
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> winding-period limit -> smooth local comparison
+function. Its exact local integer orders give the wedge/residue identity
+by compact-support integration by parts, the proved simple-pole kernel,
+and native smooth partition of unity. Holomorphicity of the smooth
+comparison function is not assumed. -/
+namespace Dubon2026.SourceComplexReciprocity.Wedge
+noncomputable section
+open MeasureTheory Filter Complex Metric Set DbarFundamental
+open scoped Topology Real Manifold ContDiff
+
+section Global
+
+variable {U : Set ℂ} (hU : IsOpen U) {Φ : ℂ → ℂ} {n : ℂ → ℤ}
+  (hloc : ∀ τ ∈ U, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ τ ∧ Ψ τ ≠ 0 ∧
+    Φ =ᶠ[𝓝 τ] fun z => (z - τ) ^ (n τ) * Ψ z)
+
+include hloc in
+
+theorem n_eq_zero_of_continuousAt {a : ℂ} (ha : a ∈ U) (hc : ContinuousAt Φ a) (hΦa : Φ a ≠ 0) :
+    n a = 0 := by
+  obtain ⟨Ψ, hΨ, hΨ0, hev⟩ := hloc a ha
+  rcases lt_trichotomy (n a) 0 with hlt | heq | hgt
+  ·
+    exfalso
+    obtain ⟨m, hm⟩ : ∃ m : ℕ, -n a = (m : ℤ) := ⟨(-n a).toNat, by omega⟩
+    have hm0 : 0 < m := by omega
+    have hev' : Ψ =ᶠ[𝓝[≠] a] fun z => (z - a) ^ m * Φ z := by
+      have h1 : ∀ᶠ z in 𝓝[≠] a, Φ z = (z - a) ^ (n a) * Ψ z :=
+        mem_nhdsWithin_of_mem_nhds hev
+      filter_upwards [h1, self_mem_nhdsWithin] with z hz hza
+      have hd : z - a ≠ 0 := sub_ne_zero.2 hza
+      rw [hz, ← mul_assoc, ← zpow_natCast, ← hm, ← zpow_add₀ hd, neg_add_cancel, zpow_zero, one_mul]
+    have hT : Tendsto (fun z => (z - a) ^ m * Φ z) (𝓝[≠] a) (𝓝 (0 * Φ a)) := by
+      refine Tendsto.mul ?_ (hc.tendsto.mono_left nhdsWithin_le_nhds)
+      have : Tendsto (fun z : ℂ => (z - a) ^ m) (𝓝 a) (𝓝 ((a - a) ^ m)) :=
+        ((continuous_id.sub continuous_const).pow m).continuousAt.tendsto
+      rw [sub_self, zero_pow hm0.ne'] at this
+      exact this.mono_left nhdsWithin_le_nhds
+    rw [zero_mul] at hT
+    have hΨT : Tendsto Ψ (𝓝[≠] a) (𝓝 (Ψ a)) := hΨ.continuousAt.tendsto.mono_left nhdsWithin_le_nhds
+    exact hΨ0 (tendsto_nhds_unique hΨT (hT.congr' hev'.symm))
+  · exact heq
+  · exfalso
+    have := hev.self_of_nhds
+    simp only [sub_self, zero_zpow _ hgt.ne', zero_mul] at this
+    exact hΦa this
+
+include hloc in
+
+theorem exists_disc {τ : ℂ} (hτ : τ ∈ U) (hUn : U ∈ 𝓝 τ) :
+    ∃ r : ℝ, ∃ Ψ : ℂ → ℂ, 0 < r ∧ ball τ r ⊆ U ∧ ContDiffOn ℝ 1 Ψ (ball τ r) ∧
+      (∀ z ∈ ball τ r, ‖Ψ z * (Ψ τ)⁻¹ - 1‖ < 1) ∧ Ψ τ ≠ 0 ∧
+      (∀ z ∈ ball τ r, Φ z = (z - τ) ^ (n τ) * Ψ z) := by
+  obtain ⟨Ψ, hΨ, hΨ0, hev⟩ := hloc τ hτ
+  have h1 : ∀ᶠ z in 𝓝 τ, ContDiffAt ℝ 1 Ψ z := hΨ.eventually (by simp)
+  have h2 : ∀ᶠ z in 𝓝 τ, ‖Ψ z * (Ψ τ)⁻¹ - 1‖ < 1 := by
+    have hc : ContinuousAt (fun z => Ψ z * (Ψ τ)⁻¹ - 1) τ :=
+      (hΨ.continuousAt.mul continuousAt_const).sub continuousAt_const
+    have h0 : ‖Ψ τ * (Ψ τ)⁻¹ - 1‖ < 1 := by rw [mul_inv_cancel₀ hΨ0]; simp
+    exact hc.norm.eventually (gt_mem_nhds h0)
+  have h0 : ∀ᶠ z in 𝓝 τ, z ∈ U := hUn
+  obtain ⟨r, hr, hball⟩ := Metric.mem_nhds_iff.1 (((h0.and hev).and h1).and h2)
+  refine ⟨r, Ψ, hr, fun z hz => (hball hz).1.1.1, fun z hz => (hball hz).1.2.contDiffWithinAt,
+    fun z hz => (hball hz).2, hΨ0, fun z hz => (hball hz).1.1.2⟩
+
+end Global
+
+theorem tsupport_ofReal_comp (ρ : ℂ → ℝ) : tsupport (fun z => ((ρ z : ℝ) : ℂ)) = tsupport ρ := by
+  simp only [tsupport]
+  congr 1
+  ext z
+  simp
+
+theorem integral_wedge_residue_identity (U : Set ℂ) (hU : IsOpen U) (Φ : ℂ → ℂ) (n : ℂ → ℤ)
+    (hloc : ∀ τ ∈ U, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ τ ∧ Ψ τ ≠ 0 ∧
+      Φ =ᶠ[𝓝 τ] fun z => (z - τ) ^ (n τ) * Ψ z)
+    (E E' : ℂ → ℂ) (hE : ∀ z ∈ U, HasDerivAt E (E' z) z)
+    (h : ℂ → ℂ) (hh : ContDiff ℝ 2 h) (hsupp : HasCompactSupport h) (hU' : tsupport h ⊆ U) :
+    Integrable (fun z : ℂ => E z / Φ z *
+        (fderiv ℝ Φ z 1 * fderiv ℝ h z I - fderiv ℝ Φ z I * fderiv ℝ h z 1)) ∧
+    Integrable (fun z : ℂ => E' z * h z *
+        ((fderiv ℝ Φ z 1 + I * fderiv ℝ Φ z I) / 2 / Φ z)) ∧
+    I / π * (∫ z : ℂ, E z / Φ z *
+        (fderiv ℝ Φ z 1 * fderiv ℝ h z I - fderiv ℝ Φ z I * fderiv ℝ h z 1)) +
+      2 * ∑ᶠ a : ℂ, (n a : ℂ) * E a * h a =
+    2 / π * ∫ z : ℂ, E' z * h z * ((fderiv ℝ Φ z 1 + I * fderiv ℝ Φ z I) / 2 / Φ z) := by
+  classical
+
+  have hdisc : ∀ τ, τ ∈ U → ∃ r : ℝ, ∃ Ψ : ℂ → ℂ, 0 < r ∧ ball τ r ⊆ U ∧
+      ContDiffOn ℝ 1 Ψ (ball τ r) ∧ (∀ z ∈ ball τ r, ‖Ψ z * (Ψ τ)⁻¹ - 1‖ < 1) ∧ Ψ τ ≠ 0 ∧
+      (∀ z ∈ ball τ r, Φ z = (z - τ) ^ (n τ) * Ψ z) := fun τ hτ =>
+    exists_disc hloc hτ (hU.mem_nhds hτ)
+  choose! r Ψf hr hrU hΨf hΨ1 hΨ0 hΦf using hdisc
+
+  have hiso : ∀ τ ∈ U, ∀ a ∈ ball τ (r τ), a ≠ τ → n a = 0 := by
+    intro τ hτ a ha haτ
+    have haU : a ∈ U := hrU τ hτ ha
+    have hcont : ContinuousAt Φ a := by
+      have hev : Φ =ᶠ[𝓝 a] fun z => (z - τ) ^ (n τ) * Ψf τ z := by
+        filter_upwards [isOpen_ball.mem_nhds ha] with z hz using hΦf τ hτ z hz
+      refine (ContinuousAt.congr ?_ hev.symm)
+      refine ContinuousAt.mul ?_ ((hΨf τ hτ).continuousOn.continuousAt (isOpen_ball.mem_nhds ha))
+      exact ((continuousAt_id.sub continuousAt_const).zpow₀ _ (Or.inl (sub_ne_zero.2 haτ)))
+    have hΦa : Φ a ≠ 0 := Φ_ne (hΨ1 τ hτ) (hΦf τ hτ) ha haτ
+    exact n_eq_zero_of_continuousAt hloc haU hcont hΦa
+
+  set K := tsupport h with hK
+  have hKc : IsCompact K := hsupp
+  obtain ⟨t, htK, hcov⟩ := hKc.elim_nhds_subcover (fun x => ball x (r x / 2)) fun x hx =>
+    ball_mem_nhds x (half_pos (hr x (hU' hx)))
+  have htU : ∀ x ∈ t, x ∈ U := fun x hx => hU' (htK x hx)
+
+  set ι := {x // x ∈ t}
+  set Uc : ι → Set ℂ := fun i => ball (i : ℂ) (r i / 2) with hUc
+  have hUo : ∀ i, IsOpen (Uc i) := fun i => isOpen_ball
+  have hKU : K ⊆ ⋃ i, Uc i := by
+    intro x hx
+    obtain ⟨i, hi, hxi⟩ := Set.mem_iUnion₂.1 (hcov hx)
+    exact Set.mem_iUnion.2 ⟨⟨i, hi⟩, hxi⟩
+  obtain ⟨f, hf⟩ := SmoothPartitionOfUnity.exists_isSubordinate 𝓘(ℝ, ℂ) (isClosed_tsupport h) Uc hUo hKU
+  set ρ : ι → ℂ → ℂ := fun i z => ((f i z : ℝ) : ℂ) with hρ
+  have hρs : ∀ i, ContDiff ℝ 2 (ρ i) := fun i => by
+    have h1 : ContDiff ℝ ∞ (f i : ℂ → ℝ) := contMDiff_iff_contDiff.1 (f i).contMDiff
+    exact Complex.ofRealCLM.contDiff.comp (h1.of_le (by norm_cast))
+  have hρt : ∀ i, tsupport (ρ i) ⊆ ball (i : ℂ) (r i / 2) := fun i => by
+    rw [hρ, tsupport_ofReal_comp]; exact hf i
+  have hρ1 : ∀ z ∈ K, ∑ i : ι, ρ i z = 1 := by
+    intro z hz
+    have := f.sum_eq_one hz
+    rw [finsum_eq_sum_of_fintype] at this
+    simp only [hρ]
+    exact_mod_cast this
+
+  set k : ι → ℂ → ℂ := fun i z => h z * ρ i z with hkdef
+  have hk2 : ∀ i, ContDiff ℝ 2 (k i) := fun i => hh.mul (hρs i)
+  have hks : ∀ i, HasCompactSupport (k i) := fun i => hsupp.mul_right
+  have hkt : ∀ i, tsupport (k i) ⊆ ball (i : ℂ) (r i) := fun i =>
+    (closure_minimal (fun z hz => subset_tsupport _ (right_ne_zero_of_mul hz))
+      (isClosed_tsupport _)).trans ((hρt i).trans (ball_subset_ball (by linarith [hr i (htU i i.2)])))
+  have hsum : h = ∑ i : ι, k i := by
+    funext z
+    rw [Finset.sum_apply]
+    simp only [hkdef, ← Finset.mul_sum]
+    by_cases hz : z ∈ K
+    · rw [hρ1 z hz, mul_one]
+    · rw [image_eq_zero_of_notMem_tsupport hz, zero_mul]
+
+  have hD : ∀ i : ι, _ := fun i => disc_identity (hΨf i (htU i i.2)) (hΨ1 i (htU i i.2))
+    (hΨ0 i (htU i i.2)) (hΦf i (htU i i.2)) (fun z hz => hE z (hrU i (htU i i.2) hz))
+    (hk2 i) (hks i) (hkt i)
+
+  have hfd : ∀ z w, fderiv ℝ h z w = ∑ i : ι, fderiv ℝ (k i) z w := by
+    intro z w
+    rw [hsum, fderiv_sum fun i _ => (hk2 i).differentiable (by norm_num) z]
+    simp [Finset.sum_apply]
+  have hhz : ∀ z, h z = ∑ i : ι, k i z := fun z => by rw [hsum, Finset.sum_apply]
+
+  have hI1 : (fun z : ℂ => E z / Φ z *
+      (fderiv ℝ Φ z 1 * fderiv ℝ h z I - fderiv ℝ Φ z I * fderiv ℝ h z 1)) =
+      fun z => ∑ i : ι, E z / Φ z *
+        (fderiv ℝ Φ z 1 * fderiv ℝ (k i) z I - fderiv ℝ Φ z I * fderiv ℝ (k i) z 1) := by
+    funext z
+    rw [hfd z I, hfd z 1, Finset.mul_sum, Finset.mul_sum, ← Finset.sum_sub_distrib, Finset.mul_sum]
+  have hI2 : (fun z : ℂ => E' z * h z * ((fderiv ℝ Φ z 1 + I * fderiv ℝ Φ z I) / 2 / Φ z)) =
+      fun z => ∑ i : ι, E' z * k i z * ((fderiv ℝ Φ z 1 + I * fderiv ℝ Φ z I) / 2 / Φ z) := by
+    funext z
+    rw [hhz z, Finset.mul_sum, Finset.sum_mul]
+
+  have hpt : ∀ i : ι, ∑ᶠ a : ℂ, (n a : ℂ) * E a * k i a = (n i : ℂ) * E i * k i i := by
+    intro i
+    refine finsum_eq_single _ (i : ℂ) fun a hai => ?_
+    by_cases hka : k i a = 0
+    · rw [hka, mul_zero]
+    · have ha : a ∈ ball (i : ℂ) (r i) := hkt i (subset_tsupport _ hka)
+      rw [hiso i (htU i i.2) a ha hai]; simp
+  have hfin : ∑ᶠ a : ℂ, (n a : ℂ) * E a * h a = ∑ i : ι, (n i : ℂ) * E i * k i i := by
+    have h1 : (fun a : ℂ => (n a : ℂ) * E a * h a) = fun a => ∑ i : ι, (n a : ℂ) * E a * k i a := by
+      funext a; rw [hhz a, Finset.mul_sum]
+    rw [h1, finsum_sum_comm]
+    · exact Finset.sum_congr rfl fun i _ => hpt i
+    · intro i _
+      refine Set.Finite.subset (Set.finite_singleton (i : ℂ)) fun a ha => ?_
+      by_contra hai
+      apply ha
+      show (n a : ℂ) * E a * k i a = 0
+      by_cases hka : k i a = 0
+      · rw [hka, mul_zero]
+      · have ha' : a ∈ ball (i : ℂ) (r i) := hkt i (subset_tsupport _ hka)
+        rw [hiso i (htU i i.2) a ha' hai]; simp
+
+  refine ⟨?_, ?_, ?_⟩
+  · rw [hI1]; exact integrable_finsetSum _ fun i _ => (hD i).1
+  · rw [hI2]; exact integrable_finsetSum _ fun i _ => (hD i).2.1
+  · rw [hI1, hI2, integral_finsetSum _ fun i _ => (hD i).1,
+      integral_finsetSum _ fun i _ => (hD i).2.1, hfin, Finset.mul_sum, Finset.mul_sum,
+      Finset.mul_sum, ← Finset.sum_add_distrib]
+    exact Finset.sum_congr rfl fun i _ => (hD i).2.2
+
+end
+end Dubon2026.SourceComplexReciprocity.Wedge

@@ -1,0 +1,74 @@
+import SourceGammaOneTwoPoleDifferential
+import SourceGammaOneDifferentialResidues
+import SourceGammaOneSimplePoleBounds
+import SourceGammaOneTwoPoleResidues
+import SourceGammaOnePrescribedResidues
+import SourceGammaOneAnalyticDivisorDifferential
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential
+#print axioms Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.differentialResidue
+
+
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneTwoPoleDifferential, `SourceGammaOneDifferentialResidues, `SourceGammaOneSimplePoleBounds, `SourceGammaOneTwoPoleResidues, `SourceGammaOnePrescribedResidues, `SourceGammaOneAnalyticDivisorDifferential]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential, `Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum, `Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero, `Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum, `Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential, `Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support, `Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues, `Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData, `Dubon2026.SourceFunctionField.GammaOne.differentialCoeff, `Dubon2026.SourceFunctionField.GammaOne.differentialResidue]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Prescribed Residues postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Prescribed Residues theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRESCRIBED RESIDUES AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneTwoPoleDifferential
+#lint in SourceGammaOneDifferentialResidues
+#lint in SourceGammaOneSimplePoleBounds
+#lint in SourceGammaOneTwoPoleResidues
+#lint in SourceGammaOnePrescribedResidues
+#lint in SourceGammaOneAnalyticDivisorDifferential

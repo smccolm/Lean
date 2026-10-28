@@ -1,0 +1,27 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\S_ModularCurve_Period_exists_parabolicHoms_int_castAddHom_comp_eq_of_forall_isOfFinOrder.lean.txt",
+      "bytes": 39378,
+      "sha256": "AF9F423A8D487EC37F8DC24E08E0095A8DB20A0BCFF753E54A1DDB1BDACFE0A2",
+      "gitBlob": "265f41f8203f08174b1c0651258d47a3151c276d",
+      "retrievedUTC": "2026-10-27T14:11:38.256226+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_mem_periodLatticeOf_sum_periodAlongOf_add_petersson_eq_of_multiplier_eq_exp.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_mem_periodLatticeOf_sum_periodAlongOf_add_petersson_eq_of_multiplier_eq_exp.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-796\\S_ModularCurve_exists_mem_periodLatticeOf_sum_periodAlongOf_add_petersson_eq_of_multiplier_eq_exp.lean.txt",
+      "bytes": 33239,
+      "sha256": "08CC77999E9DFCB70F6793864FC0B0C6E9C2D5B9583B9B9101EF7AF9CB5C49AB",
+      "gitBlob": "908e5bd295e66cdc19f22dbc50f5dd0abe14484f",
+      "retrievedUTC": "2026-10-27T14:11:38.523904+00:00"
+    }
+  ]
+}

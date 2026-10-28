@@ -1,0 +1,18 @@
+{
+  "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_modularFundamentalDomain_eq_boundary_of_hasFDerivAt.lean.txt",
+  "sha256": "6F011482F2BB06EE30F4B7E38BC8BC2092E1325BA971849FFC231B60C97A9A26",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "read": "Entire source read, including both Fubini decompositions, FTC slices, arc substitutions and final formula.",
+  "reuseCheck": "Bounded exact-name search of current project finds no existing formula. Native rectangular Stokes does not directly supply the curved modular-domain formula. Use native Fubini/FTC/change of variables as source; reuse native slash action for the separate boundary pairing. No root/package pins changed.",
+  "removed": "Unused h_sq and unused IsOpen U assumption; no arbitrary domain generalization.",
+  "serves": "DUB17/18 via original all-weight association/Picard-H1/Abel-Jacobi converse/analytic reciprocity/winding integral. This formula discharges the planar integral-to-three-boundary-pieces identity; translated cusp bounds, finite-domain unfolding and integral-period chain assembly remain separate.",
+  "modules": [
+    "SourceModularGreenDomain",
+    "SourceModularGreenLines",
+    "SourceModularGreenSliceGeometry",
+    "SourceModularGreenSlicing",
+    "SourceModularGreenArc",
+    "SourceModularGreenFormula"
+  ]
+}

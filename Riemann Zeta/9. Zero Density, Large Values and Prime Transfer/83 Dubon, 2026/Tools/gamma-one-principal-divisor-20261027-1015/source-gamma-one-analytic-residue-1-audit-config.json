@@ -1,0 +1,63 @@
+{
+  "modules": [
+    "SourceGammaOneRealizationDerivation",
+    "SourceGammaOneAnalyticDifferentialResidue"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_scalarTower",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventually_differentiableAt_rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventuallyEq_of_smul_D_eq_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germAlgebra",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeDerivation"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_scalarTower",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventually_differentiableAt_rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventuallyEq_of_smul_D_eq_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germAlgebra",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeDerivation"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion"
+  ],
+  "compileEvidence": {
+    "SourceGammaOneRealizationDerivation": "SourceGammaOneRealizationDerivation989b",
+    "SourceGammaOneAnalyticDifferentialResidue": "SourceGammaOneAnalyticDifferentialResidue990g"
+  },
+  "localModules": [
+    "SourceGammaOneRealizationDerivation",
+    "SourceGammaOneAnalyticDifferentialResidue",
+    "SourceGammaOneDifferentialResidues"
+  ],
+  "separatelyAxiomChecked": [],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germ_scalarTower",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventually_differentiableAt_rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.eventuallyEq_of_smul_D_eq_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_differential_residue_expansion",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.rz",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.germAlgebra",
+    "Dubon2026.SourceFunctionField.GammaOne.RealizationDerivative.realizeDerivation",
+    "Dubon2026.SourceComplexReciprocity.LogDerivStokes.hloc_logDeriv",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order"
+  ]
+}

@@ -1,0 +1,60 @@
+import Dubon2026.SourceWeightTwoEndpointPeriods
+import Dubon2026.SourceWeightTwoIntegralPeriods
+import Dubon2026.SourceWeightTwoClosedChainPeriods
+import Dubon2026.SourceWeightTwoSegmentPeriods
+import Dubon2026.SourceGammaOneClosedChainIntegral
+import Dubon2026.SourceModularIrrationalAction
+import Dubon2026.SourceModularPingPongSets
+import Dubon2026.SourceModularFreeProductInjection
+import Dubon2026.SourceModularProjectiveKernel
+import Dubon2026.SourceModularFreeProduct
+import Dubon2026.SourceCuspCorrectionEdgeChains
+import Dubon2026.SourceCuspCorrectionCosetChains
+import Dubon2026.SourceCuspCorrectionGenerators
+import Dubon2026.SourceCuspCorrectionCyclicCosets
+import Dubon2026.SourceCuspCorrectionEdgeCharacters
+import Dubon2026.SourceCuspCorrectionRealization
+import Dubon2026.SourceIntegralCharacterCrossed
+import Dubon2026.SourceIntegralCharacterPotential
+import Dubon2026.SourceIntegralCharacterShapiro
+import Dubon2026.SourceIntegralCharacterFreeProduct
+import Dubon2026.SourceIntegralCharacterInitialLift
+import Dubon2026.SourceIntegralCharacterCuspConjugacy
+import Dubon2026.SourceIntegralCharacterCuspSum
+import Dubon2026.SourceIntegralCharacterCorrection
+import Dubon2026.SourceIntegralCharacterModularFacts
+import Dubon2026.SourceIntegralCharacterModularBridge
+import Dubon2026.SourceIntegralParabolicCharacterLift
+import Dubon2026.SourceGammaOneIntegralParabolicLift
+import Dubon2026.SourceUnitaryCharacterFiniteOrder
+import Dubon2026.SourceUnitaryCharacterRecurrence
+import Dubon2026.SourceUnitaryCharacterTraceBound
+import Dubon2026.SourceUnitaryCharacterAbelianQuotient
+import Dubon2026.SourceUnitaryCharacterBasisExt
+import Dubon2026.SourceUnitaryCharacterTorsion
+import Dubon2026.SourceUnitaryCircleCharacter
+import Dubon2026.SourceUnitaryCharacterLogarithm
+import Dubon2026.SourceGammaOneUnitaryCharacterPeriods
+import Dubon2026.SourceModularEllipticFixedPoint
+import Dubon2026.SourceMeromorphicMultiplierParabolic
+import Dubon2026.SourceMeromorphicMultiplierGerm
+import Dubon2026.SourceGammaOneMeromorphicMultiplierElliptic
+import Dubon2026.SourceGammaOneMeromorphicMultiplierPeriods
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceWeightTwoEndpointPeriods, `Dubon2026.SourceWeightTwoIntegralPeriods, `Dubon2026.SourceWeightTwoClosedChainPeriods, `Dubon2026.SourceWeightTwoSegmentPeriods, `Dubon2026.SourceGammaOneClosedChainIntegral, `Dubon2026.SourceModularIrrationalAction, `Dubon2026.SourceModularPingPongSets, `Dubon2026.SourceModularFreeProductInjection, `Dubon2026.SourceModularProjectiveKernel, `Dubon2026.SourceModularFreeProduct, `Dubon2026.SourceCuspCorrectionEdgeChains, `Dubon2026.SourceCuspCorrectionCosetChains, `Dubon2026.SourceCuspCorrectionGenerators, `Dubon2026.SourceCuspCorrectionCyclicCosets, `Dubon2026.SourceCuspCorrectionEdgeCharacters, `Dubon2026.SourceCuspCorrectionRealization, `Dubon2026.SourceIntegralCharacterCrossed, `Dubon2026.SourceIntegralCharacterPotential, `Dubon2026.SourceIntegralCharacterShapiro, `Dubon2026.SourceIntegralCharacterFreeProduct, `Dubon2026.SourceIntegralCharacterInitialLift, `Dubon2026.SourceIntegralCharacterCuspConjugacy, `Dubon2026.SourceIntegralCharacterCuspSum, `Dubon2026.SourceIntegralCharacterCorrection, `Dubon2026.SourceIntegralCharacterModularFacts, `Dubon2026.SourceIntegralCharacterModularBridge, `Dubon2026.SourceIntegralParabolicCharacterLift, `Dubon2026.SourceGammaOneIntegralParabolicLift, `Dubon2026.SourceUnitaryCharacterFiniteOrder, `Dubon2026.SourceUnitaryCharacterRecurrence, `Dubon2026.SourceUnitaryCharacterTraceBound, `Dubon2026.SourceUnitaryCharacterAbelianQuotient, `Dubon2026.SourceUnitaryCharacterBasisExt, `Dubon2026.SourceUnitaryCharacterTorsion, `Dubon2026.SourceUnitaryCircleCharacter, `Dubon2026.SourceUnitaryCharacterLogarithm, `Dubon2026.SourceGammaOneUnitaryCharacterPeriods, `Dubon2026.SourceModularEllipticFixedPoint, `Dubon2026.SourceMeromorphicMultiplierParabolic, `Dubon2026.SourceMeromorphicMultiplierGerm, `Dubon2026.SourceGammaOneMeromorphicMultiplierElliptic, `Dubon2026.SourceGammaOneMeromorphicMultiplierPeriods]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

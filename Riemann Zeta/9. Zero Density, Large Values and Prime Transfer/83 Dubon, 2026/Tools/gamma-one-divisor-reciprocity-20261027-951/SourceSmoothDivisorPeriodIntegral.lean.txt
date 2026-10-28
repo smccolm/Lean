@@ -1,0 +1,137 @@
+import SourceSmoothCompactTranslateIntegral
+import SourceSmoothInvariantComparison
+import SourceWeightTwoPeriodUntwist
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> smooth divisor period limit.
+Consume the constructed invariant comparison, actual compact coefficient
+functions and exact local orders. The compact translate integral and existing
+normalized endpoint primitive discharge the source period-limit obligation.
+No primitive-existence, smoothed integral or reciprocity identity is assumed.
+Adapted from pinned Apache-2.0 source 886; duplicate primitive and finite-
+stabilizer foundations are replaced by existing proved declarations. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set Matrix.SpecialLinearGroup SourcePeriodUntwist
+open SourceSmoothedFundamental (smoothedFundamental)
+open scoped MatrixGroups Topology Real ComplexConjugate ModularForm
+
+theorem g_smul (Γ : Subgroup SL(2, ℤ))
+    (g : CuspForm (Γ.map (mapGL ℝ)) 2) {γ : SL(2, ℤ)} (hγ : γ ∈ Γ) (τ : ℍ) :
+    g (γ • τ) = denom (γ : GL (Fin 2) ℝ) τ ^ 2 * g τ := by
+  simpa using SlashInvariantForm.slash_action_eqn_SL'' (Γ := Γ) g hγ τ
+
+theorem exists_comparison_period_limit {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hneg : (-1 : SL(2, ℤ)) ∈ Γ)
+    (S : Finset ℍ) (n : ℍ → ℤ)
+    (hn : ∀ (γ : Γ) (τ : ℍ), n ((γ : SL(2, ℤ)) • τ) = n τ)
+    (hcov : ∀ τ : ℍ, n τ ≠ 0 → ∃ s ∈ S, ∃ γ : Γ, (γ : SL(2, ℤ)) • s = τ)
+    (hinj : ∀ s ∈ S, ∀ t ∈ S, (∃ γ : Γ, (γ : SL(2, ℤ)) • s = t) → s = t)
+    (hdvd : ∀ s ∈ S, (Nat.card (MulAction.stabilizer Γ s) : ℤ) ∣ 2 * n s)
+    (hdeg : ∑ s ∈ S, (n s : ℂ) / (Nat.card (MulAction.stabilizer Γ s) : ℂ) = 0)
+    :
+    ∃ V : ℂ → ℂ,
+      (∀ (γ : Γ) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z => (z - τ) ^ (n τ) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ (T : ℝ) (g : CuspForm (Γ.map (mapGL ℝ)) 2),
+        Integrable fun z : ℂ => g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) ∧
+      ∀ g : CuspForm (Γ.map (mapGL ℝ)) 2,
+        Tendsto (fun T : ℝ => 2 / Real.pi * ∫ z : ℂ, g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+            ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) atTop
+          (𝓝 (∑ s ∈ S, 2 * (n s : ℂ) / (Nat.card (MulAction.stabilizer Γ s) : ℂ) *
+              sourceWeightTwoAlong Γ UpperHalfPlane.I s g)) := by
+  classical
+  let h : ℝ → ℂ → ℂ := fun T z => (smoothedFundamental Γ T z : ℂ)
+  have hh : ∀ T z, h T z = (smoothedFundamental Γ T z : ℂ) := fun _ _ => rfl
+  obtain ⟨V, b, m, F, hV1, hV2, hV3, hF, hm, hae⟩ :=
+    exists_invariant_comparison Γ hneg
+      S n hn hcov hinj hdvd hdeg
+
+  set Per : ℍ → ℂ → ℂ := fun s z => ∑ᶠ γ : Γ, F s (((γ : SL(2, ℤ)) • ofComplex z : ℍ) : ℂ) *
+    conj (1 / denom ((γ : SL(2, ℤ)) : GL (Fin 2) ℝ) (ofComplex z) ^ 2) with hPer
+  set dV : ℂ → ℂ := fun z => (fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z
+    with hdV
+
+  have hunf : ∀ (g : CuspForm (Γ.map (mapGL ℝ)) 2), ∀ s ∈ S,
+      (∀ T : ℝ, Integrable fun z : ℂ => g (ofComplex z) * h T z * Per s z) ∧
+      Tendsto (fun T : ℝ => ∫ z : ℂ, g (ofComplex z) * h T z * Per s z) atTop
+        (𝓝 (∫ z : ℂ, g (ofComplex z) * F s z)) := by
+    intro g s hs
+    obtain ⟨hFc, hFcs, hFU, -⟩ := hF s hs
+    exact SourceSmoothOrbitIntegral.compact_translate_limit Γ (F s)
+      hFc hFcs hFU g (CuspFormClass.holo g).continuous (fun γ hγ τ => g_smul Γ g hγ τ)
+
+  have hh0 : ∀ T z, ¬ 0 < z.im → h T z = 0 := by
+    intro T z hz
+    rw [hh]
+    have h3 := (SourceSmoothedFundamental.smooth_partition Γ T).2.2.1
+    by_contra h'
+    apply hz
+    apply h3
+    apply subset_tsupport
+    rw [Function.mem_support]
+    intro h0; apply h'; simp [h0]
+
+  have hae' : ∀ (T : ℝ) (g : CuspForm (Γ.map (mapGL ℝ)) 2),
+      (fun z : ℂ => g (ofComplex z) * h T z * dV z) =ᵐ[volume]
+        fun z => ∑ s ∈ S, (m s : ℂ) / 2 * (g (ofComplex z) * h T z * Per s z) := by
+    intro T g
+    filter_upwards [hae] with z hz
+    by_cases him : 0 < z.im
+    · rw [hdV]; dsimp only
+      rw [hz him, Finset.mul_sum]
+      refine Finset.sum_congr rfl fun s _ => ?_
+      ring
+    · simp [hh0 T z him]
+  have hint : ∀ (T : ℝ) (g : CuspForm (Γ.map (mapGL ℝ)) 2),
+      Integrable fun z => ∑ s ∈ S, (m s : ℂ) / 2 * (g (ofComplex z) * h T z * Per s z) := by
+    intro T g
+    exact integrable_finsetSum _ fun s hs => ((hunf g s hs).1 T).const_mul _
+  refine ⟨V, hV1, hV2, hV3, fun T g => (hint T g).congr (hae' T g).symm, fun g => ?_⟩
+
+  have heq : ∀ T : ℝ, ∫ z : ℂ, g (ofComplex z) * h T z * dV z =
+      ∑ s ∈ S, (m s : ℂ) / 2 * ∫ z : ℂ, g (ofComplex z) * h T z * Per s z := by
+    intro T
+    rw [integral_congr_ae (hae' T g), integral_finsetSum _ fun s hs => ((hunf g s hs).1 T).const_mul _]
+    exact Finset.sum_congr rfl fun s _ => integral_const_mul _ _
+  have hlim : Tendsto (fun T : ℝ => 2 / Real.pi * ∫ z : ℂ, g (ofComplex z) * h T z * dV z) atTop
+      (𝓝 (2 / Real.pi * ∑ s ∈ S, (m s : ℂ) / 2 * ∫ z : ℂ, g (ofComplex z) * F s z)) := by
+    simp_rw [heq]
+    exact (tendsto_finsetSum _ fun s hs => ((hunf g s hs).2).const_mul _).const_mul _
+
+  have hpair : ∀ s ∈ S, ∫ z : ℂ, g (ofComplex z) * F s z = Real.pi * (Ek g s - Ek g b) := by
+    intro s hs
+    exact ((hF s hs).2.2.2 (Ek g) (fun z => g (ofComplex z)) fun z hz => Ek_hasDerivAt g hz).2
+  have hm' : ∀ s ∈ S, (m s : ℂ) = 2 * (n s : ℂ) / (Nat.card (MulAction.stabilizer Γ s) : ℂ) := by
+    intro s hs
+    have hc : (Nat.card (MulAction.stabilizer Γ s) : ℂ) ≠ 0 := by
+      exact_mod_cast (Nat.card_pos (α := MulAction.stabilizer Γ s)).ne'
+    have h := congrArg (fun k : ℤ => (k : ℂ)) (hm s hs)
+    push_cast at h
+    field_simp
+    linear_combination h
+  have hsum : ∑ s ∈ S, (m s : ℂ) = 0 := by
+    rw [Finset.sum_congr rfl hm']
+    have : ∑ s ∈ S, 2 * (n s : ℂ) / (Nat.card (MulAction.stabilizer Γ s) : ℂ) =
+        2 * ∑ s ∈ S, (n s : ℂ) / (Nat.card (MulAction.stabilizer Γ s) : ℂ) := by
+      rw [Finset.mul_sum]
+      exact Finset.sum_congr rfl fun s _ => by ring
+    rw [this, hdeg, mul_zero]
+  convert hlim using 2
+  have hπ : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
+  rw [Finset.mul_sum]
+  have : ∑ s ∈ S, 2 / (Real.pi : ℂ) * ((m s : ℂ) / 2 * ∫ z : ℂ, g (ofComplex z) * F s z) =
+      ∑ s ∈ S, ((m s : ℂ) * Ek g s - (m s : ℂ) * Ek g b) := by
+    refine Finset.sum_congr rfl fun s hs => ?_
+    rw [hpair s hs]; field_simp
+  rw [this, Finset.sum_sub_distrib, ← Finset.sum_mul, hsum, zero_mul, sub_zero]
+  refine Finset.sum_congr rfl fun s hs => ?_
+  rw [hm' s hs]
+  simp only [Ek, ofComplex_apply]
+
+
+end
+end Dubon2026.SourceSmoothDivisor

@@ -1,0 +1,111 @@
+import SourceModularIrrationalAction
+import SourceModularPingPongSets
+import SourceModularFreeProductInjection
+import SourceModularProjectiveKernel
+import SourceModularFreeProduct
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceModularFreeProduct.det_entries
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.ext
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg
+#print axioms Dubon2026.SourceModularFreeProduct.det_entries_real
+#print axioms Dubon2026.SourceModularFreeProduct.mul_entry
+#print axioms Dubon2026.SourceModularFreeProduct.den_ne_zero
+#print axioms Dubon2026.SourceModularFreeProduct.irrational_moebius
+#print axioms Dubon2026.SourceModularFreeProduct.moebius_mul
+#print axioms Dubon2026.SourceModularFreeProduct.moebius_one
+#print axioms Dubon2026.SourceModularFreeProduct.smul_coe
+#print axioms Dubon2026.SourceModularFreeProduct.pos_nonempty
+#print axioms Dubon2026.SourceModularFreeProduct.neg_nonempty
+#print axioms Dubon2026.SourceModularFreeProduct.disjoint_pos_neg
+#print axioms Dubon2026.SourceModularFreeProduct.S_smul_coe
+#print axioms Dubon2026.SourceModularFreeProduct.ST_smul_coe
+#print axioms Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe
+#print axioms Dubon2026.SourceModularFreeProduct.neg_one_smul_eq
+#print axioms Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos
+#print axioms Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg
+#print axioms Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg
+#print axioms Dubon2026.SourceModularFreeProduct.toPerm_apply
+#print axioms Dubon2026.SourceModularFreeProduct.toPerm_neg_one
+#print axioms Dubon2026.SourceModularFreeProduct.permS_sq
+#print axioms Dubon2026.SourceModularFreeProduct.permU_pow_three
+#print axioms Dubon2026.SourceModularFreeProduct.gen_zero
+#print axioms Dubon2026.SourceModularFreeProduct.gen_one
+#print axioms Dubon2026.SourceModularFreeProduct.gen_pow_eq_one
+#print axioms Dubon2026.SourceModularFreeProduct.incl_ofAdd_one
+#print axioms Dubon2026.SourceModularFreeProduct.incl_zero_eq
+#print axioms Dubon2026.SourceModularFreeProduct.incl_one_eq
+#print axioms Dubon2026.SourceModularFreeProduct.pingPongSet_zero
+#print axioms Dubon2026.SourceModularFreeProduct.pingPongSet_one
+#print axioms Dubon2026.SourceModularFreeProduct.pingPong
+#print axioms Dubon2026.SourceModularFreeProduct.three_le_card_factor_one
+#print axioms Dubon2026.SourceModularFreeProduct.lift_injective
+#print axioms Dubon2026.SourceModularFreeProduct.range_lift_eq
+#print axioms Dubon2026.SourceModularFreeProduct.irrational_sqrt_three
+#print axioms Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation
+#print axioms Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation
+#print axioms Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one
+#print axioms Dubon2026.SourceModularFreeProduct.mem_center_iff_eq
+#print axioms Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center
+#print axioms Dubon2026.SourceModularFreeProduct.equivRange_apply_coe
+#print axioms Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq
+#print axioms Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero
+#print axioms Dubon2026.SourceModularFreeProduct.mulEquiv_of_one
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo
+#print axioms Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo
+#print axioms Dubon2026.SourceModularFreeProduct.moebius
+#print axioms Dubon2026.SourceModularFreeProduct.Pos
+#print axioms Dubon2026.SourceModularFreeProduct.Neg
+#print axioms Dubon2026.SourceModularFreeProduct.toPerm
+#print axioms Dubon2026.SourceModularFreeProduct.permS
+#print axioms Dubon2026.SourceModularFreeProduct.permU
+#print axioms Dubon2026.SourceModularFreeProduct.G23
+#print axioms Dubon2026.SourceModularFreeProduct.gen
+#print axioms Dubon2026.SourceModularFreeProduct.incl
+#print axioms Dubon2026.SourceModularFreeProduct.pingPongSet
+#print axioms Dubon2026.SourceModularFreeProduct.equivRange
+#print axioms Dubon2026.SourceModularFreeProduct.mulEquiv
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceModularIrrationalAction, `SourceModularPingPongSets, `SourceModularFreeProductInjection, `SourceModularProjectiveKernel, `SourceModularFreeProduct]
+  let theorems : Array Name := #[`Dubon2026.SourceModularFreeProduct.det_entries, `Dubon2026.SourceModularFreeProduct.IrrationalPt.ext, `Dubon2026.SourceModularFreeProduct.IrrationalPt.irrational, `Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo_pos, `Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo_neg, `Dubon2026.SourceModularFreeProduct.det_entries_real, `Dubon2026.SourceModularFreeProduct.mul_entry, `Dubon2026.SourceModularFreeProduct.den_ne_zero, `Dubon2026.SourceModularFreeProduct.irrational_moebius, `Dubon2026.SourceModularFreeProduct.moebius_mul, `Dubon2026.SourceModularFreeProduct.moebius_one, `Dubon2026.SourceModularFreeProduct.smul_coe, `Dubon2026.SourceModularFreeProduct.pos_nonempty, `Dubon2026.SourceModularFreeProduct.neg_nonempty, `Dubon2026.SourceModularFreeProduct.disjoint_pos_neg, `Dubon2026.SourceModularFreeProduct.S_smul_coe, `Dubon2026.SourceModularFreeProduct.ST_smul_coe, `Dubon2026.SourceModularFreeProduct.ST_sq_smul_coe, `Dubon2026.SourceModularFreeProduct.neg_one_smul_eq, `Dubon2026.SourceModularFreeProduct.S_smul_neg_mem_pos, `Dubon2026.SourceModularFreeProduct.ST_smul_pos_mem_neg, `Dubon2026.SourceModularFreeProduct.ST_sq_smul_pos_mem_neg, `Dubon2026.SourceModularFreeProduct.toPerm_apply, `Dubon2026.SourceModularFreeProduct.toPerm_neg_one, `Dubon2026.SourceModularFreeProduct.permS_sq, `Dubon2026.SourceModularFreeProduct.permU_pow_three, `Dubon2026.SourceModularFreeProduct.gen_zero, `Dubon2026.SourceModularFreeProduct.gen_one, `Dubon2026.SourceModularFreeProduct.gen_pow_eq_one, `Dubon2026.SourceModularFreeProduct.incl_ofAdd_one, `Dubon2026.SourceModularFreeProduct.incl_zero_eq, `Dubon2026.SourceModularFreeProduct.incl_one_eq, `Dubon2026.SourceModularFreeProduct.pingPongSet_zero, `Dubon2026.SourceModularFreeProduct.pingPongSet_one, `Dubon2026.SourceModularFreeProduct.pingPong, `Dubon2026.SourceModularFreeProduct.three_le_card_factor_one, `Dubon2026.SourceModularFreeProduct.lift_injective, `Dubon2026.SourceModularFreeProduct.range_lift_eq, `Dubon2026.SourceModularFreeProduct.irrational_sqrt_three, `Dubon2026.SourceModularFreeProduct.eq_zero_of_irrational_relation, `Dubon2026.SourceModularFreeProduct.moebius_eq_self_relation, `Dubon2026.SourceModularFreeProduct.eq_one_or_neg_one_of_toPerm_eq_one, `Dubon2026.SourceModularFreeProduct.mem_center_iff_eq, `Dubon2026.SourceModularFreeProduct.ker_toPerm_eq_center, `Dubon2026.SourceModularFreeProduct.equivRange_apply_coe, `Dubon2026.SourceModularFreeProduct.mulEquiv_apply_of_eq, `Dubon2026.SourceModularFreeProduct.mulEquiv_of_zero, `Dubon2026.SourceModularFreeProduct.mulEquiv_of_one]
+  let constructions : Array Name := #[`Dubon2026.SourceModularFreeProduct.IrrationalPt, `Dubon2026.SourceModularFreeProduct.IrrationalPt.sqrtTwo, `Dubon2026.SourceModularFreeProduct.IrrationalPt.negSqrtTwo, `Dubon2026.SourceModularFreeProduct.moebius, `Dubon2026.SourceModularFreeProduct.Pos, `Dubon2026.SourceModularFreeProduct.Neg, `Dubon2026.SourceModularFreeProduct.toPerm, `Dubon2026.SourceModularFreeProduct.permS, `Dubon2026.SourceModularFreeProduct.permU, `Dubon2026.SourceModularFreeProduct.G23, `Dubon2026.SourceModularFreeProduct.gen, `Dubon2026.SourceModularFreeProduct.incl, `Dubon2026.SourceModularFreeProduct.pingPongSet, `Dubon2026.SourceModularFreeProduct.equivRange, `Dubon2026.SourceModularFreeProduct.mulEquiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Modular Free Product postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Modular Free Product theorems discovered"
+  logInfo m!"SOURCE MODULAR FREE PRODUCT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceModularIrrationalAction
+#lint in SourceModularPingPongSets
+#lint in SourceModularFreeProductInjection
+#lint in SourceModularProjectiveKernel
+#lint in SourceModularFreeProduct

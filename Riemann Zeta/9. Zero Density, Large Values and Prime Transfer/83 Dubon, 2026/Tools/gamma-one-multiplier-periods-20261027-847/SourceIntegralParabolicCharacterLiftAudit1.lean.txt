@@ -1,0 +1,139 @@
+import SourceIntegralCharacterCrossed
+import SourceIntegralCharacterPotential
+import SourceIntegralCharacterShapiro
+import SourceIntegralCharacterFreeProduct
+import SourceIntegralCharacterInitialLift
+import SourceIntegralCharacterCuspConjugacy
+import SourceIntegralCharacterCuspSum
+import SourceIntegralCharacterCorrection
+import SourceIntegralCharacterModularFacts
+import SourceIntegralCharacterModularBridge
+import SourceIntegralParabolicCharacterLift
+import SourceGammaOneIntegralParabolicLift
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_one
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_mul
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_add
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_sub
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_neg
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_zero
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr_zsmul
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_one
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.conj_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.add
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.neg
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.sub
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.zsmul
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.map
+#print axioms Dubon2026.SourceIntegralCharacterLift.cob_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.isCrossed_cob
+#print axioms Dubon2026.SourceIntegralCharacterLift.cob_apply_of_smul_eq
+#print axioms Dubon2026.SourceIntegralCharacterLift.cob_map
+#print axioms Dubon2026.SourceIntegralCharacterLift.exists_potential
+#print axioms Dubon2026.SourceIntegralCharacterLift.trAut_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.trHom_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.smul_coe
+#print axioms Dubon2026.SourceIntegralCharacterLift.smul_bs
+#print axioms Dubon2026.SourceIntegralCharacterLift.smul_bs_eq_bs_iff
+#print axioms Dubon2026.SourceIntegralCharacterLift.smul_bs_of_mem
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_congr
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_mul
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_inv
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_conj
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_map
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_sub
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_zsmul
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_conj
+#print axioms Dubon2026.SourceIntegralCharacterLift.conj_mem_iff_smul
+#print axioms Dubon2026.SourceIntegralCharacterLift.shapiro_apply
+#print axioms Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase_shapiro
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed.ext_of
+#print axioms Dubon2026.SourceIntegralCharacterLift.totalHom_right
+#print axioms Dubon2026.SourceIntegralCharacterLift.isCrossed_liftCrossed
+#print axioms Dubon2026.SourceIntegralCharacterLift.liftCrossed_of
+#print axioms Dubon2026.SourceIntegralCharacterLift.exists_char_comp_eq_of_forall_conj_of
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_zpow
+#print axioms Dubon2026.SourceIntegralCharacterLift.char_conj_zpow_eq_zero
+#print axioms Dubon2026.SourceIntegralCharacterLift.sum_char_cuspGen_eq_zero
+#print axioms Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_M23
+#print axioms Dubon2026.SourceIntegralCharacterLift.exists_sub_smul_apply_conj_zpow_eq_zero
+#print axioms Dubon2026.SourceIntegralCharacterLift.neg_one_mem_center
+#print axioms Dubon2026.SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center
+#print axioms Dubon2026.SourceIntegralCharacterLift.S_mul_S
+#print axioms Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow
+#print axioms Dubon2026.SourceIntegralCharacterLift.rho_neg
+#print axioms Dubon2026.SourceIntegralCharacterLift.eq_or_eq_neg_of_rho_eq
+#print axioms Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho
+#print axioms Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho_eq_conj_of
+#print axioms Dubon2026.SourceIntegralCharacterLift.exists_rho_eq_conj_tP_zpow
+#print axioms Dubon2026.SourceIntegralCharacterLift.trace_sq_of_rho_eq_conj_tP_zpow
+#print axioms Dubon2026.SourceIntegralCharacterLift.exists_int_lift
+#print axioms Dubon2026.sourceGamma1_integral_parabolic_character_lift
+#print axioms Dubon2026.SourceIntegralCharacterLift.tr
+#print axioms Dubon2026.SourceIntegralCharacterLift.IsCrossed
+#print axioms Dubon2026.SourceIntegralCharacterLift.cob
+#print axioms Dubon2026.SourceIntegralCharacterLift.trAut
+#print axioms Dubon2026.SourceIntegralCharacterLift.trHom
+#print axioms Dubon2026.SourceIntegralCharacterLift.bs
+#print axioms Dubon2026.SourceIntegralCharacterLift.evalBase
+#print axioms Dubon2026.SourceIntegralCharacterLift.shapiro
+#print axioms Dubon2026.SourceIntegralCharacterLift.genHom
+#print axioms Dubon2026.SourceIntegralCharacterLift.totalHom
+#print axioms Dubon2026.SourceIntegralCharacterLift.liftCrossed
+#print axioms Dubon2026.SourceIntegralCharacterLift.M23
+#print axioms Dubon2026.SourceIntegralCharacterLift.G23
+#print axioms Dubon2026.SourceIntegralCharacterLift.tP
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralCharacterCrossed, `SourceIntegralCharacterPotential, `SourceIntegralCharacterShapiro, `SourceIntegralCharacterFreeProduct, `SourceIntegralCharacterInitialLift, `SourceIntegralCharacterCuspConjugacy, `SourceIntegralCharacterCuspSum, `SourceIntegralCharacterCorrection, `SourceIntegralCharacterModularFacts, `SourceIntegralCharacterModularBridge, `SourceIntegralParabolicCharacterLift, `SourceGammaOneIntegralParabolicLift]
+  let theorems : Array Name := #[`Dubon2026.SourceIntegralCharacterLift.tr_apply, `Dubon2026.SourceIntegralCharacterLift.tr_one, `Dubon2026.SourceIntegralCharacterLift.tr_mul, `Dubon2026.SourceIntegralCharacterLift.tr_add, `Dubon2026.SourceIntegralCharacterLift.tr_sub, `Dubon2026.SourceIntegralCharacterLift.tr_neg, `Dubon2026.SourceIntegralCharacterLift.tr_zero, `Dubon2026.SourceIntegralCharacterLift.tr_zsmul, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_one, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.map_inv_apply, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.conj_apply, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.add, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.neg, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.sub, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.zsmul, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.map, `Dubon2026.SourceIntegralCharacterLift.cob_apply, `Dubon2026.SourceIntegralCharacterLift.isCrossed_cob, `Dubon2026.SourceIntegralCharacterLift.cob_apply_of_smul_eq, `Dubon2026.SourceIntegralCharacterLift.cob_map, `Dubon2026.SourceIntegralCharacterLift.exists_potential, `Dubon2026.SourceIntegralCharacterLift.trAut_apply, `Dubon2026.SourceIntegralCharacterLift.trHom_apply, `Dubon2026.SourceIntegralCharacterLift.smul_coe, `Dubon2026.SourceIntegralCharacterLift.smul_bs, `Dubon2026.SourceIntegralCharacterLift.smul_bs_eq_bs_iff, `Dubon2026.SourceIntegralCharacterLift.smul_bs_of_mem, `Dubon2026.SourceIntegralCharacterLift.char_congr, `Dubon2026.SourceIntegralCharacterLift.char_mul, `Dubon2026.SourceIntegralCharacterLift.char_inv, `Dubon2026.SourceIntegralCharacterLift.char_conj, `Dubon2026.SourceIntegralCharacterLift.evalBase_apply, `Dubon2026.SourceIntegralCharacterLift.evalBase_map, `Dubon2026.SourceIntegralCharacterLift.evalBase_sub, `Dubon2026.SourceIntegralCharacterLift.evalBase_zsmul, `Dubon2026.SourceIntegralCharacterLift.evalBase_conj, `Dubon2026.SourceIntegralCharacterLift.conj_mem_iff_smul, `Dubon2026.SourceIntegralCharacterLift.shapiro_apply, `Dubon2026.SourceIntegralCharacterLift.isCrossed_shapiro, `Dubon2026.SourceIntegralCharacterLift.evalBase_shapiro, `Dubon2026.SourceIntegralCharacterLift.IsCrossed.ext_of, `Dubon2026.SourceIntegralCharacterLift.totalHom_right, `Dubon2026.SourceIntegralCharacterLift.isCrossed_liftCrossed, `Dubon2026.SourceIntegralCharacterLift.liftCrossed_of, `Dubon2026.SourceIntegralCharacterLift.exists_char_comp_eq_of_forall_conj_of, `Dubon2026.SourceIntegralCharacterLift.char_zpow, `Dubon2026.SourceIntegralCharacterLift.char_conj_zpow_eq_zero, `Dubon2026.SourceIntegralCharacterLift.sum_char_cuspGen_eq_zero, `Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_M23, `Dubon2026.SourceIntegralCharacterLift.exists_sub_smul_apply_conj_zpow_eq_zero, `Dubon2026.SourceIntegralCharacterLift.neg_one_mem_center, `Dubon2026.SourceIntegralCharacterLift.eq_one_or_eq_neg_one_of_mem_center, `Dubon2026.SourceIntegralCharacterLift.S_mul_S, `Dubon2026.SourceIntegralCharacterLift.trace_conj_T_zpow, `Dubon2026.SourceIntegralCharacterLift.rho_neg, `Dubon2026.SourceIntegralCharacterLift.eq_or_eq_neg_of_rho_eq, `Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho, `Dubon2026.SourceIntegralCharacterLift.isOfFinOrder_of_rho_eq_conj_of, `Dubon2026.SourceIntegralCharacterLift.exists_rho_eq_conj_tP_zpow, `Dubon2026.SourceIntegralCharacterLift.trace_sq_of_rho_eq_conj_tP_zpow, `Dubon2026.SourceIntegralCharacterLift.exists_int_lift, `Dubon2026.sourceGamma1_integral_parabolic_character_lift]
+  let constructions : Array Name := #[`Dubon2026.SourceIntegralCharacterLift.tr, `Dubon2026.SourceIntegralCharacterLift.IsCrossed, `Dubon2026.SourceIntegralCharacterLift.cob, `Dubon2026.SourceIntegralCharacterLift.trAut, `Dubon2026.SourceIntegralCharacterLift.trHom, `Dubon2026.SourceIntegralCharacterLift.bs, `Dubon2026.SourceIntegralCharacterLift.evalBase, `Dubon2026.SourceIntegralCharacterLift.shapiro, `Dubon2026.SourceIntegralCharacterLift.genHom, `Dubon2026.SourceIntegralCharacterLift.totalHom, `Dubon2026.SourceIntegralCharacterLift.liftCrossed, `Dubon2026.SourceIntegralCharacterLift.M23, `Dubon2026.SourceIntegralCharacterLift.G23, `Dubon2026.SourceIntegralCharacterLift.tP]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Integral Parabolic Character Lift postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Integral Parabolic Character Lift theorems discovered"
+  logInfo m!"SOURCE INTEGRAL PARABOLIC CHARACTER LIFT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceIntegralCharacterCrossed
+#lint in SourceIntegralCharacterPotential
+#lint in SourceIntegralCharacterShapiro
+#lint in SourceIntegralCharacterFreeProduct
+#lint in SourceIntegralCharacterInitialLift
+#lint in SourceIntegralCharacterCuspConjugacy
+#lint in SourceIntegralCharacterCuspSum
+#lint in SourceIntegralCharacterCorrection
+#lint in SourceIntegralCharacterModularFacts
+#lint in SourceIntegralCharacterModularBridge
+#lint in SourceIntegralParabolicCharacterLift
+#lint in SourceGammaOneIntegralParabolicLift

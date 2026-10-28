@@ -1,0 +1,136 @@
+{
+  "separatelyAxiomChecked": [
+    {
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+      "reason": "Pure reflexive accessor; definitional reduction uses the actual coefficient construction. This accessor is axiom-checked and exhaustively owned, but is not claimed as a retained declaration-VALUE dependency."
+    }
+  ],
+  "recordedUTC": "2026-10-27T23:32:10.788931+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneTwoPoleDifferential",
+    "SourceGammaOneDifferentialResidues",
+    "SourceGammaOneSimplePoleBounds",
+    "SourceGammaOneTwoPoleResidues",
+    "SourceGammaOnePrescribedResidues",
+    "SourceGammaOneAnalyticDivisorDifferential"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleDifferential.lean",
+      "sha256": "F93B3F7CB5DFC5AAB72BC00D1C7DC41708FEDD87CC92D666C13B980ABB34D9EB",
+      "oleanSha256": "5CF0F2BFA3ACFBFDC3803C4A0CD1572DB89B9AE1E6547DAD45664A3C4A79BD94",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleDifferential976d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleDifferential976d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialResidues.lean",
+      "sha256": "3C709373B70B925C9BF44B00F51EEEE135F030C6390DBEFDD09E1CF32F5F7A8A",
+      "oleanSha256": "60D82988F9B32444E992B6938273DE8659703837DE5F664FF717D73C7CD86D6D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialResidues977a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialResidues977a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSimplePoleBounds.lean",
+      "sha256": "54421E0F3C0E3519C94306469DE4CEA4EC7FD9E5AE63588C60F3D923741383F8",
+      "oleanSha256": "4D5E359C4059728EED4BF2E7239F5382ADCD778FB2AD54BCB7DF27EF786C8E37",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSimplePoleBounds978a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSimplePoleBounds978a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleResidues.lean",
+      "sha256": "96DF80B562D6406639FC3C84DB62CC186F756C205C082AEF0C85A53E500A321E",
+      "oleanSha256": "385A1762572C65168857FA419503DCFAA5B47FAC6D621A4A73EB2AF46C06289B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleResidues979a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwoPoleResidues979a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidues.lean",
+      "sha256": "DD48CB2DF3678C301D83DF2170438A36607CDCAC423FD79BAC2DE145B6D02AEC",
+      "oleanSha256": "B8DD4728FDFDAA2965EA6870CD9268D1E6BD417CAA72A1319D2EB7EACDDADCAB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidues980a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedResidues980a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorDifferential.lean",
+      "sha256": "34920BEBD771CC55A393A99035C4B5A37079359B2CC95477212FB431ACD5E37D",
+      "oleanSha256": "29212BF83F20EEA37D621DF42B9B12F31367FDB15932FF67B26301FA3F18B86A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorDifferential981a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorDifferential981a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.GammaOne.simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.divisor_sum_support",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_third_kind_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialCoeff",
+    "Dubon2026.SourceFunctionField.GammaOne.differentialResidue"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesAudit1b.log",
+  "logSha256": "CE03941F4DF7CFDEC2554ED07143410F5F4BF13AFE89273D12DC428823E1DC14",
+  "auditSha256": "6FEFFF38996FEDD84469EEDF9E1D1F74C615FDDD5C81D13D4DB0A226759B3D1D",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesScratchOwnership983.log",
+  "ownershipSha256": "A92EFFA6B916ADEA75261DF4CA19805A58E6333B467C084EBA1E18474A725A14",
+  "exhaustiveTheorems": 48,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResiduesDependencyAudit1b.log",
+  "dependencyAuditSha256": "55AC61CB41EBF54EF3E693FDDC69725A8A9B5C9AE441C5530E920B487E6CEDA6",
+  "dependencyAuditSourceSha256": "02EF5522ACAF7657DBD9039E018AB2B6B0CD6086A0614EC369036CDFAF6006DD",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_divisor_differential"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character realization -> Picard/H1 -> Abel-Jacobi principal-divisor converse -> construct meromorphic function -> differential with prescribed residues.",
+  "discharged": "Actual algebraic differential with simple poles and residues equal to the degree-zero original divisor. Next: analytic local-residue realization, exponential cusp bounds, and meromorphic logarithmic primitive.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual algebraic differential now exists with the original divisor residues and regularity at all j-pole places. Its analytic residue expansion, slash invariance, exponential cusp bound, meromorphic logarithmic primitive and multiplier/cusp assembly remain. DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residues-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "1FF097AAEEF2CA18CBCC38871C63895881C3B01EAD79674BC54171BC55740F2A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

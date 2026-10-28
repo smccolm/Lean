@@ -1,0 +1,776 @@
+{
+  "status": "Canonical PASS of actual original divisor smooth comparison, filled quotient, integer winding period and divisor/Petersson reciprocity. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_divisor_reciprocity_8776.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/build_gamma_one_divisor_reciprocity_8776.ps1",
+      "sha256": "7C4996CF50E907C424C5EBA56A1754C4F17AFFFA43A23510E5EF3E84DF1A595F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_divisor_reciprocity_ownership_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/compare_gamma_one_divisor_reciprocity_ownership_8776.py",
+      "sha256": "F09CCE28382FF42BC20FB87DAC0DDE55D0C59AEEB03C0886330D1600D5D198A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-reciprocity-preexecution-review-8776.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-divisor-reciprocity-preexecution-review-8776.json",
+      "sha256": "CA71761BC5803906374CE18C387FC7BE069A00E3F9258C99093FDA824341BBFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-reciprocity-inputs-preflight-8776.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/gamma-one-reciprocity-inputs-preflight-8776.json",
+      "sha256": "E87C519FB9FC7D71ACF4CFCAC13AE995545B52C55A9B6826F5355454ED101779"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_divisor_reciprocity_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/integrate_source_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "171832558150153FF42EE1E8413C7572C7EFE541413D178CF81B84BAC9312F5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_divisor_reciprocity_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/preflight_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "28024716F619A4F76594E6CB65D1C9F86B65FDB8E049CA968C862F04D70E1530"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_global_ownership_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_divisor_reciprocity_global_ownership_8776.py",
+      "sha256": "E4D8AF5A8933DB8C2016BB8B39856B2F2F877E6CFB9C03CC36F9AC36C470BE9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_production_ownership_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_divisor_reciprocity_production_ownership_8776.py",
+      "sha256": "370DB756F439042F8E768A6F7B65336138A3864D3E6F8C0010A24BAE19935E0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_reciprocity_promotion_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/prepare_gamma_one_divisor_reciprocity_promotion_8776.py",
+      "sha256": "840E308341595FD99A4F824B49753DE70CF7B41EE3D0FA4967B5A7D4595BE695"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_divisor_reciprocity_8776.py",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/record_source_gamma_one_divisor_reciprocity_8776.py",
+      "sha256": "103C23A89F4744B74EFDEB45AA0546EB52B6C260D2F02519ADF2B70857C23ADA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-ownership-comparison-8776.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-reciprocity-ownership-comparison-8776.json",
+      "sha256": "F530C97770B236F37B3DA8B8C83FAD2F74BCE7AE58E498DF8F16A21FD43DF667"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-production-build-8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-reciprocity-production-build-8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-production-build-8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-reciprocity-production-build-8776.log",
+      "sha256": "A62EA12EA2E1B7EBA5BDC8009E2754F05DE915F054BBA973793ACC6187F0CA8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-reciprocity-scratch-ownership-8776.json",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/source-gamma-one-divisor-reciprocity-scratch-ownership-8776.json",
+      "sha256": "1F421660D92C1F25A4A84EDA7E2708DE7EA692963B6A3EA711E3FFA3E078504E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityGlobalOwnership8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityGlobalOwnership8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityGlobalOwnership8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityGlobalOwnership8776.lean.txt",
+      "sha256": "35B016D429198317E4D02482DE80CDC7D465951C0F8A28FC60ED7BC5C587DBC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityGlobalOwnership8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityGlobalOwnership8776.log",
+      "sha256": "3CD36E36B65C82247B2B7B185C9EC5D2EF578F259A0CF8A4F39A40E6B909E20C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityOwnership8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityOwnership8776.lean.txt",
+      "sha256": "9A5C08271E84637425FA1662F44CC16A30E617E23CE269E9CE31A070E596E255"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityOwnership8776.log",
+      "sha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityProductionAudit8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityProductionAudit8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityProductionAudit8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityProductionAudit8776.lean.txt",
+      "sha256": "A7C036DE695EDE3EF76EB9123EA2A473A5DDEA8543AC6F4017A4AF82E4AA97E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityProductionAudit8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorReciprocityProductionAudit8776.log",
+      "sha256": "1820C0D3C257CBD4237EB70E86E100DF5FB42FF6AB4CDFD96DBB481380411C0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1Production8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1Production8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1Production8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1Production8776.lean.txt",
+      "sha256": "3F210A70FC3179064FC5CC1D2D011EA4962E5FE9734458904699EDB81B158E15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingDependencyAudit1Production8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneDivisorWindingDependencyAudit1Production8776.log",
+      "sha256": "321D96A02AAC7441548114BA6493C8E6DD7D6ACB2CD70C7E65C5B06E7429AE54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.lean.txt",
+      "sha256": "8D5C9B67F3217E37A2C48CCAAEC7BE969F35F5030749B23C9C2E5D769E518BFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorDependencyAudit1bProduction8776.log",
+      "sha256": "F6635FFCD714D8BA1F5E60D8FCF5018C6043437A0A103757D8726BEDFD3CCF5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.lean.txt",
+      "sha256": "013A7AB6F81889194BE3FEDF32035C0DC48AE43B87146DC22ED94BC25DE458B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceGammaOneSmoothDivisorPeriodDependencyAudit1bProduction8776.log",
+      "sha256": "94638AA53BFEAE9DD1348B346349CB55BDEE93C117BBB754C12C7C38C19DB6F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1Production8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1Production8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1Production8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1Production8776.lean.txt",
+      "sha256": "8F9DC4CAB7E3B2F062AA7637F6EAB2588632D467D91DB10D1FC0623E7DDD111E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryDependencyAudit1Production8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceModularGreenBoundaryDependencyAudit1Production8776.log",
+      "sha256": "3486C9D1926257DB5AA33EF25F4B0AF2A46A79F93248290B9E3DA725C0EB8C0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.lean.txt",
+      "sha256": "F99B2B1944A34E4CC7C06F47339573014DE952519615D6BB590D2FD12D9B4796"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalDivisorWindingBoundaryDependencyAudit1Production8776.log",
+      "sha256": "FCBAB9CC3A1B0BF8CE7A87BC5B2BD097FD06ADE852E7B5B39992D9817BEA24D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.lean.txt",
+      "sha256": "48B169E01BE1FAE4AC1CDF60656131E715FEE2BE03B446E3FD22D25081F1ED65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalPeterssonReciprocityDependencyAudit1Production8776.log",
+      "sha256": "85DF9B4CD0576BFCA7736E2621C42E771F6936811A19EA76BB55D214DBA48128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.exit",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.lean",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.lean.txt",
+      "sha256": "8819546EFF84D309B08744136FC63BBCCB55269463FA247BBA164ADA7D14A329"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.log",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/SourceOriginalWindingIntegralPeriodDependencyAudit1bProduction8776.log",
+      "sha256": "D3C96955C4AC217BA2869FECD3A963BA3DFC86403D7CE021622CB69923447233"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_divisor_reciprocity_8776.ps1",
+      "path": "Tools/gamma-one-divisor-reciprocity-20261027-951/verify_gamma_one_divisor_reciprocity_8776.ps1",
+      "sha256": "3BC987ADBCE03724BBA6CFCA2CC77C6DD13D2EE047213E6BA92F8A14BA0BDBE0"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-28T00:04:57.136283+00:00",
+    "log": "logs/dubon-build-20261027-153011-740.log",
+    "sha256": "9615FE422F92D78F5942BF661353EAA40E4C88AB2E9AA8B62FDCA62B0D21078C",
+    "bytes": 14373574,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8776,
+    "projectTheorems": 55749,
+    "registeredConsumers": 25785,
+    "registeredConstructions": 2647,
+    "declarations": 34411,
+    "generated": 34813,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_152128.log",
+    "foundationSha256": "41B7DF0EE6A218E387A5B7CCBA4CC5EBBEF982342ACF613A2B9F51FE12229F2B",
+    "countReconciliation": {
+      "previousTheorems": 55220,
+      "focusedTheorems": 531,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourcePeriodUntwist.\u03a6.congr_simp",
+        "Dubon2026.sourceWeightTwoDualPeriod.congr_simp"
+      ],
+      "addedTheorems": 529,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityGlobalOwnership8776.log",
+      "globalOwnershipSha256": "3CD36E36B65C82247B2B7B185C9EC5D2EF578F259A0CF8A4F39A40E6B909E20C",
+      "globalOwnershipSourceSha256": "35B016D429198317E4D02482DE80CDC7D465951C0F8A28FC60ED7BC5C587DBC8",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+      "ownershipSha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 533,
+      "scratchDistinct": 533,
+      "generatedNameRenamings": {},
+      "productionFocused": 531,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "UpperHalfPlane.im.eq_1": [
+          {
+            "scope": "SourceGammaOneDivisorWindingScratchOwnership919",
+            "module": "Dubon2026.SourceSmoothComparisonCusps"
+          }
+        ],
+        "CuspForm.translate.congr_simp": [
+          {
+            "scope": "SourceOriginalDivisorWindingBoundaryScratchOwnership935",
+            "module": "Dubon2026.SourceModularCuspBoundaryDecay"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "CuspForm.translate.congr_simp",
+        "UpperHalfPlane.im.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceSmoothLocalModelRegularization",
+            "SourceSmoothLocalModelProducts",
+            "SourceModularSmoothProjectiveRepresentatives",
+            "SourceSmoothModularGeometry",
+            "SourceSmoothProjectiveOrbitSum",
+            "SourceSmoothDivisorOrbitData",
+            "SourceSmoothModularLogDerivative",
+            "SourceSmoothDivisorProduct",
+            "SourceSmoothDivisorLocalProduct",
+            "SourceSmoothDivisorLocalOrders",
+            "SourceSmoothDivisorInvarianceCusps",
+            "SourceSmoothDivisorLogDerivative",
+            "SourceSmoothInvariantComparison",
+            "SourceGammaOneSmoothDivisorComparison"
+          ],
+          "count": 121,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorScratchOwnership909b.log",
+            "sha256": "FB6FE91095BA44C44721643B2334B8BB88A3225977CFD693451C0EE9E6FC09A3",
+            "sourceSha256": "B382BFB047ED37F54181C6E396DC8A6B4FD29047DC3B3343BEDA30C2E679E86A"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothOrbitIntegralGeometry",
+            "SourceSmoothOrbitIntegralChangeVariables",
+            "SourceSmoothCompactTranslateIntegral",
+            "SourceSmoothDivisorPeriodIntegral",
+            "SourceGammaOneSmoothDivisorPeriodIntegral"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSmoothDivisorPeriodScratchOwnership914.log",
+            "sha256": "6957F1BB2A0105E54446879B2754B997DCEA37CCDF5F7716A50E09B33385D8D6",
+            "sourceSha256": "7E4BAB4636C380B1DEB012B6899F298D6E0E7B733C32A4BB666FE056835496A1"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonQuotient",
+            "SourceSmoothComparisonCusps",
+            "SourceSmoothComparisonWindingLog",
+            "SourceGammaOneDivisorWindingComparison"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorWindingScratchOwnership919.log",
+            "sha256": "0097075A0E95D722B2622C1DD6B632E90AF00D514F3C3FA4E91C52C6E8118A5B",
+            "sourceSha256": "885482663271373423DE7901F96995F599FDCA9BEA878FBBB7532AD1D793EFA4"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularSidePairingAction",
+            "SourceModularSidePairingIntegrals",
+            "SourceModularBoundarySidePairing",
+            "SourceModularGreenDomain",
+            "SourceModularGreenLines",
+            "SourceModularGreenSliceGeometry",
+            "SourceModularGreenSlicing",
+            "SourceModularGreenArc",
+            "SourceModularGreenFormula"
+          ],
+          "count": 119,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularGreenBoundaryScratchOwnership925.log",
+            "sha256": "656CCF3EA7176B8B26541CCB19141837F7DC9997E60C18D53D9BDEC33DFDBE1C",
+            "sourceSha256": "71406308BA3F4DC2B18C6BE6B2B6F3D4AD3FDD8A2CB441C2D98B611ABA5C564E"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCuspBoundaryDecay",
+            "SourceModularGreenPullback",
+            "SourceModularGreenTile",
+            "SourceModularGreenEdges",
+            "SourceModularGreenMeasure",
+            "SourceModularGreenDensity",
+            "SourceModularGreenSidePairing",
+            "SourceWindingLogCuspBounds",
+            "SourceModularSmoothedGreenLimit",
+            "SourceWindingBoundaryIntegral",
+            "SourceGammaOneDivisorWindingBoundary"
+          ],
+          "count": 141,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorWindingBoundaryScratchOwnership935.log",
+            "sha256": "65D347F5A19E4EC706A1794BDCE3716B85EC59DBA43EB511ED05BFB4DAE9E004",
+            "sourceSha256": "8582A9B40096E75C16C18FCF540409F76AD115E18A274FEB22F007FDCDD88CAB"
+          }
+        },
+        {
+          "modules": [
+            "SourceFinitePermutationCoboundary",
+            "SourceParabolicCosetPotentials",
+            "SourceWeightTwoPrimitiveEdges",
+            "SourceModularPeriodCorners",
+            "SourceWeightTwoCosetPeriods",
+            "SourceParabolicWindingIntegralPeriods",
+            "SourceGammaOneDivisorWindingIntegralPeriod"
+          ],
+          "count": 69,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWindingIntegralPeriodScratchOwnership943b.log",
+            "sha256": "2604D3D70BCC21771588DD2C42405F2FAAC1F4E1F632167F7FB57D94849D77A4",
+            "sourceSha256": "CE2F80A991556C66B2BAF25235FC09D04EAA3EFF0276C0ED21A7B9C26DAAD09C"
+          }
+        },
+        {
+          "modules": [
+            "SourceSmoothComparisonDbar",
+            "SourceSmoothedWindingIntegralSplit",
+            "SourceGammaOneSmoothedReciprocity",
+            "SourceUntwistPeterssonLimit",
+            "SourceGammaOnePeterssonReciprocity"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPeterssonReciprocityScratchOwnership950.log",
+            "sha256": "069B9C647D71076193A255F5319C6F0BD6F2EC72B71DDB1BAE8C7F07AAE60465",
+            "sourceSha256": "750FB693279C1918E47FA660104A9C5FFA95CAD6461AB4E84488B1FE436BCBAF"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorReciprocityOwnership8776.log",
+        "sha256": "73D2A8A3E2FCF08828D47C784E78A2A0C1B620E6617700771AB278416F23E4A9",
+        "sourceSha256": "9A5C08271E84637425FA1662F44CC16A30E617E23CE269E9CE31A070E596E255"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-131505-228.log",
+        "sha256": "F6F99E6CE65C6555F211707953E88EB897DF850197F0DEA5CF2670B7CDCA1ED1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 55 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceSmoothLocalModelRegularization",
+            "scratchSha256": "8E03F7B1CEE9A14BDD7E81422B6FFFC820494F4F1D5F2AF2D42772D891F052CC",
+            "productionSha256": "EEB3B9FAA10261C85C96BA213B3F32F5DF7854617AF8EE523FCC117BA91C4198",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothLocalModelProducts",
+            "scratchSha256": "F29AEF46E8457F756FAA69AE9E0C119EDC050D08108EA482C78789136A6D8FE1",
+            "productionSha256": "14C917B963CF9F2F7F2FFB26B39DFD3BAB837B65AA3CF25A712C1D8CCFEFF50A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothProjectiveRepresentatives",
+            "scratchSha256": "D9C29B42204AC2E02862BEC197796A610655C53B897857ABAF7A4757D4B16AEA",
+            "productionSha256": "DC160820D4DAC46D92AEF7B6AEDE799D5746392F4A6DEE291A4D0DF6BC02AEA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularGeometry",
+            "scratchSha256": "3A806D53419B94771B036DFFE2A010E5EF0DB9517D82402F2320C2C05C903D38",
+            "productionSha256": "DDB9187F22A1E48032C344131EB9EC9B03EE9D3173B45FAB35606A0F72F9CB36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothProjectiveOrbitSum",
+            "scratchSha256": "2074FC79B094DF75D1589CAF2B314C3D640A76A354DCB1601CBF0BC6E0BD60B8",
+            "productionSha256": "E425A5ACCAD8A4E9143A79B91CEA7D283C070E8B183FAF065BD1C41049063B8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorOrbitData",
+            "scratchSha256": "648E94ABA413033CBC1032CBB0B30C42047103849547B949FB4DE6FEE7DE667B",
+            "productionSha256": "F3CC30E83998BF3EB3DAA4857E767650A1B06F2FC1FAA968EC6DC787D5E5F082",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothModularLogDerivative",
+            "scratchSha256": "B35D4A4D6550A925D28A36714D3EFD733FEBE3DFA08D9187797593FBE9100EF5",
+            "productionSha256": "C11703985FDC36DAB55FAD5151BD0437446447D2DBED9426D8ECC99ED379D50C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorProduct",
+            "scratchSha256": "8D14534E567D760934BC1F979CECBDB9BB205F9F930660E7AA6A715D1504CFD0",
+            "productionSha256": "CBC0048371E1D44EFF76558B09BFF6A6DB110234CD20774B3E927B54C2DD25D3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalProduct",
+            "scratchSha256": "52F17B6EB3A8CC06730A567FB213AE8907E44D274AA3FCD313CA8AA2BFF4C613",
+            "productionSha256": "9F8DF163AE2E01DE6D4F83C1E12D53489512E1CB3574AD754278A75D0FDA1D16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLocalOrders",
+            "scratchSha256": "6023900FD05AF6274D16E4C1DC3564C2C66D91A3ED237CE61850430F90D3BED9",
+            "productionSha256": "C0A7A5BAF893ACDE23FAEC1EABCA232FB4D6F9548E910AB2BC0B3E37DEC9F493",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorInvarianceCusps",
+            "scratchSha256": "9F79832648C860446164FF03D45D29CEFFCEB3100CAEF20B6760AEBDA5AB494E",
+            "productionSha256": "9F8170E24A0D623A9034965D1F5501B3383D5D196D66A41FB99F83883F15D9BA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorLogDerivative",
+            "scratchSha256": "E1EA0BE4134C0E239E5F2F793EC3A95E77BB3AA693517DCAFE0BDEA13A2039D5",
+            "productionSha256": "EA8C7B32489F84B685C4AB4D458C300D220024224BBCD3B16C2AF08C63ECA2C1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothInvariantComparison",
+            "scratchSha256": "EC9A07869D9D1EB2E036062D0EE2D63296FD5EFD1C30DBB22FF97E02409316A6",
+            "productionSha256": "E96153DC65111A112A0F7B9D934054442E8320D4E28E9457FA7B4548548D485D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorComparison",
+            "scratchSha256": "6F27F57E2EA46C11E609A0A531BA4C54A154112823D74E718F48DBFFACAC6A11",
+            "productionSha256": "1FAAD75B835C0D1B575BF1498AA5297B7D9B53E65D9E70E8BAD2442CA158DC75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralGeometry",
+            "scratchSha256": "052F21C45C5D3D2872CA07BA48CC403C3AFC5CBDB1F50D2BCBA78F99B4141FA9",
+            "productionSha256": "8E049AE5D7323D01362CAEB250861F11E140BD2263AF527B90DA76221C41A91F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothOrbitIntegralChangeVariables",
+            "scratchSha256": "1706EA114524934822842D22D5279725D23C0B192C8C7C3A1E21A73FB1E61ACC",
+            "productionSha256": "F29A3D0EE47BF7268269D45CE0C79946C92582111C040287EF81B73C1E08EF40",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothCompactTranslateIntegral",
+            "scratchSha256": "CD59D105FB7A689B08E51FFB5A7B230933426BAD739F8F9EA9596FB6197B7385",
+            "productionSha256": "458C0C7E30C79318290C923962401ADC6171A047EADB850B6870C391B0BCA637",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothDivisorPeriodIntegral",
+            "scratchSha256": "7143F4D57AA903811ECAB4246DA6FFECF4DBF9A0CBDAB263DEFCD4A31009B46B",
+            "productionSha256": "0A0D761153CC6337F6EE3E120A1830C2290C415A52738FF078C56484AA5884E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothDivisorPeriodIntegral",
+            "scratchSha256": "48BF2C4360B2CA46CA08DBAF61B7F4E6D8B98B6D3F4C24F08BEB8DA62D5EECE0",
+            "productionSha256": "E4587819E7F40FC225CD6A5845155A282D673C5D998119912E67BCC49ADD16E2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonQuotient",
+            "scratchSha256": "21158A0291884F9F61BB69172A27FBED3A28A1D302F90ABCCBF337F550FDD056",
+            "productionSha256": "BDC396A375B49DB4304368E8D7EDE4B93C6740E6E0774FACC38EFCAEB8B7289D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonCusps",
+            "scratchSha256": "25D94B88767E20329867175483B638FDA1E6B07BA5FB6678D4B3C0D68B8BADC0",
+            "productionSha256": "3CF0715A3B3AEE23F9F4771E01AB107FBA766188E31BAB682F15472A37209708",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonWindingLog",
+            "scratchSha256": "4E45C224D1524A39969135F97333096C7CE728CDB81BFCBFCBD23AA792A26E13",
+            "productionSha256": "C35C21AA17E6E70D5572A42810F01D62562F7E6D625FADD3EC9EEB4A5643F2A2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingComparison",
+            "scratchSha256": "D536C82C9176F96EA7BD2661CCEAE2B0C40F0990D78B2E60445B4618780B06C1",
+            "productionSha256": "114DB6D9AD28B1B2C60FFD12BD8FA02CEE8FAF7D60E5942F843776EC391118CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingAction",
+            "scratchSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "productionSha256": "710ABFB17FEDD49AE6F5703C6C6340D87C6ECAB532DE6BDA569017EB61A66F8D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSidePairingIntegrals",
+            "scratchSha256": "022E338E68E8C224A9A93086F94ED15C7BEEFEA06A63926BA507FDA402FA2679",
+            "productionSha256": "EFFC9A708208C0810A7758ED8C5180E9028A56722E0B05159D5FADE8B5D25938",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularBoundarySidePairing",
+            "scratchSha256": "8B835042496E2F3EBAA984106780F849320E6990EF5060D5D254F8CAD504E8FE",
+            "productionSha256": "B989111B9F1894219512F70F4CDDFA59ECFFCE8A3C4914359D6B92FE26BB6F2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDomain",
+            "scratchSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "productionSha256": "15EFD06BC648306B0F958FBE97B569175C58242545DDF2C8AED37B3EF1DDEC56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenLines",
+            "scratchSha256": "EE8DDCB42E6E7FEB3A98848D630CCD72CD0D16F30687ADFD6D79BD6AFB2D3F9B",
+            "productionSha256": "61955AAEEC64C3302A8477CF2922465FE8BEB739FDD2A36E7822BFFCA7BC3066",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSliceGeometry",
+            "scratchSha256": "A83E93C85D206C58F0DD1D0D83A2D5F0E7B2575DEE03B4C084D18AC35F61A8BF",
+            "productionSha256": "CF0C61BCDC9F7753A4A7A9BD99E7AD3B971ED745B98C1A003D4EE4231F2C10EB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSlicing",
+            "scratchSha256": "816485841AC9937CB993A34B5ECAAE492A10365D453DD5DFB63011F3929C2892",
+            "productionSha256": "AACE99B9CC1B8FA9E85F46468626B0B4D83664E96147AC266E7F454B7520B9CF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenArc",
+            "scratchSha256": "864C4E4ACEAE495FC75CBF61BCF2596888F8B0666C9876AE0D27D0E47472A03C",
+            "productionSha256": "E107E22014786EA60C286169FB958EF8EA5FF8B266442EC7A530E1CB15D288C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenFormula",
+            "scratchSha256": "C0DE070F761BA839CED27F93A1781F0207C9AA22863C2E5F3DDC6D7BB9858405",
+            "productionSha256": "8A4EE55E492A0FDFE8CE8EBD907947DC74ACF6715D3B1E41356A51228823B444",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularCuspBoundaryDecay",
+            "scratchSha256": "DFBB87E400FEBFD1EFF68AF6AF81E26FEDC0726210DB0845E88B0E38C35BD9E7",
+            "productionSha256": "1713655EAA64D3B014E9F90A95FD8B3E428BBE94DF4D327984FB14AA40F9D17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenPullback",
+            "scratchSha256": "6BD3AB9D9A1DC1377A3FA9AE9A006DCAE80012683186D4AE1FBFA5378F06442F",
+            "productionSha256": "FC29EE287F3A2E86C3AE4AEB447EFCF8943BEEC35FEBFD1149483F8B14CF5412",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenTile",
+            "scratchSha256": "CA5E6679AC89EA1C1B0BB30B7C5151E4ADE7C494BE2C2D90EBB630B9A38729C1",
+            "productionSha256": "28E8FB33AD6A7580AAE96E909F428B0DF31248B76A1B4BC4FAE3B6CB52AE1C14",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenEdges",
+            "scratchSha256": "1EC660CACBBC8B2BE6798FF750C5BEEB267117FC8821034CBDFFF95381662A9A",
+            "productionSha256": "B69DEC9FBA5FCEE1A3C5F3819B30358A3A337EC88748C7EC4A1E0A7F0B840004",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenMeasure",
+            "scratchSha256": "FE1D490DA75F72B8E9942D50AD62B8B90E7F0607150032E30833577D76E27797",
+            "productionSha256": "6658E1E40A119C00224A444BD0D6ABE8AFE91226B38D73DF07A43B99AA986D53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenDensity",
+            "scratchSha256": "D30CB910A06801041F4CF5D42DEEF682BDF19A3DCF6225EFD58AE08E1A13F894",
+            "productionSha256": "B1D22CDD2EA43BF71E074869479F13C93C4B18397E9C6848EEBA03D5BBC3C2BD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularGreenSidePairing",
+            "scratchSha256": "58970076E036D4F7B3D05ADDD430D780A2EABB5F47ED2E95E5257E0D1B5F2E0B",
+            "productionSha256": "00D6F84B2A8FF19CBFB8F8A5DB66262159E1D102944FDB6F2DE15FAB24A3DC27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingLogCuspBounds",
+            "scratchSha256": "118833A28555B6815D950BCBC5C5A1564C7D04CA85214BF1FB4B9170D34D9434",
+            "productionSha256": "F5EB4FFE5F633D7279AA9E555020CA6D926C55F23854090D4C17ACD1AE08EF6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularSmoothedGreenLimit",
+            "scratchSha256": "94767C6820A452C8A82D6571A6D5B49DE762F96159955FCE6333669144109199",
+            "productionSha256": "71D0AEBA554203F002CC8C2010BD87785DD8A934AE475FC84E6573F1758040DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWindingBoundaryIntegral",
+            "scratchSha256": "745974CE38B9CEA6A1E35E58B24F39AF9631899100D553736CB63B95E68469A4",
+            "productionSha256": "87110B48BC221D2426157AF1CAEE3A101BA1DFF736F6F61E6584EC8311A8CF8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingBoundary",
+            "scratchSha256": "38B4CD4CC29ED9890DABE609477C02BDE453B4DAA361371DBBEAFC6CBC6B7AA0",
+            "productionSha256": "C7E3EC33AB986681C05ED82924A59EE8F6E4BEAA348D8F307399832A80AFA4F2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFinitePermutationCoboundary",
+            "scratchSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "productionSha256": "690EA634BDF91E9AB51F2D3FDF189F44D2F382E6FBE19C9A3A89BC7C221E7BE9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCosetPotentials",
+            "scratchSha256": "3732C64725DEC3B12E2CA0A6F539129A25A510C747ACCBCDBE23AED22849D710",
+            "productionSha256": "59B819DB0387CEA88C7E06FDED1209AC80E5DA3CD61254AB0F62CED23CD30FB3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoPrimitiveEdges",
+            "scratchSha256": "513BB6C73766B3A53D7F1842724C6102C51E145F88E3077C16AAA70FD16BD119",
+            "productionSha256": "6A4DCA6EFCD88A0B9F1F4F50CBAE98C103A18B53A7D2E29CB74BC54FD3ACCFB7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularPeriodCorners",
+            "scratchSha256": "843FA7AB3CCB0E5AF0998296E6D804E09DA4DA078285E5B75808E0B15C78D039",
+            "productionSha256": "60C2903FC75E893A17B1C15526366070083330F6DE0FDC85866F2F4C781A1A31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeightTwoCosetPeriods",
+            "scratchSha256": "01E926C0F2C12D7AC2C07687813564964F0B3317ABE22FF6AD2DCF43F0434D2E",
+            "productionSha256": "E9F895DC16367E07878CF588FC25386418D575952A7C1E28B4A1CC62B0784D5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicWindingIntegralPeriods",
+            "scratchSha256": "709D97386612CDFAE9859419DD6C5DD84BDE58EA9727EDFB4EF6B0FFFDDEC6E4",
+            "productionSha256": "60ACC4A7B7B77BD8827BD1820DF23CEE2E00BD6CC443C1CB549B99479E231D29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisorWindingIntegralPeriod",
+            "scratchSha256": "04D8DEFE1BFEDF677A6C91A72541B318AE709C937D120DF8AE379A5D28AED036",
+            "productionSha256": "8104BB4F327C7F4C48A543451C98AE067C3C7E152291CC943D39F044C7EE01DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothComparisonDbar",
+            "scratchSha256": "4C438CFD6CE33DBABD762D2A45FCA8883DA54722DE3F20F286BD31FF5EC809D0",
+            "productionSha256": "73B5F2A2FF6127BFEC7B9EDDFA3F4577F9EA8841CAB529F8A0DCDFAE063BB28B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSmoothedWindingIntegralSplit",
+            "scratchSha256": "0BC611342B9075EAD6BB46036D27022D175B2EB6ACBF7E0A09A4868CD0B1061A",
+            "productionSha256": "8035072D9C3E14F3670C2C4FFF2EBC49615D74D92354A5104DB75BA497420A67",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSmoothedReciprocity",
+            "scratchSha256": "5583DDA698A20FFF86AFDB5B513F1D449E972B9964F4EC6DFC194BAAC6C387A5",
+            "productionSha256": "F36958706D388E311CF704C58297422927B206481A66A90EE8E2F1913FC89413",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceUntwistPeterssonLimit",
+            "scratchSha256": "101E02EAAF5D9A594ECFE309DB3F33421B1E4931C152584412778A09061B6126",
+            "productionSha256": "492366186CC548DFB7DACADD096FB64C82FC3233E5BD4BE9EFBEB5297034A17A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeterssonReciprocity",
+            "scratchSha256": "05B796CD9F2ABBBC31326A0EFF75F288A8EFAB2282B5E0BB5E91675A097C15C5",
+            "productionSha256": "0BCE0AC639CB1DAED9F918F6AB255C761F3E495771122405D24332C7ACFE2381",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 533 distinct names from 533 exhaustive scratch checks are retained: 531 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original meromorphic function, its exact prescribed divisor orders, nonzero cusp limits and unitary multiplier remain explicit upstream inputs. The representative divisor functional must be related to the original finite divisor class. Integral Petersson/real-period identification, multiplier triviality and the original principal-divisor converse remain. Global Picard/Hecke/diamond/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-8776-console.log",
+      "sha256": "C145186223A26DEE573C3C668EC6D6A5541FCE2955EB3EB8286FEDA6346AFD3B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-8776-console.log",
+      "sha256": "C441B5DF98A67ACD60CAFC89282DAEBF5BD9AA9B2F88C697528383CD173298FB"
+    }
+  ]
+}

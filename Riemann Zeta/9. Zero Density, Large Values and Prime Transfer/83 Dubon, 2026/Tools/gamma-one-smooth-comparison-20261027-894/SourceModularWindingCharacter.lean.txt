@@ -1,0 +1,116 @@
+import SourceComplexWindingLogLift
+
+/-! Adapted from anthropics/fermats-last-theorem (Apache-2.0), pinned
+S_ModularCurve_exists_exp_eq_of_invariant_ne_zero_isParabolicHom.
+DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Picard/H1 -> Abel-Jacobi converse -> analytic reciprocity -> winding-period
+comparison -> logarithm of the nonvanishing invariant quotient.
+Native exponential covering and lift uniqueness are reused. All smoothness,
+derivatives, integer character and cusp conditions are proved from the actual
+function; no logarithm or parabolic-character certificate is assumed. -/
+namespace Dubon2026.SourceWindingLog
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex Set Topology
+open scoped MatrixGroups Topology Real
+
+section Global
+
+variable {Γ : Subgroup SL(2, ℤ)} {Φ : ℂ → ℂ}
+  (hΦ : ∀ τ : ℍ, ContDiffAt ℝ 1 Φ τ) (hne : ∀ τ : ℍ, Φ τ ≠ 0)
+  (L₀ : C(ℍ, ℂ)) (hL₀ : ∀ τ : ℍ, exp (L₀ τ) = Φ τ)
+
+/-- Extend the continuous upper-half-plane lift through the standard retraction. -/
+def Lext (L₀ : C(ℍ, ℂ)) (z : ℂ) : ℂ := L₀ (ofComplex z)
+
+theorem Lext_coe (τ : ℍ) : Lext L₀ τ = L₀ τ := by simp [Lext, ofComplex_apply]
+
+theorem continuousAt_Lext (τ : ℍ) : ContinuousAt (Lext L₀) (τ : ℂ) := by
+  have h : ContinuousAt (Lext L₀ ∘ UpperHalfPlane.coe) τ := by
+    have : Lext L₀ ∘ UpperHalfPlane.coe = L₀ := funext fun τ => Lext_coe L₀ τ
+    rw [this]; exact L₀.continuous.continuousAt
+  exact (isOpenEmbedding_coe.continuousAt_iff).1 h
+
+include hL₀ in
+theorem exp_Lext_eventually (τ : ℍ) : ∀ᶠ z in 𝓝 (τ : ℂ), exp (Lext L₀ z) = Φ z := by
+  filter_upwards [isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos] with z hz
+  rw [Lext, ofComplex_apply_of_im_pos hz, hL₀]
+
+include hΦ hne hL₀ in
+theorem contDiffAt_Lext (τ : ℍ) : ContDiffAt ℝ 1 (Lext L₀) (τ : ℂ) :=
+  contDiffAt_log_lift (hΦ τ) (hne τ) (continuousAt_Lext L₀ τ) (exp_Lext_eventually L₀ hL₀ τ)
+
+include hΦ hne hL₀ in
+theorem hasFDerivAt_Lext (τ : ℍ) :
+    HasFDerivAt (Lext L₀) ((Φ τ)⁻¹ • fderiv ℝ Φ τ) (τ : ℂ) :=
+  hasFDerivAt_log_lift (hΦ τ) (hne τ) (continuousAt_Lext L₀ τ) (exp_Lext_eventually L₀ hL₀ τ)
+
+variable (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, Φ ((γ • τ : ℍ) : ℂ) = Φ τ)
+
+theorem continuous_smul_upperHalfPlane (γ : SL(2, ℤ)) : Continuous fun τ : ℍ => γ • τ :=
+  continuous_const_smul (γ : GL (Fin 2) ℝ)
+
+include hL₀ hinv in
+
+theorem coboundary_const (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) (τ τ' : ℍ) :
+    L₀ (γ • τ) - L₀ τ = L₀ (γ • τ') - L₀ τ' := by
+  have hcont : Continuous fun τ : ℍ => L₀ (γ • τ) - L₀ τ :=
+    (L₀.continuous.comp (continuous_smul_upperHalfPlane γ)).sub L₀.continuous
+  have hexp : ∀ τ : ℍ, exp (L₀ (γ • τ) - L₀ τ) = 1 := by
+    intro τ
+    rw [Complex.exp_sub, hL₀, hL₀, hinv γ hγ τ, div_self (hL₀ τ ▸ Complex.exp_ne_zero _)]
+  exact apply_eq_of_exp_eq_one hcont hexp τ τ'
+
+include hL₀ hinv in
+theorem exists_int_coboundary (γ : SL(2, ℤ)) (hγ : γ ∈ Γ) :
+    ∃ k : ℤ, ∀ τ : ℍ, L₀ (γ • τ) - L₀ τ = 2 * π * Complex.I * k := by
+  have h1 : exp (L₀ (γ • UpperHalfPlane.I) - L₀ UpperHalfPlane.I) = 1 := by
+    rw [Complex.exp_sub, hL₀, hL₀, hinv γ hγ, div_self (hL₀ _ ▸ Complex.exp_ne_zero _)]
+  obtain ⟨k, hk⟩ := Complex.exp_eq_one_iff.1 h1
+  refine ⟨k, fun τ => ?_⟩
+  rw [coboundary_const L₀ hL₀ hinv γ hγ τ UpperHalfPlane.I, hk]
+  ring
+
+/-- The uniquely determined integer exponential period of the actual lift. -/
+def mInt (hL₀ : ∀ τ : ℍ, exp (L₀ τ) = Φ τ)
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, Φ ((γ • τ : ℍ) : ℂ) = Φ τ) (γ : Γ) : ℤ :=
+  (exists_int_coboundary L₀ hL₀ hinv γ γ.2).choose
+
+theorem mInt_spec (γ : Γ) (τ : ℍ) :
+    L₀ ((γ : SL(2, ℤ)) • τ) - L₀ τ = 2 * π * Complex.I * (mInt L₀ hL₀ hinv γ) :=
+  (exists_int_coboundary L₀ hL₀ hinv γ γ.2).choose_spec τ
+
+theorem two_pi_I_ne_zero : (2 * π * Complex.I : ℂ) ≠ 0 := by
+  simp [Real.pi_ne_zero, Complex.I_ne_zero]
+
+theorem mInt_mul (γ δ : Γ) :
+    mInt L₀ hL₀ hinv (γ * δ) = mInt L₀ hL₀ hinv γ + mInt L₀ hL₀ hinv δ := by
+  have h1 := mInt_spec L₀ hL₀ hinv (γ * δ) UpperHalfPlane.I
+  have h2 := mInt_spec L₀ hL₀ hinv γ ((δ : SL(2, ℤ)) • UpperHalfPlane.I)
+  have h3 := mInt_spec L₀ hL₀ hinv δ UpperHalfPlane.I
+  have hsm : ((γ * δ : Γ) : SL(2, ℤ)) • UpperHalfPlane.I =
+      (γ : SL(2, ℤ)) • ((δ : SL(2, ℤ)) • UpperHalfPlane.I) := by
+    rw [← mul_smul]; rfl
+  rw [hsm] at h1
+  have : (2 * π * Complex.I : ℂ) * (mInt L₀ hL₀ hinv (γ * δ) : ℂ) =
+      2 * π * Complex.I * ((mInt L₀ hL₀ hinv γ : ℂ) + mInt L₀ hL₀ hinv δ) := by
+    linear_combination -h1 + h2 + h3
+  have := mul_left_cancel₀ two_pi_I_ne_zero this
+  exact_mod_cast this
+
+/-- The integral additive character defined by the actual logarithmic shifts. -/
+def mHom : Additive Γ →+ ℤ :=
+  AddMonoidHom.mk' (fun γ => mInt L₀ hL₀ hinv (Additive.toMul γ)) fun γ δ =>
+    mInt_mul L₀ hL₀ hinv (Additive.toMul γ) (Additive.toMul δ)
+
+theorem mHom_apply (γ : Γ) : mHom L₀ hL₀ hinv (Additive.ofMul γ) = mInt L₀ hL₀ hinv γ := rfl
+
+theorem Lext_smul (γ : Γ) (τ : ℍ) :
+    Lext L₀ (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+      Lext L₀ τ + 2 * π * Complex.I * (mHom L₀ hL₀ hinv (Additive.ofMul γ) : ℂ) := by
+  rw [Lext_coe, Lext_coe, mHom_apply, ← mInt_spec L₀ hL₀ hinv γ τ]
+  ring
+
+end Global
+end
+end Dubon2026.SourceWindingLog

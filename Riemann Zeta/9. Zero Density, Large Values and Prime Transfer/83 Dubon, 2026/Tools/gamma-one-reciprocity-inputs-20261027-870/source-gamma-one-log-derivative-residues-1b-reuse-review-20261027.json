@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": [
+    "DUB-17/18",
+    "all-weight arithmetic association",
+    "original Gamma1 coefficient Hecke realization",
+    "Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "actual original-divisor compact-support logarithmic residue integral"
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-log-derivative-residues-audit-route-869.json",
+    "sha256": "8CDD1785DE3130456BCE4829EDF31226589F293F449DB9080D73F64FE5AF3012",
+    "review": {
+      "chain": [
+        "DUB-17/18",
+        "all-weight arithmetic association",
+        "original Gamma1 coefficient Hecke realization",
+        "Picard/H1",
+        "Abel-Jacobi converse",
+        "analytic reciprocity",
+        "actual original-divisor compact-support logarithmic residue integral"
+      ],
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\complex-holomorphic-stokes-route-863.json",
+          "sha256": "857CD224F46D4B4D31BD72CDE038B81C31257C2B1E65DA55D4028DC421C6590F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_zero_of_differentiableOn.lean.txt",
+          "sha256": "8764F28ACA4AF05C7DA83DB73F56A7CD6F3F300678C066CEE3A2646FCD15143A",
+          "review": "Full primary proof read. Native continuous_of_tsupport shortens its local-to-global support argument; native integral_mul_fderiv_eq_neg_fderiv_mul_of_integrable supplies both real-coordinate integration-by-parts identities."
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\complex-cauchy-pompeiu-route-865.json",
+          "sha256": "09D7AB54B995895809E52981F6CE60454BAA8E782A2031FE4D11429289B1B1C4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_inv_sub_mul_dbar_eq_neg_pi_mul.lean.txt",
+          "sha256": "47E2501F72ECB61CAA702EF89CFC8476695DA377CCF773C0504B96A57F936393",
+          "review": "Full primary proof read. Existing local production searched for dbar/residue/compact-support identities, none found. Native Cauchy circle/rectangle formulas inspected; direct faithful radial cutoff proof has a smaller adaptation burden than a new punctured-domain Stokes proof. Native radial Haar integration, integrableOn_ball_of_norm_le_rpow and improper FTC are consumed."
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\complex-residue-integral-route-866.json",
+          "sha256": "399EDE71748FB02DDCCFD3F2B3594C5F9018C14B39611214054C2210679B3F2A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_dbar_eq_neg_pi_mul_finsum_residue.lean.txt",
+          "sha256": "2AF0342DD0EF9DF1FC517BD00B2A4CB4EFEBC43F3107ED3D34B81E570249BE3F",
+          "review": "Entire primary proof read. Duplicate dbar, integrability and continuity lemmas removed in favor of already compiled 863/865 results. Native meromorphic normal form was checked, but its zero-at-pole convention does not provide the actual finite part required when subtracting the singular kernel. This proof constructs that finite part and proves finite exceptional support without a supplied residue theorem."
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\complex-log-derivative-residues-route-867.json",
+          "sha256": "28C243AAAAE8CA1AFCD8C9B46F7C25417F362578AE38A922F588E8753B3B753A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_logDeriv_mul_dbar_eq_neg_pi_mul_finsum.lean.txt",
+          "sha256": "4F8EDD1B9624732A7E1D47CD7B9437F8491CC7E076F291FEB2D03E4EAE14791E",
+          "review": "Full primary proof read. Native logDeriv_mul and logDeriv_fun_zpow replace explicit product differentiation and field simplification. Native meromorphicOrderAt_eq_int_iff supplies the actual local factor; prior simple-pole integral is consumed."
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-log-derivative-residues-route-868.json",
+          "sha256": "F71B34640A10219274C9363B8296D3EF1B23154889B19E2920996C545575AB49"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoPeriodUntwist.lean",
+          "sha256": "58C04E42F0F42315474F2F48D82C10EAA3C0BADCFB255C103893AD6043B98212",
+          "review": "Audited normalized endpoint primitive and its actual holomorphicity reused. Exact original field, analytic place, ramification and finite order formula retained."
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-invariant-untwist-1-scratch-receipt.json",
+          "sha256": "F16ECD3CCDA791603BAD7BEFAB553590188376BCBCA1BB0DCDD0440E84831B20"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexResidueSubtractedCoefficient.lean",
+          "sha256": "5F834675898B92E6CB31E30D5639A98E78A5AE727996A9EC495E6644B9B89403",
+          "review": "Read exact existing finite-part helper. It fills the residue-subtracted function at one specified pole, whereas the present local-to-global formula regularizes all varying centers and proves finite exceptional support. It does not remove the remaining finite-support argument or integration step; no duplicate single-pole extension theorem was added."
+        }
+      ],
+      "assumptionsToDischarge": [
+        "holomorphic compact-support dbar integral vanishes, derived from holomorphicity and actual compact support",
+        "actual singular kernel integrable against compact continuous multiplier",
+        "radial cutoff integral exactly minus pi",
+        "arbitrary compact C1 test function gives minus pi times its value at the pole",
+        "local actual simple-pole expansions imply finite relevant residues and exact compact-support integral formula",
+        "finite actual meromorphic orders determine logarithmic residues",
+        "compact C1 test function gives exact residue sum with actual orders and holomorphic multiplier",
+        "actual finite orders imply local residue identity",
+        "existing actual cusp-form endpoint primitive supplies holomorphic multiplier",
+        "sum uses original divisor coefficients and exact ramification, with outside-upper-half-plane terms vanishing by actual support"
+      ],
+      "remaining": "Actual F and its exact original-divisor orders remain explicit inputs. Modular winding/period/Petersson comparison, original principal-divisor converse and entire original all-weight arithmetic chain remain. No gate closed; 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "discharged": [
+    "holomorphic compact-support dbar integral vanishes, derived from holomorphicity and actual compact support",
+    "actual singular kernel integrable against compact continuous multiplier",
+    "radial cutoff integral exactly minus pi",
+    "arbitrary compact C1 test function gives minus pi times its value at the pole",
+    "local actual simple-pole expansions imply finite relevant residues and exact compact-support integral formula",
+    "finite actual meromorphic orders determine logarithmic residues",
+    "compact C1 test function gives exact residue sum with actual orders and holomorphic multiplier",
+    "actual finite orders imply local residue identity",
+    "existing actual cusp-form endpoint primitive supplies holomorphic multiplier",
+    "sum uses original divisor coefficients and exact ramification, with outside-upper-half-plane terms vanishing by actual support"
+  ],
+  "remaining": "Actual F and its exact original-divisor orders remain explicit inputs. Modular winding/period/Petersson comparison, original principal-divisor converse and entire original all-weight arithmetic chain remain. No gate closed; 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,126 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T14:52:04.287133+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceWeightTwoEndpointPeriods",
+    "SourceWeightTwoIntegralPeriods",
+    "SourceWeightTwoClosedChainPeriods",
+    "SourceWeightTwoSegmentPeriods",
+    "SourceGammaOneClosedChainIntegral"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEndpointPeriods.lean",
+      "sha256": "08FCCCD053E65F0B72679AABD0F24D9313B3BFE1F572E8B7CC47EE8A482272F3",
+      "oleanSha256": "96B0A130F6115C1A7D5CE5203CFBE28633E092B76B55120EB08552FA39977F42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoIntegralPeriods.lean",
+      "sha256": "1A6058ECF4F2E0C559D1D843B78D3A98F80747DD32C890B2F9F48ED61E2ACE35",
+      "oleanSha256": "31FAF02AA4DFED336A89735DB50342EC7FF7556BEDF94D1EA728DDF35C90838B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoClosedChainPeriods.lean",
+      "sha256": "F262AE4391F010FC1122B97BD31614DA8A502B682323FC007BB0E8407F58E9C2",
+      "oleanSha256": "D31BB5EB69B892900F7D735B22E3732489939F4B7E0D27758F4DB34C21427C8C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoSegmentPeriods.lean",
+      "sha256": "85F9369A102875F39DA5EFB99606E109406630F4630BAA59CDF66B8CB8D8DB87",
+      "oleanSha256": "6EBAF488C802C2B32D058BFC6AF9EE8E37654EFBFFB902BA9CA5480109D6499A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainIntegral.lean",
+      "sha256": "1F2BCB032ADF23F72D944E30E5EA37126A387302BC538819D780927B169B57C6",
+      "oleanSha256": "9E8306DE2C7B9BA049CA0D22C2E0B61456A37A36BB86C71EE715BDAF92DECC52"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoAlong_apply",
+    "Dubon2026.sourceWeightTwoAlong_smul",
+    "Dubon2026.sourceWeightTwoAlong_eq_sub",
+    "Dubon2026.sourceWeightTwoDualPeriod_apply",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.sourceWeightTwoAlong_smul_sub",
+    "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+    "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+    "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+    "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+    "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+    "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+    "Dubon2026.sourceWeightTwoAlong",
+    "Dubon2026.sourceWeightTwoDualPeriod",
+    "Dubon2026.sourceWeightTwoIntegralLattice",
+    "Dubon2026.sourceWeightTwoOrbitPeriod",
+    "Dubon2026.sourceWeightTwoOrbitBoundary"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoAlong_apply",
+    "Dubon2026.sourceWeightTwoAlong_smul",
+    "Dubon2026.sourceWeightTwoAlong_eq_sub",
+    "Dubon2026.sourceWeightTwoDualPeriod_apply",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.sourceWeightTwoAlong_smul_sub",
+    "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+    "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+    "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+    "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+    "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+    "Dubon2026.sourceGamma1_closed_chain_integrals_mem"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceWeightTwoAlong",
+    "Dubon2026.sourceWeightTwoDualPeriod",
+    "Dubon2026.sourceWeightTwoIntegralLattice",
+    "Dubon2026.sourceWeightTwoOrbitPeriod",
+    "Dubon2026.sourceWeightTwoOrbitBoundary"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsAudit1.log",
+  "logSha256": "8527295DC38A2C72100AED48F830230AD705182900C99CA9A7C88A4099A40D94",
+  "auditSha256": "76E1A361903D3F5B87E3D94682F57E0624E9C8AD23540C829E14578EAB8D95BB",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneClosedChainPeriodsDependencyAudit1.log",
+  "dependencyAuditSha256": "FE66B3EC03E8E28765125750A3117BA1F69C4D5D987D583A4541815C07ADC90C",
+  "dependencyAuditSourceSha256": "D103182DB88DDB298FF7DEA885704E9713EC575F939BEE3140F31AC51D17B016",
+  "consumers": [
+    "Dubon2026.sourceUpperHalfPlane_primitive_difference",
+    "Dubon2026.sourceWeightTwoAlong_apply",
+    "Dubon2026.sourceWeightTwoAlong_smul",
+    "Dubon2026.sourceWeightTwoAlong_eq_sub",
+    "Dubon2026.sourceWeightTwoDualPeriod_apply",
+    "Dubon2026.sourceWeightTwoDualPeriod_mem",
+    "Dubon2026.sourceWeightTwoAlong_smul_sub",
+    "Dubon2026.sourceWeightTwoAlong_quotient_smul",
+    "Dubon2026.sourceWeightTwoOrbitPeriod_mk",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_boundary_eq_zero",
+    "Dubon2026.sourceWeightTwoOrbitBoundary_apply",
+    "Dubon2026.sourceWeightTwo_chain_period_mem_of_orbit_boundary",
+    "Dubon2026.sourceUpperHalfPlane_segment_im_pos",
+    "Dubon2026.sourceWeightTwoAlong_eq_segment_integral",
+    "Dubon2026.sourceGamma1_closed_chain_integrals_mem",
+    "Dubon2026.sourceWeightTwoAlong",
+    "Dubon2026.sourceWeightTwoDualPeriod",
+    "Dubon2026.sourceWeightTwoIntegralLattice",
+    "Dubon2026.sourceWeightTwoOrbitPeriod",
+    "Dubon2026.sourceWeightTwoOrbitBoundary"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic association -> original Gamma1 finite Hecke characters -> Picard/H1 comparison -> Abel-Jacobi -> reciprocity -> closed integral chain periods.",
+  "discharged": "For every nonzero level, an actual finite integer chain with zero orbit boundary has its literal straight-segment integrals of original Gamma1 weight-two cusp forms represented by an element of the integer span of the original scalar modular periods. Derive primitive linearity, exact subgroup shifts, orbit-quotient descent and the segment FTC normalization; no period-lattice inclusion or analytic normalization is assumed. The zero-boundary condition remains the source condition, not an assumed conclusion.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Promote and run assembled verification. Integral parabolic-character lifting, analytic reciprocity and meromorphic construction from Abel-Jacobi periods, Picard/Hecke/diamond/H1, all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-closed-chain-periods-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "04DD791B1E2B3A195EF783CAE40290018633B0D906D3DE3504D3C789EC00E7A8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

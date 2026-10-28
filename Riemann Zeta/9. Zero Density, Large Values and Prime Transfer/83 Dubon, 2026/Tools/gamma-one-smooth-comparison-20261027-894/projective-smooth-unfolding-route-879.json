@@ -1,0 +1,38 @@
+{
+  "chain": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "invariant integral limit",
+    "projective unfolding with exact central multiplicity"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CongruenceTraceDomain.lean",
+      "sha256": "761C7C0466139786B86480E53D1C170E3973FCB435FD9B8FEFF6C6305582EFF8",
+      "read": "Entire module read"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularCosetProjection.lean",
+      "sha256": "AB956AD140628ED7723FFE1B7649E0B14B66A9A26663B5CF1A42083CAE953781",
+      "read": "Entire module read"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularProjectiveKernel.lean",
+      "sha256": "BBC3E4A80FD298F4FA4145AE611F893455635088FC6C55F8CF92CC38034F651C",
+      "read": "Entire module read"
+    }
+  ],
+  "nativeReuse": [
+    "MonoidHom.subgroupMap_surjective",
+    "MonoidHom.fiberEquivKerOfSurjective",
+    "Nat.card_congr",
+    "ENNReal.tsum_fiberwise",
+    "IsFundamentalDomain.lintegral_eq_tsum",
+    "IsFundamentalDomain.integral_eq_tsum"
+  ],
+  "shorterRoute": "Existing generic projective domain removes domain reconstruction. Exact two-element projection fibers will normalize orbit sums; native measure unfolding and dominated convergence replace bespoke finite tile enumeration if all source assumptions can be discharged.",
+  "remaining": "Native unfolding/normalization assembly, exact source closed-domain boundary transfer, winding-period limit, principal-divisor converse and full all-weight arithmetic chain. 16/20; DUB-17--20 OPEN."
+}

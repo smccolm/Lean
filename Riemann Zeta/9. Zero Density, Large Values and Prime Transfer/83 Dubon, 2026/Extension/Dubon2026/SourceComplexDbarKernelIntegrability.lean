@@ -1,0 +1,66 @@
+import Dubon2026.SourceComplexDbarCutoff
+
+ /-! DUB-17/18 -> original Gamma1 Picard/H1 -> Abel-Jacobi converse ->
+analytic reciprocity -> logarithmic-derivative residue identity ->
+the simple-pole dbar kernel. Adapted from the frozen primary FLT proof;
+native radial integration and integration by parts prove the normalization.
+No residue or Cauchy-Pompeiu conclusion is assumed. -/
+namespace Dubon2026.SourceComplexReciprocity.DbarFundamental
+noncomputable section
+open MeasureTheory Filter Complex Metric Set
+open scoped Topology Real InnerProductSpace
+
+variable (a : ℂ) {ε : ℝ}
+
+theorem integrableOn_inv (r : ℝ) : IntegrableOn (fun x : ℂ => x⁻¹) (ball 0 r) := by
+  have hd : 1 ≤ Module.finrank ℝ ℂ := by rw [Complex.finrank_real_complex]; norm_num
+  refine integrableOn_ball_of_norm_le_rpow (μ := volume) hd (C := 1) (α := 1) ?_ ?_ ?_
+  · rw [Complex.finrank_real_complex]; norm_num
+  · refine Eventually.of_forall fun x => le_of_eq ?_
+    rw [norm_inv, Real.rpow_neg_one, one_mul]
+  · exact measurable_inv.aestronglyMeasurable
+
+theorem integrableOn_inv_sub (r : ℝ) : IntegrableOn (fun z : ℂ => (z - a)⁻¹) (ball a r) := by
+  have hT := (measurePreserving_add_right (volume : Measure ℂ) a).integrableOn_comp_preimage
+    (measurableEmbedding_addRight a) (f := fun z : ℂ => (z - a)⁻¹) (s := ball a r)
+  rw [← hT]
+  have hpre : (fun x : ℂ => x + a) ⁻¹' ball a r = ball 0 r := by
+    ext x
+    simp only [mem_preimage, mem_ball_iff_norm, add_sub_cancel_right, sub_zero]
+  rw [hpre]
+  simp only [Function.comp_def, add_sub_cancel_right]
+  exact integrableOn_inv r
+
+theorem integrable_inv_sub_mul {u : ℂ → ℂ} (hu : Continuous u) (hus : HasCompactSupport u) :
+    Integrable fun z => (z - a)⁻¹ * u z := by
+  obtain ⟨R, hR⟩ := hus.isCompact.isBounded.subset_closedBall a
+  have hq : IntegrableOn (fun z : ℂ => (z - a)⁻¹) (closedBall a (R + 1)) :=
+    (integrableOn_inv_sub a (R + 2)).mono_set (closedBall_subset_ball (by linarith))
+  have h1 : IntegrableOn (fun z => (z - a)⁻¹ * u z) (closedBall a (R + 1)) :=
+    hq.mul_continuousOn hu.continuousOn (isCompact_closedBall _ _)
+  refine (integrableOn_iff_integrable_of_support_subset ?_).1 h1
+  intro z hz
+  have huz : u z ≠ 0 := fun h0 => hz (by simp [h0])
+  exact closedBall_subset_closedBall (by linarith) (hR (subset_tsupport _ huz))
+
+theorem integral_radial (f : ℝ → ℝ) : ∫ z : ℂ, f ‖z - a‖ = 2 * π * ∫ y in Ioi 0, y * f y := by
+  have h1 := integral_sub_right_eq_self (μ := (volume : Measure ℂ)) (fun x : ℂ => f ‖x‖) a
+  rw [h1, integral_fun_norm_addHaar]
+  rw [Complex.finrank_real_complex, measureReal_def, Complex.volume_ball]
+  simp [mul_assoc]
+
+theorem integral_indicator_inv_norm {ρ : ℝ} (hρ : 0 < ρ) :
+    ∫ z : ℂ, (Iic ρ).indicator (fun y : ℝ => y⁻¹) ‖z - a‖ = 2 * π * ρ := by
+  rw [integral_radial a ((Iic ρ).indicator fun y : ℝ => y⁻¹)]
+  have h1 : ∫ y in Ioi (0 : ℝ), y * (Iic ρ).indicator (fun y : ℝ => y⁻¹) y
+      = ∫ y in Ioi (0 : ℝ), (Iic ρ).indicator (fun _ => (1 : ℝ)) y := by
+    refine setIntegral_congr_fun measurableSet_Ioi fun y hy => ?_
+    by_cases hyρ : y ∈ Iic ρ
+    · rw [indicator_of_mem hyρ, indicator_of_mem hyρ, mul_inv_cancel₀ (ne_of_gt hy)]
+    · rw [indicator_of_notMem hyρ, indicator_of_notMem hyρ, mul_zero]
+  rw [h1, setIntegral_indicator measurableSet_Iic, setIntegral_const, Ioi_inter_Iic,
+    Real.volume_real_Ioc_of_le hρ.le]
+  simp
+
+end
+end Dubon2026.SourceComplexReciprocity.DbarFundamental

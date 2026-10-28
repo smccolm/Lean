@@ -1,0 +1,65 @@
+import Dubon2026.SourceGammaOneTwoPoleDifferential
+import Dubon2026.SourceGammaOneSimplePoleBounds
+
+/-! DUB-17/18 -> original Gamma1 Picard/H1 -> principal-divisor converse ->
+prescribed residues. Normalize the actual two-pole differential using the
+proved actual global residue sum. The residues are exactly +1 and -1.
+Adapted from the already proved original-field construction; its underlying
+finite-coordinate and two-pole arguments are reused directly. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve KaehlerDifferential
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+local notation "F" => functionFieldOver Γ ℂ
+
+theorem two_pole_residue_sum {P Q : Place ℂ F} (hPQ : P ≠ Q)
+    (ω : Ω[F⁄ℂ])
+    (hreg : ∀ v : Place ℂ F, v ≠ P → v ≠ Q → 0 ≤ v.ordDifferential ω) :
+    differentialResidue hT P ω + differentialResidue hT Q ω = 0 := by
+  classical
+  have hs : Function.support (fun v => differentialResidue hT v ω) ⊆
+      ({P, Q} : Finset (Place ℂ F)) := by
+    intro v hv
+    simp only [Finset.mem_coe, Finset.mem_insert, Finset.mem_singleton]
+    by_contra hn
+    push Not at hn
+    exact hv (differentialResidue_eq_zero_of_regular hT v ω (hreg v hn.1 hn.2))
+  have h := differentialResidue_finsum hT ω
+  rwa [finsum_eq_sum_of_support_subset _ hs, Finset.sum_pair hPQ] at h
+
+open scoped Classical in
+theorem exists_normalized_two_pole_differential {P Q : Place ℂ F} (hPQ : P ≠ Q) :
+    ∃ η : Ω[F⁄ℂ], (∀ v : Place ℂ F, -1 ≤ v.ordDifferential η) ∧
+      ∀ v : Place ℂ F, differentialResidue hT v η =
+        (if v = P then 1 else 0) - (if v = Q then 1 else 0) := by
+  classical
+  obtain ⟨ω, _, hP, hQ, hreg⟩ := exists_two_pole_differential hT hPQ
+  have hbound : ∀ v : Place ℂ F, -1 ≤ v.ordDifferential ω := by
+    intro v
+    by_cases hvP : v = P
+    · rw [hvP, hP]
+    by_cases hvQ : v = Q
+    · rw [hvQ, hQ]
+    have h := hreg v hvP hvQ
+    omega
+  have hPn := differentialResidue_ne_zero_of_simplePole hT P ω hP
+  have hsum := two_pole_residue_sum hT hPQ ω hreg
+  have hQres : differentialResidue hT Q ω = -differentialResidue hT P ω :=
+    eq_neg_of_add_eq_zero_right hsum
+  refine ⟨(differentialResidue hT P ω)⁻¹ • ω,
+    fun v => simple_pole_smul_bound hT v _ (hbound v), ?_⟩
+  intro v
+  rw [map_smul, smul_eq_mul]
+  by_cases hvP : v = P
+  · subst v
+    simp [hPQ, hPn]
+  by_cases hvQ : v = Q
+  · subst v
+    rw [hQres, mul_neg, inv_mul_cancel₀ hPn]
+    simp [hPQ.symm]
+  rw [differentialResidue_eq_zero_of_regular hT v ω (hreg v hvP hvQ), mul_zero]
+  simp only [if_neg hvP, if_neg hvQ, sub_self]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,94 @@
+import SourceModularGreenTile
+import SourceModularSmoothIntegralLimit
+import Dubon2026.CuspTraceLatticeIntegral
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> reciprocity -> winding-period boundary identity.
+The existing projective tiling, null-boundary equality and finite volume
+replace the external bespoke coset tiling. Native measure-preserving
+integration unfolds the actual closed domain, with its original cosets.
+The planar/hyperbolic conversion retains the exact imaginary-part square.
+Adapted from pinned Apache-2.0 anthropics source. -/
+namespace Dubon2026.SourceModularGreenPairing
+noncomputable section
+open UpperHalfPlane hiding I
+open Filter Complex MeasureTheory Asymptotics ModularGroup
+open SourceSmoothedUnfolding SourceSmoothDivisor
+open scoped MatrixGroups Topology ModularForm ComplexConjugate Real NNReal Pointwise ENNReal
+variable (Γ : Subgroup SL(2, ℤ)) [Fintype (SL(2, ℤ) ⧸ Γ)]
+
+theorem measurableSet_closedDomain : MeasurableSet (closedDomain Γ) :=
+  MeasurableSet.iUnion fun q => (ModularGroup.isClosed_fd.smul _).measurableSet
+
+theorem volume_closedDomain_lt_top : (volume : Measure ℍ) (closedDomain Γ) < ⊤ := by
+  rw [measure_congr (closedDomain_ae_eq Γ)]
+  exact integralSubgroupDomain_volume_lt_top Γ
+
+theorem integral_closedDomain_eq_sum (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (F : ℍ → ℂ) (hF : IntegrableOn F (closedDomain Γ)) :
+    ∫ τ in closedDomain Γ, F τ =
+      ∑ q : SL(2, ℤ) ⧸ Γ, ∫ τ in ModularGroup.fd, F ((Quotient.out q)⁻¹ • τ) := by
+  have hi : IntegrableOn F (integralSubgroupDomain Γ) :=
+    hF.congr_set_ae (closedDomain_ae_eq Γ).symm
+  calc
+    ∫ τ in closedDomain Γ, F τ = ∫ τ in integralSubgroupDomain Γ, F τ :=
+      setIntegral_congr_set (closedDomain_ae_eq Γ)
+    _ = ∑ q : SL(2, ℤ) ⧸ Γ, ∫ τ in (q.out : SL(2, ℤ))⁻¹ • (fdo : Set ℍ), F τ := by
+      rw [integralSubgroupDomain, integral_iUnion_ae
+        (fun q : SL(2, ℤ) ⧸ Γ => isOpen_fdo.measurableSet.nullMeasurableSet.smul q.out⁻¹)
+        (integralSubgroupDomain_tiles_aedisjoint Γ (center_le Γ hΓ)) hi, tsum_fintype]
+    _ = ∑ q : SL(2, ℤ) ⧸ Γ, ∫ τ in ModularGroup.fd, F ((Quotient.out q)⁻¹ • τ) := by
+      refine Finset.sum_congr rfl fun q _ => ?_
+      rw [← Set.image_smul,
+        (measurePreserving_smul q.out⁻¹ (volume : Measure ℍ)).setIntegral_image_emb
+          (measurableEmbedding_const_smul _) F fdo]
+      exact setIntegral_congr_set fd_ae_eq_fdo.symm
+
+theorem measurableSet_fd : MeasurableSet ModularGroup.fd :=
+  (measurableSet_le measurable_const
+    (Complex.continuous_normSq.comp UpperHalfPlane.continuous_coe).measurable).inter
+    (measurableSet_le (continuous_abs.comp UpperHalfPlane.continuous_re).measurable
+      measurable_const)
+
+theorem preimage_fdC : UpperHalfPlane.coe ⁻¹' SourceModularGreen.D = ModularGroup.fd := by
+  ext τ
+  simp only [SourceModularGreen.D, Set.mem_preimage, Set.mem_setOf_eq, ModularGroup.fd, UpperHalfPlane.coe_im,
+    UpperHalfPlane.coe_re]
+  rw [Complex.normSq_eq_norm_sq, one_le_sq_iff₀ (norm_nonneg _)]
+  exact ⟨fun h => ⟨h.2.1, h.1⟩, fun h => ⟨h.2, h.1, τ.im_pos⟩⟩
+
+theorem coe_mem_fdC_of_mem_fd {τ : ℍ} (hτ : τ ∈ ModularGroup.fd) : (τ : ℂ) ∈ SourceModularGreen.D := by
+  rw [← preimage_fdC] at hτ; exact hτ
+
+theorem fdC_subset_range : SourceModularGreen.D ⊆ Set.range UpperHalfPlane.coe := by
+  rw [UpperHalfPlane.range_coe]; exact fun z hz => hz.2.2
+
+theorem setIntegral_fd_mul_im_sq (H : ℍ → ℂ) :
+    ∫ τ in ModularGroup.fd, H τ * ((τ.im : ℝ) : ℂ) ^ 2 = ∫ z in SourceModularGreen.D, H (ofComplex z) := by
+  have mp : MeasurePreserving UpperHalfPlane.coe (volume.comap UpperHalfPlane.coe)
+      (volume.restrict (Set.range UpperHalfPlane.coe)) :=
+    ⟨measurable_coe, by rw [measurableEmbedding_coe.map_comap]⟩
+  have hmeas : Measurable fun z : ℍ => (1 / NNReal.mk z.im z.im_pos.le : ℝ≥0) ^ 2 := by
+    refine Measurable.pow_const (Measurable.const_div ?_ 1) 2
+    exact UpperHalfPlane.continuous_im.measurable.subtype_mk
+  calc ∫ τ in ModularGroup.fd, H τ * ((τ.im : ℝ) : ℂ) ^ 2
+      = ∫ τ in ModularGroup.fd, (1 / NNReal.mk τ.im τ.im_pos.le : ℝ≥0) ^ 2 •
+          (H τ * ((τ.im : ℝ) : ℂ) ^ 2) ∂(volume.comap UpperHalfPlane.coe) := by
+        rw [UpperHalfPlane.volume_def]
+        exact setIntegral_withDensity_eq_setIntegral_smul hmeas _ measurableSet_fd
+    _ = ∫ τ in ModularGroup.fd, H (ofComplex (τ : ℂ)) ∂(volume.comap UpperHalfPlane.coe) := by
+        refine setIntegral_congr_fun measurableSet_fd fun τ _ => ?_
+        have h0 : (τ.im : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr τ.im_pos.ne'
+        rw [ofComplex_apply, NNReal.smul_def, Complex.real_smul]
+        push_cast
+        field_simp
+    _ = ∫ z in SourceModularGreen.D, H (ofComplex z) ∂(volume.restrict (Set.range UpperHalfPlane.coe)) := by
+        rw [← mp.setIntegral_preimage_emb measurableEmbedding_coe (fun z => H (ofComplex z)) SourceModularGreen.D,
+          preimage_fdC]
+    _ = ∫ z in SourceModularGreen.D, H (ofComplex z) := by
+        rw [Measure.restrict_restrict measurableSet_fdC,
+          Set.inter_eq_left.mpr fdC_subset_range]
+
+
+end
+end Dubon2026.SourceModularGreenPairing

@@ -1,0 +1,16 @@
+### Original lowest-weight irreducibility and full infinitesimal character — 8 October 2026
+
+Ten further production modules construct the actual compact matrix sl2 triple and prove that the original smooth cusp generator is a primitive lowest-weight vector. Its literal successive raising derivatives have exact compact weights and nonzero lowering recurrences. For every nonzero positive-weight cusp form these derivatives are nonzero and linearly independent, and give a genuine basis of their original Lie submodule. Its span is proved equal to the full original enveloping-algebra cyclic span. Extraction of actual weight components and the original raising/lowering actions prove that this genuine lowest-weight Lie module is irreducible. Every compact weight space within it is its original raising line. The entire genuine enveloping-algebra center therefore acts through a constructed complex algebra character on the whole original cyclic span, whose normalized Casimir value is exactly k/2 times (1-k/2). These conclusions concern the original infinitesimal cyclic module; they do not identify the full adelic Hilbert representation as irreducible or prove that its infinitesimal character is regular algebraic. The source’s regular-algebraic and irreducible automorphic representation identification, and higher symmetric continuations, remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [CompactSl2Basis](Extension/Dubon2026/CompactSl2Basis.lean).
+- [AdelicCompactWeightModule](Extension/Dubon2026/AdelicCompactWeightModule.lean).
+- [AdelicLowestWeightJets](Extension/Dubon2026/AdelicLowestWeightJets.lean).
+- [AdelicRaisingLieModule](Extension/Dubon2026/AdelicRaisingLieModule.lean).
+- [AdelicRaisingEnvelopingSpan](Extension/Dubon2026/AdelicRaisingEnvelopingSpan.lean).
+- [DistinctWeightSubmodule](Extension/Dubon2026/DistinctWeightSubmodule.lean).
+- [WeightLadderIrreducibility](Extension/Dubon2026/WeightLadderIrreducibility.lean).
+- [AdelicLowestWeightIrreducible](Extension/Dubon2026/AdelicLowestWeightIrreducible.lean).
+- [EigenlineCharacter](Extension/Dubon2026/EigenlineCharacter.lean).
+- [AdelicInfinitesimalCharacter](Extension/Dubon2026/AdelicInfinitesimalCharacter.lean).
+
+Exact consumers: `actual_adelic_raising_ladder_source`, `actual_adelic_lowest_weight_irreducible_source`, `actual_adelic_infinitesimal_character_source` and `actual_adelic_infinitesimal_character_casimir_source`.

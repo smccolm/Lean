@@ -1,0 +1,140 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T19:01:32.011906+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceComplexWindingLogLift",
+    "SourceModularWindingCharacter",
+    "SourceModularWindingCuspLimit",
+    "SourceModularParabolicWindingLog"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift.lean",
+      "sha256": "954E5ADA2AA610A3384AD63924FA152032E1B1F6E2D9132A50C54294AF645CA3",
+      "oleanSha256": "3D6E9F018119B9C66D8A8F2E75D64E56E1527874DF02EFEFE4B879C784A82DFE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceComplexWindingLogLift887a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter.lean",
+      "sha256": "35997629BBC1E93561C29437E230804584A86B7A4CD990A67ABF0A88F49459CA",
+      "oleanSha256": "4201DFC003B509C6C5A6B9574B7A8135E6B4A5EB52F7432F23E70C37FF10CA34",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCharacter887a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit.lean",
+      "sha256": "EBE2C481146514B04463380080425CD720F53151272DA5C35A6859C053C52966",
+      "oleanSha256": "E8C64F9200BBA3868FB2A04AC904A9D7F2BE902C834558753A879E55570FC7C7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularWindingCuspLimit887a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog.lean",
+      "sha256": "C9CB2E067671FBC62686B537836965CFB7E285FDB90045EC3FD27CE89626B9FA",
+      "oleanSha256": "8CBF6438C3C95C6557D46F5DF60C039D875B7FFB619693A5054967C61260B13B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLog888b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt",
+    "Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one",
+    "Dubon2026.SourceWindingLog.exists_lift",
+    "Dubon2026.SourceWindingLog.eventuallyEq_log",
+    "Dubon2026.SourceWindingLog.contDiffAt_log_lift",
+    "Dubon2026.SourceWindingLog.hasFDerivAt_log_lift",
+    "Dubon2026.SourceWindingLog.Lext_coe",
+    "Dubon2026.SourceWindingLog.continuousAt_Lext",
+    "Dubon2026.SourceWindingLog.exp_Lext_eventually",
+    "Dubon2026.SourceWindingLog.contDiffAt_Lext",
+    "Dubon2026.SourceWindingLog.hasFDerivAt_Lext",
+    "Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane",
+    "Dubon2026.SourceWindingLog.coboundary_const",
+    "Dubon2026.SourceWindingLog.exists_int_coboundary",
+    "Dubon2026.SourceWindingLog.mInt_spec",
+    "Dubon2026.SourceWindingLog.two_pi_I_ne_zero",
+    "Dubon2026.SourceWindingLog.mInt_mul",
+    "Dubon2026.SourceWindingLog.mHom_apply",
+    "Dubon2026.SourceWindingLog.Lext_smul",
+    "Dubon2026.SourceWindingLog.continuous_retract",
+    "Dubon2026.SourceWindingLog.im_retract",
+    "Dubon2026.SourceWindingLog.retract_of_le",
+    "Dubon2026.SourceWindingLog.exists_tendsto_cusp",
+    "Dubon2026.SourceWindingLog.exists_parabolic_log",
+    "Dubon2026.SourceWindingLog.toUnits",
+    "Dubon2026.SourceWindingLog.Lext",
+    "Dubon2026.SourceWindingLog.mInt",
+    "Dubon2026.SourceWindingLog.mHom",
+    "Dubon2026.SourceWindingLog.retract"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceWindingLog.eq_zero_of_exp_eq_one_of_norm_lt",
+    "Dubon2026.SourceWindingLog.apply_eq_of_exp_eq_one",
+    "Dubon2026.SourceWindingLog.exists_lift",
+    "Dubon2026.SourceWindingLog.eventuallyEq_log",
+    "Dubon2026.SourceWindingLog.contDiffAt_log_lift",
+    "Dubon2026.SourceWindingLog.hasFDerivAt_log_lift",
+    "Dubon2026.SourceWindingLog.Lext_coe",
+    "Dubon2026.SourceWindingLog.continuousAt_Lext",
+    "Dubon2026.SourceWindingLog.exp_Lext_eventually",
+    "Dubon2026.SourceWindingLog.contDiffAt_Lext",
+    "Dubon2026.SourceWindingLog.hasFDerivAt_Lext",
+    "Dubon2026.SourceWindingLog.continuous_smul_upperHalfPlane",
+    "Dubon2026.SourceWindingLog.coboundary_const",
+    "Dubon2026.SourceWindingLog.exists_int_coboundary",
+    "Dubon2026.SourceWindingLog.mInt_spec",
+    "Dubon2026.SourceWindingLog.two_pi_I_ne_zero",
+    "Dubon2026.SourceWindingLog.mInt_mul",
+    "Dubon2026.SourceWindingLog.mHom_apply",
+    "Dubon2026.SourceWindingLog.Lext_smul",
+    "Dubon2026.SourceWindingLog.continuous_retract",
+    "Dubon2026.SourceWindingLog.im_retract",
+    "Dubon2026.SourceWindingLog.retract_of_le",
+    "Dubon2026.SourceWindingLog.exists_tendsto_cusp",
+    "Dubon2026.SourceWindingLog.exists_parabolic_log"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceWindingLog.toUnits",
+    "Dubon2026.SourceWindingLog.Lext",
+    "Dubon2026.SourceWindingLog.mInt",
+    "Dubon2026.SourceWindingLog.mHom",
+    "Dubon2026.SourceWindingLog.retract"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogAudit1.log",
+  "logSha256": "8C0CEA660C91D10BEFE75DA85EFC9EDB32E0D7295808AE36A3EA176565347DBD",
+  "auditSha256": "8567024AC5B40DDC7A47F999A28FDBCAF2C6922BBC82A13745FCB0EE59D52713",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 37,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 33,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularParabolicWindingLogDependencyAudit1.log",
+  "dependencyAuditSha256": "1DAFDD42C5190A9C8F530EA126F1C551C16E4091DE50E9355992AF32BCBA2A5B",
+  "dependencyAuditSourceSha256": "A63BA097E25A515950E8FCDBC8A1281C25A1B2F3722F89631350DF55520B501F",
+  "consumers": [
+    "Dubon2026.SourceWindingLog.exists_parabolic_log"
+  ],
+  "dependency": [
+    "DUB-17/18",
+    "original all-weight arithmetic association",
+    "actual Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "winding-period comparison",
+    "logarithm of actual nonvanishing invariant quotient"
+  ],
+  "discharged": [
+    "Construct global continuous logarithm by native exponential covering and prove local C1 regularity and logarithmic derivative",
+    "Derive actual integer additive character from exponential invariance; native covering uniqueness supplies constancy",
+    "Prove finite translated logarithm cusp limits from nonzero finite function limits",
+    "Existing signed-translation classification and cusp limits prove literal squared-trace-four character vanishing"
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Input is an actual C1 nonzero invariant function with nonzero translated cusp limits. The smooth comparison local model, filled quotient, winding-period integral, analytic reciprocity, original principal-divisor converse and full all-weight arithmetic chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-modular-parabolic-winding-log-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "0911424AB22565674C7CDA1CCAB2DD293E092C7A4717A662ADA4CA87FECDCF9C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

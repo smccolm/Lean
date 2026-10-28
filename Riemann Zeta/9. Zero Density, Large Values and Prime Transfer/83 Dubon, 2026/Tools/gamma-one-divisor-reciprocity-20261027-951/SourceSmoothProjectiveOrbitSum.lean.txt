@@ -1,0 +1,54 @@
+import SourceModularSmoothProjectiveRepresentatives
+import SourceSmoothModularGeometry
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> invariant comparison V.
+The two-element kernel gives the exact complex orbit-sum factor. Native
+finite-support sums and the derivative uniqueness theorem replace the
+source's sign-representative sum decomposition and repeated denominator
+identities. These facts will identify V's logarithmic derivative. -/
+namespace Dubon2026.SourceSmoothDivisor
+noncomputable section
+open UpperHalfPlane Set SourceSmoothProjective SourceSmoothedUnfolding
+open scoped MatrixGroups
+
+variable (Γ : Subgroup SL(2, ℤ))
+
+theorem finsum_projection (hΓ : (-1 : SL(2, ℤ)) ∈ Γ)
+    (f : projectiveIntegralSubgroup Γ → ℂ) (hf : Function.HasFiniteSupport f) :
+    ∑ᶠ a : Γ, f (projection Γ a) = 2 * ∑ᶠ q, f q := by
+  classical
+  haveI : Finite (projection Γ).ker :=
+    Nat.finite_of_card_ne_zero (by rw [projection_ker_card Γ hΓ]; norm_num)
+  letI : Fintype (projection Γ).ker := Fintype.ofFinite _
+  have hp : Function.HasFiniteSupport
+      (fun x : projectiveIntegralSubgroup Γ × (projection Γ).ker => f x.1) :=
+    (hf.prod (Set.finite_univ : (Set.univ : Set (projection Γ).ker).Finite)).subset
+      (fun x hx => ⟨hx, Set.mem_univ _⟩)
+  calc
+    ∑ᶠ a : Γ, f (projection Γ a) =
+        ∑ᶠ x : projectiveIntegralSubgroup Γ × (projection Γ).ker, f x.1 :=
+      finsum_eq_of_bijective (projectionEquiv Γ) (projectionEquiv Γ).bijective (fun _ => rfl)
+    _ = ∑ᶠ q : projectiveIntegralSubgroup Γ, ∑ᶠ _ : (projection Γ).ker, f q :=
+      finsum_curry _ hp
+    _ = 2 * ∑ᶠ q, f q := by
+      simp_rw [finsum_eq_sum_of_fintype, Finset.sum_const, Finset.card_univ,
+        ← Nat.card_eq_fintype_card, projection_ker_card Γ hΓ, nsmul_eq_mul, Nat.cast_ofNat]
+      exact (mul_finsum f (2 : ℂ)).symm
+
+theorem sm_representative_projection (a : Γ) :
+    sm (representative Γ (projection Γ a)) = sm a := by
+  funext z
+  unfold sm
+  rw [representative_smul]
+  rfl
+
+theorem dsm_representative_projection (a : Γ) (z : ℂ) :
+    dsm (representative Γ (projection Γ a)) z = dsm a z := by
+  have h := hasDerivAt_sm (representative Γ (projection Γ a)) (ofComplex z)
+  rw [sm_representative_projection] at h
+  have he := h.unique (hasDerivAt_sm a (ofComplex z))
+  simpa only [dsm, ofComplex_apply] using he
+
+end
+end Dubon2026.SourceSmoothDivisor

@@ -1,0 +1,46 @@
+{
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1 -> Abel-Jacobi principal-divisor converse -> analytic reciprocity -> actual winding integral.",
+  "assumptionsToDischarge": "The actual original Petersson functional in the original integer-period lattice forces integral real periods. Every actual generator has an integer parabolic character dual, extended through the literal integer span; native real-period surjectivity and exact Green applied once to Re(Ek), plus positivity on an actual open coset tile, identify the cusp form. For the original finite divisor, reciprocity then derives triviality of its given unitary multiplier from its original period-class membership. Existing meromorphic field realization concludes that the literal analytic divisor is principal.",
+  "remaining": "A meromorphic function with exact prescribed ramified orders, nonzero cusp limits and a unitary multiplier remains an explicit upstream input. Constructing such a function from the degree-zero divisor remains; the complete principal-divisor converse is not claimed. Picard/Hecke/H1, original all-weight characteristic-zero arithmetic realization/association, automorphy and literal higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-integral-period-duality-route-957.json",
+      "sha256": "BCCC20CD1010724CFA884C32AE7DFA662408648E197F461794340A5EBC86DC42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-real-primitive-green-route-962.json",
+      "sha256": "73729CDF6F066EBFDE83400A15B642B5D19DC145F76A249E6B1B76F693520A06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-finite-divisor-reciprocity-1-scratch-receipt.json",
+      "sha256": "B23F1B902FB2BE302835303B62448B78FA7D696A96E13EF012F3A15BA8584D8A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-divisor-reciprocity-assembled-body-969.json",
+      "sha256": "68323798DBDB1A71F72FD646364BCDCD68160FD2E3E1889538ACC1F6A113740B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodDualityValueProbe971.lean",
+      "sha256": "D62252891510ACC2B1E43DDABAE3DECF51E337445FAE3BF4D49469F102AE6D18"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPeriodDualityValueProbe971.log",
+      "sha256": "C3CB076C9DA0433D8BE1C19520BD5001463F2D7A1B37E7C14FF54455987D5C4D"
+    }
+  ],
+  "shorterRoutes": [
+    "Reuse native SL2 cocycle existence and already proved complete parabolic classification.",
+    "Reuse actual primitive ray/arc integrals and cusp limits.",
+    "Apply Green once to the real part of the normalized primitive; no separate conjugate and holomorphic boundary identities.",
+    "Use positivity on one actual open coset tile and native holomorphic continuation; no new inner-product instance or Riesz infrastructure.",
+    "Transport existing original Gamma1 real-period surjectivity across central sign using the proved equality-of-squares character lemma.",
+    "Apply reciprocity directly to the given meromorphic function; no second function or quotient comparison.",
+    "Prove the forward integrality implication needed by multiplier triviality. A reverse equivalence is not claimed and is deferred unless a required downstream consumer needs it."
+  ],
+  "separatelyAxiomChecked": [
+    {
+      "name": "Dubon2026.SourceIntegralPeriodDual.coind_apply",
+      "reason": "Pure definitional evaluation of the native permutation representation. The VALUE probe shows this reflexive accessor is eliminated by reduction; its defining coind construction is in the consumer closure. The accessor is explicitly axiom checked and included in exhaustive ownership and all linters, with no claim that its named theorem is a retained proof dependency."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+import SourceCuspCorrectionEdgeChains
+import SourceCuspCorrectionCosetChains
+import SourceCuspCorrectionGenerators
+import SourceCuspCorrectionCyclicCosets
+import SourceCuspCorrectionEdgeCharacters
+import SourceCuspCorrectionRealization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceCuspCorrection.lTransl_single
+#print axioms Dubon2026.SourceCuspCorrection.lTransl_one_apply
+#print axioms Dubon2026.SourceCuspCorrection.lTransl_mul_apply
+#print axioms Dubon2026.SourceCuspCorrection.toAdd_lTranslMulAut
+#print axioms Dubon2026.SourceCuspCorrection.chainSect_right
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_one
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_mul
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_of_zero
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_of_one
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_inv
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_of_zero_mul_of_one
+#print axioms Dubon2026.SourceCuspCorrection.projChain_single
+#print axioms Dubon2026.SourceCuspCorrection.projChain_lTransl_of_mem
+#print axioms Dubon2026.SourceCuspCorrection.edgeChainHom_apply
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_conj_expand
+#print axioms Dubon2026.SourceCuspCorrection.edgeChainHom_conj
+#print axioms Dubon2026.SourceCuspCorrection.sA_mul_sA
+#print axioms Dubon2026.SourceCuspCorrection.eq_ofAdd_one_pow
+#print axioms Dubon2026.SourceCuspCorrection.of_sA_mul_of_sA
+#print axioms Dubon2026.SourceCuspCorrection.of_sA_inv
+#print axioms Dubon2026.SourceCuspCorrection.of_sA_mul_τ
+#print axioms Dubon2026.SourceCuspCorrection.closure_sA_τ
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_τ
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain_τ_pow
+#print axioms Dubon2026.SourceCuspCorrection.cusp_surjective
+#print axioms Dubon2026.SourceCuspCorrection.cusp_eq_iff
+#print axioms Dubon2026.SourceCuspCorrection.cusp_smul
+#print axioms Dubon2026.SourceCuspCorrection.cusp_τ_smul
+#print axioms Dubon2026.SourceCuspCorrection.cusp_τ_zpow_smul
+#print axioms Dubon2026.SourceCuspCorrection.flip_mk
+#print axioms Dubon2026.SourceCuspCorrection.flip_flip
+#print axioms Dubon2026.SourceCuspCorrection.wd_pos
+#print axioms Dubon2026.SourceCuspCorrection.τ_pow_wd_smul
+#print axioms Dubon2026.SourceCuspCorrection.τ_zpow_smul_eq_iff
+#print axioms Dubon2026.SourceCuspCorrection.gen_mem
+#print axioms Dubon2026.SourceCuspCorrection.genAt_coe
+#print axioms Dubon2026.SourceCuspCorrection.enum_eq_zpow_smul
+#print axioms Dubon2026.SourceCuspCorrection.cusp_enum
+#print axioms Dubon2026.SourceCuspCorrection.enum_zero
+#print axioms Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_raw
+#print axioms Dubon2026.SourceCuspCorrection.enum_injOn_range
+#print axioms Dubon2026.SourceCuspCorrection.enum_width
+#print axioms Dubon2026.SourceCuspCorrection.sum_enum_succ
+#print axioms Dubon2026.SourceCuspCorrection.exists_enum_eq_of_cusp_eq
+#print axioms Dubon2026.SourceCuspCorrection.sum_ite_enum_eq
+#print axioms Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_apply
+#print axioms Dubon2026.SourceCuspCorrection.edgeChar_genAt
+#print axioms Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_of_smul
+#print axioms Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_cuspDiffAt
+#print axioms Dubon2026.SourceCuspCorrection.exists_addChar_of_mem_span
+#print axioms Dubon2026.SourceCuspCorrection.engine
+#print axioms Dubon2026.SourceCuspCorrection.lTransl
+#print axioms Dubon2026.SourceCuspCorrection.lTranslAddAut
+#print axioms Dubon2026.SourceCuspCorrection.lTranslMulAut
+#print axioms Dubon2026.SourceCuspCorrection.ChainCarrier
+#print axioms Dubon2026.SourceCuspCorrection.factorOneSect
+#print axioms Dubon2026.SourceCuspCorrection.chainSect
+#print axioms Dubon2026.SourceCuspCorrection.edgeChain
+#print axioms Dubon2026.SourceCuspCorrection.projChain
+#print axioms Dubon2026.SourceCuspCorrection.edgeChainHom
+#print axioms Dubon2026.SourceCuspCorrection.Gp
+#print axioms Dubon2026.SourceCuspCorrection.sA
+#print axioms Dubon2026.SourceCuspCorrection.uA
+#print axioms Dubon2026.SourceCuspCorrection.τ
+#print axioms Dubon2026.SourceCuspCorrection.X
+#print axioms Dubon2026.SourceCuspCorrection.Cu
+#print axioms Dubon2026.SourceCuspCorrection.cusp
+#print axioms Dubon2026.SourceCuspCorrection.flip
+#print axioms Dubon2026.SourceCuspCorrection.wd
+#print axioms Dubon2026.SourceCuspCorrection.genAt
+#print axioms Dubon2026.SourceCuspCorrection.enum
+#print axioms Dubon2026.SourceCuspCorrection.cuspDiffAt
+#print axioms Dubon2026.SourceCuspCorrection.edgeChar
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCuspCorrectionEdgeChains, `SourceCuspCorrectionCosetChains, `SourceCuspCorrectionGenerators, `SourceCuspCorrectionCyclicCosets, `SourceCuspCorrectionEdgeCharacters, `SourceCuspCorrectionRealization]
+  let theorems : Array Name := #[`Dubon2026.SourceCuspCorrection.lTransl_single, `Dubon2026.SourceCuspCorrection.lTransl_one_apply, `Dubon2026.SourceCuspCorrection.lTransl_mul_apply, `Dubon2026.SourceCuspCorrection.toAdd_lTranslMulAut, `Dubon2026.SourceCuspCorrection.chainSect_right, `Dubon2026.SourceCuspCorrection.edgeChain_one, `Dubon2026.SourceCuspCorrection.edgeChain_mul, `Dubon2026.SourceCuspCorrection.edgeChain_of_zero, `Dubon2026.SourceCuspCorrection.edgeChain_of_one, `Dubon2026.SourceCuspCorrection.edgeChain_inv, `Dubon2026.SourceCuspCorrection.edgeChain_of_zero_mul_of_one, `Dubon2026.SourceCuspCorrection.projChain_single, `Dubon2026.SourceCuspCorrection.projChain_lTransl_of_mem, `Dubon2026.SourceCuspCorrection.edgeChainHom_apply, `Dubon2026.SourceCuspCorrection.edgeChain_conj_expand, `Dubon2026.SourceCuspCorrection.edgeChainHom_conj, `Dubon2026.SourceCuspCorrection.sA_mul_sA, `Dubon2026.SourceCuspCorrection.eq_ofAdd_one_pow, `Dubon2026.SourceCuspCorrection.of_sA_mul_of_sA, `Dubon2026.SourceCuspCorrection.of_sA_inv, `Dubon2026.SourceCuspCorrection.of_sA_mul_τ, `Dubon2026.SourceCuspCorrection.closure_sA_τ, `Dubon2026.SourceCuspCorrection.edgeChain_τ, `Dubon2026.SourceCuspCorrection.edgeChain_τ_pow, `Dubon2026.SourceCuspCorrection.cusp_surjective, `Dubon2026.SourceCuspCorrection.cusp_eq_iff, `Dubon2026.SourceCuspCorrection.cusp_smul, `Dubon2026.SourceCuspCorrection.cusp_τ_smul, `Dubon2026.SourceCuspCorrection.cusp_τ_zpow_smul, `Dubon2026.SourceCuspCorrection.flip_mk, `Dubon2026.SourceCuspCorrection.flip_flip, `Dubon2026.SourceCuspCorrection.wd_pos, `Dubon2026.SourceCuspCorrection.τ_pow_wd_smul, `Dubon2026.SourceCuspCorrection.τ_zpow_smul_eq_iff, `Dubon2026.SourceCuspCorrection.gen_mem, `Dubon2026.SourceCuspCorrection.genAt_coe, `Dubon2026.SourceCuspCorrection.enum_eq_zpow_smul, `Dubon2026.SourceCuspCorrection.cusp_enum, `Dubon2026.SourceCuspCorrection.enum_zero, `Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_raw, `Dubon2026.SourceCuspCorrection.enum_injOn_range, `Dubon2026.SourceCuspCorrection.enum_width, `Dubon2026.SourceCuspCorrection.sum_enum_succ, `Dubon2026.SourceCuspCorrection.exists_enum_eq_of_cusp_eq, `Dubon2026.SourceCuspCorrection.sum_ite_enum_eq, `Dubon2026.SourceCuspCorrection.edgeChainHom_genAt_apply, `Dubon2026.SourceCuspCorrection.edgeChar_genAt, `Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_of_smul, `Dubon2026.SourceCuspCorrection.single_sub_single_mem_span_cuspDiffAt, `Dubon2026.SourceCuspCorrection.exists_addChar_of_mem_span, `Dubon2026.SourceCuspCorrection.engine]
+  let constructions : Array Name := #[`Dubon2026.SourceCuspCorrection.lTransl, `Dubon2026.SourceCuspCorrection.lTranslAddAut, `Dubon2026.SourceCuspCorrection.lTranslMulAut, `Dubon2026.SourceCuspCorrection.ChainCarrier, `Dubon2026.SourceCuspCorrection.factorOneSect, `Dubon2026.SourceCuspCorrection.chainSect, `Dubon2026.SourceCuspCorrection.edgeChain, `Dubon2026.SourceCuspCorrection.projChain, `Dubon2026.SourceCuspCorrection.edgeChainHom, `Dubon2026.SourceCuspCorrection.Gp, `Dubon2026.SourceCuspCorrection.sA, `Dubon2026.SourceCuspCorrection.uA, `Dubon2026.SourceCuspCorrection.τ, `Dubon2026.SourceCuspCorrection.X, `Dubon2026.SourceCuspCorrection.Cu, `Dubon2026.SourceCuspCorrection.cusp, `Dubon2026.SourceCuspCorrection.flip, `Dubon2026.SourceCuspCorrection.wd, `Dubon2026.SourceCuspCorrection.genAt, `Dubon2026.SourceCuspCorrection.enum, `Dubon2026.SourceCuspCorrection.cuspDiffAt, `Dubon2026.SourceCuspCorrection.edgeChar]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Cusp Correction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Cusp Correction theorems discovered"
+  logInfo m!"SOURCE CUSP CORRECTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCuspCorrectionEdgeChains
+#lint in SourceCuspCorrectionCosetChains
+#lint in SourceCuspCorrectionGenerators
+#lint in SourceCuspCorrectionCyclicCosets
+#lint in SourceCuspCorrectionEdgeCharacters
+#lint in SourceCuspCorrectionRealization

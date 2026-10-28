@@ -1,0 +1,21 @@
+{
+  "status": "Preflight generation failed before mathematical source was written: Python string literal retained a UTF-16 surrogate pair. Subsequent empty-source compiler exit zero is not mathematical verification and must not be counted. Fresh corrected generation required.",
+  "files": [
+    {
+      "path": "SourceWeightTwoEndpointPeriods.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "SourceWeightTwoEndpointPeriods.lean",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "SourceWeightTwoEndpointPeriods.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "SourceWeightTwoEndpointPeriods.olean",
+      "sha256": "32b5ac3f03bef7b0bf7fabf2abf232fd22e2c03cfcb655a08fb7369f5eee2551"
+    }
+  ]
+}

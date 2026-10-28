@@ -1,0 +1,96 @@
+import Dubon2026.SourceGammaOneDivisorWindingBoundary
+import Dubon2026.SourceParabolicWindingIntegralPeriods
+import Dubon2026.SourceWeightTwoSignedReciprocity
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> original winding period.
+Consume the actual original-divisor logarithm and its constructed parabolic
+integer character. The exact winding integral tends to an element of the
+original Gamma1 integer period lattice. The signed-to-original lattice bridge
+is reused, so lattice membership is derived for the original cusp forms. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve CongruenceSubgroup MeasureTheory Filter Complex Set
+open Matrix.SpecialLinearGroup SourceSmoothComparison SourcePeriodUntwist
+open SourceSmoothedFundamental (smoothedFundamental)
+open SourceModularGreenPairing SourceModularSidePairing SourceSmoothedUnfolding
+open SourceComplexReciprocity.Dipole
+open scoped SourceSmoothedFundamental
+open scoped MatrixGroups Topology Real Classical ComplexConjugate GammaOne
+
+theorem exists_original_divisor_winding_integral_period (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (hc : c.sum (fun _ n => n) = 0)
+    (F : ℍ → ℂ) (χ : Gamma1 N → ℂ)
+    (hF : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hχ : ∀ (γ : Gamma1 N) (τ : ℍ), F (γ.val • τ) = χ γ * F τ)
+    (hunit : ∀ γ, ‖χ γ‖ = 1)
+    (hcusp : ∀ σ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (fun τ : ℍ => F (σ • τ)) atImInfty (𝓝 L))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) *
+        (Finsupp.mapDomain (analyticPlace hT) c) (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    let D := Finsupp.mapDomain (analyticPlace hT) c
+    ∃ k : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      (∀ γ : Gamma1 N, χ γ = Complex.exp (2 * Real.pi * Complex.I *
+        ((sourceWeightTwoPeriodValue (Gamma1 N) k γ).re : ℂ))) ∧
+    ∃ S : Finset ℍ, (S : Set ℍ) ⊆ c.support ∧
+      (∀ s ∈ S, ∀ t ∈ S, (∃ γ : Gamma1 N, γ.val • s = t) → s = t) ∧
+      (∀ τ : ℍ, D (analyticPlace hT τ) ≠ 0 →
+        ∃ s ∈ S, ∃ γ : Gamma1 N, γ.val • s = τ) ∧
+    ∃ V : ℂ → ℂ,
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), V (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) = V τ) ∧
+      (∀ τ : ℍ, ∃ Ψ : ℂ → ℂ, ContDiffAt ℝ 1 Ψ (τ : ℂ) ∧ Ψ τ ≠ 0 ∧
+        V =ᶠ[𝓝 (τ : ℂ)] fun z =>
+          (z - τ) ^ ((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ)) * Ψ z) ∧
+      (∀ σ : SL(2, ℤ), ∃ Y : ℝ, ∀ z : ℂ, Y < z.im → V ((σ • ofComplex z : ℍ) : ℂ) = 1) ∧
+      (∀ (T : ℝ) (g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2),
+        Integrable fun z : ℂ => g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) ∧
+      (∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        Tendsto (fun T : ℝ => 2 / Real.pi * ∫ z : ℂ, g (ofComplex z) *
+          (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+          ((fderiv ℝ V z 1 + Complex.I * fderiv ℝ V z Complex.I) / 2 / V z)) atTop
+          (𝓝 (∑ s ∈ S, (D (analyticPlace hT s) : ℂ) *
+            sourceWeightTwoAlong (Gamma1 N) UpperHalfPlane.I s g))) ∧
+    (∀ τ : ℍ, quot (SourcePeriodUntwist.Φ F k) V τ = limUnder (𝓝[≠] (τ : ℂ)) (fun w => SourcePeriodUntwist.Φ F k w / V w)) ∧
+    (∀ σ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (fun τ : ℍ => quot (SourcePeriodUntwist.Φ F k) V ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c) ∧
+      Tendsto (fun τ : ℍ => fderiv ℝ (fun u : ℂ => quot (SourcePeriodUntwist.Φ F k) V (SourceSmoothDivisor.sm σ u)) (τ : ℂ))
+        atImInfty (𝓝 0)) ∧
+    ∃ (L : ℂ → ℂ) (m : Additive (plusMinus (Gamma1 N)) →+ ℤ),
+      (∀ γ : plusMinus (Gamma1 N), γ.val.val.trace ^ 2 = 4 → m (Additive.ofMul γ) = 0) ∧
+      (∀ τ : ℍ, ContDiffAt ℝ 1 L τ) ∧
+      (∀ τ : ℍ, HasFDerivAt L ((quot (SourcePeriodUntwist.Φ F k) V τ)⁻¹ • fderiv ℝ (quot (SourcePeriodUntwist.Φ F k) V) τ) τ) ∧
+      (∀ τ : ℍ, Complex.exp (L τ) = quot (SourcePeriodUntwist.Φ F k) V τ) ∧
+      (∀ (γ : plusMinus (Gamma1 N)) (τ : ℍ), L (((γ : SL(2, ℤ)) • τ : ℍ) : ℂ) =
+        L τ + 2 * π * Complex.I * (m (Additive.ofMul γ) : ℂ)) ∧
+      (∀ σ : SL(2, ℤ), ∃ c : ℂ,
+        Tendsto (fun τ : ℍ => L ((σ • τ : ℍ) : ℂ)) atImInfty (𝓝 c)) ∧
+    ∃ Λ ∈ sourceWeightTwoIntegralLattice (Gamma1 N),
+      ∀ g : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+        IntegrableOn (Pd (fderiv ℝ L) g) (closedDomain (plusMinus (Gamma1 N))) ∧
+        Tendsto (fun T : ℝ => 2 / (π : ℂ) * ∫ z : ℂ,
+          g (ofComplex z) * (smoothedFundamental (plusMinus (Gamma1 N)) T z : ℂ) *
+            dbarL (fderiv ℝ L z)) atTop (𝓝 (Λ g)) := by
+  classical
+  dsimp only
+  obtain ⟨k, hk, S, hsub, hinj, hcov, V, hVi, hVl, hVc, hVint, hVlim,
+    hqlim, hQcusp, L, m, hmpar, hLcd, hLd, hLexp, hLper, hLlim, hboundary⟩ :=
+    exists_original_divisor_winding_boundary_limit N hT c hc F χ hF hχ hunit hcusp ho
+  obtain ⟨Λ, hΛ, he⟩ := SourceParabolicEdgePeriod.exists_integral_period_eq_winding_edges
+    (plusMinus (Gamma1 N)) (neg_one_mem_plusMinus (Gamma1 N)) m hmpar
+  refine ⟨k, hk, S, hsub, hinj, hcov, V, hVi, hVl, hVc, hVint, hVlim,
+    hqlim, hQcusp, L, m, hmpar, hLcd, hLd, hLexp, hLper, hLlim,
+    Λ.comp (SignedForms.extend (Gamma1 N)),
+    SignedForms.integralLattice_comp_extend (Gamma1 N) Λ hΛ, ?_⟩
+  intro g
+  obtain ⟨hi, hl⟩ := hboundary g
+  refine ⟨hi, ?_⟩
+  have heq := he (SignedForms.extend (Gamma1 N) g)
+  change Tendsto _ _ (𝓝 (Λ (SignedForms.extend (Gamma1 N) g)))
+  rw [← heq]
+  exact hl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

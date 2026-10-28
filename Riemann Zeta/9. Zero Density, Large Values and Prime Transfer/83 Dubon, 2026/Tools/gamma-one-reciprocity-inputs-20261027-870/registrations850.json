@@ -1,0 +1,23 @@
+[
+  "Dubon2026.iteratedDeriv_toLp_of_bounded_jet_family",
+  "Dubon2026.iteratedDeriv_toLp_ae_of_bounded_jet_family",
+  "Dubon2026.deriv_continuousLinearMap",
+  "Dubon2026.continuousLinearMap_orbit_deriv",
+  "Dubon2026.iteratedDeriv_continuousLinearMap",
+  "Dubon2026.adelicCyclicGenerator_L2_jets_ae_of_bounds",
+  "Dubon2026.adelicCyclicGenerator_unipotent_L2_jets_ae",
+  "Dubon2026.adelicCyclicGenerator_geodesic_L2_jets_ae",
+  "Dubon2026.adelicProjectiveRealOrbit_second_order_identity",
+  "Dubon2026.adelicCyclicGenerator_L2_second_order_identity",
+  "Dubon2026.adelicCyclicHilbertGenerator_iteratedDeriv_toL2",
+  "Dubon2026.adelicCyclicHilbertGenerator_unipotent_jet_toL2",
+  "Dubon2026.adelicCyclicHilbertGenerator_geodesic_jet_toL2",
+  "Dubon2026.adelicCyclicHilbertGenerator_second_order_identity",
+  "Dubon2026.adelicHilbertInfinitesimal_orbit",
+  "Dubon2026.adelicHilbertInfinitesimal_twice",
+  "Dubon2026.adelicHilbertInfinitesimal_smul",
+  "Dubon2026.adelicCyclicHilbertGenerator_compact_infinitesimal",
+  "Dubon2026.adelicCyclicHilbertGenerator_casimir",
+  "Dubon2026.SemanticRegression.actual_adelic_Hilbert_jets_source",
+  "Dubon2026.SemanticRegression.actual_adelic_Hilbert_second_order_operator_source"
+]

@@ -1,0 +1,148 @@
+import SourceSmoothOrbitIntegralChangeVariables
+import SourceModularSmoothedFundamental
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Gamma1 Picard/H1
+-> Abel-Jacobi converse -> analytic reciprocity -> smooth divisor integral.
+Adapted from pinned Apache-2.0 anthropics/fermats-last-theorem source.
+Reuse the proved action geometry and compact-support continuity. The finite
+orbit sum is unfolded by native change of variables. Compact support permits
+eventual exact equality instead of a separate dominated-convergence argument.
+No integral identity, comparison function or period identity is assumed. -/
+namespace Dubon2026.SourceSmoothOrbitIntegral
+noncomputable section
+open UpperHalfPlane hiding I
+open MeasureTheory Filter Complex Set Metric SourceSmoothDivisor
+open scoped MatrixGroups Topology Real ComplexConjugate
+local notation "UHP" => UpperHalfPlane.upperHalfPlaneSet
+
+open SourceSmoothedFundamental (smoothedFundamental)
+
+theorem compact_translate_eventually_eq (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+    (F : ℂ → ℂ) (hF : Continuous F) (hFs : HasCompactSupport F) (hFU : tsupport F ⊆ UHP)
+    (g : ℍ → ℂ) (hg : Continuous g)
+    (hgw : ∀ γ ∈ Γ, ∀ τ : ℍ, g (γ • τ) = denom (γ : GL (Fin 2) ℝ) τ ^ 2 * g τ)
+    :
+    (∀ T : ℝ, Integrable fun z : ℂ => g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+        ∑ᶠ γ : Γ, F (sm (γ : SL(2, ℤ)) z) * conj (dsm (γ : SL(2, ℤ)) z)) ∧
+    ∀ᶠ T : ℝ in atTop, (∫ z : ℂ, g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+        ∑ᶠ γ : Γ, F (sm (γ : SL(2, ℤ)) z) * conj (dsm (γ : SL(2, ℤ)) z)) = ∫ z : ℂ, g (ofComplex z) * F z := by
+  classical
+  let h : ℝ → ℂ → ℂ := fun T z => (smoothedFundamental Γ T z : ℂ)
+  have hh : ∀ T z, h T z = (smoothedFundamental Γ T z : ℂ) := fun _ _ => rfl
+  set sF := smoothedFundamental Γ with hsF
+  have hS := fun T => SourceSmoothedFundamental.smooth_partition Γ T
+
+  have hfun : ∀ T, h T = fun z => ((sF T z : ℝ) : ℂ) := fun T => funext (hh T)
+  have hhc : ∀ T, Continuous (h T) := fun T => by
+    rw [hfun T]; exact Complex.continuous_ofReal.comp ((hS T).1 0).continuous
+  have hhs : ∀ T, HasCompactSupport (h T) := fun T => by
+    rw [hfun T]; exact (hS T).2.1.comp_left Complex.ofReal_zero
+  have hhU : ∀ T, tsupport (h T) ⊆ UHP := fun T => by
+    rw [hfun T]
+    exact (tsupport_comp_subset (g := fun x : ℝ => (x : ℂ)) Complex.ofReal_zero _).trans (hS T).2.2.1
+
+  set L := tsupport F with hL
+  have hLc : IsCompact L := hFs
+  have hfinA : ∀ T, {γ : SL(2, ℤ) | ∃ z ∈ tsupport (h T), sm γ z ∈ L}.Finite := fun T =>
+    finite_moving' (hhs T) (hhU T) hLc hFU
+  have hfinG : ∀ T, {γ : Γ | ∃ z ∈ tsupport (h T), sm (γ : SL(2, ℤ)) z ∈ L}.Finite := fun T =>
+    (hfinA T).preimage (f := fun γ : Γ => (γ : SL(2, ℤ))) Subtype.val_injective.injOn
+  set G : ℝ → Finset Γ := fun T => (hfinG T).toFinset with hG
+  have hGmem : ∀ T (γ : Γ) z, h T z ≠ 0 → F (sm (γ : SL(2, ℤ)) z) ≠ 0 → γ ∈ G T := by
+    intro T γ z hz hFz
+    rw [hG, Set.Finite.mem_toFinset]
+    exact ⟨z, subset_tsupport _ hz, subset_tsupport _ hFz⟩
+
+  set term : Γ → ℂ → ℂ := fun γ z => F (sm (γ : SL(2, ℤ)) z) * conj (dsm (γ : SL(2, ℤ)) z) with hterm
+  have hE1 : ∀ T, (fun z : ℂ => g (ofComplex z) * h T z * ∑ᶠ γ : Γ, term γ z) =
+      fun z => ∑ γ ∈ G T, g (ofComplex z) * h T z * term γ z := by
+    intro T; funext z
+    by_cases hz : h T z = 0
+    · simp [hz]
+    · rw [finsum_eq_sum_of_support_subset _ (s := G T), Finset.mul_sum]
+      intro γ hγ
+      rw [Function.mem_support] at hγ
+      exact hGmem T γ z hz (left_ne_zero_of_mul hγ)
+  have hint : ∀ T, Integrable fun z : ℂ => g (ofComplex z) * h T z * ∑ᶠ γ : Γ, term γ z := by
+    intro T
+    rw [hE1 T]
+    exact integrable_finsetSum _ fun γ _ =>
+      integrable_term F hF g hg (h T) (hhc T) (hhs T) (hhU T) (γ : SL(2, ℤ))
+  refine ⟨hint, ?_⟩
+
+  set H : ℝ → ℂ → ℂ := fun T w => ∑ᶠ γ : Γ, h T (sm (γ : SL(2, ℤ)) w) with hH
+  have hHfin : ∀ T, ∀ w ∈ L, ∑ γ ∈ G T, h T (sm ((γ : SL(2, ℤ))⁻¹) w) = H T w := by
+    intro T w hwL
+    have hw : 0 < w.im := hFU hwL
+    rw [hH]; dsimp only
+    rw [← finsum_comp_equiv (Equiv.inv Γ) (f := fun γ : Γ => h T (sm (γ : SL(2, ℤ)) w))]
+    simp only [Equiv.inv_apply, Subgroup.coe_inv]
+    symm
+    apply finsum_eq_sum_of_support_subset
+    intro γ hγ
+    rw [Function.mem_support] at hγ
+    rw [Finset.mem_coe, hG, Set.Finite.mem_toFinset]
+    refine ⟨sm ((γ : SL(2, ℤ))⁻¹) w, subset_tsupport _ hγ, ?_⟩
+    rw [← sm_mul, mul_inv_cancel, sm_one hw]
+    exact hwL
+  have hE2 : ∀ T, ∫ z : ℂ, g (ofComplex z) * h T z * ∑ᶠ γ : Γ, term γ z =
+      ∫ w : ℂ, g (ofComplex w) * F w * H T w := by
+    intro T
+    rw [hE1 T]
+    have step1 : ∫ z : ℂ, ∑ γ ∈ G T, g (ofComplex z) * h T z * term γ z =
+        ∑ γ ∈ G T, ∫ z : ℂ, g (ofComplex z) * h T z * term γ z :=
+      integral_finsetSum (G T) fun γ _ =>
+        integrable_term F hF g hg (h T) (hhc T) (hhs T) (hhU T) (γ : SL(2, ℤ))
+    have h1 : ∀ γ ∈ G T, ∫ z : ℂ, g (ofComplex z) * h T z * term γ z =
+        ∫ w, g (ofComplex w) * F w * h T (sm ((γ : SL(2, ℤ))⁻¹) w) := fun γ _ =>
+      integral_term Γ F hFU g hgw (h T) (hhU T) (γ : SL(2, ℤ)) γ.2
+    have step2 : ∫ w : ℂ, ∑ γ ∈ G T, g (ofComplex w) * F w * h T (sm ((γ : SL(2, ℤ))⁻¹) w) =
+        ∑ γ ∈ G T, ∫ w : ℂ, g (ofComplex w) * F w * h T (sm ((γ : SL(2, ℤ))⁻¹) w) :=
+      integral_finsetSum (G T) fun γ _ =>
+        integrable_term' F hF hFs hFU g hg (h T) (hhc T) (γ : SL(2, ℤ))
+    rw [step1, Finset.sum_congr rfl h1, ← step2]
+    refine integral_congr_ae (Filter.Eventually.of_forall fun w => ?_)
+    show ∑ γ ∈ G T, g (ofComplex w) * F w * h T (sm ((γ : SL(2, ℤ))⁻¹) w) =
+      g (ofComplex w) * F w * H T w
+    by_cases hwL : w ∈ L
+    · rw [← Finset.mul_sum, hHfin T w hwL]
+    · simp [image_eq_zero_of_notMem_tsupport hwL]
+
+  have hHreal : ∀ T w, H T w =
+      ((∑ᶠ γ : Γ, sF T (((γ : SL(2, ℤ)) • ofComplex w : ℍ) : ℂ) : ℝ) : ℂ) := by
+    intro T w
+    rw [hH]; dsimp only
+    simp only [hh, sm]
+    have key := AddMonoidHom.map_finsum (Complex.ofRealHom : ℝ →+* ℂ).toAddMonoidHom
+      ((hS T).2.2.2.2.1 (ofComplex w))
+    simpa using key.symm
+  obtain ⟨B, hB⟩ := hFs.bddAbove_image
+    (Complex.continuous_im.continuousOn.max
+      (Complex.continuous_im.continuousOn.inv₀ fun z hz => (hFU hz).ne'))
+  filter_upwards [eventually_ge_atTop B] with T hT
+  rw [hE2 T]
+  apply integral_congr_ae
+  exact Eventually.of_forall fun w => by
+    by_cases hw : w ∈ tsupport F
+    · have hwt : max (ofComplex w).im (ofComplex w).im⁻¹ ≤ T := by
+        have hb := hB (mem_image_of_mem (fun z : ℂ => max z.im z.im⁻¹) hw)
+        simpa only [← UpperHalfPlane.coe_im, coe_ofComplex (hFU hw)] using hb.trans hT
+      rw [hHreal, (hS T).2.2.2.2.2.2.1 _ hwt]
+      simp
+    · simp [image_eq_zero_of_notMem_tsupport hw]
+
+theorem compact_translate_limit (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+    (F : ℂ → ℂ) (hF : Continuous F) (hFs : HasCompactSupport F) (hFU : tsupport F ⊆ UHP)
+    (g : ℍ → ℂ) (hg : Continuous g)
+    (hgw : ∀ γ ∈ Γ, ∀ τ : ℍ, g (γ • τ) = denom (γ : GL (Fin 2) ℝ) τ ^ 2 * g τ)
+    :
+    (∀ T : ℝ, Integrable fun z : ℂ => g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+        ∑ᶠ γ : Γ, F (sm (γ : SL(2, ℤ)) z) * conj (dsm (γ : SL(2, ℤ)) z)) ∧
+    Tendsto (fun T : ℝ => ∫ z : ℂ, g (ofComplex z) * (smoothedFundamental Γ T z : ℂ) *
+        ∑ᶠ γ : Γ, F (sm (γ : SL(2, ℤ)) z) * conj (dsm (γ : SL(2, ℤ)) z)) atTop
+      (𝓝 (∫ z : ℂ, g (ofComplex z) * F z)) := by
+  obtain ⟨hi, he⟩ := compact_translate_eventually_eq Γ F hF hFs hFU g hg hgw
+  exact ⟨hi, tendsto_const_nhds.congr' he.symm⟩
+
+end
+end Dubon2026.SourceSmoothOrbitIntegral

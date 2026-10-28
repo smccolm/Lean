@@ -1,0 +1,98 @@
+import SourceFinitePermutationCoboundary
+import SourceParabolicCosetPotentials
+import SourceWeightTwoPrimitiveEdges
+import SourceModularPeriodCorners
+import SourceWeightTwoCosetPeriods
+import SourceParabolicWindingIntegralPeriods
+import SourceGammaOneDivisorWindingIntegralPeriod
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceParabolicEdgePeriod.exists_eq_coboundary
+#print axioms Dubon2026.SourceParabolicEdgePeriod.sum_coboundary_mul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.coe_transition
+#print axioms Dubon2026.SourceParabolicEdgePeriod.transition_mul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.transition_one
+#print axioms Dubon2026.SourceParabolicEdgePeriod.sum_range_phi_gam
+#print axioms Dubon2026.SourceParabolicEdgePeriod.toPerm_pow_apply
+#print axioms Dubon2026.SourceParabolicEdgePeriod.exists_phi_transition_eq_coboundary
+#print axioms Dubon2026.SourceParabolicEdgePeriod.phi_eq_zero_of_pow_eq_one
+#print axioms Dubon2026.SourceParabolicEdgePeriod.transition_pow_of_smul_eq
+#print axioms Dubon2026.SourceParabolicEdgePeriod.phi_transition_pow_eq_zero_of_torsion
+#print axioms Dubon2026.SourceParabolicEdgePeriod.phi_transition_T_pow_eq_zero
+#print axioms Dubon2026.SourceParabolicEdgePeriod.coe_W
+#print axioms Dubon2026.SourceParabolicEdgePeriod.W_pow_three
+#print axioms Dubon2026.SourceParabolicEdgePeriod.S_pow_two
+#print axioms Dubon2026.SourceParabolicEdgePeriod.S_pow_four
+#print axioms Dubon2026.SourceParabolicEdgePeriod.neg_one_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.S_smul_S_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.trace_neg_one_sq
+#print axioms Dubon2026.SourceParabolicEdgePeriod.coe_transition_S_S_mul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_S
+#print axioms Dubon2026.SourceParabolicEdgePeriod.hasDerivAt_Ep
+#print axioms Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray
+#print axioms Dubon2026.SourceParabolicEdgePeriod.integral_arc
+#print axioms Dubon2026.SourceParabolicEdgePeriod.coe_rho
+#print axioms Dubon2026.SourceParabolicEdgePeriod.coe_T_rho
+#print axioms Dubon2026.SourceParabolicEdgePeriod.exp_two_pi_div_three
+#print axioms Dubon2026.SourceParabolicEdgePeriod.exp_pi_div_three
+#print axioms Dubon2026.SourceParabolicEdgePeriod.S_smul_rho
+#print axioms Dubon2026.SourceParabolicEdgePeriod.S_smul_T_rho
+#print axioms Dubon2026.SourceParabolicEdgePeriod.W_smul_rho
+#print axioms Dubon2026.SourceParabolicEdgePeriod.im_T_inv_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.tendsto_T_inv_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.out_inv_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_eq
+#print axioms Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray_corner
+#print axioms Dubon2026.SourceParabolicEdgePeriod.integral_arc_corner
+#print axioms Dubon2026.SourceParabolicEdgePeriod.period_neg_one
+#print axioms Dubon2026.SourceParabolicEdgePeriod.period_transition_S_S
+#print axioms Dubon2026.SourceParabolicEdgePeriod.Ek_out_inv_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.lim_T_smul
+#print axioms Dubon2026.SourceParabolicEdgePeriod.exists_integral_period_eq_winding_edges
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period
+#print axioms Dubon2026.SourceParabolicEdgePeriod.W
+#print axioms Dubon2026.SourceParabolicEdgePeriod.Ep
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFinitePermutationCoboundary, `SourceParabolicCosetPotentials, `SourceWeightTwoPrimitiveEdges, `SourceModularPeriodCorners, `SourceWeightTwoCosetPeriods, `SourceParabolicWindingIntegralPeriods, `SourceGammaOneDivisorWindingIntegralPeriod]
+  let theorems : Array Name := #[`Dubon2026.SourceParabolicEdgePeriod.exists_eq_coboundary, `Dubon2026.SourceParabolicEdgePeriod.sum_coboundary_mul, `Dubon2026.SourceParabolicEdgePeriod.coe_transition, `Dubon2026.SourceParabolicEdgePeriod.transition_mul, `Dubon2026.SourceParabolicEdgePeriod.transition_one, `Dubon2026.SourceParabolicEdgePeriod.sum_range_phi_gam, `Dubon2026.SourceParabolicEdgePeriod.toPerm_pow_apply, `Dubon2026.SourceParabolicEdgePeriod.exists_phi_transition_eq_coboundary, `Dubon2026.SourceParabolicEdgePeriod.phi_eq_zero_of_pow_eq_one, `Dubon2026.SourceParabolicEdgePeriod.transition_pow_of_smul_eq, `Dubon2026.SourceParabolicEdgePeriod.phi_transition_pow_eq_zero_of_torsion, `Dubon2026.SourceParabolicEdgePeriod.phi_transition_T_pow_eq_zero, `Dubon2026.SourceParabolicEdgePeriod.coe_W, `Dubon2026.SourceParabolicEdgePeriod.W_pow_three, `Dubon2026.SourceParabolicEdgePeriod.S_pow_two, `Dubon2026.SourceParabolicEdgePeriod.S_pow_four, `Dubon2026.SourceParabolicEdgePeriod.neg_one_smul, `Dubon2026.SourceParabolicEdgePeriod.S_smul_S_smul, `Dubon2026.SourceParabolicEdgePeriod.trace_neg_one_sq, `Dubon2026.SourceParabolicEdgePeriod.coe_transition_S_S_mul, `Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_S, `Dubon2026.SourceParabolicEdgePeriod.hasDerivAt_Ep, `Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray, `Dubon2026.SourceParabolicEdgePeriod.integral_arc, `Dubon2026.SourceParabolicEdgePeriod.coe_rho, `Dubon2026.SourceParabolicEdgePeriod.coe_T_rho, `Dubon2026.SourceParabolicEdgePeriod.exp_two_pi_div_three, `Dubon2026.SourceParabolicEdgePeriod.exp_pi_div_three, `Dubon2026.SourceParabolicEdgePeriod.S_smul_rho, `Dubon2026.SourceParabolicEdgePeriod.S_smul_T_rho, `Dubon2026.SourceParabolicEdgePeriod.W_smul_rho, `Dubon2026.SourceParabolicEdgePeriod.im_T_inv_smul, `Dubon2026.SourceParabolicEdgePeriod.tendsto_T_inv_smul, `Dubon2026.SourceParabolicEdgePeriod.out_inv_smul, `Dubon2026.SourceParabolicEdgePeriod.phi_transition_S_eq, `Dubon2026.SourceParabolicEdgePeriod.I_mul_integral_ray_corner, `Dubon2026.SourceParabolicEdgePeriod.integral_arc_corner, `Dubon2026.SourceParabolicEdgePeriod.period_neg_one, `Dubon2026.SourceParabolicEdgePeriod.period_transition_S_S, `Dubon2026.SourceParabolicEdgePeriod.Ek_out_inv_smul, `Dubon2026.SourceParabolicEdgePeriod.lim_T_smul, `Dubon2026.SourceParabolicEdgePeriod.exists_integral_period_eq_winding_edges, `Dubon2026.SourceFunctionField.GammaOne.exists_original_divisor_winding_integral_period]
+  let constructions : Array Name := #[`Dubon2026.SourceParabolicEdgePeriod.W, `Dubon2026.SourceParabolicEdgePeriod.Ep]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Winding Integral Period postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Winding Integral Period theorems discovered"
+  logInfo m!"SOURCE ORIGINAL WINDING INTEGRAL PERIOD AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+#lint in SourceFinitePermutationCoboundary
+#lint in SourceParabolicCosetPotentials
+#lint in SourceWeightTwoPrimitiveEdges
+#lint in SourceModularPeriodCorners
+#lint in SourceWeightTwoCosetPeriods
+#lint in SourceParabolicWindingIntegralPeriods
+#lint in SourceGammaOneDivisorWindingIntegralPeriod

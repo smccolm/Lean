@@ -1,0 +1,22 @@
+{
+  "gate": "DUB-17/18",
+  "chain": [
+    "all-weight arithmetic association",
+    "original Gamma1 Picard/H1",
+    "Abel-Jacobi converse",
+    "analytic reciprocity",
+    "actual logarithmic-derivative residues"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Complex_integral_mul_logDeriv_mul_dbar_eq_neg_pi_mul_finsum.lean.txt",
+      "sha256": "4F8EDD1B9624732A7E1D47CD7B9437F8491CC7E076F291FEB2D03E4EAE14791E",
+      "review": "Full primary proof read. Native logDeriv_mul and logDeriv_fun_zpow replace explicit product differentiation and field simplification. Native meromorphicOrderAt_eq_int_iff supplies the actual local factor; prior simple-pole integral is consumed."
+    }
+  ],
+  "assumptionsToDischarge": [
+    "finite actual meromorphic orders determine logarithmic residues",
+    "compact C1 test function gives exact residue sum with actual orders and holomorphic multiplier"
+  ],
+  "remaining": "Actual modular smoothed winding/period/Petersson comparison and original principal-divisor converse remain, followed by full arithmetic chain."
+}

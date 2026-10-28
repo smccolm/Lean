@@ -1,0 +1,5 @@
+{
+  "reason": "The native Jacobian theorem is owned by namespace MeasureTheory. Correct the fully qualified required dependency Name; retain the passed exhaustive public audit and all failed dependency evidence. No mathematics, dependency traversal or required obligation changed.",
+  "old": "integral_image_eq_integral_abs_det_fderiv_smul",
+  "new": "MeasureTheory.integral_image_eq_integral_abs_det_fderiv_smul"
+}
