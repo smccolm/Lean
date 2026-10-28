@@ -1,0 +1,9 @@
+# Direct association proof reuse check — 28 October 2026
+
+This targeted follow-up serves DUB-17/18 through the original all-weight characteristic-zero modular-form Galois association. It supplements the nine-repository October 28 refresh and the parabolic Shapiro check.
+
+The [FALSE project home page](https://anr-false.github.io/) describes Deligne association as a long-term objective. Its displayed recent news does not announce a completed Lean proof. This page alone is not evidence that no proof exists elsewhere.
+
+The [CICM24_Deligne archive](https://github.com/mkaratarakis/CICM24_Deligne/tree/8e5b163b30e434e6f68549e9399650923b75fb60) remains at the revision in the accompanying manifest. Its README explicitly describes a partial formalization of the statement, with a 2023 Lean/Mathlib pin. Inspection of `Statement.lean` confirms that `Deligne` ends in an admitted placeholder; even its `EigenvaluesAlgebraic` dependency is admitted. `Frobenius.lean` also contains admitted dependencies. These files are retained only as inert `.lean.txt` research evidence, never imported or executed. The local original Fourier-field algebraicity and native Frobenius infrastructure already supply proved versions of the relevant preliminary obligations, so porting this statement-only archive would not reduce the remaining proof chain.
+
+No direct verified association or symmetric-power automorphy replacement was found in this targeted search. The refreshed TauCeti diamond and modular-curve proofs remain concrete adaptation candidates, subject to source-contract comparison and local kernel/dependency audits. This is a bounded search conclusion, not a universal absence claim. Root pins and acceptance gates are unchanged.

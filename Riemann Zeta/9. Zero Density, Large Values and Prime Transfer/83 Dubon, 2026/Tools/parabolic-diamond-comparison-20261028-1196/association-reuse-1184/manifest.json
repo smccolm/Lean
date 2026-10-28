@@ -1,0 +1,49 @@
+{
+  "repository": "mkaratarakis/CICM24_Deligne",
+  "revision": "8e5b163b30e434e6f68549e9399650923b75fb60",
+  "files": [
+    {
+      "url": "https://anr-false.github.io/",
+      "path": "false-home.html.txt",
+      "sha256": "A60A076AFEEC14EC58CD01B8DD925F0C21097AE1048BFFF4F59053556B2345FE",
+      "bytes": 5865,
+      "retrievedUTC": "2026-10-28T09:29:47.651895+00:00"
+    },
+    {
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/main",
+      "path": "cicm-head.json",
+      "sha256": "F3D47CA12F6EAABAC9BD870A0F9D5147AF1694CF4AB294C7D3F2CC401D94D494",
+      "bytes": 5627,
+      "retrievedUTC": "2026-10-28T09:29:48.213897+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/README.md",
+      "path": "README.md.txt",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9",
+      "bytes": 1479,
+      "retrievedUTC": "2026-10-28T09:29:48.409898+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "path": "Statement.lean.txt",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9",
+      "bytes": 7748,
+      "retrievedUTC": "2026-10-28T09:29:48.596896+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/GaloisReps.lean",
+      "path": "GaloisReps.lean.txt",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24",
+      "bytes": 1061,
+      "retrievedUTC": "2026-10-28T09:29:48.828897+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Frobenius.lean",
+      "path": "Frobenius.lean.txt",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6",
+      "bytes": 14408,
+      "retrievedUTC": "2026-10-28T09:29:49.042897+00:00"
+    }
+  ],
+  "externalExecution": false
+}

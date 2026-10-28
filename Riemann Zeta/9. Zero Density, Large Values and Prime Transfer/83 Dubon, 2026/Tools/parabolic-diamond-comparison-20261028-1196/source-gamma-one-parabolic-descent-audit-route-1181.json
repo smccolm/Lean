@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-10-28T09:12:08.784277+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric powers -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 parabolic operator character -> arithmetic Tate operator image and exact transfer of original integral parabolic classes.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryParabolicH1.lean",
+      "sha256": "CB69158E0F63B4AF0E5786C8822D5304810C342D46D90DD3C7C74C6DCCFA893A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFinite.lean",
+      "sha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateHecke.lean",
+      "sha256": "F0CEF6529CA2E5F48455802AA9325EA3B0DF7F94C4FAC41AFFA1B16A58D6D48F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeWords.lean",
+      "sha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteOperatorCharacterDescent.lean",
+      "sha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryRestrictionHecke.lean",
+      "sha256": "D8911790C76FE7677F7DBE07FEEEDF8AFD4ACE0B45BD9D144F8E79D997260117"
+    }
+  ],
+  "shorterRoute": "Restrict the native constant-H1 operators using already proved homogeneous parabolic stability. Reuse the existing exact Tate/H1 whole-word equivalence to identify their kernels, and the existing transfer word identity to reduce character descent to the geometric lifting of coefficient-reduced original integral parabolic classes. Do not introduce a transient finite tensor operator algebra on the Hecke span: the new adic kernel theorem can be consumed directly.",
+  "dischargedTargets": [
+    "The literal finite ring of actual restricted Gamma1 parabolic operators and its full word evaluation.",
+    "Equality of zero-word relations with the independently defined arithmetic Picard Tate-dual operators.",
+    "Conditional implication from exact parabolic transfer preimages to descent of the same original adic character, away from one fixed integer."
+  ],
+  "unresolvedInput": "For each original integral parabolic H1 class, exhibit a class in actual finite Gamma1 parabolic H1 whose image under the existing native transfer is its literal coefficient reduction. The already proved full-H1 transfer surjectivity does not supply this parabolic membership.",
+  "boundary": "The transfer lifting is not assumed proved, and this conditional assembly does not close finite character descent. The fixed exceptional primes, diamonds, arithmetic/Galois comparisons, all-weight association and DUB17--20 remain. No restricted character is substituted for the existing all-prime full-H1 character family.16/20 unchanged.",
+  "assumptionsToDischarge": [
+    "The literal finite ring of actual restricted Gamma1 parabolic operators and its full word evaluation.",
+    "Equality of zero-word relations with the independently defined arithmetic Picard Tate-dual operators.",
+    "Conditional implication from exact parabolic transfer preimages to descent of the same original adic character, away from one fixed integer."
+  ],
+  "remaining": "The transfer lifting is not assumed proved, and this conditional assembly does not close finite character descent. The fixed exceptional primes, diamonds, arithmetic/Galois comparisons, all-weight association and DUB17--20 remain. No restricted character is substituted for the existing all-prime full-H1 character family.16/20 unchanged. Explicit hypothesis: For each original integral parabolic H1 class, exhibit a class in actual finite Gamma1 parabolic H1 whose image under the existing native transfer is its literal coefficient reduction. The already proved full-H1 transfer surjectivity does not supply this parabolic membership.",
+  "preservedFailures": "1177a--c untargeted rewrites exhausted the default limit; explicit fixed-argument comparison removes them. 1178a,c cumulative elaboration was decomposed by naming the already proved uniform exceptional integer; no bound is increased.1178b mixed scratch/production imports, repaired in1179b. All failed sources and logs retained;1180 names the same existential witness, uniformly in E,tau,p,n."
+}

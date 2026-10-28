@@ -1,0 +1,55 @@
+{
+  "recordedUTC": "2026-10-28T06:52:08.563786+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the original finite Gamma1 homogeneous-coefficient Hecke character -> full/parabolic and arithmetic Tate dual comparison -> original homogeneous coefficients and every original Hecke word.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-order-reuse-1133.json",
+      "sha256": "93A106FEC5685F94407C2B7B33024966E78B1680AAB0E498F3925C28BB61E0CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-period-reuse-1134.json",
+      "sha256": "8F4BE08BECD367403A06893B2531A659AB370F6E0BEA4B38714FA190E80BCA2F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-tate-h1-1b-scratch-receipt.json",
+      "sha256": "CFBF4E544D283384FD3E8B1EAA0EF334E81F8B6490BE4CF117A2C8E9D7067E0F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteOrderTrace.lean",
+      "sha256": "BD66B2321001FE6163FC384623B81A41AC68F4FC18ED60CFEDD089E0C6FFDDD5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGammaOneH1Realization.lean",
+      "sha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFinite.lean",
+      "sha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousMonomialBasis.lean",
+      "sha256": "4216D1C71F288E2587D79D11A47D845E45CE82F419FC30D6748F7B2323097734"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeWords.lean",
+      "sha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    }
+  ],
+  "shorterRoute": "The existing finite-order integral trace bound and literal Gamma1 congruences discharge finite-order vanishing at the actual Q*(p^(n+1))^2 levels. The already proved original homogeneous monomial basis reduces lattice-factor existence to the existing scalar equivalence. Native IsBaseChange lifts the original coefficient-valued dual directly to the actual arithmetic Tate module. The exact native coefficient Hecke formula and actual Picard Hecke period inclusion identify independently defined arithmetic dual operators, then the existing integral-word intertwining theorem proves all original words. No new group torsion-freeness theory, polynomial basis, tensor basis or scalar replacement is introduced.",
+  "assumptionsToDischarge": [
+    "Parabolic vanishing already implies finite-order vanishing at the original levels for p>3.",
+    "The original homogeneous-coefficient parabolic H1 at Q*(p^(n+1))^2 is equivalent to the original integral-period lattice dual.",
+    "The actual arithmetic Picard Tate module dual with the original homogeneous coefficient module is equivalent to this literal native parabolic H1.",
+    "The actual arithmetic Picard Hecke dual followed by the original homogeneous matrix action intertwines sourceGammaOnePrimeOperators and every integral free-algebra word."
+  ],
+  "remaining": "The original constructed character acts on full H1; its passage to the parabolic space is not yet proved. Diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. A finite-character comparison is not a characteristic-zero lift. DUB-17--20 OPEN; 16/20; all twenty acceptance gates unchanged.",
+  "preservedFailures": "1133a generic-matrix trace rewrite, 1136a field-notation line break, 1137a explicit-map base-change extensionality, 1138a polynomial extensionality depth. Failed source and diagnostics preserved before repair. No mathematical statement or proof limit changed."
+}

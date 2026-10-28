@@ -1,0 +1,43 @@
+import SourceGammaOneDiamondRestriction
+import SourceGammaOneDiamondLabels
+
+/-! DUB-17/18 -> original all-weight association -> original finite
+Gamma1 arithmetic realization -> homogeneous diamond comparison.
+The original coefficient action and resulting native H1 diamond are
+independent of the Gamma0 lift of the lower-right unit. The actual
+Gamma1 kernel is killed by the already proved diagonal-cover action.
+-/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+variable (Q N w : ℕ) [NeZero N]
+
+theorem sourceGammaOneBinaryDiamondCoefficient_lift_independent
+    (g h : Gamma0 (Q * N ^ 2)) (he : Gamma0Map _ g = Gamma0Map _ h) :
+    sourceGammaOneBinaryDiamondCoefficient Q N w g =
+      sourceGammaOneBinaryDiamondCoefficient Q N w h := by
+  have hker : g * h⁻¹ ∈ Gamma1' (Q * N ^ 2) := by
+    change Gamma0Map _ (g * h⁻¹) = 1
+    rw [map_mul, he, ← map_mul, mul_inv_cancel, map_one]
+  let u : Gamma1 (Q * N ^ 2) := ⟨g.val * h.val⁻¹,
+    (Gamma1_mem _ _).mpr ((Gamma1_to_Gamma0_mem _).mp hker)⟩
+  let A := sourceBinaryCoefficientRep (ZMod N) Q w
+  have hu : A.ρ (sourceGammaOneDiamondLift Q N (g * h⁻¹)) = 1 :=
+    sourceGammaOneDiagonalHom_binary_trivial Q N w u
+  rw [map_mul, map_inv] at hu
+  have hz := congrArg (fun z => A.ρ (sourceGammaOneDiamondLift Q N g)⁻¹ * z) hu
+  simp only [← map_mul, inv_mul_cancel_left, mul_one] at hz
+  exact hz.symm
+
+theorem sourceGammaOneBinaryDiamondH1_lift_independent
+    (g h : Gamma0 (Q * N ^ 2)) (he : Gamma0Map _ g = Gamma0Map _ h) :
+    sourceGammaOneDiamondH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) g (sourceGammaOneBinaryDiamondCoefficient Q N w g) =
+    sourceGammaOneDiamondH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) h (sourceGammaOneBinaryDiamondCoefficient Q N w h) := by
+  rw [sourceGammaOneBinaryDiamondCoefficient_lift_independent Q N w g h he]
+  exact sourceGammaOneDiamondH1_lift_independent (ZMod N)
+    (sourceBinaryCoefficientRep (ZMod N) Q w) (Q * N ^ 2) g h he _
+
+end
+end Dubon2026

@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-10-28T12:43:11.063026+00:00",
+  "repository": "F-Najman/normalizer-lean",
+  "revision": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+  "commitDate": "2026-10-22T16:04:16Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/F-Najman/normalizer-lean",
+      "path": "repository.json",
+      "sha256": "76DA13AF1D586AA284DA9BA923209C645C6BA1DA9D4790BBA0D44784C0D1AE54",
+      "bytes": 5572
+    },
+    {
+      "url": "https://api.github.com/repos/F-Najman/normalizer-lean/commits/main",
+      "path": "commit.json",
+      "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81",
+      "bytes": 4893
+    },
+    {
+      "url": "https://api.github.com/repos/F-Najman/normalizer-lean/git/trees/1f4c27ec11da475383f69e6f82e2837a0cb54fd0?recursive=1",
+      "path": "tree.json",
+      "sha256": "D5A911F4C55A1168BEFF92E0B02CD71DD7A0920A7B7FD6C24029949A47F43F43",
+      "bytes": 66194
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/README.md",
+      "path": "README.md.txt",
+      "sha256": "3E9A677FB1F4AB734E9ED46C7DDE31EEB9A141816E5C395301F6A05F21C6EF26",
+      "bytes": 59272
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+      "bytes": 29
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "C034EFD033E3F0F3BBBA882369D757A62EFE728E499FAED4F3D484FD7855338B",
+      "bytes": 3140
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "bytes": 11357
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

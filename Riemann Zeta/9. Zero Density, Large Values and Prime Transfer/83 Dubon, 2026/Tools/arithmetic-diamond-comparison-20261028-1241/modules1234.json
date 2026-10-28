@@ -1,0 +1,15 @@
+[
+  "AdelicBadLocalFixedLine",
+  "AdelicDistinctLocalHecke",
+  "AdelicEveryFiniteMixedCoefficient",
+  "AdelicEveryFiniteTupleCoefficients",
+  "AdelicEveryFiniteTupleGram",
+  "AdelicEveryLocalCoreIrreducible",
+  "AdelicEveryLocalFixedLine",
+  "AdelicEveryLocalIrreducible",
+  "AdelicEveryLocalMixedCoefficient",
+  "AdelicEveryLocalNormalizedFactor",
+  "AdelicEveryLocalSchur",
+  "AdelicFullFiniteSmooth",
+  "AdelicHeckeEigenNormalization"
+]

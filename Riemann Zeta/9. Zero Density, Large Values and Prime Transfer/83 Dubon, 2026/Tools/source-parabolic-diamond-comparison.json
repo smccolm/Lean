@@ -1,0 +1,1430 @@
+{
+  "date": "28 October 2026",
+  "modules": [
+    "Dubon2026.SourcePrimitiveParabolicCharacterKernel",
+    "Dubon2026.SourceFiniteIntegralSaturation",
+    "Dubon2026.SourceSupportedCharacterFiber",
+    "Dubon2026.SourceSupportedCharacterDivisibility",
+    "Dubon2026.SourceParabolicHeckeSpan",
+    "Dubon2026.SourceParabolicHeckeCongruence",
+    "Dubon2026.SourceParabolicAdicOperatorKernel",
+    "Dubon2026.SourceGammaOneParabolicOperatorAlgebra",
+    "Dubon2026.SourceGammaOneParabolicTateKernel",
+    "Dubon2026.SourceGammaOneParabolicTransferCriterion",
+    "Dubon2026.SourceParabolicCongruenceException",
+    "Dubon2026.SourceGammaOneParabolicCharacterTransfer",
+    "Dubon2026.SourceGammaOneDiamondConjugation",
+    "Dubon2026.SourceGammaOneDiamondH1",
+    "Dubon2026.SourceGammaOneDiamondLabels",
+    "Dubon2026.SourceGammaOneUnitDiamondAction",
+    "Dubon2026.SourceGammaOneDiamondCuspPrimitive",
+    "Dubon2026.SourceGammaOneDiamondPeriodH1",
+    "Dubon2026.SourceGammaOneDiamondPeriodLattice",
+    "Dubon2026.SourceGammaOneDiamondFiniteH1",
+    "Dubon2026.SourceGammaOneDiamondPeriodTate"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> finite parabolic character descent -> original character support, integral Hecke-span saturation, actual parabolic operator congruence and exact geometric transfer preimages; actual native diamond action, original slash periods and integral lattice, homogeneous-valued finite H1 transpose and period Tate-torus compatibility.",
+  "discharged": "The already constructed original complex and Fourier-field H1 characters annihilate every operator zero on original integral parabolic H1. The actual integral Hecke span of those classes is finite and supports the same original character. Native finite-module support, a nonzero character fiber and a fixed torsion annihilator prove integrality of the original character value divided by every nonzero modulus coprime to one fixed nonzero integer when the operator vanishes after reduction on integral parabolic H1. Consequently the same compatible adic character kills such operators at every positive power of every prime away from that integer, uniformly in field and embedding. The literal finite Gamma1 parabolic operator ring is finite. Its zero-word relations equal those of the independently defined arithmetic Picard Tate-dual action. Assuming explicitly that each reduced original integral parabolic class has a parabolic preimage under the existing native transfer, the same whole original adic character descends to that actual finite operator ring. Independently, literal Gamma0 conjugation defines the native Gamma1 diamond map, preserves the actual parabolic H1, is independent of the chosen lift and gives the lower-right-unit-labelled action. Native cusp translation and the original primitive give the exact analytic diamond period identity and real H1 intertwining. The dual slash preserves the original integer period lattice. Its transpose intertwines the original homogeneous-valued finite H1 equivalence with an explicit coefficient endomorphism, and native Tate-torus naturality identifies its quotient action with base change of that same integral operator.",
+  "boundary": "The geometric lifting condition sourceGammaOneIntegralParabolicTransfer is stated and remains unproved. The finite-character descent theorem is conditional on that precise transfer input and excludes the primes dividing the proved fixed nonzero integer. Neither full-H1 transfer surjectivity nor restriction landing in parabolic H1 discharges it. The already proved all-prime full-H1 character family remains unchanged. Exceptional primes, the independent arithmetic Picard diamond and identification of the original homogeneous diamond coefficient action, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,968-module scope: all thirteen retained regressions, 56,946 exhaustive theorem checks, 26,323 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic",
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation",
+    "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+    "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+    "Dubon2026.sourceParabolicHeckeSpan_finite",
+    "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+    "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+    "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+    "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+    "Dubon2026.sourceParabolicHeckeSpan",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+    "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+    "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+    "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger",
+    "Dubon2026.sourceGammaOneDiamond_conj_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+    "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+    "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+    "Dubon2026.sourceGammaOneDiamondH1_comp",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+    "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLabel_lift",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation",
+    "Dubon2026.sourceGammaOneDiamondMorphism",
+    "Dubon2026.sourceGammaOneDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1Hom",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T08:16:33.891922+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourcePrimitiveParabolicCharacterKernel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel.lean",
+          "sha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC",
+          "oleanSha256": "55BB229336FB83E7084BCCA5F064BF9F4F8FB01426902791D60A5D2815EC6479",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelAudit1.log",
+      "logSha256": "B3C00C4DB6551A7FACA702D6B3AD21D5B5749CA5969CBA931098E1332016A639",
+      "auditSha256": "C3DE37F7017A8EA77E5056C0A18FF82B2C7145B0797922EC5345E75F345AB6DD",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+      "ownershipSha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C",
+      "exhaustiveTheorems": 3,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1.log",
+      "dependencyAuditSha256": "96878AC109A6F35E8CF17CDFCB29F45C79A42C74B462244674FC1BA4BC71B1CB",
+      "dependencyAuditSourceSha256": "8384C68A9AED627ED040FBC8FCD284025841E72C76976CFB96AEDE7F5A2C0622",
+      "consumers": [
+        "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+      ],
+      "dependency": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> the characteristic-zero kernel of the already constructed original coefficient-field H1 character.",
+      "discharged": [
+        "The existing original complex-valued H1 Hecke character annihilates every operator zero on integral parabolic H1.",
+        "The existing original Fourier-coefficient-field H1 Hecke character has the same kernel property."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "3306CD6396ADA01E3014A3C85298C59E2BD5F0E5D23676A28A454EC98A60247C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T09:18:16.066701+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceFiniteIntegralSaturation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation.lean",
+          "sha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+          "oleanSha256": "D66B358C33A6F5CBF955EB6C81AD81B80CC77B38CECF6DDA3C5C5C4363B55517",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationAudit1.log",
+      "logSha256": "A82CE322B057AD5028F85F2384D6266390F15C1462B96911E2258154DFF52323",
+      "auditSha256": "5B4600DC4BC0C96537EAD335E676842B86FBB432115E8D29A1469B182768D547",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+      "ownershipSha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60",
+      "exhaustiveTheorems": 1,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 2,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1.log",
+      "dependencyAuditSha256": "93B76A50E13DDCDDC4D7F96ACB6A9CE57FA6040453AF90C131936B3E563B4F23",
+      "dependencyAuditSourceSha256": "21AE8DDE469F8EFD0150EE03DF42FD276013F03D5869616EF67B09FA414E9DFC",
+      "consumers": [
+        "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+      ],
+      "dependency": "DUB17/18 -> original all-weight association -> finite Gamma1 parabolic character -> original parabolic operator congruence -> scalar saturation inside the actual integral Hecke span.",
+      "discharged": [
+        "A finite integral module modulo a submodule has a single nonzero torsion annihilator; every coprime nonzero scalar can therefore be divided inside that submodule."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "116A2D6692D5A277EEBB19F227759EFE7B2F3CE809FEA71F33A1A50337C26DAE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T08:59:04.230302+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceSupportedCharacterFiber",
+        "SourceSupportedCharacterDivisibility",
+        "SourceParabolicHeckeSpan",
+        "SourceParabolicHeckeCongruence",
+        "SourceParabolicAdicOperatorKernel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber.lean",
+          "sha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+          "oleanSha256": "9340907EC46D3B1AF0901F83B5D34B5C95EF57FB977354BEDC3A296084464456",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility.lean",
+          "sha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1",
+          "oleanSha256": "E14611CF2CFE91AC920D8334B8B1A06D61C9B5CA1E591F49A6F4856B6A9B6989",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan.lean",
+          "sha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457",
+          "oleanSha256": "E979E9F48E4323837376C1F72E93F491A346B163B8491ED3311511E7D77C576F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence.lean",
+          "sha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221",
+          "oleanSha256": "AD913A9F8209EA997BACA264FD4FCA77905277E47E11AA2FB8ADE2DAE1EC5DC3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel.lean",
+          "sha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0",
+          "oleanSha256": "4FE03936CE11FF7F6E3F6386E7E1FF01550E6744850B67D6B6A1D510844D529C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+        "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+        "Dubon2026.sourceParabolicHeckeSpan_finite",
+        "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+        "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+        "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+        "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+        "Dubon2026.sourceParabolicHeckeSpan"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+        "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+        "Dubon2026.sourceParabolicHeckeSpan_finite",
+        "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+        "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+        "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+        "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceParabolicHeckeSpan"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceAudit1b.log",
+      "logSha256": "DC41B0F70BC261513A16153DF8B17CBAF0C7D2B5A879B1437AE6552EE9D5A5F5",
+      "auditSha256": "7F031A40B4F0E24AE3488F101284C823753015D7AB1D9173F1CD9FCCA68CDC5B",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+      "ownershipSha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE",
+      "exhaustiveTheorems": 9,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1b.log",
+      "dependencyAuditSha256": "B8F3CBA753B5B50F5CC0B0C0E7F7039C8F5402B90BF9FAADE4524FFF293B57FD",
+      "dependencyAuditSourceSha256": "3A79178B991A0F89B2A2391D04359090B860572E4AF90487281BB76E6C5CD11E",
+      "consumers": [
+        "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+        "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+        "Dubon2026.sourceParabolicHeckeSpan_finite",
+        "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+        "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+        "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+        "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+        "Dubon2026.sourceParabolicHeckeSpan"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric powers -> arithmetic automorphy -> original all-weight association -> finite Gamma1 parabolic character -> integral parabolic operator congruence.",
+      "discharged": [
+        "A finite module has a nonzero fiber for each character annihilating its annihilator; full faithfulness is unnecessary.",
+        "Divisibility of an operator on that module gives an integral quotient of the same character value.",
+        "For the original Hecke span of parabolic H1 the original Fourier-field character has the required support, and original operator congruences give the matching integrality away from one fixed integer.",
+        "The same original compatible adic quotient character kills every operator zero modulo p^(n+1) on original integral parabolic H1, for every n and every prime coprime to one fixed nonzero integer."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The Hecke span is not asserted to equal parabolic H1. Its finite Gamma1 realization, parabolic transfer, exceptional primes, finite character descent, diamonds and arithmetic/Galois comparisons remain. No all-prime theorem is weakened. DUB17--20 OPEN;16/20 unchanged.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-1b-reuse-review-20261028.json",
+      "reuseReviewSha256": "1FF69D6BA2B58603D05A7055BBFE642B8009EB97AA5D6C23FC126464AA65952B",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T09:18:29.223977+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneParabolicOperatorAlgebra",
+        "SourceGammaOneParabolicTateKernel",
+        "SourceGammaOneParabolicTransferCriterion",
+        "SourceParabolicCongruenceException",
+        "SourceGammaOneParabolicCharacterTransfer"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra.lean",
+          "sha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878",
+          "oleanSha256": "B894BC91D7063E484074A8CC78A931C0B0A3BC50860CE38CD271376E2F67D9C7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel.lean",
+          "sha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C",
+          "oleanSha256": "761C93C453FD9D615C88520DAB228CAF22CE89E92F65AB529E0BD7B9E8E1D760",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion.lean",
+          "sha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62",
+          "oleanSha256": "EF47C868906D7F641752C6AF785363813898F70118E252448167EF5112103EBF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException.lean",
+          "sha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8",
+          "oleanSha256": "7F878DF666F1137F7F4358AA00BF47561901383517FFD1DE667543D61C7B3CB3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer.lean",
+          "sha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7",
+          "oleanSha256": "F3176DB0D148D9684B69457F44F4D538D780CB00F8DF4E071B01D63E85DB0242",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+        "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+        "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+        "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+        "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+        "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+        "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentAudit1.log",
+      "logSha256": "99A7FCE6A90ED4E7ADFDC1F97C23AF05E26E7CD5C59D8B0900DA9D3758235534",
+      "auditSha256": "568BD23D940A91834EAFA298FB5D3A273EBBD9F41F3D5EDDE50C605A44B0E841",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+      "ownershipSha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD",
+      "exhaustiveTheorems": 22,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1.log",
+      "dependencyAuditSha256": "A6FD03FD06D0F1024EFFF42D615C8BCE5FC4B14534E12B8C9C8F0B95190504FC",
+      "dependencyAuditSourceSha256": "F8594D0C2C7AB4AF2FA7E0D1D5CFCF598DC398C34B1D284E35F2C83896E0F218",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+        "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+        "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+        "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+        "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+        "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric powers -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 parabolic operator character -> arithmetic Tate operator image and exact transfer of original integral parabolic classes.",
+      "discharged": [
+        "The literal finite ring of actual restricted Gamma1 parabolic operators and its full word evaluation.",
+        "Equality of zero-word relations with the independently defined arithmetic Picard Tate-dual operators.",
+        "Conditional implication from exact parabolic transfer preimages to descent of the same original adic character, away from one fixed integer."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The transfer lifting is not assumed proved, and this conditional assembly does not close finite character descent. The fixed exceptional primes, diamonds, arithmetic/Galois comparisons, all-weight association and DUB17--20 remain. No restricted character is substituted for the existing all-prime full-H1 character family.16/20 unchanged. Explicit hypothesis: For each original integral parabolic H1 class, exhibit a class in actual finite Gamma1 parabolic H1 whose image under the existing native transfer is its literal coefficient reduction. The already proved full-H1 transfer surjectivity does not supply this parabolic membership.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "03F49CFD58D19F04800E64865AA82174E8818D984ACE0596B83D00A6FC08C492",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T09:44:54.033602+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondConjugation",
+        "SourceGammaOneDiamondH1",
+        "SourceGammaOneDiamondLabels",
+        "SourceGammaOneUnitDiamondAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation.lean",
+          "sha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257",
+          "oleanSha256": "EA3BA359B8C8BE67A9AD7719A65253ACAC4B1577482AF11D6BB9D042701B0C79",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH1.lean",
+          "sha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6",
+          "oleanSha256": "8A4FA4BFC84357928AAE5A6EA71FBE163E58B0031B7F46FD0AC82ED501DDB512",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels.lean",
+          "sha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3",
+          "oleanSha256": "037265201D26306CC70BE2877E6E6E74C3A473CAE443AEBD51ED520BE218D30F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction.lean",
+          "sha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7",
+          "oleanSha256": "14076F1A5A55658FED6BCF31C08EC11025A6141E00EA3D0E77F695763742E8D2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneDiamond_conj_mem",
+        "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+        "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+        "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+        "Dubon2026.sourceGammaOneDiamondH1_comp",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+        "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+        "Dubon2026.sourceGammaOneDiamondLabel_lift",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+        "Dubon2026.sourceGammaOneDiamondConjugation",
+        "Dubon2026.sourceGammaOneDiamondMorphism",
+        "Dubon2026.sourceGammaOneDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneDiamond_conj_mem",
+        "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+        "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+        "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+        "Dubon2026.sourceGammaOneDiamondH1_comp",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+        "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+        "Dubon2026.sourceGammaOneDiamondLabel_lift",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneDiamondConjugation",
+        "Dubon2026.sourceGammaOneDiamondMorphism",
+        "Dubon2026.sourceGammaOneDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAudit1.log",
+      "logSha256": "B8B594B6425CE659A0932D5BFB62F7DB711AFBC52422F67993293240EC1EB6ED",
+      "auditSha256": "F0872D4825E9B58150EF44D2C525C61A5D7236B5F5E4740E83E9F8E90E358712",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+      "ownershipSha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6",
+      "exhaustiveTheorems": 35,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1.log",
+      "dependencyAuditSha256": "8A71667D1B2C21AC9AF1409A866E1CECF13B447FB5754E31B4817B4226E1BEE4",
+      "dependencyAuditSourceSha256": "DE98F6A3DB2099DE3E52EA8B3ED8FCEE4A094CD9323E598879940BA690CB413C",
+      "consumers": [
+        "Dubon2026.sourceGammaOneDiamond_conj_mem",
+        "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+        "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+        "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+        "Dubon2026.sourceGammaOneDiamondH1_comp",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+        "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+        "Dubon2026.sourceGammaOneDiamondLabel_lift",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+        "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+        "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+        "Dubon2026.sourceGammaOneDiamondConjugation",
+        "Dubon2026.sourceGammaOneDiamondMorphism",
+        "Dubon2026.sourceGammaOneDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1",
+        "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison on actual native parabolic H1.",
+      "discharged": [
+        "Literal Gamma0 conjugation preserves actual Gamma1 and trace.",
+        "The native H1 map has the exact conjugated-character formula with an explicit coefficient endomorphism.",
+        "Its action on constant-coefficient H1 is independent of the lift, every unit label has a lift, and the unit-labelled operators form a monoid action.",
+        "The same actual original homogeneous-valued parabolic H1 is stable under these maps."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Analytic-period and arithmetic Picard/Tate diamond compatibility and identification of the original homogeneous coefficient convention remain. The separately stated parabolic transfer lifting, exceptional primes, Frobenius/inertia and original all-weight association are still open. No finite character or characteristic-zero lift is inferred.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "1D9324A8015B759465C2327AF582FF7E9E33F85A5AA10551BE0F02E8EAFE73C2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T09:56:37.878767+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondCuspPrimitive",
+        "SourceGammaOneDiamondPeriodH1",
+        "SourceGammaOneDiamondPeriodLattice",
+        "SourceGammaOneDiamondFiniteH1"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive.lean",
+          "sha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C",
+          "oleanSha256": "83139C6D389EA7E40081C2CDCF9DF4E8AAEFBC3E97487F4005065D2ACFC75A81",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH1.lean",
+          "sha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4",
+          "oleanSha256": "C788433C68581F6162018E9A9E43B7DC70AC77A70D0C4E7712FDCA90BCD12717",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice.lean",
+          "sha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37",
+          "oleanSha256": "C6C8EDCC953F1B84FFB03D1AAF6FF6D18DA74A51F8F58E784C8153B0A75FF47B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH1.lean",
+          "sha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F",
+          "oleanSha256": "E23E968C5D7BDE9993E4F6CA25C142680BCDEE16F18328B16A54F27ED1583331",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+        "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+        "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodAudit1.log",
+      "logSha256": "A075231EF15062E44ADD6772384E3DFBAC96E5E2E9BC07A8C999088C8B5D2006",
+      "auditSha256": "9D5D2AC45AA44E664B4B54C47A17EB947CAC43BAE98EC0A92FE365F8B899E023",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+      "ownershipSha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E",
+      "exhaustiveTheorems": 33,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1.log",
+      "dependencyAuditSha256": "8F3881F58A761702BFD9E68532457DD27B7585145A94DC131D37CBB517652133",
+      "dependencyAuditSourceSha256": "F9F195B7BF06BBE8219C70FCF956EFED89E84C0F43434D9D4429C17539AE07A6",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+        "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash, original integral periods and homogeneous-valued native H1 transpose.",
+      "discharged": [
+        "The literal slash diamond is an actual Gamma1 cusp form.",
+        "Its exact original endpoint and group-period identities and real H1 intertwining are proved.",
+        "The dual slash operator preserves the original integer lattice without a stability premise.",
+        "The original homogeneous-valued lattice/H1 equivalence intertwines its transpose with the native diamond and an explicit coefficient endomorphism."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "63D03CFACC064D9823D07141C2B4801DD1DA756EA8E30168B326A3FFA101BD95",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T10:01:26.411013+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondPeriodTate"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate.lean",
+          "sha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6",
+          "oleanSha256": "BF4F36A114AE8C287CD0AEE24275DB57C61F7DCC2A82AF7257E99E530DF21117",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateAudit1.log",
+      "logSha256": "5DFD260B1E122E658CD49F2B95B9EE25CF982D30ABFBEC43FB4AC49A5ED17FB1",
+      "auditSha256": "77F4C526EB051C0938DE9A1F1F6B1147C75E53A36FCEAF332876A2C89D5DD807",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+      "ownershipSha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71",
+      "exhaustiveTheorems": 5,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1.log",
+      "dependencyAuditSha256": "5C276272468C956A4BFCAF053AAE4B4ADF6A2F38A812889204D94FEF469FD284",
+      "dependencyAuditSourceSha256": "A8C2813E8F870967EE574571C7E6F3D982E38CF6657B2A778A8A66931DA122A4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+        "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash on the original period quotient and Tate-torus base change.",
+      "discharged": [
+        "The actual dual slash diamond descends to the original integer-period quotient.",
+        "The original Tate-torus equivalence intertwines this quotient action with base change of the actual integral-lattice diamond."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "B54EC8BF9612C1B803F63B76643FA6FA2FAC63A6BCDEBDB99A1961D4448A3990",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-primitive-parabolic-kernel-1-reuse-review-20261028.json",
+    "Tools/source-integral-saturation-1-reuse-review-20261028.json",
+    "Tools/source-supported-parabolic-congruence-1b-reuse-review-20261028.json",
+    "Tools/source-gamma-one-parabolic-descent-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-diamond-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-diamond-period-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-diamond-tate-1-reuse-review-20261028.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-diamond-comparison-promotion-route-1196.json",
+    "sha256": "3DE6813B975E7D310D1760C73A89BBEBD9D37865477CF22DC07FB1DDF9CA7E1E"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/parabolic-diamond-comparison-20261028-1196/archive-manifest.json",
+    "sha256": "F28B7A74E6ADE26C5ED3D4D0720D9A512AF6DCAC51F6CB7097C1F27E0413F1E9",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8968": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1Production8968.log",
+        "sha256": "96878AC109A6F35E8CF17CDFCB29F45C79A42C74B462244674FC1BA4BC71B1CB",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+          "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+        ],
+        "sourceSha256": "CB3250BCD724993782946394E2A0CE9B18B217D0CAA59D16BB3027218ADB2C3F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1Production8968.log",
+        "sha256": "93B76A50E13DDCDDC4D7F96ACB6A9CE57FA6040453AF90C131936B3E563B4F23",
+        "requiredProofValueEdges": 2,
+        "consumers": [
+          "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+        ],
+        "sourceSha256": "A1315A1B95C282F100963C71ECB9AD7AAE78D26C0234C001AC96A46CB0675868"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.log",
+        "sha256": "B8F3CBA753B5B50F5CC0B0C0E7F7039C8F5402B90BF9FAADE4524FFF293B57FD",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+          "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+          "Dubon2026.sourceParabolicHeckeSpan_finite",
+          "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+          "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+          "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+          "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+          "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+          "Dubon2026.sourceParabolicHeckeSpan"
+        ],
+        "sourceSha256": "642320F326CAA656F5FD8A7727444A42CC554BCFB7F9BE074F115CF61B7DFA8D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1Production8968.log",
+        "sha256": "A6FD03FD06D0F1024EFFF42D615C8BCE5FC4B14534E12B8C9C8F0B95190504FC",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+          "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+          "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+          "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+          "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+          "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+          "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+        ],
+        "sourceSha256": "72BC8E4A86029C30D2258AB7B4C794C89B6126FC1403880D43CA734540E5B529"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1Production8968.log",
+        "sha256": "8A71667D1B2C21AC9AF1409A866E1CECF13B447FB5754E31B4817B4226E1BEE4",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.sourceGammaOneDiamond_conj_mem",
+          "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+          "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+          "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+          "Dubon2026.sourceGammaOneDiamondH1_comp",
+          "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+          "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+          "Dubon2026.sourceGammaOneDiamondLabel_lift",
+          "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+          "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+          "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+          "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+          "Dubon2026.sourceGammaOneDiamondConjugation",
+          "Dubon2026.sourceGammaOneDiamondMorphism",
+          "Dubon2026.sourceGammaOneDiamondH1",
+          "Dubon2026.sourceGammaOneUnitDiamondH1",
+          "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+        ],
+        "sourceSha256": "C4A3B9281986DB59FDAD0A55DB0F76DD38137CC1A06C0FBB62B3459B51101680"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1Production8968.log",
+        "sha256": "8F3881F58A761702BFD9E68532457DD27B7585145A94DC131D37CBB517652133",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+          "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+          "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+          "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+          "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+          "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+          "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+          "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+        ],
+        "sourceSha256": "53ADA2733FC0498BAE426A8562323ECACAEC8C7A02DE965A80873496C1976500"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1Production8968.log",
+        "sha256": "5C276272468C956A4BFCAF053AAE4B4ADF6A2F38A812889204D94FEF469FD284",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+          "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+        ],
+        "sourceSha256": "A65D9D3B600D43725929A74AE7E4DB7270B9948D1C8B22090318D567FF595529"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonProductionAudit8968.log",
+    "sha256": "C520CE7AD794C2A68EA95E4D8E2AAEF605B1706B8F775AE988E044654C54CFB2",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-diamond-comparison-production-build-8968.log",
+    "aggregateSha256": "F32378CE21D7B39385246F81A45AEE73A6AC100B277BDA640A03EE4661DDB78E",
+    "productionModules": 8968,
+    "incrementModules": 21,
+    "axiomChecks": 61,
+    "exhaustiveIncrementTheorems": 108,
+    "linterScopes": 21,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 108,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 108,
+      "scratchDistinct": 108,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel._proof_1": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 108,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourcePrimitiveParabolicCharacterKernel"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+            "sha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C",
+            "sourceSha256": "A2E5F86309ED7C1337DD2AA0628309CDCCEC9A49FA9C779572557137C142EA96"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteIntegralSaturation"
+          ],
+          "count": 1,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+            "sha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60",
+            "sourceSha256": "8D27B6F6E680FC6B471C5A0D6502FCD8D8DECAB0959C3F1B180F2DF6A341C77B"
+          }
+        },
+        {
+          "modules": [
+            "SourceSupportedCharacterFiber",
+            "SourceSupportedCharacterDivisibility",
+            "SourceParabolicHeckeSpan",
+            "SourceParabolicHeckeCongruence",
+            "SourceParabolicAdicOperatorKernel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+            "sha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE",
+            "sourceSha256": "3A67AF4A3756419047718080F730AE5E605BF3CCE1AEB25FE46779F4CFC821E9"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneParabolicOperatorAlgebra",
+            "SourceGammaOneParabolicTateKernel",
+            "SourceGammaOneParabolicTransferCriterion",
+            "SourceParabolicCongruenceException",
+            "SourceGammaOneParabolicCharacterTransfer"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+            "sha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD",
+            "sourceSha256": "F5396F6B4DAD8D2D22F633EF22DFDD14642C879416FB851B7A5E7C1DBD0CEE70"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondConjugation",
+            "SourceGammaOneDiamondH1",
+            "SourceGammaOneDiamondLabels",
+            "SourceGammaOneUnitDiamondAction"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+            "sha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6",
+            "sourceSha256": "35EEA7ED74A0EFAF009E5945E568C2F786BFBCF506007481E9811D3157E27890"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCuspPrimitive",
+            "SourceGammaOneDiamondPeriodH1",
+            "SourceGammaOneDiamondPeriodLattice",
+            "SourceGammaOneDiamondFiniteH1"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+            "sha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E",
+            "sourceSha256": "50BE108FA8E7DFB4A915D471631E12A3C9681390FA57B4D4FA452646C510A7D3"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodTate"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+            "sha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71",
+            "sourceSha256": "C46184E261E040532B724A430CFC13018D7E9CBBCCE7C2937EBC0B0722F8FF30"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+        "sha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E",
+        "sourceSha256": "4E05D83682BC61E2582747A547ED2414167861AEF0044CCBD893D93757785154"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-013754-977.log",
+        "sha256": "03FD4C0449E4E9C9682A10D94E53675B19F4F507F92FE102BB95D7635C17534C"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 21 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourcePrimitiveParabolicCharacterKernel",
+            "scratchSha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC",
+            "productionSha256": "CE404C922A771062EB0897084097FDB094E3D29804E1FA0F4386182BB4D0398B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteIntegralSaturation",
+            "scratchSha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+            "productionSha256": "CC71F9A62545146FF00FD7378A3D54CCAF324297373C2F59EB8BFE05AD42DB35",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterFiber",
+            "scratchSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "productionSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterDivisibility",
+            "scratchSha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1",
+            "productionSha256": "08E9E83248323511439E6EB53D466FB1F1CB6C596ECCF90CA1EF1CFBE3F5FA84",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeSpan",
+            "scratchSha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457",
+            "productionSha256": "686BD446B6DD0F7DB69735FF5A2C47AAEA3DC3B33914AB8ECDA339FE5CA82FA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeCongruence",
+            "scratchSha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221",
+            "productionSha256": "147B128A73ED5042894AB667291C72026AD6AC29F952428E09E7D6ADF6E26CA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicAdicOperatorKernel",
+            "scratchSha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0",
+            "productionSha256": "05BEA3F5C6AC7EF448467B056C557F094F4BFBC53681DD204EA772BFEFFF9352",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicOperatorAlgebra",
+            "scratchSha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878",
+            "productionSha256": "AD1E7D0DB575D5AADA608194C5E24B6202EA25B824DD04D79C777CEC964A8DED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTateKernel",
+            "scratchSha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C",
+            "productionSha256": "06A75CA8F4D8929B044E733FFFFD093358310FD60A60D118FBF839A929428322",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTransferCriterion",
+            "scratchSha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62",
+            "productionSha256": "721BE58C716974FA937D84DB4C94762A3AD22F518F41C13939417FDDAC6C1FE8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCongruenceException",
+            "scratchSha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8",
+            "productionSha256": "1E8DD9E699FE00934AD0D1F6C83E5A01B6DD98EE5CC40E3F088EDFAE3E41FB5D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicCharacterTransfer",
+            "scratchSha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7",
+            "productionSha256": "785072AAEDC8DC1DA094773DB875776BF9E5C1A574B458D64854D23A28AC9605",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondConjugation",
+            "scratchSha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257",
+            "productionSha256": "9D9F0F07409C3C84E500EFF2C3C31543CC785D7A35857CC347B77690D313E881",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondH1",
+            "scratchSha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6",
+            "productionSha256": "C88492172A47D357A0B985663824E06F0198BB931CE2BA4C784AA79C3E79BDCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondLabels",
+            "scratchSha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3",
+            "productionSha256": "00942ACD69317C0C7D4655948D5FB0D0D88CE3D4CE61854FE1110046FAE2BDAC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnitDiamondAction",
+            "scratchSha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7",
+            "productionSha256": "543D9E6622EE2069ADA628132B58901682C399C198529E0FC3F85F9088CB7662",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCuspPrimitive",
+            "scratchSha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C",
+            "productionSha256": "6CF361AD6AEDDC2CD2B95FCD02BEF75602A9659B2D31944ABDA58AFBDF1AB471",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodH1",
+            "scratchSha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4",
+            "productionSha256": "CDCEB073E1029C455F046D6C0A0FFF72AFC330656CF67395B182ED317D82B772",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodLattice",
+            "scratchSha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37",
+            "productionSha256": "693A5200F4D452D7E0C9A94236721DAA3C07A55A78A8436A6A9B90EAA27D03B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFiniteH1",
+            "scratchSha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F",
+            "productionSha256": "DA0CD30C2CE552202AB78A8912683B6AD09CF12F866B67D226A49BACB081695F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodTate",
+            "scratchSha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6",
+            "productionSha256": "AA8F2B1779F174874A3D181CA40C88488A573ADBFD0F02D0C811C292D5AA9DB7",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 108 distinct names from 108 exhaustive scratch checks are retained: 108 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The geometric lifting condition sourceGammaOneIntegralParabolicTransfer is stated and remains unproved. The finite-character descent theorem is conditional on that precise transfer input and excludes the primes dividing the proved fixed nonzero integer. Neither full-H1 transfer surjectivity nor restriction landing in parabolic H1 discharges it. The already proved all-prime full-H1 character family remains unchanged. Exceptional primes, the independent arithmetic Picard diamond and identification of the original homogeneous diamond coefficient action, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  },
+  "receipt8968": {
+    "recordedUTC": "2026-10-28T11:53:30.590923+00:00",
+    "log": "logs/dubon-build-20261028-032432-254.log",
+    "sha256": "0C7698CD693B500C987E7001A5C1CF3A25C9D40D59FDA0F875955D2D4CCF0A43",
+    "bytes": 14736113,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8968,
+    "projectTheorems": 56946,
+    "registeredConsumers": 26323,
+    "registeredConstructions": 2782,
+    "declarations": 35090,
+    "generated": 35899,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_031830.log",
+    "foundationSha256": "1B5A4F828E1E7BE4EE494F5229C92C1CA657AEAE8DCED0AE7A3BD4C70A284BF3",
+    "countReconciliation": {
+      "previousTheorems": 56839,
+      "focusedTheorems": 108,
+      "sharedGeneratedNames": [
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter.congr_simp"
+      ],
+      "addedTheorems": 107,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonGlobalOwnership8968.log",
+      "globalOwnershipSha256": "2C30B7935D89ECF6BE114C469E01F2AB972FFAE8B1740E65FCAE190F6C48C8BF",
+      "globalOwnershipSourceSha256": "4C59D2BFFF3FB95CDB81C3FD158582E9932E6CC86312EFA33701348547EDDC0C",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+      "ownershipSha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 108,
+      "scratchDistinct": 108,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel._proof_1": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 108,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourcePrimitiveParabolicCharacterKernel"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+            "sha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C",
+            "sourceSha256": "A2E5F86309ED7C1337DD2AA0628309CDCCEC9A49FA9C779572557137C142EA96"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteIntegralSaturation"
+          ],
+          "count": 1,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+            "sha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60",
+            "sourceSha256": "8D27B6F6E680FC6B471C5A0D6502FCD8D8DECAB0959C3F1B180F2DF6A341C77B"
+          }
+        },
+        {
+          "modules": [
+            "SourceSupportedCharacterFiber",
+            "SourceSupportedCharacterDivisibility",
+            "SourceParabolicHeckeSpan",
+            "SourceParabolicHeckeCongruence",
+            "SourceParabolicAdicOperatorKernel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+            "sha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE",
+            "sourceSha256": "3A67AF4A3756419047718080F730AE5E605BF3CCE1AEB25FE46779F4CFC821E9"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneParabolicOperatorAlgebra",
+            "SourceGammaOneParabolicTateKernel",
+            "SourceGammaOneParabolicTransferCriterion",
+            "SourceParabolicCongruenceException",
+            "SourceGammaOneParabolicCharacterTransfer"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+            "sha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD",
+            "sourceSha256": "F5396F6B4DAD8D2D22F633EF22DFDD14642C879416FB851B7A5E7C1DBD0CEE70"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondConjugation",
+            "SourceGammaOneDiamondH1",
+            "SourceGammaOneDiamondLabels",
+            "SourceGammaOneUnitDiamondAction"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+            "sha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6",
+            "sourceSha256": "35EEA7ED74A0EFAF009E5945E568C2F786BFBCF506007481E9811D3157E27890"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCuspPrimitive",
+            "SourceGammaOneDiamondPeriodH1",
+            "SourceGammaOneDiamondPeriodLattice",
+            "SourceGammaOneDiamondFiniteH1"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+            "sha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E",
+            "sourceSha256": "50BE108FA8E7DFB4A915D471631E12A3C9681390FA57B4D4FA452646C510A7D3"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodTate"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+            "sha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71",
+            "sourceSha256": "C46184E261E040532B724A430CFC13018D7E9CBBCCE7C2937EBC0B0722F8FF30"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+        "sha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E",
+        "sourceSha256": "4E05D83682BC61E2582747A547ED2414167861AEF0044CCBD893D93757785154"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-013754-977.log",
+        "sha256": "03FD4C0449E4E9C9682A10D94E53675B19F4F507F92FE102BB95D7635C17534C"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 21 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourcePrimitiveParabolicCharacterKernel",
+            "scratchSha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC",
+            "productionSha256": "CE404C922A771062EB0897084097FDB094E3D29804E1FA0F4386182BB4D0398B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteIntegralSaturation",
+            "scratchSha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+            "productionSha256": "CC71F9A62545146FF00FD7378A3D54CCAF324297373C2F59EB8BFE05AD42DB35",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterFiber",
+            "scratchSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "productionSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterDivisibility",
+            "scratchSha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1",
+            "productionSha256": "08E9E83248323511439E6EB53D466FB1F1CB6C596ECCF90CA1EF1CFBE3F5FA84",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeSpan",
+            "scratchSha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457",
+            "productionSha256": "686BD446B6DD0F7DB69735FF5A2C47AAEA3DC3B33914AB8ECDA339FE5CA82FA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeCongruence",
+            "scratchSha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221",
+            "productionSha256": "147B128A73ED5042894AB667291C72026AD6AC29F952428E09E7D6ADF6E26CA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicAdicOperatorKernel",
+            "scratchSha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0",
+            "productionSha256": "05BEA3F5C6AC7EF448467B056C557F094F4BFBC53681DD204EA772BFEFFF9352",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicOperatorAlgebra",
+            "scratchSha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878",
+            "productionSha256": "AD1E7D0DB575D5AADA608194C5E24B6202EA25B824DD04D79C777CEC964A8DED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTateKernel",
+            "scratchSha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C",
+            "productionSha256": "06A75CA8F4D8929B044E733FFFFD093358310FD60A60D118FBF839A929428322",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTransferCriterion",
+            "scratchSha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62",
+            "productionSha256": "721BE58C716974FA937D84DB4C94762A3AD22F518F41C13939417FDDAC6C1FE8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCongruenceException",
+            "scratchSha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8",
+            "productionSha256": "1E8DD9E699FE00934AD0D1F6C83E5A01B6DD98EE5CC40E3F088EDFAE3E41FB5D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicCharacterTransfer",
+            "scratchSha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7",
+            "productionSha256": "785072AAEDC8DC1DA094773DB875776BF9E5C1A574B458D64854D23A28AC9605",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondConjugation",
+            "scratchSha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257",
+            "productionSha256": "9D9F0F07409C3C84E500EFF2C3C31543CC785D7A35857CC347B77690D313E881",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondH1",
+            "scratchSha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6",
+            "productionSha256": "C88492172A47D357A0B985663824E06F0198BB931CE2BA4C784AA79C3E79BDCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondLabels",
+            "scratchSha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3",
+            "productionSha256": "00942ACD69317C0C7D4655948D5FB0D0D88CE3D4CE61854FE1110046FAE2BDAC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnitDiamondAction",
+            "scratchSha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7",
+            "productionSha256": "543D9E6622EE2069ADA628132B58901682C399C198529E0FC3F85F9088CB7662",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCuspPrimitive",
+            "scratchSha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C",
+            "productionSha256": "6CF361AD6AEDDC2CD2B95FCD02BEF75602A9659B2D31944ABDA58AFBDF1AB471",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodH1",
+            "scratchSha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4",
+            "productionSha256": "CDCEB073E1029C455F046D6C0A0FFF72AFC330656CF67395B182ED317D82B772",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodLattice",
+            "scratchSha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37",
+            "productionSha256": "693A5200F4D452D7E0C9A94236721DAA3C07A55A78A8436A6A9B90EAA27D03B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFiniteH1",
+            "scratchSha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F",
+            "productionSha256": "DA0CD30C2CE552202AB78A8912683B6AD09CF12F866B67D226A49BACB081695F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodTate",
+            "scratchSha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6",
+            "productionSha256": "AA8F2B1779F174874A3D181CA40C88488A573ADBFD0F02D0C811C292D5AA9DB7",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 108 distinct names from 108 exhaustive scratch checks are retained: 108 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The geometric lifting condition sourceGammaOneIntegralParabolicTransfer is stated and remains unproved. The finite-character descent theorem is conditional on that precise transfer input and excludes the primes dividing the proved fixed nonzero integer. Neither full-H1 transfer surjectivity nor restriction landing in parabolic H1 discharges it. The already proved all-prime full-H1 character family remains unchanged. Exceptional primes, the independent arithmetic Picard diamond and identification of the original homogeneous diamond coefficient action, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  }
+}

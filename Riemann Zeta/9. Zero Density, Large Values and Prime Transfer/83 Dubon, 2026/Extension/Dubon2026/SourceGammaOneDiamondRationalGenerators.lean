@@ -1,0 +1,69 @@
+import Dubon2026.SourceRationalDiamondCoefficients
+import Dubon2026.SourceGammaOneArithmeticField
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility. The exact original integral modular-ratio
+generators and their actual diamond images are fixed by every rational
+coefficient automorphism of C. This supplies the generator step for the
+original field, rather than assuming rationality of the diamond action.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup ModularRatios
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M] (g : Gamma0 M) (σ : ℂ ≃ₐ[ℚ] ℂ)
+
+omit [NeZero M] in
+theorem arithmeticRingAut_integral_generator (x : functionFieldOver (Gamma1 M) ℂ)
+    (hx : (x : LaurentSeries ℂ) ∈ intFormRatiosC ℂ (Gamma1 M)) :
+    arithmeticRingAut (Gamma1 M) σ x = x := by
+    obtain ⟨y, _, hy⟩ := (coeffEmb_image_intFormRatiosC (Gamma1 M) ℂ).symm ▸ hx
+    apply Subtype.ext
+    ext n
+    change σ ((x : LaurentSeries ℂ).coeff n) = (x : LaurentSeries ℂ).coeff n
+    rw [← hy, coeffEmb_coeff]
+    exact σ.commutes _
+theorem diamondFieldHom_generator_coeff_rational (x : functionFieldOver (Gamma1 M) ℂ)
+    (hx : (x : LaurentSeries ℂ) ∈ intFormRatiosC ℂ (Gamma1 M)) (n : ℤ) :
+    (diamondFieldHom M g x : LaurentSeries ℂ).coeff n ∈ Set.range (algebraMap ℚ ℂ) := by
+  obtain ⟨k, f, h, pf, ph, hf, hh, hh0, hx⟩ := hx
+  have hpf : intSeriesC ℂ pf = qL f := congrArg (HahnSeries.ofPowerSeries ℤ ℂ) hf
+  have hph : intSeriesC ℂ ph = qL h := congrArg (HahnSeries.ofPowerSeries ℤ ℂ) hh
+  have hqh : qL h ≠ 0 := hph ▸ hh0
+  have hhne : h ≠ 0 := by
+    intro hz
+    apply hqh
+    simp only [hz, qL, ModularForm.coe_zero, qExpansion_zero, PowerSeries.coe_zero]
+  have hratio : (x : LaurentSeries ℂ) * qL h = qL f := by
+    rw [hx, hpf, hph, div_mul_cancel₀ _ hqh]
+  have hD : (diamondFieldHom M g x : LaurentSeries ℂ) =
+      qL (modularDiamond M g f) / qL (modularDiamond M g h) :=
+    (eq_div_iff (qL_ne_zero (by simp [Gamma1_mem, ModularGroup.T]) _
+      (modularDiamond_ne_zero M g h hhne))).mpr (diamondFieldHom_ratio M g f h hhne x hratio)
+  have hpfQ : (pf.map (Int.castRingHom ℚ)).map (algebraMap ℚ ℂ) = qExpansion 1 f := by
+    rw [← hf]
+    ext n
+    simp only [PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+  have hphQ : (ph.map (Int.castRingHom ℚ)).map (algebraMap ℚ ℂ) = qExpansion 1 h := by
+    rw [← hh]
+    ext n
+    simp only [PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+  rw [hD]
+  exact modularDiamond_ratio_coeff_rational M f h hhne
+    (pf.map (Int.castRingHom ℚ)) (ph.map (Int.castRingHom ℚ)) hpfQ hphQ g n
+
+theorem arithmeticRingAut_diamond_generator (x : functionFieldOver (Gamma1 M) ℂ)
+    (hx : (x : LaurentSeries ℂ) ∈ intFormRatiosC ℂ (Gamma1 M)) :
+    arithmeticRingAut (Gamma1 M) σ x = x ∧
+      arithmeticRingAut (Gamma1 M) σ (diamondFieldHom M g x) = diamondFieldHom M g x := by
+  refine ⟨arithmeticRingAut_integral_generator M σ x hx, ?_⟩
+  apply Subtype.ext
+  ext n
+  change σ ((diamondFieldHom M g x : LaurentSeries ℂ).coeff n) =
+    (diamondFieldHom M g x : LaurentSeries ℂ).coeff n
+  obtain ⟨a, ha⟩ := diamondFieldHom_generator_coeff_rational M g x hx n
+  rw [← ha]
+  exact σ.commutes a
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

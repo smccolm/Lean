@@ -1,0 +1,1 @@
+The first read-only GitHub API request failed in the workspace sandbox with WinError 10013 (socket access denied). No external source was downloaded or executed. Fresh attempt 1242b uses network approval.

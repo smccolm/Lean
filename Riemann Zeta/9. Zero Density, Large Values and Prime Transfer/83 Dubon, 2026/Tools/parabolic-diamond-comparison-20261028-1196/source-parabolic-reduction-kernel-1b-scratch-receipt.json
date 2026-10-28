@@ -1,0 +1,62 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T08:38:43.859229+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceFiniteIntegralSaturation",
+    "SourceParabolicReductionKernel"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation.lean",
+      "sha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+      "oleanSha256": "D66B358C33A6F5CBF955EB6C81AD81B80CC77B38CECF6DDA3C5C5C4363B55517",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel.lean",
+      "sha256": "FD4703F1B381BCE0B60E8F123864D7425EED07837B28778126ACCF348E254202",
+      "oleanSha256": "C7D9B466B6BE5ECAC0942E5B14A018D5DF5067CA8B76F9B3CB3E88382A7CAA96",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel1168a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel1168a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation",
+    "Dubon2026.sourceIntegralParabolicH1_reduction_kernel_away"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation",
+    "Dubon2026.sourceIntegralParabolicH1_reduction_kernel_away"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelAudit1.log",
+  "logSha256": "1182F7CF351C318F94AA28C0BB3C64152118E84B7FE7B340B2CA15E6B2D270E9",
+  "auditSha256": "B94F8985C205E64184153D6471D9F880D76C176636E96896B2ECEC7DAF76AA92",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelScratchOwnership1169.log",
+  "ownershipSha256": "305C1CD4C0C319AE6A65FF19C79E38302E1449C04798096993A442594D2600A1",
+  "exhaustiveTheorems": 2,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 5,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1b.log",
+  "dependencyAuditSha256": "36B9271D932101C6B916BB99F3310389E76DF77F4F19ADC00E8B60FBC7B1E593",
+  "dependencyAuditSourceSha256": "DA9DD7BC19C0C8BFD6FEB153FDDA51EE85E3E73EB7AE157400FCAC3B152FF3C2",
+  "consumers": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation",
+    "Dubon2026.sourceIntegralParabolicH1_reduction_kernel_away"
+  ],
+  "dependency": "DUB17/18 -> original all-weight association -> finite parabolic character descent -> scalar divisibility inside actual integral parabolic H1 -> exact kernel of its reduction away from one fixed torsion annihilator.",
+  "discharged": [
+    "For each finite integral module and submodule, scalar saturation holds away from a single nonzero torsion annihilator.",
+    "For actual original integral parabolic H1, reduction modulo every nonzero modulus coprime to that annihilator has exactly the scalar-multiple kernel within parabolic H1."
+  ],
+  "boundary": "Supersedes receipt 1 only to correct a copied dependency-audit prose label; all mathematical source, query and proof-dependency requirements are identical. Scratch-audited only; promotion and assembled verification pending. Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1b-reuse-review-20261028.json",
+  "reuseReviewSha256": "3D5E0712AC7A557AFDF420138679A984EEDE31DDAFAD1043ABAB34ED2F87378A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

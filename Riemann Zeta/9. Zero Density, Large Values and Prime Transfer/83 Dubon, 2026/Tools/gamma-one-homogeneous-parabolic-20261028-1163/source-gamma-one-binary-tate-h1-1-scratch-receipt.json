@@ -1,0 +1,152 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv_apply"
+  ],
+  "recordedUTC": "2026-10-28T06:59:19.313558+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneFiniteOrderDischarge",
+    "SourceGammaOneBinaryPeriodCharacters",
+    "SourceGammaOneCoefficientHeckeCharacters",
+    "SourceGammaOneBinaryParabolicH1",
+    "SourceGammaOneBinaryTateH1",
+    "SourceGammaOneBinaryTateHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge.lean",
+      "sha256": "7DFB6DA906FE9703375FD7BA065B34437B4BB10384BF77400D62607CA314F7AA",
+      "oleanSha256": "EF3F21967EDEB9EC27D91DA95CCD83E2A81CD5CE30EBB07E1CF3054C8859681D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters.lean",
+      "sha256": "16F3422187BD70D851EEEA6FA1E3DFB4BDE8C06F71C2C3122981D85936CEA093",
+      "oleanSha256": "878B99ACA3DD584C30507881CD2C39E7C296E72C2BAD34707BB52C31957AF36F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters1134a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters1134a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters.lean",
+      "sha256": "F7C943DF6D9897658B96FE34E72B5E8F60BF7F0CF6894C251A901D18B6434040",
+      "oleanSha256": "70CED03A1EEAD5918AF5C678D72EADB8EA559B73EA84B73899AF2E035E2A3567",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters1135a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters1135a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH1.lean",
+      "sha256": "8C72442187E9B39EB6CB0FA1B66F82F5E46FF9B22CD67C68AA6C53841C00235E",
+      "oleanSha256": "FC3E336F1F47BA908B251126EA0088EDDE49C1F17DDC2EC4B773EB7212DEABBB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH11136b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH11136b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1.lean",
+      "sha256": "1FB38752386F3672857AE7307C8B0F467795B8623BA049DF9D457A7943B41E9B",
+      "oleanSha256": "697F6C947354327D85BB3BFCFE669BD1628C8799D8DCCF30AB03D1029B1B129E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH11137b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH11137b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke.lean",
+      "sha256": "668DA92A85DC8722A378F98318B09EDF00DC15273C67DBAB29FD98C8482EC9B8",
+      "oleanSha256": "C913A7F1EB6B4A7AFB6B3C4908677B7FAAC781D976039D03B31428C1AC0EF40A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.finiteOrder_trace_sq_four",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteOrder_character_zero_of_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms_mem_iff_of_level",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_level_ge_four",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_finiteOrder_character_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv_apply",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHoms",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTatePrimeOperators"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.finiteOrder_trace_sq_four",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteOrder_character_zero_of_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms_mem_iff_of_level",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_level_ge_four",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_finiteOrder_character_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv_apply",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_word"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHoms",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTatePrimeOperators"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1Audit1.log",
+  "logSha256": "B62C983DB3B3A8D0C98A461B028431550EBD4F7C56ED663EBBC75E3E04ACCF40",
+  "auditSha256": "3FA0A25E095AAC82AB57FF31AA41574B65A35A3D929039464BC03E5668A4FDCA",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1ScratchOwnership1139.log",
+  "ownershipSha256": "BAA977F8FD5FEEEC931CCF6AEFC847F64305FA3F03781CFE2361CF96D929B993",
+  "exhaustiveTheorems": 81,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 34,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1DependencyAudit1.log",
+  "dependencyAuditSha256": "1CB9FDB1416DCB6B559E11F0A0A0DD7675FF756BF45A59366797D637C6AD8DDE",
+  "dependencyAuditSourceSha256": "4B575E3A9AF4E1F044DC37DED2464FD95FE99E11DE7B4F1F8594F1BBC5169EF1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_hom_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_finiteOrder_character_zero"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of the original finite Gamma1 homogeneous-coefficient Hecke character -> full/parabolic and arithmetic Tate dual comparison -> original homogeneous coefficients and every original Hecke word.",
+  "discharged": [
+    "Parabolic vanishing already implies finite-order vanishing at the original levels for p>3.",
+    "The original homogeneous-coefficient parabolic H1 at Q*(p^(n+1))^2 is equivalent to the original integral-period lattice dual.",
+    "The actual arithmetic Picard Tate module dual with the original homogeneous coefficient module is equivalent to this literal native parabolic H1.",
+    "The actual arithmetic Picard Hecke dual followed by the original homogeneous matrix action intertwines sourceGammaOnePrimeOperators and every integral free-algebra word."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The original constructed character acts on full H1; its passage to the parabolic space is not yet proved. Diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. A finite-character comparison is not a characteristic-zero lift. DUB-17--20 OPEN; 16/20; all twenty acceptance gates unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-tate-h1-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "C3D3AD96AB40921ADBA644AFEE1A0E53F4FF4ED58E41F51E98E1980A01B4E96E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

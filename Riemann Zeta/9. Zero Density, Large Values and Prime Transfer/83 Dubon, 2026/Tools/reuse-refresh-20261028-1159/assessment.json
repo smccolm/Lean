@@ -1,0 +1,581 @@
+{
+  "recordedUTC": "2026-10-28T08:21:05.303425+00:00",
+  "scope": "Nine fixed-revision repository heads; complete TauCeti tree inventories and complete old/new Mathlib and zeta-lab tree comparisons; selected proof-body inspection. No external import-closure compilation or axiom audit.",
+  "report": "Dubon Reuse Refresh 2026-10-28.md",
+  "reportSha256": "5A2C07B169AE0EC2ABDFD278D2AEA1C65467FEC66C3BFEE021FD5CB7A47F2099",
+  "heads": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "previousHead": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "head": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "changed": false,
+      "commitDate": "2026-09-24T14:06:36Z",
+      "url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "retrievedUTC": "2026-10-28T07:47:23.045682+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "previousHead": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "head": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "changed": false,
+      "commitDate": "2026-10-22T16:15:55Z",
+      "url": "https://github.com/ImperialCollegeLondon/FLT/commit/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "retrievedUTC": "2026-10-28T07:47:23.071211+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "repository": "dozenalist/ModularFormsMod",
+      "previousHead": "bc16671d6781a26216b378773502ba5583845cbf",
+      "head": "bc16671d6781a26216b378773502ba5583845cbf",
+      "changed": false,
+      "commitDate": "2026-10-21T19:30:15Z",
+      "url": "https://github.com/dozenalist/ModularFormsMod/commit/bc16671d6781a26216b378773502ba5583845cbf",
+      "retrievedUTC": "2026-10-28T07:47:23.131831+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "repository": "dozenalist/LeanModularForms",
+      "previousHead": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "head": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "changed": false,
+      "commitDate": "2026-10-05T21:41:24Z",
+      "url": "https://github.com/dozenalist/LeanModularForms/commit/f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "retrievedUTC": "2026-10-28T07:47:23.118301+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "previousHead": "116662aa4c1e9106ab5c609b3214b02f6e11a65a",
+      "head": "ee6c124192fb5146db438068b8df8d84d8da4cf0",
+      "changed": true,
+      "commitDate": "2026-10-28T06:17:31Z",
+      "url": "https://github.com/leanprover-community/mathlib4/commit/ee6c124192fb5146db438068b8df8d84d8da4cf0",
+      "retrievedUTC": "2026-10-28T07:47:23.411655+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-head.json",
+      "sha256": "5434D7B9706C16E5449B08428F034E2C88D7E6AA0A74B44AF8DE32EBEB4F9E31"
+    },
+    {
+      "repository": "openai/math",
+      "previousHead": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "head": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "changed": false,
+      "commitDate": "2026-10-26T21:18:03Z",
+      "url": "https://github.com/openai/math/commit/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "retrievedUTC": "2026-10-28T07:47:23.443249+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "repository": "teal-sea/zeta-lab",
+      "previousHead": "9c492e8a8b91c6a8787a4536102194f511478c6b",
+      "head": "f2dde1dfecc73ce687476b8606841d96a5a8f029",
+      "changed": true,
+      "commitDate": "2026-10-28T01:35:46Z",
+      "url": "https://github.com/teal-sea/zeta-lab/commit/f2dde1dfecc73ce687476b8606841d96a5a8f029",
+      "retrievedUTC": "2026-10-28T07:47:23.507350+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-head.json",
+      "sha256": "D2236BE945FBA767F6A8EBE6D03A2D65F59F36902718662DDD2A56F7281ECDF4"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "previousHead": null,
+      "head": "a722fde649de5a203c320408257b17b389be2f00",
+      "changed": true,
+      "commitDate": "2026-10-28T07:28:32Z",
+      "url": "https://github.com/TauCetiProject/TauCeti/commit/a722fde649de5a203c320408257b17b389be2f00",
+      "retrievedUTC": "2026-10-28T07:47:23.564696+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-head.json",
+      "sha256": "C78FE51E0572E27F9D52892A1822B39D548E4829A9CEF9AA8DFA05C549D3D90A"
+    },
+    {
+      "repository": "TauCetiProject/TauCetiRoadmap",
+      "previousHead": null,
+      "head": "4d14cbd5ba21a1804ca78c9989b9ea485bcfad08",
+      "changed": true,
+      "commitDate": "2026-10-28T05:06:18Z",
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/commit/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08",
+      "retrievedUTC": "2026-10-28T07:47:23.789133+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-head.json",
+      "sha256": "C28AFF8E626872BFB74476EC7A924E05F5BF398BDF249FDED17CCB75E78F4265"
+    }
+  ],
+  "archive": "Tools/reuse-refresh-20261028-1159",
+  "files": [
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159/manifest.json",
+      "sha256": "6257BBF7B9A2EEA24D10FD5B2CF03B8E39F8D17EE55212EE555CBDB3230E588A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/candidate-fetch-1160.json",
+      "sha256": "1A5247CDA4F8EC4C3317D2497D3AD25F08A1D1F219E0EB566791B6688EB4EC9E"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4-compare.json",
+      "sha256": "531683D0FEA79C464CB923170EBBF6516A9F12D2938877BEFCBAD2A527C52D26"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4-complete-tree-delta.json",
+      "sha256": "6933C783DC5C31A45A6B18CD9ED65DB7145DBE5785245765186EBA0F52244437"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4-head-tree.json",
+      "sha256": "2EE6519E78C56217A35D15486193940928DC335615DE19EA203CD720805A4BAB"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4-head.json",
+      "sha256": "5434D7B9706C16E5449B08428F034E2C88D7E6AA0A74B44AF8DE32EBEB4F9E31"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "8EE0D3B8CE6033187D03FC78FEF609BD9DCE60AC6C5E66D278E49434A5E9DE07"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "7F107DD3539009D95AD3EE68888F83DFA29C4DAB2A7301E29E35D43B5D0C050D"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "ACF37F7E2D23F9AE7D39D28A17FFB97AF06246BE0FF76678D7F5F340D85BAA44"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "9D55C9C3533ADA621EE1C52BE4B810376EA15E601A0F321FB9EEF0E5E820AD63"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "649A15FB9B11486C0EC034971B8758A817C6266ECCBD78CA5938D07E0726481A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "005B2F71EFBFF2E4629E9D9C9B1282703A1547235D55DE8CE67CF75E70B12CE8"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "50AFC773AF0895608A53959EFF1019C12A9ACA84ED729AE872D05C4C9EC1C714"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "B97B112355023FD2EE66BB36657D7E5E133B5319F52E994C992C12AF49CB29C4"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "796D36137BC05D8B2B224DDBC54CC2754ABC8A9ADDCF1ED76B5C3D44177E477C"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "EA04545687F9758B9C5135E532D2C274C7E73553863A48405B2F2BDAFEF0AAD7"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "72FA7A18B98553FE2ADBB5BE717D251D1AC8E1CD6A7452DB5B21BB6897E64FF5"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "7AB01FD386390A4A0A4E486E593B06E25418ECC13A9217E4BB44EAFD179E4089"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "9F8EFA333415E384C45FB0AD58EF0BA510B18ED13CD6E83C5CDBE4C5EB5DAE20"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "120FEFE51C8CDD70BECF3908EF6A4BB98837ED06C19E66A04193A662949FB0AB"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "6B7B415FFA35BD417FED10C5633A278E4F4C5FB9A87BC561AB376F3C2A105971"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "A6577E410C2F7A9A24BF8D9C8EFF1AC7E605B494E465000E5A0E14C40092E0B0"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "7AC81FED7EEE9D3AA2853157CA02F3A3A6C1726271AFA251B69056D716F825FA"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "E19A663CC36BBC00FFEAD51F0F53E6E59FF93EA802B84E6FC0CE3AB766A18F29"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "856ED76711E0A5D09B6DD2F41FE6B9327E96D7A5F3BE90BD614C566E9AEF3676"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "199729C22B05FC6050347FF9DECF5828A29C7AE770DF66D5F14D7CE7EA2C2781"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "7E882844522C6AD5EF74B27BC6A7B8109682A0AEAF4EB1FB56B1C917BBE97823"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "7DD708DD58E990E979FE136F735923E0A77E19F255F48E99CB5A247A024C1F7B"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "CF06F5990F696046717243DA6B32DBC5FB9AF3AEC78E3131D3DAC857EBEDD3AF"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "102DBC9807D1B2B7312C53E25C223715228F11D5C4533DE85B414418A74D03C4"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "993978FED6E73A669CBDD5B3D516D3699FAF91867B7EE65A5D534BD005AF8F80"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "16394FF491DB072726A8B09A908A63715A0EC1C1FCCBAD11F0CEF9D549A40EAC"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "28AA55DFF703649F0B20E566E8CBA9901E95F42337E2814E4242D52C65AE95DC"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "70C5CAD0FFC00B339D6A171DFE3F3E2FDA3D0C399147446E48A4576F997919E7"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "759C3B56C4BAD48B73A68B083EED551C4330309009650DBD95BE9B9180102495"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "80D50D37D88A4C9E86DA5D08E983411A3FF1AA7422D1B1978025607663117353"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "355555C4854B5B97E4D3A12A37D56A102BBB79ACE31B9EF53633D4B474EC0A25"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "15C0C9DFB8B460224419DF8A9E0FF144BE97B4B5A8AEE14C7F73DE802D4FC275"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "BA7239AF5AA386AD2478F4AABC6F0490E9A02A2F005A5129823BD32827C4D936"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "AAD866903FAE0B26EE5007EF9C1E1ADC1B1AA65DAEF6753C87D49F51EB2D7CDA"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "0CEE99BADF7984D138079EBAAF39017854A010B3A6A81595912996399C7D081D"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "FA34565F71E4F3746CECA739CCE9CE298D647EC66FE14909DAE37A36F5653EFD"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/manifest.json",
+      "sha256": "230D3292DFF086E46012FCA76AB1E516DAD5A1DB26CBD7E17A70828E6D0CC8F0"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/source-diffs-1160c.json",
+      "sha256": "5685634B27DE3BC0C9295380221538043B48A7557EAD21A1165B6577C6445127"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/source-fetch-1160b.json",
+      "sha256": "C56AD86A5A94E515CD1E762D276AB3371355A4BCA318530BC2699ABDE42AC942"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-head.json",
+      "sha256": "C78FE51E0572E27F9D52892A1822B39D548E4829A9CEF9AA8DFA05C549D3D90A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-lake-manifest.json.txt",
+      "sha256": "78AAC12CD88437EA05C41CCDAE290D72A8CE40929CFC5D14640F88E734ADF9BE"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-lean-toolchain.txt",
+      "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-README.md.txt",
+      "sha256": "B05A48415C2A3D1F5104A3701A7478DFA08ABF3B43797E3B797C377BFEAEAE38"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti-tree.json",
+      "sha256": "D3F9781F40914ED4C365EF87D128027BF3DCE2D65FD65D2322004AF4ED383CCB"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Comparison.lean.txt",
+      "sha256": "6D90A3DCF13CA09BDF5DA28A44969DAA2A59726CB7FD37D35F263E7603B70249"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Ell.lean.txt",
+      "sha256": "16CB4A459A740673016DCAD655587AB2ABEEC32C0A4ACB1F73F37017E6814207"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__FullLevel.lean.txt",
+      "sha256": "432B7AFA7CEDD20B1F1CFC8CB37B93FFC85343F9B16EEA616FEBB41F062D4585"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Full.lean.txt",
+      "sha256": "9CC1AD2987793001E204A53CEA168B0FFDB18A6A18E8254973CDE87DE7A94144"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__One.lean.txt",
+      "sha256": "58F29D8E2CE7CFDD20DE1033F1392BA44B0A38C98ED5950ADB2290DFB6F37AF0"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Zero.lean.txt",
+      "sha256": "C1ABC3E7D63F59481806A989D8A49CDCC91F3769309878F88347F0555FA77F6C"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__HomLevel.lean.txt",
+      "sha256": "7E8A50108C3A67C551E54B62B171C9E468DCF21B81F22934572CAE848B41C628"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LegendreLine.lean.txt",
+      "sha256": "AD3267B8C5549DF0F538DD54EB8FD3E71B6E3838FF867D2756A1C82510F1628B"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LevelThreeLine.lean.txt",
+      "sha256": "6CF34DF0E81933EA1D2D97805F30E952DBC014E71ACE9AC9511A85023CF9D5B6"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__ModuliProblem.lean.txt",
+      "sha256": "BB123384C8D848A7892377B9CF705D3A0EC7F62C7AEBD7A8089477F6A3FDAF56"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__NaiveLevel.lean.txt",
+      "sha256": "BA834D757C2D6EABB632FE66F30A066A43EB6ECC116CEDEFFEF7F98371E5F2B4"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__FreeAction.lean.txt",
+      "sha256": "5F152E8870216EB574EA7F5A71F472090A817A08657FC03D55CE28B4FA2C5B4A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__LevelThree.lean.txt",
+      "sha256": "B4EBEDA98BEE196F6C3256DB01A69538025D8B3EAF1602C07678100C6B757638"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Simultaneous.lean.txt",
+      "sha256": "A1ABD89FB4EA06EEDF88AFE45EBD221387639F8D2FA5BB97A495122B58BFDB07"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__YOne.lean.txt",
+      "sha256": "28BB6B996185726A127BEEE668591ED5828A42508B44242FD128285A886BF058"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+      "sha256": "400E1EC901B42E7526494B1AD652E2A14F62949258BD31FFE24A7509B134964A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+      "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+      "sha256": "382082B2596898E9998F06EE2DC75F85427F564A192ED6862EA893F79B3B0946"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+      "sha256": "29CB759CB8E2CD9C8DD094874409CC5A0A427F761F8C0CFFAF14508149471C05"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+      "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+      "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Basic.lean.txt",
+      "sha256": "5D7FEAFCCDCD43A0B9082FE652B3AFC3BFA8F6D8FBBD5EFBF303003A8AAD7954"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Fields.lean.txt",
+      "sha256": "40EBE8FD61437F210C3F763FFA5D52E1768CFE380421AA7E7CF2381A122E41E8"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Charpoly.lean.txt",
+      "sha256": "93E06AA18DC42790370A1BF75CDBA312F7FC9746E59F230B00048FA79E5A1655"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Integral.lean.txt",
+      "sha256": "51B247156BA3525C967E94001E1E7C348623EE0ADF5523535B7FE88340A69EA1"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Rational.lean.txt",
+      "sha256": "7AE39EFDA76887AD8218463FDE1C9A1B99AC69BA57F7C473D37647626998CC82"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Stability.lean.txt",
+      "sha256": "AF6292150DDB6DF0057BC56F5C28650ABABA1745EE2A4C619F289347F1C87A0E"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__NumberField.lean.txt",
+      "sha256": "87A7711A62FF7E54AF79E24DB90844EF1ADAABCA73DB994C96F96CE552D8D4AA"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Satake.lean.txt",
+      "sha256": "AB1FC1DE569DB7D833BF14FEE28E7AB39634643A6AA59FC1084B940105EE1E27"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Primitive.lean.txt",
+      "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-head.json",
+      "sha256": "C28AFF8E626872BFB74476EC7A924E05F5BF398BDF249FDED17CCB75E78F4265"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-lake-manifest.json.txt",
+      "sha256": "49FF62F27397E11D6BB697EA74F0DB6DE50356ADDE06B2860E7C62377621EB6A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-README.md.txt",
+      "sha256": "96511DB3FC568A12BB5553AA0001D9A9460F318B212CBCF3800DF7A2E549AF9A"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-tree.json",
+      "sha256": "B9C8B5FE51BFB567714ED704F97AA9E12A35A4BDA84A3E2C4F7DD01A14B43E47"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+      "sha256": "98376100B7A36BD7FE0222E094FA3866E0631A7845B0D65D9042E0C2D37D7969"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+      "sha256": "36066A37C06E5ED79765B3F2DA67E986B1C2C8A8EB9B376617ED0A6652D9B641"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+      "sha256": "C0A1182069ED48024D1D765F25D8E7AA5BBB58454A7EFC3B630F01C0E427A360"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+      "sha256": "51C3D5EF46E89AE1D022F447285736EC38FE7E53A17BD15E9825836CD28E534D"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+      "sha256": "D99FB41C43AE15FFB7F5AEC03FD2C91F3B56D8671C5594224BFF3289F390EE3D"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+      "sha256": "2A64360F61DE3575B2F933FC2FD5BB699B70C75838E45CDE6F31C92C058AD59B"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab-compare.json",
+      "sha256": "06EE729F02D278597F123BD4A078DD455783825322D3578FE2632D7E713CD25B"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab-complete-tree-delta.json",
+      "sha256": "DDDB22363289C91B89E9C355BE6EAC17F8F29476FA77B8D142F612E066F2DA53"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab-head-tree.json",
+      "sha256": "5BC35B3056F2115B9F3D71869031814D978286E14F03B6BFB862BFB911873CDC"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab-head.json",
+      "sha256": "D2236BE945FBA767F6A8EBE6D03A2D65F59F36902718662DDD2A56F7281ECDF4"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab-previousHead-tree.json",
+      "sha256": "9E8893492D813E0D5D46F0BDFFFFE9C169C6EE0E20FE7F42D566583880F9F498"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__diff__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "089C48D2B6673E8B6096EDD3A7ADF4A7BFA25AAF3D570907975D466126C8F921"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__diff__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "DF6D80FDDB1FD613165BBAD4506F8D0FF8880CEA7880C768FFE72107E61558BC"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__hunts__rung3_ball_production__lean__ExportShard.lean.txt",
+      "sha256": "18A31394EB653D698439E45211A5D30508A5CADE42C00CFABD97F7AAD3528681"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "89A973F7F29F02FF2514B12EFB0719D176672B02D32D4088E1195AA3793165E9"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "10CDE2BCEDB4C36EF5343F396DB66E07194A7C12438F722F3BEDB5CFEBDF53C2"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__previousHead__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "0689A6DAA0FA81ED690786F4D6F9FFB25167B60457B9A7C3527159F07ACA58F6"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/reuse-head-refresh-1159b/teal-sea__zeta-lab__previousHead__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "CF5314D8894903D96745A89DB9B2C839DE341D3978083F1375ED08FAB7A0A810"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/refresh_reuse_heads_1159.py",
+      "sha256": "2434713F36EE7B9AF5A90C387E6248469A6409618DF6F7721E109874AE39EF76"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/refresh_reuse_heads_1159b.py",
+      "sha256": "57AF833EF1FE1508133A6D8D5A9F935D1DA408D44A31C93417C40605B7B6846F"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/fetch_reuse_candidates_1160.py",
+      "sha256": "9CBDA9CB3C43EB0CDA350B412942F1622CD5446A181C126F9683A7982CD0F2BE"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/fetch_reuse_sources_1160b.py",
+      "sha256": "99C6740E5230BE38AAB1A553FE2BD7B318B121B293606851007E745B62718D04"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/fetch_reuse_diffs_1160c.py",
+      "sha256": "AAFD8A5CA8CBFF9E41C9C47AC892956266EC3C7667E6FB07126344976FBB148B"
+    },
+    {
+      "path": "Tools/reuse-refresh-20261028-1159/record_reuse_refresh_1164.py",
+      "sha256": "20F8A063DFD94D9FE88F83895D9C9A04226124CDCB8C703912FC74CED49C5C4A"
+    }
+  ],
+  "rootPinsChanged": false,
+  "externalImportsAdded": false,
+  "fullGoal": "16/20;DUB17--20 OPEN; all source obligations and acceptance gates unchanged"
+}

@@ -1,0 +1,34 @@
+import SourceGammaOneDiamondFieldRatios
+import SourceGammaOneFieldCuspGerm
+import SourceGammaOneDiamondFieldHom
+import SourceGammaOneDiamondFieldLabels
+import SourceGammaOneDiamondFieldJ
+import SourceLaurentAlgebraicCoefficient
+import SourceLaurentAlgebraicallyClosedLift
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe, `Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j, `Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation, `Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut]
+  let localModules : Array Name := #[`SourceGammaOneDiamondFieldRatios, `SourceGammaOneFieldCuspGerm, `SourceGammaOneDiamondFieldHom, `SourceGammaOneDiamondFieldLabels, `SourceGammaOneDiamondFieldJ, `SourceLaurentAlgebraicCoefficient, `SourceLaurentAlgebraicallyClosedLift, `SourceGammaOneDiamondCuspPrimitive, `SourceGammaOneDiamondPeriodH1, `SourceGammaOneDiamondPeriodLattice, `SourceGammaOneDiamondFiniteH1, `SourceGammaOneDiamondConjugation, `SourceGammaOneDiamondH1, `SourceGammaOneDiamondLabels, `SourceGammaOneUnitDiamondAction]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe, `Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j, `Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation, `Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_left_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver, `Dubon2026.sourceGammaOneDiamondLabel_lift, `Dubon2026.SourceFunctionField.JMultiplicity.jf_smul, `Dubon2026.SourceCurve.ConstantField.exists_translation_of_transcendental, `Dubon2026.SourceFunctionField.coeffMap]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND FIELD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the original complex Gamma1 field diamond, exact translated cusp germs, inverse and unit labels, fixed original j, and Laurent coefficient algebraicity/lift. Arithmetic field stability, Picard comparison and association remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

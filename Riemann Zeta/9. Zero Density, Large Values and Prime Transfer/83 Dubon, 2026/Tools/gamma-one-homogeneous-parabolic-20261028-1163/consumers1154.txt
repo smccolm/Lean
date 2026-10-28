@@ -1,0 +1,53 @@
+
+/-- Exact original-object consumer of `adelicFullAwayEmbedding_of_place_one`. -/
+theorem actual_full_place_complement_source  (v : HeightOneSpectrum ℤ)
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom v a = 1) :
+    ∃ b : AdelicFullAwayGroup v, adelicFullAwayEmbedding v b = a :=
+  adelicFullAwayEmbedding_of_place_one v a ha
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_local_mul`. -/
+theorem actual_normalized_local_product_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom (rationalPrimePlace p (Fact.out : p.Prime)) a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm
+      (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (rationalPrimePlace p (Fact.out : p.Prime)) g) * a) =
+      adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (rationalPrimePlace p (Fact.out : p.Prime)) g)) *
+      adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_local_mul F hpN g a ha
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_distinct_place_product`. -/
+theorem actual_normalized_distinct_product_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (l : List AdelicPlaceMatrix)
+    (hgood : ∀ a ∈ l, IsGoodAdelicPlace N a.1)
+    (hdistinct : l.Pairwise (fun a b => a.1 ≠ b.1)) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (l.map adelicPlaceMatrixEmbedding).prod =
+      (l.map (fun a => adelicNormalizedCuspCoefficient F.toCuspForm (adelicPlaceMatrixEmbedding a))).prod :=
+  adelicNormalizedCuspCoefficient_distinct_place_product F l hgood hdistinct
+
+/-- Exact original-object consumer of `adelicLocalFullAwayEquiv_symm_continuous`. -/
+theorem actual_full_factor_inverse_continuity_source  (v : HeightOneSpectrum ℤ) :
+    Continuous (adelicLocalFullAwayEquiv v).symm :=
+  adelicLocalFullAwayEquiv_symm_continuous v
+
+/-- Exact original-object consumer of `adelicPlaceGL2Hom_finitePlaceProduct`. -/
+theorem actual_finite_place_evaluation_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (i : I)
+    (g : ∀ j, GeneralLinearGroup (Fin 2) ((v j).adicCompletion ℚ)) :
+    adelicPlaceGL2Hom (v i) (adelicFinitePlaceProduct v hv g) = g i :=
+  adelicPlaceGL2Hom_finitePlaceProduct v hv i g
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_injective`. -/
+theorem actual_finite_place_product_faithful_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) : Function.Injective (adelicFinitePlaceProduct v hv) :=
+  adelicFinitePlaceProduct_injective v hv
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_mul_removal`. -/
+theorem actual_finite_place_remainder_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (a : RationalAdelicGL2) :
+    adelicFinitePlaceProduct v hv (fun i => adelicPlaceGL2Hom (v i) a) * adelicFinitePlaceRemoval v hv a = a :=
+  adelicFinitePlaceProduct_mul_removal v hv a
+
+/-- The actual finite-local-family and full-complement coordinate map is a genuine bijection onto original full adelic GL2. -/
+theorem actual_finite_family_group_factor_source {I : Type*} [Fintype I]
+    (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) :
+    Function.Bijective (adelicFiniteFamilyEquiv v hv) :=
+  (adelicFiniteFamilyEquiv v hv).bijective
+

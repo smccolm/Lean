@@ -1,0 +1,126 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T09:44:54.033602+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondConjugation",
+    "SourceGammaOneDiamondH1",
+    "SourceGammaOneDiamondLabels",
+    "SourceGammaOneUnitDiamondAction"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation.lean",
+      "sha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257",
+      "oleanSha256": "EA3BA359B8C8BE67A9AD7719A65253ACAC4B1577482AF11D6BB9D042701B0C79",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH1.lean",
+      "sha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6",
+      "oleanSha256": "8A4FA4BFC84357928AAE5A6EA71FBE163E58B0031B7F46FD0AC82ED501DDB512",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels.lean",
+      "sha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3",
+      "oleanSha256": "037265201D26306CC70BE2877E6E6E74C3A473CAE443AEBD51ED520BE218D30F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction.lean",
+      "sha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7",
+      "oleanSha256": "14076F1A5A55658FED6BCF31C08EC11025A6141E00EA3D0E77F695763742E8D2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneDiamond_conj_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+    "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+    "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+    "Dubon2026.sourceGammaOneDiamondH1_comp",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+    "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLabel_lift",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation",
+    "Dubon2026.sourceGammaOneDiamondMorphism",
+    "Dubon2026.sourceGammaOneDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneDiamond_conj_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+    "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+    "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+    "Dubon2026.sourceGammaOneDiamondH1_comp",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+    "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLabel_lift",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneDiamondConjugation",
+    "Dubon2026.sourceGammaOneDiamondMorphism",
+    "Dubon2026.sourceGammaOneDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAudit1.log",
+  "logSha256": "B8B594B6425CE659A0932D5BFB62F7DB711AFBC52422F67993293240EC1EB6ED",
+  "auditSha256": "F0872D4825E9B58150EF44D2C525C61A5D7236B5F5E4740E83E9F8E90E358712",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+  "ownershipSha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6",
+  "exhaustiveTheorems": 35,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1.log",
+  "dependencyAuditSha256": "8A71667D1B2C21AC9AF1409A866E1CECF13B447FB5754E31B4817B4226E1BEE4",
+  "dependencyAuditSourceSha256": "DE98F6A3DB2099DE3E52EA8B3ED8FCEE4A094CD9323E598879940BA690CB413C",
+  "consumers": [
+    "Dubon2026.sourceGammaOneDiamond_conj_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation_trace",
+    "Dubon2026.sourceGammaOneDiamondConjugation_mul",
+    "Dubon2026.sourceGammaOneDiamondH1_hom_apply",
+    "Dubon2026.sourceGammaOneDiamondH1_comp",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem",
+    "Dubon2026.sourceGammaOneDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLabel_lift",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_eq",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_one",
+    "Dubon2026.sourceGammaOneUnitDiamondH1_mul",
+    "Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem",
+    "Dubon2026.sourceGammaOneDiamondConjugation",
+    "Dubon2026.sourceGammaOneDiamondMorphism",
+    "Dubon2026.sourceGammaOneDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1",
+    "Dubon2026.sourceGammaOneUnitDiamondH1Hom"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison on actual native parabolic H1.",
+  "discharged": [
+    "Literal Gamma0 conjugation preserves actual Gamma1 and trace.",
+    "The native H1 map has the exact conjugated-character formula with an explicit coefficient endomorphism.",
+    "Its action on constant-coefficient H1 is independent of the lift, every unit label has a lift, and the unit-labelled operators form a monoid action.",
+    "The same actual original homogeneous-valued parabolic H1 is stable under these maps."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Analytic-period and arithmetic Picard/Tate diamond compatibility and identification of the original homogeneous coefficient convention remain. The separately stated parabolic transfer lifting, exceptional primes, Frobenius/inertia and original all-weight association are still open. No finite character or characteristic-zero lift is inferred.16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "1D9324A8015B759465C2327AF582FF7E9E33F85A5AA10551BE0F02E8EAFE73C2",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

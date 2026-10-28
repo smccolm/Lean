@@ -1,0 +1,19 @@
+[
+  "AdelicBadPlaceFamily",
+  "AdelicBadRealBaseCoordinates",
+  "AdelicBadRealBaseEquivariance",
+  "AdelicBadRealTensorBase",
+  "AdelicEveryFiniteTensorIsometry",
+  "AdelicFiniteRealTensor",
+  "AdelicFiniteRealTensorAction",
+  "AdelicRealFinitePlaceCoordinates",
+  "AdelicSplitActionOnStage",
+  "AdelicSplitAlgebraicAction",
+  "AdelicSplitCompletedAction",
+  "AdelicSplitStageAction",
+  "AdelicSplitStageMaps",
+  "AdelicSplitTensorChain",
+  "AdelicSplitTensorCompletion",
+  "AdelicSplitTensorDensity",
+  "AdelicSplitTensorDirectLimit"
+]

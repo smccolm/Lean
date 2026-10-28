@@ -1,0 +1,126 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T09:56:37.878767+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondCuspPrimitive",
+    "SourceGammaOneDiamondPeriodH1",
+    "SourceGammaOneDiamondPeriodLattice",
+    "SourceGammaOneDiamondFiniteH1"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive.lean",
+      "sha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C",
+      "oleanSha256": "83139C6D389EA7E40081C2CDCF9DF4E8AAEFBC3E97487F4005065D2ACFC75A81",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH1.lean",
+      "sha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4",
+      "oleanSha256": "C788433C68581F6162018E9A9E43B7DC70AC77A70D0C4E7712FDCA90BCD12717",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice.lean",
+      "sha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37",
+      "oleanSha256": "C6C8EDCC953F1B84FFB03D1AAF6FF6D18DA74A51F8F58E784C8153B0A75FF47B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH1.lean",
+      "sha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F",
+      "oleanSha256": "E23E968C5D7BDE9993E4F6CA25C142680BCDEE16F18328B16A54F27ED1583331",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodAudit1.log",
+  "logSha256": "A075231EF15062E44ADD6772384E3DFBAC96E5E2E9BC07A8C999088C8B5D2006",
+  "auditSha256": "9D5D2AC45AA44E664B4B54C47A17EB947CAC43BAE98EC0A92FE365F8B899E023",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+  "ownershipSha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E",
+  "exhaustiveTheorems": 33,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 28,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1.log",
+  "dependencyAuditSha256": "8F3881F58A761702BFD9E68532457DD27B7585145A94DC131D37CBB517652133",
+  "dependencyAuditSourceSha256": "F9F195B7BF06BBE8219C70FCF956EFED89E84C0F43434D9D4429C17539AE07A6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference",
+    "Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash, original integral periods and homogeneous-valued native H1 transpose.",
+  "discharged": [
+    "The literal slash diamond is an actual Gamma1 cusp form.",
+    "Its exact original endpoint and group-period identities and real H1 intertwining are proved.",
+    "The dual slash operator preserves the original integer lattice without a stability premise.",
+    "The original homogeneous-valued lattice/H1 equivalence intertwines its transpose with the native diamond and an explicit coefficient endomorphism."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "63D03CFACC064D9823D07141C2B4801DD1DA756EA8E30168B326A3FFA101BD95",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

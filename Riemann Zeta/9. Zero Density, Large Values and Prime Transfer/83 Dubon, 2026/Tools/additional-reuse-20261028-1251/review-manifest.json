@@ -1,0 +1,195 @@
+{
+  "recordedUTC": "2026-10-28T13:55:05.456487+00:00",
+  "repositories": [
+    {
+      "repository": "F-Najman/normalizer-lean",
+      "revision": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+      "commitDate": "2026-10-22T16:04:16Z"
+    },
+    {
+      "repository": "tomdif/eml-lean",
+      "revision": "72bfdee3487e9705c58afef21bdfd384c22354e3",
+      "commitDate": "2026-05-13T00:11:34Z"
+    }
+  ],
+  "registrationRetry": "First registration stopped before mutation on the explicitly recorded optional LICENSE HTTP 404. This successor verifies that precise absence and hashes every successfully fetched file.",
+  "projectPinsChanged": false,
+  "files": [
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/candidate-fetch-manifest-1251b.json",
+      "sha256": "CD192B4D6AD7023199378A5CC0B9A57BC28BFBC818EB50D061918588A6BC6833",
+      "bytes": 831
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/candidate-fetch-manifest-1251c.json",
+      "sha256": "9BF340F72AF318C1678085C19B2A6B313FB09A4D837265BF1BAA828FC6A230ED",
+      "bytes": 1143
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/candidates.json",
+      "sha256": "6B4EB07CF0286FE30ABB8819D60EC8D8B5C7C0F79CF4574CB372DB49CA96821C",
+      "bytes": 104
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/commit.json",
+      "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81",
+      "bytes": 4893
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/fetch-manifest.json",
+      "sha256": "F0E08FEBE820DA031B0576D31AB5BBEAD7D6635C4F9CF683915095A828ACB203",
+      "bytes": 2199
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/lake-manifest.json.txt",
+      "sha256": "C034EFD033E3F0F3BBBA882369D757A62EFE728E499FAED4F3D484FD7855338B",
+      "bytes": 3140
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+      "bytes": 29
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "bytes": 11357
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/NormalizerDelta/DefsXN.lean.txt",
+      "sha256": "2431118DE0CD3DE24F25974F6E1C5E43C3EA1D3C9527CA83853B502F7CB4E872",
+      "bytes": 279
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/NormalizerDelta/ProofsXN.lean.txt",
+      "sha256": "D2A7A9999D97302880ED7308F6B2ADD643812ED01456F1CD43867EC95A9745DB",
+      "bytes": 44
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/NormalizerDelta/StatementsXN.lean.txt",
+      "sha256": "FB94BB5445316EA1E688E3716E48F7FCC87BC9BB8454B34BCE98E5809854A817",
+      "bytes": 7106
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/NormalizerDelta/XNOrder.lean.txt",
+      "sha256": "E4DDFB9142C14576222DA546DAC1A450829E5B7C62CC8DF00DEC607D5959393F",
+      "bytes": 8918
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/NormalizerLean/Defs.lean.txt",
+      "sha256": "0635B5F0AEBABC0649E161BCE6672D3B77890D8A4D2083A3356F3C31DD1A75D8",
+      "bytes": 38228
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/README.md.txt",
+      "sha256": "3E9A677FB1F4AB734E9ED46C7DDE31EEB9A141816E5C395301F6A05F21C6EF26",
+      "bytes": 59272
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/repository.json",
+      "sha256": "76DA13AF1D586AA284DA9BA923209C645C6BA1DA9D4790BBA0D44784C0D1AE54",
+      "bytes": 5572
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/F-Najman--normalizer-lean/tree.json",
+      "sha256": "D5A911F4C55A1168BEFF92E0B02CD71DD7A0920A7B7FD6C24029949A47F43F43",
+      "bytes": 66194
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/candidate-fetch-manifest-1251c.json",
+      "sha256": "1742217DF7CBA38767250EE15D20701F86A4AC3934AAB85716AF45A55C06D13F",
+      "bytes": 788
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/candidates.json",
+      "sha256": "7DBF49C799A1EE835ED14C6408F77005442D286EFEEBD2331BF186D7814998DB",
+      "bytes": 63
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/commit.json",
+      "sha256": "2CAFE10A2F39942D2DB998F6C01722297402E8E34630AFEBAB2C2E908D3B243C",
+      "bytes": 7902
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/EML/EichlerIntegral.lean.txt",
+      "sha256": "3AAD1204B86F85FFA05D00B18BE0193B088D999CB59F31E63227848985CDBB3F",
+      "bytes": 17016
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/EML/HeckeAction.lean.txt",
+      "sha256": "4EA286847F11538F57F11331C49F0FA401D137A6F7EAD072E6E2F6A53C77BA11",
+      "bytes": 19263
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/fetch-manifest.json",
+      "sha256": "C0474562BC2F296FEEF47258BE075370515A23838491A7F95F89FD3DAFA091ED",
+      "bytes": 2040
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/lake-manifest.json.txt",
+      "sha256": "D0DE033FBA2896B16C28B7DEAE43C2B23266D2383C61034FBE9964E5FDA36ADD",
+      "bytes": 3114
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/lean-toolchain.txt",
+      "sha256": "651C8ACCB402B0C071CD336E9D3DC0A55516B1BFB434DDC4801F14936785B1D2",
+      "bytes": 25
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/README.md.txt",
+      "sha256": "D35093B8CB87427B06410F5B71A5DDC642335D00D7225B07BA16F1369BA936AD",
+      "bytes": 20466
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/repository.json",
+      "sha256": "3278C1ADCC8436FFAF3D5B284A4AAF70FF1EFAE37C0F3DB98F030320A26C0FE2",
+      "bytes": 4984
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/tomdif--eml-lean/tree.json",
+      "sha256": "E462227488154433A1380B9464366E2A4C4EA4899FC8A0FBDD544802EA8C30F9",
+      "bytes": 9165
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/fetch_followup_reuse_1251.py",
+      "sha256": "9299950BF98F362D21242D6177B573A81F4313564A76278F5C4D89525F384108",
+      "bytes": 2104
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/fetch_followup_candidates_1251b.py",
+      "sha256": "75B1AACDBECCB563A9A1BBF744AECEDB0A25668937030ED38ECA7F847A491606",
+      "bytes": 1241
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/fetch_followup_candidates_1251c.py",
+      "sha256": "144AB73489D3185C6472B49F824C1661FC7DF7D4C7980B6E33526AE963365828",
+      "bytes": 1287
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/register_additional_reuse_1263.py",
+      "sha256": "6901251AFBCFAACFC5AF7B8186B70297DAA396474D7FF2407990C2EE83F80034",
+      "bytes": 3618
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/register_additional_reuse_1263b.py",
+      "sha256": "D23D3471A39BF50C10115C92499B186C12E744D063308B3638C3EA2525B42543",
+      "bytes": 4128
+    },
+    {
+      "path": "Tools/additional-reuse-20261028-1251/prepare_additional_reuse_registration_1263b.py",
+      "sha256": "660C6617BB94EB30497D9DD9695A7D7106E83D1DF76D37BAFA8E37A2FFC45CED",
+      "bytes": 1105
+    },
+    {
+      "path": "Dubon Additional Reuse Candidates 2026-10-28.md",
+      "sha256": "A68E669CA6000B594429EE79F68C02D0664CC694671CF409D52E8170249E0DEF",
+      "bytes": 4797
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "externalAxiomAudit": false,
+  "productionProofAdoption": false,
+  "dependency": "DUB17/18 -> literal higher symmetric continuation -> automorphy -> original all-weight association -> original Gamma1 geometric reduction, arithmetic Picard/Tate Frobenius and inertia comparison",
+  "status": "Selected normalizer index formulas are a deferred candidate if the exact original genus/degree input requires them. Selected eml-lean statements have assumptions/admissions and do not supply the required construction. This is a bounded source review, not an assertion that no reusable proof exists. 16/20; DUB17--20 OPEN."
+}

@@ -1,0 +1,32 @@
+import SourceGammaOneDiamondCoefficient
+import SourceGammaOneDiamondRestriction
+import SourceGammaOneDiamondCoefficientMatrix
+import SourceGammaOneBinaryNormalizerTate
+import SourceGammaOneBinaryDiamondLabels
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneDiamondLift_gammaOne, `Dubon2026.sourceGammaOneDiamondLift_conjugation, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond, `Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond, `Dubon2026.sourceGammaOneDiamondLift_mod, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent, `Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent, `Dubon2026.sourceGammaOneDiamondLift, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient]
+  let localModules : Array Name := #[`SourceGammaOneDiamondCoefficient, `SourceGammaOneDiamondRestriction, `SourceGammaOneDiamondCoefficientMatrix, `SourceGammaOneBinaryNormalizerTate, `SourceGammaOneBinaryDiamondLabels, `SourceGammaOneDiamondPeriodInclusion, `SourceGammaOneBinaryDiamondTateH1, `SourceCyclotomicDiamondCovariance, `SourceRationalDiamondFraction, `SourceRationalCuspDiamondImage, `SourceRationalModularCuspQuotient, `SourceRationalDiamondQuotientGerm, `SourceRationalDiamondCoefficients, `SourceGammaOneDiamondRationalGenerators, `SourceGammaOneDiamondComplexArithmetic, `SourceGammaOneArithmeticDiamondGenerators, `SourceGammaOneArithmeticDiamondGalois, `SourceGammaOneDiamondGaloisPicard, `SourceGammaOneDiamondAnalyticGerms, `SourceGammaOneDiamondAnalyticPlaces, `SourceGammaOneDiamondAnalyticDivisors, `SourceGammaOneDiamondEndpoint, `SourceGammaOneDiamondPicardPeriods, `SourceGammaOneDiamondComplexComparison, `SourceGammaOneArithmeticDiamondTate, `SourceGammaOneDiamondPeriodTate, `SourceGammaOneDiamondArithmeticRelation, `SourceLaurentCoefficientProjection, `SourceLaurentFieldIntersection, `SourceGammaOneDiamondArithmeticLift, `SourceGammaOneArithmeticDiamond, `SourceCurveFieldEquivPicard, `SourceGammaOneDiamondPicard, `SourceGammaOneDiamondFieldRatios, `SourceGammaOneFieldCuspGerm, `SourceGammaOneDiamondFieldHom, `SourceGammaOneDiamondFieldLabels, `SourceGammaOneDiamondFieldJ, `SourceLaurentAlgebraicCoefficient, `SourceLaurentAlgebraicallyClosedLift, `SourceGammaOneDiamondCuspPrimitive, `SourceGammaOneDiamondPeriodH1, `SourceGammaOneDiamondPeriodLattice, `SourceGammaOneDiamondFiniteH1, `SourceGammaOneDiamondConjugation, `SourceGammaOneDiamondH1, `SourceGammaOneDiamondLabels, `SourceGammaOneUnitDiamondAction]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneDiamondLift_gammaOne, `Dubon2026.sourceGammaOneDiamondLift_conjugation, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond, `Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond, `Dubon2026.sourceGammaOneDiamondLift_mod, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent, `Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent, `Dubon2026.sourceGammaOneDiamondLift, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient, `Dubon2026.sourceRaisedLevelConjugation, `Dubon2026.sourceGammaOneDiagonalHom_binary_trivial, `Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneDiamondH1_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE DIAMOND NORMALIZER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the original lifted normalizer and its inverse binary coefficient action, original cocycle/H1 restriction invariance, exact homogeneous diagonal substitution, arithmetic Tate/H1 and Galois comparison, and lift independence. Parabolic transfer preimages, exceptional primes, Frobenius/inertia, characteristic-zero association and higher continuation remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

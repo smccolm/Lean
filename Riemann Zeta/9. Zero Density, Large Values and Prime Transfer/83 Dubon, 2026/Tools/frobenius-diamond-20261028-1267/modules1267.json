@@ -1,0 +1,18 @@
+[
+  "AdelicFullFiniteCoreCompletion",
+  "AdelicFullRealHilbertBasis",
+  "AdelicFullRealWeightLines",
+  "AdelicIntegerProjectionReal",
+  "AdelicIntegerRotationWeightSpace",
+  "AdelicIntegerWeightAdmissible",
+  "AdelicIntegerWeightFiniteClosure",
+  "AdelicMissingIntegerWeight",
+  "AdelicRealFiniteClosureGram",
+  "AdelicSignedFiniteAction",
+  "AdelicSignedFiniteCompletion",
+  "AdelicSignedFiniteIsometry",
+  "AdelicSignedRaisingClosure",
+  "AdelicSignedRaisingFamily",
+  "AdelicSignedWeightAdmissible",
+  "ContinuousGramClosure"
+]

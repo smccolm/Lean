@@ -1,0 +1,69 @@
+import SourceGammaOneFiniteParabolicCharacters
+import Dubon2026.SourceFiniteOrderTrace
+import Dubon2026.SourcePrimitiveGammaOneH1Realization
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> finite
+Gamma1 H1/Tate comparison -> discharge the finite-order vanishing
+condition at the actual application levels. Reuse the proved integral
+finite-order trace bound and the literal Gamma1 congruences. At level
+at least four, every finite-order element has squared trace four, so
+parabolic vanishing already kills it. No new torsion-free group theory
+or restriction on the coefficient modulus is needed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+open CongruenceSubgroup
+open scoped MatrixGroups
+
+theorem finiteOrder_trace_sq_four (M : ℕ) (hM : 4 ≤ M)
+    (γ : Gamma1 M) (hγ : IsOfFinOrder γ) : γ.val.val.trace ^ 2 = 4 := by
+  obtain ⟨k, hk, he⟩ := (Submonoid.isOfFinOrder_coe.mpr hγ).exists_pow_eq_one
+  rcases SourceFiniteOrder.offDiag_eq_zero_or_natAbs_trace_le_one γ.val hk he with hd | ht
+  · have hdet := γ.val.det_coe
+    rw [Matrix.det_fin_two, hd.1, hd.2, mul_zero, sub_zero] at hdet
+    rcases Int.eq_one_or_neg_one_of_mul_eq_one' hdet with ⟨ha, hb⟩ | ⟨ha, hb⟩ <;>
+      rw [Matrix.trace_fin_two_of, ha, hb] <;> norm_num
+  · obtain ⟨ha, hb, _⟩ := (Gamma1_mem M γ.val).mp γ.property
+    have hc : ((2 - (γ.val 0 0 + γ.val 1 1) : ℤ) : ZMod M) = 0 := by
+      push_cast
+      rw [ha, hb]
+      ring
+    have hdiv : (M : ℤ) ∣ 2 - (γ.val 0 0 + γ.val 1 1) :=
+      (ZMod.intCast_zmod_eq_zero_iff_dvd _ M).mp hc
+    have hbound : |γ.val 0 0 + γ.val 1 1| ≤ 1 := by
+      rw [Int.abs_eq_natAbs]
+      exact_mod_cast ht
+    have hpos : 0 < 2 - (γ.val 0 0 + γ.val 1 1) := by
+      have := (abs_le.mp hbound).2
+      omega
+    have hle := Int.le_of_dvd hpos hdiv
+    have := (abs_le.mp hbound).1
+    omega
+
+theorem finiteOrder_character_zero_of_parabolic (M n : ℕ) (hM : 4 ≤ M)
+    (φ : Additive (Gamma1 M) →+ ZMod n)
+    (hpar : ∀ γ : Gamma1 M, γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0)
+    (γ : Gamma1 M) (hγ : IsOfFinOrder γ) : φ (Additive.ofMul γ) = 0 :=
+  hpar γ (finiteOrder_trace_sq_four M hM γ hγ)
+
+theorem finiteParabolicHoms_mem_iff_of_level (M n : ℕ) (hM : 4 ≤ M)
+    (φ : Additive (Gamma1 M) →+ ZMod n) :
+    φ ∈ finiteParabolicHoms M n ↔
+      ∀ γ : Gamma1 M, γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0 :=
+  ⟨fun h => h.1, fun h => ⟨h, finiteOrder_character_zero_of_parabolic M n hM φ h⟩⟩
+
+theorem originalGammaOne_level_ge_four (Q p n : ℕ) [NeZero Q] (hlarge : 3 < p) :
+    4 ≤ Q * (p ^ (n + 1)) ^ 2 := by
+  have hQ : 1 ≤ Q := Nat.one_le_iff_ne_zero.mpr (NeZero.ne Q)
+  have hp : p ≤ p ^ (n + 1) := Nat.le_self_pow (by omega) p
+  nlinarith
+
+theorem originalGammaOne_finiteOrder_character_zero
+    (Q p n : ℕ) [NeZero Q] (hlarge : 3 < p)
+    (φ : Additive (Gamma1 (Q * (p ^ (n + 1)) ^ 2)) →+ ZMod (p ^ (n + 1)))
+    (hpar : ∀ γ : Gamma1 (Q * (p ^ (n + 1)) ^ 2),
+      γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0)
+    (γ : Gamma1 (Q * (p ^ (n + 1)) ^ 2)) (hγ : IsOfFinOrder γ) :
+    φ (Additive.ofMul γ) = 0 :=
+  finiteOrder_character_zero_of_parabolic _ _ (originalGammaOne_level_ge_four Q p n hlarge)
+    φ hpar γ hγ
+
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,42 @@
+import SourceOriginalIntegralParabolicCocycleSpan
+import SourceOriginalParabolicEigensystem
+
+/-! DUB17/18 -> original all-weight association -> original integral
+parabolic Hecke character. The native cocycle quotient transports the
+integral parabolic span to the actual original period eigenclass.
+No finite-character descent or characteristic-zero lift is inferred. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology
+
+theorem sourceOriginalBinaryPeriodH1_mem_integralParabolic_span
+    (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) :
+    sourceOriginalBinaryPeriodCohomology Q k hk f ∈
+      Submodule.span ℂ (sourceBinaryH1Change (Int.castRingHom ℂ) Q (k - 2).toNat ''
+        (sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat) :
+          Set (H1 (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat)))) := by
+  rw [← sourceOriginalBinaryPeriodCocycle_class]
+  have hspan := sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span Q k hk f
+  induction hspan using Submodule.span_induction with
+  | mem c hc =>
+    obtain ⟨z, hz, rfl⟩ := hc
+    rw [← sourceBinaryH1Change_cocycle]
+    exact Submodule.subset_span ⟨H1π _ z,
+      (sourceParabolicH1_cocycle_iff _ _ _).mpr hz, rfl⟩
+  | zero => rw [map_zero]; exact Submodule.zero_mem _
+  | add c d _ _ hc hd => rw [map_add]; exact Submodule.add_mem _ hc hd
+  | smul a c _ hc => rw [map_smul]; exact Submodule.smul_mem _ _ hc
+
+theorem sourcePrimitive_originalIntegralParabolic_span
+    {Q : ℕ} [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm ≠ 0 ∧
+    sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm ∈
+      Submodule.span ℂ (sourceBinaryH1Change (Int.castRingHom ℂ) Q (k - 2).toNat ''
+        (sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat) :
+          Set (H1 (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat)))) :=
+  ⟨sourceOriginalBinaryPeriodCohomology_primitive_nonzero f hk,
+    sourceOriginalBinaryPeriodH1_mem_integralParabolic_span Q k hk f.toCuspForm⟩
+
+end
+end Dubon2026

@@ -1,0 +1,20 @@
+{
+  "recordedUTC": "2026-10-28T12:47:45.449169+00:00",
+  "revision": "72bfdee3487e9705c58afef21bdfd384c22354e3",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/EML/EichlerIntegral.lean",
+      "path": "EML/EichlerIntegral.lean.txt",
+      "sha256": "3AAD1204B86F85FFA05D00B18BE0193B088D999CB59F31E63227848985CDBB3F",
+      "bytes": 17016
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/EML/HeckeAction.lean",
+      "path": "EML/HeckeAction.lean.txt",
+      "sha256": "4EA286847F11538F57F11331C49F0FA401D137A6F7EAD072E6E2F6A53C77BA11",
+      "bytes": 19263
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,69 @@
+import SourceGammaOneDiamondConjugation
+import Dubon2026.SourceGammaOneBinaryParabolicH1
+
+/-! DUB17/18 -> original all-weight association -> arithmetic Gamma1
+realization -> diamond comparison. Define the literal conjugation map
+using native group cohomology, with the coefficient endomorphism visible.
+The native character formula proves preservation of the actual original
+homogeneous-valued parabolic H1. Unit-label independence, periods and
+arithmetic compatibility remain separate obligations. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory
+variable (R V : Type) [CommRing R] [AddCommGroup V] [Module R V]
+    (M : ℕ) (g : Gamma0 M) (b : Module.End R V)
+
+/-- The explicit coefficient map for literal Gamma0 conjugation on Gamma1. -/
+def sourceGammaOneDiamondMorphism :
+    Rep.res (sourceGammaOneDiamondConjugation M g) (Rep.trivial R (Gamma1 M) V) ⟶
+      Rep.trivial R (Gamma1 M) V :=
+  Rep.ofHom {
+    toLinearMap := b
+    isIntertwining' := by intro γ; apply LinearMap.ext; intro x; rfl }
+
+/-- Native H1 pullback along literal conjugation, followed by the coefficient map. -/
+def sourceGammaOneDiamondH1 : Module.End R (H1 (Rep.trivial R (Gamma1 M) V)) :=
+  (groupCohomology.map (sourceGammaOneDiamondConjugation M g)
+    (sourceGammaOneDiamondMorphism R V M g b) 1).hom
+
+theorem sourceGammaOneDiamondH1_hom_apply
+    (x : H1 (Rep.trivial R (Gamma1 M) V)) (γ : Gamma1 M) :
+    (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) V)).hom
+      (sourceGammaOneDiamondH1 R V M g b x) (Additive.ofMul γ) =
+        b ((H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) V)).hom x
+          (Additive.ofMul (sourceGammaOneDiamondConjugation M g γ))) := by
+  induction x using H1_induction_on with
+  | h c =>
+    change (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) V)).hom
+      ((groupCohomology.map _ _ 1) (H1π _ c)) _ = _
+    rw [H1π_comp_map_apply, H1IsoOfIsTrivial_H1π_apply_apply,
+      H1IsoOfIsTrivial_H1π_apply_apply]
+    rfl
+
+theorem sourceGammaOneDiamondH1_comp (h : Gamma0 M) (c : Module.End R V)
+    (x : H1 (Rep.trivial R (Gamma1 M) V)) :
+    sourceGammaOneDiamondH1 R V M g b (sourceGammaOneDiamondH1 R V M h c x) =
+      sourceGammaOneDiamondH1 R V M (h * g) (b.comp c) x := by
+  apply (ConcreteCategory.bijective_of_isIso
+    (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) V)).hom).injective
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, sourceGammaOneDiamondH1_hom_apply, sourceGammaOneDiamondH1_hom_apply,
+    sourceGammaOneDiamondH1_hom_apply, sourceGammaOneDiamondConjugation_mul]
+  rfl
+
+theorem sourceGammaOneBinaryParabolicH1_diamond_mem
+    (Q N w : ℕ) [NeZero Q] [NeZero N] (g : Gamma0 (Q * N ^ 2))
+    (b : Module.End (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w))
+    {x : H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2))
+      (sourceBinaryCoefficientRep (ZMod N) Q w))}
+    (hx : x ∈ SourceFunctionField.GammaOne.binaryParabolicH1 Q N w) :
+    sourceGammaOneDiamondH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) g b x ∈ SourceFunctionField.GammaOne.binaryParabolicH1 Q N w := by
+  intro γ hγ
+  rw [sourceGammaOneDiamondH1_hom_apply, hx (sourceGammaOneDiamondConjugation _ g γ)
+    (by rw [sourceGammaOneDiamondConjugation_trace]; exact hγ), map_zero]
+
+end
+end Dubon2026

@@ -1,0 +1,242 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-head-tree.json",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/ee6c124192fb5146db438068b8df8d84d8da4cf0?recursive=1",
+    "sha256": "2EE6519E78C56217A35D15486193940928DC335615DE19EA203CD720805A4BAB",
+    "retrievedUTC": "2026-10-28T07:50:17.931477+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-head-tree.json",
+    "url": "https://api.github.com/repos/teal-sea/zeta-lab/git/trees/f2dde1dfecc73ce687476b8606841d96a5a8f029?recursive=1",
+    "sha256": "5BC35B3056F2115B9F3D71869031814D978286E14F03B6BFB862BFB911873CDC",
+    "retrievedUTC": "2026-10-28T07:50:17.615373+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-previousHead-tree.json",
+    "url": "https://api.github.com/repos/teal-sea/zeta-lab/git/trees/9c492e8a8b91c6a8787a4536102194f511478c6b?recursive=1",
+    "sha256": "9E8893492D813E0D5D46F0BDFFFFE9C169C6EE0E20FE7F42D566583880F9F498",
+    "retrievedUTC": "2026-10-28T07:50:17.613370+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Integral.lean",
+    "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77",
+    "retrievedUTC": "2026-10-28T07:50:16.775895+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Map.lean",
+    "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD",
+    "retrievedUTC": "2026-10-28T07:50:16.794033+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Injective.lean",
+    "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04",
+    "retrievedUTC": "2026-10-28T07:50:16.756694+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Period/Hecke.lean",
+    "sha256": "29CB759CB8E2CD9C8DD094874409CC5A0A427F761F8C0CFFAF14508149471C05",
+    "retrievedUTC": "2026-10-28T07:50:16.932232+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Diamond.lean",
+    "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703",
+    "retrievedUTC": "2026-10-28T07:50:16.973376+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/ModularSymbols/Hecke/Finite.lean",
+    "sha256": "382082B2596898E9998F06EE2DC75F85427F564A192ED6862EA893F79B3B0946",
+    "retrievedUTC": "2026-10-28T07:50:16.973376+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Integral.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Hecke/Integral.lean",
+    "sha256": "51B247156BA3525C967E94001E1E7C348623EE0ADF5523535B7FE88340A69EA1",
+    "retrievedUTC": "2026-10-28T07:50:17.121224+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Rational.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Hecke/Rational.lean",
+    "sha256": "7AE39EFDA76887AD8218463FDE1C9A1B99AC69BA57F7C473D37647626998CC82",
+    "retrievedUTC": "2026-10-28T07:50:17.137728+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Stability.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Hecke/Stability.lean",
+    "sha256": "AF6292150DDB6DF0057BC56F5C28650ABABA1745EE2A4C619F289347F1C87A0E",
+    "retrievedUTC": "2026-10-28T07:50:17.144231+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Charpoly.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Hecke/Charpoly.lean",
+    "sha256": "93E06AA18DC42790370A1BF75CDBA312F7FC9746E59F230B00048FA79E5A1655",
+    "retrievedUTC": "2026-10-28T07:50:17.294382+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__NumberField.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/NumberField.lean",
+    "sha256": "87A7711A62FF7E54AF79E24DB90844EF1ADAABCA73DB994C96F96CE552D8D4AA",
+    "retrievedUTC": "2026-10-28T07:50:17.343735+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Satake.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Satake.lean",
+    "sha256": "AB1FC1DE569DB7D833BF14FEE28E7AB39634643A6AA59FC1084B940105EE1E27",
+    "retrievedUTC": "2026-10-28T07:50:17.313161+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Fields.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Fields.lean",
+    "sha256": "40EBE8FD61437F210C3F763FFA5D52E1768CFE380421AA7E7CF2381A122E41E8",
+    "retrievedUTC": "2026-10-28T07:50:17.450210+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Basic.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Newforms/Basic.lean",
+    "sha256": "5D7FEAFCCDCD43A0B9082FE652B3AFC3BFA8F6D8FBBD5EFBF303003A8AAD7954",
+    "retrievedUTC": "2026-10-28T07:50:17.532032+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Primitive.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/Primitive.lean",
+    "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F",
+    "retrievedUTC": "2026-10-28T07:50:17.508486+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/NumberTheory/ModularForms/GaloisProd.lean",
+    "sha256": "400E1EC901B42E7526494B1AD652E2A14F62949258BD31FFE24A7509B134964A",
+    "retrievedUTC": "2026-10-28T07:50:17.618371+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Comparison.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Comparison.lean",
+    "sha256": "6D90A3DCF13CA09BDF5DA28A44969DAA2A59726CB7FD37D35F263E7603B70249",
+    "retrievedUTC": "2026-10-28T07:50:17.683404+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Ell.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Ell.lean",
+    "sha256": "16CB4A459A740673016DCAD655587AB2ABEEC32C0A4ACB1F73F37017E6814207",
+    "retrievedUTC": "2026-10-28T07:50:17.700912+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__FullLevel.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/FullLevel.lean",
+    "sha256": "432B7AFA7CEDD20B1F1CFC8CB37B93FFC85343F9B16EEA616FEBB41F062D4585",
+    "retrievedUTC": "2026-10-28T07:50:17.804841+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Full.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Gamma/Full.lean",
+    "sha256": "9CC1AD2987793001E204A53CEA168B0FFDB18A6A18E8254973CDE87DE7A94144",
+    "retrievedUTC": "2026-10-28T07:50:17.792319+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__One.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Gamma/One.lean",
+    "sha256": "58F29D8E2CE7CFDD20DE1033F1392BA44B0A38C98ED5950ADB2290DFB6F37AF0",
+    "retrievedUTC": "2026-10-28T07:50:17.795322+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Zero.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Gamma/Zero.lean",
+    "sha256": "C1ABC3E7D63F59481806A989D8A49CDCC91F3769309878F88347F0555FA77F6C",
+    "retrievedUTC": "2026-10-28T07:50:17.839945+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__HomLevel.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/HomLevel.lean",
+    "sha256": "7E8A50108C3A67C551E54B62B171C9E468DCF21B81F22934572CAE848B41C628",
+    "retrievedUTC": "2026-10-28T07:50:17.870879+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LegendreLine.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/LegendreLine.lean",
+    "sha256": "AD3267B8C5549DF0F538DD54EB8FD3E71B6E3838FF867D2756A1C82510F1628B",
+    "retrievedUTC": "2026-10-28T07:50:17.954987+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LevelThreeLine.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/LevelThreeLine.lean",
+    "sha256": "6CF34DF0E81933EA1D2D97805F30E952DBC014E71ACE9AC9511A85023CF9D5B6",
+    "retrievedUTC": "2026-10-28T07:50:17.954987+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__ModuliProblem.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/ModuliProblem.lean",
+    "sha256": "BB123384C8D848A7892377B9CF705D3A0EC7F62C7AEBD7A8089477F6A3FDAF56",
+    "retrievedUTC": "2026-10-28T07:50:17.971015+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__NaiveLevel.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/NaiveLevel.lean",
+    "sha256": "BA834D757C2D6EABB632FE66F30A066A43EB6ECC116CEDEFFEF7F98371E5F2B4",
+    "retrievedUTC": "2026-10-28T07:50:18.020555+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__FreeAction.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Rigidifier/FreeAction.lean",
+    "sha256": "5F152E8870216EB574EA7F5A71F472090A817A08657FC03D55CE28B4FA2C5B4A",
+    "retrievedUTC": "2026-10-28T07:50:18.073248+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__LevelThree.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Rigidifier/LevelThree.lean",
+    "sha256": "B4EBEDA98BEE196F6C3256DB01A69538025D8B3EAF1602C07678100C6B757638",
+    "retrievedUTC": "2026-10-28T07:50:18.108801+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Simultaneous.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/Simultaneous.lean",
+    "sha256": "A1ABD89FB4EA06EEDF88AFE45EBD221387639F8D2FA5BB97A495122B58BFDB07",
+    "retrievedUTC": "2026-10-28T07:50:18.130817+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__YOne.lean.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/TauCeti/AlgebraicGeometry/ModularCurve/YOne.lean",
+    "sha256": "28BB6B996185726A127BEEE668591ED5828A42508B44242FD128285A886BF058",
+    "retrievedUTC": "2026-10-28T07:50:18.143824+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularForms/README.md",
+    "sha256": "D99FB41C43AE15FFB7F5AEC03FD2C91F3B56D8671C5594224BFF3289F390EE3D",
+    "retrievedUTC": "2026-10-28T07:50:18.215301+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularForms/STATUS.md",
+    "sha256": "2A64360F61DE3575B2F933FC2FD5BB699B70C75838E45CDE6F31C92C058AD59B",
+    "retrievedUTC": "2026-10-28T07:50:18.196178+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularForms/PROGRESS.md",
+    "sha256": "51C3D5EF46E89AE1D022F447285736EC38FE7E53A17BD15E9825836CD28E534D",
+    "retrievedUTC": "2026-10-28T07:50:18.255463+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularCurves/README.md",
+    "sha256": "36066A37C06E5ED79765B3F2DA67E986B1C2C8A8EB9B376617ED0A6652D9B641",
+    "retrievedUTC": "2026-10-28T07:50:18.420281+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularCurves/STATUS.md",
+    "sha256": "C0A1182069ED48024D1D765F25D8E7AA5BBB58454A7EFC3B630F01C0E427A360",
+    "retrievedUTC": "2026-10-28T07:50:18.308637+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/TauCetiRoadmap/ModularCurves/PROGRESS.md",
+    "sha256": "98376100B7A36BD7FE0222E094FA3866E0631A7845B0D65D9042E0C2D37D7969",
+    "retrievedUTC": "2026-10-28T07:50:18.316146+00:00"
+  }
+]

@@ -1,0 +1,36 @@
+import Dubon2026.SourceBinaryParabolicChange
+import Dubon2026.SourceBinaryCocycleCoordinates
+
+/-! DUB17/18 -> original all-weight association -> parabolic character
+descent -> rational structure of the original parabolic cocycle space.
+The already proved additive polynomial coefficient projection commutes
+with every original integral matrix. It therefore projects the actual
+local coboundary witnesses as well as the cocycle values. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+variable {R S : Type} [CommRing R] [CommRing S] (φ : R →+ S) (Q w : ℕ)
+
+theorem sourceBinaryAdditiveCocycles_parabolic
+    {c : cocycles₁ (sourceBinaryCoefficientRep R Q w)}
+    (hc : c ∈ sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep R Q w)) :
+    sourceBinaryAdditiveCocycles φ Q w c ∈
+      sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep S Q w) := by
+  intro γ hγ
+  obtain ⟨v, hv⟩ := hc γ hγ
+  refine ⟨sourceHomogeneousAdditiveMap w φ v, ?_⟩
+  change sourceHomogeneousAdditiveMap w φ (c γ) = _
+  rw [hv, map_sub]
+  exact congrArg (fun z => z - sourceHomogeneousAdditiveMap w φ v)
+    (sourceHomogeneousAdditiveMap_matrix w φ γ.val.val v)
+
+theorem sourceComplexBinaryCocycleCoordinate_parabolic
+    (i : Module.Basis.ofVectorSpaceIndex ℚ ℂ)
+    {c : cocycles₁ (sourceBinaryCoefficientRep ℂ Q w)}
+    (hc : c ∈ sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep ℂ Q w)) :
+    sourceComplexBinaryCocycleCoordinate Q w i c ∈
+      sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep ℚ Q w) :=
+  sourceBinaryAdditiveCocycles_parabolic (sourceComplexRationalCoordinate i) Q w hc
+
+end
+end Dubon2026

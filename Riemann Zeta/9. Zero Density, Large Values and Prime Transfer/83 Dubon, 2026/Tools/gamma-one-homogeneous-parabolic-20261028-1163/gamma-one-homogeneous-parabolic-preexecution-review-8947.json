@@ -1,0 +1,59 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 24,
+  "queries": 64,
+  "theorems": 52,
+  "constructions": 12,
+  "exhaustiveScratchChecks": 151,
+  "proofValueChecks": 99,
+  "scopes": 5,
+  "receipts": {
+    "source-gamma-one-binary-tate-h1-1-scratch-receipt.json": "2794C1AEDCCDEA2B86938EFAE3BE6968983D2CA2DCF180BCF26EC9D5EE583C39",
+    "source-original-parabolic-entry-1b-scratch-receipt.json": "9D5532A39D54F3A64B84A8BCB253D82824F88F08C7886DB4D5E21411F733393E",
+    "source-parabolic-rational-span-1-scratch-receipt.json": "34AD75DC1C8D717ACCAFC60019C84A599DED9EB452886707E679A09F93FE3D86",
+    "source-original-integral-parabolic-1-scratch-receipt.json": "0CA4FCFB88CD4862E5C5873E488F1370348F4FAE45EA19B2B8B34319BF16B869",
+    "source-primitive-parabolic-relation-1-scratch-receipt.json": "258F0D04EDFCE9C0BD948144191B128D9ACC883DE9A2D6A0B545F9C915BB2E10"
+  },
+  "expectedConsumers": 26277,
+  "expectedConstructions": 2767,
+  "fullGoal": "The original finite character still acts on full H1; its descent to the finite parabolic operator image and the required finite congruence/saturation remain unproved. Integral parabolic spanning and characteristic-zero operator relations do not establish finite descent. Restriction landing in parabolic H1 does not assert nonvanishing or surjectivity. Diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_homogeneous_parabolic_8947.py",
+      "sha256": "38106BB765668491C67252C3AD7ACE1326CAE7A27B7CE4D65662731A1DB0E94B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_homogeneous_parabolic_production_ownership_8947.py",
+      "sha256": "65320A4A3726A3B84839A11F780BD1E15DE32EA9888BE8EDE366FF9A1931CD2C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_homogeneous_parabolic_global_ownership_8947.py",
+      "sha256": "115661B6E475EC3691AE0AE428B89332434D542A46C8A26FEBCF436FFA378CB8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_homogeneous_parabolic_ownership_8947.py",
+      "sha256": "CB07A74E430982D85DFE198ACD6DC02BAB4AFAF9D2C3F594E4A2B7EB375576C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_homogeneous_parabolic_8947.py",
+      "sha256": "FA8A928AA53CDF5E3500A2AA1A5703465D5004FF4F43ACFB38174D20801D15F1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_homogeneous_parabolic_8947.ps1",
+      "sha256": "AB11262CFD6940D197F307AEAB89642D521DC966B1F0307102CE31CDA2EB3FF4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_homogeneous_parabolic_8947.ps1",
+      "sha256": "EC5FED3D664B34F91B64C39D942620B43D115C886A8B8CF72DFC91A44ED82B8A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_homogeneous_parabolic_canonical_8947.py",
+      "sha256": "2DF4AEC13C34E8E0E8E9A4B27B3FF46F1140F100CCA7CC3B8E4CF9CD5A2E0113"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_homogeneous_parabolic_8947.py",
+      "sha256": "0B4FC554ACC996631C39F6844108A994757A3CA338835A49EDFBCA621F629631"
+    }
+  ],
+  "productionMutation": false
+}

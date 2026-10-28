@@ -1,0 +1,67 @@
+import SourceParabolicCohomology
+import SourceBinaryParabolicChange
+import SourceGammaOneParabolicRestriction
+import SourceParabolicCoefficientMap
+import SourcePeriodParabolicClass
+import SourceOriginalParabolicEigensystem
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceParabolicH1_cocycle_iff
+#print axioms Dubon2026.sourceParabolicCocycles_semilinear
+#print axioms Dubon2026.sourceParabolicH1_semilinear
+#print axioms Dubon2026.sourceBinaryCocyclesChange_parabolic
+#print axioms Dubon2026.sourceBinaryH1Change_parabolic
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_trace
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic
+#print axioms Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction
+#print axioms Dubon2026.sourceParabolicCocycles_coefficientMap
+#print axioms Dubon2026.sourceParabolic_exists_fixed_cusp
+#print axioms Dubon2026.sourcePeriodCocycle_mem_parabolic
+#print axioms Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic
+#print axioms Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem
+#print axioms Dubon2026.sourceParabolicCocycles
+#print axioms Dubon2026.sourceParabolicH1
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceParabolicCohomology, `SourceBinaryParabolicChange, `SourceGammaOneParabolicRestriction, `SourceParabolicCoefficientMap, `SourcePeriodParabolicClass, `SourceOriginalParabolicEigensystem]
+  let theorems : Array Name := #[`Dubon2026.sourceParabolicH1_cocycle_iff, `Dubon2026.sourceParabolicCocycles_semilinear, `Dubon2026.sourceParabolicH1_semilinear, `Dubon2026.sourceBinaryCocyclesChange_parabolic, `Dubon2026.sourceBinaryH1Change_parabolic, `Dubon2026.sourceGammaOneDiagonalHom_trace, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic, `Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic, `Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction, `Dubon2026.sourceParabolicCocycles_coefficientMap, `Dubon2026.sourceParabolic_exists_fixed_cusp, `Dubon2026.sourcePeriodCocycle_mem_parabolic, `Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic, `Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic, `Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem]
+  let constructions : Array Name := #[`Dubon2026.sourceParabolicCocycles, `Dubon2026.sourceParabolicH1]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Parabolic Entry postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Parabolic Entry theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PARABOLIC ENTRY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceParabolicCohomology
+#lint in SourceBinaryParabolicChange
+#lint in SourceGammaOneParabolicRestriction
+#lint in SourceParabolicCoefficientMap
+#lint in SourcePeriodParabolicClass
+#lint in SourceOriginalParabolicEigensystem

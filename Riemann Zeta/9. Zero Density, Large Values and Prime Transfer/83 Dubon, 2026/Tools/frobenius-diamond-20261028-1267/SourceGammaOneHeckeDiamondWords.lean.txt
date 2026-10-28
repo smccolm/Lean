@@ -1,0 +1,94 @@
+import SourceGammaOneDiamondTransfer
+import Dubon2026.SourceGammaOneHeckeWords
+
+/-! DUB-17/18 -> original all-weight association -> actual finite Gamma1
+arithmetic characters -> diamond-one descent. Adjoin the actual original
+normalizer diamonds to the actual good-prime Hecke operators. The existing
+additive word theorem and the proved native transfer invariance identify
+their entire word action with the original Gamma0 action, where diamonds
+act as one. No character or parabolic preimage is assumed here.
+-/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup
+
+/-- Original prime correspondences and original homogeneous normalizer diamonds. -/
+def sourceGammaOneHeckeDiamondOperators (Q N w : ℕ) [NeZero N] :
+    sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 (Q * N ^ 2) → Module.End (ZMod N)
+      (groupCohomology.H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2))
+        (sourceBinaryCoefficientRep (ZMod N) Q w))) :=
+  Sum.elim (sourceGammaOnePrimeOperators Q N w) (fun g =>
+    sourceGammaOneDiamondH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) g (sourceGammaOneBinaryDiamondCoefficient Q N w g))
+
+/-- The literal operator image, including diamonds needed by Frobenius normalization. -/
+def sourceGammaOneHeckeDiamondAlgebra (Q N w : ℕ) [NeZero N] :=
+  (FreeAlgebra.lift ℤ (sourceGammaOneHeckeDiamondOperators Q N w)).range
+
+/-- Original Gamma0 integral words; each original normalizer diamond maps to one. -/
+def sourceGammaOneOriginalHeckeDiamondWord (Q N w : ℕ) :
+    FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 (Q * N ^ 2)) →ₐ[ℤ]
+      sourceBinaryH1HeckeAlgebra Q w :=
+  FreeAlgebra.lift ℤ (Sum.elim (fun ell =>
+    ⟨sourceBinaryH1PrimeOperators ℤ Q w (sourceGammaOneHeckePrimeForget Q N ell),
+      Algebra.subset_adjoin ⟨sourceGammaOneHeckePrimeForget Q N ell, rfl⟩⟩) (fun _ => 1))
+
+theorem sourceGammaOneOriginalHeckeDiamondWord_val (Q N w : ℕ)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 (Q * N ^ 2))) :
+    (sourceGammaOneOriginalHeckeDiamondWord Q N w a).val =
+      FreeAlgebra.lift ℤ (Sum.elim
+        (fun ell => sourceBinaryH1PrimeOperators ℤ Q w (sourceGammaOneHeckePrimeForget Q N ell))
+        (fun _ => 1)) a := by
+  have he : (sourceBinaryH1HeckeAlgebra Q w).val.comp
+      (sourceGammaOneOriginalHeckeDiamondWord Q N w) =
+      FreeAlgebra.lift ℤ (Sum.elim
+        (fun ell => sourceBinaryH1PrimeOperators ℤ Q w (sourceGammaOneHeckePrimeForget Q N ell))
+        (fun _ => 1)) := by
+    apply FreeAlgebra.hom_ext
+    funext s
+    cases s <;>
+      simp only [Function.comp_apply, AlgHom.comp_apply,
+        sourceGammaOneOriginalHeckeDiamondWord, FreeAlgebra.lift_ι_apply] <;> rfl
+  exact AlgHom.congr_fun he a
+
+theorem sourceGammaOneHeckeDiamondWord_transfer (Q N w : ℕ) [NeZero Q] [NeZero N]
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 (Q * N ^ 2)))
+    (x : groupCohomology.H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2))
+      (sourceBinaryCoefficientRep (ZMod N) Q w))) :
+    sourceGammaOneConstantH1Transfer Q N w
+        (FreeAlgebra.lift ℤ (sourceGammaOneHeckeDiamondOperators Q N w) a x) =
+      FreeAlgebra.lift ℤ (Sum.elim
+        (fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+          (sourceGammaOneHeckePrimeForget Q N ell)) (fun _ => 1)) a
+        (sourceGammaOneConstantH1Transfer Q N w x) := by
+  apply sourceHeckeWord_intertwine_addHom _ _
+    (sourceGammaOneConstantH1Transfer Q N w).toAddMonoidHom
+  intro s y
+  cases s with
+  | inl ell =>
+    letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    exact (LinearMap.congr_fun
+      (sourceGammaOneConstantH1Transfer_hecke Q N ell.val w ell.property.1 ell.property.2) y).symm
+  | inr g => exact sourceGammaOneConstantH1Transfer_diamond Q N w g y
+
+theorem sourceGammaOneOriginalHeckeDiamondWord_change (Q N w : ℕ)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N) ⊕ Gamma0 (Q * N ^ 2)))
+    (x : groupCohomology.H1 (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w
+        ((sourceGammaOneOriginalHeckeDiamondWord Q N w a).val x) =
+      FreeAlgebra.lift ℤ (Sum.elim
+        (fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+          (sourceGammaOneHeckePrimeForget Q N ell)) (fun _ => 1)) a
+        (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x) := by
+  rw [sourceGammaOneOriginalHeckeDiamondWord_val]
+  apply sourceHeckeWord_intertwine_addHom _ _
+    (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w).toAddMonoidHom
+  intro s y
+  cases s with
+  | inl ell =>
+    letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+    exact sourceBinaryH1Change_hecke (Int.castRingHom (ZMod N)) ell.property.1 w y
+  | inr g => rfl
+
+end
+end Dubon2026

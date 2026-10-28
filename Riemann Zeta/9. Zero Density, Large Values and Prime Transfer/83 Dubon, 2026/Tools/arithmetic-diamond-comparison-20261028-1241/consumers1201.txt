@@ -1,0 +1,71 @@
+
+/-- Exact original-object consumer of `goodAdelicPrimes_infinite`. -/
+theorem actual_good_primes_infinite_source (N : ℕ) [NeZero N]  : {p : ℕ | p.Prime ∧ p.Coprime N}.Infinite  :=
+  goodAdelicPrimes_infinite N
+
+/-- Exact original-object consumer of `goodAdelicPlaceInitial_covers_finset`. -/
+theorem actual_good_place_initial_coverage_source (N : ℕ) [NeZero N]  (S : Finset (HeightOneSpectrum ℤ)) :
+    ∃ n, ∀ v ∈ S, IsGoodAdelicPlace N v → ∃ i : Fin n, goodAdelicPlaceInitial N n i = v  :=
+  goodAdelicPlaceInitial_covers_finset N S
+
+/-- Exact original-object consumer of `adelicGoodLevel_exists_base_mul_level`. -/
+theorem actual_good_level_base_decomposition_source  (N : ℕ) [NeZero N] (a : RationalAdelicGL2)
+    (ha : ∀ v, IsGoodAdelicPlace N v → adelicPlaceGL2Hom v a ∈ finitePlaceGL2Gamma0 N v) :
+    ∃ b : adelicRestrictedBaseGroup N, ∃ u : finiteAdeleGL2Gamma0 N,
+      b.val * rationalAdelicFiniteGL2Embedding u.val = a  :=
+  adelicGoodLevel_exists_base_mul_level N a ha
+
+/-- Exact original-object consumer of `adelicRestrictedStageIsometry_map`. -/
+theorem actual_restricted_reference_transition_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (n m : ℕ) (h : n ≤ m) (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedStageIsometry F m
+      (adelicRestrictedStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicRestrictedStageIsometry F n x  :=
+  adelicRestrictedStageIsometry_map F n m h x
+
+/-- Exact original-object consumer of `adelicRestrictedStageIsometry_covers_original_orbit`. -/
+theorem actual_restricted_finite_orbit_coverage_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) :
+    ∃ n x, adelicRestrictedStageIsometry F n x =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicRestrictedStageIsometry_covers_original_orbit F a
+
+/-- Exact original-object consumer of `adelicRestrictedTensor_exists_stage`. -/
+theorem actual_restricted_tensor_finite_representative_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (x : AdelicRestrictedAlgebraicTensor F) :
+    ∃ n y, adelicRestrictedTensorOf F n y = x  :=
+  adelicRestrictedTensor_exists_stage F x
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicTensorIsometry_mem_range_iff`. -/
+theorem actual_restricted_algebraic_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (y : AdelicCyclicHilbert F.toCuspForm) :
+    y ∈ (adelicRestrictedAlgebraicTensorIsometry F).toLinearMap.range ↔
+      ∃ n x, adelicRestrictedStageIsometry F n x = y  :=
+  adelicRestrictedAlgebraicTensorIsometry_mem_range_iff F y
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicTensorIsometry_range_closure`. -/
+theorem actual_restricted_tensor_density_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  :
+    (adelicRestrictedAlgebraicTensorIsometry F).toLinearMap.range.topologicalClosure = ⊤  :=
+  adelicRestrictedAlgebraicTensorIsometry_range_closure F
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_of`. -/
+theorem actual_restricted_completion_finite_vector_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (n : ℕ) (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedHilbertTensorIsometry F ((adelicRestrictedTensorOf F n x : AdelicRestrictedAlgebraicTensor F) :
+      AdelicRestrictedHilbertTensor F) = adelicRestrictedStageIsometry F n x  :=
+  adelicRestrictedHilbertTensorIsometry_of F n x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_range`. -/
+theorem actual_restricted_completion_full_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  :
+    (adelicRestrictedHilbertTensorIsometry F).toLinearMap.range = ⊤  :=
+  adelicRestrictedHilbertTensorIsometry_range F
+
+/-- The actual directed quotient retains exactly the original finite tensor inner product. -/
+theorem actual_restricted_quotient_inner_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (n : ℕ) (x y : adelicRestrictedStage F.toCuspForm n) :
+    inner ℂ (adelicRestrictedTensorOf F n x) (adelicRestrictedTensorOf F n y) = inner ℂ x y :=
+  @LinearIsometry.inner_map_map ℂ (adelicRestrictedStage F.toCuspForm n)
+    inferInstance inferInstance inferInstance (AdelicRestrictedAlgebraicTensor F)
+    inferInstance inferInstance (adelicRestrictedTensorOf F n) x y
+
+/-- Every actual original adelic Hilbert vector has a genuine completed restricted tensor representative. -/
+theorem actual_restricted_completion_surjective_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (y : AdelicCyclicHilbert F.toCuspForm) :
+    ∃ x : AdelicRestrictedHilbertTensor F, adelicRestrictedHilbertTensorEquiv F x = y :=
+  (adelicRestrictedHilbertTensorEquiv F).surjective y
+

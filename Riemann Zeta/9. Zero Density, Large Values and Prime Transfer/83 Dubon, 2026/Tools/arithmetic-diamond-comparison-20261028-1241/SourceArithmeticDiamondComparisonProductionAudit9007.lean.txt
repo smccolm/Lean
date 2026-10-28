@@ -1,0 +1,265 @@
+import Dubon2026.SourceGammaOneDiamondFieldRatios
+import Dubon2026.SourceGammaOneFieldCuspGerm
+import Dubon2026.SourceGammaOneDiamondFieldHom
+import Dubon2026.SourceGammaOneDiamondFieldLabels
+import Dubon2026.SourceGammaOneDiamondFieldJ
+import Dubon2026.SourceLaurentAlgebraicCoefficient
+import Dubon2026.SourceLaurentAlgebraicallyClosedLift
+import Dubon2026.SourceGammaOneDiamondArithmeticRelation
+import Dubon2026.SourceLaurentCoefficientProjection
+import Dubon2026.SourceLaurentFieldIntersection
+import Dubon2026.SourceGammaOneDiamondArithmeticLift
+import Dubon2026.SourceGammaOneArithmeticDiamond
+import Dubon2026.SourceCurveFieldEquivPicard
+import Dubon2026.SourceGammaOneDiamondPicard
+import Dubon2026.SourceGammaOneDiamondAnalyticGerms
+import Dubon2026.SourceGammaOneDiamondAnalyticPlaces
+import Dubon2026.SourceGammaOneDiamondAnalyticDivisors
+import Dubon2026.SourceGammaOneDiamondEndpoint
+import Dubon2026.SourceGammaOneDiamondPicardPeriods
+import Dubon2026.SourceGammaOneDiamondComplexComparison
+import Dubon2026.SourceGammaOneArithmeticDiamondTate
+import Dubon2026.SourceGammaOneDiamondPeriodInclusion
+import Dubon2026.SourceGammaOneBinaryDiamondTateH1
+import Dubon2026.SourceCyclotomicDiamondCovariance
+import Dubon2026.SourceRationalDiamondFraction
+import Dubon2026.SourceRationalCuspDiamondImage
+import Dubon2026.SourceRationalModularCuspQuotient
+import Dubon2026.SourceRationalDiamondQuotientGerm
+import Dubon2026.SourceRationalDiamondCoefficients
+import Dubon2026.SourceGammaOneDiamondRationalGenerators
+import Dubon2026.SourceGammaOneDiamondComplexArithmetic
+import Dubon2026.SourceGammaOneArithmeticDiamondGenerators
+import Dubon2026.SourceGammaOneArithmeticDiamondGalois
+import Dubon2026.SourceGammaOneDiamondGaloisPicard
+import Dubon2026.SourceGammaOneDiamondCoefficient
+import Dubon2026.SourceGammaOneDiamondRestriction
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+import Dubon2026.SourceGammaOneBinaryNormalizerTate
+import Dubon2026.SourceGammaOneBinaryDiamondLabels
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization
+#print axioms Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j
+#print axioms Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation
+#print axioms Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span
+#print axioms Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_apply
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_degree
+#print axioms Dubon2026.SourceCurve.fieldDegZeroEquiv_principal
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv_mk
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv
+#print axioms Dubon2026.SourceCurve.fieldDegZeroEquiv
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond
+#print axioms Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label
+#print axioms Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.diamond
+#print axioms Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep
+#print axioms Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction
+#print axioms Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois
+#print axioms Dubon2026.sourceGammaOneDiamondLift_gammaOne
+#print axioms Dubon2026.sourceGammaOneDiamondLift_conjugation
+#print axioms Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond
+#print axioms Dubon2026.sourceGammaOneDiamondLift_mod
+#print axioms Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois
+#print axioms Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent
+#print axioms Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent
+#print axioms Dubon2026.sourceGammaOneDiamondLift
+#print axioms Dubon2026.sourceGammaOneBinaryDiamondCoefficient
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneDiamondFieldRatios, `Dubon2026.SourceGammaOneFieldCuspGerm, `Dubon2026.SourceGammaOneDiamondFieldHom, `Dubon2026.SourceGammaOneDiamondFieldLabels, `Dubon2026.SourceGammaOneDiamondFieldJ, `Dubon2026.SourceLaurentAlgebraicCoefficient, `Dubon2026.SourceLaurentAlgebraicallyClosedLift, `Dubon2026.SourceGammaOneDiamondArithmeticRelation, `Dubon2026.SourceLaurentCoefficientProjection, `Dubon2026.SourceLaurentFieldIntersection, `Dubon2026.SourceGammaOneDiamondArithmeticLift, `Dubon2026.SourceGammaOneArithmeticDiamond, `Dubon2026.SourceCurveFieldEquivPicard, `Dubon2026.SourceGammaOneDiamondPicard, `Dubon2026.SourceGammaOneDiamondAnalyticGerms, `Dubon2026.SourceGammaOneDiamondAnalyticPlaces, `Dubon2026.SourceGammaOneDiamondAnalyticDivisors, `Dubon2026.SourceGammaOneDiamondEndpoint, `Dubon2026.SourceGammaOneDiamondPicardPeriods, `Dubon2026.SourceGammaOneDiamondComplexComparison, `Dubon2026.SourceGammaOneArithmeticDiamondTate, `Dubon2026.SourceGammaOneDiamondPeriodInclusion, `Dubon2026.SourceGammaOneBinaryDiamondTateH1, `Dubon2026.SourceCyclotomicDiamondCovariance, `Dubon2026.SourceRationalDiamondFraction, `Dubon2026.SourceRationalCuspDiamondImage, `Dubon2026.SourceRationalModularCuspQuotient, `Dubon2026.SourceRationalDiamondQuotientGerm, `Dubon2026.SourceRationalDiamondCoefficients, `Dubon2026.SourceGammaOneDiamondRationalGenerators, `Dubon2026.SourceGammaOneDiamondComplexArithmetic, `Dubon2026.SourceGammaOneArithmeticDiamondGenerators, `Dubon2026.SourceGammaOneArithmeticDiamondGalois, `Dubon2026.SourceGammaOneDiamondGaloisPicard, `Dubon2026.SourceGammaOneDiamondCoefficient, `Dubon2026.SourceGammaOneDiamondRestriction, `Dubon2026.SourceGammaOneDiamondCoefficientMatrix, `Dubon2026.SourceGammaOneBinaryNormalizerTate, `Dubon2026.SourceGammaOneBinaryDiamondLabels]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe, `Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j, `Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation, `Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation, `Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map, `Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span, `Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span, `Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j, `Dubon2026.SourceCurve.fieldDivisorEquiv_apply, `Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff, `Dubon2026.SourceCurve.fieldDivisorEquiv_degree, `Dubon2026.SourceCurve.fieldDegZeroEquiv_principal, `Dubon2026.SourceCurve.fieldPicardEquiv_mk, `Dubon2026.SourceCurve.fieldPicardEquiv_torsion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio, `Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond, `Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond, `Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label, `Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label, `Dubon2026.SourceFricke.CyclotomicConjugates.diamond, `Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep, `Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction, `Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent, `Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient, `Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational, `Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational, `Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois, `Dubon2026.sourceGammaOneDiamondLift_gammaOne, `Dubon2026.sourceGammaOneDiamondLift_conjugation, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond, `Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond, `Dubon2026.sourceGammaOneDiamondLift_mod, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent, `Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut, `Dubon2026.SourceFunctionField.laurentCoeffProjection, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut, `Dubon2026.SourceCurve.fieldDivisorEquiv, `Dubon2026.SourceCurve.fieldDegZeroEquiv, `Dubon2026.SourceCurve.fieldPicardEquiv, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard, `Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero, `Dubon2026.sourceGammaOneDiamondLift, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ARITHMETIC DIAMOND COMPARISON AUDIT PASS: {count} theorems including private/generated declarations. Original arithmetic field/Picard/period/Tate diamonds, actual Galois commutation, exact homogeneous normalizer coefficients and native finite H1 comparison. Parabolic transfer preimages, exceptional primes, Frobenius/inertia and characteristic-zero association remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneDiamondFieldRatios
+
+#lint in Dubon2026.SourceGammaOneFieldCuspGerm
+
+#lint in Dubon2026.SourceGammaOneDiamondFieldHom
+
+#lint in Dubon2026.SourceGammaOneDiamondFieldLabels
+
+#lint in Dubon2026.SourceGammaOneDiamondFieldJ
+
+#lint in Dubon2026.SourceLaurentAlgebraicCoefficient
+
+#lint in Dubon2026.SourceLaurentAlgebraicallyClosedLift
+
+#lint in Dubon2026.SourceGammaOneDiamondArithmeticRelation
+
+#lint in Dubon2026.SourceLaurentCoefficientProjection
+
+#lint in Dubon2026.SourceLaurentFieldIntersection
+
+#lint in Dubon2026.SourceGammaOneDiamondArithmeticLift
+
+#lint in Dubon2026.SourceGammaOneArithmeticDiamond
+
+#lint in Dubon2026.SourceCurveFieldEquivPicard
+
+#lint in Dubon2026.SourceGammaOneDiamondPicard
+
+#lint in Dubon2026.SourceGammaOneDiamondAnalyticGerms
+
+#lint in Dubon2026.SourceGammaOneDiamondAnalyticPlaces
+
+#lint in Dubon2026.SourceGammaOneDiamondAnalyticDivisors
+
+#lint in Dubon2026.SourceGammaOneDiamondEndpoint
+
+#lint in Dubon2026.SourceGammaOneDiamondPicardPeriods
+
+#lint in Dubon2026.SourceGammaOneDiamondComplexComparison
+
+#lint in Dubon2026.SourceGammaOneArithmeticDiamondTate
+
+#lint in Dubon2026.SourceGammaOneDiamondPeriodInclusion
+
+#lint in Dubon2026.SourceGammaOneBinaryDiamondTateH1
+
+#lint in Dubon2026.SourceCyclotomicDiamondCovariance
+
+#lint in Dubon2026.SourceRationalDiamondFraction
+
+#lint in Dubon2026.SourceRationalCuspDiamondImage
+
+#lint in Dubon2026.SourceRationalModularCuspQuotient
+
+#lint in Dubon2026.SourceRationalDiamondQuotientGerm
+
+#lint in Dubon2026.SourceRationalDiamondCoefficients
+
+#lint in Dubon2026.SourceGammaOneDiamondRationalGenerators
+
+#lint in Dubon2026.SourceGammaOneDiamondComplexArithmetic
+
+#lint in Dubon2026.SourceGammaOneArithmeticDiamondGenerators
+
+#lint in Dubon2026.SourceGammaOneArithmeticDiamondGalois
+
+#lint in Dubon2026.SourceGammaOneDiamondGaloisPicard
+
+#lint in Dubon2026.SourceGammaOneDiamondCoefficient
+
+#lint in Dubon2026.SourceGammaOneDiamondRestriction
+
+#lint in Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+
+#lint in Dubon2026.SourceGammaOneBinaryNormalizerTate
+
+#lint in Dubon2026.SourceGammaOneBinaryDiamondLabels

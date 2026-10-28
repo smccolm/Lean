@@ -1,0 +1,69 @@
+{
+  "recordedUTC": "2026-10-28T11:51:21.435350+00:00",
+  "revision": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleFundamentalGroups/Pi1/README.md",
+      "path": "Nyll/EtaleFundamentalGroups/Pi1/README.md.txt",
+      "sha256": "DC9314C5E6F46E45693F47841E1D3DC572E1DFAF2082C81B3FB194CB794E805C",
+      "bytes": 2269
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AlgebraicCurves/Models/ConstantExtension/FiniteFrobenius.lean",
+      "path": "Nyll/AlgebraicCurves/Models/ConstantExtension/FiniteFrobenius.lean.txt",
+      "sha256": "215B50B840B1A8BADBFBCFA7BFB6FF9233256848F910162415D25D814876999A",
+      "bytes": 7311
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AlgebraicCurves/Models/ConstantExtension/PicardFrobenius.lean",
+      "path": "Nyll/AlgebraicCurves/Models/ConstantExtension/PicardFrobenius.lean.txt",
+      "sha256": "C97022F683055E4157248ED3D2BB713EC5D27818D26D42B995A00A0C984AFF88",
+      "bytes": 4142
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/FrobeniusFixedTate.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/FrobeniusFixedTate.lean.txt",
+      "sha256": "45CFB15FEA94F5773DEF599CA50E7E3524F6E1617E0B2BEB8C389CE8CC543B3B",
+      "bytes": 5493
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Kummer/ArithmeticTateComparison.lean",
+      "path": "Nyll/JacobianVarieties/Kummer/ArithmeticTateComparison.lean.txt",
+      "sha256": "F384E203BDFAE098E40C4EE1F5F08D9CFF871FF7EDC0867EF95C5D96EB90FEB7",
+      "bytes": 14136
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Kummer/ArithmeticGenericTate.lean",
+      "path": "Nyll/JacobianVarieties/Kummer/ArithmeticGenericTate.lean.txt",
+      "sha256": "0B72E229890A08734BCD9171D1D70652CE5259AE9A8F52D3ED8BA58D262FA724",
+      "bytes": 16394
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Kummer/SemilinearGenericTate.lean",
+      "path": "Nyll/JacobianVarieties/Kummer/SemilinearGenericTate.lean.txt",
+      "sha256": "393373795FF632D11CFCF892521F8FA79E189BA6F41FAA27108EFDEA1E9E3990",
+      "bytes": 7162
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/Picard/Representability/CurveModelPicardRepresentabilityAbelJacobi.lean",
+      "path": "Nyll/JacobianVarieties/Picard/Representability/CurveModelPicardRepresentabilityAbelJacobi.lean.txt",
+      "sha256": "FD0AB36A96C70FF085F4A90CF39AB9804BF3339EA14F18D1F84CB6E8A058E556",
+      "bytes": 52784
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AlgebraicCurves/Models/Construction/OfSmoothProperCurve.lean",
+      "path": "Nyll/AlgebraicCurves/Models/Construction/OfSmoothProperCurve.lean.txt",
+      "sha256": "07120FC6B8F6EE536F4C12C75FC82619AA139E49C976C90DAA5B90E1EC38D2DD",
+      "bytes": 3005
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AlgebraicCurves/Geometry/Curves/SmoothProperCurveBase.lean",
+      "path": "Nyll/AlgebraicCurves/Geometry/Curves/SmoothProperCurveBase.lean.txt",
+      "sha256": "173982952F9B674DE5012370B72486DFBFD519BABF14BE8495F868C159809842",
+      "bytes": 4919
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

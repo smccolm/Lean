@@ -1,0 +1,13 @@
+[
+  "AdelicFiniteProductRealCoordinate",
+  "AdelicGoodActionBound",
+  "AdelicGoodBaseProjection",
+  "AdelicGoodTail",
+  "AdelicGoodTailTensorInvariance",
+  "AdelicRestrictedActionOnStage",
+  "AdelicRestrictedAlgebraicAction",
+  "AdelicRestrictedCompletedAction",
+  "AdelicRestrictedFiniteTensorAction",
+  "FiniteAdelicCoordinateRestriction",
+  "FiniteAdelicRestrictionHom"
+]

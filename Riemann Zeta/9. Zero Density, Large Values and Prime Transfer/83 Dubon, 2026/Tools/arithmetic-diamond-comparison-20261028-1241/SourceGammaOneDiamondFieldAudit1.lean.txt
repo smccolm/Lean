@@ -1,0 +1,75 @@
+import SourceGammaOneDiamondFieldRatios
+import SourceGammaOneFieldCuspGerm
+import SourceGammaOneDiamondFieldHom
+import SourceGammaOneDiamondFieldLabels
+import SourceGammaOneDiamondFieldJ
+import SourceLaurentAlgebraicCoefficient
+import SourceLaurentAlgebraicallyClosedLift
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization
+#print axioms Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j
+#print axioms Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation
+#print axioms Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modularDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneDiamondFieldRatios, `SourceGammaOneFieldCuspGerm, `SourceGammaOneDiamondFieldHom, `SourceGammaOneDiamondFieldLabels, `SourceGammaOneDiamondFieldJ, `SourceLaurentAlgebraicCoefficient, `SourceLaurentAlgebraicallyClosedLift]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe, `Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j, `Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation, `Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.modularDiamond, `Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Diamond Period postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Diamond Period theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND FIELD AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneDiamondFieldRatios
+#lint in SourceGammaOneFieldCuspGerm
+#lint in SourceGammaOneDiamondFieldHom
+#lint in SourceGammaOneDiamondFieldLabels
+#lint in SourceGammaOneDiamondFieldJ
+#lint in SourceLaurentAlgebraicCoefficient
+#lint in SourceLaurentAlgebraicallyClosedLift

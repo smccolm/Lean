@@ -1,0 +1,11 @@
+[
+  "AdelicFiniteFamilyTopology",
+  "AdelicFiniteTensorCompletion",
+  "AdelicFiniteTensorCore",
+  "AdelicFiniteTensorIsometry",
+  "AdelicFiniteTensorRange",
+  "AdelicFiniteTupleCoefficients",
+  "AdelicFiniteTupleGram",
+  "AdelicLocalUnitOrbit",
+  "FiniteHilbertTensor"
+]

@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T08:01:43.959239+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourcePrimitiveParabolicHeckeRelations"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations.lean",
+      "sha256": "EDDFC9033AE4A135B34FD2444C269BF26725D57A57BFDDC4F9031646C1F73F88",
+      "oleanSha256": "9DF2DE02410831E9E11C0FE87FF68EB10D7C04D09A2CB1B7EBB5190564156CDE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations1162a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations1162a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourcePrimitiveIntegralParabolicHecke_relation"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourcePrimitiveIntegralParabolicHecke_relation"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationAudit1.log",
+  "logSha256": "174398D736DC32CAB91AB42995447DC9060C75BC2D525971A4F8E0F026F11410",
+  "auditSha256": "4BDCF0928442A56BA6BA43A9A230F99B315EC3AA7A5F2FE72F3A194BE3322B8C",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationScratchOwnership1163.log",
+  "ownershipSha256": "0DA849DBFA83FF0C48D37735BECDE68E297CF666A914D850F8D824ECBB77E544",
+  "exhaustiveTheorems": 1,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationDependencyAudit1.log",
+  "dependencyAuditSha256": "4AD025384FB5820076B65FB160F162A4463DE732739807B52161080A033D8AC2",
+  "dependencyAuditSourceSha256": "7208F87238E84CC7AEAB681AABA606E77ABF16EFE19C8A68DF91A2F4637C09C4",
+  "consumers": [
+    "Dubon2026.sourcePrimitiveIntegralParabolicHecke_relation"
+  ],
+  "dependency": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic operator relations for the actual Fourier character.",
+  "discharged": [
+    "The original Fourier character vanishes on every integral Hecke word annihilating actual integral parabolic H1; no vanishing on full integral H1 is assumed."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "F81B1DA2E7C793B78FB3009AFCD10063672327C85E48D6BEF1577D93291D758C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

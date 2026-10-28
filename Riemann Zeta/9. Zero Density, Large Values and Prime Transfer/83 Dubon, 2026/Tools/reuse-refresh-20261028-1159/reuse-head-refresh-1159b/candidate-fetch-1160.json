@@ -1,0 +1,74 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-compare.json",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/compare/116662aa4c1e9106ab5c609b3214b02f6e11a65a...ee6c124192fb5146db438068b8df8d84d8da4cf0",
+    "sha256": "531683D0FEA79C464CB923170EBBF6516A9F12D2938877BEFCBAD2A527C52D26",
+    "retrievedUTC": "2026-10-28T07:47:53.531805+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-compare.json",
+    "url": "https://api.github.com/repos/teal-sea/zeta-lab/compare/9c492e8a8b91c6a8787a4536102194f511478c6b...f2dde1dfecc73ce687476b8606841d96a5a8f029",
+    "sha256": "06EE729F02D278597F123BD4A078DD455783825322D3578FE2632D7E713CD25B",
+    "retrievedUTC": "2026-10-28T07:47:53.486632+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-tree.json",
+    "url": "https://api.github.com/repos/TauCetiProject/TauCeti/git/trees/a722fde649de5a203c320408257b17b389be2f00?recursive=1",
+    "sha256": "D3F9781F40914ED4C365EF87D128027BF3DCE2D65FD65D2322004AF4ED383CCB",
+    "retrievedUTC": "2026-10-28T07:47:53.305848+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-lean-toolchain.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/lean-toolchain",
+    "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4",
+    "retrievedUTC": "2026-10-28T07:47:52.112903+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-lake-manifest.json.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/lake-manifest.json",
+    "sha256": "78AAC12CD88437EA05C41CCDAE290D72A8CE40929CFC5D14640F88E734ADF9BE",
+    "retrievedUTC": "2026-10-28T07:47:52.340825+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/LICENSE",
+    "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+    "retrievedUTC": "2026-10-28T07:47:52.526450+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-README.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/a722fde649de5a203c320408257b17b389be2f00/README.md",
+    "sha256": "B05A48415C2A3D1F5104A3701A7478DFA08ABF3B43797E3B797C377BFEAEAE38",
+    "retrievedUTC": "2026-10-28T07:47:52.731687+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-tree.json",
+    "url": "https://api.github.com/repos/TauCetiProject/TauCetiRoadmap/git/trees/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08?recursive=1",
+    "sha256": "B9C8B5FE51BFB567714ED704F97AA9E12A35A4BDA84A3E2C4F7DD01A14B43E47",
+    "retrievedUTC": "2026-10-28T07:47:53.393284+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-lean-toolchain.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/lean-toolchain",
+    "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+    "retrievedUTC": "2026-10-28T07:47:53.531805+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-lake-manifest.json.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/lake-manifest.json",
+    "sha256": "49FF62F27397E11D6BB697EA74F0DB6DE50356ADDE06B2860E7C62377621EB6A",
+    "retrievedUTC": "2026-10-28T07:47:53.577084+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/LICENSE",
+    "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+    "retrievedUTC": "2026-10-28T07:47:53.677916+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-README.md.txt",
+    "url": "https://raw.githubusercontent.com/TauCetiProject/TauCetiRoadmap/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08/README.md",
+    "sha256": "96511DB3FC568A12BB5553AA0001D9A9460F318B212CBCF3800DF7A2E549AF9A",
+    "retrievedUTC": "2026-10-28T07:47:53.719477+00:00"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "chain": "DUB17/18 -> original all-weight association -> sourcePrimitiveGammaOneHeckeCharacter on sourceGammaOnePrimeOperators -> native parabolic H1 with sourceBinaryCoefficientRep at Q*N^2 -> arithmetic Tate dual comparison preserving homogeneousMatrixAction.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousMonomialBasis.lean",
+      "sha256": "4216D1C71F288E2587D79D11A47D845E45CE82F419FC30D6748F7B2323097734"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeWords.lean",
+      "sha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    }
+  ],
+  "shorterRoute": "Use the original monomial basis to factor scalar coordinates through the already proved period lattice. Keep the original homogeneous coefficient space, level Q*N^2 and coefficient endomorphism. No new polynomial basis or scalar-coefficient substitute is introduced.",
+  "remaining": "The actual operator character is on full H1. Its parabolic passage, diamonds and Galois realization still need exact consumers."
+}

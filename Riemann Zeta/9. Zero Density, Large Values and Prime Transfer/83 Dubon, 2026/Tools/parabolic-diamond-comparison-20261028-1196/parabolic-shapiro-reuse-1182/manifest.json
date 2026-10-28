@@ -1,0 +1,23 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\prove2-shapiro.html.txt",
+    "url": "https://beta.prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+    "finalURL": "https://beta.prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+    "sha256": "F7FBB32951FB314460C24E715B30ED3BA8427077A411A92240C3F559E04B02E0",
+    "retrievedUTC": "2026-10-28T09:12:49.987671+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\prove2-shapiro-main.html.txt",
+    "url": "https://prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+    "finalURL": "https://prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875",
+    "sha256": "F7FBB32951FB314460C24E715B30ED3BA8427077A411A92240C3F559E04B02E0",
+    "retrievedUTC": "2026-10-28T09:12:49.860670+00:00"
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\wiese-parabolic-faithfulness.html.txt",
+    "url": "https://arxiv.org/html/math/0511115v3",
+    "finalURL": "https://arxiv.org/html/math/0511115v3",
+    "sha256": "4F35B97758CA9E85475565C1D0F86CFA7BD7E5FA23214E0BD6078B816675045D",
+    "retrievedUTC": "2026-10-28T09:12:49.710668+00:00"
+  }
+]

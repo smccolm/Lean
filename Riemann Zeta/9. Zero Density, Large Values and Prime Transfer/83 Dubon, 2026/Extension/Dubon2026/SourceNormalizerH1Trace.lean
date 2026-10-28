@@ -1,0 +1,43 @@
+import Dubon2026.SourceH1TraceInner
+import Dubon2026.SourceH1TraceSubgroupEquality
+
+/-! DUB-17/18 -> original Gamma1 arithmetic realization -> trivial
+diamond after native transfer. The original inner trace identity and the
+proved subgroup equality give invariance under the actual normalizer
+pullback with its inverse coefficient action. The Gamma1 consumer supplies
+the equality from the lifted original normalizer.
+-/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory
+variable {R G : Type} [CommRing R] [Group G]
+  (A : Rep R G) (g : G) (S : Subgroup G)
+  (hS : S.comap (MulAut.conj g).toMonoidHom = S)
+
+/-- The actual inner conjugation restricted to the preserved subgroup. -/
+def sourceNormalizerSubgroupHom : S →* S :=
+  (sourceTracePullbackSubgroupHom (MulAut.conj g).toMonoidHom S).comp
+    (MulEquiv.subgroupCongr hS.symm).toMonoidHom
+
+/-- The original inverse coefficient action, with the literal subgroup transport. -/
+def sourceNormalizerCoefficientMorphism :
+    Rep.res (sourceNormalizerSubgroupHom g S hS) (Rep.res S.subtype A) ⟶
+      Rep.res S.subtype A :=
+  (Rep.resFunctor (MulEquiv.subgroupCongr hS.symm).toMonoidHom).map
+      ((Rep.resFunctor (S.comap (MulAut.conj g).toMonoidHom).subtype).map
+        (sourceInnerCoefficientMorphism A g)) ≫ sourceSubgroupEqualityCoefficient A hS.symm
+
+theorem sourceSubgroupH1Trace_normalizer [Fintype (G ⧸ S)] :
+    groupCohomology.map (sourceNormalizerSubgroupHom g S hS)
+        (sourceNormalizerCoefficientMorphism A g S hS) 1 ≫
+        subgroupCohomologyTrace A S 1 = subgroupCohomologyTrace A S 1 := by
+  letI : Fintype (G ⧸ S.comap (MulAut.conj g).toMonoidHom) := by
+    rw [hS]
+    infer_instance
+  unfold sourceNormalizerSubgroupHom sourceNormalizerCoefficientMorphism
+  erw [groupCohomology.map_comp]
+  rw [Category.assoc, sourceSubgroupH1Trace_equality A hS.symm]
+  exact (sourceSubgroupH1Trace_inner A g S).symm
+
+end
+end Dubon2026

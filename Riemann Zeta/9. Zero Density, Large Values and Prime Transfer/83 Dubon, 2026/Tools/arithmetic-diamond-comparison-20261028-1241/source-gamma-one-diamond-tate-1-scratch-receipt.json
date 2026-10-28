@@ -1,0 +1,58 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T10:01:26.411013+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondPeriodTate"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate.lean",
+      "sha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6",
+      "oleanSha256": "BF4F36A114AE8C287CD0AEE24275DB57C61F7DCC2A82AF7257E99E530DF21117",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateAudit1.log",
+  "logSha256": "5DFD260B1E122E658CD49F2B95B9EE25CF982D30ABFBEC43FB4AC49A5ED17FB1",
+  "auditSha256": "77F4C526EB051C0938DE9A1F1F6B1147C75E53A36FCEAF332876A2C89D5DD807",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+  "ownershipSha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71",
+  "exhaustiveTheorems": 5,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1.log",
+  "dependencyAuditSha256": "5C276272468C956A4BFCAF053AAE4B4ADF6A2F38A812889204D94FEF469FD284",
+  "dependencyAuditSourceSha256": "A8C2813E8F870967EE574571C7E6F3D982E38CF6657B2A778A8A66931DA122A4",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash on the original period quotient and Tate-torus base change.",
+  "discharged": [
+    "The actual dual slash diamond descends to the original integer-period quotient.",
+    "The original Tate-torus equivalence intertwines this quotient action with base change of the actual integral-lattice diamond."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "B54EC8BF9612C1B803F63B76643FA6FA2FAC63A6BCDEBDB99A1961D4448A3990",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

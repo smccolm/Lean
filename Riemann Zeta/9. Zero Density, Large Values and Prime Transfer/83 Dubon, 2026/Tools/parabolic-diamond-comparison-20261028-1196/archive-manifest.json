@@ -1,0 +1,1959 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-diamond-comparison-promotion-route-1196.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-diamond-comparison-promotion-route-1196.json",
+      "sha256": "3DE6813B975E7D310D1760C73A89BBEBD9D37865477CF22DC07FB1DDF9CA7E1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Parabolic Character Descent Reuse Assessment 2026-10-28.md",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/Dubon Parabolic Character Descent Reuse Assessment 2026-10-28.md.txt",
+      "sha256": "120E8C94055BA937F920071CE6B7AEF68689550EB973B379D4BB9365DFB08417"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation.lean.txt",
+      "sha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167a.log",
+      "sha256": "DC40224ECAF1FF4C495B54CC24DD97FA4BB2D975A8A883A70DD9BACC74E1EA58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167b.log",
+      "sha256": "747DD647EE17273615AFB21869419F2F28546E0D3A90B8FD5FE60C74C88A95A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167c.log",
+      "sha256": "5F20E6B23AC9B95F748C0078CD4DB83D0ECA75768BBC9E72C20FA98BDA5F4AE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167d.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167d.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167d.log",
+      "sha256": "D3F4C30AEBFC387B3E2D57C14C89B465DC5138A7B43919279A2E90C81A218BAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceFiniteIntegralSaturation1167e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondAudit1.lean.txt",
+      "sha256": "F0872D4825E9B58150EF44D2C525C61A5D7236B5F5E4740E83E9F8E90E358712"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondAudit1.log",
+      "sha256": "B8B594B6425CE659A0932D5BFB62F7DB711AFBC52422F67993293240EC1EB6ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondConjugation.lean.txt",
+      "sha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondConjugation1185a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondConjugation1185a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondConjugation1185a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondCuspPrimitive.lean.txt",
+      "sha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondCuspPrimitive1190a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondCuspPrimitive1190a.log",
+      "sha256": "4570F7ED3C972395B0DAC66DD738DD8774C21D9EA7415CE9E5F5759E61144D01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondCuspPrimitive1190b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCuspPrimitive1190b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondCuspPrimitive1190b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1.lean.txt",
+      "sha256": "DE98F6A3DB2099DE3E52EA8B3ED8FCEE4A094CD9323E598879940BA690CB413C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1.log",
+      "sha256": "8A71667D1B2C21AC9AF1409A866E1CECF13B447FB5754E31B4817B4226E1BEE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondFiniteH1.lean.txt",
+      "sha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondFiniteH11193b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFiniteH11193b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondFiniteH11193b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondH1.lean.txt",
+      "sha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondH11186a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondH11186a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondH11186a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondLabels.lean.txt",
+      "sha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondLabels1187a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels1187a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondLabels1187a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodAudit1.lean.txt",
+      "sha256": "9D5D2AC45AA44E664B4B54C47A17EB947CAC43BAE98EC0A92FE365F8B899E023"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodAudit1.log",
+      "sha256": "A075231EF15062E44ADD6772384E3DFBAC96E5E2E9BC07A8C999088C8B5D2006"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1.lean.txt",
+      "sha256": "F9F195B7BF06BBE8219C70FCF956EFED89E84C0F43434D9D4429C17539AE07A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1.log",
+      "sha256": "8F3881F58A761702BFD9E68532457DD27B7585145A94DC131D37CBB517652133"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodH1.lean.txt",
+      "sha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodH11191a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodH11191a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodH11191a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice.lean.txt",
+      "sha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192a.log",
+      "sha256": "90F9FB27146E0B23CC86C1562B48EF0C2BFEE1BE93766C808FFDC41F191A23F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192b.log",
+      "sha256": "83CE02CA56DE23AA0A32EA7A198D4438579865EB04293B15E4CE4D689150BA19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice1192c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodLattice1192c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodScratchOwnership1195.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodScratchOwnership1195.lean.txt",
+      "sha256": "50BE108FA8E7DFB4A915D471631E12A3C9681390FA57B4D4FA452646C510A7D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+      "sha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodTate.lean.txt",
+      "sha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodTate1194a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodTate1194a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodTate1194a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondScratchOwnership1189.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondScratchOwnership1189.lean.txt",
+      "sha256": "35EEA7ED74A0EFAF009E5945E568C2F786BFBCF506007481E9811D3157E27890"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondScratchOwnership1189.log",
+      "sha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateAudit1.lean.txt",
+      "sha256": "77F4C526EB051C0938DE9A1F1F6B1147C75E53A36FCEAF332876A2C89D5DD807"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateAudit1.log",
+      "sha256": "5DFD260B1E122E658CD49F2B95B9EE25CF982D30ABFBEC43FB4AC49A5ED17FB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1.lean.txt",
+      "sha256": "A8C2813E8F870967EE574571C7E6F3D982E38CF6657B2A778A8A66931DA122A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1.log",
+      "sha256": "5C276272468C956A4BFCAF053AAE4B4ADF6A2F38A812889204D94FEF469FD284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateScratchOwnership1196.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateScratchOwnership1196.lean.txt",
+      "sha256": "C46184E261E040532B724A430CFC13018D7E9CBBCCE7C2937EBC0B0722F8FF30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateScratchOwnership1196.log",
+      "sha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "sha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178a.log",
+      "sha256": "53CCCBEEE91EEBA08D5F3F0A9BC06367FBD4A1977DEEBDF02C3878FE27789CF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178b.log",
+      "sha256": "63A335A3BDDF9F0D338F7E5F27ED8267F854149E4BC12216713D72829035C38B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178c.log",
+      "sha256": "BA69B5BE559319AF9979F78E60563FA047A340B3ABD5443B025F289688965BB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicCharacterTransfer1178d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentAudit1.lean.txt",
+      "sha256": "568BD23D940A91834EAFA298FB5D3A273EBBD9F41F3D5EDDE50C605A44B0E841"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentAudit1.log",
+      "sha256": "99A7FCE6A90ED4E7ADFDC1F97C23AF05E26E7CD5C59D8B0900DA9D3758235534"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1.lean.txt",
+      "sha256": "F8594D0C2C7AB4AF2FA7E0D1D5CFCF598DC398C34B1D284E35F2C83896E0F218"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1.log",
+      "sha256": "A6FD03FD06D0F1024EFFF42D615C8BCE5FC4B14534E12B8C9C8F0B95190504FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentScratchOwnership1181.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentScratchOwnership1181.lean.txt",
+      "sha256": "F5396F6B4DAD8D2D22F633EF22DFDD14642C879416FB851B7A5E7C1DBD0CEE70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentScratchOwnership1181.log",
+      "sha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicOperatorAlgebra.lean.txt",
+      "sha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicOperatorAlgebra1176a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicOperatorAlgebra1176a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel.lean.txt",
+      "sha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177a.log",
+      "sha256": "11B1774E15347D3D4433FB93C6FAFB00306B4CEEC54FDEBBFE6A6480B4AE6DEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177b.log",
+      "sha256": "EBE7CED7731B14657DC519848E42B2134F4ACB040C0668D892ABAD00ECEB99A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177c.log",
+      "sha256": "03C7DDF952E248E2C990F9BB8E133BDC9B8F5207DC6349300E2E05424147AD1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTateKernel1177d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTransferCriterion.lean.txt",
+      "sha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTransferCriterion1179a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTransferCriterion1179a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTransferCriterion1179b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicTransferCriterion1179b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneUnitDiamondAction.lean.txt",
+      "sha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneUnitDiamondAction1188a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnitDiamondAction1188a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneUnitDiamondAction1188a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationAudit1.lean.txt",
+      "sha256": "5B4600DC4BC0C96537EAD335E676842B86FBB432115E8D29A1469B182768D547"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationAudit1.log",
+      "sha256": "A82CE322B057AD5028F85F2384D6266390F15C1462B96911E2258154DFF52323"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1.lean.txt",
+      "sha256": "21AE8DDE469F8EFD0150EE03DF42FD276013F03D5869616EF67B09FA414E9DFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1.log",
+      "sha256": "93B76A50E13DDCDDC4D7F96ACB6A9CE57FA6040453AF90C131936B3E563B4F23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationScratchOwnership1183.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationScratchOwnership1183.lean.txt",
+      "sha256": "8D27B6F6E680FC6B471C5A0D6502FCD8D8DECAB0959C3F1B180F2DF6A341C77B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationScratchOwnership1183.log",
+      "sha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicAdicOperatorKernel.lean.txt",
+      "sha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicAdicOperatorKernel1174a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicAdicOperatorKernel1174a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicAdicOperatorKernel1174b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicAdicOperatorKernel1174b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicCongruenceException.lean.txt",
+      "sha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicCongruenceException1180a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicCongruenceException1180a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence.lean.txt",
+      "sha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173a.log",
+      "sha256": "6773730187F5A4BF60BE85F2C934E221D00F396AC840B4C973D252B1A1832FEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173b.log",
+      "sha256": "F12635465118A2EC893C9F8D8535C30D17E98C2352550C3C83A3C950628A049D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeCongruence1173d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172a.log",
+      "sha256": "79D78F126276D6FDED573C19C1EA81489BF58146C5CA18C9311CB4B00569913F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172b.log",
+      "sha256": "92D669D307CA90A3E3623A23DB6E6E2DE869D8C502AE67B9F76531D919DD8DDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172c.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172c.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172c.log",
+      "sha256": "F535EDC149C3E61B86E178FFADC7771FF655433F79B8B34B555292AF3D79855E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172d.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172d.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172d.log",
+      "sha256": "A764DE48BA2C7492992F22247CA217A62E13707BB3DD289DE3A3D2E8A7C97312"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172e.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172e.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicHeckeSpan1172f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernel.lean.txt",
+      "sha256": "FD4703F1B381BCE0B60E8F123864D7425EED07837B28778126ACCF348E254202"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel1168a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernel1168a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernel1168a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernel1168a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelAudit1.lean.txt",
+      "sha256": "B94F8985C205E64184153D6471D9F880D76C176636E96896B2ECEC7DAF76AA92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelAudit1.log",
+      "sha256": "1182F7CF351C318F94AA28C0BB3C64152118E84B7FE7B340B2CA15E6B2D270E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1.lean.txt",
+      "sha256": "B3E4197AB3F49BDA53944D8725FFFEA0C4F82758374E8056645532908DAA3015"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1.log",
+      "sha256": "01EA7A7676733B05116B2D909B05A6012FD3B8D330923A897BD76FAE76F17A0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1b.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1b.lean.txt",
+      "sha256": "DA9DD7BC19C0C8BFD6FEB153FDDA51EE85E3E73EB7AE157400FCAC3B152FF3C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelDependencyAudit1b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelDependencyAudit1b.log",
+      "sha256": "36B9271D932101C6B916BB99F3310389E76DF77F4F19ADC00E8B60FBC7B1E593"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelScratchOwnership1169.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelScratchOwnership1169.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelScratchOwnership1169.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelScratchOwnership1169.lean.txt",
+      "sha256": "DA48FFE7634A9073AFED5C1E5A6AD07F3CA68C71110833B28E507EE6304A1771"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicReductionKernelScratchOwnership1169.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicReductionKernelScratchOwnership1169.log",
+      "sha256": "305C1CD4C0C319AE6A65FF19C79E38302E1449C04798096993A442594D2600A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicCharacterKernel.lean.txt",
+      "sha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicCharacterKernel1165a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicCharacterKernel1165a.log",
+      "sha256": "0A460F25AE62B1B964BDAA9DC9E29BA8B245335668E879A1C78DD76762C674B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicCharacterKernel1165b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicCharacterKernel1165b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelAudit1.lean.txt",
+      "sha256": "C3DE37F7017A8EA77E5056C0A18FF82B2C7145B0797922EC5345E75F345AB6DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelAudit1.log",
+      "sha256": "B3C00C4DB6551A7FACA702D6B3AD21D5B5749CA5969CBA931098E1332016A639"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1.lean.txt",
+      "sha256": "8384C68A9AED627ED040FBC8FCD284025841E72C76976CFB96AEDE7F5A2C0622"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1.log",
+      "sha256": "96878AC109A6F35E8CF17CDFCB29F45C79A42C74B462244674FC1BA4BC71B1CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelScratchOwnership1166.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelScratchOwnership1166.lean.txt",
+      "sha256": "A2E5F86309ED7C1337DD2AA0628309CDCCEC9A49FA9C779572557137C142EA96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+      "sha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterDivisibility.lean.txt",
+      "sha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterDivisibility1171a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterDivisibility1171a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterFiber.lean.txt",
+      "sha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170a.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterFiber1170a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170a.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterFiber1170a.log",
+      "sha256": "40D414E2E8F5411E68B8806B50C10D8167FF3646963C6BB513585E253D4F9DC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterFiber1170b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedCharacterFiber1170b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceAudit1b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceAudit1b.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceAudit1b.lean.txt",
+      "sha256": "7F031A40B4F0E24AE3488F101284C823753015D7AB1D9173F1CD9FCCA68CDC5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceAudit1b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceAudit1b.log",
+      "sha256": "DC41B0F70BC261513A16153DF8B17CBAF0C7D2B5A879B1437AE6552EE9D5A5F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1b.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1b.lean.txt",
+      "sha256": "3A79178B991A0F89B2A2391D04359090B860572E4AF90487281BB76E6C5CD11E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1b.log",
+      "sha256": "B8F3CBA753B5B50F5CC0B0C0E7F7039C8F5402B90BF9FAADE4524FFF293B57FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceScratchOwnership1175.lean.txt",
+      "sha256": "3A67AF4A3756419047718080F730AE5E605BF3CCE1AEB25FE46779F4CFC821E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceScratchOwnership1175b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceScratchOwnership1175b.lean.txt",
+      "sha256": "3A67AF4A3756419047718080F730AE5E605BF3CCE1AEB25FE46779F4CFC821E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+      "sha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\archive_parabolic_character_descent_canonical_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/archive_parabolic_character_descent_canonical_8959.py",
+      "sha256": "E14F7D63253E97DF7EC25BEB485A3E89A46A36D8C8496BF301616CD5434F6C24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\assessment.md",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/assessment.md.txt",
+      "sha256": "D377A815AE4A2F8C26BC4C4CD027AC025D72FE2D5F72F192548855EA26551FE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\manifest.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/manifest.json",
+      "sha256": "CC1675092D93B73B6EC69DDB24BBFD136356E6E9D6F1CE83F14DC56D9C8C372B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_1189.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_gamma_one_diamond_1189.ps1",
+      "sha256": "9E0A46FFE91F4B1C83F1238987F56DCBA66EDF36500C3DB2A842DB20A71B0107"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_period_1195.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_gamma_one_diamond_period_1195.ps1",
+      "sha256": "69DB640DC84B2D06E5ED51C1F608C40523ECDA2AAE1E15FBD4BD7B3B2723BDDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_tate_1196.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_gamma_one_diamond_tate_1196.ps1",
+      "sha256": "14D23554EF727728EADD885B7E5E374A7B1BD4D2952DA5E7EE9888A444584490"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_parabolic_descent_1181.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_gamma_one_parabolic_descent_1181.ps1",
+      "sha256": "8607F3C409675C6925556F85E644AAA3D35BCAB06D64F0F2EBF5C4967FDF3FD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_integral_saturation_1183.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_integral_saturation_1183.ps1",
+      "sha256": "BF61BEF3B0EC6CD159E26EF9D3BD11ABE863263EA38FD7016023AE7DAB5A6770"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_parabolic_character_kernel_1166.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_parabolic_character_kernel_1166.ps1",
+      "sha256": "B0CBC3AABBB5906FAFA4224745ADEC1C21ABBC317F00B2589E02F705434CA852"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_parabolic_reduction_kernel_1169.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_parabolic_reduction_kernel_1169.ps1",
+      "sha256": "8CD8D2BFDA613ED0B31AB9414E9A71D0BB26808B389E1223E3F133E4BA795C35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_parabolic_reduction_kernel_1169b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_parabolic_reduction_kernel_1169b.ps1",
+      "sha256": "4071E88D3B7802A4B8BDA80727E003B1C54BA1358F4EE4D8E4811E26735E4D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_supported_parabolic_congruence_1175.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_supported_parabolic_congruence_1175.ps1",
+      "sha256": "E13BED81909018563664AF241E13A485B12AB7C98C7E6604723970D79D592F76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_supported_parabolic_congruence_1175b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/audit_supported_parabolic_congruence_1175b.ps1",
+      "sha256": "00991404C2D507CB8D2914F81180E7138543907718A8A1AB8A08B81010CF4CDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_parabolic_character_descent_8959.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/build_parabolic_character_descent_8959.ps1",
+      "sha256": "5FC01DBD4D380B195014B466F225A6E55CCEDAADD367D0B711C45DB1F6A7C94C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_parabolic_character_descent_ownership_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compare_parabolic_character_descent_ownership_8959.py",
+      "sha256": "8D33379C623928DF0CDEF7B923EB7E4AA720F1BC3ACA6868B86743A289749DE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_conjugation_1185a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_conjugation_1185a.ps1",
+      "sha256": "8003DDF78B4D15C36A2415A735947DED662FFF9A1C4BE50D9D38B9F148E6F31F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_cusp_primitive_1190a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_cusp_primitive_1190a.ps1",
+      "sha256": "43C5BA676B70B07EA80BCE450E1F676611BAEAA78697E6C483E6AA33863EE8CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_cusp_primitive_1190b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_cusp_primitive_1190b.ps1",
+      "sha256": "1DD08E357A94D66A7BA3ABD50DD24B30F70E1D1E446C27207274A002DF1EA1EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_finite_h1_1193a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_finite_h1_1193a.ps1",
+      "sha256": "4C270C54607FF758837B534BC73671438770D2C8F0F288F6F47301AAB7D553AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_finite_h1_1193b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_finite_h1_1193b.ps1",
+      "sha256": "2C8EC8960099A00F69835CE2EFBF546951CEF45039DECF36F54073954992CFA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_h1_1186a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_h1_1186a.ps1",
+      "sha256": "4AC5D986C6615AFD3AAEA9A14D45CB8F374FC8C7AF710B6E5F499E186660EFDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_labels_1187a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_labels_1187a.ps1",
+      "sha256": "B8C0975E46B3D31666E014A9C2739DED39DA3757B6C0FC65624CAB7C90FC6D8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_h1_1191a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_period_h1_1191a.ps1",
+      "sha256": "491C88A320EA27C13E615ABA25F04AAC7EA3BC2D6CFAFECD781F8DE04B7F8CCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_lattice_1192a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_period_lattice_1192a.ps1",
+      "sha256": "B08844F4D26ACA2F867C5397FC36C4650381B3B4764B53E5A03E390CA4ACFFCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_lattice_1192b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_period_lattice_1192b.ps1",
+      "sha256": "E7069EAA99B415A35D90AB5170F314B8B699A838894D42AFEFC04874E4385EC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_lattice_1192c.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_period_lattice_1192c.ps1",
+      "sha256": "CC0B067029EADE30F380A9A5A933F8CF7D27B334F68E805515F3C4292C33BFE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_tate_1194a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_diamond_period_tate_1194a.ps1",
+      "sha256": "CEA6948021818AB40D1F4690C93F73C0C98D352DE1EEFEA907C543A3877A175D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_parabolic_transfer_repair_1179b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_parabolic_transfer_repair_1179b.ps1",
+      "sha256": "F3D290074356EE8419B82371597DE5A3761CBCD9BB05432149120CBB62AC2284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_supported_parabolic_doc_repair_1175b.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_supported_parabolic_doc_repair_1175b.ps1",
+      "sha256": "F52FDCF615A60CBBE0EA4E482A2ECCD79557778135A1A3E80FAB58ADC3AF19D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_unit_diamond_action_1188a.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compile_unit_diamond_action_1188a.ps1",
+      "sha256": "4CA3070BACEE931C2F0723916AE00E2531A84A86265CE9C73E1C20007EDC1434"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1170-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1170-focus.log",
+      "sha256": "88C0E36C15FF33AD361B54CF956F7D4C1447E8073DABEDCDF0FF347D02D26179"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1170.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1170.txt",
+      "sha256": "7B715FF4CE0D11779C59C83734A10688116D7F9CFB8A7E258E3423425D4F96A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1177-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1177-focus.log",
+      "sha256": "0733C80AF21B46C156A93E2F4A553676C381EADFB99E5B6A55691D00CBEFEF14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1177.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1177.txt",
+      "sha256": "EE5B5D5590D92338C5E687243B894A18A4B61C8F60114335951090A46849C927"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1184-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1184-focus.log",
+      "sha256": "D84E3B8085997942615F84BFFD3088C319E6B036757A32629390AB00C491AB2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1184.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1184.txt",
+      "sha256": "1A5FED60BC10843C9CC02EBEA47D9780B476418190BDC380FB15643B6D6CD0D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1190-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1190-focus.log",
+      "sha256": "1D24DDABA2F1250BB5E2EA95823AE882E0C8EFB72072C89C162FA9643D5222AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1190.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/consumers1190.txt",
+      "sha256": "093D77B6D1DAD85A3EC98D4D0DF95940EEF722D65FDC9C8C6A841A3F0066112B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-route-1185.md",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/diamond-route-1185.md.txt",
+      "sha256": "D69C74D436F95B1461082D3658087D7D6858C54254D781593C1D73EB220D7396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1170.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/docs1170.py",
+      "sha256": "37AC22B8AE91851C4DD37B22D8E5EFCF8B2A9AA0E70DFCFF6BC762C131BDAD46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1177.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/docs1177.py",
+      "sha256": "B2B548A9E56098EDCAD9B46FA066C451E2CA65B29E308D5DAB881A4737906DB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1184.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/docs1184.py",
+      "sha256": "DCD9D15D36434E91F7197DAB234DA730CD94196A6B2FCCA9C982FD6F78B5D414"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1190.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/docs1190.py",
+      "sha256": "5309804B93C68994AAA3B945EE34B6E31B876689370660DE0628B4054B3BDD5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1166-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1166-focus.log",
+      "sha256": "142CC753BE6F62C6EA3E5EF51AA95B00EB875DE0B8C682B687A9FE060E1048EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1166b-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1166b-focus.log",
+      "sha256": "B820C347E1629CA98BBA54B3C12127E3BA7D43495E93EB71FD21BCABB3EB8472"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1166c-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1166c-focus.log",
+      "sha256": "6F090B8DD4EAAC19ABB4ADDEE41D2B66C8CB087342C2D2347692A47D4D31596D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1166d-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1166d-focus.log",
+      "sha256": "BE1BD94199662884AB23C67F3042E9F056A2A5334F12D8720C13B83FB763F564"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1167-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1167-focus.log",
+      "sha256": "BDECD3C34508036A284303457DB17832CD9A806B623831C2ACAB4C7C71EC4E49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1168-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1168-focus.log",
+      "sha256": "E3D015ECA5D3CBFF252C0B1E7DC2ECE32BCC89904AD3C4A88DA67B68094365C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1168b-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1168b-focus.log",
+      "sha256": "AFFFEFEB485D29C5A4CB4888B73C95ACE3223610B19F9E5033AE57502327DD04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1169-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1169-focus.log",
+      "sha256": "5A8A9F74EA3DE9AE0B380D155A42EB1C20DBF6121EE686DEB6CD4F912642117B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1170-focus.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/factor1170-focus.log",
+      "sha256": "CF9CEEF054138745DB145ECCE74CA24FE50EB5B80E743117A827293FB3017FDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_association_candidates_1184.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/fetch_association_candidates_1184.py",
+      "sha256": "57CFC781002A264019E3960E96EA261016346DC69654BF32EAA5E506F3F6F405"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_parabolic_shapiro_candidates_1182.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/fetch_parabolic_shapiro_candidates_1182.py",
+      "sha256": "6CEEE5F458BB3E8288F9C0AB256310EFCBD8D9B666CD849B320FE8AED35BA13D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1170-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/foundation1170-console.log",
+      "sha256": "2199A2251E7E2C9582F465ACC2955E395102B2E720887740E78D312831B6610F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1177-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/foundation1177-console.log",
+      "sha256": "7D0AAC8D916FFC06F57AA71A79192ACE79DAF4DAC1B071291399FAC44BCEA193"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1184-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/foundation1184-console.log",
+      "sha256": "002539D519ED9A737C4CCAEB0F6EEE832E13294BAEFF8E43F6E394FD204A40F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1190-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/foundation1190-console.log",
+      "sha256": "1BDEDB3A8746C2C187C81ACC2EDCC2E9E36E5D8388E4174EF2B2D622CCF1E301"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\generate_gamma_one_diamond_tate_audit_1196.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/generate_gamma_one_diamond_tate_audit_1196.py",
+      "sha256": "23416A79059A9EA4B2327C0FD36850FD6B65DF42F670E8BE179B54C3B042A6F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_parabolic_character_descent_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/integrate_source_parabolic_character_descent_8959.py",
+      "sha256": "B99014D80BC6F1E5827E17D153DA6F8A13E2B41E535801B821932B21CA36D185"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1170.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/modules1170.json",
+      "sha256": "4AD40A29DC4565AA34AEC2A50F3362274E564044F1EA6589EA55350EC3CFBF62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1177.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/modules1177.json",
+      "sha256": "ADC042345083D5AA89F12BAF763A18FEFB1024A85F7AD257DC50ADBA642E0699"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1184.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/modules1184.json",
+      "sha256": "F2F48F8ED2083530860E9C1DABCA8ECBB09BC9FC5D94F4823D1BBFE7B5FBFD01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1190.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/modules1190.json",
+      "sha256": "163D6567B1146F302FE08EB2D28193C3AC92FFE86A7F7E3092D30AC66BF8BD15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\next1170-counts.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/next1170-counts.json",
+      "sha256": "D91FE675C5B9A2F93A19FD6A153BB0AC6DC344B9E37490F94DE4C7C646E3DDA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1170-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/paper1170-console.log",
+      "sha256": "BECABD43953E378A922F043BDD5A3CE84C3C8F339B9AAF43F2A22731F34EE4E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1177-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/paper1177-console.log",
+      "sha256": "3CC9A354C5800984464CFFE0FC25A9186023B5C9C1D85B8E671811CA77B83AA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1184-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/paper1184-console.log",
+      "sha256": "565F63B1E779622934F57230C195513323CF98DA76757DC3063BB112BAF29A20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1190-console.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/paper1190-console.log",
+      "sha256": "3BEE9A385A1BDAAE7A2D567FBA6C6EF160A30545BB6FB8178EB63E04AAEA4C49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-character-descent-preexecution-review-8959.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-character-descent-preexecution-review-8959.json",
+      "sha256": "765FB09ECE6BF18CC1DE82C80D333BCD54D47AA05CF57A4ACEE6F321DDCE9735"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-character-descent-promotion-route-1183.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-character-descent-promotion-route-1183.json",
+      "sha256": "F453A992AB293E518B07ADC20878E466882D60BDB426C7F4001C46DD9CB3B4B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_parabolic_character_descent_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/preflight_parabolic_character_descent_8959.py",
+      "sha256": "265F35A4EA241F5F99BECF4F64BAFD947BA2A9BF74B45664577393966D1D4E3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_audit_1189.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_gamma_one_diamond_audit_1189.py",
+      "sha256": "B96D3CE55F039453BC857AC9DBCA0A37696B9BDB5DA9D56975875DB98A96A126"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_period_audit_1195.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_gamma_one_diamond_period_audit_1195.py",
+      "sha256": "A617079DC4A7AE127748E8191AD012F32282F37FAF0EBB22849B361D1B532821"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_tate_audit_1196.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_gamma_one_diamond_tate_audit_1196.py",
+      "sha256": "F60CA6C94AF1E03F8927E3A5F84EFE05DEB4DD239BCD7011A931F8BE2F4E78E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_parabolic_descent_audit_1181.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_gamma_one_parabolic_descent_audit_1181.py",
+      "sha256": "FFADFE8644534FC0EC2DB66098D3A86669DD60B8D10526F9D34B4D99470CB25C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_saturation_scope_1183.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_integral_saturation_scope_1183.py",
+      "sha256": "141DA8A4BA01ADDBE90E4F71CA5F9BDAE236A7B3A4C85CEC5587B04A9B84D32F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_descent_global_ownership_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_character_descent_global_ownership_8959.py",
+      "sha256": "BBB81BA4B2FE65B93E44D7E4D9FAEC0A7E5A3AA4196E5D7A46AD6DE8426FCAE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_descent_production_ownership_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_character_descent_production_ownership_8959.py",
+      "sha256": "81F6A96D5610A9DE9D4157982F93AA0899A1616EFEFAF65C4C128FFAF0BCC38F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_descent_promotion_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_character_descent_promotion_8959.py",
+      "sha256": "85DD9D1E27395BEF6F2DD0C90E63CCA3F87A7509B679B71B671D0FBC9EDCB695"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_kernel_audit_1166.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_character_kernel_audit_1166.py",
+      "sha256": "C66B1296CAD40C3EDD2F165DE433D8769F47498DFE5627F8C2B6193DCBFD4A65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_reduction_audit_1169.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_reduction_audit_1169.py",
+      "sha256": "3BEB5BAD45077261F84905C055A6B777501DFAD843D481805C1C526E100D1A22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_reduction_scope_repair_1169b.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_reduction_scope_repair_1169b.py",
+      "sha256": "6AECA4870F5B5F57449A68CAF7D33A2C77E2247BBFC1CCD6D68BD38CE5B12006"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_parabolic_kernel_audit_1166.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_primitive_parabolic_kernel_audit_1166.py",
+      "sha256": "50789642B170CBC20CAD749C2D71AFC112EC3ACBD1574B32E4569DDEC74FC273"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_supported_character_division_1171.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_supported_character_division_1171.py",
+      "sha256": "C59A12C6B746DFEADB7DD49165E13365EFBCB4DA48744236F68E5A5527E9E90D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_supported_character_route_1170.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_supported_character_route_1170.py",
+      "sha256": "2EEC03B4AFE583E14D8C984F1E0655C2CA1CCA693FDF56D623AAA8D5CA9ABED9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_supported_parabolic_audit_1175.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_supported_parabolic_audit_1175.py",
+      "sha256": "5DE4A5D1EC89B01E98E6BB0CFCCFF5B13615C62CDFABB47345EA2E6D690C1389"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_supported_parabolic_audit_1175b.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_supported_parabolic_audit_1175b.py",
+      "sha256": "803BD6FC8F086B6BD8576AA3DC3DDDAD43B305D99197ADA93BDE65A694A5BA57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_supported_parabolic_audit_repair_1175b.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_supported_parabolic_audit_repair_1175b.py",
+      "sha256": "6F87575D5864FA393726BF1F7EF306131587220E5D5E18F8282D64623FA2CB57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1170.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record1170.py",
+      "sha256": "F0CFF2271702296325F3D712DC63993C994D2A836E79319E79EC15BA0EF29103"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1177.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record1177.py",
+      "sha256": "5249FCD82DABA6CECDDF20ED40E240452637AB8BE200B6C2A831195CD9E25C58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1184.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record1184.py",
+      "sha256": "709F45A538B845320DE3DE844DC6F6EF7BF862A651E6F58D73E801A02F6DCE58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1190.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record1190.py",
+      "sha256": "89F965DBDAEF0654C247FF16F1965BBBE6EC82D4359B80E80E1D1D9BA490CCD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_1189.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_gamma_one_diamond_1189.py",
+      "sha256": "0163AB9B3CBE69931F46A254E1D475B0038FB77CFF03974F2C9B71D725769621"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_period_1195.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_gamma_one_diamond_period_1195.py",
+      "sha256": "2F2744BBCB0C7A95A92E4350CB28F1515C911EF2C1AC0D5FAFC8DCB72ED905A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_tate_1196.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_gamma_one_diamond_tate_1196.py",
+      "sha256": "7BE34F06E570093958D3DBBD38CE0A2721CE7AAF0BE4E7D9BC570A8D9953F44D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_parabolic_descent_1181.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_gamma_one_parabolic_descent_1181.py",
+      "sha256": "C32C3AA7D6B774881D769CCA53E5A0155135303CF541285625645864AB9D1738"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_integral_saturation_1183.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_integral_saturation_1183.py",
+      "sha256": "29397D7051FDD97DF83E9F0806994D90D026F744D069A3D366B71E53DFBED50E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_parabolic_character_kernel_1166.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_parabolic_character_kernel_1166.py",
+      "sha256": "9F123357F8F60F0727B91D71305C4F0300E5AC8AB2395430BA56DE5C2A955A26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_parabolic_operator_route_1176.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_parabolic_operator_route_1176.py",
+      "sha256": "182E92A62BFD356E352A018C4A088DDF49FF2D6C66811A17D2B927CF1487D659"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_parabolic_reduction_kernel_1169.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_parabolic_reduction_kernel_1169.py",
+      "sha256": "695045C2534240F61F350625B19DA8076844BCAF99201D3FC429E554A333960E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_parabolic_reduction_kernel_1169b.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_parabolic_reduction_kernel_1169b.py",
+      "sha256": "00F7F647326CB7C101B0200141CA54AF51A48FCBEF8A9759799198257B31FECF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_parabolic_character_descent_8959.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_source_parabolic_character_descent_8959.py",
+      "sha256": "9353510ECFF9197B2622DBB0D236E888968DB2E4D0662D847102D13D58279C6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_supported_parabolic_congruence_1175.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_supported_parabolic_congruence_1175.py",
+      "sha256": "D43194DFC458993C051D8B5522C5D90AADF1B95CF94FFE94E2EB2F829AE73DF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_supported_parabolic_congruence_1175b.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_supported_parabolic_congruence_1175b.py",
+      "sha256": "3781F565665DFEAC8C03E7CA0B4EC6C5E41CD18E15BA159094C755206AEA59E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1170.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/register1170.py",
+      "sha256": "79A49956565D1DF74998B4CED4938C0BD68ABDE33FE87335743B87A01B827947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1177.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/register1177.py",
+      "sha256": "A5270DBBDF6EA36DC626CD19A9D8A67C051DAC29727F1C247CAAF3005610146C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1184.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/register1184.py",
+      "sha256": "D944F3A47CA3FA25091C9F9A705951DA5A9F3558A30E12CB648FB3F6F1AAC1AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1190.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/register1190.py",
+      "sha256": "58F4C2578069E0B3A762A5EF7707153A9DA8C695CC74B355033B4E85767DC0A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1170.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/registrations1170.json",
+      "sha256": "830F50D80F7BA5E8682BA88AD318BF7357713D623272FB8BA0E1C64AB4EC1A7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1177.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/registrations1177.json",
+      "sha256": "76B4FB57A04624E36D0FE9CA01A910F3FB379BC26AA53D34604809900B44F9E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1184.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/registrations1184.json",
+      "sha256": "A5127AAAD62EE434D58895DD00BD9283C9D1B356D98CFAE4A4D2E303E72F9F8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1190.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/registrations1190.json",
+      "sha256": "591AD1447DC72550AAF82360C9E47137F98A2DDF9B4E3933EC0A39328B99390F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1170.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/section1170.txt",
+      "sha256": "2340F9908044E935BCF6D89E147133C5BD97A8DB40012B1E21FF9A39CCE85F9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1177.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/section1177.txt",
+      "sha256": "988C4AA82FDEAFAD8A19B2BC5565F65E98899500292A8AA59BEFCFE8F55FE856"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1184.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/section1184.txt",
+      "sha256": "4DEF842CC072A4B4AD0F98686481CAAB33ACDE0D0BE94F85A6B221CD9710E32D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1190.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/section1190.txt",
+      "sha256": "2F27323FDC8E38E37910BE50431FD72200A5D2B48CB7C064CE61E9106FDC4586"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-1-audit-config.json",
+      "sha256": "7F3B034B0823577C7D25586F77A65ACE52623ECEBFB686D440366AA75416DD52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-1-reuse-review-20261028.json",
+      "sha256": "1D9324A8015B759465C2327AF582FF7E9E33F85A5AA10551BE0F02E8EAFE73C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-1-scratch-receipt.json",
+      "sha256": "6D3F0ECD238902E2E56F93C5F72697B714243D7EAFA92B363EFBE5CACF9D9833"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-audit-route-1189.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-audit-route-1189.json",
+      "sha256": "A29F804465B0C2B6405DCDC82FA7CB9E34E05DB9C9A68B2F21676CE99FA87DE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-period-1-audit-config.json",
+      "sha256": "534A458BA4B97CBD30D666E2E5E7DEDC884C728CB5000D33BEB85C2FFDA3250D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-period-1-reuse-review-20261028.json",
+      "sha256": "63D03CFACC064D9823D07141C2B4801DD1DA756EA8E30168B326A3FFA101BD95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-period-1-scratch-receipt.json",
+      "sha256": "5454C6C8F45FA24F42CFD243F7FD97F80D19C8F788609EE46E08744BB3D8E046"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-audit-route-1195.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-period-audit-route-1195.json",
+      "sha256": "8091526D9D7FF1D56881A37376677248A486CC7B99BFC45D21632E2EDAEF261B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-tate-1-audit-config.json",
+      "sha256": "9D91EC1597AA01FD27AC5AB817E30BB01DEF9207207EE2220E1EF7AB81AC161C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-tate-1-reuse-review-20261028.json",
+      "sha256": "B54EC8BF9612C1B803F63B76643FA6FA2FAC63A6BCDEBDB99A1961D4448A3990"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-tate-1-scratch-receipt.json",
+      "sha256": "5C5AC08BC612BA297D9A2635CA964ED155E6689BC83F619ED11384BA53F7F996"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-audit-route-1196.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-diamond-tate-audit-route-1196.json",
+      "sha256": "FC383071F7F92C2E870A5F95E51D83CD6D8BBFEF9A8159C3CFDCBB5C0EE75C19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-parabolic-descent-1-audit-config.json",
+      "sha256": "E5FAAC37946B37F22779D2E12C2D07509AE29687D5B6FE1140D731319E3CF5AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-parabolic-descent-1-reuse-review-20261028.json",
+      "sha256": "03F49CFD58D19F04800E64865AA82174E8818D984ACE0596B83D00A6FC08C492"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-parabolic-descent-1-scratch-receipt.json",
+      "sha256": "E87AAD117C5DEFAD469542924BC56860E53CDCA1300079CAE42A0FCA19C0E298"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-audit-route-1181.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-gamma-one-parabolic-descent-audit-route-1181.json",
+      "sha256": "896B82D6ADC25AF27563178A88EA7176642CACDB0EF0E578D90C3C32DB75EB9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-integral-saturation-1-audit-config.json",
+      "sha256": "FD7F6D67FA18C9A80BE835C9AFFDE4BA94D019640BE309F8299CB103C1F19A1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-integral-saturation-1-reuse-review-20261028.json",
+      "sha256": "116A2D6692D5A277EEBB19F227759EFE7B2F3CE809FEA71F33A1A50337C26DAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-integral-saturation-1-scratch-receipt.json",
+      "sha256": "F4214A6C467BADE0561B38AE8BA313083A1A24BA0369EA7BB80170F593232F65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-audit-route-1183.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-integral-saturation-audit-route-1183.json",
+      "sha256": "57C3AE71ADFAAD761BF96700C6AE76B8E8FDF3722ED1E43C4D9697DF8FC56594"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-character-descent-scratch-ownership-8959.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-character-descent-scratch-ownership-8959.json",
+      "sha256": "71A5960B466B9267BF12E6BC79B7DD61E3A9302EE44091A52D1E06D6AAC5D556"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-operator-reuse-1176.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-operator-reuse-1176.json",
+      "sha256": "2B376930382D1F4544FF6261D5EE4024107483C3408328A6E8BAA53EAADAC278"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-1-audit-config.json",
+      "sha256": "70EECF781EEBF705AA9D18B92AB99F2114E0DB3C1818C6539B885651AB36F009"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-1-reuse-review-20261028.json",
+      "sha256": "B193B38B28EB77B54BF1C18CE98CF705EB9155E829B10FB54728B6655545943C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-1-scratch-receipt.json",
+      "sha256": "93F016DA9538E7B8AFD5B5B46685E70663BEEF310AB0AFEB5A8655B7C2F3AA78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1b-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-1b-reuse-review-20261028.json",
+      "sha256": "3D5E0712AC7A557AFDF420138679A984EEDE31DDAFAD1043ABAB34ED2F87378A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-1b-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-1b-scratch-receipt.json",
+      "sha256": "B1A0E48E175C4829835A410A109B27898A436B1B3FBF8A7B0A389E890BB07381"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-audit-route-1169.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-reduction-kernel-audit-route-1169.json",
+      "sha256": "5C564CCA174F6FA31705AAEE17D60A025D460F4AF4E3C1F44AFE8EF2080F1BDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-saturation-reuse-1167.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-saturation-reuse-1167.json",
+      "sha256": "602823931E83E449B2E3FACF2B5766CCE0E8E080D01CC18B3EB908EE6B4ADC5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-1-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-primitive-parabolic-kernel-1-audit-config.json",
+      "sha256": "28C1E586E6E05C3E4D6935700CC29EABCD3F5B0D533DB2DD9BEEE23C4A670204"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-1-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-primitive-parabolic-kernel-1-reuse-review-20261028.json",
+      "sha256": "3306CD6396ADA01E3014A3C85298C59E2BD5F0E5D23676A28A454EC98A60247C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-primitive-parabolic-kernel-1-scratch-receipt.json",
+      "sha256": "69482259BBA89FFC7FFAC9E9D3EB3B771469D0AFBF5FC1FC0D973FC79C1915FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-audit-route-1166.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-primitive-parabolic-kernel-audit-route-1166.json",
+      "sha256": "48238F5BC76A073C76C9C2D66815B4AD8BBBA5BD574733C79D8493EA590445F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-primitive-parabolic-relation-1-scratch-receipt.json",
+      "sha256": "258F0D04EDFCE9C0BD948144191B128D9ACC883DE9A2D6A0B545F9C915BB2E10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-character-reuse-1170.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-character-reuse-1170.json",
+      "sha256": "7DA29843F950B7D3679B9E8F2B8392DB2783E22270A0A9D7D0EE22F1EADA8EED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-1b-audit-config.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-parabolic-congruence-1b-audit-config.json",
+      "sha256": "D7C5866EFE598087078430F84321021A98C700BE467B53163E1081D515A4F6A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-1b-reuse-review-20261028.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-parabolic-congruence-1b-reuse-review-20261028.json",
+      "sha256": "1FF69D6BA2B58603D05A7055BBFE642B8009EB97AA5D6C23FC126464AA65952B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-1b-scratch-receipt.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-parabolic-congruence-1b-scratch-receipt.json",
+      "sha256": "32E039C33E09CAA84BBA6CD4500ACADCD1D357D2E98561721A2AC0634169E05D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-audit-route-1175.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-parabolic-congruence-audit-route-1175.json",
+      "sha256": "9417FA1FE49DC08DDA8F38C65A45506F1A570E1DAAB9D4263C5A1242A31B63CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-audit-route-1175b.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-supported-parabolic-congruence-audit-route-1175b.json",
+      "sha256": "519A0D60C3141B7B6FA250C6C2DD3797D159637B7E77BD1E0348218DC41AB398"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1170.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/status1170.txt",
+      "sha256": "E0128E2495FC008C526B292ED5FCD5C5DFD93BFAE8780A058086B7F1DEBD568A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1177.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/status1177.txt",
+      "sha256": "24A3AE01E0DF82D02EBADAE4347335D54574794C3317CB8A3CFCDC201AFE3F0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1184.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/status1184.txt",
+      "sha256": "B9F457CB5BC7FE51D58BC819BE6C78F1350159A9C0C355C5544307F2754EBBC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1190.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/status1190.txt",
+      "sha256": "355A86DB009B56229457E0A7A2559E2D3E23AE1E97AA07FAFAD2B0417FD031E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_parabolic_character_descent_8959.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/verify_parabolic_character_descent_8959.ps1",
+      "sha256": "00432C6769437E102AEDE70FE6CCCC2CDEF8C9E21A1ADD6E66C130DF9983686E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\cicm-head.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/cicm-head.json",
+      "sha256": "F3D47CA12F6EAABAC9BD870A0F9D5147AF1694CF4AB294C7D3F2CC401D94D494"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\false-home.html.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/false-home.html.txt",
+      "sha256": "A60A076AFEEC14EC58CD01B8DD925F0C21097AE1048BFFF4F59053556B2345FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\Frobenius.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/Frobenius.lean.txt",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\GaloisReps.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/GaloisReps.lean.txt",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\README.md.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/README.md.txt",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\association-reuse-1184\\Statement.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/association-reuse-1184/Statement.lean.txt",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-cusp-primitive-1190a\\SourceGammaOneDiamondCuspPrimitive.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/diamond-cusp-primitive-1190a/SourceGammaOneDiamondCuspPrimitive.lean.txt",
+      "sha256": "08F488E82CF71A1FA2C0E42D05E169DE97B016155880AB3A11F040B765B024F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-finite-h1-1193a\\SourceGammaOneDiamondFiniteH1.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/diamond-finite-h1-1193a/SourceGammaOneDiamondFiniteH1.lean.txt",
+      "sha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-period-lattice-1192a\\SourceGammaOneDiamondPeriodLattice.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/diamond-period-lattice-1192a/SourceGammaOneDiamondPeriodLattice.lean.txt",
+      "sha256": "7178D215C52CC76D1096ABAB86990E09A325D7A2B9C5F93C82A4C39107C836EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-period-lattice-1192b\\SourceGammaOneDiamondPeriodLattice.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/diamond-period-lattice-1192b/SourceGammaOneDiamondPeriodLattice.lean.txt",
+      "sha256": "C2D0D1E4EA7F9279C74DD1B95303DEC1FCADBB96FB4EE176B035DF304281E3E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-integral-saturation-1167a\\SourceFiniteIntegralSaturation.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/finite-integral-saturation-1167a/SourceFiniteIntegralSaturation.lean.txt",
+      "sha256": "E6ACDD54710FD510CB10789B7C4E0B018F9FE80C01420589BA3CA557F958FA4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-integral-saturation-1167b\\SourceFiniteIntegralSaturation.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/finite-integral-saturation-1167b/SourceFiniteIntegralSaturation.lean.txt",
+      "sha256": "9A5DCC286D5DC74D46E17775F3819F8EADECB36FACF12BD63B324FF4A33170CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-integral-saturation-1167c\\SourceFiniteIntegralSaturation.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/finite-integral-saturation-1167c/SourceFiniteIntegralSaturation.lean.txt",
+      "sha256": "0490DE4E08DDFF2C6579D40924AE4C668A818D9CCC6A4E2916A8F63DEC583AE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-integral-saturation-1167d\\SourceFiniteIntegralSaturation.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/finite-integral-saturation-1167d/SourceFiniteIntegralSaturation.lean.txt",
+      "sha256": "CDAFCA912DD68D5C4CF8ABF244F0675023FFE3E57B79596B5B9E1A30A29DB874"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-character-transfer-1178a\\SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-character-transfer-1178a/SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "sha256": "8D157154D410159C0235313B3EBEB8A0CBB32288CBDB1E70E58BC9CBC9491C15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-character-transfer-1178b\\SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-character-transfer-1178b/SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "sha256": "413233904FDD316C76065925BF6A12A159F03367A060CA2E268A26C60F0CE87B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-character-transfer-1178c\\SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-character-transfer-1178c/SourceGammaOneParabolicCharacterTransfer.lean.txt",
+      "sha256": "413233904FDD316C76065925BF6A12A159F03367A060CA2E268A26C60F0CE87B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-congruence-1173a\\SourceParabolicHeckeCongruence.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-congruence-1173a/SourceParabolicHeckeCongruence.lean.txt",
+      "sha256": "E63484AD29881FFF30612B281CC7BD67E24F412B82D209753725B58B39073191"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-congruence-1173b\\SourceParabolicHeckeCongruence.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-congruence-1173b/SourceParabolicHeckeCongruence.lean.txt",
+      "sha256": "35E1BFCF5D2D6C333134D9C83CC040190C9452C586F419A357EA5A318145373C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-span-1172a\\SourceParabolicHeckeSpan.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-span-1172a/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "0FEEEC226F8078902254003096613C0EFEDFDFE22685638DCA8CA628261082E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-span-1172b\\SourceParabolicHeckeSpan.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-span-1172b/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "05328049FFD0F2C31C9B65DDF032B3A7AC4D80962E32C9CAE6EF1BBA78EFD965"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-span-1172c\\SourceParabolicHeckeSpan.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-span-1172c/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "2CA9AFD475A7BC3D1FC6930A5A8A83A1467F5E32FBD099D65B2FE750B5D07DDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-hecke-span-1172d\\SourceParabolicHeckeSpan.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-hecke-span-1172d/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "ED3946A17E65A2DC1D42BB5CCAF22CFEB3583F8CB58462BA2E4F1B51EB41A190"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\assessment.md",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-shapiro-reuse-1182/assessment.md.txt",
+      "sha256": "423F47D3B29EE3785C59AD7A1C9EB35FAE0E4134DCB8A4B6FE746C7919CE7ED2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\manifest.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-shapiro-reuse-1182/manifest.json",
+      "sha256": "A7AADDE9761FC44382ADF1C4A295F5FBD15A8766C37309CA2FB6BD796AD6CE5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\prove2-shapiro-main.html.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-shapiro-reuse-1182/prove2-shapiro-main.html.txt",
+      "sha256": "F7FBB32951FB314460C24E715B30ED3BA8427077A411A92240C3F559E04B02E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\prove2-shapiro.html.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-shapiro-reuse-1182/prove2-shapiro.html.txt",
+      "sha256": "F7FBB32951FB314460C24E715B30ED3BA8427077A411A92240C3F559E04B02E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-shapiro-reuse-1182\\wiese-parabolic-faithfulness.html.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-shapiro-reuse-1182/wiese-parabolic-faithfulness.html.txt",
+      "sha256": "4F35B97758CA9E85475565C1D0F86CFA7BD7E5FA23214E0BD6078B816675045D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-tate-kernel-1177a\\SourceGammaOneParabolicTateKernel.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-tate-kernel-1177a/SourceGammaOneParabolicTateKernel.lean.txt",
+      "sha256": "D6E2F5449C7BB79E4342A8C51C6C9E1C394384BCA75C06C28C30F64D579E9226"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-tate-kernel-1177b\\SourceGammaOneParabolicTateKernel.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-tate-kernel-1177b/SourceGammaOneParabolicTateKernel.lean.txt",
+      "sha256": "CA0CC351D66ADD3E25B554CD94DED169AE81B2184B80AED323C1E2BA54A953F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-tate-kernel-1177c\\SourceGammaOneParabolicTateKernel.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-tate-kernel-1177c/SourceGammaOneParabolicTateKernel.lean.txt",
+      "sha256": "2862F07C97A7465056A1CCD55A3980B28083FE56551F2914569C9237BE1E6874"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-transfer-criterion-1179a\\SourceGammaOneParabolicTransferCriterion.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-transfer-criterion-1179a/SourceGammaOneParabolicTransferCriterion.lean.txt",
+      "sha256": "E34423CE416C3B9E30C8D4E974E9BECCD7A96B1774B262AE25BD0686256732F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-parabolic-character-kernel-1165a\\SourcePrimitiveParabolicCharacterKernel.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/primitive-parabolic-character-kernel-1165a/SourcePrimitiveParabolicCharacterKernel.lean.txt",
+      "sha256": "671881C8565AEFEBBD1147264028BDE12432F26D567BCDAA2BCA6FCCD5F1BA7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\supported-parabolic-audit-1175a\\SourceParabolicHeckeSpan.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/supported-parabolic-audit-1175a/SourceParabolicHeckeSpan.lean.txt",
+      "sha256": "8DA1EB08EC694BBCFEFEFFF1BF36221E5430F355F7D9855016A2D18B1EAD10E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\supported-parabolic-audit-1175a\\SourceSupportedParabolicCongruenceAudit1.lean.txt",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/supported-parabolic-audit-1175a/SourceSupportedParabolicCongruenceAudit1.lean.txt",
+      "sha256": "7F031A40B4F0E24AE3488F101284C823753015D7AB1D9173F1CD9FCCA68CDC5B"
+    }
+  ]
+}

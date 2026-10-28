@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-10-28T12:47:44.990168+00:00",
+  "revision": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerDelta/ProofsXN.lean",
+      "path": "NormalizerDelta/ProofsXN.lean.txt",
+      "sha256": "D2A7A9999D97302880ED7308F6B2ADD643812ED01456F1CD43867EC95A9745DB",
+      "bytes": 44
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerDelta/XNOrder.lean",
+      "path": "NormalizerDelta/XNOrder.lean.txt",
+      "sha256": "E4DDFB9142C14576222DA546DAC1A450829E5B7C62CC8DF00DEC607D5959393F",
+      "bytes": 8918
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerDelta/DefsXN.lean",
+      "path": "NormalizerDelta/DefsXN.lean.txt",
+      "sha256": "2431118DE0CD3DE24F25974F6E1C5E43C3EA1D3C9527CA83853B502F7CB4E872",
+      "bytes": 279
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

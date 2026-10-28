@@ -1,0 +1,35 @@
+import SourceLaurentAlgebraicCoefficient
+import Dubon2026.SourceLaurentScalarIndependence
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond descent. Over algebraically closed constants, the proved
+coefficient algebraicity places the entire actual Laurent root in the
+original coefficient image. A native linear retraction constructs the
+same series, preserving its support; no convergence or formal root is assumed.
+-/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+theorem exists_laurent_lift_of_relation
+    {K L : Type*} [Field K] [CharZero K] [IsAlgClosed K]
+    [Field L] [Algebra K L] [IsAlgClosed L]
+    (p : Polynomial (LaurentSeries K)) (hp : p ≠ 0) (x : LaurentSeries L)
+    (hx : Polynomial.eval₂ (coeffMap (algebraMap K L)) x p = 0) :
+    ∃ y : LaurentSeries K, coeffMap (algebraMap K L) y = x := by
+  have hc (n : ℤ) : x.coeff n ∈ Set.range (algebraMap K L) := by
+    have hi := (isAlgebraic_laurent_coeff_of_relation p hp x hx n).isIntegral
+    exact minpoly.mem_range_of_degree_eq_one K (x.coeff n)
+      (IsAlgClosed.degree_eq_one_of_irreducible K (minpoly.irreducible hi))
+  obtain ⟨π, hπ⟩ := (Algebra.linearMap K L).exists_leftInverse_of_injective
+    (LinearMap.ker_eq_bot.mpr (algebraMap K L).injective)
+  have hπa (a : K) : π (algebraMap K L a) = a := by
+    have he := LinearMap.congr_fun hπ a
+    simpa using he
+  refine ⟨x.map π, ?_⟩
+  ext n
+  change algebraMap K L (π (x.coeff n)) = x.coeff n
+  obtain ⟨a, ha⟩ := hc n
+  rw [← ha, hπa]
+
+end
+end Dubon2026.SourceFunctionField

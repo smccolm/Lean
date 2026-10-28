@@ -1,0 +1,63 @@
+{
+  "recordedUTC": "2026-10-28T07:09:55.971200+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 character arithmetic realization -> passage from the original full H1 character to parabolic H1 -> original cusp-period entry, coefficient reduction and actual Gamma1 restriction.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodCocycle.lean",
+      "sha256": "A8737004A6F240220DDC4DCDE0E0B23873EB93B1862AB212C2FF6B822D024031"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodCohomology.lean",
+      "sha256": "C8453F2763C52E6F05E3AE43A1C595278A40B6DE393DFA50ACC7950E3566D059"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBinaryCohomology.lean",
+      "sha256": "D60419DD5905477A90F55E1BC8C0F7B8770AD06727B9C4C6F9C0299129EFF600"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSemilinearCohomology.lean",
+      "sha256": "57EC10FB101EF4BF45434761F2F53F09F63D79F4F010E37EF507EE8B9CCA3B17"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCohomologyChange.lean",
+      "sha256": "AF0B8FA671F58D6FAB44624EF6136F9B20E485B8C7029F5334216B9F4843C926"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiagonalHom.lean",
+      "sha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryRestriction.lean",
+      "sha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1HeckeRelations.lean",
+      "sha256": "E9C06CFD04A4E1787D6AC89C539027F3CE794AD946EBF640EF2BBD390099CBD0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1HeckeCongruence.lean",
+      "sha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceNativeBoundaryCharacters.lean",
+      "sha256": "DBD72F4B32ADA832AE6055F66E948B0B75D672EB9B7363875FF487764E7501E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-reuse-1140.json",
+      "sha256": "3E2CEB0FF9C82C72D2BFD903F37A0B873E482CA825416CA0C296A28262BD0911"
+    }
+  ],
+  "shorterRoute": "The existing sourcePeriodCocycle_parabolic already gives the explicit local coboundary at every rational cusp stabilizer. The existing integral parabolic classification supplies a fixed rational cusp. Native coefficient equivalence and semilinear coefficient changes preserve these actual local coboundaries. The exact diagonal Gamma1 map preserves trace and makes the original finite binary action trivial, so restriction turns each local coboundary into literal zero. This directly supplies the original source-class entry and its reduction/restriction consumers, without rebuilding complex boundary/Eisenstein theory.",
+  "assumptionsToDischarge": [
+    "The original nonzero cusp-period class lies in the literal parabolic submodule of native homogeneous-coefficient H1.",
+    "Actual original coefficient change preserves that submodule.",
+    "Restriction along the original Gamma1 diagonal map sends every such finite coefficient class into the homogeneous parabolic H1 identified with the arithmetic Tate dual."
+  ],
+  "remaining": "The integral parabolic spanning/saturation and Hecke-character descent must still be proved. The scalar complex boundary theorem does not directly prove finite homogeneous-character descent. No nonvanishing of a restriction modulo p^n, surjectivity of parabolic transfer, finite character descent or characteristic-zero lift is inferred. Diamonds, arithmetic Galois realization and the full remaining DUB17--20 gates remain open; 16/20 unchanged.",
+  "preservedFailures": "1140a cocycle coercion and quotient equality rearrangement; 1141a explicit representation inference; 1142a premature dependency invocation, 1142b/c/d unnecessary nonzero original-level hypotheses removed to fix warnings; 1143a/b large coefficient-equivalence unfolding avoided by the required native representation-morphism lemma. Failed sources and diagnostics preserved before repairs; no proof limits increased.",
+  "dischargedConsumer": "The actual original primitive form gives a nonzero class in literal native parabolic homogeneous H1 and every original Hecke-word eigenvalue. Actual integral coefficient reduction followed by the original diagonal Gamma1 restriction lands in the homogeneous parabolic H1 used by the arithmetic Tate comparison. Neither finite restriction nonvanishing nor finite character descent is concluded."
+}

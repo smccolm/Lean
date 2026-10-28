@@ -1,0 +1,51 @@
+import Dubon2026.SourceGammaOneDiamondCuspPrimitive
+import Dubon2026.SourceGammaOneUnitDiamondAction
+import Dubon2026.SourceGammaOneRealPeriodH1Hecke
+
+/-! DUB17/18 -> original all-weight association -> actual arithmetic
+Gamma1 diamond comparison. Consume the literal slash primitive identity
+and the native conjugation formula. The same original cusp period and
+real H1 map intertwine the actual diamond actions, with no comparison
+certificate or replacement eigensystem. Arithmetic compatibility remains. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup UpperHalfPlane groupCohomology CategoryTheory
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M] (g : Gamma0 M)
+
+theorem periodValue_cuspDiamond
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) (γ : Gamma1 M) :
+    sourceWeightTwoPeriodValue (Gamma1 M) (cuspDiamond M g f) γ =
+      sourceWeightTwoPeriodValue (Gamma1 M) f (sourceGammaOneDiamondConjugation M g γ) := by
+  have he : g.val • (γ.val • I) =
+      (sourceGammaOneDiamondConjugation M g γ).val • (g.val • I) := by
+    change g.val • (γ.val • I) = (g.val * γ.val * g.val⁻¹) • (g.val • I)
+    simp only [mul_smul, inv_smul_smul]
+  have hd := diamondPrimitive_difference M g f I (γ.val • I)
+  rw [he, primitive_one_period, primitive_one_period, add_sub_cancel_left,
+    add_sub_cancel_left] at hd
+  exact hd.symm
+
+theorem realPeriodH1_cuspDiamond
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    realPeriodH1 M (cuspDiamond M g f) =
+      sourceGammaOneDiamondH1 ℝ ℝ M g LinearMap.id (realPeriodH1 M f) := by
+  apply (ConcreteCategory.bijective_of_isIso
+    (H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 M) ℝ)).hom).injective
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, realPeriodH1_hom_apply, sourceGammaOneDiamondH1_hom_apply,
+    realPeriodH1_hom_apply, periodValue_cuspDiamond]
+  rfl
+
+theorem realPeriodH1_cuspDiamond_unit (d : (ZMod M)ˣ)
+    (hg : Gamma0Map M g = (d : ZMod M))
+    (f : CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) :
+    realPeriodH1 M (cuspDiamond M g f) =
+      sourceGammaOneUnitDiamondH1 ℝ ℝ M d (realPeriodH1 M f) := by
+  rw [sourceGammaOneUnitDiamondH1_eq ℝ ℝ M d g hg]
+  exact realPeriodH1_cuspDiamond M g f
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

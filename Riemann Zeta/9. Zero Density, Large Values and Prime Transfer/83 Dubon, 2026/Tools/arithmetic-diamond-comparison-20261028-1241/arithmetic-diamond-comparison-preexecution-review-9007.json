@@ -1,0 +1,59 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 39,
+  "queries": 111,
+  "theorems": 92,
+  "constructions": 19,
+  "exhaustiveScratchChecks": 196,
+  "proofValueChecks": 172,
+  "scopes": 5,
+  "receipts": {
+    "source-gamma-one-diamond-field-1-scratch-receipt.json": "2C88FCF5A877C1013EF26B7AD692794F62E8B802C24E6F1F5C30AD10F925E48E",
+    "source-gamma-one-arithmetic-diamond-1-scratch-receipt.json": "B89848E9494C575A104ED4738CA5A5F60392256296AB6B7C80BAF52D708FE2BA",
+    "source-diamond-picard-periods-1-scratch-receipt.json": "0F2ECC812E980A04BCCE66B769B8EDD3281C8BC4FEF8C44625B25F910F23EEF2",
+    "source-diamond-galois-1-scratch-receipt.json": "0A368CDFA4AE5591D280BAAC9EFCFFDEE4420680B385056DD1F43F4BCCA6253E",
+    "source-diamond-normalizer-1-scratch-receipt.json": "83AC8D1D5E4E2A5320907B0B210A9A7EA833C507F763BDB0944A2F1FE912811E"
+  },
+  "expectedConsumers": 26415,
+  "expectedConstructions": 2801,
+  "fullGoal": "The original arithmetic diamond, full Picard/period/Tate compatibility, Galois commutation and homogeneous normalizer coefficient convention are now proved. The exact geometric lifting condition sourceGammaOneIntegralParabolicTransfer remains unproved, so the existing finite parabolic character descent remains conditional and excludes primes dividing its fixed nonzero integer. Exceptional primes, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_arithmetic_diamond_comparison_9007.py",
+      "sha256": "2C596C09B26CF54EC3C2F5C12F03E9207C8DBF1098C407B5E4F13364CBAA028D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_comparison_production_ownership_9007.py",
+      "sha256": "8B62144C57682B3D1DFEA082131D7324E37B1DAC0A369B127998935B417A9242"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_comparison_global_ownership_9007.py",
+      "sha256": "42814FDC706C217FB19A7ADB4ED597E9FCF4515EC9C305F418B6310AD3F81A30"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_arithmetic_diamond_comparison_ownership_9007.py",
+      "sha256": "34AC19FBD331F9036C00BF59FAC037D5D69C477AAB22C2DA323F330571CAF660"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_arithmetic_diamond_comparison_9007.py",
+      "sha256": "DE240BDD12C2E81E688C894D9C01370DA586470B80ACDC12202217D64D99DB87"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_arithmetic_diamond_comparison_9007.ps1",
+      "sha256": "9D4BDC272DF8C8EA0883C86A95000615CEF4BDFC07E60BA50182491D586F013B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_arithmetic_diamond_comparison_9007.ps1",
+      "sha256": "40A0596102E5DA7A6D580C8F9B566039C8C74537373280B56666984B37731547"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_arithmetic_diamond_comparison_canonical_9007.py",
+      "sha256": "151796424B1F31B24B471AAC2D83ADC8ABF593DD2D721A6CBAB6BD08E5D91CB9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_arithmetic_diamond_comparison_9007.py",
+      "sha256": "1B89C7227CFFD90F02F390669CD339FFAC89F6EC9A94AB3CABE2990609BF824D"
+    }
+  ],
+  "productionMutation": false
+}

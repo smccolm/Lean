@@ -1,0 +1,61 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 12,
+  "queries": 24,
+  "theorems": 19,
+  "constructions": 5,
+  "exhaustiveScratchChecks": 35,
+  "proofValueChecks": 55,
+  "scopes": 4,
+  "receipts": {
+    "source-primitive-parabolic-kernel-1-scratch-receipt.json": "69482259BBA89FFC7FFAC9E9D3EB3B771469D0AFBF5FC1FC0D973FC79C1915FD",
+    "source-integral-saturation-1-scratch-receipt.json": "F4214A6C467BADE0561B38AE8BA313083A1A24BA0369EA7BB80170F593232F65",
+    "source-supported-parabolic-congruence-1b-scratch-receipt.json": "32E039C33E09CAA84BBA6CD4500ACADCD1D357D2E98561721A2AC0634169E05D",
+    "source-gamma-one-parabolic-descent-1-scratch-receipt.json": "E87AAD117C5DEFAD469542924BC56860E53CDCA1300079CAE42A0FCA19C0E298"
+  },
+  "expectedConsumers": 26296,
+  "expectedConstructions": 2772,
+  "fullGoal": "The geometric lifting condition sourceGammaOneIntegralParabolicTransfer is stated and remains unproved. The finite-character descent theorem is conditional on that precise transfer input and excludes the primes dividing the proved fixed nonzero integer. Neither full-H1 transfer surjectivity nor restriction landing in parabolic H1 discharges it. The already proved all-prime full-H1 character family remains unchanged. Exceptional primes, diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift.16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "deferred": [
+    "SourceParabolicReductionKernel"
+  ],
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_parabolic_character_descent_8959.py",
+      "sha256": "B99014D80BC6F1E5827E17D153DA6F8A13E2B41E535801B821932B21CA36D185"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_descent_production_ownership_8959.py",
+      "sha256": "81F6A96D5610A9DE9D4157982F93AA0899A1616EFEFAF65C4C128FFAF0BCC38F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_character_descent_global_ownership_8959.py",
+      "sha256": "BBB81BA4B2FE65B93E44D7E4D9FAEC0A7E5A3AA4196E5D7A46AD6DE8426FCAE6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_parabolic_character_descent_ownership_8959.py",
+      "sha256": "8D33379C623928DF0CDEF7B923EB7E4AA720F1BC3ACA6868B86743A289749DE2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_parabolic_character_descent_8959.py",
+      "sha256": "9353510ECFF9197B2622DBB0D236E888968DB2E4D0662D847102D13D58279C6B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_parabolic_character_descent_8959.ps1",
+      "sha256": "5FC01DBD4D380B195014B466F225A6E55CCEDAADD367D0B711C45DB1F6A7C94C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_parabolic_character_descent_8959.ps1",
+      "sha256": "00432C6769437E102AEDE70FE6CCCC2CDEF8C9E21A1ADD6E66C130DF9983686E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_parabolic_character_descent_canonical_8959.py",
+      "sha256": "E14F7D63253E97DF7EC25BEB485A3E89A46A36D8C8496BF301616CD5434F6C24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_parabolic_character_descent_8959.py",
+      "sha256": "265F35A4EA241F5F99BECF4F64BAFD947BA2A9BF74B45664577393966D1D4E3F"
+    }
+  ],
+  "productionMutation": false
+}

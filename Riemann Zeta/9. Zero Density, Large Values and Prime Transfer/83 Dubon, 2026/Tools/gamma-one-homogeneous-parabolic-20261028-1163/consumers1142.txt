@@ -1,0 +1,89 @@
+
+open scoped TensorProduct
+
+/-- Exact original-object consumer of `adelicLocalCyclicProjection_fixed_scalar`. -/
+theorem actual_local_cyclic_projection_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    ∃ c : ℂ, adelicLocalCyclicProjection F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) x =
+      c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicLocalCyclicProjection_fixed_scalar F hpN x hx
+
+/-- Exact original-object consumer of `adelicCyclicLocal_away_mixed_gram`. -/
+theorem actual_local_away_gram_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g₁ g₂ : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ))
+    (a₁ a₂ : finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime))) :
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+          (adelicCyclicHilbertGenerator F.toCuspForm)))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+          (adelicCyclicHilbertGenerator F.toCuspForm))) *
+      inner ℂ (adelicCyclicHilbertGenerator F.toCuspForm) (adelicCyclicHilbertGenerator F.toCuspForm) =
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) *
+    inner ℂ
+      (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicAwayRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) a₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) :=
+  adelicCyclicLocal_away_mixed_gram F hpN g₁ g₂ a₁ a₂
+
+/-- Exact original-object consumer of `finiteAdelicLocalAwayEquiv_apply`. -/
+theorem actual_finite_local_away_product_source  (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) (a : finiteAdelicAwayGroup v) :
+    finiteAdelicLocalAwayEquiv v (g, a) = finiteAdelicLocalGL2 v g * a.val :=
+  finiteAdelicLocalAwayEquiv_apply v g a
+
+/-- Exact original-object consumer of `adelicLocalAwayTensorIsometry_range`. -/
+theorem actual_local_away_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    (adelicLocalAwayTensorIsometry F hpN).toLinearMap.range = adelicFiniteCyclicSpan F.toCuspForm :=
+  adelicLocalAwayTensorIsometry_range F hpN
+
+/-- Exact original-object consumer of `adelicLocalAwayTensorIsometry_intertwines`. -/
+theorem actual_local_away_tensor_action_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗[ℂ]
+      adelicAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalAwayTensorIsometry F hpN
+      (adelicLocalAwayTensorRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b x) =
+      adelicLocalAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalAwayTensorIsometry F hpN x) :=
+  adelicLocalAwayTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorIsometry_range`. -/
+theorem actual_local_away_completed_range_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k) :
+    (adelicLocalAwayHilbertTensorIsometry F hpN).toLinearMap.range =
+      adelicRotationWeightSpace F.toCuspForm :=
+  adelicLocalAwayHilbertTensorIsometry_range F hpN hk
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorIsometry_intertwines`. -/
+theorem actual_local_away_completed_action_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (b : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ) ×
+      finiteAdelicAwayGroup (rationalPrimePlace p (Fact.out : p.Prime)))
+    (x : AdelicLocalAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalAwayHilbertTensorIsometry F hpN (adelicLocalAwayHilbertTensorRepresentation F hpN b x) =
+      adelicLocalAwayJointRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) b
+        (adelicLocalAwayHilbertTensorIsometry F hpN x) :=
+  adelicLocalAwayHilbertTensorIsometry_intertwines F hpN b x
+
+/-- Exact original-object consumer of `adelicLocalAwayHilbertTensorEquiv_apply`. -/
+theorem actual_local_away_completed_equiv_source {N p : ℕ} [NeZero N] [NeZero p] [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k)
+    (x : AdelicLocalAwayHilbertTensor F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    (adelicLocalAwayHilbertTensorEquiv F hpN hk x).val = adelicLocalAwayHilbertTensorIsometry F hpN x :=
+  adelicLocalAwayHilbertTensorEquiv_apply F hpN hk x
+
+/-- The actual completed local-away tensor equivalence reaches every original lowest-weight Hilbert vector. -/
+theorem actual_local_away_completed_onto_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (hk : 0 < k) :
+    Function.Surjective (adelicLocalAwayHilbertTensorEquiv F hpN hk) :=
+  (adelicLocalAwayHilbertTensorEquiv F hpN hk).surjective
+

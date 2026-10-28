@@ -1,0 +1,91 @@
+import Dubon2026.SourceGammaOneAllModularRatioMembership
+import Dubon2026.SourceRationalCuspWeightIntegrality
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility -> original rational modular generators.
+Reuse the existing twelfth-weight normalization of modular quotients,
+retaining the actual rational Fourier series and pointwise quotient.
+The same denominator power and discriminant produce genuine cusp forms;
+no restriction on the original modular weight is introduced.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceFricke
+open scoped MatrixGroups ModularForm
+
+theorem exists_rational_normalized_cusp_quotient (N : ℕ) [NeZero N] {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) (hh : h ≠ 0)
+    (pf ph : PowerSeries ℚ)
+    (hpf : pf.map (algebraMap ℚ ℂ) = qExpansion 1 f)
+    (hph : ph.map (algebraMap ℚ ℂ) = qExpansion 1 h) :
+    ∃ (m : ℕ) (F H : CuspForm (Gamma1 N) ((m : ℤ) * 12)) (pF pH : PowerSeries ℚ),
+      pF.map (algebraMap ℚ ℂ) = qExpansion 1 F ∧
+      pH.map (algebraMap ℚ ℂ) = qExpansion 1 H ∧ H ≠ 0 ∧
+      ∀ τ : ℍ,
+        cuspWeightImage (Gamma1 N) ((m : ℤ) * 12) 0 0 m F τ /
+          cuspWeightImage (Gamma1 N) ((m : ℤ) * 12) 0 0 m H τ = f τ / h τ := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  have hk : 0 ≤ k := by
+    by_contra hn
+    exact hh (ModularForm.isZero_of_neg_weight (not_le.mp hn) h)
+  let m := k.toNat + 1
+  have hw : 12 + ((11 : ℕ) * k + k) = (m : ℤ) * 12 := by
+    dsimp [m]
+    rw [Int.toNat_of_nonneg hk]
+    ring
+  let D : CuspForm (Gamma1 N) 12 :=
+    cuspRestrictSubgroup (Subgroup.map_le_range _ (Gamma1 N)) CuspForm.discriminant
+  let F : CuspForm (Gamma1 N) ((m : ℤ) * 12) :=
+    (D.mulModularForm ((h.pow 11).mul f)).mcast hw
+  let H : CuspForm (Gamma1 N) ((m : ℤ) * 12) :=
+    (D.mulModularForm ((h.pow 11).mul h)).mcast hw
+  let dQ := (PowerSeries.X * dedekindEtaUnit).map (Int.castRingHom ℚ)
+  have hd : dQ.map (algebraMap ℚ ℂ) = qExpansion 1 ModularForm.discriminant := by
+    rw [dQ, PowerSeries.map_map]
+    convert qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.symm using 1
+    congr 1
+    ext z
+    simp
+  have hF : qExpansion 1 F = qExpansion 1 ModularForm.discriminant *
+      (qExpansion 1 h ^ 11 * qExpansion 1 f) := by
+    change qExpansion 1 ((D : ℍ → ℂ) * ⇑((h.pow 11).mul f)) = _
+    rw [ModularForm.qExpansion_mul_coe one_pos (hper hT),
+      ModularForm.qExpansion_mul one_pos (hper hT),
+      ModularForm.qExpansion_pow one_pos (hper hT)]
+    rfl
+  have hH : qExpansion 1 H = qExpansion 1 ModularForm.discriminant *
+      (qExpansion 1 h ^ 11 * qExpansion 1 h) := by
+    change qExpansion 1 ((D : ℍ → ℂ) * ⇑((h.pow 11).mul h)) = _
+    rw [ModularForm.qExpansion_mul_coe one_pos (hper hT),
+      ModularForm.qExpansion_mul one_pos (hper hT),
+      ModularForm.qExpansion_pow one_pos (hper hT)]
+    rfl
+  refine ⟨m, F, H, dQ * (ph ^ 11 * pf), dQ * (ph ^ 11 * ph), ?_, ?_, ?_, ?_⟩
+  · rw [map_mul, map_mul, map_pow, hd, hpf, hph, hF]
+  · rw [map_mul, map_mul, map_pow, hd, hph, hH]
+  · intro hzero
+    have hq : qExpansion 1 h ≠ 0 := by
+      rwa [Ne, ModularForm.qExpansion_eq_zero_iff one_pos (hper hT)]
+    have hdq : qExpansion 1 ModularForm.discriminant ≠ 0 := by
+      intro hz
+      apply discriminant_expansion_ne_zero
+      rw [hz, PowerSeries.coe_zero]
+    have hz : qExpansion 1 H = 0 := by rw [hzero, CuspForm.coe_zero, qExpansion_zero]
+    rw [hH] at hz
+    exact (mul_ne_zero hdq (mul_ne_zero (pow_ne_zero 11 hq) hq)) hz
+  · intro τ
+    change ((ModularForm.discriminant τ * (h τ ^ 11 * f τ)) *
+        (SourceFunctionField.CuspWeightCriterion.eisensteinFactor 0 0 τ) /
+          ModularForm.discriminant τ ^ m) /
+      ((ModularForm.discriminant τ * (h τ ^ 11 * h τ)) *
+        (SourceFunctionField.CuspWeightCriterion.eisensteinFactor 0 0 τ) /
+          ModularForm.discriminant τ ^ m) = _
+    simp only [CuspWeightCriterion.eisensteinFactor, pow_zero, one_mul, mul_one]
+    rw [div_div_div_cancel_right₀ (pow_ne_zero m (ModularForm.discriminant_ne_zero τ)),
+      mul_div_mul_left _ _ (ModularForm.discriminant_ne_zero τ)]
+    by_cases hτ : h τ = 0
+    · simp [hτ]
+    · rw [mul_div_mul_left _ _ (pow_ne_zero 11 hτ)]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,52 @@
+import Dubon2026.SourceParabolicCongruenceException
+import Dubon2026.SourceGammaOneParabolicOperatorAlgebra
+import Dubon2026.SourceGammaOneParabolicTransferCriterion
+import Dubon2026.SourceGammaOneFiniteOrderDischarge
+import Dubon2026.SourceFiniteOperatorCharacterDescent
+
+/-! DUB17/18 -> original all-weight association -> actual finite Gamma1
+parabolic character. Conditional assembly: the explicit remaining input
+is a parabolic preimage under the existing native transfer for each
+coefficient-reduced original integral parabolic class. This geometric
+lifting input is not asserted proved. The original character kernel and
+whole-word transfer then construct the exact finite operator character,
+away from the fixed exceptional integer, without a new eigensystem. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology SourceFunctionField.GammaOne
+open scoped ValuativeRel
+
+theorem sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away
+    {Q : ℕ} [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (p : ℕ) [Fact p.Prime] (hlarge : 3 < p)
+    (hcop : IsCoprime (p : ℤ) (sourcePrimitiveParabolicExceptionalInteger f hk))
+    [CharP 𝓀[E] p] (n : ℕ)
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q (p ^ (n + 1)) (k - 2).toNat) :
+      ∃ χ : binaryParabolicHeckeAlgebra Q (p ^ (n + 1)) (k - 2).toNat
+          (originalGammaOne_level_ge_four Q p n hlarge) →+*
+          𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1),
+        χ.comp (FreeAlgebra.lift ℤ (binaryParabolicPrimeOperators Q (p ^ (n + 1))
+          (k - 2).toNat (originalGammaOne_level_ge_four Q p n hlarge))).rangeRestrict.toRingHom =
+          (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+            (sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat).toRingHom := by
+  let N := p ^ (n + 1)
+  let w := (k - 2).toNat
+  let hlevel := originalGammaOne_level_ge_four Q p n hlarge
+  let θ := (FreeAlgebra.lift ℤ (binaryParabolicPrimeOperators Q N w hlevel)).rangeRestrict.toRingHom
+  let ψ := (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+    (sourceGammaOneOriginalHeckeWord Q N w).toRingHom
+  have hker : RingHom.ker θ ≤ RingHom.ker ψ := by
+    intro a ha
+    have ha0 : FreeAlgebra.lift ℤ (binaryParabolicPrimeOperators Q N w hlevel) a = 0 :=
+      congrArg Subtype.val (RingHom.mem_ker.mp ha)
+    apply sourcePrimitiveParabolicH1AdicQuotientCharacter_zero f hk τ p Fact.out hcop n
+      (sourceGammaOneOriginalHeckeWord Q N w a)
+    exact sourceGammaOneParabolicTransfer_word_kernel Q N w hlevel hlift a ha0
+  refine ⟨sourceFiniteOperatorCharacterDescend θ
+    (FreeAlgebra.lift ℤ (binaryParabolicPrimeOperators Q N w hlevel)).rangeRestrict_surjective ψ hker, ?_⟩
+  exact sourceFiniteOperatorCharacterDescend_comp _ _ _ _
+
+end
+end Dubon2026

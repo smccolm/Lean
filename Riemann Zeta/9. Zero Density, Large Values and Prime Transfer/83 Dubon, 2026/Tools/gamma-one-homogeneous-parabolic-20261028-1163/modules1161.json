@@ -1,0 +1,9 @@
+[
+  "AdelicFiniteFamilyMixedCoefficient",
+  "AdelicTensorReferenceCompletion",
+  "AdelicTensorReferenceInclusion",
+  "AdelicTensorUnitReference",
+  "AdelicUnitReferenceVector",
+  "LinearIsometryCompletionFunctor",
+  "TensorReferenceInclusion"
+]

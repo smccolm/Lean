@@ -1,0 +1,1963 @@
+{
+  "date": "28 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneDiamondFieldRatios",
+    "Dubon2026.SourceGammaOneFieldCuspGerm",
+    "Dubon2026.SourceGammaOneDiamondFieldHom",
+    "Dubon2026.SourceGammaOneDiamondFieldLabels",
+    "Dubon2026.SourceGammaOneDiamondFieldJ",
+    "Dubon2026.SourceLaurentAlgebraicCoefficient",
+    "Dubon2026.SourceLaurentAlgebraicallyClosedLift",
+    "Dubon2026.SourceGammaOneDiamondArithmeticRelation",
+    "Dubon2026.SourceLaurentCoefficientProjection",
+    "Dubon2026.SourceLaurentFieldIntersection",
+    "Dubon2026.SourceGammaOneDiamondArithmeticLift",
+    "Dubon2026.SourceGammaOneArithmeticDiamond",
+    "Dubon2026.SourceCurveFieldEquivPicard",
+    "Dubon2026.SourceGammaOneDiamondPicard",
+    "Dubon2026.SourceGammaOneDiamondAnalyticGerms",
+    "Dubon2026.SourceGammaOneDiamondAnalyticPlaces",
+    "Dubon2026.SourceGammaOneDiamondAnalyticDivisors",
+    "Dubon2026.SourceGammaOneDiamondEndpoint",
+    "Dubon2026.SourceGammaOneDiamondPicardPeriods",
+    "Dubon2026.SourceGammaOneDiamondComplexComparison",
+    "Dubon2026.SourceGammaOneArithmeticDiamondTate",
+    "Dubon2026.SourceGammaOneDiamondPeriodInclusion",
+    "Dubon2026.SourceGammaOneBinaryDiamondTateH1",
+    "Dubon2026.SourceCyclotomicDiamondCovariance",
+    "Dubon2026.SourceRationalDiamondFraction",
+    "Dubon2026.SourceRationalCuspDiamondImage",
+    "Dubon2026.SourceRationalModularCuspQuotient",
+    "Dubon2026.SourceRationalDiamondQuotientGerm",
+    "Dubon2026.SourceRationalDiamondCoefficients",
+    "Dubon2026.SourceGammaOneDiamondRationalGenerators",
+    "Dubon2026.SourceGammaOneDiamondComplexArithmetic",
+    "Dubon2026.SourceGammaOneArithmeticDiamondGenerators",
+    "Dubon2026.SourceGammaOneArithmeticDiamondGalois",
+    "Dubon2026.SourceGammaOneDiamondGaloisPicard",
+    "Dubon2026.SourceGammaOneDiamondCoefficient",
+    "Dubon2026.SourceGammaOneDiamondRestriction",
+    "Dubon2026.SourceGammaOneDiamondCoefficientMatrix",
+    "Dubon2026.SourceGammaOneBinaryNormalizerTate",
+    "Dubon2026.SourceGammaOneBinaryDiamondLabels"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> original arithmetic diamond, Picard/period/Tate comparison, Galois commutation and exact homogeneous normalizer coefficient convention.",
+  "discharged": "The literal Gamma0 diamond is constructed on the original complex modular-ratio field and descended to the original algebraic-closure field. Its original j-coordinate, constants, quotient and cusp-germ identities are proved. The actual field action induces the original place, divisor and Picard action. Existing analytic representatives and the moving lemma prove the complete complex Picard-period square, including the degree-zero cancellation of the basepoint term; unique constant-field place extension proves the arithmetic conorm square. The same arithmetic diamond therefore acts on the original Picard Tate module and integral period tensor as the actual dual slash diamond. Cyclotomic Fricke covariance, rational fixed-field descent and genuine rational cusp quotients prove rationality of diamond images of the original integral modular-ratio generators, discharging all auxiliary fraction and germ inputs. Original field generation then proves Galois commutation on both fields and on the original arithmetic places, divisors, Picard group and Tate module. The actual diagonal-cover normalizer determines the inverse original binary coefficient action; it fixes literal restrictions of original cocycles and H1 classes, equals homogeneous substitution by the reversed diagonal entries modulo the coefficient modulus, and depends only on the lower-right unit label. The original arithmetic Tate dual/H1 diamond comparison consumes precisely that coefficient formula and commutes with Galois. No replacement modular-curve or coefficient model is introduced.",
+  "boundary": "The original arithmetic diamond, full Picard/period/Tate compatibility, Galois commutation and homogeneous normalizer coefficient convention are now proved. The exact geometric lifting condition sourceGammaOneIntegralParabolicTransfer remains unproved, so the existing finite parabolic character descent remains conditional and excludes primes dividing its fixed nonzero integer. Exceptional primes, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,007-module scope: all thirteen retained regressions, 57,141 exhaustive theorem checks, 26,415 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent",
+    "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one",
+    "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j",
+    "Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation",
+    "Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation",
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation",
+    "Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map",
+    "Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span",
+    "Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span",
+    "Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+    "Dubon2026.SourceCurve.fieldDivisorEquiv_apply",
+    "Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff",
+    "Dubon2026.SourceCurve.fieldDivisorEquiv_degree",
+    "Dubon2026.SourceCurve.fieldDegZeroEquiv_principal",
+    "Dubon2026.SourceCurve.fieldPicardEquiv_mk",
+    "Dubon2026.SourceCurve.fieldPicardEquiv_torsion",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion",
+    "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent",
+    "Dubon2026.SourceFunctionField.laurentCoeffProjection",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+    "Dubon2026.SourceCurve.fieldDivisorEquiv",
+    "Dubon2026.SourceCurve.fieldDegZeroEquiv",
+    "Dubon2026.SourceCurve.fieldPicardEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard",
+    "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond",
+    "Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label",
+    "Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.diamond",
+    "Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep",
+    "Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction",
+    "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois",
+    "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+    "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+    "Dubon2026.sourceGammaOneDiamondLift_mod",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+    "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLift",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T10:32:07.040326+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondFieldRatios",
+        "SourceGammaOneFieldCuspGerm",
+        "SourceGammaOneDiamondFieldHom",
+        "SourceGammaOneDiamondFieldLabels",
+        "SourceGammaOneDiamondFieldJ",
+        "SourceLaurentAlgebraicCoefficient",
+        "SourceLaurentAlgebraicallyClosedLift"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios.lean",
+          "sha256": "787DDF7F0B0EEE510AD5F204C81FE7235B23A6F384042CF0D557AA78079AFF88",
+          "oleanSha256": "514F100A5AB2C03FE22039F6B864B545E56030D2228C86710C7EDADD1F50CBD6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm.lean",
+          "sha256": "7416A3EFEB6BF4910D564973AC7B77EE2129CD8F9BFA89661B1267EA12E8D72C",
+          "oleanSha256": "2E9A30BF22CEA725E6D8E74454FF7C1DF54BCE867678A1EC46B7DBEDDC82C111",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm1198a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm1198a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom.lean",
+          "sha256": "48A1231ED6EEAE899BB20671003BB02D2AEABFA08200996D135CFECEEF38FE3F",
+          "oleanSha256": "A3EEE961547519BB8CFC6159DF1AFB0B6F56D279237716FA3681692C064AE778",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels.lean",
+          "sha256": "3FC5EFA8220CDA2C96B29317EF7763EED3F61A6189104A1C80531DB2A0E8BA39",
+          "oleanSha256": "377FE6227918148B2DE32B98C7217700F9F11C97703ED27777C5AA3B815BB1FB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels1200a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels1200a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ.lean",
+          "sha256": "F7136000C5C5B2D05AC5C2FD074FEB3E539D79A18382E6D6C2497C5C47BCFC4E",
+          "oleanSha256": "A38ADF5190FE5A0D487731626AAA13E5FF31D8FD92D9D8E8AA102BDE9DC18C6D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ1201a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ1201a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient.lean",
+          "sha256": "A112DFD56AEE71EA66C7056745FAC276FA430C1C0D06E4BA30EC437FD70F8F39",
+          "oleanSha256": "80F3CFFE144BE987BE1C67CADAE8138D66F0427198DF53CCF262E04ABF09E0DF",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift.lean",
+          "sha256": "5BA056CF70F1F2F24BDD6CB65CD52CDA1BF37578D5BB53518575708DC6D3BDB6",
+          "oleanSha256": "FEACB07219EAE7A579007B04E4E56ED3E63F08731B299E4F2040A05B010FB944",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift1203a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift1203a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j",
+        "Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation",
+        "Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j",
+        "Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation",
+        "Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldAudit1.log",
+      "logSha256": "4B6373F45F37F6BA5757BDFF0A1FEEF3117856E2AE2E5FC8834EBD6952D3AA24",
+      "auditSha256": "2FE7B3E50A87BECD1DDEC7CEAACCABEF3C40D50953D96756C082B8401A6F7C33",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.log",
+      "ownershipSha256": "9DAD836B2ACDB97DA46310860ADD694C754192435701D7FF4FBA64F778A68B32",
+      "exhaustiveTheorems": 47,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 36,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1.log",
+      "dependencyAuditSha256": "4FF8F0AA63C2DF76D949B4EE61FF1D05ECE42627641C6EFF1CC08D9D644AA273",
+      "dependencyAuditSourceSha256": "74608FD408FE0DE4EFF7610D52A206912D23E6B9609D21D8029ABD093178E498",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j",
+        "Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation",
+        "Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic Gamma1 diamond/Picard comparison -> actual field diamond and arithmetic coefficient descent.",
+      "discharged": [
+        "The literal diamond translate stays in the original complex function field, with exact realization at every translated cusp.",
+        "Its ring laws, inverse, constant preservation, lift independence, unit multiplication and fixed original j are proved.",
+        "Every Laurent root of a nonzero polynomial over the base Laurent field has algebraic coefficients; over algebraically closed constants the same series has a literal coefficient lift."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The fixed-j field relation must still be transported to use the Laurent lifting theorem on the actual diamond image, and membership in the original arithmetic field must be proved. Arithmetic field stability, Galois/Picard diamond comparison, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "06DBE7B8B09B3B15957FC81A10A4284A44E9A95D5FCCB61862EF6260E2C6EE75",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T10:57:32.818258+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondArithmeticRelation",
+        "SourceLaurentCoefficientProjection",
+        "SourceLaurentFieldIntersection",
+        "SourceGammaOneDiamondArithmeticLift",
+        "SourceGammaOneArithmeticDiamond",
+        "SourceCurveFieldEquivPicard",
+        "SourceGammaOneDiamondPicard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation.lean",
+          "sha256": "B62B6162C3AF3DE7C677D19B4670938C6D54A4AE664FB319C5AE1F7EE107512E",
+          "oleanSha256": "77850DB6657890557CE04F70F43CEF82CE1C82DD88CD1208C670459FE1E305A7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection.lean",
+          "sha256": "D1D591D7081A20B036F7D530860EC0A7A74C9F539E9252244B5A8A44A63D407D",
+          "oleanSha256": "31615DC81A90D3C8C84830B29FC0C2CE17D0B60BD507B2246405F5B921F5DA0D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection.lean",
+          "sha256": "A33CF93AD1A9D9D98F3E0FC7DD294B7ECBCDB15897B0F0FBD520294A75CDC284",
+          "oleanSha256": "C0E27F256CD6D7C248B4ED30E710EA32A1464FA4BC896AD6D2E3D12D6090C3ED",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207d.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift.lean",
+          "sha256": "53122554AA5B02AC46166590EDCE75274A2E13A2343E7772CD0A8CB465F53A5F",
+          "oleanSha256": "9A916E0CDF48FE47D78957C6B08CFEEDE2E36E29A6D2BA423BCC0F142BE63241",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond.lean",
+          "sha256": "69711E689C8F4272249C9B50210DF0E86FCF59A26DF8935EAC8BF3AFD7AAD957",
+          "oleanSha256": "D64F1DC68A3BE3FF0EE9942A873F457A3D6A7B29882814B58CBCAA38A0B28DC5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard.lean",
+          "sha256": "C67D61233B752EE651F52310E7D1FABA9CAC8D68BE9C87224A0FBA6B0EF37B68",
+          "oleanSha256": "5808A9E26CA2F614680C924C4A9070042DB19DB9771D4C8745FFBAD0EA0AEB71",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard.lean",
+          "sha256": "4F45DC4C4C13D4076186479B0D06B8230B0AD5EB446A92CDBC65BCFEC41980AC",
+          "oleanSha256": "A6D4D162682FD59CC330E345F017FFC346AE0BD892C236B2501D6BD2009D6DE2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard1211a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard1211a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span",
+        "Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_apply",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_degree",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv_principal",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_mk",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv",
+        "Dubon2026.SourceCurve.fieldPicardEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span",
+        "Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_apply",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_degree",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv_principal",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_mk",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv",
+        "Dubon2026.SourceCurve.fieldPicardEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondAudit1.log",
+      "logSha256": "B31F850667DB47BA2B04DE9E9851D0AD237CCEF5B5E8E57BDB8259DF92F8A695",
+      "auditSha256": "F9DBBBA5F5C01341EFDED418677B5EB699191B3E92174641E94F31F8863277C3",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+      "ownershipSha256": "A4D345F98A49651891CD32C1E292E6CAE07276C0E308B3D1389DD91D43B378D2",
+      "exhaustiveTheorems": 64,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 47,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1.log",
+      "dependencyAuditSha256": "36FDC3032688DFB0F9D6DD71C6EE2973F319CD8BB9FA404D158E7E719FF5F1EB",
+      "dependencyAuditSourceSha256": "AEA459A43DCDA7495027275283CA5F5F6028EC80CE6B8691DEDE3E6FE1B58C27",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span",
+        "Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_apply",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv_degree",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv_principal",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_mk",
+        "Dubon2026.SourceCurve.fieldPicardEquiv_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent",
+        "Dubon2026.SourceFunctionField.laurentCoeffProjection",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+        "Dubon2026.SourceCurve.fieldDivisorEquiv",
+        "Dubon2026.SourceCurve.fieldDegZeroEquiv",
+        "Dubon2026.SourceCurve.fieldPicardEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard",
+        "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> arithmetic diamond/Picard comparison.",
+      "discharged": [
+        "The actual complex diamond image of every original arithmetic field element satisfies a nonzero polynomial over the arithmetic Laurent field, without an algebraicity premise.",
+        "Its exact Laurent coefficient lift lies in the original arithmetic field: arithmetic field stability is proved.",
+        "The original arithmetic diamond has field laws, constants, inverse, fixed j and the exact original complex comparison.",
+        "Both original arithmetic and complex diamonds induce actual degree-zero Picard automorphisms and preserve torsion; closed residue fields and principal-divisor transport discharge the construction inputs."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes the historical 1204 remaining arithmetic relation/lift/membership boundary only. Galois commutation, Picard-period comparison, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-diamond-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "86EE417B1E796CFFB79A9E7B224554B0C3B6FEA9C1873D6AEFBBC79F2575F0E4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T11:07:33.706162+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondAnalyticGerms",
+        "SourceGammaOneDiamondAnalyticPlaces",
+        "SourceGammaOneDiamondAnalyticDivisors",
+        "SourceGammaOneDiamondEndpoint",
+        "SourceGammaOneDiamondPicardPeriods",
+        "SourceGammaOneDiamondComplexComparison",
+        "SourceGammaOneArithmeticDiamondTate"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms.lean",
+          "sha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE",
+          "oleanSha256": "0B295DE34985B2ADDFF883E586AEAD13586A4BB3B75ECD73AB7143E3A60E129F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces.lean",
+          "sha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3",
+          "oleanSha256": "9DCA641876B0F63837F798D3B4569659C6E4E67D21C831038F8A4279E348D059",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors.lean",
+          "sha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C",
+          "oleanSha256": "9DA7A2A69E0897C6004D55623DC6FCF35D83733DB83334C302C3D84E970A98FA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint.lean",
+          "sha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011",
+          "oleanSha256": "582BE09CB566B4A9D33D7D9F3083ADF14B83756A649F7286F286D8D5BE681217",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods.lean",
+          "sha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128",
+          "oleanSha256": "09B035D31AD7DF6EAF16B3E4B42928E970D8797D06228B9C27B6E479A95248ED",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison.lean",
+          "sha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917",
+          "oleanSha256": "1C5C07EA782BD45D830857401B13EC2B0842795E609366643B20DDC0F5E0D62D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate.lean",
+          "sha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B",
+          "oleanSha256": "B31EF1A63A5449FE1121F7D1DDE54A7ABC1E7FDC8C233D87C848F33CDDC0EBD7",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsAudit1.log",
+      "logSha256": "EE655C09E37FF8EC62D94D7C83E87B1F84E5A2E55DA177E70C9DE50915579AB5",
+      "auditSha256": "4F08B710CD846BDBBEB3E6256D6B2A4BAF98A68B42D2FAD135CD3ED2AEC673E7",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+      "ownershipSha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06",
+      "exhaustiveTheorems": 28,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 35,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1.log",
+      "dependencyAuditSha256": "41B34D21D23D708828F37841EF2752540CD214CB21DAC7D94B8168B23F5282C6",
+      "dependencyAuditSourceSha256": "5FA3E4DC95EFAE3520B051F8274B66A53C743658573787B4925888020F51D026",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> arithmetic diamond/Picard comparison.",
+      "discharged": [
+        "The actual field diamond has the literal modular quotient, interior analytic germ and analytic place action.",
+        "The independent complex field/Picard diamond agrees with the original period quotient on every Picard class; the moving lemma discharges analytic representatives and degree zero discharges the basepoint term.",
+        "The original arithmetic-to-complex divisor conorm and Picard map intertwine the arithmetic and complex diamonds, by unique place extension and the proved field square.",
+        "For every Tate prime, the original arithmetic Picard diamond acts on the original p-adic period tensor by the native dual slash diamond, without extra prime restrictions or compatibility premises."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes historical missing Picard-period and arithmetic constant-field compatibility in scopes 1204/1212. Galois commutation, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "2E843CC83E2C5F5E581384158F31D84973F14A5D09461B519A2C6A357E0555F3",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T11:37:42.107766+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondPeriodInclusion",
+        "SourceGammaOneBinaryDiamondTateH1",
+        "SourceCyclotomicDiamondCovariance",
+        "SourceRationalDiamondFraction",
+        "SourceRationalCuspDiamondImage",
+        "SourceRationalModularCuspQuotient",
+        "SourceRationalDiamondQuotientGerm",
+        "SourceRationalDiamondCoefficients",
+        "SourceGammaOneDiamondRationalGenerators",
+        "SourceGammaOneDiamondComplexArithmetic",
+        "SourceGammaOneArithmeticDiamondGenerators",
+        "SourceGammaOneArithmeticDiamondGalois",
+        "SourceGammaOneDiamondGaloisPicard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion.lean",
+          "sha256": "E0934AC59B2FC0EED717633AEC76169639B86C35D89E9C611C41EDAA8790EE19",
+          "oleanSha256": "0A4D81F13492F31257DAEAA1E13041D9362B4D4C75A4535E7B6C1083AC8D9FCE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion1221a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion1221a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH1.lean",
+          "sha256": "1C050E437CF32BC40C2B2456201D36D8F82B5ED7C6BA886EDB5189B7DED6497F",
+          "oleanSha256": "09CAF02FFEAFF826D57218B34F69837D0D1E194434AC4D89642847DEFE8DCFB4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH11222a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH11222a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance.lean",
+          "sha256": "705A5F7D06F2283E3EC80F34254FFA8229277C777A220E7EF0A7685951161ED4",
+          "oleanSha256": "14ACD43D6537A70690B1174F75CACA62BE838E11319F37BF79C5C936D0732B1E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction.lean",
+          "sha256": "BE0A90D7CB7631822D7D7684F276A69BA3DD151C8FF28E6CB338FADB4C19877A",
+          "oleanSha256": "45D5F0505094991FD8D34FE3BA46078CCE4F25EE7FE3EC61432D1F75BC6971A3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction1224a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction1224a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage.lean",
+          "sha256": "C916C3A831E73CA15351B5CCC0F55807792CAD854054DD1B01BA44487653F3D4",
+          "oleanSha256": "3953BF9D51BC7BB67EACA0254BDDBAC5F1451E6C9A9E12BF0BFE6260C4508A6C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage1225a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage1225a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient.lean",
+          "sha256": "F3C35C9005CCBB53946B16DEDD7B313F605C750624B55C45F9F493B5F9567AC7",
+          "oleanSha256": "3B6405B754F4415B4EB2B76B0C2F29610763A89E09D59F1D87EA5ADF2C3980AA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm.lean",
+          "sha256": "142E7AF61982A3F750177E6C5F65FF673135B37C2E393C51E42D5B3BDA9F7964",
+          "oleanSha256": "F52630CC1871338A01A6EEEE52E7DE783A306DD9B8D59FC3955F9DD5C5EB21AD",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm1227a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm1227a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients.lean",
+          "sha256": "E84A430257A31F564031D95907BDDBCF3C04052BFBFC681CFF7E86C526D59F2B",
+          "oleanSha256": "6C0E5F5CA3E0C32E811EA050D91BA0E0BBCB65AD64ECF7E24FA92E7B87F82B72",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators.lean",
+          "sha256": "C730251F09B9B7D6C256D7AC7D687B23ED46CC0402268ED34068E549E9E6C90E",
+          "oleanSha256": "18DD8092BC44868EF20E1E303FB1B0B8E0FF244B5BB92E2A8186344302822ACA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic.lean",
+          "sha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435",
+          "oleanSha256": "8E3540E527A3C067618DF04DEC21B1FF6632A51426C502EAC6C43823748DFA7F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators.lean",
+          "sha256": "FFA46B194F64CBCEAD51D0BBE1DCE90360FC66C6E80B1BC200E05BF17FABEE69",
+          "oleanSha256": "313DD82D6DB42C0060CB933E49B19FF3B6CBBCC09A712DC97A9729A4C768F8BA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators1231a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators1231a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois.lean",
+          "sha256": "A0394BEBD1CA4432B22C92C9B185F62F77A38A8EC1CB7D3507BAF8319AB76AC2",
+          "oleanSha256": "BD2B09008DECF4ECB4771A5874AC09C2559680D3756DE16EFC971C76BF327E77",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois1232a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois1232a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard.lean",
+          "sha256": "9BC7471F9E95462F286FF2957C8D570EB826918E6F24F0BA61A53215FFD75942",
+          "oleanSha256": "23ADEFD5C16E5572609CADF2C473ED9CB0A6C6E1A2F804739EA2CF69F2DA8C7B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard1233a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard1233a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond",
+        "Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label",
+        "Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label",
+        "Dubon2026.SourceFricke.CyclotomicConjugates.diamond",
+        "Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep",
+        "Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction",
+        "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond",
+        "Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label",
+        "Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label",
+        "Dubon2026.SourceFricke.CyclotomicConjugates.diamond",
+        "Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep",
+        "Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction",
+        "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisAudit1.log",
+      "logSha256": "10DC5A170122351BD879962651A9A4A406B8DA16773ED366D481C92D94652629",
+      "auditSha256": "55BB53FE5E04D2D0B13EB91382233654D62855BC5DC362D1E87E1917F59F733C",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.log",
+      "ownershipSha256": "1A7F92F02C467680BB0D99C39A91A05D7CAF9C26D37C9F206DC476EC5F77BA43",
+      "exhaustiveTheorems": 33,
+      "linterScopes": 13,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 34,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1.log",
+      "dependencyAuditSha256": "C7CA9E5F6289D2E6AA8BA4AD1A2A1FB505ABAB5C930E18867E29E085A9B2C1CE",
+      "dependencyAuditSourceSha256": "AFE161AECE41BF7F5EB733FF6057483E2BDAB85CB7416EFBD18AEF433AE75869",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond",
+        "Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label",
+        "Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label",
+        "Dubon2026.SourceFricke.CyclotomicConjugates.diamond",
+        "Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep",
+        "Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction",
+        "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator",
+        "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed",
+        "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> original arithmetic diamond Galois compatibility and Tate/H1 comparison.",
+      "discharged": [
+        "The actual arithmetic Picard Tate diamond transposes to the original homogeneous-valued finite Gamma1 H1 diamond, with its coefficient endomorphism explicit.",
+        "Cyclotomic covariance and rational fixed-field descent apply to actual original integral modular-ratio generators; no rationality, fraction membership or cusp-germ assumptions remain.",
+        "The actual diamond on both the complex and original algebraic-closure function fields commutes with the original coefficient Galois action.",
+        "The original arithmetic place, divisor, Picard and Tate diamond commute with Galois, for every Tate prime without additional restrictions."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes historical missing diamond Galois compatibility in scopes 1204/1212/1220. The original homogeneous normalizer coefficient convention, parabolic transfer preimages, exceptional primes, Frobenius/inertia, characteristic-zero all-weight association and higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "F77D5C02A3787BE02511CD2A3169ABAECF946F6E162380E66404770A96AD9A98",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T11:50:00.345501+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneDiamondCoefficient",
+        "SourceGammaOneDiamondRestriction",
+        "SourceGammaOneDiamondCoefficientMatrix",
+        "SourceGammaOneBinaryNormalizerTate",
+        "SourceGammaOneBinaryDiamondLabels"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient.lean",
+          "sha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE",
+          "oleanSha256": "16750F8C6DDC233E7268F3C4D70719F8558BA5626F0EC37E9815E17AC6802BA6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction.lean",
+          "sha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431",
+          "oleanSha256": "61E8D945E0A6278A67FCA407E5BD5193807BC7D725B602CE2391422703318A13",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix.lean",
+          "sha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4",
+          "oleanSha256": "485B163A716ACCAED1AF3774E7BBF658EF70B48121FB45F5F517D55A44A72DB4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate.lean",
+          "sha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305",
+          "oleanSha256": "CB18BE7D1DEAAE84144B115239AEACBA59C0011C5C67CDD881D9E856FD7BEA71",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels.lean",
+          "sha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9",
+          "oleanSha256": "3F57BBCBE910D3B4A2DC342C4E771129602ED2F2AEC282E0B1B1336893E6AD06",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+        "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+        "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+        "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+        "Dubon2026.sourceGammaOneDiamondLift_mod",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+        "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+        "Dubon2026.sourceGammaOneDiamondLift",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+        "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+        "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+        "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+        "Dubon2026.sourceGammaOneDiamondLift_mod",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+        "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneDiamondLift",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerAudit1.log",
+      "logSha256": "105F30E9724A59AEDAC919BA15901C5780EF5683A27B8B7D1073BF871BA467ED",
+      "auditSha256": "EEA8A097E6893E769E16A0ECB6DFFFC9B51CBADB05E4E6D228109BFF5122DDB7",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+      "ownershipSha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE",
+      "exhaustiveTheorems": 24,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1.log",
+      "dependencyAuditSha256": "EA78C58A27C95B6604BD5FE1A255E30B3A7483DBD830A2F1553DC4551B5EE975",
+      "dependencyAuditSourceSha256": "783BC366A91A6DBDE27602966A5BE4BD948774A334F74090E04C176EAA432AE8",
+      "consumers": [
+        "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+        "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+        "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+        "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+        "Dubon2026.sourceGammaOneDiamondLift_mod",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+        "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+        "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+        "Dubon2026.sourceGammaOneDiamondLift",
+        "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> original homogeneous normalizer diamond comparison.",
+      "discharged": [
+        "The inverse lifted normalizer action intertwines the original binary representation under the actual Gamma1 conjugation.",
+        "The resulting diamond fixes literal restrictions of every original binary cocycle and H1 class.",
+        "At every positive coefficient modulus and every homogeneous degree, the original inverse normalizer action equals homogeneous substitution by the reversed diagonal entries modulo that modulus.",
+        "The original arithmetic Picard Tate dual acts on native finite Gamma1 H1 by this exact homogeneous coefficient convention and commutes with original arithmetic Galois.",
+        "The original coefficient action and resulting native H1 diamond depend only on the lower-right unit label."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes the unresolved homogeneous normalizer coefficient convention in scope 1234. Parabolic transfer preimages, the fixed exceptional-prime exclusion, coefficient-field/Frobenius/inertia realization, characteristic-zero all-weight association, automorphy and literal higher continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "39A1F02C1E6E8A1166C42C026F326069C5E9F1B2BF9D85B6B023A3EC88AA4265",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-diamond-field-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-arithmetic-diamond-1-reuse-review-20261028.json",
+    "Tools/source-diamond-picard-periods-1-reuse-review-20261028.json",
+    "Tools/source-diamond-galois-1-reuse-review-20261028.json",
+    "Tools/source-diamond-normalizer-1-reuse-review-20261028.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/arithmetic-diamond-comparison-20261028-1241/arithmetic-diamond-comparison-promotion-route-1241.json",
+    "sha256": "10A6E5B9031DA2B45EA97448F9F865968C669DE02124405730264F27C7980F5C"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/arithmetic-diamond-comparison-20261028-1241/archive-manifest.json",
+    "sha256": "E61BFBADCEDF2230A674EE841208FD652D9DD88C3D8EC2F2774D9A24FD3D2EC8",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9007": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1Production9007.log",
+        "sha256": "4FF8F0AA63C2DF76D949B4EE61FF1D05ECE42627641C6EFF1CC08D9D644AA273",
+        "requiredProofValueEdges": 36,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_coe",
+          "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ne_zero",
+          "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_translate_coe",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_diamond_field_cusp_realization",
+          "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm_algebraMap",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue_cuspGerm",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_cuspGerm",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_constants",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_one",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_mul",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_lift_independent",
+          "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_one",
+          "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut_mul",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_j",
+          "Dubon2026.SourceFunctionField.isAlgebraic_laurent_coeff_of_relation",
+          "Dubon2026.SourceFunctionField.exists_laurent_lift_of_relation",
+          "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.fieldCuspGerm",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldValue",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldAut",
+          "Dubon2026.SourceFunctionField.GammaOne.unitDiamondFieldAut"
+        ],
+        "sourceSha256": "F250B27012BCCBC0E7EB702E42C7E1829D09CBB8134D4168E421F5687E54BBF7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.log",
+        "sha256": "36FDC3032688DFB0F9D6DD71C6EE2973F319CD8BB9FA404D158E7E719FF5F1EB",
+        "requiredProofValueEdges": 47,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation",
+          "Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map",
+          "Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span",
+          "Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span",
+          "Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+          "Dubon2026.SourceCurve.fieldDivisorEquiv_apply",
+          "Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff",
+          "Dubon2026.SourceCurve.fieldDivisorEquiv_degree",
+          "Dubon2026.SourceCurve.fieldDegZeroEquiv_principal",
+          "Dubon2026.SourceCurve.fieldPicardEquiv_mk",
+          "Dubon2026.SourceCurve.fieldPicardEquiv_torsion",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk",
+          "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion",
+          "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent",
+          "Dubon2026.SourceFunctionField.laurentCoeffProjection",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+          "Dubon2026.SourceCurve.fieldDivisorEquiv",
+          "Dubon2026.SourceCurve.fieldDegZeroEquiv",
+          "Dubon2026.SourceCurve.fieldPicardEquiv",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard",
+          "Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard"
+        ],
+        "sourceSha256": "FA0AF4FCDFE1ED9FD71EE973413B4530483D5B3223D4378D2CD5C893633870E6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1Production9007.log",
+        "sha256": "41B34D21D23D708828F37841EF2752540CD214CB21DAC7D94B8168B23F5282C6",
+        "requiredProofValueEdges": 35,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+          "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+        ],
+        "sourceSha256": "F6B0E5A4C48A9F7D5D50CB620F90B60B30015EBB5614AC203624019438F50590"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1Production9007.log",
+        "sha256": "C7CA9E5F6289D2E6AA8BA4AD1A2A1FB505ABAB5C930E18867E29E085A9B2C1CE",
+        "requiredProofValueEdges": 34,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_diamond",
+          "Dubon2026.SourceFricke.exists_gammaZero_cyclotomic_same_label",
+          "Dubon2026.SourceFricke.gammaOne_invariant_comp_eq_of_label",
+          "Dubon2026.SourceFricke.CyclotomicConjugates.diamond",
+          "Dubon2026.SourceFricke.cyclotomicConjugates_self_of_rational_rep",
+          "Dubon2026.SourceFricke.exists_rational_laurent_diamond_fraction",
+          "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_rational_normalized_cusp_quotient",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_rational_laurent_translated_ratio",
+          "Dubon2026.SourceFunctionField.GammaOne.modularDiamond_ratio_coeff_rational",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_integral_generator",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_generator_coeff_rational",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_diamond_generator",
+          "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_arithmetic",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamond_generator_fixed",
+          "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_arithmetic",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticPlace_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDivisor_diamond",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois",
+          "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois"
+        ],
+        "sourceSha256": "5A6AB41E256B62192A6B41BC2388D9EA8D7293AD43BE7FC73743B16A009C3290"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1Production9007.log",
+        "sha256": "EA78C58A27C95B6604BD5FE1A255E30B3A7483DBD830A2F1553DC4551B5EE975",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+          "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+          "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+          "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+          "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+          "Dubon2026.sourceGammaOneDiamondLift_mod",
+          "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+          "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+          "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+          "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+          "Dubon2026.sourceGammaOneDiamondLift",
+          "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+        ],
+        "sourceSha256": "81271E73E3FA4E9446826792E8311557CBD41B1E5EDCC8DCC59009D88F4A2286"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonProductionAudit9007.log",
+    "sha256": "24ADF23075834DF0524E79B3BF30BB905129C98DD6F49A901DA908574B1BCA2F",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-diamond-comparison-production-build-9007.log",
+    "aggregateSha256": "7262D13E625255BCCAE62F8EB5C0230D38FEEF9983A2B104C27452C6355BEBB4",
+    "productionModules": 9007,
+    "incrementModules": 39,
+    "axiomChecks": 111,
+    "exhaustiveIncrementTheorems": 196,
+    "linterScopes": 39,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 196,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 196,
+      "scratchDistinct": 196,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1._proof_1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate._proof_1": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 196,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneDiamondFieldRatios",
+            "SourceGammaOneFieldCuspGerm",
+            "SourceGammaOneDiamondFieldHom",
+            "SourceGammaOneDiamondFieldLabels",
+            "SourceGammaOneDiamondFieldJ",
+            "SourceLaurentAlgebraicCoefficient",
+            "SourceLaurentAlgebraicallyClosedLift"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.log",
+            "sha256": "9DAD836B2ACDB97DA46310860ADD694C754192435701D7FF4FBA64F778A68B32",
+            "sourceSha256": "AB2995DDF5707EF055A31507A6BC89265A8C925BA3EB66D5E9A392F4B93F7D44"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondArithmeticRelation",
+            "SourceLaurentCoefficientProjection",
+            "SourceLaurentFieldIntersection",
+            "SourceGammaOneDiamondArithmeticLift",
+            "SourceGammaOneArithmeticDiamond",
+            "SourceCurveFieldEquivPicard",
+            "SourceGammaOneDiamondPicard"
+          ],
+          "count": 64,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+            "sha256": "A4D345F98A49651891CD32C1E292E6CAE07276C0E308B3D1389DD91D43B378D2",
+            "sourceSha256": "C593B053D693C90B0BD623D762C74399A8DDDBE5F2A8E5F79BE30EAA72614EEF"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondAnalyticGerms",
+            "SourceGammaOneDiamondAnalyticPlaces",
+            "SourceGammaOneDiamondAnalyticDivisors",
+            "SourceGammaOneDiamondEndpoint",
+            "SourceGammaOneDiamondPicardPeriods",
+            "SourceGammaOneDiamondComplexComparison",
+            "SourceGammaOneArithmeticDiamondTate"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+            "sha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06",
+            "sourceSha256": "E0482067E41215886BF15A97C4938916E9A20482878A33F91B6785299DE43F58"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodInclusion",
+            "SourceGammaOneBinaryDiamondTateH1",
+            "SourceCyclotomicDiamondCovariance",
+            "SourceRationalDiamondFraction",
+            "SourceRationalCuspDiamondImage",
+            "SourceRationalModularCuspQuotient",
+            "SourceRationalDiamondQuotientGerm",
+            "SourceRationalDiamondCoefficients",
+            "SourceGammaOneDiamondRationalGenerators",
+            "SourceGammaOneDiamondComplexArithmetic",
+            "SourceGammaOneArithmeticDiamondGenerators",
+            "SourceGammaOneArithmeticDiamondGalois",
+            "SourceGammaOneDiamondGaloisPicard"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.log",
+            "sha256": "1A7F92F02C467680BB0D99C39A91A05D7CAF9C26D37C9F206DC476EC5F77BA43",
+            "sourceSha256": "FBB7AB4E377CF9335A2E0D8343211E58D57485B35E081F45DE9F08930704CC72"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCoefficient",
+            "SourceGammaOneDiamondRestriction",
+            "SourceGammaOneDiamondCoefficientMatrix",
+            "SourceGammaOneBinaryNormalizerTate",
+            "SourceGammaOneBinaryDiamondLabels"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+            "sha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE",
+            "sourceSha256": "34288BC710B254A6597A14B4BCD7B97D516879EF676821AEF2E4A8FAFD17A5BC"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+        "sha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611",
+        "sourceSha256": "58DC790398A29C393FCC2EE809DA515D693298BDB8FD7041EE16103B115681D4"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-032432-254.log",
+        "sha256": "0C7698CD693B500C987E7001A5C1CF3A25C9D40D59FDA0F875955D2D4CCF0A43"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 39 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneDiamondFieldRatios",
+            "scratchSha256": "787DDF7F0B0EEE510AD5F204C81FE7235B23A6F384042CF0D557AA78079AFF88",
+            "productionSha256": "88FDB0011CE75E56F607A1A5325571BBCF6DB238B5F0657843B2AC2761B7A858",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFieldCuspGerm",
+            "scratchSha256": "7416A3EFEB6BF4910D564973AC7B77EE2129CD8F9BFA89661B1267EA12E8D72C",
+            "productionSha256": "DF849668C4B37CCA8021BE6EEFAC1CFD806BC542C1632C544E87FBF4887442D6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldHom",
+            "scratchSha256": "48A1231ED6EEAE899BB20671003BB02D2AEABFA08200996D135CFECEEF38FE3F",
+            "productionSha256": "408D88743331CA74D3C93BF660B8B21219B250C1DFEA2CC3E401C88CD360006F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldLabels",
+            "scratchSha256": "3FC5EFA8220CDA2C96B29317EF7763EED3F61A6189104A1C80531DB2A0E8BA39",
+            "productionSha256": "E89FDF5161AB40A1CFEC94EBD81D2BB76FFA9CEFE4FD3B4F96F1B8F68CD04097",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldJ",
+            "scratchSha256": "F7136000C5C5B2D05AC5C2FD074FEB3E539D79A18382E6D6C2497C5C47BCFC4E",
+            "productionSha256": "77C487187F253A76D1A99446542A270C76EE5F5D17EB1ADEB86003C3214A08CC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicCoefficient",
+            "scratchSha256": "A112DFD56AEE71EA66C7056745FAC276FA430C1C0D06E4BA30EC437FD70F8F39",
+            "productionSha256": "F9A2CD00F8DC14D864FA43337D0C9E0BD784C05015D6B2134E22B21BD8DFD2B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicallyClosedLift",
+            "scratchSha256": "5BA056CF70F1F2F24BDD6CB65CD52CDA1BF37578D5BB53518575708DC6D3BDB6",
+            "productionSha256": "1CDCD7A5E08D5C58A85F120564AD14C7048F09652C3E6A1CE2B5FE4B08AA904D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticRelation",
+            "scratchSha256": "B62B6162C3AF3DE7C677D19B4670938C6D54A4AE664FB319C5AE1F7EE107512E",
+            "productionSha256": "359EAA52F1E4B7DDF8A8F13184FA51A56A74DDB9A817E05149C60DE03BD089F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentCoefficientProjection",
+            "scratchSha256": "D1D591D7081A20B036F7D530860EC0A7A74C9F539E9252244B5A8A44A63D407D",
+            "productionSha256": "AC83002C570605D24B975FD41D99A56FDC1667659A3AC84A733986A8AE8C2326",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentFieldIntersection",
+            "scratchSha256": "A33CF93AD1A9D9D98F3E0FC7DD294B7ECBCDB15897B0F0FBD520294A75CDC284",
+            "productionSha256": "1BA4F21F5110EB07A1DC56C91C21AA526D5D6080028954CFAF08CF74447C29A5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticLift",
+            "scratchSha256": "53122554AA5B02AC46166590EDCE75274A2E13A2343E7772CD0A8CB465F53A5F",
+            "productionSha256": "4AEACA5180DA2507E3ACF49A44497C148265A4874D5B690550D4D9C3AA026A1F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamond",
+            "scratchSha256": "69711E689C8F4272249C9B50210DF0E86FCF59A26DF8935EAC8BF3AFD7AAD957",
+            "productionSha256": "5B834295C90E53B0E7DF5F3FAF8FE41DC2BE547EFC76B4247176A1B653AE4B82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveFieldEquivPicard",
+            "scratchSha256": "C67D61233B752EE651F52310E7D1FABA9CAC8D68BE9C87224A0FBA6B0EF37B68",
+            "productionSha256": "B08ADC99810F8418727D743C0F4443B4E7E182A60817C9DC7AC1099470E0F23A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicard",
+            "scratchSha256": "4F45DC4C4C13D4076186479B0D06B8230B0AD5EB446A92CDBC65BCFEC41980AC",
+            "productionSha256": "004CA8D763E778517AFBB8D361606B1B8D21A98FCA52BC205C76978E82403062",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticGerms",
+            "scratchSha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE",
+            "productionSha256": "1CE4DBC902C385914F02F7FAC08D468E675508AE2363F1C7E02C89AD5C663CEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticPlaces",
+            "scratchSha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3",
+            "productionSha256": "6C8296A4753FFC2B4ED3728C3901CD40DDF5E3F843D73D8A664E1DC81842A5EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticDivisors",
+            "scratchSha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C",
+            "productionSha256": "AB14A629D7D034F32094885270343FA2537600672A94DB0D7960B53C6A45C324",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondEndpoint",
+            "scratchSha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011",
+            "productionSha256": "14979801945AC2C5ED8320B4F0C3723545C1E01E1ED3374D159E2DD7633F7664",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicardPeriods",
+            "scratchSha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128",
+            "productionSha256": "917DA052A3DD35595D4A58282B73C081C0C1D5C80073CE4F102D2AA61CB5B274",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexComparison",
+            "scratchSha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917",
+            "productionSha256": "304401FBC09826F7891079B120026EBC86EFBC401B1490BCB6A1EB6A81482837",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondTate",
+            "scratchSha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B",
+            "productionSha256": "2EB1D9FE416D081D527BA20F590CA9CE67C835CBDB6691AA8CE6B20FBD06E8C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodInclusion",
+            "scratchSha256": "E0934AC59B2FC0EED717633AEC76169639B86C35D89E9C611C41EDAA8790EE19",
+            "productionSha256": "3160A27DE0ED115F7ABE67D7776EE85ECF1C40E5B9D644C0A6C5ACF1E303E3A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondTateH1",
+            "scratchSha256": "1C050E437CF32BC40C2B2456201D36D8F82B5ED7C6BA886EDB5189B7DED6497F",
+            "productionSha256": "898324FCC226768B9395A98E1B062DD31D99EEDB1BBC22340D1F82FBED6856DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicDiamondCovariance",
+            "scratchSha256": "705A5F7D06F2283E3EC80F34254FFA8229277C777A220E7EF0A7685951161ED4",
+            "productionSha256": "A060E4D2E61A0053D47804E1EAE74F1B5A8DEBBA75689D8DC8F0B732E0164944",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondFraction",
+            "scratchSha256": "BE0A90D7CB7631822D7D7684F276A69BA3DD151C8FF28E6CB338FADB4C19877A",
+            "productionSha256": "79F5A347C2C9233DC5EE82AC3B6293F3F53FFEEF9BD7C014A420B02A6D817819",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalCuspDiamondImage",
+            "scratchSha256": "C916C3A831E73CA15351B5CCC0F55807792CAD854054DD1B01BA44487653F3D4",
+            "productionSha256": "1EC812DA4A4732AF98FC8574114EABA7442788DE28B98A6822139601A02CB3C9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalModularCuspQuotient",
+            "scratchSha256": "F3C35C9005CCBB53946B16DEDD7B313F605C750624B55C45F9F493B5F9567AC7",
+            "productionSha256": "EF367EF1A9AB004A596DCF2E13EA1B60C99F47F9003C3D30FF21617C3226A128",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondQuotientGerm",
+            "scratchSha256": "142E7AF61982A3F750177E6C5F65FF673135B37C2E393C51E42D5B3BDA9F7964",
+            "productionSha256": "44A44BEB7D9FD4BD45A9C459009FBC23077AE02F2486679C9220CF2FD2A4BF53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondCoefficients",
+            "scratchSha256": "E84A430257A31F564031D95907BDDBCF3C04052BFBFC681CFF7E86C526D59F2B",
+            "productionSha256": "BD567F8E55F6DF7E64A9E691275EA617BC769CDA84AB00667FFBF8C9ABF64EA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRationalGenerators",
+            "scratchSha256": "C730251F09B9B7D6C256D7AC7D687B23ED46CC0402268ED34068E549E9E6C90E",
+            "productionSha256": "854CD4DB7E743559BBD00D6FFF00017072AF9F6F11B9EEE697DCC76B99934AFE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexArithmetic",
+            "scratchSha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435",
+            "productionSha256": "5C5AB4DC793FFC7E634C37DCC5511FB2462ABC58CAA1FD31EEC28EC19B59E71E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGenerators",
+            "scratchSha256": "FFA46B194F64CBCEAD51D0BBE1DCE90360FC66C6E80B1BC200E05BF17FABEE69",
+            "productionSha256": "A1CB0C0243E3F24FA2A28D53936827257AFC8980E657EBB231677B999558B9A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGalois",
+            "scratchSha256": "A0394BEBD1CA4432B22C92C9B185F62F77A38A8EC1CB7D3507BAF8319AB76AC2",
+            "productionSha256": "0F95AF456DF1E445067AEF9A1A0701211874A252EF6F347278D159634EB6E41F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondGaloisPicard",
+            "scratchSha256": "9BC7471F9E95462F286FF2957C8D570EB826918E6F24F0BA61A53215FFD75942",
+            "productionSha256": "FF4DA339CDEF83DDDA3B66AAF688CF64EB1812418610B50FDF44C84F894DD583",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficient",
+            "scratchSha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE",
+            "productionSha256": "6F3E745A360592BBB39A4D8034D5E6D78330DED9F29C04F3F221D94BA5FD2BEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRestriction",
+            "scratchSha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431",
+            "productionSha256": "7F7BCADFDCD4B7D718F9EDCD2AB7C75E4432AB0F2896359A0A3BFD690981A17D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficientMatrix",
+            "scratchSha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4",
+            "productionSha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryNormalizerTate",
+            "scratchSha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305",
+            "productionSha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondLabels",
+            "scratchSha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9",
+            "productionSha256": "7C5AD56FC499E8FFFE1771221DB492CC79794F7BBC24B2D8FD40A86D6596673C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 196 distinct names from 196 exhaustive scratch checks are retained: 196 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original arithmetic diamond, full Picard/period/Tate compatibility, Galois commutation and homogeneous normalizer coefficient convention are now proved. The exact geometric lifting condition sourceGammaOneIntegralParabolicTransfer remains unproved, so the existing finite parabolic character descent remains conditional and excludes primes dividing its fixed nonzero integer. Exceptional primes, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  },
+  "receipt9007": {
+    "recordedUTC": "2026-10-28T13:53:25.757334+00:00",
+    "log": "logs/dubon-build-20261028-051626-555.log",
+    "sha256": "FCBE977305DA25E0DE76429EFAA55D2D499B016038E24293DCB349F0203C51F0",
+    "bytes": 14794236,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9007,
+    "projectTheorems": 57141,
+    "registeredConsumers": 26415,
+    "registeredConstructions": 2801,
+    "declarations": 35201,
+    "generated": 36098,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_051007.log",
+    "foundationSha256": "99D0447A2D47FEBE7FB836D1AB986ACE7CDC36FC73CD8133E12E98741054CEC6",
+    "countReconciliation": {
+      "previousTheorems": 56946,
+      "focusedTheorems": 196,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom.eq_1"
+      ],
+      "addedTheorems": 195,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonGlobalOwnership9007.log",
+      "globalOwnershipSha256": "EAE6006ADDED7AED63FB99FE21BB1C11CD8568FE324E241AA9869FBAF614249F",
+      "globalOwnershipSourceSha256": "0EC3147FAD0445EA044E3645E92C0FB0FEDCDDED80E139818770B3E1B7186DCE",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+      "ownershipSha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 196,
+      "scratchDistinct": 196,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1._proof_1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate._proof_1": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 196,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneDiamondFieldRatios",
+            "SourceGammaOneFieldCuspGerm",
+            "SourceGammaOneDiamondFieldHom",
+            "SourceGammaOneDiamondFieldLabels",
+            "SourceGammaOneDiamondFieldJ",
+            "SourceLaurentAlgebraicCoefficient",
+            "SourceLaurentAlgebraicallyClosedLift"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.log",
+            "sha256": "9DAD836B2ACDB97DA46310860ADD694C754192435701D7FF4FBA64F778A68B32",
+            "sourceSha256": "AB2995DDF5707EF055A31507A6BC89265A8C925BA3EB66D5E9A392F4B93F7D44"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondArithmeticRelation",
+            "SourceLaurentCoefficientProjection",
+            "SourceLaurentFieldIntersection",
+            "SourceGammaOneDiamondArithmeticLift",
+            "SourceGammaOneArithmeticDiamond",
+            "SourceCurveFieldEquivPicard",
+            "SourceGammaOneDiamondPicard"
+          ],
+          "count": 64,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+            "sha256": "A4D345F98A49651891CD32C1E292E6CAE07276C0E308B3D1389DD91D43B378D2",
+            "sourceSha256": "C593B053D693C90B0BD623D762C74399A8DDDBE5F2A8E5F79BE30EAA72614EEF"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondAnalyticGerms",
+            "SourceGammaOneDiamondAnalyticPlaces",
+            "SourceGammaOneDiamondAnalyticDivisors",
+            "SourceGammaOneDiamondEndpoint",
+            "SourceGammaOneDiamondPicardPeriods",
+            "SourceGammaOneDiamondComplexComparison",
+            "SourceGammaOneArithmeticDiamondTate"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+            "sha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06",
+            "sourceSha256": "E0482067E41215886BF15A97C4938916E9A20482878A33F91B6785299DE43F58"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodInclusion",
+            "SourceGammaOneBinaryDiamondTateH1",
+            "SourceCyclotomicDiamondCovariance",
+            "SourceRationalDiamondFraction",
+            "SourceRationalCuspDiamondImage",
+            "SourceRationalModularCuspQuotient",
+            "SourceRationalDiamondQuotientGerm",
+            "SourceRationalDiamondCoefficients",
+            "SourceGammaOneDiamondRationalGenerators",
+            "SourceGammaOneDiamondComplexArithmetic",
+            "SourceGammaOneArithmeticDiamondGenerators",
+            "SourceGammaOneArithmeticDiamondGalois",
+            "SourceGammaOneDiamondGaloisPicard"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.log",
+            "sha256": "1A7F92F02C467680BB0D99C39A91A05D7CAF9C26D37C9F206DC476EC5F77BA43",
+            "sourceSha256": "FBB7AB4E377CF9335A2E0D8343211E58D57485B35E081F45DE9F08930704CC72"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCoefficient",
+            "SourceGammaOneDiamondRestriction",
+            "SourceGammaOneDiamondCoefficientMatrix",
+            "SourceGammaOneBinaryNormalizerTate",
+            "SourceGammaOneBinaryDiamondLabels"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+            "sha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE",
+            "sourceSha256": "34288BC710B254A6597A14B4BCD7B97D516879EF676821AEF2E4A8FAFD17A5BC"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+        "sha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611",
+        "sourceSha256": "58DC790398A29C393FCC2EE809DA515D693298BDB8FD7041EE16103B115681D4"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-032432-254.log",
+        "sha256": "0C7698CD693B500C987E7001A5C1CF3A25C9D40D59FDA0F875955D2D4CCF0A43"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 39 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneDiamondFieldRatios",
+            "scratchSha256": "787DDF7F0B0EEE510AD5F204C81FE7235B23A6F384042CF0D557AA78079AFF88",
+            "productionSha256": "88FDB0011CE75E56F607A1A5325571BBCF6DB238B5F0657843B2AC2761B7A858",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFieldCuspGerm",
+            "scratchSha256": "7416A3EFEB6BF4910D564973AC7B77EE2129CD8F9BFA89661B1267EA12E8D72C",
+            "productionSha256": "DF849668C4B37CCA8021BE6EEFAC1CFD806BC542C1632C544E87FBF4887442D6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldHom",
+            "scratchSha256": "48A1231ED6EEAE899BB20671003BB02D2AEABFA08200996D135CFECEEF38FE3F",
+            "productionSha256": "408D88743331CA74D3C93BF660B8B21219B250C1DFEA2CC3E401C88CD360006F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldLabels",
+            "scratchSha256": "3FC5EFA8220CDA2C96B29317EF7763EED3F61A6189104A1C80531DB2A0E8BA39",
+            "productionSha256": "E89FDF5161AB40A1CFEC94EBD81D2BB76FFA9CEFE4FD3B4F96F1B8F68CD04097",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldJ",
+            "scratchSha256": "F7136000C5C5B2D05AC5C2FD074FEB3E539D79A18382E6D6C2497C5C47BCFC4E",
+            "productionSha256": "77C487187F253A76D1A99446542A270C76EE5F5D17EB1ADEB86003C3214A08CC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicCoefficient",
+            "scratchSha256": "A112DFD56AEE71EA66C7056745FAC276FA430C1C0D06E4BA30EC437FD70F8F39",
+            "productionSha256": "F9A2CD00F8DC14D864FA43337D0C9E0BD784C05015D6B2134E22B21BD8DFD2B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicallyClosedLift",
+            "scratchSha256": "5BA056CF70F1F2F24BDD6CB65CD52CDA1BF37578D5BB53518575708DC6D3BDB6",
+            "productionSha256": "1CDCD7A5E08D5C58A85F120564AD14C7048F09652C3E6A1CE2B5FE4B08AA904D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticRelation",
+            "scratchSha256": "B62B6162C3AF3DE7C677D19B4670938C6D54A4AE664FB319C5AE1F7EE107512E",
+            "productionSha256": "359EAA52F1E4B7DDF8A8F13184FA51A56A74DDB9A817E05149C60DE03BD089F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentCoefficientProjection",
+            "scratchSha256": "D1D591D7081A20B036F7D530860EC0A7A74C9F539E9252244B5A8A44A63D407D",
+            "productionSha256": "AC83002C570605D24B975FD41D99A56FDC1667659A3AC84A733986A8AE8C2326",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentFieldIntersection",
+            "scratchSha256": "A33CF93AD1A9D9D98F3E0FC7DD294B7ECBCDB15897B0F0FBD520294A75CDC284",
+            "productionSha256": "1BA4F21F5110EB07A1DC56C91C21AA526D5D6080028954CFAF08CF74447C29A5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticLift",
+            "scratchSha256": "53122554AA5B02AC46166590EDCE75274A2E13A2343E7772CD0A8CB465F53A5F",
+            "productionSha256": "4AEACA5180DA2507E3ACF49A44497C148265A4874D5B690550D4D9C3AA026A1F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamond",
+            "scratchSha256": "69711E689C8F4272249C9B50210DF0E86FCF59A26DF8935EAC8BF3AFD7AAD957",
+            "productionSha256": "5B834295C90E53B0E7DF5F3FAF8FE41DC2BE547EFC76B4247176A1B653AE4B82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveFieldEquivPicard",
+            "scratchSha256": "C67D61233B752EE651F52310E7D1FABA9CAC8D68BE9C87224A0FBA6B0EF37B68",
+            "productionSha256": "B08ADC99810F8418727D743C0F4443B4E7E182A60817C9DC7AC1099470E0F23A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicard",
+            "scratchSha256": "4F45DC4C4C13D4076186479B0D06B8230B0AD5EB446A92CDBC65BCFEC41980AC",
+            "productionSha256": "004CA8D763E778517AFBB8D361606B1B8D21A98FCA52BC205C76978E82403062",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticGerms",
+            "scratchSha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE",
+            "productionSha256": "1CE4DBC902C385914F02F7FAC08D468E675508AE2363F1C7E02C89AD5C663CEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticPlaces",
+            "scratchSha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3",
+            "productionSha256": "6C8296A4753FFC2B4ED3728C3901CD40DDF5E3F843D73D8A664E1DC81842A5EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticDivisors",
+            "scratchSha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C",
+            "productionSha256": "AB14A629D7D034F32094885270343FA2537600672A94DB0D7960B53C6A45C324",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondEndpoint",
+            "scratchSha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011",
+            "productionSha256": "14979801945AC2C5ED8320B4F0C3723545C1E01E1ED3374D159E2DD7633F7664",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicardPeriods",
+            "scratchSha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128",
+            "productionSha256": "917DA052A3DD35595D4A58282B73C081C0C1D5C80073CE4F102D2AA61CB5B274",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexComparison",
+            "scratchSha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917",
+            "productionSha256": "304401FBC09826F7891079B120026EBC86EFBC401B1490BCB6A1EB6A81482837",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondTate",
+            "scratchSha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B",
+            "productionSha256": "2EB1D9FE416D081D527BA20F590CA9CE67C835CBDB6691AA8CE6B20FBD06E8C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodInclusion",
+            "scratchSha256": "E0934AC59B2FC0EED717633AEC76169639B86C35D89E9C611C41EDAA8790EE19",
+            "productionSha256": "3160A27DE0ED115F7ABE67D7776EE85ECF1C40E5B9D644C0A6C5ACF1E303E3A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondTateH1",
+            "scratchSha256": "1C050E437CF32BC40C2B2456201D36D8F82B5ED7C6BA886EDB5189B7DED6497F",
+            "productionSha256": "898324FCC226768B9395A98E1B062DD31D99EEDB1BBC22340D1F82FBED6856DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicDiamondCovariance",
+            "scratchSha256": "705A5F7D06F2283E3EC80F34254FFA8229277C777A220E7EF0A7685951161ED4",
+            "productionSha256": "A060E4D2E61A0053D47804E1EAE74F1B5A8DEBBA75689D8DC8F0B732E0164944",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondFraction",
+            "scratchSha256": "BE0A90D7CB7631822D7D7684F276A69BA3DD151C8FF28E6CB338FADB4C19877A",
+            "productionSha256": "79F5A347C2C9233DC5EE82AC3B6293F3F53FFEEF9BD7C014A420B02A6D817819",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalCuspDiamondImage",
+            "scratchSha256": "C916C3A831E73CA15351B5CCC0F55807792CAD854054DD1B01BA44487653F3D4",
+            "productionSha256": "1EC812DA4A4732AF98FC8574114EABA7442788DE28B98A6822139601A02CB3C9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalModularCuspQuotient",
+            "scratchSha256": "F3C35C9005CCBB53946B16DEDD7B313F605C750624B55C45F9F493B5F9567AC7",
+            "productionSha256": "EF367EF1A9AB004A596DCF2E13EA1B60C99F47F9003C3D30FF21617C3226A128",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondQuotientGerm",
+            "scratchSha256": "142E7AF61982A3F750177E6C5F65FF673135B37C2E393C51E42D5B3BDA9F7964",
+            "productionSha256": "44A44BEB7D9FD4BD45A9C459009FBC23077AE02F2486679C9220CF2FD2A4BF53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondCoefficients",
+            "scratchSha256": "E84A430257A31F564031D95907BDDBCF3C04052BFBFC681CFF7E86C526D59F2B",
+            "productionSha256": "BD567F8E55F6DF7E64A9E691275EA617BC769CDA84AB00667FFBF8C9ABF64EA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRationalGenerators",
+            "scratchSha256": "C730251F09B9B7D6C256D7AC7D687B23ED46CC0402268ED34068E549E9E6C90E",
+            "productionSha256": "854CD4DB7E743559BBD00D6FFF00017072AF9F6F11B9EEE697DCC76B99934AFE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexArithmetic",
+            "scratchSha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435",
+            "productionSha256": "5C5AB4DC793FFC7E634C37DCC5511FB2462ABC58CAA1FD31EEC28EC19B59E71E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGenerators",
+            "scratchSha256": "FFA46B194F64CBCEAD51D0BBE1DCE90360FC66C6E80B1BC200E05BF17FABEE69",
+            "productionSha256": "A1CB0C0243E3F24FA2A28D53936827257AFC8980E657EBB231677B999558B9A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGalois",
+            "scratchSha256": "A0394BEBD1CA4432B22C92C9B185F62F77A38A8EC1CB7D3507BAF8319AB76AC2",
+            "productionSha256": "0F95AF456DF1E445067AEF9A1A0701211874A252EF6F347278D159634EB6E41F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondGaloisPicard",
+            "scratchSha256": "9BC7471F9E95462F286FF2957C8D570EB826918E6F24F0BA61A53215FFD75942",
+            "productionSha256": "FF4DA339CDEF83DDDA3B66AAF688CF64EB1812418610B50FDF44C84F894DD583",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficient",
+            "scratchSha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE",
+            "productionSha256": "6F3E745A360592BBB39A4D8034D5E6D78330DED9F29C04F3F221D94BA5FD2BEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRestriction",
+            "scratchSha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431",
+            "productionSha256": "7F7BCADFDCD4B7D718F9EDCD2AB7C75E4432AB0F2896359A0A3BFD690981A17D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficientMatrix",
+            "scratchSha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4",
+            "productionSha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryNormalizerTate",
+            "scratchSha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305",
+            "productionSha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondLabels",
+            "scratchSha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9",
+            "productionSha256": "7C5AD56FC499E8FFFE1771221DB492CC79794F7BBC24B2D8FD40A86D6596673C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 196 distinct names from 196 exhaustive scratch checks are retained: 196 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original arithmetic diamond, full Picard/period/Tate compatibility, Galois commutation and homogeneous normalizer coefficient convention are now proved. The exact geometric lifting condition sourceGammaOneIntegralParabolicTransfer remains unproved, so the existing finite parabolic character descent remains conditional and excludes primes dividing its fixed nonzero integer. Exceptional primes, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  }
+}

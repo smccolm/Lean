@@ -1,0 +1,11 @@
+--- leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt
++++ leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt
+@@ -344,7 +344,7 @@
+ abbrev restrict (M : Y.Modules) (f : X ⟶ Y) [IsOpenImmersion f] : X.Modules :=
+   (restrictFunctor f).obj M
+ 
+-/-- The sections of the restriction of `M` over `U` are isomorphic to `Γ(M, f ''ᵁ U). -/
++/-- The sections of the restriction of `M` over `U` are isomorphic to `Γ(M, f ''ᵁ U)`. -/
+ def restrictAppIso (M : Y.Modules) (U : X.Opens) : Γ(M.restrict f, U) ≅ Γ(M, f ''ᵁ U) :=
+   Iso.refl _
+ 

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> original all-weight association -> finite parabolic character descent -> scalar divisibility inside actual integral parabolic H1 -> exact kernel of its reduction away from one fixed torsion annihilator.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-reduction-kernel-audit-route-1169.json",
+    "sha256": "5C564CCA174F6FA31705AAEE17D60A025D460F4AF4E3C1F44AFE8EF2080F1BDE",
+    "review": {
+      "recordedUTC": "2026-10-28T08:34:13.791550+00:00",
+      "chain": "DUB17/18 -> original all-weight association -> finite parabolic character descent -> scalar divisibility inside actual integral parabolic H1 -> exact kernel of its reduction away from one fixed torsion annihilator.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Module\\Torsion\\Basic.lean",
+          "sha256": "055C3F63128ED38D2B1C0C1649113F7C5A5B6E094F2CF0C56B527D4C602A38AB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1PrimePowerKernel.lean",
+          "sha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationModuleTorsionBound.lean",
+          "sha256": "76DA167305CDEE79D478C3B5E6FDCFD55BF01A22EBFF8BEE16297A1AB317171F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspStabilizer.lean",
+          "sha256": "E68170E419FE460979D6F25532A3F5E19709949982C5C5E7C1ABA8BD00E7E051"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspUnipotent.lean",
+          "sha256": "6CEFE5D3E957FF43F80E77D04DB7DC01CE43655DB91DAEE806CE7BA2B28A9833"
+        }
+      ],
+      "shorterRoute": "The native finite torsion-submodule annihilator theorem applies directly because the original integral H1 is finite over Z and Z is Noetherian. Apply it to H1 / parabolicH1, then Bezout proves saturation for every scalar coprime to one fixed nonzero integer. Combine with the existing exact full-H1 reduction kernel. This avoids new cusp-width, polynomial unipotent cokernel or Smith-normal-form developments.",
+      "scope": "A precise finite-exception saturation theorem, with one integer depending only on level and weight. It does not assert saturation at every prime, replace the existing all-prime full-H1 characters, or close the finite parabolic character descent. Bad primes and Gamma1 parabolic transfer remain separately unresolved. No change to the source goal is inferred.",
+      "remaining": "Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+      "assumptionsToDischarge": [
+        "For each finite integral module and submodule, scalar saturation holds away from a single nonzero torsion annihilator.",
+        "For actual original integral parabolic H1, reduction modulo every nonzero modulus coprime to that annihilator has exactly the scalar-multiple kernel within parabolic H1."
+      ],
+      "preservedFailures": "1167a--d preserved as noncompiling .lean.txt with logs; finite quotient instance and canonical integral action made explicit. No altered goal or raised limit."
+    }
+  },
+  "discharged": [
+    "For each finite integral module and submodule, scalar saturation holds away from a single nonzero torsion annihilator.",
+    "For actual original integral parabolic H1, reduction modulo every nonzero modulus coprime to that annihilator has exactly the scalar-multiple kernel within parabolic H1."
+  ],
+  "remaining": "Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

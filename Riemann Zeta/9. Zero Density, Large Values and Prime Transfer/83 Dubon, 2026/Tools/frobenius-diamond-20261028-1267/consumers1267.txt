@@ -1,0 +1,114 @@
+
+/-- Exact original-object consumer of `adelicNormalizedSignedRaisingJet_orthonormal`. -/
+theorem actual_integer_weight_adelicNormalizedSignedRaisingJet_orthonormal_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) :
+    Orthonormal ℂ (adelicNormalizedSignedRaisingJet f) :=
+  adelicNormalizedSignedRaisingJet_orthonormal f hf hk
+
+/-- Exact original-object consumer of `adelicSignedRaisingClosedSpan_eq_fullRealClosure`. -/
+theorem actual_integer_weight_adelicSignedRaisingClosedSpan_eq_fullRealClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) :
+    adelicSignedRaisingClosedSpan f = (adelicFullRealUnitCore f).topologicalClosure :=
+  adelicSignedRaisingClosedSpan_eq_fullRealClosure f hf
+
+/-- Exact original-object consumer of `adelicFullRealHilbertBasis_apply`. -/
+theorem actual_integer_weight_adelicFullRealHilbertBasis_apply_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    (adelicFullRealHilbertBasis f hf hk i).val = adelicNormalizedSignedRaisingJet f i :=
+  adelicFullRealHilbertBasis_apply f hf hk i
+
+/-- Exact original-object consumer of `adelicFullRealRotationEigenspace_finiteDimensional`. -/
+theorem actual_integer_weight_adelicFullRealRotationEigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (m : ℤ) :
+    FiniteDimensional ℂ (adelicFullRealRotationEigenspace f m) :=
+  adelicFullRealRotationEigenspace_finiteDimensional f hf hk m
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightProjection_finite`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightProjection_finite_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (m : ℤ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicCyclicHilbert f) :
+    adelicIntegerRotationWeightProjection f m
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicIntegerRotationWeightProjection f m x) :=
+  adelicIntegerRotationWeightProjection_finite f m a x
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightProjection_realClosure`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightProjection_realClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (i : ℕ ⊕ ℕ) (x : AdelicCyclicHilbert f) (hx : x ∈ (adelicFullRealUnitCore f).topologicalClosure) :
+    adelicIntegerRotationWeightProjection f (adelicSignedRaisingWeight k i) x ∈
+      Submodule.span ℂ {adelicSignedRaisingJet f i} :=
+  adelicIntegerRotationWeightProjection_realClosure f hf hk i x hx
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightSpace_eq_signedFiniteClosure`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightSpace_eq_signedFiniteClosure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) = adelicSignedFiniteCyclicClosedSpan f i :=
+  adelicIntegerRotationWeightSpace_eq_signedFiniteClosure f hf hk i
+
+/-- Exact original-object consumer of `continuous_gram_factor_closure`. -/
+theorem actual_integer_weight_continuous_gram_factor_closure_source {E F ι : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [NormedAddCommGroup F] [InnerProductSpace ℂ F] (u : ι → E) (T U : E →L[ℂ] F) (c : ℂ)
+    (h : ∀ i j, inner ℂ (T (u i)) (U (u j)) = inner ℂ (u i) (u j) * c)
+    (x y : E) (hx : x ∈ (Submodule.span ℂ (Set.range u)).topologicalClosure)
+    (hy : y ∈ (Submodule.span ℂ (Set.range u)).topologicalClosure) :
+    inner ℂ (T x) (U y) = inner ℂ x y * c :=
+  continuous_gram_factor_closure u T U c h x y hx hy
+
+/-- Exact original-object consumer of `adelicFullRealClosure_finite_gram`. -/
+theorem actual_integer_weight_adelicFullRealClosure_finite_gram_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (a b : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))
+    (x y : AdelicCyclicHilbert f)
+    (hx : x ∈ (adelicFullRealUnitCore f).topologicalClosure)
+    (hy : y ∈ (adelicFullRealUnitCore f).topologicalClosure) :
+    inner ℂ (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) x)
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b) y) =
+      inner ℂ x y * inner ℂ
+        (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a) (adelicCyclicUnitReference f))
+        (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b) (adelicCyclicUnitReference f)) :=
+  adelicFullRealClosure_finite_gram f hf hk a b x y hx hy
+
+/-- Exact original-object consumer of `adelicSignedFiniteCoreIsometry_range_closure`. -/
+theorem actual_integer_weight_adelicSignedFiniteCoreIsometry_range_closure_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ) :
+    (adelicSignedFiniteCoreIsometry f hf hk i).toLinearMap.range.topologicalClosure =
+      adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) :=
+  adelicSignedFiniteCoreIsometry_range_closure f hf hk i
+
+/-- Exact original-object consumer of `adelicFullFiniteCoreCompletionInclusion_intertwines`. -/
+theorem actual_integer_weight_adelicFullFiniteCoreCompletionInclusion_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicFullFiniteCoreCompletion f) :
+    adelicFullFiniteCoreCompletionInclusion f (adelicFullFiniteCoreCompletionRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicFullFiniteCoreCompletionInclusion f x) :=
+  adelicFullFiniteCoreCompletionInclusion_intertwines f a x
+
+/-- Exact original-object consumer of `adelicSignedFiniteCoreIsometry_intertwines`. -/
+theorem actual_integer_weight_adelicSignedFiniteCoreIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : adelicFullFiniteUnitCore f) :
+    adelicSignedFiniteCoreIsometry f hf hk i (adelicFullFiniteUnitCoreRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicSignedFiniteCoreIsometry f hf hk i x) :=
+  adelicSignedFiniteCoreIsometry_intertwines f hf hk i a x
+
+/-- Exact original-object consumer of `adelicSignedFiniteCompletionIsometry_intertwines`. -/
+theorem actual_integer_weight_adelicSignedFiniteCompletionIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (a : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (x : AdelicFullFiniteCoreCompletion f) :
+    adelicSignedFiniteCompletionIsometry f hf hk i (adelicFullFiniteCoreCompletionRepresentation f a x) =
+      adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a)
+        (adelicSignedFiniteCompletionIsometry f hf hk i x) :=
+  adelicSignedFiniteCompletionIsometry_intertwines f hf hk i a x
+
+/-- Exact original-object consumer of `adelicSignedWeight_finiteDimensional`. -/
+theorem actual_integer_weight_adelicSignedWeight_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (i : ℕ ⊕ ℕ)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ
+      (adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) ⊓ adelicFiniteSubgroupFixedSpace f J :
+        Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicSignedWeight_finiteDimensional f hf hk i J hJ
+
+/-- Exact original-object consumer of `adelicIntegerRotationWeightSpace_eq_bot`. -/
+theorem actual_integer_weight_adelicIntegerRotationWeightSpace_eq_bot_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (m : ℤ)
+    (hm : ∀ i, m ≠ adelicSignedRaisingWeight k i) : adelicIntegerRotationWeightSpace f m = ⊥ :=
+  adelicIntegerRotationWeightSpace_eq_bot f hf m hm
+
+/-- Exact original-object consumer of `adelicIntegerWeight_finiteDimensional`. -/
+theorem actual_integer_weight_adelicIntegerWeight_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k) (m : ℤ)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (adelicIntegerRotationWeightSpace f m ⊓ adelicFiniteSubgroupFixedSpace f J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicIntegerWeight_finiteDimensional f hf hk m J hJ
+

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic operator relations for the actual Fourier character.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-audit-route-1163.json",
+    "sha256": "93D0FB57178E5E5FF0D063B4F614675939CB0292A0ABDBBBB095BF9C09834E96",
+    "review": {
+      "recordedUTC": "2026-10-28T07:59:14.323904+00:00",
+      "chain": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic operator relations for the actual Fourier character.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1HeckeRelations.lean",
+          "sha256": "E9C06CFD04A4E1787D6AC89C539027F3CE794AD946EBF640EF2BBD390099CBD0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeWordTransport.lean",
+          "sha256": "3AAAEC58C9F86006CA22CAFC59DF1A3FA3214B8B2D8D34C51950D95D75950B3E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1HeckeAlgebra.lean",
+          "sha256": "026BEEB3D529C7BD78DEB07C7FAF1C149F56156E71161DF3086C2EFFEE075CC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-1-scratch-receipt.json",
+          "sha256": "0CA4FCFB88CD4862E5C5873E488F1370348F4FAE45EA19B2B8B34319BF16B869"
+        }
+      ],
+      "shorterRoute": "Reuse the existing integral/complex Hecke-word intertwiner and actual original nonzero period eigenclass. Its proved integral parabolic span suffices to evaluate a word vanishing on that submodule. No new stable Hecke algebra or general corestriction-parabolicity theorem is required for this necessary relation edge.",
+      "assumptionsToDischarge": [
+        "The original Fourier character vanishes on every integral Hecke word annihilating actual integral parabolic H1; no vanishing on full integral H1 is assumed."
+      ],
+      "remaining": "Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged."
+    }
+  },
+  "discharged": [
+    "The original Fourier character vanishes on every integral Hecke word annihilating actual integral parabolic H1; no vanishing on full integral H1 is assumed."
+  ],
+  "remaining": "Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

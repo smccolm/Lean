@@ -1,0 +1,9 @@
+# Original diamond/Picard/period comparison
+
+Dependency: DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> arithmetic diamond/Picard comparison.
+
+Reused results inspected before expansion: original equal-weight modular quotient realization; cusp germ injectivity; native Mobius meromorphic-order invariance; literal valuation-ring place transport; original analytic divisor moving lemma and surjectivity of analyticPicardHom; original Picard-period equivalence; native diamond primitive and endpoint identity; integral period lattice stability and Tate-torus naturality.
+
+Shorter route: identify the field diamond's exact modular quotient, then its interior germ and analytic place image. Push finite analytic divisors and use the already proved moving lemma to cover every Picard class. This avoids an incidental new cusp-by-cusp presentation. The endpoint calculation keeps the basepoint term explicit and removes it using the actual degree-zero condition. The field/Picard action is defined independently of periods, so the compatibility is a proof obligation, not a definition.
+
+To discharge: compatibility of the original complex field/Picard diamond with the original period quotient, with no new geometric or analytic premises. The arithmetic Picard comparison through the existing constant-field extension, Galois commutation, the original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain separate obligations. DUB-17--20 remain open.

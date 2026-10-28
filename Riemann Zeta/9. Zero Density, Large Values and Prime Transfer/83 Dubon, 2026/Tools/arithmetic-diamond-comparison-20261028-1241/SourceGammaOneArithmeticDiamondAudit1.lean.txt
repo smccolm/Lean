@@ -1,0 +1,86 @@
+import SourceGammaOneDiamondArithmeticRelation
+import SourceLaurentCoefficientProjection
+import SourceLaurentFieldIntersection
+import SourceGammaOneDiamondArithmeticLift
+import SourceGammaOneArithmeticDiamond
+import SourceCurveFieldEquivPicard
+import SourceGammaOneDiamondPicard
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span
+#print axioms Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_apply
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv_degree
+#print axioms Dubon2026.SourceCurve.fieldDegZeroEquiv_principal
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv_mk
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent
+#print axioms Dubon2026.SourceFunctionField.laurentCoeffProjection
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut
+#print axioms Dubon2026.SourceCurve.fieldDivisorEquiv
+#print axioms Dubon2026.SourceCurve.fieldDegZeroEquiv
+#print axioms Dubon2026.SourceCurve.fieldPicardEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneDiamondArithmeticRelation, `SourceLaurentCoefficientProjection, `SourceLaurentFieldIntersection, `SourceGammaOneDiamondArithmeticLift, `SourceGammaOneArithmeticDiamond, `SourceCurveFieldEquivPicard, `SourceGammaOneDiamondPicard]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ConstantField.diamondFieldHom_fieldMap_coordinate, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_diamond_arithmetic_laurent_relation, `Dubon2026.SourceFunctionField.laurentCoeffProjection_smul_map, `Dubon2026.SourceFunctionField.laurentCoeffProjection_mem_span, `Dubon2026.SourceFunctionField.laurentCoeffProjection_mul_span, `Dubon2026.SourceFunctionField.mem_field_of_coeffMap_mem_adjoin, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_mem_of_complex_coeffMap_mem, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_arithmetic_diamond_lift, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondValue, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_arithmeticDiamondHom, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_constants, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_one, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_mul, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j, `Dubon2026.SourceCurve.fieldDivisorEquiv_apply, `Dubon2026.SourceCurve.fieldDivisorEquiv_principal_iff, `Dubon2026.SourceCurve.fieldDivisorEquiv_degree, `Dubon2026.SourceCurve.fieldDegZeroEquiv_principal, `Dubon2026.SourceCurve.fieldPicardEquiv_mk, `Dubon2026.SourceCurve.fieldPicardEquiv_torsion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_mk, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_mk, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard_torsion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondHom_lift_independent]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.laurentCoeffProjection, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondValue, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut, `Dubon2026.SourceCurve.fieldDivisorEquiv, `Dubon2026.SourceCurve.fieldDegZeroEquiv, `Dubon2026.SourceCurve.fieldPicardEquiv, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard, `Dubon2026.SourceFunctionField.GammaOne.complexDiamondPicard]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Diamond Period postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Diamond Period theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC DIAMOND AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneDiamondArithmeticRelation
+#lint in SourceLaurentCoefficientProjection
+#lint in SourceLaurentFieldIntersection
+#lint in SourceGammaOneDiamondArithmeticLift
+#lint in SourceGammaOneArithmeticDiamond
+#lint in SourceCurveFieldEquivPicard
+#lint in SourceGammaOneDiamondPicard

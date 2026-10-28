@@ -1,0 +1,138 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T07:54:44.230982+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceCocycleConjugateCoboundary",
+    "SourceParabolicFiniteCuspWitnesses",
+    "SourceParabolicWitnessDenominators",
+    "SourceParabolicUniformDenominator",
+    "SourceOriginalBinaryCuspWitnesses",
+    "SourceParabolicIntegralCoordinateSpan",
+    "SourceOriginalIntegralParabolicCocycleSpan",
+    "SourceOriginalIntegralParabolicH1Span"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary.lean",
+      "sha256": "733415B1F215CCF2868013568ABEF032E5606AF7597200BCDF000F1EBDCB4A11",
+      "oleanSha256": "7B7169E33181AAC5D08E72566FB009A3C149BA11A2C66AE49DF30845FE34AB33",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary1151a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary1151a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses.lean",
+      "sha256": "B96EBFF0BF315008B97F8A8EDDEA63C08F66E5E256C6F3A6899795DAB7A2E8CD",
+      "oleanSha256": "BA4DE845C7C56FE7122076A66C6335E4E1B7EDDBC88CBBC711E0E87042C54303",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses1152a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses1152a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators.lean",
+      "sha256": "29D4F716CB42B9BAD0A396ADA193C57F6CA3EC370523C5CEF040D782D2B6AFC8",
+      "oleanSha256": "D4C2FDA2EBFAFA82C14D507D32FEAFCB4AB4F34264287E62A96FCF1404D9B300",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators1153a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators1153a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator.lean",
+      "sha256": "A365BCF1264B2C31F45187D602F51E00E1A46A043E99E98D1B01546D81733AEE",
+      "oleanSha256": "FD24730FDFA9566F41C21BF0EDC839C8D995785183BEB6B5D132E258270D0F8C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator1154a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator1154a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses.lean",
+      "sha256": "0D4469CA85C04099979581C30E0F58FB1B633343E1AD67C1D974DAB419419033",
+      "oleanSha256": "0A4B1CF59A6607B0B8D7B690FAAC863990B7809A88AE1C01496619EF04A98985",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses1155a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses1155a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan.lean",
+      "sha256": "1E76FED0532C60316A37224DD3F48BAC1834570B2FDCBE687FDE785E54036762",
+      "oleanSha256": "BCAC914568BCADFF1EDD8E8B2A1C81220751834ABA912341ABB9897DE0A564C8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan.lean",
+      "sha256": "8AA79F2C6DAFDA6421180A08B33580B4EC92AE70C3813A1C83BF0D2FC223418C",
+      "oleanSha256": "D3ABDD32CEF731C54044DFB3C779914076A9DFCECE58EE344B0D8136A580D867",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan1157a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan1157a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span.lean",
+      "sha256": "150922DFBF0CBEFBCB05C59FB10588F361768BA7237BBC8AD8E5D8727C29BC6C",
+      "oleanSha256": "646E065BE71C1B712A73A0EC11B3AE02D9B762DC85CF8B923FC2B5B828462276",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceCocycle_conjugate_coboundary",
+    "Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses",
+    "Dubon2026.sourceParabolicWitness_family_integerMultiple",
+    "Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple",
+    "Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_class",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses",
+    "Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span",
+    "Dubon2026.sourcePrimitive_originalIntegralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceCocycle_conjugate_coboundary",
+    "Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses",
+    "Dubon2026.sourceParabolicWitness_family_integerMultiple",
+    "Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple",
+    "Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_class",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses",
+    "Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span",
+    "Dubon2026.sourcePrimitive_originalIntegralParabolic_span"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceOriginalBinaryPeriodCocycle"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicAudit1.log",
+  "logSha256": "CD679EEFAFB33ABEAF45322F25141556E075B8713FB851A96CFACF774F74C222",
+  "auditSha256": "A0BABBBE5A2B4F680B991986D05E3078BABF5D35C4318C52E9D84EC0D176B789",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicScratchOwnership1161.log",
+  "ownershipSha256": "9C14903E04818CD81D7CF4BCCCDCE08B1D7B188EE511991EED2228EA143B137A",
+  "exhaustiveTheorems": 34,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicDependencyAudit1.log",
+  "dependencyAuditSha256": "F7211FDB72872D91456503D3646543CD5BEE74317DA061C52F923762203C3BA4",
+  "dependencyAuditSourceSha256": "DB6232C6642F93C44E8376C59F65BE6F69D994921D6FDD3E51F5DBACF5874249",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_originalIntegralParabolic_span",
+    "Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses"
+  ],
+  "dependency": "DUB17/18 -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic spanning and operator congruence -> one uniform integer denominator for the original cusp-period local coboundaries.",
+  "discharged": [
+    "Native cocycle conjugation transports actual local coboundary witnesses.",
+    "Finitely many original cusp-orbit representatives suffice for integral parabolicity.",
+    "One nonzero integer clears the rational cocycle and all whole-cusp-stabilizer witnesses simultaneously.",
+    "The actual original period cocycle retains whole-cusp witnesses under its coefficient isomorphism and rational coordinate projection.",
+    "The original nonzero primitive period H1 class lies in the complex span of actual integral parabolic H1 classes."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite parabolic Hecke-character descent and original Gamma1 arithmetic realization remain open. Integral spanning is not finite descent, nonvanishing of reduction, or a characteristic-zero lift. Diamonds, Galois realization, original all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "AD15E99C5BB8F8DF9C848B2554E1E45164C42471849554D5C439F33D8EB11BE5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

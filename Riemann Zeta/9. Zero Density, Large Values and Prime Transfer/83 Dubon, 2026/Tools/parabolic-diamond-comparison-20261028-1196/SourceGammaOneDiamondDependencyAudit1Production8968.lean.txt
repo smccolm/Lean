@@ -1,0 +1,31 @@
+import Dubon2026.SourceGammaOneDiamondConjugation
+import Dubon2026.SourceGammaOneDiamondH1
+import Dubon2026.SourceGammaOneDiamondLabels
+import Dubon2026.SourceGammaOneUnitDiamondAction
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneDiamond_conj_mem, `Dubon2026.sourceGammaOneDiamondConjugation_trace, `Dubon2026.sourceGammaOneDiamondConjugation_mul, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneDiamondH1_comp, `Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem, `Dubon2026.sourceGammaOneDiamondH1_lift_independent, `Dubon2026.sourceGammaOneDiamondLabel_lift, `Dubon2026.sourceGammaOneUnitDiamondH1_eq, `Dubon2026.sourceGammaOneUnitDiamondH1_one, `Dubon2026.sourceGammaOneUnitDiamondH1_mul, `Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem, `Dubon2026.sourceGammaOneDiamondConjugation, `Dubon2026.sourceGammaOneDiamondMorphism, `Dubon2026.sourceGammaOneDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1Hom]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneDiamondConjugation, `Dubon2026.SourceGammaOneDiamondH1, `Dubon2026.SourceGammaOneDiamondLabels, `Dubon2026.SourceGammaOneUnitDiamondAction]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneDiamond_conj_mem, `Dubon2026.sourceGammaOneDiamondConjugation_trace, `Dubon2026.sourceGammaOneDiamondConjugation_mul, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneDiamondH1_comp, `Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem, `Dubon2026.sourceGammaOneDiamondH1_lift_independent, `Dubon2026.sourceGammaOneDiamondLabel_lift, `Dubon2026.sourceGammaOneUnitDiamondH1_eq, `Dubon2026.sourceGammaOneUnitDiamondH1_one, `Dubon2026.sourceGammaOneUnitDiamondH1_mul, `Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem, `Dubon2026.sourceGammaOneDiamondConjugation, `Dubon2026.sourceGammaOneDiamondMorphism, `Dubon2026.sourceGammaOneDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1Hom, `CongruenceSubgroup.Gamma1_mem, `CongruenceSubgroup.Gamma1_to_Gamma0_mem, `CongruenceSubgroup.Gamma1_in_Gamma0, `Matrix.trace_mul_comm, `Dubon2026.SL2Reduction.SL2_reduction_surjective, `groupCohomology.H1π_comp_map_apply, `groupCohomology.H1IsoOfIsTrivial_H1π_apply_apply]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal native Gamma1 diamond conjugation, lift independence, unit action and original parabolic H1 preservation. Analytic-period and arithmetic diamond comparisons, homogeneous coefficient conventions and the separate transfer lifting remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

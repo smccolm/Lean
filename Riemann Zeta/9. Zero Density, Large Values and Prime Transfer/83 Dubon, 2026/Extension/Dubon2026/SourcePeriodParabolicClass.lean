@@ -1,0 +1,62 @@
+import Dubon2026.SourceParabolicCoefficientMap
+import Dubon2026.SourceOriginalBinaryCohomology
+
+/-! DUB17/18 -> original all-weight association -> original parabolic
+Hecke character. Reuse the original cusp-period local coboundary and
+its exact coefficient equivalence. The original nonzero cusp class is
+in native parabolic homogeneous-coefficient H1. Integral spanning and
+finite-precision character descent remain separate obligations. -/
+namespace Dubon2026
+noncomputable section
+open Matrix.SpecialLinearGroup CongruenceSubgroup OnePoint groupCohomology
+open scoped MatrixGroups
+
+theorem sourceParabolic_exists_fixed_cusp (γ : SL(2, ℤ))
+    (hγ : γ.val.trace ^ 2 = 4) :
+    ∃ β : OnePoint ℚ, mapGL ℚ γ • β = β := by
+  obtain ⟨ε, δ, n, hε, he⟩ := SourceParabolic.classification γ hγ
+  have hm : γ * δ = δ * (ε * ModularGroup.T ^ n) := by
+    rw [he]
+    rcases hε with rfl | rfl <;> simp [mul_assoc]
+  have ht : mapGL ℚ (ε * ModularGroup.T ^ n) • (∞ : OnePoint ℚ) = ∞ := by
+    apply smul_infty_eq_self_iff.mpr
+    rcases hε with rfl | rfl
+    · change (((1 * ModularGroup.T ^ n : SL(2, ℤ)) 1 0 : ℤ) : ℚ) = 0
+      simp [ModularGroup.coe_T_zpow]
+    · change (((-1 * ModularGroup.T ^ n : SL(2, ℤ)) 1 0 : ℤ) : ℚ) = 0
+      simp [ModularGroup.coe_T_zpow]
+  refine ⟨mapGL ℚ δ • ∞, ?_⟩
+  rw [← mul_smul, ← map_mul, hm, map_mul, mul_smul, ht]
+
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] {k : ℤ} {w : ℕ}
+
+theorem sourcePeriodCocycle_mem_parabolic
+    (f : CuspForm (Γ.map (mapGL ℝ)) k) (hk : k = w + 2) (α : OnePoint ℚ) :
+    sourcePeriodCocycle f hk α ∈ sourceParabolicCocycles Γ (sourcePeriodDualRep Γ w) := by
+  intro γ hγ
+  obtain ⟨β, hβ⟩ := sourceParabolic_exists_fixed_cusp γ.val hγ
+  obtain ⟨v, hv⟩ := sourcePeriodCocycle_parabolic f hk α β
+  exact ⟨v, hv γ hβ⟩
+
+theorem sourcePeriodBinaryCocycle_mem_parabolic
+    (f : CuspForm (Γ.map (mapGL ℝ)) k) (hk : k = w + 2) (α : OnePoint ℚ) :
+    (mapCocycles₁ (A := sourcePeriodDualRep Γ w) (B := sourcePeriodColumnRep Γ w)
+      (MonoidHom.id Γ) (sourcePeriodCoefficientIso Γ w).hom
+      (sourcePeriodCocycle f hk α)) ∈ sourceParabolicCocycles Γ (sourcePeriodColumnRep Γ w) :=
+  sourceParabolicCocycles_coefficientMap Γ (sourcePeriodDualRep Γ w)
+    (sourcePeriodColumnRep Γ w) (sourcePeriodCoefficientIso Γ w).hom
+    (sourcePeriodCocycle_mem_parabolic f hk α)
+
+theorem sourceOriginalBinaryPeriodCohomology_parabolic
+    (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) :
+    sourceOriginalBinaryPeriodCohomology Q k hk f ∈
+      sourceParabolicH1 (Gamma0 Q) (sourcePeriodColumnRep (Gamma0 Q) (k - 2).toNat) := by
+  change sourcePeriodH1BinaryEquiv (Gamma0 Q) (k - 2).toNat
+    (sourcePeriodH1 f (by omega) ∞) ∈ _
+  rw [sourcePeriodH1BinaryEquiv_period]
+  exact (sourceParabolicH1_cocycle_iff _ _ _).mpr
+    (sourcePeriodBinaryCocycle_mem_parabolic f (by omega) ∞)
+
+end
+end Dubon2026

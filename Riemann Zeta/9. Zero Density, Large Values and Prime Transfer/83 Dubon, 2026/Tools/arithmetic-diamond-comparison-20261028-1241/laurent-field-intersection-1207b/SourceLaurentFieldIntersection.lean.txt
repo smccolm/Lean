@@ -1,0 +1,69 @@
+import SourceLaurentCoefficientProjection
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond descent -> original arithmetic field membership. If a base Laurent
+series belongs to the field generated after constant extension, descend
+its numerator and a nonzero denominator using one base-linear coefficient
+functional. This applies to the already constructed original coefficient
+lift; no alternate function-field presentation is introduced.
+-/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+theorem mem_field_of_coeffMap_mem_adjoin (F : IntermediateField K (LaurentSeries K))
+    (x : LaurentSeries K)
+    (hx : coeffMap (algebraMap K L) x ∈
+      IntermediateField.adjoin L (coeffMap (algebraMap K L) '' (F : Set (LaurentSeries K)))) :
+    x ∈ F := by
+  classical
+  let ι := coeffMap (algebraMap K L)
+  let S : Set (LaurentSeries L) := ι '' (F : Set (LaurentSeries K))
+  let e : F →+* LaurentSeries L := ι.comp F.val.toRingHom
+  have he : S = Set.range e := by
+    ext z
+    constructor
+    · rintro ⟨y, hy, rfl⟩
+      exact ⟨⟨y, hy⟩, rfl⟩
+    · rintro ⟨y, rfl⟩
+      exact ⟨y.val, y.property, rfl⟩
+  have hs : (Algebra.adjoin L S).toSubmodule = Submodule.span L S := by
+    rw [Algebra.adjoin_eq_span, he]
+    have hm : Set.range e = (e.range.toSubmonoid : Set (LaurentSeries L)) := by
+      ext z
+      simp
+    rw [hm, Submonoid.closure_eq]
+  obtain ⟨a, ha, b, hb, hxab⟩ := IntermediateField.mem_adjoin_iff_div.mp hx
+  have ha' : a ∈ Submodule.span L S := by rw [← hs]; exact ha
+  have hb' : b ∈ Submodule.span L S := by rw [← hs]; exact hb
+  by_cases hb0 : b = 0
+  · have hx0 : x = 0 := ι.injective (by simpa [hb0] using hxab)
+    rw [hx0]
+    exact F.zero_mem
+  have hbc : ∃ n : ℤ, b.coeff n ≠ 0 := by
+    by_contra hn
+    push_neg at hn
+    apply hb0
+    ext n
+    simpa using hn n
+  obtain ⟨n, hn⟩ := hbc
+  obtain ⟨π, hπ⟩ := Module.Projective.exists_dual_eq_one K hn
+  have hp0 : laurentCoeffProjection π b ≠ 0 := by
+    intro hz
+    have hc := congrArg (fun z : LaurentSeries K => z.coeff n) hz
+    change π (b.coeff n) = 0 at hc
+    rw [hπ] at hc
+    exact one_ne_zero hc
+  have hm (z : LaurentSeries L) (hz : z ∈ Submodule.span L S) :
+      laurentCoeffProjection π z ∈ F := by
+    have hh := laurentCoeffProjection_mem_span π (F : Set (LaurentSeries K)) z hz
+    exact (Submodule.span_le.mpr (fun y hy => hy) :
+      Submodule.span K (F : Set (LaurentSeries K)) ≤ F.toSubalgebra.toSubmodule) hh
+  have hmul : x * laurentCoeffProjection π b = laurentCoeffProjection π a := by
+    have hh := congrArg (laurentCoeffProjection π) ((eq_div_iff hb0).mp hxab)
+    rwa [laurentCoeffProjection_mul_span π (F : Set (LaurentSeries K)) x b hb'] at hh
+  rw [(eq_div_iff hp0).mpr hmul]
+  exact F.div_mem (hm a ha') (hm b hb')
+
+end
+end Dubon2026.SourceFunctionField

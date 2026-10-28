@@ -1,0 +1,20 @@
+{
+  "recordedUTC": "2026-10-28T12:45:16.003681+00:00",
+  "revision": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerDelta/StatementsXN.lean",
+      "path": "NormalizerDelta/StatementsXN.lean.txt",
+      "sha256": "FB94BB5445316EA1E688E3716E48F7FCC87BC9BB8454B34BCE98E5809854A817",
+      "bytes": 7106
+    },
+    {
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerLean/Defs.lean",
+      "path": "NormalizerLean/Defs.lean.txt",
+      "sha256": "0635B5F0AEBABC0649E161BCE6672D3B77890D8A4D2083A3356F3C31DD1A75D8",
+      "bytes": 38228
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

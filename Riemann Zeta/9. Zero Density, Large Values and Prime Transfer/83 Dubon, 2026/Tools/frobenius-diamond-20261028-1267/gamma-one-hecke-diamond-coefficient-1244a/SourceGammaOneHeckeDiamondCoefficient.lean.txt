@@ -1,0 +1,32 @@
+import SourceHomogeneousHeckeDiamond
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+
+/-! DUB-17/18 -> original all-weight association -> finite Gamma1
+Frobenius realization. The exact native normalizer coefficient gives
+the degree-w factor in the quadratic relation; no restriction on w.
+-/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup
+variable (Q N w : ℕ) [NeZero N]
+
+theorem sourceGammaOneHeckeDiamondCoefficient_square
+    (g : Gamma0 (Q * N ^ 2)) (ell : ℕ)
+    (hlabel : (g.val 1 1 : ZMod N) = (ell : ZMod N)) :
+    (homogeneousMatrixAction w (Matrix.diagonal ![(ell : ZMod N), 1])).comp
+        (homogeneousMatrixAction w (Matrix.diagonal ![(ell : ZMod N), 1])) =
+      (ell : ZMod N) ^ w • sourceGammaOneBinaryDiamondCoefficient Q N w g := by
+  have hg : g.val ∈ Gamma0 N := Gamma0_le_of_dvd
+    (dvd_mul_of_dvd_right (dvd_pow_self N (by decide : 2 ≠ 0)) Q) g.property
+  have hdet : (g.val.val.det : ZMod N) = 1 := by
+    rw [g.val.property]
+    rfl
+  rw [Matrix.det_fin_two] at hdet
+  push_cast at hdet
+  have had : (g.val 1 1 : ZMod N) * (g.val 0 0 : ZMod N) = 1 := by
+    simpa only [Gamma0_mem.mp hg, mul_zero, sub_zero, mul_comm] using hdet
+  rw [sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, ← hlabel]
+  exact homogeneousHeckeDiamond_square w _ _ had
+
+end
+end Dubon2026

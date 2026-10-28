@@ -1,0 +1,143 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T13:45:41.447346+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceInnerH1Identity",
+    "SourceH1TraceInner",
+    "SourceGammaOneDiamondRange",
+    "SourceH1TraceSubgroupEquality",
+    "SourceNormalizerH1Trace",
+    "SourceH1CompositionSquare",
+    "SourceNormalizerCoefficientValue",
+    "SourceGammaOneDiamondSubgroupSquare",
+    "SourceGammaOneDiamondTransfer"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity.lean",
+      "sha256": "3E235C7A9A76CD06BF4970FAC3E4B178966F538BDFB24A89BF73B524D433B2EC",
+      "oleanSha256": "B21E40D49438F49D815683EEE16F4ABA594A47F902ECCB93495445A05238149B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner.lean",
+      "sha256": "21AC3DA9ADD755E6FB9106863F961412D20714A35CF6C339674EADECA348F0C3",
+      "oleanSha256": "BCB84C84B4CE414D217ACB9550E150581667D74188E17562AB2917D79C7C336D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner1254a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner1254a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange.lean",
+      "sha256": "1E4E99CE0631D6DC7534AA786017B95B57D4C86BA9D607DC033EA0B3B207AF17",
+      "oleanSha256": "22BAE4FC8F27E300E78FDAED02D7FEFD50F48B6983576D873A4FCC113E3214BF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange1255a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange1255a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality.lean",
+      "sha256": "2969B3963088BFEBFB89F487D8F23B092ACCC76EDF2F0748158F7D9D4740B69E",
+      "oleanSha256": "1F2ADF2B1D8D4A3BA2585DE2F0EAD8CA711FA2BB5DB4C6E659051F4715958248",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality1256a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality1256a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace.lean",
+      "sha256": "19BDA5EA08DD81E438E5A32508AE3AC1B958F1F7C6D6AF75C555515590111A12",
+      "oleanSha256": "090B39DCA1F8AE1B45BD18137CBD0C720FA82007219A67B14D24A4BEB87AC51A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare.lean",
+      "sha256": "240A64FD100DE47F95E6227C1362185585F47F656100373378F1B832C6970CA4",
+      "oleanSha256": "6819DCB5C4F5D326192138C20B53D02FFA278669F9133BBE503258B97B111362",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare1260a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare1260a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue.lean",
+      "sha256": "6DC183BB8D87E405DD00CE389B2A582CDA3C2AA25C87CA87C22DEB4026F25DEE",
+      "oleanSha256": "E25DC577D585179637B2299906B9171B2F34766964083549749BFA2E350C25C6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue1261a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue1261a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare.lean",
+      "sha256": "4B907F40625AEB434EB670439B5A4DD9BD67BBDF82FF8CBC373D3BA79ABE00D4",
+      "oleanSha256": "553267A85BF5FE71559EB5875C6B2772BEFCE3F508DE34FA9E422DB952204099",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer.lean",
+      "sha256": "FCCE2E9DBBD6DC7FC41A21896EEF70529A5BB9B47C791FDA513FD8FC9F8F9FF1",
+      "oleanSha256": "8041009A13F342E48F7D8FDE11B4BC600D017975D1F6485CEB1DC7FE2B0AC31B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceInnerH1_identity",
+    "Dubon2026.sourceSubgroupH1Trace_inner",
+    "Dubon2026.sourceGammaOneDiagonalRange_conj",
+    "Dubon2026.sourceSubgroupH1Trace_equality",
+    "Dubon2026.sourceSubgroupH1Trace_normalizer",
+    "Dubon2026.sourceH1Composition_square",
+    "Dubon2026.sourceSubgroupEqualityCoefficient_linear",
+    "Dubon2026.sourceNormalizerCoefficientMorphism_linear",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond",
+    "Dubon2026.sourceInnerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupEqualityCoefficient",
+    "Dubon2026.sourceNormalizerSubgroupHom",
+    "Dubon2026.sourceNormalizerCoefficientMorphism"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceInnerH1_identity",
+    "Dubon2026.sourceSubgroupH1Trace_inner",
+    "Dubon2026.sourceGammaOneDiagonalRange_conj",
+    "Dubon2026.sourceSubgroupH1Trace_equality",
+    "Dubon2026.sourceSubgroupH1Trace_normalizer",
+    "Dubon2026.sourceH1Composition_square",
+    "Dubon2026.sourceSubgroupEqualityCoefficient_linear",
+    "Dubon2026.sourceNormalizerCoefficientMorphism_linear",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceInnerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupEqualityCoefficient",
+    "Dubon2026.sourceNormalizerSubgroupHom",
+    "Dubon2026.sourceNormalizerCoefficientMorphism"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferAudit1.log",
+  "logSha256": "E1FF88CA557CD1F1AED129F8EDD8D48137554190CF961E7B7F338E78EE9390CD",
+  "auditSha256": "860D120754C70F64B8BDF4C2F0406C3493368C8ACA4065F2535CDA6D1D71B189",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.log",
+  "ownershipSha256": "34E834BC04CBF4E05A2662C7ED41D6762C732FC75D4487EA9FACB2BDCBE995F0",
+  "exhaustiveTheorems": 31,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1.log",
+  "dependencyAuditSha256": "9AE3B81B91AAB3448AEE9CA2228720E65EC9072898C6B7680268F75583EC3E38",
+  "dependencyAuditSourceSha256": "620E3513C9711D760CC579679DAFE526FA7F69F9737B8C734E79CCDC49CDF2FF",
+  "consumers": [
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient arithmetic Hecke characters -> diamond-one descent from the original Gamma0 character, needed for the normalized Frobenius determinant.",
+  "discharged": [
+    "The actual lifted original Gamma0 normalizer preserves the exact range of the original diagonal-cover homomorphism.",
+    "Under the existing subgroup H1 isomorphism, native normalizer pullback with inverse coefficient action is the original Gamma1 diamond with its original homogeneous coefficient.",
+    "For every positive original level and coefficient modulus, every homogeneous degree, every original normalizer and every full H1 class, the literal native transfer of its original diamond image equals its original transfer. No six-unit or parabolic-preimage assumption is needed."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This proves diamond invariance of the full native transfer, not existence of parabolic preimages or construction of a parabolic arithmetic character space. The actual Gamma1 geometric Frobenius relation and inertia, original integral parabolic-transfer condition, exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-transfer-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "A08EDA51C586857F0BB098F80359CBC6C3DEC81D868117D9B93B05223FDE368D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,383 @@
+import Dubon2026.SourceGammaOneRealPeriodH1Hecke
+import Dubon2026.SourceGammaOneRealParabolicH1
+import Dubon2026.SourceGammaOneRealParabolicHecke
+import Dubon2026.SourceGammaOneFinitePeriodLattice
+import Dubon2026.SourceGammaOneComplexTatePeriods
+import Dubon2026.SourceGammaOnePeriodTateHecke
+import Dubon2026.SourceGammaOneComplexTateHecke
+import Dubon2026.SourceGammaOneComplexCoefficientMap
+import Dubon2026.SourceGammaOneComplexFieldExtension
+import Dubon2026.SourceGammaOneComplexFieldIndependence
+import Dubon2026.SourceGammaOneComplexSpanSeparation
+import Dubon2026.SourceGammaOneConstantFieldValuationExtension
+import Dubon2026.SourceGammaOneConstantFieldPlaces
+import Dubon2026.SourceGammaOneExtendedPlaceMap
+import Dubon2026.SourceGammaOneDivisorConorm
+import Dubon2026.SourceGammaOneComplexPicardMap
+import Dubon2026.SourceGammaOneComplexTorsionFinite
+import Dubon2026.SourceGammaOneDegreeBaseChange
+import Dubon2026.SourceGammaOneNewCoordinatePlaces
+import Dubon2026.SourceGammaOneComplexCoordinateBasis
+import Dubon2026.SourceGammaOneComplexCoordinateTrace
+import Dubon2026.SourceGammaOneCoordinateDescent
+import Dubon2026.SourceGammaOneComplexSpanDescent
+import Dubon2026.SourceGammaOnePrincipalDescent
+import Dubon2026.SourceGammaOneComplexPicardInjectivity
+import Dubon2026.SourceGammaOneComplexConstantAutomorphisms
+import Dubon2026.SourceGammaOneComplexTranslations
+import Dubon2026.SourceGammaOneOffImageValues
+import Dubon2026.SourceGammaOneTranslationOrbits
+import Dubon2026.SourceGammaOneReducedRiemannRochSpace
+import Dubon2026.SourceGammaOnePrincipalDivisors
+import Dubon2026.SourceGammaOnePrincipalDivisorIdentities
+import Dubon2026.SourceGammaOneFiniteTorsionAction
+import Dubon2026.SourceGammaOneReducedDivisorInvariance
+import Dubon2026.SourceGammaOneFixedReducedDivisor
+import Dubon2026.SourceGammaOneInvariantSupport
+import Dubon2026.SourceGammaOneTorsionDivisorDescent
+import Dubon2026.SourceGammaOneTorsionComparison
+import Dubon2026.SourceGammaOneTateComparison
+import Dubon2026.SourceGammaOneArithmeticTatePeriods
+import Dubon2026.SourceGammaOneHeckeConstantField
+import Dubon2026.SourceGammaOneHeckeSpanSeparation
+import Dubon2026.SourceGammaOneHeckeValuationExtension
+import Dubon2026.SourceGammaOneHeckeConstantPlaces
+import Dubon2026.SourceGammaOneHeckeConorm
+import Dubon2026.SourceGammaOneHeckeComplexPlaces
+import Dubon2026.SourceGammaOneHeckeComplexDivisors
+import Dubon2026.SourceGammaOneHeckeComplexPicard
+import Dubon2026.SourceGammaOneArithmeticTateHecke
+import Dubon2026.SourceGammaOneIntegralCharacterFactor
+import Dubon2026.SourceGammaOneFiniteParabolicCharacters
+import Dubon2026.SourceGammaOneFiniteParabolicH1
+import Dubon2026.SourceGammaOneFiniteParabolicHecke
+import Dubon2026.SourceGammaOneArithmeticPeriodInclusion
+import Dubon2026.SourceGammaOneArithmeticTateFiniteH1
+import Dubon2026.SourceGammaOneArithmeticTateFiniteHecke
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspHeckeTrace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_mem_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicH1_hecke_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv_cuspHeckeTrace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.integralLattice_eq_dualPeriodHom_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.integralLattice_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.integralLattice_free
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_symm_tmul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_eq_quotEnd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.dualPeriodHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.integralPeriodBasis
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coeffMap_sigma_mem_gammaOne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_j
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticFieldScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.adjoin_range_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_linearIndependent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.sum_ne_of_not_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extending_valuation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extended_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_liftPlace_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_eq_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_phi_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_ne_liftPlace_of_comap_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_comap_ne_of_ne_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mem_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complex_torsion_cardinality
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finite_complex_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_baseChange
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.new_of_mem_coordinate_localRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_coordinate_basis
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_j_fiber_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_mem_span_of_regular
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_degree_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_of_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexFieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.laurentLinearMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conormDegZero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_arithmetic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_translation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.off_image_exists_nonarithmetic_j_value
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.j_value_arithmetic_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.translation_orbit_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.divisor_pow_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_reduced_space
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_principal_support
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_principalDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_arithmetic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_add_principal_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_arithmetic_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_action_factorial
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_divisor_factorial_principal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.reduced_divisor_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_lift_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_fixed_reduced_divisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.invariant_support_lifts
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_conorm_of_support_lifts
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_divisor_descent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.picard_principal_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_preimage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.torsion_cardinality_eq_complex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_torsion_cardinality_period_rank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_order_mem_complexPicardMap_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_naturality
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_symm_tmul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_j
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.arithmeticFieldScalarTower
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.adjoin_range_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.sum_ne_of_not_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extending_valuation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extended_place
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_unique
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_eq_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_phi_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_of_forall_ne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_single
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_heckeLiftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.ramificationAlong_heckeLiftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_ne_liftPlace_of_ne_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.finitePullbackAlong_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.geometricPushforwardAlong_conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeAlpha_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeBeta_fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_heckeDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_heckePicard
+#print axioms Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexFieldAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.laurentLinearMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_finite_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_ker_le_integer_character
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_integer_lattice_factor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_latticePeriod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1_hecke_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke_restrict
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_isBaseChange
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke_restrict
+#print axioms Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneRealPeriodH1Hecke, `Dubon2026.SourceGammaOneRealParabolicH1, `Dubon2026.SourceGammaOneRealParabolicHecke, `Dubon2026.SourceGammaOneFinitePeriodLattice, `Dubon2026.SourceGammaOneComplexTatePeriods, `Dubon2026.SourceGammaOnePeriodTateHecke, `Dubon2026.SourceGammaOneComplexTateHecke, `Dubon2026.SourceGammaOneComplexCoefficientMap, `Dubon2026.SourceGammaOneComplexFieldExtension, `Dubon2026.SourceGammaOneComplexFieldIndependence, `Dubon2026.SourceGammaOneComplexSpanSeparation, `Dubon2026.SourceGammaOneConstantFieldValuationExtension, `Dubon2026.SourceGammaOneConstantFieldPlaces, `Dubon2026.SourceGammaOneExtendedPlaceMap, `Dubon2026.SourceGammaOneDivisorConorm, `Dubon2026.SourceGammaOneComplexPicardMap, `Dubon2026.SourceGammaOneComplexTorsionFinite, `Dubon2026.SourceGammaOneDegreeBaseChange, `Dubon2026.SourceGammaOneNewCoordinatePlaces, `Dubon2026.SourceGammaOneComplexCoordinateBasis, `Dubon2026.SourceGammaOneComplexCoordinateTrace, `Dubon2026.SourceGammaOneCoordinateDescent, `Dubon2026.SourceGammaOneComplexSpanDescent, `Dubon2026.SourceGammaOnePrincipalDescent, `Dubon2026.SourceGammaOneComplexPicardInjectivity, `Dubon2026.SourceGammaOneComplexConstantAutomorphisms, `Dubon2026.SourceGammaOneComplexTranslations, `Dubon2026.SourceGammaOneOffImageValues, `Dubon2026.SourceGammaOneTranslationOrbits, `Dubon2026.SourceGammaOneReducedRiemannRochSpace, `Dubon2026.SourceGammaOnePrincipalDivisors, `Dubon2026.SourceGammaOnePrincipalDivisorIdentities, `Dubon2026.SourceGammaOneFiniteTorsionAction, `Dubon2026.SourceGammaOneReducedDivisorInvariance, `Dubon2026.SourceGammaOneFixedReducedDivisor, `Dubon2026.SourceGammaOneInvariantSupport, `Dubon2026.SourceGammaOneTorsionDivisorDescent, `Dubon2026.SourceGammaOneTorsionComparison, `Dubon2026.SourceGammaOneTateComparison, `Dubon2026.SourceGammaOneArithmeticTatePeriods, `Dubon2026.SourceGammaOneHeckeConstantField, `Dubon2026.SourceGammaOneHeckeSpanSeparation, `Dubon2026.SourceGammaOneHeckeValuationExtension, `Dubon2026.SourceGammaOneHeckeConstantPlaces, `Dubon2026.SourceGammaOneHeckeConorm, `Dubon2026.SourceGammaOneHeckeComplexPlaces, `Dubon2026.SourceGammaOneHeckeComplexDivisors, `Dubon2026.SourceGammaOneHeckeComplexPicard, `Dubon2026.SourceGammaOneArithmeticTateHecke, `Dubon2026.SourceGammaOneIntegralCharacterFactor, `Dubon2026.SourceGammaOneFiniteParabolicCharacters, `Dubon2026.SourceGammaOneFiniteParabolicH1, `Dubon2026.SourceGammaOneFiniteParabolicHecke, `Dubon2026.SourceGammaOneArithmeticPeriodInclusion, `Dubon2026.SourceGammaOneArithmeticTateFiniteH1, `Dubon2026.SourceGammaOneArithmeticTateFiniteHecke]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspHeckeTrace, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_mem_parabolic, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_range, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_injective, `Dubon2026.SourceFunctionField.GammaOne.realParabolicH1_hecke_mem, `Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv_cuspHeckeTrace, `Dubon2026.SourceFunctionField.GammaOne.integralLattice_eq_dualPeriodHom_range, `Dubon2026.SourceFunctionField.GammaOne.integralLattice_finite, `Dubon2026.SourceFunctionField.GammaOne.integralLattice_free, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_symm_tmul, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_val, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientHecke_eq_quotEnd, `Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_hecke, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_hecke, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coeffMap_sigma_mem_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_constants, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_rational, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_j, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexScalarTower, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticFieldScalarTower, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.adjoin_range_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap_linearIndependent, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.sum_ne_of_not_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extending_valuation, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_extended_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_liftPlace_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_unique, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_eq_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ord_phi_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_ne_liftPlace_of_comap_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.forall_comap_ne_of_ne_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_apply_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_single, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mk, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_mem_torsion, `Dubon2026.SourceFunctionField.GammaOne.complex_torsion_cardinality, `Dubon2026.SourceFunctionField.GammaOne.finite_complex_torsion, `Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_baseChange, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.new_of_mem_coordinate_localRing, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_coordinate_basis, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_j_fiber_place, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_mem_span_of_regular, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.coordinate_trace_mem_span, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_span_of_regular_off_image, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_degree_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.isPrincipal_of_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_arithmetic_torsion, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_arithmetic, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_complex_translation, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.off_image_exists_nonarithmetic_j_value, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.j_value_arithmetic_pos, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.translation_orbit_injective, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.divisor_pow_fixed, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_reduced_space, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_principal_support, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor_apply, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.degree_principalDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_mul, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_inv, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_smul, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_arithmetic, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_add_principal_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.mem_lSpace_arithmetic_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_action_factorial, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complex_torsion_divisor_factorial_principal, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.reduced_divisor_fixed, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAut_fixes_lift_single, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_fixed_reduced_divisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.invariant_support_lifts, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_conorm_of_support_lifts, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_divisor_descent, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.picard_principal_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.exists_torsion_preimage, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.torsion_cardinality_eq_complex, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmetic_torsion_cardinality_period_rank, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finite_order_mem_complexPicardMap_range, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_apply, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv_naturality, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_symm_tmul, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_constants, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_rational, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap_j, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexScalarTower, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.arithmeticFieldScalarTower, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.adjoin_range_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.sum_ne_of_not_mem_span, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extending_valuation, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_extended_place, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_comap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_unique, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace_injective, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.exists_eq_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.ord_phi_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_apply_of_forall_ne, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm_single, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_heckeLiftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.ramificationAlong_heckeLiftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.restrictAlong_ne_liftPlace_of_ne_hecke, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.finitePullbackAlong_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.geometricPushforwardAlong_conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeAlpha_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.heckeBeta_fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_heckePicard, `Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_surjective, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_parabolic, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_finite_order, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_ker_le_integer_character, `Dubon2026.SourceFunctionField.GammaOne.exists_integer_lattice_factor, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_injective, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap_surjective, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv_apply, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke_latticePeriod, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1_hecke_mem, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv_hecke_restrict, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_isBaseChange, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_injective, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction_surjective, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv_hecke_restrict]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.realPeriodH1, `Dubon2026.SourceFunctionField.GammaOne.realParabolicH1, `Dubon2026.SourceFunctionField.GammaOne.realParabolicHecke, `Dubon2026.SourceFunctionField.GammaOne.realParabolicPeriodEquiv, `Dubon2026.SourceFunctionField.GammaOne.dualPeriodHom, `Dubon2026.SourceFunctionField.GammaOne.integralPeriodBasis, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeHecke, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.fieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexFieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.laurentLinearMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conormDegZero, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principalDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.tateComplexEquiv, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.fieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.complexFieldAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.laurentLinearMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.liftPlace, `Dubon2026.SourceFunctionField.GammaOne.HeckeConstantField.conorm, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom, `Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterMap, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeCharacterEquiv, `Dubon2026.SourceFunctionField.GammaOne.finiteParabolicH1, `Dubon2026.SourceFunctionField.GammaOne.finiteLatticeH1Equiv, `Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPeriodInclusion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterRestriction, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateCharacterEquiv, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateFiniteH1Equiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC TATE H1 AUDIT PASS: {count} theorems including private/generated declarations. Actual arithmetic torsion descent, Tate-period and finite H1 dual Hecke comparison. Full/parabolic passage, homogeneous coefficients, diamonds and all-weight association remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneRealPeriodH1Hecke
+
+#lint in Dubon2026.SourceGammaOneRealParabolicH1
+
+#lint in Dubon2026.SourceGammaOneRealParabolicHecke
+
+#lint in Dubon2026.SourceGammaOneFinitePeriodLattice
+
+#lint in Dubon2026.SourceGammaOneComplexTatePeriods
+
+#lint in Dubon2026.SourceGammaOnePeriodTateHecke
+
+#lint in Dubon2026.SourceGammaOneComplexTateHecke
+
+#lint in Dubon2026.SourceGammaOneComplexCoefficientMap
+
+#lint in Dubon2026.SourceGammaOneComplexFieldExtension
+
+#lint in Dubon2026.SourceGammaOneComplexFieldIndependence
+
+#lint in Dubon2026.SourceGammaOneComplexSpanSeparation
+
+#lint in Dubon2026.SourceGammaOneConstantFieldValuationExtension
+
+#lint in Dubon2026.SourceGammaOneConstantFieldPlaces
+
+#lint in Dubon2026.SourceGammaOneExtendedPlaceMap
+
+#lint in Dubon2026.SourceGammaOneDivisorConorm
+
+#lint in Dubon2026.SourceGammaOneComplexPicardMap
+
+#lint in Dubon2026.SourceGammaOneComplexTorsionFinite
+
+#lint in Dubon2026.SourceGammaOneDegreeBaseChange
+
+#lint in Dubon2026.SourceGammaOneNewCoordinatePlaces
+
+#lint in Dubon2026.SourceGammaOneComplexCoordinateBasis
+
+#lint in Dubon2026.SourceGammaOneComplexCoordinateTrace
+
+#lint in Dubon2026.SourceGammaOneCoordinateDescent
+
+#lint in Dubon2026.SourceGammaOneComplexSpanDescent
+
+#lint in Dubon2026.SourceGammaOnePrincipalDescent
+
+#lint in Dubon2026.SourceGammaOneComplexPicardInjectivity
+
+#lint in Dubon2026.SourceGammaOneComplexConstantAutomorphisms
+
+#lint in Dubon2026.SourceGammaOneComplexTranslations
+
+#lint in Dubon2026.SourceGammaOneOffImageValues
+
+#lint in Dubon2026.SourceGammaOneTranslationOrbits
+
+#lint in Dubon2026.SourceGammaOneReducedRiemannRochSpace
+
+#lint in Dubon2026.SourceGammaOnePrincipalDivisors
+
+#lint in Dubon2026.SourceGammaOnePrincipalDivisorIdentities
+
+#lint in Dubon2026.SourceGammaOneFiniteTorsionAction
+
+#lint in Dubon2026.SourceGammaOneReducedDivisorInvariance
+
+#lint in Dubon2026.SourceGammaOneFixedReducedDivisor
+
+#lint in Dubon2026.SourceGammaOneInvariantSupport
+
+#lint in Dubon2026.SourceGammaOneTorsionDivisorDescent
+
+#lint in Dubon2026.SourceGammaOneTorsionComparison
+
+#lint in Dubon2026.SourceGammaOneTateComparison
+
+#lint in Dubon2026.SourceGammaOneArithmeticTatePeriods
+
+#lint in Dubon2026.SourceGammaOneHeckeConstantField
+
+#lint in Dubon2026.SourceGammaOneHeckeSpanSeparation
+
+#lint in Dubon2026.SourceGammaOneHeckeValuationExtension
+
+#lint in Dubon2026.SourceGammaOneHeckeConstantPlaces
+
+#lint in Dubon2026.SourceGammaOneHeckeConorm
+
+#lint in Dubon2026.SourceGammaOneHeckeComplexPlaces
+
+#lint in Dubon2026.SourceGammaOneHeckeComplexDivisors
+
+#lint in Dubon2026.SourceGammaOneHeckeComplexPicard
+
+#lint in Dubon2026.SourceGammaOneArithmeticTateHecke
+
+#lint in Dubon2026.SourceGammaOneIntegralCharacterFactor
+
+#lint in Dubon2026.SourceGammaOneFiniteParabolicCharacters
+
+#lint in Dubon2026.SourceGammaOneFiniteParabolicH1
+
+#lint in Dubon2026.SourceGammaOneFiniteParabolicHecke
+
+#lint in Dubon2026.SourceGammaOneArithmeticPeriodInclusion
+
+#lint in Dubon2026.SourceGammaOneArithmeticTateFiniteH1
+
+#lint in Dubon2026.SourceGammaOneArithmeticTateFiniteHecke

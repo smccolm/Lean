@@ -1,0 +1,96 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T13:58:42.163455+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeDiamondWords",
+    "SourceGammaOneHeckeDiamondDescent",
+    "SourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords.lean",
+      "sha256": "BAD39740F5C0A4F2BC94FA321AAC389D046B2F5EF96C2B3E3790B40111B9AF36",
+      "oleanSha256": "4B84B1DB861408AD7BC203123D345B7D2F7D1DB2865FA6546459C52B9180F49F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords1264a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords1264a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent.lean",
+      "sha256": "017B2F6A10AFAD7F637EF7F52F81E56B328520F5B257418FFE64283ACFEB130A",
+      "oleanSha256": "0C8F5D3382C1919905B767597F2E1AAD544E1F40613CA69CC944BB06301EDEFE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent1265a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent1265a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter.lean",
+      "sha256": "5FB4A952682DD91BB8D029C9BE946D3ABE85DB2BC904CB540842B43FA7D2302F",
+      "oleanSha256": "A9AB68495294B33B9C55A5D623924BC1E03B0C08D5D25A5396D6E6320FC80B50",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneDiamondToModulus_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond",
+    "Dubon2026.sourceGammaOneHeckeDiamondOperators",
+    "Dubon2026.sourceGammaOneHeckeDiamondAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord",
+    "Dubon2026.sourceGammaOneDiamondToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneDiamondToModulus_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneHeckeDiamondOperators",
+    "Dubon2026.sourceGammaOneHeckeDiamondAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord",
+    "Dubon2026.sourceGammaOneDiamondToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterAudit1.log",
+  "logSha256": "3B9B95BA2687EF2BEBFA8776F339BBFFA0352ADB25B240920672BC9AE4CA28B5",
+  "auditSha256": "F75417847CC979BD3A506B76A9D6375E1816125A29E22AF3EB796908A97660CE",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.log",
+  "ownershipSha256": "982BA829B4024E1B7668DB551C10E849C08FAA50FAA825885C73E77E6C087FD9",
+  "exhaustiveTheorems": 41,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1.log",
+  "dependencyAuditSha256": "EF18912274242FC46C06C221202F54F15F4F5E3697811FDECF02AA2261D28143",
+  "dependencyAuditSourceSha256": "40E3C3572D1C7B0E5BAC0B7F466BEBB3244EDF0DD5578C98FE5AF54FB46AB99F",
+  "consumers": [
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic character realization -> diamond-one character needed for the normalized Frobenius determinant.",
+  "discharged": [
+    "The original native transfer intertwines every word in actual prime Hecke and homogeneous normalizer diamond operators, with diamonds acting as one on the original Gamma0 coefficient module.",
+    "When six is a unit, every relation in this literal extended operator image descends to the original finite tensor-operator image; no kernel inclusion is assumed.",
+    "For each original primitive form of weight at least two, prescribed coefficient-field embedding, prime p greater than three and every precision p^(n+1), the actual extended Gamma1 operator image has a character retaining all original good-prime Fourier values and taking every original homogeneous normalizer diamond to one."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The character is constructed on full H1. Its parabolic factorization and two-dimensional arithmetic realization are not supplied. The original Gamma1 geometric Frobenius relation and inertia, parabolic preimages or a faithful alternative, exceptional primes, coefficient-field realization, characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-hecke-diamond-character-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "F63C7A19AEE3945359CF71F3B2212489C0EB258E89660A69B0EF158285444A78",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

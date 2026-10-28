@@ -1,0 +1,123 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T11:50:00.345501+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondCoefficient",
+    "SourceGammaOneDiamondRestriction",
+    "SourceGammaOneDiamondCoefficientMatrix",
+    "SourceGammaOneBinaryNormalizerTate",
+    "SourceGammaOneBinaryDiamondLabels"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient.lean",
+      "sha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE",
+      "oleanSha256": "16750F8C6DDC233E7268F3C4D70719F8558BA5626F0EC37E9815E17AC6802BA6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction.lean",
+      "sha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431",
+      "oleanSha256": "61E8D945E0A6278A67FCA407E5BD5193807BC7D725B602CE2391422703318A13",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix.lean",
+      "sha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4",
+      "oleanSha256": "485B163A716ACCAED1AF3774E7BBF658EF70B48121FB45F5F517D55A44A72DB4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate.lean",
+      "sha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305",
+      "oleanSha256": "CB18BE7D1DEAAE84144B115239AEACBA59C0011C5C67CDD881D9E856FD7BEA71",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels.lean",
+      "sha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9",
+      "oleanSha256": "3F57BBCBE910D3B4A2DC342C4E771129602ED2F2AEC282E0B1B1336893E6AD06",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+    "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+    "Dubon2026.sourceGammaOneDiamondLift_mod",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+    "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLift",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+    "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+    "Dubon2026.sourceGammaOneDiamondLift_mod",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+    "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneDiamondLift",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerAudit1.log",
+  "logSha256": "105F30E9724A59AEDAC919BA15901C5780EF5683A27B8B7D1073BF871BA467ED",
+  "auditSha256": "EEA8A097E6893E769E16A0ECB6DFFFC9B51CBADB05E4E6D228109BFF5122DDB7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+  "ownershipSha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE",
+  "exhaustiveTheorems": 24,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1.log",
+  "dependencyAuditSha256": "EA78C58A27C95B6604BD5FE1A255E30B3A7483DBD830A2F1553DC4551B5EE975",
+  "dependencyAuditSourceSha256": "783BC366A91A6DBDE27602966A5BE4BD948774A334F74090E04C176EAA432AE8",
+  "consumers": [
+    "Dubon2026.sourceGammaOneDiamondLift_gammaOne",
+    "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_conjugation",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_diamond",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond",
+    "Dubon2026.sourceGammaOneDiamondLift_mod",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_normalizerDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTate_normalizerDiamond_galois",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_lift_independent",
+    "Dubon2026.sourceGammaOneBinaryDiamondH1_lift_independent",
+    "Dubon2026.sourceGammaOneDiamondLift",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> original homogeneous normalizer diamond comparison.",
+  "discharged": [
+    "The inverse lifted normalizer action intertwines the original binary representation under the actual Gamma1 conjugation.",
+    "The resulting diamond fixes literal restrictions of every original binary cocycle and H1 class.",
+    "At every positive coefficient modulus and every homogeneous degree, the original inverse normalizer action equals homogeneous substitution by the reversed diagonal entries modulo that modulus.",
+    "The original arithmetic Picard Tate dual acts on native finite Gamma1 H1 by this exact homogeneous coefficient convention and commutes with original arithmetic Galois.",
+    "The original coefficient action and resulting native H1 diamond depend only on the lower-right unit label."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes the unresolved homogeneous normalizer coefficient convention in scope 1234. Parabolic transfer preimages, the fixed exceptional-prime exclusion, coefficient-field/Frobenius/inertia realization, characteristic-zero all-weight association, automorphy and literal higher continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "39A1F02C1E6E8A1166C42C026F326069C5E9F1B2BF9D85B6B023A3EC88AA4265",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

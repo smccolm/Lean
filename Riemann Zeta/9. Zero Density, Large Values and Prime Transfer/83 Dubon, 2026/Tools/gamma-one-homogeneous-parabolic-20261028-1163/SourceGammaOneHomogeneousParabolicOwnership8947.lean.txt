@@ -1,0 +1,42 @@
+import Dubon2026.SourceGammaOneFiniteOrderDischarge
+import Dubon2026.SourceGammaOneBinaryPeriodCharacters
+import Dubon2026.SourceGammaOneCoefficientHeckeCharacters
+import Dubon2026.SourceGammaOneBinaryParabolicH1
+import Dubon2026.SourceGammaOneBinaryTateH1
+import Dubon2026.SourceGammaOneBinaryTateHecke
+import Dubon2026.SourceParabolicCohomology
+import Dubon2026.SourceBinaryParabolicChange
+import Dubon2026.SourceGammaOneParabolicRestriction
+import Dubon2026.SourceParabolicCoefficientMap
+import Dubon2026.SourcePeriodParabolicClass
+import Dubon2026.SourceOriginalParabolicEigensystem
+import Dubon2026.SourceParabolicBinaryCoordinates
+import Dubon2026.SourceParabolicBinaryRationalSpan
+import Dubon2026.SourceParabolicBinaryH1RationalSpan
+import Dubon2026.SourceCocycleConjugateCoboundary
+import Dubon2026.SourceParabolicFiniteCuspWitnesses
+import Dubon2026.SourceParabolicWitnessDenominators
+import Dubon2026.SourceParabolicUniformDenominator
+import Dubon2026.SourceOriginalBinaryCuspWitnesses
+import Dubon2026.SourceParabolicIntegralCoordinateSpan
+import Dubon2026.SourceOriginalIntegralParabolicCocycleSpan
+import Dubon2026.SourceOriginalIntegralParabolicH1Span
+import Dubon2026.SourcePrimitiveParabolicHeckeRelations
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneFiniteOrderDischarge, `Dubon2026.SourceGammaOneBinaryPeriodCharacters, `Dubon2026.SourceGammaOneCoefficientHeckeCharacters, `Dubon2026.SourceGammaOneBinaryParabolicH1, `Dubon2026.SourceGammaOneBinaryTateH1, `Dubon2026.SourceGammaOneBinaryTateHecke, `Dubon2026.SourceParabolicCohomology, `Dubon2026.SourceBinaryParabolicChange, `Dubon2026.SourceGammaOneParabolicRestriction, `Dubon2026.SourceParabolicCoefficientMap, `Dubon2026.SourcePeriodParabolicClass, `Dubon2026.SourceOriginalParabolicEigensystem, `Dubon2026.SourceParabolicBinaryCoordinates, `Dubon2026.SourceParabolicBinaryRationalSpan, `Dubon2026.SourceParabolicBinaryH1RationalSpan, `Dubon2026.SourceCocycleConjugateCoboundary, `Dubon2026.SourceParabolicFiniteCuspWitnesses, `Dubon2026.SourceParabolicWitnessDenominators, `Dubon2026.SourceParabolicUniformDenominator, `Dubon2026.SourceOriginalBinaryCuspWitnesses, `Dubon2026.SourceParabolicIntegralCoordinateSpan, `Dubon2026.SourceOriginalIntegralParabolicCocycleSpan, `Dubon2026.SourceOriginalIntegralParabolicH1Span, `Dubon2026.SourcePrimitiveParabolicHeckeRelations]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

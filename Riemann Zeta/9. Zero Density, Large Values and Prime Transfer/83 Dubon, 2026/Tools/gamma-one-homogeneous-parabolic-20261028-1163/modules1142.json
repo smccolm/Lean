@@ -1,0 +1,15 @@
+[
+  "AdelicLocalAwayTensor",
+  "AdelicLocalAwayTensorAction",
+  "AdelicLocalAwayTensorCompletion",
+  "AdelicLocalAwayTensorRange",
+  "AdelicLocalCyclicProjection",
+  "AdelicLocalMixedCoefficient",
+  "CyclicProjectionCoefficient",
+  "FiniteAdelicLocalAwayProduct",
+  "GramFamilyIsometry",
+  "GramSpanningIsometry",
+  "IsometricRepresentationCompletion",
+  "LinearIsometryCompletion",
+  "TensorOrbitSpanning"
+]

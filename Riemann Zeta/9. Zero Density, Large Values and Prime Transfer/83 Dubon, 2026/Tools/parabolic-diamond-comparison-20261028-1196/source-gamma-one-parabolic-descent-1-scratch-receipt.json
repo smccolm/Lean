@@ -1,0 +1,118 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T09:18:29.223977+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneParabolicOperatorAlgebra",
+    "SourceGammaOneParabolicTateKernel",
+    "SourceGammaOneParabolicTransferCriterion",
+    "SourceParabolicCongruenceException",
+    "SourceGammaOneParabolicCharacterTransfer"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra.lean",
+      "sha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878",
+      "oleanSha256": "B894BC91D7063E484074A8CC78A931C0B0A3BC50860CE38CD271376E2F67D9C7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicOperatorAlgebra1176a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel.lean",
+      "sha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C",
+      "oleanSha256": "761C93C453FD9D615C88520DAB228CAF22CE89E92F65AB529E0BD7B9E8E1D760",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateKernel1177d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion.lean",
+      "sha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62",
+      "oleanSha256": "EF47C868906D7F641752C6AF785363813898F70118E252448167EF5112103EBF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTransferCriterion1179b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException.lean",
+      "sha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8",
+      "oleanSha256": "7F878DF666F1137F7F4358AA00BF47561901383517FFD1DE667543D61C7B3CB3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCongruenceException1180a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer.lean",
+      "sha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7",
+      "oleanSha256": "F3176DB0D148D9684B69457F44F4D538D780CB00F8DF4E071B01D63E85DB0242",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicCharacterTransfer1178d.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+    "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+    "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+    "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+    "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+    "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+    "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentAudit1.log",
+  "logSha256": "99A7FCE6A90ED4E7ADFDC1F97C23AF05E26E7CD5C59D8B0900DA9D3758235534",
+  "auditSha256": "568BD23D940A91834EAFA298FB5D3A273EBBD9F41F3D5EDDE50C605A44B0E841",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+  "ownershipSha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD",
+  "exhaustiveTheorems": 22,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1.log",
+  "dependencyAuditSha256": "A6FD03FD06D0F1024EFFF42D615C8BCE5FC4B14534E12B8C9C8F0B95190504FC",
+  "dependencyAuditSourceSha256": "F8594D0C2C7AB4AF2FA7E0D1D5CFCF598DC398C34B1D284E35F2C83896E0F218",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic",
+    "Dubon2026.sourceGammaOneParabolicTransfer_word_kernel",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero",
+    "Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra",
+    "Dubon2026.sourceGammaOneIntegralParabolicTransfer",
+    "Dubon2026.sourcePrimitiveParabolicExceptionalInteger"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> higher symmetric powers -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 parabolic operator character -> arithmetic Tate operator image and exact transfer of original integral parabolic classes.",
+  "discharged": [
+    "The literal finite ring of actual restricted Gamma1 parabolic operators and its full word evaluation.",
+    "Equality of zero-word relations with the independently defined arithmetic Picard Tate-dual operators.",
+    "Conditional implication from exact parabolic transfer preimages to descent of the same original adic character, away from one fixed integer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The transfer lifting is not assumed proved, and this conditional assembly does not close finite character descent. The fixed exceptional primes, diamonds, arithmetic/Galois comparisons, all-weight association and DUB17--20 remain. No restricted character is substituted for the existing all-prime full-H1 character family.16/20 unchanged. Explicit hypothesis: For each original integral parabolic H1 class, exhibit a class in actual finite Gamma1 parabolic H1 whose image under the existing native transfer is its literal coefficient reduction. The already proved full-H1 transfer surjectivity does not supply this parabolic membership.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-parabolic-descent-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "03F49CFD58D19F04800E64865AA82174E8818D984ACE0596B83D00A6FC08C492",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,44 @@
+import SourceRationalDiamondQuotientGerm
+import SourceGammaOneDiamondAnalyticGerms
+import Dubon2026.SourceQExpansionLaurentWidth
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility. Identify the rational translated quotient
+germ with the literal q-expansion quotient of the actual modular diamond.
+The original width formula reads every width-one Laurent coefficient.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup ModularRatios
+open scoped MatrixGroups ModularForm
+
+theorem modularDiamond_ratio_coeff_rational (N : ℕ) [NeZero N] {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) (hh : h ≠ 0)
+    (pf ph : PowerSeries ℚ)
+    (hpf : pf.map (algebraMap ℚ ℂ) = qExpansion 1 f)
+    (hph : ph.map (algebraMap ℚ ℂ) = qExpansion 1 h) (g : Gamma0 N) (n : ℤ) :
+    (qL (modularDiamond N g f) / qL (modularDiamond N g h)).coeff n ∈
+      Set.range (algebraMap ℚ ℂ) := by
+  obtain ⟨X, hX⟩ := exists_rational_laurent_translated_ratio N f h hh pf ph hpf hph g
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  have hN : (0 : ℝ) < N := by exact_mod_cast NeZero.pos N
+  have hr (u : ModularForm (Gamma1 N) k) :
+      CuspTaylor.Represents (qExpand ℂ N (qL u)) (cuspFunction N u) := by
+    have hp := SlashInvariantFormClass.periodic_comp_ofComplex u (hper hT)
+    rw [qL, ← qExpansion_laurent_width _ N hp u.holo' (ModularFormClass.bdd_at_infty u)]
+    exact CuspTaylor.represents_qExpansion hN (by simpa using hp.nat_mul N)
+      u.holo' (ModularFormClass.bdd_at_infty u)
+  have hquot : (⇑(modularDiamond N g f) / ⇑(modularDiamond N g h) : ℍ → ℂ) =
+      fun τ : ℍ => f (g.val • τ) / h (g.val • τ) := by
+    funext τ
+    change ((⇑f : ℍ → ℂ) ∣[k] g.val) τ / ((⇑h : ℍ → ℂ) ∣[k] g.val) τ = _
+    rw [ModularForm.SL_slash_apply, ModularForm.SL_slash_apply,
+      mul_div_mul_right _ _ (zpow_ne_zero _ (denom_ne_zero g.val τ))]
+  have hrep := (hr (modularDiamond N g f)).cusp_div (hr (modularDiamond N g h))
+  rw [hquot, ← map_div₀] at hrep
+  have he := congrArg (fun A : LaurentSeries ℂ => A.coeff ((N : ℤ) * n)) (hX.eq_series hrep)
+  rw [coeffMap_coeff, qExpand_coeff_mul] at he
+  exact ⟨X.coeff ((N : ℤ) * n), he⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

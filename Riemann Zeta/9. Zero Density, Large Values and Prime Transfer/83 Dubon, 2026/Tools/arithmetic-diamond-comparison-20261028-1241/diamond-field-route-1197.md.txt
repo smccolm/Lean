@@ -1,0 +1,29 @@
+# Original Gamma1 diamond field map: reuse and dependency decision
+
+28 October 2026. DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 remain open.
+
+Required chain: original higher symmetric-power continuation, arithmetic automorphy,
+original all-weight association, actual arithmetic Gamma1 realization, and comparison
+of the independently defined arithmetic Picard diamond with the proved original
+period and homogeneous H1 diamond.
+
+The present missing edge is the diamond on the original function field. Before
+expanding geometry, reuse `functionFieldOver_modular_ratio`, `modular_ratio_mem`,
+`diamondGL_le_conj`, native `ModularForm.translate`, and the already proved
+`cuspRealize_*_eventuallyEq` algebra. Translating the same numerator and denominator
+stays in the original complex field. The existing punctured cusp germ ring supplies
+injectivity and the ring laws; no second modular-symbol or meromorphic-field model
+is needed. Prove equality at every translated cusp so composition and lift
+independence use the same original field map.
+
+This discharges complex field stability and its actual analytic realization only.
+Rational/coefficient descent, the independent arithmetic Picard diamond comparison,
+the original homogeneous coefficient convention, Frobenius/inertia and the full
+association/continuation chain remain required. No acceptance gate is closed by
+this supporting construction.
+
+The October 28 nine-repository refresh and targeted Deligne/Shapiro inspections
+remain the external reuse evidence. A further web check returned the same FALSE
+project and CICM24 statement sources, not a verified completed association proof.
+Their claims are bounded to the inspected sources. Native local proofs suffice for
+this particular field-map step; do not import an external unverified theorem.

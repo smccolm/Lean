@@ -1,0 +1,2204 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-homogeneous-parabolic-promotion-route-1163.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-homogeneous-parabolic-promotion-route-1163.json",
+      "sha256": "1246DE01172AFD4F463C5AA95A6562320E7D5036F1C60680DCFF3FB270BF5A84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceBinaryParabolicChange.lean.txt",
+      "sha256": "4AD6B16F31338B0407640A7E87A91A4EEEF8B831F48B04849E4588F65D8DEFD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceBinaryParabolicChange1141a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceBinaryParabolicChange1141a.log",
+      "sha256": "D1299378FCAD2942A314BEEB1818E955F3B60C845D1F3CF9C78C03A342E8BE41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceBinaryParabolicChange1141b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceBinaryParabolicChange1141b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceCocycleConjugateCoboundary.lean.txt",
+      "sha256": "733415B1F215CCF2868013568ABEF032E5606AF7597200BCDF000F1EBDCB4A11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary1151a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceCocycleConjugateCoboundary1151a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCocycleConjugateCoboundary1151a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceCocycleConjugateCoboundary1151a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryParabolicH1.lean.txt",
+      "sha256": "8C72442187E9B39EB6CB0FA1B66F82F5E46FF9B22CD67C68AA6C53841C00235E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH11136b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryParabolicH11136b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryParabolicH11136b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryParabolicH11136b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryPeriodCharacters.lean.txt",
+      "sha256": "16F3422187BD70D851EEEA6FA1E3DFB4BDE8C06F71C2C3122981D85936CEA093"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters1134a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryPeriodCharacters1134a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryPeriodCharacters1134a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryPeriodCharacters1134a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1.lean.txt",
+      "sha256": "1FB38752386F3672857AE7307C8B0F467795B8623BA049DF9D457A7943B41E9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH11137b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH11137b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH11137b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH11137b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1Audit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1Audit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1Audit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1Audit1.lean.txt",
+      "sha256": "3FA0A25E095AAC82AB57FF31AA41574B65A35A3D929039464BC03E5668A4FDCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1Audit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1Audit1.log",
+      "sha256": "B62C983DB3B3A8D0C98A461B028431550EBD4F7C56ED663EBBC75E3E04ACCF40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1DependencyAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1DependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1DependencyAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1DependencyAudit1.lean.txt",
+      "sha256": "4B575E3A9AF4E1F044DC37DED2464FD95FE99E11DE7B4F1F8594F1BBC5169EF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1DependencyAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1DependencyAudit1.log",
+      "sha256": "1CB9FDB1416DCB6B559E11F0A0A0DD7675FF756BF45A59366797D637C6AD8DDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1ScratchOwnership1139.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1ScratchOwnership1139.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1ScratchOwnership1139.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1ScratchOwnership1139.lean.txt",
+      "sha256": "91998C769B8F5EED86C390F39D3DA0B53140099B80997E1438E3ACA7AFF0EC78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateH1ScratchOwnership1139.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateH1ScratchOwnership1139.log",
+      "sha256": "BAA977F8FD5FEEEC931CCF6AEFC847F64305FA3F03781CFE2361CF96D929B993"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateHecke.lean.txt",
+      "sha256": "668DA92A85DC8722A378F98318B09EDF00DC15273C67DBAB29FD98C8482EC9B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateHecke1138a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateHecke1138a.log",
+      "sha256": "551A9E10C3644E06156DC776EC734929033D0AA4BE7480E1A6AE94C8CEFB90FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateHecke1138b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTateHecke1138b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneBinaryTateHecke1138b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneCoefficientHeckeCharacters.lean.txt",
+      "sha256": "F7C943DF6D9897658B96FE34E72B5E8F60BF7F0CF6894C251A901D18B6434040"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters1135a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneCoefficientHeckeCharacters1135a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientHeckeCharacters1135a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneCoefficientHeckeCharacters1135a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneFiniteOrderDischarge.lean.txt",
+      "sha256": "7DFB6DA906FE9703375FD7BA065B34437B4BB10384BF77400D62607CA314F7AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneFiniteOrderDischarge1133a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneFiniteOrderDischarge1133a.log",
+      "sha256": "3F3F207A7F6CC68C225D1E9BBC249CA65EBB01C95DBE6071C1C8D5E3CBE63475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneFiniteOrderDischarge1133b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteOrderDischarge1133b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneFiniteOrderDischarge1133b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction.lean.txt",
+      "sha256": "CF6FBB6B8767FA389B823FAF2237635D336D41F76DD1E3A2C620222925FC9B1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142a.log",
+      "sha256": "FC866FABCF7A082D21D37021A44C62A7E1F257EDE06C4ACDC84AB129805A3924"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142b.log",
+      "sha256": "9A2DE543FA964432976C06C96C13A65788761CD795733034AF49D85D58F631DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142c.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142c.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142c.log",
+      "sha256": "90A0A4DE543233359C7C8B1F435D575F689A8059C961935B174C79CD3E7928DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142d.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142d.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142d.log",
+      "sha256": "3EFE0F994227207F166C5D548C27461BEA54576BA574D4CB1B983FA4B874FE21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142e.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142e.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceGammaOneParabolicRestriction1142e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalBinaryCuspWitnesses.lean.txt",
+      "sha256": "0D4469CA85C04099979581C30E0F58FB1B633343E1AD67C1D974DAB419419033"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses1155a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalBinaryCuspWitnesses1155a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalBinaryCuspWitnesses1155a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalBinaryCuspWitnesses1155a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicAudit1.lean.txt",
+      "sha256": "A0BABBBE5A2B4F680B991986D05E3078BABF5D35C4318C52E9D84EC0D176B789"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicAudit1.log",
+      "sha256": "CD679EEFAFB33ABEAF45322F25141556E075B8713FB851A96CFACF774F74C222"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicCocycleSpan.lean.txt",
+      "sha256": "8AA79F2C6DAFDA6421180A08B33580B4EC92AE70C3813A1C83BF0D2FC223418C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan1157a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicCocycleSpan1157a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicCocycleSpan1157a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicCocycleSpan1157a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicDependencyAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicDependencyAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicDependencyAudit1.lean.txt",
+      "sha256": "DB6232C6642F93C44E8376C59F65BE6F69D994921D6FDD3E51F5DBACF5874249"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicDependencyAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicDependencyAudit1.log",
+      "sha256": "F7211FDB72872D91456503D3646543CD5BEE74317DA061C52F923762203C3BA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicH1Span.lean.txt",
+      "sha256": "150922DFBF0CBEFBCB05C59FB10588F361768BA7237BBC8AD8E5D8727C29BC6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicH1Span1158a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicH1Span1158a.log",
+      "sha256": "9546992CFE39BE4120662963235E73C5CD4F5E05783C4A9D5C07AA451703DF35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicH1Span1158b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicH1Span1158b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicH1Span1158b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicScratchOwnership1161.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicScratchOwnership1161.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicScratchOwnership1161.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicScratchOwnership1161.lean.txt",
+      "sha256": "FF4BA8A87182BF90B6C93CAD8942DF9A42B3CBF3EDC99B7D2C727EFA2CC1D9CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralParabolicScratchOwnership1161.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalIntegralParabolicScratchOwnership1161.log",
+      "sha256": "9C14903E04818CD81D7CF4BCCCDCE08B1D7B188EE511991EED2228EA143B137A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEigensystem.lean.txt",
+      "sha256": "1B29AF1A3DE35A2D996FE4BE53310854F6D3A9CD0F3B87990F4473880E9813EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem1145a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEigensystem1145a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem1145a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEigensystem1145a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryAudit1b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryAudit1b.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryAudit1b.lean.txt",
+      "sha256": "DAA94C510915060A83EA9DB4B447FFAD4EAD8B8EF1C18058B5F32578059AD353"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryAudit1b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryAudit1b.log",
+      "sha256": "129C78C15253EB605BA6119D99A0B0043B797BA4D59BDBF848418A4788CC5675"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryDependencyAudit1b.lean.txt",
+      "sha256": "DF57CDDE394F10119BF51B978DCFBB3110E05EE1507AF259A79621435575B2C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryDependencyAudit1b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryDependencyAudit1b.log",
+      "sha256": "A4DD2C7A897B0225B234F8C4601DBCDC37C906449F1EA2165A0106AA4284207B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryScratchOwnership1146.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryScratchOwnership1146.lean.txt",
+      "sha256": "72D6ED8FF6688C7DB3F27B64E028F82B115F96ABE2D844FEDF8DE571B2EB6B48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryScratchOwnership1146b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryScratchOwnership1146b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryScratchOwnership1146b.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryScratchOwnership1146b.lean.txt",
+      "sha256": "72D6ED8FF6688C7DB3F27B64E028F82B115F96ABE2D844FEDF8DE571B2EB6B48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryScratchOwnership1146b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceOriginalParabolicEntryScratchOwnership1146b.log",
+      "sha256": "DB534A3EDD1E886935C98EEEE5160BFD245D524AC4F705438A3C4037D2A19C63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryCoordinates.lean.txt",
+      "sha256": "F8A25F73CB239518C45B2CDE4D054EDD2938C86EECC66D58ED146B8A29EF7A4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates1147a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryCoordinates1147a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates1147a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryCoordinates1147a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryH1RationalSpan.lean.txt",
+      "sha256": "A97B011E5A9CA082E6E6FFDB9C39A986D446777063D603244B271C39BCB31F8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryH1RationalSpan1149a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryH1RationalSpan1149a.log",
+      "sha256": "3DC93E853DF73B42327C97C47F49EA84BCAE864709FA6EE5A70DF4F344857FCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryH1RationalSpan1149b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryH1RationalSpan1149b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryRationalSpan.lean.txt",
+      "sha256": "3A27CC2B002E57640A4AA10BBBC4CA520C9353D0137E71C2ADA85BFA91F9E1DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan1148a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryRationalSpan1148a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan1148a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicBinaryRationalSpan1148a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoefficientMap.lean.txt",
+      "sha256": "61F9063E10CFF67DDD7AEDD63760A39057F60D60A3601D17078C47EB52B29359"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap1144a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoefficientMap1144a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap1144a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoefficientMap1144a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCohomology.lean.txt",
+      "sha256": "FCF33C6C1AA45FDFB6A020D25286E50B92D7F36A85CBC6F3B82B1747C18C58B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCohomology1140a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCohomology1140a.log",
+      "sha256": "BA5F422B8F4A37E6E22573FE8CB574DB3A039443ACC6FA5152303DA2DCAE3776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCohomology1140b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCohomology1140b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoordinateReuseProbe1147.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoordinateReuseProbe1147.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoordinateReuseProbe1147.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoordinateReuseProbe1147.lean.txt",
+      "sha256": "EA3A7FC122FE76849141125E5862062CF9ED8B437741E1B2587FAC6D40550201"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoordinateReuseProbe1147.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicCoordinateReuseProbe1147.log",
+      "sha256": "9B1ADD8161A9E977B9AFA572640A34F5D3DEF497C0B656B9514FFB0E7EE08C0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicFiniteCuspWitnesses.lean.txt",
+      "sha256": "B96EBFF0BF315008B97F8A8EDDEA63C08F66E5E256C6F3A6899795DAB7A2E8CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses1152a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicFiniteCuspWitnesses1152a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicFiniteCuspWitnesses1152a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicFiniteCuspWitnesses1152a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicIntegralCoordinateSpan.lean.txt",
+      "sha256": "1E76FED0532C60316A37224DD3F48BAC1834570B2FDCBE687FDE785E54036762"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicIntegralCoordinateSpan1156a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicIntegralCoordinateSpan1156a.log",
+      "sha256": "B40BA51B0A0D31D1B8D4293AE63F92FE53D217AD29E197966A2C39C4EA63ED77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicIntegralCoordinateSpan1156b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicIntegralCoordinateSpan1156b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicIntegralCoordinateSpan1156b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanAudit1.lean.txt",
+      "sha256": "8A56A38F465DD22857DB5BA5D6C8AC6DCC1B8303B7357550749301FD5E516BA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanAudit1.log",
+      "sha256": "64453F37AD57D6E8574CCAB4A666B5F55034B9342030D350E21B08C368AEF1AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanDependencyAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanDependencyAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanDependencyAudit1.lean.txt",
+      "sha256": "E6F4B22B712EC7BCB52F00B80826F0C5DAD5A9CCFEA29DA18F627DD02765399C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanDependencyAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanDependencyAudit1.log",
+      "sha256": "DC091A730CED54AA9066EB3C842E802FE8E45F5FD6811CB5FCB6D5E233E46772"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanScratchOwnership1150.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanScratchOwnership1150.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanScratchOwnership1150.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanScratchOwnership1150.lean.txt",
+      "sha256": "58E8CCA8AD4A0E82FD1669D6C94716E9EED240EAE7BAC696DA71C3468449EE14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanScratchOwnership1150.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicRationalSpanScratchOwnership1150.log",
+      "sha256": "935ED06F452F7CF05D91FBBCAD49D15DE69B7F3C890E7EB88D49C58C3E6B2185"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicUniformDenominator.lean.txt",
+      "sha256": "A365BCF1264B2C31F45187D602F51E00E1A46A043E99E98D1B01546D81733AEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator1154a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicUniformDenominator1154a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicUniformDenominator1154a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicUniformDenominator1154a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicWitnessDenominators.lean.txt",
+      "sha256": "29D4F716CB42B9BAD0A396ADA193C57F6CA3EC370523C5CEF040D782D2B6AFC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators1153a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicWitnessDenominators1153a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicWitnessDenominators1153a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourceParabolicWitnessDenominators1153a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass.lean.txt",
+      "sha256": "9383AA0012169312ED14D899C871FDCD11011AD0E06B53FF85E514B2C033E004"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143a.log",
+      "sha256": "1D2C7C7934FDAF6968F6080222B610FACF32887D82E5C86589803CDD32D6736E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143b.log",
+      "sha256": "AC944130A664AC87000ECD2AAEF2B18638BCFBE5B849B39048EE03F3467066D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143c.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143c.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePeriodParabolicClass1143c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicHeckeRelations.lean.txt",
+      "sha256": "EDDFC9033AE4A135B34FD2444C269BF26725D57A57BFDDC4F9031646C1F73F88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations1162a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicHeckeRelations1162a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicHeckeRelations1162a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicHeckeRelations1162a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationAudit1.lean.txt",
+      "sha256": "4BDCF0928442A56BA6BA43A9A230F99B315EC3AA7A5F2FE72F3A194BE3322B8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationAudit1.log",
+      "sha256": "174398D736DC32CAB91AB42995447DC9060C75BC2D525971A4F8E0F026F11410"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationDependencyAudit1.lean.txt",
+      "sha256": "7208F87238E84CC7AEAB681AABA606E77ABF16EFE19C8A68DF91A2F4637C09C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationDependencyAudit1.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationDependencyAudit1.log",
+      "sha256": "4AD025384FB5820076B65FB160F162A4463DE732739807B52161080A033D8AC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationScratchOwnership1163.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationScratchOwnership1163.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationScratchOwnership1163.lean",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationScratchOwnership1163.lean.txt",
+      "sha256": "1F5508CAB745FEAA4F39B075BC89D7458FBD35FBA0764A4BB420E3D5017697E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicRelationScratchOwnership1163.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/SourcePrimitiveParabolicRelationScratchOwnership1163.log",
+      "sha256": "0DA849DBFA83FF0C48D37735BECDE68E297CF666A914D850F8D824ECBB77E544"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_binary_tate_h1_1139.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_gamma_one_binary_tate_h1_1139.ps1",
+      "sha256": "1BDC9A24AD8227EA561ACF7D721F1CCE19868A719359E604B8B1DB1B5573B0D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_integral_parabolic_1161.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_original_integral_parabolic_1161.ps1",
+      "sha256": "B329F134F0EA4C17FC17063613CBAB81431F5BA60F4B3DB1B7C8E2F3246B48C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_parabolic_entry_1146.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_original_parabolic_entry_1146.ps1",
+      "sha256": "46D96C870BC9BCFF91874EB1AB2BC19D570787D5E28CC0B0B0D2D1D1AD37F0DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_parabolic_entry_1146b.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_original_parabolic_entry_1146b.ps1",
+      "sha256": "4426980D8384A84740A7D61DE2CBA0FEAD7052C571B5356CFB99862BA2C6051E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_parabolic_rational_span_1150.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_parabolic_rational_span_1150.ps1",
+      "sha256": "C2B2DA58685653D1380EE456C44680865F1B69F8D93D25930F03C95200B04D10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_primitive_parabolic_relation_1163.ps1",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/audit_primitive_parabolic_relation_1163.ps1",
+      "sha256": "E5AFF67C86386662C646FF230EB8DFDAED297960637B48913FE0B3F05DEDCFE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1142-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1142-focus.log",
+      "sha256": "4EFC9E3886B7E6781B5BA7FFA95CBC493BF852182E0A2F15F32A0A4686188A63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1142.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1142.txt",
+      "sha256": "F8F94CEEE9629B4AC14DE31AD0FCFCC7A75AC6948BB383E68536BEAF3E5D8C62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1148-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1148-focus.log",
+      "sha256": "74CE867A0ECA20D8C96CD8B296E0B4BF0C01FBA385795A4681BC5AA13FD4B50E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1148.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1148.txt",
+      "sha256": "57AAAECCD2804D9B9D1C8A7235CCE82E4AB97632B997D121469F12B479B40EB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1154-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1154-focus.log",
+      "sha256": "740ED9CC3543823AE7E6669676D9AC936EE8DCD68633EF4AFA2A0E70912C4DA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1154.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1154.txt",
+      "sha256": "603F0450E2BFBBC683C097AAD4FC178E3CD954BD001492322600E0E781317976"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1161-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1161-focus.log",
+      "sha256": "EF157E091131027E4A9D3D1D80CC0AB4F679965FFE48B3CDC623ADA6C94EB3A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1161.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1161.txt",
+      "sha256": "E7A90A3341B7FE2CABF9DA68FB32763AE9195B8E3C43F4AF4A9572355CFEC04A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1161b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1161b-focus.log",
+      "sha256": "22F0C116D8B1907BBA0D96D0300B08B9A9C4452B34ADA3A70A5B9F2BBC9832FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1161c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/consumers1161c-focus.log",
+      "sha256": "B3D5E299FF273DD8756B06760B9830EFB2EF158C20ACED18494C40E5CF4DAB30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1142.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/docs1142.py",
+      "sha256": "20496D2B095DDADD351B1BE6E9D84F3B44F2E8E0D328D3FCCCF4BB66AF188F24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1148.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/docs1148.py",
+      "sha256": "BB5956EB9F8CC90C949E1AFC0EA9FD0F0D47CE942AFBB8D804582D71D9F00FBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1154.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/docs1154.py",
+      "sha256": "90D13CED231ABC98350425F25E4A6085611C1799B8B7AA627911B257330624B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1161.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/docs1161.py",
+      "sha256": "9B57AF99EA7319CB5C543AEE14B9D49B7353A28E4A95C1FFCBE4F1B2CE53658B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\drafts1134.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/drafts1134.json",
+      "sha256": "C449DAEC19B913B781D5577E5EBA3CE57E313D6D75416E327D1851D513CA6E65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1134-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1134-focus.log",
+      "sha256": "8818CC03E466E250EDC8F0F6F3A814724A5E5F076BF8F102E81855058A2D00F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1135-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1135-focus.log",
+      "sha256": "473CD902CF30CC04D767D933BD1E6FA1E7A193BBB9DE80F4E332A78E0DEF629C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1136-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1136-focus.log",
+      "sha256": "4CF8960621E4159E2D61BBCB38D71DFD2D306C1D4B5BC5ECED72D7531C527EB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137-focus.log",
+      "sha256": "EE44B4C47E2C09BD01A4FB43CDD3137ABEC0B5B7F4A7B427286B0ADFCDCBCDC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137b-focus.log",
+      "sha256": "53E17F581CF39EE731B2770675C8BA028C8470E8ACC0AC9C52B70B41F0F0CB57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137c-focus.log",
+      "sha256": "B49C80E2643BE268DFE25F961FF6DDD0B572F8E928B8F8FD2B479DF7A09ED4A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137d-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137d-focus.log",
+      "sha256": "0D4E6BF28F2F00275411597098B9053651A95D9C29F86D258F915BCCD16832BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137e-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137e-focus.log",
+      "sha256": "C3696E80B3511E7828E7CF4E08866152F59A283EA3CEB592DB2F33237608A126"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1137f-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1137f-focus.log",
+      "sha256": "FF925549896AD7F996618910E4E1DDCE90F0B8251392847FD8DF7DA5355C889A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1139-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1139-focus.log",
+      "sha256": "A50B298794481C3EC2FAF63EDF34A40B122DD804DCB18AA90A4A7597C3D60331"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1139b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1139b-focus.log",
+      "sha256": "60EA3AB1F65B8388AD31E838D9024CF39364BBAA6102234484514A11DCA43056"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1139c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1139c-focus.log",
+      "sha256": "48A70FB90D5C0C34371194B4805DEF0E516DAA316B0B75363E14A2E782996516"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1140-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1140-focus.log",
+      "sha256": "0874D8E737BEC2E4DE68C4D3F0F5758F0564B03B10C3F5542D039720FA16692C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1140b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1140b-focus.log",
+      "sha256": "F8A7CF6C25BE26B038E3EA13AACC067B5B838759588AE61337F8437ACA61E503"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1141-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1141-focus.log",
+      "sha256": "8E161FF3D48A7F2CCE3C0905669C99BBBCF80F7461C7C1F1044A53412B40B72C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1142-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1142-focus.log",
+      "sha256": "BF2936D6D79259937BF32CD7759F904FAA6EFD86AF214024BE2ECC901ED37045"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1142b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1142b-focus.log",
+      "sha256": "6F88129A2A6DDD7FEFF4C9065FDAFBE3C9B81E409E20627A6AF85355C79184AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1142c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1142c-focus.log",
+      "sha256": "83E1F406C44E16A8731648938CCF7DD2E8DA8D49353F5E4EA873F38FB2BE010B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1148-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1148-focus.log",
+      "sha256": "731D9DBAB6BFD05EDB3FAAD5B7217402544AF036F47D9042C1E4E6AF76869B5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1148b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1148b-focus.log",
+      "sha256": "6E4283745053F302B848F073690ACB66D0A2D4D9D61DAD0447931F32B9F57A40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1148c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1148c-focus.log",
+      "sha256": "022FAADD9011B87EEE43D1FFE3DFC1F4346C7177D9985A1CE5EDBC2CF860834B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1148d-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1148d-focus.log",
+      "sha256": "4294821D5842C300E170EB585BB4EA8D502435BA97D8E9BE15C52B050B730A97"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1153-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1153-focus.log",
+      "sha256": "9CFD986EC6EC414BABA716989BB8B0C53FED4866E0B4600DBC7A0C97DCB56D43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1153b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1153b-focus.log",
+      "sha256": "B5922D69136E2B836EEEE34D57174D9F58AEE80B0949C35C688C1005FD7E4A5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1153c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1153c-focus.log",
+      "sha256": "0819D67821D39A4577241AF52AA4D70C40DDA9B2E0B8862959B1903AD16A949E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1154-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1154-focus.log",
+      "sha256": "CCB5ACBAAB9223BDDDDCB9278DAD04AED1BED497D7B606405F75A4C9977B29A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1154b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1154b-focus.log",
+      "sha256": "E6482855E9D7D060F8DF5A27D0AADB67BEB82C78B8455F69E489B453C84773E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1157-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1157-focus.log",
+      "sha256": "BB167A217002C42808BD74049809989AE5F225B06A919720E8FFB52C4DFB7385"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1157b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1157b-focus.log",
+      "sha256": "8767D6E58E8DB15EBB59B7135C8A6803B11408BC72D1F9EB8E4135B03D60EA78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1157c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1157c-focus.log",
+      "sha256": "3A3A19934C42CDFD6B6207DAA17DF4E5EE4A12C30A4110744DC05C7B88A869D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\factor1157d-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/factor1157d-focus.log",
+      "sha256": "17D97F3A8C9E87471AFFF815B90DC2BC4FFA2573D7BF1400F19A4C4687D5031B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_candidates_1160.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/fetch_reuse_candidates_1160.py",
+      "sha256": "9CBDA9CB3C43EB0CDA350B412942F1622CD5446A181C126F9683A7982CD0F2BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_diffs_1160c.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/fetch_reuse_diffs_1160c.py",
+      "sha256": "AAFD8A5CA8CBFF9E41C9C47AC892956266EC3C7667E6FB07126344976FBB148B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_sources_1160b.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/fetch_reuse_sources_1160b.py",
+      "sha256": "99C6740E5230BE38AAB1A553FE2BD7B318B121B293606851007E745B62718D04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1142-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/foundation1142-console.log",
+      "sha256": "8166C7822F1BB54B596D3AEF66AD84554D3903C3797F74D9DB23CEFA94F575F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1148-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/foundation1148-console.log",
+      "sha256": "1C11E92D9E82BC92ACD1546928F79E627FC761D2F5F52A67ECEB0EAFB9030CB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1154-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/foundation1154-console.log",
+      "sha256": "D0EA33ADAD39C0C527E9ED1F8392E8247EBADC7F2416F587F4DDD99F9774D62F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1161-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/foundation1161-console.log",
+      "sha256": "B5C818311BA05746E3ED1DBC87D858596CD7CFB6B39814FE5BCE422C164465B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-homogeneous-parabolic-promotion-route-1150.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-homogeneous-parabolic-promotion-route-1150.json",
+      "sha256": "BFDF4C3133865B3D256422C560835A85E782C2859D91780E0F2CAC1C13442E15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1142.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/modules1142.json",
+      "sha256": "E9347127EED653D6F121177A71DEC16C3123AD3BE9317DEAEE1440CE97D58BB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1148.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/modules1148.json",
+      "sha256": "E32B956BCF5F01B8BF49CC534808C27A357715FD9286BE1421D652B9EBC3D947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1154.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/modules1154.json",
+      "sha256": "B31A03D4C52D8E553D24B7D1B026A8F73F19D0D2E4A8323B06C0B74640BA9CD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1161.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/modules1161.json",
+      "sha256": "F49362CE9F048CCD6423C44B477BAEA107C07CDC3D2E63B405D47DEA1C0E1A48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1142-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/paper1142-console.log",
+      "sha256": "DC09E0036A37CBC995AC5A5FB0DAAE853F0DBEF39805B42855614F9B92AC71F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1148-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/paper1148-console.log",
+      "sha256": "6908AE17FDE9910397E71CA32947EC682C79329921239AA592B4E1005628CB84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1154-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/paper1154-console.log",
+      "sha256": "C5577D08C1BE7E1BBC4342967C0569290BD4644DFD7A8EF95A5F8D95E9EDE79C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1161-console.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/paper1161-console.log",
+      "sha256": "80AFDB6A24131D04EFBD2F6C2C5B38DFB3E6D5A1F6684281F9A0C96B2468BC2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_binary_tate_h1_audit_1139.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_gamma_one_binary_tate_h1_audit_1139.py",
+      "sha256": "187F7C30B0BD2DB5074D2435176858C52E51410EB6D617EF3CE0F504BF0760B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_integral_parabolic_audit_1161.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_original_integral_parabolic_audit_1161.py",
+      "sha256": "15FEBD5C5EDB2AA1A79F54AE4B7DC9CDBD18EF8DF20C5D99F9AF17D7CBE3B85A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_integral_span_1157.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_original_integral_span_1157.py",
+      "sha256": "B2CA77513BE9C4172D0EADCD722A3631827076AC901AEB2AF3BDF1948D55FCAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_parabolic_entry_audit_1146.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_original_parabolic_entry_audit_1146.py",
+      "sha256": "842A2B229665E530C79D67DAF2FCA41554DD1E3FC3C1DA76ADC07BE54408FC6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_parabolic_entry_audit_1146b.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_original_parabolic_entry_audit_1146b.py",
+      "sha256": "BF6D6E5A6A76530080A3CEB01851CAB30E43CE3EBCD34826DEA7C09E76B41162"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_rational_span_audit_1150.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_parabolic_rational_span_audit_1150.py",
+      "sha256": "2A87871A141F11420A742A2497F270E72B37127FC18B7A8FCCC515E2887B5378"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_parabolic_relation_audit_1163.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/prepare_primitive_parabolic_relation_audit_1163.py",
+      "sha256": "D2A9ACB65995B49E8A8FA1A1C4F53052D0C90C5CC1CEAC10D7855D88F0686D49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1142.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record1142.py",
+      "sha256": "62461A07B36B898E5B7AE7909263A0AE70B4453D023CFCB1B8DDBF6967A5DAC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1148.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record1148.py",
+      "sha256": "CB95A1E9A1BEDE4D3367FC7FDF2E87BD273E1E3FAB32D32BF9FA69C8D8D3CA15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1154.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record1154.py",
+      "sha256": "430269F1815AE6A0D5192A089A5301CF673E07999A86ED30953E933523BEB10B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1161.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record1161.py",
+      "sha256": "D14F6E4FF58A2AB0E01019CF84C7AA79D4DF197990AE751E6C1FAC00430FC254"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_integral_parabolic_1161.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_original_integral_parabolic_1161.py",
+      "sha256": "66DDA4712FB684C90DA7C86163C21B0684A0C6D9145ADCABE49C74470E0CA4C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_parabolic_entry_1146.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_original_parabolic_entry_1146.py",
+      "sha256": "648FDADDDAEDF9064BC5F2DCC4D348F61018BF6F8407440DF1FE7004EBA3745E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_parabolic_entry_1146b.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_original_parabolic_entry_1146b.py",
+      "sha256": "3BDDB8EF32970E52CB3D642C464547818EB3F8E5DC6E9498DC7739016A158FCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_parabolic_rational_span_1150.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_parabolic_rational_span_1150.py",
+      "sha256": "0030C0A91E390DB2068429E0785A921DDFE85F805ADD05ACBF92C38C616F1938"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_parabolic_relation_1163.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_primitive_parabolic_relation_1163.py",
+      "sha256": "9C25D55BF779854BDA9C685159C3311427129B3524A0B95D1D175449DF2C2632"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_binary_tate_h1_1139.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/record_source_gamma_one_binary_tate_h1_1139.py",
+      "sha256": "04D966DD6250CEA38D75E3611F569C15F13810E7F2B199A76D9565AB53A12870"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1158-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1158-focus.log",
+      "sha256": "076D98C8E655F336CF77C4BB4EE317D0F20266E58FB4AA206F6734D952EA4F47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1158b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1158b-focus.log",
+      "sha256": "A9F138B64BF57DD14BAEA4D8222A1AAF2E274C10FB9B1AD73083D54F3DE2181A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1159-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1159-focus.log",
+      "sha256": "DEF6E546FF6CEC5C37FE2C551FFA283B2825246A3F8DC9CA356D605B479CC825"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1159b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1159b-focus.log",
+      "sha256": "1ECB5155844B2569F7261E9D052D7BF6DFD2F39803673A1B1C92B5923FAEFCCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1161-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1161-focus.log",
+      "sha256": "B1DD2A47B0E0E061EB24A6CB26622AB9A60560573F432E416B377A09A321FED4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1161b-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1161b-focus.log",
+      "sha256": "B5A8B15F98D15415BB57B1875D7865B0D956FC832B11BBB41A746283ED7A631E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1161c-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1161c-focus.log",
+      "sha256": "6D7C47F0AA4A25EC32015942D533FBA345D0DDF64205DDE7C4B43751AFACF0D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1161d-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1161d-focus.log",
+      "sha256": "6C64AFCBF9EF93B94E268871092ED0A17B214A04FCA46FCBFC7DED1C9C610540"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reference1161e-focus.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reference1161e-focus.log",
+      "sha256": "3776443325B4BE13345726BEF1C6A2505FA5B8FDA7A325F877A728E9F5E97436"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\refresh_reuse_heads_1159.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/refresh_reuse_heads_1159.py",
+      "sha256": "2434713F36EE7B9AF5A90C387E6248469A6409618DF6F7721E109874AE39EF76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\refresh_reuse_heads_1159b.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/refresh_reuse_heads_1159b.py",
+      "sha256": "57AF833EF1FE1508133A6D8D5A9F935D1DA408D44A31C93417C40605B7B6846F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1142.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/register1142.py",
+      "sha256": "4BBC3776CA2063DB531BEACFF1D344096CB22A994F25748491C1F3E8F146F1D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1148.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/register1148.py",
+      "sha256": "BC7BFDF339509651947FB3CE299AD7BCE9300D8A6C9D492BFF87A9CA2265C54F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1154.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/register1154.py",
+      "sha256": "CC53F7156AC04CA2A3D6B991C66DDECEC81F86D41A7911C255635E955DE1498F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1161.py",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/register1161.py",
+      "sha256": "9B88F74D5472288BBA022D8568B4C0422F3DAD67EFF64E001A09CAFB3B0D40A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1142.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/registrations1142.json",
+      "sha256": "290CA4CEA2E7ADAA5225F52A61E9F14541C5F7F9774015B9DB25ED398E5B3FE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1148.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/registrations1148.json",
+      "sha256": "F3C0182318940C5D6B6B60AFF544C7FED941ADDFBC2AB08FB165C830DB6E1938"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1154.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/registrations1154.json",
+      "sha256": "E37A0D13B9AE3D83DAC033699E1910B716675398412DE8E7ACC7DDA969D71CCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1161.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/registrations1161.json",
+      "sha256": "E9E6211B590C6EE2448EA15E6BC3611813C603D9AA2A30A974B3D194BAD02B83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1142.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/section1142.txt",
+      "sha256": "238CF79CC7E375A369A66E3AE1070F7C7B197EBF0479CF3D5EE61593967A89DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1148.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/section1148.txt",
+      "sha256": "6207DB273DAD4E8DF770A0ECDF9D372DF6A17006135090ABD3F7116BB1C2DF0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1154.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/section1154.txt",
+      "sha256": "DD9CFA0C91E96906775D99BA0375DCE9C4B33D23ACC639390D49BE8A44EEAECF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1161.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/section1161.txt",
+      "sha256": "C9DB19AA287C01E5693B66C3A260B059B322D918C1EECDDED9BA9B448805510E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-period-reuse-1134.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-binary-period-reuse-1134.json",
+      "sha256": "8F4BE08BECD367403A06893B2531A659AB370F6E0BEA4B38714FA190E80BCA2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-tate-h1-1-audit-config.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-binary-tate-h1-1-audit-config.json",
+      "sha256": "F3B8254B135280B5EC7C2E65780F2563F83D787C3F322510E2C64B5B8056BCDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-tate-h1-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-binary-tate-h1-1-reuse-review-20261027.json",
+      "sha256": "C3D3AD96AB40921ADBA644AFEE1A0E53F4FF4ED58E41F51E98E1980A01B4E96E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-tate-h1-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-binary-tate-h1-1-scratch-receipt.json",
+      "sha256": "2794C1AEDCCDEA2B86938EFAE3BE6968983D2CA2DCF180BCF26EC9D5EE583C39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-tate-h1-audit-route-1139.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-binary-tate-h1-audit-route-1139.json",
+      "sha256": "0914A77BD1213B60BF65559C5021CA3763E21DC8E0139B1749CB6B906272B62F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-order-reuse-1133.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-finite-order-reuse-1133.json",
+      "sha256": "93A106FEC5685F94407C2B7B33024966E78B1680AAB0E498F3925C28BB61E0CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-tate-h1-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-gamma-one-finite-tate-h1-1b-scratch-receipt.json",
+      "sha256": "CFBF4E544D283384FD3E8B1EAA0EF334E81F8B6490BE4CF117A2C8E9D7067E0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-1-audit-config.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-integral-parabolic-1-audit-config.json",
+      "sha256": "281C01BB912F719FB3D568FEF19D2CAEA8B68DEDC7E30A17E7572D6065BA6546"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-integral-parabolic-1-reuse-review-20261028.json",
+      "sha256": "AD15E99C5BB8F8DF9C848B2554E1E45164C42471849554D5C439F33D8EB11BE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-integral-parabolic-1-scratch-receipt.json",
+      "sha256": "0CA4FCFB88CD4862E5C5873E488F1370348F4FAE45EA19B2B8B34319BF16B869"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-audit-route-1161.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-integral-parabolic-audit-route-1161.json",
+      "sha256": "269CDA1A2342DE7528474093ED26013D9FCE2A224A414C2A6392A59D7D1784C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-1b-audit-config.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-1b-audit-config.json",
+      "sha256": "0EC906F3BD3DE437093711DB0DC10E7E41F25BD5A7289F9AF8DD12C65D36CF9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-1b-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-1b-reuse-review-20261028.json",
+      "sha256": "28247048DAE86A51CF89DECE4E4153B88FD918DEAB350DF10850D6EAE246FC60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-1b-scratch-receipt.json",
+      "sha256": "9D5532A39D54F3A64B84A8BCB253D82824F88F08C7886DB4D5E21411F733393E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-audit-route-1146.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-audit-route-1146.json",
+      "sha256": "D08473329B741DD09506CF22C1D8EBA0E070B0890E640E4B373FE00CF9BC6FF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-audit-route-1146b.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-audit-route-1146b.json",
+      "sha256": "04BE9B3C61CFFE03ACF0ECCEC160D193421E353BB53627602590A7200D5D26B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-reuse-1140.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-original-parabolic-entry-reuse-1140.json",
+      "sha256": "3E2CEB0FF9C82C72D2BFD903F37A0B873E482CA825416CA0C296A28262BD0911"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-integral-denominator-reuse-1151.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-integral-denominator-reuse-1151.json",
+      "sha256": "053AD4BD5F06C1257289AE3CB125325631350752EDBF477629DA21EE53312FFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-1-audit-config.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-rational-span-1-audit-config.json",
+      "sha256": "8024AEC768D7282F5A4A7935746B703EB5FCA6E1EFA413E3FFD129E1726D861A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-rational-span-1-reuse-review-20261028.json",
+      "sha256": "F86ED345DA029FCD0363A78BBAA11288FEDFE7880AFF682FC016647EE78F7723"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-rational-span-1-scratch-receipt.json",
+      "sha256": "34AD75DC1C8D717ACCAFC60019C84A599DED9EB452886707E679A09F93FE3D86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-audit-route-1150.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-rational-span-audit-route-1150.json",
+      "sha256": "0F4A075944C313D45131E7F1488B86EA8EC334DF474A5B63FC2FA5CCC6530F58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-reuse-1147.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-parabolic-rational-span-reuse-1147.json",
+      "sha256": "1A9BE5B489F4AF775AB1750B7FE3A97CBCA86B63C0A25FBBA1C8A00D6C937320"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-audit-config.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-primitive-parabolic-relation-1-audit-config.json",
+      "sha256": "D278FE1FD2C558A25DE8BB2505ECA4DBB61A5DC774EF8A856E8C97F07F996142"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-primitive-parabolic-relation-1-reuse-review-20261028.json",
+      "sha256": "F81B1DA2E7C793B78FB3009AFCD10063672327C85E48D6BEF1577D93291D758C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-primitive-parabolic-relation-1-scratch-receipt.json",
+      "sha256": "258F0D04EDFCE9C0BD948144191B128D9ACC883DE9A2D6A0B545F9C915BB2E10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-audit-route-1163.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/source-primitive-parabolic-relation-audit-route-1163.json",
+      "sha256": "93D0FB57178E5E5FF0D063B4F614675939CB0292A0ABDBBBB095BF9C09834E96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1142.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/status1142.txt",
+      "sha256": "843030AB64D3B88C3E85B60C013ACA42F47C97ADF8B272D684202B38A83865E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1148.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/status1148.txt",
+      "sha256": "A1B0DD108A204E0BD9F08B1E3ECF3B126F2BCA6406A15C609FA0132335CC9E44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1154.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/status1154.txt",
+      "sha256": "1360EF21F4FBDC1EC69F0790B2D1089EBF1C7E427B1A0BBCADA6985A9DC077AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1161.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/status1161.txt",
+      "sha256": "087E3A23BE3EDF0AC29D156D1767A845A2AC8C91100C01C7A489C71F4723C0B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-h1-field-notation-linebreak-1136a\\SourceGammaOneBinaryParabolicH1.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-h1-field-notation-linebreak-1136a/SourceGammaOneBinaryParabolicH1.lean.txt",
+      "sha256": "F851630B54B1735F4301CC69C338DBA46DAAEBCBFE8A913635B4BA3D179DFC05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-h1-field-notation-linebreak-1136a\\SourceGammaOneBinaryParabolicH11136a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-h1-field-notation-linebreak-1136a/SourceGammaOneBinaryParabolicH11136a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-h1-field-notation-linebreak-1136a\\SourceGammaOneBinaryParabolicH11136a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-h1-field-notation-linebreak-1136a/SourceGammaOneBinaryParabolicH11136a.log",
+      "sha256": "9DAB1DF4C0F8A56E581041A5FFDA7591D90B8F1EBCBF68F7ED27CBFFB6FAB3D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-ext-explicit-maps-1137a\\SourceGammaOneBinaryTateH1.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-ext-explicit-maps-1137a/SourceGammaOneBinaryTateH1.lean.txt",
+      "sha256": "EDCE79635BD87220D2D34231FD8E2172A764DE28E07F3BF03C0335A762E6AC12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-ext-explicit-maps-1137a\\SourceGammaOneBinaryTateH11137a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-ext-explicit-maps-1137a/SourceGammaOneBinaryTateH11137a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-ext-explicit-maps-1137a\\SourceGammaOneBinaryTateH11137a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-ext-explicit-maps-1137a/SourceGammaOneBinaryTateH11137a.log",
+      "sha256": "7E08BF9B25560E43036408225EE3DAA82A816377DD60B58797C835FE37AF0F56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-operator-ext-depth-1138a\\SourceGammaOneBinaryTateHecke.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-operator-ext-depth-1138a/SourceGammaOneBinaryTateHecke.lean.txt",
+      "sha256": "66CD6A36420311B8B8CB8BE8F93CADE4ABDA7593B72ECF805771F8F992BCD643"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-operator-ext-depth-1138a\\SourceGammaOneBinaryTateHecke1138a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-operator-ext-depth-1138a/SourceGammaOneBinaryTateHecke1138a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-binary-tate-operator-ext-depth-1138a\\SourceGammaOneBinaryTateHecke1138a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-binary-tate-operator-ext-depth-1138a/SourceGammaOneBinaryTateHecke1138a.log",
+      "sha256": "551A9E10C3644E06156DC776EC734929033D0AA4BE7480E1A6AE94C8CEFB90FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-order-trace-expansion-1133a\\SourceGammaOneFiniteOrderDischarge.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-finite-order-trace-expansion-1133a/SourceGammaOneFiniteOrderDischarge.lean.txt",
+      "sha256": "A69E67780D4ABFEDE149337EEF6CB9AC0D79832896FEDB1DCC2B03F3317023E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-order-trace-expansion-1133a\\SourceGammaOneFiniteOrderDischarge1133a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-finite-order-trace-expansion-1133a/SourceGammaOneFiniteOrderDischarge1133a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-order-trace-expansion-1133a\\SourceGammaOneFiniteOrderDischarge1133a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-finite-order-trace-expansion-1133a/SourceGammaOneFiniteOrderDischarge1133a.log",
+      "sha256": "3F3F207A7F6CC68C225D1E9BBC249CA65EBB01C95DBE6071C1C8D5E3CBE63475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceBinaryParabolicChange.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceBinaryParabolicChange.lean.txt",
+      "sha256": "E3D5A93B3143C2242D797FC85AD5F80C5C18A6B9104B0A579CB9F4BC421EB8E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceBinaryParabolicChange1141a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceBinaryParabolicChange1141a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceBinaryParabolicChange1141a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceBinaryParabolicChange1141a.log",
+      "sha256": "D1299378FCAD2942A314BEEB1818E955F3B60C845D1F3CF9C78C03A342E8BE41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceGammaOneParabolicRestriction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceGammaOneParabolicRestriction.lean.txt",
+      "sha256": "9E25D07EED57C52BC71272413CBFD895C2B39E2FD704C0753191820B8667B1C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceGammaOneParabolicRestriction1142a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceGammaOneParabolicRestriction1142a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-change-explicit-representations-1141a\\SourceGammaOneParabolicRestriction1142a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-change-explicit-representations-1141a/SourceGammaOneParabolicRestriction1142a.log",
+      "sha256": "FC866FABCF7A082D21D37021A44C62A7E1F257EDE06C4ACDC84AB129805A3924"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-cocycle-coercions-1140a\\SourceParabolicCohomology.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-cocycle-coercions-1140a/SourceParabolicCohomology.lean.txt",
+      "sha256": "DC90DF67889CF9C13C2188B140D886E05BA1375F093B10B5229470E536FE7DFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-cocycle-coercions-1140a\\SourceParabolicCohomology1140a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-cocycle-coercions-1140a/SourceParabolicCohomology1140a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-cocycle-coercions-1140a\\SourceParabolicCohomology1140a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-cocycle-coercions-1140a/SourceParabolicCohomology1140a.log",
+      "sha256": "BA5F422B8F4A37E6E22573FE8CB574DB3A039443ACC6FA5152303DA2DCAE3776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-remove-unused-Q-1142d\\SourceGammaOneParabolicRestriction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-remove-unused-Q-1142d/SourceGammaOneParabolicRestriction.lean.txt",
+      "sha256": "BABF4B98A27035A05835B70E4026A1CD4DA7180C0BF60895D291EA2EDDB6C986"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-remove-unused-Q-1142d\\SourceGammaOneParabolicRestriction1142d.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-remove-unused-Q-1142d/SourceGammaOneParabolicRestriction1142d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-remove-unused-Q-1142d\\SourceGammaOneParabolicRestriction1142d.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-remove-unused-Q-1142d/SourceGammaOneParabolicRestriction1142d.log",
+      "sha256": "3EFE0F994227207F166C5D548C27461BEA54576BA574D4CB1B983FA4B874FE21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-unused-level-1142c\\SourceGammaOneParabolicRestriction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-unused-level-1142c/SourceGammaOneParabolicRestriction.lean.txt",
+      "sha256": "062C85C30C23045F2B6B0402585A804AAF1BAF4B245BA12F608704EE22BB447E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-unused-level-1142c\\SourceGammaOneParabolicRestriction1142c.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-unused-level-1142c/SourceGammaOneParabolicRestriction1142c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-restriction-unused-level-1142c\\SourceGammaOneParabolicRestriction1142c.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-restriction-unused-level-1142c/SourceGammaOneParabolicRestriction1142c.log",
+      "sha256": "90A0A4DE543233359C7C8B1F435D575F689A8059C961935B174C79CD3E7928DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-span-induction-context-1149a\\SourceParabolicBinaryH1RationalSpan.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-span-induction-context-1149a/SourceParabolicBinaryH1RationalSpan.lean.txt",
+      "sha256": "1AAE50C35EED5BE504299A4256563B4741ABA0E2A260C32FA890815E56501732"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-span-induction-context-1149a\\SourceParabolicBinaryH1RationalSpan1149a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-span-induction-context-1149a/SourceParabolicBinaryH1RationalSpan1149a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-span-induction-context-1149a\\SourceParabolicBinaryH1RationalSpan1149a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-span-induction-context-1149a/SourceParabolicBinaryH1RationalSpan1149a.log",
+      "sha256": "3DC93E853DF73B42327C97C47F49EA84BCAE864709FA6EE5A70DF4F344857FCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-span-unexecuted-encoding-1148\\SourceParabolicBinaryRationalSpan.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-span-unexecuted-encoding-1148/SourceParabolicBinaryRationalSpan.lean.txt",
+      "sha256": "B10B2C65A8E675CA3D0DA8180764DAEF46B228A5EFA9449B58D9D8DF7885FC66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-trace-unused-level-1142b\\SourceGammaOneParabolicRestriction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-trace-unused-level-1142b/SourceGammaOneParabolicRestriction.lean.txt",
+      "sha256": "9E25D07EED57C52BC71272413CBFD895C2B39E2FD704C0753191820B8667B1C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-trace-unused-level-1142b\\SourceGammaOneParabolicRestriction1142b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-trace-unused-level-1142b/SourceGammaOneParabolicRestriction1142b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-trace-unused-level-1142b\\SourceGammaOneParabolicRestriction1142b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-parabolic-trace-unused-level-1142b/SourceGammaOneParabolicRestriction1142b.log",
+      "sha256": "9A2DE543FA964432976C06C96C13A65788761CD795733034AF49D85D58F631DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-explicit-representations-1143a\\SourcePeriodParabolicClass.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-explicit-representations-1143a/SourcePeriodParabolicClass.lean.txt",
+      "sha256": "9208B7E2DAAD84A4ADC6566E1D02C0789B935B99FE232FD4D5C38F41E3620118"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-explicit-representations-1143a\\SourcePeriodParabolicClass1143a.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-explicit-representations-1143a/SourcePeriodParabolicClass1143a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-explicit-representations-1143a\\SourcePeriodParabolicClass1143a.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-explicit-representations-1143a/SourcePeriodParabolicClass1143a.log",
+      "sha256": "1D2C7C7934FDAF6968F6080222B610FACF32887D82E5C86589803CDD32D6736E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-native-functor-1143b\\SourcePeriodParabolicClass.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-native-functor-1143b/SourcePeriodParabolicClass.lean.txt",
+      "sha256": "DA30440255DF2E9ABB84E2A2E903A8831DBEA41353AE9F61D8574C0C764CAC9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-native-functor-1143b\\SourcePeriodParabolicClass1143b.exit",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-native-functor-1143b/SourcePeriodParabolicClass1143b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-cocycle-native-functor-1143b\\SourcePeriodParabolicClass1143b.log",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/gamma-one-period-cocycle-native-functor-1143b/SourcePeriodParabolicClass1143b.log",
+      "sha256": "AC944130A664AC87000ECD2AAEF2B18638BCFBE5B849B39048EE03F3467066D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-integral-parabolic-h1-1158a\\SourceOriginalIntegralParabolicH1Span.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/original-integral-parabolic-h1-1158a/SourceOriginalIntegralParabolicH1Span.lean.txt",
+      "sha256": "845C091758C154BC389780D1BD303E6B2849B4AA3051F926E7CD62CA2B8FC270"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-integral-coordinate-span-1156a\\SourceParabolicIntegralCoordinateSpan.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/parabolic-integral-coordinate-span-1156a/SourceParabolicIntegralCoordinateSpan.lean.txt",
+      "sha256": "362E199C0D7F934ADC952DA041954160186F9D02107A3A15F615D94E1EE6383E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159\\manifest.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159/manifest.json",
+      "sha256": "6257BBF7B9A2EEA24D10FD5B2CF03B8E39F8D17EE55212EE555CBDB3230E588A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\anthropics__fermats-last-theorem-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\candidate-fetch-1160.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/candidate-fetch-1160.json",
+      "sha256": "1A5247CDA4F8EC4C3317D2497D3AD25F08A1D1F219E0EB566791B6688EB4EC9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__LeanModularForms-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__ModularFormsMod-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\ImperialCollegeLondon__FLT-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-compare.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4-compare.json",
+      "sha256": "531683D0FEA79C464CB923170EBBF6516A9F12D2938877BEFCBAD2A527C52D26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-complete-tree-delta.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4-complete-tree-delta.json",
+      "sha256": "6933C783DC5C31A45A6B18CD9ED65DB7145DBE5785245765186EBA0F52244437"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-head-tree.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4-head-tree.json",
+      "sha256": "2EE6519E78C56217A35D15486193940928DC335615DE19EA203CD720805A4BAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4-head.json",
+      "sha256": "5434D7B9706C16E5449B08428F034E2C88D7E6AA0A74B44AF8DE32EBEB4F9E31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "8EE0D3B8CE6033187D03FC78FEF609BD9DCE60AC6C5E66D278E49434A5E9DE07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "7F107DD3539009D95AD3EE68888F83DFA29C4DAB2A7301E29E35D43B5D0C050D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "ACF37F7E2D23F9AE7D39D28A17FFB97AF06246BE0FF76678D7F5F340D85BAA44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "9D55C9C3533ADA621EE1C52BE4B810376EA15E601A0F321FB9EEF0E5E820AD63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "649A15FB9B11486C0EC034971B8758A817C6266ECCBD78CA5938D07E0726481A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "005B2F71EFBFF2E4629E9D9C9B1282703A1547235D55DE8CE67CF75E70B12CE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "50AFC773AF0895608A53959EFF1019C12A9ACA84ED729AE872D05C4C9EC1C714"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "B97B112355023FD2EE66BB36657D7E5E133B5319F52E994C992C12AF49CB29C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "796D36137BC05D8B2B224DDBC54CC2754ABC8A9ADDCF1ED76B5C3D44177E477C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "EA04545687F9758B9C5135E532D2C274C7E73553863A48405B2F2BDAFEF0AAD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "72FA7A18B98553FE2ADBB5BE717D251D1AC8E1CD6A7452DB5B21BB6897E64FF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__diff__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "7AB01FD386390A4A0A4E486E593B06E25418ECC13A9217E4BB44EAFD179E4089"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "9F8EFA333415E384C45FB0AD58EF0BA510B18ED13CD6E83C5CDBE4C5EB5DAE20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "120FEFE51C8CDD70BECF3908EF6A4BB98837ED06C19E66A04193A662949FB0AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "6B7B415FFA35BD417FED10C5633A278E4F4C5FB9A87BC561AB376F3C2A105971"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "A6577E410C2F7A9A24BF8D9C8EFF1AC7E605B494E465000E5A0E14C40092E0B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "7AC81FED7EEE9D3AA2853157CA02F3A3A6C1726271AFA251B69056D716F825FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "E19A663CC36BBC00FFEAD51F0F53E6E59FF93EA802B84E6FC0CE3AB766A18F29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "856ED76711E0A5D09B6DD2F41FE6B9327E96D7A5F3BE90BD614C566E9AEF3676"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "199729C22B05FC6050347FF9DECF5828A29C7AE770DF66D5F14D7CE7EA2C2781"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "7E882844522C6AD5EF74B27BC6A7B8109682A0AEAF4EB1FB56B1C917BBE97823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "7DD708DD58E990E979FE136F735923E0A77E19F255F48E99CB5A247A024C1F7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "CF06F5990F696046717243DA6B32DBC5FB9AF3AEC78E3131D3DAC857EBEDD3AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "102DBC9807D1B2B7312C53E25C223715228F11D5C4533DE85B414418A74D03C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Sheaf.lean.txt",
+      "sha256": "993978FED6E73A669CBDD5B3D516D3699FAF91867B7EE65A5D534BD005AF8F80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Modules__Tilde.lean.txt",
+      "sha256": "16394FF491DB072726A8B09A908A63715A0EC1C1FCCBAD11F0CEF9D549A40EAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__AlgebraicGeometry__Morphisms__Flat.lean.txt",
+      "sha256": "28AA55DFF703649F0B20E566E8CBA9901E95F42337E2814E4242D52C65AE95DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Bounds.lean.txt",
+      "sha256": "70C5CAD0FFC00B339D6A171DFE3F3E2FDA3D0C399147446E48A4576F997919E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__Cusps.lean.txt",
+      "sha256": "759C3B56C4BAD48B73A68B083EED551C4330309009650DBD95BE9B9180102495"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__JacobiTheta__OneVariable.lean.txt",
+      "sha256": "80D50D37D88A4C9E86DA5D08E983411A3FF1AA7422D1B1978025607663117353"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "355555C4854B5B97E4D3A12A37D56A102BBB79ACE31B9EF53633D4B474EC0A25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__LFunction.lean.txt",
+      "sha256": "15C0C9DFB8B460224419DF8A9E0FF144BE97B4B5A8AEE14C7F73DE802D4FC275"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "BA7239AF5AA386AD2478F4AABC6F0490E9A02A2F005A5129823BD32827C4D936"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Basic.lean.txt",
+      "sha256": "AAD866903FAE0B26EE5007EF9C1E1ADC1B1AA65DAEF6753C87D49F51EB2D7CDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt",
+      "sha256": "0CEE99BADF7984D138079EBAAF39017854A010B3A6A81595912996399C7D081D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__Unramified.lean.txt",
+      "sha256": "FA34565F71E4F3746CECA739CCE9CE298D647EC66FE14909DAE37A36F5653EFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\manifest.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/manifest.json",
+      "sha256": "230D3292DFF086E46012FCA76AB1E516DAD5A1DB26CBD7E17A70828E6D0CC8F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\openai__math-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\source-diffs-1160c.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/source-diffs-1160c.json",
+      "sha256": "5685634B27DE3BC0C9295380221538043B48A7557EAD21A1165B6577C6445127"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\source-fetch-1160b.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/source-fetch-1160b.json",
+      "sha256": "C56AD86A5A94E515CD1E762D276AB3371355A4BCA318530BC2699ABDE42AC942"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-head.json",
+      "sha256": "C78FE51E0572E27F9D52892A1822B39D548E4829A9CEF9AA8DFA05C549D3D90A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-lake-manifest.json.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-lake-manifest.json.txt",
+      "sha256": "78AAC12CD88437EA05C41CCDAE290D72A8CE40929CFC5D14640F88E734ADF9BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-lean-toolchain.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-lean-toolchain.txt",
+      "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-LICENSE.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-README.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-README.md.txt",
+      "sha256": "B05A48415C2A3D1F5104A3701A7478DFA08ABF3B43797E3B797C377BFEAEAE38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-tree.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti-tree.json",
+      "sha256": "D3F9781F40914ED4C365EF87D128027BF3DCE2D65FD65D2322004AF4ED383CCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Comparison.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Comparison.lean.txt",
+      "sha256": "6D90A3DCF13CA09BDF5DA28A44969DAA2A59726CB7FD37D35F263E7603B70249"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Ell.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Ell.lean.txt",
+      "sha256": "16CB4A459A740673016DCAD655587AB2ABEEC32C0A4ACB1F73F37017E6814207"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__FullLevel.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__FullLevel.lean.txt",
+      "sha256": "432B7AFA7CEDD20B1F1CFC8CB37B93FFC85343F9B16EEA616FEBB41F062D4585"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Full.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Full.lean.txt",
+      "sha256": "9CC1AD2987793001E204A53CEA168B0FFDB18A6A18E8254973CDE87DE7A94144"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__One.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__One.lean.txt",
+      "sha256": "58F29D8E2CE7CFDD20DE1033F1392BA44B0A38C98ED5950ADB2290DFB6F37AF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Zero.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Gamma__Zero.lean.txt",
+      "sha256": "C1ABC3E7D63F59481806A989D8A49CDCC91F3769309878F88347F0555FA77F6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__HomLevel.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__HomLevel.lean.txt",
+      "sha256": "7E8A50108C3A67C551E54B62B171C9E468DCF21B81F22934572CAE848B41C628"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LegendreLine.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LegendreLine.lean.txt",
+      "sha256": "AD3267B8C5549DF0F538DD54EB8FD3E71B6E3838FF867D2756A1C82510F1628B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LevelThreeLine.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__LevelThreeLine.lean.txt",
+      "sha256": "6CF34DF0E81933EA1D2D97805F30E952DBC014E71ACE9AC9511A85023CF9D5B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__ModuliProblem.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__ModuliProblem.lean.txt",
+      "sha256": "BB123384C8D848A7892377B9CF705D3A0EC7F62C7AEBD7A8089477F6A3FDAF56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__NaiveLevel.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__NaiveLevel.lean.txt",
+      "sha256": "BA834D757C2D6EABB632FE66F30A066A43EB6ECC116CEDEFFEF7F98371E5F2B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__FreeAction.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__FreeAction.lean.txt",
+      "sha256": "5F152E8870216EB574EA7F5A71F472090A817A08657FC03D55CE28B4FA2C5B4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__LevelThree.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Rigidifier__LevelThree.lean.txt",
+      "sha256": "B4EBEDA98BEE196F6C3256DB01A69538025D8B3EAF1602C07678100C6B757638"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Simultaneous.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__Simultaneous.lean.txt",
+      "sha256": "A1ABD89FB4EA06EEDF88AFE45EBD221387639F8D2FA5BB97A495122B58BFDB07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__YOne.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__AlgebraicGeometry__ModularCurve__YOne.lean.txt",
+      "sha256": "28BB6B996185726A127BEEE668591ED5828A42508B44242FD128285A886BF058"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__GaloisProd.lean.txt",
+      "sha256": "400E1EC901B42E7526494B1AD652E2A14F62949258BD31FFE24A7509B134964A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Diamond.lean.txt",
+      "sha256": "10394D371C829E8CF7CD20A119E13E5027737C7FF863D3EAC2E440B3140E4703"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Hecke__Finite.lean.txt",
+      "sha256": "382082B2596898E9998F06EE2DC75F85427F564A192ED6862EA893F79B3B0946"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Hecke.lean.txt",
+      "sha256": "29CB759CB8E2CD9C8DD094874409CC5A0A427F761F8C0CFFAF14508149471C05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Injective.lean.txt",
+      "sha256": "52DC9C7A724628298B6781112E9A6354F29636B2A544B02FBF8DF462AED75C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Integral.lean.txt",
+      "sha256": "533369CB0D9491B6252B5454F2CE3F45C0D491507C20C41E594DFD2235AA7E77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__ModularSymbols__Period__Map.lean.txt",
+      "sha256": "BF0B665781B18D86AC11BB3B523BC1705A36F1DE9317B259D4D4AE3F56B2F6AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Basic.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Basic.lean.txt",
+      "sha256": "5D7FEAFCCDCD43A0B9082FE652B3AFC3BFA8F6D8FBBD5EFBF303003A8AAD7954"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Fields.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Fields.lean.txt",
+      "sha256": "40EBE8FD61437F210C3F763FFA5D52E1768CFE380421AA7E7CF2381A122E41E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Charpoly.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Charpoly.lean.txt",
+      "sha256": "93E06AA18DC42790370A1BF75CDBA312F7FC9746E59F230B00048FA79E5A1655"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Integral.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Integral.lean.txt",
+      "sha256": "51B247156BA3525C967E94001E1E7C348623EE0ADF5523535B7FE88340A69EA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Rational.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Rational.lean.txt",
+      "sha256": "7AE39EFDA76887AD8218463FDE1C9A1B99AC69BA57F7C473D37647626998CC82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Stability.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Hecke__Stability.lean.txt",
+      "sha256": "AF6292150DDB6DF0057BC56F5C28650ABABA1745EE2A4C619F289347F1C87A0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__NumberField.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__NumberField.lean.txt",
+      "sha256": "87A7711A62FF7E54AF79E24DB90844EF1ADAABCA73DB994C96F96CE552D8D4AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Satake.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Newforms__Satake.lean.txt",
+      "sha256": "AB1FC1DE569DB7D833BF14FEE28E7AB39634643A6AA59FC1084B940105EE1E27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Primitive.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCeti__TauCeti__NumberTheory__ModularForms__Primitive.lean.txt",
+      "sha256": "E9D7AA2E2A2CA8996E909C507D4778FB6A0693E1CF3E0C2605B342956135D51F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-head.json",
+      "sha256": "C28AFF8E626872BFB74476EC7A924E05F5BF398BDF249FDED17CCB75E78F4265"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-lake-manifest.json.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-lake-manifest.json.txt",
+      "sha256": "49FF62F27397E11D6BB697EA74F0DB6DE50356ADDE06B2860E7C62377621EB6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-lean-toolchain.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-LICENSE.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-README.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-README.md.txt",
+      "sha256": "96511DB3FC568A12BB5553AA0001D9A9460F318B212CBCF3800DF7A2E549AF9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-tree.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap-tree.json",
+      "sha256": "B9C8B5FE51BFB567714ED704F97AA9E12A35A4BDA84A3E2C4F7DD01A14B43E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__PROGRESS.md.txt",
+      "sha256": "98376100B7A36BD7FE0222E094FA3866E0631A7845B0D65D9042E0C2D37D7969"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__README.md.txt",
+      "sha256": "36066A37C06E5ED79765B3F2DA67E986B1C2C8A8EB9B376617ED0A6652D9B641"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularCurves__STATUS.md.txt",
+      "sha256": "C0A1182069ED48024D1D765F25D8E7AA5BBB58454A7EFC3B630F01C0E427A360"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__PROGRESS.md.txt",
+      "sha256": "51C3D5EF46E89AE1D022F447285736EC38FE7E53A17BD15E9825836CD28E534D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__README.md.txt",
+      "sha256": "D99FB41C43AE15FFB7F5AEC03FD2C91F3B56D8671C5594224BFF3289F390EE3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/TauCetiProject__TauCetiRoadmap__TauCetiRoadmap__ModularForms__STATUS.md.txt",
+      "sha256": "2A64360F61DE3575B2F933FC2FD5BB699B70C75838E45CDE6F31C92C058AD59B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-compare.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab-compare.json",
+      "sha256": "06EE729F02D278597F123BD4A078DD455783825322D3578FE2632D7E713CD25B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-complete-tree-delta.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab-complete-tree-delta.json",
+      "sha256": "DDDB22363289C91B89E9C355BE6EAC17F8F29476FA77B8D142F612E066F2DA53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-head-tree.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab-head-tree.json",
+      "sha256": "5BC35B3056F2115B9F3D71869031814D978286E14F03B6BFB862BFB911873CDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-head.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab-head.json",
+      "sha256": "D2236BE945FBA767F6A8EBE6D03A2D65F59F36902718662DDD2A56F7281ECDF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-previousHead-tree.json",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab-previousHead-tree.json",
+      "sha256": "9E8893492D813E0D5D46F0BDFFFFE9C169C6EE0E20FE7F42D566583880F9F498"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__diff__lean__bridge__FourPoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__diff__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "089C48D2B6673E8B6096EDD3A7ADF4A7BFA25AAF3D570907975D466126C8F921"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__diff__lean__bridge__ThreePoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__diff__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "DF6D80FDDB1FD613165BBAD4506F8D0FF8880CEA7880C768FFE72107E61558BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__head__hunts__rung3_ball_production__lean__ExportShard.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__hunts__rung3_ball_production__lean__ExportShard.lean.txt",
+      "sha256": "18A31394EB653D698439E45211A5D30508A5CADE42C00CFABD97F7AAD3528681"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__head__lean__bridge__FourPoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "89A973F7F29F02FF2514B12EFB0719D176672B02D32D4088E1195AA3793165E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__head__lean__bridge__ThreePoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__head__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "10CDE2BCEDB4C36EF5343F396DB66E07194A7C12438F722F3BEDB5CFEBDF53C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__previousHead__lean__bridge__FourPoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__previousHead__lean__bridge__FourPoint__Main.lean.txt",
+      "sha256": "0689A6DAA0FA81ED690786F4D6F9FFB25167B60457B9A7C3527159F07ACA58F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab__previousHead__lean__bridge__ThreePoint__Main.lean.txt",
+      "path": "Tools/gamma-one-homogeneous-parabolic-20261028-1163/reuse-head-refresh-1159b/teal-sea__zeta-lab__previousHead__lean__bridge__ThreePoint__Main.lean.txt",
+      "sha256": "CF5314D8894903D96745A89DB9B2C839DE341D3978083F1375ED08FAB7A0A810"
+    }
+  ]
+}

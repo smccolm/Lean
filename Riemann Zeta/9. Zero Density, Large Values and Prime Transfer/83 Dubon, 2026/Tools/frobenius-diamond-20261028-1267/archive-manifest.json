@@ -1,0 +1,1489 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\frobenius-diamond-promotion-route-1267.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/frobenius-diamond-promotion-route-1267.json",
+      "sha256": "87D28317BA34EA3F76C793F6889B147FC36E7D2AEFACE7BBC00CE153129D844F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceCoefficientDualAction.lean.txt",
+      "sha256": "8A84A3F08B676A96E90BF0A38FB5E32C42705F45007BFDEB1A82BD6054B4FB86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceCoefficientDualAction1249a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceCoefficientDualAction1249a.log",
+      "sha256": "4BE38E28E50F2D23EC5CEBB6F1DB87720A6CADA039190C17887F5F9AD1C8DA05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceCoefficientDualAction1249b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceCoefficientDualAction1249b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferAudit1.lean.txt",
+      "sha256": "860D120754C70F64B8BDF4C2F0406C3493368C8ACA4065F2535CDA6D1D71B189"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferAudit1.log",
+      "sha256": "E1FF88CA557CD1F1AED129F8EDD8D48137554190CF961E7B7F338E78EE9390CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1.lean.txt",
+      "sha256": "620E3513C9711D760CC579679DAFE526FA7F69F9737B8C734E79CCDC49CDF2FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1.log",
+      "sha256": "9AE3B81B91AAB3448AEE9CA2228720E65EC9072898C6B7680268F75583EC3E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferScratchOwnership1262.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferScratchOwnership1262.lean.txt",
+      "sha256": "99787C7F156E17A590E823398E6648BD668AC56FE701D2EAE00E3B3678E57869"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferScratchOwnership1262.log",
+      "sha256": "34E834BC04CBF4E05A2662C7ED41D6762C732FC75D4487EA9FACB2BDCBE995F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationAudit1.lean.txt",
+      "sha256": "B43D429DB84189903CF1CFA26E41B1A186C240F64E8804AC35BFA1CF95CFE55E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationAudit1.log",
+      "sha256": "E931E882D85A555C892CC77917325D0A5B4291D45C11DF6A8962444060CE0AC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1.lean.txt",
+      "sha256": "36EE5DC31F1B43F686372376B02900AF92911263772C84D71445648D2AD04409"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1.log",
+      "sha256": "6806F9273D1D51E20150869EFBA86A7890E33BDE4CD35B787D75DBF85FD7A349"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationScratchOwnership1250.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationScratchOwnership1250.lean.txt",
+      "sha256": "628055247A8A7E3F4C0EC323F5BAE11006863F5020FEA9DFC32772F310C6ECD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationScratchOwnership1250.log",
+      "sha256": "B14EC0E495278F87874A3A67DE897567B06395429B166FCDE3FA2CFF18484E0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneArithmeticTateOperators.lean.txt",
+      "sha256": "7F9D271945303587AA5B515FCAD95181CFEA797C542F09228A2794F1F55F617C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators1246a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneArithmeticTateOperators1246a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators1246a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneArithmeticTateOperators1246a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "84A56971677269D271A6BDF7613B725BA036B7B6343247AFCB58FC02A56851DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245a.log",
+      "sha256": "B94DD92B3965B965684ECEC2EB75E7600112F7BADFB542E64E7DE24A9CC51F9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245b.log",
+      "sha256": "FCB2121C5C2D922BE84EFB3105A08E606BA0DD8FF2E40EDA286099B2197741F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245c.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245c.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245c.log",
+      "sha256": "C05D0D3FAFB0C3EA9BE17D59A9EC5BA5964AF87F76EF669C6F04530A75B69665"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245d.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245d.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245d.log",
+      "sha256": "64F67CDADA89E848A962850FE6056F0B9BB3F08F4E2757C64A06BFCA37811235"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245e.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245e.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245e.log",
+      "sha256": "44A18BA4B62803215349B7D89F40976BAFA7842B3305A8EEF1FC1A47EDC47798"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245f.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245f.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245f.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245f.log",
+      "sha256": "14DDF53F3828C090001B25136F43E23171B894CE4CDFD3340E6A5FF1B3276517"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245g.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245g.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245g.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245g.log",
+      "sha256": "3A996ED7CB609957DFF9E0102C90A929B5EA85BC41148398C2BF44E87DB0B4BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245h.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245h.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245h.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryFrobeniusNormalization1245h.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "7ECC677F9E2647DD1FB9D586882306F49B50F03550A498A3C9EF77DE89BD90E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247a.log",
+      "sha256": "48A0BF063E4920233A3FF520F0604DB831381BDC6DB0F88FEE55D2BCD2606EA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247b.log",
+      "sha256": "52568CAA6EE27E0714E2789B8CB9ACBF32B681F147B2E4DBF87AD8469885434B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247c.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247c.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247c.log",
+      "sha256": "254C291753C7051A85ABBD69CA1DA3F55AB1760E9AD8D743534CCD6967F430AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247d.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247d.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247d.log",
+      "sha256": "71F0559E9DBA34314497C061217B8C61AF61199A5577FBF765CA539F0463DD80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247e.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247e.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247e.log",
+      "sha256": "24635DD9F06DF2B39C0935BAA0D410EA866828FABB5F9B622653E1D4A7C77777"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247f.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247f.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247f.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247f.log",
+      "sha256": "8743BC4276A5C5B2CF7F12640905DDC61EEA4F5301A00CE88794FA86BAE22D48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247g.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247g.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247g.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247g.log",
+      "sha256": "A5579A076497E3EB9C8908427480E7224B6E9A792433C36D47CE51D23EFBD300"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247h.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247h.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247h.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247h.log",
+      "sha256": "EC3C85D07F31D85E2E61C1BAEF92E6333A97D4FB6B110A97776621BC02FE5DC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247i.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247i.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247i.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247i.log",
+      "sha256": "4DA187ACAA9C42DB88B18823E02EE3C2F33A46BFFC4BD8481003794F4C08633A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247j.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247j.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247j.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneBinaryGaloisHecke1247j.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondRange.lean.txt",
+      "sha256": "1E4E99CE0631D6DC7534AA786017B95B57D4C86BA9D607DC033EA0B3B207AF17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange1255a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondRange1255a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRange1255a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondRange1255a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare.lean.txt",
+      "sha256": "4B907F40625AEB434EB670439B5A4DD9BD67BBDF82FF8CBC373D3BA79ABE00D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258a.log",
+      "sha256": "99859FEF9579E5E1852EAEB9F893A669E2E5AAD34AE8114C4878311F91D4902C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258b.log",
+      "sha256": "9869B3EA1AFC5184CB529BC7CB98F63F63E518FF9688B62728D0B9AA3D9DD278"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258c.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSubgroupSquare1258c.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondSubgroupSquare1258c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondTransfer.lean.txt",
+      "sha256": "FCCE2E9DBBD6DC7FC41A21896EEF70529A5BB9B47C791FDA513FD8FC9F8F9FF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondTransfer1259a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondTransfer1259a.log",
+      "sha256": "00E01DE289FA2DC0EEA7C6BCE548EA03440FFA7BC4246E75BE34C55D222738EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondTransfer1259b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransfer1259b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneDiamondTransfer1259b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondCoefficient.lean.txt",
+      "sha256": "BC8E6EBE230CC01440CF6B63BA965B5AAFA5243842EFC2E47A565B7923D7B80B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondCoefficient1244a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondCoefficient1244a.log",
+      "sha256": "3E77899945052A047BE980A84B05D489EF37DAB01B6C2ED827F232AE6C0D08CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondCoefficient1244b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondCoefficient1244b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondDescent.lean.txt",
+      "sha256": "017B2F6A10AFAD7F637EF7F52F81E56B328520F5B257418FFE64283ACFEB130A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent1265a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondDescent1265a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondDescent1265a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondDescent1265a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondWords.lean.txt",
+      "sha256": "BAD39740F5C0A4F2BC94FA321AAC389D046B2F5EF96C2B3E3790B40111B9AF36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords1264a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondWords1264a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondWords1264a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceGammaOneHeckeDiamondWords1264a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1CompositionSquare.lean.txt",
+      "sha256": "240A64FD100DE47F95E6227C1362185585F47F656100373378F1B832C6970CA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare1260a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1CompositionSquare1260a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1CompositionSquare1260a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1CompositionSquare1260a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceInner.lean.txt",
+      "sha256": "21AC3DA9ADD755E6FB9106863F961412D20714A35CF6C339674EADECA348F0C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner1254a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceInner1254a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceInner1254a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceInner1254a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceSubgroupEquality.lean.txt",
+      "sha256": "2969B3963088BFEBFB89F487D8F23B092ACCC76EDF2F0748158F7D9D4740B69E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality1256a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceSubgroupEquality1256a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceSubgroupEquality1256a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceH1TraceSubgroupEquality1256a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterAudit1.lean.txt",
+      "sha256": "F75417847CC979BD3A506B76A9D6375E1816125A29E22AF3EB796908A97660CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterAudit1.log",
+      "sha256": "3B9B95BA2687EF2BEBFA8776F339BBFFA0352ADB25B240920672BC9AE4CA28B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1.lean.txt",
+      "sha256": "40E3C3572D1C7B0E5BAC0B7F466BEBB3244EDF0DD5578C98FE5AF54FB46AB99F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1.log",
+      "sha256": "EF18912274242FC46C06C221202F54F15F4F5E3697811FDECF02AA2261D28143"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterScratchOwnership1267.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterScratchOwnership1267.lean.txt",
+      "sha256": "723AAF685FA48B69D4F131E21D6A175B677E037DE5ECF050F6700AF9D7C8E2D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterScratchOwnership1267.log",
+      "sha256": "982BA829B4024E1B7668DB551C10E849C08FAA50FAA825885C73E77E6C087FD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeWordCommutation1252a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeWordCommutation1252a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeWordCommutation1252a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeWordCommutation1252a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHomogeneousHeckeDiamond.lean.txt",
+      "sha256": "5418C2B4BCB0B91B6B0A8C15EC2CA280F81034034331F2C3E791BCE76FE08354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHomogeneousHeckeDiamond1243a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHomogeneousHeckeDiamond1243a.log",
+      "sha256": "E80CFDC50D25ABD4233E381B4075E5C30A7F56CBC757B4C89B35A67BD4747B57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHomogeneousHeckeDiamond1243b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHomogeneousHeckeDiamond1243b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity.lean.txt",
+      "sha256": "3E235C7A9A76CD06BF4970FAC3E4B178966F538BDFB24A89BF73B524D433B2EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253a.log",
+      "sha256": "0BFF1251B48FDB3FEFEF648D73B178DA942F650C4868BA68CDF3BFE52F3D4038"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253b.log",
+      "sha256": "64A4FF54B4DCFB84725E0EFD3A5ACF0408A171642EDF51CBAFB6C1D66EF7F9D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253c.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253c.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253c.log",
+      "sha256": "F9EEC478662A3124CA777884E22D677E1FA91996D532280B0CB0D0FEE3C376B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253d.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceInnerH1Identity1253d.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceInnerH1Identity1253d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerCoefficientValue.lean.txt",
+      "sha256": "6DC183BB8D87E405DD00CE389B2A582CDA3C2AA25C87CA87C22DEB4026F25DEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue1261a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerCoefficientValue1261a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerCoefficientValue1261a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerCoefficientValue1261a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerH1Trace.lean.txt",
+      "sha256": "19BDA5EA08DD81E438E5A32508AE3AC1B958F1F7C6D6AF75C555515590111A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerH1Trace1257a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerH1Trace1257a.log",
+      "sha256": "13F7B4782087F441AB992C5BE6D92CA924CB37B8BB4CDCFB0C4757BE2BFD477E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerH1Trace1257b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceNormalizerH1Trace1257b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceNormalizerH1Trace1257b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourcePrimitiveGammaOneHeckeDiamondCharacter.lean.txt",
+      "sha256": "5FB4A952682DD91BB8D029C9BE946D3ABE85DB2BC904CB540842B43FA7D2302F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourcePrimitiveGammaOneHeckeDiamondCharacter1266a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceTateDualQuadratic.lean.txt",
+      "sha256": "99AB2E5C6A5F71CBB85246141D3C7F5A6A2756BB06246561AD78B6EBB2104ED2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248a.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceTateDualQuadratic1248a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248a.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceTateDualQuadratic1248a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248b.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceTateDualQuadratic1248b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248b.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceTateDualQuadratic1248b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_diamond_transfer_1262.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/audit_diamond_transfer_1262.ps1",
+      "sha256": "818D465AFB007891F6B8007B5A1BB7E1AC7036BF729DEAE2658EA49F8E1323A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_frobenius_normalization_1250.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/audit_frobenius_normalization_1250.ps1",
+      "sha256": "39A6C1102E5FC3C9DE86024A3240061C7B65AE235846670AF6875EEE3E9376E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_hecke_diamond_character_1267.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/audit_hecke_diamond_character_1267.ps1",
+      "sha256": "EC0800C7842AC9CD6A2F77F670468DB147B3B48D94A26A1235AB30FAB3B880CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_tate_operators_1246a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_arithmetic_tate_operators_1246a.ps1",
+      "sha256": "C943CFE04902CAAC357D67EE160894821AB0E2AABFD6D7BB6C5A514F5636E348"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245a.ps1",
+      "sha256": "4A3687079962A7B7EAE3E566698706E917B9E414FF06499ED3212EF992B0280E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245b.ps1",
+      "sha256": "D71C5DCC2C337488584F5F5D67AFF2BC465C99990785A956291D3E31E91C8F6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245c.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245c.ps1",
+      "sha256": "BF1CA2C1ED25E2AA4A709E2FBF2A3B9809691159DB31E9F36CB3344800B1F2C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245d.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245d.ps1",
+      "sha256": "B084C5B2EBE31A8A08EB670CC6C4567A512A8B9322D6823BF9581126B4E502D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245e.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245e.ps1",
+      "sha256": "BB5BECD5BE6A4DBD576C926788EF0CE6FB29FE8D378DA541A24CD3CB38CACD69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245f.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245f.ps1",
+      "sha256": "958B9A778BEA0BE4CBC9FA619280BDB48832EB9839824CA7B9A8BB8A1978D118"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245g.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245g.ps1",
+      "sha256": "A8E24B0E1C95BF71FC02EA99C4EE4430F5B38A6E9D36339625D478EB6E2F8C45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_frobenius_normalization_1245h.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_frobenius_normalization_1245h.ps1",
+      "sha256": "FCFC5930D7726A0CB05DFC141EA53898046C5644F68F4021944E65989448E61F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247a.ps1",
+      "sha256": "83937EEBF5DBBF41A2BD732FA08A7BF584EA1E39376C96522548C473661643D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247b.ps1",
+      "sha256": "36241F83C8F97DA3C86C3E04180E0DE869A9C1666EE84AAA017CF79C0BE7B0B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247c.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247c.ps1",
+      "sha256": "1EF928730045A51206A0F5B1854089D2F6F5A26AC86CF941211ADC224478BA7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247d.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247d.ps1",
+      "sha256": "C0E3F95A34A2811AE7CF1AA86A35EDBB4994CF2EEA7C42F1E0E2DE3B69D6B56F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247e.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247e.ps1",
+      "sha256": "090337DC12AF1277237A59145F6B4C6E46ABD2B1EBC87F65547EA2D32E055967"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247f.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247f.ps1",
+      "sha256": "54B008BED230A0FF5A737C6EE34B847AF5D20C54AA81BF111E00CDC41E07C151"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247g.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247g.ps1",
+      "sha256": "E788B9870AE20472DA608BA72E3172FEBECFA78326870E3DC36E813BF54D74E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247h.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247h.ps1",
+      "sha256": "22D6B9A805B44E0F978ACDF49B89D72C2A5ED6B751FD424048C9D2A284D1495B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247i.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247i.ps1",
+      "sha256": "9B14DA2292985C98DA0865046D67086E78C0A481F20018D50F86BC200E25281C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_galois_hecke_1247j.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_binary_galois_hecke_1247j.ps1",
+      "sha256": "8B997C106946CC455F544AA5016685D2BB63A211927AFD2F68708568ED595E58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_coefficient_dual_action_1249a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_coefficient_dual_action_1249a.ps1",
+      "sha256": "72B43C88262AF70228385DAA75DB2741713B0716C0DD87F064FBB04E1E247D46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_coefficient_dual_action_1249b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_coefficient_dual_action_1249b.ps1",
+      "sha256": "3001528D87D642D77ADB3B4C859017EDC6CC03AB4248F7E1EFFCFF9F3F5240B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_range_1255a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_range_1255a.ps1",
+      "sha256": "7D7AC8D01FD9C32FDA9324A8C9FC978C3B44CFDAFF8F1B46C6A2BE463745519C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_subgroup_square_1258a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_subgroup_square_1258a.ps1",
+      "sha256": "22D56AB812BC4AA40E4B7B6B615FB763B0AE7D4E8EE5C847FBBB8863FC4F4677"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_subgroup_square_1258b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_subgroup_square_1258b.ps1",
+      "sha256": "47E7DB024373CC9DF3A07E5BB0065A6F0D74ED9B107F6DE534E13CF82BC99ACE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_subgroup_square_1258c.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_subgroup_square_1258c.ps1",
+      "sha256": "30B73C040FB7E255D7FF9622FD90F17AF82E6A85631B189F92C6FF718417AFDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_transfer_1259a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_transfer_1259a.ps1",
+      "sha256": "D79187630791A93A4C6EAD73E50D987BEC6EFA4BE4652822B9EA6AEDF32BA0C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_diamond_transfer_1259b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_diamond_transfer_1259b.ps1",
+      "sha256": "81339EEA9C258FC809C30269166FD69CC425D777F8AE1E7D214B938DD40D98D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_diamond_coefficient_1244a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_hecke_diamond_coefficient_1244a.ps1",
+      "sha256": "A81ADC12AA95528484B63FAF6318B02A9F418C3D790E30F24AC89D57DE281354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_diamond_coefficient_1244b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_gamma_one_hecke_diamond_coefficient_1244b.ps1",
+      "sha256": "D7397F89DEEE46A731B63EEBE0A6E2441492499885D30A880745FCAF0D028468"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_h1_composition_square_1260a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_h1_composition_square_1260a.ps1",
+      "sha256": "952C732F85293A37ACB2A4220A3FB910254A563156FA221577506D38893F2D00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_h1_trace_inner_1254a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_h1_trace_inner_1254a.ps1",
+      "sha256": "F5D7A79A1F9D48E505B01CA18182D782D840FE3980DBEC0A4AA7EDD51FCD3E8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_h1_trace_subgroup_equality_1256a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_h1_trace_subgroup_equality_1256a.ps1",
+      "sha256": "682A26F9BCEDA8D28C1FF9F9E7865FEF505A135BEF554E0D1C0217298CC7F5E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_hecke_diamond_descent_1265a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_hecke_diamond_descent_1265a.ps1",
+      "sha256": "60C0D463922A4453E7D4E6D409F34C8F7174A6F8BE2E7F5DDCEEBCAAEF4E15F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_hecke_diamond_words_1264a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_hecke_diamond_words_1264a.ps1",
+      "sha256": "692AB6029604FE05048A7E35B3F356C6262ACD9C8A2022678CAC35EF32661FE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_hecke_word_commutation_1252a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_hecke_word_commutation_1252a.ps1",
+      "sha256": "A11ED300F4016C6922BA8ECDB120A7CE2466D3A452A2E0DFC5AE93B6335977AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_homogeneous_hecke_diamond_1243a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_homogeneous_hecke_diamond_1243a.ps1",
+      "sha256": "F01EFF56A59A08E2E85AF018D9ED5D74722823563C9886C6E75448088FC61D3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_homogeneous_hecke_diamond_1243b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_homogeneous_hecke_diamond_1243b.ps1",
+      "sha256": "10AF06B6356B8F861594255A4FDF4EF3867AE585BFF0546990B3A73948199971"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_inner_h1_identity_1253a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_inner_h1_identity_1253a.ps1",
+      "sha256": "5B73BFA915A7C07462171D81FDBC9024BF146C48919DEA1348949356FEF332D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_inner_h1_identity_1253b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_inner_h1_identity_1253b.ps1",
+      "sha256": "1F6A2653EB2F3D7C3745162913E3C8482C96A22A5975AEF3A16F3AE3B8144471"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_inner_h1_identity_1253c.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_inner_h1_identity_1253c.ps1",
+      "sha256": "D92E9B655926AA64DA4A0D50875AE736D9692D86673226974EA343A8DE37954C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_inner_h1_identity_1253d.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_inner_h1_identity_1253d.ps1",
+      "sha256": "911A42363FC6B9DBE6545056373D1AB1A3C4D42193DFE4F801B034FD7F3A803F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_normalizer_coefficient_value_1261a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_normalizer_coefficient_value_1261a.ps1",
+      "sha256": "F48C5E59852080A11982D00F417B278A337EF0D493030943C9B4FA57F7026FDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_normalizer_h1_trace_1257a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_normalizer_h1_trace_1257a.ps1",
+      "sha256": "559B9B46F74F6CC63145D232BB5232B15AAE04F7FAFE78233E182518A91D5FF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_normalizer_h1_trace_1257b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_normalizer_h1_trace_1257b.ps1",
+      "sha256": "16BD087497BD14FDB84201EB64383FA8A27F3B6498C0D277CFBDBEEC3DCAAED7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_primitive_diamond_character_1266a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_primitive_diamond_character_1266a.ps1",
+      "sha256": "A6F2A73067EC188090A130EB3C5B1B8CBF60F739FDC9684D9CA9E1916C589872"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_tate_dual_quadratic_1248a.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_tate_dual_quadratic_1248a.ps1",
+      "sha256": "D08FF0E3919AF56550001AF5407A080B1C3B0795FB91705846A1F26B558536B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_tate_dual_quadratic_1248b.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/compile_tate_dual_quadratic_1248b.ps1",
+      "sha256": "1FFA5EEFA7AAC8D468EAF4DFFC8EAC96A59ED5E2F599416E4B17AB74B5C9B71D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1251-focus.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/consumers1251-focus.log",
+      "sha256": "BDC2620B9639BF5EA39B4A9EB3F61C310BB41315AD49EA16D6C968FB1AFFE8AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1251.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/consumers1251.txt",
+      "sha256": "F574230CE553E902680EF3E350ECD75A0C87E43B3A5233F549243FDC530DD0CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1267-focus.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/consumers1267-focus.log",
+      "sha256": "6796059F13A6318CE5ECA0ACD49E6ACF639086CD1572E59612184A70084566E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1267.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/consumers1267.txt",
+      "sha256": "AB766A863F86071CCF2D084762F4660D7EDB57F186A01FE264FD41BC0041291B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\create_character_audit_1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/create_character_audit_1267.py",
+      "sha256": "BA9C590CC0F3E7CAFDEAA8CCAC201A2A8EB13336EAF287318B3D65545E5EE885"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1251.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/docs1251.py",
+      "sha256": "DA4E0956498628429740A6C53153C3210CEA50434B28E60BF13B3C34912BDC60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/docs1267.py",
+      "sha256": "DBEA3984B98DAB63941AC7E160F6DE82252D464D8706CBF95F6640F327BEBF95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_followup_candidates_1251b.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/fetch_followup_candidates_1251b.py",
+      "sha256": "75B1AACDBECCB563A9A1BBF744AECEDB0A25668937030ED38ECA7F847A491606"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_followup_candidates_1251c.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/fetch_followup_candidates_1251c.py",
+      "sha256": "144AB73489D3185C6472B49F824C1661FC7DF7D4C7980B6E33526AE963365828"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_followup_reuse_1251.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/fetch_followup_reuse_1251.py",
+      "sha256": "9299950BF98F362D21242D6177B573A81F4313564A76278F5C4D89525F384108"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1251-console.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/foundation1251-console.log",
+      "sha256": "E496E8D7C36B5AF4845FACC51BB93A8B7435063CF96AB5E99B3AB3AFCE528B0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1267-console.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/foundation1267-console.log",
+      "sha256": "8997D7B8C2DEF3EB9258841998CD04F595E5C4DE850EC8C896A90B5D8AC0F468"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1267.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/math1267.txt",
+      "sha256": "12C51A572825DF3571EF3BC83FEF971259515C2B98755EA00C6869C2F497F183"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1251.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/modules1251.json",
+      "sha256": "3944EE2C78C4C0667D598766A8F714718871A1875A62CB8CA150BF279BF35168"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1267.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/modules1267.json",
+      "sha256": "76D6F066CDCAD05ABA6FB8BDCDA8A1BF38C4EC735BDADCD17C9D7BD55E27E8BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1251-console.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/paper1251-console.log",
+      "sha256": "DD801235B61A3F841F568A2AE148103011AA69F2247F421A27F81C2C716EE16C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1267-console.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/paper1267-console.log",
+      "sha256": "E2E917EBEDDE027C899C9907B05A67D46DD80D68C376919DBD898A9D41D2C3A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_additional_reuse_registration_1263b.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_additional_reuse_registration_1263b.py",
+      "sha256": "660C6617BB94EB30497D9DD9695A7D7106E83D1DF76D37BAFA8E37A2FFC45CED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_diamond_transfer_audit_1262.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_diamond_transfer_audit_1262.py",
+      "sha256": "16BADE468A4EF2E392D73BC15E98D6386B493620737361851B13075030EE7210"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_normalization_audit_1250.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_frobenius_normalization_audit_1250.py",
+      "sha256": "8A991063C01E057E947642E3E56C77E599D7AAB044E3D15781EED59151997EE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_hecke_diamond_character_audit_1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_hecke_diamond_character_audit_1267.py",
+      "sha256": "87F5C64402344BB68E7E33A8721C4028C2C9F263CC076A9A0487F9C8BDFC3C27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_hecke_diamond_descent_1265.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_hecke_diamond_descent_1265.py",
+      "sha256": "8DE1DCD65745946DDE405E8B881F93BD06CDD0265C6C706449267A94CE535C32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_diamond_character_1266.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_primitive_diamond_character_1266.py",
+      "sha256": "8DBB612AB9759616BF751FFD40E2AAB6699BFC747B1CDEDDDABE5A6AFAF9E5D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1251.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record1251.py",
+      "sha256": "24C3BF3BF5ED64CE6379CA20298DB84E16C1BEFF7864436DAAC5FED58FE5F704"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record1267.py",
+      "sha256": "774A50F033177CD63E14D64854406BBFD6C588086F99631D3109D8A9509CE3E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_diamond_transfer_1262.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record_diamond_transfer_1262.py",
+      "sha256": "19458A1ECBA6DD190436D5D11AE2F80806C8AA204FE5F4FE1850DA146DB0C4E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_frobenius_normalization_1250.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record_frobenius_normalization_1250.py",
+      "sha256": "B7747995BB28A49922961EC3833DC3245F159E876B7173DB4DF411EA175421BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_hecke_diamond_character_1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record_hecke_diamond_character_1267.py",
+      "sha256": "58AE570C9265135DBCE47E13A9F7942636BC11E5BD2D5C3F85F2EDFCEF9CE42E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1251.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/register1251.py",
+      "sha256": "F3BFCA82735D45A37EBBEC8710BE549224D46CCFDD8093BC8AD8810D3911DABA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1267.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/register1267.py",
+      "sha256": "AF6D0020F22C572F09351A5DBA60EDCCBF65E5D4F66EE38671FC28C6E8C31099"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register_additional_reuse_1263.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/register_additional_reuse_1263.py",
+      "sha256": "6901251AFBCFAACFC5AF7B8186B70297DAA396474D7FF2407990C2EE83F80034"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register_additional_reuse_1263b.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/register_additional_reuse_1263b.py",
+      "sha256": "D23D3471A39BF50C10115C92499B186C12E744D063308B3638C3EA2525B42543"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1251.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/registrations1251.json",
+      "sha256": "0182DEF1FC14E3C8CAD5A2116394C41D3E102AB5A1AD94F03957A77E80B61797"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1267.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/registrations1267.json",
+      "sha256": "067691B6471988A49429ED1F0EFA8D1A27A86C71D8951C4FAF7A42000A125ABB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1251.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/remaining1251.txt",
+      "sha256": "55C2E190428D977907C175C6F87F444864D3848BAC66F17C09DEBAD542CF71AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1267.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/remaining1267.txt",
+      "sha256": "A736AA4C9A539167467F7BFA1BB72AF00435F80F242AB9186BFEEF40477E968C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1251.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/section1251.txt",
+      "sha256": "0CA7F3F8B449D0BA01C7288E8398FD4AFDBFECE9A98DC6DD5DCC2096D7141DAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1267.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/section1267.txt",
+      "sha256": "E5F99C41B76667F31F5DFB230F5C56EB0A78DDB5777C5315AC070F8831E2C526"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-transfer-1-audit-config.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-diamond-transfer-1-audit-config.json",
+      "sha256": "20DFB4B099887F1E844905C6FB3A3BABEDC777E344007069D7765F4C1AC70E11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-transfer-1-reuse-review-20261028.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-diamond-transfer-1-reuse-review-20261028.json",
+      "sha256": "A08EDA51C586857F0BB098F80359CBC6C3DEC81D868117D9B93B05223FDE368D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-transfer-1-scratch-receipt.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-diamond-transfer-1-scratch-receipt.json",
+      "sha256": "951FAB13BC6D856AD1E24F9672859DCBE24635DE047C1680FED402F203A35DD2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-transfer-audit-route-1262.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-diamond-transfer-audit-route-1262.json",
+      "sha256": "C59B76B839D256710A1AA0F96E80372C23141584F92CF55711794AD1A73B0013"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-1-audit-config.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-normalization-1-audit-config.json",
+      "sha256": "A4641E2F4281307056184B56BC3947E587F5ED0B93263983B978C9FBCBF321AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-1-reuse-review-20261028.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-normalization-1-reuse-review-20261028.json",
+      "sha256": "5C5DFF3BF5C6B76C712704EF75BBDE82CBDE9AC460624D9C6D4D882B4E59C533"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-1-scratch-receipt.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-normalization-1-scratch-receipt.json",
+      "sha256": "66C74A6E560692ACA8206D17FCDAD617AAC4C9565A86C6BDCE805D31A9FB2957"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-audit-route-1250.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-normalization-audit-route-1250.json",
+      "sha256": "C73BFAC45DE89648B70FE57AE1735B712653938CBE4A889984B9D112F9277DBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-hecke-diamond-character-1-audit-config.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-hecke-diamond-character-1-audit-config.json",
+      "sha256": "E3D9DF818D018CD7A0C1E26DF66C2A0A7E9FAD8ACEC04DD110F24B5FFF4C679D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-hecke-diamond-character-1-reuse-review-20261028.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-hecke-diamond-character-1-reuse-review-20261028.json",
+      "sha256": "F63C7A19AEE3945359CF71F3B2212489C0EB258E89660A69B0EF158285444A78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-hecke-diamond-character-1-scratch-receipt.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-hecke-diamond-character-1-scratch-receipt.json",
+      "sha256": "234287D26314603BA5CF98454727CDCA506B573E8C49E4E92B3057368D0224B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-hecke-diamond-character-audit-route-1267.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-hecke-diamond-character-audit-route-1267.json",
+      "sha256": "E4C4973C8662FF38758E8D2048FA7AD894EB61867A4DF92DAE92F78F1D68912C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1251.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/status1251.txt",
+      "sha256": "BDAE42917058D993E456F0E66A29FE3563269A052378B360037EF2C2D0BBE65A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1267.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/status1267.txt",
+      "sha256": "2F79E975901F6D2EC0A7848A5130EE1C717DC517C846EFF7713444EC50C132A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245a\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245a/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "EFD6BABB0BF0D23E68E296AD5B0A6237F97BDB6C93850372AF4C0224A67F3F90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245b\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245b/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "B18D994A44C189F8C09F2D8F5232E5159B05E126935E5D5E4BC61EFAAA78031B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245c\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245c/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "92AAEA7096672F15A00E762171007BACFBFDAD907B667924D21E3DB161355576"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245d\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245d/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "55B1782A3826EF51F8F9FF65BA0A8ECF11F53A308EFB5D423658215291FEC4FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245e\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245e/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "80833647A272DEEEAAC5D2C60EFF709A599826C330D4A12280DA7F1FAF4A1413"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245f\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245f/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "5F4DF96488B07BBB8B7057841788D0D346AC1D339534063817AAE9D6D1548E1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-frobenius-normalization-1245g\\SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-frobenius-normalization-1245g/SourceGammaOneBinaryFrobeniusNormalization.lean.txt",
+      "sha256": "5BEEB54266E060C2F7F43ADBAE5FCC4AB87C77BFDC617749170BAA9AE6E498F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247a\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247a/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "15ABD8A5FAA3534312751EB80D5BCB32018F26444518188E5EC817C9A19BD7A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247b\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247b/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "4FD45712509BB594F6C82090A8CA908B29A3C024BCE6AF1ACD0CF302B8F9A40E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247c\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247c/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "2FA7BAC6B90991CEF6C326A37C560964D955C4696CACE79A053C4AE3317DBD75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247d\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247d/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "61079CBB773EC560FA64D6FAA5B7C3FC0363B7B6CE9D347DBB7A1A2D7759F65B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247e\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247e/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "AB78A88A2C4E965566E55E7E971F868AD9BA3FE50FFE8A985D9D1AB7A7D5A3D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247f\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247f/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "DF3D2614D05BF2274CD246E0B298735A5710F06827E77BA76983AD3353500011"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247g\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247g/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "E0B48D2FE20A850A1DE3D413D4DD5E5C4CB2C7F224448FE38811B6E210C079AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247h\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247h/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "55FDDD0C682C08989E961789DEEAD9F351E4A6FD632C600DC4FDE602B8F52907"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-galois-hecke-1247i\\SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/binary-galois-hecke-1247i/SourceGammaOneBinaryGaloisHecke.lean.txt",
+      "sha256": "02CA9FC0CEF7A01DDAA327E7CEE84CFF321C64CBFD20493EF6CB2856DB52E4CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient-dual-action-1249a\\SourceCoefficientDualAction.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/coefficient-dual-action-1249a/SourceCoefficientDualAction.lean.txt",
+      "sha256": "92101E4FC518D84CF4F45552C44EC84136952C62B3522E256590F164E94FB834"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\candidate-fetch-manifest-1251b.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/candidate-fetch-manifest-1251b.json",
+      "sha256": "CD192B4D6AD7023199378A5CC0B9A57BC28BFBC818EB50D061918588A6BC6833"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\candidate-fetch-manifest-1251c.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/candidate-fetch-manifest-1251c.json",
+      "sha256": "9BF340F72AF318C1678085C19B2A6B313FB09A4D837265BF1BAA828FC6A230ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\candidates.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/candidates.json",
+      "sha256": "6B4EB07CF0286FE30ABB8819D60EC8D8B5C7C0F79CF4574CB372DB49CA96821C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\commit.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/commit.json",
+      "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\fetch-manifest.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/fetch-manifest.json",
+      "sha256": "F0E08FEBE820DA031B0576D31AB5BBEAD7D6635C4F9CF683915095A828ACB203"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\lake-manifest.json.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/lake-manifest.json.txt",
+      "sha256": "C034EFD033E3F0F3BBBA882369D757A62EFE728E499FAED4F3D484FD7855338B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\lean-toolchain.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\LICENSE.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\NormalizerDelta\\DefsXN.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/NormalizerDelta/DefsXN.lean.txt",
+      "sha256": "2431118DE0CD3DE24F25974F6E1C5E43C3EA1D3C9527CA83853B502F7CB4E872"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\NormalizerDelta\\ProofsXN.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/NormalizerDelta/ProofsXN.lean.txt",
+      "sha256": "D2A7A9999D97302880ED7308F6B2ADD643812ED01456F1CD43867EC95A9745DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\NormalizerDelta\\StatementsXN.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/NormalizerDelta/StatementsXN.lean.txt",
+      "sha256": "FB94BB5445316EA1E688E3716E48F7FCC87BC9BB8454B34BCE98E5809854A817"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\NormalizerDelta\\XNOrder.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/NormalizerDelta/XNOrder.lean.txt",
+      "sha256": "E4DDFB9142C14576222DA546DAC1A450829E5B7C62CC8DF00DEC607D5959393F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\NormalizerLean\\Defs.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/NormalizerLean/Defs.lean.txt",
+      "sha256": "0635B5F0AEBABC0649E161BCE6672D3B77890D8A4D2083A3356F3C31DD1A75D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\README.md.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/README.md.txt",
+      "sha256": "3E9A677FB1F4AB734E9ED46C7DDE31EEB9A141816E5C395301F6A05F21C6EF26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\repository.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/repository.json",
+      "sha256": "76DA13AF1D586AA284DA9BA923209C645C6BA1DA9D4790BBA0D44784C0D1AE54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\F-Najman--normalizer-lean\\tree.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/F-Najman--normalizer-lean/tree.json",
+      "sha256": "D5A911F4C55A1168BEFF92E0B02CD71DD7A0920A7B7FD6C24029949A47F43F43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\candidate-fetch-manifest-1251c.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/candidate-fetch-manifest-1251c.json",
+      "sha256": "1742217DF7CBA38767250EE15D20701F86A4AC3934AAB85716AF45A55C06D13F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\candidates.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/candidates.json",
+      "sha256": "7DBF49C799A1EE835ED14C6408F77005442D286EFEEBD2331BF186D7814998DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\commit.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/commit.json",
+      "sha256": "2CAFE10A2F39942D2DB998F6C01722297402E8E34630AFEBAB2C2E908D3B243C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\EML\\EichlerIntegral.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/EML/EichlerIntegral.lean.txt",
+      "sha256": "3AAD1204B86F85FFA05D00B18BE0193B088D999CB59F31E63227848985CDBB3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\EML\\HeckeAction.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/EML/HeckeAction.lean.txt",
+      "sha256": "4EA286847F11538F57F11331C49F0FA401D137A6F7EAD072E6E2F6A53C77BA11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\fetch-manifest.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/fetch-manifest.json",
+      "sha256": "C0474562BC2F296FEEF47258BE075370515A23838491A7F95F89FD3DAFA091ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\lake-manifest.json.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/lake-manifest.json.txt",
+      "sha256": "D0DE033FBA2896B16C28B7DEAE43C2B23266D2383C61034FBE9964E5FDA36ADD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\lean-toolchain.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/lean-toolchain.txt",
+      "sha256": "651C8ACCB402B0C071CD336E9D3DC0A55516B1BFB434DDC4801F14936785B1D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\README.md.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/README.md.txt",
+      "sha256": "D35093B8CB87427B06410F5B71A5DDC642335D00D7225B07BA16F1369BA936AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\repository.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/repository.json",
+      "sha256": "3278C1ADCC8436FFAF3D5B284A4AAF70FF1EFAE37C0F3DB98F030320A26C0FE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\followup-reuse-1251\\tomdif--eml-lean\\tree.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/followup-reuse-1251/tomdif--eml-lean/tree.json",
+      "sha256": "E462227488154433A1380B9464366E2A4C4EA4899FC8A0FBDD544802EA8C30F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-subgroup-square-1258a\\SourceGammaOneDiamondSubgroupSquare.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/gamma-one-diamond-subgroup-square-1258a/SourceGammaOneDiamondSubgroupSquare.lean.txt",
+      "sha256": "E9D332EC18D8CFFFEA9B4EFF4F5D2AA9148016E2B28F23334C16E7F2CEC45E2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-subgroup-square-1258b\\SourceGammaOneDiamondSubgroupSquare.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/gamma-one-diamond-subgroup-square-1258b/SourceGammaOneDiamondSubgroupSquare.lean.txt",
+      "sha256": "31970B078829FC139BA740125C6A290F3C58647D58A7F501CC10BF15B70C54EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-transfer-1259a\\SourceGammaOneDiamondTransfer.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/gamma-one-diamond-transfer-1259a/SourceGammaOneDiamondTransfer.lean.txt",
+      "sha256": "325C356E63E13BE6E64EE8507E378AA1E92070D6E746FC4E4D098C2345313B89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-diamond-coefficient-1244a\\SourceGammaOneHeckeDiamondCoefficient.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/gamma-one-hecke-diamond-coefficient-1244a/SourceGammaOneHeckeDiamondCoefficient.lean.txt",
+      "sha256": "A2EE0AD1B637636D3677193395BDCA024313C2090D8B2F950F0C2A3E4021B2FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\homogeneous-hecke-diamond-1243a\\SourceHomogeneousHeckeDiamond.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/homogeneous-hecke-diamond-1243a/SourceHomogeneousHeckeDiamond.lean.txt",
+      "sha256": "9EF734E878D557971519B940E63A4FD122D48EAD5A0D474C7904A37834B68A1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inner-h1-identity-1253a\\SourceInnerH1Identity.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/inner-h1-identity-1253a/SourceInnerH1Identity.lean.txt",
+      "sha256": "D3F9655D8F71D3AE6ECDB9B0BE36F0740992D5EC2E16FCBEEB7D79DEE767A360"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inner-h1-identity-1253b\\SourceInnerH1Identity.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/inner-h1-identity-1253b/SourceInnerH1Identity.lean.txt",
+      "sha256": "1BD7967999E0A1612DC2D8BADA1DD1C5BD4164F336A7D9D44FD7199A4B09ECF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inner-h1-identity-1253c\\SourceInnerH1Identity.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/inner-h1-identity-1253c/SourceInnerH1Identity.lean.txt",
+      "sha256": "CDDE33D66EE05059FFE9D136AB271CB1627A813400CCD221F57EC48F0469C3BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normalizer-h1-trace-1257a\\SourceNormalizerH1Trace.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/normalizer-h1-trace-1257a/SourceNormalizerH1Trace.lean.txt",
+      "sha256": "2B984E5200C8D9399FEF1B2E9955CF8515D31100F37DCD050FEBE4234AC12318"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\tate-dual-quadratic-1248a\\SourceTateDualQuadratic.lean.txt",
+      "path": "Tools/frobenius-diamond-20261028-1267/tate-dual-quadratic-1248a/SourceTateDualQuadratic.lean.txt",
+      "sha256": "36AE9822C4B4A49A509B400F5795E06CBD3B80553482FDCADABE45774EE084E2"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+import Mathlib.LinearAlgebra.BilinearMap
+import Mathlib.RepresentationTheory.Basic
+
+/-! DUB-17/18 -> finite Gamma1 arithmetic Hecke characters -> stability
+of the actual coefficient-valued Tate dual. Reuse Mathlib lcomp with its
+codomain scalar ring, retaining the contragredient inverse convention.
+-/
+namespace Dubon2026
+noncomputable section
+variable {R S T V G : Type*} [CommRing R] [CommRing S] [Algebra R S]
+  [AddCommGroup T] [Module R T] [AddCommGroup V]
+  [Module R V] [Module S V] [IsScalarTower R S V] [Group G]
+
+/-- The original precomposition action with scalars on its value module. -/
+def sourceCoefficientDualAction (ρ : G →* Module.End R T) :
+    G →* Module.End S (T →ₗ[R] V) where
+  toFun σ := LinearMap.lcomp S V (ρ σ⁻¹)
+  map_one' := by
+    apply LinearMap.ext
+    intro φ
+    apply LinearMap.ext
+    intro x
+    change φ (ρ (1⁻¹) x) = φ x
+    rw [inv_one, map_one]
+    rfl
+  map_mul' σ τ := by
+    apply LinearMap.ext
+    intro φ
+    apply LinearMap.ext
+    intro x
+    change φ (ρ ((σ * τ)⁻¹) x) = φ (ρ τ⁻¹ (ρ σ⁻¹ x))
+    rw [mul_inv_rev, map_mul]
+    rfl
+
+theorem sourceCoefficientDualAction_operator (ρ : G →* Module.End R T)
+    (σ : G) (b : Module.End S V) (H : Module.End R T)
+    (hcomm : Commute (ρ σ⁻¹) H) (φ : T →ₗ[R] V) :
+    sourceCoefficientDualAction (S := S) ρ σ ((b.restrictScalars R).comp (φ.comp H)) =
+      (b.restrictScalars R).comp ((sourceCoefficientDualAction (S := S) ρ σ φ).comp H) := by
+  apply LinearMap.ext
+  intro x
+  exact congrArg (fun z => b (φ z)) (LinearMap.congr_fun hcomm x).symm
+
+end
+end Dubon2026

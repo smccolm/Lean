@@ -1,0 +1,54 @@
+import SourceBinaryParabolicChange
+import SourceGammaOneBinaryParabolicH1
+import Dubon2026.SourceGammaOneBinaryRestriction
+
+/-! DUB17/18 -> original all-weight association -> original parabolic
+finite character. The literal diagonal map preserves trace. Its proved
+triviality on the original finite binary coefficients turns local
+coboundaries into zero. This proves the actual reduction/restriction
+entry into the Tate comparison, without asserting nonvanishing or
+surjectivity of restriction or descent of the original Hecke character. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+
+omit [NeZero Q] in
+theorem sourceGammaOneDiagonalHom_trace (γ : Gamma1 (Q * N ^ 2)) :
+    (sourceGammaOneDiagonalHom Q N γ).val.val.trace = γ.val.val.trace := by
+  rw [Matrix.trace_fin_two, Matrix.trace_fin_two]
+  rfl
+
+theorem sourceGammaOneBinaryRestrictionCocycles_parabolic
+    {c : cocycles₁ (sourceBinaryCoefficientRep (ZMod N) Q w)}
+    (hc : c ∈ sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep (ZMod N) Q w))
+    (γ : Gamma1 (Q * N ^ 2)) (hγ : γ.val.val.trace ^ 2 = 4) :
+    sourceGammaOneBinaryRestrictionCocycles Q N w c γ = 0 := by
+  obtain ⟨v, hv⟩ := hc (sourceGammaOneDiagonalHom Q N γ)
+    (by rw [sourceGammaOneDiagonalHom_trace]; exact hγ)
+  rw [sourceGammaOneBinaryRestrictionCocycles_apply, hv,
+    sourceGammaOneDiagonalHom_binary_trivial]
+  exact sub_self v
+
+theorem sourceGammaOneBinaryRestrictionH1_parabolic
+    {x : H1 (sourceBinaryCoefficientRep (ZMod N) Q w)}
+    (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep (ZMod N) Q w)) :
+    sourceGammaOneBinaryRestrictionH1 Q N w x ∈
+      SourceFunctionField.GammaOne.binaryParabolicH1 Q N w := by
+  obtain ⟨c, hc, rfl⟩ := hx
+  rw [sourceGammaOneBinaryRestrictionH1_cocycle]
+  intro γ hγ
+  rw [H1IsoOfIsTrivial_H1π_apply_apply]
+  exact sourceGammaOneBinaryRestrictionCocycles_parabolic Q N w hc γ hγ
+
+theorem sourceIntegralBinaryParabolic_gammaOne_reduction
+    {x : H1 (sourceBinaryCoefficientRep ℤ Q w)}
+    (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceGammaOneBinaryRestrictionH1 Q N w
+      (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x) ∈
+        SourceFunctionField.GammaOne.binaryParabolicH1 Q N w :=
+  sourceGammaOneBinaryRestrictionH1_parabolic Q N w
+    (sourceBinaryH1Change_parabolic (Int.castRingHom (ZMod N)) Q w hx)
+
+end
+end Dubon2026

@@ -1,0 +1,126 @@
+
+/-- Exact original-object consumer of `adelicEveryFiniteFullTensorFamily_gram`. -/
+theorem actual_full_split_adelicEveryFiniteFullTensorFamily_gram_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ (adelicFiniteFullTensorFamily F.toCuspForm v a) (adelicFiniteFullTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteFullMixedFamily F.toCuspForm v hv a) (adelicFiniteFullMixedFamily F.toCuspForm v hv b) :=
+  adelicEveryFiniteFullTensorFamily_gram F v hv hk a b
+
+/-- Exact original-object consumer of `adelicBadPlaceFamily_surjective_bad`. -/
+theorem actual_full_split_adelicBadPlaceFamily_surjective_bad_source  (N : ℕ) [NeZero N] (v : HeightOneSpectrum ℤ)
+    (hv : ¬ IsGoodAdelicPlace N v) : ∃ i, adelicBadPlaceFamily N i = v :=
+  adelicBadPlaceFamily_surjective_bad N v hv
+
+/-- Exact original-object consumer of `adelicFiniteRealJointHom_apply`. -/
+theorem actual_full_split_adelicFiniteRealJointHom_apply_source  {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ)
+    (hv : Function.Injective v)
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ) :
+    adelicFiniteRealJointHom v hv a = adelicFinitePlaceProduct v hv a.1 * adelicRealGL2Embedding a.2 :=
+  adelicFiniteRealJointHom_apply v hv a
+
+/-- Exact original-object consumer of `adelicBadRealJointHom_reconstruct`. -/
+theorem actual_full_split_adelicBadRealJointHom_reconstruct_source (N : ℕ) [NeZero N] (b : adelicRestrictedBaseGroup N) :
+    adelicBadRealJointHom N
+      (adelicFinitePlaceEvaluation (adelicBadPlaceFamily N) b.val, (rationalAdelicGL2RealFiniteEquiv b.val).1) = b.val :=
+  adelicBadRealJointHom_reconstruct N b
+
+/-- Exact original-object consumer of `adelicFiniteRealTensorFamily_gram`. -/
+theorem actual_full_split_adelicFiniteRealTensorFamily_gram_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ) :
+    inner ℂ (adelicFiniteRealTensorFamily F.toCuspForm v a) (adelicFiniteRealTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteRealMixedFamily F.toCuspForm v hv a) (adelicFiniteRealMixedFamily F.toCuspForm v hv b) :=
+  adelicFiniteRealTensorFamily_gram v F hv hk a b
+
+/-- Exact original-object consumer of `adelicBadRealTensorBaseEquiv_family`. -/
+theorem actual_full_split_adelicBadRealTensorBaseEquiv_family_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (a : AdelicBadLocalTuple N × GeneralLinearGroup (Fin 2) ℝ) :
+    adelicBadRealTensorBaseEquiv F hk (adelicFiniteRealTensorFamily F.toCuspForm (adelicBadPlaceFamily N) a) =
+      adelicRestrictedBaseOrbit F.toCuspForm (adelicBadRealBaseEquiv N a) :=
+  adelicBadRealTensorBaseEquiv_family F hk a
+
+/-- Exact original-object consumer of `adelicFiniteRealTensorIsometry_intertwines`. -/
+theorem actual_full_split_adelicFiniteRealTensorIsometry_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hk : 0 < k)
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × GeneralLinearGroup (Fin 2) ℝ)
+    (x : AdelicFiniteRealTensor F.toCuspForm v) :
+    adelicFiniteRealTensorIsometry v F hv hk (adelicFiniteRealTensorRepresentation F.toCuspForm v b x) =
+      adelicFiniteRealJointRepresentation F.toCuspForm v hv b (adelicFiniteRealTensorIsometry v F hv hk x) :=
+  adelicFiniteRealTensorIsometry_intertwines v F hv hk b x
+
+/-- Exact original-object consumer of `adelicBadRealTensorBaseEquiv_intertwines`. -/
+theorem actual_full_split_adelicBadRealTensorBaseEquiv_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (a : AdelicBadLocalTuple N × GeneralLinearGroup (Fin 2) ℝ)
+    (x : AdelicFiniteRealTensor F.toCuspForm (adelicBadPlaceFamily N)) :
+    adelicBadRealTensorBaseEquiv F hk
+      (adelicFiniteRealTensorRepresentation F.toCuspForm (adelicBadPlaceFamily N) a x) =
+      adelicRestrictedBaseCoreRepresentation F.toCuspForm (adelicBadRealBaseEquiv N a)
+        (adelicBadRealTensorBaseEquiv F hk x) :=
+  adelicBadRealTensorBaseEquiv_intertwines F hk a x
+
+/-- Exact original-object consumer of `adelicSplitStageEquiv_step`. -/
+theorem actual_full_split_adelicSplitStageEquiv_step_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n : ℕ)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageEquiv F hk (n + 1)
+      (adelicSplitStageStep F.toCuspForm (primitiveCuspForm_ne_zero F) n x) =
+      adelicRestrictedStageStep F.toCuspForm (primitiveCuspForm_ne_zero F) n
+        (adelicSplitStageEquiv F hk n x) :=
+  adelicSplitStageEquiv_step F hk n x
+
+/-- Exact original-object consumer of `adelicSplitAlgebraicTensorIsometry_mem_range_iff`. -/
+theorem actual_full_split_adelicSplitAlgebraicTensorIsometry_mem_range_iff_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (y : AdelicCyclicHilbert F.toCuspForm) :
+    y ∈ (adelicSplitAlgebraicTensorIsometry F hk).toLinearMap.range ↔
+      ∃ n x, adelicSplitStageIsometry F hk n x = y :=
+  adelicSplitAlgebraicTensorIsometry_mem_range_iff F hk y
+
+/-- Exact original-object consumer of `adelicSplitStageIsometry_covers_original_orbit`. -/
+theorem actual_full_split_adelicSplitStageIsometry_covers_original_orbit_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) :
+    ∃ n x, adelicSplitStageIsometry F hk n x =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicCyclicUnitReference F.toCuspForm) :=
+  adelicSplitStageIsometry_covers_original_orbit F hk a
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorIsometry_range`. -/
+theorem actual_full_split_adelicSplitHilbertTensorIsometry_range_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) :
+    (adelicSplitHilbertTensorIsometry F hk).toLinearMap.range = ⊤ :=
+  adelicSplitHilbertTensorIsometry_range F hk
+
+/-- Exact original-object consumer of `adelicSplitStageIsometry_map`. -/
+theorem actual_full_split_adelicSplitStageIsometry_map_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n m : ℕ) (h : n ≤ m)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageIsometry F hk m
+      (adelicSplitStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicSplitStageIsometry F hk n x :=
+  adelicSplitStageIsometry_map F hk n m h x
+
+/-- Exact original-object consumer of `adelicSplitStageFullOperator_intertwines`. -/
+theorem actual_full_split_adelicSplitStageFullOperator_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (n : ℕ) (a : RationalAdelicGL2)
+    (ha : ∀ w, IsGoodAdelicPlace N w → (∀ i : Fin n, w ≠ goodAdelicPlaceInitial N n i) →
+      adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w)
+    (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitStageIsometry F hk n (adelicSplitStageFullOperator F n a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicSplitStageIsometry F hk n x) :=
+  adelicSplitStageFullOperator_intertwines F hk n a ha x
+
+/-- Exact original-object consumer of `adelicSplitActionOnStage_compatible`. -/
+theorem actual_full_split_adelicSplitActionOnStage_compatible_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2)
+    (n m : ℕ) (h : n ≤ m) (x : adelicSplitStage F.toCuspForm n) :
+    adelicSplitActionOnStage F a m
+      (adelicSplitStageMap F.toCuspForm (primitiveCuspForm_ne_zero F) n m h x) =
+      adelicSplitActionOnStage F a n x :=
+  adelicSplitActionOnStage_compatible F hk a n m h x
+
+/-- Exact original-object consumer of `adelicSplitAlgebraicRepresentation_norm`. -/
+theorem actual_full_split_adelicSplitAlgebraicRepresentation_norm_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) (x : AdelicSplitAlgebraicTensor F) :
+    ‖adelicSplitAlgebraicRepresentation F hk a x‖ = ‖x‖ :=
+  adelicSplitAlgebraicRepresentation_norm F hk a x
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorEquiv_intertwines`. -/
+theorem actual_full_split_adelicSplitHilbertTensorEquiv_intertwines_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (a : RationalAdelicGL2) (x : AdelicSplitHilbertTensor F) :
+    adelicSplitHilbertTensorEquiv F hk (adelicSplitHilbertTensorRepresentation F hk a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicSplitHilbertTensorEquiv F hk x) :=
+  adelicSplitHilbertTensorEquiv_intertwines F hk a x
+
+/-- Exact original-object consumer of `adelicSplitHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_full_split_adelicSplitHilbertTensorRepresentation_stronglyContinuous_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (x : AdelicSplitHilbertTensor F) :
+    Continuous (fun a => adelicSplitHilbertTensorRepresentation F hk a x) :=
+  adelicSplitHilbertTensorRepresentation_stronglyContinuous F hk x
+

@@ -1,0 +1,74 @@
+import Dubon2026.SourceGammaOneRealPeriodH1Hecke
+import Dubon2026.SourceGammaOneRealParabolicH1
+import Dubon2026.SourceGammaOneRealParabolicHecke
+import Dubon2026.SourceGammaOneFinitePeriodLattice
+import Dubon2026.SourceGammaOneComplexTatePeriods
+import Dubon2026.SourceGammaOnePeriodTateHecke
+import Dubon2026.SourceGammaOneComplexTateHecke
+import Dubon2026.SourceGammaOneComplexCoefficientMap
+import Dubon2026.SourceGammaOneComplexFieldExtension
+import Dubon2026.SourceGammaOneComplexFieldIndependence
+import Dubon2026.SourceGammaOneComplexSpanSeparation
+import Dubon2026.SourceGammaOneConstantFieldValuationExtension
+import Dubon2026.SourceGammaOneConstantFieldPlaces
+import Dubon2026.SourceGammaOneExtendedPlaceMap
+import Dubon2026.SourceGammaOneDivisorConorm
+import Dubon2026.SourceGammaOneComplexPicardMap
+import Dubon2026.SourceGammaOneComplexTorsionFinite
+import Dubon2026.SourceGammaOneDegreeBaseChange
+import Dubon2026.SourceGammaOneNewCoordinatePlaces
+import Dubon2026.SourceGammaOneComplexCoordinateBasis
+import Dubon2026.SourceGammaOneComplexCoordinateTrace
+import Dubon2026.SourceGammaOneCoordinateDescent
+import Dubon2026.SourceGammaOneComplexSpanDescent
+import Dubon2026.SourceGammaOnePrincipalDescent
+import Dubon2026.SourceGammaOneComplexPicardInjectivity
+import Dubon2026.SourceGammaOneComplexConstantAutomorphisms
+import Dubon2026.SourceGammaOneComplexTranslations
+import Dubon2026.SourceGammaOneOffImageValues
+import Dubon2026.SourceGammaOneTranslationOrbits
+import Dubon2026.SourceGammaOneReducedRiemannRochSpace
+import Dubon2026.SourceGammaOnePrincipalDivisors
+import Dubon2026.SourceGammaOnePrincipalDivisorIdentities
+import Dubon2026.SourceGammaOneFiniteTorsionAction
+import Dubon2026.SourceGammaOneReducedDivisorInvariance
+import Dubon2026.SourceGammaOneFixedReducedDivisor
+import Dubon2026.SourceGammaOneInvariantSupport
+import Dubon2026.SourceGammaOneTorsionDivisorDescent
+import Dubon2026.SourceGammaOneTorsionComparison
+import Dubon2026.SourceGammaOneTateComparison
+import Dubon2026.SourceGammaOneArithmeticTatePeriods
+import Dubon2026.SourceGammaOneHeckeConstantField
+import Dubon2026.SourceGammaOneHeckeSpanSeparation
+import Dubon2026.SourceGammaOneHeckeValuationExtension
+import Dubon2026.SourceGammaOneHeckeConstantPlaces
+import Dubon2026.SourceGammaOneHeckeConorm
+import Dubon2026.SourceGammaOneHeckeComplexPlaces
+import Dubon2026.SourceGammaOneHeckeComplexDivisors
+import Dubon2026.SourceGammaOneHeckeComplexPicard
+import Dubon2026.SourceGammaOneArithmeticTateHecke
+import Dubon2026.SourceGammaOneIntegralCharacterFactor
+import Dubon2026.SourceGammaOneFiniteParabolicCharacters
+import Dubon2026.SourceGammaOneFiniteParabolicH1
+import Dubon2026.SourceGammaOneFiniteParabolicHecke
+import Dubon2026.SourceGammaOneArithmeticPeriodInclusion
+import Dubon2026.SourceGammaOneArithmeticTateFiniteH1
+import Dubon2026.SourceGammaOneArithmeticTateFiniteHecke
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneRealPeriodH1Hecke, `Dubon2026.SourceGammaOneRealParabolicH1, `Dubon2026.SourceGammaOneRealParabolicHecke, `Dubon2026.SourceGammaOneFinitePeriodLattice, `Dubon2026.SourceGammaOneComplexTatePeriods, `Dubon2026.SourceGammaOnePeriodTateHecke, `Dubon2026.SourceGammaOneComplexTateHecke, `Dubon2026.SourceGammaOneComplexCoefficientMap, `Dubon2026.SourceGammaOneComplexFieldExtension, `Dubon2026.SourceGammaOneComplexFieldIndependence, `Dubon2026.SourceGammaOneComplexSpanSeparation, `Dubon2026.SourceGammaOneConstantFieldValuationExtension, `Dubon2026.SourceGammaOneConstantFieldPlaces, `Dubon2026.SourceGammaOneExtendedPlaceMap, `Dubon2026.SourceGammaOneDivisorConorm, `Dubon2026.SourceGammaOneComplexPicardMap, `Dubon2026.SourceGammaOneComplexTorsionFinite, `Dubon2026.SourceGammaOneDegreeBaseChange, `Dubon2026.SourceGammaOneNewCoordinatePlaces, `Dubon2026.SourceGammaOneComplexCoordinateBasis, `Dubon2026.SourceGammaOneComplexCoordinateTrace, `Dubon2026.SourceGammaOneCoordinateDescent, `Dubon2026.SourceGammaOneComplexSpanDescent, `Dubon2026.SourceGammaOnePrincipalDescent, `Dubon2026.SourceGammaOneComplexPicardInjectivity, `Dubon2026.SourceGammaOneComplexConstantAutomorphisms, `Dubon2026.SourceGammaOneComplexTranslations, `Dubon2026.SourceGammaOneOffImageValues, `Dubon2026.SourceGammaOneTranslationOrbits, `Dubon2026.SourceGammaOneReducedRiemannRochSpace, `Dubon2026.SourceGammaOnePrincipalDivisors, `Dubon2026.SourceGammaOnePrincipalDivisorIdentities, `Dubon2026.SourceGammaOneFiniteTorsionAction, `Dubon2026.SourceGammaOneReducedDivisorInvariance, `Dubon2026.SourceGammaOneFixedReducedDivisor, `Dubon2026.SourceGammaOneInvariantSupport, `Dubon2026.SourceGammaOneTorsionDivisorDescent, `Dubon2026.SourceGammaOneTorsionComparison, `Dubon2026.SourceGammaOneTateComparison, `Dubon2026.SourceGammaOneArithmeticTatePeriods, `Dubon2026.SourceGammaOneHeckeConstantField, `Dubon2026.SourceGammaOneHeckeSpanSeparation, `Dubon2026.SourceGammaOneHeckeValuationExtension, `Dubon2026.SourceGammaOneHeckeConstantPlaces, `Dubon2026.SourceGammaOneHeckeConorm, `Dubon2026.SourceGammaOneHeckeComplexPlaces, `Dubon2026.SourceGammaOneHeckeComplexDivisors, `Dubon2026.SourceGammaOneHeckeComplexPicard, `Dubon2026.SourceGammaOneArithmeticTateHecke, `Dubon2026.SourceGammaOneIntegralCharacterFactor, `Dubon2026.SourceGammaOneFiniteParabolicCharacters, `Dubon2026.SourceGammaOneFiniteParabolicH1, `Dubon2026.SourceGammaOneFiniteParabolicHecke, `Dubon2026.SourceGammaOneArithmeticPeriodInclusion, `Dubon2026.SourceGammaOneArithmeticTateFiniteH1, `Dubon2026.SourceGammaOneArithmeticTateFiniteHecke]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

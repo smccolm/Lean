@@ -1,0 +1,102 @@
+{
+  "modules": [
+    "SourceHomogeneousHeckeDiamond",
+    "SourceGammaOneHeckeDiamondCoefficient",
+    "SourceGammaOneArithmeticTateOperators",
+    "SourceTateDualQuadratic",
+    "SourceGammaOneBinaryFrobeniusNormalization",
+    "SourceCoefficientDualAction",
+    "SourceGammaOneBinaryGaloisHecke"
+  ],
+  "theorems": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "queries": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "roots": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "proofEdges": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep",
+    "Dubon2026.binaryHomogeneousMonomialBasis_diagonal_ring",
+    "Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_arithmetic",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois",
+    "Dubon2026.TateModule.mapEnd",
+    "LinearMap.lcomp"
+  ],
+  "localModules": [
+    "SourceHomogeneousHeckeDiamond",
+    "SourceGammaOneHeckeDiamondCoefficient",
+    "SourceGammaOneArithmeticTateOperators",
+    "SourceTateDualQuadratic",
+    "SourceGammaOneBinaryFrobeniusNormalization",
+    "SourceCoefficientDualAction",
+    "SourceGammaOneBinaryGaloisHecke"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceHomogeneousHeckeDiamond": "SourceHomogeneousHeckeDiamond1243b",
+    "SourceGammaOneHeckeDiamondCoefficient": "SourceGammaOneHeckeDiamondCoefficient1244b",
+    "SourceGammaOneArithmeticTateOperators": "SourceGammaOneArithmeticTateOperators1246a",
+    "SourceTateDualQuadratic": "SourceTateDualQuadratic1248b",
+    "SourceGammaOneBinaryFrobeniusNormalization": "SourceGammaOneBinaryFrobeniusNormalization1245h",
+    "SourceCoefficientDualAction": "SourceCoefficientDualAction1249b",
+    "SourceGammaOneBinaryGaloisHecke": "SourceGammaOneBinaryGaloisHecke1247j"
+  }
+}

@@ -1,0 +1,27 @@
+import SourceGammaOneDiamondPeriodInclusion
+import SourceGammaOneBinaryDiamondTateH1
+import SourceCyclotomicDiamondCovariance
+import SourceRationalDiamondFraction
+import SourceRationalCuspDiamondImage
+import SourceRationalModularCuspQuotient
+import SourceRationalDiamondQuotientGerm
+import SourceRationalDiamondCoefficients
+import SourceGammaOneDiamondRationalGenerators
+import SourceGammaOneDiamondComplexArithmetic
+import SourceGammaOneArithmeticDiamondGenerators
+import SourceGammaOneArithmeticDiamondGalois
+import SourceGammaOneDiamondGaloisPicard
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneDiamondPeriodInclusion, `SourceGammaOneBinaryDiamondTateH1, `SourceCyclotomicDiamondCovariance, `SourceRationalDiamondFraction, `SourceRationalCuspDiamondImage, `SourceRationalModularCuspQuotient, `SourceRationalDiamondQuotientGerm, `SourceRationalDiamondCoefficients, `SourceGammaOneDiamondRationalGenerators, `SourceGammaOneDiamondComplexArithmetic, `SourceGammaOneArithmeticDiamondGenerators, `SourceGammaOneArithmeticDiamondGalois, `SourceGammaOneDiamondGaloisPicard]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

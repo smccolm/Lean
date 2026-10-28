@@ -1,0 +1,71 @@
+import SourceGammaOneDiamondAnalyticGerms
+import SourceGammaOneDiamondAnalyticPlaces
+import SourceGammaOneDiamondAnalyticDivisors
+import SourceGammaOneDiamondEndpoint
+import SourceGammaOneDiamondPicardPeriods
+import SourceGammaOneDiamondComplexComparison
+import SourceGammaOneArithmeticDiamondTate
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneDiamondAnalyticGerms, `SourceGammaOneDiamondAnalyticPlaces, `SourceGammaOneDiamondAnalyticDivisors, `SourceGammaOneDiamondEndpoint, `SourceGammaOneDiamondPicardPeriods, `SourceGammaOneDiamondComplexComparison, `SourceGammaOneArithmeticDiamondTate]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio, `Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut, `Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic, `Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk, `Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond, `Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond, `Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond, `Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Diamond Period postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Diamond Period theorems discovered"
+  logInfo m!"SOURCE DIAMOND PICARD PERIODS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneDiamondAnalyticGerms
+#lint in SourceGammaOneDiamondAnalyticPlaces
+#lint in SourceGammaOneDiamondAnalyticDivisors
+#lint in SourceGammaOneDiamondEndpoint
+#lint in SourceGammaOneDiamondPicardPeriods
+#lint in SourceGammaOneDiamondComplexComparison
+#lint in SourceGammaOneArithmeticDiamondTate

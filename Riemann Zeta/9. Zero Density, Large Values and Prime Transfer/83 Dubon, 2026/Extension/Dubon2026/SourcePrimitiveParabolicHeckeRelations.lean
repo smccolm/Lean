@@ -1,0 +1,50 @@
+import Dubon2026.SourceOriginalIntegralParabolicH1Span
+import Dubon2026.SourcePrimitiveH1HeckeRelations
+
+/-! DUB17/18 -> original all-weight association -> original finite
+parabolic Hecke character. The original Fourier character annihilates
+every integral operator word vanishing on integral parabolic H1.
+Reuse the native word intertwiner and eigenvector theorem. No new
+Hecke algebra or parabolic stability theorem is needed for this edge. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+
+theorem sourcePrimitiveIntegralParabolicHecke_relation
+    {Q : ℕ} [NeZero Q] {k : ℤ} (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime Q))
+    (ha : ∀ x : H1 (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat),
+      x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q (k - 2).toNat) →
+        FreeAlgebra.lift ℤ (sourceBinaryH1PrimeOperators ℤ Q (k - 2).toNat) a x = 0) :
+    FreeAlgebra.lift ℤ
+      (fun p : sourceBinaryHeckePrime Q => cuspCoefficients f.toCuspForm p.val) a = 0 := by
+  let w := (k - 2).toNat
+  let Φ := (sourceBinaryH1Change (Int.castRingHom ℂ) Q w).toAddMonoidHom
+  have hΦ (p : sourceBinaryHeckePrime Q)
+      (x : H1 (sourceBinaryCoefficientRep ℤ Q w)) :
+      Φ (sourceBinaryH1PrimeOperators ℤ Q w p x) =
+        sourceBinaryH1PrimeOperators ℂ Q w p (Φ x) :=
+    sourceBinaryH1PrimeOperators_change Q w p x
+  let T := FreeAlgebra.lift ℤ (sourceBinaryH1PrimeOperators ℂ Q w) a
+  have hspan := (sourcePrimitive_originalIntegralParabolic_span f hk).2
+  have hz : T (sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm) = 0 := by
+    generalize sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm = y at hspan ⊢
+    induction hspan using Submodule.span_induction with
+    | mem y hy =>
+      obtain ⟨z, hz, rfl⟩ := hy
+      change FreeAlgebra.lift ℤ (sourceBinaryH1PrimeOperators ℂ Q w) a (Φ z) = 0
+      rw [← sourceHeckeWord_intertwine _ _ Φ hΦ a z, ha z hz, map_zero]
+    | zero => exact map_zero T
+    | add y z _ _ hy hz => rw [map_add, hy, hz, add_zero]
+    | smul r y _ hy => rw [map_smul, hy, smul_zero]
+  obtain ⟨hne, heig⟩ := sourcePrimitive_nonzero_integralModelComplexEigensystem f hk
+  have h := sourceHeckeWord_eigenvector (sourceBinaryH1PrimeOperators ℂ Q w)
+    (fun p : sourceBinaryHeckePrime Q => cuspCoefficients f.toCuspForm p.val)
+    (sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm)
+    (fun p => heig p.val p.property.1 p.property.2) a
+  change T (sourceOriginalBinaryPeriodCohomology Q k hk f.toCuspForm) = _ at h
+  rw [hz] at h
+  exact (smul_eq_zero.mp h.symm).resolve_right hne
+
+end
+end Dubon2026

@@ -1,0 +1,50 @@
+{
+  "recordedUTC": "2026-10-28T10:51:38.123157+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> arithmetic diamond/Picard comparison.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-descent-route-1202.md",
+      "sha256": "1EF8990EA9AE13AE5CEFBCCAD2383DC2CE974DF18D2AD9F67556F84BC9DB9304"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-1-scratch-receipt.json",
+      "sha256": "2C88FCF5A877C1013EF26B7AD692794F62E8B802C24E6F1F5C30AD10F925E48E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexFieldExtension.lean",
+      "sha256": "5EA09D0CCF87F0841FAD5332D57BE5821035250825F0A91A5278969E3045DA36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentSpanDescent.lean",
+      "sha256": "259FD975B2681F28DC3FEA8C908D7B1D1F6F9861E53F907CB6950E203BC90424"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+      "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrincipalDivisorTransport.lean",
+      "sha256": "D0954572CF81E8772AC3777EF44D7909333F8E0C781F66CE6CDB11E15AB84576"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticDivisors.lean",
+      "sha256": "09103CD9A1936745261423CE975FCF607472103C0C8C1D356C7271614AF716CF"
+    }
+  ],
+  "shorterRoute": "Transport the existing finite original j-field relation through the proved complex diamond. Use the already audited same-series Laurent lift. Descend original field membership by a single linear coefficient functional on a finite numerator/denominator span; no geometric integrality framework. Reuse literal valuation, order and principal-divisor transport to construct both Picard actions independently of periods.",
+  "assumptionsToDischarge": [
+    "The actual complex diamond image of every original arithmetic field element satisfies a nonzero polynomial over the arithmetic Laurent field, without an algebraicity premise.",
+    "Its exact Laurent coefficient lift lies in the original arithmetic field: arithmetic field stability is proved.",
+    "The original arithmetic diamond has field laws, constants, inverse, fixed j and the exact original complex comparison.",
+    "Both original arithmetic and complex diamonds induce actual degree-zero Picard automorphisms and preserve torsion; closed residue fields and principal-divisor transport discharge the construction inputs."
+  ],
+  "remaining": "Supersedes the historical 1204 remaining arithmetic relation/lift/membership boundary only. Galois commutation, Picard-period comparison, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "preservedFailures": "1205a induction index;1206a/b scalar instances;1207a prerequisite guard before Lean,1207b/c scalar instances and induction;1208a implicit field,1208b unused instance warning;1209a redundant rewrites;1210a missing section inclusion. Failed sources/logs retained. No limits or proof standards changed.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

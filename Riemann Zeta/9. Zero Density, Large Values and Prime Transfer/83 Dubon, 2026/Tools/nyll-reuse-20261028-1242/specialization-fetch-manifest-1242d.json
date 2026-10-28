@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-28T11:52:43.965064+00:00",
+  "revision": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/TorsionSpecialization.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/TorsionSpecialization.lean.txt",
+      "sha256": "3B1AA9F70EFE9A6F04E5C2115EF9AF073F26CB146D4F6A1BB6CEA8AF4FB2584B",
+      "bytes": 3694
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/TorsionSpecializationWeights.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/TorsionSpecializationWeights.lean.txt",
+      "sha256": "0AC5F2620B02B69A53614DDFE74F486DFEFA26524EAD8FE6E891D3484C6B158D",
+      "bytes": 4232
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/TorsionTateSpecialization.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/TorsionTateSpecialization.lean.txt",
+      "sha256": "F9AAD3405BFE70DDE4542009BCC85CB9CDF6B52742F53C04E84E44F8E36BA0CE",
+      "bytes": 5278
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/PicardSpecializationWeights.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/PicardSpecializationWeights.lean.txt",
+      "sha256": "FE738E9084F53A66C31EBEBF07E922B3C992C858131B59978DDDD67E0F110F5C",
+      "bytes": 3728
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/AnabelianGeometry/WeightFiltration/HenselianFrobeniusLift.lean",
+      "path": "Nyll/AnabelianGeometry/WeightFiltration/HenselianFrobeniusLift.lean.txt",
+      "sha256": "B9E21EFB2681A6B2F847C79F56A6B26D742088E2AF0BE8FD879E872DB2ACA6DC",
+      "bytes": 4409
+    },
+    {
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/EtaleFundamentalGroups/GeometricFiber/HenselianSpecializationAction.lean",
+      "path": "Nyll/EtaleFundamentalGroups/GeometricFiber/HenselianSpecializationAction.lean.txt",
+      "sha256": "F7654BA7CE49137F2AACEBAF8AAB3E10C5993277B028ED9A9FC7748B285084FA",
+      "bytes": 2468
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

@@ -1,0 +1,19 @@
+{
+  "chain": "DUB17/18 -> original all-weight association -> original finite Gamma1 homogeneous-coefficient Hecke character -> finite parabolic H1/arithmetic Tate dual comparison -> finite-order vanishing at actual level Q*(p^(n+1))^2.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteOrderTrace.lean",
+      "sha256": "BD66B2321001FE6163FC384623B81A41AC68F4FC18ED60CFEDD089E0C6FFDDD5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGammaOneH1Realization.lean",
+      "sha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFinite.lean",
+      "sha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB"
+    }
+  ],
+  "shorterRoute": "Native finite-order matrix classification plus the original Gamma1 diagonal congruences force squared trace four at level at least four. The actual source level bound follows immediately from Q nonzero and p greater than three. Parabolic vanishing therefore supplies finite-order vanishing without a new global torsion classification or a separate coefficient-invertibility argument.",
+  "remaining": "Actual original full H1 parabolic passage, homogeneous coefficients and diamonds, Galois association and higher continuation remain."
+}

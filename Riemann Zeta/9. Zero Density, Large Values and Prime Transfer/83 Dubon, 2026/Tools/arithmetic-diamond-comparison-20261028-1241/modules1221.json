@@ -1,0 +1,11 @@
+[
+  "AdelicBadPlaceFinite",
+  "AdelicFiniteOpenLowestAdmissible",
+  "AdelicFullFiniteAdmissible",
+  "AdelicRealFiniteCoefficient",
+  "AdelicRealFiniteCompletedAction",
+  "AdelicRealFiniteTensor",
+  "AdelicRealFiniteTensorAction",
+  "AdelicRealFiniteTensorCompletion",
+  "AdelicRealFiniteTensorRange"
+]

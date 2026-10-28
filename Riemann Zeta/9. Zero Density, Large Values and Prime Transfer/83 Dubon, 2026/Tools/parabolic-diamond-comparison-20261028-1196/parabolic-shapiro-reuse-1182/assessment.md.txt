@@ -1,0 +1,13 @@
+# Targeted parabolic transfer reuse check — 28 October 2026
+
+This check follows the nine-repository refresh and addresses the remaining exact Gamma1 parabolic-transfer input for DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2. The downloaded pages and their hashes are in `manifest.json`. No external code was imported or executed.
+
+The [Prove2Me parabolic Shapiro entry](https://beta.prove2.me/theorems/96bbed5a-210d-4d60-8934-d83a912e2875) displays `MTT.Cohomology.exists_parabolic_coinduced_cocycle`, dated 7 September 2026, using Lean 4.33.1 and Mathlib `0df444a`. Its statement lifts a complex homogeneous-coefficient Gamma1 cocycle into a coinduced representation of SL2(Z), preserving parabolicity. The page marks the theorem “Proved”, but the public HTML inspected here contains a statement ending in a placeholder, not the accepted proof body. No proof-body or transitive axiom audit was possible from that page. Treat it as a located candidate, not verified reusable proof evidence. Its coefficient ring and map direction differ from the finite-coefficient counit/corestriction lifting required here.
+
+[Wiese, arXiv:math/0511115v3](https://arxiv.org/html/math/0511115v3), gives a mathematical reference for comparisons that must be checked separately. Proposition 2.6 discusses integral reduction and parabolic base change with explicit weight and prime restrictions. Proposition 4.2 uses a particular finite-field polynomial/permutation exact sequence and parabolic Shapiro to compare levels. These are not the arbitrary positive-prime-power transfer statement in the current local criterion. The paper also distinguishes integral faithfulness from faithfulness after reduction. No claim of a Lean proof of these paper results is made here.
+
+The local route therefore continues with its proved original integral Hecke span, supported character fiber, fixed saturation bound, and exact native operator maps. The public Shapiro entry does not close the geometric lifting condition. Any alternative based on the cited finite-field exact sequence must preserve the original character, coefficient convention, every required precision, and the source's characteristic-zero association target. A residual weight-two representation alone does not meet that target.
+
+The inspected finite-field source and complex Shapiro statement justify keeping the missing lifting condition visible. They do not establish its truth in the full proposed generality. The alternative direct reduction-kernel lemma is retained as audited scratch evidence and deferred because the Hecke-span argument already supplies the necessary congruence input.
+
+The full goal remains 16/20, with DUB-17–20 open. Root pins and the frozen paper remain unchanged.

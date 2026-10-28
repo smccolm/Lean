@@ -1,0 +1,62 @@
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_intertwines`. -/
+theorem actual_finite_tensor_intertwining_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k) (hv : Function.Injective v)  (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteLocalTensor F.toCuspForm v ⊗[ℂ] adelicFiniteFamilyAwayCore F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorRepresentation F.toCuspForm v b x) =
+      adelicFiniteFullJointRepresentation F.toCuspForm v hv b (adelicFiniteFullTensorIsometry F v hv hgood x)  :=
+  adelicFiniteFullTensorIsometry_intertwines v F hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorRepresentation_norm`. -/
+theorem actual_finite_tensor_norm_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteLocalTensor F.toCuspForm v ⊗[ℂ] adelicFiniteFamilyAwayCore F.toCuspForm v) :
+    ‖adelicFiniteFullTensorRepresentation F.toCuspForm v b x‖ = ‖x‖  :=
+  adelicFiniteFullTensorRepresentation_norm F v hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_intertwines`. -/
+theorem actual_completed_finite_tensor_intertwining_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v)
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm v) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (adelicFiniteFullHilbertTensorRepresentation F v hv hgood b x) =
+      adelicFiniteFullJointRepresentation F.toCuspForm v hv b
+        (adelicFiniteFullHilbertTensorIsometry F v hv hgood x)  :=
+  adelicFiniteFullHilbertTensorIsometry_intertwines F v hv hgood b x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_completed_finite_tensor_continuity_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ)  (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm v) :
+    Continuous (fun b => adelicFiniteFullHilbertTensorRepresentation F v hv hgood b x)  :=
+  adelicFiniteFullHilbertTensorRepresentation_stronglyContinuous F v hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteFamilyEquiv_reindex`. -/
+theorem actual_finite_adelic_permutation_source {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n))  (hv : Function.Injective v)
+    (g : ∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ))
+    (a : adelicFiniteFamilyAwayGroup (fun i => v (e i))) :
+    adelicFiniteFamilyEquiv (fun i => v (e i)) (hv.comp e.injective) ((fun i => g (e i)), a) =
+      adelicFiniteFamilyEquiv v hv (g, adelicFiniteFamilyAwayReindex v e a)  :=
+  adelicFiniteFamilyEquiv_reindex v e hv g a
+
+/-- Exact original-object consumer of `adelicFiniteFamilyAwayCore_reindex`. -/
+theorem actual_finite_complement_core_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n))  :
+    adelicFiniteFamilyAwayCore f (fun i => v (e i)) = adelicFiniteFamilyAwayCore f v  :=
+  adelicFiniteFamilyAwayCore_reindex f v e
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_reindex`. -/
+theorem actual_finite_tensor_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n)) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteLocalTensor F.toCuspForm (fun i => v (e i)) ⊗[ℂ]
+      adelicFiniteFamilyAwayCore F.toCuspForm (fun i => v (e i))) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorReindex F.toCuspForm v e x) =
+      adelicFiniteFullTensorIsometry F (fun i => v (e i)) (hv.comp e.injective) (fun i => hgood (e i)) x  :=
+  adelicFiniteFullTensorIsometry_reindex v e F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_reindex`. -/
+theorem actual_completed_finite_tensor_permutation_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (e : Equiv.Perm (Fin n)) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (x : AdelicFiniteFullHilbertTensor F.toCuspForm (fun i => v (e i))) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood (adelicFiniteFullHilbertTensorReindex F.toCuspForm v e x) =
+      adelicFiniteFullHilbertTensorIsometry F (fun i => v (e i)) (hv.comp e.injective) (fun i => hgood (e i)) x  :=
+  adelicFiniteFullHilbertTensorIsometry_reindex v e F hv hgood x
+

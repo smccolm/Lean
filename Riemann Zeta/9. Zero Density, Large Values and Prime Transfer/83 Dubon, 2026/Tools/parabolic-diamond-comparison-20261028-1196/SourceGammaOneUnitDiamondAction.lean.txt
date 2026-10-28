@@ -1,0 +1,63 @@
+import SourceGammaOneDiamondLabels
+
+/-! DUB17/18 -> original all-weight association -> arithmetic Gamma1
+realization -> diamond comparison. The literal native H1 maps form the
+unit-labelled diamond action and preserve the same original parabolic
+submodule. The contravariance of cohomology is accounted for explicitly
+before using commutativity of the unit labels. Period and arithmetic
+compatibility, including the original homogeneous coefficient action,
+are not inferred from this constant-coefficient action. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory
+variable (R V : Type) [CommRing R] [AddCommGroup V] [Module R V]
+    (M : ℕ) [NeZero M]
+
+theorem sourceGammaOneUnitDiamondH1_one : sourceGammaOneUnitDiamondH1 R V M 1 = 1 := by
+  rw [sourceGammaOneUnitDiamondH1_eq R V M 1 1 (by simp)]
+  apply LinearMap.ext
+  intro x
+  apply (ConcreteCategory.bijective_of_isIso
+    (H1IsoOfIsTrivial (Rep.trivial R (Gamma1 M) V)).hom).injective
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, sourceGammaOneDiamondH1_hom_apply]
+  have he : sourceGammaOneDiamondConjugation M 1 γ.toMul = γ.toMul := by
+    apply Subtype.ext
+    simp [sourceGammaOneDiamondConjugation]
+  rw [he]
+  rfl
+
+theorem sourceGammaOneUnitDiamondH1_mul (d e : (ZMod M)ˣ) :
+    sourceGammaOneUnitDiamondH1 R V M (d * e) =
+      sourceGammaOneUnitDiamondH1 R V M d * sourceGammaOneUnitDiamondH1 R V M e := by
+  obtain ⟨g, hg⟩ := sourceGammaOneDiamondLabel_lift M d
+  obtain ⟨h, hh⟩ := sourceGammaOneDiamondLabel_lift M e
+  have hgh : Gamma0Map M (h * g) = ((d * e : (ZMod M)ˣ) : ZMod M) := by
+    rw [map_mul, hg, hh, Units.val_mul, mul_comm]
+  rw [sourceGammaOneUnitDiamondH1_eq R V M (d * e) (h * g) hgh,
+    sourceGammaOneUnitDiamondH1_eq R V M d g hg,
+    sourceGammaOneUnitDiamondH1_eq R V M e h hh]
+  apply LinearMap.ext
+  intro x
+  exact (sourceGammaOneDiamondH1_comp R V M g LinearMap.id h LinearMap.id x).symm
+
+/-- The genuine unit-labelled diamond action on native constant-coefficient Gamma1 H1. -/
+def sourceGammaOneUnitDiamondH1Hom :
+    (ZMod M)ˣ →* Module.End R (H1 (Rep.trivial R (Gamma1 M) V)) where
+  toFun := sourceGammaOneUnitDiamondH1 R V M
+  map_one' := sourceGammaOneUnitDiamondH1_one R V M
+  map_mul' := sourceGammaOneUnitDiamondH1_mul R V M
+
+theorem sourceGammaOneBinaryParabolicH1_unitDiamond_mem
+    (Q N w : ℕ) [NeZero Q] [NeZero N] (d : (ZMod (Q * N ^ 2))ˣ)
+    {x : H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2))
+      (sourceBinaryCoefficientRep (ZMod N) Q w))}
+    (hx : x ∈ SourceFunctionField.GammaOne.binaryParabolicH1 Q N w) :
+    sourceGammaOneUnitDiamondH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) d x ∈ SourceFunctionField.GammaOne.binaryParabolicH1 Q N w :=
+  sourceGammaOneBinaryParabolicH1_diamond_mem Q N w _ LinearMap.id hx
+
+end
+end Dubon2026

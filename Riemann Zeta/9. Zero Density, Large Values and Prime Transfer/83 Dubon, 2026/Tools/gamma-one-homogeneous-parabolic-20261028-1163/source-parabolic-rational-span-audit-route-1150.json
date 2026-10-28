@@ -1,0 +1,47 @@
+{
+  "recordedUTC": "2026-10-28T07:16:11.710081+00:00",
+  "chain": "DUB17/18 -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic spanning and congruence -> complex-to-rational parabolic cocycle structure.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCocycleCoordinates.lean",
+      "sha256": "5AE6BFCBD44F92E29973F9233E254A2D34CEEE2F2D8CB9A2ECB0C33402A571E3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryAdditiveCoefficients.lean",
+      "sha256": "7BD99E4F0348D6EC1A3A40A40AF6E68BA3C71CA7BF71A7C38DE3A0FAF6E5594D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexBinaryCocycleSpan.lean",
+      "sha256": "E7C233741125754B29BBC966D978F923339EDF9F94374A16406909DB31BE2E31"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalParabolicCharacterSpan.lean",
+      "sha256": "32F335D6B2CCC3BB8070B6257469FBB49951EDEF7FE2D25658318BFC5B67FF00"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCocycleDenominators.lean",
+      "sha256": "DE6F77D24A7CE1B231C9EFD8E2A609DBE7FCD2740CE8C4A200C57B6F2AF1B6BA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-reuse-1147.json",
+      "sha256": "1A9BE5B489F4AF775AB1750B7FE3A97CBCA86B63C0A25FBBA1C8A00D6C937320"
+    }
+  ],
+  "shorterRoute": "Reuse sourceBinaryAdditiveCocycles and sourceHomogeneousAdditiveMap_matrix to project the existing local coboundary witnesses. Adapt only the finite-generator reconstruction from the frozen SourceComplexBinaryCocycleSpan proof, replacing unrestricted rational coordinates by the proved parabolic coordinates. Its two small private reconstruction lemmas are preserved verbatim as local helpers because their private numeric names are not ordinary source identifiers. No new polynomial basis, arbitrary linear-equation theory, cohomological flatness theorem or boundary/Eisenstein classification is needed.",
+  "remaining": "Uniform integral parabolic denominator clearing, integral parabolic spanning/saturation, and exact finite character descent remain. This rational-span result does not prove nonvanishing after finite restriction, parabolic transfer surjectivity, or arithmetic Galois association. DUB17--20 OPEN; 16/20 unchanged.",
+  "assumptionsToDischarge": [
+    "Actual additive rational-coordinate projection preserves original homogeneous parabolic cocycles by projecting the local coboundary witness.",
+    "Every original complex parabolic cocycle is in the complex span of the actual rational parabolic cocycles.",
+    "The native H1 quotient preserves this rational span, and the original primitive period class lies in it."
+  ],
+  "preservedFailures": "1148 unexecuted PowerShell pipeline Unicode encoding corrected before compilation, with original text preserved; 1149a dependent span induction fixed by clearing the already consumed parabolic premise. No statement or proof limit changed.",
+  "verbatimPrivateHelperReuse": {
+    "source": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexBinaryCocycleSpan.lean",
+    "sourceSha256": "E7C233741125754B29BBC966D978F923339EDF9F94374A16406909DB31BE2E31",
+    "target": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan.lean",
+    "identicalHelpers": [
+      "cocycle_ext_generators",
+      "coordinate_sum"
+    ]
+  }
+}

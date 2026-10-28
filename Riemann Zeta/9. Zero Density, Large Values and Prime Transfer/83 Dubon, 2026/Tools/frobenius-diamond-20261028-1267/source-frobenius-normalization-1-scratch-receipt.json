@@ -1,0 +1,141 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T13:11:17.576171+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceHomogeneousHeckeDiamond",
+    "SourceGammaOneHeckeDiamondCoefficient",
+    "SourceGammaOneArithmeticTateOperators",
+    "SourceTateDualQuadratic",
+    "SourceGammaOneBinaryFrobeniusNormalization",
+    "SourceCoefficientDualAction",
+    "SourceGammaOneBinaryGaloisHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond.lean",
+      "sha256": "5418C2B4BCB0B91B6B0A8C15EC2CA280F81034034331F2C3E791BCE76FE08354",
+      "oleanSha256": "BBBD4852A501AACDC57BF3FD123EA1FFABE5748CE0309B22839B34E8149E08BA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousHeckeDiamond1243b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient.lean",
+      "sha256": "BC8E6EBE230CC01440CF6B63BA965B5AAFA5243842EFC2E47A565B7923D7B80B",
+      "oleanSha256": "49BC042679545DE13A20C8EB7A5E07F16E302537022591E330A5399AA510BF6A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondCoefficient1244b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators.lean",
+      "sha256": "7F9D271945303587AA5B515FCAD95181CFEA797C542F09228A2794F1F55F617C",
+      "oleanSha256": "B53335560DEEF2F68D3D1EA423950E4ACEF454BD5E1CC14D3DCE12C86D2253E9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators1246a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticTateOperators1246a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic.lean",
+      "sha256": "99AB2E5C6A5F71CBB85246141D3C7F5A6A2756BB06246561AD78B6EBB2104ED2",
+      "oleanSha256": "3642FCB1CD8FAFDC2E4A702DF423C2EC45F6137211982FB315F199B7D7AF73CA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualQuadratic1248b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization.lean",
+      "sha256": "84A56971677269D271A6BDF7613B725BA036B7B6343247AFCB58FC02A56851DD",
+      "oleanSha256": "A0A72A4DD70AFDF333256604F7F4D669399597117B11897B7599DDBA8C4694B1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245h.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryFrobeniusNormalization1245h.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction.lean",
+      "sha256": "8A84A3F08B676A96E90BF0A38FB5E32C42705F45007BFDEB1A82BD6054B4FB86",
+      "oleanSha256": "14A05B7BC47CDD542124D7DBE111738228F36B2164E03F5ABDD6760C2032E351",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDualAction1249b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke.lean",
+      "sha256": "7ECC677F9E2647DD1FB9D586882306F49B50F03550A498A3C9EF77DE89BD90E3",
+      "oleanSha256": "32A4EEC4611069CD7CB58DB7DE7E51F75F3D1E7F021553C1444F0374F8561C32",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247j.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryGaloisHecke1247j.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationAudit1.log",
+  "logSha256": "E931E882D85A555C892CC77917325D0A5B4291D45C11DF6A8962444060CE0AC7",
+  "auditSha256": "B43D429DB84189903CF1CFA26E41B1A186C240F64E8804AC35BFA1CF95CFE55E",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.log",
+  "ownershipSha256": "B14EC0E495278F87874A3A67DE897567B06395429B166FCDE3FA2CFF18484E0B",
+  "exhaustiveTheorems": 36,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1.log",
+  "dependencyAuditSha256": "6806F9273D1D51E20150869EFBA86A7890E33BDE4CD35B787D75DBF85FD7A349",
+  "dependencyAuditSourceSha256": "36EE5DC31F1B43F686372376B02900AF92911263772C84D71445648D2AD04409",
+  "consumers": [
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.sourceTateDual_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.sourceCoefficientDualAction_operator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator",
+    "Dubon2026.sourceCoefficientDualAction",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient arithmetic Hecke characters -> original Tate Frobenius/inertia realization and Galois-stable character spaces.",
+  "discharged": [
+    "At every homogeneous degree and positive coefficient modulus, the original Hecke coefficient squared equals ell^w times the actual normalizer diamond coefficient whenever its lower-right label is ell.",
+    "The actual Gamma1 Tate Galois representation commutes with the original arithmetic Picard Hecke and diamond operators.",
+    "Given the explicitly stated original Gamma1 Tate geometric relation H*F=F*F+ell*D, the literal homogeneous-valued dual satisfies the normalized relation with ell^(w+1) times the original coefficient diamond. This conclusion is conditional on that geometric relation, not a proof of it.",
+    "The genuine inverse-precomposition Galois representation on the original homogeneous-valued Tate dual commutes with every native prime Hecke operator. This is the required generator compatibility; no original two-dimensional character space is constructed here."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual Gamma1 geometric Frobenius relation and inertia are not proved by this scope. The original integral parabolic-transfer condition, fixed exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. Finite characters and a Galois action on the ambient Tate dual do not supply a two-dimensional characteristic-zero association. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "5C5DFF3BF5C6B76C712704EF75BBDE82CBDE9AC460624D9C6D4D882B4E59C533",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

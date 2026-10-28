@@ -1,0 +1,55 @@
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_snoc_one`. -/
+theorem actual_finite_reference_coordinate_source  {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ)
+    (hv : Function.Injective v)
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v i.castSucc).adicCompletion ℚ)) :
+    adelicFinitePlaceProduct v hv (Fin.snoc g 1) =
+      adelicFinitePlaceProduct (fun i : Fin n => v i.castSucc) (hv.comp (Fin.castSucc_injective n)) g  :=
+  adelicFinitePlaceProduct_snoc_one v hv g
+
+/-- Exact original-object consumer of `adelicFiniteLocalReferenceExtension_family`. -/
+theorem actual_finite_reference_local_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (v : Fin (n + 1) → HeightOneSpectrum ℤ) 
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v i.castSucc).adicCompletion ℚ)) :
+    adelicFiniteLocalReferenceExtension f hf v
+      (adelicFiniteLocalTensorFamily f (fun i : Fin n => v i.castSucc) g) =
+      adelicFiniteLocalTensorFamily f v (Fin.snoc g 1)  :=
+  adelicFiniteLocalReferenceExtension_family f hf v g
+
+/-- Exact original-object consumer of `adelicFiniteFamilyAwayCoreInitIsometry_orbit`. -/
+theorem actual_finite_reference_complement_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + 1) → HeightOneSpectrum ℤ)  (a : adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFamilyAwayCoreInitIsometry f v (adelicFiniteFamilyAwayOrbit f v a) =
+      adelicFiniteFamilyAwayOrbit f (fun i : Fin n => v i.castSucc) (adelicFiniteFamilyAwayInitHom v a)  :=
+  adelicFiniteFamilyAwayCoreInitIsometry_orbit f v a
+
+/-- Exact original-object consumer of `adelicFiniteReferenceFamily_span`. -/
+theorem actual_finite_reference_common_span_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + 1) → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteReferenceFamily f v)) = ⊤  :=
+  adelicFiniteReferenceFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteTensorIsometry_reference_extension`. -/
+theorem actual_finite_reference_realization_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteReferenceDomain F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F (fun i : Fin n => v i.castSucc)
+      (hv.comp (Fin.castSucc_injective n)) (fun i => hgood i.castSucc)
+      (adelicFiniteReferenceToShorter F.toCuspForm v x) =
+      adelicFiniteFullTensorIsometry F v hv hgood
+        (adelicFiniteReferenceToLonger F.toCuspForm v (primitiveCuspForm_ne_zero F) x)  :=
+  adelicFiniteTensorIsometry_reference_extension v F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteHilbertTensorIsometry_reference_extension`. -/
+theorem actual_completed_finite_reference_realization_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin (n + 1) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteReferenceHilbertDomain F.toCuspForm v) :
+    adelicFiniteFullHilbertTensorIsometry F (fun i : Fin n => v i.castSucc)
+      (hv.comp (Fin.castSucc_injective n)) (fun i => hgood i.castSucc)
+      (adelicFiniteReferenceHilbertToShorter F.toCuspForm v x) =
+      adelicFiniteFullHilbertTensorIsometry F v hv hgood
+        (adelicFiniteReferenceHilbertToLonger F.toCuspForm v (primitiveCuspForm_ne_zero F) x)  :=
+  adelicFiniteHilbertTensorIsometry_reference_extension v F hv hgood x
+
+/-- Exact original-object consumer of `finiteAdeleGL2Gamma0_exists_exceptional_finset`. -/
+theorem actual_finite_adelic_level_exceptions_source  (N : ℕ)
+    (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    ∃ S : Finset (HeightOneSpectrum ℤ), ∀ v ∉ S,
+      GeneralLinearGroup.map (finiteAdelePlace v) g ∈ finitePlaceGL2Gamma0 N v  :=
+  finiteAdeleGL2Gamma0_exists_exceptional_finset N g
+

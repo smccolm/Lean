@@ -1,0 +1,34 @@
+import SourceParabolicCohomology
+import Dubon2026.SourceBinaryCohomologyChange
+
+/-! DUB17/18 -> original all-weight association -> parabolic character
+descent. Specialize native semilinear parabolic preservation to the
+original homogeneous polynomial coefficient map. This includes actual
+integral-to-ZMod reduction; no eigenclass lift or nonvanishing is assumed. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+variable {R S : Type} [CommRing R] [CommRing S] (φ : R →+* S) (Q w : ℕ)
+
+theorem sourceBinaryCocyclesChange_parabolic
+    {c : cocycles₁ (sourceBinaryCoefficientRep R Q w)}
+    (hc : c ∈ sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep R Q w)) :
+    sourceBinaryCocyclesChange φ Q w c ∈
+      sourceParabolicCocycles (Gamma0 Q) (sourceBinaryCoefficientRep S Q w) :=
+  sourceParabolicCocycles_semilinear (Gamma0 Q)
+    (sourceBinaryCoefficientRep R Q w) (sourceBinaryCoefficientRep S Q w)
+    φ (homogeneousCoefficientMap w φ)
+    (sourceBinaryCoefficientMap_equivariant φ Q w) hc
+
+theorem sourceBinaryH1Change_parabolic
+    {x : H1 (sourceBinaryCoefficientRep R Q w)}
+    (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep R Q w)) :
+    sourceBinaryH1Change φ Q w x ∈
+      sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep S Q w) :=
+  sourceParabolicH1_semilinear (Gamma0 Q)
+    (sourceBinaryCoefficientRep R Q w) (sourceBinaryCoefficientRep S Q w)
+    φ (homogeneousCoefficientMap w φ)
+    (sourceBinaryCoefficientMap_equivariant φ Q w) hx
+
+end
+end Dubon2026

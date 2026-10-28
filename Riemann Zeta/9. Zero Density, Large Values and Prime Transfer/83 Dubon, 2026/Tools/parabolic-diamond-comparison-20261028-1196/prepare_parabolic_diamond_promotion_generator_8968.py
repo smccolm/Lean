@@ -1,0 +1,52 @@
+from pathlib import Path
+import ast
+p=Path(__file__).parent
+s=(p/'prepare_parabolic_character_descent_promotion_8959.py').read_text(encoding='utf-8')
+for a,b in [('ParabolicCharacterDescent','ParabolicDiamondComparison'),
+    ('parabolic_character_descent','parabolic_diamond_comparison'),
+    ('parabolic-character-descent','parabolic-diamond-comparison'),
+    ('8959','8968'),('8,959','8,968'),('20261028-1183','20261028-1196'),
+    ('promotion-route-1183','promotion-route-1196'),('PARABCHAR8968','PARABDIAM8968')]:s=s.replace(a,b)
+s=s.replace("'source-gamma-one-parabolic-descent-1']", "'source-gamma-one-parabolic-descent-1','source-gamma-one-diamond-1','source-gamma-one-diamond-period-1','source-gamma-one-diamond-tate-1']")
+s=s.replace('==(12,24,19,5)','==(21,61,46,15)').replace('==(35,55)','==(108,113)')
+s=s.replace("dependency='", "dependency='")
+s=s.replace('and exact geometric transfer preimages.', 'and exact geometric transfer preimages; actual native diamond action, original slash periods and integral lattice, homogeneous-valued finite H1 transpose and period Tate-torus compatibility.')
+s=s.replace("discharged='", "discharged='")
+needle="the same whole original adic character descends to that actual finite operator ring.'"
+replacement="the same whole original adic character descends to that actual finite operator ring. Independently, literal Gamma0 conjugation defines the native Gamma1 diamond map, preserves the actual parabolic H1, is independent of the chosen lift and gives the lower-right-unit-labelled action. Native cusp translation and the original primitive give the exact analytic diamond period identity and real H1 intertwining. The dual slash preserves the original integer period lattice. Its transpose intertwines the original homogeneous-valued finite H1 equivalence with an explicit coefficient endomorphism, and native Tate-torus naturality identifies its quotient action with base change of that same integral operator.'"
+assert needle in s;s=s.replace(needle,replacement)
+s=s.replace('Exceptional primes, diamonds, coefficient-field/Frobenius/inertia realization', 'Exceptional primes, the independent arithmetic Picard diamond and identification of the original homogeneous diamond coefficient action, coefficient-field/Frobenius/inertia realization')
+s=s.replace('lift.16/20','lift. 16/20')
+s=s.replace('Frozen mathematical bodies are promoted by import qualification only.', 'The diamond route reuses the native Gamma0 character kernel, integral SL2 reduction, original group-cohomology maps, cusp translation, primitive uniqueness and actual lattice-period surjectivity; it avoids a second modular-symbol model and a new span-induction or Tate-torus foundation. Frozen mathematical bodies are promoted by import qualification only.')
+s=s.replace('The twelve-module original parabolic congruence and conditional finite Gamma1 descent scope passes 24 public axiom queries, 35 exhaustive scratch theorem checks, sixteen linters per module and four declaration-value audits with 55 required dependency checks', 'The twenty-one-module original parabolic congruence, conditional finite Gamma1 descent and native/period diamond scope passes 61 public axiom queries, 108 exhaustive scratch theorem checks, sixteen linters per module and seven declaration-value audits with 113 required dependency checks')
+s=s.replace('Dubon Parabolic Character Descent Reuse Assessment 2026-10-28.md', 'Dubon Parabolic Character and Diamond Reuse Assessment 2026-10-28.md')
+s=s.replace('Dubon original parabolic character congruence and descent assessment', 'Dubon original parabolic character and diamond comparison assessment')
+s=s.replace('modules=12,queries=24,exhaustiveScratchChecks=35,proofValueChecks=55', 'modules=21,queries=61,exhaustiveScratchChecks=108,proofValueChecks=113')
+s=s.replace("'(12, 12, 24, 19, 5)'", "'(21, 21, 61, 46, 15)'")
+s=s.replace("'assert count == 35'", "'assert count == 108'")
+s=s.replace("'\"increment\": 12, \"queries\": 24'", "'\"increment\": 21, \"queries\": 61'")
+s=s.replace('Original parabolic operator congruence and conditional finite Gamma1 character descent', 'Original parabolic operator congruence, conditional finite character descent and native/period diamond comparison')
+s=s.replace('range(1165,1184)', 'range(1165,1197)')
+s=s.replace("for n in owners:evidence", "for f in p.iterdir():\n if f.is_file() and '8959' in f.name and f.suffix in ['.py','.ps1','.json']:evidence.append(f.name)\nevidence += ['Dubon Parabolic Character Descent Reuse Assessment 2026-10-28.md','parabolic-character-descent-promotion-route-1183.json']\nfor n in owners:evidence")
+s=s.replace('Exceptions, diamonds, Galois realization and higher continuation OPEN', 'Native/period diamonds and original finite H1 transpose proved. Exceptions, arithmetic Picard diamond, coefficient action, Galois realization and higher continuation OPEN')
+s=s.replace('Geometric lifting, exceptional primes, diamonds and all-weight association remain', 'Geometric lifting, exceptional primes, arithmetic Picard diamonds, original coefficient convention and all-weight association remain')
+s=s.replace('and explicitly conditional transfer descent.', 'explicitly conditional transfer descent, and native/period diamond action with original finite H1 and period Tate-torus comparison.')
+s=s.replace(".replace('==24','==12').replace('==5','==4')", ".replace('==24','==21').replace('==5','==7')")
+s=s.replace("\"result['scratchSum']==35\"", "\"result['scratchSum']==108\"")
+s=s.replace("'All 12 mathematical'", "'All 21 mathematical'")
+s=s.replace("r'\\b151\\b','35'", "r'\\b151\\b','108'")
+s=s.replace("r'== 24\\b','== 12'", "r'== 24\\b','== 21'")
+s=s.replace("r'== 5\\b','== 4'", "r'== 5\\b','== 7'")
+s=s.replace("'\"incrementModules\": 12'", "'\"incrementModules\": 21'")
+s=s.replace("'\"linterScopes\": 12'", "'\"linterScopes\": 21'")
+s=s.replace('Four declaration-value audits verify 55', 'Seven declaration-value audits verify 113')
+s=s.replace('26296','26323').replace('2772','2782')
+s=s.replace('PARABOLIC CHARACTER DESCENT','PARABOLIC DIAMOND COMPARISON')
+s=s.replace('original parabolic congruence and explicitly conditional finite Gamma1 descent', 'original parabolic congruence, explicitly conditional finite Gamma1 descent and native/period diamonds')
+s=s.replace("==12 and len(ns['queries'])==24 and ns['count']==35", "==21 and len(ns['queries'])==61 and ns['count']==108")
+s=s.replace('modules=12,queries=24,theorems=19,constructions=5,exhaustiveScratchChecks=35,proofValueChecks=55,scopes=4', 'modules=21,queries=61,theorems=46,constructions=15,exhaustiveScratchChecks=108,proofValueChecks=113,scopes=7')
+s=s.replace('modules=12,checks=35,proofEdges=55', 'modules=21,checks=108,proofEdges=113')
+ast.parse(s)
+f=p/'prepare_parabolic_diamond_comparison_promotion_8968.py';assert not f.exists()
+f.write_text(s,encoding='utf-8')
+print(str(f))

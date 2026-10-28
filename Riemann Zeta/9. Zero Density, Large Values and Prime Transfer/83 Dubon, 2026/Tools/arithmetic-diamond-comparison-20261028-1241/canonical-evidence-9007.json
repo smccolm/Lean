@@ -1,0 +1,602 @@
+{
+  "status": "Canonical PASS of the original arithmetic field/Picard/period/Tate diamond, exact homogeneous coefficient convention and Galois compatibility. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic-diamond-comparison-preexecution-review-9007.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/arithmetic-diamond-comparison-preexecution-review-9007.json",
+      "sha256": "7B63E2369AF6D1A54F492A3E323351F36BBAF947E37986978F1887EA21AC90AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic-diamond-comparison-preflight-9007.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/arithmetic-diamond-comparison-preflight-9007.json",
+      "sha256": "41F4DC68C99C691D1373FF5F1CAE085ACBDED7DD252B33B1AA82AE011B6220BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_arithmetic_diamond_comparison_9007.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/build_arithmetic_diamond_comparison_9007.ps1",
+      "sha256": "9D4BDC272DF8C8EA0883C86A95000615CEF4BDFC07E60BA50182491D586F013B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_arithmetic_diamond_comparison_ownership_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compare_arithmetic_diamond_comparison_ownership_9007.py",
+      "sha256": "34AC19FBD331F9036C00BF59FAC037D5D69C477AAB22C2DA323F330571CAF660"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_arithmetic_diamond_comparison_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/integrate_source_arithmetic_diamond_comparison_9007.py",
+      "sha256": "2C596C09B26CF54EC3C2F5C12F03E9207C8DBF1098C407B5E4F13364CBAA028D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_arithmetic_diamond_comparison_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/preflight_arithmetic_diamond_comparison_9007.py",
+      "sha256": "1B89C7227CFFD90F02F390669CD339FFAC89F6EC9A94AB3CABE2990609BF824D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_comparison_global_ownership_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_arithmetic_diamond_comparison_global_ownership_9007.py",
+      "sha256": "42814FDC706C217FB19A7ADB4ED597E9FCF4515EC9C305F418B6310AD3F81A30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_comparison_production_ownership_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_arithmetic_diamond_comparison_production_ownership_9007.py",
+      "sha256": "8B62144C57682B3D1DFEA082131D7324E37B1DAC0A369B127998935B417A9242"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_comparison_promotion_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_arithmetic_diamond_comparison_promotion_9007.py",
+      "sha256": "46B8343D8CD66AC7D0747D987AA6B3707B95F75D02B9E70EC1B32AA8CC11DF8A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_arithmetic_diamond_comparison_9007.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_source_arithmetic_diamond_comparison_9007.py",
+      "sha256": "DE240BDD12C2E81E688C894D9C01370DA586470B80ACDC12202217D64D99DB87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-diamond-comparison-ownership-comparison-9007.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-arithmetic-diamond-comparison-ownership-comparison-9007.json",
+      "sha256": "C749213872ABE1445B17ADA4AA5081EF07597DB7344D41F6F8AB3E2419DEE3C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-diamond-comparison-production-build-9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-arithmetic-diamond-comparison-production-build-9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-diamond-comparison-production-build-9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-arithmetic-diamond-comparison-production-build-9007.log",
+      "sha256": "7262D13E625255BCCAE62F8EB5C0230D38FEEF9983A2B104C27452C6355BEBB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-diamond-comparison-scratch-ownership-9007.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-arithmetic-diamond-comparison-scratch-ownership-9007.json",
+      "sha256": "EA3978A84449D2E66AC2A0B0864EA3487DAF20B94B0F2AAC1CC2E53B198DB8D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonGlobalOwnership9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonGlobalOwnership9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonGlobalOwnership9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonGlobalOwnership9007.lean.txt",
+      "sha256": "0EC3147FAD0445EA044E3645E92C0FB0FEDCDDED80E139818770B3E1B7186DCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonGlobalOwnership9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonGlobalOwnership9007.log",
+      "sha256": "EAE6006ADDED7AED63FB99FE21BB1C11CD8568FE324E241AA9869FBAF614249F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonOwnership9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonOwnership9007.lean.txt",
+      "sha256": "58DC790398A29C393FCC2EE809DA515D693298BDB8FD7041EE16103B115681D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonOwnership9007.log",
+      "sha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonProductionAudit9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonProductionAudit9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonProductionAudit9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonProductionAudit9007.lean.txt",
+      "sha256": "2F8EBFAD5C9728B783EED932D4E0B04E424F99353C542E519047799084215340"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonProductionAudit9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceArithmeticDiamondComparisonProductionAudit9007.log",
+      "sha256": "24ADF23075834DF0524E79B3BF30BB905129C98DD6F49A901DA908574B1BCA2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1Production9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1Production9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1Production9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1Production9007.lean.txt",
+      "sha256": "5A6AB41E256B62192A6B41BC2388D9EA8D7293AD43BE7FC73743B16A009C3290"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1Production9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1Production9007.log",
+      "sha256": "C7CA9E5F6289D2E6AA8BA4AD1A2A1FB505ABAB5C930E18867E29E085A9B2C1CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1Production9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1Production9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1Production9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1Production9007.lean.txt",
+      "sha256": "81271E73E3FA4E9446826792E8311557CBD41B1E5EDCC8DCC59009D88F4A2286"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1Production9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1Production9007.log",
+      "sha256": "EA78C58A27C95B6604BD5FE1A255E30B3A7483DBD830A2F1553DC4551B5EE975"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1Production9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1Production9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1Production9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1Production9007.lean.txt",
+      "sha256": "F6B0E5A4C48A9F7D5D50CB620F90B60B30015EBB5614AC203624019438F50590"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1Production9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1Production9007.log",
+      "sha256": "41B34D21D23D708828F37841EF2752540CD214CB21DAC7D94B8168B23F5282C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.lean.txt",
+      "sha256": "FA0AF4FCDFE1ED9FD71EE973413B4530483D5B3223D4378D2CD5C893633870E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1Production9007.log",
+      "sha256": "36FDC3032688DFB0F9D6DD71C6EE2973F319CD8BB9FA404D158E7E719FF5F1EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1Production9007.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1Production9007.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1Production9007.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1Production9007.lean.txt",
+      "sha256": "F250B27012BCCBC0E7EB702E42C7E1829D09CBB8134D4168E421F5687E54BBF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1Production9007.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1Production9007.log",
+      "sha256": "4FF8F0AA63C2DF76D949B4EE61FF1D05ECE42627641C6EFF1CC08D9D644AA273"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_arithmetic_diamond_comparison_9007.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/verify_arithmetic_diamond_comparison_9007.ps1",
+      "sha256": "40A0596102E5DA7A6D580C8F9B566039C8C74537373280B56666984B37731547"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-28T13:53:25.757334+00:00",
+    "log": "logs/dubon-build-20261028-051626-555.log",
+    "sha256": "FCBE977305DA25E0DE76429EFAA55D2D499B016038E24293DCB349F0203C51F0",
+    "bytes": 14794236,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9007,
+    "projectTheorems": 57141,
+    "registeredConsumers": 26415,
+    "registeredConstructions": 2801,
+    "declarations": 35201,
+    "generated": 36098,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_051007.log",
+    "foundationSha256": "99D0447A2D47FEBE7FB836D1AB986ACE7CDC36FC73CD8133E12E98741054CEC6",
+    "countReconciliation": {
+      "previousTheorems": 56946,
+      "focusedTheorems": 196,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom.eq_1"
+      ],
+      "addedTheorems": 195,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonGlobalOwnership9007.log",
+      "globalOwnershipSha256": "EAE6006ADDED7AED63FB99FE21BB1C11CD8568FE324E241AA9869FBAF614249F",
+      "globalOwnershipSourceSha256": "0EC3147FAD0445EA044E3645E92C0FB0FEDCDDED80E139818770B3E1B7186DCE",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+      "ownershipSha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 196,
+      "scratchDistinct": 196,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryDiamondTateH1._proof_1": "_private.Dubon2026.SourceGammaOneBinaryDiamondTateH1.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryNormalizerTate._proof_1": "_private.Dubon2026.SourceGammaOneBinaryNormalizerTate.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 196,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneDiamondFieldRatios",
+            "SourceGammaOneFieldCuspGerm",
+            "SourceGammaOneDiamondFieldHom",
+            "SourceGammaOneDiamondFieldLabels",
+            "SourceGammaOneDiamondFieldJ",
+            "SourceLaurentAlgebraicCoefficient",
+            "SourceLaurentAlgebraicallyClosedLift"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.log",
+            "sha256": "9DAD836B2ACDB97DA46310860ADD694C754192435701D7FF4FBA64F778A68B32",
+            "sourceSha256": "AB2995DDF5707EF055A31507A6BC89265A8C925BA3EB66D5E9A392F4B93F7D44"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondArithmeticRelation",
+            "SourceLaurentCoefficientProjection",
+            "SourceLaurentFieldIntersection",
+            "SourceGammaOneDiamondArithmeticLift",
+            "SourceGammaOneArithmeticDiamond",
+            "SourceCurveFieldEquivPicard",
+            "SourceGammaOneDiamondPicard"
+          ],
+          "count": 64,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+            "sha256": "A4D345F98A49651891CD32C1E292E6CAE07276C0E308B3D1389DD91D43B378D2",
+            "sourceSha256": "C593B053D693C90B0BD623D762C74399A8DDDBE5F2A8E5F79BE30EAA72614EEF"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondAnalyticGerms",
+            "SourceGammaOneDiamondAnalyticPlaces",
+            "SourceGammaOneDiamondAnalyticDivisors",
+            "SourceGammaOneDiamondEndpoint",
+            "SourceGammaOneDiamondPicardPeriods",
+            "SourceGammaOneDiamondComplexComparison",
+            "SourceGammaOneArithmeticDiamondTate"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+            "sha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06",
+            "sourceSha256": "E0482067E41215886BF15A97C4938916E9A20482878A33F91B6785299DE43F58"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodInclusion",
+            "SourceGammaOneBinaryDiamondTateH1",
+            "SourceCyclotomicDiamondCovariance",
+            "SourceRationalDiamondFraction",
+            "SourceRationalCuspDiamondImage",
+            "SourceRationalModularCuspQuotient",
+            "SourceRationalDiamondQuotientGerm",
+            "SourceRationalDiamondCoefficients",
+            "SourceGammaOneDiamondRationalGenerators",
+            "SourceGammaOneDiamondComplexArithmetic",
+            "SourceGammaOneArithmeticDiamondGenerators",
+            "SourceGammaOneArithmeticDiamondGalois",
+            "SourceGammaOneDiamondGaloisPicard"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.log",
+            "sha256": "1A7F92F02C467680BB0D99C39A91A05D7CAF9C26D37C9F206DC476EC5F77BA43",
+            "sourceSha256": "FBB7AB4E377CF9335A2E0D8343211E58D57485B35E081F45DE9F08930704CC72"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCoefficient",
+            "SourceGammaOneDiamondRestriction",
+            "SourceGammaOneDiamondCoefficientMatrix",
+            "SourceGammaOneBinaryNormalizerTate",
+            "SourceGammaOneBinaryDiamondLabels"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+            "sha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE",
+            "sourceSha256": "34288BC710B254A6597A14B4BCD7B97D516879EF676821AEF2E4A8FAFD17A5BC"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticDiamondComparisonOwnership9007.log",
+        "sha256": "F6DAE3C9A401B29CEDD3290E0EA8815036A94F2931C1CB420B2A747FBB49F611",
+        "sourceSha256": "58DC790398A29C393FCC2EE809DA515D693298BDB8FD7041EE16103B115681D4"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-032432-254.log",
+        "sha256": "0C7698CD693B500C987E7001A5C1CF3A25C9D40D59FDA0F875955D2D4CCF0A43"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 39 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneDiamondFieldRatios",
+            "scratchSha256": "787DDF7F0B0EEE510AD5F204C81FE7235B23A6F384042CF0D557AA78079AFF88",
+            "productionSha256": "88FDB0011CE75E56F607A1A5325571BBCF6DB238B5F0657843B2AC2761B7A858",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFieldCuspGerm",
+            "scratchSha256": "7416A3EFEB6BF4910D564973AC7B77EE2129CD8F9BFA89661B1267EA12E8D72C",
+            "productionSha256": "DF849668C4B37CCA8021BE6EEFAC1CFD806BC542C1632C544E87FBF4887442D6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldHom",
+            "scratchSha256": "48A1231ED6EEAE899BB20671003BB02D2AEABFA08200996D135CFECEEF38FE3F",
+            "productionSha256": "408D88743331CA74D3C93BF660B8B21219B250C1DFEA2CC3E401C88CD360006F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldLabels",
+            "scratchSha256": "3FC5EFA8220CDA2C96B29317EF7763EED3F61A6189104A1C80531DB2A0E8BA39",
+            "productionSha256": "E89FDF5161AB40A1CFEC94EBD81D2BB76FFA9CEFE4FD3B4F96F1B8F68CD04097",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFieldJ",
+            "scratchSha256": "F7136000C5C5B2D05AC5C2FD074FEB3E539D79A18382E6D6C2497C5C47BCFC4E",
+            "productionSha256": "77C487187F253A76D1A99446542A270C76EE5F5D17EB1ADEB86003C3214A08CC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicCoefficient",
+            "scratchSha256": "A112DFD56AEE71EA66C7056745FAC276FA430C1C0D06E4BA30EC437FD70F8F39",
+            "productionSha256": "F9A2CD00F8DC14D864FA43337D0C9E0BD784C05015D6B2134E22B21BD8DFD2B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentAlgebraicallyClosedLift",
+            "scratchSha256": "5BA056CF70F1F2F24BDD6CB65CD52CDA1BF37578D5BB53518575708DC6D3BDB6",
+            "productionSha256": "1CDCD7A5E08D5C58A85F120564AD14C7048F09652C3E6A1CE2B5FE4B08AA904D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticRelation",
+            "scratchSha256": "B62B6162C3AF3DE7C677D19B4670938C6D54A4AE664FB319C5AE1F7EE107512E",
+            "productionSha256": "359EAA52F1E4B7DDF8A8F13184FA51A56A74DDB9A817E05149C60DE03BD089F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentCoefficientProjection",
+            "scratchSha256": "D1D591D7081A20B036F7D530860EC0A7A74C9F539E9252244B5A8A44A63D407D",
+            "productionSha256": "AC83002C570605D24B975FD41D99A56FDC1667659A3AC84A733986A8AE8C2326",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLaurentFieldIntersection",
+            "scratchSha256": "A33CF93AD1A9D9D98F3E0FC7DD294B7ECBCDB15897B0F0FBD520294A75CDC284",
+            "productionSha256": "1BA4F21F5110EB07A1DC56C91C21AA526D5D6080028954CFAF08CF74447C29A5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondArithmeticLift",
+            "scratchSha256": "53122554AA5B02AC46166590EDCE75274A2E13A2343E7772CD0A8CB465F53A5F",
+            "productionSha256": "4AEACA5180DA2507E3ACF49A44497C148265A4874D5B690550D4D9C3AA026A1F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamond",
+            "scratchSha256": "69711E689C8F4272249C9B50210DF0E86FCF59A26DF8935EAC8BF3AFD7AAD957",
+            "productionSha256": "5B834295C90E53B0E7DF5F3FAF8FE41DC2BE547EFC76B4247176A1B653AE4B82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveFieldEquivPicard",
+            "scratchSha256": "C67D61233B752EE651F52310E7D1FABA9CAC8D68BE9C87224A0FBA6B0EF37B68",
+            "productionSha256": "B08ADC99810F8418727D743C0F4443B4E7E182A60817C9DC7AC1099470E0F23A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicard",
+            "scratchSha256": "4F45DC4C4C13D4076186479B0D06B8230B0AD5EB446A92CDBC65BCFEC41980AC",
+            "productionSha256": "004CA8D763E778517AFBB8D361606B1B8D21A98FCA52BC205C76978E82403062",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticGerms",
+            "scratchSha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE",
+            "productionSha256": "1CE4DBC902C385914F02F7FAC08D468E675508AE2363F1C7E02C89AD5C663CEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticPlaces",
+            "scratchSha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3",
+            "productionSha256": "6C8296A4753FFC2B4ED3728C3901CD40DDF5E3F843D73D8A664E1DC81842A5EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondAnalyticDivisors",
+            "scratchSha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C",
+            "productionSha256": "AB14A629D7D034F32094885270343FA2537600672A94DB0D7960B53C6A45C324",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondEndpoint",
+            "scratchSha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011",
+            "productionSha256": "14979801945AC2C5ED8320B4F0C3723545C1E01E1ED3374D159E2DD7633F7664",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPicardPeriods",
+            "scratchSha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128",
+            "productionSha256": "917DA052A3DD35595D4A58282B73C081C0C1D5C80073CE4F102D2AA61CB5B274",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexComparison",
+            "scratchSha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917",
+            "productionSha256": "304401FBC09826F7891079B120026EBC86EFBC401B1490BCB6A1EB6A81482837",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondTate",
+            "scratchSha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B",
+            "productionSha256": "2EB1D9FE416D081D527BA20F590CA9CE67C835CBDB6691AA8CE6B20FBD06E8C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodInclusion",
+            "scratchSha256": "E0934AC59B2FC0EED717633AEC76169639B86C35D89E9C611C41EDAA8790EE19",
+            "productionSha256": "3160A27DE0ED115F7ABE67D7776EE85ECF1C40E5B9D644C0A6C5ACF1E303E3A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondTateH1",
+            "scratchSha256": "1C050E437CF32BC40C2B2456201D36D8F82B5ED7C6BA886EDB5189B7DED6497F",
+            "productionSha256": "898324FCC226768B9395A98E1B062DD31D99EEDB1BBC22340D1F82FBED6856DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicDiamondCovariance",
+            "scratchSha256": "705A5F7D06F2283E3EC80F34254FFA8229277C777A220E7EF0A7685951161ED4",
+            "productionSha256": "A060E4D2E61A0053D47804E1EAE74F1B5A8DEBBA75689D8DC8F0B732E0164944",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondFraction",
+            "scratchSha256": "BE0A90D7CB7631822D7D7684F276A69BA3DD151C8FF28E6CB338FADB4C19877A",
+            "productionSha256": "79F5A347C2C9233DC5EE82AC3B6293F3F53FFEEF9BD7C014A420B02A6D817819",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalCuspDiamondImage",
+            "scratchSha256": "C916C3A831E73CA15351B5CCC0F55807792CAD854054DD1B01BA44487653F3D4",
+            "productionSha256": "1EC812DA4A4732AF98FC8574114EABA7442788DE28B98A6822139601A02CB3C9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalModularCuspQuotient",
+            "scratchSha256": "F3C35C9005CCBB53946B16DEDD7B313F605C750624B55C45F9F493B5F9567AC7",
+            "productionSha256": "EF367EF1A9AB004A596DCF2E13EA1B60C99F47F9003C3D30FF21617C3226A128",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondQuotientGerm",
+            "scratchSha256": "142E7AF61982A3F750177E6C5F65FF673135B37C2E393C51E42D5B3BDA9F7964",
+            "productionSha256": "44A44BEB7D9FD4BD45A9C459009FBC23077AE02F2486679C9220CF2FD2A4BF53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiamondCoefficients",
+            "scratchSha256": "E84A430257A31F564031D95907BDDBCF3C04052BFBFC681CFF7E86C526D59F2B",
+            "productionSha256": "BD567F8E55F6DF7E64A9E691275EA617BC769CDA84AB00667FFBF8C9ABF64EA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRationalGenerators",
+            "scratchSha256": "C730251F09B9B7D6C256D7AC7D687B23ED46CC0402268ED34068E549E9E6C90E",
+            "productionSha256": "854CD4DB7E743559BBD00D6FFF00017072AF9F6F11B9EEE697DCC76B99934AFE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondComplexArithmetic",
+            "scratchSha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435",
+            "productionSha256": "5C5AB4DC793FFC7E634C37DCC5511FB2462ABC58CAA1FD31EEC28EC19B59E71E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGenerators",
+            "scratchSha256": "FFA46B194F64CBCEAD51D0BBE1DCE90360FC66C6E80B1BC200E05BF17FABEE69",
+            "productionSha256": "A1CB0C0243E3F24FA2A28D53936827257AFC8980E657EBB231677B999558B9A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticDiamondGalois",
+            "scratchSha256": "A0394BEBD1CA4432B22C92C9B185F62F77A38A8EC1CB7D3507BAF8319AB76AC2",
+            "productionSha256": "0F95AF456DF1E445067AEF9A1A0701211874A252EF6F347278D159634EB6E41F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondGaloisPicard",
+            "scratchSha256": "9BC7471F9E95462F286FF2957C8D570EB826918E6F24F0BA61A53215FFD75942",
+            "productionSha256": "FF4DA339CDEF83DDDA3B66AAF688CF64EB1812418610B50FDF44C84F894DD583",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficient",
+            "scratchSha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE",
+            "productionSha256": "6F3E745A360592BBB39A4D8034D5E6D78330DED9F29C04F3F221D94BA5FD2BEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRestriction",
+            "scratchSha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431",
+            "productionSha256": "7F7BCADFDCD4B7D718F9EDCD2AB7C75E4432AB0F2896359A0A3BFD690981A17D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCoefficientMatrix",
+            "scratchSha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4",
+            "productionSha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryNormalizerTate",
+            "scratchSha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305",
+            "productionSha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryDiamondLabels",
+            "scratchSha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9",
+            "productionSha256": "7C5AD56FC499E8FFFE1771221DB492CC79794F7BBC24B2D8FD40A86D6596673C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 196 distinct names from 196 exhaustive scratch checks are retained: 196 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original arithmetic diamond, full Picard/period/Tate compatibility, Galois commutation and homogeneous normalizer coefficient convention are now proved. The exact geometric lifting condition sourceGammaOneIntegralParabolicTransfer remains unproved, so the existing finite parabolic character descent remains conditional and excludes primes dividing its fixed nonzero integer. Exceptional primes, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9007-console.log",
+      "sha256": "59BE1CA46074928C7A8EDC0D11A75D8D955831722AA8C69E4414FA34053741A1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9007-console.log",
+      "sha256": "FFC1E75A953E4152D1E166BF9F2694F79C4A64271A64A7F7227C6AF629B9D263"
+    }
+  ]
+}

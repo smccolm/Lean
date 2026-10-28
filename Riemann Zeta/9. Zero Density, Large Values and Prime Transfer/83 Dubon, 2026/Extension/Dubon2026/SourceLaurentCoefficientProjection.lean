@@ -1,0 +1,62 @@
+import Dubon2026.SourceLaurentSpanDescent
+import Mathlib.LinearAlgebra.Dual.Lemmas
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond descent -> membership in the original field after coefficient lift.
+Reuse the coefficient projection from SourceLaurentSpanDescent, restricted
+to the finite scalar spans needed for numerator and denominator descent.
+The product identity is proved on those spans, not for arbitrary products.
+-/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Apply a base-linear functional to each coefficient of the original series. -/
+def laurentCoeffProjection (π : L →ₗ[K] K) : LaurentSeries L →+ LaurentSeries K where
+  toFun z := z.map π
+  map_zero' := by ext n; simp
+  map_add' z w := by ext n; simp
+
+theorem laurentCoeffProjection_smul_map (π : L →ₗ[K] K) (c : L) (z : LaurentSeries K) :
+    laurentCoeffProjection π (c • coeffMap (algebraMap K L) z) = π c • z := by
+  ext n
+  change π ((c • coeffMap (algebraMap K L) z).coeff n) = (π c • z).coeff n
+  rw [HahnSeries.coeff_smul, HahnSeries.coeff_smul, coeffMap_coeff]
+  change π (c * algebraMap K L (z.coeff n)) = π c * z.coeff n
+  rw [mul_comm c, ← Algebra.smul_def, map_smul, smul_eq_mul, mul_comm]
+
+theorem laurentCoeffProjection_mem_span (π : L →ₗ[K] K) (S : Set (LaurentSeries K))
+    (z : LaurentSeries L) (hz : z ∈ Submodule.span L (coeffMap (algebraMap K L) '' S)) :
+    laurentCoeffProjection π z ∈ Submodule.span K S := by
+  classical
+  obtain ⟨n, c, f, hf⟩ := Submodule.mem_span_set'.mp hz
+  choose y hy hye using fun i => (f i).property
+  rw [← hf, map_sum]
+  apply Submodule.sum_mem
+  intro i _
+  rw [← hye, laurentCoeffProjection_smul_map]
+  exact Submodule.smul_mem _ _ (Submodule.subset_span (hy i))
+
+theorem laurentCoeffProjection_mul_span (π : L →ₗ[K] K) (S : Set (LaurentSeries K))
+    (x : LaurentSeries K) (z : LaurentSeries L)
+    (hz : z ∈ Submodule.span L (coeffMap (algebraMap K L) '' S)) :
+    laurentCoeffProjection π (coeffMap (algebraMap K L) x * z) =
+      x * laurentCoeffProjection π z := by
+  classical
+  obtain ⟨n, c, f, hf⟩ := Submodule.mem_span_set'.mp hz
+  choose y hy hye using fun i => (f i).property
+  rw [← hf, Finset.mul_sum, map_sum, map_sum, Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro i _
+  rw [← hye]
+  have he : coeffMap (algebraMap K L) x * (c i • coeffMap (algebraMap K L) (y i)) =
+      c i • coeffMap (algebraMap K L) (x * y i) := by
+    rw [map_mul, ← HahnSeries.single_zero_mul_eq_smul,
+      ← HahnSeries.single_zero_mul_eq_smul]
+    ring
+  rw [he, laurentCoeffProjection_smul_map, laurentCoeffProjection_smul_map]
+  rw [← HahnSeries.single_zero_mul_eq_smul, ← HahnSeries.single_zero_mul_eq_smul]
+  ring
+
+end
+end Dubon2026.SourceFunctionField

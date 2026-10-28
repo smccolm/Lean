@@ -1,0 +1,25 @@
+import SourceNormalizerH1Trace
+
+/-! DUB-17/18 -> original Gamma1 diamond transfer square. The equality
+transport changes no coefficient vector, so the normalizer morphism is
+exactly the original inverse coefficient action, as needed by the native
+group/coefficient composition comparison.
+-/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory
+variable {R G : Type} [CommRing R] [Group G] (A : Rep R G)
+
+theorem sourceSubgroupEqualityCoefficient_linear {S T : Subgroup G} (h : S = T) :
+    (sourceSubgroupEqualityCoefficient A h).hom.toLinearMap = LinearMap.id := by
+  subst T
+  rfl
+
+theorem sourceNormalizerCoefficientMorphism_linear (g : G) (S : Subgroup G)
+    (hS : S.comap (MulAut.conj g).toMonoidHom = S) :
+    (sourceNormalizerCoefficientMorphism A g S hS).hom.toLinearMap = A.ρ g⁻¹ := by
+  change (sourceSubgroupEqualityCoefficient A hS.symm).hom.toLinearMap.comp (A.ρ g⁻¹) = _
+  rw [sourceSubgroupEqualityCoefficient_linear, LinearMap.id_comp]
+
+end
+end Dubon2026

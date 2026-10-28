@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient arithmetic Hecke characters -> original Tate Frobenius/inertia realization and Galois-stable character spaces.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-normalization-audit-route-1250.json",
+    "sha256": "C73BFAC45DE89648B70FE57AE1735B712653938CBE4A889984B9D112F9277DBE",
+    "review": {
+      "recordedUTC": "2026-10-28T13:03:41.011654+00:00",
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient arithmetic Hecke characters -> original Tate Frobenius/inertia realization and Galois-stable character spaces.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FiniteSymmetricRegularDiagonal.lean",
+          "sha256": "4D4D0912108CE70A9ED5645C88B8002D37B4E6B9CC75BEF03B33A1B8B7C4A7F4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondCoefficientMatrix.lean",
+          "sha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateEndomorphisms.lean",
+          "sha256": "1C08EF698C1BF1E0449FC7FFBA3FFA318EA3F6BABD13F61BB2686F4A859E7ACE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateHecke.lean",
+          "sha256": "F0CEF6529CA2E5F48455802AA9325EA3B0DF7F94C4FAC41AFFA1B16A58D6D48F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeArithmetic.lean",
+          "sha256": "01F5889544B1A50D6D347DD0B74F72526B4EABF9AB28EDC8DB5363195AB9415F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondGaloisPicard.lean",
+          "sha256": "FF4DA339CDEF83DDDA3B66AAF688CF64EB1812418610B50FDF44C84F894DD583"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardFrobeniusQuadratic.lean",
+          "sha256": "5725DC20AFFA0A743316CD736EB97DF2C30370224259447809B0E417A9F30FD9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateFrobeniusQuadratic.lean",
+          "sha256": "2A3CEFA675B0EA9E6346AF5E7BBBF855529962C0C95C75BB08B6520F87320EAE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\BilinearMap.lean",
+          "sha256": "917E30D0B10FAC7B34E3268F50C17148EC4ED779A2650992E65C30C9FA5FD910"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Basic.lean",
+          "sha256": "7DD9C54ED4B7C7085A6B7647A9BF2C52827141203B62126BC37285DE9E82223B"
+        }
+      ],
+      "shorterRoute": "The existing ring-valued homogeneous monomial-basis diagonal formula proves the exact coefficient square without generalizing the complex scalar-action framework. The original lifted normalizer formula supplies the native inverse diagonal. Reuse the native Tate endomorphism ring homomorphism and proved Picard Hecke/diamond arithmetic commutation. Mathlib lcomp supplies precomposition with codomain scalars and the standard contragredient inverse convention. Split the necessary dual quadratic calculation from original-object instantiation to stay within unchanged proof limits. The native original Gamma0 function-field reduction already proves Frobenius and inertia; extending its exact Gamma1 geometric relation remains preferable to importing a new scheme dependency chain before a need is established.",
+      "assumptionsToDischarge": [
+        "At every homogeneous degree and positive coefficient modulus, the original Hecke coefficient squared equals ell^w times the actual normalizer diamond coefficient whenever its lower-right label is ell.",
+        "The actual Gamma1 Tate Galois representation commutes with the original arithmetic Picard Hecke and diamond operators.",
+        "Given the explicitly stated original Gamma1 Tate geometric relation H*F=F*F+ell*D, the literal homogeneous-valued dual satisfies the normalized relation with ell^(w+1) times the original coefficient diamond. This conclusion is conditional on that geometric relation, not a proof of it.",
+        "The genuine inverse-precomposition Galois representation on the original homogeneous-valued Tate dual commutes with every native prime Hecke operator. This is the required generator compatibility; no original two-dimensional character space is constructed here."
+      ],
+      "remaining": "The actual Gamma1 geometric Frobenius relation and inertia are not proved by this scope. The original integral parabolic-transfer condition, fixed exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. Finite characters and a Galois action on the ambient Tate dual do not supply a two-dimensional characteristic-zero association. 16/20; DUB17--20 OPEN.",
+      "preservedFailures": "All failed variants are retained as inert source snapshots with original logs. Dependent exponent rewriting was replaced by a fixed-base power equality. Native Tate field presentations and broad rewrites exceeded default limits; typed original operator names and the small dual calculation remove repeated unfolding. The separate optional word-commutation wrapper was not retained after elaboration failures: the needed native prime-generator compatibility is proved, and existing integral-word and generated-algebra APIs remain available when character-space construction consumes it. SourceHeckeWordCommutation is an unpromoted scratch experiment, not part of this scope. No existing word or acceptance contract is weakened. No limits were increased.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false
+    }
+  },
+  "discharged": [
+    "At every homogeneous degree and positive coefficient modulus, the original Hecke coefficient squared equals ell^w times the actual normalizer diamond coefficient whenever its lower-right label is ell.",
+    "The actual Gamma1 Tate Galois representation commutes with the original arithmetic Picard Hecke and diamond operators.",
+    "Given the explicitly stated original Gamma1 Tate geometric relation H*F=F*F+ell*D, the literal homogeneous-valued dual satisfies the normalized relation with ell^(w+1) times the original coefficient diamond. This conclusion is conditional on that geometric relation, not a proof of it.",
+    "The genuine inverse-precomposition Galois representation on the original homogeneous-valued Tate dual commutes with every native prime Hecke operator. This is the required generator compatibility; no original two-dimensional character space is constructed here."
+  ],
+  "remaining": "The actual Gamma1 geometric Frobenius relation and inertia are not proved by this scope. The original integral parabolic-transfer condition, fixed exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. Finite characters and a Galois action on the ambient Tate dual do not supply a two-dimensional characteristic-zero association. 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

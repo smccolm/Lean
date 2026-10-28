@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T09:18:16.066701+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceFiniteIntegralSaturation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation.lean",
+      "sha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+      "oleanSha256": "D66B358C33A6F5CBF955EB6C81AD81B80CC77B38CECF6DDA3C5C5C4363B55517",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegralSaturation1167e.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationAudit1.log",
+  "logSha256": "A82CE322B057AD5028F85F2384D6266390F15C1462B96911E2258154DFF52323",
+  "auditSha256": "5B4600DC4BC0C96537EAD335E676842B86FBB432115E8D29A1469B182768D547",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+  "ownershipSha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60",
+  "exhaustiveTheorems": 1,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 2,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1.log",
+  "dependencyAuditSha256": "93B76A50E13DDCDDC4D7F96ACB6A9CE57FA6040453AF90C131936B3E563B4F23",
+  "dependencyAuditSourceSha256": "21AE8DDE469F8EFD0150EE03DF42FD276013F03D5869616EF67B09FA414E9DFC",
+  "consumers": [
+    "Dubon2026.sourceFiniteIntegralSubmodule_saturation"
+  ],
+  "dependency": "DUB17/18 -> original all-weight association -> finite Gamma1 parabolic character -> original parabolic operator congruence -> scalar saturation inside the actual integral Hecke span.",
+  "discharged": [
+    "A finite integral module modulo a submodule has a single nonzero torsion annihilator; every coprime nonzero scalar can therefore be divided inside that submodule."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-saturation-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "116A2D6692D5A277EEBB19F227759EFE7B2F3CE809FEA71F33A1A50337C26DAE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

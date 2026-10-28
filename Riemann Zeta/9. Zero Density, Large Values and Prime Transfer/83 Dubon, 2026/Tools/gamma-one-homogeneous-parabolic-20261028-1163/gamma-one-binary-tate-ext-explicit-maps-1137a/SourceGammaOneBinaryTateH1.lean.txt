@@ -1,0 +1,79 @@
+import SourceGammaOneBinaryParabolicH1
+import SourceGammaOneArithmeticPeriodInclusion
+import Mathlib.Algebra.Algebra.RestrictScalars
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+homogeneous-coefficient Gamma1 parabolic H1 and arithmetic Tate duality.
+Use canonical p-adic reduction on the original binary coefficient space.
+The proved arithmetic period inclusion and native base-change lift
+identify its Tate-valued dual with the original homogeneous lattice
+characters, then with native parabolic H1 at exactly Q*(p^(n+1))^2.
+The actual application level discharges finite-order vanishing. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+/-- Restrict actual arithmetic Tate characters with original binary coefficients to periods. -/
+def binaryTateCharacterRestriction :
+    (TateModule p (Pic0 (AlgebraicClosure ℚ)
+      (functionFieldOver (Gamma1 M) (AlgebraicClosure ℚ))) →ₗ[ℤ_[p]] V) →ₗ[ZMod N]
+      (sourceWeightTwoIntegralLattice (Gamma1 M) →+ V) where
+  toFun φ := φ.toAddMonoidHom.comp (arithmeticPeriodInclusion M p).toAddMonoidHom
+  map_add' _ _ := rfl
+  map_smul' _ _ := rfl
+
+theorem binaryTateCharacterRestriction_injective :
+    Function.Injective (binaryTateCharacterRestriction Q p n w) := by
+  intro φ ψ h
+  apply (arithmeticPeriodInclusion_isBaseChange M p).algHom_ext
+  intro l
+  exact congrArg (fun χ => χ l) h
+
+theorem binaryTateCharacterRestriction_surjective :
+    Function.Surjective (binaryTateCharacterRestriction Q p n w) := by
+  intro ψ
+  refine ⟨(arithmeticPeriodInclusion_isBaseChange M p).lift ψ.toIntLinearMap, ?_⟩
+  apply AddMonoidHom.ext
+  intro l
+  exact (arithmeticPeriodInclusion_isBaseChange M p).lift_eq ψ.toIntLinearMap l
+
+/-- Original homogeneous-valued arithmetic Tate duality with the original integral-period lattice. -/
+def binaryTateCharacterEquiv :
+    (TateModule p (Pic0 (AlgebraicClosure ℚ)
+      (functionFieldOver (Gamma1 M) (AlgebraicClosure ℚ))) →ₗ[ℤ_[p]] V) ≃ₗ[ZMod N]
+      (sourceWeightTwoIntegralLattice (Gamma1 M) →+ V) :=
+  LinearEquiv.ofBijective (binaryTateCharacterRestriction Q p n w)
+    ⟨binaryTateCharacterRestriction_injective Q p n w,
+      binaryTateCharacterRestriction_surjective Q p n w⟩
+
+/-- The actual original homogeneous-coefficient parabolic H1 as the arithmetic Tate dual. -/
+def binaryTateH1Equiv (hlarge : 3 < p) :
+    (TateModule p (Pic0 (AlgebraicClosure ℚ)
+      (functionFieldOver (Gamma1 M) (AlgebraicClosure ℚ))) →ₗ[ℤ_[p]] V) ≃ₗ[ZMod N]
+      binaryParabolicH1 Q N w :=
+  (binaryTateCharacterEquiv Q p n w).trans
+    (binaryLatticeH1Equiv Q N w (originalGammaOne_level_ge_four Q p n hlarge))
+
+theorem binaryTateH1Equiv_hom_apply (hlarge : 3 < p)
+    (φ : TateModule p (Pic0 (AlgebraicClosure ℚ)
+      (functionFieldOver (Gamma1 M) (AlgebraicClosure ℚ))) →ₗ[ℤ_[p]] V)
+    (γ : Gamma1 M) :
+    (H1IsoOfIsTrivial (Rep.trivial (ZMod N) (Gamma1 M) V)).hom
+      (binaryTateH1Equiv Q p n w hlarge φ).val (Additive.ofMul γ) =
+        φ (arithmeticPeriodInclusion M p (latticePeriodHom M (Additive.ofMul γ))) :=
+  binaryLatticeH1Equiv_hom_apply Q N w (originalGammaOne_level_ge_four Q p n hlarge)
+    (binaryTateCharacterEquiv Q p n w φ) γ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,76 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T07:25:13.146561+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceParabolicBinaryCoordinates",
+    "SourceParabolicBinaryRationalSpan",
+    "SourceParabolicBinaryH1RationalSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates.lean",
+      "sha256": "F8A25F73CB239518C45B2CDE4D054EDD2938C86EECC66D58ED146B8A29EF7A4B",
+      "oleanSha256": "9CCD23935E2CB1AD8820181014DA584FDDFB306309AD044DC3EB6D90945B4B30",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates1147a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryCoordinates1147a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan.lean",
+      "sha256": "3A27CC2B002E57640A4AA10BBBC4CA520C9353D0137E71C2ADA85BFA91F9E1DD",
+      "oleanSha256": "BF9C88BA5964A7C92F94F97A1D1B197EAC32932A3CB5AAD007B9A7850B4AB0CA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan1148a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan1148a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan.lean",
+      "sha256": "A97B011E5A9CA082E6E6FFDB9C39A986D446777063D603244B271C39BCB31F8B",
+      "oleanSha256": "2E6AA79CE669D4B7AF7CF84115D37995BCFD149038718F85B247226EB67B7EA5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryH1RationalSpan1149b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceBinaryAdditiveCocycles_parabolic",
+    "Dubon2026.sourceComplexBinaryCocycleCoordinate_parabolic",
+    "Dubon2026.sourceComplexParabolicBinaryCocycle_mem_rational_span",
+    "Dubon2026.sourceComplexParabolicBinaryH1_mem_rational_span",
+    "Dubon2026.sourcePrimitive_originalParabolicH1_mem_rational_span"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceBinaryAdditiveCocycles_parabolic",
+    "Dubon2026.sourceComplexBinaryCocycleCoordinate_parabolic",
+    "Dubon2026.sourceComplexParabolicBinaryCocycle_mem_rational_span",
+    "Dubon2026.sourceComplexParabolicBinaryH1_mem_rational_span",
+    "Dubon2026.sourcePrimitive_originalParabolicH1_mem_rational_span"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanAudit1.log",
+  "logSha256": "64453F37AD57D6E8574CCAB4A666B5F55034B9342030D350E21B08C368AEF1AE",
+  "auditSha256": "8A56A38F465DD22857DB5BA5D6C8AC6DCC1B8303B7357550749301FD5E516BA1",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanScratchOwnership1150.log",
+  "ownershipSha256": "935ED06F452F7CF05D91FBBCAD49D15DE69B7F3C890E7EB88D49C58C3E6B2185",
+  "exhaustiveTheorems": 12,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicRationalSpanDependencyAudit1.log",
+  "dependencyAuditSha256": "DC091A730CED54AA9066EB3C842E802FE8E45F5FD6811CB5FCB6D5E233E46772",
+  "dependencyAuditSourceSha256": "E6F4B22B712EC7BCB52F00B80826F0C5DAD5A9CCFEA29DA18F627DD02765399C",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_originalParabolicH1_mem_rational_span"
+  ],
+  "dependency": "DUB17/18 -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic spanning and congruence -> complex-to-rational parabolic cocycle structure.",
+  "discharged": [
+    "Actual additive rational-coordinate projection preserves original homogeneous parabolic cocycles by projecting the local coboundary witness.",
+    "Every original complex parabolic cocycle is in the complex span of the actual rational parabolic cocycles.",
+    "The native H1 quotient preserves this rational span, and the original primitive period class lies in it."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Uniform integral parabolic denominator clearing, integral parabolic spanning/saturation, and exact finite character descent remain. This rational-span result does not prove nonvanishing after finite restriction, parabolic transfer surjectivity, or arithmetic Galois association. DUB17--20 OPEN; 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-rational-span-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "F86ED345DA029FCD0363A78BBAA11288FEDFE7880AFF682FC016647EE78F7723",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

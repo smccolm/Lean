@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOneArithmeticDiamondGalois
+import Dubon2026.SourceGammaOneDiamondPicard
+import Dubon2026.SourceGammaOneHeckeArithmetic
+import Dubon2026.SourceTateFunctor
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility. The proved original field commutation gives
+literal place and divisor commutation, hence the actual arithmetic Picard
+and Tate diamond commute with the original coefficient Galois action.
+This supplies arithmetic equivariance; the original homogeneous normalizer
+coefficient convention and finite-character realization remain separate.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M : ℕ) [NeZero M] (g : Gamma0 M) (σ : Qbar ≃ₐ[ℚ] Qbar)
+local notation "FQ" => functionFieldOver (Gamma1 M) Qbar
+
+theorem arithmeticPlace_diamond (v : Place Qbar FQ) :
+    arithmeticPlace (Gamma1 M) σ (v.comapEquiv (ConstantField.arithmeticDiamondAut M g)) =
+      (arithmeticPlace (Gamma1 M) σ v).comapEquiv (ConstantField.arithmeticDiamondAut M g) := by
+  apply Place.ext
+  ext x
+  change ConstantField.arithmeticDiamondHom M g (arithmeticRingAut (Gamma1 M) σ.symm x) ∈
+    v.toValuationSubring ↔ arithmeticRingAut (Gamma1 M) σ.symm
+      (ConstantField.arithmeticDiamondHom M g x) ∈ v.toValuationSubring
+  rw [ConstantField.arithmeticDiamondHom_arithmetic]
+
+theorem arithmeticDivisor_diamond (D : Divisor Qbar FQ) :
+    arithmeticDivisorEquiv (Gamma1 M) σ
+        (fieldDivisorEquiv (ConstantField.arithmeticDiamondAut M g).symm D) =
+      fieldDivisorEquiv (ConstantField.arithmeticDiamondAut M g).symm
+        (arithmeticDivisorEquiv (Gamma1 M) σ D) := by
+  change Finsupp.equivMapDomain (arithmeticPlaceEquiv (Gamma1 M) σ)
+    (Finsupp.equivMapDomain (Place.placeEquiv (ConstantField.arithmeticDiamondAut M g).symm).symm D) =
+      Finsupp.equivMapDomain (Place.placeEquiv (ConstantField.arithmeticDiamondAut M g).symm).symm
+        (Finsupp.equivMapDomain (arithmeticPlaceEquiv (Gamma1 M) σ) D)
+  simp only [Finsupp.equivMapDomain_eq_mapDomain, ← Finsupp.mapDomain_comp]
+  congr 1
+  funext v
+  exact arithmeticPlace_diamond M g σ v
+
+theorem arithmeticDiamondPicard_galois (x : Pic0 Qbar FQ) :
+    gamma1ArithmeticPicardRep Qbar M σ (arithmeticDiamondPicard M g x) =
+      arithmeticDiamondPicard M g (gamma1ArithmeticPicardRep Qbar M σ x) := by
+  obtain ⟨D, rfl⟩ := Pic0.mk_surjective x
+  have hT : ModularGroup.T ∈ Gamma1 M := by simp [Gamma1_mem, ModularGroup.T]
+  change arithmeticPicard (Gamma1 M) hT σ (arithmeticDiamondPicard M g (Pic0.mk D)) =
+    arithmeticDiamondPicard M g (arithmeticPicard (Gamma1 M) hT σ (Pic0.mk D))
+  rw [arithmeticDiamondPicard_mk, arithmeticPicard_mk, arithmeticPicard_mk,
+    arithmeticDiamondPicard_mk]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  exact arithmeticDivisor_diamond M g σ D.val
+
+theorem arithmeticDiamondTate_galois (p : ℕ) [Fact p.Prime]
+    (x : TateModule p (Pic0 Qbar FQ)) :
+    TateModule.tateMap p (gamma1ArithmeticPicardRep Qbar M σ)
+        (TateModule.tateMap p (arithmeticDiamondPicard M g).toAddMonoidHom x) =
+      TateModule.tateMap p (arithmeticDiamondPicard M g).toAddMonoidHom
+        (TateModule.tateMap p (gamma1ArithmeticPicardRep Qbar M σ) x) := by
+  apply Subtype.ext
+  funext n
+  exact arithmeticDiamondPicard_galois M g σ ((x : ℕ → Pic0 Qbar FQ) n)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

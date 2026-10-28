@@ -1,0 +1,35 @@
+import SourceInnerH1Identity
+import Dubon2026.SourceH1TraceBaseChangeCoefficient
+
+/-! DUB-17/18 -> original all-weight association -> finite Gamma1
+arithmetic realization -> trivial diamond on the original Gamma0 character.
+Combine the native trace base-change theorem with the proved inner H1
+identity. The source subgroup is the literal conjugation preimage;
+identifying it with the original diagonal-cover subgroup is subsequent.
+-/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory
+variable {R G : Type} [CommRing R] [Group G]
+  (A : Rep R G) (g : G) (S : Subgroup G)
+  [Fintype (G ⧸ S)] [Fintype (G ⧸ S.comap (MulAut.conj g).toMonoidHom)]
+
+theorem sourceSubgroupH1Trace_inner :
+    subgroupCohomologyTrace A S 1 =
+      groupCohomology.map (A := Rep.res S.subtype A)
+        (sourceTracePullbackSubgroupHom (MulAut.conj g).toMonoidHom S)
+        ((Rep.resFunctor (S.comap (MulAut.conj g).toMonoidHom).subtype).map
+          (sourceInnerCoefficientMorphism A g)) 1 ≫
+        subgroupCohomologyTrace A (S.comap (MulAut.conj g).toMonoidHom) 1 := by
+  have h := sourceSubgroupH1Trace_pullback_coefficient A (MulAut.conj g).toMonoidHom S
+    A (sourceInnerCoefficientMorphism A g)
+    (subgroupComapCosetMap_surjective (MulAut.conj g).toMonoidHom
+      (MulAut.conj g).surjective S)
+  have hi : groupCohomology.map (MulAut.conj g).toMonoidHom
+      (sourceInnerCoefficientMorphism A g) 1 = 𝟙 (groupCohomology.H1 A) := by
+    apply ModuleCat.hom_ext
+    exact LinearMap.ext (sourceInnerH1_identity A g)
+  rwa [hi, Category.comp_id] at h
+
+end
+end Dubon2026

@@ -1,0 +1,66 @@
+
+/-- Exact original-object consumer of `adelicFinitePlaceProduct_addCases`. -/
+theorem actual_finite_block_coordinate_source {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ)  (hv : Function.Injective v)
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v (Fin.castAdd m i)).adicCompletion ℚ))
+    (h : ∀ j : Fin m, GeneralLinearGroup (Fin 2) ((v (Fin.natAdd n j)).adicCompletion ℚ)) :
+    adelicFinitePlaceProduct v hv (Fin.addCases g h) =
+      adelicFinitePlaceProduct (fun i : Fin n => v (Fin.castAdd m i)) (adelicPlaceFamily_left_injective v hv) g *
+      adelicFinitePlaceProduct (fun j : Fin m => v (Fin.natAdd n j)) (adelicPlaceFamily_right_injective v hv) h  :=
+  adelicFinitePlaceProduct_addCases v hv g h
+
+/-- Exact original-object consumer of `adelicFiniteTensorAssociation_original_orbit`. -/
+theorem actual_finite_block_original_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (g : ∀ i : Fin n, GeneralLinearGroup (Fin 2) ((v (Fin.castAdd m i)).adicCompletion ℚ))
+    (h : ∀ j : Fin m, GeneralLinearGroup (Fin 2) ((v (Fin.natAdd n j)).adicCompletion ℚ))
+    (a : adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullTensorIsometry F v hv hgood
+      (adelicFiniteTensorAssociation F.toCuspForm v (adelicFiniteBlockedFamily F.toCuspForm v g h a)) =
+      adelicCyclicHilbertRepresentation F.toCuspForm
+        (adelicFinitePlaceProduct (fun i : Fin n => v (Fin.castAdd m i)) (adelicPlaceFamily_left_injective v hv) g *
+          adelicFinitePlaceProduct (fun j : Fin m => v (Fin.natAdd n j)) (adelicPlaceFamily_right_injective v hv) h * a.val)
+        (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicFiniteTensorAssociation_original_orbit v F hv hgood g h a
+
+/-- Exact original-object consumer of `adelicFiniteBlockedOrbitFamily_span`. -/
+theorem actual_finite_block_tensor_span_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin (n + m) → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteBlockedOrbitFamily f v)) = ⊤  :=
+  adelicFiniteBlockedOrbitFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteTensorIsometry_association`. -/
+theorem actual_finite_block_association_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : AdelicFiniteBlockedTensor F.toCuspForm v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteTensorAssociation F.toCuspForm v x) =
+      adelicFiniteBlockedTensorIsometry v F hv hgood x  :=
+  adelicFiniteTensorIsometry_association v F hv hgood x
+
+/-- Exact original-object consumer of `adelicFiniteHilbertTensorIsometry_association`. -/
+theorem actual_completed_finite_block_association_source {N : ℕ} [NeZero N] {k : ℤ} {n m : ℕ} (v : Fin (n + m) → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i)) (x : UniformSpace.Completion (AdelicFiniteBlockedTensor F.toCuspForm v)) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (linearIsometryCompletionFunctor (adelicFiniteTensorAssociation F.toCuspForm v) x) =
+      @linearIsometryCompletion (AdelicFiniteBlockedTensor F.toCuspForm v)
+        (AdelicCyclicHilbert F.toCuspForm)
+        inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicFiniteBlockedTensorIsometry v F hv hgood) x  :=
+  adelicFiniteHilbertTensorIsometry_association v F hv hgood x
+
+/-- Exact original-object consumer of `adelicRestrictedBaseCore_le_finiteAway`. -/
+theorem actual_fixed_base_core_inclusion_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ)  (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    adelicRestrictedBaseCore f ≤ adelicFiniteFamilyAwayCore f v  :=
+  adelicRestrictedBaseCore_le_finiteAway f v hgood
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorFamily_span`. -/
+theorem actual_fixed_base_finite_tensor_span_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (v : Fin n → HeightOneSpectrum ℤ)  (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicRestrictedFiniteTensorFamily f v)) = ⊤  :=
+  adelicRestrictedFiniteTensorFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorIsometry_family`. -/
+theorem actual_fixed_base_finite_orbit_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicRestrictedBaseGroup N) :
+    adelicRestrictedFiniteTensorIsometry v F hv hgood (adelicRestrictedFiniteTensorFamily F.toCuspForm v b) =
+      adelicCyclicHilbertRepresentation F.toCuspForm (adelicFinitePlaceProduct v hv b.1 * b.2.val)
+        (adelicCyclicUnitReference F.toCuspForm)  :=
+  adelicRestrictedFiniteTensorIsometry_family v F hv hgood b
+

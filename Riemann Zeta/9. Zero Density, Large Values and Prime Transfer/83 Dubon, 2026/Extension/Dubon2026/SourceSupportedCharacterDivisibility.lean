@@ -1,0 +1,61 @@
+import Dubon2026.SourceSupportedCharacterFiber
+import Mathlib.RingTheory.IntegralClosure.Algebra.Basic
+
+/-! DUB-17/18 -> original all-weight adic association -> geometric
+finite-precision Hecke realization -> character values respect operator
+divisibility. Reuse the actual nonzero supported character fiber and the
+native finite-lattice integrality criterion. No eigenvector lift or choice
+of a free integral H1 basis is needed. -/
+namespace Dubon2026
+noncomputable section
+open scoped TensorProduct
+open TensorProduct
+
+/-- In a finite module supported at the prescribed character, divisibility of an operator on every
+vector forces the same divisibility of its field-valued character up to
+an integral quotient. -/
+theorem sourceSupportedCharacter_div_isIntegral
+    {A M F : Type} [CommRing A] [AddCommGroup M] [Module ℤ M] [Module A M]
+    [Module.Finite ℤ M] [Field F]
+    (χ : A →+* F) (hann : Module.annihilator A M ≤ RingHom.ker χ) (t : A) (n : ℤ) (hn : (n : F) ≠ 0)
+    (hdiv : ∀ m : M, ∃ u : M, t • m = n • u) :
+    IsIntegral ℤ (χ t / (n : F)) := by
+  cases Subsingleton.elim (inferInstance : Module ℤ M) (AddCommGroup.toIntModule M)
+  letI : Algebra A F := χ.toAlgebra
+  letI : Module.Finite A M := Module.Finite.of_restrictScalars_finite ℤ A M
+  letI : Nontrivial (F ⊗[A] M) := sourceModule_nontrivial_characterFiber_of_annihilator hann
+  let η : M →ₗ[ℤ] F ⊗[A] M :=
+    (TensorProduct.mk A F M 1).restrictScalars ℤ
+  have hη : η.range ≠ ⊥ := by
+    intro h
+    have hm (m : M) : η m = 0 := by
+      have he : η m ∈ η.range := LinearMap.mem_range_self η m
+      rw [h, Submodule.mem_bot] at he
+      exact he
+    have hz (z : F ⊗[A] M) : z = 0 := by
+      induction z using TensorProduct.induction_on with
+      | zero => rfl
+      | add x y hx hy => rw [hx, hy, add_zero]
+      | tmul c m =>
+        have he := congrArg (fun v : F ⊗[A] M => c • v) (hm m)
+        simpa only [η, LinearMap.restrictScalars_apply, TensorProduct.mk_apply,
+          TensorProduct.smul_tmul', smul_eq_mul, mul_one, smul_zero] using he
+    obtain ⟨z, hz'⟩ := exists_ne (0 : F ⊗[A] M)
+    exact hz' (hz z)
+  apply isIntegral_of_smul_mem_submodule η.range hη (Submodule.fg_range η)
+  rintro _ ⟨m, rfl⟩
+  obtain ⟨u, hu⟩ := hdiv m
+  have ht : χ t • η m = η (t • m) := by
+    change (χ t • (1 : F)) ⊗ₜ[A] m = (1 : F) ⊗ₜ[A] (t • m)
+    rw [show χ t • (1 : F) = t • (1 : F) by
+      simp only [smul_eq_mul, mul_one, Algebra.smul_def, RingHom.algebraMap_toAlgebra]]
+    exact TensorProduct.smul_tmul t 1 m
+  have he : χ t • η m = (n : F) • η u := by
+    rw [ht, hu, map_zsmul]
+    exact (Int.cast_smul_eq_zsmul F n (η u)).symm
+  refine ⟨u, ?_⟩
+  change η u = (χ t / (n : F)) • η m
+  rw [div_eq_mul_inv, mul_comm, mul_smul, he, smul_smul, inv_mul_cancel₀ hn, one_smul]
+
+end
+end Dubon2026

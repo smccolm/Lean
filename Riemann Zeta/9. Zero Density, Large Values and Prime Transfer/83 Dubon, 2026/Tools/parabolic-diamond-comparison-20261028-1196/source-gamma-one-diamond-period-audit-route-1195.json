@@ -1,0 +1,62 @@
+{
+  "recordedUTC": "2026-10-28T09:50:42.961826+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash, original integral periods and homogeneous-valued native H1 transpose.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-1-scratch-receipt.json",
+      "sha256": "6D3F0ECD238902E2E56F93C5F72697B714243D7EAFA92B363EFBE5CACF9D9833"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\diamond-route-1185.md",
+      "sha256": "D69C74D436F95B1461082D3658087D7D6858C54254D781593C1D73EB220D7396"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspHeckeTrace.lean",
+      "sha256": "AB544E54C759BB1FA4CC8F131BB2B474AB9F482F49E04C6375C416B373E25675"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePrimitiveDerivative.lean",
+      "sha256": "4D6D87EBCAEEFCB0EDFE451CF9943EC8DFA0F1B5A333ED0CFC46C2E8DF679E72"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePrimitiveTrace.lean",
+      "sha256": "A61DEDB31998135C35E0368BD6D9CA9AF97AD0D72768E189AE81A29F9E312118"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePeriodNormalization.lean",
+      "sha256": "A51554F78790CE0B705E36BFEE79B8E0A9913465474C3DC9E23E2F2C7A143D2B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneScalarHeckePeriods.lean",
+      "sha256": "EC68311203B101EE2B388C880077AAF8D6E4CEA3B9B22E1E2A8574DBE9556393"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspHeckeLinear.lean",
+      "sha256": "2028BFC1A35FDF3353C78F035DCEE18AAFD48CDE6A5BCC653FD01C36C809014A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePeriodHeckeLattice.lean",
+      "sha256": "8B8EE3A1F7D0196C80E24D9E2B551E95092CCF4DD8CCF4DB31D8A435D5E421B3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFiniteParabolicCharacters.lean",
+      "sha256": "5610130642176412DEE2C8D3D01F09399A3177EDC79BF6043BF059AE4B7199B6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryParabolicH1.lean",
+      "sha256": "CB69158E0F63B4AF0E5786C8822D5304810C342D46D90DD3C7C74C6DCCFA893A"
+    }
+  ],
+  "shorterRoute": "Existing native cusp translation and subgroup restriction, primitive chain rule and endpoint uniqueness, actual period surjectivity and existing binary lattice/H1 equivalence. Lattice-period surjectivity directly proves lattice stability; no new span induction or lattice basis is needed.",
+  "assumptionsToDischarge": [
+    "The literal slash diamond is an actual Gamma1 cusp form.",
+    "Its exact original endpoint and group-period identities and real H1 intertwining are proved.",
+    "The dual slash operator preserves the original integer lattice without a stability premise.",
+    "The original homogeneous-valued lattice/H1 equivalence intertwines its transpose with the native diamond and an explicit coefficient endomorphism."
+  ],
+  "remaining": "The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "preservedFailures": "1190a conjugation simp error/warning; 1192a explicit dual-period and notation errors; 1192b kernel deterministic timeout in span proof, resolved by existing lattice-period surjectivity with unchanged limits; 1193a prerequisite not yet compiled. Every failed source and log is retained.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

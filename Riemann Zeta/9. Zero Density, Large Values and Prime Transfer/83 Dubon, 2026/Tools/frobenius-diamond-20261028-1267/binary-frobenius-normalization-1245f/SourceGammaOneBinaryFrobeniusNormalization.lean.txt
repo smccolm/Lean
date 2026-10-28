@@ -1,0 +1,80 @@
+import SourceGammaOneHeckeDiamondCoefficient
+import SourceGammaOneArithmeticTateOperators
+import Dubon2026.SourceGammaOneBinaryNormalizerTate
+import Dubon2026.SourceGammaOneBinaryTateHecke
+
+/-! DUB-17/18 -> original all-weight association -> finite Gamma1
+Frobenius realization. Normalize the actual Picard Tate quadratic relation
+on the original homogeneous-valued dual. The geometric quadratic relation
+is an explicit unresolved input; the weight factor is derived here.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+/-- The original degree-w coefficient action paired with one arithmetic
+Frobenius candidate. No global Galois representation is asserted here. -/
+def binaryTateFrobeniusOperator (ell : sourceBinaryHeckePrime (Q * N))
+    (σ : Qbar ≃ₐ[ℚ] Qbar) : Module.End (ZMod N) (T →ₗ[ℤ_[p]] V) :=
+  let b := homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+  { toFun := fun φ => (b.restrictScalars ℤ_[p]).comp
+      (φ.comp (arithmeticTateGaloisRep M p σ))
+    map_add' := fun φ ψ => by
+      apply LinearMap.ext
+      intro x
+      exact b.map_add _ _
+    map_smul' := fun c φ => by
+      apply LinearMap.ext
+      intro x
+      exact b.map_smul c _ }
+
+theorem binaryTateFrobeniusOperator_quadratic_of_picard
+    (ell : sourceBinaryHeckePrime (Q * N)) (g : Gamma0 M)
+    (hlabel : (g.val 1 1 : ZMod N) = (ell.val : ZMod N))
+    (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hquad : letI : Fact ell.val.Prime := ⟨ell.property.1⟩
+      arithmeticHeckeTate M p ell.val * arithmeticTateGaloisRep M p σ =
+        arithmeticTateGaloisRep M p σ * arithmeticTateGaloisRep M p σ +
+          ell.val • arithmeticDiamondTate M p g)
+    (φ : T →ₗ[ℤ_[p]] V) :
+    binaryTateFrobeniusOperator Q p n w ell σ (binaryTatePrimeOperators Q p n w ell φ) =
+      binaryTateFrobeniusOperator Q p n w ell σ
+        (binaryTateFrobeniusOperator Q p n w ell σ φ) +
+      (ell.val : ZMod N) ^ (w + 1) •
+        (((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+          (φ.comp (arithmeticDiamondTate M p g))) := by
+  letI : Fact ell.val.Prime := ⟨ell.property.1⟩
+  let b := homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+  apply LinearMap.ext
+  intro x
+  change b (b (φ (arithmeticHeckeTate M p ell.val
+    (arithmeticTateGaloisRep M p σ x)))) =
+    b (b (φ (arithmeticTateGaloisRep M p σ
+      (arithmeticTateGaloisRep M p σ x)))) +
+    (ell.val : ZMod N) ^ (w + 1) •
+      sourceGammaOneBinaryDiamondCoefficient Q N w g
+        (φ (arithmeticDiamondTate M p g x))
+  rw [LinearMap.congr_fun hquad x, map_add, map_add, map_add,
+    map_nsmul, map_nsmul, map_nsmul]
+  congr 1
+  have hc := congrArg (fun f : Module.End (ZMod N) V =>
+    f (φ (arithmeticDiamondTate M p g x)))
+      (sourceGammaOneHeckeDiamondCoefficient_square Q N w g ell.val hlabel)
+  change b (b _) = (ell.val : ZMod N) ^ w • _ at hc
+  rw [hc, ← Nat.cast_smul_eq_nsmul (R := ZMod N), smul_smul, pow_succ, mul_comm]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

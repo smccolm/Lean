@@ -1,0 +1,76 @@
+import SourceGammaOneDiamondPeriodH1
+import Dubon2026.SourceGammaOneFiniteParabolicH1
+
+/-! DUB17/18 -> original all-weight association -> actual arithmetic
+Gamma1 diamond comparison. The literal slash operator is complex linear;
+its dual carries each original integral period to the conjugated period.
+Thus the original integer lattice is stable. This constructs the actual
+period-side diamond used in the native finite H1 comparison, independently
+of the still-required algebraic Picard diamond. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup UpperHalfPlane
+open scoped MatrixGroups ModularForm
+variable (M : ℕ) [NeZero M] (g : Gamma0 M)
+local notation "Λ" => sourceWeightTwoIntegralLattice (Gamma1 M)
+
+/-- The complex linear operator given by the actual weight-two slash diamond. -/
+def cuspDiamondLinear : Module.End ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2) where
+  toFun := cuspDiamond M g
+  map_add' f h := by
+    apply DFunLike.coe_injective
+    simp only [CuspForm.coe_add, cuspDiamond_coe, SlashAction.add_slash]
+  map_smul' c f := by
+    apply DFunLike.coe_injective
+    simp only [CuspForm.IsGLPos.coe_smul, cuspDiamond_coe]
+    apply sourceSmul_slash_of_det_pos
+    simp only [← Matrix.GeneralLinearGroup.val_det_apply, det_mapGL, Units.val_one]
+    exact one_pos
+
+/-- The actual dual slash diamond on the original cusp-form dual. -/
+def periodDiamondLinear :
+    Module.End ℂ (Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)) :=
+  (cuspDiamondLinear M g).dualMap
+
+theorem periodDiamondLinear_dualPeriod (γ : Gamma1 M) :
+    periodDiamondLinear M g (sourceWeightTwoDualPeriod (Gamma1 M) γ) =
+      sourceWeightTwoDualPeriod (Gamma1 M) (sourceGammaOneDiamondConjugation M g γ) := by
+  ext f
+  change sourceWeightTwoDualPeriod (Gamma1 M) γ (cuspDiamond M g f) = _
+  rw [sourceWeightTwoDualPeriod_apply, sourceWeightTwoDualPeriod_apply]
+  exact periodValue_cuspDiamond M g f γ
+
+theorem periodDiamondLinear_preserves_integralLattice
+    {v : Module.Dual ℂ (CuspForm ((Gamma1 M).map (mapGL ℝ)) 2)} (hv : v ∈ Λ) :
+    periodDiamondLinear M g v ∈ Λ := by
+  have hle : Λ ≤ (sourceWeightTwoIntegralLattice (Gamma1 M)).comap
+      ((periodDiamondLinear M g).restrictScalars ℤ) := by
+    apply Submodule.span_le.mpr
+    rintro _ ⟨γ, rfl⟩
+    change periodDiamondLinear M g (sourceWeightTwoDualPeriod (Gamma1 M) γ) ∈ Λ
+    rw [periodDiamondLinear_dualPeriod]
+    exact sourceWeightTwoDualPeriod_mem (Gamma1 M) _
+  exact hle hv
+
+/-- The actual dual slash diamond restricted to the original integral period lattice. -/
+def periodLatticeDiamond : Module.End ℤ Λ where
+  toFun l := ⟨periodDiamondLinear M g l.val, periodDiamondLinear_preserves_integralLattice M g l.property⟩
+  map_add' l m := Subtype.ext ((periodDiamondLinear M g).map_add l.val m.val)
+  map_smul' n l := Subtype.ext (((periodDiamondLinear M g).restrictScalars ℤ).map_smul n l.val)
+
+theorem periodLatticeDiamond_latticePeriod (γ : Gamma1 M) :
+    periodLatticeDiamond M g (latticePeriodHom M (Additive.ofMul γ)) =
+      latticePeriodHom M (Additive.ofMul (sourceGammaOneDiamondConjugation M g γ)) := by
+  apply Subtype.ext
+  exact periodDiamondLinear_dualPeriod M g γ
+
+theorem periodDiamondLinear_along (a b : ℍ) :
+    periodDiamondLinear M g (sourceWeightTwoAlong (Gamma1 M) a b) =
+      sourceWeightTwoAlong (Gamma1 M) (g.val • a) (g.val • b) := by
+  ext f
+  change sourceWeightTwoAlong (Gamma1 M) a b (cuspDiamond M g f) = _
+  simp only [along_eq_primitive_one]
+  exact (diamondPrimitive_difference M g f a b).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,127 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T07:19:35.247788+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceParabolicCohomology",
+    "SourceBinaryParabolicChange",
+    "SourceGammaOneParabolicRestriction",
+    "SourceParabolicCoefficientMap",
+    "SourcePeriodParabolicClass",
+    "SourceOriginalParabolicEigensystem"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology.lean",
+      "sha256": "FCF33C6C1AA45FDFB6A020D25286E50B92D7F36A85CBC6F3B82B1747C18C58B3",
+      "oleanSha256": "1978298A1A566D5881986E0C41063D94365810900E19582BA8E71996EEF1B014",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCohomology1140b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange.lean",
+      "sha256": "4AD6B16F31338B0407640A7E87A91A4EEEF8B831F48B04849E4588F65D8DEFD3",
+      "oleanSha256": "9C3E370EEF35F6A9EA1D681617683ECD7242E8B169DC38D30CFFF30D234AC0FA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryParabolicChange1141b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction.lean",
+      "sha256": "CF6FBB6B8767FA389B823FAF2237635D336D41F76DD1E3A2C620222925FC9B1A",
+      "oleanSha256": "1E7D3F13EA865AC239E7BF1F5BC0542E50AB9EFA612C8ED5AABDC817677B42C4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142e.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicRestriction1142e.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap.lean",
+      "sha256": "61F9063E10CFF67DDD7AEDD63760A39057F60D60A3601D17078C47EB52B29359",
+      "oleanSha256": "BA323E758D1EB8A61E832937E2F48DDFF8BCF1F0350BD3A764C368FBBD0384B1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap1144a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicCoefficientMap1144a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass.lean",
+      "sha256": "9383AA0012169312ED14D899C871FDCD11011AD0E06B53FF85E514B2C033E004",
+      "oleanSha256": "34BD7A8664C61E4F8043B63F71C13FE0896F2214B33AFCD816694481D7686B5C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodParabolicClass1143c.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem.lean",
+      "sha256": "1B29AF1A3DE35A2D996FE4BE53310854F6D3A9CD0F3B87990F4473880E9813EA",
+      "oleanSha256": "96BE828E16F3698493C868EBF3D8FD337E17CE568470A95F79F85DBDA9BF01D3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem1145a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEigensystem1145a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceParabolicH1_cocycle_iff",
+    "Dubon2026.sourceParabolicCocycles_semilinear",
+    "Dubon2026.sourceParabolicH1_semilinear",
+    "Dubon2026.sourceBinaryCocyclesChange_parabolic",
+    "Dubon2026.sourceBinaryH1Change_parabolic",
+    "Dubon2026.sourceGammaOneDiagonalHom_trace",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic",
+    "Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction",
+    "Dubon2026.sourceParabolicCocycles_coefficientMap",
+    "Dubon2026.sourceParabolic_exists_fixed_cusp",
+    "Dubon2026.sourcePeriodCocycle_mem_parabolic",
+    "Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic",
+    "Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic",
+    "Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem",
+    "Dubon2026.sourceParabolicCocycles",
+    "Dubon2026.sourceParabolicH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceParabolicH1_cocycle_iff",
+    "Dubon2026.sourceParabolicCocycles_semilinear",
+    "Dubon2026.sourceParabolicH1_semilinear",
+    "Dubon2026.sourceBinaryCocyclesChange_parabolic",
+    "Dubon2026.sourceBinaryH1Change_parabolic",
+    "Dubon2026.sourceGammaOneDiagonalHom_trace",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic",
+    "Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction",
+    "Dubon2026.sourceParabolicCocycles_coefficientMap",
+    "Dubon2026.sourceParabolic_exists_fixed_cusp",
+    "Dubon2026.sourcePeriodCocycle_mem_parabolic",
+    "Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic",
+    "Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic",
+    "Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceParabolicCocycles",
+    "Dubon2026.sourceParabolicH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryAudit1b.log",
+  "logSha256": "129C78C15253EB605BA6119D99A0B0043B797BA4D59BDBF848418A4788CC5675",
+  "auditSha256": "DAA94C510915060A83EA9DB4B447FFAD4EAD8B8EF1C18058B5F32578059AD353",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryScratchOwnership1146b.log",
+  "ownershipSha256": "DB534A3EDD1E886935C98EEEE5160BFD245D524AC4F705438A3C4037D2A19C63",
+  "exhaustiveTheorems": 23,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 27,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalParabolicEntryDependencyAudit1b.log",
+  "dependencyAuditSha256": "A4DD2C7A897B0225B234F8C4601DBCDC37C906449F1EA2165A0106AA4284207B",
+  "dependencyAuditSourceSha256": "DF57CDDE394F10119BF51B978DCFBB3110E05EE1507AF259A79621435575B2C7",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem",
+    "Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction",
+    "Dubon2026.sourceBinaryCocyclesChange_parabolic"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 character arithmetic realization -> passage from the original full H1 character to parabolic H1 -> original cusp-period entry, coefficient reduction and actual Gamma1 restriction.",
+  "discharged": [
+    "The original nonzero cusp-period class lies in the literal parabolic submodule of native homogeneous-coefficient H1.",
+    "Actual original coefficient change preserves that submodule.",
+    "Restriction along the original Gamma1 diagonal map sends every such finite coefficient class into the homogeneous parabolic H1 identified with the arithmetic Tate dual."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The integral parabolic spanning/saturation and Hecke-character descent must still be proved. The scalar complex boundary theorem does not directly prove finite homogeneous-character descent. No nonvanishing of a restriction modulo p^n, surjectivity of parabolic transfer, finite character descent or characteristic-zero lift is inferred. Diamonds, arithmetic Galois realization and the full remaining DUB17--20 gates remain open; 16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-parabolic-entry-1b-reuse-review-20261028.json",
+  "reuseReviewSha256": "28247048DAE86A51CF89DECE4E4153B88FD918DEAB350DF10850D6EAE246FC60",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

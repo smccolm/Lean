@@ -1,0 +1,73 @@
+import Dubon2026.SourceCyclotomicDiamondCovariance
+import Dubon2026.SourceCyclotomicTraceStructure
+import Dubon2026.SourceLaurentScalarIndependence
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility -> rationality of the original diamond.
+The existing cyclotomic Fricke field and its Galois fixed-field theorem
+descend the exact translated Laurent series of a rational invariant
+fraction. The source fraction and its rational germ remain explicit;
+the original modular-ratio generators must still supply those inputs.
+-/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane SourceFunctionField CongruenceSubgroup
+open scoped MatrixGroups
+
+theorem cyclotomicConjugates_self_of_rational_rep {N : ℕ}
+    (σ : kN N ≃ₐ[ℚ] kN N) {F : ℍ → ℂ} (X : LaurentSeries ℚ)
+    (hX : CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ) X) (cuspFunction N F)) :
+    CyclotomicConjugates σ F F := by
+  have he : coeffMap (algebraMap (kN N) ℂ) (coeffMap (algebraMap ℚ (kN N)) X) =
+      coeffMap (algebraMap ℚ ℂ) X := by
+    ext n
+    simp only [coeffMap_coeff]
+    rfl
+  have hs : coeffMap σ.toRingEquiv.toRingHom (coeffMap (algebraMap ℚ (kN N)) X) =
+      coeffMap (algebraMap ℚ (kN N)) X := by
+    ext n
+    simp only [coeffMap_coeff, eq_ratCast, map_ratCast]
+  refine ⟨coeffMap (algebraMap ℚ (kN N)) X, ?_, ?_⟩
+  · rwa [he]
+  · rwa [hs, he]
+
+theorem exists_rational_laurent_diamond_fraction (N : ℕ) [NeZero N]
+    {F : ℍ → ℂ} (hF : F ∈ holomorphicCyclotomicFrickeFractions N)
+    (hFinv : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (X : LaurentSeries ℚ)
+    (hX : CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ) X) (cuspFunction N F))
+    (g : Gamma0 N) :
+    ∃ Y : LaurentSeries ℚ,
+      CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ) Y)
+        (cuspFunction N (F ∘ (g.val • ·))) := by
+  have hFg : F ∘ (g.val • ·) ∈ holomorphicCyclotomicFrickeFractions N := by
+    simpa only [sl_smul_def, inv_inv, Function.comp_def] using
+      smul_mem_holomorphicCyclotomicFrickeFractions g.val⁻¹ hF
+  obtain ⟨A, _, hA⟩ := exists_field_laurent_holomorphic_fraction hFg
+  have hfix (σ : kN N ≃ₐ[ℚ] kN N) : coeffMap σ.toRingEquiv.toRingHom A = A := by
+    obtain ⟨B, hB, hBσ⟩ :=
+      (cyclotomicConjugates_self_of_rational_rep σ X hX).diamond hF hF hFinv g
+    have he : B = A := (coeffMap (algebraMap (kN N) ℂ)).injective (hB.eq_series hA)
+    subst B
+    exact (coeffMap (algebraMap (kN N) ℂ)).injective (hBσ.eq_series hA)
+  letI := finiteDimensional_kN N
+  letI := isGalois_kN N
+  have hc (n : ℤ) : A.coeff n ∈ Set.range (algebraMap ℚ (kN N)) := by
+    apply (IsGalois.mem_range_algebraMap_iff_fixed _).mpr
+    intro σ
+    exact congrArg (fun Z : LaurentSeries (kN N) => Z.coeff n) (hfix σ)
+  obtain ⟨π, hπ⟩ := (Algebra.linearMap ℚ (kN N)).exists_leftInverse_of_injective
+    (LinearMap.ker_eq_bot.mpr (algebraMap ℚ (kN N)).injective)
+  have hπa (a : ℚ) : π (algebraMap ℚ (kN N) a) = a := by
+    have he := LinearMap.congr_fun hπ a
+    simpa using he
+  have he : coeffMap (algebraMap ℚ ℂ) (A.map π) = coeffMap (algebraMap (kN N) ℂ) A := by
+    ext n
+    change algebraMap ℚ ℂ (π (A.coeff n)) = algebraMap (kN N) ℂ (A.coeff n)
+    obtain ⟨a, ha⟩ := hc n
+    rw [← ha, hπa]
+    rfl
+  exact ⟨A.map π, he.symm ▸ hA⟩
+
+end
+end Dubon2026.SourceFricke

@@ -1,0 +1,52 @@
+{
+  "scope": "October28 live default-branch refresh; source inspection only, no external proof closure audited or imported.",
+  "repositories": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.172727+00:00"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.172898+00:00"
+    },
+    {
+      "repository": "dozenalist/ModularFormsMod",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.172820+00:00"
+    },
+    {
+      "repository": "dozenalist/LeanModularForms",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.172583+00:00"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.173574+00:00"
+    },
+    {
+      "repository": "openai/math",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.173534+00:00"
+    },
+    {
+      "repository": "teal-sea/zeta-lab",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.173452+00:00"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.173754+00:00"
+    },
+    {
+      "repository": "TauCetiProject/TauCetiRoadmap",
+      "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+      "retrievedUTC": "2026-10-28T07:46:49.183756+00:00"
+    }
+  ],
+  "rootPinsChanged": false,
+  "externalImport": false
+}

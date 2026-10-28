@@ -1,0 +1,19 @@
+### Every-place original local irreducibility and coefficient factorization — 8 October 2026
+
+Thirteen further production modules prove the original local fixed-line and irreducibility results at every finite place, including the actual ramified places. A genuine bounded local Hecke sum at a good prime commutes with every original action at a distinct place; the known primitive Fourier eigenvalue extends to that entire actual cyclic Hilbert component. At a bad place, original local level invariance becomes full finite-level invariance, and the vector lies in the original lowest-weight space. The proved faithful classical reconstruction, exact reversal of the unitary Hecke normalization and primitive good-prime multiplicity one then put that vector on the original primitive generator line. Combining this argument with the existing good-place proof gives the exact cyclic level-fixed line at every finite place. Genuine local cyclic projection, scalar commutants, closed Hilbert irreducibility and smooth algebraic core irreducibility follow for the actual original local representations. The actual local/full-complement coefficient and mixed Gram identities now hold at every finite place, with exact original generator normalization. Induction over distinct actual places gives full finite-family normalized coefficient and original unit-reference Gram products without a good-place restriction. Separately, every smooth vector in the original full finite Hilbert factor is proved to belong to the actual finite algebraic orbit core, and conversely; the proof uses the original open-sublevel algebraic equality and genuine finite smoothness of the faithful cusp-function model. No bad-place newvector theorem, irreducibility, coefficient product or smooth-core identification is assumed.
+
+Actual local cyclic level-fixed lines, Hilbert and smooth-core irreducibility, and normalized coefficient/Gram products are now proved at every original finite place. The original full finite Hilbert factor is admissible and its smooth vectors are exactly its genuine algebraic core. The real/finite tensor equivalence and restricted good-place tensor with independent full action remain proved. Individual bad-place tensor factorization of the fixed base, spherical representation/Euler-factor classification, full adelic admissibility across all real compact types, the automorphic non-CM bridge and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicBadLocalFixedLine](Extension/Dubon2026/AdelicBadLocalFixedLine.lean).
+- [AdelicDistinctLocalHecke](Extension/Dubon2026/AdelicDistinctLocalHecke.lean).
+- [AdelicEveryFiniteMixedCoefficient](Extension/Dubon2026/AdelicEveryFiniteMixedCoefficient.lean).
+- [AdelicEveryFiniteTupleCoefficients](Extension/Dubon2026/AdelicEveryFiniteTupleCoefficients.lean).
+- [AdelicEveryFiniteTupleGram](Extension/Dubon2026/AdelicEveryFiniteTupleGram.lean).
+- [AdelicEveryLocalCoreIrreducible](Extension/Dubon2026/AdelicEveryLocalCoreIrreducible.lean).
+- [AdelicEveryLocalFixedLine](Extension/Dubon2026/AdelicEveryLocalFixedLine.lean).
+- [AdelicEveryLocalIrreducible](Extension/Dubon2026/AdelicEveryLocalIrreducible.lean).
+- [AdelicEveryLocalMixedCoefficient](Extension/Dubon2026/AdelicEveryLocalMixedCoefficient.lean).
+- [AdelicEveryLocalNormalizedFactor](Extension/Dubon2026/AdelicEveryLocalNormalizedFactor.lean).
+- [AdelicEveryLocalSchur](Extension/Dubon2026/AdelicEveryLocalSchur.lean).
+- [AdelicFullFiniteSmooth](Extension/Dubon2026/AdelicFullFiniteSmooth.lean).
+- [AdelicHeckeEigenNormalization](Extension/Dubon2026/AdelicHeckeEigenNormalization.lean).

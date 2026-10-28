@@ -1,0 +1,46 @@
+import Dubon2026.SourceGammaOneDiamondPeriodLattice
+import Dubon2026.SourceGammaOneComplexTatePeriods
+import Dubon2026.SourceTateTorusNaturality
+
+/-! DUB17/18 -> original all-weight association -> arithmetic Gamma1
+diamond comparison. The same original period quotient carries the actual
+dual slash diamond. Existing Tate-torus naturality intertwines it with
+base change of the proved integral lattice operator. This supplies the
+period/Tate side of the comparison; no algebraic Picard diamond or
+arithmetic-equivariance conclusion is assumed or inferred. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup
+open scoped TensorProduct
+variable (M : ℕ) [NeZero M] (g : Gamma0 M)
+local notation "Λ" => sourceWeightTwoIntegralLattice (Gamma1 M)
+
+/-- The actual dual slash diamond on the original integer-period quotient. -/
+def periodQuotientDiamond :
+    Module.End ℤ (Module.Dual ℂ (CuspForm (Gamma1 M) 2) ⧸ Λ) :=
+  (sourceWeightTwoIntegralLattice (Gamma1 M)).mapQ
+    (sourceWeightTwoIntegralLattice (Gamma1 M))
+    ((periodDiamondLinear M g).restrictScalars ℤ)
+    (fun _ hv => periodDiamondLinear_preserves_integralLattice M g hv)
+
+theorem periodQuotientDiamond_eq_quotEnd :
+    (periodQuotientDiamond M g).toAddMonoidHom =
+      TateModule.Period.quotEnd ℂ Λ (periodDiamondLinear M g)
+        (fun _ hv => periodDiamondLinear_preserves_integralLattice M g hv) := by
+  apply AddMonoidHom.ext
+  intro x
+  obtain ⟨v, rfl⟩ := Submodule.mkQ_surjective Λ x
+  rfl
+
+theorem periodTateTensor_diamond (p : ℕ) [Fact p.Prime] (z : ℤ_[p] ⊗[ℤ] Λ) :
+    TateModule.Period.phi2 ℂ p Λ (integralPeriodBasis M)
+      ((periodLatticeDiamond M g).baseChange ℤ_[p] z) =
+      TateModule.tateMap p (periodQuotientDiamond M g).toAddMonoidHom
+        (TateModule.Period.phi2 ℂ p Λ (integralPeriodBasis M) z) := by
+  rw [periodQuotientDiamond_eq_quotEnd]
+  exact TateModule.Period.phi2_baseChange ℂ p Λ (integralPeriodBasis M)
+    (periodDiamondLinear M g) (fun _ hv => periodDiamondLinear_preserves_integralLattice M g hv)
+    (periodLatticeDiamond M g) (fun _ => rfl) z
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

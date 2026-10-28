@@ -1,0 +1,27 @@
+# Reuse decision for original diamond arithmetic descent
+
+28 October 2026. This serves DUB-17 Theorem 2.6 and DUB-18 Corollary 8.2 through
+the existing continuation -> automorphy -> original all-weight association ->
+arithmetic Gamma1/Picard diamond chain. Neither gate is closed here.
+
+The original complex field diamond is constructed from actual modular quotients.
+Its cusp germs and inverse, lift independence, unit action and fixed original j
+coordinate provide the complex side. To define the independent arithmetic diamond,
+it must preserve the image of the original algebraic-closure coefficient field.
+
+Reuse inspected: SourceTranscendentalTranslation proves that an arbitrary
+transcendental coefficient can be translated by every base-field constant by an
+ambient field automorphism. SourceLaurentCoefficientMap supplies the literal
+coefficientwise homomorphism. Native nonzero polynomials have finitely many roots.
+Together these give algebraicity of each coefficient of a Laurent-series root of
+a polynomial over the base Laurent field. This avoids a new general geometric
+integrality theorem, a full modular-form q-expansion principle, or a second field
+presentation. The necessary application is over the algebraically closed Qbar;
+there algebraic coefficients lie in the original coefficient image.
+
+The existing SourceLaurentSpanDescent and SourceGammaOneComplexFieldIndependence
+are candidates for descending field membership after coefficient descent. The
+fixed j identity should transport the finite original j-field relation. These
+intervening steps must be proved before claiming arithmetic field stability.
+No rational descent, Galois commutation or Picard comparison is inferred merely
+from complex field stability or a finite character.

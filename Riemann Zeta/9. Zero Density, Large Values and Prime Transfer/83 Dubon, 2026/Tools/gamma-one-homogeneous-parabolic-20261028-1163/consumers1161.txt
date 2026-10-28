@@ -1,0 +1,71 @@
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_distinct_place_product_mul`. -/
+theorem actual_normalized_full_complement_product_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (l : List AdelicPlaceMatrix)
+    (hgood : ∀ x ∈ l, IsGoodAdelicPlace N x.1)
+    (hdistinct : l.Pairwise (fun x y => x.1 ≠ y.1))
+    (a : RationalAdelicGL2) (ha : ∀ x ∈ l, adelicPlaceGL2Hom x.1 a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm ((l.map adelicPlaceMatrixEmbedding).prod * a) =
+      (l.map (fun x => adelicNormalizedCuspCoefficient F.toCuspForm (adelicPlaceMatrixEmbedding x))).prod *
+        adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_distinct_place_product_mul F l hgood hdistinct a ha
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_norm`. -/
+theorem actual_cusp_unit_reference_norm_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) : ‖adelicCyclicUnitReference f‖ = 1 :=
+  adelicCyclicUnitReference_norm f hf
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_coefficient`. -/
+theorem actual_unit_reference_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (a : RationalAdelicGL2) :
+    inner ℂ (adelicCyclicUnitReference f)
+      (adelicCyclicHilbertRepresentation f a (adelicCyclicUnitReference f)) =
+        adelicNormalizedCuspCoefficient f a :=
+  adelicCyclicUnitReference_coefficient f a
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_unit_reference`. -/
+theorem actual_tensor_unit_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime]
+    (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗ₜ[ℂ]
+        adelicFullAwayUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+      adelicCyclicUnitReference F.toCuspForm :=
+  adelicLocalFullAwayTensorIsometry_unit_reference F hpN
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_right_reference`. -/
+theorem actual_tensor_local_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (x ⊗ₜ[ℂ] adelicFullAwayUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) =
+        x.val :=
+  adelicLocalFullAwayTensorIsometry_right_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayTensorIsometry_left_reference`. -/
+theorem actual_tensor_complement_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) :
+    adelicLocalFullAwayTensorIsometry F hpN
+      (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) ⊗ₜ[ℂ] x) =
+        x.val :=
+  adelicLocalFullAwayTensorIsometry_left_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_right_reference`. -/
+theorem actual_completed_tensor_local_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : UniformSpace.Completion (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :
+    adelicLocalFullAwayHilbertTensorIsometry F hpN
+      (adelicLocalReferenceCompletionInclusion F.toCuspForm (primitiveCuspForm_ne_zero F)
+        (rationalPrimePlace p (Fact.out : p.Prime)) x) =
+      @linearIsometryCompletion
+        (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+        (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicLocalCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).subtypeₗᵢ x :=
+  adelicLocalFullAwayHilbertTensorIsometry_right_reference F hpN x
+
+/-- Exact original-object consumer of `adelicLocalFullAwayHilbertTensorIsometry_left_reference`. -/
+theorem actual_completed_tensor_complement_reference_source {N : ℕ} [NeZero N] {k : ℤ} {p : ℕ} [NeZero p] [Fact p.Prime] (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : UniformSpace.Completion (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :
+    adelicLocalFullAwayHilbertTensorIsometry F hpN
+      (adelicFullAwayReferenceCompletionInclusion F.toCuspForm (primitiveCuspForm_ne_zero F)
+        (rationalPrimePlace p (Fact.out : p.Prime)) x) =
+      @linearIsometryCompletion
+        (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+        (AdelicCyclicHilbert F.toCuspForm) inferInstance inferInstance inferInstance inferInstance inferInstance
+        (adelicFullAwayCyclicCore F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))).subtypeₗᵢ x :=
+  adelicLocalFullAwayHilbertTensorIsometry_left_reference F hpN x
+

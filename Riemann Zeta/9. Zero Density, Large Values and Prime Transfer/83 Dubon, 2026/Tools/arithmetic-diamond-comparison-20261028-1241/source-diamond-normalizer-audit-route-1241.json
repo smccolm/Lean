@@ -1,0 +1,47 @@
+{
+  "recordedUTC": "2026-10-28T11:44:00.213946+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> original homogeneous normalizer diamond comparison.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-1-scratch-receipt.json",
+      "sha256": "0A368CDFA4AE5591D280BAAC9EFCFFDEE4420680B385056DD1F43F4BCCA6253E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels.lean",
+      "sha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiagonalHom.lean",
+      "sha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedLevelConjugation.lean",
+      "sha256": "9AF796C71BBF056CF03810F3E8294E8B4F47325A4C458D6A69170B50DC6D0A43"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryRestriction.lean",
+      "sha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousDiagonalAction.lean",
+      "sha256": "2B63041CD2C81189F4D022B115E30C26975BDF62A2C2AA4ADC095D4D3D33DEE8"
+    }
+  ],
+  "shorterRoute": "Restrict the existing raised-level group homomorphism to the actual Gamma0 normalizer. Native cocycle multiplication and proved diagonal-cover coefficient triviality give exact restriction invariance. Original matrix entries modulo N identify the inverse coefficient action with the existing homogeneous diagonal substitution. Compose the already audited arithmetic Tate/H1 diamond equality with this matrix equality; use the proved arithmetic Picard Tate Galois commutation. The original Gamma1 character kernel and coefficient triviality give lift independence. No new normalizer or cohomology framework is needed.",
+  "assumptionsToDischarge": [
+    "The inverse lifted normalizer action intertwines the original binary representation under the actual Gamma1 conjugation.",
+    "The resulting diamond fixes literal restrictions of every original binary cocycle and H1 class.",
+    "At every positive coefficient modulus and every homogeneous degree, the original inverse normalizer action equals homogeneous substitution by the reversed diagonal entries modulo that modulus.",
+    "The original arithmetic Picard Tate dual acts on native finite Gamma1 H1 by this exact homogeneous coefficient convention and commutes with original arithmetic Galois.",
+    "The original coefficient action and resulting native H1 diamond depend only on the lower-right unit label."
+  ],
+  "remaining": "Supersedes the unresolved homogeneous normalizer coefficient convention in scope 1234. Parabolic transfer preimages, the fixed exceptional-prime exclusion, coefficient-field/Frobenius/inertia realization, characteristic-zero all-weight association, automorphy and literal higher continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB17--20 OPEN.",
+  "preservedFailures": "1237a mapGL matrix coercion rewrite and unused simp fixed using the literal mapped matrix. 1239a broad rewrite exceeded default heartbeats; repaired by explicit composition of the two proved equalities. Successful 1235a/1236a/1237b retained before uniform scratch-import rebuilding. No proof limits or standards changed.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

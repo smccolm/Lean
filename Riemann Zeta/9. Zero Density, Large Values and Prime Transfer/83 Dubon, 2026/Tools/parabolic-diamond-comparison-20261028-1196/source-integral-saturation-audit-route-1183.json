@@ -1,0 +1,32 @@
+{
+  "recordedUTC": "2026-10-28T09:16:27.993029+00:00",
+  "chain": "DUB17/18 -> original all-weight association -> finite Gamma1 parabolic character -> original parabolic operator congruence -> scalar saturation inside the actual integral Hecke span.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Module\\Torsion\\Basic.lean",
+      "sha256": "055C3F63128ED38D2B1C0C1649113F7C5A5B6E094F2CF0C56B527D4C602A38AB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1PrimePowerKernel.lean",
+      "sha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationModuleTorsionBound.lean",
+      "sha256": "76DA167305CDEE79D478C3B5E6FDCFD55BF01A22EBFF8BEE16297A1AB317171F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspStabilizer.lean",
+      "sha256": "E68170E419FE460979D6F25532A3F5E19709949982C5C5E7C1ABA8BD00E7E051"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspUnipotent.lean",
+      "sha256": "6CEFE5D3E957FF43F80E77D04DB7DC01CE43655DB91DAEE806CE7BA2B28A9833"
+    }
+  ],
+  "shorterRoute": "The native finite torsion-submodule annihilator theorem applies directly because the original integral H1 is finite over Z and Z is Noetherian. Apply it to H1 / parabolicH1, then Bezout proves saturation for every scalar coprime to one fixed nonzero integer. Combine with the existing exact full-H1 reduction kernel. This avoids new cusp-width, polynomial unipotent cokernel or Smith-normal-form developments.",
+  "scope": "Only the generic saturation lemma is promoted because the actual Hecke-span congruence directly consumes it. The separately audited SourceParabolicReductionKernel theorem remains archived scratch work and is deferred; it is not required by the shorter route. No source theorem or acceptance gate is weakened.",
+  "remaining": "Parabolic Hecke stability or an exact invariant-module substitute, finite-character congruence/descent, Gamma1 parabolic realization and the arithmetic/Galois comparisons remain. 16/20 unchanged.",
+  "assumptionsToDischarge": [
+    "A finite integral module modulo a submodule has a single nonzero torsion annihilator; every coprime nonzero scalar can therefore be divided inside that submodule."
+  ]
+}

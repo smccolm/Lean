@@ -1,0 +1,156 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T11:07:33.706162+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondAnalyticGerms",
+    "SourceGammaOneDiamondAnalyticPlaces",
+    "SourceGammaOneDiamondAnalyticDivisors",
+    "SourceGammaOneDiamondEndpoint",
+    "SourceGammaOneDiamondPicardPeriods",
+    "SourceGammaOneDiamondComplexComparison",
+    "SourceGammaOneArithmeticDiamondTate"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms.lean",
+      "sha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE",
+      "oleanSha256": "0B295DE34985B2ADDFF883E586AEAD13586A4BB3B75ECD73AB7143E3A60E129F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces.lean",
+      "sha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3",
+      "oleanSha256": "9DCA641876B0F63837F798D3B4569659C6E4E67D21C831038F8A4279E348D059",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors.lean",
+      "sha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C",
+      "oleanSha256": "9DA7A2A69E0897C6004D55623DC6FCF35D83733DB83334C302C3D84E970A98FA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint.lean",
+      "sha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011",
+      "oleanSha256": "582BE09CB566B4A9D33D7D9F3083ADF14B83756A649F7286F286D8D5BE681217",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods.lean",
+      "sha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128",
+      "oleanSha256": "09B035D31AD7DF6EAF16B3E4B42928E970D8797D06228B9C27B6E479A95248ED",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison.lean",
+      "sha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917",
+      "oleanSha256": "1C5C07EA782BD45D830857401B13EC2B0842795E609366643B20DDC0F5E0D62D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate.lean",
+      "sha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B",
+      "oleanSha256": "B31EF1A63A5449FE1121F7D1DDE54A7ABC1E7FDC8C233D87C848F33CDDC0EBD7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsAudit1.log",
+  "logSha256": "EE655C09E37FF8EC62D94D7C83E87B1F84E5A2E55DA177E70C9DE50915579AB5",
+  "auditSha256": "4F08B710CD846BDBBEB3E6256D6B2A4BAF98A68B42D2FAD135CD3ED2AEC673E7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+  "ownershipSha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06",
+  "exhaustiveTheorems": 28,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 35,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1.log",
+  "dependencyAuditSha256": "41B34D21D23D708828F37841EF2752540CD214CB21DAC7D94B8168B23F5282C6",
+  "dependencyAuditSourceSha256": "5FA3E4DC95EFAE3520B051F8274B66A53C743658573787B4925888020F51D026",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.diamondFieldHom_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_diamondFieldHom_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_diamondFieldHom",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_comap_diamondFieldAut",
+    "Dubon2026.SourceFunctionField.GammaOne.diamondDivisor_mapDomain_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPicardHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticEndpointHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPeriodHom_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.picardPeriodEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodQuotient_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.complexPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.liftPlace_comap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.conorm_diamondDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.complexPicardMap_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.tateComplexEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticPicardTatePeriodTensorEquiv_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondLinear",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticDiamondDegreeZero"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 homogeneous-coefficient arithmetic realization -> arithmetic diamond/Picard comparison.",
+  "discharged": [
+    "The actual field diamond has the literal modular quotient, interior analytic germ and analytic place action.",
+    "The independent complex field/Picard diamond agrees with the original period quotient on every Picard class; the moving lemma discharges analytic representatives and degree zero discharges the basepoint term.",
+    "The original arithmetic-to-complex divisor conorm and Picard map intertwine the arithmetic and complex diamonds, by unique place extension and the proved field square.",
+    "For every Tate prime, the original arithmetic Picard diamond acts on the original p-adic period tensor by the native dual slash diamond, without extra prime restrictions or compatibility premises."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Supersedes historical missing Picard-period and arithmetic constant-field compatibility in scopes 1204/1212. Galois commutation, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "2E843CC83E2C5F5E581384158F31D84973F14A5D09461B519A2C6A357E0555F3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

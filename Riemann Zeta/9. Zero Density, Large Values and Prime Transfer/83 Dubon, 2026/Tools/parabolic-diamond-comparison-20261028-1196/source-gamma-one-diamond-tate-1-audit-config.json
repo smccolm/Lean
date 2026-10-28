@@ -1,0 +1,45 @@
+{
+  "modules": [
+    "SourceGammaOneDiamondPeriodTate"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd",
+    "Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond",
+    "Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice",
+    "Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond",
+    "Dubon2026.TateModule.Period.phi2_baseChange"
+  ],
+  "localModules": [
+    "SourceGammaOneDiamondPeriodTate",
+    "SourceGammaOneDiamondCuspPrimitive",
+    "SourceGammaOneDiamondPeriodH1",
+    "SourceGammaOneDiamondPeriodLattice",
+    "SourceGammaOneDiamondFiniteH1",
+    "SourceGammaOneDiamondConjugation",
+    "SourceGammaOneDiamondH1",
+    "SourceGammaOneDiamondLabels",
+    "SourceGammaOneUnitDiamondAction"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneDiamondPeriodTate": "SourceGammaOneDiamondPeriodTate1194a"
+  }
+}

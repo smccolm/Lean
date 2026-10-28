@@ -1,0 +1,80 @@
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_finiteFamilyEquiv`. -/
+theorem actual_finite_tuple_coefficient_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (adelicFiniteFamilyEquiv v hv b) =
+      (∏ i, adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b.1 i)))) *
+      adelicNormalizedCuspCoefficient F.toCuspForm b.2.val :=
+  adelicNormalizedCuspCoefficient_finiteFamilyEquiv v hv F hgood b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_finiteFamily_gram`. -/
+theorem actual_finite_tuple_gram_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b₁ b₂ : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₁)
+        (adelicCyclicUnitReference F.toCuspForm))
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₂)
+        (adelicCyclicUnitReference F.toCuspForm)) =
+      (∏ i, inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₁.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₂.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))) *
+      inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₁.2.val (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₂.2.val (adelicCyclicUnitReference F.toCuspForm)) :=
+  adelicCyclicUnitReference_finiteFamily_gram v hv F hgood b₁ b₂
+
+/-- Exact original-object consumer of `adelicFiniteFamilyEquiv_symm_continuous`. -/
+theorem actual_finite_family_inverse_topology_source {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) : Continuous (adelicFiniteFamilyEquiv v hv).symm :=
+  adelicFiniteFamilyEquiv_symm_continuous v hv
+
+/-- Exact original-object consumer of `adelicLocalUnitOrbit_span`. -/
+theorem actual_original_unit_local_orbit_span_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (v : HeightOneSpectrum ℤ) :
+    Submodule.span ℂ (Set.range (adelicLocalUnitOrbit f v)) = ⊤ :=
+  adelicLocalUnitOrbit_span f hf v
+
+/-- Exact original-object consumer of `adelicFiniteLocalTensorFamily_span`. -/
+theorem actual_finite_local_tensor_orbit_span_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hf : f ≠ 0) :
+    Submodule.span ℂ (Set.range (adelicFiniteLocalTensorFamily f v)) = ⊤ :=
+  adelicFiniteLocalTensorFamily_span f v hf
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorFamily_gram`. -/
+theorem actual_finite_hilbert_tensor_gram_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ (adelicFiniteFullTensorFamily F.toCuspForm v a) (adelicFiniteFullTensorFamily F.toCuspForm v b) =
+      inner ℂ (adelicFiniteFullMixedFamily F.toCuspForm v hv a) (adelicFiniteFullMixedFamily F.toCuspForm v hv b) :=
+  adelicFiniteFullTensorFamily_gram F v hv hgood a b
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_family`. -/
+theorem actual_finite_hilbert_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullTensorIsometry F v hv hgood (adelicFiniteFullTensorFamily F.toCuspForm v a) =
+      adelicFiniteFullMixedFamily F.toCuspForm v hv a :=
+  adelicFiniteFullTensorIsometry_family F v hv hgood a
+
+/-- Exact original-object consumer of `adelicFiniteFullTensorIsometry_range`. -/
+theorem actual_finite_hilbert_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    (adelicFiniteFullTensorIsometry F v hv hgood).toLinearMap.range =
+      Submodule.span ℂ (Set.range (fun g : RationalAdelicGL2 =>
+        adelicCyclicHilbertRepresentation F.toCuspForm g (adelicCyclicHilbertGenerator F.toCuspForm))) :=
+  adelicFiniteFullTensorIsometry_range F v hv hgood
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_family`. -/
+theorem actual_completed_finite_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicFiniteFullHilbertTensorIsometry F v hv hgood
+      (adelicFiniteFullTensorFamily F.toCuspForm v a : AdelicFiniteFullHilbertTensor F.toCuspForm v) =
+      adelicFiniteFullMixedFamily F.toCuspForm v hv a :=
+  adelicFiniteFullHilbertTensorIsometry_family F v hv hgood a
+
+/-- Exact original-object consumer of `adelicFiniteFullHilbertTensorIsometry_range`. -/
+theorem actual_completed_finite_tensor_range_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (F : PrimitiveCuspForm N k) (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v) (hgood : ∀ i, IsGoodAdelicPlace N (v i)) :
+    (adelicFiniteFullHilbertTensorIsometry F v hv hgood).toLinearMap.range = ⊤ :=
+  adelicFiniteFullHilbertTensorIsometry_range F v hv hgood
+

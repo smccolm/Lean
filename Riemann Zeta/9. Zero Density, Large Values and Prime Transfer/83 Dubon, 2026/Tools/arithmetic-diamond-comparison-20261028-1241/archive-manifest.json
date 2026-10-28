@@ -1,0 +1,1939 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic-diamond-comparison-promotion-route-1241.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/arithmetic-diamond-comparison-promotion-route-1241.json",
+      "sha256": "10A6E5B9031DA2B45EA97448F9F865968C669DE02124405730264F27C7980F5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCurveFieldEquivPicard.lean.txt",
+      "sha256": "C67D61233B752EE651F52310E7D1FABA9CAC8D68BE9C87224A0FBA6B0EF37B68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCurveFieldEquivPicard1210a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCurveFieldEquivPicard1210a.log",
+      "sha256": "B36F6557DE4876F6CD3291533209E599BC13475A779C3492F68955EA0BBB3060"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCurveFieldEquivPicard1210b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldEquivPicard1210b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCurveFieldEquivPicard1210b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCyclotomicDiamondCovariance.lean.txt",
+      "sha256": "705A5F7D06F2283E3EC80F34254FFA8229277C777A220E7EF0A7685951161ED4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCyclotomicDiamondCovariance1223a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCyclotomicDiamondCovariance1223a.log",
+      "sha256": "E5EC8304F6F65530B4BA4370763BC0EA632A17460CC234852B1D939C7732F81D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCyclotomicDiamondCovariance1223b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicDiamondCovariance1223b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceCyclotomicDiamondCovariance1223b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisAudit1.lean.txt",
+      "sha256": "55BB53FE5E04D2D0B13EB91382233654D62855BC5DC362D1E87E1917F59F733C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisAudit1.log",
+      "sha256": "10DC5A170122351BD879962651A9A4A406B8DA16773ED366D481C92D94652629"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1.lean.txt",
+      "sha256": "AFE161AECE41BF7F5EB733FF6057483E2BDAB85CB7416EFBD18AEF433AE75869"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisDependencyAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisDependencyAudit1.log",
+      "sha256": "C7CA9E5F6289D2E6AA8BA4AD1A2A1FB505ABAB5C930E18867E29E085A9B2C1CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisScratchOwnership1234.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisScratchOwnership1234.lean.txt",
+      "sha256": "FBB7AB4E377CF9335A2E0D8343211E58D57485B35E081F45DE9F08930704CC72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondGaloisScratchOwnership1234.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondGaloisScratchOwnership1234.log",
+      "sha256": "1A7F92F02C467680BB0D99C39A91A05D7CAF9C26D37C9F206DC476EC5F77BA43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerAudit1.lean.txt",
+      "sha256": "EEA8A097E6893E769E16A0ECB6DFFFC9B51CBADB05E4E6D228109BFF5122DDB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerAudit1.log",
+      "sha256": "105F30E9724A59AEDAC919BA15901C5780EF5683A27B8B7D1073BF871BA467ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1.lean.txt",
+      "sha256": "783BC366A91A6DBDE27602966A5BE4BD948774A334F74090E04C176EAA432AE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerDependencyAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerDependencyAudit1.log",
+      "sha256": "EA78C58A27C95B6604BD5FE1A255E30B3A7483DBD830A2F1553DC4551B5EE975"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerScratchOwnership1241.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerScratchOwnership1241.lean.txt",
+      "sha256": "34288BC710B254A6597A14B4BCD7B97D516879EF676821AEF2E4A8FAFD17A5BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondNormalizerScratchOwnership1241.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondNormalizerScratchOwnership1241.log",
+      "sha256": "B59AD46F18D077E34BEEBCEB963BDF540635B613175277547448AB95F48F9CBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsAudit1.lean.txt",
+      "sha256": "4F08B710CD846BDBBEB3E6256D6B2A4BAF98A68B42D2FAD135CD3ED2AEC673E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsAudit1.log",
+      "sha256": "EE655C09E37FF8EC62D94D7C83E87B1F84E5A2E55DA177E70C9DE50915579AB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1.lean.txt",
+      "sha256": "5FA3E4DC95EFAE3520B051F8274B66A53C743658573787B4925888020F51D026"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsDependencyAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsDependencyAudit1.log",
+      "sha256": "41B34D21D23D708828F37841EF2752540CD214CB21DAC7D94B8168B23F5282C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsScratchOwnership1220.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsScratchOwnership1220.lean.txt",
+      "sha256": "E0482067E41215886BF15A97C4938916E9A20482878A33F91B6785299DE43F58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondPicardPeriodsScratchOwnership1220.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceDiamondPicardPeriodsScratchOwnership1220.log",
+      "sha256": "FB132F2365698CF60B3ACAB47C2F64C3873853D3282BC751F21D2342684B1C06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamond.lean.txt",
+      "sha256": "69711E689C8F4272249C9B50210DF0E86FCF59A26DF8935EAC8BF3AFD7AAD957"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamond1209a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamond1209a.log",
+      "sha256": "BE6E9E1D7E9BE25D9FFBBD7A5B82AB3B4D27B0C65AF4CA42C7973B2C8F045F55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamond1209b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamond1209b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamond1209b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondAudit1.lean.txt",
+      "sha256": "F9DBBBA5F5C01341EFDED418677B5EB699191B3E92174641E94F31F8863277C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondAudit1.log",
+      "sha256": "B31F850667DB47BA2B04DE9E9851D0AD237CCEF5B5E8E57BDB8259DF92F8A695"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1.lean.txt",
+      "sha256": "AEA459A43DCDA7495027275283CA5F5F6028EC80CE6B8691DEDE3E6FE1B58C27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondDependencyAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondDependencyAudit1.log",
+      "sha256": "36FDC3032688DFB0F9D6DD71C6EE2973F319CD8BB9FA404D158E7E719FF5F1EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGalois.lean.txt",
+      "sha256": "A0394BEBD1CA4432B22C92C9B185F62F77A38A8EC1CB7D3507BAF8319AB76AC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois1232a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGalois1232a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGalois1232a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGalois1232a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGenerators.lean.txt",
+      "sha256": "FFA46B194F64CBCEAD51D0BBE1DCE90360FC66C6E80B1BC200E05BF17FABEE69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators1231a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGenerators1231a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondGenerators1231a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondGenerators1231a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondScratchOwnership1212.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondScratchOwnership1212.lean.txt",
+      "sha256": "C593B053D693C90B0BD623D762C74399A8DDDBE5F2A8E5F79BE30EAA72614EEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondScratchOwnership1212.log",
+      "sha256": "A4D345F98A49651891CD32C1E292E6CAE07276C0E308B3D1389DD91D43B378D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondTate.lean.txt",
+      "sha256": "01604B57A4E4B44A9D1B83CE046316C4E3C2A8131028D553DF5467297B6FF02B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondTate1219a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondTate1219a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneArithmeticDiamondTate1219a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondLabels.lean.txt",
+      "sha256": "6AB4DF5A4AD363127FA70AD89D69E1039973C4B3817BEC5118198D2F9772D8B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondLabels1240a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondLabels1240a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondLabels1240a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondTateH1.lean.txt",
+      "sha256": "1C050E437CF32BC40C2B2456201D36D8F82B5ED7C6BA886EDB5189B7DED6497F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH11222a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondTateH11222a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryDiamondTateH11222a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryDiamondTateH11222a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryNormalizerTate.lean.txt",
+      "sha256": "FEB1E8F89E29225A0519D3FBEE454B69C8BE32886A43B8835324E47C8D14E305"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryNormalizerTate1239a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryNormalizerTate1239a.log",
+      "sha256": "043C10BDC1A039A99B5C55494CD34ACF6AF00466EB23EEEBD3083994EB83B4E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryNormalizerTate1239b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryNormalizerTate1239b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneBinaryNormalizerTate1239b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticDivisors.lean.txt",
+      "sha256": "2F2CCC2353911850C8A6FB69EC7623CF89D9A84388B756B534CD1790B1045F0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticDivisors1215a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticDivisors1215a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticDivisors1215a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticGerms.lean.txt",
+      "sha256": "1D187DF04304A51C5F977C054A9380921C7E8550934EBAE4D869A0A5919E61AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticGerms1213a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticGerms1213a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticGerms1213a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticPlaces.lean.txt",
+      "sha256": "75D609324DADF8C4D85608256286DF86B0761F7E954A411F08F9FD8D7B9D74D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticPlaces1214a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticPlaces1214a.log",
+      "sha256": "10C28F254B55763602870A41DBECEEABC712D0625B8FF89695F17F3432BB62C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticPlaces1214b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondAnalyticPlaces1214b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondAnalyticPlaces1214b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift.lean.txt",
+      "sha256": "53122554AA5B02AC46166590EDCE75274A2E13A2343E7772CD0A8CB465F53A5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208a.log",
+      "sha256": "8F5FFE9F2B3C8DD8440CA344A221A872083EFADDD610AE101BE40CD52A3164B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208b.log",
+      "sha256": "034F7641732D2A5A7A46F0C95D03264C5A5BC31F990B45956DD38BB4B7AE7BF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticLift1208c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticLift1208c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticRelation.lean.txt",
+      "sha256": "B62B6162C3AF3DE7C677D19B4670938C6D54A4AE664FB319C5AE1F7EE107512E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticRelation1205a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticRelation1205a.log",
+      "sha256": "FEF27584E448695858A1B17DBE5F8E9AA8CAE4CBC5B0B547CF19A80C0FC7B4CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticRelation1205b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondArithmeticRelation1205b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondArithmeticRelation1205b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficient.lean.txt",
+      "sha256": "206475732E3EFD1AF1D8D998E9E916215254C3D194C1AB1C7FCD9F1CF19FEDDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficient1235a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficient1235a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficient1235b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficient1235b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficient1235b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix.lean.txt",
+      "sha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237a.log",
+      "sha256": "B250EA72B31DB7756F3A4A37120ABF871D4EA25E0442F6E4B9E2DDB96303EA3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondCoefficientMatrix1237c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondCoefficientMatrix1237c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexArithmetic.lean.txt",
+      "sha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexArithmetic1230a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexArithmetic1230a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexArithmetic1230b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexArithmetic1230b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexArithmetic1230b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexComparison.lean.txt",
+      "sha256": "6927CF189E053E6A23DA6721FA73922AEEACE13AB40857827E5C6EE1A17E9917"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexComparison1218a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondComplexComparison1218a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondComplexComparison1218a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondEndpoint.lean.txt",
+      "sha256": "5D76F50C3CFC0B7C487D49FFFA43EEDC591DACF73A8A3AAFD96B6BEB988EC011"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondEndpoint1216a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondEndpoint1216a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondEndpoint1216a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldAudit1.lean.txt",
+      "sha256": "2FE7B3E50A87BECD1DDEC7CEAACCABEF3C40D50953D96756C082B8401A6F7C33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldAudit1.log",
+      "sha256": "4B6373F45F37F6BA5757BDFF0A1FEEF3117856E2AE2E5FC8834EBD6952D3AA24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1.lean.txt",
+      "sha256": "74608FD408FE0DE4EFF7610D52A206912D23E6B9609D21D8029ABD093178E498"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldDependencyAudit1.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldDependencyAudit1.log",
+      "sha256": "4FF8F0AA63C2DF76D949B4EE61FF1D05ECE42627641C6EFF1CC08D9D644AA273"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldHom.lean.txt",
+      "sha256": "48A1231ED6EEAE899BB20671003BB02D2AEABFA08200996D135CFECEEF38FE3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldHom1199a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldHom1199a.log",
+      "sha256": "95ECC3601684A0E78782702AFA9DFBAD24C04787CC80571427A997A4660F7A88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldHom1199b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldHom1199b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldHom1199b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldJ.lean.txt",
+      "sha256": "F7136000C5C5B2D05AC5C2FD074FEB3E539D79A18382E6D6C2497C5C47BCFC4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ1201a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldJ1201a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldJ1201a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldJ1201a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldLabels.lean.txt",
+      "sha256": "3FC5EFA8220CDA2C96B29317EF7763EED3F61A6189104A1C80531DB2A0E8BA39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels1200a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldLabels1200a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldLabels1200a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldLabels1200a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios.lean.txt",
+      "sha256": "787DDF7F0B0EEE510AD5F204C81FE7235B23A6F384042CF0D557AA78079AFF88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197a.log",
+      "sha256": "8DCCBDD2DEABCEAF90F3CB927100728CF0BF1A5D3808BE13599B7C0DCE7CE717"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197b.log",
+      "sha256": "707F988A6E181396DC6F2F38954444A298F69923F300BF343726F7CE03160DCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldRatios1197c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldRatios1197c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldScratchOwnership1204.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldScratchOwnership1204.lean.txt",
+      "sha256": "AB2995DDF5707EF055A31507A6BC89265A8C925BA3EB66D5E9A392F4B93F7D44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondFieldScratchOwnership1204.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondFieldScratchOwnership1204.log",
+      "sha256": "9DAD836B2ACDB97DA46310860ADD694C754192435701D7FF4FBA64F778A68B32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondGaloisPicard.lean.txt",
+      "sha256": "9BC7471F9E95462F286FF2957C8D570EB826918E6F24F0BA61A53215FFD75942"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard1233a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondGaloisPicard1233a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGaloisPicard1233a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondGaloisPicard1233a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondLabels.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondLabels.lean.txt",
+      "sha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPeriodInclusion.lean.txt",
+      "sha256": "E0934AC59B2FC0EED717633AEC76169639B86C35D89E9C611C41EDAA8790EE19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion1221a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPeriodInclusion1221a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodInclusion1221a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPeriodInclusion1221a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicard.lean.txt",
+      "sha256": "4F45DC4C4C13D4076186479B0D06B8230B0AD5EB446A92CDBC65BCFEC41980AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard1211a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicard1211a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicard1211a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicard1211a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicardPeriods.lean.txt",
+      "sha256": "29D0066C5F15E5C23EE0FEB3BC8A4E394595CD0D71C9B33189902DD331693128"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicardPeriods1217a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPicardPeriods1217a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondPicardPeriods1217a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRationalGenerators.lean.txt",
+      "sha256": "C730251F09B9B7D6C256D7AC7D687B23ED46CC0402268ED34068E549E9E6C90E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRationalGenerators1229a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRationalGenerators1229a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRationalGenerators1229b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRationalGenerators1229b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRationalGenerators1229b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRestriction.lean.txt",
+      "sha256": "88DD8DABD1C54610B7C84F8C02EE490D7FA0CC9278761A751E0360B0A75F2431"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRestriction1236a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRestriction1236a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRestriction1236b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondRestriction1236b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneDiamondRestriction1236b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneFieldCuspGerm.lean.txt",
+      "sha256": "7416A3EFEB6BF4910D564973AC7B77EE2129CD8F9BFA89661B1267EA12E8D72C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm1198a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneFieldCuspGerm1198a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldCuspGerm1198a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceGammaOneFieldCuspGerm1198a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient.lean.txt",
+      "sha256": "A112DFD56AEE71EA66C7056745FAC276FA430C1C0D06E4BA30EC437FD70F8F39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202a.log",
+      "sha256": "7BB48F9B786B0009AEFAA8BA47507509E65074751ACCB7A9E8ED52EE39E6A0EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202b.log",
+      "sha256": "E815828735B4C24F96342F3570C73F2EAA24D10415BE14319A0608BA8ABC0000"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicCoefficient1202c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicCoefficient1202c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicallyClosedLift.lean.txt",
+      "sha256": "5BA056CF70F1F2F24BDD6CB65CD52CDA1BF37578D5BB53518575708DC6D3BDB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift1203a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicallyClosedLift1203a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAlgebraicallyClosedLift1203a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentAlgebraicallyClosedLift1203a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection.lean.txt",
+      "sha256": "D1D591D7081A20B036F7D530860EC0A7A74C9F539E9252244B5A8A44A63D407D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206a.log",
+      "sha256": "AB83C0B412850E3B7C3C5A65888D1A1B8F1FD1F854E69DD389223F545BA7042E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206b.log",
+      "sha256": "D69633E629D83269E45022030306A1038B7C29AE5946FDC8A377FADFCFE336A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentCoefficientProjection1206c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentCoefficientProjection1206c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection.lean.txt",
+      "sha256": "A33CF93AD1A9D9D98F3E0FC7DD294B7ECBCDB15897B0F0FBD520294A75CDC284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207b.log",
+      "sha256": "CA8144838BEADA14C28B2F02BBF618F77AF6E131275BB36D5D27EF1C9DE4F01C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207c.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207c.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207c.log",
+      "sha256": "6A8E64F08F46760BA8E42D67FD9F706FE2A05E5852CAE254260FDD05E333C40D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207d.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFieldIntersection1207d.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceLaurentFieldIntersection1207d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalCuspDiamondImage.lean.txt",
+      "sha256": "C916C3A831E73CA15351B5CCC0F55807792CAD854054DD1B01BA44487653F3D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage1225a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalCuspDiamondImage1225a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondImage1225a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalCuspDiamondImage1225a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondCoefficients.lean.txt",
+      "sha256": "E84A430257A31F564031D95907BDDBCF3C04052BFBFC681CFF7E86C526D59F2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondCoefficients1228a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondCoefficients1228a.log",
+      "sha256": "3D97BF6F3D382FC80DEADF8C1897A85E0E6A76FEF37B9E3D4F95907DCB8746FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondCoefficients1228b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondCoefficients1228b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondCoefficients1228b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondFraction.lean.txt",
+      "sha256": "BE0A90D7CB7631822D7D7684F276A69BA3DD151C8FF28E6CB338FADB4C19877A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction1224a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondFraction1224a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondFraction1224a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondFraction1224a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondQuotientGerm.lean.txt",
+      "sha256": "142E7AF61982A3F750177E6C5F65FF673135B37C2E393C51E42D5B3BDA9F7964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm1227a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondQuotientGerm1227a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiamondQuotientGerm1227a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalDiamondQuotientGerm1227a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient.lean",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalModularCuspQuotient.lean.txt",
+      "sha256": "F3C35C9005CCBB53946B16DEDD7B313F605C750624B55C45F9F493B5F9567AC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226a.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalModularCuspQuotient1226a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226a.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalModularCuspQuotient1226a.log",
+      "sha256": "B65EC3F13AC9B62558D5C35128CF00FAE9B577CF35C3ACD5754BB35FFB1A22B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226b.exit",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalModularCuspQuotient1226b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularCuspQuotient1226b.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/SourceRationalModularCuspQuotient1226b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_diamond_galois_1234.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/audit_diamond_galois_1234.ps1",
+      "sha256": "5DF56737F1DF9008E327B6D8B2A20CC1CEEB5E45CDFF52EE7DCF9574BFC081E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_diamond_normalizer_1241.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/audit_diamond_normalizer_1241.ps1",
+      "sha256": "0322D3E6C61A4935213E31CDA37D0D5470961AC6F815BA98C3E9E808D40359CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_diamond_picard_periods_1220.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/audit_diamond_picard_periods_1220.ps1",
+      "sha256": "EA6ECBA008790260EA8DE8C2C98C0D658E00311CB4A2DD617A4E59A7D4BE7DD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_arithmetic_diamond_1212.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/audit_gamma_one_arithmetic_diamond_1212.ps1",
+      "sha256": "D40302F115BF4EF42A151D40340E4DB5562CB9B199968A884B59DB33964DD1F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_field_1204.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/audit_gamma_one_diamond_field_1204.ps1",
+      "sha256": "BBD8FA6F1609A6E5FB9FBB84ED7ED83BEC1634D46197E55816BE32B1190FE2B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_diamond_1209a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_arithmetic_diamond_1209a.ps1",
+      "sha256": "4EF1492EF87355717A5FC0CC548A954CA6C2E2C8A9B31B58D2733E7EFEC9D7EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_diamond_1209b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_arithmetic_diamond_1209b.ps1",
+      "sha256": "B354E890A451532FDBF9E2E65358A4B277EBB98A9BEB0FDA9A1A03470F7A8AF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_diamond_galois_1232a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_arithmetic_diamond_galois_1232a.ps1",
+      "sha256": "CF4C3616C7BE788F74CEF01B9FF753BEC56BDDC588720F8503003AC6C542F85D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_diamond_generators_1231a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_arithmetic_diamond_generators_1231a.ps1",
+      "sha256": "5A9D942452D12521E725332FC4E955BF1271F7EE10E7F892768ABAF7EE6DB686"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_arithmetic_diamond_tate_1219a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_arithmetic_diamond_tate_1219a.ps1",
+      "sha256": "4E1CF7AA5D1742C359434ED24B7F85791F1CBE35F7104B0C837F727016952BDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_diamond_labels_1240a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_binary_diamond_labels_1240a.ps1",
+      "sha256": "92FBAF299AA861C5AE28CF5BAB34486274D1A98BCCDCB813570218D93926F851"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_diamond_tate_h1_1222a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_binary_diamond_tate_h1_1222a.ps1",
+      "sha256": "B2D7DB4FE6F1F08ED949661909002F9276B00ACAB3E31DE47FCA93A609A6D6C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_normalizer_tate_1239a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_binary_normalizer_tate_1239a.ps1",
+      "sha256": "01316CC294B66A5AC7C35CEEEC3F3805C8D4D75EEBF8D6D243F517A81E70F600"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_binary_normalizer_tate_1239b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_binary_normalizer_tate_1239b.ps1",
+      "sha256": "E9EDAF45BA560529A9131E204B4F026C519CE7CD43FF8EAAA15F79F3D8CED49C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_cyclotomic_diamond_covariance_1223a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_cyclotomic_diamond_covariance_1223a.ps1",
+      "sha256": "09BE93F2E459861CFF8FDD8D17F108510CEBB4A40110E3C47EC898F9FF08393C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_cyclotomic_diamond_covariance_1223b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_cyclotomic_diamond_covariance_1223b.ps1",
+      "sha256": "8429083CFBF7857836F79F635476EDD1655FAA16B453161FF538B916F660C367"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_analytic_divisors_1215a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_analytic_divisors_1215a.ps1",
+      "sha256": "70028ADF3AB0B8D15206B56413325E6530CDB8E3832F5B70EF150E4CA71238E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_analytic_germs_1213a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_analytic_germs_1213a.ps1",
+      "sha256": "366E750BBF8D4AE742BACB3E23FC6282350CC00C33A7949AD0590649888F037B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_analytic_places_1214a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_analytic_places_1214a.ps1",
+      "sha256": "4ABA53F253EED3411E1FED62FE87C944EF740352E8FBBBDA1E22C19E8522EFE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_analytic_places_1214b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_analytic_places_1214b.ps1",
+      "sha256": "9266A7CEE5B739D55725FDA7E00C11BF3E0CD57AF5CD2D3C3B6A6366D6DFFAEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_arithmetic_lift_1208a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_arithmetic_lift_1208a.ps1",
+      "sha256": "B324D80CEBFE32C222E1035416A844015EF40BB3D326156332C228AA6D07BA5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_arithmetic_lift_1208b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_arithmetic_lift_1208b.ps1",
+      "sha256": "22F8D6101832BDBD29D7B68C40FA834C0FE7D82F2CA6F43FA7AC56BB42675589"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_arithmetic_lift_1208c.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_arithmetic_lift_1208c.ps1",
+      "sha256": "D4BD3C1D33C1B2B8F88BC9ED8BEE66827597D2590D035152CFC3A07D4B7D5CED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_arithmetic_relation_1205a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_arithmetic_relation_1205a.ps1",
+      "sha256": "C93978E49AD3809F85958C3331F0656540A0C849EFFE3B5DBCDB007AE8C93C55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_arithmetic_relation_1205b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_arithmetic_relation_1205b.ps1",
+      "sha256": "572FD6559FB404BD50A599908865D3BFF088B6BDC4A29F8F84732E1ACD5BDBF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_coefficient_1235a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_coefficient_1235a.ps1",
+      "sha256": "236649C57465CE8B77F669116EAB8B4CA72992AFA860A6FD14A062EE5F2E888A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_coefficient_matrix_1237a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_coefficient_matrix_1237a.ps1",
+      "sha256": "41DE27DE904D2D1F1D97640B31383DE75B0101AE73983BB642017BE37DC5E626"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_coefficient_matrix_1237b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_coefficient_matrix_1237b.ps1",
+      "sha256": "7CDB5694358059B6551999DFF67173E322764F1B5CB2F5169F903B62872CAB9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_complex_arithmetic_1230a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_complex_arithmetic_1230a.ps1",
+      "sha256": "92BB79DD4C9D9F1C57D00C8DBEA0697A125D4D575205C0A81E1147289DA3296F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_complex_arithmetic_1230b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_complex_arithmetic_1230b.ps1",
+      "sha256": "36EC0B3A82140A4082F700AD16AEF977DCB45684E1C0A2FC401AB5254B83C627"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_complex_comparison_1218a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_complex_comparison_1218a.ps1",
+      "sha256": "395B215011361D6C1C58480A763BC0C5F5473B2EE14F290857CEB5EDDB20059A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_endpoint_1216a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_endpoint_1216a.ps1",
+      "sha256": "BA3F271F9A666998C8FAA43E72D191F753A2420E74996D93EFF0C44DEAEBAD2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_hom_1199a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_hom_1199a.ps1",
+      "sha256": "62129261EB2A200DF1A59644EF101D6A3805B6EA04A3841635F07719F21D2475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_hom_1199b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_hom_1199b.ps1",
+      "sha256": "1DCC06457B4D4E9F2B9F378D13EC30F18B8DAE9D1EFBFAF0747B8653401CFBCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_j_1201a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_j_1201a.ps1",
+      "sha256": "FEA4B84FC1DF0B370F2C239B54C7EE7F0718C06DEF9B733A65B56F89F72CD1D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_labels_1200a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_labels_1200a.ps1",
+      "sha256": "268952A0CD4D21B55E121C4B759878D035A22298698299F4C8881AD374717112"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_ratios_1197a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_ratios_1197a.ps1",
+      "sha256": "3D23FE5B52DA6D4AE8C085825DDDEEF3059F43BCCE67410485FC0B0249FCA55A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_ratios_1197b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_ratios_1197b.ps1",
+      "sha256": "18DE87EB970E1683DB7F506D531562F4127B247331F3FDE507F44ADD821B23A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_field_ratios_1197c.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_field_ratios_1197c.ps1",
+      "sha256": "37E9F8C864D24C515CE422E06A32307714E47A802F87E37039533DE1FF48B94C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_galois_picard_1233a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_galois_picard_1233a.ps1",
+      "sha256": "9BB030BC39EF50AB63FA8D6A75B308D971A7682DCBD816CCFD7172D4B9F8D63F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_period_inclusion_1221a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_period_inclusion_1221a.ps1",
+      "sha256": "AC6BE6F41B7B08D89F8EED7B45CB17AC930722EAFCEC5FE642AC4E8F143C9029"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_picard_1211a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_picard_1211a.ps1",
+      "sha256": "0C13E713778F13C035792981FB9D40CD2A8048243DDD2ADBDDC658172816875B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_picard_periods_1217a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_picard_periods_1217a.ps1",
+      "sha256": "8864F66211332F830BD92956A6AD66F550693E51C9148575D5A4D0AB2C919146"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_rational_generators_1229a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_rational_generators_1229a.ps1",
+      "sha256": "8A34DDA01150E12FAA16437240B2C5BCA0971DACACDBC870ABBCFEEA18042E52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_rational_generators_1229b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_rational_generators_1229b.ps1",
+      "sha256": "B6675435EE4B8B5E998852FB8F7D6C9DAC89A81310E9FE6030BAD8C6A665B546"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_diamond_restriction_1236a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_diamond_restriction_1236a.ps1",
+      "sha256": "5E183541CF6040E7EB6ABDA176FF108080A213A818A1C1137FF4F74064787CEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_field_cusp_germ_1198a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_field_cusp_germ_1198a.ps1",
+      "sha256": "BB84E1FCE7CCF2DB18A59882C906F7D1FA8947B9A2767EE353EEA5100CC892CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_field_equiv_picard_1210a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_field_equiv_picard_1210a.ps1",
+      "sha256": "5E03701B0EE41C4B441AD29D28E7D3DC1C063F9E740785F93F4F3E4F76D48DE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_field_equiv_picard_1210b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_field_equiv_picard_1210b.ps1",
+      "sha256": "E181A84A96F73A15934869A0B8CEB659689B8F0907F607ACE356DD1294B314BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_algebraic_coefficient_1202a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_algebraic_coefficient_1202a.ps1",
+      "sha256": "A54F2ECC0F9EB6D3B83C1BAA304D04AFE0F0C6312E7359947AFB3D79CD8485D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_algebraic_coefficient_1202b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_algebraic_coefficient_1202b.ps1",
+      "sha256": "B7E355CCAC50A9956EDBC6EE2B433A1E48E0D9924ADE21DC1B0757B191230B61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_algebraic_coefficient_1202c.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_algebraic_coefficient_1202c.ps1",
+      "sha256": "529AC4428BC2DFE803D2A81469857CE31CB859F227B8B040525BF5A262A7D5D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_closed_lift_1203a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_closed_lift_1203a.ps1",
+      "sha256": "7DC01F3E266FD688186415C7A26E37DDEEF562E94F5A071EC8F906335A12EFC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_field_intersection_1207a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_field_intersection_1207a.ps1",
+      "sha256": "59EE5FA78562FA8D0846FB47CDD2BD08303D62209E505F60F1241EF9DD35B322"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_field_intersection_1207b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_field_intersection_1207b.ps1",
+      "sha256": "8B2CAED9A824F47C10750144B20704D473A93020AA0D6434B5275E00F801B927"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_field_intersection_1207c.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_field_intersection_1207c.ps1",
+      "sha256": "9F9D8CFB0C31C4838E7D2B94B73BE3AC011E9531A13804D6B3EA2B07E24F0745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_field_intersection_1207d.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_field_intersection_1207d.ps1",
+      "sha256": "1AD676B0EB80656F0E0337C6E4B84F0FD05360E10BD7879AC60001A5539D5B45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_projection_1206a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_projection_1206a.ps1",
+      "sha256": "3B8458121CFE0A0251F880AAEE0CAC59F284B6A936F42498AFD536AFC8B76968"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_projection_1206b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_projection_1206b.ps1",
+      "sha256": "16C460CF18DDFC3AC62AADD8B7AB8DBB90840C34DB3827FE64CC40400E5B9F4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_laurent_projection_1206c.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_laurent_projection_1206c.ps1",
+      "sha256": "9E124DC9D771D2E6D2F266E5DE9738A4885E3D9380A3E8CCB783BA985732674A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_cusp_diamond_image_1225a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_cusp_diamond_image_1225a.ps1",
+      "sha256": "C2569553A7DD2B49E9623931EA038D24ECC89387F58298C93E7093E668BFF8FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_diamond_coefficients_1228a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_diamond_coefficients_1228a.ps1",
+      "sha256": "5234666165A79DDDC9B7444A74080A0C987AE6A631A44B0239948028909D1B8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_diamond_coefficients_1228b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_diamond_coefficients_1228b.ps1",
+      "sha256": "7AA78CF8F1FA990BDA0EA576C42A362FCD28C0B7AD98B77EFFB8DDAC90C52A6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_diamond_fraction_1224a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_diamond_fraction_1224a.ps1",
+      "sha256": "653818BEBCE367537C3B3B80929E40DAA89D93BAD48F8E93991068F9196EBAF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_diamond_quotient_germ_1227a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_diamond_quotient_germ_1227a.ps1",
+      "sha256": "25AFDB4A2F3D368632D92E963BD60F28C4EBCAFA0A1BDDCF144839C39DD0AD72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_modular_cusp_quotient_1226a.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_modular_cusp_quotient_1226a.ps1",
+      "sha256": "68E46C30973B7D74C8BFD6C7CE1235B826CE80A9FD46EA5E7A76E2040BE3F68A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_rational_modular_cusp_quotient_1226b.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/compile_rational_modular_cusp_quotient_1226b.ps1",
+      "sha256": "50032D4E01C236EDE9DB4677915A59F4B51186AAE737E53708379AC608AE8768"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1201-focus.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1201-focus.log",
+      "sha256": "3F9C70D2D47A7F0F9879C302183129DEB84A2C0F397A0A47AEE8D38D3CB8E94E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1201.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1201.txt",
+      "sha256": "20E530006779E2418E12A644B7DE998D4371060E1370458DAEEA94D8093F3E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1212-focus.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1212-focus.log",
+      "sha256": "60BC671DAA41300CCCA63D330AE7EC02BAF1809D6063C14CA42B727920C85C58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1212.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1212.txt",
+      "sha256": "381FF95C5785CBD45ACE39DE20B60BB94FB79CDB9CE0EE40DD193DFD1A7A0E5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1221-focus.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1221-focus.log",
+      "sha256": "FA6B5CB06146B03C84252BE703122F58247600FF15EA8CBECF3B312B680A1734"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1221.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1221.txt",
+      "sha256": "875F7963992AD06360CA5FFDDA55F00B57E58640F17974B405F8CFA3717757FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1234-focus.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1234-focus.log",
+      "sha256": "24DBB6FA64CAFF65BB3E8F842E976F1CA9874EF23CB92E6A253F0A6BD35F563B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1234.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/consumers1234.txt",
+      "sha256": "C334BDB9733AD0D300E148D13AFE89845E49578238EF38F19688EF9B317DA806"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-descent-route-1202.md",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-arithmetic-descent-route-1202.md.txt",
+      "sha256": "1EF8990EA9AE13AE5CEFBCCAD2383DC2CE974DF18D2AD9F67556F84BC9DB9304"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-field-route-1197.md",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-field-route-1197.md.txt",
+      "sha256": "1FF7C4E0AF6DF8F59EA56CD2FDEE1B4105D7D22647FF64CB0BBCC7803689240E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-picard-period-route-1213.md",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-picard-period-route-1213.md.txt",
+      "sha256": "60A5DDA224EB7EC125EF3085A3F88D9D0396978BE666DE0360300BE07B62B111"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1201.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/docs1201.py",
+      "sha256": "711B7D499E83B1C1EF81A21898C9B6C08D6607BBA9BFCA76A1C51A858A65870E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1212.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/docs1212.py",
+      "sha256": "D7471584F160869BC6C13006E926727084A6234116BAF33B5E4FD6B88BA22CDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1221.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/docs1221.py",
+      "sha256": "D063874CD3F62A029953E526B09BA1AB4C0D1FF68226A0612F366A31E105B852"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1234.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/docs1234.py",
+      "sha256": "0F7393A01F26390A6DF358EB9AF53C6D10504A8BC6506915F2D0F48E1510DF83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1201-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/foundation1201-console.log",
+      "sha256": "1559A66DABD121B2FB8E3535F6EB98DECB92ED942BE16D67CE91280F84DB155B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1212-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/foundation1212-console.log",
+      "sha256": "25AA68A175A2DAA7E89E28D5E03EDC9069D89E1ED299F62B7BCF45020002D852"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1221-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/foundation1221-console.log",
+      "sha256": "86BB776D428381568BA4CDDF64D770C7C07291D145530031E041D80FE23F4284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1234-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/foundation1234-console.log",
+      "sha256": "01FFFB083E13D3EC76B875C0FD0A1A3564BE6CD7461E4A212A5D41CFC6F52901"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1201.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/modules1201.json",
+      "sha256": "040CB7FC595996C19489E3DC3619FCE7F22D70CC2AA114AB40189F8047081E88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1212.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/modules1212.json",
+      "sha256": "80DF936CB353321ECE2AE9344DF1923DE4DC964A3936A01D4DEC4E9CC8AC2B55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1221.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/modules1221.json",
+      "sha256": "40A01E83EE599AE3DE930B1AFFFD270DE364F6A8B89BF5922C2BC19962632D7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1234.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/modules1234.json",
+      "sha256": "5A903CCAD1DAC9A478276EF870CB3B79D46116832530E1EB655EB7AD840DC5A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1201-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/paper1201-console.log",
+      "sha256": "2A36DC58DC9F7C14899824EEB91175A4A0F4099221FCE946DFD155F67BD5BDFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1212-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/paper1212-console.log",
+      "sha256": "2A5BC116670B8AD9EDEC947E4528C35E0C1EF13F86EE928A6EFEB3B16A4FCB14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1221-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/paper1221-console.log",
+      "sha256": "7DD764EF6DA1FDDE221B660AB918B36F47E2A1E9AF5F69F7833BA590CAFA6053"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1234-console.log",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/paper1234-console.log",
+      "sha256": "55BAC247712AAC9271A2C5E6D1620D61F98D5C709C4D18FB5F2685F5D16B9F71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_diamond_galois_1232.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_arithmetic_diamond_galois_1232.py",
+      "sha256": "302A3A9075ECCEA5F2E172FE08FB6E6E15A591876361C41324A768B1E3F92A63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_diamond_galois_audit_1234.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_diamond_galois_audit_1234.py",
+      "sha256": "C9D4D7D7D83DA061ECFD532CDBE75589EBD20DEA0C02A39B92F2C578A134ACA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_diamond_normalizer_audit_1241.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_diamond_normalizer_audit_1241.py",
+      "sha256": "52F534E498936CD7C114976232529C08CF8E4F2238AFB735DC6DF802B58EB479"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_diamond_picard_periods_audit_1220.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_diamond_picard_periods_audit_1220.py",
+      "sha256": "CB2274D98CB3C5FDD65C72E77993150C4C374DA12106615CC5A6804F6A18A7CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_diamond_audit_1212.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_gamma_one_arithmetic_diamond_audit_1212.py",
+      "sha256": "961088B0BC7ACF1295A29AAD4385CC41158BB4494914C52C815BBDB5EEEEB9CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_field_audit_1204.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/prepare_gamma_one_diamond_field_audit_1204.py",
+      "sha256": "4C5B4190AB5DBE6DC0EE2F32F2BC1B4F7D17E723CEDB16E4E668C4FD7A2FE3A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\recompile_normalizer_imports_1238.ps1",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/recompile_normalizer_imports_1238.ps1",
+      "sha256": "3A6F992C271BEC6318AE91BE4FF1C30BEDA2B4E2859BF669312361830EE3C184"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1201.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record1201.py",
+      "sha256": "7DDDC44A0E122856BF3F64EC10571CAF02443F3C84F92198B47865EE584AF368"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1212.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record1212.py",
+      "sha256": "4D94D056BE9566D7364F1F6F69226376845543AB18C5EDAAADB4AA4D3C7A5621"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1221.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record1221.py",
+      "sha256": "CE6D4CE0642CBBA769F0E218F9ECC0C1B613FCC9741A863F2D8B15331EBF351B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1234.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record1234.py",
+      "sha256": "1AA2B32CC63D12117E0D20F704073BB69C9E33F32EEA7CEE4108380D13C94EE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_diamond_galois_1234.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_diamond_galois_1234.py",
+      "sha256": "3E3BA995C51E2FE9F0F7E6E57027E0F4FC92629476F8A82897FC35706CEF23DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_diamond_normalizer_1241.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_diamond_normalizer_1241.py",
+      "sha256": "01F7DE366C1B7EE31F8907A43D121CD86AEC16DAB8A312911149DAB497AFF060"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_diamond_picard_periods_1220.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_diamond_picard_periods_1220.py",
+      "sha256": "8A59E49A0C449CB2E62CE1F8175D602D38FD62BA0CE816533365D90926B9EE51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_arithmetic_diamond_1212.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_gamma_one_arithmetic_diamond_1212.py",
+      "sha256": "3C6ACB1DAEF84BE5B2707C8C85121603BC491F3DB24032F81646C5C315A1D8A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_field_1204.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/record_gamma_one_diamond_field_1204.py",
+      "sha256": "8AD2F687F77AEED8051061F65A91171AB8C1C4A5B49CA63BF19C69101726C075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1201.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/register1201.py",
+      "sha256": "54B7593D13248A0B3EA171678477A12A90E2CDB43B19B0DEE780E813CF6F318E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1212.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/register1212.py",
+      "sha256": "3828B23837C3A58FE29DE377A047B377FA7097934DAF62B0D5AEDF7A9DC7A408"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1221.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/register1221.py",
+      "sha256": "D73732C102466ABEDE1E62FEFCBFC526C4253BE0403F1C321A9B4E0E72C7E39D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1234.py",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/register1234.py",
+      "sha256": "959D029353D344F74527B5DB1CC36B8E8DBA84402025CF6700CC40E2A5C10DAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1201.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/registrations1201.json",
+      "sha256": "4008E71D8AA5AC967336832E20C85AACAE8D75455CAF6E1E41EA6B315CA53581"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1212.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/registrations1212.json",
+      "sha256": "BDD66370E150EF0720C10BB770E85EB03FBE7E8FD588AB3223CBE16A6A626E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1221.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/registrations1221.json",
+      "sha256": "8D356455A567DB5A97AD1BB58B3613EC21692F400331DA49F8CF3ABAEE951BB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1234.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/registrations1234.json",
+      "sha256": "2D942BBD68062258F7492C93A6212271E4070587F140F32ED31E423D9B9D2B71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1201.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/section1201.txt",
+      "sha256": "991193AB62F6AD841E77CAE75739868A29E4CB0F8BE3AB2F6054E4DB2F5CBCA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1212.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/section1212.txt",
+      "sha256": "9BE5C116B8054D9467580840B55984AD82A90A9C79DC147D8AFD01CA6A7E9E89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1221.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/section1221.txt",
+      "sha256": "B5BF47F0611A9809831E2D925D7256E415E46A90246A9BE7BD7627A6216CE52F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1234.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/section1234.txt",
+      "sha256": "A7D575FBD7851FEF9BEC5ADE9C2FC94FDF0C89E6BF5333240028201CD730A9A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-1-audit-config.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-galois-1-audit-config.json",
+      "sha256": "AA7246A513C7D4D3D4E89B13D80657916D9899998E0F5202B96D7E1B71E1B8E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-1-reuse-review-20261028.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-galois-1-reuse-review-20261028.json",
+      "sha256": "F77D5C02A3787BE02511CD2A3169ABAECF946F6E162380E66404770A96AD9A98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-galois-1-scratch-receipt.json",
+      "sha256": "0A368CDFA4AE5591D280BAAC9EFCFFDEE4420680B385056DD1F43F4BCCA6253E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-galois-audit-route-1234.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-galois-audit-route-1234.json",
+      "sha256": "67CB236465EA8F246AFE001BF924494D933CBD30F3C269049965BC9533A02C25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-1-audit-config.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-normalizer-1-audit-config.json",
+      "sha256": "FA7DCE02C81007D669C1BDB241C6C36232922281ABE4379DAE92B62C0FC2E1D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-1-reuse-review-20261028.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-normalizer-1-reuse-review-20261028.json",
+      "sha256": "39A1F02C1E6E8A1166C42C026F326069C5E9F1B2BF9D85B6B023A3EC88AA4265"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-normalizer-1-scratch-receipt.json",
+      "sha256": "83AC8D1D5E4E2A5320907B0B210A9A7EA833C507F763BDB0944A2F1FE912811E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-normalizer-audit-route-1241.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-normalizer-audit-route-1241.json",
+      "sha256": "E624D3D24616DE67DC46BA7343E4E74B83E184A80A35047D445F03F4F1D6C55E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-1-audit-config.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-picard-periods-1-audit-config.json",
+      "sha256": "66AF36F43DCC675BB101D7E3B7BEE5805B144CD8991BEBA265813621020E2E8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-1-reuse-review-20261028.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-picard-periods-1-reuse-review-20261028.json",
+      "sha256": "2E843CC83E2C5F5E581384158F31D84973F14A5D09461B519A2C6A357E0555F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-picard-periods-1-scratch-receipt.json",
+      "sha256": "0F2ECC812E980A04BCCE66B769B8EDD3281C8BC4FEF8C44625B25F910F23EEF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-diamond-picard-periods-audit-route-1220.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-diamond-picard-periods-audit-route-1220.json",
+      "sha256": "D38FD48F3B134C0AF0E6F4299756554574A6C224AB6CEF4F7887585A17C87D13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-diamond-1-audit-config.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-arithmetic-diamond-1-audit-config.json",
+      "sha256": "0BF57C7452D3281473BA14C52C6B8C1013A335C52A56BB4AC905460F4A686747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-diamond-1-reuse-review-20261028.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-arithmetic-diamond-1-reuse-review-20261028.json",
+      "sha256": "86EE417B1E796CFFB79A9E7B224554B0C3B6FEA9C1873D6AEFBBC79F2575F0E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-diamond-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-arithmetic-diamond-1-scratch-receipt.json",
+      "sha256": "B89848E9494C575A104ED4738CA5A5F60392256296AB6B7C80BAF52D708FE2BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-diamond-audit-route-1212.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-arithmetic-diamond-audit-route-1212.json",
+      "sha256": "95E08CBEB49E13F6BF6EC263C982AF3824ED1E429795B031ECF7E09E8507C9E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-1-audit-config.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-field-1-audit-config.json",
+      "sha256": "61226262DE30D47F2E9F2D5CD801D6113EE41633A001C182119015378626CE30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-1-reuse-review-20261028.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-field-1-reuse-review-20261028.json",
+      "sha256": "06DBE7B8B09B3B15957FC81A10A4284A44E9A95D5FCCB61862EF6260E2C6EE75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-field-1-scratch-receipt.json",
+      "sha256": "2C88FCF5A877C1013EF26B7AD692794F62E8B802C24E6F1F5C30AD10F925E48E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-field-audit-route-1204.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-field-audit-route-1204.json",
+      "sha256": "6EB29FBA4CCD7CDE23600DCE703D870146BDF62E3E5C37CB84B4644572412193"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-period-1-scratch-receipt.json",
+      "sha256": "5454C6C8F45FA24F42CFD243F7FD97F80D19C8F788609EE46E08744BB3D8E046"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-tate-1-scratch-receipt.json",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/source-gamma-one-diamond-tate-1-scratch-receipt.json",
+      "sha256": "5C5AC08BC612BA297D9A2635CA964ED155E6689BC83F619ED11384BA53F7F996"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1201.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/status1201.txt",
+      "sha256": "1CCDDA9FF1C8C1B8F5A1A658740D1A2876048E2589AA195F8C74A8948AF64F53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1212.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/status1212.txt",
+      "sha256": "4477D4CC502F670BA12567F0670F44763941B93A330C296C90B5E3553150821E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1221.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/status1221.txt",
+      "sha256": "99632C06B2579A019BAF135729E5DDF9427519A9CF885B143BFEE9CA1615F9C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1234.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/status1234.txt",
+      "sha256": "4B078253FF92F5F42E3CDBC019190CF920440D3F3B6DCC32B8B5D328B9D83624"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic-diamond-1209a\\SourceGammaOneArithmeticDiamond.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/arithmetic-diamond-1209a/SourceGammaOneArithmeticDiamond.lean.txt",
+      "sha256": "86296E59FA8F34C04376EBAAAEC3A74CA96C0EBD061CBBED7D5B720216D1A175"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-normalizer-tate-1239a\\SourceGammaOneBinaryNormalizerTate.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/binary-normalizer-tate-1239a/SourceGammaOneBinaryNormalizerTate.lean.txt",
+      "sha256": "BE7DE1E1E9828D8DA2C714F4D29BBF82692D92B9AB5690B76D444A555C577772"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-diamond-covariance-1223a\\SourceCyclotomicDiamondCovariance.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/cyclotomic-diamond-covariance-1223a/SourceCyclotomicDiamondCovariance.lean.txt",
+      "sha256": "8F378201E97F988F66E9DBB6CECED97D0A73E169D5D2FD6C057DA7275A07A9DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-analytic-places-1214a\\SourceGammaOneDiamondAnalyticPlaces.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-analytic-places-1214a/SourceGammaOneDiamondAnalyticPlaces.lean.txt",
+      "sha256": "FB3ECF0D02579B16812074051D87F9862CD792716B5B504EC870BFA61EC7520A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-lift-1208a\\SourceGammaOneDiamondArithmeticLift.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-arithmetic-lift-1208a/SourceGammaOneDiamondArithmeticLift.lean.txt",
+      "sha256": "606252051B888BCACA08755B60F70E6B7F8748B746959C9D98CB94922950B35F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-lift-1208b\\SourceGammaOneDiamondArithmeticLift.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-arithmetic-lift-1208b/SourceGammaOneDiamondArithmeticLift.lean.txt",
+      "sha256": "4CB45554231A3EFC620334B64E3BE7530DE4C2870E0D364D74910AC574F47C62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-relation-1205a\\SourceGammaOneDiamondArithmeticRelation.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-arithmetic-relation-1205a/SourceGammaOneDiamondArithmeticRelation.lean.txt",
+      "sha256": "4015EB7121B11ECF22CED8CE95F2805229F5EDC0E06A7D4CEF101D8F30BDBC68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-coefficient-matrix-1237a\\SourceGammaOneDiamondCoefficientMatrix.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-coefficient-matrix-1237a/SourceGammaOneDiamondCoefficientMatrix.lean.txt",
+      "sha256": "D3B5809B3A56C21B387CEAB270989785B37D76738B9EEC312F9A46396C71782C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-complex-arithmetic-1230a\\SourceGammaOneDiamondComplexArithmetic.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-complex-arithmetic-1230a/SourceGammaOneDiamondComplexArithmetic.lean.txt",
+      "sha256": "5DEE6511B20EE4DB24BEBF16A1277D938559D942A50E0639BEA9A7908BCBF435"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-field-hom-1199a\\SourceGammaOneDiamondFieldHom.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-field-hom-1199a/SourceGammaOneDiamondFieldHom.lean.txt",
+      "sha256": "CB6363979EAB8CD9E6DA9902A9B4F13C7E4C0F3523C8FBA142CD72938A190426"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-field-ratios-1197a\\SourceGammaOneDiamondFieldRatios.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-field-ratios-1197a/SourceGammaOneDiamondFieldRatios.lean.txt",
+      "sha256": "A9C675F4E6C04A380F1D106FEAE7473430180042432AC03CD68D6DE99DBAB202"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-field-ratios-1197b\\SourceGammaOneDiamondFieldRatios.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-field-ratios-1197b/SourceGammaOneDiamondFieldRatios.lean.txt",
+      "sha256": "AABDF5A0365C2EABCF80A7040F71105926678001470C3E1EE2592F29B401D235"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diamond-rational-generators-1229a\\SourceGammaOneDiamondRationalGenerators.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/diamond-rational-generators-1229a/SourceGammaOneDiamondRationalGenerators.lean.txt",
+      "sha256": "7366D77DF13CFE468ED17C4BFF50FAFE6198420AAED0B5BE43F4AA3CD0F46F5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\field-equiv-picard-1210a\\SourceCurveFieldEquivPicard.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/field-equiv-picard-1210a/SourceCurveFieldEquivPicard.lean.txt",
+      "sha256": "8F0345C26EC4272B62A9F8E632F10B7687769F8950EC62CC140354CB952F8816"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-algebraic-coefficient-1202a\\SourceLaurentAlgebraicCoefficient.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-algebraic-coefficient-1202a/SourceLaurentAlgebraicCoefficient.lean.txt",
+      "sha256": "54E76684BCBC61FAFF0B9415353F8335F2BAC674A222933912B5FE7DC182FEE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-algebraic-coefficient-1202b\\SourceLaurentAlgebraicCoefficient.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-algebraic-coefficient-1202b/SourceLaurentAlgebraicCoefficient.lean.txt",
+      "sha256": "98EEA26D8A982C4162B3DB125A76F90108C97F897C9B6A9ABA2D19DE8AA18E22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-field-intersection-1207b\\SourceLaurentFieldIntersection.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-field-intersection-1207b/SourceLaurentFieldIntersection.lean.txt",
+      "sha256": "7253B3CEFABD2157AF9184DA395FA4D3AAC736A8588C542E987DC7340F8C1BDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-field-intersection-1207c\\SourceLaurentFieldIntersection.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-field-intersection-1207c/SourceLaurentFieldIntersection.lean.txt",
+      "sha256": "1E60ECFE77D910F652EFC59FB41C41DDF18DDEF8EDD0B6872030224940D83F78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-projection-1206a\\SourceLaurentCoefficientProjection.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-projection-1206a/SourceLaurentCoefficientProjection.lean.txt",
+      "sha256": "24A036425A098E92DE9519617A0CF6A35E91F627A78103C90B87D27478C16FF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-projection-1206b\\SourceLaurentCoefficientProjection.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/laurent-projection-1206b/SourceLaurentCoefficientProjection.lean.txt",
+      "sha256": "56B8D052B2248C14C8060C0307648334B272E7572CF6B29DE090916C18F8D8E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normalizer-imports-1235a\\SourceGammaOneDiamondCoefficient.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/normalizer-imports-1235a/SourceGammaOneDiamondCoefficient.lean.txt",
+      "sha256": "607453DC0EFCBFA863D7648B2A1B465DB337232AF9FBDE3327CDE82EC75A4D85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normalizer-imports-1236a\\SourceGammaOneDiamondRestriction.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/normalizer-imports-1236a/SourceGammaOneDiamondRestriction.lean.txt",
+      "sha256": "575F00D1E9D2B238BF2C2EB2F8229958943F413AC2CDB05830709735722B76AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normalizer-imports-1237b\\SourceGammaOneDiamondCoefficientMatrix.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/normalizer-imports-1237b/SourceGammaOneDiamondCoefficientMatrix.lean.txt",
+      "sha256": "4D383E70B8F3B728AF2BB8D5DEC2FC8C4AA52DFCA3B8F091018BE954A86062F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\rational-diamond-coefficients-1228a\\SourceRationalDiamondCoefficients.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/rational-diamond-coefficients-1228a/SourceRationalDiamondCoefficients.lean.txt",
+      "sha256": "3FEBF59D545387255299709F732F4B99F43FE3690D137742518183FF07886A34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\rational-modular-cusp-quotient-1226a\\SourceRationalModularCuspQuotient.lean.txt",
+      "path": "Tools/arithmetic-diamond-comparison-20261028-1241/rational-modular-cusp-quotient-1226a/SourceRationalModularCuspQuotient.lean.txt",
+      "sha256": "DC607CEE9F6C92812DBC9AA47B9EAF804E6E663CF0E851086B299973DC3545CA"
+    }
+  ]
+}

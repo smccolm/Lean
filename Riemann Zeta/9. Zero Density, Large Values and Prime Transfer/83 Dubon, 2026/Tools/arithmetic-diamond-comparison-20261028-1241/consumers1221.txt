@@ -1,0 +1,84 @@
+
+/-- Exact original-object consumer of `not_isGoodAdelicPlace_iff_dvd`. -/
+theorem actual_bad_place_level_divisor_source  (N : ℕ) (v : HeightOneSpectrum ℤ) :
+    ¬ IsGoodAdelicPlace N v ↔ Rat.HeightOneSpectrum.natGenerator v ∣ N :=
+  not_isGoodAdelicPlace_iff_dvd N v
+
+/-- Exact original-object consumer of `adelicFiniteOpenLowest_finiteDimensional`. -/
+theorem actual_full_finite_open_lowest_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ ↥(adelicRotationWeightSpace f ⊓ adelicFiniteSubgroupFixedSpace f J :
+      Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicFiniteOpenLowest_finiteDimensional f hf hk J hJ
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_coordinates`. -/
+theorem actual_real_finite_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) (b : RationalAdelicGL2) :
+    adelicNormalizedCuspCoefficient f b =
+      adelicNormalizedCuspCoefficient f (adelicRealGL2Embedding (rationalAdelicGL2RealFiniteEquiv b).1) *
+      adelicNormalizedCuspCoefficient f (rationalAdelicFiniteGL2Embedding (rationalAdelicGL2RealFiniteEquiv b).2) :=
+  adelicNormalizedCuspCoefficient_coordinates f hf hk b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_realFinite_gram`. -/
+theorem actual_real_finite_gram_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a b : GeneralLinearGroup (Fin 2) ℝ × GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (rationalAdelicGL2RealFiniteEquiv.symm a) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (rationalAdelicGL2RealFiniteEquiv.symm b) (adelicCyclicUnitReference f)) =
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding a.1) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (adelicRealGL2Embedding b.1) (adelicCyclicUnitReference f)) *
+    inner ℂ
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding a.2) (adelicCyclicUnitReference f))
+      (adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding b.2) (adelicCyclicUnitReference f)) :=
+  adelicCyclicUnitReference_realFinite_gram f hf hk a b
+
+/-- Exact original-object consumer of `adelicRealFiniteTensorIsometry_family`. -/
+theorem actual_real_finite_tensor_family_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a : GeneralLinearGroup (Fin 2) ℝ × GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    adelicRealFiniteTensorIsometry f hf hk (adelicRealFiniteTensorFamily f a) = adelicRealFiniteMixedFamily f a :=
+  adelicRealFiniteTensorIsometry_family f hf hk a
+
+/-- Exact original-object consumer of `adelicRealFiniteTensorIsometry_range_closure`. -/
+theorem actual_real_finite_tensor_density_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicRealFiniteTensorIsometry f hf hk).toLinearMap.range.topologicalClosure = ⊤ :=
+  adelicRealFiniteTensorIsometry_range_closure f hf hk
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorIsometry_range`. -/
+theorem actual_real_finite_completed_range_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicRealFiniteHilbertTensorIsometry f hf hk).toLinearMap.range = ⊤ :=
+  adelicRealFiniteHilbertTensorIsometry_range f hf hk
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorEquiv_intertwines`. -/
+theorem actual_real_finite_completed_equivariance_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (a : RationalAdelicGL2) (x : AdelicRealFiniteHilbertTensor f) :
+    adelicRealFiniteHilbertTensorEquiv f hf hk
+      (adelicRealFiniteHilbertTensorRepresentation f hf hk (rationalAdelicGL2RealFiniteEquiv a) x) =
+      adelicCyclicHilbertRepresentation f a (adelicRealFiniteHilbertTensorEquiv f hf hk x) :=
+  adelicRealFiniteHilbertTensorEquiv_intertwines f hf hk a x
+
+/-- Exact original-object consumer of `adelicRealFiniteHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_real_finite_completed_continuity_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (x : AdelicRealFiniteHilbertTensor f) :
+    Continuous (fun b => adelicRealFiniteHilbertTensorRepresentation f hf hk b x) :=
+  adelicRealFiniteHilbertTensorRepresentation_stronglyContinuous f hf hk x
+
+/-- Exact original-object consumer of `adelicFullFiniteUnitCore_closure_eq_weight`. -/
+theorem actual_full_finite_factor_weight_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k) :
+    (adelicFullFiniteUnitCore f).topologicalClosure = adelicRotationWeightSpace f :=
+  adelicFullFiniteUnitCore_closure_eq_weight f hf hk
+
+/-- Exact original-object consumer of `adelicFullFiniteUnitCoreRepresentation_admissible`. -/
+theorem actual_full_finite_core_admissibility_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicFullFiniteUnitCoreRepresentation f).comp J.subtype)) :=
+  adelicFullFiniteUnitCoreRepresentation_admissible f hf hk J hJ
+
+/-- Exact original-object consumer of `adelicFullFiniteHilbertRepresentation_admissible`. -/
+theorem actual_full_finite_hilbert_admissibility_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) :
+    FiniteDimensional ℂ (Representation.invariants ((adelicFullFiniteHilbertRepresentation f).comp J.subtype)) :=
+  adelicFullFiniteHilbertRepresentation_admissible f hf hk J hJ
+

@@ -1,0 +1,90 @@
+import Dubon2026.SourceParabolicBinaryCoordinates
+import Dubon2026.SourcePeriodParabolicClass
+
+/-! DUB17/18 -> original all-weight association -> integral parabolic
+spanning. Retain the existing original period witness on each whole
+rational cusp stabilizer through the exact coefficient isomorphism
+and the existing rational coordinate projection. These are the actual
+inputs to the uniform integral denominator theorem. -/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology OnePoint
+open scoped MatrixGroups
+
+private theorem coefficient_cusp_witnesses
+    {R : Type} [CommRing R] (Γ : Subgroup SL(2, ℤ)) (A B : Rep R Γ) (φ : A ⟶ B)
+    (c : cocycles₁ A)
+    (hc : ∀ β : OnePoint ℚ, ∃ v : A,
+      ∀ γ : Γ, mapGL ℚ γ.val • β = β → c γ = A.ρ γ v - v) :
+    ∀ β : OnePoint ℚ, ∃ v : B,
+      ∀ γ : Γ, mapGL ℚ γ.val • β = β →
+        mapCocycles₁ (A := A) (B := B) (MonoidHom.id Γ) φ c γ = B.ρ γ v - v := by
+  intro β
+  obtain ⟨v, hv⟩ := hc β
+  refine ⟨φ.hom v, ?_⟩
+  intro γ hγ
+  change φ.hom (c γ) = B.ρ γ (φ.hom v) - φ.hom v
+  rw [hv γ hγ, map_sub, Rep.hom_comm_apply]
+
+theorem sourceBinaryAdditiveCocycles_cusp_witnesses
+    {R S : Type} [CommRing R] [CommRing S] (φ : R →+ S) (Q w : ℕ)
+    (c : cocycles₁ (sourceBinaryCoefficientRep R Q w))
+    (hc : ∀ β : OnePoint ℚ, ∃ v : sourceBinaryCoefficientRep R Q w,
+      ∀ γ : Gamma0 Q, mapGL ℚ γ.val • β = β →
+        c γ = (sourceBinaryCoefficientRep R Q w).ρ γ v - v) :
+    ∀ β : OnePoint ℚ, ∃ v : sourceBinaryCoefficientRep S Q w,
+      ∀ γ : Gamma0 Q, mapGL ℚ γ.val • β = β →
+        sourceBinaryAdditiveCocycles φ Q w c γ =
+          (sourceBinaryCoefficientRep S Q w).ρ γ v - v := by
+  intro β
+  obtain ⟨v, hv⟩ := hc β
+  refine ⟨sourceHomogeneousAdditiveMap w φ v, ?_⟩
+  intro γ hγ
+  change sourceHomogeneousAdditiveMap w φ (c γ) = _
+  rw [hv γ hγ, map_sub]
+  exact congrArg (fun z => z - sourceHomogeneousAdditiveMap w φ v)
+    (sourceHomogeneousAdditiveMap_matrix w φ γ.val.val v)
+
+/-- The original cusp-period cocycle in the actual homogeneous coefficient convention. -/
+def sourceOriginalBinaryPeriodCocycle (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) :
+    cocycles₁ (sourceBinaryCoefficientRep ℂ Q (k - 2).toNat) :=
+  mapCocycles₁ (A := sourcePeriodDualRep (Gamma0 Q) (k - 2).toNat)
+    (B := sourcePeriodColumnRep (Gamma0 Q) (k - 2).toNat)
+    (MonoidHom.id (Gamma0 Q)) (sourcePeriodCoefficientIso (Gamma0 Q) (k - 2).toNat).hom
+      (sourcePeriodCocycle f (by omega) ∞)
+
+theorem sourceOriginalBinaryPeriodCocycle_class
+    (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) :
+    H1π _ (sourceOriginalBinaryPeriodCocycle Q k hk f) =
+      sourceOriginalBinaryPeriodCohomology Q k hk f :=
+  (sourcePeriodH1BinaryEquiv_period f (by omega) ∞).symm
+
+theorem sourceOriginalBinaryPeriodCocycle_cusp_witnesses
+    (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) :
+    ∀ β : OnePoint ℚ, ∃ v : sourceBinaryCoefficientRep ℂ Q (k - 2).toNat,
+      ∀ γ : Gamma0 Q, mapGL ℚ γ.val • β = β →
+        sourceOriginalBinaryPeriodCocycle Q k hk f γ =
+          (sourceBinaryCoefficientRep ℂ Q (k - 2).toNat).ρ γ v - v :=
+  coefficient_cusp_witnesses (Gamma0 Q) (sourcePeriodDualRep (Gamma0 Q) (k - 2).toNat)
+    (sourcePeriodColumnRep (Gamma0 Q) (k - 2).toNat)
+    (sourcePeriodCoefficientIso (Gamma0 Q) (k - 2).toNat).hom
+    (sourcePeriodCocycle f (by omega) ∞) (sourcePeriodCocycle_parabolic f (by omega) ∞)
+
+theorem sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses
+    (Q : ℕ) [NeZero Q] (k : ℤ) (hk : 2 ≤ k)
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k)
+    (i : Module.Basis.ofVectorSpaceIndex ℚ ℂ) :
+    ∀ β : OnePoint ℚ, ∃ v : sourceBinaryCoefficientRep ℚ Q (k - 2).toNat,
+      ∀ γ : Gamma0 Q, mapGL ℚ γ.val • β = β →
+        sourceComplexBinaryCocycleCoordinate Q (k - 2).toNat i
+          (sourceOriginalBinaryPeriodCocycle Q k hk f) γ =
+            (sourceBinaryCoefficientRep ℚ Q (k - 2).toNat).ρ γ v - v :=
+  sourceBinaryAdditiveCocycles_cusp_witnesses (sourceComplexRationalCoordinate i) Q (k - 2).toNat
+    (sourceOriginalBinaryPeriodCocycle Q k hk f)
+    (sourceOriginalBinaryPeriodCocycle_cusp_witnesses Q k hk f)
+
+end
+end Dubon2026

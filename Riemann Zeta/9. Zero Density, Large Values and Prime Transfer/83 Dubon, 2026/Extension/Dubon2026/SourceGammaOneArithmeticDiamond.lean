@@ -1,0 +1,81 @@
+import Dubon2026.SourceGammaOneDiamondArithmeticLift
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond/Picard comparison -> actual arithmetic field automorphism.
+The proved arithmetic lift and injectivity of the original coefficient
+embedding give the field laws and inverse on the original Qbar field.
+Its exact complex comparison is proved, not supplied as a premise.
+Galois commutation, the independent Picard action and period comparison remain.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M : ℕ) [NeZero M]
+local notation "FQ" => functionFieldOver (Gamma1 M) Qbar
+
+/-- The original arithmetic field element whose image is the actual complex diamond. -/
+def arithmeticDiamondValue (g : Gamma0 M) (x : FQ) : FQ :=
+  (exists_arithmetic_diamond_lift M g x).choose
+
+theorem fieldMap_arithmeticDiamondValue (g : Gamma0 M) (x : FQ) :
+    fieldMap M (arithmeticDiamondValue M g x) = diamondFieldHom M g (fieldMap M x) :=
+  (exists_arithmetic_diamond_lift M g x).choose_spec
+
+/-- The diamond homomorphism on the original arithmetic Gamma1 function field. -/
+def arithmeticDiamondHom (g : Gamma0 M) : FQ →+* FQ where
+  toFun := arithmeticDiamondValue M g
+  map_zero' := by
+    apply (fieldMap M).injective
+    rw [fieldMap_arithmeticDiamondValue, map_zero, map_zero]
+  map_one' := by
+    apply (fieldMap M).injective
+    rw [fieldMap_arithmeticDiamondValue, map_one, map_one]
+  map_add' x y := by
+    apply (fieldMap M).injective
+    rw [fieldMap_arithmeticDiamondValue, map_add, map_add, map_add,
+      fieldMap_arithmeticDiamondValue, fieldMap_arithmeticDiamondValue]
+  map_mul' x y := by
+    apply (fieldMap M).injective
+    rw [fieldMap_arithmeticDiamondValue, map_mul, map_mul, map_mul,
+      fieldMap_arithmeticDiamondValue, fieldMap_arithmeticDiamondValue]
+
+theorem fieldMap_arithmeticDiamondHom (g : Gamma0 M) (x : FQ) :
+    fieldMap M (arithmeticDiamondHom M g x) = diamondFieldHom M g (fieldMap M x) :=
+  fieldMap_arithmeticDiamondValue M g x
+
+theorem arithmeticDiamondHom_constants (g : Gamma0 M) (c : Qbar) :
+    arithmeticDiamondHom M g (algebraMap Qbar FQ c) = algebraMap Qbar FQ c := by
+  apply (fieldMap M).injective
+  rw [fieldMap_arithmeticDiamondHom, fieldMap_constants, diamondFieldHom_constants]
+
+theorem arithmeticDiamondHom_one (x : FQ) : arithmeticDiamondHom M 1 x = x := by
+  apply (fieldMap M).injective
+  rw [fieldMap_arithmeticDiamondHom, diamondFieldHom_one]
+
+theorem arithmeticDiamondHom_mul (g h : Gamma0 M) (x : FQ) :
+    arithmeticDiamondHom M g (arithmeticDiamondHom M h x) = arithmeticDiamondHom M (h * g) x := by
+  apply (fieldMap M).injective
+  rw [fieldMap_arithmeticDiamondHom, fieldMap_arithmeticDiamondHom,
+    fieldMap_arithmeticDiamondHom, diamondFieldHom_mul]
+
+/-- The actual diamond automorphism of the original algebraic-closure coefficient field. -/
+def arithmeticDiamondAut (g : Gamma0 M) : FQ ≃ₐ[Qbar] FQ where
+  __ := arithmeticDiamondHom M g
+  invFun := arithmeticDiamondHom M g⁻¹
+  left_inv x := by
+    change arithmeticDiamondHom M g⁻¹ (arithmeticDiamondHom M g x) = x
+    rw [arithmeticDiamondHom_mul, mul_inv_cancel, arithmeticDiamondHom_one]
+  right_inv x := by
+    change arithmeticDiamondHom M g (arithmeticDiamondHom M g⁻¹ x) = x
+    rw [arithmeticDiamondHom_mul, inv_mul_cancel, arithmeticDiamondHom_one]
+  commutes' := arithmeticDiamondHom_constants M g
+
+theorem arithmeticDiamondHom_j (g : Gamma0 M) :
+    arithmeticDiamondHom M g (jCoordinateOver (Gamma1 M) Qbar) =
+      jCoordinateOver (Gamma1 M) Qbar := by
+  apply (fieldMap M).injective
+  rw [fieldMap_arithmeticDiamondHom, fieldMap_j, diamondFieldHom_j]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

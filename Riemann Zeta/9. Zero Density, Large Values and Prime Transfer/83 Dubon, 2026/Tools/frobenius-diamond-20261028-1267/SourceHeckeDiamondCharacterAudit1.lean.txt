@@ -1,0 +1,58 @@
+import SourceGammaOneHeckeDiamondWords
+import SourceGammaOneHeckeDiamondDescent
+import SourcePrimitiveGammaOneHeckeDiamondCharacter
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_transfer
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel
+#print axioms Dubon2026.sourceGammaOneDiamondToModulus_comp
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondOperators
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondAlgebra
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord
+#print axioms Dubon2026.sourceGammaOneDiamondToModulus
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneHeckeDiamondWords, `SourceGammaOneHeckeDiamondDescent, `SourcePrimitiveGammaOneHeckeDiamondCharacter]
+  let theorems : Array Name := #[`Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val, `Dubon2026.sourceGammaOneHeckeDiamondWord_transfer, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel, `Dubon2026.sourceGammaOneDiamondToModulus_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond]
+  let constructions : Array Name := #[`Dubon2026.sourceGammaOneHeckeDiamondOperators, `Dubon2026.sourceGammaOneHeckeDiamondAlgebra, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord, `Dubon2026.sourceGammaOneDiamondToModulus, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Frobenius Normalization postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Frobenius Normalization theorems discovered"
+  logInfo m!"SOURCE HECKE DIAMOND CHARACTER AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneHeckeDiamondWords
+#lint in SourceGammaOneHeckeDiamondDescent
+#lint in SourcePrimitiveGammaOneHeckeDiamondCharacter

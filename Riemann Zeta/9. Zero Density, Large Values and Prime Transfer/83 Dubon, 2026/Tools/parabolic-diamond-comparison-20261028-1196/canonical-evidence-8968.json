@@ -1,0 +1,529 @@
+{
+  "status": "Canonical PASS of the original parabolic operator congruence away from a fixed integer, actual finite parabolic/Tate word kernels and explicitly conditional transfer descent. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_parabolic_diamond_comparison_8968.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/build_parabolic_diamond_comparison_8968.ps1",
+      "sha256": "1A90D49D7448DF4A15DDBAFE93DD9D19A6BB27D45645D73101E58FD837E26164"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_parabolic_diamond_comparison_ownership_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/compare_parabolic_diamond_comparison_ownership_8968.py",
+      "sha256": "84BD18978D8CA2EC1FE498AE9D16346FA83132F34CA09959AC8D54D7BD023C95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_parabolic_diamond_comparison_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/integrate_source_parabolic_diamond_comparison_8968.py",
+      "sha256": "0314D97693BD7F473D8337BCE9F99566115B01609FBCE2812F2CA70A54C0B8EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-diamond-comparison-preexecution-review-8968.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-diamond-comparison-preexecution-review-8968.json",
+      "sha256": "775060DECF5C96518F178437EDBC3017A10A2C00A6A2023D4AAB34667402F31E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parabolic-diamond-comparison-preflight-8968.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/parabolic-diamond-comparison-preflight-8968.json",
+      "sha256": "F864C5222A484540C655A6369D0CFCCF65C08310617DC1420CB5DCA7B4C70896"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_parabolic_diamond_comparison_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/preflight_parabolic_diamond_comparison_8968.py",
+      "sha256": "CA7F5F9A2C0D2447A34108C77B77F37B8DB3589F7E8B31A571C868A7EC78BECD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_diamond_comparison_global_ownership_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_diamond_comparison_global_ownership_8968.py",
+      "sha256": "4D0E51A35CFC5E1E65336EC44BD6DEBFBBF43AC4B97BB49EADA20AC86BEF6377"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_diamond_comparison_production_ownership_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_diamond_comparison_production_ownership_8968.py",
+      "sha256": "C6A8C76C254CEDCD9C8AD65E4BCD89A4C44A8CD7A2C036A19DE614300F244080"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_diamond_comparison_promotion_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_diamond_comparison_promotion_8968.py",
+      "sha256": "436EB160B9443ACF513A77F45130C803BAB6FE1C3E1A197FBBCB3CAAA7ECE85F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_parabolic_diamond_promotion_generator_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/prepare_parabolic_diamond_promotion_generator_8968.py",
+      "sha256": "66C0765A78F052CF8DD9DA49C4C9336CECCDFBBE9EB04924BD82E600185F090B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_parabolic_diamond_comparison_8968.py",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/record_source_parabolic_diamond_comparison_8968.py",
+      "sha256": "8EFD38B1C896F84AC64186EE7FD9538A338A2F49E5DEC7D440D18AB628BFBF07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-diamond-comparison-ownership-comparison-8968.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-diamond-comparison-ownership-comparison-8968.json",
+      "sha256": "1841E0B02EF7F6BAC160F2F923601E4C5E3EA0E9E0B195ABBDAC4772DF1D327C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-diamond-comparison-production-build-8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-diamond-comparison-production-build-8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-diamond-comparison-production-build-8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-diamond-comparison-production-build-8968.log",
+      "sha256": "F32378CE21D7B39385246F81A45AEE73A6AC100B277BDA640A03EE4661DDB78E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-diamond-comparison-scratch-ownership-8968.json",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/source-parabolic-diamond-comparison-scratch-ownership-8968.json",
+      "sha256": "10F245567B83AEA2B6AEAA551C60142ED8DFAC1D2BCBDC28A731B5EBEE800745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1Production8968.lean.txt",
+      "sha256": "C4A3B9281986DB59FDAD0A55DB0F76DD38137CC1A06C0FBB62B3459B51101680"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondDependencyAudit1Production8968.log",
+      "sha256": "8A71667D1B2C21AC9AF1409A866E1CECF13B447FB5754E31B4817B4226E1BEE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1Production8968.lean.txt",
+      "sha256": "53ADA2733FC0498BAE426A8562323ECACAEC8C7A02DE965A80873496C1976500"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondPeriodDependencyAudit1Production8968.log",
+      "sha256": "8F3881F58A761702BFD9E68532457DD27B7585145A94DC131D37CBB517652133"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1Production8968.lean.txt",
+      "sha256": "A65D9D3B600D43725929A74AE7E4DB7270B9948D1C8B22090318D567FF595529"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneDiamondTateDependencyAudit1Production8968.log",
+      "sha256": "5C276272468C956A4BFCAF053AAE4B4ADF6A2F38A812889204D94FEF469FD284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1Production8968.lean.txt",
+      "sha256": "72BC8E4A86029C30D2258AB7B4C794C89B6126FC1403880D43CA734540E5B529"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceGammaOneParabolicDescentDependencyAudit1Production8968.log",
+      "sha256": "A6FD03FD06D0F1024EFFF42D615C8BCE5FC4B14534E12B8C9C8F0B95190504FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1Production8968.lean.txt",
+      "sha256": "A1315A1B95C282F100963C71ECB9AD7AAE78D26C0234C001AC96A46CB0675868"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceIntegralSaturationDependencyAudit1Production8968.log",
+      "sha256": "93B76A50E13DDCDDC4D7F96ACB6A9CE57FA6040453AF90C131936B3E563B4F23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonGlobalOwnership8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonGlobalOwnership8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonGlobalOwnership8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonGlobalOwnership8968.lean.txt",
+      "sha256": "4C59D2BFFF3FB95CDB81C3FD158582E9932E6CC86312EFA33701348547EDDC0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonGlobalOwnership8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonGlobalOwnership8968.log",
+      "sha256": "2C30B7935D89ECF6BE114C469E01F2AB972FFAE8B1740E65FCAE190F6C48C8BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonOwnership8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonOwnership8968.lean.txt",
+      "sha256": "4E05D83682BC61E2582747A547ED2414167861AEF0044CCBD893D93757785154"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonOwnership8968.log",
+      "sha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonProductionAudit8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonProductionAudit8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonProductionAudit8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonProductionAudit8968.lean.txt",
+      "sha256": "41C54D5753616659EE8DCCE4D854CF3AF9A8E44CD4F8B01CAF3AC797B90B5A35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonProductionAudit8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceParabolicDiamondComparisonProductionAudit8968.log",
+      "sha256": "C520CE7AD794C2A68EA95E4D8E2AAEF605B1706B8F775AE988E044654C54CFB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1Production8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1Production8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1Production8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1Production8968.lean.txt",
+      "sha256": "CB3250BCD724993782946394E2A0CE9B18B217D0CAA59D16BB3027218ADB2C3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1Production8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourcePrimitiveParabolicKernelDependencyAudit1Production8968.log",
+      "sha256": "96878AC109A6F35E8CF17CDFCB29F45C79A42C74B462244674FC1BA4BC71B1CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.exit",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.lean",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.lean.txt",
+      "sha256": "642320F326CAA656F5FD8A7727444A42CC554BCFB7F9BE074F115CF61B7DFA8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.log",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/SourceSupportedParabolicCongruenceDependencyAudit1bProduction8968.log",
+      "sha256": "B8F3CBA753B5B50F5CC0B0C0E7F7039C8F5402B90BF9FAADE4524FFF293B57FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_parabolic_diamond_comparison_8968.ps1",
+      "path": "Tools/parabolic-diamond-comparison-20261028-1196/verify_parabolic_diamond_comparison_8968.ps1",
+      "sha256": "C922629F40E4B256D24FCD5B1069C6C96FB45CEA52630D5B2A0425102E44C085"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-28T11:53:30.590923+00:00",
+    "log": "logs/dubon-build-20261028-032432-254.log",
+    "sha256": "0C7698CD693B500C987E7001A5C1CF3A25C9D40D59FDA0F875955D2D4CCF0A43",
+    "bytes": 14736113,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8968,
+    "projectTheorems": 56946,
+    "registeredConsumers": 26323,
+    "registeredConstructions": 2782,
+    "declarations": 35090,
+    "generated": 35899,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_031830.log",
+    "foundationSha256": "1B5A4F828E1E7BE4EE494F5229C92C1CA657AEAE8DCED0AE7A3BD4C70A284BF3",
+    "countReconciliation": {
+      "previousTheorems": 56839,
+      "focusedTheorems": 108,
+      "sharedGeneratedNames": [
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter.congr_simp"
+      ],
+      "addedTheorems": 107,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonGlobalOwnership8968.log",
+      "globalOwnershipSha256": "2C30B7935D89ECF6BE114C469E01F2AB972FFAE8B1740E65FCAE190F6C48C8BF",
+      "globalOwnershipSourceSha256": "4C59D2BFFF3FB95CDB81C3FD158582E9932E6CC86312EFA33701348547EDDC0C",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+      "ownershipSha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 108,
+      "scratchDistinct": 108,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneParabolicTateKernel._proof_1": "_private.Dubon2026.SourceGammaOneParabolicTateKernel.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 108,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourcePrimitiveParabolicCharacterKernel"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+            "sha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C",
+            "sourceSha256": "A2E5F86309ED7C1337DD2AA0628309CDCCEC9A49FA9C779572557137C142EA96"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteIntegralSaturation"
+          ],
+          "count": 1,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSaturationScratchOwnership1183.log",
+            "sha256": "E84B8D47B6C1800BF1F4FFDD9CB31904E5A2A607014ABCB3952CF7BE2D59ED60",
+            "sourceSha256": "8D27B6F6E680FC6B471C5A0D6502FCD8D8DECAB0959C3F1B180F2DF6A341C77B"
+          }
+        },
+        {
+          "modules": [
+            "SourceSupportedCharacterFiber",
+            "SourceSupportedCharacterDivisibility",
+            "SourceParabolicHeckeSpan",
+            "SourceParabolicHeckeCongruence",
+            "SourceParabolicAdicOperatorKernel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+            "sha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE",
+            "sourceSha256": "3A67AF4A3756419047718080F730AE5E605BF3CCE1AEB25FE46779F4CFC821E9"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneParabolicOperatorAlgebra",
+            "SourceGammaOneParabolicTateKernel",
+            "SourceGammaOneParabolicTransferCriterion",
+            "SourceParabolicCongruenceException",
+            "SourceGammaOneParabolicCharacterTransfer"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicDescentScratchOwnership1181.log",
+            "sha256": "730418B2FC16B8EA4FF4CCFF93EAA2B904F61A4906F13285EBC6382178CD08FD",
+            "sourceSha256": "F5396F6B4DAD8D2D22F633EF22DFDD14642C879416FB851B7A5E7C1DBD0CEE70"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondConjugation",
+            "SourceGammaOneDiamondH1",
+            "SourceGammaOneDiamondLabels",
+            "SourceGammaOneUnitDiamondAction"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondScratchOwnership1189.log",
+            "sha256": "55C1B2D043201921AF3CF4C35A6C2D97C4A2AA76C69A594A05570376AB5C81A6",
+            "sourceSha256": "35EEA7ED74A0EFAF009E5945E568C2F786BFBCF506007481E9811D3157E27890"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondCuspPrimitive",
+            "SourceGammaOneDiamondPeriodH1",
+            "SourceGammaOneDiamondPeriodLattice",
+            "SourceGammaOneDiamondFiniteH1"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodScratchOwnership1195.log",
+            "sha256": "C54BB52A6920E37A1832D1A67B60B0728BD094244B644B341FF0C4B43683102E",
+            "sourceSha256": "50BE108FA8E7DFB4A915D471631E12A3C9681390FA57B4D4FA452646C510A7D3"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneDiamondPeriodTate"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTateScratchOwnership1196.log",
+            "sha256": "C16176C5C8CF2A7944ACC64F94EC5D6744A6D39CD0BE598B45BB0EBBDAB7EC71",
+            "sourceSha256": "C46184E261E040532B724A430CFC13018D7E9CBBCCE7C2937EBC0B0722F8FF30"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicDiamondComparisonOwnership8968.log",
+        "sha256": "48E1383B1D470D0D3D81398DE559988F2CDEC914FAF1CAA976D991B38148F05E",
+        "sourceSha256": "4E05D83682BC61E2582747A547ED2414167861AEF0044CCBD893D93757785154"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-013754-977.log",
+        "sha256": "03FD4C0449E4E9C9682A10D94E53675B19F4F507F92FE102BB95D7635C17534C"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 21 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourcePrimitiveParabolicCharacterKernel",
+            "scratchSha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC",
+            "productionSha256": "CE404C922A771062EB0897084097FDB094E3D29804E1FA0F4386182BB4D0398B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteIntegralSaturation",
+            "scratchSha256": "C030679D10CABEFC45D35B02A1611EF1037A853E412B990AC3B9601F97F652A7",
+            "productionSha256": "CC71F9A62545146FF00FD7378A3D54CCAF324297373C2F59EB8BFE05AD42DB35",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterFiber",
+            "scratchSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "productionSha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSupportedCharacterDivisibility",
+            "scratchSha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1",
+            "productionSha256": "08E9E83248323511439E6EB53D466FB1F1CB6C596ECCF90CA1EF1CFBE3F5FA84",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeSpan",
+            "scratchSha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457",
+            "productionSha256": "686BD446B6DD0F7DB69735FF5A2C47AAEA3DC3B33914AB8ECDA339FE5CA82FA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicHeckeCongruence",
+            "scratchSha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221",
+            "productionSha256": "147B128A73ED5042894AB667291C72026AD6AC29F952428E09E7D6ADF6E26CA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicAdicOperatorKernel",
+            "scratchSha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0",
+            "productionSha256": "05BEA3F5C6AC7EF448467B056C557F094F4BFBC53681DD204EA772BFEFFF9352",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicOperatorAlgebra",
+            "scratchSha256": "6AA2D2AB9EDD3E3828CA071D9E8308671DD009D68B7644346CCF5E690501D878",
+            "productionSha256": "AD1E7D0DB575D5AADA608194C5E24B6202EA25B824DD04D79C777CEC964A8DED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTateKernel",
+            "scratchSha256": "047BDE672EBC56F4949F095DD3F2AC68992F8DE75511C057EBA08F77BE5B8B6C",
+            "productionSha256": "06A75CA8F4D8929B044E733FFFFD093358310FD60A60D118FBF839A929428322",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicTransferCriterion",
+            "scratchSha256": "A5BCDED0B422F15F31D139C494470ADCB8C1448256D173F594EAB298E2BB9B62",
+            "productionSha256": "721BE58C716974FA937D84DB4C94762A3AD22F518F41C13939417FDDAC6C1FE8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceParabolicCongruenceException",
+            "scratchSha256": "D507FE741D9EE2946745B5F20A0D7B3102FFAEB0C23D1BFC7D8BAA407F0BC3D8",
+            "productionSha256": "1E8DD9E699FE00934AD0D1F6C83E5A01B6DD98EE5CC40E3F088EDFAE3E41FB5D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneParabolicCharacterTransfer",
+            "scratchSha256": "0D345E3C4F912ACC4EEA79D11A90E148D2D493E27CECFA0269E1FD597C7F02F7",
+            "productionSha256": "785072AAEDC8DC1DA094773DB875776BF9E5C1A574B458D64854D23A28AC9605",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondConjugation",
+            "scratchSha256": "2D637353D637B1D45EFA3B11C1B79A8E1EA0927C0A5797A67F5ECD8689D9D257",
+            "productionSha256": "9D9F0F07409C3C84E500EFF2C3C31543CC785D7A35857CC347B77690D313E881",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondH1",
+            "scratchSha256": "0ABA507C22FCEEB1AF2E0DE9F38E33B77A7A3357EE5AED1DABF6116E4829F9B6",
+            "productionSha256": "C88492172A47D357A0B985663824E06F0198BB931CE2BA4C784AA79C3E79BDCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondLabels",
+            "scratchSha256": "D0A7EA5DB8E3AC15576BF850CDB3AA15B869D7DBB726A2D2A41C3F05ABB0F2F3",
+            "productionSha256": "00942ACD69317C0C7D4655948D5FB0D0D88CE3D4CE61854FE1110046FAE2BDAC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnitDiamondAction",
+            "scratchSha256": "F20ECCC7B9A3DFF78A4C7BB673FAA96E2CE335354F6E7872BD316452064BB2A7",
+            "productionSha256": "543D9E6622EE2069ADA628132B58901682C399C198529E0FC3F85F9088CB7662",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondCuspPrimitive",
+            "scratchSha256": "9D945E08E44F5D739FCD18ACE5E73FD053B929515D28F17071227E2F1870E01C",
+            "productionSha256": "6CF361AD6AEDDC2CD2B95FCD02BEF75602A9659B2D31944ABDA58AFBDF1AB471",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodH1",
+            "scratchSha256": "A805586E56CC96D8E2B15452F71AF71BD3C4E6469D619D11342B2E2FE0AA40E4",
+            "productionSha256": "CDCEB073E1029C455F046D6C0A0FFF72AFC330656CF67395B182ED317D82B772",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodLattice",
+            "scratchSha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37",
+            "productionSha256": "693A5200F4D452D7E0C9A94236721DAA3C07A55A78A8436A6A9B90EAA27D03B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondFiniteH1",
+            "scratchSha256": "58940B02B5EB7C764331CB6F7B68831079CF4C659226ACC22A7E0C0D4A79241F",
+            "productionSha256": "DA0CD30C2CE552202AB78A8912683B6AD09CF12F866B67D226A49BACB081695F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondPeriodTate",
+            "scratchSha256": "4A100A41E99041015304FFB9635B7AB86869E56F4F9A93D9108BB28EA7DC81B6",
+            "productionSha256": "AA8F2B1779F174874A3D181CA40C88488A573ADBFD0F02D0C811C292D5AA9DB7",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 108 distinct names from 108 exhaustive scratch checks are retained: 108 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The geometric lifting condition sourceGammaOneIntegralParabolicTransfer is stated and remains unproved. The finite-character descent theorem is conditional on that precise transfer input and excludes the primes dividing the proved fixed nonzero integer. Neither full-H1 transfer surjectivity nor restriction landing in parabolic H1 discharges it. The already proved all-prime full-H1 character family remains unchanged. Exceptional primes, the independent arithmetic Picard diamond and identification of the original homogeneous diamond coefficient action, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-8968-console.log",
+      "sha256": "6B9DDC25EAA23ED9E5BD6EF1E8A60C14D0D995871F57A0646B12D50EF053F6BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-8968-console.log",
+      "sha256": "346FA94E7DD3D7638825E1D9443916F82FF141C870AFFFA74A305691AC45BA2A"
+    }
+  ]
+}

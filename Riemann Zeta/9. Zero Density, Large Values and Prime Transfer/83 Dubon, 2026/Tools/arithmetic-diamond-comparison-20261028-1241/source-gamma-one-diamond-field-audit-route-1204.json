@@ -1,0 +1,69 @@
+{
+  "recordedUTC": "2026-10-28T10:24:59.944435+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic Gamma1 diamond/Picard comparison -> actual field diamond and arithmetic coefficient descent.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\diamond-field-route-1197.md",
+      "sha256": "1FF7C4E0AF6DF8F59EA56CD2FDEE1B4105D7D22647FF64CB0BBCC7803689240E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\diamond-arithmetic-descent-route-1202.md",
+      "sha256": "1EF8990EA9AE13AE5CEFBCCAD2383DC2CE974DF18D2AD9F67556F84BC9DB9304"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-period-1-scratch-receipt.json",
+      "sha256": "5454C6C8F45FA24F42CFD243F7FD97F80D19C8F788609EE46E08744BB3D8E046"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAllModularRatioMembership.lean",
+      "sha256": "95850C3B199D189FCBAF8E2365E8F8DA06642CB391F6BB179E768A802D902B73"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFieldModularRatio.lean",
+      "sha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspRealizationAlgebra.lean",
+      "sha256": "0680420B858B8C345208EDC841A7057916E276167B45C175978D66F050E3AD96"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspPlaceLeftInvariance.lean",
+      "sha256": "20584441E5908C847E5C62FA9B1B806BA5AF110A44D375CCF28915138B3FB73A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspJExactOrder.lean",
+      "sha256": "406738D1286D0DDD12A5471188A8AD6CDA73986741D516EBCF9BB832433CDC3F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTranscendentalTranslation.lean",
+      "sha256": "3B90B5DA8E55805EE08610769222B1E2F4C3892E6ABE0F7A207C2B92D865974A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientMap.lean",
+      "sha256": "BB7D4274475CB03336B90871A85D0D799A97A29F414DD50B2634C2315EF5332F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentSpanDescent.lean",
+      "sha256": "259FD975B2681F28DC3FEA8C908D7B1D1F6F9861E53F907CB6950E203BC90424"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexTranslations.lean",
+      "sha256": "97879DADFCC20B0748F9D2B4FC7F5E2D84420916634A3D1228CAB045E6414002"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexFieldIndependence.lean",
+      "sha256": "CC79D5AFC96EDA5F6AE7F9B9B6C36EC317F083E0DCC4378E32786EE76B40E100"
+    }
+  ],
+  "shorterRoute": "Original equal-weight modular quotients, native slash translation and injective cusp germs give the exact complex field automorphism without another analytic model. Existing transcendental translation automorphisms and finite polynomial roots give Laurent coefficient algebraicity and the same-series lift over algebraically closed constants; no new geometric integrality framework is needed.",
+  "assumptionsToDischarge": [
+    "The literal diamond translate stays in the original complex function field, with exact realization at every translated cusp.",
+    "Its ring laws, inverse, constant preservation, lift independence, unit multiplication and fixed original j are proved.",
+    "Every Laurent root of a nonzero polynomial over the base Laurent field has algebraic coefficients; over algebraically closed constants the same series has a literal coefficient lift."
+  ],
+  "remaining": "The fixed-j field relation must still be transported to use the Laurent lifting theorem on the actual diamond image, and membership in the original arithmetic field must be proved. Arithmetic field stability, Galois/Picard diamond comparison, original homogeneous coefficient convention, parabolic transfer preimages and exceptional primes, all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "preservedFailures": "1197a/b elaboration and subgroup lemma names;1199a coercions in inverse laws;1202a/b missing CharZero infinitude import. Failed sources and logs preserved. No limits or proof standards changed.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

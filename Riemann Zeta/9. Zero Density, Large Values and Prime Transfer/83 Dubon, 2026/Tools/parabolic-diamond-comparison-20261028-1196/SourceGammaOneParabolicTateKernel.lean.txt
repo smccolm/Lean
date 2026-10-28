@@ -1,0 +1,48 @@
+import SourceGammaOneParabolicOperatorAlgebra
+import Dubon2026.SourceGammaOneBinaryTateHecke
+
+/-! DUB17/18 -> original all-weight association -> finite parabolic
+character descent -> arithmetic Tate operator image. The existing actual
+arithmetic Tate/H1 whole-word equivalence identifies zero operators in
+both independently defined representations. No character existence or
+parabolic transfer is assumed by this comparison. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryTateWord_eq_zero_iff_parabolic (hlarge : 3 < p)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) :
+    FreeAlgebra.lift ℤ (binaryTatePrimeOperators Q p n w) a = 0 ↔
+      FreeAlgebra.lift ℤ (binaryParabolicPrimeOperators Q N w
+        (originalGammaOne_level_ge_four Q p n hlarge)) a = 0 := by
+  have he := binaryParabolicWord_eq_zero_iff Q N w
+    (originalGammaOne_level_ge_four Q p n hlarge) a
+  constructor
+  · intro ha
+    apply he.mpr
+    intro x
+    obtain ⟨φ, rfl⟩ := (binaryTateH1Equiv Q p n w hlarge).surjective x
+    rw [← binaryTateH1Equiv_word Q p n w hlarge, ha, LinearMap.zero_apply, map_zero]
+    rfl
+  · intro ha
+    have hz := he.mp ha
+    apply LinearMap.ext
+    intro φ
+    apply (binaryTateH1Equiv Q p n w hlarge).injective
+    apply Subtype.ext
+    exact (binaryTateH1Equiv_word Q p n w hlarge a φ).trans
+      ((hz (binaryTateH1Equiv Q p n w hlarge φ)).trans
+        (congrArg Subtype.val (map_zero (binaryTateH1Equiv Q p n w hlarge))).symm)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

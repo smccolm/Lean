@@ -1,0 +1,42 @@
+import SourceGammaOneDiamondArithmeticRelation
+import SourceLaurentAlgebraicallyClosedLift
+import SourceLaurentFieldIntersection
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond/Picard comparison -> actual arithmetic field diamond. Transport
+the original finite j-field relation, lift its Laurent coefficients, and
+descend membership in the original integral-ratio field. The resulting
+arithmetic element has the exact original complex diamond as its image.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.ConstantField
+noncomputable section
+open CongruenceSubgroup
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+attribute [local instance] complexAlgebra
+variable (M : ℕ) [NeZero M]
+local notation "FQ" => functionFieldOver (Gamma1 M) Qbar
+local notation "FC" => functionFieldOver (Gamma1 M) ℂ
+
+theorem arithmetic_mem_of_complex_coeffMap_mem (y : LaurentSeries Qbar)
+    (hy : coeffMap (algebraMap Qbar ℂ) y ∈ FC) : y ∈ FQ := by
+  apply mem_field_of_coeffMap_mem_adjoin FQ y
+  have hle : FC ≤ IntermediateField.adjoin ℂ
+      (coeffMap (algebraMap Qbar ℂ) '' (FQ : Set (LaurentSeries Qbar))) := by
+    apply IntermediateField.adjoin_le_iff.mpr
+    rintro z ⟨a, ha, rfl⟩
+    apply IntermediateField.subset_adjoin
+    refine ⟨coeffEmb Qbar a, coeffEmb_mem_laurentBaseChange Qbar ha, ?_⟩
+    exact OriginalConstantField.coeffMap_sigma_rational a
+  exact hle hy
+
+theorem exists_arithmetic_diamond_lift (g : Gamma0 M) (x : FQ) :
+    ∃ y : FQ, fieldMap M y = diamondFieldHom M g (fieldMap M x) := by
+  obtain ⟨p, hp, hrel⟩ := exists_diamond_arithmetic_laurent_relation M g x
+  obtain ⟨y, hy⟩ := exists_laurent_lift_of_relation p hp _ hrel
+  have hmem : y ∈ FQ := arithmetic_mem_of_complex_coeffMap_mem M y
+    (hy.symm ▸ (diamondFieldHom M g (fieldMap M x)).property)
+  exact ⟨⟨y, hmem⟩, Subtype.ext hy⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ConstantField

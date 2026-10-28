@@ -1,0 +1,38 @@
+--- leanprover-community__mathlib4__previousHead__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt
++++ leanprover-community__mathlib4__head__Mathlib__NumberTheory__RamificationInertia__HilbertTheory.lean.txt
+@@ -6,6 +6,8 @@
+ module
+ 
+ public import Mathlib.NumberTheory.RamificationInertia.Galois
++
++import Mathlib.LinearAlgebra.Dimension.Domain
+ 
+ /-!
+ 
+@@ -149,7 +151,7 @@
+   have : IsDomain R := (FaithfulSMul.algebraMap_injective R B).isDomain
+   have : Module.Finite R B := Module.Finite.right A R B
+   rw [← mul_left_inj' (c := Module.finrank R B) Module.finrank_pos.ne',
+-    Module.finrank_mul_finrank' B, IsDecompositionRing.finrank_top G P R p,
++    Module.IsTorsionFree.finrank_mul_finrank, IsDecompositionRing.finrank_top G P R p,
+     ncard_primesOver_mul_ramificationIdxIn_mul_inertiaDegIn p B G,
+     IsGaloisGroup.card_eq_finrank' G A B]
+ 
+@@ -161,7 +163,7 @@
+   have : IsDomain R := (FaithfulSMul.algebraMap_injective R B).isDomain
+   have : Module.Finite R B := Module.Finite.right A R B
+   rw [← mul_left_inj' (c := Module.finrank R B) Module.finrank_pos.ne',
+-    Module.finrank_mul_finrank' B, IsInertiaRing.finrank_top G P R p,
++    Module.IsTorsionFree.finrank_mul_finrank, IsInertiaRing.finrank_top G P R p,
+     ← IsGaloisGroup.card_eq_finrank' G A B, mul_assoc, mul_comm (p.inertiaDegIn B),
+     ← ncard_primesOver_mul_ramificationIdxIn_mul_inertiaDegIn p B G]
+ 
+@@ -175,7 +177,7 @@
+   have : Module.Finite R B := Module.Finite.right A R B
+   have : Module.Finite R' B := Module.Finite.right R R' B
+   rw [← mul_left_inj' (c := Module.finrank R' B) Module.finrank_pos.ne',
+-    Module.finrank_mul_finrank' B, IsInertiaRing.finrank_top G P R' p,
++    Module.IsTorsionFree.finrank_mul_finrank, IsInertiaRing.finrank_top G P R' p,
+     IsDecompositionRing.finrank_top G P R p, mul_comm]
+ 
+ end rank

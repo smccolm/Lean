@@ -1,0 +1,76 @@
+
+/-- Exact original-object consumer of `finiteAdelicGL2On_mem`. -/
+theorem actual_place_restriction_coordinate_source  (S : Set (HeightOneSpectrum ℤ))
+    (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) (v : HeightOneSpectrum ℤ) (hv : v ∈ S) :
+    GeneralLinearGroup.map (finiteAdelePlace v) (finiteAdelicGL2On S g) = GeneralLinearGroup.map (finiteAdelePlace v) g  :=
+  finiteAdelicGL2On_mem S g v hv
+
+/-- Exact original-object consumer of `finiteAdelicGL2On_mul_compl`. -/
+theorem actual_complementary_adelic_restriction_source (S : Set (HeightOneSpectrum ℤ))  (g : GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)) :
+    finiteAdelicGL2On S g * finiteAdelicGL2On Sᶜ g = g  :=
+  finiteAdelicGL2On_mul_compl S g
+
+/-- Exact original-object consumer of `adelicGoodPart_mul_base`. -/
+theorem actual_good_base_original_factor_source  (N : ℕ) (a : RationalAdelicGL2) :
+    adelicGoodPartHom N a * (adelicBaseProjection N a).val = a  :=
+  adelicGoodPart_mul_base N a
+
+/-- Exact original-object consumer of `adelicBaseProjection_base`. -/
+theorem actual_fixed_base_projection_source  (N : ℕ) (b : adelicRestrictedBaseGroup N) : adelicBaseProjection N b.val = b  :=
+  adelicBaseProjection_base N b
+
+/-- Exact original-object consumer of `adelicRestrictedFiniteTensorIsometry_intertwines`. -/
+theorem actual_fixed_base_external_action_source {N : ℕ} [NeZero N] {k : ℤ} {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (F : PrimitiveCuspForm N k)  (hv : Function.Injective v)
+    (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicRestrictedBaseGroup N)
+    (x : AdelicRestrictedFiniteTensor F.toCuspForm v) :
+    adelicRestrictedFiniteTensorIsometry v F hv hgood (adelicRestrictedFiniteTensorRepresentation F.toCuspForm v b x) =
+      adelicRestrictedFiniteJointRepresentation F.toCuspForm v hv hgood b
+        (adelicRestrictedFiniteTensorIsometry v F hv hgood x)  :=
+  adelicRestrictedFiniteTensorIsometry_intertwines v F hv hgood b x
+
+/-- Exact original-object consumer of `adelicGoodTail_unitReference`. -/
+theorem actual_good_tail_reference_fixed_source (N : ℕ) {n : ℕ} (v : Fin n → HeightOneSpectrum ℤ) (hv : Function.Injective v)  [NeZero N] {k : ℤ}
+    (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hgood : ∀ i, IsGoodAdelicPlace N (v i))
+    (a : RationalAdelicGL2)
+    (ha : ∀ w, IsGoodAdelicPlace N w → (∀ i, w ≠ v i) → adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w) :
+    adelicCyclicHilbertRepresentation f (adelicGoodTail N v hv a) (adelicCyclicUnitReference f) =
+      adelicCyclicUnitReference f  :=
+  adelicGoodTail_unitReference N v hv f hgood a ha
+
+/-- Exact original-object consumer of `adelicActionStage_spec`. -/
+theorem actual_full_action_stage_bound_source (N : ℕ) [NeZero N]  (a : RationalAdelicGL2) (n : ℕ) :
+    ∀ w, IsGoodAdelicPlace N w → (∀ i : Fin (adelicActionStage N a n), w ≠ goodAdelicPlaceInitial N (adelicActionStage N a n) i) →
+      adelicPlaceGL2Hom w a ∈ finitePlaceGL2Gamma0 N w  :=
+  adelicActionStage_spec N a n
+
+/-- Exact original-object consumer of `adelicRestrictedActionOnStage_intertwines`. -/
+theorem actual_finite_stage_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (n : ℕ)
+    (x : adelicRestrictedStage F.toCuspForm n) :
+    adelicRestrictedAlgebraicTensorIsometry F (adelicRestrictedActionOnStage F a n x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedStageIsometry F n x)  :=
+  adelicRestrictedActionOnStage_intertwines F a n x
+
+/-- Exact original-object consumer of `adelicRestrictedAlgebraicAction_intertwines`. -/
+theorem actual_restricted_algebraic_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedAlgebraicTensor F) :
+    adelicRestrictedAlgebraicTensorIsometry F (adelicRestrictedAlgebraicAction F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedAlgebraicTensorIsometry F x)  :=
+  adelicRestrictedAlgebraicAction_intertwines F a x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorIsometry_intertwines`. -/
+theorem actual_restricted_completed_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedHilbertTensor F) :
+    adelicRestrictedHilbertTensorIsometry F (adelicRestrictedHilbertTensorRepresentation F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedHilbertTensorIsometry F x)  :=
+  adelicRestrictedHilbertTensorIsometry_intertwines F a x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorRepresentation_stronglyContinuous`. -/
+theorem actual_restricted_full_action_continuous_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (x : AdelicRestrictedHilbertTensor F) :
+    Continuous (fun a => adelicRestrictedHilbertTensorRepresentation F a x)  :=
+  adelicRestrictedHilbertTensorRepresentation_stronglyContinuous F x
+
+/-- Exact original-object consumer of `adelicRestrictedHilbertTensorEquiv_intertwines`. -/
+theorem actual_restricted_equivalence_full_action_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k)  (a : RationalAdelicGL2) (x : AdelicRestrictedHilbertTensor F) :
+    adelicRestrictedHilbertTensorEquiv F (adelicRestrictedHilbertTensorRepresentation F a x) =
+      adelicCyclicHilbertRepresentation F.toCuspForm a (adelicRestrictedHilbertTensorEquiv F x)  :=
+  adelicRestrictedHilbertTensorEquiv_intertwines F a x
+

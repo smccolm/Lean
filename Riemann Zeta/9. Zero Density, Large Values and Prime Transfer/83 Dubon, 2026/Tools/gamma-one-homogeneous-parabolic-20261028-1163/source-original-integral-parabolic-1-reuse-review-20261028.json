@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic spanning and operator congruence -> one uniform integer denominator for the original cusp-period local coboundaries.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-integral-parabolic-audit-route-1161.json",
+    "sha256": "269CDA1A2342DE7528474093ED26013D9FCE2A224A414C2A6392A59D7D1784C5",
+    "review": {
+      "recordedUTC": "2026-10-28T07:30:08.368515+00:00",
+      "chain": "DUB17/18 -> original all-weight association -> original finite Gamma1 parabolic character -> integral parabolic spanning and operator congruence -> one uniform integer denominator for the original cusp-period local coboundaries.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspSpace.lean",
+          "sha256": "60B451E13D7553A17B000CE60611C3E16BA92D25EB9C665676A02E69C875CC7B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodCocycle.lean",
+          "sha256": "A8737004A6F240220DDC4DCDE0E0B23873EB93B1862AB212C2FF6B822D024031"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCocycleDenominators.lean",
+          "sha256": "DE6F77D24A7CE1B231C9EFD8E2A609DBE7FCD2740CE8C4A200C57B6F2AF1B6BA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCocycleCoordinates.lean",
+          "sha256": "5AE6BFCBD44F92E29973F9233E254A2D34CEEE2F2D8CB9A2ECB0C33402A571E3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryAdditiveCoefficients.lean",
+          "sha256": "7BD99E4F0348D6EC1A3A40A40AF6E68BA3C71CA7BF71A7C38DE3A0FAF6E5594D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSemilinearCohomology.lean",
+          "sha256": "57EC10FB101EF4BF45434761F2F53F09F63D79F4F010E37EF507EE8B9CCA3B17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-parabolic-integral-denominator-reuse-1151.json",
+          "sha256": "053AD4BD5F06C1257289AE3CB125325631350752EDBF477629DA21EE53312FFE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexBinaryCocycleSpan.lean",
+          "sha256": "E7C233741125754B29BBC966D978F923339EDF9F94374A16406909DB31BE2E31"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicBinaryRationalSpan.lean",
+          "sha256": "3A27CC2B002E57640A4AA10BBBC4CA520C9353D0137E71C2ADA85BFA91F9E1DD"
+        }
+      ],
+      "shorterRoute": "Use the already finite original SourceManin.CuspSpace quotient, native chosen representatives and its actual orbit equivalence. The original sourcePeriodCocycle_parabolic supplies a single local witness on each entire cusp stabilizer. Additive rational-coordinate maps preserve those witnesses. Clear the finitely many representative witnesses together with the existing uniform cocycle denominator; integral conjugation transports them to every cusp. This avoids new cusp-width, parity, simultaneous-eigenvector or boundary/Eisenstein machinery.",
+      "scope": "The uniform denominator construction consumes the original stronger whole-cusp-stabilizer condition, which is already proved for the source period cocycle and must be retained through coefficient projection. Pointwise cyclic parabolicity alone is not silently promoted to that stronger condition. The existing rational pointwise-parabolic span remains separately valid.",
+      "remaining": "Finite parabolic Hecke-character descent and original Gamma1 arithmetic realization remain open. Integral spanning is not finite descent, nonvanishing of reduction, or a characteristic-zero lift. Diamonds, Galois realization, original all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+      "assumptionsToDischarge": [
+        "Native cocycle conjugation transports actual local coboundary witnesses.",
+        "Finitely many original cusp-orbit representatives suffice for integral parabolicity.",
+        "One nonzero integer clears the rational cocycle and all whole-cusp-stabilizer witnesses simultaneously.",
+        "The actual original period cocycle retains whole-cusp witnesses under its coefficient isomorphism and rational coordinate projection.",
+        "The original nonzero primitive period H1 class lies in the complex span of actual integral parabolic H1 classes."
+      ],
+      "preservedFailures": "1156a map_ne_zero is an equivalence; repaired with .mpr. 1158a span-induction index made a variable and corrected native nonzero theorem name. Failed sources preserved before repair; logs retained; no hypothesis or resource limit changed.",
+      "verbatimHelpers": [
+        "integer_coefficient_composition",
+        "cocycle_ext_generators",
+        "coordinate_sum",
+        "coefficientEval"
+      ]
+    }
+  },
+  "discharged": [
+    "Native cocycle conjugation transports actual local coboundary witnesses.",
+    "Finitely many original cusp-orbit representatives suffice for integral parabolicity.",
+    "One nonzero integer clears the rational cocycle and all whole-cusp-stabilizer witnesses simultaneously.",
+    "The actual original period cocycle retains whole-cusp witnesses under its coefficient isomorphism and rational coordinate projection.",
+    "The original nonzero primitive period H1 class lies in the complex span of actual integral parabolic H1 classes."
+  ],
+  "remaining": "Finite parabolic Hecke-character descent and original Gamma1 arithmetic realization remain open. Integral spanning is not finite descent, nonvanishing of reduction, or a characteristic-zero lift. Diamonds, Galois realization, original all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN; 16/20 unchanged.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

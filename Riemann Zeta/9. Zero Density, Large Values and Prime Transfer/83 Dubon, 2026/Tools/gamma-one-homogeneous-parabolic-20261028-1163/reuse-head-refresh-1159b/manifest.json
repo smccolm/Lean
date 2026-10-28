@@ -1,0 +1,106 @@
+{
+  "scope": "October28 live default-branch refresh; source inspection only, no external proof closure audited or imported.",
+  "repositories": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "previousHead": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "head": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "changed": false,
+      "commitDate": "2026-09-24T14:06:36Z",
+      "url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "retrievedUTC": "2026-10-28T07:47:23.045682+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "previousHead": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "head": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "changed": false,
+      "commitDate": "2026-10-22T16:15:55Z",
+      "url": "https://github.com/ImperialCollegeLondon/FLT/commit/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "retrievedUTC": "2026-10-28T07:47:23.071211+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "repository": "dozenalist/ModularFormsMod",
+      "previousHead": "bc16671d6781a26216b378773502ba5583845cbf",
+      "head": "bc16671d6781a26216b378773502ba5583845cbf",
+      "changed": false,
+      "commitDate": "2026-10-21T19:30:15Z",
+      "url": "https://github.com/dozenalist/ModularFormsMod/commit/bc16671d6781a26216b378773502ba5583845cbf",
+      "retrievedUTC": "2026-10-28T07:47:23.131831+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "repository": "dozenalist/LeanModularForms",
+      "previousHead": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "head": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "changed": false,
+      "commitDate": "2026-10-05T21:41:24Z",
+      "url": "https://github.com/dozenalist/LeanModularForms/commit/f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "retrievedUTC": "2026-10-28T07:47:23.118301+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "previousHead": "116662aa4c1e9106ab5c609b3214b02f6e11a65a",
+      "head": "ee6c124192fb5146db438068b8df8d84d8da4cf0",
+      "changed": true,
+      "commitDate": "2026-10-28T06:17:31Z",
+      "url": "https://github.com/leanprover-community/mathlib4/commit/ee6c124192fb5146db438068b8df8d84d8da4cf0",
+      "retrievedUTC": "2026-10-28T07:47:23.411655+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\leanprover-community__mathlib4-head.json",
+      "sha256": "5434D7B9706C16E5449B08428F034E2C88D7E6AA0A74B44AF8DE32EBEB4F9E31"
+    },
+    {
+      "repository": "openai/math",
+      "previousHead": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "head": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "changed": false,
+      "commitDate": "2026-10-26T21:18:03Z",
+      "url": "https://github.com/openai/math/commit/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "retrievedUTC": "2026-10-28T07:47:23.443249+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "repository": "teal-sea/zeta-lab",
+      "previousHead": "9c492e8a8b91c6a8787a4536102194f511478c6b",
+      "head": "f2dde1dfecc73ce687476b8606841d96a5a8f029",
+      "changed": true,
+      "commitDate": "2026-10-28T01:35:46Z",
+      "url": "https://github.com/teal-sea/zeta-lab/commit/f2dde1dfecc73ce687476b8606841d96a5a8f029",
+      "retrievedUTC": "2026-10-28T07:47:23.507350+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\teal-sea__zeta-lab-head.json",
+      "sha256": "D2236BE945FBA767F6A8EBE6D03A2D65F59F36902718662DDD2A56F7281ECDF4"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "previousHead": null,
+      "head": "a722fde649de5a203c320408257b17b389be2f00",
+      "changed": true,
+      "commitDate": "2026-10-28T07:28:32Z",
+      "url": "https://github.com/TauCetiProject/TauCeti/commit/a722fde649de5a203c320408257b17b389be2f00",
+      "retrievedUTC": "2026-10-28T07:47:23.564696+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCeti-head.json",
+      "sha256": "C78FE51E0572E27F9D52892A1822B39D548E4829A9CEF9AA8DFA05C549D3D90A"
+    },
+    {
+      "repository": "TauCetiProject/TauCetiRoadmap",
+      "previousHead": null,
+      "head": "4d14cbd5ba21a1804ca78c9989b9ea485bcfad08",
+      "changed": true,
+      "commitDate": "2026-10-28T05:06:18Z",
+      "url": "https://github.com/TauCetiProject/TauCetiRoadmap/commit/4d14cbd5ba21a1804ca78c9989b9ea485bcfad08",
+      "retrievedUTC": "2026-10-28T07:47:23.789133+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-1159b\\TauCetiProject__TauCetiRoadmap-head.json",
+      "sha256": "C28AFF8E626872BFB74476EC7A924E05F5BF398BDF249FDED17CCB75E78F4265"
+    }
+  ],
+  "rootPinsChanged": false,
+  "externalImport": false
+}

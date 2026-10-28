@@ -1,0 +1,89 @@
+import Dubon2026.SourceGammaOneFiniteOrderDischarge
+import Dubon2026.SourceGammaOneHeckeWords
+import Dubon2026.HomogeneousMonomialBasis
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+finite homogeneous-coefficient Gamma1 H1 -> original period-lattice
+characters. Keep the original binary homogeneous space and the exact
+level Q*N^2. Its already proved monomial basis reduces existence to
+the audited scalar character equivalence. At level at least four the
+proved trace argument discharges finite-order vanishing coordinate by
+coordinate; only the original parabolic condition remains. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup
+open scoped MatrixGroups
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+
+/-- Original binary-valued characters vanishing on every actual parabolic element. -/
+def binaryParabolicHoms : Submodule (ZMod N)
+    (Additive (Gamma1 (Q * N ^ 2)) →+ sourceBinaryCoefficientRep (ZMod N) Q w) where
+  carrier := {φ | ∀ γ : Gamma1 (Q * N ^ 2),
+    γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0}
+  zero_mem' := fun _ _ => rfl
+  add_mem' ha hb := fun γ hγ => by
+    rw [AddMonoidHom.add_apply, ha γ hγ, hb γ hγ, add_zero]
+  smul_mem' c _ h := fun γ hγ => by
+    rw [AddMonoidHom.smul_apply, h γ hγ, smul_zero]
+
+/-- Original group-period pullback with the original homogeneous coefficient space. -/
+def binaryPeriodCharacterMap :
+    (sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) →ₗ[ZMod N] binaryParabolicHoms Q N w where
+  toFun ψ := ⟨ψ.comp (latticePeriodHom (Q * N ^ 2)), fun γ hγ => by
+    rw [AddMonoidHom.comp_apply, latticePeriodHom_parabolic _ γ hγ, map_zero]⟩
+  map_add' _ _ := rfl
+  map_smul' _ _ := rfl
+
+theorem binaryPeriodCharacterMap_injective :
+    Function.Injective (binaryPeriodCharacterMap Q N w) := by
+  intro ψ χ h
+  apply AddMonoidHom.ext
+  intro l
+  obtain ⟨γ, rfl⟩ := latticePeriodHom_surjective (Q * N ^ 2) l
+  exact congrArg (fun φ : binaryParabolicHoms Q N w => φ.val γ) h
+
+theorem binaryPeriodCharacterMap_surjective (hlevel : 4 ≤ Q * N ^ 2) :
+    Function.Surjective (binaryPeriodCharacterMap Q N w) := by
+  classical
+  intro φ
+  let b := binaryHomogeneousMonomialBasis (R := ZMod N) w
+  let coordinates (i : Fin (w + 1)) : finiteParabolicHoms (Q * N ^ 2) N :=
+    ⟨(b.coord i).toAddMonoidHom.comp φ.val, by
+      apply (finiteParabolicHoms_mem_iff_of_level _ _ hlevel _).mpr
+      intro γ hγ
+      rw [AddMonoidHom.comp_apply, φ.property γ hγ, map_zero]⟩
+  let ψ (i : Fin (w + 1)) :=
+    (finiteLatticeCharacterEquiv (Q * N ^ 2) N).symm (coordinates i)
+  have hψ (i : Fin (w + 1)) (γ : Additive (Gamma1 (Q * N ^ 2))) :
+      ψ i (latticePeriodHom (Q * N ^ 2) γ) = b.coord i (φ.val γ) :=
+    congrArg (fun χ : finiteParabolicHoms (Q * N ^ 2) N => χ.val γ)
+      ((finiteLatticeCharacterEquiv (Q * N ^ 2) N).apply_symm_apply (coordinates i))
+  let F : sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w :=
+    { toFun := fun l => ∑ i, ψ i l • b i
+      map_zero' := by simp
+      map_add' := fun l m => by simp only [map_add, add_smul, Finset.sum_add_distrib] }
+  refine ⟨F, Subtype.ext ?_⟩
+  apply AddMonoidHom.ext
+  intro γ
+  change (∑ i, ψ i (latticePeriodHom (Q * N ^ 2) γ) • b i) = φ.val γ
+  simp only [hψ, Module.Basis.coord_apply]
+  exact b.sum_repr (φ.val γ)
+
+/-- The original homogeneous-valued lattice dual realizes all parabolic characters. -/
+def binaryPeriodCharacterEquiv (hlevel : 4 ≤ Q * N ^ 2) :
+    (sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) ≃ₗ[ZMod N] binaryParabolicHoms Q N w :=
+  LinearEquiv.ofBijective (binaryPeriodCharacterMap Q N w)
+    ⟨binaryPeriodCharacterMap_injective Q N w,
+      binaryPeriodCharacterMap_surjective Q N w hlevel⟩
+
+theorem binaryPeriodCharacterEquiv_apply (hlevel : 4 ≤ Q * N ^ 2)
+    (ψ : sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) (γ : Gamma1 (Q * N ^ 2)) :
+    (binaryPeriodCharacterEquiv Q N w hlevel ψ).val (Additive.ofMul γ) =
+      ψ (latticePeriodHom (Q * N ^ 2) (Additive.ofMul γ)) := rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

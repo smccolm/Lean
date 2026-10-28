@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-10-28T08:12:23.061760+00:00",
+  "chain": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> the characteristic-zero kernel of the already constructed original coefficient-field H1 character.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveIntegralH1Character.lean",
+      "sha256": "4B9CE96A0248BA5FA8C5BD659FF195BBAD7AFA8D4BC07B5B65197BEBBC403AD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveH1CoefficientField.lean",
+      "sha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeWordTransport.lean",
+      "sha256": "3AAAEC58C9F86006CA22CAFC59DF1A3FA3214B8B2D8D34C51950D95D75950B3E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-relation-1-scratch-receipt.json",
+      "sha256": "258F0D04EDFCE9C0BD948144191B128D9ACC883DE9A2D6A0B545F9C915BB2E10"
+    }
+  ],
+  "shorterRoute": "Reuse the native adjoin/range identification for FreeAlgebra.lift and the original character values on prime generators. Realize each actual operator by a word, apply the proved integral parabolic word relation, and use the exact coefficient-field subtype. No new character, eigenclass, field embedding or operator algebra is substituted.",
+  "assumptionsToDischarge": [
+    "The existing original complex-valued H1 Hecke character annihilates every operator zero on integral parabolic H1.",
+    "The existing original Fourier-coefficient-field H1 Hecke character has the same kernel property."
+  ],
+  "remaining": "Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged.",
+  "preservedFailures": "1165a rewrite through RingHom coercion was made explicit using change; failed source and log retained, no mathematical hypothesis changed."
+}

@@ -1,0 +1,41 @@
+import Mathlib.Algebra.Module.Torsion.Basic
+import Mathlib.RingTheory.Noetherian.Basic
+import Mathlib.RingTheory.PrincipalIdealDomain
+
+/-! DUB17/18 -> original all-weight association -> finite parabolic
+character descent -> integral parabolic reduction kernel. For a submodule
+of a finite integral module, only a fixed torsion annihilator obstructs
+scalar saturation. The native finite-torsion annihilator theorem avoids
+a new cusp-width or integral unipotent matrix classification. -/
+namespace Dubon2026
+noncomputable section
+
+theorem sourceFiniteIntegralSubmodule_saturation
+    {M : Type} [AddCommGroup M] [Module ℤ M] [Module.Finite ℤ M]
+    (P : Submodule ℤ M) :
+    ∃ d : ℤ, d ≠ 0 ∧ ∀ n : ℤ, n ≠ 0 → IsCoprime n d →
+      ∀ x : M, n • x ∈ P → x ∈ P := by
+  cases Subsingleton.elim (inferInstance : Module ℤ M) (AddCommGroup.toIntModule M)
+  letI : IsNoetherian ℤ (M ⧸ P) := isNoetherian_of_isNoetherianRing_of_finite ℤ (M ⧸ P)
+  let T := Submodule.torsion ℤ (M ⧸ P)
+  letI : Module.Finite ℤ T := inferInstance
+  obtain ⟨d, hd, hd0⟩ := Submodule.annihilator_top_inter_nonZeroDivisors
+    (Submodule.torsion_isTorsion (R := ℤ) (M := M ⧸ P))
+  refine ⟨d, nonZeroDivisors.ne_zero hd0, fun n hn hnd x hx => ?_⟩
+  have hnq : n • P.mkQ x = 0 := by
+    rw [← map_smul, Submodule.mkQ_apply, Submodule.Quotient.mk_eq_zero]
+    exact hx
+  have ht : P.mkQ x ∈ T :=
+    (Submodule.mem_torsion_iff _).mpr ⟨⟨n, mem_nonZeroDivisors_of_ne_zero hn⟩, hnq⟩
+  have hdq : d • P.mkQ x = 0 := by
+    have h := Submodule.mem_annihilator.mp hd ⟨P.mkQ x, ht⟩ Submodule.mem_top
+    exact congrArg Subtype.val h
+  obtain ⟨a, b, hab⟩ := hnd
+  have hzero : P.mkQ x = 0 := by
+    calc
+      P.mkQ x = (a * n + b * d) • P.mkQ x := by rw [hab, one_smul]
+      _ = 0 := by simp only [add_smul, mul_smul, hnq, hdq, smul_zero, add_zero]
+  exact (Submodule.Quotient.mk_eq_zero P).mp hzero
+
+end
+end Dubon2026

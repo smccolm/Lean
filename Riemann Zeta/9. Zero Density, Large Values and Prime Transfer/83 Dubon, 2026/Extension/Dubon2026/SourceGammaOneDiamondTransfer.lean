@@ -1,0 +1,42 @@
+import Dubon2026.SourceGammaOneDiamondSubgroupSquare
+
+/-! DUB-17/18 -> original all-weight association -> finite Gamma1
+arithmetic realization -> trivial diamond on the original transferred
+Gamma0 character. The actual native transfer is invariant under the
+original diamond with its proved inverse homogeneous coefficient action.
+No surjectivity or parabolic-preimage assumption enters this identity.
+-/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory CongruenceSubgroup groupCohomology
+variable (Q N w : ℕ) [NeZero Q] [NeZero N] (g : Gamma0 (Q * N ^ 2))
+local notation "A" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "H" => MonoidHom.range (sourceGammaOneDiagonalHom Q N)
+local notation "d" => sourceGammaOneDiamondLift Q N g
+local notation "B" => Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) A
+
+theorem sourceGammaOneConstantH1Transfer_diamond (x : H1 B) :
+    sourceGammaOneConstantH1Transfer Q N w
+        (sourceGammaOneDiamondH1 (ZMod N) A (Q * N ^ 2) g
+          (sourceGammaOneBinaryDiamondCoefficient Q N w g) x) =
+      sourceGammaOneConstantH1Transfer Q N w x := by
+  letI : Subgroup.FiniteIndex H := sourceGammaOneDiagonalHom_range_finiteIndex Q N
+  letI : Fintype (Gamma0 Q ⧸ H) := Subgroup.fintypeQuotientOfFiniteIndex
+  obtain ⟨y, rfl⟩ := (ConcreteCategory.bijective_of_isIso
+    (sourceGammaOneSubgroupH1Iso Q N w).hom).surjective x
+  have hd := congrArg (fun f : H1 (Rep.res (Subgroup.subtype H) A) ⟶ H1 B => f y)
+    (sourceGammaOneSubgroupH1Iso_diamond_square Q N w g)
+  change (sourceGammaOneSubgroupH1Iso Q N w).hom
+      (groupCohomology.map
+        (sourceNormalizerSubgroupHom d H (sourceGammaOneDiagonalRange_conj Q N g))
+        (sourceNormalizerCoefficientMorphism A d H (sourceGammaOneDiagonalRange_conj Q N g)) 1 y) =
+    sourceGammaOneDiamondH1 (ZMod N) A (Q * N ^ 2) g
+      (sourceGammaOneBinaryDiamondCoefficient Q N w g)
+        ((sourceGammaOneSubgroupH1Iso Q N w).hom y) at hd
+  rw [← hd, sourceGammaOneConstantH1Transfer_subgroupIso,
+    sourceGammaOneConstantH1Transfer_subgroupIso, sourceHeckeH1Trace_eq_subgroupTrace]
+  exact congrArg (fun f : H1 (Rep.res (Subgroup.subtype H) A) ⟶ H1 A => f y)
+    (sourceSubgroupH1Trace_normalizer A d H (sourceGammaOneDiagonalRange_conj Q N g))
+
+end
+end Dubon2026

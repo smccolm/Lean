@@ -1,0 +1,57 @@
+import Dubon2026.SourceGammaOneDiamondFieldRatios
+import Dubon2026.SourceGammaOneFieldCuspGerm
+import Dubon2026.SourceGammaOneDiamondFieldHom
+import Dubon2026.SourceGammaOneDiamondFieldLabels
+import Dubon2026.SourceGammaOneDiamondFieldJ
+import Dubon2026.SourceLaurentAlgebraicCoefficient
+import Dubon2026.SourceLaurentAlgebraicallyClosedLift
+import Dubon2026.SourceGammaOneDiamondArithmeticRelation
+import Dubon2026.SourceLaurentCoefficientProjection
+import Dubon2026.SourceLaurentFieldIntersection
+import Dubon2026.SourceGammaOneDiamondArithmeticLift
+import Dubon2026.SourceGammaOneArithmeticDiamond
+import Dubon2026.SourceCurveFieldEquivPicard
+import Dubon2026.SourceGammaOneDiamondPicard
+import Dubon2026.SourceGammaOneDiamondAnalyticGerms
+import Dubon2026.SourceGammaOneDiamondAnalyticPlaces
+import Dubon2026.SourceGammaOneDiamondAnalyticDivisors
+import Dubon2026.SourceGammaOneDiamondEndpoint
+import Dubon2026.SourceGammaOneDiamondPicardPeriods
+import Dubon2026.SourceGammaOneDiamondComplexComparison
+import Dubon2026.SourceGammaOneArithmeticDiamondTate
+import Dubon2026.SourceGammaOneDiamondPeriodInclusion
+import Dubon2026.SourceGammaOneBinaryDiamondTateH1
+import Dubon2026.SourceCyclotomicDiamondCovariance
+import Dubon2026.SourceRationalDiamondFraction
+import Dubon2026.SourceRationalCuspDiamondImage
+import Dubon2026.SourceRationalModularCuspQuotient
+import Dubon2026.SourceRationalDiamondQuotientGerm
+import Dubon2026.SourceRationalDiamondCoefficients
+import Dubon2026.SourceGammaOneDiamondRationalGenerators
+import Dubon2026.SourceGammaOneDiamondComplexArithmetic
+import Dubon2026.SourceGammaOneArithmeticDiamondGenerators
+import Dubon2026.SourceGammaOneArithmeticDiamondGalois
+import Dubon2026.SourceGammaOneDiamondGaloisPicard
+import Dubon2026.SourceGammaOneDiamondCoefficient
+import Dubon2026.SourceGammaOneDiamondRestriction
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+import Dubon2026.SourceGammaOneBinaryNormalizerTate
+import Dubon2026.SourceGammaOneBinaryDiamondLabels
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneDiamondFieldRatios, `Dubon2026.SourceGammaOneFieldCuspGerm, `Dubon2026.SourceGammaOneDiamondFieldHom, `Dubon2026.SourceGammaOneDiamondFieldLabels, `Dubon2026.SourceGammaOneDiamondFieldJ, `Dubon2026.SourceLaurentAlgebraicCoefficient, `Dubon2026.SourceLaurentAlgebraicallyClosedLift, `Dubon2026.SourceGammaOneDiamondArithmeticRelation, `Dubon2026.SourceLaurentCoefficientProjection, `Dubon2026.SourceLaurentFieldIntersection, `Dubon2026.SourceGammaOneDiamondArithmeticLift, `Dubon2026.SourceGammaOneArithmeticDiamond, `Dubon2026.SourceCurveFieldEquivPicard, `Dubon2026.SourceGammaOneDiamondPicard, `Dubon2026.SourceGammaOneDiamondAnalyticGerms, `Dubon2026.SourceGammaOneDiamondAnalyticPlaces, `Dubon2026.SourceGammaOneDiamondAnalyticDivisors, `Dubon2026.SourceGammaOneDiamondEndpoint, `Dubon2026.SourceGammaOneDiamondPicardPeriods, `Dubon2026.SourceGammaOneDiamondComplexComparison, `Dubon2026.SourceGammaOneArithmeticDiamondTate, `Dubon2026.SourceGammaOneDiamondPeriodInclusion, `Dubon2026.SourceGammaOneBinaryDiamondTateH1, `Dubon2026.SourceCyclotomicDiamondCovariance, `Dubon2026.SourceRationalDiamondFraction, `Dubon2026.SourceRationalCuspDiamondImage, `Dubon2026.SourceRationalModularCuspQuotient, `Dubon2026.SourceRationalDiamondQuotientGerm, `Dubon2026.SourceRationalDiamondCoefficients, `Dubon2026.SourceGammaOneDiamondRationalGenerators, `Dubon2026.SourceGammaOneDiamondComplexArithmetic, `Dubon2026.SourceGammaOneArithmeticDiamondGenerators, `Dubon2026.SourceGammaOneArithmeticDiamondGalois, `Dubon2026.SourceGammaOneDiamondGaloisPicard, `Dubon2026.SourceGammaOneDiamondCoefficient, `Dubon2026.SourceGammaOneDiamondRestriction, `Dubon2026.SourceGammaOneDiamondCoefficientMatrix, `Dubon2026.SourceGammaOneBinaryNormalizerTate, `Dubon2026.SourceGammaOneBinaryDiamondLabels]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

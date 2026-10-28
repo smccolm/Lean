@@ -1,0 +1,59 @@
+import SourceGammaOneArithmeticTateOperators
+import SourceCoefficientDualAction
+import Dubon2026.SourceGammaOneBinaryTateHecke
+
+/-! DUB-17/18 -> original all-weight association -> finite Gamma1
+arithmetic Hecke-character realization. The actual contragredient Galois
+action on the original homogeneous-valued Tate dual commutes with every
+native Hecke word. This proves stability of the eventual character spaces;
+neither character descent nor Frobenius/inertia is assumed discharged.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+/-- The genuine dual arithmetic Galois action, including the required inverse. -/
+def binaryTateGaloisRep : (Qbar ≃ₐ[ℚ] Qbar) →*
+    Module.End (ZMod N) (T →ₗ[ℤ_[p]] V) :=
+  sourceCoefficientDualAction (arithmeticTateGaloisRep M p)
+
+theorem binaryTateGaloisRep_prime (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (ell : sourceBinaryHeckePrime (Q * N)) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryTateGaloisRep Q p n w σ (binaryTatePrimeOperators Q p n w ell φ) =
+      binaryTatePrimeOperators Q p n w ell (binaryTateGaloisRep Q p n w σ φ) := by
+  letI : Fact ell.val.Prime := ⟨ell.property.1⟩
+  exact sourceCoefficientDualAction_operator (arithmeticTateGaloisRep M p) σ
+    (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]))
+    (arithmeticHeckeTate M p ell.val) (arithmeticTateGaloisRep_hecke M p ell.val σ⁻¹) φ
+
+theorem binaryTateGaloisRep_word (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N))) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryTateGaloisRep Q p n w σ
+        (FreeAlgebra.lift ℤ (binaryTatePrimeOperators Q p n w) a φ) =
+      FreeAlgebra.lift ℤ (binaryTatePrimeOperators Q p n w) a
+        (binaryTateGaloisRep Q p n w σ φ) := by
+  have hmem : FreeAlgebra.lift ℤ (binaryTatePrimeOperators Q p n w) a ∈
+      Algebra.adjoin ℤ (Set.range (binaryTatePrimeOperators Q p n w)) := by
+    rw [Algebra.adjoin_range_eq_range_freeAlgebra_lift]
+    exact ⟨a, rfl⟩
+  have hcomm := Algebra.commute_of_mem_adjoin_of_forall_mem_commute hmem
+    (fun z hz => by
+      obtain ⟨ell, rfl⟩ := hz
+      exact LinearMap.ext (binaryTateGaloisRep_prime Q p n w σ ell))
+  exact LinearMap.congr_fun hcomm φ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

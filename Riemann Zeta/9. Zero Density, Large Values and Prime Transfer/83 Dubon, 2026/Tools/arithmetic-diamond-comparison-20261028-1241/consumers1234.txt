@@ -1,0 +1,142 @@
+
+/-- Exact original-object consumer of `adelicLocalNormalizedHecke_distinct_component`. -/
+theorem actual_distinct_local_hecke_component_source {N : ℕ} [NeZero N] {k : ℤ}  {p : ℕ} [NeZero p]
+    (F : PrimitiveCuspForm N k) (hp : p.Prime) (hpN : p.Coprime N)
+    (v : HeightOneSpectrum ℤ) (hv : v ≠ rationalPrimePlace p hp)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v) :
+    adelicLocalNormalizedHecke F.toCuspForm p hp hpN x = normalizedCuspCoefficients F.toCuspForm p • x :=
+  adelicLocalNormalizedHecke_distinct_component F hp hpN v hv x hx
+
+/-- Exact original-object consumer of `adelicNormalizedHecke_eigen_iff`. -/
+theorem actual_reverse_hecke_normalization_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (p : ℕ) [NeZero p] (hpN : p.Coprime N) (x : AdelicCyclicHilbert f) :
+    adelicNormalizedHecke f p hpN x = normalizedCuspCoefficients f p • x ↔
+      adelicHilbertHeckeTrace f p hpN x =
+        ((Real.sqrt (p : ℝ) : ℂ) ^ (2 - k) * cuspCoefficients f p) • x :=
+  adelicNormalizedHecke_eigen_iff f p hpN x
+
+/-- Exact original-object consumer of `adelicBadLocalCyclic_fixed_generator_scalar`. -/
+theorem actual_bad_local_fixed_line_source {N : ℕ} [NeZero N] {k : ℤ}  (F : PrimitiveCuspForm N k) (hk : 0 < k)
+    (v : HeightOneSpectrum ℤ) (hv : ¬ IsGoodAdelicPlace N v)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v)
+    (hfix : x ∈ adelicLocalFixedSpace F.toCuspForm v) :
+    ∃ c : ℂ, x = c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicBadLocalCyclic_fixed_generator_scalar F hk v hv x hx hfix
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclic_fixed_eq_generator_line`. -/
+theorem actual_every_local_fixed_line_source  {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ) :
+    adelicLocalCyclicClosedSpan F.toCuspForm v ⊓ adelicLocalFixedSpace F.toCuspForm v =
+      Submodule.span ℂ {adelicCyclicHilbertGenerator F.toCuspForm} :=
+  adelicEveryLocalCyclic_fixed_eq_generator_line F hk v
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicProjection_fixed_scalar`. -/
+theorem actual_every_local_cyclic_projection_source  {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (x : AdelicCyclicHilbert F.toCuspForm) (hx : x ∈ adelicLocalFixedSpace F.toCuspForm v) :
+    ∃ c : ℂ, adelicLocalCyclicProjection F.toCuspForm v x = c • adelicCyclicHilbertGenerator F.toCuspForm :=
+  adelicEveryLocalCyclicProjection_fixed_scalar F hk v x hx
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclic_intertwiner_scalar`. -/
+theorem actual_every_local_schur_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (T : AdelicCyclicHilbert F.toCuspForm →L[ℂ] AdelicCyclicHilbert F.toCuspForm)
+    (hT : ∀ g x, T (adelicCyclicLocalRepresentation F.toCuspForm
+      v g x) =
+        adelicCyclicLocalRepresentation F.toCuspForm v g (T x))
+    (hcyclic : T (adelicCyclicHilbertGenerator F.toCuspForm) ∈
+      adelicLocalCyclicClosedSpan F.toCuspForm v) :
+    ∃ c : ℂ, ∀ x ∈ adelicLocalCyclicClosedSpan F.toCuspForm v,
+      T x = c • x :=
+  adelicEveryLocalCyclic_intertwiner_scalar F hk v T hT hcyclic
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicClosedSpan_irreducible`. -/
+theorem actual_every_local_hilbert_irreducibility_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (S : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hclosed : IsClosed (S : Set (AdelicCyclicHilbert F.toCuspForm)))
+    (hle : S ≤ adelicLocalCyclicClosedSpan F.toCuspForm v)
+    (hinv : ∀ g x, x ∈ S → adelicCyclicLocalRepresentation F.toCuspForm
+      v g x ∈ S) :
+    S = ⊥ ∨ S = adelicLocalCyclicClosedSpan F.toCuspForm v :=
+  adelicEveryLocalCyclicClosedSpan_irreducible F hk v S hclosed hle hinv
+
+/-- Exact original-object consumer of `adelicEveryLocalCyclicCore_irreducible`. -/
+theorem actual_every_local_core_irreducibility_source  {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (W : Submodule ℂ (AdelicCyclicHilbert F.toCuspForm))
+    (hW : W ≤ adelicLocalCyclicCore F.toCuspForm v)
+    (hinv : ∀ g x, x ∈ W → adelicCyclicLocalRepresentation F.toCuspForm
+      v g x ∈ W) :
+    W = ⊥ ∨ W = adelicLocalCyclicCore F.toCuspForm v :=
+  adelicEveryLocalCyclicCore_irreducible F hk v W hW hinv
+
+/-- Exact original-object consumer of `adelicEveryLocal_fullAway_mixed_gram`. -/
+theorem actual_every_local_full_complement_gram_source {N : ℕ} [NeZero N] {k : ℤ}  (F : PrimitiveCuspForm N k) (hk : 0 < k) (v : HeightOneSpectrum ℤ)
+    (g₁ g₂ : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))
+    (a₁ a₂ : AdelicFullAwayGroup v) :
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₁
+        (adelicCyclicFullAwayRepresentation F.toCuspForm v a₁
+          (adelicCyclicHilbertGenerator F.toCuspForm)))
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₂
+        (adelicCyclicFullAwayRepresentation F.toCuspForm v a₂
+          (adelicCyclicHilbertGenerator F.toCuspForm))) *
+      inner ℂ (adelicCyclicHilbertGenerator F.toCuspForm) (adelicCyclicHilbertGenerator F.toCuspForm) =
+    inner ℂ
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicLocalRepresentation F.toCuspForm v g₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) *
+    inner ℂ
+      (adelicCyclicFullAwayRepresentation F.toCuspForm v a₁
+        (adelicCyclicHilbertGenerator F.toCuspForm))
+      (adelicCyclicFullAwayRepresentation F.toCuspForm v a₂
+        (adelicCyclicHilbertGenerator F.toCuspForm)) :=
+  adelicEveryLocal_fullAway_mixed_gram F hk v g₁ g₂ a₁ a₂
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_everyLocal_mul`. -/
+theorem actual_every_local_normalized_factor_source {N : ℕ} [NeZero N] {k : ℤ} (F : PrimitiveCuspForm N k) (hk : 0 < k)  (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ))
+    (a : RationalAdelicGL2) (ha : adelicPlaceGL2Hom v a = 1) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 v g) * a) =
+      adelicNormalizedCuspCoefficient F.toCuspForm (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 v g)) *
+        adelicNormalizedCuspCoefficient F.toCuspForm a :=
+  adelicNormalizedCuspCoefficient_everyLocal_mul F hk v g a ha
+
+/-- Exact original-object consumer of `adelicFullFiniteHilbert_smooth_iff_core`. -/
+theorem actual_full_finite_smooth_core_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k)  (hf : f ≠ 0) (hk : 0 < k)
+    (x : AdelicCyclicHilbert f) (hx : x ∈ adelicRotationWeightSpace f) :
+    (∃ J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)),
+      IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))) ∧
+        ∀ g ∈ J, adelicCyclicHilbertRepresentation f (rationalAdelicFiniteGL2Embedding g) x = x) ↔
+      x ∈ adelicFullFiniteUnitCore f :=
+  adelicFullFiniteHilbert_smooth_iff_core f hf hk x hx
+
+/-- Exact original-object consumer of `adelicNormalizedCuspCoefficient_every_finiteFamilyEquiv`. -/
+theorem actual_every_finite_family_coefficient_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k) 
+    (hk : 0 < k)
+    (b : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    adelicNormalizedCuspCoefficient F.toCuspForm (adelicFiniteFamilyEquiv v hv b) =
+      (∏ i, adelicNormalizedCuspCoefficient F.toCuspForm
+        (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b.1 i)))) *
+      adelicNormalizedCuspCoefficient F.toCuspForm b.2.val :=
+  adelicNormalizedCuspCoefficient_every_finiteFamilyEquiv v hv F hk b
+
+/-- Exact original-object consumer of `adelicCyclicUnitReference_every_finiteFamily_gram`. -/
+theorem actual_every_finite_family_gram_source {N : ℕ} [NeZero N] {k : ℤ} {I : Type*} [Fintype I] (v : I → HeightOneSpectrum ℤ) (hv : Function.Injective v) (F : PrimitiveCuspForm N k) 
+    (hk : 0 < k)
+    (b₁ b₂ : (∀ i, GeneralLinearGroup (Fin 2) ((v i).adicCompletion ℚ)) × adelicFiniteFamilyAwayGroup v) :
+    inner ℂ
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₁)
+        (adelicCyclicUnitReference F.toCuspForm))
+      (adelicCyclicHilbertRepresentation F.toCuspForm (adelicFiniteFamilyEquiv v hv b₂)
+        (adelicCyclicUnitReference F.toCuspForm)) =
+      (∏ i, inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₁.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm
+          (rationalAdelicFiniteGL2Embedding (finiteAdelicLocalGL2 (v i) (b₂.1 i)))
+          (adelicCyclicUnitReference F.toCuspForm))) *
+      inner ℂ
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₁.2.val (adelicCyclicUnitReference F.toCuspForm))
+        (adelicCyclicHilbertRepresentation F.toCuspForm b₂.2.val (adelicCyclicUnitReference F.toCuspForm)) :=
+  adelicCyclicUnitReference_every_finiteFamily_gram v hv F hk b₁ b₂
+

@@ -1,0 +1,95 @@
+{
+  "modules": [
+    "SourceInnerH1Identity",
+    "SourceH1TraceInner",
+    "SourceGammaOneDiamondRange",
+    "SourceH1TraceSubgroupEquality",
+    "SourceNormalizerH1Trace",
+    "SourceH1CompositionSquare",
+    "SourceNormalizerCoefficientValue",
+    "SourceGammaOneDiamondSubgroupSquare",
+    "SourceGammaOneDiamondTransfer"
+  ],
+  "theorems": [
+    "Dubon2026.sourceInnerH1_identity",
+    "Dubon2026.sourceSubgroupH1Trace_inner",
+    "Dubon2026.sourceGammaOneDiagonalRange_conj",
+    "Dubon2026.sourceSubgroupH1Trace_equality",
+    "Dubon2026.sourceSubgroupH1Trace_normalizer",
+    "Dubon2026.sourceH1Composition_square",
+    "Dubon2026.sourceSubgroupEqualityCoefficient_linear",
+    "Dubon2026.sourceNormalizerCoefficientMorphism_linear",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond"
+  ],
+  "constructions": [
+    "Dubon2026.sourceInnerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupEqualityCoefficient",
+    "Dubon2026.sourceNormalizerSubgroupHom",
+    "Dubon2026.sourceNormalizerCoefficientMorphism"
+  ],
+  "queries": [
+    "Dubon2026.sourceInnerH1_identity",
+    "Dubon2026.sourceSubgroupH1Trace_inner",
+    "Dubon2026.sourceGammaOneDiagonalRange_conj",
+    "Dubon2026.sourceSubgroupH1Trace_equality",
+    "Dubon2026.sourceSubgroupH1Trace_normalizer",
+    "Dubon2026.sourceH1Composition_square",
+    "Dubon2026.sourceSubgroupEqualityCoefficient_linear",
+    "Dubon2026.sourceNormalizerCoefficientMorphism_linear",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond",
+    "Dubon2026.sourceInnerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupEqualityCoefficient",
+    "Dubon2026.sourceNormalizerSubgroupHom",
+    "Dubon2026.sourceNormalizerCoefficientMorphism"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceInnerH1_identity",
+    "Dubon2026.sourceSubgroupH1Trace_inner",
+    "Dubon2026.sourceGammaOneDiagonalRange_conj",
+    "Dubon2026.sourceSubgroupH1Trace_equality",
+    "Dubon2026.sourceSubgroupH1Trace_normalizer",
+    "Dubon2026.sourceH1Composition_square",
+    "Dubon2026.sourceSubgroupEqualityCoefficient_linear",
+    "Dubon2026.sourceNormalizerCoefficientMorphism_linear",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond",
+    "Dubon2026.sourceInnerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupEqualityCoefficient",
+    "Dubon2026.sourceNormalizerSubgroupHom",
+    "Dubon2026.sourceNormalizerCoefficientMorphism",
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "Dubon2026.sourceGammaOneDiamondLift_conjugation",
+    "groupCohomology.map_comp"
+  ],
+  "localModules": [
+    "SourceInnerH1Identity",
+    "SourceH1TraceInner",
+    "SourceGammaOneDiamondRange",
+    "SourceH1TraceSubgroupEquality",
+    "SourceNormalizerH1Trace",
+    "SourceH1CompositionSquare",
+    "SourceNormalizerCoefficientValue",
+    "SourceGammaOneDiamondSubgroupSquare",
+    "SourceGammaOneDiamondTransfer"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceInnerH1Identity": "SourceInnerH1Identity1253d",
+    "SourceH1TraceInner": "SourceH1TraceInner1254a",
+    "SourceGammaOneDiamondRange": "SourceGammaOneDiamondRange1255a",
+    "SourceH1TraceSubgroupEquality": "SourceH1TraceSubgroupEquality1256a",
+    "SourceNormalizerH1Trace": "SourceNormalizerH1Trace1257b",
+    "SourceH1CompositionSquare": "SourceH1CompositionSquare1260a",
+    "SourceNormalizerCoefficientValue": "SourceNormalizerCoefficientValue1261a",
+    "SourceGammaOneDiamondSubgroupSquare": "SourceGammaOneDiamondSubgroupSquare1258c",
+    "SourceGammaOneDiamondTransfer": "SourceGammaOneDiamondTransfer1259b"
+  }
+}

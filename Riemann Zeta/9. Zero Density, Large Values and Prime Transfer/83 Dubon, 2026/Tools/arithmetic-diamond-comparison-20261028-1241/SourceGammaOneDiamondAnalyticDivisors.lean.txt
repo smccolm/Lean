@@ -1,0 +1,55 @@
+import SourceGammaOneDiamondAnalyticPlaces
+import SourceGammaOneDiamondPicard
+import Dubon2026.SourceGammaOneAnalyticHeckeDivisors
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond/Picard comparison. Push actual finite analytic divisors through
+the native diamond and prove that the independently defined field/Picard
+action has precisely those images. The existing moving lemma then covers
+every Picard class; no new cusp presentation is required.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup UpperHalfPlane SourceCurve SourceWeightTwoJacobi
+open scoped MatrixGroups
+variable (M : ℕ) (g : Gamma0 M)
+
+/-- The literal image of a finite analytic divisor under the diamond lift. -/
+def analyticDiamondLinear : Module.End ℤ (ℍ →₀ ℤ) :=
+  Finsupp.lmapDomain ℤ ℤ (fun τ => g.val • τ)
+
+/-- The same analytic diamond restricted to degree-zero divisors. -/
+def analyticDiamondDegreeZero : Module.End ℤ analyticDegree.ker where
+  toFun c := ⟨analyticDiamondLinear M g c.val, by
+    change analyticDegree (Finsupp.mapDomain (fun τ => g.val • τ) c.val) = 0
+    rw [analyticDegree_mapDomain]
+    exact LinearMap.mem_ker.mp c.property⟩
+  map_add' c e := Subtype.ext ((analyticDiamondLinear M g).map_add c.val e.val)
+  map_smul' n c := Subtype.ext ((analyticDiamondLinear M g).map_smul n c.val)
+
+variable [NeZero M] (hT : ModularGroup.T ∈ Gamma1 M)
+
+theorem diamondDivisor_mapDomain_analytic (c : ℍ →₀ ℤ) :
+    fieldDivisorEquiv (diamondFieldAut M g).symm (Finsupp.mapDomain (analyticPlace hT) c) =
+      Finsupp.mapDomain (analyticPlace hT) (analyticDiamondLinear M g c) := by
+  change Finsupp.equivMapDomain (Place.placeEquiv (diamondFieldAut M g).symm).symm
+    (Finsupp.mapDomain (analyticPlace hT) c) =
+      Finsupp.mapDomain (analyticPlace hT) (Finsupp.mapDomain (fun τ => g.val • τ) c)
+  rw [Finsupp.equivMapDomain_eq_mapDomain, ← Finsupp.mapDomain_comp,
+    ← Finsupp.mapDomain_comp]
+  congr 1
+  funext τ
+  exact analyticPlace_comap_diamondFieldAut M g hT τ
+
+theorem analyticPicardHom_diamond (c : analyticDegree.ker) :
+    analyticPicardHom M hT (analyticDiamondDegreeZero M g c) =
+      complexDiamondPicard M g (analyticPicardHom M hT c) := by
+  change Pic0.mk (analyticDivisorHom M hT (analyticDiamondDegreeZero M g c)) =
+    complexDiamondPicard M g (Pic0.mk (analyticDivisorHom M hT c))
+  rw [complexDiamondPicard_mk]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  exact (diamondDivisor_mapDomain_analytic M g hT c.val).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

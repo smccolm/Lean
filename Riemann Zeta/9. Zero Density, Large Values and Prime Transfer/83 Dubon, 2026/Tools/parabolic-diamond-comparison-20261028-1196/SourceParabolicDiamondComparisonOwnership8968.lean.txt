@@ -1,0 +1,39 @@
+import Dubon2026.SourcePrimitiveParabolicCharacterKernel
+import Dubon2026.SourceFiniteIntegralSaturation
+import Dubon2026.SourceSupportedCharacterFiber
+import Dubon2026.SourceSupportedCharacterDivisibility
+import Dubon2026.SourceParabolicHeckeSpan
+import Dubon2026.SourceParabolicHeckeCongruence
+import Dubon2026.SourceParabolicAdicOperatorKernel
+import Dubon2026.SourceGammaOneParabolicOperatorAlgebra
+import Dubon2026.SourceGammaOneParabolicTateKernel
+import Dubon2026.SourceGammaOneParabolicTransferCriterion
+import Dubon2026.SourceParabolicCongruenceException
+import Dubon2026.SourceGammaOneParabolicCharacterTransfer
+import Dubon2026.SourceGammaOneDiamondConjugation
+import Dubon2026.SourceGammaOneDiamondH1
+import Dubon2026.SourceGammaOneDiamondLabels
+import Dubon2026.SourceGammaOneUnitDiamondAction
+import Dubon2026.SourceGammaOneDiamondCuspPrimitive
+import Dubon2026.SourceGammaOneDiamondPeriodH1
+import Dubon2026.SourceGammaOneDiamondPeriodLattice
+import Dubon2026.SourceGammaOneDiamondFiniteH1
+import Dubon2026.SourceGammaOneDiamondPeriodTate
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourcePrimitiveParabolicCharacterKernel, `Dubon2026.SourceFiniteIntegralSaturation, `Dubon2026.SourceSupportedCharacterFiber, `Dubon2026.SourceSupportedCharacterDivisibility, `Dubon2026.SourceParabolicHeckeSpan, `Dubon2026.SourceParabolicHeckeCongruence, `Dubon2026.SourceParabolicAdicOperatorKernel, `Dubon2026.SourceGammaOneParabolicOperatorAlgebra, `Dubon2026.SourceGammaOneParabolicTateKernel, `Dubon2026.SourceGammaOneParabolicTransferCriterion, `Dubon2026.SourceParabolicCongruenceException, `Dubon2026.SourceGammaOneParabolicCharacterTransfer, `Dubon2026.SourceGammaOneDiamondConjugation, `Dubon2026.SourceGammaOneDiamondH1, `Dubon2026.SourceGammaOneDiamondLabels, `Dubon2026.SourceGammaOneUnitDiamondAction, `Dubon2026.SourceGammaOneDiamondCuspPrimitive, `Dubon2026.SourceGammaOneDiamondPeriodH1, `Dubon2026.SourceGammaOneDiamondPeriodLattice, `Dubon2026.SourceGammaOneDiamondFiniteH1, `Dubon2026.SourceGammaOneDiamondPeriodTate]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

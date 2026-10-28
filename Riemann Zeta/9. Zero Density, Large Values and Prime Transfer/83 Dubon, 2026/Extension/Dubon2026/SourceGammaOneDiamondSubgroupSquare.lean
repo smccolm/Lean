@@ -1,0 +1,46 @@
+import Dubon2026.SourceGammaOneDiamondRange
+import Dubon2026.SourceNormalizerH1Trace
+import Dubon2026.SourceH1CompositionSquare
+import Dubon2026.SourceNormalizerCoefficientValue
+import Dubon2026.SourceGammaOneSubgroupCohomologyMap
+import Dubon2026.SourceGammaOneDiamondH1
+
+/-! DUB-17/18 -> original Gamma1 arithmetic realization -> trivial
+diamond after the original surjective transfer. Identify the normalizer
+pullback on the literal image subgroup with the original Gamma1 diamond
+under the existing native H1 isomorphism, retaining its actual inverse
+homogeneous coefficient action.
+-/
+namespace Dubon2026
+noncomputable section
+open CategoryTheory CongruenceSubgroup groupCohomology
+variable (Q N w : ℕ) [NeZero N] (g : Gamma0 (Q * N ^ 2))
+local notation "A" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "H" => MonoidHom.range (sourceGammaOneDiagonalHom Q N)
+local notation "d" => sourceGammaOneDiamondLift Q N g
+local notation "B" => Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) A
+
+theorem sourceGammaOneSubgroupH1Iso_diamond_square :
+    groupCohomology.map
+        (sourceNormalizerSubgroupHom d H (sourceGammaOneDiagonalRange_conj Q N g))
+        (sourceNormalizerCoefficientMorphism A d H (sourceGammaOneDiagonalRange_conj Q N g)) 1 ≫
+        (sourceGammaOneSubgroupH1Iso Q N w).hom =
+      (sourceGammaOneSubgroupH1Iso Q N w).hom ≫
+        groupCohomology.map (sourceGammaOneDiamondConjugation (Q * N ^ 2) g)
+          (sourceGammaOneDiamondMorphism (ZMod N) A (Q * N ^ 2) g
+            (sourceGammaOneBinaryDiamondCoefficient Q N w g)) 1 := by
+  rw [sourceGammaOneSubgroupH1Iso_hom_eq_map]
+  apply sourceH1Composition_square
+  · apply MonoidHom.ext
+    intro γ
+    apply Subtype.ext
+    exact (sourceGammaOneDiamondLift_conjugation Q N g γ).symm
+  · change LinearMap.id.comp
+        (sourceNormalizerCoefficientMorphism A d H
+          (sourceGammaOneDiagonalRange_conj Q N g)).hom.toLinearMap =
+      (sourceGammaOneBinaryDiamondCoefficient Q N w g).comp LinearMap.id
+    rw [sourceNormalizerCoefficientMorphism_linear, LinearMap.id_comp, LinearMap.comp_id]
+    rfl
+
+end
+end Dubon2026

@@ -1,0 +1,161 @@
+import Dubon2026.SourcePrimitiveParabolicCharacterKernel
+import Dubon2026.SourceFiniteIntegralSaturation
+import Dubon2026.SourceSupportedCharacterFiber
+import Dubon2026.SourceSupportedCharacterDivisibility
+import Dubon2026.SourceParabolicHeckeSpan
+import Dubon2026.SourceParabolicHeckeCongruence
+import Dubon2026.SourceParabolicAdicOperatorKernel
+import Dubon2026.SourceGammaOneParabolicOperatorAlgebra
+import Dubon2026.SourceGammaOneParabolicTateKernel
+import Dubon2026.SourceGammaOneParabolicTransferCriterion
+import Dubon2026.SourceParabolicCongruenceException
+import Dubon2026.SourceGammaOneParabolicCharacterTransfer
+import Dubon2026.SourceGammaOneDiamondConjugation
+import Dubon2026.SourceGammaOneDiamondH1
+import Dubon2026.SourceGammaOneDiamondLabels
+import Dubon2026.SourceGammaOneUnitDiamondAction
+import Dubon2026.SourceGammaOneDiamondCuspPrimitive
+import Dubon2026.SourceGammaOneDiamondPeriodH1
+import Dubon2026.SourceGammaOneDiamondPeriodLattice
+import Dubon2026.SourceGammaOneDiamondFiniteH1
+import Dubon2026.SourceGammaOneDiamondPeriodTate
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic
+#print axioms Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic
+#print axioms Dubon2026.sourceFiniteIntegralSubmodule_saturation
+#print axioms Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator
+#print axioms Dubon2026.sourceSupportedCharacter_div_isIntegral
+#print axioms Dubon2026.sourceParabolicHeckeSpan_finite
+#print axioms Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator
+#print axioms Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero
+#print axioms Dubon2026.sourceParabolicHeckeSpan_operator_congruence
+#print axioms Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away
+#print axioms Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away
+#print axioms Dubon2026.sourceParabolicHeckeSpan
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic
+#print axioms Dubon2026.sourceGammaOneParabolicTransfer_word_kernel
+#print axioms Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero
+#print axioms Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero
+#print axioms Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra
+#print axioms Dubon2026.sourceGammaOneIntegralParabolicTransfer
+#print axioms Dubon2026.sourcePrimitiveParabolicExceptionalInteger
+#print axioms Dubon2026.sourceGammaOneDiamond_conj_mem
+#print axioms Dubon2026.sourceGammaOneDiamondConjugation_trace
+#print axioms Dubon2026.sourceGammaOneDiamondConjugation_mul
+#print axioms Dubon2026.sourceGammaOneDiamondH1_hom_apply
+#print axioms Dubon2026.sourceGammaOneDiamondH1_comp
+#print axioms Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem
+#print axioms Dubon2026.sourceGammaOneDiamondH1_lift_independent
+#print axioms Dubon2026.sourceGammaOneDiamondLabel_lift
+#print axioms Dubon2026.sourceGammaOneUnitDiamondH1_eq
+#print axioms Dubon2026.sourceGammaOneUnitDiamondH1_one
+#print axioms Dubon2026.sourceGammaOneUnitDiamondH1_mul
+#print axioms Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem
+#print axioms Dubon2026.sourceGammaOneDiamondConjugation
+#print axioms Dubon2026.sourceGammaOneDiamondMorphism
+#print axioms Dubon2026.sourceGammaOneDiamondH1
+#print axioms Dubon2026.sourceGammaOneUnitDiamondH1
+#print axioms Dubon2026.sourceGammaOneUnitDiamondH1Hom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourcePrimitiveParabolicCharacterKernel, `Dubon2026.SourceFiniteIntegralSaturation, `Dubon2026.SourceSupportedCharacterFiber, `Dubon2026.SourceSupportedCharacterDivisibility, `Dubon2026.SourceParabolicHeckeSpan, `Dubon2026.SourceParabolicHeckeCongruence, `Dubon2026.SourceParabolicAdicOperatorKernel, `Dubon2026.SourceGammaOneParabolicOperatorAlgebra, `Dubon2026.SourceGammaOneParabolicTateKernel, `Dubon2026.SourceGammaOneParabolicTransferCriterion, `Dubon2026.SourceParabolicCongruenceException, `Dubon2026.SourceGammaOneParabolicCharacterTransfer, `Dubon2026.SourceGammaOneDiamondConjugation, `Dubon2026.SourceGammaOneDiamondH1, `Dubon2026.SourceGammaOneDiamondLabels, `Dubon2026.SourceGammaOneUnitDiamondAction, `Dubon2026.SourceGammaOneDiamondCuspPrimitive, `Dubon2026.SourceGammaOneDiamondPeriodH1, `Dubon2026.SourceGammaOneDiamondPeriodLattice, `Dubon2026.SourceGammaOneDiamondFiniteH1, `Dubon2026.SourceGammaOneDiamondPeriodTate]
+  let theorems : Array Name := #[`Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic, `Dubon2026.sourceFiniteIntegralSubmodule_saturation, `Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator, `Dubon2026.sourceSupportedCharacter_div_isIntegral, `Dubon2026.sourceParabolicHeckeSpan_finite, `Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator, `Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero, `Dubon2026.sourceParabolicHeckeSpan_operator_congruence, `Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away, `Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_val, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra_finite, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicWord_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.binaryTateWord_eq_zero_iff_parabolic, `Dubon2026.sourceGammaOneParabolicTransfer_word_kernel, `Dubon2026.sourcePrimitiveParabolicExceptionalInteger_ne_zero, `Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero, `Dubon2026.sourcePrimitiveGammaOneParabolicCharacter_of_transfer_away, `Dubon2026.sourceGammaOneDiamond_conj_mem, `Dubon2026.sourceGammaOneDiamondConjugation_trace, `Dubon2026.sourceGammaOneDiamondConjugation_mul, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneDiamondH1_comp, `Dubon2026.sourceGammaOneBinaryParabolicH1_diamond_mem, `Dubon2026.sourceGammaOneDiamondH1_lift_independent, `Dubon2026.sourceGammaOneDiamondLabel_lift, `Dubon2026.sourceGammaOneUnitDiamondH1_eq, `Dubon2026.sourceGammaOneUnitDiamondH1_one, `Dubon2026.sourceGammaOneUnitDiamondH1_mul, `Dubon2026.sourceGammaOneBinaryParabolicH1_unitDiamond_mem, `Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond_eq_quotEnd, `Dubon2026.SourceFunctionField.GammaOne.periodTateTensor_diamond]
+  let constructions : Array Name := #[`Dubon2026.sourceParabolicHeckeSpan, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicPrimeOperators, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHeckeAlgebra, `Dubon2026.sourceGammaOneIntegralParabolicTransfer, `Dubon2026.sourcePrimitiveParabolicExceptionalInteger, `Dubon2026.sourceGammaOneDiamondConjugation, `Dubon2026.sourceGammaOneDiamondMorphism, `Dubon2026.sourceGammaOneDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1, `Dubon2026.sourceGammaOneUnitDiamondH1Hom, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond, `Dubon2026.SourceFunctionField.GammaOne.periodQuotientDiamond]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE PARABOLIC DIAMOND COMPARISON AUDIT PASS: {count} theorems including private/generated declarations. Original parabolic congruence away from a fixed integer, actual finite parabolic/Tate word kernel, explicitly conditional transfer descent, and native/period diamond action with original finite H1 and period Tate-torus comparison. Geometric lifting, exceptional primes, arithmetic Picard diamonds, original coefficient convention and all-weight association remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourcePrimitiveParabolicCharacterKernel
+
+#lint in Dubon2026.SourceFiniteIntegralSaturation
+
+#lint in Dubon2026.SourceSupportedCharacterFiber
+
+#lint in Dubon2026.SourceSupportedCharacterDivisibility
+
+#lint in Dubon2026.SourceParabolicHeckeSpan
+
+#lint in Dubon2026.SourceParabolicHeckeCongruence
+
+#lint in Dubon2026.SourceParabolicAdicOperatorKernel
+
+#lint in Dubon2026.SourceGammaOneParabolicOperatorAlgebra
+
+#lint in Dubon2026.SourceGammaOneParabolicTateKernel
+
+#lint in Dubon2026.SourceGammaOneParabolicTransferCriterion
+
+#lint in Dubon2026.SourceParabolicCongruenceException
+
+#lint in Dubon2026.SourceGammaOneParabolicCharacterTransfer
+
+#lint in Dubon2026.SourceGammaOneDiamondConjugation
+
+#lint in Dubon2026.SourceGammaOneDiamondH1
+
+#lint in Dubon2026.SourceGammaOneDiamondLabels
+
+#lint in Dubon2026.SourceGammaOneUnitDiamondAction
+
+#lint in Dubon2026.SourceGammaOneDiamondCuspPrimitive
+
+#lint in Dubon2026.SourceGammaOneDiamondPeriodH1
+
+#lint in Dubon2026.SourceGammaOneDiamondPeriodLattice
+
+#lint in Dubon2026.SourceGammaOneDiamondFiniteH1
+
+#lint in Dubon2026.SourceGammaOneDiamondPeriodTate

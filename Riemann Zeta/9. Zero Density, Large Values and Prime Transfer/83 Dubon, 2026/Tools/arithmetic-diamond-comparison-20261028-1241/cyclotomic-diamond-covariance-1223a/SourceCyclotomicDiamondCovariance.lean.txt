@@ -1,0 +1,60 @@
+import Dubon2026.SourceCyclotomicFractionCovariance
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility. Reuse the proved cyclotomic modular lift
+and original Fricke-fraction covariance. For Gamma0, the conjugate lift
+has the same lower-right label; actual Gamma1 invariance therefore makes
+both lifts act identically. No new modular-curve model is introduced.
+Application to the original arithmetic field remains to be assembled.
+-/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open Matrix UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups
+
+theorem exists_gammaZero_cyclotomic_same_label (N : ℕ) [NeZero N]
+    (s : ℕ) (hs : s.Coprime N) (g : Gamma0 N) :
+    ∃ g' : Gamma0 N, Gamma0Map N g' = Gamma0Map N g ∧
+      ∀ v : Fin 2 → ZMod N,
+        vecMulSL N (cyclotomicTorsionVector s v) g.val =
+          cyclotomicTorsionVector s (vecMulSL N v g'.val) := by
+  obtain ⟨A, hA⟩ := exists_modular_cyclotomic_conjugate N s hs g.val
+  have h10 := congrFun (hA ![0, 1]) 0
+  have h11 := congrFun (hA ![0, 1]) 1
+  simp only [vecMulSL, cyclotomicTorsionVector, Matrix.vecMul, dotProduct,
+    Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+    Matrix.map_apply, zero_mul, one_mul, zero_add] at h10 h11
+  have hg0 : ((g.val 1 0 : ℤ) : ZMod N) = 0 := Gamma0_mem.mp g.property
+  have hA0 : ((A 1 0 : ℤ) : ZMod N) = 0 := by simpa only [hg0, mul_zero] using h10.symm
+  let g' : Gamma0 N := ⟨A, Gamma0_mem.mpr hA0⟩
+  refine ⟨g', ?_, hA⟩
+  change ((A 1 1 : ℤ) : ZMod N) = ((g.val 1 1 : ℤ) : ZMod N)
+  apply (ZMod.isUnit_iff_coprime s N).mpr hs |>.mul_left_cancel
+  exact h11.symm
+
+theorem gammaOne_invariant_comp_eq_of_label (N : ℕ) (F : ℍ → ℂ)
+    (hF : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (g h : Gamma0 N) (he : Gamma0Map N g = Gamma0Map N h) :
+    F ∘ (g.val • ·) = F ∘ (h.val • ·) := by
+  have hker : g * h⁻¹ ∈ Gamma1' N := by
+    change Gamma0Map N (g * h⁻¹) = 1
+    rw [map_mul, he, ← map_mul, mul_inv_cancel, map_one]
+  have hu : g.val * h.val⁻¹ ∈ Gamma1 N :=
+    (Gamma1_mem N _).mpr ((Gamma1_to_Gamma0_mem _).mp hker)
+  funext τ
+  have hh := hF _ hu (h.val • τ)
+  simpa only [Function.comp_apply, mul_smul, inv_smul_smul] using hh
+
+theorem CyclotomicConjugates.diamond {N : ℕ} [NeZero N] {σ : kN N ≃ₐ[ℚ] kN N}
+    {F G : ℍ → ℂ} (hFG : CyclotomicConjugates σ F G)
+    (hF : F ∈ holomorphicCyclotomicFrickeFractions N)
+    (hG : G ∈ holomorphicCyclotomicFrickeFractions N)
+    (hFinv : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ) (g : Gamma0 N) :
+    CyclotomicConjugates σ (F ∘ (g.val • ·)) (G ∘ (g.val • ·)) := by
+  obtain ⟨s, hs, hσ⟩ := exists_cyclotomic_aut_exponent N σ
+  obtain ⟨g', hlabel, hconj⟩ := exists_gammaZero_cyclotomic_same_label N s hs g
+  have hh := hFG.modular hF hG s hs hσ g.val g'.val hconj
+  rwa [gammaOne_invariant_comp_eq_of_label N F hFinv g' g hlabel] at hh
+
+end
+end Dubon2026.SourceFricke

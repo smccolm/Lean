@@ -1,0 +1,54 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T08:16:33.891922+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourcePrimitiveParabolicCharacterKernel"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel.lean",
+      "sha256": "56F332635478AD049DAE4789D24231029CEBD6EBDB9706D2B056D012651B11FC",
+      "oleanSha256": "55BB229336FB83E7084BCCA5F064BF9F4F8FB01426902791D60A5D2815EC6479",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicCharacterKernel1165b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelAudit1.log",
+  "logSha256": "B3C00C4DB6551A7FACA702D6B3AD21D5B5749CA5969CBA931098E1332016A639",
+  "auditSha256": "C3DE37F7017A8EA77E5056C0A18FF82B2C7145B0797922EC5345E75F345AB6DD",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelScratchOwnership1166.log",
+  "ownershipSha256": "99B0BE5F9BA908DA1BCD9A0D20A44E29170C64FBAF9DCCFB2DABC2A8A6DD2A8C",
+  "exhaustiveTheorems": 3,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveParabolicKernelDependencyAudit1.log",
+  "dependencyAuditSha256": "96878AC109A6F35E8CF17CDFCB29F45C79A42C74B462244674FC1BA4BC71B1CB",
+  "dependencyAuditSourceSha256": "8384C68A9AED627ED040FBC8FCD284025841E72C76976CFB96AEDE7F5A2C0622",
+  "consumers": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_zero_of_parabolic",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_zero_of_parabolic"
+  ],
+  "dependency": "DUB17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 parabolic character -> the characteristic-zero kernel of the already constructed original coefficient-field H1 character.",
+  "discharged": [
+    "The existing original complex-valued H1 Hecke character annihilates every operator zero on integral parabolic H1.",
+    "The existing original Fourier-coefficient-field H1 Hecke character has the same kernel property."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite congruence and descent to the actual finite parabolic Gamma1 operator image remain. This characteristic-zero relation is not finite-character descent. Diamonds, Galois realization, all-weight association, automorphy and higher symmetric-power continuation remain. DUB17--20 OPEN;16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-parabolic-kernel-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "3306CD6396ADA01E3014A3C85298C59E2BD5F0E5D23676A28A454EC98A60247C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

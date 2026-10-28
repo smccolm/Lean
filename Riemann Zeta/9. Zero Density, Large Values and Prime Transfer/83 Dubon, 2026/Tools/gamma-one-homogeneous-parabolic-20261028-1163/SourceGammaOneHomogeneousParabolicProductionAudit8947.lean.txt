@@ -1,0 +1,173 @@
+import Dubon2026.SourceGammaOneFiniteOrderDischarge
+import Dubon2026.SourceGammaOneBinaryPeriodCharacters
+import Dubon2026.SourceGammaOneCoefficientHeckeCharacters
+import Dubon2026.SourceGammaOneBinaryParabolicH1
+import Dubon2026.SourceGammaOneBinaryTateH1
+import Dubon2026.SourceGammaOneBinaryTateHecke
+import Dubon2026.SourceParabolicCohomology
+import Dubon2026.SourceBinaryParabolicChange
+import Dubon2026.SourceGammaOneParabolicRestriction
+import Dubon2026.SourceParabolicCoefficientMap
+import Dubon2026.SourcePeriodParabolicClass
+import Dubon2026.SourceOriginalParabolicEigensystem
+import Dubon2026.SourceParabolicBinaryCoordinates
+import Dubon2026.SourceParabolicBinaryRationalSpan
+import Dubon2026.SourceParabolicBinaryH1RationalSpan
+import Dubon2026.SourceCocycleConjugateCoboundary
+import Dubon2026.SourceParabolicFiniteCuspWitnesses
+import Dubon2026.SourceParabolicWitnessDenominators
+import Dubon2026.SourceParabolicUniformDenominator
+import Dubon2026.SourceOriginalBinaryCuspWitnesses
+import Dubon2026.SourceParabolicIntegralCoordinateSpan
+import Dubon2026.SourceOriginalIntegralParabolicCocycleSpan
+import Dubon2026.SourceOriginalIntegralParabolicH1Span
+import Dubon2026.SourcePrimitiveParabolicHeckeRelations
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteOrder_trace_sq_four
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteOrder_character_zero_of_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms_mem_iff_of_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_level_ge_four
+#print axioms Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_finiteOrder_character_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv_apply
+#print axioms Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_hom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_word
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHoms
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTatePrimeOperators
+#print axioms Dubon2026.sourceParabolicH1_cocycle_iff
+#print axioms Dubon2026.sourceParabolicCocycles_semilinear
+#print axioms Dubon2026.sourceParabolicH1_semilinear
+#print axioms Dubon2026.sourceBinaryCocyclesChange_parabolic
+#print axioms Dubon2026.sourceBinaryH1Change_parabolic
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_trace
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic
+#print axioms Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction
+#print axioms Dubon2026.sourceParabolicCocycles_coefficientMap
+#print axioms Dubon2026.sourceParabolic_exists_fixed_cusp
+#print axioms Dubon2026.sourcePeriodCocycle_mem_parabolic
+#print axioms Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic
+#print axioms Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem
+#print axioms Dubon2026.sourceParabolicCocycles
+#print axioms Dubon2026.sourceParabolicH1
+#print axioms Dubon2026.sourceBinaryAdditiveCocycles_parabolic
+#print axioms Dubon2026.sourceComplexBinaryCocycleCoordinate_parabolic
+#print axioms Dubon2026.sourceComplexParabolicBinaryCocycle_mem_rational_span
+#print axioms Dubon2026.sourceComplexParabolicBinaryH1_mem_rational_span
+#print axioms Dubon2026.sourcePrimitive_originalParabolicH1_mem_rational_span
+#print axioms Dubon2026.sourceCocycle_conjugate_coboundary
+#print axioms Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses
+#print axioms Dubon2026.sourceParabolicWitness_family_integerMultiple
+#print axioms Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple
+#print axioms Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_class
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses
+#print axioms Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span
+#print axioms Dubon2026.sourcePrimitive_originalIntegralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle
+#print axioms Dubon2026.sourcePrimitiveIntegralParabolicHecke_relation
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneFiniteOrderDischarge, `Dubon2026.SourceGammaOneBinaryPeriodCharacters, `Dubon2026.SourceGammaOneCoefficientHeckeCharacters, `Dubon2026.SourceGammaOneBinaryParabolicH1, `Dubon2026.SourceGammaOneBinaryTateH1, `Dubon2026.SourceGammaOneBinaryTateHecke, `Dubon2026.SourceParabolicCohomology, `Dubon2026.SourceBinaryParabolicChange, `Dubon2026.SourceGammaOneParabolicRestriction, `Dubon2026.SourceParabolicCoefficientMap, `Dubon2026.SourcePeriodParabolicClass, `Dubon2026.SourceOriginalParabolicEigensystem, `Dubon2026.SourceParabolicBinaryCoordinates, `Dubon2026.SourceParabolicBinaryRationalSpan, `Dubon2026.SourceParabolicBinaryH1RationalSpan, `Dubon2026.SourceCocycleConjugateCoboundary, `Dubon2026.SourceParabolicFiniteCuspWitnesses, `Dubon2026.SourceParabolicWitnessDenominators, `Dubon2026.SourceParabolicUniformDenominator, `Dubon2026.SourceOriginalBinaryCuspWitnesses, `Dubon2026.SourceParabolicIntegralCoordinateSpan, `Dubon2026.SourceOriginalIntegralParabolicCocycleSpan, `Dubon2026.SourceOriginalIntegralParabolicH1Span, `Dubon2026.SourcePrimitiveParabolicHeckeRelations]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.finiteOrder_trace_sq_four, `Dubon2026.SourceFunctionField.GammaOne.finiteOrder_character_zero_of_parabolic, `Dubon2026.SourceFunctionField.GammaOne.finiteParabolicHoms_mem_iff_of_level, `Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_level_ge_four, `Dubon2026.SourceFunctionField.GammaOne.originalGammaOne_finiteOrder_character_zero, `Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_injective, `Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap_surjective, `Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv_apply, `Dubon2026.sourceGammaOneConstantHeckeH1_coefficient_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1_hecke_mem, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_injective, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction_surjective, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv_prime, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_prime, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv_word, `Dubon2026.sourceParabolicH1_cocycle_iff, `Dubon2026.sourceParabolicCocycles_semilinear, `Dubon2026.sourceParabolicH1_semilinear, `Dubon2026.sourceBinaryCocyclesChange_parabolic, `Dubon2026.sourceBinaryH1Change_parabolic, `Dubon2026.sourceGammaOneDiagonalHom_trace, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_parabolic, `Dubon2026.sourceGammaOneBinaryRestrictionH1_parabolic, `Dubon2026.sourceIntegralBinaryParabolic_gammaOne_reduction, `Dubon2026.sourceParabolicCocycles_coefficientMap, `Dubon2026.sourceParabolic_exists_fixed_cusp, `Dubon2026.sourcePeriodCocycle_mem_parabolic, `Dubon2026.sourcePeriodBinaryCocycle_mem_parabolic, `Dubon2026.sourceOriginalBinaryPeriodCohomology_parabolic, `Dubon2026.sourcePrimitive_originalParabolicHeckeWordEigensystem, `Dubon2026.sourceBinaryAdditiveCocycles_parabolic, `Dubon2026.sourceComplexBinaryCocycleCoordinate_parabolic, `Dubon2026.sourceComplexParabolicBinaryCocycle_mem_rational_span, `Dubon2026.sourceComplexParabolicBinaryH1_mem_rational_span, `Dubon2026.sourcePrimitive_originalParabolicH1_mem_rational_span, `Dubon2026.sourceCocycle_conjugate_coboundary, `Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses, `Dubon2026.sourceParabolicWitness_family_integerMultiple, `Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple, `Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses, `Dubon2026.sourceOriginalBinaryPeriodCocycle_class, `Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses, `Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses, `Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span, `Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span, `Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span, `Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span, `Dubon2026.sourcePrimitive_originalIntegralParabolic_span, `Dubon2026.sourcePrimitiveIntegralParabolicHecke_relation]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryParabolicHoms, `Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterMap, `Dubon2026.SourceFunctionField.GammaOne.binaryPeriodCharacterEquiv, `Dubon2026.SourceFunctionField.GammaOne.binaryParabolicH1, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterRestriction, `Dubon2026.SourceFunctionField.GammaOne.binaryTateCharacterEquiv, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv, `Dubon2026.SourceFunctionField.GammaOne.binaryTatePrimeOperators, `Dubon2026.sourceParabolicCocycles, `Dubon2026.sourceParabolicH1, `Dubon2026.sourceOriginalBinaryPeriodCocycle]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE HOMOGENEOUS PARABOLIC AUDIT PASS: {count} theorems including private/generated declarations. Actual homogeneous Tate dual/parabolic H1 and original whole Hecke words, original parabolic eigenclass, integral span and integral operator relations. Finite character descent, diamonds and all-weight association remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneFiniteOrderDischarge
+
+#lint in Dubon2026.SourceGammaOneBinaryPeriodCharacters
+
+#lint in Dubon2026.SourceGammaOneCoefficientHeckeCharacters
+
+#lint in Dubon2026.SourceGammaOneBinaryParabolicH1
+
+#lint in Dubon2026.SourceGammaOneBinaryTateH1
+
+#lint in Dubon2026.SourceGammaOneBinaryTateHecke
+
+#lint in Dubon2026.SourceParabolicCohomology
+
+#lint in Dubon2026.SourceBinaryParabolicChange
+
+#lint in Dubon2026.SourceGammaOneParabolicRestriction
+
+#lint in Dubon2026.SourceParabolicCoefficientMap
+
+#lint in Dubon2026.SourcePeriodParabolicClass
+
+#lint in Dubon2026.SourceOriginalParabolicEigensystem
+
+#lint in Dubon2026.SourceParabolicBinaryCoordinates
+
+#lint in Dubon2026.SourceParabolicBinaryRationalSpan
+
+#lint in Dubon2026.SourceParabolicBinaryH1RationalSpan
+
+#lint in Dubon2026.SourceCocycleConjugateCoboundary
+
+#lint in Dubon2026.SourceParabolicFiniteCuspWitnesses
+
+#lint in Dubon2026.SourceParabolicWitnessDenominators
+
+#lint in Dubon2026.SourceParabolicUniformDenominator
+
+#lint in Dubon2026.SourceOriginalBinaryCuspWitnesses
+
+#lint in Dubon2026.SourceParabolicIntegralCoordinateSpan
+
+#lint in Dubon2026.SourceOriginalIntegralParabolicCocycleSpan
+
+#lint in Dubon2026.SourceOriginalIntegralParabolicH1Span
+
+#lint in Dubon2026.SourcePrimitiveParabolicHeckeRelations

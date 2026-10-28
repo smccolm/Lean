@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-10-28T09:54:25.011914+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> arithmetic realization of original finite Gamma1 characters -> diamond comparison -> literal slash on the original period quotient and Tate-torus base change.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondPeriodLattice.lean",
+      "sha256": "AFB33B86B42EDDBEBA35ACBF61F31999950863A32E73AB73A8F48D86DDDC1F37"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePeriodTateHecke.lean",
+      "sha256": "8BA8DC83F8D7240E6396984ADA2C641924B645A6CC0AB8B4CBCB24AE09089977"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexTatePeriods.lean",
+      "sha256": "D25FF8C64BEA48697C45E048C2F798D341640CCA12FB51BE158A87551359D922"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusNaturality.lean",
+      "sha256": "F3D95B762178E37B2F32ECE8AFD1E15790715F6BD6386802ABC01BA19A239E57"
+    }
+  ],
+  "shorterRoute": "Apply the existing native Tate-torus naturality theorem to the already proved actual integral-period diamond; no new tensor basis or Tate-module theory.",
+  "assumptionsToDischarge": [
+    "The actual dual slash diamond descends to the original integer-period quotient.",
+    "The original Tate-torus equivalence intertwines this quotient action with base change of the actual integral-lattice diamond."
+  ],
+  "remaining": "The independently defined arithmetic Picard diamond and the identification of the required original homogeneous coefficient action remain. The separate parabolic transfer lifting and exceptional primes, Frobenius/inertia, original all-weight association and higher continuation remain.16/20; DUB17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

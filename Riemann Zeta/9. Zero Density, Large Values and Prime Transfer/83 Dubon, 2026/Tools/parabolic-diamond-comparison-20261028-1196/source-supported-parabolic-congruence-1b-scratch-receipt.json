@@ -1,0 +1,110 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T08:59:04.230302+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceSupportedCharacterFiber",
+    "SourceSupportedCharacterDivisibility",
+    "SourceParabolicHeckeSpan",
+    "SourceParabolicHeckeCongruence",
+    "SourceParabolicAdicOperatorKernel"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber.lean",
+      "sha256": "874CA92169E0F31BD99FCB39D1E10F53587BD484552E826413EC145583325220",
+      "oleanSha256": "9340907EC46D3B1AF0901F83B5D34B5C95EF57FB977354BEDC3A296084464456",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterFiber1170b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility.lean",
+      "sha256": "2DCB8859DD0CE48BD4F06C172B292383A00E1861B3F075F9124851668A5939D1",
+      "oleanSha256": "E14611CF2CFE91AC920D8334B8B1A06D61C9B5CA1E591F49A6F4856B6A9B6989",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedCharacterDivisibility1171a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan.lean",
+      "sha256": "9C41E4799DE6F964CB47F739DA37FC3B52A4423766121BC331D6203B2093D457",
+      "oleanSha256": "E979E9F48E4323837376C1F72E93F491A346B163B8491ED3311511E7D77C576F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeSpan1172f.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence.lean",
+      "sha256": "25C4284C8239714DD090887CD638DEB16EBB9E8B98A93047856FDAD2F4FAE221",
+      "oleanSha256": "AD913A9F8209EA997BACA264FD4FCA77905277E47E11AA2FB8ADE2DAE1EC5DC3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicHeckeCongruence1173d.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel.lean",
+      "sha256": "5F2B91F939406C1E2E74AD81DF21ED4B0CD11A495B33CB976AA1E6997B61D7D0",
+      "oleanSha256": "4FE03936CE11FF7F6E3F6386E7E1FF01550E6744850B67D6B6A1D510844D529C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicAdicOperatorKernel1174b.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+    "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+    "Dubon2026.sourceParabolicHeckeSpan_finite",
+    "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+    "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+    "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+    "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+    "Dubon2026.sourceParabolicHeckeSpan"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+    "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+    "Dubon2026.sourceParabolicHeckeSpan_finite",
+    "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+    "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+    "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+    "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceParabolicHeckeSpan"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceAudit1b.log",
+  "logSha256": "DC41B0F70BC261513A16153DF8B17CBAF0C7D2B5A879B1437AE6552EE9D5A5F5",
+  "auditSha256": "7F031A40B4F0E24AE3488F101284C823753015D7AB1D9173F1CD9FCCA68CDC5B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceScratchOwnership1175b.log",
+  "ownershipSha256": "2E9963C2FCB0AF483E87023BF8E3DAE3D0CA62CD578E9A5DCD2E5E76E07DB3FE",
+  "exhaustiveTheorems": 9,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSupportedParabolicCongruenceDependencyAudit1b.log",
+  "dependencyAuditSha256": "B8F3CBA753B5B50F5CC0B0C0E7F7039C8F5402B90BF9FAADE4524FFF293B57FD",
+  "dependencyAuditSourceSha256": "3A79178B991A0F89B2A2391D04359090B860572E4AF90487281BB76E6C5CD11E",
+  "consumers": [
+    "Dubon2026.sourceModule_nontrivial_characterFiber_of_annihilator",
+    "Dubon2026.sourceSupportedCharacter_div_isIntegral",
+    "Dubon2026.sourceParabolicHeckeSpan_finite",
+    "Dubon2026.sourcePrimitiveParabolicHeckeSpan_annihilator",
+    "Dubon2026.sourceBinaryH1Change_heckeAlgebra_zero",
+    "Dubon2026.sourceParabolicHeckeSpan_operator_congruence",
+    "Dubon2026.sourcePrimitiveParabolicHecke_congruence_integral_away",
+    "Dubon2026.sourcePrimitiveParabolicH1AdicQuotientCharacter_zero_away",
+    "Dubon2026.sourceParabolicHeckeSpan"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric powers -> arithmetic automorphy -> original all-weight association -> finite Gamma1 parabolic character -> integral parabolic operator congruence.",
+  "discharged": [
+    "A finite module has a nonzero fiber for each character annihilating its annihilator; full faithfulness is unnecessary.",
+    "Divisibility of an operator on that module gives an integral quotient of the same character value.",
+    "For the original Hecke span of parabolic H1 the original Fourier-field character has the required support, and original operator congruences give the matching integrality away from one fixed integer.",
+    "The same original compatible adic quotient character kills every operator zero modulo p^(n+1) on original integral parabolic H1, for every n and every prime coprime to one fixed nonzero integer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The Hecke span is not asserted to equal parabolic H1. Its finite Gamma1 realization, parabolic transfer, exceptional primes, finite character descent, diamonds and arithmetic/Galois comparisons remain. No all-prime theorem is weakened. DUB17--20 OPEN;16/20 unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-supported-parabolic-congruence-1b-reuse-review-20261028.json",
+  "reuseReviewSha256": "1FF69D6BA2B58603D05A7055BBFE642B8009EB97AA5D6C23FC126464AA65952B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

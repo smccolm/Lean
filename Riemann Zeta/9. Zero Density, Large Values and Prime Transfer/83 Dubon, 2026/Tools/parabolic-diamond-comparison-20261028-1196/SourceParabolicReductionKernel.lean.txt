@@ -1,0 +1,39 @@
+import SourceFiniteIntegralSaturation
+import SourceBinaryParabolicChange
+import Dubon2026.SourceBinaryH1PrimePowerKernel
+import Dubon2026.SourceBinaryH1HeckeAlgebra
+
+/-! DUB17/18 -> original all-weight association -> finite parabolic
+character descent -> exact integral parabolic reduction kernel. One
+fixed nonzero integer, depending only on source level and weight, bounds
+the saturation obstruction. Away from it the native full-H1 scalar
+division theorem produces a parabolic integral class. Exceptional
+moduli are retained explicitly; no all-prime descent is asserted. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup groupCohomology
+
+theorem sourceIntegralParabolicH1_reduction_kernel_away
+    (Q w : ℕ) [NeZero Q] :
+    ∃ d : ℤ, d ≠ 0 ∧ ∀ (N : ℕ), N ≠ 0 → IsCoprime (N : ℤ) d →
+      ∀ x : H1 (sourceBinaryCoefficientRep ℤ Q w),
+        x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w) →
+        (sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x = 0 ↔
+          ∃ y : H1 (sourceBinaryCoefficientRep ℤ Q w),
+            y ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w) ∧
+              x = (N : ℤ) • y) := by
+  letI := sourceIntegralBinaryH1Finite Q w
+  obtain ⟨d, hd, hsat⟩ := sourceFiniteIntegralSubmodule_saturation
+    (sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w))
+  refine ⟨d, hd, fun N hN hcop x hx => ?_⟩
+  rw [sourceBinaryH1Change_zmod_nonzero_eq_zero_iff Q w N hN]
+  constructor
+  · rintro ⟨y, hy⟩
+    refine ⟨y, hsat N (by exact_mod_cast hN) hcop y ?_, hy⟩
+    rw [← hy]
+    exact hx
+  · rintro ⟨y, _, hy⟩
+    exact ⟨y, hy⟩
+
+end
+end Dubon2026

@@ -1,0 +1,68 @@
+import SourceCocycleConjugateCoboundary
+import SourceParabolicFiniteCuspWitnesses
+import SourceParabolicWitnessDenominators
+import SourceParabolicUniformDenominator
+import SourceOriginalBinaryCuspWitnesses
+import SourceParabolicIntegralCoordinateSpan
+import SourceOriginalIntegralParabolicCocycleSpan
+import SourceOriginalIntegralParabolicH1Span
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceCocycle_conjugate_coboundary
+#print axioms Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses
+#print axioms Dubon2026.sourceParabolicWitness_family_integerMultiple
+#print axioms Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple
+#print axioms Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_class
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses
+#print axioms Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span
+#print axioms Dubon2026.sourcePrimitive_originalIntegralParabolic_span
+#print axioms Dubon2026.sourceOriginalBinaryPeriodCocycle
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCocycleConjugateCoboundary, `SourceParabolicFiniteCuspWitnesses, `SourceParabolicWitnessDenominators, `SourceParabolicUniformDenominator, `SourceOriginalBinaryCuspWitnesses, `SourceParabolicIntegralCoordinateSpan, `SourceOriginalIntegralParabolicCocycleSpan, `SourceOriginalIntegralParabolicH1Span]
+  let theorems : Array Name := #[`Dubon2026.sourceCocycle_conjugate_coboundary, `Dubon2026.sourceParabolicCocycles_of_cusp_orbit_witnesses, `Dubon2026.sourceParabolicWitness_family_integerMultiple, `Dubon2026.sourceRationalBinaryCocycle_parabolic_integerMultiple, `Dubon2026.sourceBinaryAdditiveCocycles_cusp_witnesses, `Dubon2026.sourceOriginalBinaryPeriodCocycle_class, `Dubon2026.sourceOriginalBinaryPeriodCocycle_cusp_witnesses, `Dubon2026.sourceOriginalBinaryPeriodCocycleCoordinate_cusp_witnesses, `Dubon2026.sourceRationalCuspBinaryCocycle_mem_integralParabolic_span, `Dubon2026.sourceComplexCuspBinaryCocycle_mem_integralParabolic_span, `Dubon2026.sourceOriginalBinaryPeriodCocycle_mem_integralParabolic_span, `Dubon2026.sourceOriginalBinaryPeriodH1_mem_integralParabolic_span, `Dubon2026.sourcePrimitive_originalIntegralParabolic_span]
+  let constructions : Array Name := #[`Dubon2026.sourceOriginalBinaryPeriodCocycle]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Integral Parabolic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Integral Parabolic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL INTEGRAL PARABOLIC AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCocycleConjugateCoboundary
+#lint in SourceParabolicFiniteCuspWitnesses
+#lint in SourceParabolicWitnessDenominators
+#lint in SourceParabolicUniformDenominator
+#lint in SourceOriginalBinaryCuspWitnesses
+#lint in SourceParabolicIntegralCoordinateSpan
+#lint in SourceOriginalIntegralParabolicCocycleSpan
+#lint in SourceOriginalIntegralParabolicH1Span

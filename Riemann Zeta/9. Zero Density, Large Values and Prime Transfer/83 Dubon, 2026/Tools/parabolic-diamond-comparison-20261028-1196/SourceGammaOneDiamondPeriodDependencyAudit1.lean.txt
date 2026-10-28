@@ -1,0 +1,31 @@
+import SourceGammaOneDiamondCuspPrimitive
+import SourceGammaOneDiamondPeriodH1
+import SourceGammaOneDiamondPeriodLattice
+import SourceGammaOneDiamondFiniteH1
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond]
+  let localModules : Array Name := #[`SourceGammaOneDiamondCuspPrimitive, `SourceGammaOneDiamondPeriodH1, `SourceGammaOneDiamondPeriodLattice, `SourceGammaOneDiamondFiniteH1, `SourceGammaOneDiamondConjugation, `SourceGammaOneDiamondH1, `SourceGammaOneDiamondLabels, `SourceGammaOneUnitDiamondAction]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.diamondGL_le_conj, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond_coe, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_hasDerivAt, `Dubon2026.SourceFunctionField.GammaOne.diamondPrimitive_difference, `Dubon2026.SourceFunctionField.GammaOne.periodValue_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_cuspDiamond_unit, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_dualPeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_preserves_integralLattice, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond_latticePeriod, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear_along, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_unitDiamond, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamond, `Dubon2026.SourceFunctionField.GammaOne.cuspDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodDiamondLinear, `Dubon2026.SourceFunctionField.GammaOne.periodLatticeDiamond, `Dubon2026.sourceHasDerivAt_comp_smul, `Dubon2026.sourceUpperHalfPlane_primitive_difference, `Dubon2026.sourceWeightTwoPrimitive_hasDerivAt, `Dubon2026.sourceGammaOneDiamondConjugation, `Dubon2026.sourceGammaOneDiamondH1_hom_apply, `Dubon2026.sourceGammaOneUnitDiamondH1_eq, `Dubon2026.sourceWeightTwoDualPeriod_mem, `Dubon2026.SourceFunctionField.GammaOne.primitive_one_period, `Dubon2026.SourceFunctionField.GammaOne.latticePeriodHom_surjective, `Dubon2026.SourceFunctionField.GammaOne.realPeriodH1_hom_apply, `Dubon2026.SourceFunctionField.GammaOne.binaryLatticeH1Equiv_hom_apply]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND PERIOD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual slash cusp diamond, original endpoint periods, stable original integer lattice and literal homogeneous-valued finite H1 transpose. Arithmetic Picard diamond and the original coefficient convention, transfer lifting and exceptional primes remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

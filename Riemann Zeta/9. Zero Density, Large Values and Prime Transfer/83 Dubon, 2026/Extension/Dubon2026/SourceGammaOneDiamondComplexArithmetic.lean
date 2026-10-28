@@ -1,0 +1,56 @@
+import Dubon2026.SourceGammaOneDiamondRationalGenerators
+
+/-! DUB-17/18 -> original all-weight association -> arithmetic Gamma1
+diamond Galois compatibility. Induction on the literal original integral
+modular-ratio field consumes the proved rational-generator identities.
+The complex diamond commutes with every coefficient automorphism over Q;
+constants, sums, inverses and products are handled by the actual field maps.
+Restriction to the original arithmetic field remains the next consumer.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup
+variable (M : ℕ) [NeZero M] (g : Gamma0 M) (σ : ℂ ≃ₐ[ℚ] ℂ)
+local notation "FC" => functionFieldOver (Gamma1 M) ℂ
+
+theorem diamondFieldHom_arithmetic (x : FC) :
+    arithmeticRingAut (Gamma1 M) σ (diamondFieldHom M g x) =
+      diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ x) := by
+  have hm {y : LaurentSeries ℂ} (hy : y ∈ qExpFunctionFieldC ℂ (Gamma1 M)) : y ∈ FC := by
+    rwa [functionFieldOver_eq_qExpFunctionFieldC]
+  have H (y : LaurentSeries ℂ) (hy : y ∈ qExpFunctionFieldC ℂ (Gamma1 M)) :
+      ∀ hz : y ∈ FC,
+        arithmeticRingAut (Gamma1 M) σ (diamondFieldHom M g ⟨y, hz⟩) =
+          diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ ⟨y, hz⟩) := by
+    induction hy using IntermediateField.adjoin_induction with
+    | mem y hy =>
+        intro hz
+        obtain ⟨h1, h2⟩ := arithmeticRingAut_diamond_generator M g σ ⟨y, hz⟩ hy
+        rw [h1, h2]
+    | algebraMap c =>
+        intro hz
+        change arithmeticRingAut (Gamma1 M) σ (diamondFieldHom M g (algebraMap ℂ FC c)) =
+          diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ (algebraMap ℂ FC c))
+        rw [diamondFieldHom_constants, arithmeticRingAut_constants, diamondFieldHom_constants]
+    | add y z hy hz ihy ihz =>
+        intro hsum
+        change arithmeticRingAut (Gamma1 M) σ
+          (diamondFieldHom M g (⟨y, hm hy⟩ + ⟨z, hm hz⟩)) =
+            diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ (⟨y, hm hy⟩ + ⟨z, hm hz⟩))
+        simp only [map_add, ihy (hm hy), ihz (hm hz)]
+    | inv y hy ihy =>
+        intro hi
+        change arithmeticRingAut (Gamma1 M) σ
+          (diamondFieldHom M g (⟨y, hm hy⟩ : FC)⁻¹) =
+            diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ (⟨y, hm hy⟩ : FC)⁻¹)
+        simp only [map_inv₀, ihy (hm hy)]
+    | mul y z hy hz ihy ihz =>
+        intro hprod
+        change arithmeticRingAut (Gamma1 M) σ
+          (diamondFieldHom M g (⟨y, hm hy⟩ * ⟨z, hm hz⟩)) =
+            diamondFieldHom M g (arithmeticRingAut (Gamma1 M) σ (⟨y, hm hy⟩ * ⟨z, hm hz⟩))
+        simp only [map_mul, ihy (hm hy), ihz (hm hz)]
+  exact H x (by simpa only [← functionFieldOver_eq_qExpFunctionFieldC] using x.property) x.property
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

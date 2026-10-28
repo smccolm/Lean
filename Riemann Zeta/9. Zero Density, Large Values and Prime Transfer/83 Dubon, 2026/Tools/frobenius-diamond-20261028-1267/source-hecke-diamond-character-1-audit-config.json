@@ -1,0 +1,87 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeDiamondWords",
+    "SourceGammaOneHeckeDiamondDescent",
+    "SourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneDiamondToModulus_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGammaOneHeckeDiamondOperators",
+    "Dubon2026.sourceGammaOneHeckeDiamondAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord",
+    "Dubon2026.sourceGammaOneDiamondToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneDiamondToModulus_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond",
+    "Dubon2026.sourceGammaOneHeckeDiamondOperators",
+    "Dubon2026.sourceGammaOneHeckeDiamondAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord",
+    "Dubon2026.sourceGammaOneDiamondToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneDiamondToModulus_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond",
+    "Dubon2026.sourceGammaOneHeckeDiamondOperators",
+    "Dubon2026.sourceGammaOneHeckeDiamondAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeDiamondWord",
+    "Dubon2026.sourceGammaOneDiamondToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_diamond",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourceHeckeWord_intertwine_addHom",
+    "Dubon2026.sourcePrimePower_six_isUnit"
+  ],
+  "localModules": [
+    "SourceGammaOneHeckeDiamondWords",
+    "SourceGammaOneHeckeDiamondDescent",
+    "SourcePrimitiveGammaOneHeckeDiamondCharacter",
+    "SourceInnerH1Identity",
+    "SourceH1TraceInner",
+    "SourceGammaOneDiamondRange",
+    "SourceH1TraceSubgroupEquality",
+    "SourceNormalizerH1Trace",
+    "SourceH1CompositionSquare",
+    "SourceNormalizerCoefficientValue",
+    "SourceGammaOneDiamondSubgroupSquare",
+    "SourceGammaOneDiamondTransfer"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneHeckeDiamondWords": "SourceGammaOneHeckeDiamondWords1264a",
+    "SourceGammaOneHeckeDiamondDescent": "SourceGammaOneHeckeDiamondDescent1265a",
+    "SourcePrimitiveGammaOneHeckeDiamondCharacter": "SourcePrimitiveGammaOneHeckeDiamondCharacter1266a"
+  }
+}

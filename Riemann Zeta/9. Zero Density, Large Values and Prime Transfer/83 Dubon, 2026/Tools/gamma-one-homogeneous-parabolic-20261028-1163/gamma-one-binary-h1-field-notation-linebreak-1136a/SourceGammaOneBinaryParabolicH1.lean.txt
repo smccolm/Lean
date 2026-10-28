@@ -1,0 +1,83 @@
+import SourceGammaOneBinaryPeriodCharacters
+import SourceGammaOneCoefficientHeckeCharacters
+import SourceGammaOneFiniteParabolicHecke
+
+/-! DUB17/18 -> original all-weight arithmetic realization -> actual
+homogeneous-coefficient Gamma1 H1. The native character isomorphism
+identifies the literal parabolic submodule at Q*N^2 with the original
+homogeneous-valued lattice dual. The existing Hecke operator is the
+period transpose followed by its original coefficient endomorphism.
+No scalarization of the homogeneous action is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup groupCohomology CategoryTheory
+variable (Q N w : ℕ) [NeZero Q] [NeZero N]
+
+/-- The literal parabolic submodule of the original homogeneous-valued native H1. -/
+def binaryParabolicH1 : Submodule (ZMod N)
+    (H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))) :=
+  (binaryParabolicHoms Q N w).comap
+    (H1IsoOfIsTrivial
+      (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).hom.hom
+
+/-- The original homogeneous-valued period dual as actual parabolic H1. -/
+def binaryLatticeH1Equiv (hlevel : 4 ≤ Q * N ^ 2) :
+    (sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) ≃ₗ[ZMod N] binaryParabolicH1 Q N w :=
+  (binaryPeriodCharacterEquiv Q N w hlevel).trans
+    ((H1IsoOfIsTrivial
+      (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).
+      toLinearEquiv.ofSubmodule' (binaryParabolicHoms Q N w)).symm
+
+theorem binaryLatticeH1Equiv_hom_apply (hlevel : 4 ≤ Q * N ^ 2)
+    (ψ : sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) (γ : Gamma1 (Q * N ^ 2)) :
+    (H1IsoOfIsTrivial
+      (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).hom
+      (binaryLatticeH1Equiv Q N w hlevel ψ).val (Additive.ofMul γ) =
+        ψ (latticePeriodHom (Q * N ^ 2) (Additive.ofMul γ)) := by
+  change (H1IsoOfIsTrivial
+      (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).hom
+    ((H1IsoOfIsTrivial
+      (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).inv
+      (binaryPeriodCharacterEquiv Q N w hlevel ψ).val) (Additive.ofMul γ) = _
+  rw [Iso.inv_hom_id_apply, binaryPeriodCharacterEquiv_apply]
+
+private local instance (d : ℕ) [NeZero d] :
+    Fintype (Gamma1 (Q * N ^ 2) ⧸ sourceGammaOneHeckeUpper (Q * N ^ 2) d) := by
+  letI := sourceGammaOneHeckeUpper_finiteIndex (Q * N ^ 2) d
+  exact Fintype.ofFinite _
+
+theorem binaryLatticeH1Equiv_hecke (hlevel : 4 ≤ Q * N ^ 2) (d : ℕ) [NeZero d]
+    (b : Module.End (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w))
+    (ψ : sourceWeightTwoIntegralLattice (Gamma1 (Q * N ^ 2)) →+
+      sourceBinaryCoefficientRep (ZMod N) Q w) :
+    (binaryLatticeH1Equiv Q N w hlevel
+        ((b.toAddMonoidHom.comp ψ).comp (periodLatticeHecke (Q * N ^ 2) d).toAddMonoidHom)).val =
+      sourceGammaOneConstantHeckeH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+        (Q * N ^ 2) d b (binaryLatticeH1Equiv Q N w hlevel ψ).val := by
+  apply (ConcreteCategory.bijective_of_isIso (H1IsoOfIsTrivial
+    (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))).hom).injective
+  apply AddMonoidHom.ext
+  intro γ
+  have hγ : γ = Additive.ofMul γ.toMul := rfl
+  rw [hγ, binaryLatticeH1Equiv_hom_apply, sourceGammaOneConstantHeckeH1_coefficient_hom_apply]
+  simp only [AddMonoidHom.comp_apply, LinearMap.toAddMonoidHom_coe,
+    periodLatticeHecke_latticePeriod, map_sum]
+  apply Finset.sum_congr rfl
+  intro q _
+  exact congrArg b (binaryLatticeH1Equiv_hom_apply Q N w hlevel ψ _).symm
+
+theorem binaryParabolicH1_hecke_mem (hlevel : 4 ≤ Q * N ^ 2) (d : ℕ) [NeZero d]
+    (b : Module.End (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w))
+    {x : H1 (Rep.trivial (ZMod N) (Gamma1 (Q * N ^ 2)) (sourceBinaryCoefficientRep (ZMod N) Q w))}
+    (hx : x ∈ binaryParabolicH1 Q N w) :
+    sourceGammaOneConstantHeckeH1 (ZMod N) (sourceBinaryCoefficientRep (ZMod N) Q w)
+      (Q * N ^ 2) d b x ∈ binaryParabolicH1 Q N w := by
+  obtain ⟨ψ, hψ⟩ := (binaryLatticeH1Equiv Q N w hlevel).surjective ⟨x, hx⟩
+  have he : (binaryLatticeH1Equiv Q N w hlevel ψ).val = x := congrArg Subtype.val hψ
+  rw [← he, ← binaryLatticeH1Equiv_hecke]
+  exact (binaryLatticeH1Equiv Q N w hlevel _).property
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

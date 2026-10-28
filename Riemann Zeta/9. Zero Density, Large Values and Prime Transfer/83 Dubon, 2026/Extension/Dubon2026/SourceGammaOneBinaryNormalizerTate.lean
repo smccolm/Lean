@@ -1,0 +1,60 @@
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+import Dubon2026.SourceGammaOneBinaryDiamondTateH1
+import Dubon2026.SourceGammaOneDiamondGaloisPicard
+
+/-! DUB-17/18 -> original all-weight association -> original finite
+Gamma1 arithmetic realization -> original homogeneous diamond comparison.
+Consume the independently proved inverse normalizer coefficient formula
+and the actual arithmetic Picard Tate/H1 diamond square. The resulting
+operator uses the original homogeneous substitution, and commutes with
+the original arithmetic Galois action. Parabolic transfer, exceptional
+primes and characteristic-zero association remain unresolved.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryTateH1Equiv_normalizerDiamond (hlarge : 3 < p) (g : Gamma0 M)
+    (φ : T →ₗ[ℤ_[p]] V) :
+    (binaryTateH1Equiv Q p n w hlarge
+        (((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+          (φ.comp (TateModule.tateMap p (arithmeticDiamondPicard M g).toAddMonoidHom)))).val =
+      sourceGammaOneDiamondH1 (ZMod N) V M g
+        (homogeneousMatrixAction w
+          (Matrix.diagonal ![(g.val 1 1 : ZMod N), (g.val 0 0 : ZMod N)]))
+        (binaryTateH1Equiv Q p n w hlarge φ).val := by
+  exact (binaryTateH1Equiv_diamond Q p n w hlarge g
+    (sourceGammaOneBinaryDiamondCoefficient Q N w g) φ).trans
+      (congrArg (fun b : Module.End (ZMod N) V =>
+        sourceGammaOneDiamondH1 (ZMod N) V M g b
+          (binaryTateH1Equiv Q p n w hlarge φ).val)
+        (sourceGammaOneBinaryDiamondCoefficient_eq_diagonal Q N w g))
+
+theorem binaryTate_normalizerDiamond_galois (g : Gamma0 M)
+    (σ : Qbar ≃ₐ[ℚ] Qbar) (φ : T →ₗ[ℤ_[p]] V) :
+    ((((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+      (φ.comp (TateModule.tateMap p (arithmeticDiamondPicard M g).toAddMonoidHom))).comp
+        (TateModule.tateMap p (gamma1ArithmeticPicardRep Qbar M σ))) =
+      ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+        ((φ.comp (TateModule.tateMap p (gamma1ArithmeticPicardRep Qbar M σ))).comp
+          (TateModule.tateMap p (arithmeticDiamondPicard M g).toAddMonoidHom)) := by
+  apply LinearMap.ext
+  intro x
+  exact congrArg (sourceGammaOneBinaryDiamondCoefficient Q N w g)
+    (congrArg φ (arithmeticDiamondTate_galois M g σ p x).symm)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

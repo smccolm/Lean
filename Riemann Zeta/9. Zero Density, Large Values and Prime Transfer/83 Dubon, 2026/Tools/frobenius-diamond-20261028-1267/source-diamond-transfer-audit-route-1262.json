@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-10-28T13:38:50.460948+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 homogeneous-coefficient arithmetic Hecke characters -> diamond-one descent from the original Gamma0 character, needed for the normalized Frobenius determinant.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceH1TraceBaseChangeCoefficient.lean",
+      "sha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePullbackSquare.lean",
+      "sha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "sha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondCoefficient.lean",
+      "sha256": "6F3E745A360592BBB39A4D8034D5E6D78330DED9F29C04F3F221D94BA5FD2BEC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondH1.lean",
+      "sha256": "C88492172A47D357A0B985663824E06F0198BB931CE2BA4C784AA79C3E79BDCC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneTransferCosetFormula.lean",
+      "sha256": "1BE54F55F62F67125A13DA1A46DFC5B16E34E62CFCA6244D5EE4B390BFA3A38C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceShapiroH1CosetTrace.lean",
+      "sha256": "28CAE34E906641EDC4A384F982A9397F7A80643AFF1BBD5EDE57B2752BEACA12"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\Functoriality.lean",
+      "sha256": "2F30E3B5E055526AE05165755744F06C769BADC344FBE211E4AA3EDEC23C38EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Homological\\GroupCohomology\\LowDegree.lean",
+      "sha256": "5870D5D2EA7251F9F41BB0E1F22BF819D888009D63D06F35237AA30D0780128F"
+    }
+  ],
+  "shorterRoute": "Reuse the existing native trace base-change theorem and original subgroup H1 isomorphism. Prove inner conjugation with inverse coefficient action is the identity by its explicit coboundary, then transport the native trace through the proved subgroup equality. Reuse the group/coefficient composition proof already present in the original Hecke pullback square instead of elaborating the entire concrete cocycle square. No replacement transfer, new cohomology framework, broader degree generalization, or unit hypothesis is introduced.",
+  "assumptionsToDischarge": [
+    "The actual lifted original Gamma0 normalizer preserves the exact range of the original diagonal-cover homomorphism.",
+    "Under the existing subgroup H1 isomorphism, native normalizer pullback with inverse coefficient action is the original Gamma1 diamond with its original homogeneous coefficient.",
+    "For every positive original level and coefficient modulus, every homogeneous degree, every original normalizer and every full H1 class, the literal native transfer of its original diamond image equals its original transfer. No six-unit or parabolic-preimage assumption is needed."
+  ],
+  "remaining": "This proves diamond invariance of the full native transfer, not existence of parabolic preimages or construction of a parabolic arithmetic character space. The actual Gamma1 geometric Frobenius relation and inertia, original integral parabolic-transfer condition, exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "preservedFailures": "Failed elaborations are preserved as inert sources and original logs. The inner cocycle proof uses the exact Mathlib inverse-cocycle convention. Subgroup equality transport is retained explicitly. A concrete nested cohomology elaboration exceeded the default limit; the existing generic composition-square proof removes that unfolding. No limits increased.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

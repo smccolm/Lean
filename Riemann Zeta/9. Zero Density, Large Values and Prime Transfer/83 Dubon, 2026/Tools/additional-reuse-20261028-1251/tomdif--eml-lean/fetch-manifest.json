@@ -1,0 +1,52 @@
+{
+  "recordedUTC": "2026-10-28T12:43:13.150025+00:00",
+  "repository": "tomdif/eml-lean",
+  "revision": "72bfdee3487e9705c58afef21bdfd384c22354e3",
+  "commitDate": "2026-05-13T00:11:34Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/tomdif/eml-lean",
+      "path": "repository.json",
+      "sha256": "3278C1ADCC8436FFAF3D5B284A4AAF70FF1EFAE37C0F3DB98F030320A26C0FE2",
+      "bytes": 4984
+    },
+    {
+      "url": "https://api.github.com/repos/tomdif/eml-lean/commits/main",
+      "path": "commit.json",
+      "sha256": "2CAFE10A2F39942D2DB998F6C01722297402E8E34630AFEBAB2C2E908D3B243C",
+      "bytes": 7902
+    },
+    {
+      "url": "https://api.github.com/repos/tomdif/eml-lean/git/trees/72bfdee3487e9705c58afef21bdfd384c22354e3?recursive=1",
+      "path": "tree.json",
+      "sha256": "E462227488154433A1380B9464366E2A4C4EA4899FC8A0FBDD544802EA8C30F9",
+      "bytes": 9165
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/README.md",
+      "path": "README.md.txt",
+      "sha256": "D35093B8CB87427B06410F5B71A5DDC642335D00D7225B07BA16F1369BA936AD",
+      "bytes": 20466
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "651C8ACCB402B0C071CD336E9D3DC0A55516B1BFB434DDC4801F14936785B1D2",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "D0DE033FBA2896B16C28B7DEAE43C2B23266D2383C61034FBE9964E5FDA36ADD",
+      "bytes": 3114
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomdif/eml-lean/72bfdee3487e9705c58afef21bdfd384c22354e3/LICENSE",
+      "path": "LICENSE.txt",
+      "status": 404
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

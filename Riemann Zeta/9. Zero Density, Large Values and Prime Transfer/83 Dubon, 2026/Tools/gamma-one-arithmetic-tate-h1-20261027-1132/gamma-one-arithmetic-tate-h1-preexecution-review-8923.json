@@ -1,0 +1,60 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 56,
+  "queries": 178,
+  "theorems": 140,
+  "constructions": 38,
+  "exhaustiveScratchChecks": 357,
+  "proofValueChecks": 207,
+  "scopes": 6,
+  "receipts": {
+    "source-gamma-one-real-parabolic-hecke-1-scratch-receipt.json": "3CD975E2308402811F0EBF5934BDF38B192A6C1950306A1DE0744086822BC51E",
+    "source-gamma-one-complex-tate-hecke-1-scratch-receipt.json": "B0966A06294EEB1254D043F68C2E3750BFAF05A77F9812200C36BD6B5B064F61",
+    "source-gamma-one-arithmetic-picard-injectivity-1-scratch-receipt.json": "2014DBA39AD4FDA1BB362505BCE8CF4B5CB743F0E6F37F8159FC794F9A1E26DF",
+    "source-gamma-one-arithmetic-torsion-tate-1b-scratch-receipt.json": "29FE079EB97DB8546E8FB0E9D529227671DF54A044B782D57BF488AFD2FF4A1F",
+    "source-gamma-one-arithmetic-hecke-1-scratch-receipt.json": "25675B4DE3E5BF4831069124427B1F400C040668346FD4456E7D226774AE5B44",
+    "source-gamma-one-finite-tate-h1-1b-scratch-receipt.json": "CFBF4E544D283384FD3E8B1EAA0EF334E81F8B6490BE4CF117A2C8E9D7067E0F"
+  },
+  "expectedConsumers": 26225,
+  "expectedConstructions": 2755,
+  "fullGoal": "The finite H1 target explicitly retains parabolic and finite-order vanishing. The full/parabolic passage, discharge of finite-order vanishing for the application, original homogeneous coefficients and diamonds, coefficient-field/Frobenius/inertia realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. No rank-equals-twice-genus claim is inferred from the lattice-rank torsion cardinality. Finite characters do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_arithmetic_tate_h1_8923.py",
+      "sha256": "466BFBF8D133D32E3AF37CAC640E099B9A3781AC80061515ADBE8188331706BD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_tate_h1_production_ownership_8923.py",
+      "sha256": "C0C025C1B7B383A745A21CE2D950E1974C76A68AB4608CA3B83B6C2CFD90510A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_tate_h1_global_ownership_8923.py",
+      "sha256": "77872FF798C21F8BEBD5C938E265B79C2C4D0FCD0A8DBA893ED468BE5452ABE9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_arithmetic_tate_h1_ownership_8923.py",
+      "sha256": "CF085414E5C471EEF4E8D786FC1081586973EBB5972267373D429A321116573C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_arithmetic_tate_h1_8923.py",
+      "sha256": "3D28A92D48B4AD530DB4238561D867B6BA778A3FD15C03B7795A174A9AC7E899"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_tate_h1_8923.ps1",
+      "sha256": "EB282E83B5DD64A7C1454CEB8A15211D5546CD28AAC911D8CCEF35AF06117480"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_arithmetic_tate_h1_8923.ps1",
+      "sha256": "1ACA8A27028FCBCA8E164F18C3ED37D568C38F40B9323232BAB0090C985C73B1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_arithmetic_tate_h1_canonical_8923.py",
+      "sha256": "7E53DFFBB06DEC4870117B9A50C7AD7D004751AAC50BDEF0599564F928329CBA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_arithmetic_tate_h1_8923.py",
+      "sha256": "91D395573E0FED189B548A43995AD570CA28AA56A50377CEA4BE35C4D368892C"
+    }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,22 @@
+### Original integer rotation weights and finite-subgroup admissibility — 8 October 2026
+
+Sixteen further production modules prove the exact signed rotation spectrum of the original full real Hilbert factor and finite-dimensional fixed spaces for every integer rotation character and every open finite adelic subgroup. The genuine raising vectors and their actual real reflections have weights k+2n and -(k+2n); their distinct irrational-angle characters give orthogonality, and their actual norm normalization gives an orthonormal family. Their closed span is proved equal to the whole original full-real cyclic factor, producing its genuine signed Hilbert basis. Its integer-character eigenspaces are exactly the corresponding original lines, or zero outside the signed spectrum. In the original entire adelic Hilbert space, the simultaneous character spaces are defined using every real rotation angle. The actual orthogonal projectors commute with the original finite-adelic action, send each real orbit into the precise signed raising line, and therefore identify each global signed-weight space with the actual finite cyclic closure of that signed vector. Missing integer weights vanish on the dense original full orbit and hence on the entire space. Independently, continuity and sesquilinearity extend the proved real/finite Gram identity from original orbit generators to the actual full real Hilbert closure. The normalized signed vector therefore has exactly the original finite unit-reference Gram matrix. This constructs a genuine finite-equivariant core isometry; completion has exactly the global signed-weight space as its range. The original finite-core completion identifies with the already proved admissible lowest-weight factor. These actual equivariant isometries give an injective linear map from each signed-weight/open-subgroup fixed space to the original lowest-weight fixed space. Thus every integer rotation weight and every genuine open finite adelic subgroup has finite-dimensional joint fixed space, including the missing weights whose spaces are zero. No spectral basis, coefficient factorization or admissibility hypothesis is assumed.
+
+The original fully split restricted tensor, individual finite local irreducibility/admissibility, full-real signed Hilbert basis and all-integer-rotation-weight/open-finite-subgroup fixed-space finiteness are proved. The precise general compact-type formulation, spherical representation/Euler-factor classification, the automorphic non-CM bridge and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [AdelicFullFiniteCoreCompletion](Extension/Dubon2026/AdelicFullFiniteCoreCompletion.lean).
+- [AdelicFullRealHilbertBasis](Extension/Dubon2026/AdelicFullRealHilbertBasis.lean).
+- [AdelicFullRealWeightLines](Extension/Dubon2026/AdelicFullRealWeightLines.lean).
+- [AdelicIntegerProjectionReal](Extension/Dubon2026/AdelicIntegerProjectionReal.lean).
+- [AdelicIntegerRotationWeightSpace](Extension/Dubon2026/AdelicIntegerRotationWeightSpace.lean).
+- [AdelicIntegerWeightAdmissible](Extension/Dubon2026/AdelicIntegerWeightAdmissible.lean).
+- [AdelicIntegerWeightFiniteClosure](Extension/Dubon2026/AdelicIntegerWeightFiniteClosure.lean).
+- [AdelicMissingIntegerWeight](Extension/Dubon2026/AdelicMissingIntegerWeight.lean).
+- [AdelicRealFiniteClosureGram](Extension/Dubon2026/AdelicRealFiniteClosureGram.lean).
+- [AdelicSignedFiniteAction](Extension/Dubon2026/AdelicSignedFiniteAction.lean).
+- [AdelicSignedFiniteCompletion](Extension/Dubon2026/AdelicSignedFiniteCompletion.lean).
+- [AdelicSignedFiniteIsometry](Extension/Dubon2026/AdelicSignedFiniteIsometry.lean).
+- [AdelicSignedRaisingClosure](Extension/Dubon2026/AdelicSignedRaisingClosure.lean).
+- [AdelicSignedRaisingFamily](Extension/Dubon2026/AdelicSignedRaisingFamily.lean).
+- [AdelicSignedWeightAdmissible](Extension/Dubon2026/AdelicSignedWeightAdmissible.lean).
+- [ContinuousGramClosure](Extension/Dubon2026/ContinuousGramClosure.lean).
