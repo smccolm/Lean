@@ -1,0 +1,7 @@
+### Actual actual continuous whole representation gluing — 10 October 2026
+
+For actual compatible continuous general-linear matrix families, prove continuity of both original matrix and inverse-matrix coordinates of the glued unit in the genuine coefficient product-subtype topology. This proves continuity of the same whole glued original representation. Combine actual algebraic uniqueness with these proved topology facts to construct exactly one continuous whole representation with the two prescribed actual original coefficient projections.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousCoefficientFiberProduct](Extension/Dubon2026/ContinuousCoefficientFiberProduct.lean).

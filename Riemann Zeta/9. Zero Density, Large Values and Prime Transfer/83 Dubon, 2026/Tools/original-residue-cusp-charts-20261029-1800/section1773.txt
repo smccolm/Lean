@@ -1,0 +1,7 @@
+### Actual rank-one direct summand from original coordinates — 10 October 2026
+
+Restrict the actual first-coordinate linear map to the original submodule identified with the first axis. Prove it bijective using the actual inverse coordinate map, obtaining a genuine linear equivalence with the coefficient ring. Compose its inverse with the original first-coordinate map to construct a projection onto the same submodule; its kernel is an actual complementary submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [SubmoduleCoordinateLineSplitting](Extension/Dubon2026/SubmoduleCoordinateLineSplitting.lean).

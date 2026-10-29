@@ -1,0 +1,155 @@
+import SourceIntegralDiamondReduction1670b
+import SourceIntegralDiamondZeroForward1671a
+import SourceIntegralDiamondZeroEquivalence1672a
+import SourceIntegralDiamondWitness1673a
+import SourceIntegralDiamondNormalizedReduction1674a
+import SourceIntegralDiamondChosenReduction1675a
+import SourceIntegralDiamondSeriesOperations1676b
+import SourceIntegralDiamondReducedOperations1677b
+import SourceIntegralDiamondRatioRelation1678b
+import SourceIntegralDiamondAdditiveSeries1679b
+import SourceIntegralDiamondRatioClosure1681b
+import SourceIntegralDiamondReducedAddition1682b
+import SourceIntegralDiamondFieldPull1683d
+import SourceIntegralDiamondFieldRange1684b
+import SourceIntegralDiamondFieldConstants1685c
+import SourceIntegralDiamondFieldOperations1686b
+import SourceIntegralDiamondComposition1687b
+import SourceIntegralDiamondFieldComposition1688c
+import SourceIntegralDiamondFieldIdentity1689b
+import SourceIntegralDiamondFieldAction1690b
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_unique
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_inv_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_C
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_of_integral_diamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_iff_integral_diamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coe_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integral_diamond_witness_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_level_power
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.level_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_of_witness
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_zero_iff_original
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_inv
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.mem_originalReducedField_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.exists_even_originalReducedField_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coe_reducedFieldPullHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_scaled_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_of_invariant
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.even_slash_eq_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_one_matrix
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.diamondWitness
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalEvenRepresentative
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative.mk
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralDiamondReduction1670b, `SourceIntegralDiamondZeroForward1671a, `SourceIntegralDiamondZeroEquivalence1672a, `SourceIntegralDiamondWitness1673a, `SourceIntegralDiamondNormalizedReduction1674a, `SourceIntegralDiamondChosenReduction1675a, `SourceIntegralDiamondSeriesOperations1676b, `SourceIntegralDiamondReducedOperations1677b, `SourceIntegralDiamondRatioRelation1678b, `SourceIntegralDiamondAdditiveSeries1679b, `SourceIntegralDiamondRatioClosure1681b, `SourceIntegralDiamondReducedAddition1682b, `SourceIntegralDiamondFieldPull1683d, `SourceIntegralDiamondFieldRange1684b, `SourceIntegralDiamondFieldConstants1685c, `SourceIntegralDiamondFieldOperations1686b, `SourceIntegralDiamondComposition1687b, `SourceIntegralDiamondFieldComposition1688c, `SourceIntegralDiamondFieldIdentity1689b, `SourceIntegralDiamondFieldAction1690b]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.red_apply, `Dubon2026.SourceFunctionField.IntegralDiamond.red_eq_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_unique, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_int_smul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_inv_int_smul, `Dubon2026.SourceFunctionField.IntegralDiamond.red_C, `Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_of_integral_diamond, `Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_iff_integral_diamond, `Dubon2026.SourceFunctionField.IntegralDiamond.coe_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.integral_diamond_witness_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.red_level_power, `Dubon2026.SourceFunctionField.IntegralDiamond.level_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_of_witness, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_zero_iff_original, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_add, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_one, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_one, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_add, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_inv, `Dubon2026.SourceFunctionField.IntegralDiamond.mem_originalReducedField_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.exists_even_originalReducedField_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_add, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_mem, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mem, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_add, `Dubon2026.SourceFunctionField.IntegralDiamond.coe_reducedFieldPullHom, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_scaled_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_of_invariant, `Dubon2026.SourceFunctionField.IntegralDiamond.even_slash_eq_of_signed_gammaOne, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_signed_gammaOne, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_one_matrix, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_apply, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_of_signed_gammaOne]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.red, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed, `Dubon2026.SourceFunctionField.IntegralDiamond.diamondWitness, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.originalEvenRepresentative, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull, `Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative, `Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative.mk, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Reduced diamond action postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Reduced diamond action theorems discovered"
+  logInfo m!"SOURCE REDUCED DIAMOND ACTION PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceIntegralDiamondReduction1670b
+#lint in SourceIntegralDiamondZeroForward1671a
+#lint in SourceIntegralDiamondZeroEquivalence1672a
+#lint in SourceIntegralDiamondWitness1673a
+#lint in SourceIntegralDiamondNormalizedReduction1674a
+#lint in SourceIntegralDiamondChosenReduction1675a
+#lint in SourceIntegralDiamondSeriesOperations1676b
+#lint in SourceIntegralDiamondReducedOperations1677b
+#lint in SourceIntegralDiamondRatioRelation1678b
+#lint in SourceIntegralDiamondAdditiveSeries1679b
+#lint in SourceIntegralDiamondRatioClosure1681b
+#lint in SourceIntegralDiamondReducedAddition1682b
+#lint in SourceIntegralDiamondFieldPull1683d
+#lint in SourceIntegralDiamondFieldRange1684b
+#lint in SourceIntegralDiamondFieldConstants1685c
+#lint in SourceIntegralDiamondFieldOperations1686b
+#lint in SourceIntegralDiamondComposition1687b
+#lint in SourceIntegralDiamondFieldComposition1688c
+#lint in SourceIntegralDiamondFieldIdentity1689b
+#lint in SourceIntegralDiamondFieldAction1690b

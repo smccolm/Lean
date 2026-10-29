@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticUnramifiedTraceZeroClasses",
+  "mathematics": "The actual unramified condition is defined as the kernel of genuine trace-zero H1 restriction to the original arithmetic inertia subgroup. Under the explicit nonzero-dimension condition, the coefficient inclusion gives a linear equivalence with the previously proved intersection of the original determinant trace kernel and inertia restriction kernel. Its original full-adjoint class is retained. Thus dimensions agree, and proved arithmetic cohomology finiteness gives finite-dimensionality of this actual trace-zero local condition.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Actual trace-zero coefficient representation, continuous cocycles/coboundaries, quotient restriction and arithmetic inertia modules inspected. Pinned LinearEquiv.finrank_eq and Module.Finite.equiv inspected. Bellovin section2.1 rechecked live for actual continuous restriction. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Used an explicit original local-class subtype in congrArg to compare the same full-adjoint cohomology values; no mathematical condition changed."
+  ],
+  "productionLog": "arithmeticTraceZeroClasses1647b-focus.log"
+}

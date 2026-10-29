@@ -1,0 +1,7 @@
+### Actual original determinant and ordinary quotient class equivalence — 10 October 2026
+
+Compose the existing original quotient coefficient-fiber equivalence with the restriction of the genuine whole class bijection. The proved literal sum-ideal criterion identifies exactly the original fixed-determinant ordinary classes. Its evaluation formula retains the same original matrices and the same quotient coefficient map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedDeterminantOrdinaryQuotientEquivalence](Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryQuotientEquivalence.lean).

@@ -1,0 +1,7 @@
+### Actual ordinary relative cotangent dual finiteness — 10 October 2026
+
+Original Noetherianity gives finite generation of the actual relative maximal-ideal quotient over the original ring. True reduction and the proved original residue action give finite-dimensionality over the original coefficient residue field. The genuine ordinary dual is finite-dimensional by the pinned linear-dual theorem, and its dimension equals that of the same literal quotient.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalRelativeCotangentDualFiniteness](Extension/Dubon2026/OriginalRelativeCotangentDualFiniteness.lean).

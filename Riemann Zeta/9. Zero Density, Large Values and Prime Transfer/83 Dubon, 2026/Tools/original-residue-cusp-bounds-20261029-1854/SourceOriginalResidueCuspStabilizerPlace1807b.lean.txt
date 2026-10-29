@@ -1,0 +1,72 @@
+import SourceOriginalResidueDiamondCuspChart1806a
+import Dubon2026.SourceCurvePlaceTransport
+import Dubon2026.SourceCurveLaurentPlaces
+import Dubon2026.SourceLaurentExpansionOrders
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> genuine residue cusp places and their actual
+stabilizers. Pull back the native Laurent valuation through the constructed
+original residue chart. Its j(q^N) image proves nontriviality and a genuine
+j-pole. The exact diamond twist identity preserves Laurent order, hence the
+normalized place order on every field element. No place or stabilizer witness
+is assumed; full-base labeling and the fiber bounds remain to be proved. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond SourceCurve
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem exists_originalResidueCuspStabilizerPlace (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N) (β : SL(2, ℤ)) :
+    ∃ w : Place kk (qExpFunctionFieldC kk (Gamma1 N)),
+      w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0 ∧
+      ∀ (γ : Gamma0 N) (j : ℤ),
+        (β⁻¹ * γ.val * β = ModularGroup.T ^ j ∨
+          β⁻¹ * γ.val * β = -(ModularGroup.T ^ j)) →
+        ∀ x : qExpFunctionFieldC kk (Gamma1 N),
+          w.ord (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x) = w.ord x := by
+  obtain ⟨Φ, hj, hΦ⟩ := exists_originalResidueDiamondCuspFieldHom A N ℓ hℓN ζ hζ β
+  let jF : qExpFunctionFieldC kk (Gamma1 N) :=
+    ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩
+  have ho : (Φ jF).order = -(N : ℤ) := by
+    rw [hj, laurent_order_qExpand, order_jqModC, mul_neg_one]
+  have hNpos : (0 : ℤ) < N := by exact_mod_cast NeZero.pos N
+  obtain ⟨w, e, he, hw⟩ := Place.exists_place_of_laurent_embedding Φ
+    ⟨jF, by rw [ho]; omega⟩
+  have hepos : (0 : ℤ) < e := by exact_mod_cast he
+  refine ⟨w, ?_, fun γ j hγ x => ?_⟩
+  · have h := hw jF
+    rw [ho] at h
+    change w.ord jF < 0
+    nlinarith
+  · have horder : (Φ (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x)).order = (Φ x).order := by
+      rw [hΦ γ j hγ x]
+      by_cases hx : x = 0
+      · rw [hx, map_zero, map_zero]
+      · exact laurent_order_qTwist _ _ (by simpa only [map_zero] using Φ.injective.ne hx)
+    have h1 := hw (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x)
+    have h2 := hw x
+    rw [horder] at h1
+    nlinarith
+
+theorem exists_originalResidueCuspFixedPlace (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N) (β : SL(2, ℤ)) :
+    ∃ w : Place kk (qExpFunctionFieldC kk (Gamma1 N)),
+      w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0 ∧
+      ∀ (γ : Gamma0 N) (j : ℤ),
+        (β⁻¹ * γ.val * β = ModularGroup.T ^ j ∨
+          β⁻¹ * γ.val * β = -(ModularGroup.T ^ j)) →
+        w.comapEquiv (originalResidueDiamondAction A N ℓ hℓN γ⁻¹) = w := by
+  obtain ⟨w, hwj, hw⟩ := exists_originalResidueCuspStabilizerPlace A N ℓ hℓN ζ hζ β
+  refine ⟨w, hwj, fun γ j hγ => ?_⟩
+  apply Place.ext
+  ext x
+  rw [Place.mem_iff_ord_nonneg, Place.mem_iff_ord_nonneg, Place.ord_comapEquiv, hw γ j hγ x]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

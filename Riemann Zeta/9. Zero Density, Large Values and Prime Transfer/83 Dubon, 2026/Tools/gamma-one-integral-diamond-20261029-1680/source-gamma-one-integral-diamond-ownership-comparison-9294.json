@@ -1,0 +1,236 @@
+{
+  "scratchSum": 93,
+  "scratchDistinct": 93,
+  "generatedNameRenamings": {},
+  "productionFocused": 93,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceFrickeLevelIntegralRing",
+        "SourceFrickeGammaOneNormalizer",
+        "SourceFrickeTraceSubgroup",
+        "SourceFrickeTraceForms",
+        "SourceFrickeDenominatorUniformization",
+        "SourceEvenWeightFrickeTrace"
+      ],
+      "count": 40,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceScratchOwnership1643.log",
+        "sha256": "7D1FB7492CABC5847EA2384DEA8091BE93DAABA2396652C88ADE4E17D0932D8B",
+        "sourceSha256": "D6C617411CC15DE9E529A0B84EBC2B0D3D8F88C429ECC1DB07D8450201782121"
+      }
+    },
+    {
+      "modules": [
+        "SourceIntegralSeriesScalarDescent",
+        "SourceIntegralSeriesCommonDenominator",
+        "SourceGammaOneAlgebraicCuspDenominator",
+        "SourceIntegralDiscriminantCancellation",
+        "SourceGammaOneAlgebraicFormDenominator",
+        "SourceEvenWeightBalance",
+        "SourceEvenWeightFrickeCommonDenominator",
+        "SourceEvenWeightUniformFrickeIntegrality"
+      ],
+      "count": 17,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformScratchOwnership1653.log",
+        "sha256": "3198B16ED1982E470C2DD0EE80E7BA7DD3AC637D8AE4F532952C7EAE88EEE354",
+        "sourceSha256": "D5F5DDDFDE97AECDD4D28F93EB094EE1E9C02AF3C57CDC90116DE215E5686301"
+      }
+    },
+    {
+      "modules": [
+        "SourceIntegralSlashCuspSubgroup",
+        "SourceIntegralSlashCuspChart",
+        "SourceIntegralSlashFrickeChart",
+        "SourceIntegralSlashSMove",
+        "SourceIntegralSlashTMove",
+        "SourceEvenWeightUniformSlashIntegrality"
+      ],
+      "count": 31,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashScratchOwnership1661.log",
+        "sha256": "EB3155131AC03953FFD77ABBDF6362461C6B8DB22C282CEFF5C8F2F120E38DA5",
+        "sourceSha256": "E27804C795837EAF4FE6B70CC6B7489E8C6867FAE8D83A8B6A0642D02E9DCB02"
+      }
+    },
+    {
+      "modules": [
+        "SourceRationalCuspDiamondFourier",
+        "SourceRationalDiscriminantCancellation",
+        "SourceRationalModularDiamondFourier",
+        "SourceEvenWeightIntegralDiamondForm"
+      ],
+      "count": 5,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondScratchOwnership1669.log",
+        "sha256": "9BF833E4F2079C55563368A5488DBCEC4435989407F79A79A08CE32B2997426D",
+        "sourceSha256": "662015BA606E38FD9F0AF2F9554BEBF31A1B8403D86F37C03160433F41CBFDD7"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondOwnership9294.log",
+    "sha256": "6BB6418AB6B8FC010C3A0DE2BF7D8E4381EE5DA80489EB501F638107DB4B0BB1",
+    "sourceSha256": "52067D1E4A24C0014D43661814136D2F89EA9FDD55007B60A5B645789CDBF739"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-224820-610.log",
+    "sha256": "03FBE6B8250C894D33FC8BE8BD687E4CABC58EC2F1DDC14FDEF8D6077E1B9284"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 24 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceFrickeLevelIntegralRing",
+        "scratchSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+        "productionSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeGammaOneNormalizer",
+        "scratchSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+        "productionSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTraceSubgroup",
+        "scratchSha256": "837B8047D05E74D8F3BDF2118D68D018DC21874231EF89F897735D5A15A51C5F",
+        "productionSha256": "0CC78CF0C7F988B69A0732012DB7E96E3C4C380BE0F4F4A5E0FB9D1F9C95C7BC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTraceForms",
+        "scratchSha256": "4A7012079BD1372D4BCF6A0A3F211EBC30512F648C347B6F49FDC464F8B02196",
+        "productionSha256": "49E6C8EDC08B557C3801F0B6B812C0575973BA31FFDD70887B1CA6CA7E8EC45D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeDenominatorUniformization",
+        "scratchSha256": "B2B66A0DA84FC972F18F28FFA0E197B41D29795A6FD709F3B5DEEE9A378F2600",
+        "productionSha256": "8CF081E46D0E15ECF55B34DC7E3BD7B45B3C020154B43F2C0E9D75836302A333",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightFrickeTrace",
+        "scratchSha256": "2DF92E3C6D6F1F082D0B5A5DA164CB2B47A6AA99F31246A5BC7A1C93AFB728AB",
+        "productionSha256": "DC213002B19390C43D74DD3A6A6D881BE6677078BC24608C759132DA94DC1242",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSeriesScalarDescent",
+        "scratchSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+        "productionSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSeriesCommonDenominator",
+        "scratchSha256": "06D5F3629916C3781631F3CE3A6C4FF9411BFA491B432C8A7E2005CB70524745",
+        "productionSha256": "8FC445104B61498267F036D922C6C7DB07061B7701C57F20B89E27F08DDA5656",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAlgebraicCuspDenominator",
+        "scratchSha256": "86E8AF9BC06BFEB5BDD3701134F26DB5C70E158396D52C52DE5BDF19EA2B5D68",
+        "productionSha256": "6A3FF583E178763BBD51ABA724AAB4D87F5CAEA067E0AFA57EE1DD7A542D9169",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiscriminantCancellation",
+        "scratchSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+        "productionSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAlgebraicFormDenominator",
+        "scratchSha256": "B454177EAC6479C52373F462907D7F55B12A27D3CCA789DF8F46BC92DD53E48A",
+        "productionSha256": "F8EA4211F8A43B7CEF047F6CA5C1E1E804420A2624F2A5C0D309CBEB65E9325D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightBalance",
+        "scratchSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+        "productionSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightFrickeCommonDenominator",
+        "scratchSha256": "963EC02EA4A586C78EE2011F013D30453487F451569016CFBA3C11A5F2678B7B",
+        "productionSha256": "FD298E46E8C147E73C32B5A2E6A097F846BD1F238559225176123F9A9CDAEBA2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightUniformFrickeIntegrality",
+        "scratchSha256": "4BF5FAF0E05F308DDF1F7828111F6A15895A26E6A2DA31E7571DEAC588FFAC20",
+        "productionSha256": "475892B72CAE36B98715AB2B7BC3AD4C80889DCF9359326FA51B6593B9561C79",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSlashCuspSubgroup",
+        "scratchSha256": "1313230CD9022348C9FE5D2F90305B9F9C8E907E36593C14F54526CCE158B544",
+        "productionSha256": "91253B4EF8064F457167312DECBFBB82D6FD0647C5F7F11C7024B389AE8ABE6C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSlashCuspChart",
+        "scratchSha256": "31DDCA3B3A21E4F6D635D4945A28D75341CC6CE0827EC166E87C5F2B569E3D38",
+        "productionSha256": "C64CE214C6D434E397311209476A0AA19FA31631497BCA9B3F0AB99AAC8B7F49",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSlashFrickeChart",
+        "scratchSha256": "AB239D15958418E3FA8B03182628A1D7251094EE9F68FB0BFD7022F9BD919B9F",
+        "productionSha256": "093AE3C32ED23BD17E615DE7EB10268FE90E2EC7F0C8C4D8051639B4F45262DD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSlashSMove",
+        "scratchSha256": "8F73E1C0F30D62A82D2D42B218DAAA7B1C284A09371A19DED487FD08B6AD2633",
+        "productionSha256": "331FC885A79B14EB7B9FD5FB27F26AA29F0CA2312050E34A568C14A76E1E4ECC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralSlashTMove",
+        "scratchSha256": "F58DC86BD55512FEAA7CDD3AA002CAF3DC761B4CD37CAC810E542FE33BACEAD0",
+        "productionSha256": "0834F1CD89066014F9E24034FD4DBD6CD4B1996350269AD06065917A8853AD89",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightUniformSlashIntegrality",
+        "scratchSha256": "971311FCF219F6597DE99D29102A1979E76503778AA111954633D100DF38BD04",
+        "productionSha256": "4D553A7F085CB84744A72EBE92862DFFE244E282C19C3E17FC7F4A316A830567",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceRationalCuspDiamondFourier",
+        "scratchSha256": "B4B4890619D93C3989DB917BCE1331103482810BAF66FB2E51DFA26CDB71BA94",
+        "productionSha256": "0A6A9872F478C981872E47BF2F212BB81557421C727D62A09F35A61BF1093469",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceRationalDiscriminantCancellation",
+        "scratchSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+        "productionSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceRationalModularDiamondFourier",
+        "scratchSha256": "C17DBA20C71AEA0B88EB8CA5B412E620B856FBCB574B8677F06B61CCB0F64FDF",
+        "productionSha256": "A948A9C08413436D612DE9E0579091821E7F2257F4E6C0379DEE974D8D7E3174",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEvenWeightIntegralDiamondForm",
+        "scratchSha256": "D36E7224DDACEDE4997DB31ADAD92D1ABFD24669031847B1192525F7ACE8F2F2",
+        "productionSha256": "48428585F20D84364830E712CEEE50F3F5BF2ED772C512A9BBCA5396CCB11CBD",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

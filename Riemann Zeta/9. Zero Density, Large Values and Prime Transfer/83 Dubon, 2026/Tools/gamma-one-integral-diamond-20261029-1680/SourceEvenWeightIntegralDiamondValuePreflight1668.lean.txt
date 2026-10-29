@@ -1,0 +1,31 @@
+import SourceRationalCuspDiamondFourier1664c
+import SourceRationalDiscriminantCancellation1665a
+import SourceRationalModularDiamondFourier1666a
+import SourceEvenWeightIntegralDiamondForm1667a
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form]
+  let localModules : Array Name := #[`SourceRationalCuspDiamondFourier1664c, `SourceRationalDiscriminantCancellation1665a, `SourceRationalModularDiamondFourier1666a, `SourceEvenWeightIntegralDiamondForm1667a, `SourceFrickeLevelIntegralRing, `SourceFrickeGammaOneNormalizer, `SourceFrickeTraceSubgroup, `SourceFrickeTraceForms, `SourceFrickeDenominatorUniformization, `SourceEvenWeightFrickeTrace, `SourceIntegralSeriesScalarDescent, `SourceIntegralSeriesCommonDenominator, `SourceGammaOneAlgebraicCuspDenominator, `SourceIntegralDiscriminantCancellation, `SourceGammaOneAlgebraicFormDenominator, `SourceEvenWeightBalance, `SourceEvenWeightFrickeCommonDenominator, `SourceEvenWeightUniformFrickeIntegrality, `SourceIntegralSlashCuspSubgroup, `SourceIntegralSlashCuspChart, `SourceIntegralSlashFrickeChart, `SourceIntegralSlashSMove, `SourceIntegralSlashTMove, `SourceEvenWeightUniformSlashIntegrality]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent, `Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff, `Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul, `Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd, `Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary, `Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent, `Dubon2026.SourceFricke.represents_rational_discriminantLaurent, `Dubon2026.SourceFricke.represents_rational_eisensteinFactorLaurent, `Dubon2026.SourceFricke.exists_integer_unit_eisensteinFactorLaurent, `Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor, `Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv, `Dubon2026.SourceFunctionField.GammaOne.modularDiamond, `Dubon2026.SourceFricke.qExpansion_coeff_width]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE EVEN WEIGHT INTEGRAL DIAMOND PREFLIGHT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual level-cleared integral diamond form consumer. Rational cusp and modular diamond coefficients are derived from the original rational expansion; full slash integrality supplies algebraic integrality; rational algebraic integers give the constructed integer Fourier series. Preservation of reduced relations, full reduced field action and degree/genus remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

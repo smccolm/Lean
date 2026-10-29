@@ -1,0 +1,1 @@
+Transport the named original topology along its proved maximal-adic equality. Apply the existing complete local Hausdorff theorem and finite-residue Noetherian compactness theorem in that same topology, then preserve the original topology in the conclusions.

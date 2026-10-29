@@ -1,0 +1,1 @@
+Restrict the actual scalar extension of the genuine fixed-residual quotient representation to the original group. Every original matrix is definitionally the given residual matrix. Apply the actual invariant-subspace restriction lemma to derive irreducibility of the same quotient representation over the original extension field.

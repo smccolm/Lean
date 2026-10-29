@@ -1,0 +1,7 @@
+### Actual original invariant scalar descent — 10 October 2026
+
+Extend the actual original matrices through a genuine coefficient-field algebra map. Every original invariant matrix is proved invariant for the same extended representation. Assuming that actual extended column-vector representation is irreducible over an algebraically closed extension, Schur gives a scalar there. A diagonal entry identifies that scalar with the image of an original coefficient, and injectivity of the actual field map descends the entire scalar matrix to the original field. The original field is not assumed algebraically closed.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixAdjointScalarDescent](Extension/Dubon2026/MatrixAdjointScalarDescent.lean).

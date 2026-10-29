@@ -1,0 +1,7 @@
+### Actual original trace-zero adjoint invariant vanishing — 10 October 2026
+
+For the actual trace-zero adjoint representation, coefficient inclusion sends an invariant to an original full-adjoint invariant. The proved scalar descent makes its matrix an original scalar matrix under explicit extension irreducibility. Its actual trace is the original matrix dimension times that scalar. When this dimension is nonzero in the original field, the scalar and entire invariant vanish. Nonempty matrix size is derived from that same dimension hypothesis.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TraceZeroAdjointInvariants](Extension/Dubon2026/TraceZeroAdjointInvariants.lean).

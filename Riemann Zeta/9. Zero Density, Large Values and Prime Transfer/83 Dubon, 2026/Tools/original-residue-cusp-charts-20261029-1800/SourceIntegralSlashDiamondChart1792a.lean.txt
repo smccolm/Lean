@@ -1,0 +1,60 @@
+import SourceIntegralSlashNormalizedCoordinate
+import Dubon2026.SourceIntegralDiamondWitness
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual diamond-chart equivariance. Native even
+slash invariance handles the signed cusp matrix. Native integral diamond
+witnesses and the literal slash composition rule compute their cusp reductions;
+the clearing power is explicit and will cancel in the normalized field value. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke IntegralDiamond UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+
+theorem reducedSlashSeries_neg_matrix {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (β : SL(2, ℤ)) :
+    reducedSlashSeries N hk f hp (-β) φ hN = reducedSlashSeries N hk f hp β φ hN := by
+  have he : slashCoefficientSeries N hk f hp (-β) = slashCoefficientSeries N hk f hp β := by
+    apply PowerSeries.map_injective (RN N).subtype Subtype.val_injective
+    rw [slashCoefficientSeries_map, slashCoefficientSeries_map,
+      ← ModularForm.SL_slash, ← ModularForm.SL_slash, IntegralTrace.slash_neg_even hk]
+  simp only [reducedSlashSeries, he]
+
+theorem normalizedSlashValue_neg_matrix (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ]
+    (β : SL(2, ℤ)) {x : LaurentSeries K} (hx : x ∈ normalizedGenerators N K) :
+    normalizedSlashValue N φ hN (-β) x = normalizedSlashValue N φ hN β x := by
+  obtain ⟨r, f, p, hp, rfl⟩ := hx
+  rw [normalizedSlashValue_eq N φ hN (-β) ℓ f hp rfl,
+    normalizedSlashValue_eq N φ hN β ℓ f hp rfl,
+    reducedSlashSeries_neg_matrix, reducedSlashSeries_neg_matrix]
+
+theorem reducedSlashSeries_scaledDiamond {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (γ : Gamma0 N) (a : ℕ) (hP : IsIntegralQExp (scaledDiamond N γ a f) P)
+    (β : SL(2, ℤ)) :
+    reducedSlashSeries N hk (scaledDiamond N γ a f) hP β φ hN =
+      PowerSeries.C ((N : K) ^ a) * reducedSlashSeries N hk f hp (γ.val * β) φ hN := by
+  have hq : qExpansion (N : ℝ)
+      ((⇑(scaledDiamond N γ a f) : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) =
+      (N : ℂ) ^ a • qExpansion (N : ℝ)
+        ((⇑f : ℍ → ℂ) ∣[k] ((γ.val * β : SL(2, ℤ)) : GL (Fin 2) ℝ)) := by
+    rw [coe_scaledDiamond, ← ModularForm.SL_slash, ModularForm.SL_smul_slash,
+      ← SlashAction.slash_mul, ModularForm.SL_slash]
+    exact ModularForm.qExpansion_smul (Nat.cast_pos.mpr (NeZero.pos N))
+      (cusp_strictPeriod N (γ.val * β)) ((N : ℂ) ^ a)
+      (ModularForm.translate f ((γ.val * β : SL(2, ℤ)) : GL (Fin 2) ℝ))
+  have he : slashCoefficientSeries N hk (scaledDiamond N γ a f) hP β =
+      PowerSeries.C ((N : RN N) ^ a) * slashCoefficientSeries N hk f hp (γ.val * β) := by
+    apply PowerSeries.map_injective (RN N).subtype Subtype.val_injective
+    rw [slashCoefficientSeries_map, map_mul, PowerSeries.map_C,
+      slashCoefficientSeries_map, map_pow, map_natCast, ← PowerSeries.smul_eq_C_mul]
+    exact hq
+  unfold reducedSlashSeries
+  rw [he, map_mul, PowerSeries.map_C, map_pow, map_natCast]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

@@ -1,0 +1,64 @@
+{
+  "modules": [
+    "SourceOriginalResidueDiamondCommute",
+    "SourceOriginalResidueDiamondFiberStabilizer",
+    "SourceOriginalResidueLabeledCuspFiber"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index",
+    "Dubon2026.SourceCurve.Place.exists_comapEquiv_of_restrict_eq"
+  ],
+  "localModules": [
+    "SourceOriginalResidueDiamondCommute",
+    "SourceOriginalResidueDiamondFiberStabilizer",
+    "SourceOriginalResidueLabeledCuspFiber",
+    "SourceIntegralSlashRaisedLevelOne",
+    "SourceIntegralSlashCuspTriangular",
+    "SourceIntegralSlashRaisedCuspFormula",
+    "SourceIntegralSlashTriangularParameter",
+    "SourceIntegralSlashRaisedCuspCoefficients",
+    "SourceIntegralSlashRaisedCuspReduction",
+    "SourceIntegralSlashRaisedCuspLaurent",
+    "SourceIntegralSlashRaisedCuspCoordinate",
+    "SourceIntegralSlashCuspCoordinate",
+    "SourceOriginalResidueFullCuspChart",
+    "SourceOriginalResidueCuspBaseComparison",
+    "SourceOriginalResidueCuspPlaceOverBase",
+    "SourceOriginalResidueCuspMatrix",
+    "SourceOriginalResidueLabeledCuspPlace",
+    "SourceIntegralDiamondNormalizedAction",
+    "SourceIntegralSlashFieldNormalizedRatio",
+    "SourceIntegralDiamondScalarNormalizedAction",
+    "SourceIntegralSlashDiamondGenerator",
+    "SourceIntegralSlashDiamondStabilizer",
+    "SourceOriginalResidueDiamondCuspChart",
+    "SourceOriginalResidueCuspStabilizerPlace"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceOriginalResidueDiamondCommute": "SourceOriginalResidueDiamondCommute-1844",
+    "SourceOriginalResidueDiamondFiberStabilizer": "SourceOriginalResidueDiamondFiberStabilizer-1844",
+    "SourceOriginalResidueLabeledCuspFiber": "SourceOriginalResidueLabeledCuspFiber-1844"
+  }
+}

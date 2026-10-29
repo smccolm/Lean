@@ -1,0 +1,7 @@
+### Actual actual original unframed fixed-quotient equivalence — 10 October 2026
+
+The existing original framed fixed-quotient equivalence preserves and reflects actual strict conjugacy, using an original representative of every quotient element. Descend that actual equivalence with the pinned Quotient.congr constructor to the existing original unframed deformation classes and prove its value on every original framed class.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedFixedQuotientEquivalence](Extension/Dubon2026/OriginalUnframedFixedQuotientEquivalence.lean).

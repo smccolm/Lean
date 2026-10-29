@@ -1,0 +1,7 @@
+### Actual actual trace coefficient and original unframed class bijection — 10 October 2026
+
+For the actual original completed presentation trace ring, evaluate its genuine whole descended representation through the existing continuous residue-preserving coefficient maps. Equality of original classes implies whole strict conjugacy and therefore equality of all actual trace coefficients. Conversely, choose an existing original framed representative of any class and use the proved unique trace-coefficient construction. Exact original reduction compatibility makes this a genuine map in the existing coefficient fiber.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CompletedTraceCoefficientClassBijection](Extension/Dubon2026/CompletedTraceCoefficientClassBijection.lean).

@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [IsLocalRing R]
+
+/-- Exact original-object consumer of `localMatrixRepresentation_span_eq_top`. -/
+theorem actual_local_matrix_representation_spanning_localMatrixRepresentation_span_eq_top_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+    (ρ : G →* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ)))] :
+    Submodule.span R (Set.range (fun g => (ρ g).val)) = ⊤ :=
+  localMatrixRepresentation_span_eq_top (L := L) ρ
+
+end
+

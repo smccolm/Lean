@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G K : Type*} [Group G] [Field K]
+
+/-- Exact original-object consumer of `residualOrdinary_exists_nonidentity`. -/
+theorem actual_residual_ordinary_nontrivial_element_residualOrdinary_exists_nonidentity_source
+    (ρ : G →* GeneralLinearGroup (Fin 2) K)
+    (e : (matrixStandardRepresentation ρ).invariants ≃ₗ[K] K) :
+    ∃ g, ρ g ≠ 1 :=
+  residualOrdinary_exists_nonidentity ρ e
+
+end
+

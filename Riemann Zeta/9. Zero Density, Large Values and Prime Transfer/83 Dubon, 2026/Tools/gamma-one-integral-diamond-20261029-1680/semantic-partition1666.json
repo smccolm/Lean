@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-10",
+  "reason": "Default aggregate module-export symbol-indexing timeout, not a proof failure. Named let-binding experiment did not lower the measured cost and was reverted.",
+  "preservedConsumers": 1033,
+  "movedConsumers": 85,
+  "movedSourceSHA256": "f52e39063335d2e971255e37935ca3658cc2e65a3cd83d00e7ffab43c13be5cc",
+  "consumerNamesSignaturesAndBodies": "Exact verbatim partition verified against before1666repair source.",
+  "mandatoryModules": [
+    "ArithmeticSemanticRegression",
+    "SemanticRegression",
+    "Audit"
+  ],
+  "status": "FINAL PASS: actual zero exits consumed for all focuses and sequential foundation/paper verifiers; zero diagnostics; combined1666 receipt recorded.",
+  "log": "semanticPartition1666-focus.log",
+  "hashes": {
+    "SemanticRegression": "a4745fcb4ff779041007cb1e3ec5cd5fab85c48f80985665b41c125eaf86831d",
+    "ArithmeticSemanticRegression": "9b93908257157149b98f82b4dab79981238afeb146d46b11024a5e8d65d52cdb"
+  },
+  "paper": "logs/dubon-build-20261010-032241-806.log",
+  "foundation": "../../logs/foundation_freeze_20261010_031925.log",
+  "counts": [
+    1666,
+    1033,
+    7027,
+    13224
+  ],
+  "linters": [
+    8782,
+    6323
+  ]
+}

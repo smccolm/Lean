@@ -1,0 +1,60 @@
+{
+  "status": "Prepared only; predecessor9330 canonical PASS archived. Full acceptance remains 16/20.",
+  "modules": 44,
+  "queries": 109,
+  "theorems": 90,
+  "constructions": 19,
+  "exhaustiveScratchChecks": 168,
+  "proofValueChecks": 205,
+  "scopes": 6,
+  "receipts": {
+    "source-reduced-diamond-scalar-1-scratch-receipt.json": "68D4FB6A688FD790AFE84AC1F6131968A4B4F490E9C6FCDE00A2F989C9A24E2E",
+    "source-original-residue-fixed-fibers-1-scratch-receipt.json": "0A633BE1AB4A22873A2A3B81404B264A407B018FA7226C09E30106E6CB8D326D",
+    "source-integral-slash-chart-relations-1-scratch-receipt.json": "EF5441CD2AAE11C264472093A6E052791CF6A053A29CAF507567F2F42C4E87A1",
+    "source-original-residue-slash-embedding-1-scratch-receipt.json": "5C7511460CC1C2DBBF4F2885908B5452E014F1BAC91FE21C7FD1663C2870BA1D",
+    "source-prescribed-residue-cusp-chart-1-scratch-receipt.json": "422081529D4AECB4E9B9868A8AD343C4D60E4E2A832745508A9A46DD0BA5F64D",
+    "source-reduced-cusp-translation-1-scratch-receipt.json": "D19D43610498F33F2515F887E39467E25E401CADB61E44C9CF4D732BD553680E"
+  },
+  "expectedConsumers": 27336,
+  "expectedConstructions": 2979,
+  "fullGoal": "The actual diamond action still needs to be identified with the constructed cusp chart on all field elements. The second full-base slot, finite elliptic charts (including residue characteristics two and three), residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_original_residue_cusp_charts_9374.py",
+      "sha256": "241A18C9C6A93B5EDB9832133C5A044387AA4D8D1D31D283B4E4FB73B10B51BD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_original_residue_cusp_charts_production_ownership_9374.py",
+      "sha256": "53335B617FFD2A565AED6337BF28EB188C98289FC12F157D491B7816A0AA93D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_original_residue_cusp_charts_global_ownership_9374.py",
+      "sha256": "571A34747D34BED7E6809F713164E76543D2D287F82A8F59862AA947EC090D16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_original_residue_cusp_charts_ownership_9374.py",
+      "sha256": "7ECA85FA484496076EBDC8E3DEBA3C0ED0FD7902F6518EAFBDDD4DBE9E301624"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_original_residue_cusp_charts_9374.py",
+      "sha256": "E5FBEF7695864A018247C01BC351BB3739F5AEBCF57BD85EAAC030C4D5080409"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_original_residue_cusp_charts_9374.ps1",
+      "sha256": "2BC8EBD3663EEE92361840A46056168AFD55144B1DF976D19ECF6075E6C473F4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_original_residue_cusp_charts_9374.ps1",
+      "sha256": "8AB1339E78511E5099405CA2D69BB97B95CA5420767D03A71BE8D8B1AAEFF440"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_original_residue_cusp_charts_canonical_9374.py",
+      "sha256": "9FD7877741C7C52F8B9D9DCD0FA7ED6BD581EE2C87DE05851334577F4183837D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_original_residue_cusp_charts_9374.py",
+      "sha256": "DCBE5FCE7F5F85EC5F4180A4E1FA8E56509F2C25E12E0F4314DD2DE478CAECFB"
+    }
+  ],
+  "productionMutation": false
+}

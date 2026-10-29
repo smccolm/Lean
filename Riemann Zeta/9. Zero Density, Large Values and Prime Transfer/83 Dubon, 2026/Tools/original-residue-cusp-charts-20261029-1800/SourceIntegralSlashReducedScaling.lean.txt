@@ -1,0 +1,36 @@
+import SourceIntegralSlashReducedSeries
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> reduced slash chart. Actual integer scaling
+commutes with the localized coefficient reduction. This is the scaling step
+needed to transfer a mod-ell zero integral expansion to every cusp chart.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem reducedSlashSeries_of_coe_int_smul (N : ℕ) [NeZero N] {k : ℤ}
+    (hk : Even k) (f F : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (hP : IsIntegralQExp F P) (β : SL(2, ℤ))
+    {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+    (c : ℤ) (hF : (⇑F : ℍ → ℂ) = (c : ℂ) • (⇑f : ℍ → ℂ)) :
+    reducedSlashSeries N hk F hP β φ hN =
+      PowerSeries.C (c : K) * reducedSlashSeries N hk f hp β φ hN := by
+  have hq : qExpansion (N : ℝ) ((⇑F : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) =
+      (c : ℂ) • qExpansion (N : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) := by
+    rw [hF, ← ModularForm.SL_slash, ModularForm.SL_smul_slash]
+    exact ModularForm.qExpansion_smul (Nat.cast_pos.mpr (NeZero.pos N))
+      (cusp_strictPeriod N β) (c : ℂ) (ModularForm.translate f (β : GL (Fin 2) ℝ))
+  have he : slashCoefficientSeries N hk F hP β =
+      PowerSeries.C (c : RN N) * slashCoefficientSeries N hk f hp β := by
+    apply PowerSeries.map_injective (RN N).subtype Subtype.val_injective
+    rw [slashCoefficientSeries_map, map_mul, PowerSeries.map_C,
+      slashCoefficientSeries_map, map_intCast, ← PowerSeries.smul_eq_C_mul]
+    exact hq
+  unfold reducedSlashSeries
+  rw [he, map_mul, PowerSeries.map_C, map_intCast]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

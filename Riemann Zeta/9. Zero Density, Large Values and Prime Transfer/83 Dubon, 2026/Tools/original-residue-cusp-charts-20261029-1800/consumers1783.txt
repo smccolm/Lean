@@ -1,0 +1,33 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G O R : Type*} [Group G] [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `matrixOrdinaryRelationQuotient_localData`. -/
+theorem actual_residual_ordinary_relation_quotient_matrixOrdinaryRelationQuotient_localData_source
+    [IsNoetherianRing R] [Finite (IsLocalRing.ResidueField O)]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (σ : G →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (hρ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (g₀ : G) (hg₀ : σ g₀ ≠ 1)
+    (hOrd : Nonempty ((matrixStandardRepresentation σ).invariants ≃ₗ[IsLocalRing.ResidueField O]
+        IsLocalRing.ResidueField O) ∧
+      ∃ N : Submodule (IsLocalRing.ResidueField O) (Fin 2 → IsLocalRing.ResidueField O),
+        IsCompl (matrixStandardRepresentation σ).invariants N) :
+    let J := matrixOrdinaryRelationIdeal ρ g₀
+    letI := matrixOrdinaryRelationQuotient_isLocal eR ρ σ hρ g₀ hg₀ hOrd
+    IsNoetherianRing (R ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (R ⧸ J)) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  matrixOrdinaryRelationQuotient_localData hR eR ρ σ hρ g₀ hg₀ hOrd
+
+end
+

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "SimpleModuleBurnside",
+  "mathematics": "Pinned Schur makes every actual module endomorphism an original scalar for a simple finite-dimensional module over an algebraically closed coefficient field. Thus each original coefficient-linear map is genuinely linear over the original module endomorphism ring. Applying the proved Jacobson density theorem to an actual finite original basis realizes this map by an element of the same acting algebra, giving surjectivity of the actual algebra action.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned jacobson_density proof, IsSimpleModule Schur, actual Representation.asModule/asModuleEquiv/asAlgebraHom and MonoidAlgebra.lift_apply inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/SimpleModule/Basic.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "draftVerification": "lake env lean D/SimpleModuleBurnside.lean passed actual exit0 with zero diagnostics; production build not yet run.",
+  "productionLog": "simpleModuleBurnside1660-focus.log"
+}

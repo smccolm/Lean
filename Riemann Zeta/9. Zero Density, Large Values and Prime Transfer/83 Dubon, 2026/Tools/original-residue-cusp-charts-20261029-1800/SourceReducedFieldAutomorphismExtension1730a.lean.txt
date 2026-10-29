@@ -1,0 +1,47 @@
+import SourceReducedFieldTensorFraction1727c
+import Mathlib.RingTheory.TensorProduct.Maps
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue fiber bounds -> extension of the actual prime-field diamond action.
+The faithful tensor and its actual fraction field now extend every original
+prime-field automorphism to the original larger coefficient field. Native
+fraction-ring equivalence transport supplies the inverse and multiplicativity;
+the coefficient formula connects it to the already proved diamond action. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField GammaOne
+open scoped MatrixGroups TensorProduct
+attribute [local instance] originalFieldScalarAlgebra originalFieldTensorAlgebra
+
+private instance originalFieldTensorScalarTower {K L : Type*}
+    [Field K] [Field L] [Algebra K L] (Γ : Subgroup SL(2, ℤ)) :
+    IsScalarTower L (L ⊗[K] qExpFunctionFieldC K Γ) (qExpFunctionFieldC L Γ) :=
+  IsScalarTower.of_algebraMap_eq fun a => (originalFieldTensorEval Γ).commutes a |>.symm
+
+/-- Extend an actual original-field automorphism through faithful scalar tensor and fractions. -/
+def originalFieldAutomorphismExtension {K L : Type*} [Field K] [Field L] [Algebra K L]
+    (Γ : Subgroup SL(2, ℤ)) (σ : qExpFunctionFieldC K Γ ≃ₐ[K] qExpFunctionFieldC K Γ) :
+    qExpFunctionFieldC L Γ ≃ₐ[L] qExpFunctionFieldC L Γ := by
+  letI := originalField_isFractionRing (K := K) (L := L) Γ
+  exact IsFractionRing.algEquivOfAlgEquiv
+    (Algebra.TensorProduct.congr (AlgEquiv.refl L L) σ)
+
+theorem originalFieldAutomorphismExtension_coeff {K L : Type*}
+    [Field K] [Field L] [Algebra K L] (Γ : Subgroup SL(2, ℤ))
+    (σ : qExpFunctionFieldC K Γ ≃ₐ[K] qExpFunctionFieldC K Γ)
+    (x : qExpFunctionFieldC K Γ) :
+    originalFieldAutomorphismExtension (L := L) Γ σ (originalFieldCoefficientHom Γ x) =
+      originalFieldCoefficientHom Γ (σ x) := by
+  letI := originalField_isFractionRing (K := K) (L := L) Γ
+  change IsFractionRing.algEquivOfAlgEquiv
+    (Algebra.TensorProduct.congr (AlgEquiv.refl L L) σ)
+    (algebraMap (L ⊗[K] qExpFunctionFieldC K Γ) (qExpFunctionFieldC L Γ) (1 ⊗ₜ[K] x)) = _
+  rw [IsFractionRing.algEquivOfAlgEquiv_algebraMap]
+  change originalFieldTensorEval (L := L) Γ
+    (Algebra.TensorProduct.congr (AlgEquiv.refl L L) σ (1 ⊗ₜ[K] x)) = _
+  simp only [Algebra.TensorProduct.congr_apply, Algebra.TensorProduct.map_tmul,
+    AlgEquiv.toAlgHom_eq_coe, AlgEquiv.coe_algHom, AlgEquiv.refl_apply,
+    originalFieldTensorEval_tmul, one_smul]
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

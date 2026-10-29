@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientRetraction_maximalIdeal_pow_comap`. -/
+theorem actual_coefficient_retraction_ideal_powers_coefficientRetraction_maximalIdeal_pow_comap_source
+    (S : Subalgebra O R) [IsLocalRing S] [IsLocalHom S.val.toRingHom]
+    (f : R →ₐ[O] S) (hfix : ∀ x : S, f x = x) (n : ℕ) :
+    ((IsLocalRing.maximalIdeal R) ^ n).comap S.val.toRingHom =
+      (IsLocalRing.maximalIdeal S) ^ n :=
+  coefficientRetraction_maximalIdeal_pow_comap S f hfix n
+
+end
+

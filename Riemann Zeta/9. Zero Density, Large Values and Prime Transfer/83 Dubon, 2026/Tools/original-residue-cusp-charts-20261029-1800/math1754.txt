@@ -1,0 +1,1 @@
+Evaluate the original whole representation and its actual fixed-quotient factor through the same genuine continuous residue-preserving coefficient map. Prove that the existing unframed quotient equivalence carries one evaluated class to the other, entry by entry. Transfer injectivity and surjectivity of the proved quotient class map to the original whole-group class map.

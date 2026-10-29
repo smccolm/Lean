@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι κ R : Type*} [Fintype ι] [DecidableEq ι]
+  [Fintype κ] [DecidableEq κ] [CommRing R]
+
+/-- Exact original-object consumer of `matrixTraceGram_det_isUnit`. -/
+theorem actual_matrix_trace_gram_matrixTraceGram_det_isUnit_source (b : Basis κ R (Matrix ι ι R)) :
+    IsUnit (matrixTraceGram b).det :=
+  matrixTraceGram_det_isUnit b
+
+end
+

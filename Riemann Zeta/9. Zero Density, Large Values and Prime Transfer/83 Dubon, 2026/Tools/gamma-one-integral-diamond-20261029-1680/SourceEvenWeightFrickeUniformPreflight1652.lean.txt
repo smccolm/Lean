@@ -1,0 +1,66 @@
+import SourceIntegralSeriesScalarDescent1642b
+import SourceIntegralSeriesCommonDenominator1644b
+import SourceGammaOneAlgebraicCuspDenominator1645b
+import SourceIntegralDiscriminantCancellation1646b
+import SourceGammaOneAlgebraicFormDenominator1647a
+import SourceEvenWeightBalance1648b
+import SourceEvenWeightFrickeCommonDenominator1649c
+import SourceEvenWeightUniformFrickeIntegrality1650b
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeForm
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralSeriesScalarDescent1642b, `SourceIntegralSeriesCommonDenominator1644b, `SourceGammaOneAlgebraicCuspDenominator1645b, `SourceIntegralDiscriminantCancellation1646b, `SourceGammaOneAlgebraicFormDenominator1647a, `SourceEvenWeightBalance1648b, `SourceEvenWeightFrickeCommonDenominator1649c, `SourceEvenWeightUniformFrickeIntegrality1650b]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance, `Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm, `Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.frickeForm]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE EVEN WEIGHT FRICKE UNIFORM PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceIntegralSeriesScalarDescent1642b
+#lint in SourceIntegralSeriesCommonDenominator1644b
+#lint in SourceGammaOneAlgebraicCuspDenominator1645b
+#lint in SourceIntegralDiscriminantCancellation1646b
+#lint in SourceGammaOneAlgebraicFormDenominator1647a
+#lint in SourceEvenWeightBalance1648b
+#lint in SourceEvenWeightFrickeCommonDenominator1649c
+#lint in SourceEvenWeightUniformFrickeIntegrality1650b

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalCoefficientFiberProductClasses",
+  "mathematics": "Use the existing original continuous framed fiber and its genuine strict-conjugacy quotient over the actual coefficient fiber product with its constructed true residue and original maximal-adic topology. Apply the already proved originalUnframedPostcomp to both actual algebra projections using their proved continuity and genuine whole residue identities. Prove that equality of each projected original class is exactly strict conjugacy of the entire corresponding projected representations.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact existing OriginalContinuousFramedFiber, originalUnframedPostcomp, originalUnframedClass_eq_iff and actual matrixStrictlyConjugate_fiberProduct_of_projections signatures and proofs inspected. D-only drafts derive original topology/residue and residual irreducibility bridges explicitly. Levin Lecture5 Proposition1.6 supplies the source coefficient fiber-product setting; no external Lean proof imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/HopkinsLevitzki.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "prePromotionReview": [
+    "Select the genuine maximal-adic topology explicitly when accessing an original continuous framed lift over the subtype coefficient ring; prevents a fresh product-subtype instance from being inferred instead. The topology itself is unchanged."
+  ],
+  "productionFixes": [
+    "Select the actual maximal-adic topology explicitly for original fiber-product framed values, preserving the true original WithIdeal topology rather than inferring the available product-subtype instance.",
+    "Omit unused IsLocalRing C only from the first projected-class equality criterion; the original first projection does not require it. No warning suppression."
+  ],
+  "productionLog": "originalFiberClasses1685b-focus.log"
+}

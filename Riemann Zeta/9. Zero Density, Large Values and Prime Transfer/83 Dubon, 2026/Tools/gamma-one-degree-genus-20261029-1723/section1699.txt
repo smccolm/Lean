@@ -1,0 +1,7 @@
+### Actual actual trace coordinate descent — 10 October 2026
+
+Form the genuine trace Gram matrix with entries in an actual unit-reflecting coefficient subalgebra. Its mapped determinant is the proved original Gram unit, so reflection gives a unit in the subalgebra itself. Invert that same matrix there. Evaluate original trace pairings against the entire basis expansion and solve the resulting row-vector equation; every actual coordinate belongs to the original subalgebra, and the original matrix lies in its span over that subalgebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTraceBasisCoordinates](Extension/Dubon2026/MatrixTraceBasisCoordinates.lean).

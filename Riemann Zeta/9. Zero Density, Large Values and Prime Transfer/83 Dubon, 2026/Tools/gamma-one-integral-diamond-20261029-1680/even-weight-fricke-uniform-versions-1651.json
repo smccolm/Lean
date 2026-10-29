@@ -1,0 +1,10 @@
+{
+  "SourceIntegralSeriesScalarDescent": "1642b",
+  "SourceIntegralSeriesCommonDenominator": "1644b",
+  "SourceGammaOneAlgebraicCuspDenominator": "1645b",
+  "SourceIntegralDiscriminantCancellation": "1646b",
+  "SourceGammaOneAlgebraicFormDenominator": "1647a",
+  "SourceEvenWeightBalance": "1648b",
+  "SourceEvenWeightFrickeCommonDenominator": "1649c",
+  "SourceEvenWeightUniformFrickeIntegrality": "1650b"
+}

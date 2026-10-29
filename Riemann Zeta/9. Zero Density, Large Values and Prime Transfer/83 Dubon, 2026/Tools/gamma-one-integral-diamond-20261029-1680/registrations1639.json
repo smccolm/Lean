@@ -1,0 +1,11 @@
+[
+  "Dubon2026.originalResidueRepresentative_residue",
+  "Dubon2026.originalResidueDifference_mem",
+  "Dubon2026.relativeMaximalCotangentValue_eq",
+  "Dubon2026.relativeMaximalCotangentValue_add",
+  "Dubon2026.relativeMaximalCotangentValue_smul",
+  "Dubon2026.relativeMaximalCotangentValue_mul",
+  "Dubon2026.relativeMaximalCotangentDerivation_maximal",
+  "Dubon2026.relativeMaximalCotangentDerivation_surjective",
+  "Dubon2026.SemanticRegression.actual_relative_maximal_cotangent_derivation_relativeMaximalCotangentDerivation_surjective_source"
+]

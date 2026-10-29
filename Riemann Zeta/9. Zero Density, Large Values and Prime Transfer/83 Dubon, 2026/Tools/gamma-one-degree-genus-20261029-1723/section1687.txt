@@ -1,0 +1,7 @@
+### Actual original coefficient fiber-product class injectivity — 10 October 2026
+
+For the actual original absolutely irreducible residual representation, take representatives of two genuine original coefficient fiber-product classes with equal actual projections. The proved class equality criteria provide strict conjugacy of both whole projected representations. Derive the stabilizer-lifting residual irreducibility condition from the original fixed-residue lift through the proved true-residue transport identity. Apply the proved conjugator alignment and whole fiber-product strict gluing, then use the genuine first residue identity to conclude equality in the original strict quotient. Thus both actual projected classes determine the original class.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalCoefficientFiberProductClassInjectivity](Extension/Dubon2026/OriginalCoefficientFiberProductClassInjectivity.lean).

@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {A B C : Type} [CommRing A] [CommRing B] [CommRing C]
+
+/-- Exact original-object consumer of `coefficientFiberProduct_isLocalRing`. -/
+theorem actual_local_coefficient_fiber_product_coefficientFiberProduct_isLocalRing_source [IsLocalRing A]
+    (f : A →+* C) (g : B →+* C) [IsLocalHom g] :
+    IsLocalRing (CoefficientFiberProduct f g) :=
+  coefficientFiberProduct_isLocalRing f g
+
+end
+

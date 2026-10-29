@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G H ι K : Type} [Group G] [Group H] [Fintype ι] [DecidableEq ι] [Field K]
+  [TopologicalSpace G] [TopologicalSpace H] [TopologicalSpace K] [IsTopologicalRing K]
+
+/-- Exact original-object consumer of `continuousTraceZeroH1Restriction_eq_zero_iff`. -/
+theorem actual_continuous_trace_zero_restriction_continuousTraceZeroH1Restriction_eq_zero_iff_source
+    (hn : (Fintype.card ι : K) ≠ 0)
+    (ρ : G →* GeneralLinearGroup ι K) (hρ : Continuous ρ)
+    (φ : H →* G) (hφ : Continuous φ) (x : ContinuousTraceZeroAdjointH1 ρ hρ) :
+    continuousTraceZeroH1Restriction ρ hρ φ hφ x = 0 ↔
+      continuousMatrixAdjointH1Restriction ρ hρ φ hφ
+        (continuousTraceZeroH1Inclusion ρ hρ x) = 0 :=
+  continuousTraceZeroH1Restriction_eq_zero_iff hn ρ hρ φ hφ x
+
+end
+

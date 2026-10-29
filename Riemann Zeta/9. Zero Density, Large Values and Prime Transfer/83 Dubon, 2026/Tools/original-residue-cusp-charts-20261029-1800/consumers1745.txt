@@ -1,0 +1,48 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedTraceCoefficientClass_bijective`. -/
+theorem actual_completed_trace_coefficient_class_bijection_completedTraceCoefficientClass_bijective_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    [IsLocalRing (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq))]
+    [IsLocalHom (closedMatrixTraceAlgebra (O := O)
+      (completedPresentationRepresentation ρ H q hq)).val.toRingHom]
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (σ₀ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ₀ : (σ₀.comp q.toMonoidHom).comp
+      (ProfiniteGrp.ProfiniteCompletion.eta (GrpCat.of G)).hom = ρ)
+    (τ : H →ₜ* GeneralLinearGroup ι
+      (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)))
+    (hτ : MatrixStrictlyConjugate
+      (IsLocalRing.residue (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))
+      ((GeneralLinearGroup.map
+        (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)).val.toRingHom).comp
+          τ.toMonoidHom) (completedPresentationRepresentation ρ H q hq))
+    (hτres : (GeneralLinearGroup.map (localCoefficientReduction
+      (coefficientSubalgebraResidueEquiv (completedPresentationResidueEquiv ρ q.toMonoidHom.ker)
+        (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)))).toRingHom).comp
+          τ.toMonoidHom = σ₀) :
+    Function.Bijective (originalCoefficientRepresentationClass
+      (coefficientSubalgebraResidueEquiv (completedPresentationResidueEquiv ρ q.toMonoidHom.ker)
+        (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)))
+      eA H σ₀ τ hτres) :=
+  completedTraceCoefficientClass_bijective hA ρ H q hq eA σ₀ hσ₀ τ hτ hτres
+
+end
+

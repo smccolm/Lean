@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "AdicMatrixIdempotentLifting",
+  "mathematics": "Use the actual cubic error bounds to prove that the idempotency errors tend to zero. Prove that every iterate retains the original seed reduction. Construct the actual coefficientwise limit by original adic completeness, use original matrix continuity and separatedness to prove it idempotent, and use closedness of the original subalgebra and of the original coefficient ideal to preserve algebra membership and the exact original reduction.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: original adic Cauchy compatibility, completeness, matrix topology, genuine residue maps and cubic error identities inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Reduced the actual zero-matrix coordinate before applying the original scalar adic neighborhood basis.",
+    "Made the ideal type explicit before coercing its first power to a set in the closed-ideal argument. No topology, completeness hypothesis or mathematical conclusion changed."
+  ],
+  "productionLog": "adicIdempotent1706b-focus.log"
+}

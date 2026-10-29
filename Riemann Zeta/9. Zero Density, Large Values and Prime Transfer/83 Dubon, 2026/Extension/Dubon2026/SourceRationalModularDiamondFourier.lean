@@ -1,0 +1,51 @@
+import Dubon2026.SourceRationalCuspDiamondFourier
+import Dubon2026.SourceRationalDiscriminantCancellation
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> level-cleared integral diamond forms. Multiply the actual modular
+form by Delta, apply the proved rational cusp diamond theorem, and
+cancel the actual integral eta unit. Every rationality input is read
+from the original Fourier series; rationality of the transform is
+proved, not supplied. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+theorem rational_modular_diamond_coeff (N : ℕ) [NeZero N] {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) (y : PowerSeries ℚ)
+    (hy : y.map (algebraMap ℚ ℂ) = qExpansion 1 f) (g : Gamma0 N) :
+    ∀ n : ℕ, (qExpansion 1 (GammaOne.modularDiamond N g f)).coeff n ∈
+      (algebraMap ℚ ℂ).range := by
+  let D : CuspForm (Gamma1 N) 12 :=
+    cuspRestrictSubgroup (Subgroup.map_le_range _ (Gamma1 N)) CuspForm.discriminant
+  let G := D.mulModularForm f
+  let d : PowerSeries ℚ := (PowerSeries.X * dedekindEtaUnit).map (Int.castRingHom ℚ)
+  have hd : d.map (algebraMap ℚ ℂ) = qExpansion 1 ModularForm.discriminant := by
+    rw [qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit]
+    ext n
+    simp only [d, PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+  have hyG : (d * y).map (algebraMap ℚ ℂ) = qExpansion 1 G := by
+    rw [map_mul, hd, hy]
+    change _ = qExpansion 1 (((D : ModularForm (Gamma1 N) 12).mul f) : ℍ → ℂ)
+    rw [ModularForm.qExpansion_mul one_pos (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+    rfl
+  have hDslash : (⇑D : ℍ → ℂ) ∣[(12 : ℤ)] g.val = ⇑D := by
+    exact SlashInvariantFormClass.slash_action_eq CuspForm.discriminant
+      (g.val : GL (Fin 2) ℝ) ⟨g.val, rfl⟩
+  have hfun : (⇑(GammaOne.modularDiamond N g (G : ModularForm (Gamma1 N) (12 + k))) : ℍ → ℂ) =
+      (⇑D : ℍ → ℂ) * (⇑(GammaOne.modularDiamond N g f) : ℍ → ℂ) := by
+    change (((⇑D : ℍ → ℂ) * (⇑f : ℍ → ℂ)) ∣[12 + k] g.val) = _
+    rw [ModularForm.mul_slash_SL2, hDslash]
+    rfl
+  have hq : qExpansion 1 (GammaOne.modularDiamond N g (G : ModularForm (Gamma1 N) (12 + k))) =
+      qExpansion 1 ModularForm.discriminant * qExpansion 1 (GammaOne.modularDiamond N g f) := by
+    rw [hfun, ModularForm.qExpansion_mul_coe one_pos (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+    rfl
+  apply rational_coeff_of_discriminant_mul
+  intro n
+  rw [← hq]
+  exact rational_cusp_diamond_coeff N ((by decide : Even (12 : ℤ)).add hk) G (d * y) hyG g n
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

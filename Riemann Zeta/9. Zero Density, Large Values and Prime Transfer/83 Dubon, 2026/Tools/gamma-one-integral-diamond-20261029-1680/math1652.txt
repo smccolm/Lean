@@ -1,0 +1,1 @@
+The kernel of the original continuous matrix adjoint coboundary map is proved equal to the actual invariant submodule of that same original adjoint representation. Rank-nullity on the genuine matrix coefficient space gives coboundary dimension plus original invariant dimension equal to the square of the original matrix size.

@@ -1,0 +1,117 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T12:08:06.485823+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralDiamondNormalizedAction",
+    "SourceIntegralSlashFieldNormalizedRatio",
+    "SourceIntegralDiamondScalarNormalizedAction",
+    "SourceIntegralSlashDiamondGenerator",
+    "SourceIntegralSlashDiamondStabilizer",
+    "SourceOriginalResidueDiamondCuspChart",
+    "SourceOriginalResidueCuspStabilizerPlace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction.lean",
+      "sha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+      "oleanSha256": "51B7E56581F8A6DC7F3994911C0B60308B99F736C94479CF0B3866EC63D8CE4B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio.lean",
+      "sha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+      "oleanSha256": "B36E71D9915A123BF7FD471A78367878486AFD735E120FB205EC921A32DE346E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction.lean",
+      "sha256": "D4B369AF85091BAB35DF91073DD26C79EB73DE8F85C77873C7E6FD851BB2545B",
+      "oleanSha256": "09DF68E5A731BB13A110BD1461F814454B82214C34905196EBA00D7BBC328881",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator.lean",
+      "sha256": "F3EC91CE7A5CD0F6F245C9246116466B8349517CC78BB2D11A077F4EEB59C35A",
+      "oleanSha256": "AEB94CB5E7432F61A3EDAE403FBC38A8021951A6BC06FDC100C5DD36E478C4F9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer.lean",
+      "sha256": "46E9C10E7A78D9D87962C18547914FF8AD9C72A4479BD499D156C9DEAEEC71FA",
+      "oleanSha256": "3DFABD39EA95A4D832209CE8811C96DF6AC0743AB56D6B859E9C8E2B09D90AB1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart.lean",
+      "sha256": "92DA381B7DD34C1EF0A426EF3BD984016C7FF86F60034512D9049ADF0B4123D2",
+      "oleanSha256": "55ACFF7AE56AD88B1EA36A0E0A813BB87566B97F4EC90A2412CC8EE7561E6F05",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace.lean",
+      "sha256": "B3D3C3CCD9B16EB5986CEB29DB0B4BBE09728083BF5DFFF25104C54F91779995",
+      "oleanSha256": "F8C781A92CC0D10455DF6453BEFA1537C2E0F36218B124F68315FF5DE1C5163A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerAudit1.log",
+  "logSha256": "3B8986929579E73EDB3C323AB85532BC647359FA4C05271C346C7B9DAD7BC0B1",
+  "auditSha256": "0D4C8AA0FC86419221AE40BEBF4CCBBE366356D11CDE0B3592A04EAAD979DEF0",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+  "ownershipSha256": "42ED024115228629069947951542213F7311D2EEE0559567977F716178F18D2C",
+  "exhaustiveTheorems": 21,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1.log",
+  "dependencyAuditSha256": "5D19F31C3E0291A1848826B5CB15401A12B0A658F794A62299B0B567837EC317",
+  "dependencyAuditSourceSha256": "E2A1A75EF67F22E8CD8348D460DFA9E488D3338DECD48AA356284FBC29C2394C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio"
+  ],
+  "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual residue cusp fixed places and full-base chart labels.",
+  "discharged": [
+    "The actual residue cusp embedding is equivariant for the actual diamond action and signed translations, without an equivariance, action or map certificate.",
+    "A genuine residue cusp place with a j-pole is constructed and is fixed by the actual signed translation stabilizer. No place-existence or stabilizer assumption remains.",
+    "The existing cusp homomorphism maps weight-12r integral ratios to the literal quotient of reduced slash series, directly serving the second full-base coordinate."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The full-base slot labeling via j_N, finite elliptic charts including characteristics two and three, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, parabolic integral transfer, exceptional-prime removal, original all-weight association, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB17--20 OPEN under the full unchanged contract.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "16D9937046DBD05B95B79837A1F9F5FF088F4E2E2C365A5D99F0BE46729DB360",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

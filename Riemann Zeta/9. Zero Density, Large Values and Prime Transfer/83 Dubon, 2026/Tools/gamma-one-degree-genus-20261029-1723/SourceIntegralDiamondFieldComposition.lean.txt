@@ -1,0 +1,57 @@
+import SourceIntegralDiamondFieldOperations
+import SourceIntegralDiamondComposition
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action.
+Compose the actual original-field endomorphisms. Native ring-homomorphism
+laws preserve the level-power scalar, so two arbitrary clearing exponents
+can be used directly. This avoids another common-exponent construction.
+Actual slash composition and its proved normalized scaling law discharge
+the remaining dependence on the two integral witnesses. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem reducedFieldPullHom_comp (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (γ δ : Gamma0 N)
+    (x : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) :
+    reducedFieldPullHom N ℓ hℓN δ (reducedFieldPullHom N ℓ hℓN γ x) =
+      reducedFieldPullHom N ℓ hℓN (γ * δ) x := by
+  obtain ⟨k, hk, f, g, pf, pg, hf, hg, hg0, hx⟩ := exists_even_originalReducedField_ratio x
+  let u := diamondWitness N hk γ f hf
+  let v := diamondWitness N hk γ g hg
+  have hv : red ℓ v.val.2 ≠ 0 := by
+    intro hz
+    apply hg0
+    apply (normalizedRed_zero_iff_original N ℓ hℓN hk γ g hg v.property).mp
+    exact (normalizedRed_eq_zero_iff N ℓ hℓN v.val.1 v.val.2).mpr hz
+  have hratio : red ℓ u.val.2 / red ℓ v.val.2 ∈
+      qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) := by
+    simpa only [red_apply] using div_mem_qExpFunctionFieldC
+      (scaledDiamond N γ u.val.1 f) (scaledDiamond N γ v.val.1 g)
+      u.property v.property (by simpa only [red_apply] using hv)
+  let y : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) := ⟨red ℓ u.val.2 / red ℓ v.val.2, hratio⟩
+  have he : reducedFieldPullHom N ℓ hℓN γ x =
+      y / ((N : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) ^ u.val.1 /
+        (N : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) ^ v.val.1) := by
+    apply Subtype.ext
+    change reducedFieldPull N ℓ γ x = (red ℓ u.val.2 / red ℓ v.val.2) /
+      ((N : LaurentSeries (ZMod ℓ)) ^ u.val.1 / (N : LaurentSeries (ZMod ℓ)) ^ v.val.1)
+    rw [reducedFieldPull_eq N ℓ hℓN γ x hk f g hf hg hg0 hx,
+      reducedDiamond_eq N ℓ hℓN hk γ f hf u.property,
+      reducedDiamond_eq N ℓ hℓN hk γ g hg v.property,
+      normalizedRed, normalizedRed, div_div_div_comm]
+  rw [he, map_div₀, map_div₀, map_pow, map_pow, map_natCast]
+  apply Subtype.ext
+  change reducedFieldPull N ℓ δ y /
+    ((N : LaurentSeries (ZMod ℓ)) ^ u.val.1 / (N : LaurentSeries (ZMod ℓ)) ^ v.val.1) =
+      reducedFieldPull N ℓ (γ * δ) x
+  rw [reducedFieldPull_eq N ℓ hℓN δ y hk (scaledDiamond N γ u.val.1 f)
+      (scaledDiamond N γ v.val.1 g) u.property v.property hv rfl,
+    reducedFieldPull_eq N ℓ hℓN (γ * δ) x hk f g hf hg hg0 hx,
+    reducedDiamond_scaled_comp N ℓ hℓN hk γ δ f hf u.property,
+    reducedDiamond_scaled_comp N ℓ hℓN hk γ δ g hg v.property]
+  field_simp [level_ne_zero N ℓ hℓN]
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

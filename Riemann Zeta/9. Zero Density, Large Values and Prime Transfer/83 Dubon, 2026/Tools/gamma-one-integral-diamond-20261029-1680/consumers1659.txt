@@ -1,0 +1,33 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι] [Nonempty ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `arithmeticLocalCotangent_traceZero_invariants_dimension`. -/
+theorem actual_arithmetic_trace_zero_cotangent_dimension_arithmeticLocalCotangent_traceZero_invariants_dimension_source
+    (hn : (Fintype.card ι : IsLocalRing.ResidueField O) ≠ 0)
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := AlgebraicClosure (IsLocalRing.ResidueField O)) σ))]
+    (hσ : Continuous σ) (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P.asIdeal ≤ σ.ker) :
+    (matrixTraceZeroAdjointRepresentation σ).invariants = ⊥ ∧
+    Module.finrank (IsLocalRing.ResidueField O) (ArithmeticLocalCotangentDual a ha p hp hpa σ hσ δ hδ P hP) + 1 =
+      Module.finrank (IsLocalRing.ResidueField O)
+        (arithmeticUnramifiedTraceZeroClasses a σ hσ P.asIdeal) + Fintype.card ι ^ 2 :=
+  arithmeticLocalCotangent_traceZero_invariants_dimension hn a ha p hp hpa σ hσ δ hδ P hP
+
+end
+

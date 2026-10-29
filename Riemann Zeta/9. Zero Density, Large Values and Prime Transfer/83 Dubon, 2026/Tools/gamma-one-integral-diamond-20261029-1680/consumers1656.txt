@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
+
+variable (L : Type) [Field L] [Algebra K L] [IsAlgClosed L] [Nonempty ι]
+
+/-- Exact original-object consumer of `matrixAdjointInvariants_finrank_of_extension`. -/
+theorem actual_matrix_adjoint_invariant_dimension_matrixAdjointInvariants_finrank_of_extension_source
+    (ρ : G →* GeneralLinearGroup ι K)
+    [Representation.IsIrreducible (matrixStandardRepresentation (matrixCoefficientExtension (L := L) ρ))] :
+    Module.finrank K (matrixAdjointRepresentation ρ).invariants = 1 :=
+  matrixAdjointInvariants_finrank_of_extension L ρ
+
+end
+

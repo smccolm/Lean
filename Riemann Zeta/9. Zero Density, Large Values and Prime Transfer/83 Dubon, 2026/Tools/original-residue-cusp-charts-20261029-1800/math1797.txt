@@ -1,0 +1,1 @@
+Construct the genuine contravariant homomorphism on original Hopf-algebra points from a coordinate bialgebra map. The counit and comultiplication identities prove preservation of the original identity and convolution product; the exact original coordinate evaluation is retained.

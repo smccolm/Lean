@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type} [Fintype ι] [DecidableEq ι] [Field K]
+  [TopologicalSpace K] [IsTopologicalRing K]
+
+/-- Exact original-object consumer of `arithmeticUnramifiedTraceZeroClasses_finiteDimensional`. -/
+theorem actual_arithmetic_unramified_trace_zero_classes_arithmeticUnramifiedTraceZeroClasses_finiteDimensional_source
+    [Finite K] [DiscreteTopology K] (hn : (Fintype.card ι : K) ≠ 0)
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP K p]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι K) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a))) :
+    Module.Finite K (arithmeticUnramifiedTraceZeroClasses a ρ hρ P) :=
+  arithmeticUnramifiedTraceZeroClasses_finiteDimensional hn a ha p hp hpa ρ hρ P
+
+end
+

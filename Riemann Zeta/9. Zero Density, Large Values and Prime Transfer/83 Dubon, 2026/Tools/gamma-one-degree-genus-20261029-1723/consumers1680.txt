@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable (R : Type*) [CommRing R] [IsLocalRing R] [Finite R]
+
+/-- Exact original-object consumer of `finiteLocalCoefficient_complete`. -/
+theorem actual_finite_local_coefficient_topology_finiteLocalCoefficient_complete_source :
+    IsAdicComplete (IsLocalRing.maximalIdeal R) R :=
+  finiteLocalCoefficient_complete R
+
+end
+

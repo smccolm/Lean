@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι κ O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [Fintype κ] [DecidableEq κ] [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientRepresentationMatrixAlgebra_mem_maximal_smul`. -/
+theorem actual_coefficient_matrix_algebra_reduction_kernel_coefficientRepresentationMatrixAlgebra_mem_maximal_smul_source
+    [IsLocalRing R] (S : Subalgebra O R) [IsLocalRing S] [IsLocalHom S.val.toRingHom]
+    (ρ : G →* GeneralLinearGroup ι R) (a : κ → G)
+    (b : Basis κ R (Matrix ι ι R)) (hb : ∀ i, b i = (ρ (a i)).val)
+    (hcoord : ∀ x i, b.repr (ρ x).val i ∈ S)
+    (X : coefficientRepresentationMatrixAlgebra S ρ)
+    (hX : ∀ i j, X.val i j ∈ IsLocalRing.maximalIdeal R) :
+    X ∈ IsLocalRing.maximalIdeal S •
+      (⊤ : Submodule S (coefficientRepresentationMatrixAlgebra S ρ)) :=
+  coefficientRepresentationMatrixAlgebra_mem_maximal_smul S ρ a b hb hcoord X hX
+
+end
+

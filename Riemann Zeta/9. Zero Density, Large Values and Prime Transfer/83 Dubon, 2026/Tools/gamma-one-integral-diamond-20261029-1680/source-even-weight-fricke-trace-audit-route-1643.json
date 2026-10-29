@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-10-29T05:42:14.024108+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power slash integrality -> actual even-weight Fricke trace.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-trace-reuse-review-1630.json",
+      "sha256": "65E4CB3B141D648F226D0D197C9B1B249863FF260C44A587C8B7218A4B774431"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-trace-minimality-review-1636.json",
+      "sha256": "7030828AB58C3D7A095DEB003AAB8C42FE0E509D9EF4142A7A58EF788743C5C1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Even Weight Fricke Trace Assessment 2026-10-28.md",
+      "sha256": "443387C2FCC22CDA8BF260A1C8E1DAA62E9197E981F44A7919EA33287C97795C"
+    }
+  ],
+  "shorterRoute": "Reuse actual Fricke and triangular Hecke matrices, native subgroup restriction, S-square identity, strict periods and even-weight negation. Direct SL2 conjugation comap avoids a GL-injectivity detour. Apply the constructed twelve-divisible auxiliary; the original even-weight ratio theorem removes any need for an odd-weight branch.",
+  "assumptionsToDischarge": [
+    "The actual trace subgroup has finite index and both required translations.",
+    "The original transformed forms have the exact Fourier normalization and slash identities.",
+    "The constructed actual auxiliary discharges all auxiliary inputs in the even-weight Fricke trace.",
+    "Every actual Fricke coefficient is integral after a coefficient-dependent level power.",
+    "A common nonzero integer denominator implies one common level exponent by proved Bezout and factorization."
+  ],
+  "remaining": "Construct the common integer denominator and assemble uniform full slash integrality. Reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,7 @@
+### Actual actual fixed-residual absolute irreducibility — 10 October 2026
+
+Restrict the actual scalar extension of the genuine fixed-residual quotient representation to the original group. Every original matrix is definitionally the given residual matrix. Apply the actual invariant-subspace restriction lemma to derive irreducibility of the same quotient representation over the original extension field.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FixedResidualAbsoluteIrreducibility](Extension/Dubon2026/FixedResidualAbsoluteIrreducibility.lean).

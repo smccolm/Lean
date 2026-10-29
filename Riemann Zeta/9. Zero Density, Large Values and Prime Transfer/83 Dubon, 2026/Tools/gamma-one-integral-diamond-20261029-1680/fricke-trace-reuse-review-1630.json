@@ -1,0 +1,31 @@
+{
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> Gamma1 degree/genus -> reduced field action -> uniform level-power slash integrality -> constructed even-weight trace application.",
+  "source": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-fricke-integrality-depth-1496\\S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_fricke_coeff.lean.txt",
+    "sha256": "7A55866244D8C754B7F9DA4DCFB05BB430B235D56356DCEFEBBB15D4082BE978"
+  },
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FrickeMatrices.lean",
+      "sha256": "8598DA7D050B7F4989E744E8892C9F570BCEF9255B47EE58EC4DF466E3CB6C1A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFourierLinear.lean",
+      "sha256": "23ADD4FF88B5B8792E0C831693FC9D47A1F031C8C095418F0E41048280992019"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralTraceModularForm.lean",
+      "sha256": "9A0961B2468106F568DFD0EE06C06578B3AED34F04FE9EFAEABF260EAE76A234"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRationalBoundedDenominators.lean",
+      "sha256": "BF4FA5190BA81FACB7CDE51C768B7207BF75E5E6680DDAD9E89E3FBD02BB65D6"
+    }
+  ],
+  "route": "Reuse actual frickeMatrix and its entry/determinant laws, native periods and even-weight negation. Adapt only the required conjugate subgroup and transformed-form coefficient identities. Use the proved twelve-divisible auxiliary, so no odd-weight auxiliary is needed for the original field. Uniformity and all downstream gates remain open.",
+  "noProofLimitsChanged": true
+}

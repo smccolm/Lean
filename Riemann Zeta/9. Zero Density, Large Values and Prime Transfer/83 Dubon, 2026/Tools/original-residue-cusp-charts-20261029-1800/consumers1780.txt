@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R A K : Type*} [Group G] [CommRing R]
+  [CommRing A] [IsLocalRing A] [Field K]
+
+/-- Exact original-object consumer of `matrixOrdinaryRelationIdeal_le_kernel_iff_invariants`. -/
+theorem actual_matrix_ordinary_ideal_invariant_criterion_matrixOrdinaryRelationIdeal_le_kernel_iff_invariants_source
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (g₀ : G)
+    (f : R →+* A) (r : A →+* K) [IsLocalHom r]
+    (hρ : GeneralLinearGroup.map (r.comp f) (ρ g₀) ≠ 1) :
+    matrixOrdinaryRelationIdeal ρ g₀ ≤ RingHom.ker f ↔
+      (Nonempty ((matrixStandardRepresentation ((GeneralLinearGroup.map f).comp ρ)).invariants
+          ≃ₗ[A] A) ∧
+        ∃ N : Submodule A (Fin 2 → A),
+          IsCompl (matrixStandardRepresentation ((GeneralLinearGroup.map f).comp ρ)).invariants N) :=
+  matrixOrdinaryRelationIdeal_le_kernel_iff_invariants ρ g₀ f r hρ
+
+end
+

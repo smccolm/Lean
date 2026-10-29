@@ -1,0 +1,7 @@
+### Actual actual original class evaluation across the fixed quotient — 10 October 2026
+
+Evaluate the original whole representation and its actual fixed-quotient factor through the same genuine continuous residue-preserving coefficient map. Prove that the existing unframed quotient equivalence carries one evaluated class to the other, entry by entry. Transfer injectivity and surjectivity of the proved quotient class map to the original whole-group class map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalCoefficientClassFixedQuotient](Extension/Dubon2026/OriginalCoefficientClassFixedQuotient.lean).

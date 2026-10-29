@@ -1,0 +1,7 @@
+### Actual actual original adic coefficient locality — 10 October 2026
+
+Transport the proved original maximal-adic topology equality in the closed coefficient-subalgebra unit argument. Derive actual unit reflection for the same subalgebra, locality of its inclusion and locality of its original ring operations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalAdicCoefficientSubalgebraLocality](Extension/Dubon2026/OriginalAdicCoefficientSubalgebraLocality.lean).

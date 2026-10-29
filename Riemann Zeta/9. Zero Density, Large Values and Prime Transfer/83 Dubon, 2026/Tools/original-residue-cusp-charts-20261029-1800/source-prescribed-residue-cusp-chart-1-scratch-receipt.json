@@ -1,0 +1,60 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T11:30:29.783588+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourcePrescribedPrimitiveRootReduction",
+    "SourceOriginalResiduePrescribedCuspChart"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedPrimitiveRootReduction.lean",
+      "sha256": "9B94F87AECC2250353213992F23CB5913ACB18D8911619897A5E09DC12339E0B",
+      "oleanSha256": "C7093B59F86EDE17DC2A93C478B364AEC01FE824EF38C8828D5BFEF9890714B9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedPrimitiveRootReduction-1790.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedPrimitiveRootReduction-1790.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePrescribedCuspChart.lean",
+      "sha256": "AB3FAA6A3D12851101A0F8AE6463624E902AC5F3B566F2F779AC13F5880C39CD",
+      "oleanSha256": "FA560764B37C15C5E98FECAFCF10B17A99156397C6B9C38C8ACC2FDA2D7AB9DD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePrescribedCuspChart-1790.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePrescribedCuspChart-1790.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedResidueCuspChartAudit1.log",
+  "logSha256": "F1263F227AF8F7593ECFF3E57B0ED51D8F5E54EFE5DF6CAE852F94CBBA920378",
+  "auditSha256": "C1EEA67DE8C56D1FE508C4D2CFEA472BA6B4ADF5C21215D7BE0AD69D45CB34CB",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedResidueCuspChartScratchOwnership1790.log",
+  "ownershipSha256": "5D6FE8A2F845FF8B9628F632808C95B9754513086AEABBE7F0E080CD8DE432F3",
+  "exhaustiveTheorems": 4,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedResidueCuspChartDependencyAudit1.log",
+  "dependencyAuditSha256": "3DEC53E8716AAC8F0C445863CF615E25E30CB2863A79A9A243305DFBCF91B27C",
+  "dependencyAuditSourceSha256": "A0DD98A3332A461D89D804966FA7C9B47A4BFF056A9111D9EEE2DDC91C7F1FFE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom"
+  ],
+  "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual prescribed-root cusp field chart.",
+  "discharged": [
+    "The native sourceIntegralReduction_exists_extension theorem replaces the external second lying-over, quotient-domain and algebraic-closure construction. Native cyclotomic/minimal-polynomial evaluation prescribes the root. Native algebraic closedness of the actual valuation residue field and the already constructed original cusp embedding give the actual prescribed chart and its j(q^N) image."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Diamond-stabilizer equivariance, full-base slot identification, residue fiber bounds and reverse genus remain open. Acceptance remains 16/20; DUB17--20 OPEN. Frozen paper, proof standards and full completion criteria unchanged.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prescribed-residue-cusp-chart-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "0AD184A2D2A48AEC3500753E7EFECDFAFDDB134B6862D13F97EA06E608821377",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

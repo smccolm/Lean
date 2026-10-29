@@ -1,0 +1,7 @@
+### Actual original representation algebra residue surjection — 10 October 2026
+
+Use absolute irreducibility of the genuine original residual representation to expand every original residue-field matrix in actual representation values. Lift all scalar coefficients through the original coefficient constants and include these constants in the original coefficient subalgebra. The resulting actual finite sum lies in the original representation-generated matrix algebra and reduces to the chosen matrix, proving surjectivity of its genuine residue map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CoefficientMatrixAlgebraResidue](Extension/Dubon2026/CoefficientMatrixAlgebraResidue.lean).

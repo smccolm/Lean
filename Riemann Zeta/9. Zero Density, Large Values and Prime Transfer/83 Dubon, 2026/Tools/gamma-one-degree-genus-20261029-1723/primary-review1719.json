@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalTraceRepresentationDescent",
+  "mathematics": "Consume the actual original-dimensional trace left-ideal basis constructed from original residual absolute irreducibility. Construct the whole representation over the literal closed trace coefficient algebra from its genuine left action. Its original column matrix reduces to the identity and is invertible in the ambient original ring; the proved intertwining identity therefore gives strict conjugacy of the entire original representation with this actual coefficient extension.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-whole-trace-descent-route-20261010.json: actual left-ideal action, original basis-to-matrix algebra equivalence, original group law, actual strict conjugacy and coefficient-subtype topology inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "originalTraceDescent1719-focus.log"
+}

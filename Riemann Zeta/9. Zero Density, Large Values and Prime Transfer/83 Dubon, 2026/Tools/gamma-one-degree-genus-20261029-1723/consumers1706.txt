@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R] [WithIdeal R]
+
+/-- Exact original-object consumer of `adicMatrixIdempotent_exists_mem_closedSubalgebra`. -/
+theorem actual_adic_matrix_idempotent_lifting_adicMatrixIdempotent_exists_mem_closedSubalgebra_source
+    [IsAdicComplete (WithIdeal.i : Ideal R) R]
+    {O : Type*} [CommRing O] [Algebra O (Matrix ι ι R)]
+    (S : Subalgebra O (Matrix ι ι R)) (hS : IsClosed (S : Set (Matrix ι ι R)))
+    (X : Matrix ι ι R) (hXS : X ∈ S)
+    (hX : ∀ i j, (X ^ 2 - X) i j ∈ (WithIdeal.i : Ideal R)) :
+    ∃ E : Matrix ι ι R, E ∈ S ∧ E ^ 2 = E ∧
+      ∀ i j, (E - X) i j ∈ (WithIdeal.i : Ideal R) :=
+  adicMatrixIdempotent_exists_mem_closedSubalgebra S hS X hXS hX
+
+end
+

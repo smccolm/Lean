@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalTraceMatrixIdempotent",
+  "mathematics": "Choose an actual preimage of the original diagonal residual matrix unit using the proved surjection from the genuine representation matrix algebra over its actual closed trace coefficients. Prove that its idempotency error lies entrywise in the original maximal ideal. Consume the already proved closedness of that same algebra and the actual convergent cubic construction to obtain a genuine idempotent in it with exactly the prescribed original residual matrix unit.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: original adic Cauchy compatibility, completeness, matrix topology, genuine residue maps and cubic error identities inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "originalIdempotent1708-focus.log"
+}

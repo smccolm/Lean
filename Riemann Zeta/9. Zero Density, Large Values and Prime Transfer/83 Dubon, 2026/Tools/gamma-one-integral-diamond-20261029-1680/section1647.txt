@@ -1,0 +1,7 @@
+### Actual arithmetic trace-zero inertia classes — 10 October 2026
+
+The actual unramified condition is defined as the kernel of genuine trace-zero H1 restriction to the original arithmetic inertia subgroup. Under the explicit nonzero-dimension condition, the coefficient inclusion gives a linear equivalence with the previously proved intersection of the original determinant trace kernel and inertia restriction kernel. Its original full-adjoint class is retained. Thus dimensions agree, and proved arithmetic cohomology finiteness gives finite-dimensionality of this actual trace-zero local condition.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedTraceZeroClasses](Extension/Dubon2026/ArithmeticUnramifiedTraceZeroClasses.lean).

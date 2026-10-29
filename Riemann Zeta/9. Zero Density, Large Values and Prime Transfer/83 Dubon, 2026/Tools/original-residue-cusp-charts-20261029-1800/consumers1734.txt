@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+  [t : TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `originalAdicCoefficientSubalgebra_isLocalRing`. -/
+theorem actual_original_adic_coefficient_subalgebra_locality_originalAdicCoefficientSubalgebra_isLocalRing_source
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (S : Subalgebra O R) (hS : IsClosed (S : Set R)) : IsLocalRing S :=
+  originalAdicCoefficientSubalgebra_isLocalRing hR eR S hS
+
+end
+

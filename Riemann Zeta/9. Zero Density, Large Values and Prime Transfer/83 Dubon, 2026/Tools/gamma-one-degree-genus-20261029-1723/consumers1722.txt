@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `adicCompletion_original_dense`. -/
+theorem actual_adic_completion_original_density_adicCompletion_original_dense_source (I : Ideal R) (hI : I.FG)
+    [TopologicalSpace (AdicCompletion I R)]
+    (h : IsAdic (I.map (algebraMap R (AdicCompletion I R)))) :
+    DenseRange (algebraMap R (AdicCompletion I R)) :=
+  adicCompletion_original_dense I hI h
+
+end
+

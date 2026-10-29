@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `arithmeticLocalFirstOrderCocycleEquiv_bijective`. -/
+theorem actual_arithmetic_local_first_order_cocycles_arithmeticLocalFirstOrderCocycleEquiv_bijective_source (a : 𝓞 ℚ)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P ≤ ρ.ker) :
+    Function.Bijective (arithmeticLocalFirstOrderCocycleEquiv a ρ hρ P hP) :=
+  arithmeticLocalFirstOrderCocycleEquiv_bijective a ρ hρ P hP
+
+end
+

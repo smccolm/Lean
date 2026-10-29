@@ -1,0 +1,1 @@
+Use actual residual ordinary invariants to put the literal ordinary ideal in the maximal ideal and derive quotient locality, Noetherianity, own maximal-adic topology and completeness.

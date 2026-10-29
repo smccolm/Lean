@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι S A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing S] [Ring A] [Algebra S A]
+
+/-- Exact original-object consumer of `algebraIdempotentMatrixRepresentation_apply`. -/
+theorem actual_algebra_idempotent_matrix_action_algebraIdempotentMatrixRepresentation_apply_source (σ : G →* A) (e : A)
+    (b : Basis ι S (algebraIdempotentLeftIdeal (S := S) e)) (g : G) (i j : ι) :
+    (algebraIdempotentMatrixRepresentation σ e b g).val i j =
+      b.repr (algebraIdempotentLeftAction e (σ g) (b j)) i :=
+  algebraIdempotentMatrixRepresentation_apply σ e b g i j
+
+end
+

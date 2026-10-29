@@ -1,0 +1,50 @@
+import SourceReducedCoordinateMapIndependence1708a
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> signed-index lower
+bound -> finite coordinate-degree transfer. The proved finite-family
+coefficient independence bounds every finite independent subset of the
+original field by the actual target degree. Native rank theory then proves
+finiteness and the degree inequality. The intended target is the native
+residue image; no base-change surjectivity or equality is required. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField
+open scoped IntermediateField
+
+theorem positive_relfinrank_and_le_of_coeffMap {K L : Type*} [Field K] [Field L]
+    [Algebra K L] (F₀ : IntermediateField K (LaurentSeries K))
+    (F : IntermediateField L (LaurentSeries L)) (t : LaurentSeries K)
+    (ht : t ∈ F₀) (htr : Transcendental K t)
+    (hmap : ∀ x ∈ F₀, coeffMap (algebraMap K L) x ∈ F)
+    (hpos : 0 < relfinrank L⟮coeffMap (algebraMap K L) t⟯ F) :
+    0 < relfinrank K⟮t⟯ F₀ ∧
+      relfinrank K⟮t⟯ F₀ ≤ relfinrank L⟮coeffMap (algebraMap K L) t⟯ F := by
+  classical
+  let J₀ := K⟮t⟯
+  let J := L⟮coeffMap (algebraMap K L) t⟯
+  have h₀ : J₀ ≤ F₀ := adjoin_simple_le_iff.mpr ht
+  have h : J ≤ F := adjoin_simple_le_iff.mpr (hmap t ht)
+  let E₀ := extendScalars h₀
+  let E := extendScalars h
+  rw [relfinrank_eq_finrank_of_le h₀, relfinrank_eq_finrank_of_le h]
+  rw [relfinrank_eq_finrank_of_le h] at hpos
+  letI : FiniteDimensional J E := Module.finite_of_finrank_pos hpos
+  let n := Module.finrank J E
+  have hbound : ∀ s : Finset E₀,
+      LinearIndependent J₀ (fun i : s => (i : E₀)) → s.card ≤ n := by
+    intro s hs
+    have hs₀ : LinearIndependent J₀ (fun i : s => ((i : E₀) : LaurentSeries K)) :=
+      hs.map' E₀.val.toLinearMap (LinearMap.ker_eq_bot_of_injective Subtype.val_injective)
+    have hsL := linearIndependent_coordinate_coeffMap (L := L) htr hs₀
+    let w : s → E := fun i => ⟨coeffMap (algebraMap K L) ((i : E₀) : LaurentSeries K),
+      hmap _ ((mem_extendScalars h₀).mp (i : E₀).property)⟩
+    have hw : LinearIndependent J w := LinearIndependent.of_comp E.val.toLinearMap hsL
+    have hcard := hw.fintype_card_le_finrank
+    simpa only [Fintype.card_coe] using hcard
+  have hrank : Module.rank J₀ E₀ ≤ n := rank_le hbound
+  letI : FiniteDimensional J₀ E₀ := Module.rank_lt_aleph0_iff.mp
+    (lt_of_le_of_lt hrank (Cardinal.natCast_lt_aleph0 (n := n)))
+  exact ⟨Module.finrank_pos, Module.finrank_le_of_rank_le hrank⟩
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

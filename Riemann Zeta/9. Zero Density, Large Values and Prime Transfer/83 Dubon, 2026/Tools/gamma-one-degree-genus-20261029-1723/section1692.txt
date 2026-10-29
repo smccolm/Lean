@@ -1,0 +1,7 @@
+### Actual actual coefficient subalgebra residue — 10 October 2026
+
+Use the original coefficient constants and the given true ambient residue equivalence to prove surjectivity of the induced residue map of an actual local coefficient subalgebra. Its field homomorphism is injective. Construct the genuine residue equivalence and prove its evaluation on every actual subalgebra element, then the whole reduction-map identity. The subalgebra inclusion is never assumed surjective.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CoefficientSubalgebraResidue](Extension/Dubon2026/CoefficientSubalgebraResidue.lean).

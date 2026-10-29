@@ -1,0 +1,48 @@
+import SourceGammaOneAlgebraicCuspDenominator1645b
+import SourceIntegralDiscriminantCancellation1646b
+import Dubon2026.ModularDegeneracy
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> uniform level-power
+slash integrality -> common integer denominator. Multiply the actual
+modular form by the native discriminant cusp form, use the proved
+integral cusp span and algebraic scalar descent, then cancel the exact
+integer eta-unit expansion. The common denominator is constructed;
+only the explicit elementary weight-balance input remains here. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+theorem exists_common_integer_denominator_of_algebraic_form_coefficients
+    (N : ℕ) [NeZero N] (k : ℤ) (a b m : ℕ)
+    (hk : 12 + k + 4 * a + 6 * b = 12 * m)
+    (F : ModularForm (Gamma1 N) k)
+    (hF : ∀ n : ℕ, IsAlgebraic ℚ ((qExpansion 1 F).coeff n)) :
+    ∃ d : ℤ, d ≠ 0 ∧ ∀ n : ℕ, IsIntegral ℤ ((d : ℂ) * (qExpansion 1 F).coeff n) := by
+  let D : CuspForm (Gamma1 N) 12 :=
+    cuspRestrictSubgroup (Subgroup.map_le_range _ (Gamma1 N)) CuspForm.discriminant
+  let G := D.mulModularForm F
+  have hq : qExpansion 1 G = qExpansion 1 ModularForm.discriminant * qExpansion 1 F := by
+    change qExpansion 1 (((D : ModularForm (Gamma1 N) 12).mul F) : ℍ → ℂ) = _
+    rw [ModularForm.qExpansion_mul one_pos (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+    rfl
+  have hDc : ∀ n, (qExpansion 1 ModularForm.discriminant).coeff n ∈
+      (algebraicClosure ℚ ℂ).toSubfield.toSubring := by
+    intro n
+    rw [qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit, PowerSeries.coeff_map]
+    exact intCast_mem _ _
+  have hFc : ∀ n, (qExpansion 1 F).coeff n ∈
+      (algebraicClosure ℚ ℂ).toSubfield.toSubring :=
+    fun n => mem_algebraicClosure_iff.mpr (hF n)
+  have hGc : ∀ n, IsAlgebraic ℚ ((qExpansion 1 G).coeff n) := by
+    intro n
+    rw [hq]
+    exact mem_algebraicClosure_iff.mp (IntegralTrace.coeff_mul_mem hDc hFc n)
+  obtain ⟨d, hd, h⟩ := exists_common_integer_denominator_of_algebraic_cusp_coefficients
+    N (12 + k) a b m hk G hGc
+  refine ⟨d, hd, integral_coeff_of_discriminant_mul (qExpansion 1 F) d ?_⟩
+  intro n
+  simpa only [hq] using h n
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

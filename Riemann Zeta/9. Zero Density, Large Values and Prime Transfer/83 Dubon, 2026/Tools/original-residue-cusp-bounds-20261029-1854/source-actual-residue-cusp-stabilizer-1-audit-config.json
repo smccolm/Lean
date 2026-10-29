@@ -1,0 +1,79 @@
+{
+  "modules": [
+    "SourceIntegralDiamondNormalizedAction",
+    "SourceIntegralSlashFieldNormalizedRatio",
+    "SourceIntegralDiamondScalarNormalizedAction",
+    "SourceIntegralSlashDiamondGenerator",
+    "SourceIntegralSlashDiamondStabilizer",
+    "SourceOriginalResidueDiamondCuspChart",
+    "SourceOriginalResidueCuspStabilizerPlace"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators",
+    "Dubon2026.SourceCurve.Place.exists_place_of_laurent_embedding",
+    "Dubon2026.SourceFunctionField.laurent_order_qTwist",
+    "Dubon2026.SourceFunctionField.laurent_order_qExpand",
+    "Dubon2026.SourceCurve.Place.ord_comapEquiv"
+  ],
+  "localModules": [
+    "SourceIntegralDiamondNormalizedAction",
+    "SourceIntegralSlashFieldNormalizedRatio",
+    "SourceIntegralDiamondScalarNormalizedAction",
+    "SourceIntegralSlashDiamondGenerator",
+    "SourceIntegralSlashDiamondStabilizer",
+    "SourceOriginalResidueDiamondCuspChart",
+    "SourceOriginalResidueCuspStabilizerPlace"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceIntegralDiamondNormalizedAction": "SourceIntegralDiamondNormalizedAction-1813",
+    "SourceIntegralSlashFieldNormalizedRatio": "SourceIntegralSlashFieldNormalizedRatio-1813",
+    "SourceIntegralDiamondScalarNormalizedAction": "SourceIntegralDiamondScalarNormalizedAction-1813",
+    "SourceIntegralSlashDiamondGenerator": "SourceIntegralSlashDiamondGenerator-1813",
+    "SourceIntegralSlashDiamondStabilizer": "SourceIntegralSlashDiamondStabilizer-1813",
+    "SourceOriginalResidueDiamondCuspChart": "SourceOriginalResidueDiamondCuspChart-1813",
+    "SourceOriginalResidueCuspStabilizerPlace": "SourceOriginalResidueCuspStabilizerPlace-1813"
+  }
+}

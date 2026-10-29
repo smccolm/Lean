@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalResidueDerivationContinuousCocycles",
+  "mathematics": "The actual relative derivation coefficient map is continuous in the proved original maximal-adic topologies. Composing its genuine matrix map with the same original continuous representation gives actual first-order continuity; the proved dual-number product/adic comparison retains the original first-order topology. The actual residue-field-linear cocycle map therefore lands in genuine continuous cocycles and retains every original right-logarithmic matrix value.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original matrix infinitesimal and coordinate derivation-linearity proofs re-read. Genuine actual original unramified universal representation and its full true residue theorem inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Actual original relative derivation cocycle/class linearity requires kernel proof. Cotangent residue-field linearity, explicit relative maximal-ideal cotangent quotient, full Selmer dimension theory, modular association and patching remain open.",
+  "productionFixes": [
+    "Omitted unused IsTopologicalRing R on both public theorems. Genuine continuity uses the proved equality of original and maximal-adic topologies; no topological-ring assumption is needed. Initial warning runs rejected."
+  ],
+  "productionLog": "relativeContinuousCocycles1634c-focus.log"
+}

@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [Algebra O R]
+  [TopologicalSpace G] [TopologicalSpace R]
+
+/-- Exact original-object consumer of `matrixStrictlyConjugate_subalgebra_continuous`. -/
+theorem actual_coefficient_subalgebra_representation_continuity_matrixStrictlyConjugate_subalgebra_continuous_source [Group G] [IsTopologicalRing R]
+    {K : Type*} [CommRing K] (r : R →+* K)
+    (S : Subalgebra O R) (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (τ : G →* GeneralLinearGroup ι S)
+    (h : MatrixStrictlyConjugate r ((GeneralLinearGroup.map S.val.toRingHom).comp τ) ρ) :
+    Continuous τ :=
+  matrixStrictlyConjugate_subalgebra_continuous r S ρ hρ τ h
+
+end
+

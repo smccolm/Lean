@@ -1,0 +1,54 @@
+import Dubon2026.SourceIntegralDiamondReduction
+import Dubon2026.SourceIntegralDiamondZeroForward
+import Dubon2026.SourceIntegralDiamondZeroEquivalence
+import Dubon2026.SourceIntegralDiamondWitness
+import Dubon2026.SourceIntegralDiamondNormalizedReduction
+import Dubon2026.SourceIntegralDiamondChosenReduction
+import Dubon2026.SourceIntegralDiamondSeriesOperations
+import Dubon2026.SourceIntegralDiamondReducedOperations
+import Dubon2026.SourceIntegralDiamondRatioRelation
+import Dubon2026.SourceIntegralDiamondAdditiveSeries
+import Dubon2026.SourceIntegralDiamondRatioClosure
+import Dubon2026.SourceIntegralDiamondReducedAddition
+import Dubon2026.SourceIntegralDiamondFieldPull
+import Dubon2026.SourceIntegralDiamondFieldRange
+import Dubon2026.SourceIntegralDiamondFieldConstants
+import Dubon2026.SourceIntegralDiamondFieldOperations
+import Dubon2026.SourceIntegralDiamondComposition
+import Dubon2026.SourceIntegralDiamondFieldComposition
+import Dubon2026.SourceIntegralDiamondFieldIdentity
+import Dubon2026.SourceIntegralDiamondFieldAction
+import Dubon2026.SourceIntegralDiamondFullBaseInclusion
+import Dubon2026.SourceIntegralDiamondGammaZeroFixed
+import Dubon2026.SourceIntegralDiamondEisensteinAction
+import Dubon2026.SourceIntegralDiamondSignedMembership
+import Dubon2026.SourceIntegralDiamondExactKernel
+import Dubon2026.SourceIntegralDiamondFixedFieldDegree
+import Dubon2026.SourceReducedBaseCoordinateMap
+import Dubon2026.SourceReducedBaseDegreeLower
+import Dubon2026.SourceIntegralDiamondIndexLower
+import Dubon2026.SourceReducedCoordinateIndependence
+import Dubon2026.SourceReducedCoordinateMapIndependence
+import Dubon2026.SourceReducedFieldCoefficientMap
+import Dubon2026.SourceReducedCoordinateDegreeTransport
+import Dubon2026.SourceReducedResidueDegreeTransport
+import Dubon2026.SourceGammaOneDegreePreservation
+import Dubon2026.SourceGammaOneResidueGenusUpper
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceIntegralDiamondReduction, `Dubon2026.SourceIntegralDiamondZeroForward, `Dubon2026.SourceIntegralDiamondZeroEquivalence, `Dubon2026.SourceIntegralDiamondWitness, `Dubon2026.SourceIntegralDiamondNormalizedReduction, `Dubon2026.SourceIntegralDiamondChosenReduction, `Dubon2026.SourceIntegralDiamondSeriesOperations, `Dubon2026.SourceIntegralDiamondReducedOperations, `Dubon2026.SourceIntegralDiamondRatioRelation, `Dubon2026.SourceIntegralDiamondAdditiveSeries, `Dubon2026.SourceIntegralDiamondRatioClosure, `Dubon2026.SourceIntegralDiamondReducedAddition, `Dubon2026.SourceIntegralDiamondFieldPull, `Dubon2026.SourceIntegralDiamondFieldRange, `Dubon2026.SourceIntegralDiamondFieldConstants, `Dubon2026.SourceIntegralDiamondFieldOperations, `Dubon2026.SourceIntegralDiamondComposition, `Dubon2026.SourceIntegralDiamondFieldComposition, `Dubon2026.SourceIntegralDiamondFieldIdentity, `Dubon2026.SourceIntegralDiamondFieldAction, `Dubon2026.SourceIntegralDiamondFullBaseInclusion, `Dubon2026.SourceIntegralDiamondGammaZeroFixed, `Dubon2026.SourceIntegralDiamondEisensteinAction, `Dubon2026.SourceIntegralDiamondSignedMembership, `Dubon2026.SourceIntegralDiamondExactKernel, `Dubon2026.SourceIntegralDiamondFixedFieldDegree, `Dubon2026.SourceReducedBaseCoordinateMap, `Dubon2026.SourceReducedBaseDegreeLower, `Dubon2026.SourceIntegralDiamondIndexLower, `Dubon2026.SourceReducedCoordinateIndependence, `Dubon2026.SourceReducedCoordinateMapIndependence, `Dubon2026.SourceReducedFieldCoefficientMap, `Dubon2026.SourceReducedCoordinateDegreeTransport, `Dubon2026.SourceReducedResidueDegreeTransport, `Dubon2026.SourceGammaOneDegreePreservation, `Dubon2026.SourceGammaOneResidueGenusUpper]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ClosedCoefficientSubalgebraLocality",
+  "mathematics": "For a closed subalgebra of the original maximal-adic coefficient ring with the original residue field, approximate the inverse of an actual ambient unit by finite geometric sums in the same subalgebra. The residue identification supplies an original coefficient constant matching the inverse residue, so the geometric ratio belongs to the actual maximal ideal and its powers tend to zero. Closedness puts the actual inverse in the subalgebra. Thus the genuine inclusion reflects units and the existing subalgebra ring is local.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-closed-trace-coefficient-route-20261010.json: actual original coefficient subalgebras, pinned topology, geometric sum and trace APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Used ordered rewrites for multiplication through the actual residue homomorphism, avoiding opposing simplifier orientations.",
+    "Proved equality of the whole finite-sum sequence by function extensionality and specified the constant-one limit explicitly. Original geometric sums, unit inverse, topology and statement unchanged."
+  ],
+  "productionLog": "closedCoefficientLocality1691c-focus.log"
+}

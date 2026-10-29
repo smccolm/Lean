@@ -1,0 +1,7 @@
+### Actual actual local coefficient stabilizer lifting — 10 October 2026
+
+Consider a genuine surjective homomorphism of original local coefficient rings and the same original representation reduced along it. Explicit absolute irreducibility of the true residual representation of that reduction makes each actual reduced stabilizer a genuine coefficient scalar unit by the proved local centralizer theorem. The pinned surjective-local-hom units theorem lifts that actual coefficient unit. Its original scalar matrix stabilizes the whole original representation and reduces to the exact supplied reduced stabilizer. Thus actual stabilizers lift along the original coefficient surjection.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixRepresentationStabilizerLifting](Extension/Dubon2026/MatrixRepresentationStabilizerLifting.lean).

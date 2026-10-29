@@ -1,0 +1,7 @@
+### Actual original relative cotangent residue-field linearity — 10 October 2026
+
+The actual relative cotangent maps carry the original residue-field action on their genuine epsilon coefficients. The pinned universal differential equivalence with original relative derivations is proved linear over that same original residue field by actual pointwise addition and scalar multiplication. Its composition with the continuous coefficient-point classification is exactly the original cotangent-point classification.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalResidueCotangentLinearity](Extension/Dubon2026/OriginalResidueCotangentLinearity.lean).

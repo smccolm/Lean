@@ -1,0 +1,38 @@
+import SourceIntegralDiamondFieldAction1690b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> signed-index lower bound
+-> exact kernel of the reduced action. The determinant identity identifies
+the signed Gamma1 subgroup from the upper-left residue, precisely the
+residue label appearing in the existing integral Eisenstein slash formula. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open CongruenceSubgroup GammaOne
+open scoped MatrixGroups
+
+theorem gammaZero_diagonal_product (N : ℕ) (γ : Gamma0 N) :
+    (γ.val 0 0 : ZMod N) * (γ.val 1 1 : ZMod N) = 1 := by
+  have h : ((γ.val.val.det : ℤ) : ZMod N) = 1 := by rw [γ.val.det_coe, Int.cast_one]
+  rw [Matrix.det_fin_two] at h
+  simpa only [Int.cast_sub, Int.cast_mul, Gamma0_mem.mp γ.property, mul_zero, sub_zero] using h
+
+theorem signed_gammaOne_of_upperLeft (N : ℕ) (γ : Gamma0 N)
+    (hγ : (γ.val 0 0 : ZMod N) = 1 ∨ (γ.val 0 0 : ZMod N) = -1) :
+    γ.val ∈ plusMinus (Gamma1 N) := by
+  have hd := gammaZero_diagonal_product N γ
+  apply (mem_plusMinus_iff _ _).mpr
+  rcases hγ with h | h
+  · left
+    rw [h, one_mul] at hd
+    exact (Gamma1_mem N γ.val).mpr ⟨h, hd, Gamma0_mem.mp γ.property⟩
+  · right
+    rw [h, neg_one_mul] at hd
+    have hd' : (γ.val 1 1 : ZMod N) = -1 := neg_eq_iff_eq_neg.mp hd
+    simp [Gamma1_mem, h, hd', Gamma0_mem.mp γ.property]
+
+theorem gammaZero_upperLeft_ne_zero (N : ℕ) [NeZero N] (hN : 1 < N) (γ : Gamma0 N) :
+    (γ.val 0 0 : ZMod N) ≠ 0 := by
+  letI : Fact (1 < N) := ⟨hN⟩
+  exact left_ne_zero_of_mul_eq_one (gammaZero_diagonal_product N γ)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

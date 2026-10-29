@@ -1,0 +1,26 @@
+import SourceOriginalResidueImageCuspCount
+import SourceIntegralSlashFieldDiamondCovariance
+import SourceOriginalResidueCuspHomFamily
+import SourceOriginalResidueCuspPlaceFamily
+import SourceOriginalResidueCuspPlaceCovariance
+import SourceOriginalResidueCuspOrbitMap
+import SourceOriginalResidueFullBaseFinite
+import SourceOriginalResiduePoleBaseLabel
+import SourceOriginalResidueCuspFamilyBaseLabel
+import SourceOriginalResidueCuspFamilyExhaustion
+import SourceOriginalResidueCuspOrbitSurjection
+import SourceOriginalResidueCuspCount
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralSlashFieldDiamondCovariance, `SourceOriginalResidueCuspHomFamily, `SourceOriginalResidueCuspPlaceFamily, `SourceOriginalResidueCuspPlaceCovariance, `SourceOriginalResidueCuspOrbitMap, `SourceOriginalResidueFullBaseFinite, `SourceOriginalResiduePoleBaseLabel, `SourceOriginalResidueCuspFamilyBaseLabel, `SourceOriginalResidueCuspFamilyExhaustion, `SourceOriginalResidueCuspOrbitSurjection, `SourceOriginalResidueCuspCount, `SourceOriginalResidueImageCuspCount]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

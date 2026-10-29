@@ -1,0 +1,7 @@
+### Actual original true-residue scalar extension — 10 October 2026
+
+Extend the actual maximal-ideal reduction through the original true-residue equivalence into the same original extension field. The proved whole residual identity gives equality with the scalar extension of the original residual representation, on every group element and matrix entry.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TrueResidueScalarExtension](Extension/Dubon2026/TrueResidueScalarExtension.lean).

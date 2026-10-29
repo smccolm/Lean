@@ -1,0 +1,48 @@
+{
+  "reason": "The complete 1691 preflight found five docBlame failures on data projections of EvenIntegralRepresentative. Add exactly the five missing field documentation strings; preserve all statements and proof bodies and propagate only import changes. Every original source and failure log remains immutable. No linter or proof check is weakened.",
+  "files": [
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldPull1683c.lean",
+      "previousSha256": "7C104CD183E54040CA3043F88F5355C84CFF53E1BDC677E9AA0C1257C61CF0FA",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldPull1683d.lean",
+      "successorSha256": "DF49DAF7CCA1229C7D5C903306862F83C2E4F85B48AD465F6AE24B35226A8548"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldRange1684a.lean",
+      "previousSha256": "88D169005E71BCBA7EAEDB1BEE0640B555E49EBA46C0C7F9422363C78986320C",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldRange1684b.lean",
+      "successorSha256": "89536A6E14A5AAB2BB69091BA71C6720557D31F12830B56B3C3849E890DCB238"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldConstants1685b.lean",
+      "previousSha256": "B0EE091D0ECB4A1F060B4C8010BC7891CE780FC44F79B1E1518C1D4CA5FFB6E4",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldConstants1685c.lean",
+      "successorSha256": "CC63EC8A6B57F98511E8D8902ABB9F2F345BACFDC5261557BB9803B6871FBBAE"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldOperations1686a.lean",
+      "previousSha256": "D87FFBBB42D34A850013D68AB1CFE1FE5465A2A2FC2B81C81787FC4E3C13B182",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldOperations1686b.lean",
+      "successorSha256": "D6DA1494B95D1103B8857707FD32AFCA88E87C27A9B2BCEBEFAC1083516BBD34"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldComposition1688b.lean",
+      "previousSha256": "B71EA84C0ADD04B372A88800CDB3CA36093FEA839163032CFD7F364098DD404B",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldComposition1688c.lean",
+      "successorSha256": "D530496FEE50BCFA13D765C16F9F12FB08F03A95A160A5E7F60F5831FA75B8FF"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldIdentity1689a.lean",
+      "previousSha256": "86F522E75FBF195FC5A526AC8EEEDA4BDB8D20BD5CA8DA420843AC920E1E42F5",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldIdentity1689b.lean",
+      "successorSha256": "EEDD890420653B0EC594E9AE3549AEB44245B3B9F53B4FCEEABA5CA85BFF86F8"
+    },
+    {
+      "previous": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldAction1690a.lean",
+      "previousSha256": "2EDFF6004E78335565DA4DE48A6863DD2124DF8CD4516697F7D602BB4978C3D6",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFieldAction1690b.lean",
+      "successorSha256": "682DE66F08E388BCC150AF01191C578E7AAE8AA801A1365888564A7C235C0489"
+    }
+  ],
+  "productionMutation": false
+}

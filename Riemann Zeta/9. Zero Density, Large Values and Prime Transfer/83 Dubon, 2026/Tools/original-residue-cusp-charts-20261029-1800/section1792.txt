@@ -1,0 +1,7 @@
+### Actual Hopf point coefficient automorphism action — 10 October 2026
+
+Use genuine coefficient composition on the original algebra-valued points. Prove that it preserves the existing convolution multiplication, construct the point automorphisms for coefficient automorphisms, and assemble their actual group action with the exact coordinate-evaluation formula.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CommutativeHopfPointsCoefficientChange](Extension/Dubon2026/CommutativeHopfPointsCoefficientChange.lean).

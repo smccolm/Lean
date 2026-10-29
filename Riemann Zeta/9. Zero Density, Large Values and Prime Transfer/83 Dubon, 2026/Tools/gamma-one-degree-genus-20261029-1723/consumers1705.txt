@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [WithIdeal R]
+  [IsPrecomplete (WithIdeal.i : Ideal R) R]
+
+/-- Exact original-object consumer of `adicMatrixSequence_exists_limit_of_steps`. -/
+theorem actual_adic_matrix_sequence_convergence_adicMatrixSequence_exists_limit_of_steps_source {ι : Type*} (u : ℕ → Matrix ι ι R)
+    (hu : ∀ n i j, (u (n + 1) - u n) i j ∈ (WithIdeal.i : Ideal R) ^ n) :
+    ∃ X : Matrix ι ι R, Tendsto u atTop (𝓝 X) :=
+  adicMatrixSequence_exists_limit_of_steps u hu
+
+end
+

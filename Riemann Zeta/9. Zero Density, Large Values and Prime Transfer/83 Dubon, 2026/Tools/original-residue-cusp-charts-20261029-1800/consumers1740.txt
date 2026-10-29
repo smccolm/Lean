@@ -1,0 +1,27 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R K : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [CommRing K] [Algebra O R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `descendedTraceCoefficientMaps_eq`. -/
+theorem actual_descended_trace_coefficient_generation_descendedTraceCoefficientMaps_eq_source {A B : Type*} [CommRing A] [CommRing B]
+    [Algebra O A] [TopologicalSpace A] [T2Space A]
+    (r : R →+* K) (ρ : G →* GeneralLinearGroup ι R)
+    (τ : G →* GeneralLinearGroup ι (closedMatrixTraceAlgebra (O := O) ρ))
+    (h : MatrixStrictlyConjugate r
+      ((GeneralLinearGroup.map (closedMatrixTraceAlgebra (O := O) ρ).val.toRingHom).comp τ) ρ)
+    (f g : closedMatrixTraceAlgebra (O := O) ρ →ₐ[O] A)
+    (hf : Continuous f) (hg : Continuous g) (rA : A →+* B)
+    (hfg : MatrixStrictlyConjugate rA
+      ((GeneralLinearGroup.map f.toRingHom).comp τ)
+      ((GeneralLinearGroup.map g.toRingHom).comp τ)) : f = g :=
+  descendedTraceCoefficientMaps_eq r ρ τ h f g hf hg rA hfg
+
+end
+

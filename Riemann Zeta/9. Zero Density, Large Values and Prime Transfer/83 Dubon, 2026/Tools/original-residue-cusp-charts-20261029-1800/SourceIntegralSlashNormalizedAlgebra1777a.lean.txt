@@ -1,0 +1,51 @@
+import SourceMonoidGeneratorAlgebraLift1776b
+import SourceIntegralSlashNormalizedLinearRelations1774a
+import SourceIntegralSlashNormalizedCoordinate1775a
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. The actual
+normalized modular generators form a monoid, and all their finite relations
+have already been transferred. Native monoid-algebra quotient descent therefore
+constructs their literal cusp algebra map, with its value at every generator.
+No multiplicativity, unit or relation-preservation premise remains. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem exists_normalizedSlashAlgebraHom (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    {K : Type*} [Field K] [CharP K ℓ] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+    (β : SL(2, ℤ)) :
+    ∃ Φ : Algebra.adjoin K (normalizedGenerators N K) →ₐ[K] LaurentSeries K,
+      ∀ x (hx : x ∈ normalizedGenerators N K),
+        Φ ⟨x, Algebra.subset_adjoin hx⟩ = normalizedSlashValue N φ hN β x := by
+  classical
+  let M : Submonoid (LaurentSeries K) :=
+    { carrier := normalizedGenerators N K
+      one_mem' := one_mem_normalizedGenerators N K
+      mul_mem' := mul_mem_normalizedGenerators }
+  let θ : M →* LaurentSeries K :=
+    { toFun := fun x => normalizedSlashValue N φ hN β x
+      map_one' := normalizedSlashValue_one N φ hN β ℓ
+      map_mul' := fun x y => normalizedSlashValue_mul N φ hN β ℓ x.property y.property }
+  have hlin : ∀ a : M →₀ K,
+      (a.sum fun x c => c • (x : LaurentSeries K)) = 0 →
+        (a.sum fun x c => c • θ x) = 0 := by
+    intro a ha
+    let c := a.mapDomain (Subtype.val : M → LaurentSeries K)
+    have hc : (↑c.support : Set (LaurentSeries K)) ⊆ normalizedGenerators N K := by
+      intro x hx
+      obtain ⟨y, _, rfl⟩ := Finset.mem_image.mp (Finsupp.mapDomain_support hx)
+      exact y.property
+    have he : (c.sum fun x b => b • x) = 0 := by
+      rw [Finsupp.sum_mapDomain_index_inj Subtype.val_injective]
+      exact ha
+    have h := normalizedSlashValue_linear_relation N ℓ φ hN β c hc he
+    rw [Finsupp.sum_mapDomain_index_inj Subtype.val_injective] at h
+    exact h
+  obtain ⟨Φ, hΦ⟩ := exists_algHom_adjoin_of_monoid_relations M θ hlin
+  exact ⟨Φ, fun x hx => hΦ ⟨x, hx⟩⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

@@ -1,0 +1,37 @@
+import Dubon2026.SourceIntegralSlashDiamondGenerator
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp count -> surjection from the existing integral translation
+orbits to actual residue cusp places. Extend the already proved normalized
+actual-action formula to arbitrary field elements and two constructed charts.
+This supplies full covariance needed to exhaust each base-cusp fiber. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K]
+  [CharP K ℓ] [Algebra (ZMod ℓ) K] (hℓN : ¬ ℓ ∣ N)
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+
+theorem originalReducedSlashFieldHom_diamond_mul
+    (β : SL(2, ℤ)) (Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x)
+    (γ : Gamma0 N) (Ψ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΨ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Ψ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN ((γ⁻¹).val * β) x)
+    (x : qExpFunctionFieldC K (Gamma1 N)) :
+    Ψ x = Φ (reducedFieldActionOver K N ℓ hℓN γ x) := by
+  have he : Ψ = Φ.comp (reducedFieldActionOver K N ℓ hℓN γ).toAlgHom := by
+    apply IntermediateField.algHom_ext_of_eq_adjoin K
+      (originalField_eq_adjoin_normalizedGenerators N K)
+    intro y hy
+    change Ψ ⟨y, _⟩ = Φ (reducedFieldActionOver K N ℓ hℓN γ ⟨y, _⟩)
+    rw [hΨ y hy, originalReducedSlashFieldHom_diamond_generator N ℓ hℓN φ hN β Φ hΦ γ hy]
+  exact AlgHom.congr_fun he x
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

@@ -1,0 +1,28 @@
+import SourceIntegralSlashRaisedLevelOne
+import SourceIntegralSlashCuspTriangular
+import SourceIntegralSlashRaisedCuspFormula
+import SourceIntegralSlashTriangularParameter
+import SourceIntegralSlashRaisedCuspCoefficients
+import SourceIntegralSlashRaisedCuspReduction
+import SourceIntegralSlashRaisedCuspLaurent
+import SourceIntegralSlashRaisedCuspCoordinate
+import SourceIntegralSlashCuspCoordinate
+import SourceOriginalResidueFullCuspChart
+import SourceOriginalResidueCuspBaseComparison
+import SourceOriginalResidueCuspPlaceOverBase
+import SourceOriginalResidueCuspMatrix
+import SourceOriginalResidueLabeledCuspPlace
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralSlashRaisedLevelOne, `SourceIntegralSlashCuspTriangular, `SourceIntegralSlashRaisedCuspFormula, `SourceIntegralSlashTriangularParameter, `SourceIntegralSlashRaisedCuspCoefficients, `SourceIntegralSlashRaisedCuspReduction, `SourceIntegralSlashRaisedCuspLaurent, `SourceIntegralSlashRaisedCuspCoordinate, `SourceIntegralSlashCuspCoordinate, `SourceOriginalResidueFullCuspChart, `SourceOriginalResidueCuspBaseComparison, `SourceOriginalResidueCuspPlaceOverBase, `SourceOriginalResidueCuspMatrix, `SourceOriginalResidueLabeledCuspPlace]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

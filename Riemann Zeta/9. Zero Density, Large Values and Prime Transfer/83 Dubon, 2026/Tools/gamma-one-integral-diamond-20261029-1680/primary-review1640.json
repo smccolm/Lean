@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "RelativeMaximalCotangentUniversal",
+  "mathematics": "For an original module annihilated by the original maximal ideal, restriction of an actual relative derivation to the maximal ideal is linear over the original ring. Its kernel contains exactly the required square and coefficient-ideal relations, so it descends to the literal quotient. Composing with the constructed original derivation recovers every value, and surjectivity gives uniqueness. Thus genuine linear maps from this actual quotient classify the original relative derivations.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned Ideal.Cotangent, actual quotient module and Derivation APIs inspected; original residue maps and actual arithmetic local-ring Noetherian and residue theorems re-read. Stacks 33.16.5 equal-residue hypothesis retained explicitly. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Passed the implicit vector and ideal-element arguments explicitly with @hM to the genuine Module.IsTorsionBySet hypothesis. The coefficient scalar tower is introduced only where derivation composition requires it. No mathematical hypothesis changed."
+  ],
+  "productionLog": "relativeMaximalUniversal1640b-focus.log"
+}

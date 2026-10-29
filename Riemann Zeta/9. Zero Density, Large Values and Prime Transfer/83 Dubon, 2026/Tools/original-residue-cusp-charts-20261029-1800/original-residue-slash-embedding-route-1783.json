@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-10-29T11:11:32.845148+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight association -> actual homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual residue cusp field embedding.",
+  "reuseReviewed": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\manifest.json",
+      "sha256": "4B2E1DEA12532879536650C383F71D7AA3D4E9EF80F94263D58DF43D8EB870A3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-chart-field-extension-1762\\manifest.json",
+      "sha256": "72AA1F7AF853CC2B28E74B847B05FB5B7E1AA26F0C708F697D80C20E233F8AC9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-fixed-fibers-1-scratch-receipt.json",
+      "sha256": "0A633BE1AB4A22873A2A3B81404B264A407B018FA7226C09E30106E6CB8D326D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-integral-slash-chart-relations-1-scratch-receipt.json",
+      "sha256": "EF5441CD2AAE11C264472093A6E052791CF6A053A29CAF507567F2F42C4E87A1"
+    }
+  ],
+  "shorterRoute": "Native width expansion computes all level-one images. Original discriminant powers normalize all original integral ratios, even when their original weight is negative or odd. Native finite relation transfer extends to all normalized generators. Native MonoidAlgebra.lift and RingHom.liftOfRightInverse replace separate span and bilinear multiplicativity constructions. Native IsFractionRing.comap_isAlgebraic_iff and Algebra.IsAlgebraic.injective_tower_top replace the external minimal-polynomial denominator argument. The native finite residue-coordinate upper bound and original ratio inclusion discharge algebraicity without the exact signed-index or degree-preservation theorem in the actual residue consumer, and the original j image is exactly the already proved transcendental j(q^N).",
+  "remaining": "Stabilizer equivariance, actual residue fiber bounds and reverse genus remain open. The map is proved for every supplied algebraic-integer reduction homomorphism; construction of reductions with prescribed root-of-unity image remains a separate cusp-chart input. Acceptance 16/20; DUB17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalBuild": false,
+  "externalImport": false
+}

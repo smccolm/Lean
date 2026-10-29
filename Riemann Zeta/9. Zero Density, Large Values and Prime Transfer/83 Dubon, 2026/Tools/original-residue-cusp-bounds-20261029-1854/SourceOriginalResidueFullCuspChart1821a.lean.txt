@@ -1,0 +1,49 @@
+import SourceIntegralSlashCuspCoordinate1820a
+import SourceIntegralSlashDiamondStabilizer1805a
+import Dubon2026.SourceOriginalResiduePrescribedCuspChart
+import Dubon2026.SourceOriginalResidueDiamondFixedField
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual full-base cusp and diamond chart. One
+constructed homomorphism has both prescribed j coordinates and the exact
+signed-translation action on the entire original residue field. None of these
+three clauses, the reduction map, or the homomorphism is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem exists_originalResidueFullCuspFieldHom (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N)
+    (g : SL(2, ℤ)) (a : ℕ) [NeZero a] (b : ℤ)
+    (ha : (a : ℤ) ∣ g 1 0) (haN : a ∣ N)
+    (hb : g 1 0 * b ≡ g 1 1 * a [ZMOD N]) :
+    ∃ Φ : qExpFunctionFieldC kk (Gamma1 N) →ₐ[kk] LaurentSeries kk,
+      Φ ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ =
+        qExpand kk N (jqModC kk) ∧
+      Φ ⟨jqNModC kk N, fullBase_le_originalField kk N
+        (jqd_mem_coeff_field N kk (dvd_refl N))⟩ =
+        qExpand kk (a * a) (qTwist (ζ ^ (b * (a : ℤ))) (jqModC kk)) ∧
+      ∀ (γ : Gamma0 N) (j : ℤ),
+        (g⁻¹ * γ.val * g = ModularGroup.T ^ j ∨
+          g⁻¹ * γ.val * g = -(ModularGroup.T ^ j)) →
+        ∀ x : qExpFunctionFieldC kk (Gamma1 N),
+          Φ (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x) = qTwist (ζ ^ j) (Φ x) := by
+  letI : Algebra (ZMod ℓ) kk := (ZMod.castHom (dvd_refl ℓ) kk).toAlgebra
+  obtain ⟨φ, hN, Φ, hφ, hΦ, hj⟩ :=
+    exists_originalResiduePrescribedCuspFieldHom A N ℓ hℓN (ζ : kk) hζ g
+  have hζN : ζ ^ N = 1 := Units.ext (by
+    rw [Units.val_pow_eq_pow_val, Units.val_one]
+    exact hζ.pow_eq_one)
+  refine ⟨Φ, hj, originalReducedSlashFieldHom_jqN N ℓ φ hN ζ hζN hφ g a b ha haN hb Φ hΦ,
+    fun γ j hγ x => ?_⟩
+  exact originalReducedSlashFieldHom_diamond_stabilizer N ℓ hℓN φ hN ζ hφ g Φ hΦ γ j hγ x
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

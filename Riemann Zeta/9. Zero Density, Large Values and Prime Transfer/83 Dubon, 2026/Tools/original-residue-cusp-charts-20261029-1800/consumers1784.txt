@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedOrdinary_coefficient_iff`. -/
+theorem actual_original_unframed_ordinary_coefficient_ideal_originalUnframedOrdinary_coefficient_iff_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup (Fin 2) R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (N : Subgroup H) (g₀ : N) (hg₀ : σ g₀.val ≠ 1)
+    (f : OriginalContinuousCoefficientFiber eR eA) :
+    originalUnframedOrdinary eA H σ N
+        (originalCoefficientRepresentationClass eR eA H σ τ hτ f) ↔
+      matrixOrdinaryRelationIdeal (τ.toMonoidHom.comp N.subtype) g₀ ≤
+        RingHom.ker f.val.toRingHom :=
+  originalUnframedOrdinary_coefficient_iff eR eA H σ τ hτ N g₀ hg₀ f
+
+end
+

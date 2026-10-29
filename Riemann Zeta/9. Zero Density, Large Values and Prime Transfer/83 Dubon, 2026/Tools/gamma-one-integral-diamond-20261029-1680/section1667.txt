@@ -1,0 +1,7 @@
+### Actual genuine local coefficient fiber products — 10 October 2026
+
+Construct the actual ring of compatible original coefficient pairs using the pinned RingHom.eqLocus of the original product projections. Compatible genuine units have their componentwise inverse in that same ring, with both original projections preserved. The first projection is genuinely surjective when the original second coefficient map is surjective. If the second coefficient map reflects units, then so does the first projection; actual locality of the first coefficient ring therefore makes the same original fiber-product ring local.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalCoefficientFiberProduct](Extension/Dubon2026/LocalCoefficientFiberProduct.lean).

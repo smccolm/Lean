@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "HopfSubgroupVanishingAntipode",
+  "mathematics": "Use inversion and the identity in the constructed actual point group. The original subgroup vanishing ideal is stable under the original antipode, and its counit vanishes when the original base embeds in the point-value ring.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-flat-point-closure-drafts-20261010.json and finite-flat-primary-api-review-20261010.json: source Section6.3, actual joint kernel, quotient injection, original antipode/counit and finite torsion-free PID module APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "precompilationFixes": "Explicit actual subgroup/pointwise torsion-free API imports; no proof claim.",
+  "productionLog": "subgroupVanishing1795b-focus.log",
+  "productionFixes": [
+    "Give the actual local group instance an explicit lowerCamelCase name and documentation to satisfy all sixteen linters; theorem statements unchanged."
+  ]
+}

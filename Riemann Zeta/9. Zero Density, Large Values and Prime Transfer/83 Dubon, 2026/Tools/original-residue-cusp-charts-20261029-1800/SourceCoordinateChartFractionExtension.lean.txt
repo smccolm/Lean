@@ -1,0 +1,49 @@
+import SourceCoordinateAlgebraicChartInjectivity
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. An algebra
+map on the literal generators extends to their actual generated field once its
+coordinate image is transcendental and the original coordinate extension is
+algebraic. Native fraction-ring lifting is used after the proved short tower
+injectivity argument. The actual modular degree and j-image discharge these
+separate, strictly narrower inputs in the original residue consumer. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntermediateField
+open scoped IntermediateField.algebraAdjoinAdjoin
+
+theorem exists_coordinate_chart_fraction_extension
+    {K L T : Type*} [Field K] [Field L] [Field T] [Algebra K L] [Algebra K T]
+    (G : Set L) (x : IntermediateField.adjoin K G) (hx : (x : L) ∈ G)
+    [Algebra.IsAlgebraic K⟮x⟯ (IntermediateField.adjoin K G)]
+    (φ : Algebra.adjoin K G →ₐ[K] T)
+    (ht : Transcendental K (φ ⟨x, Algebra.subset_adjoin hx⟩)) :
+    ∃ Φ : IntermediateField.adjoin K G →ₐ[K] T,
+      ∀ a : Algebra.adjoin K G, Φ (algebraMap _ _ a) = φ a := by
+  let F := IntermediateField.adjoin K G
+  let A := Algebra.adjoin K G
+  let B := A.comap F.val
+  let e : B →ₐ[K] A :=
+    { toFun := fun a => ⟨a.val.val, a.property⟩
+      map_zero' := rfl
+      map_one' := rfl
+      map_add' _ _ := rfl
+      map_mul' _ _ := rfl
+      commutes' _ := rfl }
+  have he : Function.Surjective e := by
+    intro a
+    exact ⟨⟨⟨a, IntermediateField.algebra_adjoin_le_adjoin K G a.property⟩, a.property⟩, rfl⟩
+  have hxB : x ∈ B := Algebra.subset_adjoin hx
+  have hinjB : Function.Injective (φ.comp e) :=
+    coordinate_algebraic_chart_injective B x hxB (φ.comp e) ht
+  have hinj : Function.Injective φ := by
+    intro a b h
+    obtain ⟨a', rfl⟩ := he a
+    obtain ⟨b', rfl⟩ := he b
+    exact congrArg e (hinjB h)
+  refine ⟨IsFractionRing.liftAlgHom (A := A) (K := F) hinj, fun a => ?_⟩
+  rw [IsFractionRing.liftAlgHom_apply, IsFractionRing.lift_algebraMap]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

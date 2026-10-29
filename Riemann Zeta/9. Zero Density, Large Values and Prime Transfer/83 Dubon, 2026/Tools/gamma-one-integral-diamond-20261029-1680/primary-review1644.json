@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalRelativeCotangentDualFiniteness",
+  "mathematics": "Original Noetherianity gives finite generation of the actual relative maximal-ideal quotient over the original ring. True reduction and the proved original residue action give finite-dimensionality over the original coefficient residue field. The genuine ordinary dual is finite-dimensional by the pinned linear-dual theorem, and its dimension equals that of the same literal quotient.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned Ideal.Cotangent, actual quotient module and Derivation APIs inspected; original residue maps and actual arithmetic local-ring Noetherian and residue theorems re-read. Stacks 33.16.5 equal-residue hypothesis retained explicitly. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "cotangentDualFiniteness1644-focus.log"
+}

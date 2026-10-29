@@ -1,0 +1,1 @@
+Construct simultaneous evaluation of each original coordinate at the specified genuine Hopf points. Its literal kernel is the vanishing ideal. The actual quotient embeds into the product of point-value rings, and the exact original coordinate-evaluation formula is retained.

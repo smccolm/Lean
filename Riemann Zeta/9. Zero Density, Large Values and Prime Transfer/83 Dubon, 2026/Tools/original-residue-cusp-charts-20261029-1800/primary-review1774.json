@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixOrdinaryInvariantDirectSummand",
+  "mathematics": "Consume the original invariant-line basis constructed from the actual ordinary matrix relations. Use the genuine linear action of the inverse basis and the original two-coordinate product equivalence to identify the actual invariant submodule of the existing column representation. Derive a true coefficient-linear equivalence with the original ring and an actual complementary submodule of the same original two-dimensional module.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-ordinary-invariant-line-route-20261010.json: source Section6.2, actual original unit-coordinate basis, residue reflection, fixed vectors and determinant-complement operators inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Generalize the existing matrixStandardRepresentation definition to commutative coefficient rings and arbitrary universes, retaining its exact matrix-action formula and proof. All later original field Schur declarations are byte-identical; the source hash was checked before editing. Full package and exact existing consumers will be reverified."
+  ],
+  "productionLog": "ordinaryInvariantSummand1774-focus.log"
+}

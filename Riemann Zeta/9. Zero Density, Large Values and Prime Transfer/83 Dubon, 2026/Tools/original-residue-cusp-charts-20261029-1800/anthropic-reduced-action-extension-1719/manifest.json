@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-29T08:27:54.779588+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-action-extension-1719\\S_ModularCurve_existsUnique_algEquiv_qExpFunctionFieldC_coe_apply_eq_coeffMap.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_existsUnique_algEquiv_qExpFunctionFieldC_coe_apply_eq_coeffMap.lean",
+      "bytes": 21636,
+      "sha256": "5660D4CA84B860515ADFD06CE40AB166A44FB057928E63B90D5F14CE894CB5DD",
+      "gitBlob": "5e748b63338a17464a915764c5c1fa6567221d90"
+    }
+  ],
+  "purpose": "Read-only primary-source review of extension of the proved prime-field diamond action to the actual algebraically closed residue coefficient field. This is the next necessary input to the modular fiber-count and reverse genus inequality for DUB-17/18. Compare native coefficient independence, actual field inclusion and Mathlib tensor/fraction APIs before implementation; no external import or options adopted.",
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,11 @@
+{
+  "SourceReducedBaseCoordinateMap": "1702b",
+  "SourceReducedBaseDegreeLower": "1703b",
+  "SourceIntegralDiamondIndexLower": "1704b",
+  "SourceReducedCoordinateIndependence": "1707a",
+  "SourceReducedCoordinateMapIndependence": "1708a",
+  "SourceReducedFieldCoefficientMap": "1710b",
+  "SourceReducedCoordinateDegreeTransport": "1711a",
+  "SourceReducedResidueDegreeTransport": "1712b",
+  "SourceGammaOneDegreePreservation": "1713a"
+}

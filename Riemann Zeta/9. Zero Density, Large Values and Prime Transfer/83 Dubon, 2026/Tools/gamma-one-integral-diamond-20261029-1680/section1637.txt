@@ -1,0 +1,7 @@
+### Actual original arithmetic local cotangent class linearity — 10 October 2026
+
+The actual residue-field-linear universal differential equivalence is specialized to the literal original completed arithmetic local ring. It preserves its same whole first-order local representations under the proved coefficient-point classification. Composing with the proved original derivation class linear map gives a genuine residue-field-linear and surjective map from actual relative cotangent maps onto the same local continuous cohomology condition.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalCotangentLinearity](Extension/Dubon2026/ArithmeticLocalCotangentLinearity.lean).

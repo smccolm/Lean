@@ -1,0 +1,62 @@
+import Dubon2026.SourceReducedFieldScalarGeneration
+import Dubon2026.SourceReducedFieldTensorEmbedding
+import Dubon2026.SourceReducedFieldTensorFraction
+import Dubon2026.SourceReducedFieldAutomorphismExtension
+import Dubon2026.SourceReducedFieldAutomorphismExtensionLaws
+import Dubon2026.SourceIntegralDiamondScalarAction
+import Dubon2026.SourceIntegralDiamondScalarBaseFixed
+import Dubon2026.SourceIntegralDiamondScalarFixedDegree
+import Dubon2026.SourceIntegralDiamondScalarFixedField
+import Dubon2026.SourceOriginalResidueCoordinateIndex
+import Dubon2026.SourceIntegralDiamondFixedPlaceTransitivity
+import Dubon2026.SourceOriginalResidueDiamondFixedField
+import Dubon2026.SourceIntegralDiamondBaseFiberTransitivity
+import Dubon2026.SourceOriginalResidueDiamondFiberTransitivity
+import Dubon2026.SourceIntegralSlashCoefficientLocalization
+import Dubon2026.SourceIntegralSlashCoefficientReduction
+import Dubon2026.SourceIntegralSlashReducedSeries
+import Dubon2026.SourceIntegralSlashReducedScaling
+import Dubon2026.SourceIntegralSlashReducedZero
+import Dubon2026.SourceIntegralSlashReducedOperations
+import Dubon2026.SourceIntegralSlashReducedSums
+import Dubon2026.SourceIntegralSlashLinearRelation
+import Dubon2026.SourceIntegralSlashLevelOne
+import Dubon2026.SourceIntegralSlashDiscriminantNormalization
+import Dubon2026.SourceCoordinateAlgebraicChartInjectivity
+import Dubon2026.SourceIntegralSlashReducedPowers
+import Dubon2026.SourceIntegralSlashReducedEquality
+import Dubon2026.SourceIntegralSlashNormalizedGenerators
+import Dubon2026.SourceIntegralSlashNormalizedRatioEquality
+import Dubon2026.SourceIntegralSlashNormalizedMap
+import Dubon2026.SourceIntegralSlashNormalizedLinearRelations
+import Dubon2026.SourceIntegralSlashNormalizedCoordinate
+import Dubon2026.SourceMonoidGeneratorAlgebraLift
+import Dubon2026.SourceIntegralSlashNormalizedAlgebra
+import Dubon2026.SourceCoordinateChartFractionExtension
+import Dubon2026.SourceIntegralSlashFieldEmbedding
+import Dubon2026.SourceOriginalResidueSlashFieldEmbedding
+import Dubon2026.SourcePrescribedPrimitiveRootReduction
+import Dubon2026.SourceOriginalResiduePrescribedCuspChart
+import Dubon2026.SourceIntegralSlashReducedTranslation
+import Dubon2026.SourceIntegralSlashReducedTranslationSeries
+import Dubon2026.SourceIntegralSlashDiamondChart
+import Dubon2026.SourceIntegralSlashNormalizedDiamond
+import Dubon2026.SourceIntegralSlashFieldChartIdentities
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceReducedFieldScalarGeneration, `Dubon2026.SourceReducedFieldTensorEmbedding, `Dubon2026.SourceReducedFieldTensorFraction, `Dubon2026.SourceReducedFieldAutomorphismExtension, `Dubon2026.SourceReducedFieldAutomorphismExtensionLaws, `Dubon2026.SourceIntegralDiamondScalarAction, `Dubon2026.SourceIntegralDiamondScalarBaseFixed, `Dubon2026.SourceIntegralDiamondScalarFixedDegree, `Dubon2026.SourceIntegralDiamondScalarFixedField, `Dubon2026.SourceOriginalResidueCoordinateIndex, `Dubon2026.SourceIntegralDiamondFixedPlaceTransitivity, `Dubon2026.SourceOriginalResidueDiamondFixedField, `Dubon2026.SourceIntegralDiamondBaseFiberTransitivity, `Dubon2026.SourceOriginalResidueDiamondFiberTransitivity, `Dubon2026.SourceIntegralSlashCoefficientLocalization, `Dubon2026.SourceIntegralSlashCoefficientReduction, `Dubon2026.SourceIntegralSlashReducedSeries, `Dubon2026.SourceIntegralSlashReducedScaling, `Dubon2026.SourceIntegralSlashReducedZero, `Dubon2026.SourceIntegralSlashReducedOperations, `Dubon2026.SourceIntegralSlashReducedSums, `Dubon2026.SourceIntegralSlashLinearRelation, `Dubon2026.SourceIntegralSlashLevelOne, `Dubon2026.SourceIntegralSlashDiscriminantNormalization, `Dubon2026.SourceCoordinateAlgebraicChartInjectivity, `Dubon2026.SourceIntegralSlashReducedPowers, `Dubon2026.SourceIntegralSlashReducedEquality, `Dubon2026.SourceIntegralSlashNormalizedGenerators, `Dubon2026.SourceIntegralSlashNormalizedRatioEquality, `Dubon2026.SourceIntegralSlashNormalizedMap, `Dubon2026.SourceIntegralSlashNormalizedLinearRelations, `Dubon2026.SourceIntegralSlashNormalizedCoordinate, `Dubon2026.SourceMonoidGeneratorAlgebraLift, `Dubon2026.SourceIntegralSlashNormalizedAlgebra, `Dubon2026.SourceCoordinateChartFractionExtension, `Dubon2026.SourceIntegralSlashFieldEmbedding, `Dubon2026.SourceOriginalResidueSlashFieldEmbedding, `Dubon2026.SourcePrescribedPrimitiveRootReduction, `Dubon2026.SourceOriginalResiduePrescribedCuspChart, `Dubon2026.SourceIntegralSlashReducedTranslation, `Dubon2026.SourceIntegralSlashReducedTranslationSeries, `Dubon2026.SourceIntegralSlashDiamondChart, `Dubon2026.SourceIntegralSlashNormalizedDiamond, `Dubon2026.SourceIntegralSlashFieldChartIdentities]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

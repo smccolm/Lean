@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "AdicCompletionOriginalDensity",
+  "mathematics": "Choose an original-ring representative of every genuine completion evaluation. The proved actual evaluation-kernel equality puts its difference from the original completion element in the corresponding extended ideal power. Apply the actual ideal-power neighborhood basis to prove density of the same original ring in its completion.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-coefficient-retraction-route-20261010.json: original completion kernels, localizations, matrix-coordinate generation, continuous framed universality, local coefficient retractions and adic neighborhood bases inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "State the actual completion-valued neighborhood image equality explicitly, then use reverse add_sub_assoc and commutative cancellation. No hypothesis or proof limit changed.",
+    "Initial attempts1722a/b failed an underdetermined additive cancellation theorem and rewrite orientation respectively; clean1722c actual exit0 consumed."
+  ],
+  "productionLog": "adicOriginalDensity1722c-focus.log"
+}

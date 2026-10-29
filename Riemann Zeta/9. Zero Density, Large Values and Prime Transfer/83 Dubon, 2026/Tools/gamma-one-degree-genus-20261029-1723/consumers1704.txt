@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixIdempotentNewtonSequence_error`. -/
+theorem actual_matrix_idempotent_newton_bounds_matrixIdempotentNewtonSequence_error_source (I : Ideal R) (X : Matrix ι ι R)
+    (hX : ∀ i j, (X ^ 2 - X) i j ∈ I) (n : ℕ) :
+    ∀ i j, ((matrixIdempotentNewtonSequence X n) ^ 2 -
+      matrixIdempotentNewtonSequence X n) i j ∈ I ^ (2 ^ n) :=
+  matrixIdempotentNewtonSequence_error I X hX n
+
+end
+

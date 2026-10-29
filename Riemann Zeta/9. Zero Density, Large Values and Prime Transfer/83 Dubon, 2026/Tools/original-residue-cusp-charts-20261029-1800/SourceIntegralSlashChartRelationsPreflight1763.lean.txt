@@ -1,0 +1,76 @@
+import SourceIntegralSlashCoefficientLocalization1753b
+import SourceIntegralSlashCoefficientReduction1755a
+import SourceIntegralSlashReducedSeries1756b
+import SourceIntegralSlashReducedScaling1757c
+import SourceIntegralSlashReducedZero1758c
+import SourceIntegralSlashReducedOperations1759a
+import SourceIntegralSlashReducedSums1760d
+import SourceIntegralSlashLinearRelation1761e
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralSlashCoefficientLocalization1753b, `SourceIntegralSlashCoefficientReduction1755a, `SourceIntegralSlashReducedSeries1756b, `SourceIntegralSlashReducedScaling1757c, `SourceIntegralSlashReducedZero1758c, `SourceIntegralSlashReducedOperations1759a, `SourceIntegralSlashReducedSums1760d, `SourceIntegralSlashLinearRelation1761e]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit, `Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing, `Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map, `Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel, `Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction, `Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Integral slash chart relations postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Integral slash chart relations theorems discovered"
+  logInfo m!"SOURCE INTEGRAL SLASH CHART RELATIONS PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+#lint in SourceIntegralSlashCoefficientLocalization1753b
+#lint in SourceIntegralSlashCoefficientReduction1755a
+#lint in SourceIntegralSlashReducedSeries1756b
+#lint in SourceIntegralSlashReducedScaling1757c
+#lint in SourceIntegralSlashReducedZero1758c
+#lint in SourceIntegralSlashReducedOperations1759a
+#lint in SourceIntegralSlashReducedSums1760d
+#lint in SourceIntegralSlashLinearRelation1761e

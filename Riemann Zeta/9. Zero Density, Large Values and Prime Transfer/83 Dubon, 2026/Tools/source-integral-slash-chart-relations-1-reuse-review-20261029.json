@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual reduced slash field embedding -> localized coefficients and finite linear relation transfer.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-integral-slash-chart-relations-audit-route-1768.json",
+    "sha256": "E5D78D01A0E6261A7699C04A1147C8C584C83655E94AFCFB5BB4DAF4B1DA9511",
+    "review": {
+      "recordedUTC": "2026-10-29T10:39:36.091349+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual reduced slash field embedding -> localized coefficients and finite linear relation transfer.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\integral-slash-chart-relations-route-1764.json",
+          "sha256": "E5C2484822C91B6468BE209B31C6114E27D2E18D9295623B27680FBB5F7068F3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\manifest.json",
+          "sha256": "4B2E1DEA12532879536650C383F71D7AA3D4E9EF80F94263D58DF43D8EB870A3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-chart-field-extension-1762\\manifest.json",
+          "sha256": "72AA1F7AF853CC2B28E74B847B05FB5B7E1AA26F0C708F697D80C20E233F8AC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Actual Reduced Slash Relations Assessment 2026-10-29.md",
+          "sha256": "9E931876923E15874C4523308539582AB214B124022495FD92C519B42E146593"
+        }
+      ],
+      "shorterRoute": "The native level-integral subring, Mathlib localization, original uniform slash integrality, integral modular-form operations and exact prime-multiple Fourier kernel replace the longer coefficientwise-choice construction in the pinned external reference. Existing even representatives cover every original integral ratio. The first preflight found one missing declaration docstring; the fresh successor adds that docstring, preserving all mathematical statements and proof bodies and every audit check. The failed predecessor is retained. A separate native algebraicity shortcut for the later field-map injectivity is under development and is not claimed here.",
+      "assumptionsToDischarge": [
+        "The literal level-integral coefficient ring is the localization of the actual complex algebraic integers at the level. Its universal reduction map gives exact clearing-power formulas without choosing a denominator independently for each proof.",
+        "Native uniform even-weight slash integrality puts every actual cusp Fourier series in this ring. Every algebraic-integer series clearing it by any level power reduces to the same normalized series.",
+        "The actual reduced slash series preserves addition, products, integer multiples and finite integer sums. The exact prime-multiple Fourier kernel transfers zero reduction to every cusp.",
+        "Projecting onto a basis over the prime field and reassembling finite supports proves preservation of every finite residue-field linear relation between original integral modular forms of the same even weight. No relation-preservation certificate remains in this consumer."
+      ],
+      "remaining": "The actual normalized-generator field embedding, its stabilizer charts, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under every original completion condition.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The literal level-integral coefficient ring is the localization of the actual complex algebraic integers at the level. Its universal reduction map gives exact clearing-power formulas without choosing a denominator independently for each proof.",
+    "Native uniform even-weight slash integrality puts every actual cusp Fourier series in this ring. Every algebraic-integer series clearing it by any level power reduces to the same normalized series.",
+    "The actual reduced slash series preserves addition, products, integer multiples and finite integer sums. The exact prime-multiple Fourier kernel transfers zero reduction to every cusp.",
+    "Projecting onto a basis over the prime field and reassembling finite supports proves preservation of every finite residue-field linear relation between original integral modular forms of the same even weight. No relation-preservation certificate remains in this consumer."
+  ],
+  "remaining": "The actual normalized-generator field embedding, its stabilizer charts, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under every original completion condition.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

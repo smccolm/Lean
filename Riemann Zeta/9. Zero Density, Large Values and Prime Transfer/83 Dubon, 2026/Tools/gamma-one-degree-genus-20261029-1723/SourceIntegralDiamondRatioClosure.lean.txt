@@ -1,0 +1,97 @@
+import SourceIntegralDiamondAdditiveSeries
+import Dubon2026.SourceGammaOneEvenIntegralRatios
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action.
+The original integer Fourier ratios over ZMod are closed under field
+operations. Hence every element of the original adjoined field has an
+actual same-weight integral ratio, and native even-weight replacement
+supplies the representatives needed by the proved reduced diamond laws.
+The local subfield is proved equal to the original source field.
+Adapted from the pinned Apache-2.0 Sol reduced-field-action reference;
+native original ratio definitions and even-weight replacement are reused. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+variable {N ℓ : ℕ} [Fact ℓ.Prime]
+
+theorem originalRatio_zero : (0 : LaurentSeries (ZMod ℓ)) ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  refine ⟨0, 0, 1, 0, 1, integralQExp_zero N 0, integralQExp_one N, ?_, ?_⟩
+  · rw [← red_apply, map_one]; exact one_ne_zero
+  · rw [← red_apply, map_zero, zero_div]
+
+theorem originalRatio_one : (1 : LaurentSeries (ZMod ℓ)) ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  refine ⟨0, 1, 1, 1, 1, integralQExp_one N, integralQExp_one N, ?_, ?_⟩
+  · rw [← red_apply, map_one]; exact one_ne_zero
+  · rw [← red_apply, map_one, div_one]
+
+theorem originalRatio_mul {x y : LaurentSeries (ZMod ℓ)}
+    (hx : x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N))
+    (hy : y ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N)) :
+    x * y ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  obtain ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩ := hx
+  obtain ⟨l, f', g', pf', pg', hf', hg', hg'0, rfl⟩ := hy
+  refine ⟨k + l, f.mul f', g.mul g', pf * pf', pg * pg',
+    integralQExp_mul f f' hf hf', integralQExp_mul g g' hg hg', ?_, ?_⟩
+  · rw [intSeriesC_mul]; exact mul_ne_zero hg0 hg'0
+  · rw [intSeriesC_mul, intSeriesC_mul, div_mul_div_comm]
+
+theorem originalRatio_add {x y : LaurentSeries (ZMod ℓ)}
+    (hx : x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N))
+    (hy : y ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N)) :
+    x + y ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  obtain ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩ := hx
+  obtain ⟨l, f', g', pf', pg', hf', hg', hg'0, rfl⟩ := hy
+  refine ⟨k + l, f.mul g' + g.mul f', g.mul g', pf * pg' + pg * pf', pg * pg',
+    integralQExp_add (f.mul g') (g.mul f')
+      (integralQExp_mul f g' hf hg') (integralQExp_mul g f' hg hf'),
+    integralQExp_mul g g' hg hg', ?_, ?_⟩
+  · rw [intSeriesC_mul]; exact mul_ne_zero hg0 hg'0
+  · simp only [← red_apply] at hg0 hg'0 ⊢
+    rw [map_add, map_mul, map_mul, map_mul, div_add_div _ _ hg0 hg'0]
+
+theorem originalRatio_neg {x : LaurentSeries (ZMod ℓ)}
+    (hx : x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N)) :
+    -x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  obtain ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩ := hx
+  refine ⟨k, 0 - f, g, 0 - pf, pg,
+    integralQExp_sub 0 f (integralQExp_zero N k) hf, hg, hg0, ?_⟩
+  simp only [← red_apply, zero_sub, map_neg, neg_div]
+
+theorem originalRatio_inv {x : LaurentSeries (ZMod ℓ)}
+    (hx : x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N)) :
+    x⁻¹ ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  obtain ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩ := hx
+  by_cases hf0 : intSeriesC (ZMod ℓ) pf = 0
+  · rw [hf0, zero_div, inv_zero]; exact originalRatio_zero
+  · exact ⟨k, g, f, pg, pf, hg, hf, hf0, by rw [inv_div]⟩
+
+theorem mem_originalReducedField_iff {x : LaurentSeries (ZMod ℓ)} :
+    x ∈ qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) ↔
+      x ∈ intFormRatiosC (ZMod ℓ) (Gamma1 N) := by
+  let R : Subfield (LaurentSeries (ZMod ℓ)) :=
+    { carrier := intFormRatiosC (ZMod ℓ) (Gamma1 N)
+      zero_mem' := originalRatio_zero
+      one_mem' := originalRatio_one
+      mul_mem' := originalRatio_mul
+      add_mem' := originalRatio_add
+      neg_mem' := originalRatio_neg
+      inv_mem' := fun _ => originalRatio_inv }
+  have hc (c : ZMod ℓ) : algebraMap (ZMod ℓ) (LaurentSeries (ZMod ℓ)) c ∈ R := by
+    rw [← ZMod.natCast_zmod_val c, map_natCast]
+    exact natCast_mem R _
+  let F := R.toIntermediateField hc
+  have hle : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) ≤ F :=
+    IntermediateField.adjoin_le_iff.mpr (fun _ h => h)
+  exact ⟨fun h => hle h, fun h => intFormRatiosC_subset _ _ h⟩
+
+theorem exists_even_originalReducedField_ratio
+    (x : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) :
+    ∃ (k : ℤ), Even k ∧ ∃ (f g : ModularForm (Gamma1 N) k)
+      (pf pg : PowerSeries ℤ), IsIntegralQExp f pf ∧ IsIntegralQExp g pg ∧
+        red ℓ pg ≠ 0 ∧ (x : LaurentSeries (ZMod ℓ)) = red ℓ pf / red ℓ pg := by
+  simpa only [red_apply] using exists_even_integral_ratio
+    (show ModularGroup.T ∈ Gamma1 N by simp [Gamma1_mem, ModularGroup.T]) (mem_originalReducedField_iff.mp x.property)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

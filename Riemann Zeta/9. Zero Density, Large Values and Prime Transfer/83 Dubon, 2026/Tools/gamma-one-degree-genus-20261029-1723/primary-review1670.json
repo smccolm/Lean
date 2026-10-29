@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ContinuousCoefficientFiberProduct",
+  "mathematics": "For actual compatible continuous general-linear matrix families, prove continuity of both original matrix and inverse-matrix coordinates of the glued unit in the genuine coefficient product-subtype topology. This proves continuity of the same whole glued original representation. Combine actual algebraic uniqueness with these proved topology facts to construct exactly one continuous whole representation with the two prescribed actual original coefficient projections.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned actual RingHom.eqLocus and CommRingCat concrete pullbackCone inspected; Units mapping, local-hom reflection and actual matrix/unit topology APIs inspected. Existing CanonicalAdelicGL2Coordinates actual matrix-product/unit-continuity proof reviewed; current construction treats general matrix size and the actual compatible-pair subring. Levin Lecture5 original group-fiber-product role rechecked live10Oct2026. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Algebra/Category/Ring/Constructions.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Group/Matrix.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Specified each actual matrix monoid in Units.continuous_val and Units.continuous_coe_inv, following the already proved CanonicalAdelicGL2Coordinates pattern. This prevents inference from selecting pointwise function multiplication instead of original matrix multiplication; the genuine product-subtype topology and continuity statement are unchanged."
+  ],
+  "productionLog": "continuousCoefficientFiber1670b-focus.log"
+}

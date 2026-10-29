@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [IsDomain R] [CommRing A] [HopfAlgebra R A]
+  [Field K] [Algebra R K] [FaithfulSMul R K]
+
+/-- Exact original-object consumer of `hopfPointsCoordinateQuotient_finite_free`. -/
+theorem actual_hopf_points_coordinate_quotient_free_hopfPointsCoordinateQuotient_finite_free_source [IsPrincipalIdealRing R] [Module.Finite R A]
+    (X : Set (WithConv (A →ₐ[R] K))) :
+    Module.Finite R (A ⧸ hopfPointsVanishingIdeal X) ∧
+      Module.Free R (A ⧸ hopfPointsVanishingIdeal X) :=
+  hopfPointsCoordinateQuotient_finite_free X
+
+end
+

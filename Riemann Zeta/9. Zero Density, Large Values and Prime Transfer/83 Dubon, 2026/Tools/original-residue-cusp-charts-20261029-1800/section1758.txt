@@ -1,0 +1,7 @@
+### Actual actual determinant and subgroup conditions on original classes — 10 October 2026
+
+Descend the genuine whole determinant condition and genuine subgroup-killing condition to the existing original unframed quotient. Prove well-definedness with actual strict-conjugacy invariance and identify each condition on every original framed representative.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedDeterminantInertiaConditions](Extension/Dubon2026/OriginalUnframedDeterminantInertiaConditions.lean).

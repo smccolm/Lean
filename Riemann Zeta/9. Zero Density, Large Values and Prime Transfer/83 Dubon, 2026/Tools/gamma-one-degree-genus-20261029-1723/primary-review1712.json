@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixUnitLeftIdealColumns",
+  "mathematics": "Prove entrywise that an actual matrix fixed on the right by the original diagonal matrix unit is exactly the sum of its selected-column entries times the original column matrix units. This computes the genuine residual left ideal used in the original-dimensional basis construction.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: actual idempotent left ideal, finite module Nakayama, original basis coordinates, true residue maps and local-ring column invertibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Made the evaluated original matrix product and scalar type explicit before the coordinate rewrite.",
+    "Used Ne.symm explicitly for the off-column condition and removed unused simplification arguments. Exact original column decomposition unchanged."
+  ],
+  "productionLog": "matrixUnitColumns1712c-focus.log"
+}

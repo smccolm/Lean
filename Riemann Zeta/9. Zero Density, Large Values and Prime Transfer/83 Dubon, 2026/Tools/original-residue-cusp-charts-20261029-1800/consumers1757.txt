@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R K : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing K]
+
+/-- Exact original-object consumer of `matrixStrictlyConjugate_ker`. -/
+theorem actual_matrix_strict_conjugacy_conditions_matrixStrictlyConjugate_ker_source (r : R →+* K)
+    (ρ τ : G →* GeneralLinearGroup ι R) (h : MatrixStrictlyConjugate r ρ τ) :
+    ρ.ker = τ.ker :=
+  matrixStrictlyConjugate_ker r ρ τ h
+
+end
+

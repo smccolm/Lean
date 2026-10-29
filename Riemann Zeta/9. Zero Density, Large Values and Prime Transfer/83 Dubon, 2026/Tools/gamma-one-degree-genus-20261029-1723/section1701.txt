@@ -1,0 +1,7 @@
+### Actual original closed matrix basis span — 10 October 2026
+
+Prove that the actual span of an original full matrix basis over a coefficient subalgebra consists exactly of matrices whose genuine original basis coordinates lie in that subalgebra. Use the proved full-matrix trace duality to express each genuine coordinate as the trace against an actual fixed matrix, and derive its continuity in the original coefficient topology. A closed coefficient subalgebra therefore gives a closed actual matrix-basis span by intersecting these genuine coordinate preimages.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixBasisSubalgebraSpan](Extension/Dubon2026/MatrixBasisSubalgebraSpan.lean).

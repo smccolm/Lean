@@ -1,0 +1,32 @@
+import Dubon2026.SourceIntegralSlashCuspTriangular
+import Dubon2026.SourceSiegelLeadingUnit
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Compute the
+literal q-parameter of the existing triangular Hecke action at width N=ad.
+This phase and exponent identify the exact j_N slot after coefficient reduction. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane Function GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups
+
+theorem qParam_triangular_width (N a d : ℕ) [NeZero N] [NeZero a] [NeZero d]
+    (had : a * d = N) (B : ℕ) (τ : ℍ) :
+    Periodic.qParam 1 ((heckeTriangularMatrix a d B • τ : ℍ) : ℂ) =
+      zeta N ((a * B : ℕ) : ℤ) * Periodic.qParam (N : ℝ) (τ : ℂ) ^ (a * a) := by
+  rw [heckeTriangularMatrix_smul]
+  change Periodic.qParam 1
+    ((((levelRaiseMatrix a • τ : ℍ) : ℂ) + (B : ℕ)) / (d : ℕ)) = _
+  rw [coe_levelRaiseMatrix_smul, Periodic.qParam, Periodic.qParam, zeta,
+    ← Complex.exp_nat_mul, ← Complex.exp_add]
+  congr 1
+  have hd : (d : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne d
+  have ha : (a : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne a
+  have hN : (N : ℂ) = a * d := by exact_mod_cast had.symm
+  push_cast
+  rw [hN]
+  field_simp
+  ring
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

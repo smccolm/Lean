@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-29T11:12:13.257023+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-prescribed-root-reduction-1784\\S_Complex_exists_ringHom_integralClosure_int_apply_eq_of_isPrimitiveRoot.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_Complex_exists_ringHom_integralClosure_int_apply_eq_of_isPrimitiveRoot.lean",
+      "bytes": 5626,
+      "sha256": "6967F0363429FE822C54085D7688697ED81CD599AD0B1E4948AEAB3026DBD1C7",
+      "gitBlob": "65939b609761573c064f5b582ccccb21a2f5b507"
+    }
+  ],
+  "purpose": "Read-only pinned source review of the actual diamond-stabilizer charts over finite and cusp residue fibers. Native Galois place transitivity and fixed-field degree arguments are already available; inspect these exact remaining chart statements before expanding the reverse-genus dependency. No external import or proof options adopted.",
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,30 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R]
+  [Algebra O R] [WithIdeal R]
+
+/-- Exact original-object consumer of `originalClosedTraceMatrixAlgebra_finite_free_closed`. -/
+theorem actual_original_closed_trace_matrix_algebra_originalClosedTraceMatrixAlgebra_finite_free_closed_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+    (hR : (WithIdeal.i : Ideal R) = IsLocalRing.maximalIdeal R)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ)))] :
+    Module.Finite (closedMatrixTraceAlgebra (O := O) ρ)
+        (coefficientRepresentationMatrixAlgebra (closedMatrixTraceAlgebra (O := O) ρ) ρ) ∧
+      Module.Free (closedMatrixTraceAlgebra (O := O) ρ)
+        (coefficientRepresentationMatrixAlgebra (closedMatrixTraceAlgebra (O := O) ρ) ρ) ∧
+      IsClosed (coefficientRepresentationMatrixAlgebra (closedMatrixTraceAlgebra (O := O) ρ) ρ :
+        Set (Matrix ι ι R)) :=
+  originalClosedTraceMatrixAlgebra_finite_free_closed (L := L) hR eR ρ
+
+end
+

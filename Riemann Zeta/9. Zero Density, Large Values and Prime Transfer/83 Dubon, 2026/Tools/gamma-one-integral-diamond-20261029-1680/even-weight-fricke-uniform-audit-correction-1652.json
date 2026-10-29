@@ -1,0 +1,31 @@
+{
+  "previous": "1651",
+  "failure": "VALUE traversal stopped at already audited canonical scratch Fricke trace modules. Public, exhaustive and sixteen-linter audit passed; the missing dependencies were not traversed.",
+  "correction": "Add the six actual imported canonical scratch modules to local VALUE traversal. Preserve every required edge and the failed evidence. Correct stale audit message: common denominator is constructed.",
+  "requiredEdgesUnchanged": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance",
+    "Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm",
+    "Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.frickeForm",
+    "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN",
+    "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd",
+    "Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary",
+    "Dubon2026.SourceFricke.span_gammaOne_integral_cuspForms_eq_top",
+    "Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit",
+    "Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem",
+    "Dubon2026.SourceFricke.gammaOneQCoeffLinear",
+    "Dubon2026.cuspRestrictSubgroup",
+    "Algebra.IsAlgebraic.exists_integral_multiples",
+    "LinearMap.exists_leftInverse_of_injective"
+  ]
+}

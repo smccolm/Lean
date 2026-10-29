@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CommutativeHopfPointsGroup",
+  "mathematics": "Construct the original antipode as an algebra homomorphism for a commutative Hopf coordinate algebra. Derive the inverse law for actual algebra-valued points from the Hopf antipode identity and existing convolution multiplication, then construct their group and its exact inverse-evaluation formula.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-flat-hopf-points-drafts-20261010.json and finite-flat-primary-api-review-20261010.json: source Section6.3 and actual pinned Hopf, convolution, coefficient-composition and finite-free point APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Use actual Coalgebra.Repr.arbitrary rather than treating scoped notation as a namespace declaration.",
+    "Declare the constructed class-valued group as abbrev to meet the reducibility linter without suppressing diagnostics."
+  ],
+  "productionLog": "hopfPoints1791b-focus.log"
+}

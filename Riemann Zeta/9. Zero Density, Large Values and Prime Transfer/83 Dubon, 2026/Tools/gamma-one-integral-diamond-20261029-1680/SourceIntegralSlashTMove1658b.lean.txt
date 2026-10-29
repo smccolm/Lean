@@ -1,0 +1,72 @@
+import SourceIntegralSlashCuspChart1655b
+import Dubon2026.SourceSiegelLeadingUnit
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> uniform level-power slash integrality. Integer translations multiply
+each actual cusp coefficient by an integral root of unity. The native
+Siegel cyclotomic integrality theorem covers both generator directions;
+no new cyclotomic or inverse-root infrastructure is needed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open Function UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups ModularForm Real
+
+private theorem qParam_vadd (M : ℕ) (t : ℝ) (τ : ℍ) :
+    Periodic.qParam (M : ℝ) (((t +ᵥ τ : ℍ)) : ℂ) =
+      Complex.exp (2 * π * Complex.I * t / M) * Periodic.qParam (M : ℝ) τ := by
+  simp only [Periodic.qParam, coe_vadd, ← Complex.exp_add]
+  congr 1
+  push_cast
+  ring
+
+theorem coeff_cusp_mul_T_zpow {M : ℕ} [NeZero M] {k : ℤ}
+    (f : ModularForm (Gamma1 M) k) (β : SL(2, ℤ)) (j : ℤ) (n : ℕ) :
+    (qExpansion (M : ℝ)
+      ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n =
+      zeta M j ^ n *
+        (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n := by
+  symm
+  refine ModularFormClass.qExpansion_coeff_unique
+    (c := fun m => zeta M j ^ m *
+      (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff m)
+    (f := ModularForm.translate f ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ))
+    (Nat.cast_pos.mpr (NeZero.pos M)) (cusp_strictPeriod M (β * ModularGroup.T ^ j)) ?_ n
+  intro τ
+  have hm : ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ) =
+      (β : GL (Fin 2) ℝ) * ((ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ) :=
+    map_mul (mapGL ℝ) β (ModularGroup.T ^ j)
+  have happ : ((⇑f : ℍ → ℂ) ∣[k]
+      ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ)) τ =
+      ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) ((j : ℝ) +ᵥ τ) := by
+    rw [hm, SlashAction.slash_mul]
+    change (((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) ∣[k]
+      (ModularGroup.T ^ j : SL(2, ℤ))) τ = _
+    rw [ModularForm.SL_slash_apply, UpperHalfPlane.modular_T_zpow_smul]
+    have hd : UpperHalfPlane.denom (ModularGroup.T ^ j : SL(2, ℤ)) τ = 1 := by
+      rw [ModularGroup.denom_apply]
+      simp [ModularGroup.coe_T_zpow]
+    rw [hd, one_zpow, mul_one]
+  change HasSum _ (((⇑f : ℍ → ℂ) ∣[k]
+    ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ)) τ)
+  rw [happ]
+  convert hasSum_cusp f β ((j : ℝ) +ᵥ τ) using 1
+  funext m
+  rw [qParam_vadd, mul_pow]
+  simp only [zeta, smul_eq_mul, Complex.ofReal_intCast]
+  ring
+
+theorem exists_level_power_cusp_mul_T_zpow {M : ℕ} [NeZero M] {k : ℤ}
+    (f : ModularForm (Gamma1 M) k) (β : SL(2, ℤ)) (j : ℤ)
+    (h : ∃ a : ℕ, ∀ n : ℕ, IsIntegral ℤ ((M : ℂ) ^ a *
+      (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n)) :
+    ∃ a : ℕ, ∀ n : ℕ, IsIntegral ℤ ((M : ℂ) ^ a *
+      (qExpansion (M : ℝ)
+        ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.T ^ j : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n) := by
+  obtain ⟨a, ha⟩ := h
+  refine ⟨a, fun n => ?_⟩
+  rw [coeff_cusp_mul_T_zpow, mul_left_comm]
+  exact ((isIntegral_zeta M (NeZero.pos M) j).pow n).mul (ha n)
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

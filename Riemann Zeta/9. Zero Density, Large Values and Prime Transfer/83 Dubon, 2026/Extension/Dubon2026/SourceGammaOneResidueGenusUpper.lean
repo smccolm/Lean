@@ -1,0 +1,48 @@
+import Dubon2026.SourceGammaOneDegreePreservation
+import Dubon2026.SourceGammaOneResidueSeparability
+import Dubon2026.SourceJointSeparableGenus
+
+/-! DUB-17/18 -> original homogeneous Gamma1 Hecke realization -> original
+genus preservation. The proved coordinate degree equality and the actual
+separating residue j satisfy the native genus specialization inequality for
+the single actual coefficient prolongation. Thus reduction cannot increase
+the original adelic genus. The reverse modular genus inequality remains
+required; this result does not assume or claim good reduction. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open SourceCurve SourceCurve.RegularProlongation IntermediateField
+open CongruenceSubgroup GammaOne GammaOne.CoefficientReduction
+open scoped MatrixGroups IntermediateField
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "Γ" => Gamma1 N
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "Fb" => residueImage A Γ
+private local instance : Algebra kk Fb := (residueImage A Γ).toSubalgebra.algebra
+
+theorem gammaOne_residue_genus_le_away_level (hℓN : ¬ ℓ ∣ N) :
+    genusFF kk Fb ≤ genusFF Qbar FF := by
+  letI := valuation_residue_isAlgClosed A
+  have hT : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, ModularGroup.T]
+  letI : FiniteDimensional Qbar⟮jCoordinateOver Γ Qbar⟯ FF := finiteDimensional_jCoordinateOver hT Qbar
+  letI : FiniteDimensional kk⟮residueJCoordinate A Γ⟯ Fb :=
+    (finite_residueCoordinate_and_degree_le A Γ hT).1
+  letI : Algebra.IsSeparable kk⟮residueJCoordinate A Γ⟯ Fb := isSeparable_residueCoordinate A Γ hT
+  let S : Fin 1 → RegularProlongation A FF Fb := fun _ => regularProlongation A Γ
+  have ht : ∀ i, jCoordinateOver Γ Qbar ∈ (S i).integers :=
+    fun _ => jCoordinateOver_mem_gaussRing A Γ
+  have hr : ∀ i, (S i).residue ⟨jCoordinateOver Γ Qbar, ht i⟩ = residueJCoordinate A Γ :=
+    fun _ => regularProlongation_jCoordinateOver A Γ
+  have heq : 1 * Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb =
+      Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ FF := by
+    rw [one_mul]
+    exact (gammaOne_degree_and_residueField_away_level A N ℓ hℓN).1.symm
+  have h := JointChartAssembly.genus_inequality_of_separating_residue_coordinate
+    A 1 Fb S (fun _ _ _ => Subsingleton.elim _ _) (jCoordinateOver Γ Qbar) ht
+    (residueJCoordinate A Γ) (transcendental_residueJCoordinate A Γ) hr heq
+  simpa only [one_mul] using h
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

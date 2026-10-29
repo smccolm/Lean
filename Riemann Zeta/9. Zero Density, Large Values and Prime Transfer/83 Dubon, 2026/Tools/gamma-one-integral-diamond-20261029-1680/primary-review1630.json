@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalRelativeCotangentPoints",
+  "mathematics": "Linear maps from the genuine relative Kaehler differential module to the actual epsilon ideal classify original relative derivations by the pinned universal differential property. Composing with the proved actual continuous coefficient comparison gives all genuine continuous residual dual-number points. Every original coefficient evaluation is its universal differential image plus the same constant residue value.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned derivationToSquareZeroEquivLift, KaehlerDifferential.linearMapEquivDerivation and WithIdeal.uniformContinuous_of_map_le APIs inspected. Existing coordinate derivation/cotangent proofs and actual original arithmetic local ring were read; no external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Actual original relative residue derivations/cotangent maps and first-order set/class comparisons only. Residue-field linearity into local continuous cohomology, unframed prorepresentability, full Selmer dimension theory, modular association and patching remain open.",
+  "productionLog": "relativeCotangent1630-focus.log"
+}

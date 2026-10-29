@@ -1,0 +1,27 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R]
+  [Algebra O R] [WithIdeal R] [IsAdicComplete (WithIdeal.i : Ideal R) R]
+
+/-- Exact original-object consumer of `originalTraceMatrixIdempotent_exists`. -/
+theorem actual_original_trace_matrix_idempotent_originalTraceMatrixIdempotent_exists_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+    (hR : (WithIdeal.i : Ideal R) = IsLocalRing.maximalIdeal R)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ)))] (i₀ : ι) :
+    ∃ e : coefficientRepresentationMatrixAlgebra (closedMatrixTraceAlgebra (O := O) ρ) ρ,
+      e ^ 2 = e ∧ (RingHom.mapMatrix (IsLocalRing.residue R)) e.val =
+        Matrix.single i₀ i₀ 1 :=
+  originalTraceMatrixIdempotent_exists (L := L) hR eR ρ i₀
+
+end
+

@@ -1,0 +1,32 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `representationDeterminantSubgroupQuotient_localData`. -/
+theorem actual_residual_determinant_subgroup_quotient_representationDeterminantSubgroupQuotient_localData_source
+    [IsNoetherianRing R] [Finite (IsLocalRing.ResidueField O)]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    (σ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hρ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (δ : G →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (N : Subgroup G) (hN : N ≤ σ.ker) :
+    let J := representationDeterminantIdeal ρ δ ⊔ matrixRepresentationRelationIdeal ρ N
+    letI := representationDeterminantSubgroupQuotient_isLocal eR ρ σ hρ δ hδ N hN
+    IsNoetherianRing (R ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (R ⧸ J)) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  representationDeterminantSubgroupQuotient_localData hR eR ρ σ hρ δ hδ N hN
+
+end
+

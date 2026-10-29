@@ -1,0 +1,18 @@
+import Dubon2026.SemanticRegression
+import Lean.LibrarySuggestions.Basic
+
+open Lean in
+run_cmd Lean.Elab.Command.liftTermElabM do
+  let start ← IO.getNumHeartbeats
+  let ci ← getConstInfo ``Dubon2026.arithmeticUnramifiedRepresentation_stabilizer_scalar_unit
+  let ns ← ci.type.relevantConstants
+  let finish ← IO.getNumHeartbeats
+  logInfo m!"Production stabilizer signature: {(finish - start) / 1000} heartbeats; {ns.size} relevant constants"
+
+open Lean in
+run_cmd Lean.Elab.Command.liftTermElabM do
+  let start ← IO.getNumHeartbeats
+  let ci ← getConstInfo ``Dubon2026.SemanticRegression.actual_arithmetic_unramified_matrix_spanning_arithmeticUnramifiedRepresentation_stabilizer_scalar_unit_source
+  let ns ← ci.type.relevantConstants
+  let finish ← IO.getNumHeartbeats
+  logInfo m!"Exact consumer signature: {(finish - start) / 1000} heartbeats; {ns.size} relevant constants"

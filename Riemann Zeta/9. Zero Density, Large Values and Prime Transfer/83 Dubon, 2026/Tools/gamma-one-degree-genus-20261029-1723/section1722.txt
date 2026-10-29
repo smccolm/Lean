@@ -1,0 +1,7 @@
+### Actual original adic completion density — 10 October 2026
+
+Choose an original-ring representative of every genuine completion evaluation. The proved actual evaluation-kernel equality puts its difference from the original completion element in the corresponding extended ideal power. Apply the actual ideal-power neighborhood basis to prove density of the same original ring in its completion.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [AdicCompletionOriginalDensity](Extension/Dubon2026/AdicCompletionOriginalDensity.lean).

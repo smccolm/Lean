@@ -1,0 +1,134 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T06:19:59.429680+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceIntegralSeriesScalarDescent",
+    "SourceIntegralSeriesCommonDenominator",
+    "SourceGammaOneAlgebraicCuspDenominator",
+    "SourceIntegralDiscriminantCancellation",
+    "SourceGammaOneAlgebraicFormDenominator",
+    "SourceEvenWeightBalance",
+    "SourceEvenWeightFrickeCommonDenominator",
+    "SourceEvenWeightUniformFrickeIntegrality"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent.lean",
+      "sha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+      "oleanSha256": "A32132047174D3D3E5EF42A5BC3B91D7ABF8340531E0A9914E1AE34BD44F6D4B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator.lean",
+      "sha256": "06D5F3629916C3781631F3CE3A6C4FF9411BFA491B432C8A7E2005CB70524745",
+      "oleanSha256": "A91F026F84D4F526BE01AA5D3DEC774283743E1BF1ADBA659EA72DAEFAC2CD56",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator.lean",
+      "sha256": "86E8AF9BC06BFEB5BDD3701134F26DB5C70E158396D52C52DE5BDF19EA2B5D68",
+      "oleanSha256": "501CFCC2BC1F52AE409E4493578B0B5DE684E0964EECB3D9BFDBC8BF38249D4C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation.lean",
+      "sha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+      "oleanSha256": "43608E55F75EA19E707B448EA026190DDA841664E3D172B8B914E1CCD8A068CB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator.lean",
+      "sha256": "B454177EAC6479C52373F462907D7F55B12A27D3CCA789DF8F46BC92DD53E48A",
+      "oleanSha256": "22A0CC47A8EE26D1FD25ADDC2614ED24A7FFEFDD504C30C8A93EBD1005DE3F27",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance.lean",
+      "sha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+      "oleanSha256": "406CC73FB5117168B73D3E087599B36ABEED388535914EFA8901DAB7A8E28F3B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator.lean",
+      "sha256": "963EC02EA4A586C78EE2011F013D30453487F451569016CFBA3C11A5F2678B7B",
+      "oleanSha256": "66EE66FB74B19F0120282FC7864E6FA3C1D595BF67BEAEF233690CB561FD0863",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator-1653.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality.lean",
+      "sha256": "4BF5FAF0E05F308DDF1F7828111F6A15895A26E6A2DA31E7571DEAC588FFAC20",
+      "oleanSha256": "053C39C2BC0CBBE82EC0B2465D659807AA35108E16F035F46CBFFAA468D2D381",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality-1653.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality-1653.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance",
+    "Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm",
+    "Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.frickeForm"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance",
+    "Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm",
+    "Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.frickeForm"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformAudit1.log",
+  "logSha256": "9698F47F479835F61121E4E450DF14A87B78FED6DE3A136E6A00D13FAF226622",
+  "auditSha256": "344DF9A160A952C97360372786A4E8F89ABC9E3872E244B1718B05DA2A89C027",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformScratchOwnership1653.log",
+  "ownershipSha256": "3198B16ED1982E470C2DD0EE80E7BA7DD3AC637D8AE4F532952C7EAE88EEE354",
+  "exhaustiveTheorems": 17,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformDependencyAudit1.log",
+  "dependencyAuditSha256": "D5EBFA423D9C932404E1AEBA1835F2BCD4C5E85FCFE94F733E70B0BF66770E3A",
+  "dependencyAuditSourceSha256": "76AF3C6572CE3058CDBF0CB7823C04713E5097AA2FEAA771C9FC6699048EF8FA",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power SL2 slash integrality -> uniform even-weight Fricke integrality.",
+  "discharged": [
+    "The actual even-weight Fricke transform is a Gamma1 modular form.",
+    "The actual trace proves every transformed coefficient algebraic.",
+    "Native integral cusp span and scalar descent construct a common integer denominator.",
+    "The actual discriminant and its integral inverse extend the denominator from cusp forms to modular forms.",
+    "Even integer weights admit the required nonnegative balance, including negative weights.",
+    "A single power of the level clears every actual even-weight Fricke coefficient at every nonzero level."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Full SL2 slash integrality, reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-fricke-uniform-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "C720BE024491F0FD46871D9E6961E455FBEAF3BC8508FDBC9B15808F071604F1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

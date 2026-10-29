@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
+  [TopologicalSpace G] [TopologicalSpace K] [IsTopologicalRing K]
+
+/-- Exact original-object consumer of `continuousMatrixAdjointCoboundaries_finrank_add_invariants`. -/
+theorem actual_continuous_adjoint_coboundary_dimension_continuousMatrixAdjointCoboundaries_finrank_add_invariants_source
+    (ρ : G →* GeneralLinearGroup ι K) (hρ : Continuous ρ) :
+    Module.finrank K (continuousMatrixAdjointCoboundaries ρ hρ) +
+      Module.finrank K (matrixAdjointRepresentation ρ).invariants = Fintype.card ι ^ 2 :=
+  continuousMatrixAdjointCoboundaries_finrank_add_invariants ρ hρ
+
+end
+

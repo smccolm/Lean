@@ -1,0 +1,7 @@
+### Actual actual invertible matrix fiber-product gluing — 10 October 2026
+
+Construct a genuine ring equivalence between original matrices over the actual coefficient fiber product and compatible pairs of original coefficient matrices. Apply the previously constructed compatible-pair unit to the original invertible matrices and transport through the inverse ring equivalence. Its actual two projections are exactly the supplied original matrices. Equality of both original coefficient projections determines the whole invertible matrix, proving existence and uniqueness of actual general-linear gluing.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixCoefficientFiberProduct](Extension/Dubon2026/MatrixCoefficientFiberProduct.lean).

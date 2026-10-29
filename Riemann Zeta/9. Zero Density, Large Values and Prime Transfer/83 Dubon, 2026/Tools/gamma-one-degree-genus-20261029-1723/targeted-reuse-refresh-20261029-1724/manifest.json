@@ -1,0 +1,62 @@
+{
+  "recordedUTC": "2026-10-29T08:47:33.423292+00:00",
+  "purpose": "Fresh primary-source reuse check for DUB-17/18 original Gamma1 genus preservation and subsequent all-weight association/automorphy; inspected inert sources only, no external execution or import.",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/main",
+      "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "date": "2026-09-24T14:06:36Z",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F",
+      "path": "anthropics--fermats-last-theorem-head.json"
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/main",
+      "pin": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "date": "2026-10-22T16:15:55Z",
+      "sha256": "ECFE89978CCCCF6E35EDE111B4D1CE9F58E9724908581AE67E0992B5FB2094E1",
+      "path": "ImperialCollegeLondon--FLT-head.json"
+    },
+    {
+      "repo": "F-Najman/normalizer-lean",
+      "url": "https://api.github.com/repos/F-Najman/normalizer-lean/commits/main",
+      "pin": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+      "date": "2026-10-22T16:04:16Z",
+      "sha256": "F0256A4CBAE99E39045AC9E6936865EF4B5FF8C0C7770A6D5E94B69ED2369A81",
+      "path": "F-Najman--normalizer-lean-head.json"
+    },
+    {
+      "repo": "leanprover-community/mathlib4",
+      "url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/master",
+      "pin": "d0207795ac79006da92d98544e1ce915ae386160",
+      "date": "2026-10-29T02:16:49Z",
+      "sha256": "B8A69D7BC1CE59A6561F0605328AE5FAE1064D0035B2BA75B5926CD7B8F285EF",
+      "path": "leanprover-community--mathlib4-head.json"
+    },
+    {
+      "repo": "F-Najman/normalizer-lean",
+      "pin": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/README.md",
+      "sha256": "3E9A677FB1F4AB734E9ED46C7DDE31EEB9A141816E5C395301F6A05F21C6EF26",
+      "path": "normalizer-README.md",
+      "bytes": 59272
+    },
+    {
+      "repo": "F-Najman/normalizer-lean",
+      "pin": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/NormalizerDelta/Statements.lean",
+      "sha256": "A3C5AAF338EB6041A9D379B8FACCA1D6CCA1BA93186E6B14ED0F3432C9B22E86",
+      "path": "normalizer-NormalizerDelta--Statements.lean.txt",
+      "bytes": 13257
+    },
+    {
+      "repo": "F-Najman/normalizer-lean",
+      "pin": "1f4c27ec11da475383f69e6f82e2837a0cb54fd0",
+      "url": "https://raw.githubusercontent.com/F-Najman/normalizer-lean/1f4c27ec11da475383f69e6f82e2837a0cb54fd0/lean-toolchain",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+      "path": "normalizer-lean-toolchain",
+      "bytes": 29
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T06:36:04.797995+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceIntegralSlashCuspSubgroup",
+    "SourceIntegralSlashCuspChart",
+    "SourceIntegralSlashFrickeChart",
+    "SourceIntegralSlashSMove",
+    "SourceIntegralSlashTMove",
+    "SourceEvenWeightUniformSlashIntegrality"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup.lean",
+      "sha256": "1313230CD9022348C9FE5D2F90305B9F9C8E907E36593C14F54526CCE158B544",
+      "oleanSha256": "080E8CEC61712332787D3CE9A825537194EE09E36D8D3C5E015D40401AB6D315",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup-1661.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart.lean",
+      "sha256": "31DDCA3B3A21E4F6D635D4945A28D75341CC6CE0827EC166E87C5F2B569E3D38",
+      "oleanSha256": "061DC59C2AE8CCEBEE163EC21398A5AAA0007AB911F2EAFC947021D8A1A4BE56",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart-1661.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart.lean",
+      "sha256": "AB239D15958418E3FA8B03182628A1D7251094EE9F68FB0BFD7022F9BD919B9F",
+      "oleanSha256": "428B95777ECDE257D1A8A95D6AB6CE82988517763045BAC978342E78B3C58A51",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart-1661.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove.lean",
+      "sha256": "8F73E1C0F30D62A82D2D42B218DAAA7B1C284A09371A19DED487FD08B6AD2633",
+      "oleanSha256": "D8279BE49FB790E58817C43C2EDE659BF9D7043008BE7BFB3986A62C3D057B7D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove-1661.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove.lean",
+      "sha256": "F58DC86BD55512FEAA7CDD3AA002CAF3DC761B4CD37CAC810E542FE33BACEAD0",
+      "oleanSha256": "564D3EAE4215D656626F156802F9B73E507DC5171B16D05BE653BD12E4CCFCEA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove-1661.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality.lean",
+      "sha256": "971311FCF219F6597DE99D29102A1979E76503778AA111954633D100DF38BD04",
+      "oleanSha256": "7D65748CF6AB8A2B839B24B99A6209915D48ABBD4DFD04045355BA22DA9BF59D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality-1661.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality-1661.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma",
+    "Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod",
+    "Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma",
+    "Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod",
+    "Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashAudit1.log",
+  "logSha256": "713653CC40F778A9FCBA62EB8FCF52C96FEC5AF74450340D12976C4E08089E46",
+  "auditSha256": "93BC27D671E328D51211209BCC3A6ED111DE32DFC49406D0350C745220E7BB4B",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashScratchOwnership1661.log",
+  "ownershipSha256": "EB3155131AC03953FFD77ABBDF6362461C6B8DB22C282CEFF5C8F2F120E38DA5",
+  "exhaustiveTheorems": 31,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 35,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashDependencyAudit1.log",
+  "dependencyAuditSha256": "E4EF289603D2FCB25F7908AE384E554DED88C43D9BD939AE5269D4D56B1076C9",
+  "dependencyAuditSourceSha256": "6A2AB0D3F7E29CAF5FCAE039851A44E262931D85C43E81968996C0F643256492",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform even-weight SL2 slash integrality.",
+  "discharged": [
+    "Actual arbitrary-cusp charts have level M squared invariance.",
+    "The chart and Fricke chart have the exact Fourier normalization.",
+    "The actual uniform Fricke theorem transports a single clearing exponent through S.",
+    "Existing integral cyclotomic phases transport integrality through every integer translation.",
+    "Native SL2 generation and the original integer q-expansion give a uniform level power at every actual cusp."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Rational diamond coefficients, level-cleared integral diamond forms, reduced relation preservation and full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-full-slash-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "62E4051BDA472FFB06246E6E0FB9003758C39B8D51317504C7DA91EB8123406F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

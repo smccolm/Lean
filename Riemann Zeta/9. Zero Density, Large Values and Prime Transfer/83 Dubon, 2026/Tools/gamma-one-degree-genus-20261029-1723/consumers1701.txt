@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι κ O R : Type*} [Fintype ι] [DecidableEq ι]
+  [Fintype κ] [DecidableEq κ] [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `isClosed_matrix_subalgebra_basis_span`. -/
+theorem actual_matrix_basis_subalgebra_span_isClosed_matrix_subalgebra_basis_span_source [TopologicalSpace R] [IsTopologicalRing R]
+    (S : Subalgebra O R) (hS : IsClosed (S : Set R)) (b : Basis κ R (Matrix ι ι R)) :
+    IsClosed (Submodule.span S (Set.range b) : Set (Matrix ι ι R)) :=
+  isClosed_matrix_subalgebra_basis_span S hS b
+
+end
+

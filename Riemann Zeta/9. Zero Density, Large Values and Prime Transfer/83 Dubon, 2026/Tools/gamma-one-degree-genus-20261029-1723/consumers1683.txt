@@ -1,0 +1,46 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O A B C : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A] [Finite A]
+  [CommRing B] [IsLocalRing B] [Algebra O B] [WithIdeal B] [Finite B]
+  [CommRing C] [IsLocalRing C] [Algebra O C]
+
+/-- Exact original-object consumer of `originalFiniteFiberProductFramed_exists`. -/
+theorem actual_original_finite_fiber_product_framed_gluing_originalFiniteFiberProductFramed_exists_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eC : IsLocalRing.ResidueField C ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : A →ₐ[O] C) (g : B →ₐ[O] C) [IsLocalHom g.toRingHom]
+    (hg : Function.Surjective g)
+    (hgres : (localCoefficientReduction eC).comp g = localCoefficientReduction eB)
+    (H : ProfiniteGrp)
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (ρA : OriginalContinuousFramedFiber eA H σ)
+    (ρB : OriginalContinuousFramedFiber eB H σ)
+    (h : MatrixStrictlyConjugate (localCoefficientReduction eC).toRingHom
+      ((GeneralLinearGroup.map g.toRingHom).comp ρB.val.toMonoidHom)
+      ((GeneralLinearGroup.map f.toRingHom).comp ρA.val.toMonoidHom)) :
+    (letI := coefficientFiberProductAlgebra f g
+     letI := coefficientFiberProduct_isLocalRing f.toRingHom g.toRingHom
+     letI : WithIdeal (CoefficientFiberProduct f.toRingHom g.toRingHom) :=
+       ⟨IsLocalRing.maximalIdeal _⟩
+     letI : TopologicalSpace (CoefficientFiberProduct f.toRingHom g.toRingHom) :=
+       (IsLocalRing.maximalIdeal _).adicTopology
+     ∃ ρ : OriginalContinuousFramedFiber (coefficientFiberProductResidueEquiv f g hg eA) H σ,
+       (GeneralLinearGroup.map (coefficientFiberProductFst f.toRingHom g.toRingHom)).comp
+           ρ.val.toMonoidHom = ρA.val.toMonoidHom ∧
+       MatrixStrictlyConjugate (localCoefficientReduction eB).toRingHom ρB.val.toMonoidHom
+         ((GeneralLinearGroup.map (coefficientFiberProductSnd f.toRingHom g.toRingHom)).comp
+           ρ.val.toMonoidHom)) :=
+  originalFiniteFiberProductFramed_exists hA hB eA eB eC f g hg hgres H σ ρA ρB h
+
+end
+

@@ -1,0 +1,14 @@
+{
+  "recordedUTC": "2026-10-29T09:28:18.852704+00:00",
+  "failedAudit": "SourceReducedDiamondScalarValuePreflight1737.log",
+  "failedAuditSha256": "027E9A721B5BBB408337FE12F48CD5C6B93CD5112E2F194344C6AABD468AAD7E",
+  "finding": "The first action-extension kernel proof used the proved elementwise signed-kernel criterion but did not transitively use the original subgroup-kernel equality required by the declared proof route.",
+  "repair": "The fresh scalar-action kernel proof rewrites by the original prime-field subgroup-kernel equality and then applies the elementwise criterion. Its base-fixation and Artin-degree successors change only this import. The original 61 required value dependencies are unchanged.",
+  "newVersions": [
+    "SourceIntegralDiamondScalarAction1733b",
+    "SourceIntegralDiamondScalarBaseFixed1734c",
+    "SourceIntegralDiamondScalarFixedDegree1735b"
+  ],
+  "failedEvidencePreserved": true,
+  "auditWeakened": false
+}

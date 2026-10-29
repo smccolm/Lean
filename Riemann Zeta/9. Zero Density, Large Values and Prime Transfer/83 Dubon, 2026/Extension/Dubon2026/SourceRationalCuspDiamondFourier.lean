@@ -1,0 +1,64 @@
+import Dubon2026.SourceRationalCuspDiamondImage
+import Dubon2026.SourceIntegralLaurentWeightFactors
+import Dubon2026.SourceGammaOneDiamondFieldRatios
+import Dubon2026.SourceQExpansionPeriodWidth
+import Dubon2026.SourceEvenWeightBalance
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> level-cleared integer diamond forms. Reuse the actual rational
+diamond germ of the normalized cusp image and cancel the existing
+Eisenstein/discriminant factors. Native Fourier width change reads the
+original width-one coefficients. No rational-transform premise is used. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceFricke
+open CuspWeightCriterion
+open scoped MatrixGroups ModularForm
+
+theorem exists_rational_cusp_diamond_laurent (N : ℕ) [NeZero N]
+    (k : ℤ) (a b m : ℕ) (hk : k + 4 * a + 6 * b = 12 * m)
+    (f : CuspForm (Gamma1 N) k) (y : PowerSeries ℚ)
+    (hy : y.map (algebraMap ℚ ℂ) = qExpansion 1 f) (g : Gamma0 N) :
+    ∃ Y : LaurentSeries ℚ,
+      CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ) Y)
+        (cuspFunction N ((⇑f : ℍ → ℂ) ∣[k] g.val)) := by
+  obtain ⟨X, hX⟩ := exists_rational_cuspWeightImage_diamond_laurent N k a b m hk f y hy g
+  let D : LaurentSeries ℚ :=
+    qExpand ℚ N ((PowerSeries.X * dedekindEtaUnit).map (Int.castRingHom ℚ))
+  let E : LaurentSeries ℚ :=
+    qExpand ℚ N (eisensteinQSeries 4) ^ a * qExpand ℚ N (eisensteinQSeries 6) ^ b
+  obtain ⟨u, hu⟩ := exists_integer_unit_eisensteinFactorLaurent N a b
+  have hEunit : IsUnit E := by
+    rw [show E = coeffMap (Int.castRingHom ℚ) (u : LaurentSeries ℤ) from hu.symm]
+    exact u.isUnit.map (coeffMap (Int.castRingHom ℚ))
+  refine ⟨X * D ^ m / E, ?_⟩
+  rw [map_div₀, map_mul, map_pow]
+  apply (hX.cusp_mul ((represents_rational_discriminantLaurent N).cusp_pow m)).cusp_of_mul_eq
+    (represents_rational_eisensteinFactorLaurent N a b)
+    (by simpa only [map_zero] using (coeffMap (algebraMap ℚ ℂ)).injective.ne hEunit.ne_zero)
+  funext τ
+  exact slash_mul_eisensteinFactor hk
+    (cuspWeightImage_mul_discriminant (Gamma1 N) k a b m f) g.val τ
+
+theorem rational_cusp_diamond_coeff (N : ℕ) [NeZero N] {k : ℤ} (hk : Even k)
+    (f : CuspForm (Gamma1 N) k) (y : PowerSeries ℚ)
+    (hy : y.map (algebraMap ℚ ℂ) = qExpansion 1 f) (g : Gamma0 N) (n : ℕ) :
+    (qExpansion 1 (GammaOne.modularDiamond N g (f : ModularForm (Gamma1 N) k))).coeff n ∈
+      Set.range (algebraMap ℚ ℂ) := by
+  obtain ⟨a, b, m, hweight⟩ := IntegralFricke.exists_even_weight_balance hk
+  obtain ⟨Y, hY⟩ := exists_rational_cusp_diamond_laurent N k a b m hweight f y hy g
+  let F := GammaOne.modularDiamond N g (f : ModularForm (Gamma1 N) k)
+  have hp := SlashInvariantFormClass.periodic_comp_ofComplex F (gammaOne_one_mem_strictPeriods N)
+  have hpN : Function.Periodic ((⇑F : ℍ → ℂ) ∘ ofComplex) (N : ℝ) := by
+    simpa using hp.nat_mul N
+  have hq := CuspTaylor.represents_qExpansion (Nat.cast_pos.mpr (NeZero.pos N))
+    hpN F.holo' (ModularFormClass.bdd_at_infty F)
+  have he := congrArg (fun Z : LaurentSeries ℂ => Z.coeff ((N * n : ℕ) : ℤ)) (hY.eq_series hq)
+  dsimp only at he
+  rw [coeffMap_coeff, HahnSeries.ofPowerSeries_apply_coeff,
+    qExpansion_coeff_width F (NeZero.ne N) hp F.holo' (ModularFormClass.bdd_at_infty F),
+    if_pos (dvd_mul_right N n), Nat.mul_div_cancel_left _ (NeZero.pos N)] at he
+  exact ⟨Y.coeff ((N * n : ℕ) : ℤ), he⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

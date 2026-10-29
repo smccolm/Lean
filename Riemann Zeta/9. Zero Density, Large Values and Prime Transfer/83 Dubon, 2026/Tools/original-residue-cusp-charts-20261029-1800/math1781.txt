@@ -1,0 +1,1 @@
+Use the actual invertible matrix action to identify whole invariant submodules; transport the actual rank-one linear equivalence and complementary submodule.

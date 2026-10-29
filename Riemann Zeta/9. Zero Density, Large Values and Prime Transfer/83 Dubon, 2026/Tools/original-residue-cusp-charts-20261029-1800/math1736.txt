@@ -1,0 +1,1 @@
+Use the exact maximal-ideal-power reflection of the genuine local retraction in the inherited original subalgebra topology. Transport the original ambient topology equality explicitly before applying the proved completeness argument. This yields the actual subalgebra maximal-adic topology and completeness without replacing its original topology.

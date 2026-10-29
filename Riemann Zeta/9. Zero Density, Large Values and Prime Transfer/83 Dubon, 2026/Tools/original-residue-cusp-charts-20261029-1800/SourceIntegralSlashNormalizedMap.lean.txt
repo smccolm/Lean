@@ -1,0 +1,77 @@
+import SourceIntegralSlashNormalizedRatioEquality
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. Define the
+cusp value on the actual normalized generators and prove that every actual
+representative computes it. The value outside this generating set is an unused
+totalization; every extension theorem restricts to the set and proves all its
+relations. Multiplication and the unit come from the literal modular forms. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (β : SL(2, ℤ))
+
+/-- The literal cusp value of a normalized generator, computed from any chosen actual representative. -/
+def normalizedSlashValue (x : LaurentSeries K) : LaurentSeries K := by
+  classical
+  exact if h : x ∈ normalizedGenerators N K then
+    HahnSeries.ofPowerSeries ℤ K
+      (reducedSlashSeries N ((show Even (12 : ℤ) by decide).mul_right (h.choose : ℤ))
+        h.choose_spec.choose h.choose_spec.choose_spec.choose_spec.1 β φ hN) /
+      HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+        (gammaOneDiscriminant N) (integralQExp_gammaOneDiscriminant N) β φ hN) ^ h.choose
+  else 0
+
+theorem normalizedSlashValue_eq (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ]
+    {r : ℕ} (f : ModularForm (Gamma1 N) (12 * (r : ℤ))) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) {x : LaurentSeries K}
+    (hx : x = intSeriesC K p / intSeriesC K discriminantSeries ^ r) :
+    normalizedSlashValue N φ hN β x =
+      HahnSeries.ofPowerSeries ℤ K
+        (reducedSlashSeries N ((show Even (12 : ℤ) by decide).mul_right (r : ℤ)) f hp β φ hN) /
+      HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+        (gammaOneDiscriminant N) (integralQExp_gammaOneDiscriminant N) β φ hN) ^ r := by
+  have h : x ∈ normalizedGenerators N K := ⟨r, f, p, hp, hx⟩
+  rw [normalizedSlashValue, dif_pos h]
+  exact normalized_slash_ratio_eq N ℓ φ hN β h.choose_spec.choose f
+    h.choose_spec.choose_spec.choose_spec.1 hp
+      (h.choose_spec.choose_spec.choose_spec.2.symm.trans hx)
+
+theorem normalizedSlashValue_mul (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ]
+    {x y : LaurentSeries K} (hx : x ∈ normalizedGenerators N K)
+    (hy : y ∈ normalizedGenerators N K) :
+    normalizedSlashValue N φ hN β (x * y) =
+      normalizedSlashValue N φ hN β x * normalizedSlashValue N φ hN β y := by
+  obtain ⟨r, f, p, hp, rfl⟩ := hx
+  obtain ⟨s, g, q, hq, rfl⟩ := hy
+  let er : Even (12 * (r : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let es : Even (12 * (s : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let et : Even (12 * (↑(r + s) : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let hc : 12 * (r : ℤ) + 12 * (s : ℤ) = 12 * (↑(r + s) : ℤ) := by push_cast; ring
+  have he := normalizedSlashValue_eq N φ hN β ℓ ((f.mul g).mcast hc)
+    (integralQExp_mul f g hp hq)
+    (x := (intSeriesC K p / intSeriesC K discriminantSeries ^ r) *
+      (intSeriesC K q / intSeriesC K discriminantSeries ^ s))
+    (by rw [intSeriesC_mul, pow_add, div_mul_div_comm])
+  rw [he, normalizedSlashValue_eq N φ hN β ℓ f hp rfl,
+    normalizedSlashValue_eq N φ hN β ℓ g hq rfl]
+  have hm := (reducedSlashSeries_mcast N φ hN β (er.add es) et hc
+    (f.mul g) (integralQExp_mul f g hp hq)).trans
+      (reducedSlashSeries_mul N φ hN β er es f g hp hq)
+  rw [hm, map_mul, pow_add, div_mul_div_comm]
+
+theorem normalizedSlashValue_one (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ] :
+    normalizedSlashValue N φ hN β 1 = 1 := by
+  let hc : (0 : ℤ) = 12 * (0 : ℤ) := by ring
+  have he := normalizedSlashValue_eq N φ hN β ℓ
+    ((1 : ModularForm (Gamma1 N) 0).mcast hc) (p := 1) (integralQExp_one N)
+    (x := 1) (by simp only [intSeriesC, map_one, pow_zero, div_one])
+  have hm := reducedSlashSeries_mcast N φ hN β (by decide) (by decide) hc
+    (1 : ModularForm (Gamma1 N) 0) (p := 1) (integralQExp_one N)
+  rw [he, hm, reducedSlashSeries_one, map_one, pow_zero, div_one]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

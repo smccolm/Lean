@@ -1,0 +1,7 @@
+### Actual original-dimensional trace left-ideal basis — 10 October 2026
+
+Consume the genuine idempotent inside the actual original trace matrix algebra and its proved finite generation. Derive the actual reduction-kernel condition from the original representation basis and coordinate descent, and lift every residual column unit using the original matrix-algebra residue surjection. Apply the proved Nakayama spanning and actual column-matrix independence to construct a basis of the same idempotent left ideal indexed by the original representation dimension, with exactly the prescribed original residual columns.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalTraceLeftIdealBasis](Extension/Dubon2026/OriginalTraceLeftIdealBasis.lean).

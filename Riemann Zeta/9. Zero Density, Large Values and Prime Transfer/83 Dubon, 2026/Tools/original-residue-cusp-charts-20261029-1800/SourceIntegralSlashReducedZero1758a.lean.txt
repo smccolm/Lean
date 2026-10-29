@@ -1,0 +1,33 @@
+import SourceIntegralSlashReducedScaling1757a
+import Dubon2026.SourceIntegralDiamondReduction
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash chart. The existing
+prime-multiple kernel of integer Fourier reduction and actual prime division
+of modular forms prove that every zero reduction remains zero at any cusp.
+This is the genuine relation-transfer input to the reduced chart construction.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem reducedSlashSeries_zero_of_prime_reduction (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    {k : ℤ} (hk : Even k) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (β : SL(2, ℤ)) {K : Type*} [Field K] [CharP K ℓ]
+    (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (hzero : red ℓ p = 0) :
+    reducedSlashSeries N hk f hp β φ hN = 0 := by
+  have hℓ : (ℓ : ℤ) ≠ 0 := Int.natCast_ne_zero.mpr (Fact.out : ℓ.Prime).ne_zero
+  have hℓC : (ℓ : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (Fact.out : ℓ.Prime).ne_zero
+  obtain ⟨p', rfl⟩ := (red_eq_zero_iff ℓ p).mp hzero
+  let f' : ModularForm (Gamma1 N) k := (ℓ : ℂ)⁻¹ • f
+  have hp' : IsIntegralQExp f' p' := integralQExp_inv_int_smul f (ℓ : ℤ) hℓ hp
+  have hff' : (⇑f : ℍ → ℂ) = (ℓ : ℂ) • (⇑f' : ℍ → ℂ) := by
+    rw [show (⇑f' : ℍ → ℂ) = (ℓ : ℂ)⁻¹ • (⇑f : ℍ → ℂ) from rfl,
+      smul_smul, mul_inv_cancel₀ hℓC, one_smul]
+  have he := reducedSlashSeries_of_coe_int_smul N hk f' f hp' hp β φ hN (ℓ : ℤ) hff'
+  simpa only [Int.cast_natCast, CharP.cast_eq_zero, map_zero, zero_mul] using he
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

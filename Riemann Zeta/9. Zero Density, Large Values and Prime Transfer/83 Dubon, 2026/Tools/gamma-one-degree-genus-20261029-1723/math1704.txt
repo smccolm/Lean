@@ -1,0 +1,1 @@
+Define the genuine cubic iteration starting at the original matrix X. Apply the proved noncommutative polynomial identities and actual matrix ideal-product bounds to show that its idempotency error and each successive difference have entries in I^(2^n). Prove that every actual iterate remains in the same coefficient subalgebra as the seed.

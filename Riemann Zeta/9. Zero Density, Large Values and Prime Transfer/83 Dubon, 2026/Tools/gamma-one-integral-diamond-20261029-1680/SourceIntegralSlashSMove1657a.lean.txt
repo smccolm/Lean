@@ -1,0 +1,80 @@
+import SourceIntegralSlashFrickeChart1656c
+import SourceEvenWeightUniformFrickeIntegrality
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> uniform level-power slash integrality. The actual even-weight Fricke
+theorem at level M^2 transports a single clearing power from beta to
+beta*S. Both normalizing integer powers are cleared explicitly.
+No denominator or transformed-integrality certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+theorem integral_level_pow_of_zpow {M : ℕ} (hM : (M : ℂ) ≠ 0)
+    {b : ℕ} {e : ℤ} {x : ℂ}
+    (h : IsIntegral ℤ ((M : ℂ) ^ b * ((M : ℂ) ^ e * x))) :
+    IsIntegral ℤ ((M : ℂ) ^ (b + e.toNat) * x) := by
+  let u : ℕ := ((e.toNat : ℤ) - e).toNat
+  have hu : (u : ℤ) = (e.toNat : ℤ) - e :=
+    Int.toNat_of_nonneg (sub_nonneg.mpr (Int.self_le_toNat e))
+  have he : (M : ℂ) ^ (b + e.toNat) * x =
+      (M : ℂ) ^ u * ((M : ℂ) ^ b * ((M : ℂ) ^ e * x)) := by
+    rw [← zpow_natCast, Nat.cast_add, ← zpow_natCast (M : ℂ) u, hu,
+      ← zpow_natCast (M : ℂ) b, ← mul_assoc, ← mul_assoc,
+      ← zpow_add₀ hM, ← zpow_add₀ hM]
+    congr 2
+    ring
+  rw [he]
+  have hnat : IsIntegral ℤ (M : ℂ) := (integralClosure ℤ ℂ).algebraMap_mem M
+  exact (hnat.pow u).mul h
+
+theorem exists_level_power_cusp_mul_S {M : ℕ} [NeZero M] {k : ℤ}
+    (hk : Even k) (f : ModularForm (Gamma1 M) k) (β : SL(2, ℤ))
+    (h : ∃ a : ℕ, ∀ n : ℕ, IsIntegral ℤ ((M : ℂ) ^ a *
+      (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n)) :
+    ∃ b : ℕ, ∀ n : ℕ, IsIntegral ℤ ((M : ℂ) ^ b *
+      (qExpansion (M : ℝ)
+        ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n) := by
+  have hM : (M : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne M)
+  have hnat : IsIntegral ℤ (M : ℂ) := (integralClosure ℤ ℂ).algebraMap_mem M
+  obtain ⟨a, ha⟩ := h
+  let a' : ℕ := a + (1 - k).toNat
+  have hF : ∀ n : ℕ, IsIntegral ℤ (((M ^ 2 : ℕ) : ℂ) ^ a' *
+      (qExpansion 1 (cuspChart f β)).coeff n) := by
+    intro n
+    rw [coeff_qExpansion_cuspChart]
+    have hnonneg : (0 : ℤ) ≤ 2 * (a' : ℤ) + (k - 1) - a := by
+      have := Int.self_le_toNat (1 - k)
+      simp only [a', Nat.cast_add]
+      omega
+    let u : ℕ := (2 * (a' : ℤ) + (k - 1) - a).toNat
+    have hu : (u : ℤ) = 2 * (a' : ℤ) + (k - 1) - a := Int.toNat_of_nonneg hnonneg
+    have he : ((M ^ 2 : ℕ) : ℂ) ^ a' = (M : ℂ) ^ (2 * (a' : ℤ)) := by
+      push_cast
+      rw [← zpow_natCast, ← zpow_natCast, ← zpow_mul]
+      norm_num
+    have key : ((M ^ 2 : ℕ) : ℂ) ^ a' *
+        ((M : ℂ) ^ (k - 1) *
+          (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n) =
+        (M : ℂ) ^ u * ((M : ℂ) ^ a *
+          (qExpansion (M : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n) := by
+      rw [he, ← zpow_natCast (M : ℂ) u, hu, ← zpow_natCast (M : ℂ) a,
+        ← mul_assoc, ← mul_assoc, ← zpow_add₀ hM, ← zpow_add₀ hM]
+      congr 2
+      ring
+    rw [key]
+    exact (hnat.pow u).mul (ha n)
+  obtain ⟨b, hb⟩ := IntegralFricke.exists_level_power_integral_even_fricke_coefficients
+    (M ^ 2) hk (cuspChart f β) a' hF
+  refine ⟨2 * b + (2 * k - 3).toNat, fun n => ?_⟩
+  have hbn := hb n
+  rw [← IntegralFricke.coe_frickeForm, coeff_qExpansion_fricke_cuspChart] at hbn
+  have he : ((M ^ 2 : ℕ) : ℂ) ^ b = (M : ℂ) ^ (2 * b) := by
+    push_cast
+    rw [← pow_mul]
+  rw [he] at hbn
+  exact integral_level_pow_of_zpow hM hbn
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

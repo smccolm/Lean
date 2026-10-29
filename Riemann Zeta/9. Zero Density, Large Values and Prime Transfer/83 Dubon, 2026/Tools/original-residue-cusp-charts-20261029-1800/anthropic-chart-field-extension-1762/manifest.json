@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-29T10:20:08.888309+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-chart-field-extension-1762\\S_IntermediateField_exists_algHom_adjoin_apply_eq_of_isAlgebraic_of_transcendental.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IntermediateField_exists_algHom_adjoin_apply_eq_of_isAlgebraic_of_transcendental.lean",
+      "bytes": 12352,
+      "sha256": "1E15033E323B1ECDF41BD2C7D7EF54A6E1B3A4B9F610A5F7555E53C8B29593E5",
+      "gitBlob": "3cc44663895e93a4317bc4f17e34dd4434e478f4"
+    }
+  ],
+  "purpose": "Read-only pinned source review of the actual diamond-stabilizer charts over finite and cusp residue fibers. Native Galois place transitivity and fixed-field degree arguments are already available; inspect these exact remaining chart statements before expanding the reverse-genus dependency. No external import or proof options adopted.",
+  "externalBuild": false,
+  "externalImport": false
+}

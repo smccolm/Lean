@@ -1,0 +1,202 @@
+import Dubon2026.SourceIntegralDiamondNormalizedAction
+import Dubon2026.SourceIntegralSlashFieldNormalizedRatio
+import Dubon2026.SourceIntegralDiamondScalarNormalizedAction
+import Dubon2026.SourceIntegralSlashDiamondGenerator
+import Dubon2026.SourceIntegralSlashDiamondStabilizer
+import Dubon2026.SourceOriginalResidueDiamondCuspChart
+import Dubon2026.SourceOriginalResidueCuspStabilizerPlace
+import Dubon2026.SourceIntegralSlashRaisedLevelOne
+import Dubon2026.SourceIntegralSlashCuspTriangular
+import Dubon2026.SourceIntegralSlashRaisedCuspFormula
+import Dubon2026.SourceIntegralSlashTriangularParameter
+import Dubon2026.SourceIntegralSlashRaisedCuspCoefficients
+import Dubon2026.SourceIntegralSlashRaisedCuspReduction
+import Dubon2026.SourceIntegralSlashRaisedCuspLaurent
+import Dubon2026.SourceIntegralSlashRaisedCuspCoordinate
+import Dubon2026.SourceIntegralSlashCuspCoordinate
+import Dubon2026.SourceOriginalResidueFullCuspChart
+import Dubon2026.SourceOriginalResidueCuspBaseComparison
+import Dubon2026.SourceOriginalResidueCuspPlaceOverBase
+import Dubon2026.SourceOriginalResidueCuspMatrix
+import Dubon2026.SourceOriginalResidueLabeledCuspPlace
+import Dubon2026.SourceOriginalResidueDiamondCommute
+import Dubon2026.SourceOriginalResidueDiamondFiberStabilizer
+import Dubon2026.SourceOriginalResidueLabeledCuspFiber
+import Dubon2026.SourceIntegralSlashFieldDiamondCovariance
+import Dubon2026.SourceOriginalResidueCuspHomFamily
+import Dubon2026.SourceOriginalResidueCuspPlaceFamily
+import Dubon2026.SourceOriginalResidueCuspPlaceCovariance
+import Dubon2026.SourceOriginalResidueCuspOrbitMap
+import Dubon2026.SourceOriginalResidueFullBaseFinite
+import Dubon2026.SourceOriginalResiduePoleBaseLabel
+import Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel
+import Dubon2026.SourceOriginalResidueCuspFamilyExhaustion
+import Dubon2026.SourceOriginalResidueCuspOrbitSurjection
+import Dubon2026.SourceOriginalResidueCuspCount
+import Dubon2026.SourceOriginalResidueImageCuspCount
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceIntegralDiamondNormalizedAction, `Dubon2026.SourceIntegralSlashFieldNormalizedRatio, `Dubon2026.SourceIntegralDiamondScalarNormalizedAction, `Dubon2026.SourceIntegralSlashDiamondGenerator, `Dubon2026.SourceIntegralSlashDiamondStabilizer, `Dubon2026.SourceOriginalResidueDiamondCuspChart, `Dubon2026.SourceOriginalResidueCuspStabilizerPlace, `Dubon2026.SourceIntegralSlashRaisedLevelOne, `Dubon2026.SourceIntegralSlashCuspTriangular, `Dubon2026.SourceIntegralSlashRaisedCuspFormula, `Dubon2026.SourceIntegralSlashTriangularParameter, `Dubon2026.SourceIntegralSlashRaisedCuspCoefficients, `Dubon2026.SourceIntegralSlashRaisedCuspReduction, `Dubon2026.SourceIntegralSlashRaisedCuspLaurent, `Dubon2026.SourceIntegralSlashRaisedCuspCoordinate, `Dubon2026.SourceIntegralSlashCuspCoordinate, `Dubon2026.SourceOriginalResidueFullCuspChart, `Dubon2026.SourceOriginalResidueCuspBaseComparison, `Dubon2026.SourceOriginalResidueCuspPlaceOverBase, `Dubon2026.SourceOriginalResidueCuspMatrix, `Dubon2026.SourceOriginalResidueLabeledCuspPlace, `Dubon2026.SourceOriginalResidueDiamondCommute, `Dubon2026.SourceOriginalResidueDiamondFiberStabilizer, `Dubon2026.SourceOriginalResidueLabeledCuspFiber, `Dubon2026.SourceIntegralSlashFieldDiamondCovariance, `Dubon2026.SourceOriginalResidueCuspHomFamily, `Dubon2026.SourceOriginalResidueCuspPlaceFamily, `Dubon2026.SourceOriginalResidueCuspPlaceCovariance, `Dubon2026.SourceOriginalResidueCuspOrbitMap, `Dubon2026.SourceOriginalResidueFullBaseFinite, `Dubon2026.SourceOriginalResiduePoleBaseLabel, `Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel, `Dubon2026.SourceOriginalResidueCuspFamilyExhaustion, `Dubon2026.SourceOriginalResidueCuspOrbitSurjection, `Dubon2026.SourceOriginalResidueCuspCount, `Dubon2026.SourceOriginalResidueImageCuspCount]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash, `Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart, `Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite, `Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUE CUSP BOUNDS AUDIT PASS: {count} theorems including private/generated declarations. Actual diamond-equivariant j/j_N charts and residue-image cusp count proved. Finite elliptic bounds, reverse genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceIntegralDiamondNormalizedAction
+
+#lint in Dubon2026.SourceIntegralSlashFieldNormalizedRatio
+
+#lint in Dubon2026.SourceIntegralDiamondScalarNormalizedAction
+
+#lint in Dubon2026.SourceIntegralSlashDiamondGenerator
+
+#lint in Dubon2026.SourceIntegralSlashDiamondStabilizer
+
+#lint in Dubon2026.SourceOriginalResidueDiamondCuspChart
+
+#lint in Dubon2026.SourceOriginalResidueCuspStabilizerPlace
+
+#lint in Dubon2026.SourceIntegralSlashRaisedLevelOne
+
+#lint in Dubon2026.SourceIntegralSlashCuspTriangular
+
+#lint in Dubon2026.SourceIntegralSlashRaisedCuspFormula
+
+#lint in Dubon2026.SourceIntegralSlashTriangularParameter
+
+#lint in Dubon2026.SourceIntegralSlashRaisedCuspCoefficients
+
+#lint in Dubon2026.SourceIntegralSlashRaisedCuspReduction
+
+#lint in Dubon2026.SourceIntegralSlashRaisedCuspLaurent
+
+#lint in Dubon2026.SourceIntegralSlashRaisedCuspCoordinate
+
+#lint in Dubon2026.SourceIntegralSlashCuspCoordinate
+
+#lint in Dubon2026.SourceOriginalResidueFullCuspChart
+
+#lint in Dubon2026.SourceOriginalResidueCuspBaseComparison
+
+#lint in Dubon2026.SourceOriginalResidueCuspPlaceOverBase
+
+#lint in Dubon2026.SourceOriginalResidueCuspMatrix
+
+#lint in Dubon2026.SourceOriginalResidueLabeledCuspPlace
+
+#lint in Dubon2026.SourceOriginalResidueDiamondCommute
+
+#lint in Dubon2026.SourceOriginalResidueDiamondFiberStabilizer
+
+#lint in Dubon2026.SourceOriginalResidueLabeledCuspFiber
+
+#lint in Dubon2026.SourceIntegralSlashFieldDiamondCovariance
+
+#lint in Dubon2026.SourceOriginalResidueCuspHomFamily
+
+#lint in Dubon2026.SourceOriginalResidueCuspPlaceFamily
+
+#lint in Dubon2026.SourceOriginalResidueCuspPlaceCovariance
+
+#lint in Dubon2026.SourceOriginalResidueCuspOrbitMap
+
+#lint in Dubon2026.SourceOriginalResidueFullBaseFinite
+
+#lint in Dubon2026.SourceOriginalResiduePoleBaseLabel
+
+#lint in Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel
+
+#lint in Dubon2026.SourceOriginalResidueCuspFamilyExhaustion
+
+#lint in Dubon2026.SourceOriginalResidueCuspOrbitSurjection
+
+#lint in Dubon2026.SourceOriginalResidueCuspCount
+
+#lint in Dubon2026.SourceOriginalResidueImageCuspCount

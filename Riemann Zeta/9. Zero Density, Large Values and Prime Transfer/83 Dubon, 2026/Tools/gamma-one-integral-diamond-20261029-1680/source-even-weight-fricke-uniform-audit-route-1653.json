@@ -1,0 +1,32 @@
+{
+  "recordedUTC": "2026-10-29T06:11:03.079892+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power SL2 slash integrality -> uniform even-weight Fricke integrality.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-common-denominator-shorter-route-1642.json",
+      "sha256": "9DA28DD72A01A2AC157B4630A6CE7474F9743A0CDA3309C6EA1287EAA27C393F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\even-weight-fricke-uniform-audit-correction-1652.json",
+      "sha256": "FB5B8BB5F044F8189DB642A30F036388E8842D576DED09522F224C71FE3DEF3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Even Weight Fricke Uniform Assessment 2026-10-28.md",
+      "sha256": "882C0B88EC39CD66F6B668A09DE20C96508A0575DFEFCAB7F44EB6ACD57F9CF3"
+    }
+  ],
+  "shorterRoute": "Native integral cusp span, linear retraction to the algebraic coefficient field, native finite integral multiples and the actual integral discriminant inverse construct the denominator. The actual trace supplies coefficient algebraicity; no separate rational modular basis is needed. Even-weight integral ratios preserve the original field.",
+  "assumptionsToDischarge": [
+    "The actual even-weight Fricke transform is a Gamma1 modular form.",
+    "The actual trace proves every transformed coefficient algebraic.",
+    "Native integral cusp span and scalar descent construct a common integer denominator.",
+    "The actual discriminant and its integral inverse extend the denominator from cusp forms to modular forms.",
+    "Even integer weights admit the required nonnegative balance, including negative weights.",
+    "A single power of the level clears every actual even-weight Fricke coefficient at every nonzero level."
+  ],
+  "remaining": "Full SL2 slash integrality, reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

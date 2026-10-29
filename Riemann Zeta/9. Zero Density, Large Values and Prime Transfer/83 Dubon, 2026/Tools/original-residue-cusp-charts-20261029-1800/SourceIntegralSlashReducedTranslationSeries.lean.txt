@@ -1,0 +1,59 @@
+import SourceIntegralSlashReducedTranslation
+import SourceIntegralSlashNormalizedMap
+import Dubon2026.SourceEtaProductTransport
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> diamond stabilizer equivariance. Transfer the
+actual T-translation formula through the level coefficient localization, then
+reuse the native power-series rescaling/Laurent twisting identity. This proves
+the required translation identity on all actual normalized field generators. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne
+open GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (ζ : Kˣ)
+  (hφ : ∀ z : Zbar,
+    (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+include hφ
+
+theorem reducedSlashSeries_mul_T_zpow {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (β : SL(2, ℤ)) (j : ℤ) :
+    reducedSlashSeries N hk f hp (β * ModularGroup.T ^ j) φ hN =
+      PowerSeries.rescale ((ζ ^ j : Kˣ) : K) (reducedSlashSeries N hk f hp β φ hN) := by
+  ext n
+  have he : (slashCoefficientSeries N hk f hp (β * ModularGroup.T ^ j)).coeff n =
+      (integersToLevel N ⟨zeta N j, isIntegral_zeta N (NeZero.pos N) j⟩) ^ n *
+        (slashCoefficientSeries N hk f hp β).coeff n := by
+    apply Subtype.ext
+    simpa only [slashCoefficientSeries, PowerSeries.coeff_mk] using
+      coeff_cusp_mul_T_zpow f β j n
+  simp only [reducedSlashSeries, PowerSeries.coeff_map, PowerSeries.coeff_rescale]
+  rw [he, map_mul, map_pow, levelReduction_zeta N φ hN ζ hφ]
+
+theorem ofPowerSeries_reducedSlashSeries_mul_T_zpow {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (β : SL(2, ℤ)) (j : ℤ) :
+    HahnSeries.ofPowerSeries ℤ K
+      (reducedSlashSeries N hk f hp (β * ModularGroup.T ^ j) φ hN) =
+      qTwist (ζ ^ j) (HahnSeries.ofPowerSeries ℤ K
+        (reducedSlashSeries N hk f hp β φ hN)) := by
+  rw [reducedSlashSeries_mul_T_zpow N φ hN ζ hφ, qTwist_ofPowerSeries]
+
+theorem normalizedSlashValue_mul_T_zpow (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ]
+    (β : SL(2, ℤ)) (j : ℤ) {x : LaurentSeries K}
+    (hx : x ∈ normalizedGenerators N K) :
+    normalizedSlashValue N φ hN (β * ModularGroup.T ^ j) x =
+      qTwist (ζ ^ j) (normalizedSlashValue N φ hN β x) := by
+  obtain ⟨r, f, p, hp, rfl⟩ := hx
+  rw [normalizedSlashValue_eq N φ hN (β * ModularGroup.T ^ j) ℓ f hp rfl,
+    normalizedSlashValue_eq N φ hN β ℓ f hp rfl,
+    ofPowerSeries_reducedSlashSeries_mul_T_zpow N φ hN ζ hφ,
+    ofPowerSeries_reducedSlashSeries_mul_T_zpow N φ hN ζ hφ,
+    map_div₀, map_pow]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

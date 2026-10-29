@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
+
+/-- Exact original-object consumer of `submodule_rankOne_split_of_coordinates`. -/
+theorem actual_submodule_coordinate_line_splitting_submodule_rankOne_split_of_coordinates_source (S : Submodule R V)
+    (e : V ≃ₗ[R] R × R) (hS : ∀ v, v ∈ S ↔ (e v).2 = 0) :
+    Nonempty (S ≃ₗ[R] R) ∧ ∃ N : Submodule R V, IsCompl S N :=
+  submodule_rankOne_split_of_coordinates S e hS
+
+end
+

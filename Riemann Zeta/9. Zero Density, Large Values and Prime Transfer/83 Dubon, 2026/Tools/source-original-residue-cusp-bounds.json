@@ -1,0 +1,1493 @@
+{
+  "date": "29 October 2026",
+  "modules": [
+    "Dubon2026.SourceIntegralDiamondNormalizedAction",
+    "Dubon2026.SourceIntegralSlashFieldNormalizedRatio",
+    "Dubon2026.SourceIntegralDiamondScalarNormalizedAction",
+    "Dubon2026.SourceIntegralSlashDiamondGenerator",
+    "Dubon2026.SourceIntegralSlashDiamondStabilizer",
+    "Dubon2026.SourceOriginalResidueDiamondCuspChart",
+    "Dubon2026.SourceOriginalResidueCuspStabilizerPlace",
+    "Dubon2026.SourceIntegralSlashRaisedLevelOne",
+    "Dubon2026.SourceIntegralSlashCuspTriangular",
+    "Dubon2026.SourceIntegralSlashRaisedCuspFormula",
+    "Dubon2026.SourceIntegralSlashTriangularParameter",
+    "Dubon2026.SourceIntegralSlashRaisedCuspCoefficients",
+    "Dubon2026.SourceIntegralSlashRaisedCuspReduction",
+    "Dubon2026.SourceIntegralSlashRaisedCuspLaurent",
+    "Dubon2026.SourceIntegralSlashRaisedCuspCoordinate",
+    "Dubon2026.SourceIntegralSlashCuspCoordinate",
+    "Dubon2026.SourceOriginalResidueFullCuspChart",
+    "Dubon2026.SourceOriginalResidueCuspBaseComparison",
+    "Dubon2026.SourceOriginalResidueCuspPlaceOverBase",
+    "Dubon2026.SourceOriginalResidueCuspMatrix",
+    "Dubon2026.SourceOriginalResidueLabeledCuspPlace",
+    "Dubon2026.SourceOriginalResidueDiamondCommute",
+    "Dubon2026.SourceOriginalResidueDiamondFiberStabilizer",
+    "Dubon2026.SourceOriginalResidueLabeledCuspFiber",
+    "Dubon2026.SourceIntegralSlashFieldDiamondCovariance",
+    "Dubon2026.SourceOriginalResidueCuspHomFamily",
+    "Dubon2026.SourceOriginalResidueCuspPlaceFamily",
+    "Dubon2026.SourceOriginalResidueCuspPlaceCovariance",
+    "Dubon2026.SourceOriginalResidueCuspOrbitMap",
+    "Dubon2026.SourceOriginalResidueFullBaseFinite",
+    "Dubon2026.SourceOriginalResiduePoleBaseLabel",
+    "Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel",
+    "Dubon2026.SourceOriginalResidueCuspFamilyExhaustion",
+    "Dubon2026.SourceOriginalResidueCuspOrbitSurjection",
+    "Dubon2026.SourceOriginalResidueCuspCount",
+    "Dubon2026.SourceOriginalResidueImageCuspCount"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> actual homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue cusp and finite elliptic fiber bounds.",
+  "discharged": "The actual residue diamond action is identified with the constructed cusp embedding on the whole original function field. Both j and j_N have their exact source Laurent coordinates in the same chart. Every native primitive cusp label has a constructed matrix and an actual place above it. The actual diamond action is commutative, and signed-translation stabilizers fix the entire corresponding base fiber. A single coefficient reduction gives a cusp-place family on the existing signed Gamma1 cosets and translation orbits. Native full-base cusp exhaustion and actual diamond transitivity prove that this orbit map covers every residue j-pole. The native complex cusp-orbit bijection therefore proves that the actual residue cusp count is at most the complex cusp count, for every prime away from the level, including 2 and 3. The primitive root and coefficient reduction are constructed. The proved field equality transports this bound to the literal coefficient residue image and its native j coordinate. No chart, action, transitivity, degree, field-identification or cusp-count certificate remains in the final residue-image cusp-count theorem.",
+  "boundary": "Finite elliptic charts and finite fiber bounds, including residue characteristics two and three, and the reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,410-module scope: all thirteen retained regressions, 59,477 exhaustive theorem checks, 27,387 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T12:08:06.485823+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceIntegralDiamondNormalizedAction",
+        "SourceIntegralSlashFieldNormalizedRatio",
+        "SourceIntegralDiamondScalarNormalizedAction",
+        "SourceIntegralSlashDiamondGenerator",
+        "SourceIntegralSlashDiamondStabilizer",
+        "SourceOriginalResidueDiamondCuspChart",
+        "SourceOriginalResidueCuspStabilizerPlace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction.lean",
+          "sha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+          "oleanSha256": "51B7E56581F8A6DC7F3994911C0B60308B99F736C94479CF0B3866EC63D8CE4B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio.lean",
+          "sha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+          "oleanSha256": "B36E71D9915A123BF7FD471A78367878486AFD735E120FB205EC921A32DE346E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction.lean",
+          "sha256": "D4B369AF85091BAB35DF91073DD26C79EB73DE8F85C77873C7E6FD851BB2545B",
+          "oleanSha256": "09DF68E5A731BB13A110BD1461F814454B82214C34905196EBA00D7BBC328881",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator.lean",
+          "sha256": "F3EC91CE7A5CD0F6F245C9246116466B8349517CC78BB2D11A077F4EEB59C35A",
+          "oleanSha256": "AEB94CB5E7432F61A3EDAE403FBC38A8021951A6BC06FDC100C5DD36E478C4F9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer.lean",
+          "sha256": "46E9C10E7A78D9D87962C18547914FF8AD9C72A4479BD499D156C9DEAEEC71FA",
+          "oleanSha256": "3DFABD39EA95A4D832209CE8811C96DF6AC0743AB56D6B859E9C8E2B09D90AB1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart.lean",
+          "sha256": "92DA381B7DD34C1EF0A426EF3BD984016C7FF86F60034512D9049ADF0B4123D2",
+          "oleanSha256": "55ACFF7AE56AD88B1EA36A0E0A813BB87566B97F4EC90A2412CC8EE7561E6F05",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace.lean",
+          "sha256": "B3D3C3CCD9B16EB5986CEB29DB0B4BBE09728083BF5DFFF25104C54F91779995",
+          "oleanSha256": "F8C781A92CC0D10455DF6453BEFA1537C2E0F36218B124F68315FF5DE1C5163A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerAudit1.log",
+      "logSha256": "3B8986929579E73EDB3C323AB85532BC647359FA4C05271C346C7B9DAD7BC0B1",
+      "auditSha256": "0D4C8AA0FC86419221AE40BEBF4CCBBE366356D11CDE0B3592A04EAAD979DEF0",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+      "ownershipSha256": "42ED024115228629069947951542213F7311D2EEE0559567977F716178F18D2C",
+      "exhaustiveTheorems": 21,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1.log",
+      "dependencyAuditSha256": "5D19F31C3E0291A1848826B5CB15401A12B0A658F794A62299B0B567837EC317",
+      "dependencyAuditSourceSha256": "E2A1A75EF67F22E8CD8348D460DFA9E488D3338DECD48AA356284FBC29C2394C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio"
+      ],
+      "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual residue cusp fixed places and full-base chart labels.",
+      "discharged": [
+        "The actual residue cusp embedding is equivariant for the actual diamond action and signed translations, without an equivariance, action or map certificate.",
+        "A genuine residue cusp place with a j-pole is constructed and is fixed by the actual signed translation stabilizer. No place-existence or stabilizer assumption remains.",
+        "The existing cusp homomorphism maps weight-12r integral ratios to the literal quotient of reduced slash series, directly serving the second full-base coordinate."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The full-base slot labeling via j_N, finite elliptic charts including characteristics two and three, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, parabolic integral transfer, exceptional-prime removal, original all-weight association, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB17--20 OPEN under the full unchanged contract.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-1-reuse-review-20261029.json",
+      "reuseReviewSha256": "16D9937046DBD05B95B79837A1F9F5FF088F4E2E2C365A5D99F0BE46729DB360",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T12:43:25.835396+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceIntegralSlashRaisedLevelOne",
+        "SourceIntegralSlashCuspTriangular",
+        "SourceIntegralSlashRaisedCuspFormula",
+        "SourceIntegralSlashTriangularParameter",
+        "SourceIntegralSlashRaisedCuspCoefficients",
+        "SourceIntegralSlashRaisedCuspReduction",
+        "SourceIntegralSlashRaisedCuspLaurent",
+        "SourceIntegralSlashRaisedCuspCoordinate",
+        "SourceIntegralSlashCuspCoordinate",
+        "SourceOriginalResidueFullCuspChart",
+        "SourceOriginalResidueCuspBaseComparison",
+        "SourceOriginalResidueCuspPlaceOverBase",
+        "SourceOriginalResidueCuspMatrix",
+        "SourceOriginalResidueLabeledCuspPlace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne.lean",
+          "sha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+          "oleanSha256": "1537ECB00D3A6CD17E352DC8FD50BB75D5971AAB378CECF9DA263F2F5B0E7F25",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular.lean",
+          "sha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+          "oleanSha256": "5B83E723000C8170E67584507F312D7EAF66175E9ABCB93B040A60BDF07F4777",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula.lean",
+          "sha256": "DB8D6E2B3E5B18BA40B8E4810D3BFAB3DE193C68640E705E91FBD142A3D1EB50",
+          "oleanSha256": "3D37B75C1FFB6065ED848CE717F226C26FBD4DF78892565CDB9D86AFA2B9C5AA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter.lean",
+          "sha256": "CA4A61055ECC924B96C613C711D3C3DEC07307326B909615803458296C4BBCE2",
+          "oleanSha256": "4489CEBD8FCC664FCFBFE78E98DAC51CE65DCEBA29F52966BB2E7FF26B4353BC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients.lean",
+          "sha256": "39B7E30AED715EC13EAFBA529EF47EC28979F4DBB05439E1AE2995CC21E8B909",
+          "oleanSha256": "A775C03AC7EC2FC92B957B49A47839DC04B3D4CE8E330FEEAECA44F6648AF49D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction.lean",
+          "sha256": "F59AEF0A764041A8C909A435452722A771A548F4636C5814F73E174ACA4A06CD",
+          "oleanSha256": "8354527934D5427C30DDD43B08708847E55549931729B1A3A84CECCE0AD7960B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent.lean",
+          "sha256": "FE8D4B00CEECCCF9F2CE580732617C859CDCDBDB053C1745B36F1D7542CB526B",
+          "oleanSha256": "3AD4A638F4773F6D470291C5EF1717F5E0BCD56F7C83FAEDDB2866E6F2F7406D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate.lean",
+          "sha256": "80D950A2DBCA14A5ED3BB585295EC56848FE3547DD81E59038E61DB2EC98BE98",
+          "oleanSha256": "8E558CA29BC4CEB7C2FE4974A990AF5D9BF365764ACEF028C23F6877C6604299",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate.lean",
+          "sha256": "4D0A602C28543B1B7FC7FC970F17BFC25A719739BD6B077168914DDB262EE105",
+          "oleanSha256": "1D5257849771BB96858B456BED985FBC03E1CA563F513850BD4FB6AFE7B868E2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart.lean",
+          "sha256": "90E06FF703FE52885E4E05213EA913894D7978A1158E6D2B59D80816AF4DC7F4",
+          "oleanSha256": "FB5F7B2328D181A914B6F8EF79DB0F946A35E02EDDB980A2A6F9CDCB9E90EC9B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison.lean",
+          "sha256": "FC8AAEE35C1E6F1E3592EA5249F94F6F2E0FF826B1DF7E44B600993106C61705",
+          "oleanSha256": "689A43C4B3D98BDA61E93507DB3820C6CA0B35DC09BAB435A3F364F7BF646D5F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase.lean",
+          "sha256": "C1D7A755325DF5EA68642D166030FE2F06DCA9960B0065F8C2A54E03709CEB5F",
+          "oleanSha256": "6BFBD8ADF2BF185EE29CF0E59C2992EF55A312021A47F6CC09FC2954D17760BC",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix.lean",
+          "sha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+          "oleanSha256": "1228F9F958691B542146F7A88CF5CEB74D690C41F011383A204FA563A04F0CE9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace.lean",
+          "sha256": "F6B3610DB8373C79569D7098C65FB4EDDA00DE34386FB5AEEC41C1861D410AF6",
+          "oleanSha256": "3E5D3E160EA427B39EDC681A77278B8EA7154CBA9AB726E9ABBA0FF0DF048965",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash",
+        "Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared",
+        "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash",
+        "Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared",
+        "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspAudit1.log",
+      "logSha256": "EF10CB1EE305CBD2DB34A1E0157A6DE9FB6FB1AD7A73FDB5C676DF8C24E7C077",
+      "auditSha256": "B3A0C2EF53304AB3ACB3A849825DCC21F86D8D4DCC093C209D97035345DEE669",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+      "ownershipSha256": "5D8F580FBBEBC4E4DEB8C4A4E24D74D54FD11263520C18FCE559C4797D976F1F",
+      "exhaustiveTheorems": 38,
+      "linterScopes": 14,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1.log",
+      "dependencyAuditSha256": "542DF588AC772306C0801E029710B4ED58B2F79416E190A2EBCBA385102D4305",
+      "dependencyAuditSourceSha256": "9871C8C721BFA28A65C0ABE572324778561024A85EB1F9F65A8107D8137698C1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply"
+      ],
+      "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue cusp fiber bounds -> exact full-base cusp labels and their actual original-field stabilizers.",
+      "discharged": [
+        "The source integer-label formula for the actual j_N coordinate is proved from literal raised E4-cube and discriminant expansions in every allowed residue characteristic.",
+        "One constructed actual original-field homomorphism has both prescribed source coordinates and signed-translation diamond equivariance, without a map, coefficient-reduction or equivariance certificate.",
+        "For every existing primitive full-base cusp label, an actual integral cusp matrix and a genuine original residue-field place are constructed. Its exact base valuation restriction, j-pole and signed-translation stabilizer are proved; no matrix, place or extension certificate remains."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Transporting stabilizers over the whole fiber, cusp double-coset injection and fiber bounds, finite elliptic charts including characteristics two and three, and the reverse genus inequality remain required. Original genus preservation, parabolic integral transfer, exceptional-prime removal, original all-weight association, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB17--20 OPEN under the unchanged full contract.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-reuse-review-20261029.json",
+      "reuseReviewSha256": "18C1A3F9002D1B3A905C5200566F8BE8DDC759E26F97C8A081C9C8B9AE9C21E3",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T12:59:10.120998+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceOriginalResidueDiamondCommute",
+        "SourceOriginalResidueDiamondFiberStabilizer",
+        "SourceOriginalResidueLabeledCuspFiber"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute.lean",
+          "sha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+          "oleanSha256": "FA17EE0B417659C8F9039AFC2EBDB066A6FDA7BAEA2DF84AB0A18CCFF019369F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer.lean",
+          "sha256": "24CF45292EFBD52F4D70626C9EF71E69FF66D9D0FA905D8814259307AA28CCE6",
+          "oleanSha256": "6C7689DB16CDF5EC603D7A5740D30A5C94134CD6DD99E2E701302C76227D2232",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber.lean",
+          "sha256": "5D0698589DFE8AFA9E16F3CD5137B3E0D55B0C466C3AA7A7323FBB365611E3CE",
+          "oleanSha256": "B511C1361C7AE64E00854173130906079AF70CDF7DAEAD2D2C51D80B3F0AC569",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberAudit1.log",
+      "logSha256": "E37888BE9FB28A2257A1EB295F116B98B8D90723895E9E90477BBD338A017EB7",
+      "auditSha256": "FA3B3E1F77773904C40A5BBD568C4774B864FC3E74B1944B7DDCE2C01014831A",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+      "ownershipSha256": "0645802C2CE0FEB91FCA4551CCE8A0C2D8B8F639F17AAB016238DEC3E1EA1F93",
+      "exhaustiveTheorems": 11,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1.log",
+      "dependencyAuditSha256": "D0D79AD238C07A253F750F27723B708261B0DACD19CEF6AD0A2F156729E179C2",
+      "dependencyAuditSourceSha256": "86B231ACA279659656C66473578A8EA39B923E39719C32C4BF6B9C7B9B7910CE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+      ],
+      "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> original genus preservation -> reverse genus inequality -> residue fiber stabilizers and bounds.",
+      "discharged": [
+        "Commutativity of the actual original residue diamond action is proved from its exact kernel.",
+        "An actual diamond element fixing one place fixes every place above the same full-base valuation, using proved fiber transitivity.",
+        "For each native primitive cusp label, a cusp matrix is constructed whose signed-translation stabilizer fixes the entire actual residue fiber, without action, commutativity, transitivity or stabilizer premises."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Cusp cardinality comparison, finite elliptic fiber bounds including characteristics two and three, and reverse genus inequality remain open. Original all-weight association, automorphy and literal higher continuation remain required. Acceptance 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-1-reuse-review-20261029.json",
+      "reuseReviewSha256": "0F47E9DD5154312BA59FE3428A5CF7124485CE31C07774283957E81D0D480054",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T13:26:59.892826+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceIntegralSlashFieldDiamondCovariance",
+        "SourceOriginalResidueCuspHomFamily",
+        "SourceOriginalResidueCuspPlaceFamily",
+        "SourceOriginalResidueCuspPlaceCovariance",
+        "SourceOriginalResidueCuspOrbitMap",
+        "SourceOriginalResidueFullBaseFinite",
+        "SourceOriginalResiduePoleBaseLabel",
+        "SourceOriginalResidueCuspFamilyBaseLabel",
+        "SourceOriginalResidueCuspFamilyExhaustion",
+        "SourceOriginalResidueCuspOrbitSurjection",
+        "SourceOriginalResidueCuspCount",
+        "SourceOriginalResidueImageCuspCount"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance.lean",
+          "sha256": "50E08478D4E8C3952AC32ED9D6495CE8B963DB742EB954C9EF160D93E1814E88",
+          "oleanSha256": "4DBC923C29F6BA05C5FBCB0E0F827DE1E525AEC040F275371F80C8C31B42AC3B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily.lean",
+          "sha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24",
+          "oleanSha256": "52EAAE7C5033A3672EA2D98B04CD5B1C7FE7AFBCE06D4DDA48FAB3C62679B46C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily.lean",
+          "sha256": "28EA588A4A85708B8BFD4C08A7DDAD2A5AEF4406779754253C5002B63F95D074",
+          "oleanSha256": "F419B2F58AFB6F6DC3796B8F7209D0B2A8BB51D84D973F14D4E7EA0BD9A74521",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance.lean",
+          "sha256": "D574C2AF1300866A9FF2F40069E16BE5531B91F4445D9BACCF2C408BED41C42B",
+          "oleanSha256": "80A29F3F40856786C20D0ECB129F7D08967FF9BC599F7EAD3FFF4FF4D002A6F0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap.lean",
+          "sha256": "258CEFA4C1054417F50635BB97D605FF5A764B17B1559EDF5BFDD8984CF31425",
+          "oleanSha256": "B25A21BA6F5DCCF3EB8DD5A8291FD61F3F94AAA769CB4FFFD24EF37CF1AAE843",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite.lean",
+          "sha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252",
+          "oleanSha256": "D174DF8D2FCCFC0F11E53495C1660181DAC8E2C926FC76BBB1E5797CC1F736C1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel.lean",
+          "sha256": "87174BD5817FB85877421B676B33381D3E46341171196594766262AE7A9B91FA",
+          "oleanSha256": "89B8895DB4E177DDE4CA0E17DE4B797BC568A0B5EABD2B62D132FEF7C30A609A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel.lean",
+          "sha256": "EDC7E8BEFA022B5CD220FCE6D5114058FD44285E206576755DD382D115399413",
+          "oleanSha256": "D40FF3D9D6DD828116403A46F23DA2A84FCC486F21E42213091DC4C40C902722",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion.lean",
+          "sha256": "A2FF1D25340034B49B4731ACE94EA7541B76F6E100BD24735A42189D57E8BCB0",
+          "oleanSha256": "FE379F77B74E69A3D76FE51A296087F0D3CC9C4BA14BD024B7481ABFD49E467D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection.lean",
+          "sha256": "72B02BBDAD6491CFDA73FD8C512ABD4AAF96BB7758F91418B14E7325792CAA6A",
+          "oleanSha256": "496611856ED0807BAE4245B600E29A10F1947CB9B5E8D309AF1B22F48107FF54",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount.lean",
+          "sha256": "FC6BA661C75048C7E02718E2575C1F5382083044DA531B84B4822CD072CC6088",
+          "oleanSha256": "0AF522E34EAC38E6B317AEE5F49D3D4BB1583415D63F97FB6878A8C9E2CB6C16",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount-1845.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount-1845.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount.lean",
+          "sha256": "7D1DD770B8F6EE4993CA6DE0B03525507F0F0DCCEF82F4F6F57A65AA176DF509",
+          "oleanSha256": "8657E897ED8E8345D8F11FF81558F11F647A6BD649D592FC0B23D3083423DC23",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount-1850.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount-1850.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex",
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace",
+        "Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit2.log",
+      "logSha256": "96C2A1D89AA09663E804015442BAA46A54B084379D1F877E960D342C78E58978",
+      "auditSha256": "344B11B409AC79623FB3106D060EB8D76C3DCF5B968B7AB1F01E654BD7A1D72E",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.log",
+      "ownershipSha256": "7FFCDF2D859BDD8E79047D59D2999199FFCDC6C4F32E2594DD6233B5F5A661B7",
+      "exhaustiveTheorems": 68,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 38,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit2.log",
+      "dependencyAuditSha256": "E7841B1C50E1466D88B0E7CE3BAA17D7BF4C91D044AEE85848ACAE3B30D53BFB",
+      "dependencyAuditSourceSha256": "FA146677D8D790851E7A5020DC6E3620474053259EF5A12C2BC5006FB345AC61",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex"
+      ],
+      "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> all-weight original association -> original genus preservation -> reverse genus inequality -> residue cusp bound.",
+      "discharged": [
+        "Common coefficient-reduction charts and their genuine places are constructed for all integral cusp matrices.",
+        "The place family descends through the existing signed cosets and translation orbits.",
+        "Every actual residue j-pole is in the family, using full-base cusp exhaustion and actual diamond transitivity.",
+        "The exact residue cusp cardinality upper bound is derived from the native characteristic-zero cusp-orbit equality.",
+        "The residue cusp-count inequality constructs its primitive root and coefficient reduction; no chart, count, degree or transitivity certificate remains in its signature.",
+        "The cusp bound is transported to the literal residue image and native residue j used by the original coefficient prolongation; its field equality is proved by degree preservation."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite elliptic fiber bounds in all allowed residue characteristics and reverse genus inequality, then original all-weight association and all remaining acceptance gates. Acceptance remains 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-2-reuse-review-20261029.json",
+      "reuseReviewSha256": "0FCA832A56D10D7FB100A991ECC8D5909859A3D3D83BC8B9B879C2B2EDCDDEAE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-actual-residue-cusp-stabilizer-1-reuse-review-20261029.json",
+    "Tools/source-original-residue-labeled-cusp-1-reuse-review-20261029.json",
+    "Tools/source-original-residue-cusp-fiber-1-reuse-review-20261029.json",
+    "Tools/source-original-residue-cusp-count-2-reuse-review-20261029.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/original-residue-cusp-bounds-20261029-1854/original-residue-cusp-bounds-promotion-route-1854.json",
+    "sha256": "C3096A319C00BB722EA9B1227D19678C9EE8F6DAE1042C8556AA32D9DF98CA71"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/original-residue-cusp-bounds-20261029-1854/archive-manifest.json",
+    "sha256": "512C4A6C8153DC25A10F1C7E9916A1D6FBE26A50DCA9C15D225E52E7753CE78D",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9410": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1Production9410.log",
+        "sha256": "5D19F31C3E0291A1848826B5CB15401A12B0A658F794A62299B0B567837EC317",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace",
+          "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio"
+        ],
+        "sourceSha256": "7F10B308E15BD2ABCDB943F42E02DA2DEAE0B68DB0A0F56C25B091CE7A825167"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1Production9410.log",
+        "sha256": "542DF588AC772306C0801E029710B4ED58B2F79416E190A2EBCBA385102D4305",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+          "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply"
+        ],
+        "sourceSha256": "4DBEF969EE25485C50BE4B891FD108C212C26C6596A46FBBABCA3FE49E68BEB0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1Production9410.log",
+        "sha256": "D0D79AD238C07A253F750F27723B708261B0DACD19CEF6AD0A2F156729E179C2",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+        ],
+        "sourceSha256": "48D775F071E264C1006B94A953229819031D162D5E5131D0F44F8612FAB64B62"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit2Production9410.log",
+        "sha256": "E7841B1C50E1466D88B0E7CE3BAA17D7BF4C91D044AEE85848ACAE3B30D53BFB",
+        "requiredProofValueEdges": 38,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.gammaOne_residueImage_j_pole_card_le_complex"
+        ],
+        "sourceSha256": "5289E427FBA38F9BE545B45CFDACE7780180ABD7AEB89055ED2A18298CD61BA0"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBoundsProductionAudit9410.log",
+    "sha256": "37D71FCE1899F2B2D39B341DC597C838B482D9DE81F60582D8C8BD262E2D0CDC",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-bounds-production-build-9410.log",
+    "aggregateSha256": "F13A48285B5875F4DA273F004FB1D7800A42AC35D33EB1D8EAD2BF3DA763C44E",
+    "productionModules": 9410,
+    "incrementModules": 36,
+    "axiomChecks": 57,
+    "exhaustiveIncrementTheorems": 137,
+    "linterScopes": 36,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 138,
+    "productionReuse": "Only canonical and versioned scratch imports are qualified to their registered production modules. All audited statements, proof bodies and comments remain identical. Original function fields and actual modular forms are retained; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 138,
+      "scratchDistinct": 137,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspCount._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspCount._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyBaseLabel._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyBaseLabel._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueCuspFamilyBaseLabel": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyExhaustion._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyExhaustion._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspHomFamily._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspHomFamily._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitMap._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitMap._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitSurjection._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitSurjection._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceCovariance._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceCovariance._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceFamily._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceFamily._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceOverBase._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceOverBase._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspStabilizerPlace._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspStabilizerPlace._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCommute._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCommute._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCuspChart._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCuspChart._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondFiberStabilizer._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondFiberStabilizer._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullBaseFinite._proof_1": "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullBaseFinite._proof_2": "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullCuspChart._proof_1": "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullCuspChart._proof_2": "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_sourceOriginalResidueImageCuspCount._proof_1": "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_dubon2026._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_sourceOriginalResidueImageCuspCount._proof_2": "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_dubon2026._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspFiber._proof_1": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspFiber._proof_2": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueLabeledCuspFiber": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspPlace._proof_1": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspPlace._proof_2": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueLabeledCuspPlace": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResiduePoleBaseLabel._proof_1": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResiduePoleBaseLabel._proof_2": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResiduePoleBaseLabel": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026"
+      },
+      "productionFocused": 137,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.CoefficientCuspLabels.embedding.congr_simp": [
+          {
+            "scope": "SourceOriginalResidueLabeledCuspScratchOwnership1830",
+            "module": "Dubon2026.SourceOriginalResidueLabeledCuspPlace"
+          },
+          {
+            "scope": "SourceOriginalResidueCuspCountScratchOwnership1850",
+            "module": "Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceIntegralDiamondNormalizedAction",
+            "SourceIntegralSlashFieldNormalizedRatio",
+            "SourceIntegralDiamondScalarNormalizedAction",
+            "SourceIntegralSlashDiamondGenerator",
+            "SourceIntegralSlashDiamondStabilizer",
+            "SourceOriginalResidueDiamondCuspChart",
+            "SourceOriginalResidueCuspStabilizerPlace"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+            "sha256": "42ED024115228629069947951542213F7311D2EEE0559567977F716178F18D2C",
+            "sourceSha256": "267293056B51EE028358B5EC897543CB06BAB14BD7A0BFA7743A02A3161971C8"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashRaisedLevelOne",
+            "SourceIntegralSlashCuspTriangular",
+            "SourceIntegralSlashRaisedCuspFormula",
+            "SourceIntegralSlashTriangularParameter",
+            "SourceIntegralSlashRaisedCuspCoefficients",
+            "SourceIntegralSlashRaisedCuspReduction",
+            "SourceIntegralSlashRaisedCuspLaurent",
+            "SourceIntegralSlashRaisedCuspCoordinate",
+            "SourceIntegralSlashCuspCoordinate",
+            "SourceOriginalResidueFullCuspChart",
+            "SourceOriginalResidueCuspBaseComparison",
+            "SourceOriginalResidueCuspPlaceOverBase",
+            "SourceOriginalResidueCuspMatrix",
+            "SourceOriginalResidueLabeledCuspPlace"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+            "sha256": "5D8F580FBBEBC4E4DEB8C4A4E24D74D54FD11263520C18FCE559C4797D976F1F",
+            "sourceSha256": "3F97C86719AE0BBDF7EF68AE959ADF6CB6F89843A17306FBA63493D01441AFD3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalResidueDiamondCommute",
+            "SourceOriginalResidueDiamondFiberStabilizer",
+            "SourceOriginalResidueLabeledCuspFiber"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+            "sha256": "0645802C2CE0FEB91FCA4551CCE8A0C2D8B8F639F17AAB016238DEC3E1EA1F93",
+            "sourceSha256": "0D60ECFEC87AD22D4B6B33148DBA4D2425EE887ED5BE8E9AB0B29F8FF8389376"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashFieldDiamondCovariance",
+            "SourceOriginalResidueCuspHomFamily",
+            "SourceOriginalResidueCuspPlaceFamily",
+            "SourceOriginalResidueCuspPlaceCovariance",
+            "SourceOriginalResidueCuspOrbitMap",
+            "SourceOriginalResidueFullBaseFinite",
+            "SourceOriginalResiduePoleBaseLabel",
+            "SourceOriginalResidueCuspFamilyBaseLabel",
+            "SourceOriginalResidueCuspFamilyExhaustion",
+            "SourceOriginalResidueCuspOrbitSurjection",
+            "SourceOriginalResidueCuspCount",
+            "SourceOriginalResidueImageCuspCount"
+          ],
+          "count": 68,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.log",
+            "sha256": "7FFCDF2D859BDD8E79047D59D2999199FFCDC6C4F32E2594DD6233B5F5A661B7",
+            "sourceSha256": "86FE26C98BB37D431E0DEF239A3C56ADFD5A869ABA93C666A5DEB33119DE0FF2"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBoundsOwnership9410.log",
+        "sha256": "8D2B176B6E6AFFDAAF06A9F9398DC37622154ED69218EB9556BA4FFF3704A5C8",
+        "sourceSha256": "8159028BCA1B46C64A395F1781E42FFD1EFC7A334AEF266495FDEF00DF7D1C7A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-050112-784.log",
+        "sha256": "427A7012A5E285F3742EFCDB7E11864213467F3BAA1A4C1597B33E00069CE8FE"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 36 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceIntegralDiamondNormalizedAction",
+            "scratchSha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+            "productionSha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFieldNormalizedRatio",
+            "scratchSha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+            "productionSha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondScalarNormalizedAction",
+            "scratchSha256": "D4B369AF85091BAB35DF91073DD26C79EB73DE8F85C77873C7E6FD851BB2545B",
+            "productionSha256": "19F06F8B6169367142F94F0760C4B7B260088EAD303F3FCA167E95F6676CAAB9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashDiamondGenerator",
+            "scratchSha256": "F3EC91CE7A5CD0F6F245C9246116466B8349517CC78BB2D11A077F4EEB59C35A",
+            "productionSha256": "4654FC45FB51F153A25DEAC927BCC1747FE11EFF2DBF53E8D56F42F3E9004092",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashDiamondStabilizer",
+            "scratchSha256": "46E9C10E7A78D9D87962C18547914FF8AD9C72A4479BD499D156C9DEAEEC71FA",
+            "productionSha256": "C61BB1E0313E4E4938C39811B3C0AF7A5CAFC6D445667605A9C5B93057EE07AF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondCuspChart",
+            "scratchSha256": "92DA381B7DD34C1EF0A426EF3BD984016C7FF86F60034512D9049ADF0B4123D2",
+            "productionSha256": "7659A80A93DDD5E1E49722CFE4EA57C3416512A35678A7B519631B076B7B675A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspStabilizerPlace",
+            "scratchSha256": "B3D3C3CCD9B16EB5986CEB29DB0B4BBE09728083BF5DFFF25104C54F91779995",
+            "productionSha256": "14906DBA3ED50D760C989D8D2649FB0B364EE82477DB1A443A1DD24A2BD96BC8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedLevelOne",
+            "scratchSha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+            "productionSha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspTriangular",
+            "scratchSha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+            "productionSha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspFormula",
+            "scratchSha256": "DB8D6E2B3E5B18BA40B8E4810D3BFAB3DE193C68640E705E91FBD142A3D1EB50",
+            "productionSha256": "2D0271A3742204E88CDD585F6E5518D8C50573983894B4A3851F2FAFB873B313",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashTriangularParameter",
+            "scratchSha256": "CA4A61055ECC924B96C613C711D3C3DEC07307326B909615803458296C4BBCE2",
+            "productionSha256": "3F203E60DAB382A5A19479F87787AF913E42437BD47132D25780E97A0E5F6169",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspCoefficients",
+            "scratchSha256": "39B7E30AED715EC13EAFBA529EF47EC28979F4DBB05439E1AE2995CC21E8B909",
+            "productionSha256": "016E91F411F3AF0DB292AA747382A26E3EA5FCB034160F0FB8D09C407984D06A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspReduction",
+            "scratchSha256": "F59AEF0A764041A8C909A435452722A771A548F4636C5814F73E174ACA4A06CD",
+            "productionSha256": "7A551D656CB3886475DD1E9C012B04C4E9FAA10B009D02952BB8076ECDDF2C83",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspLaurent",
+            "scratchSha256": "FE8D4B00CEECCCF9F2CE580732617C859CDCDBDB053C1745B36F1D7542CB526B",
+            "productionSha256": "7B66E23D9CC590CE2C1FAAEF4319C084A5942A22F5DB4CB8850215E232AC94A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspCoordinate",
+            "scratchSha256": "80D950A2DBCA14A5ED3BB585295EC56848FE3547DD81E59038E61DB2EC98BE98",
+            "productionSha256": "CFD9B003631E1CC7588CA23D81F8B50A07F3CF18DDC4214DCF334DC879F15660",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspCoordinate",
+            "scratchSha256": "4D0A602C28543B1B7FC7FC970F17BFC25A719739BD6B077168914DDB262EE105",
+            "productionSha256": "44C415C8A613A0CFF9DBB62FAA4575F2F5E7ADDB9E874DDA9BE2F95DE4A085C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueFullCuspChart",
+            "scratchSha256": "90E06FF703FE52885E4E05213EA913894D7978A1158E6D2B59D80816AF4DC7F4",
+            "productionSha256": "5E77B3C527153348651B9C58F9DEBD0CE84C99040ECEA33E303F47A22E8483AA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspBaseComparison",
+            "scratchSha256": "FC8AAEE35C1E6F1E3592EA5249F94F6F2E0FF826B1DF7E44B600993106C61705",
+            "productionSha256": "F07224C384C678CB3B337738137CC45CCABAE25617A4590AB35C02C50DC00D31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceOverBase",
+            "scratchSha256": "C1D7A755325DF5EA68642D166030FE2F06DCA9960B0065F8C2A54E03709CEB5F",
+            "productionSha256": "D5655C8C8DD343BC90E76F8DF2D619EACB56B2CE27449BDE1BBF7B9768E9E0E7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspMatrix",
+            "scratchSha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+            "productionSha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueLabeledCuspPlace",
+            "scratchSha256": "F6B3610DB8373C79569D7098C65FB4EDDA00DE34386FB5AEEC41C1861D410AF6",
+            "productionSha256": "E5C9FAC61DB718EF2553575D6245D04F30336EA2B479C315E7F4FE8B5A5587DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondCommute",
+            "scratchSha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+            "productionSha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondFiberStabilizer",
+            "scratchSha256": "24CF45292EFBD52F4D70626C9EF71E69FF66D9D0FA905D8814259307AA28CCE6",
+            "productionSha256": "FAF5147B5368909CC81C719544872CDF2696CBD016D30F91B221EFE97ED8FFB9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueLabeledCuspFiber",
+            "scratchSha256": "5D0698589DFE8AFA9E16F3CD5137B3E0D55B0C466C3AA7A7323FBB365611E3CE",
+            "productionSha256": "BA781819B67F08B2BC0CB1D386B74E623207D338234CFA5975848084373676A1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFieldDiamondCovariance",
+            "scratchSha256": "50E08478D4E8C3952AC32ED9D6495CE8B963DB742EB954C9EF160D93E1814E88",
+            "productionSha256": "A0529042CFEA446CDAA5B79FB70C3FEC9DE68187B14D0E567D7A2308066E0FD7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspHomFamily",
+            "scratchSha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24",
+            "productionSha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceFamily",
+            "scratchSha256": "28EA588A4A85708B8BFD4C08A7DDAD2A5AEF4406779754253C5002B63F95D074",
+            "productionSha256": "C1B8C3B61BCFC429259C872AE035E20DB1AFF137CA84A384D8671BEF5940D9B1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceCovariance",
+            "scratchSha256": "D574C2AF1300866A9FF2F40069E16BE5531B91F4445D9BACCF2C408BED41C42B",
+            "productionSha256": "E4DA6518EBA9F5C1A67AB1DB0373253269B42EA0E0F0E5CEF15DD29A3762A90A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspOrbitMap",
+            "scratchSha256": "258CEFA4C1054417F50635BB97D605FF5A764B17B1559EDF5BFDD8984CF31425",
+            "productionSha256": "7F293F0A999A351238B012CBBBAB37ED910B40D66EB3348884563F0DA95777B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueFullBaseFinite",
+            "scratchSha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252",
+            "productionSha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResiduePoleBaseLabel",
+            "scratchSha256": "87174BD5817FB85877421B676B33381D3E46341171196594766262AE7A9B91FA",
+            "productionSha256": "3437E688EF063197DC058DAE68E841B7AD18730DEEF4CAD371A8D71401905B24",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspFamilyBaseLabel",
+            "scratchSha256": "EDC7E8BEFA022B5CD220FCE6D5114058FD44285E206576755DD382D115399413",
+            "productionSha256": "09133CDE13C8D9C4599D9A60872F404330809FEFB897CAA056E1A6054BEF20D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspFamilyExhaustion",
+            "scratchSha256": "A2FF1D25340034B49B4731ACE94EA7541B76F6E100BD24735A42189D57E8BCB0",
+            "productionSha256": "375411B64A9B0D4F7AB1440A2346D200393B364809F6DA68CC81EC8E32F516B7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspOrbitSurjection",
+            "scratchSha256": "72B02BBDAD6491CFDA73FD8C512ABD4AAF96BB7758F91418B14E7325792CAA6A",
+            "productionSha256": "2EBD2AF02BC9559415322EC3605987CDC138B570A39E64B36F8C6F7659D7E318",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspCount",
+            "scratchSha256": "FC6BA661C75048C7E02718E2575C1F5382083044DA531B84B4822CD072CC6088",
+            "productionSha256": "F24957777CA66B238D4604D14ACAB40AD2BD6CF72467BB412846B5CFCF4E9574",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueImageCuspCount",
+            "scratchSha256": "7D1DD770B8F6EE4993CA6DE0B03525507F0F0DCCEF82F4F6F57A65AA176DF509",
+            "productionSha256": "8700E0863F07D40933653A01FB3F6CB46699F26D040E00814683D2145DB3BE63",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 137 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Finite elliptic charts and finite fiber bounds, including residue characteristics two and three, and the reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged."
+  },
+  "receipt9410": {
+    "recordedUTC": "2026-10-29T15:08:45.405296+00:00",
+    "log": "logs/dubon-build-20261029-064933-200.log",
+    "sha256": "77D795EF69352A7292F7CC0E07C39F5D121827EA795F4BCBD8407844E55E7E1A",
+    "bytes": 15604334,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9410,
+    "projectTheorems": 59477,
+    "registeredConsumers": 27387,
+    "registeredConstructions": 2985,
+    "declarations": 36369,
+    "generated": 39283,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261029_064356.log",
+    "foundationSha256": "637DE620658CF6E016B6B238A5C92EF10C74201E32B985304476B25963A52E54",
+    "countReconciliation": {
+      "previousTheorems": 59340,
+      "focusedTheorems": 137,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 137,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBoundsGlobalOwnership9410.log",
+      "globalOwnershipSha256": "13224A0DE343FD9567B465A7A7229E64BC8449F361B13D55F44CD19304CDB999",
+      "globalOwnershipSourceSha256": "751207201470810244F1B778018AC6F8D81966C404EC5ABA8086D43A63B9025F",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBoundsOwnership9410.log",
+      "ownershipSha256": "8D2B176B6E6AFFDAAF06A9F9398DC37622154ED69218EB9556BA4FFF3704A5C8"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 138,
+      "scratchDistinct": 137,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspCount._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspCount._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyBaseLabel._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyBaseLabel._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueCuspFamilyBaseLabel": "_private.Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyExhaustion._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspFamilyExhaustion._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspFamilyExhaustion.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspHomFamily._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspHomFamily._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspHomFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitMap._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitMap._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspOrbitMap.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitSurjection._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspOrbitSurjection._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspOrbitSurjection.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceCovariance._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceCovariance._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceCovariance.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceFamily._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceFamily._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceFamily.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceOverBase._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspPlaceOverBase._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspPlaceOverBase.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspStabilizerPlace._proof_1": "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueCuspStabilizerPlace._proof_2": "_private.Dubon2026.SourceOriginalResidueCuspStabilizerPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCommute._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCommute._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondCommute.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCuspChart._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondCuspChart._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondFiberStabilizer._proof_1": "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueDiamondFiberStabilizer._proof_2": "_private.Dubon2026.SourceOriginalResidueDiamondFiberStabilizer.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullBaseFinite._proof_1": "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullBaseFinite._proof_2": "_private.Dubon2026.SourceOriginalResidueFullBaseFinite.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullCuspChart._proof_1": "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueFullCuspChart._proof_2": "_private.Dubon2026.SourceOriginalResidueFullCuspChart.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_sourceOriginalResidueImageCuspCount._proof_1": "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_dubon2026._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_sourceOriginalResidueImageCuspCount._proof_2": "_private.Dubon2026.SourceOriginalResidueImageCuspCount.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateField_dubon2026._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspFiber._proof_1": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspFiber._proof_2": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueLabeledCuspFiber": "_private.Dubon2026.SourceOriginalResidueLabeledCuspFiber.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspPlace._proof_1": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResidueLabeledCuspPlace._proof_2": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResidueLabeledCuspPlace": "_private.Dubon2026.SourceOriginalResidueLabeledCuspPlace.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResiduePoleBaseLabel._proof_1": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceOriginalResiduePoleBaseLabel._proof_2": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_sourceOriginalResiduePoleBaseLabel": "_private.Dubon2026.SourceOriginalResiduePoleBaseLabel.0.Dubon2026.SourceFunctionField.IntegralSlash.instIsAlgClosedResidueFieldSubtypeAlgebraicClosureRatMemValuationSubring_dubon2026"
+      },
+      "productionFocused": 137,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.CoefficientCuspLabels.embedding.congr_simp": [
+          {
+            "scope": "SourceOriginalResidueLabeledCuspScratchOwnership1830",
+            "module": "Dubon2026.SourceOriginalResidueLabeledCuspPlace"
+          },
+          {
+            "scope": "SourceOriginalResidueCuspCountScratchOwnership1850",
+            "module": "Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceIntegralDiamondNormalizedAction",
+            "SourceIntegralSlashFieldNormalizedRatio",
+            "SourceIntegralDiamondScalarNormalizedAction",
+            "SourceIntegralSlashDiamondGenerator",
+            "SourceIntegralSlashDiamondStabilizer",
+            "SourceOriginalResidueDiamondCuspChart",
+            "SourceOriginalResidueCuspStabilizerPlace"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+            "sha256": "42ED024115228629069947951542213F7311D2EEE0559567977F716178F18D2C",
+            "sourceSha256": "267293056B51EE028358B5EC897543CB06BAB14BD7A0BFA7743A02A3161971C8"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashRaisedLevelOne",
+            "SourceIntegralSlashCuspTriangular",
+            "SourceIntegralSlashRaisedCuspFormula",
+            "SourceIntegralSlashTriangularParameter",
+            "SourceIntegralSlashRaisedCuspCoefficients",
+            "SourceIntegralSlashRaisedCuspReduction",
+            "SourceIntegralSlashRaisedCuspLaurent",
+            "SourceIntegralSlashRaisedCuspCoordinate",
+            "SourceIntegralSlashCuspCoordinate",
+            "SourceOriginalResidueFullCuspChart",
+            "SourceOriginalResidueCuspBaseComparison",
+            "SourceOriginalResidueCuspPlaceOverBase",
+            "SourceOriginalResidueCuspMatrix",
+            "SourceOriginalResidueLabeledCuspPlace"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+            "sha256": "5D8F580FBBEBC4E4DEB8C4A4E24D74D54FD11263520C18FCE559C4797D976F1F",
+            "sourceSha256": "3F97C86719AE0BBDF7EF68AE959ADF6CB6F89843A17306FBA63493D01441AFD3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalResidueDiamondCommute",
+            "SourceOriginalResidueDiamondFiberStabilizer",
+            "SourceOriginalResidueLabeledCuspFiber"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+            "sha256": "0645802C2CE0FEB91FCA4551CCE8A0C2D8B8F639F17AAB016238DEC3E1EA1F93",
+            "sourceSha256": "0D60ECFEC87AD22D4B6B33148DBA4D2425EE887ED5BE8E9AB0B29F8FF8389376"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashFieldDiamondCovariance",
+            "SourceOriginalResidueCuspHomFamily",
+            "SourceOriginalResidueCuspPlaceFamily",
+            "SourceOriginalResidueCuspPlaceCovariance",
+            "SourceOriginalResidueCuspOrbitMap",
+            "SourceOriginalResidueFullBaseFinite",
+            "SourceOriginalResiduePoleBaseLabel",
+            "SourceOriginalResidueCuspFamilyBaseLabel",
+            "SourceOriginalResidueCuspFamilyExhaustion",
+            "SourceOriginalResidueCuspOrbitSurjection",
+            "SourceOriginalResidueCuspCount",
+            "SourceOriginalResidueImageCuspCount"
+          ],
+          "count": 68,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.log",
+            "sha256": "7FFCDF2D859BDD8E79047D59D2999199FFCDC6C4F32E2594DD6233B5F5A661B7",
+            "sourceSha256": "86FE26C98BB37D431E0DEF239A3C56ADFD5A869ABA93C666A5DEB33119DE0FF2"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBoundsOwnership9410.log",
+        "sha256": "8D2B176B6E6AFFDAAF06A9F9398DC37622154ED69218EB9556BA4FFF3704A5C8",
+        "sourceSha256": "8159028BCA1B46C64A395F1781E42FFD1EFC7A334AEF266495FDEF00DF7D1C7A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-050112-784.log",
+        "sha256": "427A7012A5E285F3742EFCDB7E11864213467F3BAA1A4C1597B33E00069CE8FE"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 36 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceIntegralDiamondNormalizedAction",
+            "scratchSha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+            "productionSha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFieldNormalizedRatio",
+            "scratchSha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+            "productionSha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondScalarNormalizedAction",
+            "scratchSha256": "D4B369AF85091BAB35DF91073DD26C79EB73DE8F85C77873C7E6FD851BB2545B",
+            "productionSha256": "19F06F8B6169367142F94F0760C4B7B260088EAD303F3FCA167E95F6676CAAB9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashDiamondGenerator",
+            "scratchSha256": "F3EC91CE7A5CD0F6F245C9246116466B8349517CC78BB2D11A077F4EEB59C35A",
+            "productionSha256": "4654FC45FB51F153A25DEAC927BCC1747FE11EFF2DBF53E8D56F42F3E9004092",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashDiamondStabilizer",
+            "scratchSha256": "46E9C10E7A78D9D87962C18547914FF8AD9C72A4479BD499D156C9DEAEEC71FA",
+            "productionSha256": "C61BB1E0313E4E4938C39811B3C0AF7A5CAFC6D445667605A9C5B93057EE07AF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondCuspChart",
+            "scratchSha256": "92DA381B7DD34C1EF0A426EF3BD984016C7FF86F60034512D9049ADF0B4123D2",
+            "productionSha256": "7659A80A93DDD5E1E49722CFE4EA57C3416512A35678A7B519631B076B7B675A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspStabilizerPlace",
+            "scratchSha256": "B3D3C3CCD9B16EB5986CEB29DB0B4BBE09728083BF5DFFF25104C54F91779995",
+            "productionSha256": "14906DBA3ED50D760C989D8D2649FB0B364EE82477DB1A443A1DD24A2BD96BC8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedLevelOne",
+            "scratchSha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+            "productionSha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspTriangular",
+            "scratchSha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+            "productionSha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspFormula",
+            "scratchSha256": "DB8D6E2B3E5B18BA40B8E4810D3BFAB3DE193C68640E705E91FBD142A3D1EB50",
+            "productionSha256": "2D0271A3742204E88CDD585F6E5518D8C50573983894B4A3851F2FAFB873B313",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashTriangularParameter",
+            "scratchSha256": "CA4A61055ECC924B96C613C711D3C3DEC07307326B909615803458296C4BBCE2",
+            "productionSha256": "3F203E60DAB382A5A19479F87787AF913E42437BD47132D25780E97A0E5F6169",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspCoefficients",
+            "scratchSha256": "39B7E30AED715EC13EAFBA529EF47EC28979F4DBB05439E1AE2995CC21E8B909",
+            "productionSha256": "016E91F411F3AF0DB292AA747382A26E3EA5FCB034160F0FB8D09C407984D06A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspReduction",
+            "scratchSha256": "F59AEF0A764041A8C909A435452722A771A548F4636C5814F73E174ACA4A06CD",
+            "productionSha256": "7A551D656CB3886475DD1E9C012B04C4E9FAA10B009D02952BB8076ECDDF2C83",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspLaurent",
+            "scratchSha256": "FE8D4B00CEECCCF9F2CE580732617C859CDCDBDB053C1745B36F1D7542CB526B",
+            "productionSha256": "7B66E23D9CC590CE2C1FAAEF4319C084A5942A22F5DB4CB8850215E232AC94A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashRaisedCuspCoordinate",
+            "scratchSha256": "80D950A2DBCA14A5ED3BB585295EC56848FE3547DD81E59038E61DB2EC98BE98",
+            "productionSha256": "CFD9B003631E1CC7588CA23D81F8B50A07F3CF18DDC4214DCF334DC879F15660",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspCoordinate",
+            "scratchSha256": "4D0A602C28543B1B7FC7FC970F17BFC25A719739BD6B077168914DDB262EE105",
+            "productionSha256": "44C415C8A613A0CFF9DBB62FAA4575F2F5E7ADDB9E874DDA9BE2F95DE4A085C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueFullCuspChart",
+            "scratchSha256": "90E06FF703FE52885E4E05213EA913894D7978A1158E6D2B59D80816AF4DC7F4",
+            "productionSha256": "5E77B3C527153348651B9C58F9DEBD0CE84C99040ECEA33E303F47A22E8483AA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspBaseComparison",
+            "scratchSha256": "FC8AAEE35C1E6F1E3592EA5249F94F6F2E0FF826B1DF7E44B600993106C61705",
+            "productionSha256": "F07224C384C678CB3B337738137CC45CCABAE25617A4590AB35C02C50DC00D31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceOverBase",
+            "scratchSha256": "C1D7A755325DF5EA68642D166030FE2F06DCA9960B0065F8C2A54E03709CEB5F",
+            "productionSha256": "D5655C8C8DD343BC90E76F8DF2D619EACB56B2CE27449BDE1BBF7B9768E9E0E7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspMatrix",
+            "scratchSha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+            "productionSha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueLabeledCuspPlace",
+            "scratchSha256": "F6B3610DB8373C79569D7098C65FB4EDDA00DE34386FB5AEEC41C1861D410AF6",
+            "productionSha256": "E5C9FAC61DB718EF2553575D6245D04F30336EA2B479C315E7F4FE8B5A5587DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondCommute",
+            "scratchSha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+            "productionSha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueDiamondFiberStabilizer",
+            "scratchSha256": "24CF45292EFBD52F4D70626C9EF71E69FF66D9D0FA905D8814259307AA28CCE6",
+            "productionSha256": "FAF5147B5368909CC81C719544872CDF2696CBD016D30F91B221EFE97ED8FFB9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueLabeledCuspFiber",
+            "scratchSha256": "5D0698589DFE8AFA9E16F3CD5137B3E0D55B0C466C3AA7A7323FBB365611E3CE",
+            "productionSha256": "BA781819B67F08B2BC0CB1D386B74E623207D338234CFA5975848084373676A1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFieldDiamondCovariance",
+            "scratchSha256": "50E08478D4E8C3952AC32ED9D6495CE8B963DB742EB954C9EF160D93E1814E88",
+            "productionSha256": "A0529042CFEA446CDAA5B79FB70C3FEC9DE68187B14D0E567D7A2308066E0FD7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspHomFamily",
+            "scratchSha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24",
+            "productionSha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceFamily",
+            "scratchSha256": "28EA588A4A85708B8BFD4C08A7DDAD2A5AEF4406779754253C5002B63F95D074",
+            "productionSha256": "C1B8C3B61BCFC429259C872AE035E20DB1AFF137CA84A384D8671BEF5940D9B1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspPlaceCovariance",
+            "scratchSha256": "D574C2AF1300866A9FF2F40069E16BE5531B91F4445D9BACCF2C408BED41C42B",
+            "productionSha256": "E4DA6518EBA9F5C1A67AB1DB0373253269B42EA0E0F0E5CEF15DD29A3762A90A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspOrbitMap",
+            "scratchSha256": "258CEFA4C1054417F50635BB97D605FF5A764B17B1559EDF5BFDD8984CF31425",
+            "productionSha256": "7F293F0A999A351238B012CBBBAB37ED910B40D66EB3348884563F0DA95777B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueFullBaseFinite",
+            "scratchSha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252",
+            "productionSha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResiduePoleBaseLabel",
+            "scratchSha256": "87174BD5817FB85877421B676B33381D3E46341171196594766262AE7A9B91FA",
+            "productionSha256": "3437E688EF063197DC058DAE68E841B7AD18730DEEF4CAD371A8D71401905B24",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspFamilyBaseLabel",
+            "scratchSha256": "EDC7E8BEFA022B5CD220FCE6D5114058FD44285E206576755DD382D115399413",
+            "productionSha256": "09133CDE13C8D9C4599D9A60872F404330809FEFB897CAA056E1A6054BEF20D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspFamilyExhaustion",
+            "scratchSha256": "A2FF1D25340034B49B4731ACE94EA7541B76F6E100BD24735A42189D57E8BCB0",
+            "productionSha256": "375411B64A9B0D4F7AB1440A2346D200393B364809F6DA68CC81EC8E32F516B7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspOrbitSurjection",
+            "scratchSha256": "72B02BBDAD6491CFDA73FD8C512ABD4AAF96BB7758F91418B14E7325792CAA6A",
+            "productionSha256": "2EBD2AF02BC9559415322EC3605987CDC138B570A39E64B36F8C6F7659D7E318",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueCuspCount",
+            "scratchSha256": "FC6BA661C75048C7E02718E2575C1F5382083044DA531B84B4822CD072CC6088",
+            "productionSha256": "F24957777CA66B238D4604D14ACAB40AD2BD6CF72467BB412846B5CFCF4E9574",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidueImageCuspCount",
+            "scratchSha256": "7D1DD770B8F6EE4993CA6DE0B03525507F0F0DCCEF82F4F6F57A65AA176DF509",
+            "productionSha256": "8700E0863F07D40933653A01FB3F6CB46699F26D040E00814683D2145DB3BE63",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 137 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Finite elliptic charts and finite fiber bounds, including residue characteristics two and three, and the reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged."
+  }
+}

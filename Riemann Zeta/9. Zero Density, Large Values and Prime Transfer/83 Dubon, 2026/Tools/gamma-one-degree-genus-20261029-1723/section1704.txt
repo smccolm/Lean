@@ -1,0 +1,7 @@
+### Actual cubic matrix iteration bounds — 10 October 2026
+
+Define the genuine cubic iteration starting at the original matrix X. Apply the proved noncommutative polynomial identities and actual matrix ideal-product bounds to show that its idempotency error and each successive difference have entries in I^(2^n). Prove that every actual iterate remains in the same coefficient subalgebra as the seed.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixIdempotentNewtonBounds](Extension/Dubon2026/MatrixIdempotentNewtonBounds.lean).

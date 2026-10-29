@@ -1,0 +1,1 @@
+In an actual basis of the original full matrix algebra, express the genuine trace-dual matrices in that same basis. Prove that their coordinate matrix is an actual left inverse to the trace Gram matrix, by applying the original trace pairing to the whole basis expansions. Deduce that the genuine Gram determinant is a unit in the original coefficient ring.

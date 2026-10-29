@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type} [Fintype ι] [DecidableEq ι] [Field K] [Finite K]
+  [TopologicalSpace K] [DiscreteTopology K]
+
+/-- Exact original-object consumer of `arithmeticLocalFirstOrderCocycles_finrank`. -/
+theorem actual_arithmetic_local_cocycle_classes_arithmeticLocalFirstOrderCocycles_finrank_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP K p]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι K) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P ≤ ρ.ker) :
+    Module.finrank K (arithmeticLocalFirstOrderCocycles a ρ P) =
+      Module.finrank K (arithmeticUnramifiedFixedDeterminantClasses a ρ hρ P) +
+        Module.finrank K (continuousMatrixAdjointCoboundaries ρ hρ) :=
+  arithmeticLocalFirstOrderCocycles_finrank a ha p hp hpa ρ hρ P hP
+
+end
+

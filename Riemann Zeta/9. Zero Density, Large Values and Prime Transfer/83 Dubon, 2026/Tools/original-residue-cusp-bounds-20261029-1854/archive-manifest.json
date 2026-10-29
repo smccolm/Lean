@@ -1,0 +1,1834 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Actual Residue Cusp Stabilizer Assessment 2026-10-29.md",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/Dubon Actual Residue Cusp Stabilizer Assessment 2026-10-29.md.txt",
+      "sha256": "12D4AA35E1A6F038B539D8BAA7A73E01A9C6041A23276EB7303CFA7393664A9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Residue Cusp Count Assessment 2026-10-29.md",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/Dubon Original Residue Cusp Count Assessment 2026-10-29.md.txt",
+      "sha256": "1E388B86742432200F4C8B01C7B425285987EA8238BFABA89F46E38E3BF769C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Residue Cusp Fiber Assessment 2026-10-29.md",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/Dubon Original Residue Cusp Fiber Assessment 2026-10-29.md.txt",
+      "sha256": "7091AD65DD70EAD820180AFBD8EDF9C3C776FE08086E88225224123BEFEA2C56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Residue Labeled Cusp Assessment 2026-10-29.md",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/Dubon Original Residue Labeled Cusp Assessment 2026-10-29.md.txt",
+      "sha256": "BE00035D2037F2B33C9CA3FB8621ECA91A2E3F8D2DCFA7A4B54C6EC72C9069FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerAudit1.lean.txt",
+      "sha256": "0D4C8AA0FC86419221AE40BEBF4CCBBE366356D11CDE0B3592A04EAAD979DEF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerAudit1.log",
+      "sha256": "3B8986929579E73EDB3C323AB85532BC647359FA4C05271C346C7B9DAD7BC0B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerDependencyAudit1.lean.txt",
+      "sha256": "E2A1A75EF67F22E8CD8348D460DFA9E488D3338DECD48AA356284FBC29C2394C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerDependencyAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerDependencyAudit1.log",
+      "sha256": "5D19F31C3E0291A1848826B5CB15401A12B0A658F794A62299B0B567837EC317"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerScratchOwnership1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerScratchOwnership1813.lean.txt",
+      "sha256": "267293056B51EE028358B5EC897543CB06BAB14BD7A0BFA7743A02A3161971C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceActualResidueCuspStabilizerScratchOwnership1813.log",
+      "sha256": "42ED024115228629069947951542213F7311D2EEE0559567977F716178F18D2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction.lean.txt",
+      "sha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798a.lean.txt",
+      "sha256": "43E59B3D18C3FBDA5F5FEE58F45DAD8E2BAC09ACACFCCD8C5B1CEE865F484864"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798a.log",
+      "sha256": "48BDBA777A4B645B1DC7768A32C55D6D30B5ADF69E94FE9DD65BD83385EB9390"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798b.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798b.lean.txt",
+      "sha256": "00FDCA538098CA6A487352CB47C3315F6C541291036FFF746AC7055E2EADAB1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798b.log",
+      "sha256": "C24C3D7411BE4F7BCB593008AEEE51C49E5BF59500CAE709AC0C6F1A1E4822A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798c.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798c.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798c.lean.txt",
+      "sha256": "3624F922B64EF5DE1FA74E79AEBF24C23837C9FAA9FCC6047CDDD5D014625354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1798c.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1798c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1801a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1801a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1801a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1801a.lean.txt",
+      "sha256": "4C036E9F59C20BA8C47D151CD86DB47FBDBE379C2EA25165CC6C26EB6D78883B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondNormalizedAction1801a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondNormalizedAction1801a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction.lean.txt",
+      "sha256": "D4B369AF85091BAB35DF91073DD26C79EB73DE8F85C77873C7E6FD851BB2545B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction1803a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction1803a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction1803a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction1803a.lean.txt",
+      "sha256": "066DFE2AD5B97318E4758B5E3321D734131FE1176AD604763134A48406209ABD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarNormalizedAction1803a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralDiamondScalarNormalizedAction1803a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate.lean.txt",
+      "sha256": "4D0A602C28543B1B7FC7FC970F17BFC25A719739BD6B077168914DDB262EE105"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate1820a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate1820a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate1820a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate1820a.lean.txt",
+      "sha256": "F4ECD448EF7BAED2795C20847BE11C1D2176678E03012803B65052F46807E966"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate1820a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspCoordinate1820a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular.lean.txt",
+      "sha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812a.lean.txt",
+      "sha256": "DCF2A334D7DD4742194615B3A8C6EA6A26202D4AAE0D01A8E5FE3F46456529FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812a.log",
+      "sha256": "CF1CFDD03E2B3AD7996F66BFB0FA055CE2A4244B131377528C5D59387BC1B857"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812b.lean.txt",
+      "sha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular1812b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashCuspTriangular1812b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator.lean.txt",
+      "sha256": "F3EC91CE7A5CD0F6F245C9246116466B8349517CC78BB2D11A077F4EEB59C35A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator1804a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator1804a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator1804a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator1804a.lean.txt",
+      "sha256": "C7B718C9EF37B32A6E17BCA01352B8EEC58FC1B46D0E34E2E5E2A6D2F5D9E0D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondGenerator1804a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondGenerator1804a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer.lean.txt",
+      "sha256": "46E9C10E7A78D9D87962C18547914FF8AD9C72A4479BD499D156C9DEAEEC71FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer1805a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer1805a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer1805a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer1805a.lean.txt",
+      "sha256": "AF9777369E9B0A9F74334839F6CEA0F48872EED42BE911500A9445CB2CEC12B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondStabilizer1805a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashDiamondStabilizer1805a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance.lean.txt",
+      "sha256": "50E08478D4E8C3952AC32ED9D6495CE8B963DB742EB954C9EF160D93E1814E88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance1831a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance1831a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance1831a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance1831a.lean.txt",
+      "sha256": "50E08478D4E8C3952AC32ED9D6495CE8B963DB742EB954C9EF160D93E1814E88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldDiamondCovariance1831a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldDiamondCovariance1831a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio.lean.txt",
+      "sha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799a.lean.txt",
+      "sha256": "4E16DFDA36F1E380B7D265387ED1393952AFBFE9B8C1229E4B37A130500F8221"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799a.log",
+      "sha256": "F5188457FE616423CE9869F8DDDAEC36689127A5AE7B004FE3D48D2974DDCC55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799b.lean.txt",
+      "sha256": "15D848B87C65B001B6692141BACC4C8EFB069980AC9D6BF026EF7753EB2A9AE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1799b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1799b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1802a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1802a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1802a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1802a.lean.txt",
+      "sha256": "0C99D154AB90A158052BAC2A82BAD56DADB239626353680E3D6253B3CD04D075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldNormalizedRatio1802a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashFieldNormalizedRatio1802a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients.lean.txt",
+      "sha256": "39B7E30AED715EC13EAFBA529EF47EC28979F4DBB05439E1AE2995CC21E8B909"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816a.lean.txt",
+      "sha256": "F1881BC1716789F5ED4150547DFA45F93DA6B670E6D8FF079286AA902635A4CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816a.log",
+      "sha256": "38FAC6ADAC2528DFB5A3FBD81177D624B6BC74E29CC839D828EEF4E9AC0C02EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816b.lean.txt",
+      "sha256": "6C4D4916158DBB2984F32CC6FF95D2F910B854FF9D6271C0FDE91E6F34CD196E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients1816b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoefficients1816b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate.lean.txt",
+      "sha256": "80D950A2DBCA14A5ED3BB585295EC56848FE3547DD81E59038E61DB2EC98BE98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819a.lean.txt",
+      "sha256": "39C3630C8DBD64A0C45490BE7C9B054E72A1ADE9CA81A5D4B7D0715EEDA82C79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819a.log",
+      "sha256": "D62092B21E9DD5647C36BCF6897581BF5703346A821364E5F9EE5F11FF71584B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819b.lean.txt",
+      "sha256": "B1A039F63CD8875FADB28D3B73E8716F78BA4DDD55563DEA66ABE5E68D05AA8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate1819b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspCoordinate1819b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula.lean.txt",
+      "sha256": "DB8D6E2B3E5B18BA40B8E4810D3BFAB3DE193C68640E705E91FBD142A3D1EB50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula1814a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula1814a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula1814a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula1814a.lean.txt",
+      "sha256": "FC9B78C829D9FE06837F306EEB3737348D630A30A9A4C94E94036947810B0A1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula1814a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspFormula1814a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent.lean.txt",
+      "sha256": "FE8D4B00CEECCCF9F2CE580732617C859CDCDBDB053C1745B36F1D7542CB526B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818a.lean.txt",
+      "sha256": "1E386FE3CE24774E5A7DBAE0D3554E2143ADB47E48BEB886055B383F247BD7A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818a.log",
+      "sha256": "99BF414D2E525131FBFF099F8DE670D05A201FEEDF78F4421DB1D5788681B095"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818b.lean.txt",
+      "sha256": "A178B32A9809683D700DAF0E0C4C1DDCB67C6453BBE0CCEED9CA6E3151EF1C5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent1818b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspLaurent1818b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction.lean.txt",
+      "sha256": "F59AEF0A764041A8C909A435452722A771A548F4636C5814F73E174ACA4A06CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction1817a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction1817a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction1817a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction1817a.lean.txt",
+      "sha256": "0794E310E92C85D7EC81EC081E247F81A1719D4EF44E1185754749FE7A6EA6D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction1817a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedCuspReduction1817a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne.lean.txt",
+      "sha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811a.lean.txt",
+      "sha256": "0B565B4109EE007967DFE411F8DB71AB602B42579159C4B349780BBA92DD0CCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811a.log",
+      "sha256": "4338F80FDEC693436CBBFA38E69FC4D0AAC6015369DBFDF9FD347446FDD85D91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811b.lean.txt",
+      "sha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne1811b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashRaisedLevelOne1811b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter.lean.txt",
+      "sha256": "CA4A61055ECC924B96C613C711D3C3DEC07307326B909615803458296C4BBCE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter1815a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter1815a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter1815a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter1815a.lean.txt",
+      "sha256": "76BBDED660939679021946CC3A8A73861659E2F6651BA2F0655C125D7DD7C6C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter1815a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceIntegralSlashTriangularParameter1815a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison.lean.txt",
+      "sha256": "FC8AAEE35C1E6F1E3592EA5249F94F6F2E0FF826B1DF7E44B600993106C61705"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison1822a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison1822a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison1822a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison1822a.lean.txt",
+      "sha256": "D7697488AA02954974E51AAE6D9508A18A91E4120B07268107DBAB12BC0E4597"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison1822a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspBaseComparison1822a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount.lean.txt",
+      "sha256": "FC6BA661C75048C7E02718E2575C1F5382083044DA531B84B4822CD072CC6088"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount1843a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount1843a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount1843a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount1843a.lean.txt",
+      "sha256": "F770410490D2F221EEB8E1D3B75037C545F850BF99839B3DB88CC90BDB69A3B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCount1843a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCount1843a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit1.lean.txt",
+      "sha256": "F9BA4E6983F4C5EDD32642ED353952EFB1395291A726419480AEFB8315B2D975"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit1.log",
+      "sha256": "5A0AE9BFB7477A2EC9224B190A0344930B6E4B305EDEBE13DCD540E418CAD1C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit2.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit2.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit2.lean.txt",
+      "sha256": "344B11B409AC79623FB3106D060EB8D76C3DCF5B968B7AB1F01E654BD7A1D72E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountAudit2.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountAudit2.log",
+      "sha256": "96C2A1D89AA09663E804015442BAA46A54B084379D1F877E960D342C78E58978"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit1.lean.txt",
+      "sha256": "708A02F752AA5D8E2BAB8E186453172510B6127F7A2C2325B983F280F92D2903"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit1.log",
+      "sha256": "25C2E49CE427632DF8F0EB987223BEEAD52A77824506D5B59C7F065F75D9732A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit2.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit2.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit2.lean.txt",
+      "sha256": "FA146677D8D790851E7A5020DC6E3620474053259EF5A12C2BC5006FB345AC61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountDependencyAudit2.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountDependencyAudit2.log",
+      "sha256": "E7841B1C50E1466D88B0E7CE3BAA17D7BF4C91D044AEE85848ACAE3B30D53BFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountScratchOwnership1850.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountScratchOwnership1850.lean.txt",
+      "sha256": "86FE26C98BB37D431E0DEF239A3C56ADFD5A869ABA93C666A5DEB33119DE0FF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspCountScratchOwnership1850.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspCountScratchOwnership1850.log",
+      "sha256": "7FFCDF2D859BDD8E79047D59D2999199FFCDC6C4F32E2594DD6233B5F5A661B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel.lean.txt",
+      "sha256": "EDC7E8BEFA022B5CD220FCE6D5114058FD44285E206576755DD382D115399413"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel1840a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel1840a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel1840a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel1840a.lean.txt",
+      "sha256": "99BC9C4FEFC41EBA7EAA2F75EAC27A5739ABEFB6C2EAA06B6A06E12D77822A11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyBaseLabel1840a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyBaseLabel1840a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion.lean.txt",
+      "sha256": "A2FF1D25340034B49B4731ACE94EA7541B76F6E100BD24735A42189D57E8BCB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion1841a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion1841a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion1841a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion1841a.lean.txt",
+      "sha256": "29C4987AE26506C798D6C4FD956E6E0485066AB66C551222A9F5BA70FBCA8B42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFamilyExhaustion1841a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFamilyExhaustion1841a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberAudit1.lean.txt",
+      "sha256": "FA3B3E1F77773904C40A5BBD568C4774B864FC3E74B1944B7DDCE2C01014831A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberAudit1.log",
+      "sha256": "E37888BE9FB28A2257A1EB295F116B98B8D90723895E9E90477BBD338A017EB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberDependencyAudit1.lean.txt",
+      "sha256": "86B231ACA279659656C66473578A8EA39B923E39719C32C4BF6B9C7B9B7910CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberDependencyAudit1.log",
+      "sha256": "D0D79AD238C07A253F750F27723B708261B0DACD19CEF6AD0A2F156729E179C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberScratchOwnership1844.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberScratchOwnership1844.lean.txt",
+      "sha256": "0D60ECFEC87AD22D4B6B33148DBA4D2425EE887ED5BE8E9AB0B29F8FF8389376"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+      "sha256": "0645802C2CE0FEB91FCA4551CCE8A0C2D8B8F639F17AAB016238DEC3E1EA1F93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily.lean.txt",
+      "sha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily1832a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily1832a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily1832a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily1832a.lean.txt",
+      "sha256": "74CED2F18E6EA53FD5EEC19F8167645FD86D8A403B656BC94A90CA7C1799AF24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspHomFamily1832a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspHomFamily1832a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix.lean.txt",
+      "sha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824a.lean.txt",
+      "sha256": "254D4042727AC1CD00E631700609206EF319EA79286B5E2502F04E39FB0D1A8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824a.log",
+      "sha256": "3750B1A13025F3EC91B60581A952EF2587068A422A83EA425D7700BF2E75F47E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824b.lean.txt",
+      "sha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix1824b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspMatrix1824b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap.lean.txt",
+      "sha256": "258CEFA4C1054417F50635BB97D605FF5A764B17B1559EDF5BFDD8984CF31425"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap1837a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap1837a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap1837a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap1837a.lean.txt",
+      "sha256": "9F92EA5EE90AC785AB336E95EB2202EBFAB80990A4A983D276C298A88C8C40A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitMap1837a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitMap1837a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection.lean.txt",
+      "sha256": "72B02BBDAD6491CFDA73FD8C512ABD4AAF96BB7758F91418B14E7325792CAA6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842a.lean.txt",
+      "sha256": "8856BEB957291457369444CF1D2D462B90BE087D20ECD8411A3E7A820C28446E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842a.log",
+      "sha256": "C15A10F306841135F2CE15661D4BB01D71683B8C7CD8C47124AC47434304FA3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842b.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842b.lean.txt",
+      "sha256": "0F2D7C9F2214D45E57AB228339FBD8507AA6737BA030E7A87CD866D6902BEED5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842b.log",
+      "sha256": "B2717D7A4DF58401CE702368BEE5EFA96B4250B037CF489ABBB65DA6CABC9584"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842c.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842c.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842c.lean.txt",
+      "sha256": "3C18451E5335BEC9D101E167834A70432413ACBB77EEAA570B9C609AF50A10C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspOrbitSurjection1842c.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspOrbitSurjection1842c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance.lean.txt",
+      "sha256": "D574C2AF1300866A9FF2F40069E16BE5531B91F4445D9BACCF2C408BED41C42B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance1835a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance1835a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance1835a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance1835a.lean.txt",
+      "sha256": "DDA4E61014C672844E4E58D65F96C98A4BC36586A683E032566282986E3506A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceCovariance1835a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceCovariance1835a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily.lean.txt",
+      "sha256": "28EA588A4A85708B8BFD4C08A7DDAD2A5AEF4406779754253C5002B63F95D074"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833a.lean.txt",
+      "sha256": "4FAC774B07457E8508E320487354DE747A608C3D7322AC4B9F65D40DBF530F57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833a.log",
+      "sha256": "67293A75ABB0747ECB5151BB226F203256AEAA3D42B59E03C7273717D213C43D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833b.lean.txt",
+      "sha256": "C5E376F72BB3F3A6E94096FACC934B17DFE2868A977B1E4EE386BCE59EDC3EE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceFamily1833b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceFamily1833b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase.lean.txt",
+      "sha256": "C1D7A755325DF5EA68642D166030FE2F06DCA9960B0065F8C2A54E03709CEB5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823a.lean.txt",
+      "sha256": "AFE3B9D915E68BF84CB1896B1F723D3D9F36A8DC8071160BD1255C3F0B07F628"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823a.log",
+      "sha256": "AAC3E1597BD17864B19859C4EA733E677B07EBEEBEF929A82BCD087DAF8C22D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823b.lean.txt",
+      "sha256": "71E6895FF428B1BA01A24587D992161EFA6DE6D8B4482D6E33A3E71D6A0A50F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase1823b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspPlaceOverBase1823b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace.lean.txt",
+      "sha256": "B3D3C3CCD9B16EB5986CEB29DB0B4BBE09728083BF5DFFF25104C54F91779995"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807a.lean.txt",
+      "sha256": "B299B4FDB5F0E6D3B8151ABD93EC15970EBF9DB0E1FD8F9BB877E3E4876D3E4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807b.lean.txt",
+      "sha256": "ADC24DBF1BD2BF76243CDDB47AAD181BB870A08BA701551104D3E3EE36D8A4F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspStabilizerPlace1807b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueCuspStabilizerPlace1807b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute-1844.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute-1844.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute.lean.txt",
+      "sha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute1827a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute1827a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute1827a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute1827a.lean.txt",
+      "sha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute1827a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCommute1827a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart-1813.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart-1813.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart-1813.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart.lean.txt",
+      "sha256": "92DA381B7DD34C1EF0A426EF3BD984016C7FF86F60034512D9049ADF0B4123D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart1806a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart1806a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart1806a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart1806a.lean.txt",
+      "sha256": "11A95865A50CFB95D25427ADECD02165B8D3B88511DD594F714D2921A67A8A05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCuspChart1806a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondCuspChart1806a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer-1844.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer-1844.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer.lean.txt",
+      "sha256": "24CF45292EFBD52F4D70626C9EF71E69FF66D9D0FA905D8814259307AA28CCE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828a.lean.txt",
+      "sha256": "3906CFE8D1F3B681A6978BA3479B8F791D29B1C8022F17AE4D31DC2BFC2B2F27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828a.log",
+      "sha256": "A3BE863C972052B13FE1A9944793A23FE815EBA0B50DC95E53F0AE40B543AA36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828b.lean.txt",
+      "sha256": "639EE576A5402254D52F76DBFB58457A8F79DE7FC34F993319A2636E0A3042D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer1828b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueDiamondFiberStabilizer1828b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite.lean.txt",
+      "sha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838a.lean.txt",
+      "sha256": "D129BAEB77AF73118CDA17666B53C05E5AD5425B4567F9A0BDB9A8D28BA2F945"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838a.log",
+      "sha256": "6C951441DB406A4FF86979D958DFE75F14D6701D41F83742846EAA04EB73DF33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838b.lean.txt",
+      "sha256": "0F3E1873699180079A93114A56EF1634E85B763EF9E76344318B35717E88D252"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullBaseFinite1838b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullBaseFinite1838b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart.lean.txt",
+      "sha256": "90E06FF703FE52885E4E05213EA913894D7978A1158E6D2B59D80816AF4DC7F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart1821a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart1821a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart1821a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart1821a.lean.txt",
+      "sha256": "8340E670F523EA1AE127E76667E87A2A2BE47A56CE0410D017F9E3999E0FCE9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart1821a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueFullCuspChart1821a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount-1850.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount-1850.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount-1850.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount-1850.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount.lean.txt",
+      "sha256": "7D1DD770B8F6EE4993CA6DE0B03525507F0F0DCCEF82F4F6F57A65AA176DF509"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847a.lean.txt",
+      "sha256": "4B2CCD562B34893ED7BE0E2612DDD4266EC0FE84FF2FE74973A88D513C431F76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847a.log",
+      "sha256": "2B8E5376617E4AB8C73AD632287DADBA9FF4B8D941C548600AD6021EB6070416"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847b.lean.txt",
+      "sha256": "7D1DD770B8F6EE4993CA6DE0B03525507F0F0DCCEF82F4F6F57A65AA176DF509"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueImageCuspCount1847b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueImageCuspCount1847b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspAudit1.lean.txt",
+      "sha256": "B3A0C2EF53304AB3ACB3A849825DCC21F86D8D4DCC093C209D97035345DEE669"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspAudit1.log",
+      "sha256": "EF10CB1EE305CBD2DB34A1E0157A6DE9FB6FB1AD7A73FDB5C676DF8C24E7C077"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspDependencyAudit1.lean.txt",
+      "sha256": "9871C8C721BFA28A65C0ABE572324778561024A85EB1F9F65A8107D8137698C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspDependencyAudit1.log",
+      "sha256": "542DF588AC772306C0801E029710B4ED58B2F79416E190A2EBCBA385102D4305"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber-1844.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber-1844.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber.lean.txt",
+      "sha256": "5D0698589DFE8AFA9E16F3CD5137B3E0D55B0C466C3AA7A7323FBB365611E3CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber1829a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber1829a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber1829a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber1829a.lean.txt",
+      "sha256": "2F1FAF249296D439368A6FDD65E215533F9A329D96AB347B07EB088852441C4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber1829a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspFiber1829a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace-1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace-1830.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace.lean.txt",
+      "sha256": "F6B3610DB8373C79569D7098C65FB4EDDA00DE34386FB5AEEC41C1861D410AF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace1825a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace1825a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace1825a.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace1825a.lean.txt",
+      "sha256": "66E4D4BABA137D4E9942801D9FDD301318118803336861D949A7776FD99E1AC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace1825a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspPlace1825a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspScratchOwnership1830.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspScratchOwnership1830.lean.txt",
+      "sha256": "3F97C86719AE0BBDF7EF68AE959ADF6CB6F89843A17306FBA63493D01441AFD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+      "sha256": "5D8F580FBBEBC4E4DEB8C4A4E24D74D54FD11263520C18FCE559C4797D976F1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel-1845.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel-1845.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel-1845.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel-1845.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel.lean.txt",
+      "sha256": "87174BD5817FB85877421B676B33381D3E46341171196594766262AE7A9B91FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839a.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839a.lean.txt",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839a.lean.txt",
+      "sha256": "CBB266AB6FBB64A3EE7F069A2895837820BCDC7EEB0801CAD8C565DA372BCA39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839a.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839a.log",
+      "sha256": "CE2EE04B3894CFC801E48AA9C73039B0005331944E7DC7412A0BE8AD2C4423AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839b.exit",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839b.lean",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839b.lean.txt",
+      "sha256": "6ECDD64F3831FEBDD3C2C38DC223F175C138C9E39923AD42F777C8E933F95D6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResiduePoleBaseLabel1839b.log",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/SourceOriginalResiduePoleBaseLabel1839b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\manifest.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/anthropic-diamond-place-charts-1746/manifest.json",
+      "sha256": "A00F35CD5B83884F54C43AA205CEB8B4388310D375B5E202DF457B1681ABEE95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-original-residue-charts-1750\\manifest.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/anthropic-original-residue-charts-1750/manifest.json",
+      "sha256": "F3D47C18037B527D22332BFCF7CD08AC7EE6167D799A40CEA83757FC8A1D080D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_actual_residue_cusp_stabilizer_1813.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_actual_residue_cusp_stabilizer_1813.ps1",
+      "sha256": "AFA8F8820C67F81208B33B321753999A921B582E641D0BCFF9CB230AB50FCCBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_actual_residue_cusp_stabilizer_preflight_1810.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_actual_residue_cusp_stabilizer_preflight_1810.ps1",
+      "sha256": "A5001AEC98CF5BA86ABBB2623B4429FF988518642C33CB036BBC7B3AA8477883"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_cusp_count_1845.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_cusp_count_1845.ps1",
+      "sha256": "97AD63A1787BE38C035E8FD43697CB2292BDADC6F129D20B074143E4E14A23E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_cusp_count_1850.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_cusp_count_1850.ps1",
+      "sha256": "775F4143EE6CFC1F57E7228EF4DA2E41346E54E590E95DB41461D5DF4DC4B5E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_cusp_fiber_1844.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_cusp_fiber_1844.ps1",
+      "sha256": "AEB15B1D7EC475B4815A6EE80279428421D387BCA72C144A62A16458528E1582"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_cusp_fiber_preflight_1834.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_cusp_fiber_preflight_1834.ps1",
+      "sha256": "A21FF5F9646B508C007D39C4E83C7B41FEA60BDB306E6F1423614280C6CD037A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_cusp_fiber_preflight_1836.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_cusp_fiber_preflight_1836.ps1",
+      "sha256": "DCC7C1B4FC9D6D4BE0C87DCF93F475F947D22CF55FD21778E04B96CCA4FF29AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_labeled_cusp_1830.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_labeled_cusp_1830.ps1",
+      "sha256": "63734B7997462AA950F522AF4FBE2C583F5B570E9289E08FE6ACCEDA7E13A829"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_residue_labeled_cusp_preflight_1826.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/audit_original_residue_labeled_cusp_preflight_1826.ps1",
+      "sha256": "DC5E5A89FB61F5D161964E5610995C6C05E3DE39F7ACC6CB5080B28987A7DD54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_actual_residue_cusp_stabilizer_canonical_1813.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/build_actual_residue_cusp_stabilizer_canonical_1813.ps1",
+      "sha256": "27AEC3F65E453CFD1848CACDCA672C3EA16D21704284881224855B1EB5B5FEF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_residue_cusp_count_canonical_1845.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/build_original_residue_cusp_count_canonical_1845.ps1",
+      "sha256": "3237ED3CA070F71FCFF0EB302BEF50979B3377F0111DEA372C4FEC2E8590F617"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_residue_cusp_count_canonical_1850.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/build_original_residue_cusp_count_canonical_1850.ps1",
+      "sha256": "8E553C7AC74D1819DFCF8825BC8349B9D8C804A520FC92AF5FD71F488B6B9A0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_residue_cusp_fiber_canonical_1844.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/build_original_residue_cusp_fiber_canonical_1844.ps1",
+      "sha256": "F1B449BE2F707BD09CAB476B7E1677762DED8F2B97585E4F869EA21A48650688"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_residue_labeled_cusp_canonical_1830.ps1",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/build_original_residue_labeled_cusp_canonical_1830.ps1",
+      "sha256": "189EC73EFAA53EB64ACECC552E42DCA346AD28B914979B00967F4BE3843F5E3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-residue-cusp-bounds-promotion-route-1854.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/original-residue-cusp-bounds-promotion-route-1854.json",
+      "sha256": "C3096A319C00BB722EA9B1227D19678C9EE8F6DAE1042C8556AA32D9DF98CA71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-residue-cusp-orbit-route-1831.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/original-residue-cusp-orbit-route-1831.json",
+      "sha256": "B33A046600563C2E4D76E15AF62934F383A70EFC9A7B5CAF5E01D4B66FCB9F1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_actual_residue_cusp_stabilizer_canonical_1813.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/prepare_actual_residue_cusp_stabilizer_canonical_1813.py",
+      "sha256": "3C46B15C2320A032D33A6B36485DEF0157CEFA5982D1728E65C0888D8F33476E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_actual_residue_cusp_stabilizer_1813.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/record_actual_residue_cusp_stabilizer_1813.py",
+      "sha256": "45A382AF68C173CE5115E409E2866648A5726CE1ECCABC98D8A8B7DC1F6ACD2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_residue_cusp_count_1845.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/record_original_residue_cusp_count_1845.py",
+      "sha256": "84D423BF209042F8D9B944EA33A201062746CFF353863D182B3B2C287EA8E7C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_residue_cusp_count_1850.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/record_original_residue_cusp_count_1850.py",
+      "sha256": "501D162C90DC9BEA41F38ABE9329BA949735AB2F92DF1E295D542CA15C6DEA42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_residue_cusp_fiber_1844.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/record_original_residue_cusp_fiber_1844.py",
+      "sha256": "0670BC69C507CA2AF4983B9065519F347FE8974DCDCEB8D9E266404FC88E12E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_residue_labeled_cusp_1830.py",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/record_original_residue_labeled_cusp_1830.py",
+      "sha256": "6084FCACE2A78995F7E1A3786AC7498872E420704EC4F92BC2E379032EEEB34E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-1-audit-config.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-actual-residue-cusp-stabilizer-1-audit-config.json",
+      "sha256": "8B382E28BDE81B6C759CBC9CF63135E42470B5C4E1A0FF6EBB379A2E098EA98A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-1-reuse-review-20261029.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-actual-residue-cusp-stabilizer-1-reuse-review-20261029.json",
+      "sha256": "16D9937046DBD05B95B79837A1F9F5FF088F4E2E2C365A5D99F0BE46729DB360"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-actual-residue-cusp-stabilizer-1-scratch-receipt.json",
+      "sha256": "B5D4B824191EF8D84E8553C0F02FC5A0C88BD13019819ABEC3A52976244BE310"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-residue-cusp-stabilizer-audit-route-1813.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-actual-residue-cusp-stabilizer-audit-route-1813.json",
+      "sha256": "EAF1BA858F1B9B17DFAEFFB04FD14D24793E48B2FAC7068C2C4E83CF3DC8BEE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-2-audit-config.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-count-2-audit-config.json",
+      "sha256": "B19A965E753C69D84BA748AFC64EAC87E011319F2A00E17B5505BE18B940A744"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-2-reuse-review-20261029.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-count-2-reuse-review-20261029.json",
+      "sha256": "0FCA832A56D10D7FB100A991ECC8D5909859A3D3D83BC8B9B879C2B2EDCDDEAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-2-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-count-2-scratch-receipt.json",
+      "sha256": "36A5D7B1F7872D151C5D2BA63C658F09B1FC26705628A99EAA51E0C480B059BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-audit-route-1850.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-count-audit-route-1850.json",
+      "sha256": "34A4876B9BFB9B8B869BF94BC5085751EAD2348C00FB0292F371419E18DF00E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-1-audit-config.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-fiber-1-audit-config.json",
+      "sha256": "7A46425AB62C37F6783D0032B07E0B8BFD82A2281A79675BD5C60F13860ECF6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-1-reuse-review-20261029.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-fiber-1-reuse-review-20261029.json",
+      "sha256": "0F47E9DD5154312BA59FE3428A5CF7124485CE31C07774283957E81D0D480054"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-fiber-1-scratch-receipt.json",
+      "sha256": "D145C006E944630241341ACA66C0CE03E75A10F58E1DC97A8DB38264FC80F33A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-audit-route-1844.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-cusp-fiber-audit-route-1844.json",
+      "sha256": "7448BA251A2BB3BDC2CE531C25E55BF356ACB16E8A904567F30227F3B3C03441"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-fixed-fibers-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-fixed-fibers-1-scratch-receipt.json",
+      "sha256": "0A633BE1AB4A22873A2A3B81404B264A407B018FA7226C09E30106E6CB8D326D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-audit-config.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-labeled-cusp-1-audit-config.json",
+      "sha256": "E9A616FDF0298C4693CBBF670C8E66EE93623B12145A1094620D74CCEA4073FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-reuse-review-20261029.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-labeled-cusp-1-reuse-review-20261029.json",
+      "sha256": "18C1A3F9002D1B3A905C5200566F8BE8DDC759E26F97C8A081C9C8B9AE9C21E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-labeled-cusp-1-scratch-receipt.json",
+      "sha256": "BD4AD05D63EC51B39FCC74E4CB6E72068A3CB176DD7BDE6738D1A4940F4458FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-audit-route-1830.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-original-residue-labeled-cusp-audit-route-1830.json",
+      "sha256": "E3F8B567DC4D1A130BC96F8303C34ED10ABC9398335B8313BA0EDBBA381FB363"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-prescribed-residue-cusp-chart-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-prescribed-residue-cusp-chart-1-scratch-receipt.json",
+      "sha256": "422081529D4AECB4E9B9868A8AD343C4D60E4E2A832745508A9A46DD0BA5F64D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-reduced-cusp-translation-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-reduced-cusp-translation-1-scratch-receipt.json",
+      "sha256": "D19D43610498F33F2515F887E39467E25E401CADB61E44C9CF4D732BD553680E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-scalar-1-scratch-receipt.json",
+      "path": "Tools/original-residue-cusp-bounds-20261029-1854/source-reduced-diamond-scalar-1-scratch-receipt.json",
+      "sha256": "68D4FB6A688FD790AFE84AC1F6131968A4B4F490E9C6FCDE00A2F989C9A24E2E"
+    }
+  ]
+}

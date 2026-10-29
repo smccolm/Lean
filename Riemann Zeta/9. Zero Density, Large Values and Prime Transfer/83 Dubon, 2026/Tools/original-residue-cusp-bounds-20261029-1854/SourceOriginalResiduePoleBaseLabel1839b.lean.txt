@@ -1,0 +1,59 @@
+import SourceOriginalResidueFullBaseFinite1838b
+import Dubon2026.SourceCurveFiniteEmbeddingRestriction
+import Dubon2026.SourceModularCoefficientCuspCount
+import Dubon2026.SourceGammaOneResidueSeparability
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp bound -> exhaustion of the original residue poles by actual
+cusp charts. Restrict each actual j-pole through the proved finite full-base
+inclusion. Native positive ramification preserves its pole, and the already
+proved base-cusp exhaustion supplies its exact primitive label. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond SourceCurve
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : IsAlgClosed kk := valuation_residue_isAlgClosed A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+private local instance : Algebra kk (modularFunctionFieldCoeff N kk) :=
+  (modularFunctionFieldCoeff N kk).toSubalgebra.algebra
+
+theorem originalResiduePole_lies_over_labeledCusp (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N)
+    (w : Place kk (qExpFunctionFieldC kk (Gamma1 N)))
+    (hw : w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0) :
+    let hN : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+    ∃ s : {s // s ∈ CuspLabels.labels N},
+      w.toValuationSubring.comap
+        (IntermediateField.inclusion (fullBase_le_originalField kk N)).toRingHom =
+          (CoefficientCuspLabels.place N kk hN ζ hζ s).toValuationSubring := by
+  classical
+  dsimp only
+  let hN : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  let ι := IntermediateField.inclusion (fullBase_le_originalField kk N)
+  let hf := originalResidueFullBase_inclusion_finite A N
+  let v := Place.restrictAlongFinite ι hf w
+  have hj : ι (jCoeff N kk) =
+      ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ := rfl
+  have he := Place.ord_restrictAlongFinite_uniformizer_pos ι hf w
+  have ho := Place.ord_restrictAlongFinite ι hf w (jCoeff N kk)
+  rw [hj] at ho
+  have hv : v.ord (jCoeff N kk) < 0 := by
+    change (Place.restrictAlongFinite ι hf w).ord (jCoeff N kk) < 0
+    nlinarith
+  have hfin : {v : Place kk (modularFunctionFieldCoeff N kk) | v.ord (jCoeff N kk) < 0}.Finite :=
+    (finite_coeff_divisor_support N kk (jCoeff N kk)).subset fun _ h => ne_of_lt h
+  have hS : ∀ v, v ∈ hfin.toFinset ↔ v.ord (jCoeff N kk) < 0 := fun v => hfin.mem_toFinset
+  have hvS : v ∈ hfin.toFinset := (hS v).mpr hv
+  rw [coeff_cusp_family_exhaustive N kk hN ζ hζ hfin.toFinset hS] at hvS
+  obtain ⟨s, _, hs⟩ := Finset.mem_image.mp hvS
+  refine ⟨s, ?_⟩
+  rw [hs]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

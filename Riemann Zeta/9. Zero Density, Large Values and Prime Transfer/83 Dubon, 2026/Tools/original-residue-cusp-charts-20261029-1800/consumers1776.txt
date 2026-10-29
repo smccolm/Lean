@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [IsLocalRing R]
+
+/-- Exact original-object consumer of `submodule_rankOne_exists_primitive_vector`. -/
+theorem actual_submodule_rank_one_primitive_vector_submodule_rankOne_exists_primitive_vector_source
+    (S N : Submodule R (Fin 2 → R)) (hSN : IsCompl S N) (e : S ≃ₗ[R] R) :
+    ∃ v : Fin 2 → R, v ∈ S ∧ ∃ i, IsUnit (v i) :=
+  submodule_rankOne_exists_primitive_vector S N hSN e
+
+end
+

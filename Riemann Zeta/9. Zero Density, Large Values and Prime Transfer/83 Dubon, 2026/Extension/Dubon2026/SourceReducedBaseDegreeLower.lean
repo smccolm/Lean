@@ -1,0 +1,59 @@
+import Dubon2026.SourceReducedBaseCoordinateMap
+import Dubon2026.SourceModularCoefficientFieldFinite
+
+/-! DUB-17/18 -> Gamma1 degree/genus preservation -> signed-index bound.
+The existing exact j-substitution degree over the algebraic closure supplies
+the lower bound over the original coefficient field. Native finite divisor
+generation and the tower identity then put the same lower bound on the actual
+full modular base field. No base-change equality or finite-degree premise is
+introduced. This is the precise base factor needed in the Artin degree tower.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open Polynomial IntermediateField SourceLevelProjective
+open scoped IntermediateField
+
+theorem psi_le_j_substitution_minpoly_degree (K : Type*) [Field K]
+    (N : ℕ) [NeZero N] (hNK : (N : K) ≠ 0) :
+    dedekindPsi N ≤ (minpoly K⟮jqModC K⟯ (qExpand K N (jqModC K))).natDegree := by
+  let L := AlgebraicClosure K
+  let σ : K →+* L := algebraMap K L
+  have hj : coeffMap σ (jqModC K) = jqModC L := map_jqModC σ
+  have hx : coeffMap σ (qExpand K N (jqModC K)) = qExpand L N (jqModC L) := by
+    rw [coeffMap_qExpand, hj]
+  have hNL : (N : L) ≠ 0 := by
+    simpa only [map_natCast, map_zero] using σ.injective.ne hNK
+  have h := minpoly_coordinate_coeffMap_degree_le σ (jqModC K)
+    (qExpand K N (jqModC K)) (residue_j_substitution_isIntegral K N)
+  rw [hj, hx, residue_j_minpoly_natDegree_eq_psi N hNL] at h
+  exact h
+
+theorem psi_le_fullBase_relfinrank (K : Type*) [Field K]
+    (N : ℕ) [NeZero N] (hNK : (N : K) ≠ 0) :
+    dedekindPsi N ≤ relfinrank K⟮jqModC K⟯ (modularFunctionFieldCoeff N K) := by
+  let J := K⟮jqModC K⟯
+  let P := IntermediateField.adjoin K
+    ({jqModC K, qExpand K N (jqModC K)} : Set (LaurentSeries K))
+  have hJP : J ≤ P := IntermediateField.adjoin.mono K _ _ (by
+    intro y hy
+    exact Or.inl hy)
+  have hPF : P ≤ modularFunctionFieldCoeff N K := by
+    rw [adjoin_le_iff]
+    rintro y (hy | hy)
+    · exact hy ▸ jq_mem_coeff_field N K
+    · exact hy ▸ jqd_mem_coeff_field N K (dvd_refl N)
+  have hsimple : (minpoly J (qExpand K N (jqModC K))).natDegree = relfinrank J P := by
+    dsimp only [P, J]
+    rw [← residue_j_adjoin_union_eq_pair, coefficient_relfinrank_adjoin_union_singleton]
+    exact (residue_j_simple_finrank_eq_minpoly K N).symm
+  letI := finiteDimensional_coeff_field N K
+  have hpos : 0 < relfinrank J (modularFunctionFieldCoeff N K) := by
+    rw [← coefficient_field_finrank_over_j_eq_relfinrank]
+    exact Module.finrank_pos
+  have hle : relfinrank J P ≤ relfinrank J (modularFunctionFieldCoeff N K) :=
+    Nat.le_of_dvd hpos (dvd_of_mul_right_eq _ (relfinrank_mul_relfinrank hJP hPF))
+  rw [← hsimple] at hle
+  exact (psi_le_j_substitution_minpoly_degree K N hNK).trans hle
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

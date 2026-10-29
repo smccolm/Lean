@@ -1,0 +1,7 @@
+### Actual actual original class conditions and coefficient ideals — 10 October 2026
+
+Evaluate the same original whole representation through the genuine existing continuous residue-preserving coefficient fiber. Consume the existing determinant-ideal and matrix-relation-ideal kernel equivalences to identify the original unframed determinant and subgroup conditions. Their conjunction is exactly annihilation of the literal sum of these actual ideals.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedConditionCoefficientIdeals](Extension/Dubon2026/OriginalUnframedConditionCoefficientIdeals.lean).

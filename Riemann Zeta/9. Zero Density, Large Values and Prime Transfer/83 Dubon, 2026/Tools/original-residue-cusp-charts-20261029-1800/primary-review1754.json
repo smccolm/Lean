@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalCoefficientClassFixedQuotient",
+  "mathematics": "Evaluate the original whole representation and its actual fixed-quotient factor through the same genuine continuous residue-preserving coefficient map. Prove that the existing unframed quotient equivalence carries one evaluated class to the other, entry by entry. Transfer injectivity and surjectivity of the proved quotient class map to the original whole-group class map.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-original-unframed-route-20261010.json: actual original arithmetic residual representation, proved fixed-residual presentation, actual quotient class equivalence, literal whole trace algebra and exact original coefficient evaluation inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "coefficientFixedQuotient1754-focus.log"
+}

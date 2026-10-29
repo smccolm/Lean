@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticLocalCotangentDual",
+  "mathematics": "Specialize the actual ordinary residue-field dual to the literal relative maximal-ideal quotient of the completed arithmetic local ring. Its proved Noetherianity gives genuine finite-dimensionality. The original epsilon-coefficient equivalence composes with the actual local class map to give a residue-field-linear surjection onto the same local continuous cohomology condition. The pinned dimension inequality and equality of dual dimension bound the actual local class dimension by the dimension of the original literal cotangent quotient.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned Ideal.Cotangent, actual quotient module and Derivation APIs inspected; original residue maps and actual arithmetic local-ring Noetherian and residue theorems re-read. Stacks 33.16.5 equal-residue hypothesis retained explicitly. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "The dimension theorem explicitly installs the canonical inherited AddCommMonoid of the literal relative maximal-ideal quotient, via instAddCommGroupRelativeMaximalCotangent.toAddCommMonoid. This avoids instance-search timeout without changing its operations, scalar action, mathematical hypotheses, or resource limits."
+  ],
+  "productionLog": "arithmeticCotangentDual1645c-focus.log"
+}

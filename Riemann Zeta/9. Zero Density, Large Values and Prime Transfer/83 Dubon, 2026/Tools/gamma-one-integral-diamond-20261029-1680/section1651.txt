@@ -1,0 +1,7 @@
+### Actual original local cocycle class kernel and dimension — 10 October 2026
+
+The genuine quotient class map from original local continuous cocycles onto the actual simultaneous determinant and inertia condition is linear and surjective. Its kernel is precisely the original continuous coboundaries inside the local cocycles. Original residual inertia triviality proves that every actual coboundary lies there. Proved arithmetic continuous cocycle finiteness supplies finite-dimensionality, and actual rank-nullity gives local cocycle dimension equal to local cohomology dimension plus original coboundary dimension.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalCocycleClasses](Extension/Dubon2026/ArithmeticLocalCocycleClasses.lean).

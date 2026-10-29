@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T11:17:25.975534+00:00",
+  "chain": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual prescribed-root cusp field chart.",
+  "shorterRoute": "The native sourceIntegralReduction_exists_extension theorem replaces the external second lying-over, quotient-domain and algebraic-closure construction. Native cyclotomic/minimal-polynomial evaluation prescribes the root. Native algebraic closedness of the actual valuation residue field and the already constructed original cusp embedding give the actual prescribed chart and its j(q^N) image.",
+  "remaining": "Diamond-stabilizer equivariance, full-base slot identification, residue fiber bounds and reverse genus remain open. Acceptance remains 16/20; DUB17--20 OPEN. Frozen paper, proof standards and full completion criteria unchanged.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-prescribed-root-reduction-1784\\manifest.json",
+      "sha256": "F3F42077352C3BF608D33DEF0822531A58689CAEE9932803D1C439D7ACDDA3CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-residue-slash-embedding-route-1783.json",
+      "sha256": "941360835ECB9BC4200F62A0D299593E3ADC2E401EA63450DF01CBC7582C584E"
+    }
+  ],
+  "assumptionsToDischarge": [
+    "The native sourceIntegralReduction_exists_extension theorem replaces the external second lying-over, quotient-domain and algebraic-closure construction. Native cyclotomic/minimal-polynomial evaluation prescribes the root. Native algebraic closedness of the actual valuation residue field and the already constructed original cusp embedding give the actual prescribed chart and its j(q^N) image."
+  ]
+}

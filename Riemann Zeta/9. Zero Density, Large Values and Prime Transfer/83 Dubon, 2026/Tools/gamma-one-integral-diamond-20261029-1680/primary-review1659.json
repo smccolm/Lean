@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticTraceZeroCotangentDimension",
+  "mathematics": "For the same actual residual arithmetic representation, its explicit absolute irreducibility and original nonzero matrix dimension give both vanishing of the genuine trace-zero invariant submodule and the actual framed cotangent dimension formula in terms of its original trace-zero inertia kernel. The result consumes the proved scalar descent, original completed-ring cotangent dimension, and actual trace-zero local-class comparison. The ordinary cotangent dual dimension plus one equals that genuine local trace-zero H1 dimension plus the square of the original matrix size.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned Representation.IsIrreducible algebraically closed Schur theorem, actual IntertwiningMap algebra and invariant APIs, Matrix.toLin, GeneralLinearGroup.map and AlgebraicClosure definitions inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RepresentationTheory/Irreducible.lean",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "traceZeroCotangentDimension1659-focus.log"
+}

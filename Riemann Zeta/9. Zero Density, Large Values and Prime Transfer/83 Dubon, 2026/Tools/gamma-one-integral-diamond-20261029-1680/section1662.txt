@@ -1,0 +1,7 @@
+### Actual original coefficient-field matrix spanning descent — 10 October 2026
+
+Construct a genuine coefficient-linear retraction of the original field embedding using injectivity and the pinned vector-space left-inverse theorem. The proved Burnside theorem expresses the actual extended original matrix as a finite combination of the same extended representation matrices. Applying the retraction to every entry descends its coefficients to the original field. Thus every original matrix is a genuine finite original-coefficient combination and the original span is the full matrix algebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixRepresentationSpanningDescent](Extension/Dubon2026/MatrixRepresentationSpanningDescent.lean).

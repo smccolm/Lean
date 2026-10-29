@@ -1,0 +1,52 @@
+{
+  "recordedUTC": "2026-10-29T08:19:59.604962+00:00",
+  "chain": "DUB17 Thm2.6 / DUB18 Cor8.2 -> higher continuation -> automorphy -> original all-weight association -> actual homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> signed-index lower bound and finite-degree transport.",
+  "checked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransportIndependence.lean",
+      "sha256": "D83B73AD96082EE46D3B3715521183F6D4EF403AD4F920DCD34792F16148654B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientFieldFinite.lean",
+      "sha256": "F779EC846D90903E9D1EFFFE0DF2E770B56F2E828C9FD9814A4977F47CB4EB44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueAllLevelDegree.lean",
+      "sha256": "F15067A0FDA6819648E2A1DBC49F4C7E28B42289E3E42F84108C4B87A7E7FAEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueRatioDegree.lean",
+      "sha256": "8B5D59C92C0ADBFC54BA50E73334729A7FE084B9D1F260A258A675E849FFFDE8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneIntegralRatioDegreeAssembly.lean",
+      "sha256": "1DF24F46D62372D5ECAC7D0E5BB06135FA8DE70A50AB46EE4ED44C30DE986FEB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-degree-transport-1706\\manifest.json",
+      "sha256": "6EEAD06CE380A1B03B524175B90DA142FF2F15511C143F136B0ADACD36E8EE89"
+    }
+  ],
+  "selectedRoute": "Map the actual j-substitution minimal polynomial to the algebraic closure and use the already proved exact degree there. Only a lower bound on the full base degree is needed. Native finite divisor generation supplies finiteness. Actual Artin degree and base fixation give the signed-index bound from positive coordinate degree. Native coefficient independence plus finite denominator clearing transfers positive degree and the bound between the original prime and residue fields; no base-change equality, new spanning theorem or infinite-dimensional transport is needed. Native upper-degree assembly then proves degree preservation and actual residue-field equality.",
+  "discharged": [
+    "full modular base lower degree",
+    "finite prime-field coordinate degree",
+    "signed total index lower bound",
+    "coordinate degree preservation",
+    "residue image equals original integral-ratio field"
+  ],
+  "endpointAssumptions": [
+    "nonzero level N",
+    "prime ell not dividing N",
+    "actual valuation subring A of a characteristic-zero coefficient field",
+    "residue field of characteristic ell"
+  ],
+  "remaining": "Original genus preservation and all remaining DUB17--20 requirements. Acceptance16/20. Mathematical endpoint compiles; preflight and canonical verification pending.",
+  "proofOptionsChanged": false,
+  "externalImport": false,
+  "externalBuild": false
+}

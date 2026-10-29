@@ -1,0 +1,45 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedPresentationTraceCoefficient_exists_unique`. -/
+theorem actual_completed_presentation_unframed_universality_completedPresentationTraceCoefficient_exists_unique_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : H →ₜ* GeneralLinearGroup ι
+      (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)))
+    (hτ : MatrixStrictlyConjugate
+      (IsLocalRing.residue (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))
+      ((GeneralLinearGroup.map
+        (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)).val.toRingHom).comp
+          τ.toMonoidHom) (completedPresentationRepresentation ρ H q hq))
+    (σ : H →ₜ* GeneralLinearGroup ι A)
+    (hσ : (GeneralLinearGroup.map (localCoefficientReduction eA).toRingHom).comp
+      (profiniteMatrixRestriction (σ.comp q)) = ρ) :
+    ∃! f : closedMatrixTraceAlgebra (O := O)
+        (completedPresentationRepresentation ρ H q hq) →ₐ[O] A,
+      Continuous f ∧
+      (localCoefficientReduction eA).comp f =
+        (localCoefficientReduction (completedPresentationResidueEquiv ρ q.toMonoidHom.ker)).comp
+          (closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)).val ∧
+      MatrixStrictlyConjugate (localCoefficientReduction eA).toRingHom
+        ((GeneralLinearGroup.map f.toRingHom).comp τ.toMonoidHom) σ.toMonoidHom :=
+  completedPresentationTraceCoefficient_exists_unique hA ρ H q hq eA τ hτ σ hσ
+
+end
+

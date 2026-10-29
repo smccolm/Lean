@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixStrictConjugacySurjectiveRestriction",
+  "mathematics": "Use actual representatives under a genuine surjective group homomorphism to preserve and reflect the same original strict conjugator. Prove equality of the exact ranges of original matrix traces and therefore equality of the literal closed trace coefficient algebras.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-original-unframed-route-20261010.json: actual original arithmetic residual representation, proved fixed-residual presentation, actual quotient class equivalence, literal whole trace algebra and exact original coefficient evaluation inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "strictSurjectiveRestriction1749-focus.log"
+}

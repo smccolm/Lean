@@ -1,0 +1,7 @@
+### Actual free rank-one ordinary invariant direct summand — 10 October 2026
+
+Consume the original invariant-line basis constructed from the actual ordinary matrix relations. Use the genuine linear action of the inverse basis and the original two-coordinate product equivalence to identify the actual invariant submodule of the existing column representation. Derive a true coefficient-linear equivalence with the original ring and an actual complementary submodule of the same original two-dimensional module.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryInvariantDirectSummand](Extension/Dubon2026/MatrixOrdinaryInvariantDirectSummand.lean).

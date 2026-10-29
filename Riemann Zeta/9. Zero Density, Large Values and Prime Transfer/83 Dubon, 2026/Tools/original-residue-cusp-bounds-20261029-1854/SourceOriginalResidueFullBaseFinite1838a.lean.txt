@@ -1,0 +1,37 @@
+import Dubon2026.SourceIntegralDiamondScalarBaseFixed
+import Dubon2026.SourceReducedResidueDegreeTransport
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp count -> restriction of a residue pole to the full modular
+base. Native positive degree over j and the literal intermediate-field tower
+prove finiteness of that exact inclusion. No exact degree, separability or
+finite-extension certificate is required for this restriction step. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open CongruenceSubgroup GammaOne IntermediateField
+open scoped MatrixGroups IntermediateField
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+private local instance : Algebra kk (modularFunctionFieldCoeff N kk) :=
+  (modularFunctionFieldCoeff N kk).toSubalgebra.algebra
+
+theorem originalResidueFullBase_inclusion_finite :
+    (IntermediateField.inclusion (fullBase_le_originalField kk N)).toRingHom.Finite := by
+  let B := modularFunctionFieldCoeff N kk
+  let F := qExpFunctionFieldC kk (Gamma1 N)
+  have hJB : kk⟮jqModC kk⟯ ≤ B := adjoin_simple_le_iff.mpr (jq_mem_coeff_field N kk)
+  have hBF : B ≤ F := fullBase_le_originalField kk N
+  have hp := ReducedDegreeTransport.residue_integralRatio_degree_pos A (Gamma1 N)
+    (by simp [Gamma1_mem, ModularGroup.T])
+  rw [← relfinrank_mul_relfinrank hJB hBF] at hp
+  have hpos : 0 < relfinrank B F := Nat.pos_of_mul_pos_left hp
+  rw [relfinrank_eq_finrank_of_le hBF] at hpos
+  letI : Algebra B F := (IntermediateField.inclusion hBF).toAlgebra
+  change Module.Finite B F
+  exact Module.finite_of_finrank_pos hpos
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

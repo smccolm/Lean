@@ -1,0 +1,1 @@
+Postcompose an actual identity-reducing conjugator through a genuine residue map. Under an actual residue-compatible coefficient ring map, send the original invertible conjugator and every matrix in the original whole representation through that same map. Prove the resulting original reduction and conjugacy identities.

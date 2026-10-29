@@ -1,0 +1,7 @@
+### Actual whole trace descent from original residual data — 10 October 2026
+
+Derive all complete local presentation inputs from the original continuous residual representation. Transport its actual absolute irreducibility through the genuine true-residue equivalence. Apply the proved continuous whole trace descent to the original universal representation and prove that the same descended representation reduces to the exact original whole residual representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalPresentedTraceDescent](Extension/Dubon2026/OriginalPresentedTraceDescent.lean).

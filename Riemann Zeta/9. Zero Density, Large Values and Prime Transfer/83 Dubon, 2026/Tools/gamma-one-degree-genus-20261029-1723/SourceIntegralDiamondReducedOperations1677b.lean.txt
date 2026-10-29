@@ -1,0 +1,54 @@
+import SourceIntegralDiamondSeriesOperations1676b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> preservation of all ratio relations. The actual chosen reduction
+respects products and differences. Independence of witnesses permits
+the exact common-exponent integral series, and elementary field
+arithmetic removes its level power. These laws also serve the required
+field homomorphism, avoiding a separate cross-relation calculation. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem normalizedRed_mul (N ℓ : ℕ) [Fact ℓ.Prime] (a b : ℕ) (P Q : PowerSeries ℤ) :
+    normalizedRed N ℓ (a + b) (P * Q) = normalizedRed N ℓ a P * normalizedRed N ℓ b Q := by
+  simp only [normalizedRed, map_mul, pow_add, div_mul_div_comm]
+
+theorem normalizedRed_sub (N ℓ : ℕ) [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    (a b : ℕ) (P Q : PowerSeries ℤ) :
+    normalizedRed N ℓ (a + b)
+      (PowerSeries.C ((N : ℤ) ^ b) * P - PowerSeries.C ((N : ℤ) ^ a) * Q) =
+        normalizedRed N ℓ a P - normalizedRed N ℓ b Q := by
+  simp only [normalizedRed, map_sub, map_mul, red_level_power, pow_add]
+  field_simp [level_ne_zero N ℓ hℓN]
+
+theorem reducedDiamond_mul (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k l : ℤ} (hk : Even k) (hl : Even l) (g : Gamma0 N)
+    (f : ModularForm (Gamma1 N) k) (h : ModularForm (Gamma1 N) l)
+    {p q : PowerSeries ℤ} (hp : IsIntegralQExp f p) (hq : IsIntegralQExp h q) :
+    reducedDiamond N ℓ (hk.add hl) g (f.mul h) (integralQExp_mul f h hp hq) =
+      reducedDiamond N ℓ hk g f hp * reducedDiamond N ℓ hl g h hq := by
+  let u := diamondWitness N hk g f hp
+  let v := diamondWitness N hl g h hq
+  rw [reducedDiamond_eq N ℓ hℓN (hk.add hl) g (f.mul h) (integralQExp_mul f h hp hq)
+      (integralQExp_scaled_mul N g f h u.property v.property),
+    reducedDiamond_eq N ℓ hℓN hk g f hp u.property,
+    reducedDiamond_eq N ℓ hℓN hl g h hq v.property]
+  exact normalizedRed_mul N ℓ u.val.1 v.val.1 u.val.2 v.val.2
+
+theorem reducedDiamond_sub (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k : ℤ} (hk : Even k) (g : Gamma0 N) (f h : ModularForm (Gamma1 N) k)
+    {p q : PowerSeries ℤ} (hp : IsIntegralQExp f p) (hq : IsIntegralQExp h q) :
+    reducedDiamond N ℓ hk g (f - h) (integralQExp_sub f h hp hq) =
+      reducedDiamond N ℓ hk g f hp - reducedDiamond N ℓ hk g h hq := by
+  let u := diamondWitness N hk g f hp
+  let v := diamondWitness N hk g h hq
+  rw [reducedDiamond_eq N ℓ hℓN hk g (f - h) (integralQExp_sub f h hp hq)
+      (integralQExp_scaled_sub N g f h u.property v.property),
+    reducedDiamond_eq N ℓ hℓN hk g f hp u.property,
+    reducedDiamond_eq N ℓ hℓN hk g h hq v.property]
+  exact normalizedRed_sub N ℓ hℓN u.val.1 v.val.1 u.val.2 v.val.2
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

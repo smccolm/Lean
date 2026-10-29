@@ -1,0 +1,42 @@
+import SourceIntegralSlashCoefficientLocalization
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash chart. The literal
+level-integral ring has a unique ring-map extension of algebraic-integer
+reduction when the level remains nonzero. Mathlib localization supplies
+the homomorphism; the clearing-power formula proves denominator independence.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke
+local notation "Zbar" => integralClosure ℤ ℂ
+attribute [local instance] levelIntegerAlgebra
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+
+/-- Reduction of the actual coefficient ring with the level inverted. -/
+def levelReduction : RN N →+* K := by
+  letI := levelInteger_isLocalization N
+  exact IsLocalization.Away.lift (N : Zbar)
+    (show IsUnit (φ (N : Zbar)) by
+      rw [map_natCast]
+      exact isUnit_iff_ne_zero.mpr hN)
+
+theorem levelReduction_integers (x : Zbar) :
+    levelReduction N φ hN (integersToLevel N x) = φ x := by
+  letI := levelInteger_isLocalization N
+  exact IsLocalization.Away.lift_eq (N : Zbar) _ x
+
+theorem levelReduction_clearing (x : RN N) (a : ℕ)
+    (h : IsIntegral ℤ ((N : ℂ) ^ a * (x : ℂ))) :
+    levelReduction N φ hN x = φ ⟨(N : ℂ) ^ a * (x : ℂ), h⟩ / (N : K) ^ a := by
+  have he : integersToLevel N ⟨(N : ℂ) ^ a * (x : ℂ), h⟩ = (N : RN N) ^ a * x :=
+    Subtype.ext rfl
+  have hn := congrArg (levelReduction N φ hN) he
+  rw [levelReduction_integers, map_mul, map_pow, map_natCast] at hn
+  apply (eq_div_iff (pow_ne_zero a hN)).mpr
+  rw [mul_comm]
+  exact hn.symm
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

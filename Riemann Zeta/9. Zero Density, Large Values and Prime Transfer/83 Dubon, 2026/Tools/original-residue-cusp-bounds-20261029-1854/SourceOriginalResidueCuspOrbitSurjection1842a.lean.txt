@@ -1,0 +1,51 @@
+import SourceOriginalResidueCuspFamilyExhaustion1841a
+import SourceOriginalResidueCuspOrbitMap1837a
+import Dubon2026.SourceGammaOneExactCuspOrbits
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp bound. The native integral translation-orbit space maps onto
+all actual residue j-poles. Its already proved characteristic-zero cusp
+bijection converts that surjection to the exact required cardinality bound.
+Only the prescribed coefficient reduction remains as a narrower input; the
+next actual residue consumer constructs it. No cusp count is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne GammaOne.CuspCounting SourceCurve
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem originalResidueOrbitCuspPlace_surjective (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ) :
+    Function.Surjective (fun q : Orbits (Γ := Gamma1 N) =>
+      (⟨originalResidueOrbitCuspPlace A N ℓ hℓN φ ζ hφ q,
+        originalResidueOrbitCuspPlace_j_neg A N ℓ hℓN φ ζ hφ q⟩ :
+        {w : Place kk (qExpFunctionFieldC kk (Gamma1 N)) //
+          w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0})) := by
+  rintro ⟨w, hw⟩
+  obtain ⟨β, hβ⟩ := exists_originalResidueCuspPlace_of_j_pole A N ℓ hℓN φ ζ hζ hφ w hw
+  refine ⟨SourceManin.orbQ (translation (Gamma1 N)) (β⁻¹ : Cosets (Gamma1 N)), Subtype.ext ?_⟩
+  rw [originalResidueOrbitCuspPlace_mk, originalResidueCosetCuspPlace_mk, inv_inv]
+  exact hβ
+
+theorem originalResidue_j_pole_card_le_complex_of_reduction (hℓN : ¬ ℓ ∣ N)
+    (φ : Zbar →+* kk) (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ) :
+    Nat.card {w : Place kk (qExpFunctionFieldC kk (Gamma1 N)) //
+      w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0} ≤
+      Nat.card (PolePlaces (Gamma1 N)) := by
+  letI : (plusMinus (Gamma1 N)).FiniteIndex := Subgroup.finiteIndex_of_le (le_plusMinus _)
+  rw [gammaOne_j_pole_card_eq_translation_orbits N]
+  exact Nat.card_le_card_of_surjective _
+    (originalResidueOrbitCuspPlace_surjective A N ℓ hℓN φ ζ hζ hφ)
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

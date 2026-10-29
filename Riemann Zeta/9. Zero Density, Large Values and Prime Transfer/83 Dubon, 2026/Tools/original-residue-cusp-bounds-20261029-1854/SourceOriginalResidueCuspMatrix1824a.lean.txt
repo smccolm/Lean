@@ -1,0 +1,45 @@
+import Dubon2026.SourceCuspNormalForm
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual matrix for each existing primitive cusp
+label. Reuse the native coprime residue lift and Mathlib SL2 row completion.
+Only the Bezout adjustment to the required triangular slot is added; no new
+unit-lifting theory, cusp quotient, or general matrix completion is developed.
+The slot adjustment follows anthropics/fermats-last-theorem, Apache-2.0,
+commit 6e837e75355538c7f80bab5b956861e86c4eacc2, P2M/Sol/
+S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_neg. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open scoped MatrixGroups
+
+theorem exists_primitiveCuspMatrix (N a b : ℕ) [NeZero a] (haN : a ∣ N)
+    (hb : Nat.Coprime b (Nat.gcd a (N / a))) :
+    ∃ g : SL(2, ℤ), g 1 0 = (a : ℤ) ∧
+      g 1 0 * (b : ℤ) ≡ g 1 1 * a [ZMOD N] := by
+  have hg0 : (Nat.gcd a (N / a) : ℤ) ≠ 0 := by
+    exact_mod_cast Nat.gcd_ne_zero_left (NeZero.ne a)
+  have hcop : IsCoprime (b : ℤ) ((Nat.gcd a (N / a) : ℕ) : ℤ) :=
+    Nat.isCoprime_iff_coprime.mpr hb
+  obtain ⟨x, hx, hxa⟩ := SourceManin.CuspSpace.exists_dvd_sub_and_isCoprime hg0 hcop (NeZero.ne a)
+  obtain ⟨s, hs⟩ := hx
+  have hbez : ((Nat.gcd a (N / a) : ℕ) : ℤ) =
+      (a : ℤ) * Nat.gcdA a (N / a) + ((N / a : ℕ) : ℤ) * Nat.gcdB a (N / a) :=
+    Nat.gcd_eq_gcd_ab a (N / a)
+  let d : ℤ := x - (a : ℤ) * (Nat.gcdA a (N / a) * s)
+  have hd : d = (b : ℤ) + ((N / a : ℕ) : ℤ) * (Nat.gcdB a (N / a) * s) := by
+    dsimp [d]
+    linear_combination hs + s * hbez
+  have had : IsCoprime (a : ℤ) d := by
+    have h := hxa.add_mul_left_left (-(Nat.gcdA a (N / a) * s))
+    have he : x + (a : ℤ) * (-(Nat.gcdA a (N / a) * s)) = d := by dsimp [d]; ring
+    rw [he] at h
+    exact h.symm
+  obtain ⟨g, hg10, hg11⟩ := had.exists_SL2_row 1
+  refine ⟨g, hg10, ?_⟩
+  rw [hg10, hg11, Int.modEq_iff_dvd, hd]
+  have hNa : (N : ℤ) = (a : ℤ) * ((N / a : ℕ) : ℤ) := by
+    exact_mod_cast (Nat.mul_div_cancel' haN).symm
+  exact ⟨Nat.gcdB a (N / a) * s, by rw [hNa]; ring⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

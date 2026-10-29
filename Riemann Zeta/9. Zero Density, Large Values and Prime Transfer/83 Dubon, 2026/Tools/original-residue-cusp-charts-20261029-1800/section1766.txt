@@ -1,0 +1,7 @@
+### Actual entire invariant first axis — 10 October 2026
+
+For the original matrix family fixing the first axis, use a genuine unit in the second-column difference of one original matrix to force the second coordinate of every fixed vector to vanish. Conversely every original first-axis vector is fixed by all matrices.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoInvariantAxis](Extension/Dubon2026/MatrixTwoInvariantAxis.lean).

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalCoefficientFiberProductClassInjectivity",
+  "mathematics": "For the actual original absolutely irreducible residual representation, take representatives of two genuine original coefficient fiber-product classes with equal actual projections. The proved class equality criteria provide strict conjugacy of both whole projected representations. Derive the stabilizer-lifting residual irreducibility condition from the original fixed-residue lift through the proved true-residue transport identity. Apply the proved conjugator alignment and whole fiber-product strict gluing, then use the genuine first residue identity to conclude equality in the original strict quotient. Thus both actual projected classes determine the original class.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact existing OriginalContinuousFramedFiber, originalUnframedPostcomp, originalUnframedClass_eq_iff and actual matrixStrictlyConjugate_fiberProduct_of_projections signatures and proofs inspected. D-only drafts derive original topology/residue and residual irreducibility bridges explicitly. Levin Lecture5 Proposition1.6 supplies the source coefficient fiber-product setting; no external Lean proof imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/HopkinsLevitzki.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "prePromotionReview": [
+    "Select the genuine maximal-adic topology explicitly when accessing an original continuous framed lift over the subtype coefficient ring; prevents a fresh product-subtype instance from being inferred instead. The topology itself is unchanged."
+  ],
+  "productionFixes": [
+    "Select the actual original maximal-adic topology explicitly for the fiber-product representatives.",
+    "Transport the strict relation along congrArg of the genuine first residue-map equality, keeping the original representatives fixed; direct rewrite attempted to change their dependent fixed-residue subtype. The full actual relation and conclusion are unchanged."
+  ],
+  "productionLog": "originalClassInjectivity1687b-focus.log",
+  "consumerFixes": [
+    "Explicitly instantiate the already declared algebraically closed coefficient field with (L := L) in the exact theorem consumer; L is not determined by the injectivity conclusion alone. Same signature and irreducibility hypothesis."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "RepresentationIrreducibilityFromRestriction",
+  "mathematics": "Regard each actual invariant subspace of the whole representation as an invariant subspace of its original restricted action. Original irreducibility makes it zero or the entire original vector space, and the actual nontrivial subrepresentation lattice is retained.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-original-unframed-route-20261010.json: actual original arithmetic residual representation, proved fixed-residual presentation, actual quotient class equivalence, literal whole trace algebra and exact original coefficient evaluation inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Use Field K, as required by the pinned Representation.IsIrreducible definition. The initial CommRing draft did not elaborate; all intended scalar-extension applications already use a field. No mathematical conclusion or resource limit changed."
+  ],
+  "productionLog": "irreducibleRestriction1748b-focus.log"
+}

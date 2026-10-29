@@ -1,0 +1,59 @@
+import SourceIntegralSlashReducedTranslationSeries
+import SourceIntegralSlashDiamondChart
+import Dubon2026.SourceJPrimeOrbitObstruction
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual field-chart equivariance. The already
+constructed cusp maps agree with the literal normalized-generator values.
+Native intermediate-field extensionality extends their signed-matrix and
+translation identities to every element of the original function field. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K] [CharP K ℓ]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+
+include ℓ
+
+theorem originalReducedSlashFieldHom_mul_T_zpow (ζ : Kˣ)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (β : SL(2, ℤ)) (j : ℤ)
+    (Φ Ψ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x)
+    (hΨ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Ψ ⟨x, normalizedGenerators_subset N K hx⟩ =
+        normalizedSlashValue N φ hN (β * ModularGroup.T ^ j) x)
+    (x : qExpFunctionFieldC K (Gamma1 N)) : Ψ x = qTwist (ζ ^ j) (Φ x) := by
+  let θ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K :=
+    { (qTwist (ζ ^ j)).comp Φ.toRingHom with
+      commutes' := fun c => by
+        change qTwist (ζ ^ j) (Φ (algebraMap K _ c)) = _
+        rw [Φ.commutes, PrimeDegreeAux.qTwist_algebraMap] }
+  have he : Ψ = θ := IntermediateField.algHom_ext_of_eq_adjoin K
+    (originalField_eq_adjoin_normalizedGenerators N K) (fun y hy => by
+      change Ψ ⟨y, _⟩ = qTwist (ζ ^ j) (Φ ⟨y, _⟩)
+      rw [hΨ y hy, hΦ y hy]
+      exact normalizedSlashValue_mul_T_zpow N φ hN ζ hφ ℓ β j hy)
+  exact AlgHom.congr_fun he x
+
+theorem originalReducedSlashFieldHom_neg_matrix (β : SL(2, ℤ))
+    (Φ Ψ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x)
+    (hΨ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Ψ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN (-β) x) :
+    Ψ = Φ := by
+  apply IntermediateField.algHom_ext_of_eq_adjoin K
+    (originalField_eq_adjoin_normalizedGenerators N K)
+  intro x hx
+  rw [hΨ x hx, hΦ x hx]
+  exact normalizedSlashValue_neg_matrix N φ hN ℓ β hx
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

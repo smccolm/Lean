@@ -1,0 +1,1 @@
+Use genuine coefficient composition on the original algebra-valued points. Prove that it preserves the existing convolution multiplication, construct the point automorphisms for coefficient automorphisms, and assemble their actual group action with the exact coordinate-evaluation formula.

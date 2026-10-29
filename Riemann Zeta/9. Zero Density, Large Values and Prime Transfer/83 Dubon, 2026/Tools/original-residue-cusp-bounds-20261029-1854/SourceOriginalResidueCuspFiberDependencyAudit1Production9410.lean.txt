@@ -1,0 +1,30 @@
+import Dubon2026.SourceOriginalResidueDiamondCommute
+import Dubon2026.SourceOriginalResidueDiamondFiberStabilizer
+import Dubon2026.SourceOriginalResidueLabeledCuspFiber
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer]
+  let localModules : Array Name := #[`Dubon2026.SourceOriginalResidueDiamondCommute, `Dubon2026.SourceOriginalResidueDiamondFiberStabilizer, `Dubon2026.SourceOriginalResidueLabeledCuspFiber, `Dubon2026.SourceIntegralSlashRaisedLevelOne, `Dubon2026.SourceIntegralSlashCuspTriangular, `Dubon2026.SourceIntegralSlashRaisedCuspFormula, `Dubon2026.SourceIntegralSlashTriangularParameter, `Dubon2026.SourceIntegralSlashRaisedCuspCoefficients, `Dubon2026.SourceIntegralSlashRaisedCuspReduction, `Dubon2026.SourceIntegralSlashRaisedCuspLaurent, `Dubon2026.SourceIntegralSlashRaisedCuspCoordinate, `Dubon2026.SourceIntegralSlashCuspCoordinate, `Dubon2026.SourceOriginalResidueFullCuspChart, `Dubon2026.SourceOriginalResidueCuspBaseComparison, `Dubon2026.SourceOriginalResidueCuspPlaceOverBase, `Dubon2026.SourceOriginalResidueCuspMatrix, `Dubon2026.SourceOriginalResidueLabeledCuspPlace, `Dubon2026.SourceIntegralDiamondNormalizedAction, `Dubon2026.SourceIntegralSlashFieldNormalizedRatio, `Dubon2026.SourceIntegralDiamondScalarNormalizedAction, `Dubon2026.SourceIntegralSlashDiamondGenerator, `Dubon2026.SourceIntegralSlashDiamondStabilizer, `Dubon2026.SourceOriginalResidueDiamondCuspChart, `Dubon2026.SourceOriginalResidueCuspStabilizerPlace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index, `Dubon2026.SourceCurve.Place.exists_comapEquiv_of_restrict_eq]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL RESIDUE CUSP FIBER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the value closure of the actual complete labeled fiber stabilizer. Actual diamond commutativity, exact kernel and native actual-action fiber transitivity are proved and consumed. Cusp counting, finite elliptic charts and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,5 @@
+{
+  "reason": "The concrete trace consumer compiled except for one unused simp argument. Fresh successor removes that argument. Two unused ring membership wrappers are removed before exhaustive value-closure auditing, preserving the source ring and all substantive mathematics. The denominator arithmetic successor changes only its import.",
+  "fullGoalUnchanged": true,
+  "productionMutation": false
+}

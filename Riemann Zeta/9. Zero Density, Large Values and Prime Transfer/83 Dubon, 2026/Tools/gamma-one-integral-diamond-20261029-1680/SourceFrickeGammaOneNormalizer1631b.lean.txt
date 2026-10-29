@@ -1,0 +1,70 @@
+import Dubon2026.FrickeMatrices
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> level-power slash
+integrality -> trace application. The actual repository Fricke matrix
+normalizes Gamma1. This discharges the modularity condition needed for
+the diagonal-transformed input to the trace; it assumes only the literal
+Gamma1 congruences. No duplicate Fricke object is introduced.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_fricke_coeff. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm Pointwise
+local notation "Γ₁(" M ")" => ((Gamma1 M : Subgroup SL(2, ℤ)) : Subgroup (GL (Fin 2) ℝ))
+variable {N : ℕ}
+
+/-- The integral matrix obtained by conjugating a lower-level element by Fricke. -/
+def frickeConjMat (N : ℕ) (δ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ :=
+  !![δ 1 1, -(δ 1 0 / N); -((N : ℤ) * δ 0 1), δ 0 0]
+
+theorem det_frickeConjMat (δ : SL(2, ℤ)) (h : (N : ℤ) ∣ δ 1 0) (hN : (N : ℤ) ≠ 0) :
+    (frickeConjMat N δ).det = 1 := by
+  obtain ⟨c, hc⟩ := h
+  have hdet := Matrix.SpecialLinearGroup.det_coe δ
+  rw [Matrix.det_fin_two] at hdet ⊢
+  have h1 : (N : ℤ) * c / N = c := by rw [mul_comm]; exact Int.mul_ediv_cancel c hN
+  simp only [frickeConjMat, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+    Matrix.cons_val_one, Matrix.cons_val_fin_one, hc, h1] at hdet ⊢
+  linear_combination hdet
+
+/-- The corresponding determinant-one integral Fricke conjugate. -/
+def frickeConjSL (δ : SL(2, ℤ)) (h : (N : ℤ) ∣ δ 1 0) (hN : (N : ℤ) ≠ 0) : SL(2, ℤ) :=
+  ⟨frickeConjMat N δ, det_frickeConjMat δ h hN⟩
+
+theorem frickeMatrix_mul_mul_inv [NeZero N] (δ : SL(2, ℤ)) (h : (N : ℤ) ∣ δ 1 0) :
+    frickeMatrix N * Matrix.SpecialLinearGroup.mapGL ℝ δ * (frickeMatrix N)⁻¹ =
+      Matrix.SpecialLinearGroup.mapGL ℝ
+        (frickeConjSL δ h (by exact_mod_cast NeZero.ne N)) := by
+  rw [mul_inv_eq_iff_eq_mul]
+  ext i j
+  have hN : (N : ℝ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  have hN' : (N : ℤ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  obtain ⟨c, hc⟩ := h
+  have hc' : (δ 1 0 / N : ℤ) = c := by rw [hc, Int.mul_ediv_cancel_left _ hN']
+  have e00 : (frickeConjSL δ ⟨c, hc⟩ hN' : SL(2, ℤ)) 0 0 = δ 1 1 := rfl
+  have e01 : (frickeConjSL δ ⟨c, hc⟩ hN' : SL(2, ℤ)) 0 1 = -(δ 1 0 / N) := rfl
+  have e10 : (frickeConjSL δ ⟨c, hc⟩ hN' : SL(2, ℤ)) 1 0 = -((N : ℤ) * δ 0 1) := rfl
+  have e11 : (frickeConjSL δ ⟨c, hc⟩ hN' : SL(2, ℤ)) 1 1 = δ 0 0 := rfl
+  simp only [Matrix.GeneralLinearGroup.coe_mul, frickeMatrix_val]
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, Fin.sum_univ_two, e00, e01, e10, e11, hc', hc] <;> ring
+
+theorem fricke_conj_mem [NeZero N] {δ : SL(2, ℤ)} (hδ : δ ∈ Gamma1 N) :
+    frickeMatrix N * (δ : GL (Fin 2) ℝ) * (frickeMatrix N)⁻¹ ∈ Γ₁(N) := by
+  rw [Gamma1_mem] at hδ
+  obtain ⟨h00, h11, h10⟩ := hδ
+  have hdvd : (N : ℤ) ∣ δ 1 0 := (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp h10
+  have hN' : (N : ℤ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  refine ⟨frickeConjSL δ hdvd hN', ?_, (frickeMatrix_mul_mul_inv δ hdvd).symm⟩
+  show frickeConjSL δ hdvd hN' ∈ Gamma1 N
+  rw [Gamma1_mem]
+  refine ⟨h11, h00, ?_⟩
+  show ((-((N : ℤ) * δ 0 1) : ℤ) : ZMod N) = 0
+  rw [ZMod.intCast_zmod_eq_zero_iff_dvd]
+  exact ⟨-δ 0 1, by ring⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

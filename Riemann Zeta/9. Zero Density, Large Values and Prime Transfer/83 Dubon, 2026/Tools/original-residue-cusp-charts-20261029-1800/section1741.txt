@@ -1,0 +1,7 @@
+### Actual original strict conjugators under coefficient change — 10 October 2026
+
+Postcompose an actual identity-reducing conjugator through a genuine residue map. Under an actual residue-compatible coefficient ring map, send the original invertible conjugator and every matrix in the original whole representation through that same map. Prove the resulting original reduction and conjugacy identities.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixStrictConjugacyCoefficientChange](Extension/Dubon2026/MatrixStrictConjugacyCoefficientChange.lean).

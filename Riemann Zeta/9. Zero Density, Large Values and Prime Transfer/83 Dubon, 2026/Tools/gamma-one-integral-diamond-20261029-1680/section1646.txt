@@ -1,0 +1,7 @@
+### Actual continuous trace-zero cohomology restriction — 10 October 2026
+
+Actual continuous trace-zero cocycles restrict along the original continuous group homomorphism. The same original trace-zero matrix gives the restricted coboundary, so restriction descends to genuine continuous H1. It commutes with the original full-adjoint inclusion. When the original matrix dimension is nonzero in the coefficient field, an actual trace-zero class restricts to zero exactly when its included original adjoint class does.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousTraceZeroRestriction](Extension/Dubon2026/ContinuousTraceZeroRestriction.lean).

@@ -1,0 +1,7 @@
+### Actual actual residual-compatible determinant and subgroup quotient — 10 October 2026
+
+Use the existing original determinant and subgroup-relation ideal containment theorems to place their literal sum in the genuine original maximal ideal. This derives properness and locality of the actual quotient. Transfer finite residue through the actual original residue equivalence and apply genuine original complete local quotient data to obtain Noetherianity, its own maximal-adic topology and completeness.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualDeterminantSubgroupQuotient](Extension/Dubon2026/ResidualDeterminantSubgroupQuotient.lean).

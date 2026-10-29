@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-10-29T05:39:28.665008+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_sum_smul_eq_of_qExpansion_coeff_mem.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-fricke-denominator-depth-1640\\S_ModularCurve_exists_sum_smul_eq_of_qExpansion_coeff_mem.lean.txt",
+      "bytes": 4439,
+      "sha256": "8818EADAE998FF8F9F5E92AEE0A608007167056E4D7F16F9FE7DC1C3FD3B6C7B"
+    }
+  ],
+  "purpose": "Read-only source review for the common-denominator obligation in the actual even-weight Fricke trace route serving DUB-17/18.",
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,7 @@
+### Actual actual maximal-adic coefficient projection continuity — 10 October 2026
+
+Use the already proved equality of the actual finite coefficient fiber product's maximal-adic and original product-subtype topologies. Transport continuity of the genuine first and second product projections along this equality. Both actual ring homomorphisms are therefore continuous from the genuine original maximal-adic fiber product to the corresponding original coefficient rings.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteCoefficientFiberProductProjectionTopology](Extension/Dubon2026/FiniteCoefficientFiberProductProjectionTopology.lean).

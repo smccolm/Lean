@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S : Type*} [Ring R] [Ring S]
+
+/-- Exact original-object consumer of `idempotentNewtonStep_error`. -/
+theorem actual_idempotent_newton_step_idempotentNewtonStep_error_source (x : R) :
+    (idempotentNewtonStep x) ^ 2 - idempotentNewtonStep x =
+      (x ^ 2 - x) ^ 2 * (4 * (x ^ 2 - x) - 3) :=
+  idempotentNewtonStep_error x
+
+end
+

@@ -1,0 +1,7 @@
+### Actual original local first-order cocycles — 10 October 2026
+
+The actual local first-order cocycles are the intersection of the genuine pointwise trace kernel and the zero restriction kernel on original inertia. For an original residual representation trivial on that inertia, these two linear conditions are proved equivalent to the whole original lift having constant residual determinant and trivial inertia. Original reconstruction and continuity give a bijection between all such whole first-order lifts and these actual local continuous cocycles.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalFirstOrderCocycles](Extension/Dubon2026/ArithmeticLocalFirstOrderCocycles.lean).

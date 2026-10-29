@@ -1,0 +1,1 @@
+Transport the proved original maximal-adic topology equality in the closed coefficient-subalgebra unit argument. Derive actual unit reflection for the same subalgebra, locality of its inclusion and locality of its original ring operations.

@@ -1,0 +1,7 @@
+### Actual arithmetic trace-zero cotangent classes — 10 October 2026
+
+The ordinary residue-field dual of the literal completed arithmetic deformation ring cotangent quotient maps linearly and surjectively onto the genuine trace-zero inertia condition. This is the composition of the already proved original cotangent class map with the inverse of the proved trace-zero local comparison. Equality of the original local dimensions transfers the genuine cotangent dimension bound to this actual trace-zero cohomology kernel.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticTraceZeroCotangent](Extension/Dubon2026/ArithmeticTraceZeroCotangent.lean).

@@ -1,0 +1,34 @@
+import SourceIntegralDiamondNormalizedAction
+import SourceIntegralSlashFieldNormalizedRatio
+import SourceIntegralDiamondScalarNormalizedAction
+import SourceIntegralSlashDiamondGenerator
+import SourceIntegralSlashDiamondStabilizer
+import SourceOriginalResidueDiamondCuspChart
+import SourceOriginalResidueCuspStabilizerPlace
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio]
+  let localModules : Array Name := #[`SourceIntegralDiamondNormalizedAction, `SourceIntegralSlashFieldNormalizedRatio, `SourceIntegralDiamondScalarNormalizedAction, `SourceIntegralSlashDiamondGenerator, `SourceIntegralSlashDiamondStabilizer, `SourceOriginalResidueDiamondCuspChart, `SourceOriginalResidueCuspStabilizerPlace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.gammaOneDiscriminantPow_slash, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueDiamondCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspStabilizerPlace, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff, `Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix, `Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators, `Dubon2026.SourceCurve.Place.exists_place_of_laurent_embedding, `Dubon2026.SourceFunctionField.laurent_order_qTwist, `Dubon2026.SourceFunctionField.laurent_order_qExpand, `Dubon2026.SourceCurve.Place.ord_comapEquiv]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ACTUAL RESIDUE CUSP STABILIZER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the value closure of the constructed actual residue cusp fixed place and normalized-ratio chart formula. The actual diamond action, prescribed cusp embedding, Laurent place and signed stabilizer are consumed. No action, cusp-map, equivariance or place certificate is assumed. Second full-base coordinate, finite elliptic charts, fiber bounds and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

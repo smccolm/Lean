@@ -1,0 +1,104 @@
+import Dubon2026.SourceGammaOneEvenIntegralRatios
+import Dubon2026.SourceLevelOneCoefficientRing
+import Dubon2026.SourceLevelOneIntegralWeightFactor
+import Dubon2026.SourceTraceProductCoefficientRing
+import Dubon2026.SourceIntegralLevelOneTraceCoefficients
+import Dubon2026.SourceTraceExponentialCoefficientVanishing
+import Dubon2026.SourceIntegralTraceParameters
+import Dubon2026.SourceIntegralTracePowerCoefficients
+import Dubon2026.SourceIntegralTraceCoefficientExtraction
+import Dubon2026.SourceIntegralTraceModularForm
+import Dubon2026.SourceIntegralTraceCuspTransversal
+import Dubon2026.SourceIntegralTraceTranslates
+import Dubon2026.SourceIntegralTraceTranslationCoefficients
+import Dubon2026.SourceIntegralTracePeriodWidth
+import Dubon2026.SourceIntegralTraceAnalyticProducts
+import Dubon2026.SourceIntegralTraceSlashPeriods
+import Dubon2026.SourceIntegralTraceTranslationAssembly
+import Dubon2026.SourceIntegralTraceTransversalSplit
+import Dubon2026.SourceIntegralTraceDecomposition
+import Dubon2026.SourceIntegralTraceDegenerateCusp
+import Dubon2026.SourceEvenWeightPeakedTraceIntegrality
+import Dubon2026.SourceGammaOnePeakedCuspClasses
+import Dubon2026.SourcePeakedBernoulliFourier
+import Dubon2026.SourcePeakedBernoulliMoments
+import Dubon2026.SourcePeakedBernoulliResidueWeights
+import Dubon2026.SourcePeakedBernoulliCharacterInversion
+import Dubon2026.SourcePeakedBernoulliConvolution
+import Dubon2026.SourcePeakedBernoulliVanishing
+import Dubon2026.SourcePeakedBernoulliFourierInversion
+import Dubon2026.SourcePeakedBernoulliSpan
+import Dubon2026.SourcePeakedBernoulliProgressions
+import Dubon2026.SourcePeakedBernoulliTotient
+import Dubon2026.SourcePeakedExponentHelpers
+import Dubon2026.SourcePeakedExponents
+import Dubon2026.SourceGammaOnePeakedCuspOrders
+import Dubon2026.SourceSiegelJacobiFiniteProducts
+import Dubon2026.SourceSiegelJacobiGaussProduct
+import Dubon2026.SourceSiegelJacobiFiniteIdentity
+import Dubon2026.SourceSiegelJacobiProductBounds
+import Dubon2026.SourceSiegelJacobiDominatedLimit
+import Dubon2026.SourceSiegelJacobiRangeLimit
+import Dubon2026.SourceSiegelJacobiProductIdentity
+import Dubon2026.SourceSiegelFunction
+import Dubon2026.SourceSiegelProductCore
+import Dubon2026.SourceSiegelThetaIdentification
+import Dubon2026.SourceSiegelHolomorphic
+import Dubon2026.SourceSiegelEtaTransform
+import Dubon2026.SourceSiegelThetaTransform
+import Dubon2026.SourceSiegelInversion
+import Dubon2026.SourceSiegelSL2Transformation
+import Dubon2026.SourceSiegelLevelShiftFactors
+import Dubon2026.SourceSiegelLevelShifts
+import Dubon2026.SourceSiegelResidueReduction
+import Dubon2026.SourceSiegelProductTransformation
+import Dubon2026.SourceSiegelStableCoefficients
+import Dubon2026.SourceSiegelProductLocalUniform
+import Dubon2026.SourceSiegelProductTaylorExpansion
+import Dubon2026.SourceSiegelPolynomialFactors
+import Dubon2026.SourceSiegelIntegralCoefficients
+import Dubon2026.SourceSiegelQParameter
+import Dubon2026.SourceSiegelResidueProductIndices
+import Dubon2026.SourceSiegelResidueProductStreams
+import Dubon2026.SourceSiegelLeadingUnit
+import Dubon2026.SourceSiegelNormalizedProduct
+import Dubon2026.SourceSiegelCoefficientSeries
+import Dubon2026.SourceSiegelIntegralExpansion
+import Dubon2026.SourceSiegelFiniteSeriesProducts
+import Dubon2026.SourceSiegelProductCoefficients
+import Dubon2026.SourceSiegelProductLeadingCoefficient
+import Dubon2026.SourceSiegelProductPhases
+import Dubon2026.SourceSiegelFiniteProductExpansion
+import Dubon2026.SourcePeakedAuxiliaryFunction
+import Dubon2026.SourceSiegelCuspPermutation
+import Dubon2026.SourcePeakedAuxiliaryCuspDecay
+import Dubon2026.SourcePeakedAuxiliaryHolomorphic
+import Dubon2026.SourcePeakedAuxiliaryModularForm
+import Dubon2026.SourcePeakedDiscriminantSeries
+import Dubon2026.SourcePeakedSeriesOperations
+import Dubon2026.SourcePeakedShiftedCoefficients
+import Dubon2026.SourcePeakedShiftedSeries
+import Dubon2026.SourcePeakedWidthOneIdentification
+import Dubon2026.SourcePeakedIntegralQExpansion
+import Dubon2026.SourcePeakedTranslatedIntegralExpansion
+import Dubon2026.SourcePeakedScaledOrders
+import Dubon2026.SourcePeakedOrderGapDecay
+import Dubon2026.SourceActualPeakedAuxiliary
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneEvenIntegralRatios, `Dubon2026.SourceLevelOneCoefficientRing, `Dubon2026.SourceLevelOneIntegralWeightFactor, `Dubon2026.SourceTraceProductCoefficientRing, `Dubon2026.SourceIntegralLevelOneTraceCoefficients, `Dubon2026.SourceTraceExponentialCoefficientVanishing, `Dubon2026.SourceIntegralTraceParameters, `Dubon2026.SourceIntegralTracePowerCoefficients, `Dubon2026.SourceIntegralTraceCoefficientExtraction, `Dubon2026.SourceIntegralTraceModularForm, `Dubon2026.SourceIntegralTraceCuspTransversal, `Dubon2026.SourceIntegralTraceTranslates, `Dubon2026.SourceIntegralTraceTranslationCoefficients, `Dubon2026.SourceIntegralTracePeriodWidth, `Dubon2026.SourceIntegralTraceAnalyticProducts, `Dubon2026.SourceIntegralTraceSlashPeriods, `Dubon2026.SourceIntegralTraceTranslationAssembly, `Dubon2026.SourceIntegralTraceTransversalSplit, `Dubon2026.SourceIntegralTraceDecomposition, `Dubon2026.SourceIntegralTraceDegenerateCusp, `Dubon2026.SourceEvenWeightPeakedTraceIntegrality, `Dubon2026.SourceGammaOnePeakedCuspClasses, `Dubon2026.SourcePeakedBernoulliFourier, `Dubon2026.SourcePeakedBernoulliMoments, `Dubon2026.SourcePeakedBernoulliResidueWeights, `Dubon2026.SourcePeakedBernoulliCharacterInversion, `Dubon2026.SourcePeakedBernoulliConvolution, `Dubon2026.SourcePeakedBernoulliVanishing, `Dubon2026.SourcePeakedBernoulliFourierInversion, `Dubon2026.SourcePeakedBernoulliSpan, `Dubon2026.SourcePeakedBernoulliProgressions, `Dubon2026.SourcePeakedBernoulliTotient, `Dubon2026.SourcePeakedExponentHelpers, `Dubon2026.SourcePeakedExponents, `Dubon2026.SourceGammaOnePeakedCuspOrders, `Dubon2026.SourceSiegelJacobiFiniteProducts, `Dubon2026.SourceSiegelJacobiGaussProduct, `Dubon2026.SourceSiegelJacobiFiniteIdentity, `Dubon2026.SourceSiegelJacobiProductBounds, `Dubon2026.SourceSiegelJacobiDominatedLimit, `Dubon2026.SourceSiegelJacobiRangeLimit, `Dubon2026.SourceSiegelJacobiProductIdentity, `Dubon2026.SourceSiegelFunction, `Dubon2026.SourceSiegelProductCore, `Dubon2026.SourceSiegelThetaIdentification, `Dubon2026.SourceSiegelHolomorphic, `Dubon2026.SourceSiegelEtaTransform, `Dubon2026.SourceSiegelThetaTransform, `Dubon2026.SourceSiegelInversion, `Dubon2026.SourceSiegelSL2Transformation, `Dubon2026.SourceSiegelLevelShiftFactors, `Dubon2026.SourceSiegelLevelShifts, `Dubon2026.SourceSiegelResidueReduction, `Dubon2026.SourceSiegelProductTransformation, `Dubon2026.SourceSiegelStableCoefficients, `Dubon2026.SourceSiegelProductLocalUniform, `Dubon2026.SourceSiegelProductTaylorExpansion, `Dubon2026.SourceSiegelPolynomialFactors, `Dubon2026.SourceSiegelIntegralCoefficients, `Dubon2026.SourceSiegelQParameter, `Dubon2026.SourceSiegelResidueProductIndices, `Dubon2026.SourceSiegelResidueProductStreams, `Dubon2026.SourceSiegelLeadingUnit, `Dubon2026.SourceSiegelNormalizedProduct, `Dubon2026.SourceSiegelCoefficientSeries, `Dubon2026.SourceSiegelIntegralExpansion, `Dubon2026.SourceSiegelFiniteSeriesProducts, `Dubon2026.SourceSiegelProductCoefficients, `Dubon2026.SourceSiegelProductLeadingCoefficient, `Dubon2026.SourceSiegelProductPhases, `Dubon2026.SourceSiegelFiniteProductExpansion, `Dubon2026.SourcePeakedAuxiliaryFunction, `Dubon2026.SourceSiegelCuspPermutation, `Dubon2026.SourcePeakedAuxiliaryCuspDecay, `Dubon2026.SourcePeakedAuxiliaryHolomorphic, `Dubon2026.SourcePeakedAuxiliaryModularForm, `Dubon2026.SourcePeakedDiscriminantSeries, `Dubon2026.SourcePeakedSeriesOperations, `Dubon2026.SourcePeakedShiftedCoefficients, `Dubon2026.SourcePeakedShiftedSeries, `Dubon2026.SourcePeakedWidthOneIdentification, `Dubon2026.SourcePeakedIntegralQExpansion, `Dubon2026.SourcePeakedTranslatedIntegralExpansion, `Dubon2026.SourcePeakedScaledOrders, `Dubon2026.SourcePeakedOrderGapDecay, `Dubon2026.SourceActualPeakedAuxiliary]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

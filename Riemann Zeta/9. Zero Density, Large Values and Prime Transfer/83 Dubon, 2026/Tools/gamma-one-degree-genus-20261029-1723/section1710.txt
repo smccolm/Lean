@@ -1,0 +1,7 @@
+### Actual original matrix ideal coordinates — 10 October 2026
+
+Use the proved full matrix trace duality to show that every actual basis coordinate of a matrix with entries in the original ideal lies in that same ideal. Prove the converse by evaluating the actual finite basis expansion. This identifies the original entrywise ideal condition in every genuine full-matrix basis.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixBasisIdealCoordinates](Extension/Dubon2026/MatrixBasisIdealCoordinates.lean).

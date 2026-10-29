@@ -1,0 +1,1 @@
+Combine literal ideal annihilation with the genuine invariant rank-one direct-summand criterion for the same coefficient-changed original representation.

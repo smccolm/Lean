@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-10-29T05:39:54.986707+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_exists_sum_smul_eq_of_forall_coeff_mem.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-fricke-denominator-leaves-1641\\S_PowerSeries_exists_sum_smul_eq_of_forall_coeff_mem.lean.txt",
+      "bytes": 1584,
+      "sha256": "0E7D0D00D672BCFD28264D3D69043C43452806A83B7C6500EB17A8237ADFBC13"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_sum_smul_eq_of_isIntegralQExp_gamma1.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-fricke-denominator-leaves-1641\\S_ModularCurve_exists_sum_smul_eq_of_isIntegralQExp_gamma1.lean.txt",
+      "bytes": 2004,
+      "sha256": "84EF2EAD64CB9ECD9ADF0F966F71ACC8D98D0610B663149F3FCB49625C52A437"
+    }
+  ],
+  "purpose": "Read-only review of coefficient descent and integral spanning needed for the common denominator in the actual Fricke trace route serving DUB-17/18.",
+  "externalBuild": false,
+  "externalImport": false
+}

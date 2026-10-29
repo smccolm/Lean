@@ -1,0 +1,57 @@
+import SourceIntegralDiamondWitness1673a
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> independence of level-cleared Fourier witnesses. Divide the actual
+reduced integer series by the nonzero reduced level power. Exact
+cross-scaling proves independence of the clearing exponent and series;
+the proved kernel equivalence preserves nonzero ratio denominators. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem red_level_power (N ℓ a : ℕ) :
+    red ℓ (PowerSeries.C ((N : ℤ) ^ a)) = (N : LaurentSeries (ZMod ℓ)) ^ a := by
+  rw [red_C, map_intCast, Int.cast_pow, Int.cast_natCast]
+
+theorem level_ne_zero (N ℓ : ℕ) [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N) :
+    (N : LaurentSeries (ZMod ℓ)) ≠ 0 := by
+  have hN : (N : ZMod ℓ) ≠ 0 := by
+    intro hz
+    exact hℓN ((ZMod.natCast_eq_zero_iff N ℓ).mp hz)
+  simpa only [map_natCast] using (HahnSeries.C_ne_zero hN :
+    (HahnSeries.C (N : ZMod ℓ) : LaurentSeries (ZMod ℓ)) ≠ 0)
+
+/-- The literal reduced Fourier series with its level-clearing factor removed. -/
+def normalizedRed (N ℓ : ℕ) [Fact ℓ.Prime] (a : ℕ) (P : PowerSeries ℤ) :
+    LaurentSeries (ZMod ℓ) := red ℓ P / (N : LaurentSeries (ZMod ℓ)) ^ a
+
+theorem normalizedRed_eq_zero_iff (N ℓ : ℕ) [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    (a : ℕ) (P : PowerSeries ℤ) : normalizedRed N ℓ a P = 0 ↔ red ℓ P = 0 := by
+  rw [normalizedRed, div_eq_zero_iff]
+  simp only [pow_ne_zero _ (level_ne_zero N ℓ hℓN), or_false]
+
+theorem normalizedRed_eq_of_witness (N ℓ : ℕ) [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k : ℤ} (g : Gamma0 N) (f : ModularForm (Gamma1 N) k)
+    {a b : ℕ} {P Q : PowerSeries ℤ}
+    (hP : IsIntegralQExp (scaledDiamond N g a f) P)
+    (hQ : IsIntegralQExp (scaledDiamond N g b f) Q) :
+    normalizedRed N ℓ a P = normalizedRed N ℓ b Q := by
+  have he := congrArg (red ℓ) (integral_diamond_witness_eq N g f hP hQ)
+  rw [map_mul, map_mul, red_level_power, red_level_power] at he
+  unfold normalizedRed
+  apply (div_eq_div_iff (pow_ne_zero _ (level_ne_zero N ℓ hℓN))
+    (pow_ne_zero _ (level_ne_zero N ℓ hℓN))).mpr
+  simpa only [mul_comm] using he
+
+theorem normalizedRed_zero_iff_original (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) {k : ℤ} (hk : Even k) (g : Gamma0 N)
+    (f : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ} {a : ℕ}
+    (hp : IsIntegralQExp f p) (hP : IsIntegralQExp (scaledDiamond N g a f) P) :
+    normalizedRed N ℓ a P = 0 ↔ red ℓ p = 0 := by
+  rw [normalizedRed_eq_zero_iff N ℓ hℓN]
+  exact red_zero_iff_integral_diamond N ℓ hℓN hk g f (scaledDiamond N g a f)
+    hp hP (coe_scaledDiamond N g a f)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

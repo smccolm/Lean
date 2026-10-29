@@ -1,0 +1,179 @@
+import Dubon2026.SourceFrickeLevelIntegralRing
+import Dubon2026.SourceFrickeGammaOneNormalizer
+import Dubon2026.SourceFrickeTraceSubgroup
+import Dubon2026.SourceFrickeTraceForms
+import Dubon2026.SourceFrickeDenominatorUniformization
+import Dubon2026.SourceEvenWeightFrickeTrace
+import Dubon2026.SourceIntegralSeriesScalarDescent
+import Dubon2026.SourceIntegralSeriesCommonDenominator
+import Dubon2026.SourceGammaOneAlgebraicCuspDenominator
+import Dubon2026.SourceIntegralDiscriminantCancellation
+import Dubon2026.SourceGammaOneAlgebraicFormDenominator
+import Dubon2026.SourceEvenWeightBalance
+import Dubon2026.SourceEvenWeightFrickeCommonDenominator
+import Dubon2026.SourceEvenWeightUniformFrickeIntegrality
+import Dubon2026.SourceIntegralSlashCuspSubgroup
+import Dubon2026.SourceIntegralSlashCuspChart
+import Dubon2026.SourceIntegralSlashFrickeChart
+import Dubon2026.SourceIntegralSlashSMove
+import Dubon2026.SourceIntegralSlashTMove
+import Dubon2026.SourceEvenWeightUniformSlashIntegrality
+import Dubon2026.SourceRationalCuspDiamondFourier
+import Dubon2026.SourceRationalDiscriminantCancellation
+import Dubon2026.SourceRationalModularDiamondFourier
+import Dubon2026.SourceEvenWeightIntegralDiamondForm
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.g₀
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeForm
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.cuspChart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceFrickeLevelIntegralRing, `Dubon2026.SourceFrickeGammaOneNormalizer, `Dubon2026.SourceFrickeTraceSubgroup, `Dubon2026.SourceFrickeTraceForms, `Dubon2026.SourceFrickeDenominatorUniformization, `Dubon2026.SourceEvenWeightFrickeTrace, `Dubon2026.SourceIntegralSeriesScalarDescent, `Dubon2026.SourceIntegralSeriesCommonDenominator, `Dubon2026.SourceGammaOneAlgebraicCuspDenominator, `Dubon2026.SourceIntegralDiscriminantCancellation, `Dubon2026.SourceGammaOneAlgebraicFormDenominator, `Dubon2026.SourceEvenWeightBalance, `Dubon2026.SourceEvenWeightFrickeCommonDenominator, `Dubon2026.SourceEvenWeightUniformFrickeIntegrality, `Dubon2026.SourceIntegralSlashCuspSubgroup, `Dubon2026.SourceIntegralSlashCuspChart, `Dubon2026.SourceIntegralSlashFrickeChart, `Dubon2026.SourceIntegralSlashSMove, `Dubon2026.SourceIntegralSlashTMove, `Dubon2026.SourceEvenWeightUniformSlashIntegrality, `Dubon2026.SourceRationalCuspDiamondFourier, `Dubon2026.SourceRationalDiscriminantCancellation, `Dubon2026.SourceRationalModularDiamondFourier, `Dubon2026.SourceEvenWeightIntegralDiamondForm]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul, `Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat, `Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv, `Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem, `Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff, `Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀, `Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform, `Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform, `Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal, `Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul, `Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform, `Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash, `Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow, `Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator, `Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance, `Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm, `Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma, `Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp, `Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod, `Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp, `Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart, `Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply, `Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply, `Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq, `Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart, `Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients, `Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent, `Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff, `Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul, `Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff, `Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.RN, `Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat, `Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.g₀, `Dubon2026.SourceFunctionField.IntegralFricke.Gform, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform, `Dubon2026.SourceFunctionField.IntegralFricke.frickeForm, `Dubon2026.SourceFunctionField.IntegralSlash.cuspChart]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE INTEGRAL DIAMOND AUDIT PASS: {count} theorems including private/generated declarations. Actual uniform even-weight slash integrality and integral diamond forms. Reduced field action, degree/genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceFrickeLevelIntegralRing
+
+#lint in Dubon2026.SourceFrickeGammaOneNormalizer
+
+#lint in Dubon2026.SourceFrickeTraceSubgroup
+
+#lint in Dubon2026.SourceFrickeTraceForms
+
+#lint in Dubon2026.SourceFrickeDenominatorUniformization
+
+#lint in Dubon2026.SourceEvenWeightFrickeTrace
+
+#lint in Dubon2026.SourceIntegralSeriesScalarDescent
+
+#lint in Dubon2026.SourceIntegralSeriesCommonDenominator
+
+#lint in Dubon2026.SourceGammaOneAlgebraicCuspDenominator
+
+#lint in Dubon2026.SourceIntegralDiscriminantCancellation
+
+#lint in Dubon2026.SourceGammaOneAlgebraicFormDenominator
+
+#lint in Dubon2026.SourceEvenWeightBalance
+
+#lint in Dubon2026.SourceEvenWeightFrickeCommonDenominator
+
+#lint in Dubon2026.SourceEvenWeightUniformFrickeIntegrality
+
+#lint in Dubon2026.SourceIntegralSlashCuspSubgroup
+
+#lint in Dubon2026.SourceIntegralSlashCuspChart
+
+#lint in Dubon2026.SourceIntegralSlashFrickeChart
+
+#lint in Dubon2026.SourceIntegralSlashSMove
+
+#lint in Dubon2026.SourceIntegralSlashTMove
+
+#lint in Dubon2026.SourceEvenWeightUniformSlashIntegrality
+
+#lint in Dubon2026.SourceRationalCuspDiamondFourier
+
+#lint in Dubon2026.SourceRationalDiscriminantCancellation
+
+#lint in Dubon2026.SourceRationalModularDiamondFourier
+
+#lint in Dubon2026.SourceEvenWeightIntegralDiamondForm

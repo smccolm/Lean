@@ -1,0 +1,28 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B C K : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B] [CommRing C] [CommRing K]
+  [TopologicalSpace G] [TopologicalSpace A] [TopologicalSpace B] [IsTopologicalRing B]
+
+/-- Exact original-object consumer of `continuousCoefficientFiberProduct_exists_of_strictlyConjugate`. -/
+theorem actual_continuous_strict_conjugacy_gluing_continuousCoefficientFiberProduct_exists_of_strictlyConjugate_source
+    (f : A →+* C) (g : B →+* C) (hg : Function.Surjective g) [IsLocalHom g]
+    (rC : C →+* K)
+    (ρA : G →ₜ* GeneralLinearGroup ι A) (ρB : G →ₜ* GeneralLinearGroup ι B)
+    (h : MatrixStrictlyConjugate rC
+      ((GeneralLinearGroup.map g).comp ρB.toMonoidHom)
+      ((GeneralLinearGroup.map f).comp ρA.toMonoidHom)) :
+    ∃ ρ : G →ₜ* GeneralLinearGroup ι (CoefficientFiberProduct f g),
+      (GeneralLinearGroup.map (coefficientFiberProductFst f g)).comp ρ.toMonoidHom =
+        ρA.toMonoidHom ∧
+      MatrixStrictlyConjugate (rC.comp g) ρB.toMonoidHom
+        ((GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp ρ.toMonoidHom) :=
+  continuousCoefficientFiberProduct_exists_of_strictlyConjugate f g hg rC ρA ρB h
+
+end
+

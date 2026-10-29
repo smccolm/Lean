@@ -1,0 +1,1 @@
+Transport the original coefficient topology along its proved equality with the true maximal-adic topology. Apply the already constructed whole continuous trace-ring descent and preserve its actual representation, original closed trace coefficients, original residue map and strict conjugacy in that same original topology.

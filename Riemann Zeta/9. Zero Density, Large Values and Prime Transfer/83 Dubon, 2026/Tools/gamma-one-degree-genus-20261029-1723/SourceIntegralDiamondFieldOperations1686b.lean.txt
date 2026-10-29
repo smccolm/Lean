@@ -1,0 +1,70 @@
+import SourceIntegralDiamondFieldConstants1685c
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action.
+The actual pullback preserves multiplication and addition on every element
+of the original field. Proved even representatives and the actual reduced
+form laws supply these identities; no chosen-representation compatibility
+or field-homomorphism law is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem reducedFieldPull_mul (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (δ : Gamma0 N)
+    (x y : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) :
+    reducedFieldPull N ℓ δ (x * y) = reducedFieldPull N ℓ δ x * reducedFieldPull N ℓ δ y := by
+  obtain ⟨k, hk, f, g, pf, pg, hf, hg, hg0, hx⟩ := exists_even_originalReducedField_ratio x
+  obtain ⟨l, hl, f', g', pf', pg', hf', hg', hg'0, hy⟩ := exists_even_originalReducedField_ratio y
+  have hxy : ((x * y : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) : LaurentSeries (ZMod ℓ)) =
+      red ℓ (pf * pf') / red ℓ (pg * pg') := by
+    rw [IntermediateField.coe_mul, hx, hy, map_mul, map_mul, div_mul_div_comm]
+  rw [reducedFieldPull_eq N ℓ hℓN δ x hk f g hf hg hg0 hx,
+    reducedFieldPull_eq N ℓ hℓN δ y hl f' g' hf' hg' hg'0 hy,
+    reducedFieldPull_eq N ℓ hℓN δ (x * y) (hk.add hl) (f.mul f') (g.mul g')
+      (integralQExp_mul f f' hf hf') (integralQExp_mul g g' hg hg')
+      (by rw [map_mul]; exact mul_ne_zero hg0 hg'0) hxy,
+    reducedDiamond_mul N ℓ hℓN hk hl δ f f' hf hf',
+    reducedDiamond_mul N ℓ hℓN hk hl δ g g' hg hg', div_mul_div_comm]
+
+theorem reducedFieldPull_add (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (δ : Gamma0 N)
+    (x y : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) :
+    reducedFieldPull N ℓ δ (x + y) = reducedFieldPull N ℓ δ x + reducedFieldPull N ℓ δ y := by
+  obtain ⟨k, hk, f, g, pf, pg, hf, hg, hg0, hx⟩ := exists_even_originalReducedField_ratio x
+  obtain ⟨l, hl, f', g', pf', pg', hf', hg', hg'0, hy⟩ := exists_even_originalReducedField_ratio y
+  have hxy : ((x + y : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) : LaurentSeries (ZMod ℓ)) =
+      red ℓ (pf * pg' + pg * pf') / red ℓ (pg * pg') := by
+    rw [IntermediateField.coe_add, hx, hy, map_add, map_mul, map_mul, map_mul,
+      div_add_div _ _ hg0 hg'0]
+  rw [reducedFieldPull_eq N ℓ hℓN δ x hk f g hf hg hg0 hx,
+    reducedFieldPull_eq N ℓ hℓN δ y hl f' g' hf' hg' hg'0 hy,
+    reducedFieldPull_eq N ℓ hℓN δ (x + y) (hk.add hl)
+      (f.mul g' + g.mul f') (g.mul g')
+      (integralQExp_add (f.mul g') (g.mul f')
+        (integralQExp_mul f g' hf hg') (integralQExp_mul g f' hg hf'))
+      (integralQExp_mul g g' hg hg') (by rw [map_mul]; exact mul_ne_zero hg0 hg'0) hxy,
+    reducedDiamond_add N ℓ hℓN (hk.add hl) δ (f.mul g') (g.mul f')
+      (integralQExp_mul f g' hf hg') (integralQExp_mul g f' hg hf'),
+    reducedDiamond_mul N ℓ hℓN hk hl δ f g' hf hg',
+    reducedDiamond_mul N ℓ hℓN hk hl δ g f' hg hf',
+    reducedDiamond_mul N ℓ hℓN hk hl δ g g' hg hg',
+    div_add_div _ _ (reducedDiamond_ne_zero N ℓ hℓN hk δ g hg hg0)
+      (reducedDiamond_ne_zero N ℓ hℓN hl δ g' hg' hg'0)]
+
+/-- The actual original reduced-field endomorphism induced by a Gamma0 slash. -/
+def reducedFieldPullHom (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (δ : Gamma0 N) :
+    qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) →+* qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) where
+  toFun x := ⟨reducedFieldPull N ℓ δ x, reducedFieldPull_mem N ℓ hℓN δ x⟩
+  map_one' := Subtype.ext (reducedFieldPull_one N ℓ hℓN δ)
+  map_mul' x y := Subtype.ext (reducedFieldPull_mul N ℓ hℓN δ x y)
+  map_zero' := Subtype.ext (reducedFieldPull_zero N ℓ hℓN δ)
+  map_add' x y := Subtype.ext (reducedFieldPull_add N ℓ hℓN δ x y)
+
+theorem coe_reducedFieldPullHom (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (δ : Gamma0 N) (x : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) :
+    (reducedFieldPullHom N ℓ hℓN δ x : LaurentSeries (ZMod ℓ)) = reducedFieldPull N ℓ δ x := rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

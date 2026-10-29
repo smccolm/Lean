@@ -1,0 +1,7 @@
+### Actual original simultaneous determinant and ordinary coefficient ideal — 10 October 2026
+
+Consume the exact original determinant and ordinary class coefficient criteria for the same universal matrices and the same coefficient map. Their conjunction is precisely annihilation of the literal sum of the original determinant and ordinary ideals.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedDeterminantOrdinaryCoefficientIdeal](Extension/Dubon2026/OriginalUnframedDeterminantOrdinaryCoefficientIdeal.lean).

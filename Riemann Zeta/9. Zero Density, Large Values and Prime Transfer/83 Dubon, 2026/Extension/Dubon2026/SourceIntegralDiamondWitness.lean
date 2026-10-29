@@ -1,0 +1,50 @@
+import Dubon2026.SourceIntegralDiamondZeroEquivalence
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> independence of actual integral diamond witnesses. Use the original
+modular diamond with a literal level-power scalar. Its integral Fourier
+series is constructed upstream, and any two such witnesses satisfy the
+exact cross-scaling identity required before reduction. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+/-- The actual diamond form multiplied by a natural power of the level. -/
+def scaledDiamond (N : ℕ) (g : Gamma0 N) (a : ℕ) {k : ℤ}
+    (f : ModularForm (Gamma1 N) k) : ModularForm (Gamma1 N) k :=
+  (N : ℂ) ^ a • modularDiamond N g f
+
+theorem coe_scaledDiamond (N : ℕ) (g : Gamma0 N) (a : ℕ) {k : ℤ}
+    (f : ModularForm (Gamma1 N) k) :
+    (⇑(scaledDiamond N g a f) : ℍ → ℂ) =
+      (N : ℂ) ^ a • ((⇑f : ℍ → ℂ) ∣[k] g.val) := rfl
+
+theorem exists_integral_scaledDiamond (N : ℕ) [NeZero N] {k : ℤ} (hk : Even k)
+    (g : Gamma0 N) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) :
+    ∃ (a : ℕ) (P : PowerSeries ℤ), IsIntegralQExp (scaledDiamond N g a f) P := by
+  obtain ⟨a, F, P, hP, hF⟩ :=
+    IntegralSlash.exists_level_power_integral_even_diamond_form N hk f hp g
+  refine ⟨a, P, ?_⟩
+  rw [hF] at hP
+  exact hP
+
+theorem integral_diamond_witness_eq (N : ℕ) {k : ℤ} (g : Gamma0 N)
+    (f : ModularForm (Gamma1 N) k) {a b : ℕ} {P Q : PowerSeries ℤ}
+    (hP : IsIntegralQExp (scaledDiamond N g a f) P)
+    (hQ : IsIntegralQExp (scaledDiamond N g b f) Q) :
+    PowerSeries.C ((N : ℤ) ^ b) * P = PowerSeries.C ((N : ℤ) ^ a) * Q := by
+  have h1 := integralQExp_int_smul (scaledDiamond N g a f) hP ((N : ℤ) ^ b)
+  have h2 := integralQExp_int_smul (scaledDiamond N g b f) hQ ((N : ℤ) ^ a)
+  have he : (((N : ℤ) ^ b : ℤ) : ℂ) • (⇑(scaledDiamond N g a f) : ℍ → ℂ) =
+      (((N : ℤ) ^ a : ℤ) : ℂ) • (⇑(scaledDiamond N g b f) : ℍ → ℂ) := by
+    rw [coe_scaledDiamond, coe_scaledDiamond]
+    funext τ
+    simp only [Pi.smul_apply, smul_eq_mul, Int.cast_pow, Int.cast_natCast]
+    ring
+  rw [he] at h1
+  exact integralQExp_unique h1 h2
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

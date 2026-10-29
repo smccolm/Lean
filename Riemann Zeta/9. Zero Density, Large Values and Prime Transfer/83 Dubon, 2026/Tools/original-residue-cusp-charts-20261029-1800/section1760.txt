@@ -1,0 +1,7 @@
+### Actual actual original complete local coefficient compactness — 10 October 2026
+
+Transport the named original topology along its proved maximal-adic equality. Apply the existing complete local Hausdorff theorem and finite-residue Noetherian compactness theorem in that same topology, then preserve the original topology in the conclusions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalAdicCompleteLocalCompactness](Extension/Dubon2026/OriginalAdicCompleteLocalCompactness.lean).

@@ -1,0 +1,85 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T06:48:49.571024+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceRationalCuspDiamondFourier",
+    "SourceRationalDiscriminantCancellation",
+    "SourceRationalModularDiamondFourier",
+    "SourceEvenWeightIntegralDiamondForm"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier.lean",
+      "sha256": "B4B4890619D93C3989DB917BCE1331103482810BAF66FB2E51DFA26CDB71BA94",
+      "oleanSha256": "C0DB04A1E627E44C1902E2472522A0E6FE31B2007DC3EF33FAB57B42CD0668FB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier-1669.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier-1669.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation.lean",
+      "sha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+      "oleanSha256": "32D4D77061E4EA0A34E750B729B3FD3939AFAD62EDF5497A861938CA6B04CC52",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation-1669.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation-1669.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier.lean",
+      "sha256": "C17DBA20C71AEA0B88EB8CA5B412E620B856FBCB574B8677F06B61CCB0F64FDF",
+      "oleanSha256": "FA5699AABEEF6BE3E2A0E29FA4D067A7D4C00DCDCD39400B3E1FD4D83C89BB48",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier-1669.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier-1669.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm.lean",
+      "sha256": "D36E7224DDACEDE4997DB31ADAD92D1ABFD24669031847B1192525F7ACE8F2F2",
+      "oleanSha256": "A130B233B05D829C1434E19D7E7849592610FD1B6F7C80D71EBDA3A24E528167",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm-1669.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm-1669.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondAudit1.log",
+  "logSha256": "ED96B57F4D1BBD70F7F19DF509E773BD60A600F2966B19FB9ADEC8AD73D20FEA",
+  "auditSha256": "38BACD60D7E67067C302108CC8EAF01DB8949853001C09E41324ED5AFBD782F7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondScratchOwnership1669.log",
+  "ownershipSha256": "9BF833E4F2079C55563368A5488DBCEC4435989407F79A79A08CE32B2997426D",
+  "exhaustiveTheorems": 5,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondDependencyAudit1.log",
+  "dependencyAuditSha256": "7F253B283874F9A84D6B499A2C8C486B27D127427D349F520C1F40D34862D8B6",
+  "dependencyAuditSourceSha256": "41CA860127E0E978FBBBC73B3B9548D5BE990F7A887CF83C3A6F144566E1A7BB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> signed-index lower bound -> reduced field action -> reduced relation preservation -> actual level-cleared integral diamond forms.",
+  "discharged": [
+    "Actual even-weight cusp diamonds have rational Fourier coefficients derived from the original rational series.",
+    "The actual discriminant and its integer eta-unit inverse pass rationality to modular diamonds.",
+    "The actual full slash theorem gives a uniform level power; sparse width change reads width-one coefficients.",
+    "Rational algebraic integers construct the integer power series and actual level-cleared Gamma1 diamond form."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Reduction-zero preservation, independence of ratio representatives, full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-integral-diamond-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "5372F9B6E00191C5A0EACE54811F5836C1EA6EE179BCCE512560B29D0E0FA5CD",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,7 @@
+### Actual coefficient fiber-product original residue — 10 October 2026
+
+Equip the actual compatible-pair coefficient ring with its original diagonal coefficient algebra. Prove compatibility of both genuine algebra projections. Use the already proved surjective local first projection and existing surjectiveLocalResidueAlgEquiv to identify its true residue field with the original residue field. Prove that every actual pair has the original first residue and that the entire genuine fiber-product reduction equals the first original reduction composed with the actual first algebra projection.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CoefficientFiberProductResidue](Extension/Dubon2026/CoefficientFiberProductResidue.lean).

@@ -1,0 +1,7 @@
+### Actual relative maximal-ideal cotangent universal property — 10 October 2026
+
+For an original module annihilated by the original maximal ideal, restriction of an actual relative derivation to the maximal ideal is linear over the original ring. Its kernel contains exactly the required square and coefficient-ideal relations, so it descends to the literal quotient. Composing with the constructed original derivation recovers every value, and surjectivity gives uniqueness. Thus genuine linear maps from this actual quotient classify the original relative derivations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RelativeMaximalCotangentUniversal](Extension/Dubon2026/RelativeMaximalCotangentUniversal.lean).

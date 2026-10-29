@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R] [IsLocalRing R]
+
+/-- Exact original-object consumer of `residualMatrixColumns_linearIndependent`. -/
+theorem actual_residual_matrix_column_independence_residualMatrixColumns_linearIndependent_source (v : ι → Matrix ι ι R) (i₀ : ι)
+    (hv : ∀ i, (RingHom.mapMatrix (IsLocalRing.residue R)) (v i) =
+      Matrix.single i i₀ 1) : LinearIndependent R v :=
+  residualMatrixColumns_linearIndependent v i₀ hv
+
+end
+

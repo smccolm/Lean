@@ -1,0 +1,34 @@
+import SourceIntegralDiamondReduction
+import SourceIntegralDiamondZeroForward
+import SourceIntegralDiamondZeroEquivalence
+import SourceIntegralDiamondWitness
+import SourceIntegralDiamondNormalizedReduction
+import SourceIntegralDiamondChosenReduction
+import SourceIntegralDiamondSeriesOperations
+import SourceIntegralDiamondReducedOperations
+import SourceIntegralDiamondRatioRelation
+import SourceIntegralDiamondAdditiveSeries
+import SourceIntegralDiamondRatioClosure
+import SourceIntegralDiamondReducedAddition
+import SourceIntegralDiamondFieldPull
+import SourceIntegralDiamondFieldRange
+import SourceIntegralDiamondFieldConstants
+import SourceIntegralDiamondFieldOperations
+import SourceIntegralDiamondComposition
+import SourceIntegralDiamondFieldComposition
+import SourceIntegralDiamondFieldIdentity
+import SourceIntegralDiamondFieldAction
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralDiamondReduction, `SourceIntegralDiamondZeroForward, `SourceIntegralDiamondZeroEquivalence, `SourceIntegralDiamondWitness, `SourceIntegralDiamondNormalizedReduction, `SourceIntegralDiamondChosenReduction, `SourceIntegralDiamondSeriesOperations, `SourceIntegralDiamondReducedOperations, `SourceIntegralDiamondRatioRelation, `SourceIntegralDiamondAdditiveSeries, `SourceIntegralDiamondRatioClosure, `SourceIntegralDiamondReducedAddition, `SourceIntegralDiamondFieldPull, `SourceIntegralDiamondFieldRange, `SourceIntegralDiamondFieldConstants, `SourceIntegralDiamondFieldOperations, `SourceIntegralDiamondComposition, `SourceIntegralDiamondFieldComposition, `SourceIntegralDiamondFieldIdentity, `SourceIntegralDiamondFieldAction]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

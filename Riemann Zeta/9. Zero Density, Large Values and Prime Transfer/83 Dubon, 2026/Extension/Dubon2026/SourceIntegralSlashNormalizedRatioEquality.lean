@@ -1,0 +1,75 @@
+import Dubon2026.SourceIntegralSlashNormalizedGenerators
+import Dubon2026.SourceIntegralSlashReducedEquality
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual normalized-generator chart. Two actual
+discriminant-normalized representatives of the same reduced function give the
+same cusp value. Cross-multiplication gives integral forms of the same even
+weight, so native finite relation transfer discharges representative independence.
+No equality-preservation or denominator-nonvanishing certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem normalized_slash_ratio_eq (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    {K : Type*} [Field K] [CharP K ℓ] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+    (β : SL(2, ℤ)) {r s : ℕ}
+    (f : ModularForm (Gamma1 N) (12 * (r : ℤ)))
+    (g : ModularForm (Gamma1 N) (12 * (s : ℤ))) {p q : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (hq : IsIntegralQExp g q)
+    (he : intSeriesC K p / intSeriesC K discriminantSeries ^ r =
+      intSeriesC K q / intSeriesC K discriminantSeries ^ s) :
+    HahnSeries.ofPowerSeries ℤ K
+        (reducedSlashSeries N ((show Even (12 : ℤ) by decide).mul_right (r : ℤ))
+          f hp β φ hN) /
+      HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+        (gammaOneDiscriminant N) (integralQExp_gammaOneDiscriminant N) β φ hN) ^ r =
+    HahnSeries.ofPowerSeries ℤ K
+        (reducedSlashSeries N ((show Even (12 : ℤ) by decide).mul_right (s : ℤ))
+          g hq β φ hN) /
+      HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+        (gammaOneDiscriminant N) (integralQExp_gammaOneDiscriminant N) β φ hN) ^ s := by
+  let er : Even (12 * (r : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let es : Even (12 * (s : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let et : Even (12 * (↑(r + s) : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  let h₁ : 12 * (r : ℤ) + 12 * (s : ℤ) = 12 * (↑(r + s) : ℤ) := by push_cast; ring
+  let h₂ : 12 * (s : ℤ) + 12 * (r : ℤ) = 12 * (↑(r + s) : ℤ) := by push_cast; ring
+  let F := (f.mul (gammaOneDiscriminantPow N s)).mcast h₁
+  let G := (g.mul (gammaOneDiscriminantPow N r)).mcast h₂
+  have hF : IsIntegralQExp F (p * discriminantSeries ^ s) :=
+    integralQExp_mul f (gammaOneDiscriminantPow N s) hp (integralQExp_gammaOneDiscriminantPow N s)
+  have hG : IsIntegralQExp G (q * discriminantSeries ^ r) :=
+    integralQExp_mul g (gammaOneDiscriminantPow N r) hq (integralQExp_gammaOneDiscriminantPow N r)
+  have hd := intSeriesC_discriminant_ne_zero K
+  rw [div_eq_div_iff (pow_ne_zero _ hd) (pow_ne_zero _ hd)] at he
+  have hFG : intSeriesC K (p * discriminantSeries ^ s) =
+      intSeriesC K (q * discriminantSeries ^ r) := by
+    simpa only [intSeriesC_mul, intSeriesC_pow_eq] using he
+  have hred := reducedSlashSeries_eq_of_intSeriesC_eq N ℓ φ hN β et F G hF hG hFG
+  have hredF : reducedSlashSeries N et F hF β φ hN =
+      reducedSlashSeries N er f hp β φ hN *
+        reducedSlashSeries N (by decide) (gammaOneDiscriminant N)
+          (integralQExp_gammaOneDiscriminant N) β φ hN ^ s := by
+    exact (reducedSlashSeries_mcast N φ hN β (er.add es) et h₁
+      (f.mul (gammaOneDiscriminantPow N s)) hF).trans
+        ((reducedSlashSeries_mul N φ hN β er es f (gammaOneDiscriminantPow N s)
+          hp (integralQExp_gammaOneDiscriminantPow N s)).trans
+            (by rw [reducedSlashSeries_discriminantPow]))
+  have hredG : reducedSlashSeries N et G hG β φ hN =
+      reducedSlashSeries N es g hq β φ hN *
+        reducedSlashSeries N (by decide) (gammaOneDiscriminant N)
+          (integralQExp_gammaOneDiscriminant N) β φ hN ^ r := by
+    exact (reducedSlashSeries_mcast N φ hN β (es.add er) et h₂
+      (g.mul (gammaOneDiscriminantPow N r)) hG).trans
+        ((reducedSlashSeries_mul N φ hN β es er g (gammaOneDiscriminantPow N r)
+          hq (integralQExp_gammaOneDiscriminantPow N r)).trans
+            (by rw [reducedSlashSeries_discriminantPow]))
+  rw [hredF, hredG] at hred
+  have hδ := reducedSlashSeries_discriminant_ne_zero N φ hN β
+  rw [div_eq_div_iff (pow_ne_zero _ hδ) (pow_ne_zero _ hδ),
+    ← map_pow, ← map_mul, ← map_pow, ← map_mul, hred]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

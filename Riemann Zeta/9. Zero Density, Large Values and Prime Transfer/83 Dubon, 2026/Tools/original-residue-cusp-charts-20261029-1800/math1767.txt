@@ -1,0 +1,1 @@
+If both original second-column differences were nonunits, their images under the genuine local field residue map would vanish, contradicting the original residual matrix being nonidentity. This derives the unit relation and then the exact full original invariant-axis equality.

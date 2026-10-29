@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B K L : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B] [CommRing K] [CommRing L]
+
+omit [CommRing L] in
+/-- Exact original-object consumer of `matrixStrictlyConjugate_map`. -/
+theorem actual_matrix_strict_conjugacy_coefficient_change_matrixStrictlyConjugate_map_source (rA : A →+* K) (rB : B →+* K)
+    (f : A →+* B) (hres : rB.comp f = rA)
+    (ρ τ : G →* GeneralLinearGroup ι A) (h : MatrixStrictlyConjugate rA ρ τ) :
+    MatrixStrictlyConjugate rB ((GeneralLinearGroup.map f).comp ρ)
+      ((GeneralLinearGroup.map f).comp τ) :=
+  matrixStrictlyConjugate_map rA rB f hres ρ τ h
+
+end
+

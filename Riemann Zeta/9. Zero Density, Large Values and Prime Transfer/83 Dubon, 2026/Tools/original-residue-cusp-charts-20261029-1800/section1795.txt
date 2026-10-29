@@ -1,0 +1,7 @@
+### Actual original subgroup vanishing antipode and counit stability — 10 October 2026
+
+Use inversion and the identity in the constructed actual point group. The original subgroup vanishing ideal is stable under the original antipode, and its counit vanishes when the original base embeds in the point-value ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfSubgroupVanishingAntipode](Extension/Dubon2026/HopfSubgroupVanishingAntipode.lean).

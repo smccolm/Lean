@@ -1,0 +1,47 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import ast,json,re,hashlib
+s=Path(__file__).parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest().upper()
+old=json.loads((s/'even-weight-fricke-uniform-versions-1651.json').read_text(encoding='utf-8'))
+versions=old.copy()
+mods=list(versions)
+def write(n,t):
+ f=s/n;assert not f.exists(),f;f.write_text(t,encoding='utf-8')
+for m,v in versions.items():
+ f=s/(m+v+'.lean');assert f.with_suffix('.exit').read_text().strip()=='0' and f.with_suffix('.log').stat().st_size==0,m
+ c=f.read_text(encoding='utf-8')
+ for vv in [old,versions]:
+  for n,ver in vv.items():c=c.replace('import '+n+ver+'\n','import '+n+'\n')
+ write(m+'.lean',c)
+write('even-weight-fricke-uniform-versions-1653.json',json.dumps(versions,indent=2)+'\n')
+cfg=json.loads((s/'even-weight-fricke-uniform-preflight-config-1652.json').read_text(encoding='utf-8'))
+cfg.update(modules=mods,queries=cfg['theorems']+cfg['constructions'],localModules=mods+list(json.loads((s/'even-weight-fricke-trace-versions-1643.json').read_text(encoding='utf-8'))),separatelyAxiomChecked=[],compileEvidence={m:m+'-1653' for m in mods})
+stem='source-even-weight-fricke-uniform-1';write(stem+'-audit-config.json',json.dumps(cfg,indent=2)+'\n')
+arr=lambda xs:'#['+', '.join(chr(96)+x for x in xs)+']'
+for a,b in [('SourceEvenWeightFrickeUniformPreflight1652','SourceEvenWeightFrickeUniformAudit1'),('SourceEvenWeightFrickeUniformValuePreflight1652','SourceEvenWeightFrickeUniformDependencyAudit1')]:
+ c=(s/(a+'.lean')).read_text(encoding='utf-8')
+ for n,v in old.items():c=c.replace(n+v,n)
+ for key in ['theorems','constructions','roots']:
+  c=re.sub(r'let '+key+r' : Array Name := #\[[^\n]*\]','let '+key+' : Array Name := '+arr(cfg[key]),c)
+ c=re.sub(r'let required : Array Name := #\[[^\n]*\]','let required : Array Name := '+arr(cfg['proofEdges']),c)
+ c=c.replace('EVEN WEIGHT FRICKE UNIFORM PREFLIGHT','EVEN WEIGHT FRICKE UNIFORM');write(b+'.lean',c)
+c=(s/'SourceIntegralTraceScratchOwnership1532.lean').read_text(encoding='utf-8')
+c='\n'.join('import '+m for m in mods)+'\nimport Mathlib.Tactic\n'+c[c.index('\nopen Lean'):]
+c=re.sub(r'let mods : Array Name := #\[[^\n]*\]','let mods : Array Name := '+arr(mods),c)
+write('SourceEvenWeightFrickeUniformScratchOwnership1653.lean',c)
+report='Dubon Even Weight Fricke Uniform Assessment 2026-10-28.md'
+write(report,"# Uniform even-weight Fricke integrality — 28 October 2026\n\nThe exact unresolved chain is DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 → literal higher continuation → automorphy → original all-weight characteristic-zero association → original Gamma1 degree/genus preservation → reduced field action → uniform level-power slash integrality. Acceptance remains 16/20; DUB-17–20 OPEN.\n\nThe theorem exists_level_power_integral_even_fricke_coefficients proves that, at every nonzero level N and every even integer weight, an actual Gamma1(N) modular form whose Fourier coefficients are cleared by a single power of N has the same property after its actual Fricke transform. The exponent is uniform over every coefficient. No common-denominator, transformed-algebraicity, auxiliary-existence, decay or trace-decomposition premise remains. Level one is proved directly from modular invariance; negative even weights are included.\n\nThe actual trace supplies pointwise level-power integrality and hence algebraicity of every transformed coefficient. Existing integral Gamma1 cusp forms span the cusp space. A finite scalar combination with algebraic coefficients descends to the algebraic subfield by a linear retraction; native integral-multiple algebra clears the finitely many scalars. Multiplication by the actual discriminant reduces a modular form to that cusp case, and its proved integral Euler-product inverse cancels the discriminant. An elementary even-weight balance constructs all required nonnegative exponents. The existing Bezout and factorization argument turns the resulting common integer denominator into one level power.\n\nThe [pinned scalar-descent source](https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_exists_sum_smul_eq_of_forall_coeff_mem.lean) is adapted using native LinearMap.exists_leftInverse_of_injective. The repository's integral cusp span and actual discriminant cancellation give a shorter route than constructing another rational basis of every modular-form space. The original integral-ratio field already admits even-weight representatives, so an odd-weight auxiliary branch is not required.\n\nEight versioned modules pass public/exhaustive axiom checks and sixteen linters each. All 24 required dependency checks pass in the declaration-value closure of the uniform theorem, including the actual constructed auxiliary and trace. The first value audit stopped at six canonical scratch imports; its evidence is preserved and a fresh audit traverses those imports without dropping any edge. Canonical ownership and receipts are recorded separately. The scope contains eleven public theorems and one definition; no proof limits, root pins or source contract changed.\n\nProduction promotion and assembled verification of this scope remain pending. Full SL2 slash integrality, reduced field action on every rational relation, the signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain required. No Dubon acceptance gate is claimed closed.\n")
+route=dict(recordedUTC=datetime.now(timezone.utc).isoformat(),chain='DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power SL2 slash integrality -> uniform even-weight Fricke integrality.',reuseChecked=[dict(path=str(s/n),sha256=sha(s/n)) for n in ['fricke-common-denominator-shorter-route-1642.json','even-weight-fricke-uniform-audit-correction-1652.json',report]],shorterRoute='Native integral cusp span, linear retraction to the algebraic coefficient field, native finite integral multiples and the actual integral discriminant inverse construct the denominator. The actual trace supplies coefficient algebraicity; no separate rational modular basis is needed. Even-weight integral ratios preserve the original field.',assumptionsToDischarge=['The actual even-weight Fricke transform is a Gamma1 modular form.','The actual trace proves every transformed coefficient algebraic.','Native integral cusp span and scalar descent construct a common integer denominator.','The actual discriminant and its integral inverse extend the denominator from cusp forms to modular forms.','Even integer weights admit the required nonnegative balance, including negative weights.','A single power of the level clears every actual even-weight Fricke coefficient at every nonzero level.'],remaining='Full SL2 slash integrality, reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.',externalBuild=False,externalImport=False,rootPinsChanged=False,proofLimitsChanged=False)
+rf='source-even-weight-fricke-uniform-audit-route-1653.json';write(rf,json.dumps(route,indent=2)+'\n')
+c=(s/'record_siegel_function_1580.py').read_text(encoding='utf-8')
+for a,b in [('source-siegel-function-1',stem),('SourceSiegelFunctionAudit1','SourceEvenWeightFrickeUniformAudit1'),('SourceSiegelFunctionDependencyAudit1','SourceEvenWeightFrickeUniformDependencyAudit1'),('SourceSiegelFunctionScratchOwnership1580','SourceEvenWeightFrickeUniformScratchOwnership1653'),('source-siegel-function-audit-route-1580',rf[:-5]),('SIEGEL FUNCTION','EVEN WEIGHT FRICKE UNIFORM')]:c=c.replace(a,b)
+nm,nq,ne=len(mods),len(cfg['queries']),len(cfg['proofEdges'])
+c=c.replace('(19, 101, 110)',str((nm,nq,ne))).replace('modules=19',f'modules={nm}').replace('queries=101',f'queries={nq}').replace('linterScopes=19',f'linterScopes={nm}').replace("text.count('with 16 linters') == 19",f"text.count('with 16 linters') == {nm}").replace('all 110 required',f'all {ne} required').replace('requiredProofValueEdges=110',f'requiredProofValueEdges={ne}').replace('proofEdges=110',f'proofEdges={ne}')
+ast.parse(c);write('record_even_weight_fricke_uniform_1653.py',c)
+c=(s/'audit_siegel_function_1580.ps1').read_text(encoding='utf-8')
+for a,b in [('SourceSiegelFunctionAudit1','SourceEvenWeightFrickeUniformAudit1'),('SourceSiegelFunctionDependencyAudit1','SourceEvenWeightFrickeUniformDependencyAudit1'),('SourceSiegelFunctionScratchOwnership1580','SourceEvenWeightFrickeUniformScratchOwnership1653'),('record_siegel_function_1580','record_even_weight_fricke_uniform_1653')]:c=c.replace(a,b)
+write('audit_even_weight_fricke_uniform_1653.ps1',c)
+c=(s/'build_siegel_function_canonical_1580.ps1').read_text(encoding='utf-8')
+c=re.sub(r'\$names=@\([^\n]+\)',"$names=@("+','.join(repr(m) for m in mods)+')',c).replace("$ev=$base+'-1580'","$ev=$base+'-1653'").replace('audit_siegel_function_1580','audit_even_weight_fricke_uniform_1653')
+write('build_even_weight_fricke_uniform_canonical_1653.ps1',c)
+print(json.dumps(dict(modules=nm,queries=nq,edges=ne,status='Canonical mathematical bodies and comments frozen.')))

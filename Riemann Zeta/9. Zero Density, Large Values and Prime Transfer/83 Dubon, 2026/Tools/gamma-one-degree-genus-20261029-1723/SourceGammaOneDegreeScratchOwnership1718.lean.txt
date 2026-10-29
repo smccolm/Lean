@@ -1,0 +1,23 @@
+import SourceReducedBaseCoordinateMap
+import SourceReducedBaseDegreeLower
+import SourceIntegralDiamondIndexLower
+import SourceReducedCoordinateIndependence
+import SourceReducedCoordinateMapIndependence
+import SourceReducedFieldCoefficientMap
+import SourceReducedCoordinateDegreeTransport
+import SourceReducedResidueDegreeTransport
+import SourceGammaOneDegreePreservation
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceReducedBaseCoordinateMap, `SourceReducedBaseDegreeLower, `SourceIntegralDiamondIndexLower, `SourceReducedCoordinateIndependence, `SourceReducedCoordinateMapIndependence, `SourceReducedFieldCoefficientMap, `SourceReducedCoordinateDegreeTransport, `SourceReducedResidueDegreeTransport, `SourceGammaOneDegreePreservation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

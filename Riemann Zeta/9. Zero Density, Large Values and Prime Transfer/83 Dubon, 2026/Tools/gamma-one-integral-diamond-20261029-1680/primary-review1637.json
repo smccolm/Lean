@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticLocalCotangentLinearity",
+  "mathematics": "The actual residue-field-linear universal differential equivalence is specialized to the literal original completed arithmetic local ring. It preserves its same whole first-order local representations under the proved coefficient-point classification. Composing with the proved original derivation class linear map gives a genuine residue-field-linear and surjective map from actual relative cotangent maps onto the same local continuous cohomology condition.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original matrix infinitesimal and coordinate derivation-linearity proofs re-read. Genuine actual original unramified universal representation and its full true residue theorem inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "arithmeticCotangentLinearity1637-focus.log"
+}

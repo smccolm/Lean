@@ -1,0 +1,37 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O R A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R] [IsTopologicalRing R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedConditionQuotientEquiv_evaluation`. -/
+theorem actual_original_unframed_condition_quotient_equivalence_originalUnframedConditionQuotientEquiv_evaluation_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u}) (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup ι R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (δ : H →* Oˣ) (N : Subgroup H)
+    [IsLocalRing (R ⧸ (representationDeterminantIdeal τ.toMonoidHom δ ⊔
+      matrixRepresentationRelationIdeal τ.toMonoidHom N))]
+    (hbij : Function.Bijective (originalCoefficientRepresentationClass eR eA H σ τ hτ))
+    (f : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eR
+      (representationDeterminantIdeal τ.toMonoidHom δ ⊔
+        matrixRepresentationRelationIdeal τ.toMonoidHom N)) eA) :
+    (originalUnframedConditionQuotientEquiv eR eA H σ τ hτ δ N hbij f).val =
+      originalCoefficientRepresentationClass eR eA H σ τ hτ
+        (originalQuotientCoefficientRestriction eR eA
+          (representationDeterminantIdeal τ.toMonoidHom δ ⊔
+            matrixRepresentationRelationIdeal τ.toMonoidHom N) f).val :=
+  originalUnframedConditionQuotientEquiv_evaluation eR eA H σ τ hτ δ N hbij f
+
+end
+

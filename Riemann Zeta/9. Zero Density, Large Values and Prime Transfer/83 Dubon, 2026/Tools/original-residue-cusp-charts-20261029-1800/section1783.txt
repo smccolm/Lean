@@ -1,0 +1,7 @@
+### Actual residual ordinary quotient local structure — 10 October 2026
+
+Use actual residual ordinary invariants to put the literal ordinary ideal in the maximal ideal and derive quotient locality, Noetherianity, own maximal-adic topology and completeness.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualOrdinaryRelationQuotient](Extension/Dubon2026/ResidualOrdinaryRelationQuotient.lean).

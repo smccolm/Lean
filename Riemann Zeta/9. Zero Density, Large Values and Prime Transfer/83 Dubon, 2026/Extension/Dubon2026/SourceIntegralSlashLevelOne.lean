@@ -1,0 +1,45 @@
+import Dubon2026.SourceIntegralSlashReducedSeries
+import Dubon2026.SourceGammaOneIntegralJRatio
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. Native
+width change and level-one slash invariance compute the literal reduced chart
+of every integral level-one form. This will identify its discriminant denominator
+and its original j coordinate; no new analytic Fourier theorem is needed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem coeff_reducedSlashSeries_levelOne (N : ℕ) [NeZero N]
+    {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+    (β : SL(2, ℤ)) {k : ℤ} (hk : Even k) (f : ModularForm 𝒮ℒ k)
+    {p : PowerSeries ℤ} (hp : IsIntegralQExp f p) (n : ℕ) :
+    (reducedSlashSeries N hk
+      (ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N)) f)
+      hp β φ hN).coeff n = if N ∣ n then (p.coeff (n / N) : K) else 0 := by
+  let F := ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N)) f
+  have hs : (⇑F : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ) = f :=
+    SlashInvariantForm.slash_action_eqn f _ ⟨β, rfl⟩
+  have hc : ((slashCoefficientSeries N hk F hp β).coeff n : ℂ) =
+      if N ∣ n then (p.coeff (n / N) : ℂ) else 0 := by
+    rw [slashCoefficientSeries, PowerSeries.coeff_mk]
+    change (qExpansion (N : ℝ)
+      ((⇑F : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n = _
+    rw [hs, SourceFricke.qExpansion_coeff_width f (NeZero.ne N)
+      (SlashInvariantFormClass.periodic_comp_ofComplex f one_mem_strictPeriods_SL)
+      f.holo' (ModularFormClass.bdd_at_infty f), ← hp]
+    simp only [PowerSeries.coeff_map, eq_intCast]
+  have he : (slashCoefficientSeries N hk F hp β).coeff n =
+      if N ∣ n then integersToLevel N (p.coeff (n / N) : Zbar) else 0 := by
+    apply Subtype.ext
+    split_ifs with hn <;> simpa only [hn, ↓reduceIte] using hc
+  change (levelReduction N φ hN) ((slashCoefficientSeries N hk F hp β).coeff n) = _
+  rw [he]
+  split_ifs
+  · rw [levelReduction_integers, map_intCast]
+  · exact map_zero _
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

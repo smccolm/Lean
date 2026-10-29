@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientRepresentationAlgebraHom_inclusion`. -/
+theorem actual_coefficient_representation_algebra_hom_coefficientRepresentationAlgebraHom_inclusion_source (S : Subalgebra O R)
+    (ρ : G →* GeneralLinearGroup ι R) :
+    (coefficientRepresentationMatrixAlgebra S ρ).val.toRingHom.toMonoidHom.comp
+        (coefficientRepresentationAlgebraHom S ρ) =
+      (Units.coeHom (Matrix ι ι R)).comp ρ :=
+  coefficientRepresentationAlgebraHom_inclusion S ρ
+
+end
+

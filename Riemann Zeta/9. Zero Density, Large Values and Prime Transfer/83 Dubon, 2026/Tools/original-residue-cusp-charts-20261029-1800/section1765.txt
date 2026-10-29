@@ -1,0 +1,7 @@
+### Actual primitive two-dimensional vector basis — 10 October 2026
+
+Use the actual unit coordinate of the original two-dimensional vector to construct an explicit invertible matrix with that vector as its first column. Its original determinant is a unit by a direct two-dimensional calculation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixPrimitiveVectorBasis](Extension/Dubon2026/MatrixPrimitiveVectorBasis.lean).

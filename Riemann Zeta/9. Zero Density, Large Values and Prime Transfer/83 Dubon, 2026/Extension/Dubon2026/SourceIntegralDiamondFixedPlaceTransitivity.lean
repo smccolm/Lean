@@ -1,0 +1,44 @@
+import Dubon2026.SourceIntegralDiamondScalarFixedDegree
+import Dubon2026.SourceCurveGaloisFiberTransitivity
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue fiber bounds. Native Galois place transitivity over the actual
+fixed field yields an automorphism. Native Artin surjectivity identifies that
+automorphism with an element of the actual diamond image, and hence with a
+literal Gamma0 matrix. No transitivity or automorphism-image certificate is
+assumed. Identification of the fixed field with the full modular base is a
+separate proved-degree consumer. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open IntermediateField CongruenceSubgroup GammaOne SourceCurve
+open scoped MatrixGroups
+variable (L : Type*) [Field L] (N ℓ : ℕ)
+  [NeZero N] [Fact ℓ.Prime] [Algebra (ZMod ℓ) L] (hℓN : ¬ ℓ ∣ N)
+local notation "F" => qExpFunctionFieldC L (Gamma1 N)
+local notation "G" => MonoidHom.range (reducedFieldActionOver L N ℓ hℓN)
+local notation "X" => IntermediateField.fixedField G
+
+private local instance : Finite G := reducedFieldActionOver_range_finite L N ℓ hℓN
+private local instance : FiniteDimensional X F :=
+  inferInstanceAs (FiniteDimensional (FixedPoints.subfield G F) F)
+private local instance : IsGalois X F :=
+  inferInstanceAs (IsGalois (FixedPoints.subfield G F) F)
+
+theorem diamond_exists_comapEquiv_of_restrict_fixed_eq (w w' : Place L F)
+    (h : w'.restrict X = w.restrict X) :
+    ∃ γ : Gamma0 N, w.comapEquiv (reducedFieldActionOver L N ℓ hℓN γ) = w' := by
+  obtain ⟨σ, hσ⟩ := Place.exists_comapEquiv_of_restrict_eq w w' h
+  obtain ⟨e, he⟩ := (FixedPoints.toAlgAut_bijective G F).surjective σ
+  obtain ⟨γ, hγ⟩ := e.property
+  refine ⟨γ, ?_⟩
+  have heq : σ.restrictScalars L = reducedFieldActionOver L N ℓ hℓN γ := by
+    apply AlgEquiv.ext
+    intro x
+    have hx := congrArg (fun f : F ≃ₐ[X] F => f x) he
+    change e.val x = σ x at hx
+    rw [hγ]
+    exact hx.symm
+  rwa [heq] at hσ
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

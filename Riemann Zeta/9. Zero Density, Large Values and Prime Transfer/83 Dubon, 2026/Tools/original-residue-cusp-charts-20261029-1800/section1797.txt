@@ -1,0 +1,7 @@
+### Actual coordinate restriction on Hopf points — 10 October 2026
+
+Construct the genuine contravariant homomorphism on original Hopf-algebra points from a coordinate bialgebra map. The counit and comultiplication identities prove preservation of the original identity and convolution product; the exact original coordinate evaluation is retained.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [HopfPointsRestriction](Extension/Dubon2026/HopfPointsRestriction.lean).

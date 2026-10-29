@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalResidueMaximalCotangent",
+  "mathematics": "The genuine original epsilon ideal is proved annihilated by the actual original maximal ideal under the same constant residue coefficient action. The actual maximal-ideal quotient universal property therefore gives all original relative residue derivations, linearly over the original residue field. Composing with the actual universal differential equivalence identifies maps on the literal maximal-ideal quotient with the original relative cotangent maps and retains every universal differential evaluation.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned Ideal.Cotangent, actual quotient module and Derivation APIs inspected; original residue maps and actual arithmetic local-ring Noetherian and residue theorems re-read. Stacks 33.16.5 equal-residue hypothesis retained explicitly. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Before promotion, the actual epsilon scalar commutation was stated as SMulCommClass R K, as required by the linear-map module instance and verified in1636. Production focused compilation passed on its first attempt."
+  ],
+  "productionLog": "originalMaximalCotangent1641-focus.log"
+}

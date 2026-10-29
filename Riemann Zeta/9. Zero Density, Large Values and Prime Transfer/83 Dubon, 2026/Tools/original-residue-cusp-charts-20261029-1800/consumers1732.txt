@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientRetraction_isAdicComplete`. -/
+theorem actual_coefficient_retraction_adic_topology_coefficientRetraction_isAdicComplete_source [WithIdeal R]
+    [IsAdicComplete (WithIdeal.i : Ideal R) R]
+    (hR : (WithIdeal.i : Ideal R) = IsLocalRing.maximalIdeal R)
+    (S : Subalgebra O R) [IsLocalRing S] [IsLocalHom S.val.toRingHom]
+    (hS : IsClosed (S : Set R))
+    (f : R →ₐ[O] S) (hfix : ∀ x : S, f x = x) :
+    IsAdicComplete (IsLocalRing.maximalIdeal S) S :=
+  coefficientRetraction_isAdicComplete hR S hS f hfix
+
+end
+

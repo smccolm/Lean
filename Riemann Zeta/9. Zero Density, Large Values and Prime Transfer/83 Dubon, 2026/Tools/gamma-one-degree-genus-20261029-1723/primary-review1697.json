@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixTraceGram",
+  "mathematics": "In an actual basis of the original full matrix algebra, express the genuine trace-dual matrices in that same basis. Prove that their coordinate matrix is an actual left inverse to the trace Gram matrix, by applying the original trace pairing to the whole basis expansions. Deduce that the genuine Gram determinant is a unit in the original coefficient ring.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-original-trace-basis-route-20261010.json: actual original matrix span, local finite basis extraction, full matrix trace pairing, Gram inverse and original closed trace algebra inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "matrixTraceGram1697-focus.log"
+}

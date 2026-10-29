@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixIdempotentLeftIdealSpanning",
+  "mathematics": "Take actual lifts in the original idempotent left ideal of the genuine residual column units. For each original left-ideal element, lift the coefficients of its actual residual column expansion and subtract the corresponding linear combination. The original reduction-kernel theorem puts the remainder in the coefficient maximal ideal times the ambient algebra; the proved idempotent transfer puts it in that maximal ideal times the same left ideal. Apply finite-module Nakayama over the original local coefficient ring to prove spanning.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: actual idempotent left ideal, finite module Nakayama, original basis coordinates, true residue maps and local-ring column invertibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Installed the same canonical submodule AddCommGroup, Module and SMul instances locally and made the genuine scalar action explicit, eliminating nested-subalgebra typeclass search timeout without any resource-limit change.",
+    "Made the actual inclusion map subtraction definitional before residue reduction. Removed unused simplification arguments; the original kernel, scalar surjection and Nakayama statement are unchanged."
+  ],
+  "productionLog": "leftIdealSpanning1713g-focus.log"
+}

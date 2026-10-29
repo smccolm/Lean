@@ -1,0 +1,79 @@
+{
+  "modules": [
+    "SourceRationalCuspDiamondFourier",
+    "SourceRationalDiscriminantCancellation",
+    "SourceRationalModularDiamondFourier",
+    "SourceEvenWeightIntegralDiamondForm"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "constructions": [],
+  "roots": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd",
+    "Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary",
+    "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_diamond_laurent",
+    "Dubon2026.SourceFricke.represents_rational_discriminantLaurent",
+    "Dubon2026.SourceFricke.represents_rational_eisensteinFactorLaurent",
+    "Dubon2026.SourceFricke.exists_integer_unit_eisensteinFactorLaurent",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.modularDiamond",
+    "Dubon2026.SourceFricke.qExpansion_coeff_width"
+  ],
+  "localModules": [
+    "SourceRationalCuspDiamondFourier",
+    "SourceRationalDiscriminantCancellation",
+    "SourceRationalModularDiamondFourier",
+    "SourceEvenWeightIntegralDiamondForm",
+    "SourceFrickeLevelIntegralRing",
+    "SourceFrickeGammaOneNormalizer",
+    "SourceFrickeTraceSubgroup",
+    "SourceFrickeTraceForms",
+    "SourceFrickeDenominatorUniformization",
+    "SourceEvenWeightFrickeTrace",
+    "SourceIntegralSeriesScalarDescent",
+    "SourceIntegralSeriesCommonDenominator",
+    "SourceGammaOneAlgebraicCuspDenominator",
+    "SourceIntegralDiscriminantCancellation",
+    "SourceGammaOneAlgebraicFormDenominator",
+    "SourceEvenWeightBalance",
+    "SourceEvenWeightFrickeCommonDenominator",
+    "SourceEvenWeightUniformFrickeIntegrality",
+    "SourceIntegralSlashCuspSubgroup",
+    "SourceIntegralSlashCuspChart",
+    "SourceIntegralSlashFrickeChart",
+    "SourceIntegralSlashSMove",
+    "SourceIntegralSlashTMove",
+    "SourceEvenWeightUniformSlashIntegrality"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceRationalCuspDiamondFourier": "SourceRationalCuspDiamondFourier-1669",
+    "SourceRationalDiscriminantCancellation": "SourceRationalDiscriminantCancellation-1669",
+    "SourceRationalModularDiamondFourier": "SourceRationalModularDiamondFourier-1669",
+    "SourceEvenWeightIntegralDiamondForm": "SourceEvenWeightIntegralDiamondForm-1669"
+  }
+}

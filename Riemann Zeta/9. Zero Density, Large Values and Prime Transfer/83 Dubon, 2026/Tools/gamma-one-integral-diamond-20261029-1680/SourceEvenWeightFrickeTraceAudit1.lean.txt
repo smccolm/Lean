@@ -1,0 +1,82 @@
+import SourceFrickeLevelIntegralRing
+import SourceFrickeGammaOneNormalizer
+import SourceFrickeTraceSubgroup
+import SourceFrickeTraceForms
+import SourceFrickeDenominatorUniformization
+import SourceEvenWeightFrickeTrace
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.RN
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.GammaS
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.g₀
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Gform
+#print axioms Dubon2026.SourceFunctionField.IntegralFricke.Thetaform
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickeLevelIntegralRing, `SourceFrickeGammaOneNormalizer, `SourceFrickeTraceSubgroup, `SourceFrickeTraceForms, `SourceFrickeDenominatorUniformization, `SourceEvenWeightFrickeTrace]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul, `Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat, `Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv, `Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem, `Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff, `Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀, `Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform, `Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform, `Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal, `Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul, `Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform, `Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash, `Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow, `Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.RN, `Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat, `Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL, `Dubon2026.SourceFunctionField.IntegralFricke.GammaS, `Dubon2026.SourceFunctionField.IntegralFricke.g₀, `Dubon2026.SourceFunctionField.IntegralFricke.Gform, `Dubon2026.SourceFunctionField.IntegralFricke.Thetaform]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE EVEN WEIGHT FRICKE TRACE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickeLevelIntegralRing
+#lint in SourceFrickeGammaOneNormalizer
+#lint in SourceFrickeTraceSubgroup
+#lint in SourceFrickeTraceForms
+#lint in SourceFrickeDenominatorUniformization
+#lint in SourceEvenWeightFrickeTrace

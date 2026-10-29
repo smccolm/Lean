@@ -1,0 +1,105 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T11:42:46.668113+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralSlashReducedTranslation",
+    "SourceIntegralSlashReducedTranslationSeries",
+    "SourceIntegralSlashDiamondChart",
+    "SourceIntegralSlashNormalizedDiamond",
+    "SourceIntegralSlashFieldChartIdentities"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslation.lean",
+      "sha256": "06A2BAF35BC9B32BDEB1E218FD080D03B07B837AFF4A6E2A005C136A9A19A9BE",
+      "oleanSha256": "A3A0155CA4825C3ABF228AED8946E24F2AF88629087E8388F3C2416E722E7A49",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslation-1797.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslation-1797.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslationSeries.lean",
+      "sha256": "FC854AD7118F9905A1395A34B79B05D20C973CC95A1AC5E45312B1D57A933620",
+      "oleanSha256": "9C39BF1326EE9D8648C65DDD9E0635B8E135E4A3FC84D4A57C2C16E0FAB55D69",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslationSeries-1797.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedTranslationSeries-1797.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondChart.lean",
+      "sha256": "4F8F6E9D77A985FA8DD5C72E7E21226CF1499EE614DBE41770D74B9A37D6A5EE",
+      "oleanSha256": "5ABFA02FBAFBDFF175A2D5D88E33F9F99C78794D41E1110A00F20D25C4B95896",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondChart-1797.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashDiamondChart-1797.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashNormalizedDiamond.lean",
+      "sha256": "26A264B4CE3BCF87293F51AF2E250A17E9D793B66F9CDF3E18A2F05B18F267CE",
+      "oleanSha256": "EE28D1AE77754B33B6B40E695FFDD42D4CD4B1835AB9FA33799AFB05A97E91D4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashNormalizedDiamond-1797.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashNormalizedDiamond-1797.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldChartIdentities.lean",
+      "sha256": "19573EBD16B5D12705AF4B523AA3FD492897CAEB718A06395861D4F8885C5FF7",
+      "oleanSha256": "7E8453180ACE2619E99D281196B5461C7DC785924A2159AAA719FB939D139AEE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldChartIdentities-1797.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFieldChartIdentities-1797.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_zeta",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_discriminant",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_neg_matrix"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_zeta",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_discriminant",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_neg_matrix"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCuspTranslationAudit1.log",
+  "logSha256": "2B3ADC84A1DDDA8FCAD2E110C48E9B88329F9C04633B032B701307FE53A3C0EA",
+  "auditSha256": "9159D994530E123F6BBF7E0A68BC844D3B0068C4019D63135C6D6FEF640C1CA8",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCuspTranslationScratchOwnership1797.log",
+  "ownershipSha256": "FA51CEC8400EACAF5DF645E8C402B97B7069FC682874FD7EA4C5ACCD2601E519",
+  "exhaustiveTheorems": 11,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCuspTranslationDependencyAudit1.log",
+  "dependencyAuditSha256": "0CA0E632FA8FF8F813E080B7B4055B3090E8965784EE171FCAB3231760FE0A26",
+  "dependencyAuditSourceSha256": "2BA156C904EA63351DE7733D65F6C165310D1A741C678084FC19A4C853D114CD",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_neg_matrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond"
+  ],
+  "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual diamond stabilizer equivariance.",
+  "discharged": [
+    "Proved exact normalized-generator translation by the prescribed residue root, signed-cusp invariance and the level-cleared diamond chart formula from the actual modular forms.",
+    "Translation and signed-matrix identities extend to every original field element for the already constructed cusp maps, using their proved normalized-generator values."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Full actual field-action equivariance, full-base slot identification, residue fiber bounds and reverse genus remain open; the complete original all-weight association, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-reduced-cusp-translation-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "C6DEFC95C71F0731E5B737F1439A9E2B82F1B1121EE3189A078370E3B9E1E3DB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

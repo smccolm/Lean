@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B : Type*} [CommSemiring R] [CommSemiring A]
+  [HopfAlgebra R A] [CommSemiring B] [Algebra R B]
+
+/-- Exact original-object consumer of `commutativeHopfPointsGroup_inv_apply`. -/
+theorem actual_commutative_hopf_points_group_commutativeHopfPointsGroup_inv_apply_source (f : WithConv (A →ₐ[R] B)) (a : A) :
+    letI := commutativeHopfPointsGroup (R := R) (A := A) (B := B)
+    (f⁻¹) a = f (HopfAlgebra.antipode R a) :=
+  commutativeHopfPointsGroup_inv_apply f a
+
+end
+

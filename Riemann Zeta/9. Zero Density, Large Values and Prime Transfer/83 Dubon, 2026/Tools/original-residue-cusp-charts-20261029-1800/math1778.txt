@@ -1,0 +1,1 @@
+Derive a nonidentity original residual group element from the actual rank-one invariant module by comparing its finite dimension with the two-dimensional trivial action.

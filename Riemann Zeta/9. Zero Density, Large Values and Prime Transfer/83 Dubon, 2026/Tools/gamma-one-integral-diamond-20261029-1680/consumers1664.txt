@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [IsLocalRing R] [Field L]
+  [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `localMatrixRepresentation_stabilizer_scalar_unit`. -/
+theorem actual_local_matrix_representation_centralizer_localMatrixRepresentation_stabilizer_scalar_unit_source
+    (ρ : G →* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ)))]
+    (U : GeneralLinearGroup ι R) (hU : ∀ g, U * ρ g = ρ g * U) :
+    ∃ a : Rˣ, U = GeneralLinearGroup.scalar ι a :=
+  localMatrixRepresentation_stabilizer_scalar_unit (L := L) ρ U hU
+
+end
+

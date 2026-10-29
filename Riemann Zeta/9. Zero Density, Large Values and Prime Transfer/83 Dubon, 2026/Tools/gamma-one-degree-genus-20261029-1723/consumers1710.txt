@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι κ R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixBasisCoordinates_mem_ideal_iff`. -/
+theorem actual_matrix_basis_ideal_coordinates_matrixBasisCoordinates_mem_ideal_iff_source [Fintype κ]
+    (I : Ideal R) (b : Basis κ R (Matrix ι ι R)) (X : Matrix ι ι R) :
+    (∀ i j, X i j ∈ I) ↔ ∀ k, b.repr X k ∈ I :=
+  matrixBasisCoordinates_mem_ideal_iff I b X
+
+end
+

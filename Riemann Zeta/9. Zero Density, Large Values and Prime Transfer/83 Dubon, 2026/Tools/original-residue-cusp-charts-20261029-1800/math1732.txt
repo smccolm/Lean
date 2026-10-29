@@ -1,0 +1,1 @@
+Use the actual retraction equality for every maximal-ideal power to identify the inherited coefficient neighborhood basis with the subalgebra maximal-adic basis. For a closed subalgebra of the original complete coefficient ring, inherited completeness and separatedness then prove completeness for that same subalgebra maximal ideal.

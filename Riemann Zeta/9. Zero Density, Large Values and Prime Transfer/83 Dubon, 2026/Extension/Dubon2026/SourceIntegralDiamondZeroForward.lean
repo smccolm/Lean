@@ -1,0 +1,56 @@
+import Dubon2026.SourceIntegralDiamondReduction
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> preservation of all reduced ratio relations. If an actual integer
+Fourier series vanishes modulo ell, every level-cleared integral
+diamond witness also vanishes, provided ell does not divide the level.
+Divide the original form by ell, construct its actual integral diamond
+upstream, and compare the exact integer series after level scaling. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem red_C (ℓ : ℕ) (z : ℤ) :
+    red ℓ (PowerSeries.C z) = HahnSeries.C (z : ZMod ℓ) := by
+  rw [red, RingHom.comp_apply, PowerSeries.map_C, HahnSeries.ofPowerSeries_C]
+  rfl
+
+theorem red_zero_of_integral_diamond (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) {k : ℤ} (hk : Even k) (g : Gamma0 N)
+    (f F : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ} {n : ℕ}
+    (hp : IsIntegralQExp f p) (hP : IsIntegralQExp F P)
+    (hF : (⇑F : ℍ → ℂ) = (N : ℂ) ^ n • ((⇑f : ℍ → ℂ) ∣[k] g.val))
+    (hzero : red ℓ p = 0) : red ℓ P = 0 := by
+  have hℓ : (ℓ : ℤ) ≠ 0 := Int.natCast_ne_zero.mpr (Fact.out : ℓ.Prime).ne_zero
+  have hℓC : (ℓ : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (Fact.out : ℓ.Prime).ne_zero
+  have hN : (N : ZMod ℓ) ≠ 0 := by
+    intro hz
+    exact hℓN ((ZMod.natCast_eq_zero_iff N ℓ).mp hz)
+  obtain ⟨p', rfl⟩ := (red_eq_zero_iff ℓ p).mp hzero
+  let f' : ModularForm (Gamma1 N) k := (ℓ : ℂ)⁻¹ • f
+  have hp' : IsIntegralQExp f' p' := by
+    exact integralQExp_inv_int_smul f (ℓ : ℤ) hℓ hp
+  obtain ⟨m, G, Q, hQ, hG⟩ :=
+    IntegralSlash.exists_level_power_integral_even_diamond_form N hk f' hp' g
+  have hff' : (⇑f : ℍ → ℂ) = (ℓ : ℂ) • (⇑f' : ℍ → ℂ) := by
+    rw [show (⇑f' : ℍ → ℂ) = (ℓ : ℂ)⁻¹ • (⇑f : ℍ → ℂ) from rfl,
+      smul_smul, mul_inv_cancel₀ hℓC, one_smul]
+  have h1 := integralQExp_int_smul F hP ((N : ℤ) ^ m)
+  have h2 := integralQExp_int_smul G hQ ((ℓ : ℤ) * (N : ℤ) ^ n)
+  have hefun : (((N : ℤ) ^ m : ℤ) : ℂ) • (⇑F : ℍ → ℂ) =
+      (((ℓ : ℤ) * (N : ℤ) ^ n : ℤ) : ℂ) • (⇑G : ℍ → ℂ) := by
+    rw [hF, hG, hff', ModularForm.SL_smul_slash]
+    funext τ
+    simp only [Pi.smul_apply, smul_eq_mul]
+    push_cast
+    ring
+  rw [hefun] at h1
+  have he := congrArg (red ℓ) (integralQExp_unique h1 h2)
+  rw [map_mul, map_mul, red_C, red_C] at he
+  simp only [Int.cast_mul, Int.cast_pow, Int.cast_natCast, ZMod.natCast_self,
+    zero_mul, map_zero, zero_mul] at he
+  exact (mul_eq_zero.mp he).resolve_left (HahnSeries.C_ne_zero (pow_ne_zero _ hN))
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

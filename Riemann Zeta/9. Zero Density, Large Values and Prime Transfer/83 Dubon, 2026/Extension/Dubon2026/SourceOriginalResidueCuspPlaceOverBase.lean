@@ -1,0 +1,93 @@
+import Dubon2026.SourceOriginalResidueCuspBaseComparison
+import Dubon2026.SourceCurvePlaceTransport
+import Dubon2026.SourceCurveLaurentPlaces
+import Dubon2026.SourceLaurentExpansionOrders
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> a stabilizer-fixed place above the specified
+full-base cusp. Compare the restriction of the constructed two-coordinate
+chart to the existing full-base chart, then pull back the Laurent valuation.
+The full-base chart and its proved normalization are strictly upstream input;
+no original-field place, extension, or stabilizer witness is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond SourceCurve
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+private local instance : Algebra kk (modularFunctionFieldCoeff N kk) :=
+  (modularFunctionFieldCoeff N kk).toSubalgebra.algebra
+
+theorem exists_originalResidueCuspFixedPlace_over_chart (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N)
+    (g : SL(2, ℤ)) (a : ℕ) [NeZero a] (b : ℤ)
+    (ha : (a : ℤ) ∣ g 1 0) (haN : a ∣ N)
+    (hb : g 1 0 * b ≡ g 1 1 * a [ZMOD N])
+    (θ : modularFunctionFieldCoeff N kk →ₐ[kk] LaurentSeries kk)
+    (hj : θ (jCoeff N kk) = qExpand kk N (jqModC kk))
+    (hjN : θ ⟨jqNModC kk N, jqd_mem_coeff_field N kk (dvd_refl N)⟩ =
+      qExpand kk (a * a) (qTwist (ζ ^ (b * (a : ℤ))) (jqModC kk)))
+    (v : Place kk (modularFunctionFieldCoeff N kk)) (e : ℕ) (he : 0 < e)
+    (hv : ∀ x, v.ord x * (e : ℤ) = (θ x).order) :
+    ∃ w : Place kk (qExpFunctionFieldC kk (Gamma1 N)),
+      w.toValuationSubring.comap
+        (IntermediateField.inclusion (fullBase_le_originalField kk N)).toRingHom = v.toValuationSubring ∧
+      w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0 ∧
+      ∀ (γ : Gamma0 N) (j : ℤ),
+        (g⁻¹ * γ.val * g = ModularGroup.T ^ j ∨
+          g⁻¹ * γ.val * g = -(ModularGroup.T ^ j)) →
+        w.comapEquiv (originalResidueDiamondAction A N ℓ hℓN γ⁻¹) = w := by
+  letI := valuation_residue_isAlgClosed A
+  have hN : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  obtain ⟨Φ, hΦj, hΦjN, hΦ⟩ := exists_originalResidueFullCuspFieldHom A N ℓ hℓN ζ hζ g a b ha haN hb
+  let ι := IntermediateField.inclusion (fullBase_le_originalField kk N)
+  have hbase : Φ.comp ι = θ := fullBase_algHom_ext N kk hN _ _
+    (hΦj.trans hj.symm) (hΦjN.trans hjN.symm)
+  let jF : qExpFunctionFieldC kk (Gamma1 N) :=
+    ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩
+  have ho : (Φ jF).order = -(N : ℤ) := by
+    rw [hΦj, laurent_order_qExpand, order_jqModC, mul_neg_one]
+  have hNpos : (0 : ℤ) < N := by exact_mod_cast NeZero.pos N
+  obtain ⟨w, r, hr, hw⟩ := Place.exists_place_of_laurent_embedding Φ ⟨jF, by rw [ho]; omega⟩
+  have hrpos : (0 : ℤ) < r := by exact_mod_cast hr
+  have hepos : (0 : ℤ) < e := by exact_mod_cast he
+  have horder : ∀ (γ : Gamma0 N) (j : ℤ),
+      (g⁻¹ * γ.val * g = ModularGroup.T ^ j ∨
+        g⁻¹ * γ.val * g = -(ModularGroup.T ^ j)) →
+      ∀ x, w.ord (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x) = w.ord x := by
+    intro γ j hγ x
+    have h1 := hw (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x)
+    have h2 := hw x
+    have ht : (Φ (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x)).order = (Φ x).order := by
+      rw [hΦ γ j hγ x]
+      by_cases hx : x = 0
+      · rw [hx, map_zero, map_zero]
+      · exact laurent_order_qTwist _ _ (by simpa only [map_zero] using Φ.injective.ne hx)
+    rw [ht] at h1
+    nlinarith
+  refine ⟨w, ?_, ?_, fun γ j hγ => ?_⟩
+  · ext x
+    rw [ValuationSubring.mem_comap, Place.mem_iff_ord_nonneg, Place.mem_iff_ord_nonneg]
+    have h1 := hw (ι x)
+    have h2 := hv x
+    have hx : Φ (ι x) = θ x := AlgHom.congr_fun hbase x
+    rw [hx] at h1
+    change 0 ≤ w.ord (ι x) ↔ 0 ≤ v.ord x
+    calc
+      _ ↔ 0 ≤ w.ord (ι x) * (r : ℤ) := (mul_nonneg_iff_of_pos_right hrpos).symm
+      _ ↔ 0 ≤ v.ord x * (e : ℤ) := by rw [h1, h2]
+      _ ↔ 0 ≤ v.ord x := mul_nonneg_iff_of_pos_right hepos
+  · have h := hw jF
+    rw [ho] at h
+    change w.ord jF < 0
+    nlinarith
+  · apply Place.ext
+    ext x
+    rw [Place.mem_iff_ord_nonneg, Place.mem_iff_ord_nonneg, Place.ord_comapEquiv, horder γ j hγ x]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

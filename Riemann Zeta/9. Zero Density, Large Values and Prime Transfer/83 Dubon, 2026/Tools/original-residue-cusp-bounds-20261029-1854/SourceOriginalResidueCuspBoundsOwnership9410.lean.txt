@@ -1,0 +1,54 @@
+import Dubon2026.SourceIntegralDiamondNormalizedAction
+import Dubon2026.SourceIntegralSlashFieldNormalizedRatio
+import Dubon2026.SourceIntegralDiamondScalarNormalizedAction
+import Dubon2026.SourceIntegralSlashDiamondGenerator
+import Dubon2026.SourceIntegralSlashDiamondStabilizer
+import Dubon2026.SourceOriginalResidueDiamondCuspChart
+import Dubon2026.SourceOriginalResidueCuspStabilizerPlace
+import Dubon2026.SourceIntegralSlashRaisedLevelOne
+import Dubon2026.SourceIntegralSlashCuspTriangular
+import Dubon2026.SourceIntegralSlashRaisedCuspFormula
+import Dubon2026.SourceIntegralSlashTriangularParameter
+import Dubon2026.SourceIntegralSlashRaisedCuspCoefficients
+import Dubon2026.SourceIntegralSlashRaisedCuspReduction
+import Dubon2026.SourceIntegralSlashRaisedCuspLaurent
+import Dubon2026.SourceIntegralSlashRaisedCuspCoordinate
+import Dubon2026.SourceIntegralSlashCuspCoordinate
+import Dubon2026.SourceOriginalResidueFullCuspChart
+import Dubon2026.SourceOriginalResidueCuspBaseComparison
+import Dubon2026.SourceOriginalResidueCuspPlaceOverBase
+import Dubon2026.SourceOriginalResidueCuspMatrix
+import Dubon2026.SourceOriginalResidueLabeledCuspPlace
+import Dubon2026.SourceOriginalResidueDiamondCommute
+import Dubon2026.SourceOriginalResidueDiamondFiberStabilizer
+import Dubon2026.SourceOriginalResidueLabeledCuspFiber
+import Dubon2026.SourceIntegralSlashFieldDiamondCovariance
+import Dubon2026.SourceOriginalResidueCuspHomFamily
+import Dubon2026.SourceOriginalResidueCuspPlaceFamily
+import Dubon2026.SourceOriginalResidueCuspPlaceCovariance
+import Dubon2026.SourceOriginalResidueCuspOrbitMap
+import Dubon2026.SourceOriginalResidueFullBaseFinite
+import Dubon2026.SourceOriginalResiduePoleBaseLabel
+import Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel
+import Dubon2026.SourceOriginalResidueCuspFamilyExhaustion
+import Dubon2026.SourceOriginalResidueCuspOrbitSurjection
+import Dubon2026.SourceOriginalResidueCuspCount
+import Dubon2026.SourceOriginalResidueImageCuspCount
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceIntegralDiamondNormalizedAction, `Dubon2026.SourceIntegralSlashFieldNormalizedRatio, `Dubon2026.SourceIntegralDiamondScalarNormalizedAction, `Dubon2026.SourceIntegralSlashDiamondGenerator, `Dubon2026.SourceIntegralSlashDiamondStabilizer, `Dubon2026.SourceOriginalResidueDiamondCuspChart, `Dubon2026.SourceOriginalResidueCuspStabilizerPlace, `Dubon2026.SourceIntegralSlashRaisedLevelOne, `Dubon2026.SourceIntegralSlashCuspTriangular, `Dubon2026.SourceIntegralSlashRaisedCuspFormula, `Dubon2026.SourceIntegralSlashTriangularParameter, `Dubon2026.SourceIntegralSlashRaisedCuspCoefficients, `Dubon2026.SourceIntegralSlashRaisedCuspReduction, `Dubon2026.SourceIntegralSlashRaisedCuspLaurent, `Dubon2026.SourceIntegralSlashRaisedCuspCoordinate, `Dubon2026.SourceIntegralSlashCuspCoordinate, `Dubon2026.SourceOriginalResidueFullCuspChart, `Dubon2026.SourceOriginalResidueCuspBaseComparison, `Dubon2026.SourceOriginalResidueCuspPlaceOverBase, `Dubon2026.SourceOriginalResidueCuspMatrix, `Dubon2026.SourceOriginalResidueLabeledCuspPlace, `Dubon2026.SourceOriginalResidueDiamondCommute, `Dubon2026.SourceOriginalResidueDiamondFiberStabilizer, `Dubon2026.SourceOriginalResidueLabeledCuspFiber, `Dubon2026.SourceIntegralSlashFieldDiamondCovariance, `Dubon2026.SourceOriginalResidueCuspHomFamily, `Dubon2026.SourceOriginalResidueCuspPlaceFamily, `Dubon2026.SourceOriginalResidueCuspPlaceCovariance, `Dubon2026.SourceOriginalResidueCuspOrbitMap, `Dubon2026.SourceOriginalResidueFullBaseFinite, `Dubon2026.SourceOriginalResiduePoleBaseLabel, `Dubon2026.SourceOriginalResidueCuspFamilyBaseLabel, `Dubon2026.SourceOriginalResidueCuspFamilyExhaustion, `Dubon2026.SourceOriginalResidueCuspOrbitSurjection, `Dubon2026.SourceOriginalResidueCuspCount, `Dubon2026.SourceOriginalResidueImageCuspCount]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

@@ -1,0 +1,7 @@
+### Actual original trace-zero arithmetic cotangent dimension and invariants — 10 October 2026
+
+For the same actual residual arithmetic representation, its explicit absolute irreducibility and original nonzero matrix dimension give both vanishing of the genuine trace-zero invariant submodule and the actual framed cotangent dimension formula in terms of its original trace-zero inertia kernel. The result consumes the proved scalar descent, original completed-ring cotangent dimension, and actual trace-zero local-class comparison. The ordinary cotangent dual dimension plus one equals that genuine local trace-zero H1 dimension plus the square of the original matrix size.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticTraceZeroCotangentDimension](Extension/Dubon2026/ArithmeticTraceZeroCotangentDimension.lean).

@@ -1,0 +1,1 @@
+Define the literal ordinary matrix polynomial operator, prove its exact coefficient-change formula and identify annihilation of the span of all its entries with vanishing of all actual changed operators.

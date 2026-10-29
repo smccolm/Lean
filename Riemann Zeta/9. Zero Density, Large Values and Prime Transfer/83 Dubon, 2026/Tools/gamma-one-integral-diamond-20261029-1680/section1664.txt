@@ -1,0 +1,7 @@
+### Actual actual local representation scalar stabilizers — 10 October 2026
+
+An original matrix commuting with all matrices of the same local-ring representation commutes with their genuine coefficient span by addition and scalar multiplication. The proved local-ring spanning theorem makes that the full original matrix algebra. Commutation with actual standard basis matrices then forces an original scalar matrix. If the commuting matrix is an actual invertible change of basis, the pinned general-linear center characterization proves it is an original scalar unit. This identifies the genuine stabilizers needed for unframed deformation theory under the explicit absolute irreducibility of the actual residual representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalMatrixRepresentationCentralizer](Extension/Dubon2026/LocalMatrixRepresentationCentralizer.lean).

@@ -1,0 +1,30 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A B : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+  [CommRing B] [IsLocalRing B] [Algebra O B]
+
+variable {C : Type*} [CommRing C] [IsLocalRing C] [Algebra O C]
+
+/-- Exact original-object consumer of `coefficientFiberProductReduction_snd`. -/
+theorem actual_coefficient_fiber_product_residue_compatibility_coefficientFiberProductReduction_snd_source
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eC : IsLocalRing.ResidueField C ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : A →ₐ[O] C) (g : B →ₐ[O] C) [IsLocalHom g.toRingHom]
+    (hg : Function.Surjective g)
+    (hfres : (localCoefficientReduction eC).comp f = localCoefficientReduction eA)
+    (hgres : (localCoefficientReduction eC).comp g = localCoefficientReduction eB) :
+    (letI := coefficientFiberProductAlgebra f g
+     letI := coefficientFiberProduct_isLocalRing f.toRingHom g.toRingHom
+     localCoefficientReduction (coefficientFiberProductResidueEquiv f g hg eA) =
+       (localCoefficientReduction eB).comp (coefficientFiberProductSndAlgHom f g)) :=
+  coefficientFiberProductReduction_snd eA eB eC f g hg hfres hgres
+
+end
+

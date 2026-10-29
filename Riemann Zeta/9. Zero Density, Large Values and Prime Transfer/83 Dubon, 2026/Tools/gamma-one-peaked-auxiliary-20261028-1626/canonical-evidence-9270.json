@@ -1,0 +1,984 @@
+{
+  "status": "Canonical PASS of the original Gamma One even-weight trace, exact Siegel expansions and constructed actual peaked auxiliary. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_peaked_auxiliary_9270.ps1",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/build_gamma_one_peaked_auxiliary_9270.ps1",
+      "sha256": "803D3F6104691EC99D2F686F3DA1E9860B8610A7C268BBFD89A9754EFE13DAF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_peaked_auxiliary_9270b.ps1",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/build_gamma_one_peaked_auxiliary_9270b.ps1",
+      "sha256": "06E34291D3C25EBD87459726DB5895532368CC0CB6093B296C28C5025E5AB2F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_peaked_auxiliary_ownership_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/compare_gamma_one_peaked_auxiliary_ownership_9270.py",
+      "sha256": "4AB2236567D0CA92076ED8134BD9B5D11CF73E15FFEF55E48ED4049AFB8D8C95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-peaked-auxiliary-preexecution-review-9270.json",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/gamma-one-peaked-auxiliary-preexecution-review-9270.json",
+      "sha256": "5F767E6B0A4284AAD0E4626B087B56A3D58D960E924D860BEA0C2E6B33084B91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-peaked-auxiliary-preflight-9270.json",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/gamma-one-peaked-auxiliary-preflight-9270.json",
+      "sha256": "7F3C44CDF20B8AF7673D80788E0F0BEE7703BE5C35B9B02C01C4BB29CA1F7F32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_peaked_auxiliary_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/integrate_source_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "2DDA0E331C518DB9E2B61C37F6A8F41AFE3D90A084A83F0FCDC6742F2D918818"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_peaked_auxiliary_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/preflight_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "9B28B8A5D068E1CC5B3048305C77E8A413D44C52D49607FF0BF001F9DD03881D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_peaked_auxiliary_global_ownership_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/prepare_gamma_one_peaked_auxiliary_global_ownership_9270.py",
+      "sha256": "1BE51595098737D70E1454E68A817A7060D5276C35D3F16F60ACC8FDC5FCEADE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_peaked_auxiliary_production_ownership_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/prepare_gamma_one_peaked_auxiliary_production_ownership_9270.py",
+      "sha256": "484F078728276F6086F9B11D41C6E333DE338B4A2E60725C93171FF53067E43D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_peaked_auxiliary_9270.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/record_source_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "3F681297E7A769E593F69D0B3E05C9D94252D84456716AE5F0A42952BD7D2676"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_peaked_auxiliary_9270b.py",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/record_source_gamma_one_peaked_auxiliary_9270b.py",
+      "sha256": "E6BE1E8E88613E6198AFE1E642997EEDC89597C2EA95DDCA6523FEEEF06B825A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-peaked-auxiliary-ownership-comparison-9270.json",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/source-gamma-one-peaked-auxiliary-ownership-comparison-9270.json",
+      "sha256": "842768628FD0FCE227D94B66196F3C99715108D72F921E8819E2F40B6F2E5CCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-peaked-auxiliary-production-build-9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/source-gamma-one-peaked-auxiliary-production-build-9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-peaked-auxiliary-production-build-9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/source-gamma-one-peaked-auxiliary-production-build-9270.log",
+      "sha256": "A9460D0E1364746F9ECF0588FF165DC913353631FA8CDB2E5583BADF6B2B8ED6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-peaked-auxiliary-scratch-ownership-9270.json",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/source-gamma-one-peaked-auxiliary-scratch-ownership-9270.json",
+      "sha256": "27DEDFA21F6AD71B7166CB4704896BC10CE7176662ADEDEAE750C0488F6038DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeakedAuxiliaryDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceActualPeakedAuxiliaryDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeakedAuxiliaryDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceActualPeakedAuxiliaryDependencyAudit1Production9270.lean.txt",
+      "sha256": "9747CC1751129369101308A52E692AC4ECE576C7F464B75A5CD29E5C9D814ADB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeakedAuxiliaryDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceActualPeakedAuxiliaryDependencyAudit1Production9270.log",
+      "sha256": "05897311C52732D964AE79131DF168A97B91397D1A4128F858A548385091A660"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.lean.txt",
+      "sha256": "B9767242729B8116A56D2FF725DA6DABAC3A9611FB1CD1E133720A2AA7C7620A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.log",
+      "sha256": "05A2121A56FEDA18EA95F0B41100F2D0F7D2A4C058EB3489BDEB6D5DCC212BA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryOwnership9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryOwnership9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryOwnership9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryOwnership9270.lean.txt",
+      "sha256": "08508D5EDFBCA96ECEEB01B6F4B35FEB563CFD4C19D21288EBD7F81E0C82A335"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryOwnership9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryOwnership9270.log",
+      "sha256": "D25B99C17621A1E9426ED9F6FC1C221F8C9DE1E173A3EB488B2F4D7AE028786B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryProductionAudit9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryProductionAudit9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryProductionAudit9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryProductionAudit9270.lean.txt",
+      "sha256": "9F44963C378E7A726CA589004924FF160EC180EBD5A0652FA648F8C54CF2C5AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryProductionAudit9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceGammaOnePeakedAuxiliaryProductionAudit9270.log",
+      "sha256": "E77437770D1D8CEE28293EE632DD1C97ABDD429730D7EEAF37DF12E5232CED94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceDependencyAudit2Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceIntegralTraceDependencyAudit2Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceDependencyAudit2Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceIntegralTraceDependencyAudit2Production9270.lean.txt",
+      "sha256": "1037047D9D37B78533F28E6ED26F539C0969CF8056063B46E4922C9C133447BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceDependencyAudit2Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceIntegralTraceDependencyAudit2Production9270.log",
+      "sha256": "219BD33BBD7DF0F6F111340AFC4BB21D6CA0A556ECE0F94B6DE1E07DDBF1A0F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedExponentDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedExponentDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedExponentDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedExponentDependencyAudit1Production9270.lean.txt",
+      "sha256": "08ACC0F89AC403B177AFBF25E5C8026636AA43665AAB8E73CF95B28083F3E0A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedExponentDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedExponentDependencyAudit1Production9270.log",
+      "sha256": "C0FA7AEEA7D893999D348C8739553092CC424627DF714F6D1C06BD8667233792"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedModularFormDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedModularFormDependencyAudit1Production9270.lean.txt",
+      "sha256": "6DB247E297AEAACD2087FD3181945A56BDC118C50D1959E6754FEE3DDC5F3B1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourcePeakedModularFormDependencyAudit1Production9270.log",
+      "sha256": "EBE93E3FC8F9B9DC1B6D4381B90B73CBDC9CECBA5C8EED2DA8F891AE3CC261C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelExpansionDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelExpansionDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelExpansionDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelExpansionDependencyAudit1Production9270.lean.txt",
+      "sha256": "F12DD6AD259B0619BC2CB54CB82E2A876EDEE31ADBCF48FF15D93937A5D6C109"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelExpansionDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelExpansionDependencyAudit1Production9270.log",
+      "sha256": "D96E155AA6AD1CC13E09018ACCBB73D273533982177A3924224DA020168545EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFiniteProductDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFiniteProductDependencyAudit1Production9270.lean.txt",
+      "sha256": "C58CF862B9A60B71CADD3F9D5987D2E0D092C36486477E1A3259AD36E597CCC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFiniteProductDependencyAudit1Production9270.log",
+      "sha256": "98FBAB7F25BA921A670A2C2C74432F24EFB5C8D1B14C76C32868D49CDA4EB905"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFunctionDependencyAudit1Production9270.exit",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFunctionDependencyAudit1Production9270.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFunctionDependencyAudit1Production9270.lean",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFunctionDependencyAudit1Production9270.lean.txt",
+      "sha256": "14B2CB69C3AD9150B493B1BF24254F0D6E55CF1B5F444301C04005E4F755417B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFunctionDependencyAudit1Production9270.log",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/SourceSiegelFunctionDependencyAudit1Production9270.log",
+      "sha256": "1A128E93350029C2DC83259F7BB4EB0CC30991CCC6F8BF2522996B993C858FFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_peaked_auxiliary_9270.ps1",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/verify_gamma_one_peaked_auxiliary_9270.ps1",
+      "sha256": "3F6081AA8786FA0BDB35E941A7CA7CD23281133E0CA4846D547A7AE71AAC9C8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_peaked_auxiliary_9270b.ps1",
+      "path": "Tools/gamma-one-peaked-auxiliary-20261028-1626/verify_gamma_one_peaked_auxiliary_9270b.ps1",
+      "sha256": "78F352E60FEFA937ECF478F6136D1AC9C0AFF380C5B243AE3A69EDC64EF9D964"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-29T07:27:50.565853+00:00",
+    "log": "logs/dubon-build-20261028-224820-610.log",
+    "sha256": "03FBE6B8250C894D33FC8BE8BD687E4CABC58EC2F1DDC14FDEF8D6077E1B9284",
+    "bytes": 15411240,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9270,
+    "projectTheorems": 58905,
+    "registeredConsumers": 27085,
+    "registeredConstructions": 2939,
+    "declarations": 36009,
+    "generated": 38666,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_223955.log",
+    "foundationSha256": "4CD27126AC4B107CD0979CE2F34F56AC17852A2204D54C47463341CCCC353631",
+    "countReconciliation": {
+      "previousTheorems": 58119,
+      "focusedTheorems": 786,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 786,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryGlobalOwnership9270.log",
+      "globalOwnershipSha256": "05A2121A56FEDA18EA95F0B41100F2D0F7D2A4C058EB3489BDEB6D5DCC212BA0",
+      "globalOwnershipSourceSha256": "B9767242729B8116A56D2FF725DA6DABAC3A9611FB1CD1E133720A2AA7C7620A",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryOwnership9270.log",
+      "ownershipSha256": "D25B99C17621A1E9426ED9F6FC1C221F8C9DE1E173A3EB488B2F4D7AE028786B"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 786,
+      "scratchDistinct": 786,
+      "generatedNameRenamings": {},
+      "productionFocused": 786,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneEvenIntegralRatios",
+            "SourceLevelOneCoefficientRing",
+            "SourceLevelOneIntegralWeightFactor",
+            "SourceTraceProductCoefficientRing",
+            "SourceIntegralLevelOneTraceCoefficients",
+            "SourceTraceExponentialCoefficientVanishing",
+            "SourceIntegralTraceParameters",
+            "SourceIntegralTracePowerCoefficients",
+            "SourceIntegralTraceCoefficientExtraction",
+            "SourceIntegralTraceModularForm",
+            "SourceIntegralTraceCuspTransversal",
+            "SourceIntegralTraceTranslates",
+            "SourceIntegralTraceTranslationCoefficients",
+            "SourceIntegralTracePeriodWidth",
+            "SourceIntegralTraceAnalyticProducts",
+            "SourceIntegralTraceSlashPeriods",
+            "SourceIntegralTraceTranslationAssembly",
+            "SourceIntegralTraceTransversalSplit",
+            "SourceIntegralTraceDecomposition",
+            "SourceIntegralTraceDegenerateCusp",
+            "SourceEvenWeightPeakedTraceIntegrality"
+          ],
+          "count": 144,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceScratchOwnership1538.log",
+            "sha256": "44F54F7BEEB311305EB44BA66C26792D371DC73FD1F62C97777B424D3F84F43B",
+            "sourceSha256": "3CD2FED34898E04A669BDD733F2F536D676A5B4D25FF27D25D38B4A74A7CC678"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOnePeakedCuspClasses",
+            "SourcePeakedBernoulliFourier",
+            "SourcePeakedBernoulliMoments",
+            "SourcePeakedBernoulliResidueWeights",
+            "SourcePeakedBernoulliCharacterInversion",
+            "SourcePeakedBernoulliConvolution",
+            "SourcePeakedBernoulliVanishing",
+            "SourcePeakedBernoulliFourierInversion",
+            "SourcePeakedBernoulliSpan",
+            "SourcePeakedBernoulliProgressions",
+            "SourcePeakedBernoulliTotient",
+            "SourcePeakedExponentHelpers",
+            "SourcePeakedExponents",
+            "SourceGammaOnePeakedCuspOrders"
+          ],
+          "count": 123,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedExponentScratchOwnership1556.log",
+            "sha256": "878BF0D29B0EBF7B1D9BE33C7E9A9A80AB3CDDAA204B5AFAE274BF0F6BC83F60",
+            "sourceSha256": "E8DA15072F914BD92301786825D6CC65B3B13884B6DB38770C905F75B316D5DC"
+          }
+        },
+        {
+          "modules": [
+            "SourceSiegelJacobiFiniteProducts",
+            "SourceSiegelJacobiGaussProduct",
+            "SourceSiegelJacobiFiniteIdentity",
+            "SourceSiegelJacobiProductBounds",
+            "SourceSiegelJacobiDominatedLimit",
+            "SourceSiegelJacobiRangeLimit",
+            "SourceSiegelJacobiProductIdentity",
+            "SourceSiegelFunction",
+            "SourceSiegelProductCore",
+            "SourceSiegelThetaIdentification",
+            "SourceSiegelHolomorphic",
+            "SourceSiegelEtaTransform",
+            "SourceSiegelThetaTransform",
+            "SourceSiegelInversion",
+            "SourceSiegelSL2Transformation",
+            "SourceSiegelLevelShiftFactors",
+            "SourceSiegelLevelShifts",
+            "SourceSiegelResidueReduction",
+            "SourceSiegelProductTransformation"
+          ],
+          "count": 232,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFunctionScratchOwnership1580.log",
+            "sha256": "06095FD8FE0309BC9EB8FAB42D78CC65A27D93C65BD77F032FBE02B0BBC95223",
+            "sourceSha256": "490B8FFA985E39A89C2ACA893141D2451C81A2D0249957F59D86B0B57734F697"
+          }
+        },
+        {
+          "modules": [
+            "SourceSiegelStableCoefficients",
+            "SourceSiegelProductLocalUniform",
+            "SourceSiegelProductTaylorExpansion",
+            "SourceSiegelPolynomialFactors",
+            "SourceSiegelIntegralCoefficients",
+            "SourceSiegelQParameter",
+            "SourceSiegelResidueProductIndices",
+            "SourceSiegelResidueProductStreams",
+            "SourceSiegelLeadingUnit",
+            "SourceSiegelNormalizedProduct",
+            "SourceSiegelCoefficientSeries",
+            "SourceSiegelIntegralExpansion"
+          ],
+          "count": 133,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelExpansionScratchOwnership1598.log",
+            "sha256": "D96AD5F042BF5282C246C8BF06C43B231F43311EA97474F481A85C3DEBE4E513",
+            "sourceSha256": "11AAE1BFDD899D0588B837039F7F500449D9D88C5407AB87B5F3721730DFCDB5"
+          }
+        },
+        {
+          "modules": [
+            "SourceSiegelFiniteSeriesProducts",
+            "SourceSiegelProductCoefficients",
+            "SourceSiegelProductLeadingCoefficient",
+            "SourceSiegelProductPhases",
+            "SourceSiegelFiniteProductExpansion"
+          ],
+          "count": 59,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductScratchOwnership1608.log",
+            "sha256": "C942B7C96C230CAE1E5484D2495E1A21CEC20EC780D83E1DC6F368CDCCE44D21",
+            "sourceSha256": "F5F98F9E80E4347CCB5C176E07AC3947CA720A6780CC7C428E2A306F138429F1"
+          }
+        },
+        {
+          "modules": [
+            "SourcePeakedAuxiliaryFunction",
+            "SourceSiegelCuspPermutation",
+            "SourcePeakedAuxiliaryCuspDecay",
+            "SourcePeakedAuxiliaryHolomorphic",
+            "SourcePeakedAuxiliaryModularForm"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormScratchOwnership1612.log",
+            "sha256": "5165D8F03AF8D9C451EF463915E93A6939BC62C255987B25D53A313CB4EE4438",
+            "sourceSha256": "85FB1C067D5A5CDE5405F0AE3A1CD86024F9C8E64DD7C0C674F78E1379A6E097"
+          }
+        },
+        {
+          "modules": [
+            "SourcePeakedDiscriminantSeries",
+            "SourcePeakedSeriesOperations",
+            "SourcePeakedShiftedCoefficients",
+            "SourcePeakedShiftedSeries",
+            "SourcePeakedWidthOneIdentification",
+            "SourcePeakedIntegralQExpansion",
+            "SourcePeakedTranslatedIntegralExpansion",
+            "SourcePeakedScaledOrders",
+            "SourcePeakedOrderGapDecay",
+            "SourceActualPeakedAuxiliary"
+          ],
+          "count": 56,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceActualPeakedAuxiliaryScratchOwnership1625.log",
+            "sha256": "524D25C0F72F6C1A4A35AAD3219B2D11B9AC4FAEA341018C1A173F98614999B3",
+            "sourceSha256": "54D6E903DA2DD6902F138BD11CD5B3AE992F83F842EB85062834E390AE78D9F9"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeakedAuxiliaryOwnership9270.log",
+        "sha256": "D25B99C17621A1E9426ED9F6FC1C221F8C9DE1E173A3EB488B2F4D7AE028786B",
+        "sourceSha256": "08508D5EDFBCA96ECEEB01B6F4B35FEB563CFD4C19D21288EBD7F81E0C82A335"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-181459-328.log",
+        "sha256": "6AC77F128117D48086D929941F678472BFB1639425B473012583122BD6CA6451"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 86 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneEvenIntegralRatios",
+            "scratchSha256": "83AC191EC6D4B7F22C6D6A6BC4DB5F2912A6A54A76057D9BAD1457DC50953BCC",
+            "productionSha256": "83AC191EC6D4B7F22C6D6A6BC4DB5F2912A6A54A76057D9BAD1457DC50953BCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLevelOneCoefficientRing",
+            "scratchSha256": "112B5324F20DB51534474175C849552E11EA7474AC625A769FF78FA42B6A4B6E",
+            "productionSha256": "112B5324F20DB51534474175C849552E11EA7474AC625A769FF78FA42B6A4B6E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLevelOneIntegralWeightFactor",
+            "scratchSha256": "96C9F6D1CA131B0352D3FBF4E846C9ED4303AD898CF3E7106EFE4C310E2B1CB3",
+            "productionSha256": "96C9F6D1CA131B0352D3FBF4E846C9ED4303AD898CF3E7106EFE4C310E2B1CB3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceProductCoefficientRing",
+            "scratchSha256": "1BE1D0360E3E126FB8E901E57E1D66977A86EE7EA106C7239B8D7DC937D1A831",
+            "productionSha256": "1BE1D0360E3E126FB8E901E57E1D66977A86EE7EA106C7239B8D7DC937D1A831",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralLevelOneTraceCoefficients",
+            "scratchSha256": "8DA5F438A256AA3A15CD00CD9627282764B3A45A683C25CA5C3E72B8DF72FDAB",
+            "productionSha256": "EE723F895C309F2058ED014A99BFBB281A2AF47758A73B147E61EBAE9CF6F783",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTraceExponentialCoefficientVanishing",
+            "scratchSha256": "A1F0C68F22CF3A8B08EC8E1C5748439D51E1900D8E94A753692E218F83F7D2E6",
+            "productionSha256": "A1F0C68F22CF3A8B08EC8E1C5748439D51E1900D8E94A753692E218F83F7D2E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceParameters",
+            "scratchSha256": "7D95D664DA7E50A1513B2612BF0A49374E9270E75D240F39FD0ED816CA382316",
+            "productionSha256": "7D95D664DA7E50A1513B2612BF0A49374E9270E75D240F39FD0ED816CA382316",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTracePowerCoefficients",
+            "scratchSha256": "9EF6F227FA80C0C50398F2EF2860A709F9CDE1C0F1F1510AD3B291160C5BF5E9",
+            "productionSha256": "9EF6F227FA80C0C50398F2EF2860A709F9CDE1C0F1F1510AD3B291160C5BF5E9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceCoefficientExtraction",
+            "scratchSha256": "BD587D4A0D8BFF924194E76792F019E89F9ABB259CDD5C51857C7D9C9F99BF09",
+            "productionSha256": "8DF893B310AE3B8DB5FDAFB1945118267DBCBD35379399581F958470CD684C2E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceModularForm",
+            "scratchSha256": "9A0961B2468106F568DFD0EE06C06578B3AED34F04FE9EFAEABF260EAE76A234",
+            "productionSha256": "9A0961B2468106F568DFD0EE06C06578B3AED34F04FE9EFAEABF260EAE76A234",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceCuspTransversal",
+            "scratchSha256": "F3974674A2D76CED3E1784B64E401E8DA9756A222A4F664B309810575E4B924B",
+            "productionSha256": "F3974674A2D76CED3E1784B64E401E8DA9756A222A4F664B309810575E4B924B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceTranslates",
+            "scratchSha256": "63345AEFC3ED42EEE4C63372825C0F2322814DCC4FEF46FDDF5449BD8B4F2AEA",
+            "productionSha256": "63345AEFC3ED42EEE4C63372825C0F2322814DCC4FEF46FDDF5449BD8B4F2AEA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceTranslationCoefficients",
+            "scratchSha256": "1E9FD81636CCA4689288CF8E3C501FC69BE822FE6190AC8C2F16A5D52E0C0FDA",
+            "productionSha256": "A5C1B3DAEEA0747B3B411E09A43D2E689BBC849F292E2144AF82D297736C03D9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTracePeriodWidth",
+            "scratchSha256": "B9AD825AADBC7F760761892A17CEFE22168A3FCBECE146538B98ADA6519C4645",
+            "productionSha256": "B9AD825AADBC7F760761892A17CEFE22168A3FCBECE146538B98ADA6519C4645",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceAnalyticProducts",
+            "scratchSha256": "69D0E7BC65A3EC1B3B3B7C47088BA75B5E91C3D33853E15A24D96F3AD9A29B5F",
+            "productionSha256": "9447F93A4DC4258122939141D46C788BDF569104DC268D2C24E6A20FE8DC71FE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceSlashPeriods",
+            "scratchSha256": "8C432F746D673FF02A96B3A0EA4C4133D6A21D23A0F321CED199754972A5CA73",
+            "productionSha256": "5C69176CCC86BBB42F668E0F0918D6A5EF1966F9C1C1323B0AAE03E0E87DD418",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceTranslationAssembly",
+            "scratchSha256": "6DDA6501BF1869D6F254FB9212D490B06109DB7D2249F26AB7EA2C7D96CC1B8A",
+            "productionSha256": "0F75BD5ADBDA78879DAE522775415562F7092ED3C8ABAE930EBC06012DFC0DFA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceTransversalSplit",
+            "scratchSha256": "BD86CA78F1952405556432FCFFD1C054F116A96E6B03D522119808FC4B30E956",
+            "productionSha256": "A2D48B7AB56B4EA3280A7912837BB5153F77415CA4A61C739374470798E57A2B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceDecomposition",
+            "scratchSha256": "488F3B6DB7BA95D9039C86DFBFFED233E69FEDAB0C13CFFC7D449C203EBB311B",
+            "productionSha256": "04CDA8AAE89C26ED1EBD4C27CA31CDE8EC84842402F85D48BC23FF24A164B2D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralTraceDegenerateCusp",
+            "scratchSha256": "E308F590E564331EC00DFE7EE725D4D4CDF8BBA448E3915768A6F0E77FACEA8A",
+            "productionSha256": "955CBC901519CCF2F77D2CAA06CC146041FDA2757E7DC057DB3B17DEFC8BA11E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightPeakedTraceIntegrality",
+            "scratchSha256": "6453E7F7474EC59C0755B61DEEE6CF6A515285043C4C8F4540815B34AC1DE202",
+            "productionSha256": "C1CA6189B2C82563A6BAF244A3CB1B49A359623A0BDCDD798EF90971774AB8D4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeakedCuspClasses",
+            "scratchSha256": "E3BCD247DC76C18F3CD56BF8D9F356107B352DDF62B8334E99BE03BAA6E6E529",
+            "productionSha256": "E3BCD247DC76C18F3CD56BF8D9F356107B352DDF62B8334E99BE03BAA6E6E529",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliFourier",
+            "scratchSha256": "CBDD3066F5D643F405175B4A333003CD933104F76B4FC3473F6BC57D4E0218BE",
+            "productionSha256": "CBDD3066F5D643F405175B4A333003CD933104F76B4FC3473F6BC57D4E0218BE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliMoments",
+            "scratchSha256": "7CD48B7E8017AB7024EADD936797CB6AF5AD42016DEA02B18E3AB3A85A378305",
+            "productionSha256": "6861C19842691FC7016CFBF5CA4AC23704FE4859D7EBB995AAD30F635B65FB31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliResidueWeights",
+            "scratchSha256": "DF163901EE9EEC733E0C36EC9C83DA36FE5E8947C1269A6BD5221527BF70AA50",
+            "productionSha256": "D53CF18FF852EA62A99C52DA6ECDDD71BB919466A44C01079DF8E462C323DDF7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliCharacterInversion",
+            "scratchSha256": "427CC2BC23179CDD503080F86791C9A32BEB26D54FAEE9E302B9BA57E9070CEF",
+            "productionSha256": "427CC2BC23179CDD503080F86791C9A32BEB26D54FAEE9E302B9BA57E9070CEF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliConvolution",
+            "scratchSha256": "1112E9F55C9BBDA1994645184D0642C83FDAFDFF3832B0134151BB34B6CE959D",
+            "productionSha256": "62FA63CB2197C8AC2B92023FD501DB4CC8D4AC74BED1B87A26C08D107A5E500B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliVanishing",
+            "scratchSha256": "8C21B5EBF8F55E4B626501E004274A12CA8E043EEB835CE525C0537928F6AF9A",
+            "productionSha256": "06639F31002B4017B39480C8390964CC699670983C3AE8DDB559261D9A2480A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliFourierInversion",
+            "scratchSha256": "FF7534FB0F0C29536CCCD4A4DE940177E79576EF1BA6BAEAD8B846A7FFBBBF11",
+            "productionSha256": "C1C3631A8487133D9A19652C875A1B5E9BA65A06852DD27CB1FA250FAD8DB782",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliSpan",
+            "scratchSha256": "83EBE6FC2EA2B78905C35BA41138104355691CB6BC1450E551212D3311B029E6",
+            "productionSha256": "A267A7C4079540BB99E461D4F374F3333B5D4A529E21C3CF8E5C4D3DCDFE03EA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliProgressions",
+            "scratchSha256": "511BBBE62DA68B5DECCD1C40F0D5B1D0B1B01AA1B21E518B5867A6EB842A6915",
+            "productionSha256": "7BF179FB404E37EFC09426D17675E351CEB2E392AC85029EEF6AEECB47A1EB20",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedBernoulliTotient",
+            "scratchSha256": "6DC8B9B5E797B5B5F6A4629994747996B550422EDC03E01CC5FDFE4D88AF8DEE",
+            "productionSha256": "5B08A21C90AB6B5F5757DF177F7CD65B2D8BD57EB15C65B0B86080E388A724B3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedExponentHelpers",
+            "scratchSha256": "4A21B4286FBF7D142E61C83E3D8C4A153A9036989C5408FE3E7BD1A634F0CB0B",
+            "productionSha256": "87CB29751C64D4FAF17ADEE33D594B39A175ABA06C8D4A4E8CCF0930639936B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedExponents",
+            "scratchSha256": "6B5702170852EAF28022EC15B64F55288B97312800C11AD96CBC40AD910DF4D7",
+            "productionSha256": "CB7B21F0F4B4B553478BE5BFF75E7CB5C08DDEFC31747AC8FD32FCC5CEC5B970",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePeakedCuspOrders",
+            "scratchSha256": "C020614352CAC6A506D030D3A30817C838E6032DF9E3967F10916621744AB576",
+            "productionSha256": "52A38867BBC8554C70104E97F40966CA05667BB70DC0501FBBEC124CEE62FA23",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiFiniteProducts",
+            "scratchSha256": "A0830E4F068000700F2F6AD3AAEA3B73AECEF6CEE4A15AAE930F4C27E518E33B",
+            "productionSha256": "A0830E4F068000700F2F6AD3AAEA3B73AECEF6CEE4A15AAE930F4C27E518E33B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiGaussProduct",
+            "scratchSha256": "B97298E45124B99F8AF3135CE6C863DE245883A4E3D99CEA9BAF95DC9431851A",
+            "productionSha256": "15957DAE92540761B4122A19FE6CD5EC49703967099906602B53602E98F32DB4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiFiniteIdentity",
+            "scratchSha256": "069038B848F11DEAD4CDBCF91BA42EDD68CF86C2CC2CCBAB60A44A2AD95C4EF1",
+            "productionSha256": "A1FEB587EA804D0181C3D6B10CE15311105E22D9FA8087A5D1A316D27805CB74",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiProductBounds",
+            "scratchSha256": "5729B877868DC58D8DBD808ECEA9A83BE33E7742409CC9AC6CD927BC72FDB13A",
+            "productionSha256": "14D1FB5A46845819B4320731111388F0F6A86A69751CCF2A2758C27D3E07E7AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiDominatedLimit",
+            "scratchSha256": "2BA5434D5CA9728A16CDA2A01628E9785B7656E55EE5836EAFE0E2E7C05C56BA",
+            "productionSha256": "EC9EC4852DFADC5BE81FD77687D73F3394DC42EF20ACF88E838EC81C6365D4F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiRangeLimit",
+            "scratchSha256": "CEF71081DEE4CDAD14DD98A974D3AA0A38EB72B92A6095CE149FA88BB3D34F80",
+            "productionSha256": "B477B9D23DBFDB216A68C143ADC016F77BB1C74EDF25E5E6AF934B28BF3BCF7E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelJacobiProductIdentity",
+            "scratchSha256": "2E34423D8ECCDDAA994044E783F9AB99B4E23EAA9CE3251078F2AACF8C2B512F",
+            "productionSha256": "A3AD09C0217F1964506CF72D481287BF00F4BCF52EBFB919AC1A04AC75389BEC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelFunction",
+            "scratchSha256": "0E100B467E0607192516BF5F361E6FC2DEAC3CD81969ECA47D3155E4F4436C48",
+            "productionSha256": "0E100B467E0607192516BF5F361E6FC2DEAC3CD81969ECA47D3155E4F4436C48",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductCore",
+            "scratchSha256": "DA5063CB1A6629C5D0DD33FBFCA9885A325EE1A437F6F216BE3D4A0F02F4C68C",
+            "productionSha256": "CE0CFCFA2785EEC9E6CCDA151670953FF40F83DEE7993E0C70818B112252ABC9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelThetaIdentification",
+            "scratchSha256": "A1641D36E62EDF9F632FFE824BCE57356303DCA67330957C15E7A8A03F66C2A8",
+            "productionSha256": "EC510910C93E412B2F6EC87B82C24C5702C10F5F7ABAF02D3BA3EE81292A66BF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelHolomorphic",
+            "scratchSha256": "0DDF84618FFA48AB20C7DE768F55488FBB4929947A5ECA12726FF2305E90B25F",
+            "productionSha256": "457B2EDD0FF0914AA13AEDBCF0FDB3B7868B7511138AF95C0BB85848AA4345A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelEtaTransform",
+            "scratchSha256": "E42A85348AD0E79992EE83CA084C3145FD5563603648D1B23899EB4E6BACB087",
+            "productionSha256": "62CECB495EA5F551D61DA707D487D028CAB758AFF7BE576503F82E947FD39858",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelThetaTransform",
+            "scratchSha256": "7CCFB8E556F5D898A25E4A20A9F5182EC7C613431283A1512C55E6B2EA21BEE9",
+            "productionSha256": "33C7BD130F44D104E1948D5237F02F8540E26D116C16BDDA9FA35067D5326323",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelInversion",
+            "scratchSha256": "AC9599038F51D3FFFD8A71ABF3DDC48F349B950B87B723A5F04717E95D08E320",
+            "productionSha256": "EB3A53B45E0FA29EB2CD2830B8EF92B026A3ABBD2D0848093998319A68B72905",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelSL2Transformation",
+            "scratchSha256": "BBA527445AA96448F1F18050543490FEFC9EC69558CD4DB39F6A7FDFD88DC828",
+            "productionSha256": "8EE8B0BDDBD5EF3ED66D70CF0FF22D01CCA42DAB3F51F63CCD3763CCD8668927",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelLevelShiftFactors",
+            "scratchSha256": "CFE3ECE91AADF27B102F115E16B7A7084ADB3608B074930DA71375688F1D958F",
+            "productionSha256": "6204FB78F62E863EA624458EB2A445D83B0169838C57D11F7AFDA9E1FD6C0C05",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelLevelShifts",
+            "scratchSha256": "B620EDE9B7A14D4DE6BB9C815933B0FFB2AE2CB356E924368FD8158D7DE42DA7",
+            "productionSha256": "C785DB55BCA44FBF547F8639D0A25A98DD063DD355CE7964367D27F33D17C6DD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelResidueReduction",
+            "scratchSha256": "E13839FB9A9B56F1414416A4209D81243A36906E65D4538AA64E6D8E4B8CA85D",
+            "productionSha256": "C991D7C7E886161E067EE530C45E3579C8166B418A5ECD1F940F6B0241F71AA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductTransformation",
+            "scratchSha256": "B275809DABB5ADFDB1E96C2475E4C8AD8696E83B4924A6BAAAAA9435AE7D22D6",
+            "productionSha256": "806C694FC0C26984C77DC16FF04EDDBBFA17E12DED9F6E9506B49C92F4F27FE2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelStableCoefficients",
+            "scratchSha256": "1369BF3384F5B580F00A26EF7AA2D80D3F55AA87259523B0784E93AF834A79CD",
+            "productionSha256": "1369BF3384F5B580F00A26EF7AA2D80D3F55AA87259523B0784E93AF834A79CD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductLocalUniform",
+            "scratchSha256": "83E0E3E65BF5BC9AF6538C925AAA0309489B927834A387DAD142FACD280D02E4",
+            "productionSha256": "6E162369A867E9114374492FB3E6EAD3B743D48927A395D91914923367765D82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductTaylorExpansion",
+            "scratchSha256": "AB2E3D8C2EC0FB5F908A3DE694FDF5CA615DFF92496A9A09BF52DC60354E7B99",
+            "productionSha256": "14FBE8B4F975C58957DA9718779D4D42D8B05C9CD2C05F9B2BF8B24BD13B5C82",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelPolynomialFactors",
+            "scratchSha256": "39B062696F1F6605C2139F67BF9BCC38CCC5FBFD51A132C59C2A427755A98DAB",
+            "productionSha256": "8A95292C1A484ACFD06108024A29A374493B661471A79A4C42A306EC6DF6D20E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelIntegralCoefficients",
+            "scratchSha256": "EB3F835F56553AF1A6BE7C4C725510D4657E3927DDD205D2C576AA5397EE60AF",
+            "productionSha256": "B9143CD7B4611E643F5283A9B8B0BFDAF8F3A5E9B8951FFEF47B165212ECF341",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelQParameter",
+            "scratchSha256": "C4A6666CD5B5965225022646EBEA8C1C173A1CAF06966076191E653423D23E32",
+            "productionSha256": "01CD7C7E7FA309FDD985DC7A7735D25BC5CECCC5792A99117202BFEC20B12765",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelResidueProductIndices",
+            "scratchSha256": "71F28C0E52B1A77DDD9281659279ACBC4D49A17EEF264663FD580E4DAA1A76D5",
+            "productionSha256": "E3AD8B00D5D035D01E86323AE51F9707B43544ACCC108CA5EFD00AA29C33DF26",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelResidueProductStreams",
+            "scratchSha256": "66E8D2C5CC1C5270F608D2F2F1B2D2D7B60B6AA561D5DB837622B027E7BC50DB",
+            "productionSha256": "7CE8FBED0BD36A84E2255A7CD4EAB7C29D73B420E3D23B955C2CE409E02E661D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelLeadingUnit",
+            "scratchSha256": "535F2F68E8CA4636855DD741B8BE2A97B54B8E8471A32AC07EAE404EBA3B1AA3",
+            "productionSha256": "378590BEA5F0C166D363DE84027B7EC17580383845D37F9CF88654F1C0C5B559",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelNormalizedProduct",
+            "scratchSha256": "C5768706D2ACF58FD6B99FB1DA3CA1C341E060A1776EF145F68F7E27CD6C798D",
+            "productionSha256": "C9C126CE94173B4D948DA29A15B8175DFCC40D0F53646BDC3C9668A68DF268ED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelCoefficientSeries",
+            "scratchSha256": "94AFE5EED031D9BA9A74313E27B1DE2ACA4C3497F6F45DF5EAC83987EF70EA89",
+            "productionSha256": "F2D0665521CE84E06D6582D60AEEB48CB9E18CAB0FE37E8D83C54F1570AA7BC2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelIntegralExpansion",
+            "scratchSha256": "CAD45C7A416A6989C955D8D461268463D33CAA3C6A6259C7901B2E3F6603AD4C",
+            "productionSha256": "722CF61C49C2901DBB635670C2570A8C82962FB6C58E7CA19A6161E5BE11D89E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelFiniteSeriesProducts",
+            "scratchSha256": "E7F68E7E489C53F9C1A6AD95924E117C1E7DDB8390EF75FF8C6E7062F4DFFF72",
+            "productionSha256": "E97FFED3D07D504EA893EC0DB49653945C34EFCE97B8530504376D2C39B8BC1E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductCoefficients",
+            "scratchSha256": "6FE9E8DEE091E34B279F8C0E843C92F50690801D039FADC170246DEC4826EB8C",
+            "productionSha256": "B7C3C09E3F05D872411A9148AA39611929ED0B41B894EA72A1223892C23D8BA8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductLeadingCoefficient",
+            "scratchSha256": "DF51065DC3BB9CA495F9E1C6DAA7C87C0F1FDA8D812663D443D8C335F09A0F2A",
+            "productionSha256": "0273A682FB2AD84F171784048E6CE4EE9AB7CCC8461B879781F179991020DEB0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelProductPhases",
+            "scratchSha256": "0FC48D97E099F4DC67B2E3507CC21143C917DFDA731BDCCB83FF419F007BEFF9",
+            "productionSha256": "615964A758D24F7613CBE6FE258D59B755036EEC6620481C1C2371902F5A449B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelFiniteProductExpansion",
+            "scratchSha256": "8CC732DBA4C62465B0D70684E7375D33E75A56F5BC6DB9825AF27BCF7E6DD879",
+            "productionSha256": "C99F5491E5FD8CDC23859E239CE138673CC9F55039CF5008C71997FDBF5CD037",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedAuxiliaryFunction",
+            "scratchSha256": "8BDE2F520D51FDE63B34568B0DED07FCB271A2099461B578653E7BFDE1B2A381",
+            "productionSha256": "B7F7DF6DF48066D25FFFC958626228582E1D8658F15040DB02BC26AB6D844E74",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSiegelCuspPermutation",
+            "scratchSha256": "668EEA83847DDCF9AEB52402A95ACF0ECF84F623794A6AC4C2D3C5B97A24692D",
+            "productionSha256": "62E90FEEC195B07530012EA9EA50D473B1CBAA58C7AE66A0933F2170814C72B6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedAuxiliaryCuspDecay",
+            "scratchSha256": "2EF80C37622431E1EC02030E69C684B1284E894788D65A5C81F4D1209CC6EC0C",
+            "productionSha256": "C433ACC7DE6FC6ECC2CC25B7AC3DC7BAF02479D76DC892727E1D5CC18A81D349",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedAuxiliaryHolomorphic",
+            "scratchSha256": "85667816541A661D67DC8C97DFFA1A04D5B2473E8F3ADF048F9FF35A715D7577",
+            "productionSha256": "D7DA96DF06486658A81223F09DE40389CF8453E77B0AB70CDB1DF1BCA82E49A4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedAuxiliaryModularForm",
+            "scratchSha256": "EC55768A94F07D0CA97B5BF7ACC2A25DB2076AE8DEE3D0F3EB97E15618252A51",
+            "productionSha256": "CB835C6CA963DEEA3A4ED2788FC6241AF26D4A66F93C0C2395CD466D4849244C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedDiscriminantSeries",
+            "scratchSha256": "74541368940F47D76DC21EFF2451A058C38FD40948E900BC19451C3D5ECDCD25",
+            "productionSha256": "94A8CAECFFEC0EEE2E008B823426469161191E8B0C7FCB3705C7B0CD0B0DC90A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedSeriesOperations",
+            "scratchSha256": "5A6001BBC079097D403EAAB579A4E0E8AD096037AE2C5A4AAAFA44E3208198E9",
+            "productionSha256": "2983F8110D22C0466FBEEF9A6216D6EFBAD46B1BD357183030022B4B1F0A0C08",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedShiftedCoefficients",
+            "scratchSha256": "4322EA7C189069E15D911DEE84E807E101F7E606EE7E221A390EFD0FCC301B65",
+            "productionSha256": "8EFD63B4C98C3DAEED8740B9CF6D746BB38D76A6570F2FE80B3F5C1C1BFEE091",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedShiftedSeries",
+            "scratchSha256": "AFFF7EA1C30179FB827A2F31D1227DF93A120044F0F5A7DBA436204933866557",
+            "productionSha256": "4A685E155BEAD0AE53661DC83841DA20DDE8B14D7E33AC12687C5EEB71F0A86C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedWidthOneIdentification",
+            "scratchSha256": "47B772744FAEB0D82C28531A220F9010E66375A34C9C383E0F65F39B8294823F",
+            "productionSha256": "B40F5CA8D096284F0B97283F0D0467B3769D3A8814F2AE1083476AB9D77934C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedIntegralQExpansion",
+            "scratchSha256": "87C7ABED51C145DEB78AFF1B11B710F74B97D0D4CA1D876630D088B714531C42",
+            "productionSha256": "81DA33AF3CBE946FF6E75AA2E4AC6AC7B5637A428C54FA3DDBF31EC51A7EB717",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedTranslatedIntegralExpansion",
+            "scratchSha256": "8B7EEAC25F4B672FCA442118812FDDCBC939653CD6F0A7EF41858FEE636314E7",
+            "productionSha256": "EC79878912A229D6AFA1E89918A6FE5C4E27AAF66D329E34924ADF0D06332E7A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedScaledOrders",
+            "scratchSha256": "99D5120BF2A993F3A02B909FCC1E700C8C25E3990B6F2076F7739EB1A19099E1",
+            "productionSha256": "06AFED63AFEB9EA611BFCD03C1597CC5B86BD55E705F5D07340C5DF878C8D984",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePeakedOrderGapDecay",
+            "scratchSha256": "16DE073FBA937202D4DA69E5E7046E90B33DEA92005C40C53899ADD1116836F5",
+            "productionSha256": "23F8E29B5D6BAA5CB7D567F42E215AA5F95C56A2AF1D7F1BCFA2EC158B44F601",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceActualPeakedAuxiliary",
+            "scratchSha256": "F1FA841B5B15E3EA67479B6B3629CAC3BE560627D9A69E28CFB94BCDD40D1556",
+            "productionSha256": "7CD31E8FBEACA2EB981761DC0C225EC98F8C01B5CD322EFD6D58E935885ED83D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 786 distinct names from 786 exhaustive scratch checks are retained: 786 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The constructed auxiliary must still be applied to the even-weight trace theorem on the correct conjugate subgroup. Uniform level-power slash integrality, the action on every reduced rational relation, the signed-index lower bound and original degree/genus preservation remain open. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9270-console.log",
+      "sha256": "9072478247F280DA0D11306E71BD2C5601352D5FBBA0816D0442015920BEA977"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9270-console.log",
+      "sha256": "B2E1AD5B8CE45C0C70E42D0792ADC4A2A2E0B54A11A3D5DE199221EEA066BA50"
+    }
+  ]
+}

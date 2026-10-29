@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing A]
+
+/-- Exact original-object consumer of `matrixRepresentationConjugate_continuous`. -/
+theorem actual_matrix_representation_conjugation_matrixRepresentationConjugate_continuous_source [TopologicalSpace G]
+    [TopologicalSpace A] [IsTopologicalRing A]
+    (ρ : G →* GeneralLinearGroup ι A) (hρ : Continuous ρ) (U : GeneralLinearGroup ι A) :
+    Continuous (matrixRepresentationConjugate ρ U) :=
+  matrixRepresentationConjugate_continuous ρ hρ U
+
+end
+

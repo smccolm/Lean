@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι κ O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [Fintype κ] [DecidableEq κ] [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `isClosed_coefficientRepresentationMatrixAlgebra`. -/
+theorem actual_coefficient_representation_matrix_algebra_isClosed_coefficientRepresentationMatrixAlgebra_source
+    [TopologicalSpace R] [IsTopologicalRing R]
+    (S : Subalgebra O R) (hS : IsClosed (S : Set R))
+    (ρ : G →* GeneralLinearGroup ι R) (a : κ → G)
+    (b : Basis κ R (Matrix ι ι R)) (hb : ∀ i, b i = (ρ (a i)).val)
+    (hcoord : ∀ x i, b.repr (ρ x).val i ∈ S) :
+    IsClosed (coefficientRepresentationMatrixAlgebra S ρ : Set (Matrix ι ι R)) :=
+  isClosed_coefficientRepresentationMatrixAlgebra S hS ρ a b hb hcoord
+
+end
+

@@ -1,0 +1,7 @@
+### Actual original universal arithmetic matrix spanning and scalar stabilizers — 10 October 2026
+
+The actual completed unramified fixed-determinant arithmetic coefficient ring has its proved original residue equivalence. Its genuine coefficient reduction is surjective with exactly the actual maximal ideal as kernel, and the proved whole universal representation residue identity identifies the actual reduced representation with the original residual arithmetic representation. Explicit absolute irreducibility of that original representation therefore supplies the genuine residual hypothesis of the proved local-ring spanning theorem. The same whole universal arithmetic matrices span their actual completed coefficient matrix algebra. The proved centralizer theorem then identifies every original invertible stabilizer as a scalar unit in that same completed coefficient ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedMatrixSpanning](Extension/Dubon2026/ArithmeticUnramifiedMatrixSpanning.lean).

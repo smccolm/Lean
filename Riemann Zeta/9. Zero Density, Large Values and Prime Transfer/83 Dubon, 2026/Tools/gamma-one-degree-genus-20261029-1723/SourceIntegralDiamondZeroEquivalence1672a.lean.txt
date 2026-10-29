@@ -1,0 +1,38 @@
+import SourceIntegralDiamondZeroForward1671a
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> nonzero reduced denominators. Apply the proved forward kernel
+preservation to the actual inverse diamond and cancel the level power.
+This makes reduction-zero equivalence a theorem for every actual
+integral witness, not an assumption about a selected representative. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem red_zero_iff_integral_diamond (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) {k : ℤ} (hk : Even k) (g : Gamma0 N)
+    (f F : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ} {n : ℕ}
+    (hp : IsIntegralQExp f p) (hP : IsIntegralQExp F P)
+    (hF : (⇑F : ℍ → ℂ) = (N : ℂ) ^ n • ((⇑f : ℍ → ℂ) ∣[k] g.val)) :
+    red ℓ P = 0 ↔ red ℓ p = 0 := by
+  refine ⟨fun hz => ?_, red_zero_of_integral_diamond N ℓ hℓN hk g f F hp hP hF⟩
+  let H : ModularForm (Gamma1 N) k := (N : ℂ) ^ n • f
+  have hH : IsIntegralQExp H (PowerSeries.C ((N : ℤ) ^ n) * p) := by
+    simpa only [Int.cast_pow, Int.cast_natCast] using integralQExp_int_smul f hp ((N : ℤ) ^ n)
+  have he : (⇑H : ℍ → ℂ) = (N : ℂ) ^ 0 • ((⇑F : ℍ → ℂ) ∣[k] (g⁻¹).val) := by
+    change (N : ℂ) ^ n • (⇑f : ℍ → ℂ) =
+      (N : ℂ) ^ 0 • ((⇑F : ℍ → ℂ) ∣[k] g.val⁻¹)
+    rw [pow_zero, one_smul, hF, ModularForm.SL_smul_slash,
+      ← SlashAction.slash_mul, mul_inv_cancel, SlashAction.slash_one]
+  have hr := red_zero_of_integral_diamond N ℓ hℓN hk g⁻¹ F H hP hH he hz
+  rw [map_mul, red_C] at hr
+  have hN : (N : ZMod ℓ) ≠ 0 := by
+    intro hz
+    exact hℓN ((ZMod.natCast_eq_zero_iff N ℓ).mp hz)
+  apply (mul_eq_zero.mp hr).resolve_left
+  apply HahnSeries.C_ne_zero
+  simpa only [Int.cast_pow, Int.cast_natCast] using pow_ne_zero n hN
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

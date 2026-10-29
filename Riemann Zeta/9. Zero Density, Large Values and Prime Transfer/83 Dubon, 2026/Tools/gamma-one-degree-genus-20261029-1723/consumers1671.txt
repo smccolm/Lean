@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι A B : Type} [Fintype ι] [DecidableEq ι] [CommRing A] [CommRing B]
+
+/-- Exact original-object consumer of `generalLinearGroup_strict_lift`. -/
+theorem actual_local_coefficient_matrix_lifting_generalLinearGroup_strict_lift_source {K : Type} [CommRing K]
+    (f : A →+* B) (hf : Function.Surjective f) [IsLocalHom f]
+    (rA : A →+* K) (rB : B →+* K) (hr : rB.comp f = rA)
+    (U : GeneralLinearGroup ι B) (hU : GeneralLinearGroup.map rB U = 1) :
+    ∃ V : GeneralLinearGroup ι A,
+      GeneralLinearGroup.map f V = U ∧ GeneralLinearGroup.map rA V = 1 :=
+  generalLinearGroup_strict_lift f hf rA rB hr U hU
+
+end
+

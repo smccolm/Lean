@@ -1,0 +1,26 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L]
+
+/-- Exact original-object consumer of `trueResidueScalarExtension_eq`. -/
+theorem actual_true_residue_scalar_extension_trueResidueScalarExtension_eq_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    (σ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp ρ = σ) :
+    letI : Algebra (IsLocalRing.ResidueField R) L :=
+      ((algebraMap (IsLocalRing.ResidueField O) L).comp eR.toRingHom).toAlgebra
+    matrixCoefficientExtension (L := L)
+      ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ) =
+        matrixCoefficientExtension (L := L) σ :=
+  trueResidueScalarExtension_eq (L := L) eR ρ σ hσ
+
+end
+

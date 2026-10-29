@@ -1,0 +1,77 @@
+import Dubon2026.SourceIntegralDiamondChosenReduction
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> preservation of all ratio relations. Native modular Fourier
+linearity and slash multiplication give the exact integral witness
+products and differences. Cross-products will be ordered with the
+same weight k+k', avoiding an unnecessary weight-cast branch. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem integralQExp_mul {N : ℕ} {k l : ℤ}
+    (f : ModularForm (Gamma1 N) k) (h : ModularForm (Gamma1 N) l)
+    {p q : PowerSeries ℤ} (hp : IsIntegralQExp f p) (hq : IsIntegralQExp h q) :
+    IsIntegralQExp (f.mul h) (p * q) := by
+  unfold IsIntegralQExp
+  rw [map_mul, hp, hq, ModularForm.qExpansion_mul one_pos
+    (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+
+theorem integralQExp_sub {N : ℕ} {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) {p q : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (hq : IsIntegralQExp h q) :
+    IsIntegralQExp (f - h) (p - q) := by
+  unfold IsIntegralQExp
+  rw [map_sub, hp, hq, ModularForm.qExpansion_sub one_pos
+    (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+
+theorem scaledDiamond_mul (N : ℕ) (g : Gamma0 N) (a b : ℕ) {k l : ℤ}
+    (f : ModularForm (Gamma1 N) k) (h : ModularForm (Gamma1 N) l) :
+    scaledDiamond N g (a + b) (f.mul h) =
+      (scaledDiamond N g a f).mul (scaledDiamond N g b h) := by
+  ext τ
+  change ((N : ℂ) ^ (a + b) • (((⇑f : ℍ → ℂ) * (⇑h : ℍ → ℂ)) ∣[k + l] g.val)) τ =
+    (((N : ℂ) ^ a • ((⇑f : ℍ → ℂ) ∣[k] g.val)) *
+      ((N : ℂ) ^ b • ((⇑h : ℍ → ℂ) ∣[l] g.val))) τ
+  rw [ModularForm.mul_slash_SL2]
+  simp only [pow_add, Pi.smul_apply, Pi.mul_apply, smul_eq_mul]
+  ring
+
+theorem integralQExp_scaled_mul (N : ℕ) (g : Gamma0 N) {a b : ℕ} {k l : ℤ}
+    (f : ModularForm (Gamma1 N) k) (h : ModularForm (Gamma1 N) l)
+    {P Q : PowerSeries ℤ} (hP : IsIntegralQExp (scaledDiamond N g a f) P)
+    (hQ : IsIntegralQExp (scaledDiamond N g b h) Q) :
+    IsIntegralQExp (scaledDiamond N g (a + b) (f.mul h)) (P * Q) := by
+  rw [scaledDiamond_mul]
+  exact integralQExp_mul _ _ hP hQ
+
+theorem scaledDiamond_sub (N : ℕ) (g : Gamma0 N) (a b : ℕ) {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) :
+    scaledDiamond N g (a + b) (f - h) =
+      (N : ℂ) ^ b • scaledDiamond N g a f - (N : ℂ) ^ a • scaledDiamond N g b h := by
+  ext τ
+  change ((N : ℂ) ^ (a + b) • (((⇑f : ℍ → ℂ) - (⇑h : ℍ → ℂ)) ∣[k] g.val)) τ =
+    ((N : ℂ) ^ b • ((N : ℂ) ^ a • ((⇑f : ℍ → ℂ) ∣[k] g.val)) -
+      (N : ℂ) ^ a • ((N : ℂ) ^ b • ((⇑h : ℍ → ℂ) ∣[k] g.val))) τ
+  rw [sub_eq_add_neg, SlashAction.add_slash, SlashAction.neg_slash]
+  simp only [pow_add, Pi.smul_apply, Pi.sub_apply, Pi.add_apply, Pi.neg_apply, smul_eq_mul]
+  ring
+
+theorem integralQExp_scaled_sub (N : ℕ) (g : Gamma0 N) {a b : ℕ} {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) {P Q : PowerSeries ℤ}
+    (hP : IsIntegralQExp (scaledDiamond N g a f) P)
+    (hQ : IsIntegralQExp (scaledDiamond N g b h) Q) :
+    IsIntegralQExp (scaledDiamond N g (a + b) (f - h))
+      (PowerSeries.C ((N : ℤ) ^ b) * P - PowerSeries.C ((N : ℤ) ^ a) * Q) := by
+  rw [scaledDiamond_sub]
+  refine integralQExp_sub
+    ((N : ℂ) ^ b • scaledDiamond N g a f)
+    ((N : ℂ) ^ a • scaledDiamond N g b h) ?_ ?_
+  · simpa only [Int.cast_pow, Int.cast_natCast] using
+      integralQExp_int_smul (scaledDiamond N g a f) hP ((N : ℤ) ^ b)
+  · simpa only [Int.cast_pow, Int.cast_natCast] using
+      integralQExp_int_smul (scaledDiamond N g b h) hQ ((N : ℤ) ^ a)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

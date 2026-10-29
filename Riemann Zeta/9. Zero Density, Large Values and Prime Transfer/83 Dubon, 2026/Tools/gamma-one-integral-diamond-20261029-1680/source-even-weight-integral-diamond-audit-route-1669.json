@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-29T06:40:59.211331+00:00",
+  "chain": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> signed-index lower bound -> reduced field action -> reduced relation preservation -> actual level-cleared integral diamond forms.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reduced-diamond-native-reuse-review-1663.json",
+      "sha256": "4D6E390A6FB9959484B75DAFDA2CBF01A793C7BBC6335C348E7C1C22A6F0092F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-field-action-1662\\manifest.json",
+      "sha256": "B171D64BDD614ED0281FBFE706E0BC5123CC0B3948DDCA9CE1289FB4B37723ED"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Even Weight Integral Diamond Assessment 2026-10-28.md",
+      "sha256": "0F3C9608CB381BA2ADA3051C9C31F66C81BA0006D9699C9ECED89DCE5763D262"
+    }
+  ],
+  "shorterRoute": "Reuse native rational normalized cusp diamond germs and the actual weight-factor identities. Native integer eta-unit cancellation passes to modular forms. Full slash integrality and rational-integral descent construct the actual integer Fourier series without another modular rational basis or common-denominator construction.",
+  "assumptionsToDischarge": [
+    "Actual even-weight cusp diamonds have rational Fourier coefficients derived from the original rational series.",
+    "The actual discriminant and its integer eta-unit inverse pass rationality to modular diamonds.",
+    "The actual full slash theorem gives a uniform level power; sparse width change reads width-one coefficients.",
+    "Rational algebraic integers construct the integer power series and actual level-cleared Gamma1 diamond form."
+  ],
+  "remaining": "Reduction-zero preservation, independence of ratio representatives, full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

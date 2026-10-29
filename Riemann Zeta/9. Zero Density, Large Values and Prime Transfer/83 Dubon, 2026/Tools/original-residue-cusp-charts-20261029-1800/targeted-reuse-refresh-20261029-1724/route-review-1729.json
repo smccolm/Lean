@@ -1,0 +1,44 @@
+{
+  "recordedUTC": "2026-10-29T08:58:48.382071+00:00",
+  "acceptedRoute": "Pinned Anthropic original Gamma1 degree/genus proof references, adapted through the already proved native objects and default proof limits.",
+  "nativeReuse": [
+    "Original integral-ratio representations and Eisenstein separation",
+    "Artin fixed-field degree",
+    "Laurent coefficient independence",
+    "Finite residue-coordinate degree and original degree assembly",
+    "Separating-residue-coordinate genus inequality",
+    "Mathlib scalar tensor and fraction-field equivalence APIs"
+  ],
+  "exactTarget": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> finite homogeneous Gamma1 Hecke realization -> original degree/genus preservation",
+  "mathlibComparison": [
+    {
+      "path": "Mathlib/NumberTheory/ModularForms/LFunction.lean",
+      "pinnedLocalExists": false,
+      "sameBytes": false,
+      "localSha256": null
+    },
+    {
+      "path": "Mathlib/NumberTheory/ModularForms/NormTrace.lean",
+      "pinnedLocalExists": true,
+      "sameBytes": false,
+      "localSha256": "83D70D1EEB5224B86AA4BBC21A0E165E559D300DD7EA87624518DE9C290DAC52"
+    },
+    {
+      "path": "Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+      "pinnedLocalExists": true,
+      "sameBytes": false,
+      "localSha256": "27D26FE4EFC2CDCD47FBEFE3E4CFC79A1FEB59F24E71023B41D239DCBAC99B0E"
+    }
+  ],
+  "limitations": [
+    "External files are inert source references; no external build or transitive axiom audit is claimed.",
+    "Imperial Automorphic.lean defines a restricted weight-two quaternionic notion and contains admitted declarations; it cannot discharge original all-weight association or higher symmetric-power continuation.",
+    "Normalizer statements concern real congruence-subgroup normalizers and group quotients; they do not construct the required characteristic-p original function-field action or genus comparison.",
+    "The inspected Mathlib L-function results give the classical modular-form L-function, not all higher symmetric-power Euler products.",
+    "No direct complete formalization of the Dubon endpoint was found in the searches; this is a bounded search result, not a claim of global nonexistence."
+  ],
+  "sourceIntegrity": "Selected Imperial/Mathlib contents verified against their pinned Git tree blobs; all downloaded files have SHA256 records.",
+  "rootPinsChanged": false,
+  "externalBuild": false,
+  "externalImport": false
+}

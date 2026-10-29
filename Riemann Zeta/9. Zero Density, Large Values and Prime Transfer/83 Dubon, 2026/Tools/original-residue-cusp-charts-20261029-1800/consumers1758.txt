@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedKillsSubgroup_class_iff`. -/
+theorem actual_original_unframed_determinant_inertia_conditions_originalUnframedKillsSubgroup_class_iff_source
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u}) (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (N : Subgroup H) (ρ : OriginalContinuousFramedFiber eA H σ) :
+    originalUnframedKillsSubgroup eA H σ N (originalUnframedClass eA H σ ρ) ↔
+      N ≤ ρ.val.toMonoidHom.ker :=
+  originalUnframedKillsSubgroup_class_iff eA H σ N ρ
+
+end
+

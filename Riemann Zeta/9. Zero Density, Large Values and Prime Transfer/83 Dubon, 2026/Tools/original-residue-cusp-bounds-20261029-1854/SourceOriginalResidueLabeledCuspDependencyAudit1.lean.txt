@@ -1,0 +1,41 @@
+import SourceIntegralSlashRaisedLevelOne
+import SourceIntegralSlashCuspTriangular
+import SourceIntegralSlashRaisedCuspFormula
+import SourceIntegralSlashTriangularParameter
+import SourceIntegralSlashRaisedCuspCoefficients
+import SourceIntegralSlashRaisedCuspReduction
+import SourceIntegralSlashRaisedCuspLaurent
+import SourceIntegralSlashRaisedCuspCoordinate
+import SourceIntegralSlashCuspCoordinate
+import SourceOriginalResidueFullCuspChart
+import SourceOriginalResidueCuspBaseComparison
+import SourceOriginalResidueCuspPlaceOverBase
+import SourceOriginalResidueCuspMatrix
+import SourceOriginalResidueLabeledCuspPlace
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply]
+  let localModules : Array Name := #[`SourceIntegralSlashRaisedLevelOne, `SourceIntegralSlashCuspTriangular, `SourceIntegralSlashRaisedCuspFormula, `SourceIntegralSlashTriangularParameter, `SourceIntegralSlashRaisedCuspCoefficients, `SourceIntegralSlashRaisedCuspReduction, `SourceIntegralSlashRaisedCuspLaurent, `SourceIntegralSlashRaisedCuspCoordinate, `SourceIntegralSlashCuspCoordinate, `SourceOriginalResidueFullCuspChart, `SourceOriginalResidueCuspBaseComparison, `SourceOriginalResidueCuspPlaceOverBase, `SourceOriginalResidueCuspMatrix, `SourceOriginalResidueLabeledCuspPlace, `SourceIntegralDiamondNormalizedAction, `SourceIntegralSlashFieldNormalizedRatio, `SourceIntegralDiamondScalarNormalizedAction, `SourceIntegralSlashDiamondGenerator, `SourceIntegralSlashDiamondStabilizer, `SourceOriginalResidueDiamondCuspChart, `SourceOriginalResidueCuspStabilizerPlace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash, `Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart, `Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_apply, `Dubon2026.SourceFunctionField.GammaOne.modularStretch_integral, `ModularFormClass.qExpansion_coeff_unique, `Dubon2026.hasSum_pow_dvd_reindex, `Dubon2026.SourceFunctionField.qTwist_ofPowerSeries, `Dubon2026.SourceFunctionField.qExpand_ofPowerSeries_eq_expand, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_zeta, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_normalized_ratio, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_stabilizer, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom, `Dubon2026.SourceFunctionField.residue_full_generation_and_degree, `Dubon2026.SourceCurve.Place.exists_place_of_laurent_embedding, `Dubon2026.SourceCurve.Place.ord_comapEquiv, `Dubon2026.SourceFunctionField.CoefficientCuspLabels.embedding_spec, `Dubon2026.SourceManin.CuspSpace.exists_dvd_sub_and_isCoprime, `IsCoprime.exists_SL2_row]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL RESIDUE LABELED CUSP DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the value closure of the actual labeled cusp fixed-place construction and the semantic level-raising identity. Both exact coordinates, actual diamond action, prescribed reduction, base restriction and primitive label matrix are proved and consumed. Fiber bounds, finite elliptic charts and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,35 @@
+{
+  "recordedUTC": "2026-10-29T08:25:28.248621+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> actual signed-index lower bound and finite coordinate-degree transport.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-degree-transport-1706\\manifest.json",
+      "sha256": "6EEAD06CE380A1B03B524175B90DA142FF2F15511C143F136B0ADACD36E8EE89"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-degree-reuse-review-1714.json",
+      "sha256": "542D990691C2355C4AE8DBD43CBD4D84D221348A8A67EEB1D80FD0E4A769726D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-kernel-1-scratch-receipt.json",
+      "sha256": "B9AE195E92E7508113D6E285811280C7DA57654C76E0CCB08182BC88AE0967CD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Gamma One Degree Preservation Assessment 2026-10-29.md",
+      "sha256": "D40996A10C13838BAF78491382E7527DD8E0485073DE74A6C127586C41B4CDED"
+    }
+  ],
+  "shorterRoute": "Reuse was checked against native Laurent coefficient independence, finite-coordinate degree transport, finite divisor generation, the algebraically closed j-substitution degree, actual residue-coordinate finiteness and original degree assembly. The pinned Apache-2.0 source is anthropics/fermats-last-theorem at 6e837e75355538c7f80bab5b956861e86c4eacc2; the two newly selected source files are hash-verified inert references. Only the lower base-degree inequality is needed; full base-change equality and an infinite-dimensional transport theory are deferred. Ambient Laurent independence avoids additional chosen internal coordinate maps.",
+  "assumptionsToDischarge": [
+    "The actual j-substitution minimal polynomial maps to the algebraic closure. Its already proved degree there gives a lower bound over the original coefficient field. Native finite divisor generation and the simple-extension tower give the required full modular base degree inequality.",
+    "Full-base fixation, the exact reduced action kernel and Artin degree now give the total signed-index lower bound from positive coordinate degree. No action, kernel, base inclusion or base degree remains a premise.",
+    "Native Laurent coefficient independence and finite polynomial denominator clearing preserve independent finite families over the actual rational-function coordinate. Rank bounds derive finite degree over the original coefficient field; no independence, finiteness or base-change equality certificate is supplied.",
+    "The original integral-ratio field maps into the actual coefficient residue field. Native finite residue degree and integral-ratio inclusion give positive degree there, and coefficient transport supplies the prime-field positivity and return inequality.",
+    "The signed-index bound holds for the actual residue integral-ratio field. The native upper-degree consumer proves original Gamma1 coordinate degree preservation and equality of the actual residue image with the original integral-ratio field at every prime away from the level, including characteristics two and three."
+  ],
+  "remaining": "Original genus preservation is still required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

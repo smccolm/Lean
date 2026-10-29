@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticLocalCotangentDimension",
+  "mathematics": "The actual epsilon comparison, maximal-ideal cotangent comparison, universal differential comparison and original derivation cocycle equivalence compose to identify the ordinary residue-field dual of the literal completed arithmetic cotangent quotient with the genuine local continuous cocycles. Its dimension equals actual local cohomology dimension plus original coboundary dimension. The proved original adjoint invariant formula gives cotangent dual dimension plus original invariant dimension equal to local cohomology dimension plus the square of the matrix size.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Original arithmetic whole-lift and genuine continuous cocycle classifications inspected. Pinned Representation.invariants, LinearMap.finrank_range_add_finrank_ker, Submodule.comapSubtypeEquivOfLe and Module.finrank_matrix inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Before promotion, composed the genuine cotangent-to-cocycle dimension equality by transitivity, avoiding unnecessary rewriting through the deeply nested original completed-ring type."
+  ],
+  "productionLog": "localCotangentDimension1653-focus.log"
+}

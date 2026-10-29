@@ -1,0 +1,1 @@
+The actual coordinate quotient embeds by its joint evaluation into a product of faithful field algebras. Transfer torsion-freeness along this actual injection. Over a principal ideal domain, derive finite freeness from finite generation of the original coordinate algebra using the existing torsion-free module theorem.

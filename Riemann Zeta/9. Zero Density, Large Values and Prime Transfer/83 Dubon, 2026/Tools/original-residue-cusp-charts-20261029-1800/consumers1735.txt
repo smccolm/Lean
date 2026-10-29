@@ -1,0 +1,37 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationTraceAlgebra_isNoetherian`. -/
+theorem actual_completed_presentation_trace_retraction_completedPresentationTraceAlgebra_isNoetherian_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (H : ProfiniteGrp.{0})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    [IsAdicComplete (IsLocalRing.maximalIdeal
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    {L : Type} [Field L]
+    [Algebra (IsLocalRing.ResidueField
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)) L] [IsAlgClosed L]
+    (hR : IsAdic (IsLocalRing.maximalIdeal
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue
+          (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))).comp
+          (completedPresentationRepresentation ρ H q hq))))] (i₀ : ι) :
+    IsNoetherianRing (closedMatrixTraceAlgebra (O := O)
+      (completedPresentationRepresentation ρ H q hq)) :=
+  completedPresentationTraceAlgebra_isNoetherian (L := L) ρ H q hq hR i₀
+
+end
+

@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [WithIdeal R]
+
+/-- Exact original-object consumer of `closedCoefficientSubalgebra_isLocalRing`. -/
+theorem actual_closed_coefficient_subalgebra_locality_closedCoefficientSubalgebra_isLocalRing_source
+    (hR : (WithIdeal.i : Ideal R) = IsLocalRing.maximalIdeal R)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (S : Subalgebra O R) (hS : IsClosed (S : Set R)) : IsLocalRing S :=
+  closedCoefficientSubalgebra_isLocalRing hR eR S hS
+
+end
+

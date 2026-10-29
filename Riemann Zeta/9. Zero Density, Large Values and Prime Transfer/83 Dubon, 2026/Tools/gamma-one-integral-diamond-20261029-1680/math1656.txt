@@ -1,0 +1,1 @@
+The original scalar-matrix map is coefficient-linear into the actual original adjoint invariants and injective for nonempty matrix size. Genuine irreducibility after extension to an algebraically closed field makes it surjective by the proved scalar descent. The resulting original-field linear equivalence proves that the same actual original invariant submodule has dimension one.

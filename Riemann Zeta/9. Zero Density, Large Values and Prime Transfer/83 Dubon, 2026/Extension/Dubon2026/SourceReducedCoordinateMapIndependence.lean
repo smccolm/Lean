@@ -1,0 +1,58 @@
+import Dubon2026.SourceReducedCoordinateIndependence
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> finite coordinate
+degree transport. Polynomial denominator clearing turns a relation over the
+extended rational-function coordinate into a finite coefficient relation.
+The native Laurent coefficient-independence theorem and the proved coordinate
+power independence then eliminate it. This is the needed finite-family
+comparison, with no preservation-of-independence premise. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField Polynomial
+open scoped IntermediateField
+
+theorem linearIndependent_coordinate_coeffMap {K L : Type*} [Field K] [Field L]
+    [Algebra K L] {t : LaurentSeries K} (htr : Transcendental K t)
+    {ι : Type*} [Fintype ι] {v : ι → LaurentSeries K} (hv : LinearIndependent K⟮t⟯ v) :
+    LinearIndependent L⟮coeffMap (algebraMap K L) t⟯
+      (fun i => coeffMap (algebraMap K L) (v i)) := by
+  classical
+  let σ := algebraMap K L
+  have hw := linearIndependent_coeffMap_algebraMap L (linearIndependent_pow_mul htr hv)
+  rw [linearIndependent_iff'] at hw ⊢
+  intro s g hg i hi
+  obtain ⟨d, hd, hs⟩ := exists_common_denom (coeffMap σ t) Finset.univ g
+  choose! P hP using hs
+  have hg' : ∑ j ∈ s, aeval (coeffMap σ t) (P j) * coeffMap σ (v j) = 0 := by
+    have h := congrArg (fun z : LaurentSeries L => aeval (coeffMap σ t) d * z) hg
+    beta_reduce at h
+    rw [mul_zero, Finset.mul_sum] at h
+    rw [← h]
+    refine Finset.sum_congr rfl fun j _ => ?_
+    change _ = aeval (coeffMap σ t) d * ((g j : LaurentSeries L) * coeffMap σ (v j))
+    rw [← mul_assoc, hP j (Finset.mem_univ j)]
+  let n : ℕ := (s.sup fun j => (P j).natDegree) + 1
+  have hdeg : ∀ j ∈ s, (P j).natDegree < n := fun j hj =>
+    Nat.lt_succ_of_le (Finset.le_sup (f := fun j => (P j).natDegree) hj)
+  have hrel : ∑ p ∈ (Finset.range n) ×ˢ s,
+      (P p.2).coeff p.1 • coeffMap σ (t ^ p.1 * v p.2) = 0 := by
+    rw [Finset.sum_product_right, ← hg']
+    refine Finset.sum_congr rfl fun j hj => ?_
+    rw [aeval_eq_sum_range' (hdeg j hj), Finset.sum_mul]
+    refine Finset.sum_congr rfl fun k _ => ?_
+    rw [← HahnSeries.single_zero_mul_eq_smul, map_mul, map_pow, Algebra.smul_def,
+      SourceDifferential.algebraMap_laurentSeries_apply_alt, mul_assoc]
+  have hcoeff : ∀ j ∈ s, ∀ k ∈ Finset.range n, (P j).coeff k = 0 := fun j hj k hk =>
+    hw ((Finset.range n) ×ˢ s) (fun p => (P p.2).coeff p.1) hrel (k, j)
+      (Finset.mem_product.mpr ⟨hk, hj⟩)
+  have hP0 : P i = 0 := by
+    ext k
+    by_cases hk : k < n
+    · rw [hcoeff i hi k (Finset.mem_range.mpr hk), coeff_zero]
+    · rw [coeff_zero, coeff_eq_zero_of_natDegree_lt (lt_of_lt_of_le (hdeg i hi) (not_lt.mp hk))]
+  have h3 : aeval (coeffMap σ t) d * (g i : LaurentSeries L) = 0 := by
+    rw [hP i (Finset.mem_univ i), hP0, map_zero]
+  exact Subtype.ext ((mul_eq_zero.mp h3).resolve_left hd)
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

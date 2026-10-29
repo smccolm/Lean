@@ -1,0 +1,30 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `arithmeticLocalCotangentDual_finrank_add_invariants`. -/
+theorem actual_arithmetic_local_cotangent_dimension_arithmeticLocalCotangentDual_finrank_add_invariants_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ) (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P.asIdeal ≤ σ.ker) :
+    Module.finrank (IsLocalRing.ResidueField O) (ArithmeticLocalCotangentDual a ha p hp hpa σ hσ δ hδ P hP) +
+      Module.finrank (IsLocalRing.ResidueField O) (matrixAdjointRepresentation σ).invariants =
+    Module.finrank (IsLocalRing.ResidueField O)
+      (arithmeticUnramifiedFixedDeterminantClasses a σ hσ P.asIdeal) + Fintype.card ι ^ 2 :=
+  arithmeticLocalCotangentDual_finrank_add_invariants a ha p hp hpa σ hσ δ hδ P hP
+
+end
+

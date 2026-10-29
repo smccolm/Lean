@@ -1,0 +1,128 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T08:18:40.530015+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralDiamondFullBaseInclusion",
+    "SourceIntegralDiamondGammaZeroFixed",
+    "SourceIntegralDiamondEisensteinAction",
+    "SourceIntegralDiamondSignedMembership",
+    "SourceIntegralDiamondExactKernel",
+    "SourceIntegralDiamondFixedFieldDegree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFullBaseInclusion.lean",
+      "sha256": "0E7075085F446FF148B65627B1C9EE894B01D7256972D8E86D2EBEB11042551A",
+      "oleanSha256": "4F5133917D51FC4883AA1590116B712A5B00CE034D4F8BEC16A5FB54B5252D5D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFullBaseInclusion-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFullBaseInclusion-1709.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondGammaZeroFixed.lean",
+      "sha256": "97C3714F4BD17ED215ED322380B50B77284CAF16C72C6795886CE576E88FB8CC",
+      "oleanSha256": "974645062B3CEBD66BA7177722B692CFFBF775963268540EA5A1665A36F29700",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondGammaZeroFixed-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondGammaZeroFixed-1709.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondEisensteinAction.lean",
+      "sha256": "FEB7E98203293FE8C4659057DF85FE304F9C8FA58C6834A92450B7BEE9F5B029",
+      "oleanSha256": "78F9F309F33EF965993362FB52DC23A2262198809BC85F278C6339DEE1BB2C58",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondEisensteinAction-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondEisensteinAction-1709.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondSignedMembership.lean",
+      "sha256": "A7ADAFFBD27DC24E1664CD6BC8CDE717CFB4CE942B72C00427F52BDF7E5CB603",
+      "oleanSha256": "992F6A0C6F98D4628303C0DF2B57642BCE5F005058D6683D09A8F9C743EA5660",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondSignedMembership-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondSignedMembership-1709.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondExactKernel.lean",
+      "sha256": "41211BE5CD17440285E9999D66C41F7C235A4EF53A7F91535E570AF56CE91040",
+      "oleanSha256": "50BFF4CB5AF57D358575EECA6326C4A0CBE32B11247E660163F002CCC0870615",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondExactKernel-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondExactKernel-1709.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedFieldDegree.lean",
+      "sha256": "B4E599FE4A0CE491E3A5F1F18A81ED8D061B13A9820DF07AD8DF50F93C179F6E",
+      "oleanSha256": "512AEC23B5FBD0B8BE38CB1E78C656A25C2F7A7661678B328F806C7073EDB98A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedFieldDegree-1709.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedFieldDegree-1709.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.divisor_j_mem_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_gammaZero_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_fixes_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalReducedField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.red_eisenstein4_ne_zero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eisenstein_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_diagonal_product",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_upperLeft",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_upperLeft_ne_zero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_small_level",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_reducedFieldEquiv_eq_one",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_iff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_range_finite",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_fixedField_degree_eq_signed_relativeIndex"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.divisor_j_mem_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_gammaZero_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_fixes_gammaZeroField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalReducedField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.red_eisenstein4_ne_zero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eisenstein_ratio",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_diagonal_product",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_upperLeft",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_upperLeft_ne_zero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_small_level",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_reducedFieldEquiv_eq_one",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_iff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_range_finite",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_fixedField_degree_eq_signed_relativeIndex"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelAudit1.log",
+  "logSha256": "F257D2576C32CBE37CE41967A0F48CD5A1F14684887732CA84AF1B49B1249349",
+  "auditSha256": "7338F1AB314A1B19DCC953D942B6B83C7978E6B823197C78B5E1995F3D8BE9C1",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelScratchOwnership1709.log",
+  "ownershipSha256": "2999C127211FA5D423F27D8CF59E502F48DC61132904E2E71AAED0D7D0174EA9",
+  "exhaustiveTheorems": 24,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelDependencyAudit1.log",
+  "dependencyAuditSha256": "04190612E32B785C64DB9972DCF5D5A49DE118CB047C8FE9E8E886660C369820",
+  "dependencyAuditSourceSha256": "1B1DF489B1E5E73D17033B5FACE378499CA97A5BEEB638978AC089C5B0E3EEE5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_fixedField_degree_eq_signed_relativeIndex",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalReducedField"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> signed-index lower bound -> actual reduced action, exact kernel and fixed-field degree.",
+  "discharged": [
+    "Native degeneracy maps and the original integral j ratio put every divisor j expansion in the Gamma0 field, hence put the actual full modular base field in the original Gamma1 field.",
+    "Actual even integral Gamma0 ratios are fixed by the constructed diamond pullback. Adjoin extensionality proves fixation of the whole Gamma0 field and therefore of the actual full modular base field.",
+    "The actual integral Eisenstein separator transforms by the upper-left matrix entry. Its nonzero E4 denominator and first-coefficient separation identify every signed class at levels above two, in every coefficient characteristic. At levels one and two all Gamma0 matrices already lie in signed Gamma1.",
+    "The exact action kernel is signed Gamma1 inside Gamma0. Its finite index proves finiteness of the actual automorphism image; native Artin fixed-field theory gives its exact degree, equal to that signed relative index. No kernel, finiteness, fixation or degree premise remains in these consumers."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The total signed-index lower bound still needs the full-base degree comparison and finite coordinate-degree transfer. Original degree/genus preservation, integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-kernel-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "B0008110416F3B9BBA5BC8BBE8D2996B0FB201CB23EE1884A3AD46089C068156",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

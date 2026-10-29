@@ -1,0 +1,7 @@
+### Actual whole original trace-ring representation descent — 10 October 2026
+
+Consume the actual original-dimensional trace left-ideal basis constructed from original residual absolute irreducibility. Construct the whole representation over the literal closed trace coefficient algebra from its genuine left action. Its original column matrix reduces to the identity and is invertible in the ambient original ring; the proved intertwining identity therefore gives strict conjugacy of the entire original representation with this actual coefficient extension.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalTraceRepresentationDescent](Extension/Dubon2026/OriginalTraceRepresentationDescent.lean).

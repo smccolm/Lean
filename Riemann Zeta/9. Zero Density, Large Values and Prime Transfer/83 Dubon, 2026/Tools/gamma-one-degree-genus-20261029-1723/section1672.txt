@@ -1,0 +1,7 @@
+### Actual whole original strict conjugacy and reduction — 10 October 2026
+
+Define strict conjugacy by a genuine invertible original change of basis whose actual residue is the identity and which conjugates every original group element. Construct identity, inverse and product conjugators to prove reflexivity, symmetry and transitivity. The actual reduction homomorphism then proves equality of the entire two original residual representations. This relation concerns whole representations, not only first-order approximations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixRepresentationStrictConjugacy](Extension/Dubon2026/MatrixRepresentationStrictConjugacy.lean).

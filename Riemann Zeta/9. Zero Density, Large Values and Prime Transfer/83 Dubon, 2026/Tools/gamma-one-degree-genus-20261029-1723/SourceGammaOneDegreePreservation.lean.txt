@@ -1,0 +1,40 @@
+import SourceIntegralDiamondIndexLower
+import SourceReducedResidueDegreeTransport
+import Dubon2026.SourceGammaOneIntegralRatioDegreeAssembly
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-
+power continuation -> automorphy -> original all-weight characteristic-zero
+association -> actual homogeneous Gamma1 Hecke character -> original degree
+and genus preservation. The actual residue-coordinate finiteness supplies
+the last prime-field degree input. Transfer the proved signed-index bound
+back to the original residue ratios and consume the native upper-degree
+assembly. This proves original coordinate degree preservation and equality
+of the actual residue image with the integral-ratio field at every prime
+away from the level, including 2 and 3. Genus preservation remains separate.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open IntermediateField CongruenceSubgroup GammaOne GammaOne.CoefficientReduction
+open scoped MatrixGroups IntermediateField
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (residueImage A (Gamma1 N)) :=
+  (residueImage A (Gamma1 N)).toSubalgebra.algebra
+
+theorem signed_index_le_residue_ratio_degree (hℓN : ¬ ℓ ∣ N) :
+    (plusMinus (Gamma1 N)).index ≤
+      relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk (Gamma1 N)) := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  obtain ⟨hp, hle⟩ := ReducedDegreeTransport.primeField_degree_pos_and_le_residue A (Gamma1 N) ℓ hT
+  exact (signed_index_le_reduced_degree_of_pos N ℓ hℓN hp).trans hle
+
+theorem gammaOne_degree_and_residueField_away_level (hℓN : ¬ ℓ ∣ N) :
+    Module.finrank L⟮jCoordinateOver (Gamma1 N) L⟯ (functionFieldOver (Gamma1 N) L) =
+        Module.finrank kk⟮residueJCoordinate A (Gamma1 N)⟯ (residueImage A (Gamma1 N)) ∧
+      residueImage A (Gamma1 N) = qExpFunctionFieldC kk (Gamma1 N) :=
+  gammaOne_degree_and_residueField_of_integral_ratio_index A N
+    (signed_index_le_residue_ratio_degree A N ℓ hℓN)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

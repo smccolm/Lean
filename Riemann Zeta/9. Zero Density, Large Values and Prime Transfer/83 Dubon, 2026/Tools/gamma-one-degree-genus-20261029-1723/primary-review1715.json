@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalTraceLeftIdealBasis",
+  "mathematics": "Consume the genuine idempotent inside the actual original trace matrix algebra and its proved finite generation. Derive the actual reduction-kernel condition from the original representation basis and coordinate descent, and lift every residual column unit using the original matrix-algebra residue surjection. Apply the proved Nakayama spanning and actual column-matrix independence to construct a basis of the same idempotent left ideal indexed by the original representation dimension, with exactly the prescribed original residual columns.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: actual idempotent left ideal, finite module Nakayama, original basis coordinates, true residue maps and local-ring column invertibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "originalLeftIdealBasis1715-focus.log"
+}

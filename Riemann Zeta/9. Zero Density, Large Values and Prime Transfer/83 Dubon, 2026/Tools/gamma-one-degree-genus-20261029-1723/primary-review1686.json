@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalFramedTrueResidueTransport",
+  "mathematics": "Consume the existing original whole continuous fixed-residue framed lift and an actual coefficient algebra morphism preserving the specified original residue identifications. Prove entry by entry, using injectivity of the genuine target residue equivalence and the original whole framed residue condition, that reducing the coefficient-changed representation by the actual target maximal ideal gives exactly the original residual representation transported to that true residue field. Specialize to the identity morphism for the original lift itself.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact existing OriginalContinuousFramedFiber, originalUnframedPostcomp, originalUnframedClass_eq_iff and actual matrixStrictlyConjugate_fiberProduct_of_projections signatures and proofs inspected. D-only drafts derive original topology/residue and residual irreducibility bridges explicitly. Levin Lecture5 Proposition1.6 supplies the source coefficient fiber-product setting; no external Lean proof imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/HopkinsLevitzki.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "originalTrueResidueTransport1686-focus.log"
+}

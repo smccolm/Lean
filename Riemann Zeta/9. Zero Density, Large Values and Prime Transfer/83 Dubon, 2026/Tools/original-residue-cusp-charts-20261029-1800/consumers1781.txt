@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrix_invariants_rankOne_split_conjugacy_iff`. -/
+theorem actual_matrix_invariant_submodule_conjugacy_matrix_invariants_rankOne_split_conjugacy_iff_source
+    (ρ τ : G →* GeneralLinearGroup ι R) (U : GeneralLinearGroup ι R)
+    (hc : ∀ g, τ g = U * ρ g * U⁻¹) :
+    (Nonempty ((matrixStandardRepresentation ρ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (ι → R), IsCompl (matrixStandardRepresentation ρ).invariants N) ↔
+    (Nonempty ((matrixStandardRepresentation τ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (ι → R), IsCompl (matrixStandardRepresentation τ).invariants N) :=
+  matrix_invariants_rankOne_split_conjugacy_iff ρ τ U hc
+
+end
+

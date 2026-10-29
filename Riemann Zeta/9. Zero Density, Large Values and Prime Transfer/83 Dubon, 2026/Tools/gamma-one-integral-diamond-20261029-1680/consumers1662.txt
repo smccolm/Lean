@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι K L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `matrixRepresentation_span_eq_top_of_extension`. -/
+theorem actual_matrix_representation_spanning_descent_matrixRepresentation_span_eq_top_of_extension_source [IsAlgClosed L]
+    (ρ : G →* GeneralLinearGroup ι K)
+    [Representation.IsIrreducible (matrixStandardRepresentation (matrixCoefficientExtension (L := L) ρ))] :
+    Submodule.span K (Set.range (fun g => (ρ g).val)) = ⊤ :=
+  matrixRepresentation_span_eq_top_of_extension (L := L) ρ
+
+end
+

@@ -1,0 +1,80 @@
+import SourceReducedFieldScalarGeneration1721f
+import SourceReducedFieldTensorEmbedding1725c
+import SourceReducedFieldTensorFraction1727c
+import SourceReducedFieldAutomorphismExtension1730d
+import SourceReducedFieldAutomorphismExtensionLaws1732b
+import SourceIntegralDiamondScalarAction1733a
+import SourceIntegralDiamondScalarBaseFixed1734b
+import SourceIntegralDiamondScalarFixedDegree1735a
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceReducedFieldScalarGeneration1721f, `SourceReducedFieldTensorEmbedding1725c, `SourceReducedFieldTensorFraction1727c, `SourceReducedFieldAutomorphismExtension1730d, `SourceReducedFieldAutomorphismExtensionLaws1732b, `SourceIntegralDiamondScalarAction1733a, `SourceIntegralDiamondScalarBaseFixed1734b, `SourceIntegralDiamondScalarFixedDegree1735a]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel, `Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite, `Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Reduced diamond action postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Reduced diamond action theorems discovered"
+  logInfo m!"SOURCE REDUCED DIAMOND SCALAR PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceReducedFieldScalarGeneration1721f
+#lint in SourceReducedFieldTensorEmbedding1725c
+#lint in SourceReducedFieldTensorFraction1727c
+#lint in SourceReducedFieldAutomorphismExtension1730d
+#lint in SourceReducedFieldAutomorphismExtensionLaws1732b
+#lint in SourceIntegralDiamondScalarAction1733a
+#lint in SourceIntegralDiamondScalarBaseFixed1734b
+#lint in SourceIntegralDiamondScalarFixedDegree1735a

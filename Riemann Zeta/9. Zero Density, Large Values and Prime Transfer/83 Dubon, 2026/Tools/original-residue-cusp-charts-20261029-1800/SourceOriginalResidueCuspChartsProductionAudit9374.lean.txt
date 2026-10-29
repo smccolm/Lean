@@ -1,0 +1,278 @@
+import Dubon2026.SourceReducedFieldScalarGeneration
+import Dubon2026.SourceReducedFieldTensorEmbedding
+import Dubon2026.SourceReducedFieldTensorFraction
+import Dubon2026.SourceReducedFieldAutomorphismExtension
+import Dubon2026.SourceReducedFieldAutomorphismExtensionLaws
+import Dubon2026.SourceIntegralDiamondScalarAction
+import Dubon2026.SourceIntegralDiamondScalarBaseFixed
+import Dubon2026.SourceIntegralDiamondScalarFixedDegree
+import Dubon2026.SourceIntegralDiamondScalarFixedField
+import Dubon2026.SourceOriginalResidueCoordinateIndex
+import Dubon2026.SourceIntegralDiamondFixedPlaceTransitivity
+import Dubon2026.SourceOriginalResidueDiamondFixedField
+import Dubon2026.SourceIntegralDiamondBaseFiberTransitivity
+import Dubon2026.SourceOriginalResidueDiamondFiberTransitivity
+import Dubon2026.SourceIntegralSlashCoefficientLocalization
+import Dubon2026.SourceIntegralSlashCoefficientReduction
+import Dubon2026.SourceIntegralSlashReducedSeries
+import Dubon2026.SourceIntegralSlashReducedScaling
+import Dubon2026.SourceIntegralSlashReducedZero
+import Dubon2026.SourceIntegralSlashReducedOperations
+import Dubon2026.SourceIntegralSlashReducedSums
+import Dubon2026.SourceIntegralSlashLinearRelation
+import Dubon2026.SourceIntegralSlashLevelOne
+import Dubon2026.SourceIntegralSlashDiscriminantNormalization
+import Dubon2026.SourceCoordinateAlgebraicChartInjectivity
+import Dubon2026.SourceIntegralSlashReducedPowers
+import Dubon2026.SourceIntegralSlashReducedEquality
+import Dubon2026.SourceIntegralSlashNormalizedGenerators
+import Dubon2026.SourceIntegralSlashNormalizedRatioEquality
+import Dubon2026.SourceIntegralSlashNormalizedMap
+import Dubon2026.SourceIntegralSlashNormalizedLinearRelations
+import Dubon2026.SourceIntegralSlashNormalizedCoordinate
+import Dubon2026.SourceMonoidGeneratorAlgebraLift
+import Dubon2026.SourceIntegralSlashNormalizedAlgebra
+import Dubon2026.SourceCoordinateChartFractionExtension
+import Dubon2026.SourceIntegralSlashFieldEmbedding
+import Dubon2026.SourceOriginalResidueSlashFieldEmbedding
+import Dubon2026.SourcePrescribedPrimitiveRootReduction
+import Dubon2026.SourceOriginalResiduePrescribedCuspChart
+import Dubon2026.SourceIntegralSlashReducedTranslation
+import Dubon2026.SourceIntegralSlashReducedTranslationSeries
+import Dubon2026.SourceIntegralSlashDiamondChart
+import Dubon2026.SourceIntegralSlashNormalizedDiamond
+import Dubon2026.SourceIntegralSlashFieldChartIdentities
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_restrict_fixed_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_fullBase_comap_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedSlashSeries_levelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminant
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_one_discriminantSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_discriminant_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminant_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coordinate_algebraic_chart_injective
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mcast
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_one
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_eq_of_intSeriesC_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_pow_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.one_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.mul_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators_subset
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integral_ratio_eq_div_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalized_slash_ratio_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_one
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_linear_relation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_levelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneEisensteinCube
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqModC_eq_discriminant_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqModC_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC_transcendental
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_algHom_adjoin_of_monoid_relations
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_normalizedSlashAlgebraHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_coordinate_chart_fraction_extension
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalReducedSlashFieldHom_of_coordinate_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueSlashFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.discriminantSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminant
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneEisensteinCube
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_zeta
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_neg_matrix
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_discriminant
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_neg_matrix
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceReducedFieldScalarGeneration, `Dubon2026.SourceReducedFieldTensorEmbedding, `Dubon2026.SourceReducedFieldTensorFraction, `Dubon2026.SourceReducedFieldAutomorphismExtension, `Dubon2026.SourceReducedFieldAutomorphismExtensionLaws, `Dubon2026.SourceIntegralDiamondScalarAction, `Dubon2026.SourceIntegralDiamondScalarBaseFixed, `Dubon2026.SourceIntegralDiamondScalarFixedDegree, `Dubon2026.SourceIntegralDiamondScalarFixedField, `Dubon2026.SourceOriginalResidueCoordinateIndex, `Dubon2026.SourceIntegralDiamondFixedPlaceTransitivity, `Dubon2026.SourceOriginalResidueDiamondFixedField, `Dubon2026.SourceIntegralDiamondBaseFiberTransitivity, `Dubon2026.SourceOriginalResidueDiamondFiberTransitivity, `Dubon2026.SourceIntegralSlashCoefficientLocalization, `Dubon2026.SourceIntegralSlashCoefficientReduction, `Dubon2026.SourceIntegralSlashReducedSeries, `Dubon2026.SourceIntegralSlashReducedScaling, `Dubon2026.SourceIntegralSlashReducedZero, `Dubon2026.SourceIntegralSlashReducedOperations, `Dubon2026.SourceIntegralSlashReducedSums, `Dubon2026.SourceIntegralSlashLinearRelation, `Dubon2026.SourceIntegralSlashLevelOne, `Dubon2026.SourceIntegralSlashDiscriminantNormalization, `Dubon2026.SourceCoordinateAlgebraicChartInjectivity, `Dubon2026.SourceIntegralSlashReducedPowers, `Dubon2026.SourceIntegralSlashReducedEquality, `Dubon2026.SourceIntegralSlashNormalizedGenerators, `Dubon2026.SourceIntegralSlashNormalizedRatioEquality, `Dubon2026.SourceIntegralSlashNormalizedMap, `Dubon2026.SourceIntegralSlashNormalizedLinearRelations, `Dubon2026.SourceIntegralSlashNormalizedCoordinate, `Dubon2026.SourceMonoidGeneratorAlgebraLift, `Dubon2026.SourceIntegralSlashNormalizedAlgebra, `Dubon2026.SourceCoordinateChartFractionExtension, `Dubon2026.SourceIntegralSlashFieldEmbedding, `Dubon2026.SourceOriginalResidueSlashFieldEmbedding, `Dubon2026.SourcePrescribedPrimitiveRootReduction, `Dubon2026.SourceOriginalResiduePrescribedCuspChart, `Dubon2026.SourceIntegralSlashReducedTranslation, `Dubon2026.SourceIntegralSlashReducedTranslationSeries, `Dubon2026.SourceIntegralSlashDiamondChart, `Dubon2026.SourceIntegralSlashNormalizedDiamond, `Dubon2026.SourceIntegralSlashFieldChartIdentities]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel, `Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite, `Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex, `Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index, `Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_restrict_fixed_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase, `Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_fullBase_comap_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq, `Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit, `Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing, `Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map, `Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedSlashSeries_levelOne, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminant, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_one_discriminantSeries, `Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_discriminant_ne_zero, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminant_ne_zero, `Dubon2026.SourceFunctionField.IntegralSlash.coordinate_algebraic_chart_injective, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mcast, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_one, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_pow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_pow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_eq_of_intSeriesC_eq, `Dubon2026.SourceFunctionField.IntegralSlash.mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_pow_eq, `Dubon2026.SourceFunctionField.IntegralSlash.one_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.mul_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators_subset, `Dubon2026.SourceFunctionField.IntegralSlash.integral_ratio_eq_div_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalized_slash_ratio_eq, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_eq, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_one, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_smul, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_linear_relation, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_levelOne, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneEisensteinCube, `Dubon2026.SourceFunctionField.IntegralSlash.jqModC_eq_discriminant_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.jqModC_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC_transcendental, `Dubon2026.SourceFunctionField.IntegralSlash.exists_algHom_adjoin_of_monoid_relations, `Dubon2026.SourceFunctionField.IntegralSlash.exists_normalizedSlashAlgebraHom, `Dubon2026.SourceFunctionField.IntegralSlash.exists_coordinate_chart_fraction_extension, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalReducedSlashFieldHom_of_coordinate_degree, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueSlashFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResiduePrescribedCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_zeta, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_neg_matrix, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_neg_matrix, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_discriminant, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_neg_matrix]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction, `Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel, `Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra, `Dubon2026.SourceFunctionField.IntegralSlash.levelReduction, `Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries, `Dubon2026.SourceFunctionField.IntegralSlash.discriminantSeries, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminant, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneEisensteinCube]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUE CUSP CHARTS AUDIT PASS: {count} theorems including private/generated declarations. Actual residue diamond action, fixed field, fiber transitivity and prescribed cusp charts. Diamond equivariance, reverse genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceReducedFieldScalarGeneration
+
+#lint in Dubon2026.SourceReducedFieldTensorEmbedding
+
+#lint in Dubon2026.SourceReducedFieldTensorFraction
+
+#lint in Dubon2026.SourceReducedFieldAutomorphismExtension
+
+#lint in Dubon2026.SourceReducedFieldAutomorphismExtensionLaws
+
+#lint in Dubon2026.SourceIntegralDiamondScalarAction
+
+#lint in Dubon2026.SourceIntegralDiamondScalarBaseFixed
+
+#lint in Dubon2026.SourceIntegralDiamondScalarFixedDegree
+
+#lint in Dubon2026.SourceIntegralDiamondScalarFixedField
+
+#lint in Dubon2026.SourceOriginalResidueCoordinateIndex
+
+#lint in Dubon2026.SourceIntegralDiamondFixedPlaceTransitivity
+
+#lint in Dubon2026.SourceOriginalResidueDiamondFixedField
+
+#lint in Dubon2026.SourceIntegralDiamondBaseFiberTransitivity
+
+#lint in Dubon2026.SourceOriginalResidueDiamondFiberTransitivity
+
+#lint in Dubon2026.SourceIntegralSlashCoefficientLocalization
+
+#lint in Dubon2026.SourceIntegralSlashCoefficientReduction
+
+#lint in Dubon2026.SourceIntegralSlashReducedSeries
+
+#lint in Dubon2026.SourceIntegralSlashReducedScaling
+
+#lint in Dubon2026.SourceIntegralSlashReducedZero
+
+#lint in Dubon2026.SourceIntegralSlashReducedOperations
+
+#lint in Dubon2026.SourceIntegralSlashReducedSums
+
+#lint in Dubon2026.SourceIntegralSlashLinearRelation
+
+#lint in Dubon2026.SourceIntegralSlashLevelOne
+
+#lint in Dubon2026.SourceIntegralSlashDiscriminantNormalization
+
+#lint in Dubon2026.SourceCoordinateAlgebraicChartInjectivity
+
+#lint in Dubon2026.SourceIntegralSlashReducedPowers
+
+#lint in Dubon2026.SourceIntegralSlashReducedEquality
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedGenerators
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedRatioEquality
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedMap
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedLinearRelations
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedCoordinate
+
+#lint in Dubon2026.SourceMonoidGeneratorAlgebraLift
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedAlgebra
+
+#lint in Dubon2026.SourceCoordinateChartFractionExtension
+
+#lint in Dubon2026.SourceIntegralSlashFieldEmbedding
+
+#lint in Dubon2026.SourceOriginalResidueSlashFieldEmbedding
+
+#lint in Dubon2026.SourcePrescribedPrimitiveRootReduction
+
+#lint in Dubon2026.SourceOriginalResiduePrescribedCuspChart
+
+#lint in Dubon2026.SourceIntegralSlashReducedTranslation
+
+#lint in Dubon2026.SourceIntegralSlashReducedTranslationSeries
+
+#lint in Dubon2026.SourceIntegralSlashDiamondChart
+
+#lint in Dubon2026.SourceIntegralSlashNormalizedDiamond
+
+#lint in Dubon2026.SourceIntegralSlashFieldChartIdentities

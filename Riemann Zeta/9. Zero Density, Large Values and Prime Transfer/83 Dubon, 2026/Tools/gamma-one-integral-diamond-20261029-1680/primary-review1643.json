@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalRelativeCotangentDual",
+  "mathematics": "Transport the genuine residue action on the literal relative maximal-ideal quotient through the actual original residue-field equivalence. Its action agrees with the original ring action under true reduction. Taking actual epsilon coefficients identifies original-ring-linear epsilon-valued maps with ordinary linear maps from the same quotient to the original residue field. The inverse uses genuine epsilon vectors, and the comparison is proved linear over that residue field.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned Ideal.Cotangent, actual quotient module and Derivation APIs inspected; original residue maps and actual arithmetic local-ring Noetherian and residue theorems re-read. Stacks 33.16.5 equal-residue hypothesis retained explicitly. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Marked the genuine class-valued transported module definition implicit_reducible as required by the class-definition linter.",
+    "Used explicit original residue-module and epsilon coefficient-action instances while constructing the linear equivalence.",
+    "Changed dependent subtype-value addition to its actual underlying dual-number equality before rewriting. Structure fields now carry their own proofs, avoiding constructor subgoal ordering. Initial failed/warning focuses rejected."
+  ],
+  "productionLog": "originalCotangentDual1643c-focus.log"
+}

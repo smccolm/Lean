@@ -1,0 +1,67 @@
+import SourceEvenWeightFrickeTrace
+import SourceGammaOneAlgebraicFormDenominator1647a
+import SourceEvenWeightBalance1648b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> uniform level-power
+slash integrality. Construct a common nonzero integer denominator for
+the actual even-weight Fricke transform. Its Gamma1 modularity follows
+from the proved actual normalizer; its coefficient algebraicity follows
+from the constructed trace. The existing integral cusp span, scalar
+descent and discriminant cancellation then produce the denominator.
+No common-denominator or algebraic-transform premise remains. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm Pointwise
+variable {N : ℕ} [NeZero N] {k : ℤ}
+
+theorem Gamma1_le_conj_fricke (N : ℕ) [NeZero N] :
+    (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) ≤
+      ConjAct.toConjAct (frickeMatrix N)⁻¹ • (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) := by
+  rintro x ⟨γ, hγ, rfl⟩
+  rw [mem_conj_iff]
+  exact fricke_conj_mem hγ
+
+/-- The actual Fricke transform as a modular form on the original Gamma1 group. -/
+def frickeForm (F : ModularForm (Gamma1 N) k) : ModularForm (Gamma1 N) k :=
+  ModularNormPolynomial.restrict (Gamma1_le_conj_fricke N)
+    (ModularForm.translate F (frickeMatrix N))
+
+theorem coe_frickeForm (F : ModularForm (Gamma1 N) k) :
+    (⇑(frickeForm F) : ℍ → ℂ) = (⇑F : ℍ → ℂ) ∣[k] frickeMatrix N := rfl
+
+theorem isAlgebraic_of_mem_RN {x : ℂ} (hx : x ∈ RN N) : IsAlgebraic ℚ x := by
+  obtain ⟨b, hb⟩ := hx
+  have hprod : IsAlgebraic ℚ ((N : ℂ) ^ b * x) :=
+    (IsFractionRing.isAlgebraic_iff ℤ ℚ ℂ).mp hb.isAlgebraic
+  have hpow : IsAlgebraic ℚ ((N : ℂ) ^ b) := by
+    have hi : IsAlgebraic ℚ (N : ℂ) := by
+      exact_mod_cast (isAlgebraic_algebraMap (x := (N : ℚ)) :
+        IsAlgebraic ℚ (algebraMap ℚ ℂ (N : ℚ)))
+    exact hi.pow b
+  have hne : (N : ℂ) ^ b ≠ 0 := pow_ne_zero _ (Nat.cast_ne_zero.mpr (NeZero.ne N))
+  have hmem := (algebraicClosure ℚ ℂ).div_mem
+    (mem_algebraicClosure_iff.mpr hprod) (mem_algebraicClosure_iff.mpr hpow)
+  apply mem_algebraicClosure_iff.mp
+  simpa only [mul_div_cancel_left₀ _ hne] using hmem
+
+theorem exists_common_nat_denominator_even_fricke (hN : 2 ≤ N) (hk : Even k)
+    (F : ModularForm (Gamma1 N) k) {a : ℕ}
+    (hF : ∀ n : ℕ, IsIntegral ℤ ((N : ℂ) ^ a * (qExpansion 1 F).coeff n)) :
+    ∃ D : ℕ, D ≠ 0 ∧ ∀ n : ℕ, IsIntegral ℤ ((D : ℂ) *
+      (qExpansion 1 ((⇑F : ℍ → ℂ) ∣[k] frickeMatrix N)).coeff n) := by
+  have hcoeff : ∀ n : ℕ, IsAlgebraic ℚ ((qExpansion 1 (frickeForm F)).coeff n) :=
+    fun n => isAlgebraic_of_mem_RN (even_weight_coeff_slash_fricke_mem_RN hN hk F hF n)
+  obtain ⟨u, v, m, hweight⟩ := exists_even_weight_balance ((by decide : Even (12 : ℤ)).add hk)
+  obtain ⟨d, hd, hint⟩ := exists_common_integer_denominator_of_algebraic_form_coefficients
+    N k u v m hweight (frickeForm F) hcoeff
+  refine ⟨(d ^ 2).natAbs, Int.natAbs_ne_zero.mpr (pow_ne_zero 2 hd), fun n => ?_⟩
+  have hcast : (((d ^ 2).natAbs : ℕ) : ℂ) = (d : ℂ) * (d : ℂ) := by
+    rw [← Int.cast_natCast, Int.natAbs_of_nonneg (sq_nonneg d)]
+    push_cast
+    ring
+  rw [hcast, mul_assoc]
+  exact (isIntegral_algebraMap : IsIntegral ℤ (d : ℂ)).mul (hint n)
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

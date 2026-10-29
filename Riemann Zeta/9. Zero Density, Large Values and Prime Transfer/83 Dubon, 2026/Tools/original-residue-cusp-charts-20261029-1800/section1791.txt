@@ -1,0 +1,7 @@
+### Actual commutative Hopf algebra actual point group — 10 October 2026
+
+Construct the original antipode as an algebra homomorphism for a commutative Hopf coordinate algebra. Derive the inverse law for actual algebra-valued points from the Hopf antipode identity and existing convolution multiplication, then construct their group and its exact inverse-evaluation formula.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CommutativeHopfPointsGroup](Extension/Dubon2026/CommutativeHopfPointsGroup.lean).

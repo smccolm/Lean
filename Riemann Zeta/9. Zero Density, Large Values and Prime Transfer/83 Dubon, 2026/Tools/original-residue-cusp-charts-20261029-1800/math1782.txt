@@ -1,0 +1,1 @@
+Define the actual rank-one invariant direct-summand condition on the existing original deformation quotient and derive well-definedness through genuine basis transport.

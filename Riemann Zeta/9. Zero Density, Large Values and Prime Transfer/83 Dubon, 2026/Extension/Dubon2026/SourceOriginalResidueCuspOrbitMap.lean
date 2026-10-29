@@ -1,0 +1,82 @@
+import Dubon2026.SourceOriginalResidueCuspPlaceCovariance
+import Dubon2026.SourceGammaOneCuspCosetPlaces
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp bound. Descend the constructed actual residue places through
+exactly the native signed Gamma1 cosets and integral translation orbits used
+by the proved characteristic-zero cusp count. The required two invariances
+are proved upstream on the same family; every resulting place is a j-pole.
+Surjectivity onto all actual residue j-poles is the remaining count input. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne GammaOne.CuspCounting SourceCurve
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+/-- The actual residue cusp place of the inverse representative of a native signed coset. -/
+def originalResidueCosetCuspPlace (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk) :
+    Cosets (Gamma1 N) → Place kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  Quotient.lift (fun g => originalResidueCuspPlace A N ℓ hℓN φ g⁻¹) (by
+    intro a b hab
+    change originalResidueCuspPlace A N ℓ hℓN φ a⁻¹ = originalResidueCuspPlace A N ℓ hℓN φ b⁻¹
+    have hm := QuotientGroup.leftRel_apply.mp hab
+    have hb : b⁻¹ = (a⁻¹ * b)⁻¹ * a⁻¹ := by group
+    rw [hb]
+    exact (originalResidueCuspPlace_mul_left_signed A N ℓ hℓN φ a⁻¹ (a⁻¹ * b)⁻¹ (inv_mem hm)).symm)
+
+theorem originalResidueCosetCuspPlace_mk (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk) (g : SL(2, ℤ)) :
+    originalResidueCosetCuspPlace A N ℓ hℓN φ (g : Cosets (Gamma1 N)) =
+      originalResidueCuspPlace A N ℓ hℓN φ g⁻¹ := rfl
+
+theorem originalResidueCosetCuspPlace_translation (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (ζ : kkˣ) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (j : ℤ) (x : Cosets (Gamma1 N)) :
+    originalResidueCosetCuspPlace A N ℓ hℓN φ ((translation (Gamma1 N) ^ j) x) =
+      originalResidueCosetCuspPlace A N ℓ hℓN φ x := by
+  rw [translation_zpow_apply]
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    rw [MulAction.Quotient.smul_mk, smul_eq_mul, originalResidueCosetCuspPlace_mk,
+      originalResidueCosetCuspPlace_mk, mul_inv_rev, ← zpow_neg,
+      originalResidueCuspPlace_mul_T_zpow A N ℓ hℓN φ ζ hφ]
+
+/-- The actual residue cusp-place map on the existing integral translation-orbit space. -/
+def originalResidueOrbitCuspPlace (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (ζ : kkˣ) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ) :
+    Orbits (Γ := Gamma1 N) → Place kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  Quotient.lift (originalResidueCosetCuspPlace A N ℓ hℓN φ) (by
+    intro x y hxy
+    obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp hxy
+    obtain ⟨j, hj⟩ := Subgroup.mem_zpowers_iff.mp g.2
+    change (g.val : Equiv.Perm (Cosets (Gamma1 N))) y = x at hg
+    rw [← hg, ← hj]
+    exact originalResidueCosetCuspPlace_translation A N ℓ hℓN φ ζ hφ j y)
+
+theorem originalResidueOrbitCuspPlace_mk (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (ζ : kkˣ) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (x : Cosets (Gamma1 N)) :
+    originalResidueOrbitCuspPlace A N ℓ hℓN φ ζ hφ (SourceManin.orbQ (translation (Gamma1 N)) x) =
+      originalResidueCosetCuspPlace A N ℓ hℓN φ x := rfl
+
+theorem originalResidueOrbitCuspPlace_j_neg (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (ζ : kkˣ) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (q : Orbits (Γ := Gamma1 N)) :
+    (originalResidueOrbitCuspPlace A N ℓ hℓN φ ζ hφ q).ord
+      ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0 := by
+  induction q using Quotient.inductionOn with
+  | h x =>
+    induction x using QuotientGroup.induction_on with
+    | H g => exact originalResidueCuspPlace_j_neg A N ℓ hℓN φ g⁻¹
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

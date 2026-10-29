@@ -1,0 +1,54 @@
+import SourceIntegralSlashDiamondGenerator1804a
+import Dubon2026.SourceIntegralSlashFieldChartIdentities
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual diamond stabilizer chart. Combine the
+proved actual-action generator formula with signed cusp translation, then use
+native field-generator extensionality. The resulting twist identity holds on
+every original field element for the actual diamond action, not an assumed
+family of automorphisms or an equivariance certificate. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K]
+  [CharP K ℓ] [Algebra (ZMod ℓ) K] (hℓN : ¬ ℓ ∣ N)
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+
+theorem originalReducedSlashFieldHom_diamond_stabilizer (ζ : Kˣ)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (β : SL(2, ℤ)) (Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x)
+    (γ : Gamma0 N) (j : ℤ)
+    (hγ : β⁻¹ * γ.val * β = ModularGroup.T ^ j ∨
+      β⁻¹ * γ.val * β = -(ModularGroup.T ^ j))
+    (x : qExpFunctionFieldC K (Gamma1 N)) :
+    Φ (reducedFieldActionOver K N ℓ hℓN γ⁻¹ x) = qTwist (ζ ^ j) (Φ x) := by
+  let θ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K :=
+    { (qTwist (ζ ^ j)).comp Φ.toRingHom with
+      commutes' := fun c => by
+        change qTwist (ζ ^ j) (Φ (algebraMap K _ c)) = _
+        rw [Φ.commutes, PrimeDegreeAux.qTwist_algebraMap] }
+  have he : Φ.comp (reducedFieldActionOver K N ℓ hℓN γ⁻¹).toAlgHom = θ := by
+    apply IntermediateField.algHom_ext_of_eq_adjoin K
+      (originalField_eq_adjoin_normalizedGenerators N K)
+    intro y hy
+    change Φ (reducedFieldActionOver K N ℓ hℓN γ⁻¹ ⟨y, _⟩) =
+      qTwist (ζ ^ j) (Φ ⟨y, _⟩)
+    rw [originalReducedSlashFieldHom_diamond_generator N ℓ hℓN φ hN β Φ hΦ γ⁻¹ hy,
+      inv_inv, hΦ y hy]
+    have hm : γ.val * β = β * (β⁻¹ * γ.val * β) := by group
+    rcases hγ with hγ | hγ
+    · rw [hm, hγ]
+      exact normalizedSlashValue_mul_T_zpow N φ hN ζ hφ ℓ β j hy
+    · rw [hm, hγ, mul_neg, normalizedSlashValue_neg_matrix N φ hN ℓ _ hy]
+      exact normalizedSlashValue_mul_T_zpow N φ hN ζ hφ ℓ β j hy
+  exact AlgHom.congr_fun he x
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

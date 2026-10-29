@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A B C : Type*} [CommRing O] [CommRing A] [CommRing B] [CommRing C]
+  [Algebra O A] [Algebra O B] [Algebra O C]
+
+variable [IsLocalRing O] [IsLocalRing A]
+
+/-- Exact original-object consumer of `coefficientFiberProductReduction_fst`. -/
+theorem actual_coefficient_fiber_product_residue_coefficientFiberProductReduction_fst_source (f : A →ₐ[O] C) (g : B →ₐ[O] C)
+    [IsLocalHom g.toRingHom] (hg : Function.Surjective g)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O) :
+    (letI := coefficientFiberProductAlgebra f g
+     letI := coefficientFiberProduct_isLocalRing f.toRingHom g.toRingHom
+     localCoefficientReduction (coefficientFiberProductResidueEquiv f g hg eA) =
+       (localCoefficientReduction eA).comp (coefficientFiberProductFstAlgHom f g)) :=
+  coefficientFiberProductReduction_fst f g hg eA
+
+end
+

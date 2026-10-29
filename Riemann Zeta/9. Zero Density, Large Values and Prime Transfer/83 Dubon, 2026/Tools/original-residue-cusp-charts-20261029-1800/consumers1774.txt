@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [Group G] [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixOrdinary_invariants_rankOne_directSummand`. -/
+theorem actual_matrix_ordinary_invariant_direct_summand_matrixOrdinary_invariants_rankOne_directSummand_source (r : R →+* K) [IsLocalHom r]
+    (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hρ : GeneralLinearGroup.map r (ρ g₀) ≠ 1)
+    (hrel : ∀ g, ((ρ g).val - 1) *
+      ((ρ g₀).val - (GeneralLinearGroup.det (ρ g₀) : R) • (1 : Matrix (Fin 2) (Fin 2) R)) = 0) :
+    Nonempty ((matrixStandardRepresentation ρ).invariants ≃ₗ[R] R) ∧
+      ∃ N : Submodule R (Fin 2 → R), IsCompl (matrixStandardRepresentation ρ).invariants N :=
+  matrixOrdinary_invariants_rankOne_directSummand r ρ g₀ hρ hrel
+
+end
+

@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O R : Type*} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `matrixIdempotentLeftIdeal_span`. -/
+theorem actual_matrix_idempotent_left_ideal_spanning_matrixIdempotentLeftIdeal_span_source
+    (S : Subalgebra O R) [IsLocalRing S]
+    (A : Subalgebra S (Matrix ι ι R)) [Module.Finite S A]
+    (e : A) (he : e ^ 2 = e) (i₀ : ι)
+    (hebar : (RingHom.mapMatrix (IsLocalRing.residue R)) e.val = Matrix.single i₀ i₀ 1)
+    (hscalar : Function.Surjective (fun c : S => IsLocalRing.residue R c.val))
+    (hker : ∀ x : A, (∀ i j, x.val i j ∈ IsLocalRing.maximalIdeal R) →
+      x ∈ IsLocalRing.maximalIdeal S • (⊤ : Submodule S A))
+    (v : ι → algebraIdempotentLeftIdeal (S := S) e)
+    (hv : ∀ i, (RingHom.mapMatrix (IsLocalRing.residue R)) (v i).val.val =
+      Matrix.single i i₀ 1) :
+    letI : Module S (algebraIdempotentLeftIdeal (S := S) e) :=
+      (algebraIdempotentLeftIdeal (S := S) e).module
+    Submodule.span S (Set.range v) = ⊤ :=
+  matrixIdempotentLeftIdeal_span S A e he i₀ hebar hscalar hker v hv
+
+end
+

@@ -1,0 +1,20 @@
+{
+  "status": "Prepared only; predecessor9374 canonical PASS and archive are mandatory preflight inputs.",
+  "modules": 36,
+  "queries": 57,
+  "theorems": 51,
+  "constructions": 6,
+  "exhaustiveScratchChecks": 138,
+  "proofValueChecks": 100,
+  "scopes": 4,
+  "receipts": {
+    "source-actual-residue-cusp-stabilizer-1-scratch-receipt.json": "B5D4B824191EF8D84E8553C0F02FC5A0C88BD13019819ABEC3A52976244BE310",
+    "source-original-residue-labeled-cusp-1-scratch-receipt.json": "BD4AD05D63EC51B39FCC74E4CB6E72068A3CB176DD7BDE6738D1A4940F4458FD",
+    "source-original-residue-cusp-fiber-1-scratch-receipt.json": "D145C006E944630241341ACA66C0CE03E75A10F58E1DC97A8DB38264FC80F33A",
+    "source-original-residue-cusp-count-2-scratch-receipt.json": "36A5D7B1F7872D151C5D2BA63C658F09B1FC26705628A99EAA51E0C480B059BB"
+  },
+  "expectedConsumers": 27387,
+  "expectedConstructions": 2985,
+  "fullGoal": "Finite elliptic charts and finite fiber bounds, including residue characteristics two and three, and the reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "productionMutation": false
+}

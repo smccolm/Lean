@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing K] [Algebra R K]
+
+/-- The same original Hopf point group in the exact subgroup vanishing consumer. -/
+noncomputable local instance hopfSubgroupPointGroupSource : Group (WithConv (A →ₐ[R] K)) :=
+  commutativeHopfPointsGroup
+
+/-- Exact original-object consumer of `hopfSubgroupVanishingIdeal_counit`. -/
+theorem actual_hopf_subgroup_vanishing_antipode_hopfSubgroupVanishingIdeal_counit_source
+    (hinj : Function.Injective (algebraMap R K))
+    (X : @Subgroup (WithConv (A →ₐ[R] K)) (commutativeHopfPointsGroup (R := R)))
+    (a : A) (ha : a ∈ hopfPointsVanishingIdeal (X : Set (WithConv (A →ₐ[R] K)))) :
+    Coalgebra.counit (R := R) a = 0 :=
+  hopfSubgroupVanishingIdeal_counit hinj X a ha
+
+end
+

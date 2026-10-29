@@ -1,0 +1,114 @@
+import SourceIntegralSlashLevelOne
+import SourceIntegralSlashDiscriminantNormalization
+import SourceCoordinateAlgebraicChartInjectivity
+import SourceIntegralSlashReducedPowers
+import SourceIntegralSlashReducedEquality
+import SourceIntegralSlashNormalizedGenerators
+import SourceIntegralSlashNormalizedRatioEquality
+import SourceIntegralSlashNormalizedMap
+import SourceIntegralSlashNormalizedLinearRelations
+import SourceIntegralSlashNormalizedCoordinate
+import SourceMonoidGeneratorAlgebraLift
+import SourceIntegralSlashNormalizedAlgebra
+import SourceCoordinateChartFractionExtension
+import SourceIntegralSlashFieldEmbedding
+import SourceOriginalResidueSlashFieldEmbedding
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedSlashSeries_levelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminant
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_one_discriminantSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_discriminant_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminant_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coordinate_algebraic_chart_injective
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mcast
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_one
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_eq_of_intSeriesC_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_pow_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.one_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.mul_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators_subset
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integral_ratio_eq_div_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalized_slash_ratio_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_one
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_linear_relation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_levelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneEisensteinCube
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqModC_eq_discriminant_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqModC_mem_normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC_transcendental
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_algHom_adjoin_of_monoid_relations
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_normalizedSlashAlgebraHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_coordinate_chart_fraction_extension
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalReducedSlashFieldHom_of_coordinate_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueSlashFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.discriminantSeries
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminant
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminantPow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneEisensteinCube
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralSlashLevelOne, `SourceIntegralSlashDiscriminantNormalization, `SourceCoordinateAlgebraicChartInjectivity, `SourceIntegralSlashReducedPowers, `SourceIntegralSlashReducedEquality, `SourceIntegralSlashNormalizedGenerators, `SourceIntegralSlashNormalizedRatioEquality, `SourceIntegralSlashNormalizedMap, `SourceIntegralSlashNormalizedLinearRelations, `SourceIntegralSlashNormalizedCoordinate, `SourceMonoidGeneratorAlgebraLift, `SourceIntegralSlashNormalizedAlgebra, `SourceCoordinateChartFractionExtension, `SourceIntegralSlashFieldEmbedding, `SourceOriginalResidueSlashFieldEmbedding]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedSlashSeries_levelOne, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminant, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_one_discriminantSeries, `Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_discriminant_ne_zero, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneDiscriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminant_ne_zero, `Dubon2026.SourceFunctionField.IntegralSlash.coordinate_algebraic_chart_injective, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mcast, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_one, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_pow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_pow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_discriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_eq_of_intSeriesC_eq, `Dubon2026.SourceFunctionField.IntegralSlash.mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.intSeriesC_pow_eq, `Dubon2026.SourceFunctionField.IntegralSlash.one_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.mul_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators_subset, `Dubon2026.SourceFunctionField.IntegralSlash.integral_ratio_eq_div_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.originalField_eq_adjoin_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalized_slash_ratio_eq, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_eq, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_mul, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_one, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_smul, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_linear_relation, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedSlashSeries_levelOne, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneEisensteinCube, `Dubon2026.SourceFunctionField.IntegralSlash.jqModC_eq_discriminant_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.jqModC_mem_normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue_jqModC_transcendental, `Dubon2026.SourceFunctionField.IntegralSlash.exists_algHom_adjoin_of_monoid_relations, `Dubon2026.SourceFunctionField.IntegralSlash.exists_normalizedSlashAlgebraHom, `Dubon2026.SourceFunctionField.IntegralSlash.exists_coordinate_chart_fraction_extension, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalReducedSlashFieldHom_of_coordinate_degree, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueSlashFieldHom]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.discriminantSeries, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminant, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneDiscriminantPow, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedGenerators, `Dubon2026.SourceFunctionField.IntegralSlash.normalizedSlashValue, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneEisensteinCube]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue slash embedding postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue slash embedding theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUE SLASH EMBEDDING AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+
+#lint in SourceIntegralSlashLevelOne
+#lint in SourceIntegralSlashDiscriminantNormalization
+#lint in SourceCoordinateAlgebraicChartInjectivity
+#lint in SourceIntegralSlashReducedPowers
+#lint in SourceIntegralSlashReducedEquality
+#lint in SourceIntegralSlashNormalizedGenerators
+#lint in SourceIntegralSlashNormalizedRatioEquality
+#lint in SourceIntegralSlashNormalizedMap
+#lint in SourceIntegralSlashNormalizedLinearRelations
+#lint in SourceIntegralSlashNormalizedCoordinate
+#lint in SourceMonoidGeneratorAlgebraLift
+#lint in SourceIntegralSlashNormalizedAlgebra
+#lint in SourceCoordinateChartFractionExtension
+#lint in SourceIntegralSlashFieldEmbedding
+#lint in SourceOriginalResidueSlashFieldEmbedding

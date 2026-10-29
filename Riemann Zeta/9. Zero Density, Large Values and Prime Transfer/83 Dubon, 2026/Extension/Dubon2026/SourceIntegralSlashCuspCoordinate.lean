@@ -1,0 +1,62 @@
+import Dubon2026.SourceIntegralSlashRaisedCuspCoordinate
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Convert the
+source integer cusp label to the native nonnegative triangular representative.
+Adapted arithmetic from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2, P2M/Sol/
+S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_eq_slot_and_diamondPullbackModL_eq_qTwist.
+The analytic formula and field homomorphism are the already proved native ones. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K] [CharP K ℓ]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+include ℓ
+
+theorem originalReducedSlashFieldHom_jqN
+    (ζ : Kˣ) (hζ : ζ ^ N = 1) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (g : SL(2, ℤ)) (a : ℕ) [NeZero a] (b : ℤ)
+    (ha : (a : ℤ) ∣ g 1 0) (haN : a ∣ N)
+    (hb : g 1 0 * b ≡ g 1 1 * a [ZMOD N])
+    (Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN g x) :
+    Φ ⟨jqNModC K N, fullBase_le_originalField K N (jqd_mem_coeff_field N K (dvd_refl N))⟩ =
+      qExpand K (a * a) (qTwist (ζ ^ (b * (a : ℤ))) (jqModC K)) := by
+  obtain ⟨d, hdN⟩ := haN
+  have hd : d ≠ 0 := by
+    rintro rfl
+    exact NeZero.ne N (by rw [hdN, mul_zero])
+  letI : NeZero d := ⟨hd⟩
+  have had : a * d = N := hdN.symm
+  obtain ⟨c, hc⟩ := ha
+  have hd0 : (d : ℤ) ≠ 0 := by exact_mod_cast hd
+  let B : ℕ := (b % (d : ℤ)).toNat
+  have hBb : (B : ℤ) = b % (d : ℤ) := Int.toNat_of_nonneg (Int.emod_nonneg _ hd0)
+  have hbB : b = (d : ℤ) * (b / (d : ℤ)) + B := by
+    rw [hBb]
+    exact (Int.mul_ediv_add_emod b d).symm
+  have hN' : (N : ℤ) = a * d := by exact_mod_cast hdN
+  have hNt : (N : ℤ) ∣ g 1 1 * a - g 1 0 * (B : ℤ) := by
+    have h1 : (N : ℤ) ∣ g 1 1 * a - g 1 0 * b := hb.dvd
+    have h2 : g 1 1 * a - g 1 0 * (B : ℤ) =
+        (g 1 1 * a - g 1 0 * b) + N * (c * (b / (d : ℤ))) := by
+      linear_combination (g 1 0) * hbB + ((d : ℤ) * (b / (d : ℤ))) * hc -
+        (c * (b / (d : ℤ))) * hN'
+    rw [h2]
+    exact dvd_add h1 (dvd_mul_right _ _)
+  obtain ⟨t, ht⟩ := hNt
+  rw [originalReducedSlashFieldHom_jqN_triangular N ℓ φ hN ζ hφ a d had g B c t hc ht Φ hΦ]
+  have he : ((a * B : ℕ) : ℤ) = b * a + N * (-(b / (d : ℤ))) := by
+    push_cast
+    linear_combination (-(a : ℤ)) * hbB + (b / (d : ℤ)) * hN'
+  rw [he, zpow_add, zpow_mul ζ (N : ℤ), zpow_natCast, hζ, one_zpow, mul_one]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

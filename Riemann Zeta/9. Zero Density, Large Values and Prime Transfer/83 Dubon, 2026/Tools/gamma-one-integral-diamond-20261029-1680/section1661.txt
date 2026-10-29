@@ -1,0 +1,7 @@
+### Actual original irreducible matrix spanning — 10 October 2026
+
+Apply the proved original algebra-action theorem to the genuine monoid-algebra module of the original irreducible representation. Its actual coefficient-linear equivalence with the original vector space transfers surjectivity to the same group-algebra action. Specializing to the original column-vector representation and expanding the genuine group-algebra element gives an actual finite coefficient combination of original representation matrices for every matrix. Therefore those same original matrices span the whole matrix algebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixRepresentationBurnside](Extension/Dubon2026/MatrixRepresentationBurnside.lean).

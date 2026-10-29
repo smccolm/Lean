@@ -1,0 +1,107 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T10:13:37.036444+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralDiamondScalarFixedField",
+    "SourceOriginalResidueCoordinateIndex",
+    "SourceIntegralDiamondFixedPlaceTransitivity",
+    "SourceOriginalResidueDiamondFixedField",
+    "SourceIntegralDiamondBaseFiberTransitivity",
+    "SourceOriginalResidueDiamondFiberTransitivity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedField.lean",
+      "sha256": "C504B82A49920F68939076661CF0CBC19C046CFD5A4B72C0210F37AA211DA12B",
+      "oleanSha256": "C35F0933752EF8C41D9914A23FCF46503A2B22D5974997AA79E7A9EF8D2BBFF9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedField-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedField-1754.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCoordinateIndex.lean",
+      "sha256": "6347D02C8A55C9167E72059AEAC13973F27B4B23598A0AC85EB7C24F7DE2D621",
+      "oleanSha256": "88DFF24AEFED7D086C432A07B64A10A4E6191A89E66FB7301E2CEBDC9E6CFBC3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCoordinateIndex-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCoordinateIndex-1754.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedPlaceTransitivity.lean",
+      "sha256": "FF9CEF9B4BA1AB64CBCE7F966C24EF7562BF0C055E186E97DA5B30DE16D8F2CE",
+      "oleanSha256": "6A8534E20FB19C6D08CAB6B92970496ED764CFBD01FBA9506DC7E0B0F61BB314",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedPlaceTransitivity-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondFixedPlaceTransitivity-1754.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFixedField.lean",
+      "sha256": "AB8B3CB04D2ABD05FA11C336699034647920FC04A3D2375289DD4271C3EC30CB",
+      "oleanSha256": "3D6EDD8AB223BCFCC0BF239162EF7CA14F3E99EE270B5FE262ABD22357505643",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFixedField-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFixedField-1754.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondBaseFiberTransitivity.lean",
+      "sha256": "43EEC2B0C6F53C143C5C54D2246786FBD28893F7E4B101C2A9823F4B53AEAA08",
+      "oleanSha256": "B4DBC1B9C84B9053A81DDC445CD0C5FF61F5180022BC45AF659DC413D2890C46",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondBaseFiberTransitivity-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondBaseFiberTransitivity-1754.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberTransitivity.lean",
+      "sha256": "8BB362A898381493B82191B8A57C27B93645AC6F407E222DD1AC8AC331951989",
+      "oleanSha256": "2194FDFFBA5CA08BF0887F914C7509E242F2EBE146CC1FBDEFD9C40B20EF5B90",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberTransitivity-1754.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberTransitivity-1754.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_restrict_fixed_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_fullBase_comap_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.scalar_fixedField_eq_fullBase_of_coordinate_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_restrict_fixed_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.diamond_exists_comapEquiv_of_fullBase_comap_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFixedFibersAudit1.log",
+  "logSha256": "3F8C474BBFC161F2CA3B3877C212CAB461C36FC7E49D5BFE9F47BFB27C42D6AD",
+  "auditSha256": "DB211AB2A9C5C611D7B421068AAF5BF29F1DF2CD2C2C9F8ECFFDE4291045DFBE",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFixedFibersScratchOwnership1754.log",
+  "ownershipSha256": "BF60AA10B2BF7E9C2BDEC22F6CB5AF6BD49DA2C7DF35656A9849480733BB2398",
+  "exhaustiveTheorems": 15,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFixedFibersDependencyAudit1.log",
+  "dependencyAuditSha256": "92968598EC81B0D1F189EE2F92A76C775F0B9066898737D2DA3337DA1ABF9920",
+  "dependencyAuditSourceSha256": "50D33039F7211D3968580F9F64ED97C130497171FBAB21596D7B3B80C550049D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue fiber bounds -> actual residue diamond fixed field and full-base fiber transitivity.",
+  "discharged": [
+    "The actual original residue coordinate degree is the signed Gamma1 index, by the already proved original degree preservation and residue-field equality.",
+    "The diamond fixed field equals the full modular base: its proved Artin degree, original coordinate degree and the native full-base degree force relative degree one. The valuation-residue consumer discharges the coordinate-degree input.",
+    "Native Galois place transitivity over that fixed field and Artin automorphism surjectivity produce a literal Gamma0 matrix relating any two actual residue places above the same full-base place. No action, fixed-field identity, Galois transitivity or degree certificate remains a hypothesis in the actual residue consumer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The finite elliptic and cusp stabilizer charts, exact residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under the full original completion contract.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-fixed-fibers-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "523525546216E56800805B3972CD064F02172FFC8344A436FB34B1D9432F2498",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

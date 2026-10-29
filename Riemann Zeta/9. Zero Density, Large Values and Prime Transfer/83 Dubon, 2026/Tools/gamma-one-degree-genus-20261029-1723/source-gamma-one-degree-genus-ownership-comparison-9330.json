@@ -1,0 +1,323 @@
+{
+  "scratchSum": 174,
+  "scratchDistinct": 174,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1_sourceGammaOneResidueGenusUpper._proof_1": "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1._proof_1",
+    "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1_sourceGammaOneResidueGenusUpper._proof_2": "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1._proof_2"
+  },
+  "productionFocused": 174,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceIntegralDiamondReduction",
+        "SourceIntegralDiamondZeroForward",
+        "SourceIntegralDiamondZeroEquivalence",
+        "SourceIntegralDiamondWitness",
+        "SourceIntegralDiamondNormalizedReduction",
+        "SourceIntegralDiamondChosenReduction",
+        "SourceIntegralDiamondSeriesOperations",
+        "SourceIntegralDiamondReducedOperations",
+        "SourceIntegralDiamondRatioRelation",
+        "SourceIntegralDiamondAdditiveSeries",
+        "SourceIntegralDiamondRatioClosure",
+        "SourceIntegralDiamondReducedAddition",
+        "SourceIntegralDiamondFieldPull",
+        "SourceIntegralDiamondFieldRange",
+        "SourceIntegralDiamondFieldConstants",
+        "SourceIntegralDiamondFieldOperations",
+        "SourceIntegralDiamondComposition",
+        "SourceIntegralDiamondFieldComposition",
+        "SourceIntegralDiamondFieldIdentity",
+        "SourceIntegralDiamondFieldAction"
+      ],
+      "count": 126,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondActionScratchOwnership1700.log",
+        "sha256": "380F4FFD80A30DADD51F701CC5CE362F972F51631DFE8755177096FF4E8905A2",
+        "sourceSha256": "4BCBECD358ED2EFA744846BE4403931B74DB96763B66C80BD0B160C5054FE8A5"
+      }
+    },
+    {
+      "modules": [
+        "SourceIntegralDiamondFullBaseInclusion",
+        "SourceIntegralDiamondGammaZeroFixed",
+        "SourceIntegralDiamondEisensteinAction",
+        "SourceIntegralDiamondSignedMembership",
+        "SourceIntegralDiamondExactKernel",
+        "SourceIntegralDiamondFixedFieldDegree"
+      ],
+      "count": 24,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelScratchOwnership1709.log",
+        "sha256": "2999C127211FA5D423F27D8CF59E502F48DC61132904E2E71AAED0D7D0174EA9",
+        "sourceSha256": "799F7FF427E9A3108AA7E165318A0E10BA3DFF1269175980D67C06B6B833FED2"
+      }
+    },
+    {
+      "modules": [
+        "SourceReducedBaseCoordinateMap",
+        "SourceReducedBaseDegreeLower",
+        "SourceIntegralDiamondIndexLower",
+        "SourceReducedCoordinateIndependence",
+        "SourceReducedCoordinateMapIndependence",
+        "SourceReducedFieldCoefficientMap",
+        "SourceReducedCoordinateDegreeTransport",
+        "SourceReducedResidueDegreeTransport",
+        "SourceGammaOneDegreePreservation"
+      ],
+      "count": 20,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeScratchOwnership1718.log",
+        "sha256": "9C26AC1DAA29F12D4844F84205DC1A9A6680D56EAE3E1929451F3E971634874C",
+        "sourceSha256": "5873F7A9DB6C8F7B863EA2E51B6704BA80F69E35E30A6D968AFF9513CF45E12D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneResidueGenusUpper"
+      ],
+      "count": 4,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperScratchOwnership1722.log",
+        "sha256": "A0B61DD8C47F23324EC3E844FF506EEE0556799E911973D68B576EF0927825B3",
+        "sourceSha256": "948B86BE1E829EECF362F9EDA92C9A50D184617A13380C7CD76B49FC02336D98"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.log",
+    "sha256": "6B620D79153D193DA67D0740534E2D3C4A988D464FFB069C7D67AB994A39F60F",
+    "sourceSha256": "3F278C64C41405ED498574D157AAC14AA743DA068F08B7C5FEA90B5CF429F2D7"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-004653-990.log",
+    "sha256": "161FA0C47ABF8D4482DDD1390D40DA07416D4F7DFF62EDFAE87099E969C5497E"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 36 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceIntegralDiamondReduction",
+        "scratchSha256": "E71B204B53BC59A6267C9444EBE100161C9BA2F100093585DA6DEE5BF0900C96",
+        "productionSha256": "DEC7FDB1C798E5A91FE0900BFFA65D256E1D7DE288B99673923D8ED7F45DAF16",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondZeroForward",
+        "scratchSha256": "D48FC206AF72962D6471ECC94651316A764579EF4A96A94B8FA60213E81D0A13",
+        "productionSha256": "411B5EED828348EF20714DECE3AE8BF5BBAE3223789D070B3AE3FFAD66E8CC0B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondZeroEquivalence",
+        "scratchSha256": "A07C159EFA5E3C30BB2F489944C06BD6477FBEB5A850F09F1CF22ED8E8EAF82F",
+        "productionSha256": "284B663A31FFF9B4E55C798B392309FE42B3D719AB0528B4D4754FC5F038BC7A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondWitness",
+        "scratchSha256": "11808E80ED6D16DB241680D0FC3CFC165868D36B19814971417975708DB05122",
+        "productionSha256": "45996D5C8FF749B3CD5A4C784AE4DFE2149D56DBA537BC13EF67D1217A6B102A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondNormalizedReduction",
+        "scratchSha256": "BC00E00DDDDFACC479C996376085B6821A75959BD5B7DEA0C2DDDA11382CEEB3",
+        "productionSha256": "5B3DFA6ED96FCE5F42B3D6EAE28A92CA8F74081167D67F7CF2672E14348B9C72",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondChosenReduction",
+        "scratchSha256": "2A9473B6297A8EB13076827ACF4ABBBE30B5CB7930918B7A19D644BDEF0051EE",
+        "productionSha256": "8007E7E4E4E5EDB06653AE4E7D15DE5A158B96A9912206F34FDB45D3A151D261",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondSeriesOperations",
+        "scratchSha256": "9E0AD5885F643AD6845A74D4613AC9C8A620034F8463DAE5A587837D188427AC",
+        "productionSha256": "F4CF0D93F9937F7CDB9BB3B49B6B6CC2CBE2DBC574A7EB0C91D842D5B7FFFCA1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondReducedOperations",
+        "scratchSha256": "DC0EEFED835BA310FF0D59FCF46FC51AE239BF4117949C668345C51BC1DEBACC",
+        "productionSha256": "3AB605EEF85B101E3E7B6492C8CFE7D673BA5C04606B82A9F8E8C68E749CF095",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondRatioRelation",
+        "scratchSha256": "4B465D6851363767DEC646613237542CDE1AEFB718819C6ED4EB6AA1752CAC2F",
+        "productionSha256": "DC42F9DE1DDC54C8336DD5646E7F187A7734B3587AC8AB139DDF48CC35416404",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondAdditiveSeries",
+        "scratchSha256": "6D0A0E61998436E217202AF1B2AB788A05FEA498A4069C927A3FF5AB72A6D865",
+        "productionSha256": "F2CE367474E7C23624E857287DD287A2509FF035C2CE3C086536A0FB2F9FC2F0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondRatioClosure",
+        "scratchSha256": "92BE74D55756F5D7C87486FC3C37FD8B59A2A48AA515B7FD1B8D7AB0A0F3AF5D",
+        "productionSha256": "982BD37E9C6ADB0364483C64930FB9AE83AF9A75948BB760F917B344A12747B2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondReducedAddition",
+        "scratchSha256": "30161433CC8CE6F7C5EEE2443024ED19E563C0F350483F541FA981552EDF76BB",
+        "productionSha256": "01ED95BF0C12D96D53A9142F61120A00D0DEFA1C77B9ECEAF50BF42FA6DC7106",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldPull",
+        "scratchSha256": "807A1FF491E5AEC74EEB5C9E329EC65037D3F61C7295A973C58F86476619C270",
+        "productionSha256": "17091D1BC296F450FFA65F2B70AFE8AF8AE02EBBF862FB51DDF2BC7CD135D3C0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldRange",
+        "scratchSha256": "94D00CF6D34F9AA3673ACD5AD370A800F47FEBE481D0C54472493720635D2089",
+        "productionSha256": "713DBAB1C1EBEB74435E03B19442D1409C9CC9D1AC636E226F5FCFF2ECE321C8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldConstants",
+        "scratchSha256": "D9E1F4E9222A05FDFC72788C4D54329796A97B80989821835CF1B70ACD4E9C52",
+        "productionSha256": "752DC8FA6C5880C47B619E0178A094FA57C23E1FBCF07E70B07CD6F28116D918",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldOperations",
+        "scratchSha256": "271D3BD1A752A1E31449DD93BCA323F76A3E0D60FB4A608EFBA3316C92FE8BC9",
+        "productionSha256": "34D6CDD004BE82DDE7355EC8C0FB483BE07D01DB7412C80B2DF249DD0F38FF0D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondComposition",
+        "scratchSha256": "EF21EE98E90E5041BE135BA38BD324DCAB506BB59AB7E0EEFAE72DF641D09B03",
+        "productionSha256": "35B241D5F2488A78156E5550B025C03DA6C38111D94756DACFBCD6916F18EB3E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldComposition",
+        "scratchSha256": "3DCA76B5F6E04852D17452AE22AC0B1E33BEB5F6ECCA3683EE0C6C40B4240A72",
+        "productionSha256": "CA3E21609938F60169CFAF8002F4BD81A6870EB2BD0BA7078B69195BD34CC319",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldIdentity",
+        "scratchSha256": "BB9BC3CDE4EB803EE7C441CEFBC023B3633EDB3111F9CE94414E111F565641E6",
+        "productionSha256": "8C6159A9C9E89D28507B41954CCA50C3F7AF0EB5F95198B56DA857A6EE7D14C6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFieldAction",
+        "scratchSha256": "40DCEB78874C26B0927C65DA3459A3C0B3523136705AA4F8F244F8786F10AF67",
+        "productionSha256": "7FC4E4F9210458182B0AB30BFF3E274480AEEE77025814D8FD4B0735581142D5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFullBaseInclusion",
+        "scratchSha256": "0E7075085F446FF148B65627B1C9EE894B01D7256972D8E86D2EBEB11042551A",
+        "productionSha256": "0E7075085F446FF148B65627B1C9EE894B01D7256972D8E86D2EBEB11042551A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondGammaZeroFixed",
+        "scratchSha256": "97C3714F4BD17ED215ED322380B50B77284CAF16C72C6795886CE576E88FB8CC",
+        "productionSha256": "C0CFEF995D6DE171B0719694874ABDF871A252516E38D9DD96F48FEF1C5352EC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondEisensteinAction",
+        "scratchSha256": "FEB7E98203293FE8C4659057DF85FE304F9C8FA58C6834A92450B7BEE9F5B029",
+        "productionSha256": "000A1926585955F63020721A9D430154FB8F401DA967576E3898AAE1FD2300EF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondSignedMembership",
+        "scratchSha256": "A7ADAFFBD27DC24E1664CD6BC8CDE717CFB4CE942B72C00427F52BDF7E5CB603",
+        "productionSha256": "5314ABC747D36668A9A3832EB3483A2D8BFAC36E85E1009D72CD89E2C951D8D2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondExactKernel",
+        "scratchSha256": "41211BE5CD17440285E9999D66C41F7C235A4EF53A7F91535E570AF56CE91040",
+        "productionSha256": "DDB42681E882664ED36265F17FE3FF4A2902FA83748C6EDD07F4DD1E817AE056",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondFixedFieldDegree",
+        "scratchSha256": "B4E599FE4A0CE491E3A5F1F18A81ED8D061B13A9820DF07AD8DF50F93C179F6E",
+        "productionSha256": "3F10760DA16DE945387B180C0B8C0E504F84F50AF050B5EBDFF8AC141D5ABAF2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedBaseCoordinateMap",
+        "scratchSha256": "E51926436C4B90326C34937212289B214F7556E36DFB48BB72A41307D1317A15",
+        "productionSha256": "E51926436C4B90326C34937212289B214F7556E36DFB48BB72A41307D1317A15",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedBaseDegreeLower",
+        "scratchSha256": "054ED86E77B5A334ED7A5998BAED1216E4C5C8DBEC29B059907767454E4E5258",
+        "productionSha256": "2DE38659C6D7EBF550D1E3626B05A5ADA2B70B8523036C8D98D5D67406C7C01D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralDiamondIndexLower",
+        "scratchSha256": "406978F7061B67D40C969FA8CB4A09DB794010F01BD1EFD1C95C6F10D5AF799C",
+        "productionSha256": "165397709427131EE08EDF0DBD6B6E08984075F4B6E3046BCC7AA7F59EB0E9AB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedCoordinateIndependence",
+        "scratchSha256": "A6E33CA266505DB492F75BAC018B5F2AF8758AD344E991A9ABB6B08AA4CAE26D",
+        "productionSha256": "47EE0981546EF6757190B1DAE99372D2542A656AE26AD1C71C6DD7A2D1E474AE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedCoordinateMapIndependence",
+        "scratchSha256": "CECD21D8D0C61752ED3FE09D2BDECD8796ABF695A76EE9BA9424B6C4C01387EC",
+        "productionSha256": "7989B462982D43059C36DE189AD1D3D80D35726D2A85F7C9426C8220E6334A10",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedFieldCoefficientMap",
+        "scratchSha256": "4CEC3B54B26B8211D7DF00734B90A80941127A5AF195A900423A03AFBB00F46B",
+        "productionSha256": "4CEC3B54B26B8211D7DF00734B90A80941127A5AF195A900423A03AFBB00F46B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedCoordinateDegreeTransport",
+        "scratchSha256": "47AC5A766E66CF9993F3197F18A016C7D8F79A4D679956B3F0837D4EFEAEE2C3",
+        "productionSha256": "6A9A0C315A018694A2C6FCA18F43110ED7A29FC0525D2A96E8251EFB30D69D13",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReducedResidueDegreeTransport",
+        "scratchSha256": "8480A61A1A99BFECB8D8032F34BB7335B116B938216319439B7177099B74AA52",
+        "productionSha256": "FEEEFE810C447B7B9C4D663DB9EF56120EF6F0776EBA026B8F417A9C6BFFD5B3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDegreePreservation",
+        "scratchSha256": "3D52D6D2BAEB5549BA1B3FE37E5DFE1BA959C4ADFE8664896C3D012D1D5F7BA5",
+        "productionSha256": "40DF8AA00D1440F3811E043B3B9A7B0DC84580799B37BC58E39E172A7F52E71A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueGenusUpper",
+        "scratchSha256": "B7F2192756324F6695444546B9BA126CA5C8E98E894F03FB5DE2F6A1EB39192E",
+        "productionSha256": "0CB8174717FA7874EBFF64EADF1EBD15B9FBB37A151029BC1C4C712254FD9369",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

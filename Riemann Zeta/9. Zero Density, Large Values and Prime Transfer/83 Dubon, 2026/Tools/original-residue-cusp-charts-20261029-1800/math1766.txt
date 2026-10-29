@@ -1,0 +1,1 @@
+For the original matrix family fixing the first axis, use a genuine unit in the second-column difference of one original matrix to force the second coordinate of every fixed vector to vanish. Conversely every original first-axis vector is fixed by all matrices.

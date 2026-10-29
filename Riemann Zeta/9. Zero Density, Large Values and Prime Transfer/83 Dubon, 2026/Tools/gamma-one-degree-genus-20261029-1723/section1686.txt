@@ -1,0 +1,7 @@
+### Actual original whole framed true-residue transport — 10 October 2026
+
+Consume the existing original whole continuous fixed-residue framed lift and an actual coefficient algebra morphism preserving the specified original residue identifications. Prove entry by entry, using injectivity of the genuine target residue equivalence and the original whole framed residue condition, that reducing the coefficient-changed representation by the actual target maximal ideal gives exactly the original residual representation transported to that true residue field. Specialize to the identity morphism for the original lift itself.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalFramedTrueResidueTransport](Extension/Dubon2026/OriginalFramedTrueResidueTransport.lean).

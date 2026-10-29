@@ -1,0 +1,7 @@
+### Actual original continuous adjoint coboundary dimension — 10 October 2026
+
+The kernel of the original continuous matrix adjoint coboundary map is proved equal to the actual invariant submodule of that same original adjoint representation. Rank-nullity on the genuine matrix coefficient space gives coboundary dimension plus original invariant dimension equal to the square of the original matrix size.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousAdjointCoboundaryDimension](Extension/Dubon2026/ContinuousAdjointCoboundaryDimension.lean).

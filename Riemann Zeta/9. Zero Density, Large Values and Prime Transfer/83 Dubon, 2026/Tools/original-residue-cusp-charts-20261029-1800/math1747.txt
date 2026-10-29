@@ -1,0 +1,1 @@
+Use the existing original coefficient-fiber postcomposition and original unframed class postcomposition. Evaluate both sides on every actual whole original representation matrix and prove the coefficient-composition identity entry by entry. This establishes naturality for the same evaluation map used by the constructed universal trace representation.

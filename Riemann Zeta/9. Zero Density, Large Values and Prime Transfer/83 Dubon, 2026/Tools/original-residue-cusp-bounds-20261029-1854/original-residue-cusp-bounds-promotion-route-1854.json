@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-29T13:30:43.347546+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> actual homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue cusp and finite elliptic fiber bounds.",
+  "discharged": "The actual residue diamond action is identified with the constructed cusp embedding on the whole original function field. Both j and j_N have their exact source Laurent coordinates in the same chart. Every native primitive cusp label has a constructed matrix and an actual place above it. The actual diamond action is commutative, and signed-translation stabilizers fix the entire corresponding base fiber. A single coefficient reduction gives a cusp-place family on the existing signed Gamma1 cosets and translation orbits. Native full-base cusp exhaustion and actual diamond transitivity prove that this orbit map covers every residue j-pole. The native complex cusp-orbit bijection therefore proves that the actual residue cusp count is at most the complex cusp count, for every prime away from the level, including 2 and 3. The primitive root and coefficient reduction are constructed. The proved field equality transports this bound to the literal coefficient residue image and its native j coordinate. No chart, action, transitivity, degree, field-identification or cusp-count certificate remains in the final residue-image cusp-count theorem.",
+  "remaining": "Finite elliptic charts and finite fiber bounds, including residue characteristics two and three, and the reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "route": "The October 29 reuse refresh is applied to the exact unresolved source chain. Native normalized-generator extension proves full-field diamond covariance. Native Fourier coefficient uniqueness and sparse power-series expansion replace a new analytic coset framework for j_N. The native coprime-lift and SL2 row-completion lemmas construct cusp matrices. Native exact-kernel and Galois place-transitivity proofs give all-fiber stabilizers. The existing complex signed-coset translation orbits provide a shorter residue cusp surjection proof than the external generic double-coset injection. Four scopes are promoted by import qualification only; all mathematical statements, bodies and comments are frozen. All public/private/generated axiom checks, sixteen linters per module, all 100 required VALUE dependencies, exact ownership and sequential foundation/paper verification remain mandatory. Frozen paper, root pins and owner-only BAT are unchanged. Historical scope reports retain their original boundaries; the current combined status supersedes them.",
+  "receipts": {
+    "source-actual-residue-cusp-stabilizer-1-scratch-receipt.json": "B5D4B824191EF8D84E8553C0F02FC5A0C88BD13019819ABEC3A52976244BE310",
+    "source-original-residue-labeled-cusp-1-scratch-receipt.json": "BD4AD05D63EC51B39FCC74E4CB6E72068A3CB176DD7BDE6738D1A4940F4458FD",
+    "source-original-residue-cusp-fiber-1-scratch-receipt.json": "D145C006E944630241341ACA66C0CE03E75A10F58E1DC97A8DB38264FC80F33A",
+    "source-original-residue-cusp-count-2-scratch-receipt.json": "36A5D7B1F7872D151C5D2BA63C658F09B1FC26705628A99EAA51E0C480B059BB"
+  },
+  "modules": 36,
+  "queries": 57,
+  "exhaustiveScratchChecks": 138,
+  "proofValueChecks": 100,
+  "scopes": 4,
+  "productionMutation": false
+}

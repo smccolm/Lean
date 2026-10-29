@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `matrixTwo_ordinary_relations_of_invariant_line`. -/
+theorem actual_matrix_two_ordinary_relation_converse_matrixTwo_ordinary_relations_of_invariant_line_source
+    (A : G → GeneralLinearGroup (Fin 2) R) (U : GeneralLinearGroup (Fin 2) R)
+    (hU : ∀ w : Fin 2 → R,
+      (∀ g, (A g).val *ᵥ w = w) ↔ (U⁻¹.val *ᵥ w) 1 = 0) (g₀ g : G) :
+    ((A g).val - 1) *
+      ((A g₀).val - (GeneralLinearGroup.det (A g₀) : R) •
+        (1 : Matrix (Fin 2) (Fin 2) R)) = 0 :=
+  matrixTwo_ordinary_relations_of_invariant_line A U hU g₀ g
+
+end
+

@@ -1,0 +1,59 @@
+import Dubon2026.FrickeMatrices
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> reduced
+field action -> uniform level-power slash integrality. This is the
+coefficient ring needed to apply the proved even-weight trace to the
+constructed actual peaked auxiliary. Membership permits a level power
+depending on the coefficient; uniformity is a separate required step.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_fricke_coeff. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm Pointwise
+
+/-- Complex numbers integral after multiplication by some power of the level. -/
+def RN (N : ℕ) : Subring ℂ where
+  carrier := {x | ∃ b : ℕ, IsIntegral ℤ ((N : ℂ) ^ b * x)}
+  mul_mem' := by
+    rintro x y ⟨b₁, h₁⟩ ⟨b₂, h₂⟩
+    refine ⟨b₁ + b₂, ?_⟩
+    rw [pow_add, mul_mul_mul_comm]
+    exact h₁.mul h₂
+  one_mem' := ⟨0, by simpa using isIntegral_one⟩
+  add_mem' := by
+    rintro x y ⟨b₁, h₁⟩ ⟨b₂, h₂⟩
+    refine ⟨b₁ + b₂, ?_⟩
+    have e : (N : ℂ) ^ (b₁ + b₂) * (x + y) =
+        (N : ℂ) ^ b₂ * ((N : ℂ) ^ b₁ * x) + (N : ℂ) ^ b₁ * ((N : ℂ) ^ b₂ * y) := by
+      rw [pow_add]; ring
+    rw [e]
+    have hN : IsIntegral ℤ (N : ℂ) := by
+      have := isIntegral_algebraMap (R := ℤ) (A := ℂ) (x := (N : ℤ))
+      simpa using this
+    exact ((hN.pow b₂).mul h₁).add ((hN.pow b₁).mul h₂)
+  zero_mem' := ⟨0, by simpa using isIntegral_zero⟩
+  neg_mem' := by
+    rintro x ⟨b, h⟩
+    exact ⟨b, by rw [mul_neg]; exact h.neg⟩
+
+variable {N : ℕ}
+
+theorem mem_RN_iff {x : ℂ} : x ∈ RN N ↔ ∃ b : ℕ, IsIntegral ℤ ((N : ℂ) ^ b * x) := Iff.rfl
+
+theorem mem_RN_of_isIntegral_mul {a : ℕ} {x : ℂ} (h : IsIntegral ℤ ((N : ℂ) ^ a * x)) : x ∈ RN N :=
+  ⟨a, h⟩
+
+theorem mem_RN_of_isIntegral {x : ℂ} (h : IsIntegral ℤ x) : x ∈ RN N :=
+  ⟨0, by simpa using h⟩
+
+theorem inv_natCast_mem_RN [NeZero N] : ((N : ℂ))⁻¹ ∈ RN N := by
+  refine ⟨1, ?_⟩
+  have hN : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  rw [pow_one, mul_inv_cancel₀ hN]
+  exact isIntegral_one
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

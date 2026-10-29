@@ -1,0 +1,32 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `arithmeticLocalCotangentClass_eq_iff`. -/
+theorem actual_arithmetic_local_cotangent_points_arithmeticLocalCotangentClass_eq_iff_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ) (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P.asIdeal ≤ σ.ker)
+    (d e : ArithmeticLocalCotangentMaps a ha p hp hpa σ hσ δ hδ P hP) :
+    arithmeticLocalCotangentClass a ha p hp hpa σ hσ δ hδ P hP d =
+      arithmeticLocalCotangentClass a ha p hp hpa σ hσ δ hδ P hP e ↔
+        MatrixFirstOrderStrictlyConjugate σ
+          (arithmeticLocalCotangentLiftEquiv a ha p hp hpa σ hσ δ hδ P hP d).val.val
+          (arithmeticLocalCotangentLiftEquiv a ha p hp hpa σ hσ δ hδ P hP e).val.val :=
+  arithmeticLocalCotangentClass_eq_iff a ha p hp hpa σ hσ δ hδ P hP d e
+
+end
+

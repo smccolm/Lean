@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "FixedResidualAbsoluteIrreducibility",
+  "mathematics": "Restrict the actual scalar extension of the genuine fixed-residual quotient representation to the original group. Every original matrix is definitionally the given residual matrix. Apply the actual invariant-subspace restriction lemma to derive irreducibility of the same quotient representation over the original extension field.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-original-unframed-route-20261010.json: actual original arithmetic residual representation, proved fixed-residual presentation, actual quotient class equivalence, literal whole trace algebra and exact original coefficient evaluation inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "fixedResidualIrreducibility1750-focus.log"
+}

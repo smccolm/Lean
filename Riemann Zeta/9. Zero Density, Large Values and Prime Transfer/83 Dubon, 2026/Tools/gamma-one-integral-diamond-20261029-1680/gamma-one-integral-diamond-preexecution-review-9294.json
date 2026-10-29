@@ -1,0 +1,58 @@
+{
+  "status": "Prepared only; predecessor9270 canonical PASS and archived evidence required. Integral diamond witnesses are constructed; reduced field action and source gates remain required.",
+  "modules": 24,
+  "queries": 70,
+  "theorems": 61,
+  "constructions": 9,
+  "exhaustiveScratchChecks": 93,
+  "proofValueChecks": 121,
+  "scopes": 4,
+  "receipts": {
+    "source-even-weight-fricke-trace-1-scratch-receipt.json": "0E94FDBC5AE551B56CD147493C8D27753F408F7A8179CCB846BA9F23CDCAE214",
+    "source-even-weight-fricke-uniform-1-scratch-receipt.json": "D0FEB4C854B4F813CC2CCB1E3CDD2DED712B173DFEDAF847B7A8096CEBE296E8",
+    "source-even-weight-full-slash-1-scratch-receipt.json": "40058DFB9BB5392072F431F585DC291AD4CBB3A4E233EB70FE4C67513DA2632A",
+    "source-even-weight-integral-diamond-1-scratch-receipt.json": "A27D62262A528E7A1248B79FE0FA6B9F40A0EE125A74D46F7A17CA22918561BA"
+  },
+  "expectedConsumers": 27146,
+  "expectedConstructions": 2948,
+  "fullGoal": "The action on all reduced rational relations, its field and composition laws, the signed-index lower bound and original degree/genus preservation remain open in the production scope. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_integral_diamond_9294.py",
+      "sha256": "572F57C451EBDDDBF14A1B731AA3FFE1383ACA9A8EA84C5769AD7A22F6EB5D49"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_diamond_production_ownership_9294.py",
+      "sha256": "BEAA58D4779766E7B0F97F36AE5977D5EB091EC513E283696AB53C863FE76297"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_diamond_global_ownership_9294.py",
+      "sha256": "040273276684EA9F3B145FF941B3DB2C034B27CBE9962DE5F4AE7E1F752B45E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_integral_diamond_ownership_9294.py",
+      "sha256": "C19DDF264C1AD1D84E90D04E7B9546BA0883CFCB68F11DD5D79BE254ABA9BC2C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_integral_diamond_9294.py",
+      "sha256": "9B7EC17E4B6463932183150DC2F3271DC84E026AD9F3C1AFCF72C84FC9EAE1D5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_integral_diamond_9294.ps1",
+      "sha256": "69B51CF7D8084DAE3747DA7405F9543090BE24175D91AAB0884F49B54D7AD964"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_integral_diamond_9294.ps1",
+      "sha256": "3BF4F9F2ADC8A22DDC3D8639511435352F744D26616D3AFCDDC22479416EDEE6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_integral_diamond_canonical_9294.py",
+      "sha256": "569FE4BDAB2FF75B9D5B8A0245CFAF3A2E73B5BAB39729F71929F8D664AE81AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_integral_diamond_9294.py",
+      "sha256": "B1870387BC62AE9923025A2DBD7CCE6F41B5927C99EF558A2E6A4B8803361D51"
+    }
+  ],
+  "productionMutation": false
+}

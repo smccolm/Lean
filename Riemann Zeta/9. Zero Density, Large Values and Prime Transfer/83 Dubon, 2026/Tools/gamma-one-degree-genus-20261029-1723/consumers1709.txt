@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {S A : Type*} [CommRing S] [Ring A] [Algebra S A]
+
+/-- Exact original-object consumer of `algebraIdempotentLeftIdeal_mem_ideal_smul`. -/
+theorem actual_algebra_idempotent_left_ideal_algebraIdempotentLeftIdeal_mem_ideal_smul_source (I : Ideal S)
+    (e : A) (he : e ^ 2 = e) (x : algebraIdempotentLeftIdeal (S := S) e)
+    (hx : (x : A) ∈ I • (⊤ : Submodule S A)) :
+    x ∈ I • (⊤ : Submodule S (algebraIdempotentLeftIdeal (S := S) e)) :=
+  algebraIdempotentLeftIdeal_mem_ideal_smul I e he x hx
+
+end
+

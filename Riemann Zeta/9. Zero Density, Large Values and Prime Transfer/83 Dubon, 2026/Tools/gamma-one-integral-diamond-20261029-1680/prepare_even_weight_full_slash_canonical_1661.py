@@ -1,0 +1,47 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import ast,json,re,hashlib
+s=Path(__file__).parent;sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest().upper()
+old=json.loads((s/'even-weight-full-slash-versions-1660.json').read_text(encoding='utf-8'))
+versions=old.copy()
+mods=list(versions)
+def write(n,t):
+ f=s/n;assert not f.exists(),f;f.write_text(t,encoding='utf-8')
+for m,v in versions.items():
+ f=s/(m+v+'.lean');assert f.with_suffix('.exit').read_text().strip()=='0' and f.with_suffix('.log').stat().st_size==0,m
+ c=f.read_text(encoding='utf-8')
+ for vv in [old,versions]:
+  for n,ver in vv.items():c=c.replace('import '+n+ver+'\n','import '+n+'\n')
+ write(m+'.lean',c)
+write('even-weight-full-slash-versions-1661.json',json.dumps(versions,indent=2)+'\n')
+cfg=json.loads((s/'even-weight-full-slash-preflight-config-1660.json').read_text(encoding='utf-8'))
+cfg.update(modules=mods,queries=cfg['theorems']+cfg['constructions'],localModules=mods+list(json.loads((s/'even-weight-fricke-trace-versions-1643.json').read_text(encoding='utf-8')))+list(json.loads((s/'even-weight-fricke-uniform-versions-1653.json').read_text(encoding='utf-8'))),separatelyAxiomChecked=[],compileEvidence={m:m+'-1661' for m in mods})
+stem='source-even-weight-full-slash-1';write(stem+'-audit-config.json',json.dumps(cfg,indent=2)+'\n')
+arr=lambda xs:'#['+', '.join(chr(96)+x for x in xs)+']'
+for a,b in [('SourceEvenWeightFullSlashPreflight1660','SourceEvenWeightFullSlashAudit1'),('SourceEvenWeightFullSlashValuePreflight1660','SourceEvenWeightFullSlashDependencyAudit1')]:
+ c=(s/(a+'.lean')).read_text(encoding='utf-8')
+ for n,v in old.items():c=c.replace(n+v,n)
+ for key in ['theorems','constructions','roots']:
+  c=re.sub(r'let '+key+r' : Array Name := #\[[^\n]*\]','let '+key+' : Array Name := '+arr(cfg[key]),c)
+ c=re.sub(r'let required : Array Name := #\[[^\n]*\]','let required : Array Name := '+arr(cfg['proofEdges']),c)
+ c=c.replace('EVEN WEIGHT FULL SLASH PREFLIGHT','EVEN WEIGHT FULL SLASH');write(b+'.lean',c)
+c=(s/'SourceIntegralTraceScratchOwnership1532.lean').read_text(encoding='utf-8')
+c='\n'.join('import '+m for m in mods)+'\nimport Mathlib.Tactic\n'+c[c.index('\nopen Lean'):]
+c=re.sub(r'let mods : Array Name := #\[[^\n]*\]','let mods : Array Name := '+arr(mods),c)
+write('SourceEvenWeightFullSlashScratchOwnership1661.lean',c)
+report='Dubon Even Weight Full Slash Assessment 2026-10-28.md'
+write(report,"# Uniform even-weight full slash integrality — 28 October 2026\n\nThe exact unresolved chain is DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 → literal higher continuation → automorphy → original all-weight characteristic-zero association → original Gamma1 degree/genus preservation → reduced field action → uniform level-power SL2 slash integrality. Acceptance remains 16/20; DUB-17–20 OPEN.\n\nThe theorem exists_level_power_integral_even_slash_coefficients consumes an actual even-weight Gamma1(M) modular form and its original integer Fourier series. For every nonzero level M and every actual SL2(Z) matrix, it constructs one exponent b such that M^b times every coefficient of the width-M translated Fourier expansion is an algebraic integer. A stronger preceding theorem allows an original common level-clearing power. Negative even weights and level one are included. Neither transformed-integrality, auxiliary existence nor a common denominator remains a premise.\n\nThe proof reuses the repository's original level-raising integral conjugate, scalar Fricke slash formula, translated modular forms, strict periods and coefficient uniqueness. A chart at level M squared gives the exact factor M^(k−1). Its actual Fricke transform is M^(k−2) times the chart at beta*S; native q-expansion linearity gives the combined factor M^(2k−3). The proved uniform Fricke theorem and explicit nonnegative exponents then propagate integrality through S. Translation by every integer multiplies coefficients by the already proved integral Siegel cyclotomic phase. Native SL2 generation, even-weight negation and the original sparse width change finish the argument. The original integral-ratio field admits even-weight representatives; no odd-weight auxiliary theory is required on this chain.\n\nThe [pinned full-slash source](https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_coeff.lean) is adapted without its duplicate matrices, determinant proofs, analytic uniqueness wrapper, root-of-unity inverse proof or linter suppressions. Native modular q-expansion linearity replaces a second analytic construction for the Fricke chart.\n\nAll six versioned modules pass public/exhaustive axiom checks and sixteen linters each. All 35 required dependencies occur in the declaration-value closure of the actual integral-q-expansion consumer, including the uniform Fricke theorem, common denominator, original trace, actual peaked auxiliary and native S/T generation. The scope contains twenty public theorems and one definition. Canonical ownership and receipts are recorded separately; production promotion and assembled verification remain pending.\n\nThis discharges the uniform even-weight SL2 slash-integrality obligation. It does not construct the action on every reduced rational relation. Rational diamond coefficients, level-cleared integral diamond forms, preservation of reduction relations, the signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain required. No Dubon acceptance gate is claimed closed. Root pins, proof limits and the full source contract are unchanged.\n")
+route=dict(recordedUTC=datetime.now(timezone.utc).isoformat(),chain='DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform even-weight SL2 slash integrality.',reuseChecked=[dict(path=str(s/n),sha256=sha(s/n)) for n in ['full-slash-native-reuse-review-1654.json',report]],shorterRoute='Native level-raising conjugates, translated modular forms, coefficient uniqueness and q-expansion linearity give the actual cusp/Fricke chart. The existing cyclotomic phase handles both T directions, even-weight negation handles inverse S, and native SL2 generation completes the original integral-q-expansion consumer.',assumptionsToDischarge=['Actual arbitrary-cusp charts have level M squared invariance.','The chart and Fricke chart have the exact Fourier normalization.','The actual uniform Fricke theorem transports a single clearing exponent through S.','Existing integral cyclotomic phases transport integrality through every integer translation.','Native SL2 generation and the original integer q-expansion give a uniform level power at every actual cusp.'],remaining='Rational diamond coefficients, level-cleared integral diamond forms, reduced relation preservation and full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.',externalBuild=False,externalImport=False,rootPinsChanged=False,proofLimitsChanged=False)
+rf='source-even-weight-full-slash-audit-route-1661.json';write(rf,json.dumps(route,indent=2)+'\n')
+c=(s/'record_siegel_function_1580.py').read_text(encoding='utf-8')
+for a,b in [('source-siegel-function-1',stem),('SourceSiegelFunctionAudit1','SourceEvenWeightFullSlashAudit1'),('SourceSiegelFunctionDependencyAudit1','SourceEvenWeightFullSlashDependencyAudit1'),('SourceSiegelFunctionScratchOwnership1580','SourceEvenWeightFullSlashScratchOwnership1661'),('source-siegel-function-audit-route-1580',rf[:-5]),('SIEGEL FUNCTION','EVEN WEIGHT FULL SLASH')]:c=c.replace(a,b)
+nm,nq,ne=len(mods),len(cfg['queries']),len(cfg['proofEdges'])
+c=c.replace('(19, 101, 110)',str((nm,nq,ne))).replace('modules=19',f'modules={nm}').replace('queries=101',f'queries={nq}').replace('linterScopes=19',f'linterScopes={nm}').replace("text.count('with 16 linters') == 19",f"text.count('with 16 linters') == {nm}").replace('all 110 required',f'all {ne} required').replace('requiredProofValueEdges=110',f'requiredProofValueEdges={ne}').replace('proofEdges=110',f'proofEdges={ne}')
+ast.parse(c);write('record_even_weight_full_slash_1661.py',c)
+c=(s/'audit_siegel_function_1580.ps1').read_text(encoding='utf-8')
+for a,b in [('SourceSiegelFunctionAudit1','SourceEvenWeightFullSlashAudit1'),('SourceSiegelFunctionDependencyAudit1','SourceEvenWeightFullSlashDependencyAudit1'),('SourceSiegelFunctionScratchOwnership1580','SourceEvenWeightFullSlashScratchOwnership1661'),('record_siegel_function_1580','record_even_weight_full_slash_1661')]:c=c.replace(a,b)
+write('audit_even_weight_full_slash_1661.ps1',c)
+c=(s/'build_siegel_function_canonical_1580.ps1').read_text(encoding='utf-8')
+c=re.sub(r'\$names=@\([^\n]+\)',"$names=@("+','.join(repr(m) for m in mods)+')',c).replace("$ev=$base+'-1580'","$ev=$base+'-1661'").replace('audit_siegel_function_1580','audit_even_weight_full_slash_1661')
+write('build_even_weight_full_slash_canonical_1661.ps1',c)
+print(json.dumps(dict(modules=nm,queries=nq,edges=ne,status='Canonical mathematical bodies and comments frozen.')))

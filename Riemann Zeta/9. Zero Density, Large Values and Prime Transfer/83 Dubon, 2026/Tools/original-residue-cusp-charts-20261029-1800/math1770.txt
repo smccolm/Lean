@@ -1,0 +1,1 @@
+Extend the actual primitive fixed vector to an original invertible basis. Conjugation makes every original matrix fix the first axis. Genuine residual nonidentity survives this original basis change, so the derived residual criterion proves that the entire invariant module is precisely that first coordinate line.

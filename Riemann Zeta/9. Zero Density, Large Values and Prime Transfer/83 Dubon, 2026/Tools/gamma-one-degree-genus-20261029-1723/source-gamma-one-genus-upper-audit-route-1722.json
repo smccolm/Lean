@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-10-29T08:43:26.603027+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> upper bound on the actual residue genus.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-1-scratch-receipt.json",
+      "sha256": "4A873E43FDB7D5F3F4C524D89393E5DBAC1B6E5CA942300E9E20C4D62E3781E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-genus-upper-preflight-config-1720.json",
+      "sha256": "5DDCDA3DFF75393513CBE48BDC2C2A7F2E130A3D68537208DB37EFD4EABB2253"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Gamma One Residue Genus Upper Assessment 2026-10-29.md",
+      "sha256": "5C76B1934445337A07CF486293AC8D17008CC2DEE8C21DA195FCA00198512C42"
+    }
+  ],
+  "shorterRoute": "Reuse was checked against the native separating-residue-coordinate genus inequality, original regular prolongation, residue-coordinate separability and newly proved original Gamma1 degree preservation. A single prolongation (the family indexed by Fin 1) suffices. General Kummer families, new Riemann-Roch infrastructure and unrelated constant-field transport are unnecessary for this half of genus preservation.",
+  "assumptionsToDischarge": [
+    "For the actual valuation subring of the algebraic closure of the rationals, original Gamma1 coordinate degree preservation and residue-field identification now supply the degree premise of the native separating-coordinate genus inequality.",
+    "The actual regular prolongation, proved residue separability and algebraic closure of the residue coefficients give genus(residue image) <= genus(original function field) for every prime not dividing the level, including two and three. No degree, genus or regular-prolongation certificate is assumed."
+  ],
+  "remaining": "The reverse genus inequality is still required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

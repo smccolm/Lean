@@ -1,0 +1,7 @@
+### Actual actual strict conjugacy and traces through the original quotient — 10 October 2026
+
+Use actual representatives under a genuine surjective group homomorphism to preserve and reflect the same original strict conjugator. Prove equality of the exact ranges of original matrix traces and therefore equality of the literal closed trace coefficient algebras.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixStrictConjugacySurjectiveRestriction](Extension/Dubon2026/MatrixStrictConjugacySurjectiveRestriction.lean).

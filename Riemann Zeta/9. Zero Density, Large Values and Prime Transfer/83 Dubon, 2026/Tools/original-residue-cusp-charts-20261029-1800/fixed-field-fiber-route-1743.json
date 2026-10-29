@@ -1,0 +1,33 @@
+{
+  "recordedUTC": "2026-10-29T09:34:30.475177+00:00",
+  "chain": "DUB-17/18 -> original all-weight association -> finite homogeneous Gamma1 Hecke realization -> original genus preservation -> reverse genus inequality -> residue fiber bounds -> diamond fixed-field identification and place-fiber transitivity.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisFiberTransitivity.lean",
+      "sha256": "24ECB1ADDA1751FA1FBD8FF904117BE17A2CD06A2D5DE32FC7CD2E2F3099BC35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Fixed.lean",
+      "sha256": "F2DE94113C73C500221964AD961CDE0241BD4E7555FAA67EACD9D68E2B84B203"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneIntegralRatioDegreeAssembly.lean",
+      "sha256": "1DF24F46D62372D5ECAC7D0E5BB06135FA8DE70A50AB46EE4ED44C30DE986FEB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCoordinateIndex1742a.lean",
+      "sha256": "6347D02C8A55C9167E72059AEAC13973F27B4B23598A0AC85EB7C24F7DE2D621"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedField1739a.lean",
+      "sha256": "C504B82A49920F68939076661CF0CBC19C046CFD5A4B72C0210F37AA211DA12B"
+    }
+  ],
+  "shorterRoute": "Use the already proved original residue coordinate degree, exact scalar diamond Artin degree and native full modular base degree to force the intervening fixed-field degree to one. Then reuse native Galois place-fiber transitivity and FixedPoints.toAlgAut_bijective to obtain a literal diamond matrix witness. This avoids a new integral-closure prime transitivity development and a coefficient intersection proof of fixed-field identification.",
+  "assumptionsToDischarge": [
+    "The conditional coordinate degree in the fixed-field comparison is discharged by residue_original_coordinate_degree_eq_signed_index for the actual valuation residue field.",
+    "Finite action image and Artin degree are derived from the exact signed kernel.",
+    "The Galois place-transitivity hypotheses follow from native finite fixed-point theory."
+  ],
+  "remaining": "Actual residue fiber bounds at j=0,1728,infinity, including characteristics two and three, and the reverse genus comparison remain required; no new source acceptance gate is closed."
+}

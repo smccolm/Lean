@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixTwo_invariant_line_of_ordinary_relations`. -/
+theorem actual_matrix_two_ordinary_invariant_line_matrixTwo_invariant_line_of_ordinary_relations_source (r : R →+* K) [IsLocalHom r]
+    (A : G → GeneralLinearGroup (Fin 2) R)
+    (g₀ : G) (hA : GeneralLinearGroup.map r (A g₀) ≠ 1)
+    (hrel : ∀ g, ((A g).val - 1) *
+      ((A g₀).val - (GeneralLinearGroup.det (A g₀) : R) • (1 : Matrix (Fin 2) (Fin 2) R)) = 0) :
+    ∃ U : GeneralLinearGroup (Fin 2) R, ∀ w : Fin 2 → R,
+      (∀ g, (A g).val *ᵥ w = w) ↔ (U⁻¹.val *ᵥ w) 1 = 0 :=
+  matrixTwo_invariant_line_of_ordinary_relations r A g₀ hA hrel
+
+end
+

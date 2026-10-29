@@ -1,0 +1,32 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `arithmeticUnramifiedRepresentation_stabilizer_scalar_unit`. -/
+theorem actual_arithmetic_unramified_matrix_spanning_arithmeticUnramifiedRepresentation_stabilizer_scalar_unit_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := AlgebraicClosure (IsLocalRing.ResidueField O)) σ))]
+    (hσ : Continuous σ) (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P.asIdeal ≤ σ.ker)
+    (U : GeneralLinearGroup ι (ArithmeticUnramifiedDeformationRing a ha p hp hpa σ hσ δ P))
+    (hU : ∀ g, U * arithmeticUnramifiedRepresentation a ha p hp hpa σ hσ δ P g =
+      arithmeticUnramifiedRepresentation a ha p hp hpa σ hσ δ P g * U) :
+    ∃ u : (ArithmeticUnramifiedDeformationRing a ha p hp hpa σ hσ δ P)ˣ,
+      U = GeneralLinearGroup.scalar ι u :=
+  arithmeticUnramifiedRepresentation_stabilizer_scalar_unit a ha p hp hpa σ hσ δ hδ P hP U hU
+
+end
+

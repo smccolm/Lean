@@ -1,0 +1,7 @@
+### Actual naturality of actual original unframed trace evaluation — 10 October 2026
+
+Use the existing original coefficient-fiber postcomposition and original unframed class postcomposition. Evaluate both sides on every actual whole original representation matrix and prove the coefficient-composition identity entry by entry. This establishes naturality for the same evaluation map used by the constructed universal trace representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalCoefficientRepresentationNaturality](Extension/Dubon2026/OriginalCoefficientRepresentationNaturality.lean).

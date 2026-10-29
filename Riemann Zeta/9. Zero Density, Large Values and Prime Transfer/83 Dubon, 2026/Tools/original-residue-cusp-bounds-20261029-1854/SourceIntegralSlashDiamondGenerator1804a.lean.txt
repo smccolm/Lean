@@ -1,0 +1,48 @@
+import SourceIntegralDiamondScalarNormalizedAction1803a
+import Dubon2026.SourceIntegralSlashNormalizedDiamond
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual diamond stabilizer chart. Apply the
+constructed cusp homomorphism to the actual scalar-extended diamond action on
+each normalized generator. Its inverse clearing power cancels the literal
+clearing power in the native cusp expansion; no equivariance is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K]
+  [CharP K ℓ] [Algebra (ZMod ℓ) K] (hℓN : ¬ ℓ ∣ N)
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+
+theorem originalReducedSlashFieldHom_diamond_generator (β : SL(2, ℤ))
+    (Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x)
+    (γ : Gamma0 N) {x : LaurentSeries K} (hx : x ∈ normalizedGenerators N K) :
+    Φ (reducedFieldActionOver K N ℓ hℓN γ ⟨x, normalizedGenerators_subset N K hx⟩) =
+      normalizedSlashValue N φ hN ((γ⁻¹).val * β) x := by
+  obtain ⟨r, f, p, hp, rfl⟩ := hx
+  let hk : Even (12 * (r : ℤ)) := (show Even (12 : ℤ) by decide).mul_right _
+  obtain ⟨a, P, hP⟩ := exists_integral_scaledDiamond N hk γ⁻¹ f hp
+  let y : qExpFunctionFieldC K (Gamma1 N) :=
+    ⟨intSeriesC K P / intSeriesC K discriminantSeries ^ r,
+      normalizedGenerators_subset N K ⟨r, scaledDiamond N γ⁻¹ a f, P, hP, rfl⟩⟩
+  have he : reducedFieldActionOver K N ℓ hℓN γ
+      ⟨intSeriesC K p / intSeriesC K discriminantSeries ^ r,
+        normalizedGenerators_subset N K ⟨r, f, p, hp, rfl⟩⟩ = y / (N : qExpFunctionFieldC K (Gamma1 N)) ^ a :=
+    Subtype.ext (reducedFieldActionOver_normalized K N ℓ hℓN γ f hp a hP)
+  have hy := hΦ _ ⟨r, scaledDiamond N γ⁻¹ a f, P, hP, rfl⟩
+  change Φ y = _ at hy
+  rw [he, map_div₀, map_pow, map_natCast, hy,
+    normalizedSlashValue_scaledDiamond N φ hN ℓ f hp γ⁻¹ a hP β,
+    map_pow, map_natCast]
+  have hn : (N : LaurentSeries K) ≠ 0 := by
+    simpa only [map_natCast] using (HahnSeries.C_ne_zero hN :
+      (HahnSeries.C (N : K) : LaurentSeries K) ≠ 0)
+  exact mul_div_cancel_left₀ _ (pow_ne_zero a hn)
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

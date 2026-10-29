@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R M : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+  [AddCommGroup M] [Module R M] [Module O M]
+
+variable [IsScalarTower O R M]
+
+/-- Exact original-object consumer of `relativeMaximalCotangentDerivationEquiv_apply`. -/
+theorem actual_relative_maximal_cotangent_universal_relativeMaximalCotangentDerivationEquiv_apply_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (hM : Module.IsTorsionBySet R M (IsLocalRing.maximalIdeal R))
+    (f : RelativeMaximalCotangent O R →ₗ[R] M) (r : R) :
+    relativeMaximalCotangentDerivationEquiv eR hM f r =
+      f (relativeMaximalCotangentDerivation eR r) :=
+  relativeMaximalCotangentDerivationEquiv_apply eR hM f r
+
+end
+

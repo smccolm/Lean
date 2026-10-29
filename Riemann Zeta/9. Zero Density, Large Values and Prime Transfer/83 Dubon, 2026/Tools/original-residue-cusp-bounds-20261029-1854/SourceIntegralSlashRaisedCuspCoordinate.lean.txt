@@ -1,0 +1,69 @@
+import SourceIntegralSlashRaisedCuspLaurent
+import SourceIntegralSlashFieldNormalizedRatio
+import Dubon2026.SourceIntegralDiamondScalarBaseFixed
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Apply the
+proved actual-field ratio formula to the raised E4 cube and discriminant.
+Their identical triangular denominator cancels, yielding the literal j_N slot
+on the same original Gamma1 field homomorphism used for diamond equivariance. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K] [CharP K ℓ]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+private local instance : Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+include ℓ
+
+theorem originalReducedSlashFieldHom_jqN_triangular
+    (ζ : Kˣ) (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (a d : ℕ) [NeZero a] [NeZero d] (had : a * d = N)
+    (g : SL(2, ℤ)) (B : ℕ) (c t : ℤ) (hc : g 1 0 = a * c)
+    (ht : g 1 1 * a - g 1 0 * (B : ℤ) = N * t)
+    (Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K)
+    (hΦ : ∀ x (hx : x ∈ normalizedGenerators N K),
+      Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN g x) :
+    Φ ⟨jqNModC K N, fullBase_le_originalField K N (jqd_mem_coeff_field N K (dvd_refl N))⟩ =
+      qExpand K (a * a) (qTwist (ζ ^ ((a * B : ℕ) : ℤ)) (jqModC K)) := by
+  let f : ModularForm 𝒮ℒ 12 := (ModularForm.E₄.pow 3).mcast (by norm_num)
+  let δ : ModularForm 𝒮ℒ 12 := CuspForm.discriminant
+  have hf : IsIntegralQExp f (eisenstein4 ^ 3) := integralQExp_gammaOneEisensteinCube N
+  have hδ : IsIntegralQExp δ discriminantSeries := integralQExp_gammaOneDiscriminant N
+  have hδ0 : intSeriesC K (PowerSeries.expand N (NeZero.ne N) discriminantSeries) ≠ 0 := by
+    rw [intSeriesC_expand]
+    exact fun hz => intSeriesC_discriminant_ne_zero K ((qExpand K N).injective (hz.trans (map_zero _).symm))
+  have h := originalReducedSlashFieldHom_normalized_ratio N ℓ φ hN g Φ hΦ (r := 1)
+    (gammaOneRaisedLevelOne N f) (gammaOneRaisedLevelOne N δ)
+    (integralQExp_gammaOneRaisedLevelOne N f hf)
+    (integralQExp_gammaOneRaisedLevelOne N δ hδ) hδ0
+  have he := jqNModC_eq_raised_discriminant_ratio N K
+  have hi : (⟨jqNModC K N, fullBase_le_originalField K N
+      (jqd_mem_coeff_field N K (dvd_refl N))⟩ : qExpFunctionFieldC K (Gamma1 N)) =
+      ⟨intSeriesC K (PowerSeries.expand N (NeZero.ne N) (eisenstein4 ^ 3)) /
+        intSeriesC K (PowerSeries.expand N (NeZero.ne N) discriminantSeries),
+        div_mem_qExpFunctionFieldC (gammaOneRaisedLevelOne N f) (gammaOneRaisedLevelOne N δ)
+          (integralQExp_gammaOneRaisedLevelOne N f hf)
+          (integralQExp_gammaOneRaisedLevelOne N δ hδ) hδ0⟩ := Subtype.ext he
+  rw [hi, h]
+  change HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+    (gammaOneRaisedLevelOne N f) (integralQExp_gammaOneRaisedLevelOne N f hf) g φ hN) /
+    HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+      (gammaOneRaisedLevelOne N δ) (integralQExp_gammaOneRaisedLevelOne N δ hδ) g φ hN) = _
+  rw [ofPowerSeries_reducedRaisedLevelOne N a d had φ hN ζ hφ f hf g B c t hc ht,
+    ofPowerSeries_reducedRaisedLevelOne N a d had φ hN ζ hφ δ hδ g B c t hc ht]
+  have hd : (d : K) ≠ 0 := by
+    intro hz
+    apply hN
+    rw [← had, Nat.cast_mul, hz, mul_zero]
+  have hdL : (d : LaurentSeries K) ≠ 0 := by
+    simpa only [map_natCast] using (HahnSeries.C_ne_zero hd :
+      (HahnSeries.C (d : K) : LaurentSeries K) ≠ 0)
+  rw [div_div_div_cancel_right₀ (pow_ne_zero 12 hdL), ← map_div₀, ← map_div₀,
+    ← jqModC_eq_discriminant_normalized]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

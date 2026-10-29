@@ -1,0 +1,7 @@
+### Actual primitive fixed column from original relations — 10 October 2026
+
+A matrix nonzero in the actual residue has an original unit entry. Select its corresponding genuine column. Actual matrix-minus-identity relations fix that entire column for every original matrix, giving a primitive invariant vector over the original coefficient ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixFixedColumnFromRelations](Extension/Dubon2026/MatrixFixedColumnFromRelations.lean).

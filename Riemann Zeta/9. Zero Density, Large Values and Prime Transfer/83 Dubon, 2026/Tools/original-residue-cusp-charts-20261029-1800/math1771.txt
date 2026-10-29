@@ -1,0 +1,1 @@
+A matrix nonzero in the actual residue has an original unit entry. Select its corresponding genuine column. Actual matrix-minus-identity relations fix that entire column for every original matrix, giving a primitive invariant vector over the original coefficient ring.

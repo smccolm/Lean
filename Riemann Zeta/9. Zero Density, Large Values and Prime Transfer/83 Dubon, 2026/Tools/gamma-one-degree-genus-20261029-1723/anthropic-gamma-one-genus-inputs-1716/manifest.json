@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-10-29T08:22:04.240293+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-genus-inputs-1716\\S_ModularCurve_two_mul_genusFF_add_card_fibres_le_finrank_add_two_of_gamma1_le.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_two_mul_genusFF_add_card_fibres_le_finrank_add_two_of_gamma1_le.lean",
+      "bytes": 46759,
+      "sha256": "8F8EB61D8118F4CBC8C78D377BBED72FB14EF364B6001FDBAA414B5AA298975B",
+      "gitBlob": "6cadf88264baaff5f5410b03942795798d9300f2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-genus-inputs-1716\\S_ModularCurve_natCard_doubleCoset_le_card_fibres_of_finrank_eq_index.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_natCard_doubleCoset_le_card_fibres_of_finrank_eq_index.lean",
+      "bytes": 59475,
+      "sha256": "19A670DE5D257C0AC592B723D3C1264D50E56F5B87F690D163EFFB9B52E325DC",
+      "gitBlob": "66caabba3546bbe4f486eb0fab4abe35fd33b2b0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-genus-inputs-1716\\S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean",
+      "bytes": 54019,
+      "sha256": "5085319636FFDD9F8E7692CB1FA57E3B2F1334C2B14F30D4F3B3E2F9DD7BE4A0",
+      "gitBlob": "df76a55d7757020f03ec3e4883f003d3bcdb9506"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-genus-inputs-1716\\S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean",
+      "bytes": 49082,
+      "sha256": "2BE6066BFA7CB9EBB51F3DAEE21CC8AC778DDFBCC0C4F3512069B8853D17C6BC",
+      "gitBlob": "ffe4875e5a4e13d43857eb29668d1fe7a2290475"
+    }
+  ],
+  "purpose": "Read-only review of the exact remaining genus-preservation dependency after original Gamma1 degree preservation. Compare native original curves, fiber/cusp orbit classifications, canonical divisors and residue geometry against these four pinned source inputs; select only missing Gamma1 components. No external import, build, proof-option or source-contract change.",
+  "externalBuild": false,
+  "externalImport": false
+}

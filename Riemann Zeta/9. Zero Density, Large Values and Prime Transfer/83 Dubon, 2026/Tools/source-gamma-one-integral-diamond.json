@@ -1,0 +1,1135 @@
+{
+  "date": "29 October 2026",
+  "modules": [
+    "Dubon2026.SourceFrickeLevelIntegralRing",
+    "Dubon2026.SourceFrickeGammaOneNormalizer",
+    "Dubon2026.SourceFrickeTraceSubgroup",
+    "Dubon2026.SourceFrickeTraceForms",
+    "Dubon2026.SourceFrickeDenominatorUniformization",
+    "Dubon2026.SourceEvenWeightFrickeTrace",
+    "Dubon2026.SourceIntegralSeriesScalarDescent",
+    "Dubon2026.SourceIntegralSeriesCommonDenominator",
+    "Dubon2026.SourceGammaOneAlgebraicCuspDenominator",
+    "Dubon2026.SourceIntegralDiscriminantCancellation",
+    "Dubon2026.SourceGammaOneAlgebraicFormDenominator",
+    "Dubon2026.SourceEvenWeightBalance",
+    "Dubon2026.SourceEvenWeightFrickeCommonDenominator",
+    "Dubon2026.SourceEvenWeightUniformFrickeIntegrality",
+    "Dubon2026.SourceIntegralSlashCuspSubgroup",
+    "Dubon2026.SourceIntegralSlashCuspChart",
+    "Dubon2026.SourceIntegralSlashFrickeChart",
+    "Dubon2026.SourceIntegralSlashSMove",
+    "Dubon2026.SourceIntegralSlashTMove",
+    "Dubon2026.SourceEvenWeightUniformSlashIntegrality",
+    "Dubon2026.SourceRationalCuspDiamondFourier",
+    "Dubon2026.SourceRationalDiscriminantCancellation",
+    "Dubon2026.SourceRationalModularDiamondFourier",
+    "Dubon2026.SourceEvenWeightIntegralDiamondForm"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> actual finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> signed-index lower bound -> reduced field action -> integral diamond forms -> uniform level-power slash integrality -> actual even-weight Fricke trace.",
+  "discharged": "The actual conjugate-subgroup trace consumes the constructed peaked auxiliary and proves Fricke coefficient integrality. Finite algebraic coefficient descent, the existing integral cusp basis and discriminant cancellation prove a common denominator, then arithmetic removes every prime away from the level. This gives uniform level-power Fricke integrality for every nonzero level and every even integer weight. The actual cusp chart at the squared level transfers Fricke to the S move; integral root-of-unity phases supply all integer T moves. Native SL2(Z) generation proves uniform level-power integrality for every slash matrix. Rational cusp diamond expansions and discriminant cancellation prove rationality of the actual transformed modular-form coefficients. Combining rationality and integrality constructs an actual Gamma1 modular form with integer Fourier series equal to a level power times the Gamma0 diamond transform. No auxiliary-existence, common-denominator, transformed-rationality or transformed-integrality premise remains in this final construction.",
+  "boundary": "The action on all reduced rational relations, its field and composition laws, the signed-index lower bound and original degree/genus preservation remain open in the production scope. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,294-module scope: all thirteen retained regressions, 58,998 exhaustive theorem checks, 27,146 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator",
+    "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T05:50:25.608036+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceFrickeLevelIntegralRing",
+        "SourceFrickeGammaOneNormalizer",
+        "SourceFrickeTraceSubgroup",
+        "SourceFrickeTraceForms",
+        "SourceFrickeDenominatorUniformization",
+        "SourceEvenWeightFrickeTrace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelIntegralRing.lean",
+          "sha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+          "oleanSha256": "46C5F86D2D39057A3800B583DC5B6BBCBA33C36DFFFCFF6154731E094225D720",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelIntegralRing-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelIntegralRing-1643.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeGammaOneNormalizer.lean",
+          "sha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+          "oleanSha256": "EC1947C9E82A0580B6F2039264825650EBF5F6ADB4E3F1F0A85C12A979E28160",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeGammaOneNormalizer-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeGammaOneNormalizer-1643.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceSubgroup.lean",
+          "sha256": "837B8047D05E74D8F3BDF2118D68D018DC21874231EF89F897735D5A15A51C5F",
+          "oleanSha256": "061ACCC6A9873700EC1E8AE110472DBD03046108281B238EF6E19091665F527D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceSubgroup-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceSubgroup-1643.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceForms.lean",
+          "sha256": "4A7012079BD1372D4BCF6A0A3F211EBC30512F648C347B6F49FDC464F8B02196",
+          "oleanSha256": "C2A9DCA59A552AB88B0C70FF2F81B6DD752A21F6C71CBF2BBDD92C70C266BD5E",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceForms-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTraceForms-1643.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeDenominatorUniformization.lean",
+          "sha256": "B2B66A0DA84FC972F18F28FFA0E197B41D29795A6FD709F3B5DEEE9A378F2600",
+          "oleanSha256": "EEE3B991B87BC4C33422D65B289CCEEE9E246E1C47B905F22127F6159426321D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeDenominatorUniformization-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeDenominatorUniformization-1643.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTrace.lean",
+          "sha256": "2DF92E3C6D6F1F082D0B5A5DA164CB2B47A6AA99F31246A5BC7A1C93AFB728AB",
+          "oleanSha256": "627EFD868EDDD0840C58FD358C4267EDA7B22550A1AEFB33BAB0C27056D4F435",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTrace-1643.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTrace-1643.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv",
+        "Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem",
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀",
+        "Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal",
+        "Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash",
+        "Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow",
+        "Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator",
+        "Dubon2026.SourceFunctionField.IntegralFricke.RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.g₀",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_RN_of_isIntegral_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.inv_natCast_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.det_frickeConjMat",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeMatrix_mul_mul_inv",
+        "Dubon2026.SourceFunctionField.IntegralFricke.fricke_conj_mem",
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_GammaS_iff",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gamma_le_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.T_pow_mem_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.STS_mem_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.mem_conj_iff",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conjS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS_le_conj_g₀",
+        "Dubon2026.SourceFunctionField.IntegralFricke.natCast_mem_strictPeriods_GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_Thetaform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.g₀_eq_diagonal",
+        "Dubon2026.SourceFunctionField.IntegralFricke.qParam_diagonal_smul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coeff_qExpansion_Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gform_slash_S",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash_S",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform_slash",
+        "Dubon2026.SourceFunctionField.IntegralFricke.dvd_pow_self_of_dvd_pow",
+        "Dubon2026.SourceFunctionField.IntegralFricke.isIntegral_pow_mul_of_isIntegral_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeConjMat",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeConjSL",
+        "Dubon2026.SourceFunctionField.IntegralFricke.GammaS",
+        "Dubon2026.SourceFunctionField.IntegralFricke.g₀",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gform",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Thetaform"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceAudit1.log",
+      "logSha256": "BE0E8782F4A5EC4A6E50E1BC4A162F653EB52CD653429DFEDA7613B0D3F9B381",
+      "auditSha256": "6F964FCEAC337E4C78C4E247FD851FC196FC02C4A3B9AB6B93232318EA2ADDCD",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceScratchOwnership1643.log",
+      "ownershipSha256": "7D1FB7492CABC5847EA2384DEA8091BE93DAABA2396652C88ADE4E17D0932D8B",
+      "exhaustiveTheorems": 40,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 44,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceDependencyAudit1.log",
+      "dependencyAuditSha256": "45FCECE5355CE2081C551F899D628589F9036DE3C603A553E3E420185FE9F250",
+      "dependencyAuditSourceSha256": "53C5E6406267B5E41B8E4380134B1949CDC20CF7C33FE45EB96749354ED8C006",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power slash integrality -> actual even-weight Fricke trace.",
+      "discharged": [
+        "The actual trace subgroup has finite index and both required translations.",
+        "The original transformed forms have the exact Fourier normalization and slash identities.",
+        "The constructed actual auxiliary discharges all auxiliary inputs in the even-weight Fricke trace.",
+        "Every actual Fricke coefficient is integral after a coefficient-dependent level power.",
+        "A common nonzero integer denominator implies one common level exponent by proved Bezout and factorization."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Construct the common integer denominator and assemble uniform full slash integrality. Reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-fricke-trace-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "11EAD6A793671008CB77D9AD7DEEB4CA04FE078ABD0204C353319EBEAF9E57F1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T06:19:59.429680+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceIntegralSeriesScalarDescent",
+        "SourceIntegralSeriesCommonDenominator",
+        "SourceGammaOneAlgebraicCuspDenominator",
+        "SourceIntegralDiscriminantCancellation",
+        "SourceGammaOneAlgebraicFormDenominator",
+        "SourceEvenWeightBalance",
+        "SourceEvenWeightFrickeCommonDenominator",
+        "SourceEvenWeightUniformFrickeIntegrality"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent.lean",
+          "sha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+          "oleanSha256": "A32132047174D3D3E5EF42A5BC3B91D7ABF8340531E0A9914E1AE34BD44F6D4B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesScalarDescent-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator.lean",
+          "sha256": "06D5F3629916C3781631F3CE3A6C4FF9411BFA491B432C8A7E2005CB70524745",
+          "oleanSha256": "A91F026F84D4F526BE01AA5D3DEC774283743E1BF1ADBA659EA72DAEFAC2CD56",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSeriesCommonDenominator-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator.lean",
+          "sha256": "86E8AF9BC06BFEB5BDD3701134F26DB5C70E158396D52C52DE5BDF19EA2B5D68",
+          "oleanSha256": "501CFCC2BC1F52AE409E4493578B0B5DE684E0964EECB3D9BFDBC8BF38249D4C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicCuspDenominator-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation.lean",
+          "sha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+          "oleanSha256": "43608E55F75EA19E707B448EA026190DDA841664E3D172B8B914E1CCD8A068CB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiscriminantCancellation-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator.lean",
+          "sha256": "B454177EAC6479C52373F462907D7F55B12A27D3CCA789DF8F46BC92DD53E48A",
+          "oleanSha256": "22A0CC47A8EE26D1FD25ADDC2614ED24A7FFEFDD504C30C8A93EBD1005DE3F27",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAlgebraicFormDenominator-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance.lean",
+          "sha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+          "oleanSha256": "406CC73FB5117168B73D3E087599B36ABEED388535914EFA8901DAB7A8E28F3B",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightBalance-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator.lean",
+          "sha256": "963EC02EA4A586C78EE2011F013D30453487F451569016CFBA3C11A5F2678B7B",
+          "oleanSha256": "66EE66FB74B19F0120282FC7864E6FA3C1D595BF67BEAEF233690CB561FD0863",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeCommonDenominator-1653.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality.lean",
+          "sha256": "4BF5FAF0E05F308DDF1F7828111F6A15895A26E6A2DA31E7571DEAC588FFAC20",
+          "oleanSha256": "053C39C2BC0CBBE82EC0B2465D659807AA35108E16F035F46CBFFAA468D2D381",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality-1653.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformFrickeIntegrality-1653.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm",
+        "Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeForm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance",
+        "Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke",
+        "Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm",
+        "Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke",
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.frickeForm"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformAudit1.log",
+      "logSha256": "9698F47F479835F61121E4E450DF14A87B78FED6DE3A136E6A00D13FAF226622",
+      "auditSha256": "344DF9A160A952C97360372786A4E8F89ABC9E3872E244B1718B05DA2A89C027",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformScratchOwnership1653.log",
+      "ownershipSha256": "3198B16ED1982E470C2DD0EE80E7BA7DD3AC637D8AE4F532952C7EAE88EEE354",
+      "exhaustiveTheorems": 17,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformDependencyAudit1.log",
+      "dependencyAuditSha256": "D5EBFA423D9C932404E1AEBA1835F2BCD4C5E85FCFE94F733E70B0BF66770E3A",
+      "dependencyAuditSourceSha256": "76AF3C6572CE3058CDBF0CB7823C04713E5097AA2FEAA771C9FC6699048EF8FA",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform level-power SL2 slash integrality -> uniform even-weight Fricke integrality.",
+      "discharged": [
+        "The actual even-weight Fricke transform is a Gamma1 modular form.",
+        "The actual trace proves every transformed coefficient algebraic.",
+        "Native integral cusp span and scalar descent construct a common integer denominator.",
+        "The actual discriminant and its integral inverse extend the denominator from cusp forms to modular forms.",
+        "Even integer weights admit the required nonnegative balance, including negative weights.",
+        "A single power of the level clears every actual even-weight Fricke coefficient at every nonzero level."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Full SL2 slash integrality, reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-fricke-uniform-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "C720BE024491F0FD46871D9E6961E455FBEAF3BC8508FDBC9B15808F071604F1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T06:36:04.797995+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceIntegralSlashCuspSubgroup",
+        "SourceIntegralSlashCuspChart",
+        "SourceIntegralSlashFrickeChart",
+        "SourceIntegralSlashSMove",
+        "SourceIntegralSlashTMove",
+        "SourceEvenWeightUniformSlashIntegrality"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup.lean",
+          "sha256": "1313230CD9022348C9FE5D2F90305B9F9C8E907E36593C14F54526CCE158B544",
+          "oleanSha256": "080E8CEC61712332787D3CE9A825537194EE09E36D8D3C5E015D40401AB6D315",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspSubgroup-1661.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart.lean",
+          "sha256": "31DDCA3B3A21E4F6D635D4945A28D75341CC6CE0827EC166E87C5F2B569E3D38",
+          "oleanSha256": "061DC59C2AE8CCEBEE163EC21398A5AAA0007AB911F2EAFC947021D8A1A4BE56",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspChart-1661.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart.lean",
+          "sha256": "AB239D15958418E3FA8B03182628A1D7251094EE9F68FB0BFD7022F9BD919B9F",
+          "oleanSha256": "428B95777ECDE257D1A8A95D6AB6CE82988517763045BAC978342E78B3C58A51",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashFrickeChart-1661.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove.lean",
+          "sha256": "8F73E1C0F30D62A82D2D42B218DAAA7B1C284A09371A19DED487FD08B6AD2633",
+          "oleanSha256": "D8279BE49FB790E58817C43C2EDE659BF9D7043008BE7BFB3986A62C3D057B7D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashSMove-1661.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove.lean",
+          "sha256": "F58DC86BD55512FEAA7CDD3AA002CAF3DC761B4CD37CAC810E542FE33BACEAD0",
+          "oleanSha256": "564D3EAE4215D656626F156802F9B73E507DC5171B16D05BE653BD12E4CCFCEA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTMove-1661.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality.lean",
+          "sha256": "971311FCF219F6597DE99D29102A1979E76503778AA111954633D100DF38BD04",
+          "oleanSha256": "7D65748CF6AB8A2B839B24B99A6209915D48ABBD4DFD04045355BA22DA9BF59D",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality-1661.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightUniformSlashIntegrality-1661.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma",
+        "Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod",
+        "Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients",
+        "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_dvd_of_Gamma1_sq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaiseConj_mem_Gamma",
+        "Dubon2026.SourceFunctionField.IntegralSlash.Gamma1_sq_le_conj_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.cusp_strictPeriod",
+        "Dubon2026.SourceFunctionField.IntegralSlash.hasSum_cusp",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coe_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.slash_levelRaise_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart_apply",
+        "Dubon2026.SourceFunctionField.IntegralSlash.qParam_levelRaise_smul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_fricke_sq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.fricke_cuspChart_eq",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_qExpansion_fricke_cuspChart",
+        "Dubon2026.SourceFunctionField.IntegralSlash.integral_level_pow_of_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_S",
+        "Dubon2026.SourceFunctionField.IntegralSlash.coeff_cusp_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_mul_T_zpow",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_cusp_one",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_of_level_power",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.cuspChart"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashAudit1.log",
+      "logSha256": "713653CC40F778A9FCBA62EB8FCF52C96FEC5AF74450340D12976C4E08089E46",
+      "auditSha256": "93BC27D671E328D51211209BCC3A6ED111DE32DFC49406D0350C745220E7BB4B",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashScratchOwnership1661.log",
+      "ownershipSha256": "EB3155131AC03953FFD77ABBDF6362461C6B8DB22C282CEFF5C8F2F120E38DA5",
+      "exhaustiveTheorems": 31,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 35,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashDependencyAudit1.log",
+      "dependencyAuditSha256": "E4EF289603D2FCB25F7908AE384E554DED88C43D9BD939AE5269D4D56B1076C9",
+      "dependencyAuditSourceSha256": "6A2AB0D3F7E29CAF5FCAE039851A44E262931D85C43E81968996C0F643256492",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> reduced field action -> uniform even-weight SL2 slash integrality.",
+      "discharged": [
+        "Actual arbitrary-cusp charts have level M squared invariance.",
+        "The chart and Fricke chart have the exact Fourier normalization.",
+        "The actual uniform Fricke theorem transports a single clearing exponent through S.",
+        "Existing integral cyclotomic phases transport integrality through every integer translation.",
+        "Native SL2 generation and the original integer q-expansion give a uniform level power at every actual cusp."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Rational diamond coefficients, level-cleared integral diamond forms, reduced relation preservation and full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-full-slash-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "62E4051BDA472FFB06246E6E0FB9003758C39B8D51317504C7DA91EB8123406F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T06:48:49.571024+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceRationalCuspDiamondFourier",
+        "SourceRationalDiscriminantCancellation",
+        "SourceRationalModularDiamondFourier",
+        "SourceEvenWeightIntegralDiamondForm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier.lean",
+          "sha256": "B4B4890619D93C3989DB917BCE1331103482810BAF66FB2E51DFA26CDB71BA94",
+          "oleanSha256": "C0DB04A1E627E44C1902E2472522A0E6FE31B2007DC3EF33FAB57B42CD0668FB",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier-1669.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCuspDiamondFourier-1669.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation.lean",
+          "sha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+          "oleanSha256": "32D4D77061E4EA0A34E750B729B3FD3939AFAD62EDF5497A861938CA6B04CC52",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation-1669.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDiscriminantCancellation-1669.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier.lean",
+          "sha256": "C17DBA20C71AEA0B88EB8CA5B412E620B856FBCB574B8677F06B61CCB0F64FDF",
+          "oleanSha256": "FA5699AABEEF6BE3E2A0E29FA4D067A7D4C00DCDCD39400B3E1FD4D83C89BB48",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier-1669.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalModularDiamondFourier-1669.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm.lean",
+          "sha256": "D36E7224DDACEDE4997DB31ADAD92D1ABFD24669031847B1192525F7ACE8F2F2",
+          "oleanSha256": "A130B233B05D829C1434E19D7E7849592610FD1B6F7C80D71EBDA3A24E528167",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm-1669.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondForm-1669.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_rational_cusp_diamond_laurent",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_cusp_diamond_coeff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_coeff_of_discriminant_mul",
+        "Dubon2026.SourceFunctionField.IntegralSlash.rational_modular_diamond_coeff",
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondAudit1.log",
+      "logSha256": "ED96B57F4D1BBD70F7F19DF509E773BD60A600F2966B19FB9ADEC8AD73D20FEA",
+      "auditSha256": "38BACD60D7E67067C302108CC8EAF01DB8949853001C09E41324ED5AFBD782F7",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondScratchOwnership1669.log",
+      "ownershipSha256": "9BF833E4F2079C55563368A5488DBCEC4435989407F79A79A08CE32B2997426D",
+      "exhaustiveTheorems": 5,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondDependencyAudit1.log",
+      "dependencyAuditSha256": "7F253B283874F9A84D6B499A2C8C486B27D127427D349F520C1F40D34862D8B6",
+      "dependencyAuditSourceSha256": "41CA860127E0E978FBBBC73B3B9548D5BE990F7A887CF83C3A6F144566E1A7BB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Cor8.2 -> literal higher continuation -> automorphy -> original characteristic-zero association -> original Gamma1 degree/genus -> signed-index lower bound -> reduced field action -> reduced relation preservation -> actual level-cleared integral diamond forms.",
+      "discharged": [
+        "Actual even-weight cusp diamonds have rational Fourier coefficients derived from the original rational series.",
+        "The actual discriminant and its integer eta-unit inverse pass rationality to modular diamonds.",
+        "The actual full slash theorem gives a uniform level power; sparse width change reads width-one coefficients.",
+        "Rational algebraic integers construct the integer power series and actual level-cleared Gamma1 diamond form."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Reduction-zero preservation, independence of ratio representatives, full reduced field action, signed-index lower bound, original degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-even-weight-integral-diamond-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "5372F9B6E00191C5A0EACE54811F5836C1EA6EE179BCCE512560B29D0E0FA5CD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-even-weight-fricke-trace-1-reuse-review-20261028.json",
+    "Tools/source-even-weight-fricke-uniform-1-reuse-review-20261028.json",
+    "Tools/source-even-weight-full-slash-1-reuse-review-20261028.json",
+    "Tools/source-even-weight-integral-diamond-1-reuse-review-20261028.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-integral-diamond-20261029-1680/gamma-one-integral-diamond-promotion-route-1680.json",
+    "sha256": "E376AC3F83CAB3E6F4CF673B172FADF7A11D034977052C6D71A20EDF638F32D7"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-integral-diamond-20261029-1680/archive-manifest.json",
+    "sha256": "A26A071DC8F3911FFBFD4D7EEE663923D8DD05B1D814379EE5F8928D20A86119",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9294": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceDependencyAudit1Production9294.log",
+        "sha256": "45FCECE5355CE2081C551F899D628589F9036DE3C603A553E3E420185FE9F250",
+        "requiredProofValueEdges": 44,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator"
+        ],
+        "sourceSha256": "DBDFBC00548B14FD6C4D9F5E73ADED8883015CCB08D859AE9ADC4D94A5627491"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformDependencyAudit1Production9294.log",
+        "sha256": "D5EBFA423D9C932404E1AEBA1835F2BCD4C5E85FCFE94F733E70B0BF66770E3A",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients"
+        ],
+        "sourceSha256": "C1E67EB9332BE7EDA6B52CC71527BA8C676553623F15EB5096E63E3E5BFDCB31"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashDependencyAudit1Production9294.log",
+        "sha256": "E4EF289603D2FCB25F7908AE384E554DED88C43D9BD939AE5269D4D56B1076C9",
+        "requiredProofValueEdges": 35,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_slash_coefficients"
+        ],
+        "sourceSha256": "4A239D3AE862357ED2E15BDF033B3B3352A2AB98CB23F9BC18B94C9AAEC60D8A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondDependencyAudit1Production9294.log",
+        "sha256": "7F253B283874F9A84D6B499A2C8C486B27D127427D349F520C1F40D34862D8B6",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralSlash.exists_level_power_integral_even_diamond_form"
+        ],
+        "sourceSha256": "1FF87C2A249046F591842140A5BB16370CF8D1BA7D5600E644169828640378C5"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondProductionAudit9294.log",
+    "sha256": "7E2B78F31A3C4B51AB990E887671F4A67ECC7CF20646062915E280FF20FEED74",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-diamond-production-build-9294.log",
+    "aggregateSha256": "AAF7FC477F0C40CF143D05E209100CD4B92FD2FEE5786CCADD78E6DCE21F56E3",
+    "productionModules": 9294,
+    "incrementModules": 24,
+    "axiomChecks": 70,
+    "exhaustiveIncrementTheorems": 93,
+    "linterScopes": 24,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 93,
+    "productionReuse": "Only canonical and versioned scratch imports are qualified to their registered production modules. All audited statements, proof bodies and comments remain identical. Original function fields and actual modular forms are retained; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 93,
+      "scratchDistinct": 93,
+      "generatedNameRenamings": {},
+      "productionFocused": 93,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceFrickeLevelIntegralRing",
+            "SourceFrickeGammaOneNormalizer",
+            "SourceFrickeTraceSubgroup",
+            "SourceFrickeTraceForms",
+            "SourceFrickeDenominatorUniformization",
+            "SourceEvenWeightFrickeTrace"
+          ],
+          "count": 40,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceScratchOwnership1643.log",
+            "sha256": "7D1FB7492CABC5847EA2384DEA8091BE93DAABA2396652C88ADE4E17D0932D8B",
+            "sourceSha256": "D6C617411CC15DE9E529A0B84EBC2B0D3D8F88C429ECC1DB07D8450201782121"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSeriesScalarDescent",
+            "SourceIntegralSeriesCommonDenominator",
+            "SourceGammaOneAlgebraicCuspDenominator",
+            "SourceIntegralDiscriminantCancellation",
+            "SourceGammaOneAlgebraicFormDenominator",
+            "SourceEvenWeightBalance",
+            "SourceEvenWeightFrickeCommonDenominator",
+            "SourceEvenWeightUniformFrickeIntegrality"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformScratchOwnership1653.log",
+            "sha256": "3198B16ED1982E470C2DD0EE80E7BA7DD3AC637D8AE4F532952C7EAE88EEE354",
+            "sourceSha256": "D5F5DDDFDE97AECDD4D28F93EB094EE1E9C02AF3C57CDC90116DE215E5686301"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashCuspSubgroup",
+            "SourceIntegralSlashCuspChart",
+            "SourceIntegralSlashFrickeChart",
+            "SourceIntegralSlashSMove",
+            "SourceIntegralSlashTMove",
+            "SourceEvenWeightUniformSlashIntegrality"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashScratchOwnership1661.log",
+            "sha256": "EB3155131AC03953FFD77ABBDF6362461C6B8DB22C282CEFF5C8F2F120E38DA5",
+            "sourceSha256": "E27804C795837EAF4FE6B70CC6B7489E8C6867FAE8D83A8B6A0642D02E9DCB02"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalCuspDiamondFourier",
+            "SourceRationalDiscriminantCancellation",
+            "SourceRationalModularDiamondFourier",
+            "SourceEvenWeightIntegralDiamondForm"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondScratchOwnership1669.log",
+            "sha256": "9BF833E4F2079C55563368A5488DBCEC4435989407F79A79A08CE32B2997426D",
+            "sourceSha256": "662015BA606E38FD9F0AF2F9554BEBF31A1B8403D86F37C03160433F41CBFDD7"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondOwnership9294.log",
+        "sha256": "6BB6418AB6B8FC010C3A0DE2BF7D8E4381EE5DA80489EB501F638107DB4B0BB1",
+        "sourceSha256": "52067D1E4A24C0014D43661814136D2F89EA9FDD55007B60A5B645789CDBF739"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-224820-610.log",
+        "sha256": "03FBE6B8250C894D33FC8BE8BD687E4CABC58EC2F1DDC14FDEF8D6077E1B9284"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 24 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceFrickeLevelIntegralRing",
+            "scratchSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+            "productionSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeGammaOneNormalizer",
+            "scratchSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+            "productionSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTraceSubgroup",
+            "scratchSha256": "837B8047D05E74D8F3BDF2118D68D018DC21874231EF89F897735D5A15A51C5F",
+            "productionSha256": "0CC78CF0C7F988B69A0732012DB7E96E3C4C380BE0F4F4A5E0FB9D1F9C95C7BC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTraceForms",
+            "scratchSha256": "4A7012079BD1372D4BCF6A0A3F211EBC30512F648C347B6F49FDC464F8B02196",
+            "productionSha256": "49E6C8EDC08B557C3801F0B6B812C0575973BA31FFDD70887B1CA6CA7E8EC45D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeDenominatorUniformization",
+            "scratchSha256": "B2B66A0DA84FC972F18F28FFA0E197B41D29795A6FD709F3B5DEEE9A378F2600",
+            "productionSha256": "8CF081E46D0E15ECF55B34DC7E3BD7B45B3C020154B43F2C0E9D75836302A333",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightFrickeTrace",
+            "scratchSha256": "2DF92E3C6D6F1F082D0B5A5DA164CB2B47A6AA99F31246A5BC7A1C93AFB728AB",
+            "productionSha256": "DC213002B19390C43D74DD3A6A6D881BE6677078BC24608C759132DA94DC1242",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSeriesScalarDescent",
+            "scratchSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+            "productionSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSeriesCommonDenominator",
+            "scratchSha256": "06D5F3629916C3781631F3CE3A6C4FF9411BFA491B432C8A7E2005CB70524745",
+            "productionSha256": "8FC445104B61498267F036D922C6C7DB07061B7701C57F20B89E27F08DDA5656",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAlgebraicCuspDenominator",
+            "scratchSha256": "86E8AF9BC06BFEB5BDD3701134F26DB5C70E158396D52C52DE5BDF19EA2B5D68",
+            "productionSha256": "6A3FF583E178763BBD51ABA724AAB4D87F5CAEA067E0AFA57EE1DD7A542D9169",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiscriminantCancellation",
+            "scratchSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+            "productionSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAlgebraicFormDenominator",
+            "scratchSha256": "B454177EAC6479C52373F462907D7F55B12A27D3CCA789DF8F46BC92DD53E48A",
+            "productionSha256": "F8EA4211F8A43B7CEF047F6CA5C1E1E804420A2624F2A5C0D309CBEB65E9325D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightBalance",
+            "scratchSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+            "productionSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightFrickeCommonDenominator",
+            "scratchSha256": "963EC02EA4A586C78EE2011F013D30453487F451569016CFBA3C11A5F2678B7B",
+            "productionSha256": "FD298E46E8C147E73C32B5A2E6A097F846BD1F238559225176123F9A9CDAEBA2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightUniformFrickeIntegrality",
+            "scratchSha256": "4BF5FAF0E05F308DDF1F7828111F6A15895A26E6A2DA31E7571DEAC588FFAC20",
+            "productionSha256": "475892B72CAE36B98715AB2B7BC3AD4C80889DCF9359326FA51B6593B9561C79",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspSubgroup",
+            "scratchSha256": "1313230CD9022348C9FE5D2F90305B9F9C8E907E36593C14F54526CCE158B544",
+            "productionSha256": "91253B4EF8064F457167312DECBFBB82D6FD0647C5F7F11C7024B389AE8ABE6C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspChart",
+            "scratchSha256": "31DDCA3B3A21E4F6D635D4945A28D75341CC6CE0827EC166E87C5F2B569E3D38",
+            "productionSha256": "C64CE214C6D434E397311209476A0AA19FA31631497BCA9B3F0AB99AAC8B7F49",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFrickeChart",
+            "scratchSha256": "AB239D15958418E3FA8B03182628A1D7251094EE9F68FB0BFD7022F9BD919B9F",
+            "productionSha256": "093AE3C32ED23BD17E615DE7EB10268FE90E2EC7F0C8C4D8051639B4F45262DD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashSMove",
+            "scratchSha256": "8F73E1C0F30D62A82D2D42B218DAAA7B1C284A09371A19DED487FD08B6AD2633",
+            "productionSha256": "331FC885A79B14EB7B9FD5FB27F26AA29F0CA2312050E34A568C14A76E1E4ECC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashTMove",
+            "scratchSha256": "F58DC86BD55512FEAA7CDD3AA002CAF3DC761B4CD37CAC810E542FE33BACEAD0",
+            "productionSha256": "0834F1CD89066014F9E24034FD4DBD6CD4B1996350269AD06065917A8853AD89",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightUniformSlashIntegrality",
+            "scratchSha256": "971311FCF219F6597DE99D29102A1979E76503778AA111954633D100DF38BD04",
+            "productionSha256": "4D553A7F085CB84744A72EBE92862DFFE244E282C19C3E17FC7F4A316A830567",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalCuspDiamondFourier",
+            "scratchSha256": "B4B4890619D93C3989DB917BCE1331103482810BAF66FB2E51DFA26CDB71BA94",
+            "productionSha256": "0A6A9872F478C981872E47BF2F212BB81557421C727D62A09F35A61BF1093469",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiscriminantCancellation",
+            "scratchSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+            "productionSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalModularDiamondFourier",
+            "scratchSha256": "C17DBA20C71AEA0B88EB8CA5B412E620B856FBCB574B8677F06B61CCB0F64FDF",
+            "productionSha256": "A948A9C08413436D612DE9E0579091821E7F2257F4E6C0379DEE974D8D7E3174",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightIntegralDiamondForm",
+            "scratchSha256": "D36E7224DDACEDE4997DB31ADAD92D1ABFD24669031847B1192525F7ACE8F2F2",
+            "productionSha256": "48428585F20D84364830E712CEEE50F3F5BF2ED772C512A9BBCA5396CCB11CBD",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 93 distinct names from 93 exhaustive scratch checks are retained: 93 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The action on all reduced rational relations, its field and composition laws, the signed-index lower bound and original degree/genus preservation remain open in the production scope. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged."
+  },
+  "receipt9294": {
+    "recordedUTC": "2026-10-29T09:15:34.943824+00:00",
+    "log": "logs/dubon-build-20261029-004653-990.log",
+    "sha256": "161FA0C47ABF8D4482DDD1390D40DA07416D4F7DFF62EDFAE87099E969C5497E",
+    "bytes": 15438772,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9294,
+    "projectTheorems": 58998,
+    "registeredConsumers": 27146,
+    "registeredConstructions": 2948,
+    "declarations": 36080,
+    "generated": 38705,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261029_004029.log",
+    "foundationSha256": "56ED7C20F05B623942394767C5698DEAC7B16874CE32A7DD3A4C3F0CFAA36813",
+    "countReconciliation": {
+      "previousTheorems": 58905,
+      "focusedTheorems": 93,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 93,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondGlobalOwnership9294.log",
+      "globalOwnershipSha256": "BA0A1C752E13CC92616FC60DFCC494B04350B74EECB7FFD4ECDC5070AAC91AB6",
+      "globalOwnershipSourceSha256": "0E7E19EF93568AF8D394DBB1B2FA61FB94EE027CAE21067623D9D0F810B55787",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondOwnership9294.log",
+      "ownershipSha256": "6BB6418AB6B8FC010C3A0DE2BF7D8E4381EE5DA80489EB501F638107DB4B0BB1"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 93,
+      "scratchDistinct": 93,
+      "generatedNameRenamings": {},
+      "productionFocused": 93,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceFrickeLevelIntegralRing",
+            "SourceFrickeGammaOneNormalizer",
+            "SourceFrickeTraceSubgroup",
+            "SourceFrickeTraceForms",
+            "SourceFrickeDenominatorUniformization",
+            "SourceEvenWeightFrickeTrace"
+          ],
+          "count": 40,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeTraceScratchOwnership1643.log",
+            "sha256": "7D1FB7492CABC5847EA2384DEA8091BE93DAABA2396652C88ADE4E17D0932D8B",
+            "sourceSha256": "D6C617411CC15DE9E529A0B84EBC2B0D3D8F88C429ECC1DB07D8450201782121"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSeriesScalarDescent",
+            "SourceIntegralSeriesCommonDenominator",
+            "SourceGammaOneAlgebraicCuspDenominator",
+            "SourceIntegralDiscriminantCancellation",
+            "SourceGammaOneAlgebraicFormDenominator",
+            "SourceEvenWeightBalance",
+            "SourceEvenWeightFrickeCommonDenominator",
+            "SourceEvenWeightUniformFrickeIntegrality"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFrickeUniformScratchOwnership1653.log",
+            "sha256": "3198B16ED1982E470C2DD0EE80E7BA7DD3AC637D8AE4F532952C7EAE88EEE354",
+            "sourceSha256": "D5F5DDDFDE97AECDD4D28F93EB094EE1E9C02AF3C57CDC90116DE215E5686301"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralSlashCuspSubgroup",
+            "SourceIntegralSlashCuspChart",
+            "SourceIntegralSlashFrickeChart",
+            "SourceIntegralSlashSMove",
+            "SourceIntegralSlashTMove",
+            "SourceEvenWeightUniformSlashIntegrality"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightFullSlashScratchOwnership1661.log",
+            "sha256": "EB3155131AC03953FFD77ABBDF6362461C6B8DB22C282CEFF5C8F2F120E38DA5",
+            "sourceSha256": "E27804C795837EAF4FE6B70CC6B7489E8C6867FAE8D83A8B6A0642D02E9DCB02"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalCuspDiamondFourier",
+            "SourceRationalDiscriminantCancellation",
+            "SourceRationalModularDiamondFourier",
+            "SourceEvenWeightIntegralDiamondForm"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightIntegralDiamondScratchOwnership1669.log",
+            "sha256": "9BF833E4F2079C55563368A5488DBCEC4435989407F79A79A08CE32B2997426D",
+            "sourceSha256": "662015BA606E38FD9F0AF2F9554BEBF31A1B8403D86F37C03160433F41CBFDD7"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDiamondOwnership9294.log",
+        "sha256": "6BB6418AB6B8FC010C3A0DE2BF7D8E4381EE5DA80489EB501F638107DB4B0BB1",
+        "sourceSha256": "52067D1E4A24C0014D43661814136D2F89EA9FDD55007B60A5B645789CDBF739"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-224820-610.log",
+        "sha256": "03FBE6B8250C894D33FC8BE8BD687E4CABC58EC2F1DDC14FDEF8D6077E1B9284"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 24 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceFrickeLevelIntegralRing",
+            "scratchSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+            "productionSha256": "5D616F9540702C5E5BC98A0AAF75886779FF2ADD5FAD7D7E52E0E913FAFF3F5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeGammaOneNormalizer",
+            "scratchSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+            "productionSha256": "2503531DA7144521CF81A6E2EBD0B2B488831585B885B9514BBA6209898850D8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTraceSubgroup",
+            "scratchSha256": "837B8047D05E74D8F3BDF2118D68D018DC21874231EF89F897735D5A15A51C5F",
+            "productionSha256": "0CC78CF0C7F988B69A0732012DB7E96E3C4C380BE0F4F4A5E0FB9D1F9C95C7BC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTraceForms",
+            "scratchSha256": "4A7012079BD1372D4BCF6A0A3F211EBC30512F648C347B6F49FDC464F8B02196",
+            "productionSha256": "49E6C8EDC08B557C3801F0B6B812C0575973BA31FFDD70887B1CA6CA7E8EC45D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeDenominatorUniformization",
+            "scratchSha256": "B2B66A0DA84FC972F18F28FFA0E197B41D29795A6FD709F3B5DEEE9A378F2600",
+            "productionSha256": "8CF081E46D0E15ECF55B34DC7E3BD7B45B3C020154B43F2C0E9D75836302A333",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightFrickeTrace",
+            "scratchSha256": "2DF92E3C6D6F1F082D0B5A5DA164CB2B47A6AA99F31246A5BC7A1C93AFB728AB",
+            "productionSha256": "DC213002B19390C43D74DD3A6A6D881BE6677078BC24608C759132DA94DC1242",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSeriesScalarDescent",
+            "scratchSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+            "productionSha256": "C2BC19D65AEEA4D4FA865D33AA2BB56E6385C2A57B359B6C536905AE78E792EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSeriesCommonDenominator",
+            "scratchSha256": "06D5F3629916C3781631F3CE3A6C4FF9411BFA491B432C8A7E2005CB70524745",
+            "productionSha256": "8FC445104B61498267F036D922C6C7DB07061B7701C57F20B89E27F08DDA5656",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAlgebraicCuspDenominator",
+            "scratchSha256": "86E8AF9BC06BFEB5BDD3701134F26DB5C70E158396D52C52DE5BDF19EA2B5D68",
+            "productionSha256": "6A3FF583E178763BBD51ABA724AAB4D87F5CAEA067E0AFA57EE1DD7A542D9169",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiscriminantCancellation",
+            "scratchSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+            "productionSha256": "FF41A36615DCB04EA4EE8ABBF34A4C488B93DEB09B1AAD3A6A645BFF7B572895",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAlgebraicFormDenominator",
+            "scratchSha256": "B454177EAC6479C52373F462907D7F55B12A27D3CCA789DF8F46BC92DD53E48A",
+            "productionSha256": "F8EA4211F8A43B7CEF047F6CA5C1E1E804420A2624F2A5C0D309CBEB65E9325D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightBalance",
+            "scratchSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+            "productionSha256": "E9533E7BC12A51F969BE52863D40F8E021DC9080709CE8DD166E2D39E61C39CC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightFrickeCommonDenominator",
+            "scratchSha256": "963EC02EA4A586C78EE2011F013D30453487F451569016CFBA3C11A5F2678B7B",
+            "productionSha256": "FD298E46E8C147E73C32B5A2E6A097F846BD1F238559225176123F9A9CDAEBA2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightUniformFrickeIntegrality",
+            "scratchSha256": "4BF5FAF0E05F308DDF1F7828111F6A15895A26E6A2DA31E7571DEAC588FFAC20",
+            "productionSha256": "475892B72CAE36B98715AB2B7BC3AD4C80889DCF9359326FA51B6593B9561C79",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspSubgroup",
+            "scratchSha256": "1313230CD9022348C9FE5D2F90305B9F9C8E907E36593C14F54526CCE158B544",
+            "productionSha256": "91253B4EF8064F457167312DECBFBB82D6FD0647C5F7F11C7024B389AE8ABE6C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashCuspChart",
+            "scratchSha256": "31DDCA3B3A21E4F6D635D4945A28D75341CC6CE0827EC166E87C5F2B569E3D38",
+            "productionSha256": "C64CE214C6D434E397311209476A0AA19FA31631497BCA9B3F0AB99AAC8B7F49",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashFrickeChart",
+            "scratchSha256": "AB239D15958418E3FA8B03182628A1D7251094EE9F68FB0BFD7022F9BD919B9F",
+            "productionSha256": "093AE3C32ED23BD17E615DE7EB10268FE90E2EC7F0C8C4D8051639B4F45262DD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashSMove",
+            "scratchSha256": "8F73E1C0F30D62A82D2D42B218DAAA7B1C284A09371A19DED487FD08B6AD2633",
+            "productionSha256": "331FC885A79B14EB7B9FD5FB27F26AA29F0CA2312050E34A568C14A76E1E4ECC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralSlashTMove",
+            "scratchSha256": "F58DC86BD55512FEAA7CDD3AA002CAF3DC761B4CD37CAC810E542FE33BACEAD0",
+            "productionSha256": "0834F1CD89066014F9E24034FD4DBD6CD4B1996350269AD06065917A8853AD89",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightUniformSlashIntegrality",
+            "scratchSha256": "971311FCF219F6597DE99D29102A1979E76503778AA111954633D100DF38BD04",
+            "productionSha256": "4D553A7F085CB84744A72EBE92862DFFE244E282C19C3E17FC7F4A316A830567",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalCuspDiamondFourier",
+            "scratchSha256": "B4B4890619D93C3989DB917BCE1331103482810BAF66FB2E51DFA26CDB71BA94",
+            "productionSha256": "0A6A9872F478C981872E47BF2F212BB81557421C727D62A09F35A61BF1093469",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalDiscriminantCancellation",
+            "scratchSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+            "productionSha256": "4946CFC92E3F66A014125D92D49CE5FE2DE561955A3C0F2890825D2D377FAA53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRationalModularDiamondFourier",
+            "scratchSha256": "C17DBA20C71AEA0B88EB8CA5B412E620B856FBCB574B8677F06B61CCB0F64FDF",
+            "productionSha256": "A948A9C08413436D612DE9E0579091821E7F2257F4E6C0379DEE974D8D7E3174",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceEvenWeightIntegralDiamondForm",
+            "scratchSha256": "D36E7224DDACEDE4997DB31ADAD92D1ABFD24669031847B1192525F7ACE8F2F2",
+            "productionSha256": "48428585F20D84364830E712CEEE50F3F5BF2ED772C512A9BBCA5396CCB11CBD",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 93 distinct names from 93 exhaustive scratch checks are retained: 93 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The action on all reduced rational relations, its field and composition laws, the signed-index lower bound and original degree/genus preservation remain open in the production scope. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged."
+  }
+}

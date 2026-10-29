@@ -1,0 +1,7 @@
+### Actual residual ordinary nonidentity element — 10 October 2026
+
+Derive a nonidentity original residual group element from the actual rank-one invariant module by comparing its finite dimension with the two-dimensional trivial action.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualOrdinaryNontrivialElement](Extension/Dubon2026/ResidualOrdinaryNontrivialElement.lean).

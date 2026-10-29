@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> literal higher continuation -> automorphy -> all-weight original association -> original genus preservation -> reverse genus inequality -> residue cusp bound.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-count-audit-route-1850.json",
+    "sha256": "34A4876B9BFB9B8B869BF94BC5085751EAD2348C00FB0292F371419E18DF00E6",
+    "review": {
+      "recordedUTC": "2026-10-29T13:07:42.695969+00:00",
+      "chain": "DUB17/18 -> literal higher continuation -> automorphy -> all-weight original association -> original genus preservation -> reverse genus inequality -> residue cusp bound.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspCosetPlaces.lean",
+          "sha256": "F3B409E4879591CCCEA066139F3749CE254403A4F30090DEF6F1048FCD96CE54"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactCuspOrbits.lean",
+          "sha256": "BD92E7100C6DF23ECFE8E672759A72D87822D77014E8219D67D2877560A3EE00"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueDiamondFiberTransitivity.lean",
+          "sha256": "488314CDB2E385D54A802943D898FF0346670BBC72C576CC68B12D472C56130B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteEmbeddingRestriction.lean",
+          "sha256": "FD6A2B3D7FBB9559207108D49E2CA24908458B65AD3D63C44BA3A53FC7270D20"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientCuspCount.lean",
+          "sha256": "11A631EE84B2A125D9B041A1531F0B398811DA2DA77017087BB5AD33E3A9AC4F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralSlashFieldChartIdentities.lean",
+          "sha256": "33D2D2EA063A975CD52A2CC1F73D5302987A6854F1C66CB2EBEB544BA06F96D1"
+        }
+      ],
+      "shorterRoute": "The repository already constructs the precise signed Gamma1 cosets, their integral translation orbits and the characteristic-zero cusp/pole bijection. Construct the analogous actual residue cusp-place map from one prescribed coefficient reduction, prove left signed-Gamma1 and right translation invariance using the actual action and normalized charts, and prove surjectivity by the existing full-base cusp exhaustion and actual diamond fiber transitivity. Nat.card_le_card_of_surjective will then bound residue poles by the same characteristic-zero orbit count. This avoids reproving the external generic double-coset injection and slot-label transport/classification. The full j_N formula and exact base restriction already proved in the labeled-chart scope are essential to identify the base fiber. The recently proved actual-action commutativity and all-fiber stabilizers remain available for the finite elliptic fiber route.",
+      "assumptionsToDischarge": [
+        "Common coefficient-reduction charts and their genuine places are constructed for all integral cusp matrices.",
+        "The place family descends through the existing signed cosets and translation orbits.",
+        "Every actual residue j-pole is in the family, using full-base cusp exhaustion and actual diamond transitivity.",
+        "The exact residue cusp cardinality upper bound is derived from the native characteristic-zero cusp-orbit equality.",
+        "The residue cusp-count inequality constructs its primitive root and coefficient reduction; no chart, count, degree or transitivity certificate remains in its signature.",
+        "The cusp bound is transported to the literal residue image and native residue j used by the original coefficient prolongation; its field equality is proved by degree preservation."
+      ],
+      "remaining": "Finite elliptic fiber bounds in all allowed residue characteristics and reverse genus inequality, then original all-weight association and all remaining acceptance gates. Acceptance remains 16/20; DUB17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "predecessor": "source-original-residue-cusp-count-audit-route-1845.json"
+    }
+  },
+  "discharged": [
+    "Common coefficient-reduction charts and their genuine places are constructed for all integral cusp matrices.",
+    "The place family descends through the existing signed cosets and translation orbits.",
+    "Every actual residue j-pole is in the family, using full-base cusp exhaustion and actual diamond transitivity.",
+    "The exact residue cusp cardinality upper bound is derived from the native characteristic-zero cusp-orbit equality.",
+    "The residue cusp-count inequality constructs its primitive root and coefficient reduction; no chart, count, degree or transitivity certificate remains in its signature.",
+    "The cusp bound is transported to the literal residue image and native residue j used by the original coefficient prolongation; its field equality is proved by degree preservation."
+  ],
+  "remaining": "Finite elliptic fiber bounds in all allowed residue characteristics and reverse genus inequality, then original all-weight association and all remaining acceptance gates. Acceptance remains 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

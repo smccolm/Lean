@@ -1,0 +1,36 @@
+import SourceOriginalResidueCuspOrbitSurjection1842c
+import Dubon2026.SourcePrescribedPrimitiveRootReduction
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp cardinality bound. Construct the primitive root and the
+prescribed algebraic-integer reduction in the actual valuation residue field.
+The proved orbit surjection then bounds all actual residue j-poles by the
+actual characteristic-zero Gamma1 cusp count, for every prime away from the
+level, including characteristics two and three. No chart, reduction, action,
+field-degree, cusp-classification or count certificate remains. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne GammaOne.CuspCounting SourceCurve
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem originalResidue_j_pole_card_le_complex (hℓN : ¬ ℓ ∣ N) :
+    Nat.card {w : Place kk (qExpFunctionFieldC kk (Gamma1 N)) //
+      w.ord ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0} ≤
+      Nat.card (PolePlaces (Gamma1 N)) := by
+  letI := valuation_residue_isAlgClosed A
+  have hN : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  letI : NeZero (N : kk) := ⟨hN⟩
+  obtain ⟨z, hz⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot kk N
+  have hu := hz.isUnit (NeZero.ne N)
+  have hζ : IsPrimitiveRoot (hu.unit : kk) N := by rw [hu.unit_spec]; exact hz
+  obtain ⟨φ, hφ⟩ := exists_algebraicIntegerReduction_primitiveRoot N ℓ hℓN kk (hu.unit : kk) hζ
+  exact originalResidue_j_pole_card_le_complex_of_reduction A N ℓ hℓN φ hu.unit hζ hφ
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

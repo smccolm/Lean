@@ -1,0 +1,7 @@
+### Actual whole invariant line from a primitive vector — 10 October 2026
+
+Extend the actual primitive fixed vector to an original invertible basis. Conjugation makes every original matrix fix the first axis. Genuine residual nonidentity survives this original basis change, so the derived residual criterion proves that the entire invariant module is precisely that first coordinate line.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoPrimitiveInvariantLine](Extension/Dubon2026/MatrixTwoPrimitiveInvariantLine.lean).

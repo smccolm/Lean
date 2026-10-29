@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K G H V : Type*} [Field K] [Monoid G] [Monoid H]
+  [AddCommGroup V] [Module K V]
+
+/-- Exact original-object consumer of `representation_irreducible_of_restriction`. -/
+theorem actual_representation_irreducibility_from_restriction_representation_irreducible_of_restriction_source (q : G →* H) (ρ : Representation K H V)
+    [Representation.IsIrreducible (ρ.comp q)] : Representation.IsIrreducible ρ :=
+  representation_irreducible_of_restriction q ρ
+
+end
+

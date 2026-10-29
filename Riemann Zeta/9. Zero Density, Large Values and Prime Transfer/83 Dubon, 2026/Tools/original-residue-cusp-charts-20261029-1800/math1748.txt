@@ -1,0 +1,1 @@
+Regard each actual invariant subspace of the whole representation as an invariant subspace of its original restricted action. Original irreducibility makes it zero or the entire original vector space, and the actual nontrivial subrepresentation lattice is retained.

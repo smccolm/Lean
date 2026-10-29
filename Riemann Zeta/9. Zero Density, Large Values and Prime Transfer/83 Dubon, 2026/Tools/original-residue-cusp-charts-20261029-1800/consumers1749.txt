@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G H ι R K O : Type*} [Group G] [Group H] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing K]
+
+omit [CommRing K] in
+/-- Exact original-object consumer of `closedMatrixTraceAlgebra_comp_surjective`. -/
+theorem actual_matrix_strict_conjugacy_surjective_restriction_closedMatrixTraceAlgebra_comp_surjective_source [CommRing O] [Algebra O R]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    (q : G →* H) (hq : Function.Surjective q) (ρ : H →* GeneralLinearGroup ι R) :
+    closedMatrixTraceAlgebra (O := O) (ρ.comp q) = closedMatrixTraceAlgebra (O := O) ρ :=
+  closedMatrixTraceAlgebra_comp_surjective q hq ρ
+
+end
+

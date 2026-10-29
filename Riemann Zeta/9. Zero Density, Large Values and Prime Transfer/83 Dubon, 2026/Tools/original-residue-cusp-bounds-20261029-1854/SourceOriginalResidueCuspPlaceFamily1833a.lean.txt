@@ -1,0 +1,67 @@
+import SourceOriginalResidueCuspHomFamily1832a
+import Dubon2026.SourceCurveLaurentPlaces
+import Dubon2026.SourceLaurentExpansionOrders
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue cusp count -> actual cusp-place map on the existing translation
+orbits. Pull back the native Laurent valuation through each constructed cusp
+homomorphism. Its exact j image supplies nontriviality. The normalization,
+valuation-ring membership and j-pole are all derived for these same places. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne SourceCurve
+open scoped MatrixGroups
+local notation "Zbar" => integralClosure ℤ ℂ
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+variable (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk) (β : SL(2, ℤ))
+
+private theorem exists_cuspPlace_normalization :
+    ∃ (w : Place kk (qExpFunctionFieldC kk (Gamma1 N))) (e : ℕ),
+      0 < e ∧ ∀ x, w.ord x * (e : ℤ) = (originalResidueCuspHom A N ℓ hℓN φ β x).order := by
+  apply Place.exists_place_of_laurent_embedding
+  refine ⟨⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩, ?_⟩
+  rw [originalResidueCuspHom_j, laurent_order_qExpand, order_jqModC, mul_neg_one]
+  exact neg_ne_zero.mpr (by exact_mod_cast NeZero.ne N)
+
+/-- The genuine normalized place pulled back from the constructed original residue cusp chart. -/
+def originalResidueCuspPlace : Place kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (exists_cuspPlace_normalization A N ℓ hℓN φ β).choose
+
+/-- The positive Laurent-order scale of this same genuine cusp place. -/
+def originalResidueCuspRamification : ℕ :=
+  (exists_cuspPlace_normalization A N ℓ hℓN φ β).choose_spec.choose
+
+theorem originalResidueCuspRamification_pos : 0 < originalResidueCuspRamification A N ℓ hℓN φ β :=
+  (exists_cuspPlace_normalization A N ℓ hℓN φ β).choose_spec.choose_spec.1
+
+theorem originalResidueCuspPlace_order (x : qExpFunctionFieldC kk (Gamma1 N)) :
+    (originalResidueCuspPlace A N ℓ hℓN φ β).ord x *
+      (originalResidueCuspRamification A N ℓ hℓN φ β : ℤ) =
+      (originalResidueCuspHom A N ℓ hℓN φ β x).order :=
+  (exists_cuspPlace_normalization A N ℓ hℓN φ β).choose_spec.choose_spec.2 x
+
+theorem originalResidueCuspPlace_mem_iff (x : qExpFunctionFieldC kk (Gamma1 N)) :
+    x ∈ (originalResidueCuspPlace A N ℓ hℓN φ β).toValuationSubring ↔
+      0 ≤ (originalResidueCuspHom A N ℓ hℓN φ β x).order := by
+  rw [Place.mem_iff_ord_nonneg, ← originalResidueCuspPlace_order]
+  exact (mul_nonneg_iff_of_pos_right (show (0 : ℤ) < originalResidueCuspRamification A N ℓ hℓN φ β by
+    exact_mod_cast originalResidueCuspRamification_pos A N ℓ hℓN φ β)).symm
+
+theorem originalResidueCuspPlace_j_neg :
+    (originalResidueCuspPlace A N ℓ hℓN φ β).ord
+      ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ < 0 := by
+  have h := originalResidueCuspPlace_order A N ℓ hℓN φ β
+    ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩
+  rw [originalResidueCuspHom_j, laurent_order_qExpand, order_jqModC, mul_neg_one] at h
+  have he : (0 : ℤ) < originalResidueCuspRamification A N ℓ hℓN φ β := by
+    exact_mod_cast originalResidueCuspRamification_pos A N ℓ hℓN φ β
+  have hn : (0 : ℤ) < N := by exact_mod_cast NeZero.pos N
+  nlinarith
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

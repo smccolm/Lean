@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "HopfPointsRestriction",
+  "mathematics": "Construct the genuine contravariant homomorphism on original Hopf-algebra points from a coordinate bialgebra map. The counit and comultiplication identities prove preservation of the original identity and convolution product; the exact original coordinate evaluation is retained.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-flat-further-point-drafts-20261010.json and finite-flat-primary-api-review-20261010.json: source Section6.3, original bialgebra restriction, quotient antipode/counit, finite original coordinate basis and Krull stabilizer APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "pointRestriction1797-focus.log"
+}

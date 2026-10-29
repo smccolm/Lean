@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticUnframedDeterminantOrdinaryUniversality",
+  "mathematics": "Use the actual arithmetic trace universal ring and its derived whole class classification. Derive a nonidentity element of the genuine arithmetic inertia subgroup from its original residual invariant rank. Residual determinant compatibility and genuine residual ordinarity derive the literal sum-ideal quotient, with complete Noetherian local structure in its own maximal-adic topology. For every complete Noetherian local target, its actual coefficient fiber classifies precisely the original fixed-determinant ordinary classes, with the original matrix evaluation formula.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "determinant-ordinary-next-drafts-20261010.json: source Sections6.1-6.2, actual determinant and ordinary coefficient ideals, original class evaluation and arithmetic trace universality inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "arithmeticDetOrdinary1790-focus.log"
+}

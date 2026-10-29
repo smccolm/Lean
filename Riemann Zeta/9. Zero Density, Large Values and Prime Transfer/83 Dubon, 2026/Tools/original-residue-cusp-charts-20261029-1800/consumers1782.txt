@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A : Type} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalUnframedOrdinary_class_iff`. -/
+theorem actual_original_unframed_ordinary_condition_originalUnframedOrdinary_class_iff_source
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{0}) (σ : H →* GeneralLinearGroup (Fin 2) (IsLocalRing.ResidueField O))
+    (N : Subgroup H) (ρ : OriginalContinuousFramedFiber eA H σ) :
+    originalUnframedOrdinary eA H σ N (originalUnframedClass eA H σ ρ) ↔
+      (Nonempty ((matrixStandardRepresentation (ρ.val.toMonoidHom.comp N.subtype)).invariants ≃ₗ[A] A) ∧
+        ∃ W : Submodule A (Fin 2 → A),
+          IsCompl (matrixStandardRepresentation (ρ.val.toMonoidHom.comp N.subtype)).invariants W) :=
+  originalUnframedOrdinary_class_iff eA H σ N ρ
+
+end
+

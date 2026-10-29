@@ -1,0 +1,35 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `originalPresentedTraceDescent_exists`. -/
+theorem actual_original_presented_trace_descent_originalPresentedTraceDescent_exists_source
+    (H : ProfiniteGrp.{0})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ.toMonoidHom))] (i₀ : ι) :
+    letI := originalPresentedCoefficientRing_isLocal H q σ
+    let υ := completedPresentationRepresentation (originalPresentedResidualRestriction H q σ) H q hq
+    let S := closedMatrixTraceAlgebra (O := O) υ
+    let eR := completedPresentationResidueEquiv
+      (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker
+    ∃ τ : H →ₜ* GeneralLinearGroup ι S,
+      MatrixStrictlyConjugate (IsLocalRing.residue (OriginalPresentedCoefficientRing H q σ))
+        ((GeneralLinearGroup.map S.val.toRingHom).comp τ.toMonoidHom) υ ∧
+      (GeneralLinearGroup.map ((localCoefficientReduction eR).comp S.val).toRingHom).comp
+        τ.toMonoidHom = σ.toMonoidHom :=
+  originalPresentedTraceDescent_exists (L := L) H q hq σ i₀
+
+end
+

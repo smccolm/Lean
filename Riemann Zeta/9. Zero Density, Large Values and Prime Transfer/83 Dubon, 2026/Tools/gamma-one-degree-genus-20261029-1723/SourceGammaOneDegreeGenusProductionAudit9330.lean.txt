@@ -1,0 +1,257 @@
+import Dubon2026.SourceIntegralDiamondReduction
+import Dubon2026.SourceIntegralDiamondZeroForward
+import Dubon2026.SourceIntegralDiamondZeroEquivalence
+import Dubon2026.SourceIntegralDiamondWitness
+import Dubon2026.SourceIntegralDiamondNormalizedReduction
+import Dubon2026.SourceIntegralDiamondChosenReduction
+import Dubon2026.SourceIntegralDiamondSeriesOperations
+import Dubon2026.SourceIntegralDiamondReducedOperations
+import Dubon2026.SourceIntegralDiamondRatioRelation
+import Dubon2026.SourceIntegralDiamondAdditiveSeries
+import Dubon2026.SourceIntegralDiamondRatioClosure
+import Dubon2026.SourceIntegralDiamondReducedAddition
+import Dubon2026.SourceIntegralDiamondFieldPull
+import Dubon2026.SourceIntegralDiamondFieldRange
+import Dubon2026.SourceIntegralDiamondFieldConstants
+import Dubon2026.SourceIntegralDiamondFieldOperations
+import Dubon2026.SourceIntegralDiamondComposition
+import Dubon2026.SourceIntegralDiamondFieldComposition
+import Dubon2026.SourceIntegralDiamondFieldIdentity
+import Dubon2026.SourceIntegralDiamondFieldAction
+import Dubon2026.SourceIntegralDiamondFullBaseInclusion
+import Dubon2026.SourceIntegralDiamondGammaZeroFixed
+import Dubon2026.SourceIntegralDiamondEisensteinAction
+import Dubon2026.SourceIntegralDiamondSignedMembership
+import Dubon2026.SourceIntegralDiamondExactKernel
+import Dubon2026.SourceIntegralDiamondFixedFieldDegree
+import Dubon2026.SourceReducedBaseCoordinateMap
+import Dubon2026.SourceReducedBaseDegreeLower
+import Dubon2026.SourceIntegralDiamondIndexLower
+import Dubon2026.SourceReducedCoordinateIndependence
+import Dubon2026.SourceReducedCoordinateMapIndependence
+import Dubon2026.SourceReducedFieldCoefficientMap
+import Dubon2026.SourceReducedCoordinateDegreeTransport
+import Dubon2026.SourceReducedResidueDegreeTransport
+import Dubon2026.SourceGammaOneDegreePreservation
+import Dubon2026.SourceGammaOneResidueGenusUpper
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_unique
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_inv_int_smul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_C
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_of_integral_diamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_iff_integral_diamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coe_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integral_diamond_witness_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_level_power
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.level_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_of_witness
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_zero_iff_original
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_sub
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_inv
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.mem_originalReducedField_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.exists_even_originalReducedField_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_add
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coe_reducedFieldPullHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_scaled_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_comp
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_of_invariant
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.even_slash_eq_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_one_matrix
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_of_signed_gammaOne
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.diamondWitness
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalEvenRepresentative
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative.mk
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.divisor_j_mem_gammaZeroField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_gammaZeroField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_gammaZero_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_fixes_gammaZeroField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_fixes_fullBase
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalReducedField
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.red_eisenstein4_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eisenstein_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_diagonal_product
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_upperLeft
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_upperLeft_ne_zero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_small_level
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_reducedFieldEquiv_eq_one
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_kernel
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_range_finite
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reduced_fixedField_degree_eq_signed_relativeIndex
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_le_away_level
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceIntegralDiamondReduction, `Dubon2026.SourceIntegralDiamondZeroForward, `Dubon2026.SourceIntegralDiamondZeroEquivalence, `Dubon2026.SourceIntegralDiamondWitness, `Dubon2026.SourceIntegralDiamondNormalizedReduction, `Dubon2026.SourceIntegralDiamondChosenReduction, `Dubon2026.SourceIntegralDiamondSeriesOperations, `Dubon2026.SourceIntegralDiamondReducedOperations, `Dubon2026.SourceIntegralDiamondRatioRelation, `Dubon2026.SourceIntegralDiamondAdditiveSeries, `Dubon2026.SourceIntegralDiamondRatioClosure, `Dubon2026.SourceIntegralDiamondReducedAddition, `Dubon2026.SourceIntegralDiamondFieldPull, `Dubon2026.SourceIntegralDiamondFieldRange, `Dubon2026.SourceIntegralDiamondFieldConstants, `Dubon2026.SourceIntegralDiamondFieldOperations, `Dubon2026.SourceIntegralDiamondComposition, `Dubon2026.SourceIntegralDiamondFieldComposition, `Dubon2026.SourceIntegralDiamondFieldIdentity, `Dubon2026.SourceIntegralDiamondFieldAction, `Dubon2026.SourceIntegralDiamondFullBaseInclusion, `Dubon2026.SourceIntegralDiamondGammaZeroFixed, `Dubon2026.SourceIntegralDiamondEisensteinAction, `Dubon2026.SourceIntegralDiamondSignedMembership, `Dubon2026.SourceIntegralDiamondExactKernel, `Dubon2026.SourceIntegralDiamondFixedFieldDegree, `Dubon2026.SourceReducedBaseCoordinateMap, `Dubon2026.SourceReducedBaseDegreeLower, `Dubon2026.SourceIntegralDiamondIndexLower, `Dubon2026.SourceReducedCoordinateIndependence, `Dubon2026.SourceReducedCoordinateMapIndependence, `Dubon2026.SourceReducedFieldCoefficientMap, `Dubon2026.SourceReducedCoordinateDegreeTransport, `Dubon2026.SourceReducedResidueDegreeTransport, `Dubon2026.SourceGammaOneDegreePreservation, `Dubon2026.SourceGammaOneResidueGenusUpper]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.red_apply, `Dubon2026.SourceFunctionField.IntegralDiamond.red_eq_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_unique, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_int_smul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_inv_int_smul, `Dubon2026.SourceFunctionField.IntegralDiamond.red_C, `Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_of_integral_diamond, `Dubon2026.SourceFunctionField.IntegralDiamond.red_zero_iff_integral_diamond, `Dubon2026.SourceFunctionField.IntegralDiamond.coe_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.exists_integral_scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.integral_diamond_witness_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.red_level_power, `Dubon2026.SourceFunctionField.IntegralDiamond.level_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_eq_of_witness, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_zero_iff_original, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_scaled_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_sub, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_add, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_one, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_one, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_add, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.originalRatio_inv, `Dubon2026.SourceFunctionField.IntegralDiamond.mem_originalReducedField_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.exists_even_originalReducedField_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.integralQExp_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_add, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eq, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_ratio_mem, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mem, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_add, `Dubon2026.SourceFunctionField.IntegralDiamond.coe_reducedFieldPullHom, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_scaled_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_comp, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond_of_invariant, `Dubon2026.SourceFunctionField.IntegralDiamond.even_slash_eq_of_signed_gammaOne, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_signed_gammaOne, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom_one_matrix, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_mul, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_apply, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_of_signed_gammaOne, `Dubon2026.SourceFunctionField.IntegralDiamond.divisor_j_mem_gammaZeroField, `Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_gammaZeroField, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_of_gammaZero_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv_fixes_gammaZeroField, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_fixes_fullBase, `Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalReducedField, `Dubon2026.SourceFunctionField.IntegralDiamond.red_eisenstein4_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull_eisenstein_ratio, `Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_diagonal_product, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_upperLeft, `Dubon2026.SourceFunctionField.IntegralDiamond.gammaZero_upperLeft_ne_zero, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_small_level, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_of_reducedFieldEquiv_eq_one, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_eq_one_iff, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_kernel, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction_range_finite, `Dubon2026.SourceFunctionField.IntegralDiamond.reduced_fixedField_degree_eq_signed_relativeIndex, `Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate, `Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate, `Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le, `Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level, `Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_le_away_level]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.red, `Dubon2026.SourceFunctionField.IntegralDiamond.scaledDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.normalizedRed, `Dubon2026.SourceFunctionField.IntegralDiamond.diamondWitness, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedDiamond, `Dubon2026.SourceFunctionField.IntegralDiamond.originalEvenRepresentative, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPull, `Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative, `Dubon2026.SourceFunctionField.IntegralDiamond.EvenIntegralRepresentative.mk, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldPullHom, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldEquiv, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldAction]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE DEGREE GENUS AUDIT PASS: {count} theorems including private/generated declarations. Actual reduced diamond action, original degree preservation and residue-genus upper bound. Reverse genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceIntegralDiamondReduction
+
+#lint in Dubon2026.SourceIntegralDiamondZeroForward
+
+#lint in Dubon2026.SourceIntegralDiamondZeroEquivalence
+
+#lint in Dubon2026.SourceIntegralDiamondWitness
+
+#lint in Dubon2026.SourceIntegralDiamondNormalizedReduction
+
+#lint in Dubon2026.SourceIntegralDiamondChosenReduction
+
+#lint in Dubon2026.SourceIntegralDiamondSeriesOperations
+
+#lint in Dubon2026.SourceIntegralDiamondReducedOperations
+
+#lint in Dubon2026.SourceIntegralDiamondRatioRelation
+
+#lint in Dubon2026.SourceIntegralDiamondAdditiveSeries
+
+#lint in Dubon2026.SourceIntegralDiamondRatioClosure
+
+#lint in Dubon2026.SourceIntegralDiamondReducedAddition
+
+#lint in Dubon2026.SourceIntegralDiamondFieldPull
+
+#lint in Dubon2026.SourceIntegralDiamondFieldRange
+
+#lint in Dubon2026.SourceIntegralDiamondFieldConstants
+
+#lint in Dubon2026.SourceIntegralDiamondFieldOperations
+
+#lint in Dubon2026.SourceIntegralDiamondComposition
+
+#lint in Dubon2026.SourceIntegralDiamondFieldComposition
+
+#lint in Dubon2026.SourceIntegralDiamondFieldIdentity
+
+#lint in Dubon2026.SourceIntegralDiamondFieldAction
+
+#lint in Dubon2026.SourceIntegralDiamondFullBaseInclusion
+
+#lint in Dubon2026.SourceIntegralDiamondGammaZeroFixed
+
+#lint in Dubon2026.SourceIntegralDiamondEisensteinAction
+
+#lint in Dubon2026.SourceIntegralDiamondSignedMembership
+
+#lint in Dubon2026.SourceIntegralDiamondExactKernel
+
+#lint in Dubon2026.SourceIntegralDiamondFixedFieldDegree
+
+#lint in Dubon2026.SourceReducedBaseCoordinateMap
+
+#lint in Dubon2026.SourceReducedBaseDegreeLower
+
+#lint in Dubon2026.SourceIntegralDiamondIndexLower
+
+#lint in Dubon2026.SourceReducedCoordinateIndependence
+
+#lint in Dubon2026.SourceReducedCoordinateMapIndependence
+
+#lint in Dubon2026.SourceReducedFieldCoefficientMap
+
+#lint in Dubon2026.SourceReducedCoordinateDegreeTransport
+
+#lint in Dubon2026.SourceReducedResidueDegreeTransport
+
+#lint in Dubon2026.SourceGammaOneDegreePreservation
+
+#lint in Dubon2026.SourceGammaOneResidueGenusUpper

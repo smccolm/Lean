@@ -1,0 +1,51 @@
+import Dubon2026.SourceIntegralDiamondGammaZeroFixed
+import Dubon2026.SourceGammaOneEisensteinSeparation
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> signed-index lower bound
+-> faithful action modulo the signed subgroup. Reuse the actual integral
+weight-four Eisenstein separating forms and their proved Gamma0 slash
+formula. Their E4 denominator is invariant and remains nonzero in every
+coefficient characteristic. This is the concrete action formula required
+to consume the existing signed-identity separation theorem. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem red_eisenstein4_ne_zero (ℓ : ℕ) [Fact ℓ.Prime] : red ℓ eisenstein4 ≠ 0 := by
+  intro h
+  have h0 := congrArg (fun f : LaurentSeries (ZMod ℓ) => f.coeff 0) h
+  simp [red_apply, intSeriesC, PowerSeries.coeff_coe, eisenstein4] at h0
+
+theorem reducedFieldPull_eisenstein_ratio (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (δ : Gamma0 N) (c : ZMod N) (hc : c ≠ 0)
+    (hc' : c * (δ.val 0 0 : ZMod N) ≠ 0)
+    (x : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N))
+    (hx : (x : LaurentSeries (ZMod ℓ)) = IntegralEisenstein.ratio (ZMod ℓ) N c) :
+    reducedFieldPull N ℓ δ x =
+      IntegralEisenstein.ratio (ZMod ℓ) N (c * (δ.val 0 0 : ZMod N)) := by
+  let f := IntegralEisenstein.normalizedForm N c
+  let g : ModularForm (Gamma1 N) 4 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N)) ModularForm.E₄
+  have hf := IntegralEisenstein.normalizedForm_integral N c hc
+  have hg : IsIntegralQExp g eisenstein4 := qExpansion_E4_eq_map_eisenstein4.symm
+  have hw : IsIntegralQExp (scaledDiamond N δ 0 f)
+      (IntegralEisenstein.integralSeries N (c * (δ.val 0 0 : ZMod N))) := by
+    rw [coe_scaledDiamond, pow_zero, one_smul]
+    change IsIntegralQExp ((IntegralEisenstein.normalizedForm N c : ℍ → ℂ) ∣[(4 : ℤ)] δ.val) _
+    rw [IntegralEisenstein.normalizedForm_slash N c δ.val δ.property]
+    exact IntegralEisenstein.normalizedForm_integral N _ hc'
+  have hi : (⇑g : ℍ → ℂ) ∣[(4 : ℤ)] δ.val = g := by
+    rw [ModularForm.SL_slash]
+    exact SlashInvariantFormClass.slash_action_eq ModularForm.E₄ _
+      ⟨δ.val, rfl⟩
+  have he : Even (4 : ℤ) := ⟨2, rfl⟩
+  rw [reducedFieldPull_eq N ℓ hℓN δ x he f g hf hg (red_eisenstein4_ne_zero ℓ)
+      (by simpa only [IntegralEisenstein.ratio, red_apply] using hx),
+    reducedDiamond_eq N ℓ hℓN he δ f hf hw,
+    reducedDiamond_of_invariant N ℓ hℓN he δ g hg hi,
+    normalizedRed, pow_zero, div_one]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

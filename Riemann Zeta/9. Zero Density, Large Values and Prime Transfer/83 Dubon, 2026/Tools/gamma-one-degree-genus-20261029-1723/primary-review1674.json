@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CoefficientFiberProductConjugatorAlignment",
+  "mathematics": "For the actual two projected representations over the coefficient fiber product, their original common reductions agree entry by entry. The discrepancy between two genuine projected conjugators is therefore proved to stabilize the same whole reduced representation. Apply the proved actual stabilizer-lifting theorem under explicit absolute irreducibility of its true residue representation. Multiplying the original second conjugator by that actual lifted stabilizer preserves its whole conjugacy and makes its common reduction equal to the original first conjugator. Consequently strict conjugacy of both actual projected whole representations implies strict conjugacy over the original coefficient fiber product, using the constructed compatible conjugators rather than assuming compatibility.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned actual general-linear mk, map_det, determinant of an original unit matrix, map_comp, and local-hom unit reflection inspected. Existing FirstOrderCohomologyClassification retains strict first-order conjugacy; the current relation extends to whole original representations. Levin Lecture5 Proposition1.6 original conjugator lifting and stabilizer alignment route rechecked live10Oct2026. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Defs.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Used the explicitly qualified genuine group inverse-of-product theorem, following the focused strict-conjugacy repair, before promotion. The actual stabilizer discrepancy, its lifted correction and the final projected-to-whole strict-conjugacy theorem compiled unchanged on the first production attempt."
+  ],
+  "productionLog": "fiberConjugatorAlignment1674-focus.log"
+}

@@ -1,0 +1,43 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O L : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `arithmeticTraceUnframedUniversality_exists`. -/
+theorem actual_arithmetic_trace_unframed_universality_arithmeticTraceUnframedUniversality_exists_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))] (i₀ : ι) :
+    ∃ hlocal : IsLocalRing (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ),
+      letI := hlocal
+      IsNoetherianRing (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ) ∧
+      IsAdic (IsLocalRing.maximalIdeal (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ)) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ))
+        (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ) ∧
+      ∃ (eT : IsLocalRing.ResidueField (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ)
+          ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup ι
+          (ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ))
+        (hτres : (GeneralLinearGroup.map (localCoefficientReduction eT).toRingHom).comp
+          τ.toMonoidHom = σ),
+        ∀ (A : Type) [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+          [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+          (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+          (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+          Function.Bijective (originalCoefficientRepresentationClass eT eA
+            (rationalArithmeticGaloisGroup a) σ τ hτres) :=
+  arithmeticTraceUnframedUniversality_exists (L := L) a ha p hp hpa σ hσ i₀
+
+end
+

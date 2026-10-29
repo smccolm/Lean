@@ -1,0 +1,58 @@
+{
+  "status": "Prepared only; predecessor9294 canonical PASS and archived evidence required. Original degree preservation and residue-genus upper inequality are proved; reverse genus and source gates remain required.",
+  "modules": 36,
+  "queries": 112,
+  "theorems": 100,
+  "constructions": 12,
+  "exhaustiveScratchChecks": 174,
+  "proofValueChecks": 249,
+  "scopes": 4,
+  "receipts": {
+    "source-reduced-diamond-action-1-scratch-receipt.json": "DE8755861A90675AB7BE6AED4EF41DAFB341DE714A5E684E5B1EAC1674B87E71",
+    "source-reduced-diamond-kernel-1-scratch-receipt.json": "B9AE195E92E7508113D6E285811280C7DA57654C76E0CCB08182BC88AE0967CD",
+    "source-gamma-one-degree-1-scratch-receipt.json": "4A873E43FDB7D5F3F4C524D89393E5DBAC1B6E5CA942300E9E20C4D62E3781E8",
+    "source-gamma-one-genus-upper-1-scratch-receipt.json": "B8EA3C26DFA462BCD12610A5B2C99297FD97848082556F4157F87975B23A9651"
+  },
+  "expectedConsumers": 27246,
+  "expectedConstructions": 2960,
+  "fullGoal": "The reverse genus inequality remains open; original genus preservation is not yet complete. Extension of the prime-field action to the residue coefficients and the required modular fiber bounds are the next dependencies. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_degree_genus_9330.py",
+      "sha256": "E7AE12EE39EB81018EA31D9A726AB670588298D38146CFD6FEA6352DCF7B29C1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_degree_genus_production_ownership_9330.py",
+      "sha256": "3557CFA89CDB6131D44DAA5EFCFC2AC66A7680B25D3166FF5E9AD43CA2FE21F6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_degree_genus_global_ownership_9330.py",
+      "sha256": "433B98120F83D9AAB5E517146CF654EED22CEDBFCD21C49C77985DF64BB2CFCF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_degree_genus_ownership_9330.py",
+      "sha256": "BA721DCC6E6E1ECF93EBD4EF8CCB87252E4358FEE6C66EDB4F4E0A1ACA936B3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_degree_genus_9330.py",
+      "sha256": "5D1981DC0ECAE007AF329FAD0DC27DFB5726A50C00F80E4965E1D4F7E4BB6697"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_degree_genus_9330.ps1",
+      "sha256": "1DEF5292E09C6AAAAB7CAB0E7980B5E32C06A424CCF91CA464902F901F0E5E40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_degree_genus_9330.ps1",
+      "sha256": "5B43D0AA7E6FC21B481CC2C5B8AE44BBDDD1789979D62D68E9A6F347EF46A1E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_degree_genus_canonical_9330.py",
+      "sha256": "3AAC4294073891BCA71F706D8D848583CFCEFE08A953536604647BDFC784F5DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_degree_genus_9330.py",
+      "sha256": "7D5990264BD13E3D28E9D9504E090D4263A09AD46B1BD862B82E6CD3FB1C1B17"
+    }
+  ],
+  "productionMutation": false
+}

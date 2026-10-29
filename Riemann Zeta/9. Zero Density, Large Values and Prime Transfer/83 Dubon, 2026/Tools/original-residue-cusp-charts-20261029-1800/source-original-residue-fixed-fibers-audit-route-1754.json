@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-29T10:05:17.999572+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue fiber bounds -> actual residue diamond fixed field and full-base fiber transitivity.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fixed-field-fiber-route-1743.json",
+      "sha256": "27CB996AD7ADA128DCB629D1C55D7699990E51C268BC1161701A067464F24F62"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-residue-fixed-fibers-audit-refinement-1752.json",
+      "sha256": "E2F5BA9C6CF4279D3BD8BCB89631B7BF62CCAF921A9B0EC57613BCEE5EB7B2A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-scalar-1-scratch-receipt.json",
+      "sha256": "68D4FB6A688FD790AFE84AC1F6131968A4B4F490E9C6FCDE00A2F989C9A24E2E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\manifest.json",
+      "sha256": "A00F35CD5B83884F54C43AA205CEB8B4388310D375B5E202DF457B1681ABEE95"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-original-residue-charts-1750\\manifest.json",
+      "sha256": "F3D47C18037B527D22332BFCF7CD08AC7EE6167D799A40CEA83757FC8A1D080D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\manifest.json",
+      "sha256": "4B2E1DEA12532879536650C383F71D7AA3D4E9EF80F94263D58DF43D8EB870A3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Residue Fixed Field and Fiber Transitivity Assessment 2026-10-29.md",
+      "sha256": "4F81992DBAE4A999844181F7982D1CDC1F8B24A0DA8220BEB052CEA54FED07B1"
+    }
+  ],
+  "shorterRoute": "Reuse the already proved original coordinate degree and native full-base degree to identify the fixed field; this avoids the longer external invariant-function construction. Native SourceCurveGaloisFiberTransitivity and Mathlib FixedPoints.toAlgAut_bijective avoid reconstructing the integral-closure prime/place correspondence. Six versioned modules pass public/private/generated axiom checks and sixteen linters each. All 22 required dependencies are checked in the value closures of two actual consumers and the explicitly audited actual action construction; the definitional construction is a separate root because its name reduces away in the consumer values. The failed predecessor audit and fresh refinement are retained; no check was removed.",
+  "assumptionsToDischarge": [
+    "The actual original residue coordinate degree is the signed Gamma1 index, by the already proved original degree preservation and residue-field equality.",
+    "The diamond fixed field equals the full modular base: its proved Artin degree, original coordinate degree and the native full-base degree force relative degree one. The valuation-residue consumer discharges the coordinate-degree input.",
+    "Native Galois place transitivity over that fixed field and Artin automorphism surjectivity produce a literal Gamma0 matrix relating any two actual residue places above the same full-base place. No action, fixed-field identity, Galois transitivity or degree certificate remains a hypothesis in the actual residue consumer."
+  ],
+  "remaining": "The finite elliptic and cusp stabilizer charts, exact residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under the full original completion contract.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

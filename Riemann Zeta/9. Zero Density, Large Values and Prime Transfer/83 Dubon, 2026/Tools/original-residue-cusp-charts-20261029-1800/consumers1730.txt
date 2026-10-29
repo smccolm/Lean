@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [Algebra O A] [TopologicalSpace A]
+
+/-- Exact original-object consumer of `completedPresentation_image_mem_subalgebra`. -/
+theorem actual_completed_presentation_subalgebra_image_completedPresentation_image_mem_subalgebra_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (S : Subalgebra O A) (hS : IsClosed (S : Set A))
+    (hunit : ∀ x : S, IsUnit (x : A) → IsUnit x)
+    (f : CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker →ₐ[O] A)
+    (hf : Continuous f)
+    (hentry : ∀ h i j, f ((completedPresentationRepresentation ρ H q hq h).val i j) ∈ S)
+    (x : CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker) : f x ∈ S :=
+  completedPresentation_image_mem_subalgebra ρ H q hq S hS hunit f hf hentry x
+
+end
+

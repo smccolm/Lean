@@ -1,0 +1,88 @@
+import SourceIntegralSlashFieldDiamondCovariance
+import SourceOriginalResidueCuspHomFamily
+import SourceOriginalResidueCuspPlaceFamily
+import SourceOriginalResidueCuspPlaceCovariance
+import SourceOriginalResidueCuspOrbitMap
+import SourceOriginalResidueFullBaseFinite
+import SourceOriginalResiduePoleBaseLabel
+import SourceOriginalResidueCuspFamilyBaseLabel
+import SourceOriginalResidueCuspFamilyExhaustion
+import SourceOriginalResidueCuspOrbitSurjection
+import SourceOriginalResidueCuspCount
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace
+
+
+
+private def runOriginalResidueCuspCountAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralSlashFieldDiamondCovariance, `SourceOriginalResidueCuspHomFamily, `SourceOriginalResidueCuspPlaceFamily, `SourceOriginalResidueCuspPlaceCovariance, `SourceOriginalResidueCuspOrbitMap, `SourceOriginalResidueFullBaseFinite, `SourceOriginalResiduePoleBaseLabel, `SourceOriginalResidueCuspFamilyBaseLabel, `SourceOriginalResidueCuspFamilyExhaustion, `SourceOriginalResidueCuspOrbitSurjection, `SourceOriginalResidueCuspCount]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite, `Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue cusp count postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue cusp count theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUE CUSP COUNT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runOriginalResidueCuspCountAudit
+
+#lint in SourceIntegralSlashFieldDiamondCovariance
+#lint in SourceOriginalResidueCuspHomFamily
+#lint in SourceOriginalResidueCuspPlaceFamily
+#lint in SourceOriginalResidueCuspPlaceCovariance
+#lint in SourceOriginalResidueCuspOrbitMap
+#lint in SourceOriginalResidueFullBaseFinite
+#lint in SourceOriginalResiduePoleBaseLabel
+#lint in SourceOriginalResidueCuspFamilyBaseLabel
+#lint in SourceOriginalResidueCuspFamilyExhaustion
+#lint in SourceOriginalResidueCuspOrbitSurjection
+#lint in SourceOriginalResidueCuspCount

@@ -1,0 +1,108 @@
+import Dubon2026.SourceFrickeTraceForms
+import Dubon2026.SourceFrickeDenominatorUniformization
+import Dubon2026.SourceActualPeakedAuxiliary
+import Dubon2026.SourceEvenWeightPeakedTraceIntegrality
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> level-power slash
+integrality. Apply the actual constructed twelve-divisible peaked
+auxiliary to the even-weight trace on the actual S-conjugate subgroup.
+All auxiliary, subgroup, expansion and decay assumptions are discharged.
+The first theorem proves coefficientwise level-power integrality. The
+second derives a uniform exponent from a separately explicit common
+nonzero integer denominator, whose construction is still required.
+Even weights suffice for the original integral-ratio field by the proved
+SourceGammaOneEvenIntegralRatios theorem.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_fricke_coeff. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm Pointwise
+local notation "Γ₁(" M ")" => ((Gamma1 M : Subgroup SL(2, ℤ)) : Subgroup (GL (Fin 2) ℝ))
+variable {N : ℕ} [NeZero N] {k : ℤ}
+
+theorem even_weight_coeff_slash_fricke_mem_RN (hN : 2 ≤ N) (hk : Even k)
+    (f : ModularForm Γ₁(N) k) {a : ℕ}
+    (hf : ∀ n : ℕ, IsIntegral ℤ ((N : ℂ) ^ a * (qExpansion 1 (⇑f : ℍ → ℂ)).coeff n))
+    (n : ℕ) :
+    (qExpansion 1 ((⇑f : ℍ → ℂ) ∣[k] frickeMatrix N)).coeff n ∈ RN N := by
+  obtain ⟨w, m₀, a', δ, ϑ, hw12, hm₀, hδ, hsrc, hz, hne, hinv, hint, hdec⟩ :=
+    GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd N hN
+  have hw : Even w := by
+    obtain ⟨t, ht⟩ := hw12
+    exact ⟨6 * t, by omega⟩
+  have hG : ∀ n : ℕ, (qExpansion (N : ℝ) (⇑(Gform f) : ℍ → ℂ)).coeff n ∈ RN N := by
+    intro n
+    rw [coeff_qExpansion_Gform]
+    exact (RN N).mul_mem inv_natCast_mem_RN (mem_RN_of_isIntegral_mul (hf n))
+  have hΘ : ∀ n : ℕ, (qExpansion (N : ℝ) (⇑(Thetaform ϑ) : ℍ → ℂ)).coeff n ∈ RN N :=
+    fun n => mem_RN_of_isIntegral_mul (hsrc n)
+  have hΘS₀ : ∀ n : ℕ, n < m₀ → (qExpansion 1 ((⇑(Thetaform ϑ) : ℍ → ℂ) ∣[w]
+      ((ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n = 0 := by
+    rw [Thetaform_slash_S hw]
+    exact hz
+  have hΘS₁ : ∃ v ∈ RN N, v * (qExpansion 1 ((⇑(Thetaform ϑ) : ℍ → ℂ) ∣[w]
+      ((ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff m₀ = 1 := by
+    rw [Thetaform_slash_S hw]
+    exact ⟨((qExpansion 1 (⇑ϑ : ℍ → ℂ)).coeff m₀)⁻¹,
+      mem_RN_of_isIntegral_mul hinv, inv_mul_cancel₀ hne⟩
+  have hΘS : ∀ n : ℕ, (qExpansion 1 ((⇑(Thetaform ϑ) : ℍ → ℂ) ∣[w]
+      ((ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n ∈ RN N := by
+    rw [Thetaform_slash_S hw]
+    exact fun n => mem_RN_of_isIntegral_mul (hint n)
+  have hdecay : ∀ β : SL(2, ℤ),
+      (∀ j : ℤ, β * ModularGroup.T ^ j ∉ GammaS N ∧ -(β * ModularGroup.T ^ j) ∉ GammaS N) →
+      (β * ModularGroup.S⁻¹ ∉ GammaS N ∧ -(β * ModularGroup.S⁻¹) ∉ GammaS N) →
+      ((⇑(Thetaform ϑ) : ℍ → ℂ) ∣[w] (β : GL (Fin 2) ℝ)) =O[atImInfty]
+        fun τ : ℍ => Real.exp (-(2 * Real.pi * ((m₀ : ℝ) + δ)) * τ.im) := by
+    intro β hT hS
+    rw [Thetaform_slash]
+    apply hdec (ModularGroup.S * β)
+    ·
+      constructor
+      · intro hmem
+        apply hS.2
+        apply mem_GammaS_iff.mpr
+        have e : ModularGroup.S * -(β * ModularGroup.S⁻¹) * ModularGroup.S⁻¹ = ModularGroup.S * β := by
+          rw [ModularGroup.S_inv]; simp only [mul_neg, neg_neg, mul_assoc, SourceSL2Cocycle.S_mul_S]; simp
+        rwa [e]
+      · intro hmem
+        apply hS.1
+        apply mem_GammaS_iff.mpr
+        have e : ModularGroup.S * (β * ModularGroup.S⁻¹) * ModularGroup.S⁻¹ = -(ModularGroup.S * β) := by
+          rw [ModularGroup.S_inv]; simp only [mul_neg, neg_mul, neg_neg, mul_assoc, SourceSL2Cocycle.S_mul_S]; simp
+        rwa [e]
+    ·
+      intro j
+      constructor
+      · intro hmem
+        apply (hT j).1
+        apply mem_GammaS_iff.mpr
+        simpa only [mul_assoc] using hmem
+      · intro hmem
+        apply (hT j).2
+        apply mem_GammaS_iff.mpr
+        have e : ModularGroup.S * -(β * ModularGroup.T ^ j) * ModularGroup.S⁻¹ =
+            -(ModularGroup.S * β * ModularGroup.T ^ j * ModularGroup.S⁻¹) := by
+          simp only [mul_neg, neg_mul, mul_assoc]
+        rwa [e]
+
+  have key := IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary
+    (GammaS N) N (NeZero.pos N) (T_pow_mem_GammaS N) (STS_mem_GammaS N)
+    (RN N) hk hw (Gform f) hG (Thetaform ϑ) hΘ m₀ hm₀ hΘS₀ hΘS₁ hΘS δ hδ hdecay n
+  rwa [Gform_slash_S] at key
+
+theorem even_weight_level_power_fricke_of_common_denominator (hN : 2 ≤ N) (hk : Even k)
+    (f : ModularForm Γ₁(N) k) {a D : ℕ} (hD : D ≠ 0)
+    (hf : ∀ n : ℕ, IsIntegral ℤ ((N : ℂ) ^ a * (qExpansion 1 (⇑f : ℍ → ℂ)).coeff n))
+    (hcommon : ∀ n : ℕ, IsIntegral ℤ ((D : ℂ) *
+      (qExpansion 1 ((⇑f : ℍ → ℂ) ∣[k] frickeMatrix N)).coeff n)) :
+    ∀ n : ℕ, IsIntegral ℤ ((N : ℂ) ^ D *
+      (qExpansion 1 ((⇑f : ℍ → ℂ) ∣[k] frickeMatrix N)).coeff n) := by
+  intro n
+  obtain ⟨b, hb⟩ := even_weight_coeff_slash_fricke_mem_RN hN hk f hf n
+  exact isIntegral_pow_mul_of_isIntegral_mul (NeZero.ne N) hD hb (hcommon n)
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

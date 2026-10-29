@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalUnframedOrdinaryCoefficientIdeal",
+  "mathematics": "Consume the same original residue-preserving coefficient evaluation; identify its genuine ordinary class condition with annihilation of the original ordinary ideal.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "ordinary-quotient-next-drafts-20261010.json: source Section6.2, genuine invariant submodules, exact coefficient polynomials, original quotient fibers and residue compatibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Transport the actual residual nonidentity by equality composition rather than rewriting through the subgroup-composition wrapper. The exact original residual representation and coefficient map are unchanged."
+  ],
+  "productionLog": "ordinaryCoefficient1784b-focus.log"
+}

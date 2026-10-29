@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι κ O R : Type*} [Fintype ι] [DecidableEq ι]
+  [Fintype κ] [DecidableEq κ] [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `matrix_mem_subalgebra_span_of_trace`. -/
+theorem actual_matrix_trace_basis_coordinates_matrix_mem_subalgebra_span_of_trace_source
+    (S : Subalgebra O R) [IsLocalHom S.val.toRingHom]
+    (b : Basis κ R (Matrix ι ι R))
+    (hb : ∀ i j, Matrix.trace (b i * b j) ∈ S)
+    (X : Matrix ι ι R) (hX : ∀ j, Matrix.trace (X * b j) ∈ S) :
+    X ∈ Submodule.span S (Set.range b) :=
+  matrix_mem_subalgebra_span_of_trace S b hb X hX
+
+end
+

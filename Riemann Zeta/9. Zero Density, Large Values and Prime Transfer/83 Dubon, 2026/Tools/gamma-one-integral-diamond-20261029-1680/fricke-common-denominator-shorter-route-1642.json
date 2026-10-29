@@ -1,0 +1,20 @@
+{
+  "dependency": "DUB-17/18 -> original Gamma1 degree/genus -> reduced field action -> uniform level-power slash integrality -> common integer denominator.",
+  "reused": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-fricke-denominator-leaves-1641\\S_PowerSeries_exists_sum_smul_eq_of_forall_coeff_mem.lean.txt",
+      "sha256": "0E7D0D00D672BCFD28264D3D69043C43452806A83B7C6500EB17A8237ADFBC13"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRationalBoundedDenominators.lean",
+      "sha256": "BF4FA5190BA81FACB7CDE51C768B7207BF75E5E6680DDAD9E89E3FBD02BB65D6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCuspWeightCancellation.lean",
+      "sha256": "AF04B5B5ACB8EF881A97477A1AF96120BB3075AC32F7883B362AE8EA2092E437"
+    }
+  ],
+  "route": "Use the proved native integral cusp-form span. Multiply an actual even-weight modular form by the discriminant, descend its finite integral-series representation to the algebraic coefficient subfield using a native linear projection, clear finitely many algebraic scalars, and cancel the discriminant using its already proved integer Laurent unit. Coefficientwise RN membership gives actual algebraicity. This avoids reconstructing the external Fricke algebraic expansion and all-weight modular-form basis infrastructure.",
+  "remaining": "Each bridge and the full common-denominator consumer must still be proved; reduced field action, degree/genus and DUB-17--20 remain open.",
+  "productionMutation": false
+}

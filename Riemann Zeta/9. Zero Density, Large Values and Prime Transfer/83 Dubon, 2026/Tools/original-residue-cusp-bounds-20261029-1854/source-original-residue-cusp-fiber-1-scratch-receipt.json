@@ -1,0 +1,72 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T12:59:10.120998+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceOriginalResidueDiamondCommute",
+    "SourceOriginalResidueDiamondFiberStabilizer",
+    "SourceOriginalResidueLabeledCuspFiber"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute.lean",
+      "sha256": "8B505BD8EA230128CD3F45589542180A2140FFEC878329212120CD468D25D77E",
+      "oleanSha256": "FA17EE0B417659C8F9039AFC2EBDB066A6FDA7BAEA2DF84AB0A18CCFF019369F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondCommute-1844.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer.lean",
+      "sha256": "24CF45292EFBD52F4D70626C9EF71E69FF66D9D0FA905D8814259307AA28CCE6",
+      "oleanSha256": "6C7689DB16CDF5EC603D7A5740D30A5C94134CD6DD99E2E701302C76227D2232",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueDiamondFiberStabilizer-1844.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber.lean",
+      "sha256": "5D0698589DFE8AFA9E16F3CD5137B3E0D55B0C466C3AA7A7323FBB365611E3CE",
+      "oleanSha256": "B511C1361C7AE64E00854173130906079AF70CDF7DAEAD2D2C51D80B3F0AC569",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspFiber-1844.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction_commute",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixes_of_same_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberAudit1.log",
+  "logSha256": "E37888BE9FB28A2257A1EB295F116B98B8D90723895E9E90477BBD338A017EB7",
+  "auditSha256": "FA3B3E1F77773904C40A5BBD568C4774B864FC3E74B1944B7DDCE2C01014831A",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberScratchOwnership1844.log",
+  "ownershipSha256": "0645802C2CE0FEB91FCA4551CCE8A0C2D8B8F639F17AAB016238DEC3E1EA1F93",
+  "exhaustiveTheorems": 11,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspFiberDependencyAudit1.log",
+  "dependencyAuditSha256": "D0D79AD238C07A253F750F27723B708261B0DACD19CEF6AD0A2F156729E179C2",
+  "dependencyAuditSourceSha256": "86B231ACA279659656C66473578A8EA39B923E39719C32C4BF6B9C7B9B7910CE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFiber_stabilizer"
+  ],
+  "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> original genus preservation -> reverse genus inequality -> residue fiber stabilizers and bounds.",
+  "discharged": [
+    "Commutativity of the actual original residue diamond action is proved from its exact kernel.",
+    "An actual diamond element fixing one place fixes every place above the same full-base valuation, using proved fiber transitivity.",
+    "For each native primitive cusp label, a cusp matrix is constructed whose signed-translation stabilizer fixes the entire actual residue fiber, without action, commutativity, transitivity or stabilizer premises."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cusp cardinality comparison, finite elliptic fiber bounds including characteristics two and three, and reverse genus inequality remain open. Original all-weight association, automorphy and literal higher continuation remain required. Acceptance 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "0F47E9DD5154312BA59FE3428A5CF7124485CE31C07774283957E81D0D480054",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

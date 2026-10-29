@@ -1,0 +1,42 @@
+import Dubon2026.SourceFrickeLevelIntegralRing
+import Dubon2026.SourceFrickeGammaOneNormalizer
+import Dubon2026.SourceFrickeTraceSubgroup
+import Dubon2026.SourceFrickeTraceForms
+import Dubon2026.SourceFrickeDenominatorUniformization
+import Dubon2026.SourceEvenWeightFrickeTrace
+import Dubon2026.SourceIntegralSeriesScalarDescent
+import Dubon2026.SourceIntegralSeriesCommonDenominator
+import Dubon2026.SourceGammaOneAlgebraicCuspDenominator
+import Dubon2026.SourceIntegralDiscriminantCancellation
+import Dubon2026.SourceGammaOneAlgebraicFormDenominator
+import Dubon2026.SourceEvenWeightBalance
+import Dubon2026.SourceEvenWeightFrickeCommonDenominator
+import Dubon2026.SourceEvenWeightUniformFrickeIntegrality
+import Dubon2026.SourceIntegralSlashCuspSubgroup
+import Dubon2026.SourceIntegralSlashCuspChart
+import Dubon2026.SourceIntegralSlashFrickeChart
+import Dubon2026.SourceIntegralSlashSMove
+import Dubon2026.SourceIntegralSlashTMove
+import Dubon2026.SourceEvenWeightUniformSlashIntegrality
+import Dubon2026.SourceRationalCuspDiamondFourier
+import Dubon2026.SourceRationalDiscriminantCancellation
+import Dubon2026.SourceRationalModularDiamondFourier
+import Dubon2026.SourceEvenWeightIntegralDiamondForm
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceFrickeLevelIntegralRing, `Dubon2026.SourceFrickeGammaOneNormalizer, `Dubon2026.SourceFrickeTraceSubgroup, `Dubon2026.SourceFrickeTraceForms, `Dubon2026.SourceFrickeDenominatorUniformization, `Dubon2026.SourceEvenWeightFrickeTrace, `Dubon2026.SourceIntegralSeriesScalarDescent, `Dubon2026.SourceIntegralSeriesCommonDenominator, `Dubon2026.SourceGammaOneAlgebraicCuspDenominator, `Dubon2026.SourceIntegralDiscriminantCancellation, `Dubon2026.SourceGammaOneAlgebraicFormDenominator, `Dubon2026.SourceEvenWeightBalance, `Dubon2026.SourceEvenWeightFrickeCommonDenominator, `Dubon2026.SourceEvenWeightUniformFrickeIntegrality, `Dubon2026.SourceIntegralSlashCuspSubgroup, `Dubon2026.SourceIntegralSlashCuspChart, `Dubon2026.SourceIntegralSlashFrickeChart, `Dubon2026.SourceIntegralSlashSMove, `Dubon2026.SourceIntegralSlashTMove, `Dubon2026.SourceEvenWeightUniformSlashIntegrality, `Dubon2026.SourceRationalCuspDiamondFourier, `Dubon2026.SourceRationalDiscriminantCancellation, `Dubon2026.SourceRationalModularDiamondFourier, `Dubon2026.SourceEvenWeightIntegralDiamondForm]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

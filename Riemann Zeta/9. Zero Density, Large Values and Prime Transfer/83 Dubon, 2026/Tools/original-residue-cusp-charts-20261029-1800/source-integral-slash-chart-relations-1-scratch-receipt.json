@@ -1,0 +1,156 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T10:47:43.570349+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralSlashCoefficientLocalization",
+    "SourceIntegralSlashCoefficientReduction",
+    "SourceIntegralSlashReducedSeries",
+    "SourceIntegralSlashReducedScaling",
+    "SourceIntegralSlashReducedZero",
+    "SourceIntegralSlashReducedOperations",
+    "SourceIntegralSlashReducedSums",
+    "SourceIntegralSlashLinearRelation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientLocalization.lean",
+      "sha256": "0318EFC23F5E994A78823795ACFA603732C5A485D2B42B71D89C1F1C57C3AA11",
+      "oleanSha256": "13556DADC36B6398921D19B5C233452805B1A13EAF5D8AA52BB3B2D866433CD9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientLocalization-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientLocalization-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientReduction.lean",
+      "sha256": "9BE1D4315418E43A3DD15CAD8F3B2503F705FF473968C41764EEEF70F9E151CE",
+      "oleanSha256": "C8259312DE930F805E4D410E16597C6830DEFE217D6EA6289EB12754CF57184C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientReduction-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCoefficientReduction-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSeries.lean",
+      "sha256": "FA4B391D64F5074F336ABA5D2DBD1EBF19C30E435D8CE96CC00C32E9750A9EDB",
+      "oleanSha256": "2723A69E34A44212008AA9150D4A447287B5002F2F1539802FA5933C7542E306",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSeries-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSeries-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedScaling.lean",
+      "sha256": "AAB338BB5E58C67B5AC44567D1999FD5505280E1573C8B27A604A2F160666EA3",
+      "oleanSha256": "74913D1261AA63E1264AFA974FD676FD9D73ECB21A3ADB88B8170720F2B4783E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedScaling-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedScaling-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedZero.lean",
+      "sha256": "90A333B38A9D2F8B24F0FF5EDE15A81CBFB8221D11EC906EF45F131EB3804066",
+      "oleanSha256": "50B8CA15BD315734754915DEF83AEC53BB3F6E17E44A833F0DC460E45773DED2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedZero-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedZero-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedOperations.lean",
+      "sha256": "95C9B82DBF9F59DCF05C5762BAB180BCEE1BA0FEFC4783C5588F0CEA13C9A240",
+      "oleanSha256": "F4A683FA3AFF28A4417E6FCF504F458F55C24224CB3EAA36BFC82E91D4333D54",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedOperations-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedOperations-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSums.lean",
+      "sha256": "BAE64251E78ADFE9FAFD7F25DF7208849A5902EEF3C67CD5237AA8B0F15C55E3",
+      "oleanSha256": "A580E0C4510064C742C7302950684E0506C804827B7988FBF6CC38D72AFA4504",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSums-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashReducedSums-1768.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashLinearRelation.lean",
+      "sha256": "6DB457B620FF035F8F656550BD3A44E0AB1EA056C79B191EE0601990B4ECF6FC",
+      "oleanSha256": "E6AE437B315F929E1B658971E7C575D29B4AC34EA93540619705A08BA4A748C6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashLinearRelation-1768.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashLinearRelation-1768.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map",
+    "Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.level_natCast_isUnit",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelInteger_isLocalization",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_integers",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries_map",
+    "Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_of_coe_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero_of_prime_reduction",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_add",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_finset_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_zero",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_congr",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_finset_int_smul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashChartRelationsAudit1.log",
+  "logSha256": "5543F5A66A12A94AF88568184AA2EF7F08083741AB263B95D0960E512A30589C",
+  "auditSha256": "8BBC57F5873654EF6BEB8166ACA206DDE6CA89562B0EC72A4BFADDB6EA37C3B4",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashChartRelationsScratchOwnership1768.log",
+  "ownershipSha256": "94BAAD3B7034E22AB96568CDEEF286E13AFBCE0B69C17D34E70DAFC3D925BCAD",
+  "exhaustiveTheorems": 34,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 34,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashChartRelationsDependencyAudit1.log",
+  "dependencyAuditSha256": "789417E1D773B78A50355BEF387356DE1417E8EE430EF0B17762859E411F5C27",
+  "dependencyAuditSourceSha256": "37D903713EA2513C3588CE4FA251FA52B6AF2834C74B395194A122959F41F818",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_linear_relation",
+    "Dubon2026.SourceFunctionField.IntegralSlash.map_clearedSlash_eq_smul_reducedSlash",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries_mul",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction_clearing",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integersToLevel",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelIntegerAlgebra",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelReduction",
+    "Dubon2026.SourceFunctionField.IntegralSlash.slashCoefficientSeries",
+    "Dubon2026.SourceFunctionField.IntegralSlash.reducedSlashSeries"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual reduced slash field embedding -> localized coefficients and finite linear relation transfer.",
+  "discharged": [
+    "The literal level-integral coefficient ring is the localization of the actual complex algebraic integers at the level. Its universal reduction map gives exact clearing-power formulas without choosing a denominator independently for each proof.",
+    "Native uniform even-weight slash integrality puts every actual cusp Fourier series in this ring. Every algebraic-integer series clearing it by any level power reduces to the same normalized series.",
+    "The actual reduced slash series preserves addition, products, integer multiples and finite integer sums. The exact prime-multiple Fourier kernel transfers zero reduction to every cusp.",
+    "Projecting onto a basis over the prime field and reassembling finite supports proves preservation of every finite residue-field linear relation between original integral modular forms of the same even weight. No relation-preservation certificate remains in this consumer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual normalized-generator field embedding, its stabilizer charts, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under every original completion condition.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-slash-chart-relations-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "83C992FFF6D6152017330513F31AEA49C1ABF0CBD735FF586EFC582AE9D00266",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

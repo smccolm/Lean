@@ -1,0 +1,35 @@
+import Dubon2026.SourceOriginalResidueCuspCount
+import Dubon2026.SourceGammaOneDegreePreservation
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp contribution in the actual coefficient prolongation. Transport the
+proved cusp bound to the literal residue image and its native j coordinate.
+The field equality is the proved away-level degree-preservation conclusion;
+no field identification or cusp-count certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne GammaOne.CoefficientReduction SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance (B : IntermediateField kk (LaurentSeries kk)) : Algebra kk B :=
+  B.toSubalgebra.algebra
+
+theorem gammaOne_residueImage_j_pole_card_le_complex (hℓN : ¬ ℓ ∣ N) :
+    Nat.card {w : Place kk (residueImage A (Gamma1 N)) //
+      w.ord (residueJCoordinate A (Gamma1 N)) < 0} ≤
+      Nat.card (CuspCounting.PolePlaces (Gamma1 N)) := by
+  have hfield := (IntegralDiamond.gammaOne_degree_and_residueField_away_level A N ℓ hℓN).2
+  have heq (B C : IntermediateField kk (LaurentSeries kk)) (h : B = C)
+      (hb : jqModC kk ∈ B) (hc : jqModC kk ∈ C) :
+      Nat.card {w : Place kk B // w.ord ⟨jqModC kk, hb⟩ < 0} =
+        Nat.card {w : Place kk C // w.ord ⟨jqModC kk, hc⟩ < 0} := by
+    subst C
+    rfl
+  exact (heq _ _ hfield (jq_mem_residueImage A (Gamma1 N))
+    (jqModC_mem_integralRatioField kk (Gamma1 N))).le.trans
+      (originalResidue_j_pole_card_le_complex A N ℓ hℓN)
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

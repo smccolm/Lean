@@ -1,0 +1,43 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationTraceAlgebra_localData`. -/
+theorem actual_completed_presentation_trace_local_data_completedPresentationTraceAlgebra_localData_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (H : ProfiniteGrp.{0})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    [IsAdicComplete (IsLocalRing.maximalIdeal
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    {L : Type} [Field L]
+    [Algebra (IsLocalRing.ResidueField
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)) L] [IsAlgClosed L]
+    (hR : IsAdic (IsLocalRing.maximalIdeal
+      (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue
+          (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker))).comp
+          (completedPresentationRepresentation ρ H q hq))))] (i₀ : ι) :
+    let S := closedMatrixTraceAlgebra (O := O) (completedPresentationRepresentation ρ H q hq)
+    letI : IsLocalRing S := originalAdicCoefficientSubalgebra_isLocalRing hR
+      (completedPresentationResidueEquiv ρ q.toMonoidHom.ker) S
+      (isClosed_closedMatrixTraceAlgebra (completedPresentationRepresentation ρ H q hq))
+    IsNoetherianRing S ∧ IsAdic (IsLocalRing.maximalIdeal S) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal S) S ∧
+      ∃ f : CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker →ₐ[O] S,
+        (∀ x : S, f x = x) ∧ Continuous f :=
+  completedPresentationTraceAlgebra_localData (L := L) ρ H q hq hR i₀
+
+end
+

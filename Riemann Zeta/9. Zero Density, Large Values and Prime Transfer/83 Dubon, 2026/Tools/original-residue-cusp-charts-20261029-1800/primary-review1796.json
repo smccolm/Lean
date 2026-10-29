@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "HopfPointsCoordinateQuotientFree",
+  "mathematics": "The actual coordinate quotient embeds by its joint evaluation into a product of faithful field algebras. Transfer torsion-freeness along this actual injection. Over a principal ideal domain, derive finite freeness from finite generation of the original coordinate algebra using the existing torsion-free module theorem.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-flat-point-closure-drafts-20261010.json and finite-flat-primary-api-review-20261010.json: source Section6.3, actual joint kernel, quotient injection, original antipode/counit and finite torsion-free PID module APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "precompilationFixes": "Explicit actual subgroup/pointwise torsion-free API imports; no proof claim.",
+  "productionFixes": [
+    "Use the actual algebra homomorphism underlying linear map map_smul theorem in the torsion-freeness transfer."
+  ],
+  "productionLog": "pointFree1796b-focus.log"
+}

@@ -1,0 +1,7 @@
+### Actual exact ordinary invariant-summand relation criterion — 10 October 2026
+
+Prove both directions of the original ordinary criterion. Genuine polynomial relations construct a primitive invariant column and the entire rank-one invariant direct summand. Conversely a true rank-one invariant direct summand gives a primitive invariant vector through its original projection. Residual nonidentity then constructs a genuine invariant-line basis, and the actual determinant-complement calculation yields every original ordinary relation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryRelationCriterion](Extension/Dubon2026/MatrixOrdinaryRelationCriterion.lean).

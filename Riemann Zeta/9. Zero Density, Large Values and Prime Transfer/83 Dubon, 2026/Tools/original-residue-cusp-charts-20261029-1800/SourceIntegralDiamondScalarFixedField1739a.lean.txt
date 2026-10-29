@@ -1,0 +1,71 @@
+import SourceIntegralDiamondScalarBaseFixed
+import SourceIntegralDiamondScalarFixedDegree
+import SourceGammaOneDegreePreservation
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue fiber bounds. Identify the actual diamond fixed field with the full
+modular base by its proved Artin degree and the original coordinate degree.
+The sole explicit degree equality is the already proved original residue
+coordinate theorem; the actual valuation consumer discharges it next. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open IntermediateField CongruenceSubgroup GammaOne SourceLevelProjective
+open scoped MatrixGroups IntermediateField
+
+theorem scalar_fixedField_eq_fullBase_of_coordinate_degree
+    (L : Type*) [Field L] [IsAlgClosed L] (N ℓ : ℕ)
+    [NeZero N] [Fact ℓ.Prime] [Algebra (ZMod ℓ) L] (hℓN : ¬ ℓ ∣ N)
+    (hdegree : relfinrank L⟮jqModC L⟯ (qExpFunctionFieldC L (Gamma1 N)) =
+      (plusMinus (Gamma1 N)).index) :
+    lift (IntermediateField.fixedField (reducedFieldActionOver L N ℓ hℓN).range) =
+      modularFunctionFieldCoeff N L := by
+  let F := qExpFunctionFieldC L (Gamma1 N)
+  let J := L⟮jqModC L⟯
+  let B := modularFunctionFieldCoeff N L
+  let A := IntermediateField.fixedField (reducedFieldActionOver L N ℓ hℓN).range
+  let X := IntermediateField.lift A
+  have hJB : J ≤ B := adjoin_simple_le_iff.mpr (jq_mem_coeff_field N L)
+  have hBX : B ≤ X := by
+    intro y hy
+    have hyF := fullBase_le_originalField L N hy
+    have hyA : (⟨y, hyF⟩ : F) ∈ A := by
+      rw [mem_fixedField_iff]
+      rintro e ⟨γ, rfl⟩
+      exact reducedFieldActionOver_fixes_fullBase L N ℓ hℓN γ ⟨y, hyF⟩ hy
+    exact (mem_lift (⟨y, hyF⟩ : F)).mpr hyA
+  have hXF : X ≤ F := lift_le A
+  have hXFdegree : relfinrank X F = (plusMinus (Gamma1 N)).relIndex (Gamma0 N) := by
+    have h := relfinrank_map_map A (⊤ : IntermediateField L F) F.val
+    change relfinrank (lift A) (lift (⊤ : IntermediateField L F)) = _ at h
+    have ht : lift (⊤ : IntermediateField L F) = F := lift_top L F
+    rw [ht, relfinrank_top_right] at h
+    exact h.trans (reduced_over_fixedField_degree_eq_signed_relativeIndex L N ℓ hℓN)
+  have htower : relfinrank J F = relfinrank J B *
+      (relfinrank B X * (plusMinus (Gamma1 N)).relIndex (Gamma0 N)) := by
+    rw [← relfinrank_mul_relfinrank hJB (hBX.trans hXF),
+      ← relfinrank_mul_relfinrank hBX hXF, hXFdegree]
+  have hNK₀ : (N : ZMod ℓ) ≠ 0 := fun h => hℓN ((ZMod.natCast_eq_zero_iff N ℓ).mp h)
+  have hNK : (N : L) ≠ 0 := by
+    rw [← map_natCast (algebraMap (ZMod ℓ) L)]
+    exact (map_ne_zero (algebraMap (ZMod ℓ) L)).mpr hNK₀
+  have hbase : relfinrank J B = dedekindPsi N :=
+    (residue_full_generation_and_degree N hNK).2
+  have hindex : (plusMinus (Gamma1 N)).index =
+      dedekindPsi N * (plusMinus (Gamma1 N)).relIndex (Gamma0 N) := by
+    rw [← Subgroup.relIndex_mul_index (signed_gammaOne_le_gammaZero N), gamma0_index, mul_comm]
+  letI : (plusMinus (Gamma1 N)).FiniteIndex := Subgroup.finiteIndex_of_le (le_plusMinus _)
+  have hn : dedekindPsi N * (plusMinus (Gamma1 N)).relIndex (Gamma0 N) ≠ 0 := by
+    rw [← hindex]
+    exact Subgroup.FiniteIndex.index_ne_zero
+  change relfinrank J F = (plusMinus (Gamma1 N)).index at hdegree
+  rw [htower, hbase, hindex] at hdegree
+  have hm : relfinrank B X = 1 := mul_left_cancel₀ hn (by
+    calc
+      (dedekindPsi N * (plusMinus (Gamma1 N)).relIndex (Gamma0 N)) * relfinrank B X =
+          dedekindPsi N * (relfinrank B X * (plusMinus (Gamma1 N)).relIndex (Gamma0 N)) := by ac_rfl
+      _ = dedekindPsi N * (plusMinus (Gamma1 N)).relIndex (Gamma0 N) := hdegree
+      _ = (dedekindPsi N * (plusMinus (Gamma1 N)).relIndex (Gamma0 N)) * 1 := by rw [mul_one])
+  exact le_antisymm (relfinrank_eq_one_iff.mp hm) hBX
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

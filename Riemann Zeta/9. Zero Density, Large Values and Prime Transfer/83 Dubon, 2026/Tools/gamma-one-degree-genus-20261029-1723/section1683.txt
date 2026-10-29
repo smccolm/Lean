@@ -1,0 +1,7 @@
+### Actual original finite framed fiber-product gluing — 10 October 2026
+
+Consume the already constructed original whole continuous fixed-residue lifts and their genuine strict common conjugacy. Use the proved continuous strict gluing, then transport continuity across the proved equality between the same finite coefficient fiber product's product-subtype and maximal-adic topologies. Use the genuine true-residue first-projection equality and the original first lift's entire residue condition to place the glued representation in the existing OriginalContinuousFramedFiber. The first original projection is exact and the second is strictly conjugate with respect to its actual original residue.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalFiniteFiberProductFramedGluing](Extension/Dubon2026/OriginalFiniteFiberProductFramedGluing.lean).

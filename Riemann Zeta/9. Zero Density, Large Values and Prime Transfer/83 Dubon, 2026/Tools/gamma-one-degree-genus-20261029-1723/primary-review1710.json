@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixBasisIdealCoordinates",
+  "mathematics": "Use the proved full matrix trace duality to show that every actual basis coordinate of a matrix with entries in the original ideal lies in that same ideal. Prove the converse by evaluating the actual finite basis expansion. This identifies the original entrywise ideal condition in every genuine full-matrix basis.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: actual idempotent left ideal, finite module Nakayama, original basis coordinates, true residue maps and local-ring column invertibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Reduced actual matrix sum and scalar coordinates in the evaluated original basis identity before rewriting. The original ideal-coordinate equivalence is unchanged."
+  ],
+  "productionLog": "matrixIdealCoordinates1710b-focus.log"
+}

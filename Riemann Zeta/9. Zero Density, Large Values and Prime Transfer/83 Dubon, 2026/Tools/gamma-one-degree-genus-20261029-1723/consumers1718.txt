@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `matrixIdempotentBasis_intertwines`. -/
+theorem actual_matrix_idempotent_basis_intertwiner_matrixIdempotentBasis_intertwines_source (S : Subalgebra O R)
+    (A : Subalgebra S (Matrix ι ι R)) (σ : G →* A) (e : A)
+    (b : letI : Module S (algebraIdempotentLeftIdeal (S := S) e) :=
+      (algebraIdempotentLeftIdeal (S := S) e).module
+      Basis ι S (algebraIdempotentLeftIdeal (S := S) e)) (i₀ : ι) (g : G) :
+    (σ g).val * residualColumnMatrix (fun i => (b i).val.val) i₀ =
+      residualColumnMatrix (fun i => (b i).val.val) i₀ *
+        (RingHom.mapMatrix S.val.toRingHom) (algebraIdempotentMatrixRepresentation σ e b g).val :=
+  matrixIdempotentBasis_intertwines S A σ e b i₀ g
+
+end
+

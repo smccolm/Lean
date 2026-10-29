@@ -1,0 +1,1 @@
+Derive compactness and Hausdorffness of the original complete Noetherian finite-residue coefficient ring in its proved original maximal-adic topology. Apply the existing actual local quotient theorems to obtain Noetherianity, maximal-adic quotient topology and maximal-ideal completeness of the genuine coefficient quotient.

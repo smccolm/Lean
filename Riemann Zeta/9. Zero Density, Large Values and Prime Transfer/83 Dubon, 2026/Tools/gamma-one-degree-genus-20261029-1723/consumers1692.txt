@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientSubalgebraReduction_eq`. -/
+theorem actual_coefficient_subalgebra_residue_coefficientSubalgebraReduction_eq_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (S : Subalgebra O R) [IsLocalRing S] [IsLocalHom S.val.toRingHom] :
+    localCoefficientReduction (coefficientSubalgebraResidueEquiv eR S) =
+      (localCoefficientReduction eR).comp S.val :=
+  coefficientSubalgebraReduction_eq eR S
+
+end
+

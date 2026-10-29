@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalUnframedDeterminantInertiaConditions",
+  "mathematics": "Descend the genuine whole determinant condition and genuine subgroup-killing condition to the existing original unframed quotient. Prove well-definedness with actual strict-conjugacy invariance and identify each condition on every original framed representative.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-unframed-condition-route-20261010.json: actual original class conditions, existing determinant and subgroup relation ideals, original local quotient coefficient fibers and complete local topology APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Used direct congrArg transport of the proved determinant/kernel equalities in the actual Quotient.lift well-definedness proof. This avoids rewrite matching across the continuous-monoid-hom and function coercions; the definitions and original conditions are unchanged.1758b passed cleanly."
+  ],
+  "productionLog": "unframedConditions1758b-focus.log"
+}

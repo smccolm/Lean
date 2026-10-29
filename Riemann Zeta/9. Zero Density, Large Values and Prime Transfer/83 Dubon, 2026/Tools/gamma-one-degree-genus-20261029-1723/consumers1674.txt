@@ -1,0 +1,34 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B C L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B] [CommRing C]
+
+variable [IsLocalRing B] [IsLocalRing C] [Field L]
+  [Algebra (IsLocalRing.ResidueField C) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `matrixStrictlyConjugate_fiberProduct_of_projections`. -/
+theorem actual_coefficient_fiber_product_conjugator_alignment_matrixStrictlyConjugate_fiberProduct_of_projections_source {K : Type} [CommRing K]
+    (f : A →+* C) (g : B →+* C) (hg : Function.Surjective g)
+    (ρ σ : G →* GeneralLinearGroup ι (CoefficientFiberProduct f g))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue C)).comp
+          ((GeneralLinearGroup.map g).comp
+            ((GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp ρ)))))]
+    (rA : A →+* K) (rB : B →+* K)
+    (hA : MatrixStrictlyConjugate rA
+      ((GeneralLinearGroup.map (coefficientFiberProductFst f g)).comp ρ)
+      ((GeneralLinearGroup.map (coefficientFiberProductFst f g)).comp σ))
+    (hB : MatrixStrictlyConjugate rB
+      ((GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp ρ)
+      ((GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp σ)) :
+    MatrixStrictlyConjugate (rA.comp (coefficientFiberProductFst f g)) ρ σ :=
+  matrixStrictlyConjugate_fiberProduct_of_projections (L := L) f g hg ρ σ rA rB hA hB
+
+end
+

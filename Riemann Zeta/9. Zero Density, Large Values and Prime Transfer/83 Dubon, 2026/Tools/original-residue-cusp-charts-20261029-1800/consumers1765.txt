@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `matrixTwo_exists_basis_column_of_unit`. -/
+theorem actual_matrix_primitive_vector_basis_matrixTwo_exists_basis_column_of_unit_source (v : Fin 2 → R)
+    (hv : ∃ i, IsUnit (v i)) :
+    ∃ U : GeneralLinearGroup (Fin 2) R, ∀ i, U i 0 = v i :=
+  matrixTwo_exists_basis_column_of_unit v hv
+
+end
+

@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type*} [Fintype ι] [DecidableEq ι] [CommRing K]
+
+/-- Exact original-object consumer of `matrix_eq_sum_single_column`. -/
+theorem actual_matrix_unit_left_ideal_columns_matrix_eq_sum_single_column_source (X : Matrix ι ι K) (i₀ : ι)
+    (hX : X * Matrix.single i₀ i₀ 1 = X) :
+    X = ∑ i, X i i₀ • Matrix.single i i₀ 1 :=
+  matrix_eq_sum_single_column X i₀ hX
+
+end
+

@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B C : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B] [CommRing C]
+  [TopologicalSpace G] [TopologicalSpace A] [TopologicalSpace B]
+
+/-- Exact original-object consumer of `continuousCoefficientFiberProductRepresentation_existsUnique`. -/
+theorem actual_continuous_coefficient_fiber_product_continuousCoefficientFiberProductRepresentation_existsUnique_source
+    (f : A →+* C) (g : B →+* C)
+    (ρA : G →ₜ* GeneralLinearGroup ι A) (ρB : G →ₜ* GeneralLinearGroup ι B)
+    (h : (GeneralLinearGroup.map f).comp ρA.toMonoidHom =
+      (GeneralLinearGroup.map g).comp ρB.toMonoidHom) :
+    ∃! ρ : G →ₜ* GeneralLinearGroup ι (CoefficientFiberProduct f g),
+      (GeneralLinearGroup.map (coefficientFiberProductFst f g)).comp ρ.toMonoidHom = ρA.toMonoidHom ∧
+      (GeneralLinearGroup.map (coefficientFiberProductSnd f g)).comp ρ.toMonoidHom = ρB.toMonoidHom :=
+  continuousCoefficientFiberProductRepresentation_existsUnique f g ρA ρB h
+
+end
+

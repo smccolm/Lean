@@ -1,0 +1,7 @@
+### Actual finite coefficient fiber-product topology comparison — 10 October 2026
+
+For the original compatible-pair fiber product of finite coefficient rings with a local first ring and unit-reflecting second map, derive actual Noetherianness and maximal-adic completeness. Prove equality of its genuine maximal-adic topology and original product-subtype topology when the original coefficient topologies are discrete. Then derive that hypothesis for the actual finite local maximal-adic coefficient rings, yielding the required exact topology equality on the same original fiber-product ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteCoefficientFiberProductTopology](Extension/Dubon2026/FiniteCoefficientFiberProductTopology.lean).

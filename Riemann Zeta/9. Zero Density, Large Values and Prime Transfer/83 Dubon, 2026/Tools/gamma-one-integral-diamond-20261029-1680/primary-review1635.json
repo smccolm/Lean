@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticLocalDerivationLinearity",
+  "mathematics": "Differentiate the actual entire universal unramified fixed-determinant arithmetic representation through genuine relative derivations of its literal original completed local ring. The original generic continuous cocycle construction gives residue-field linearity. The actual coefficient-point classification is proved to give exactly the same whole first-order representation; hence its same local cohomology class map is genuinely linear over the original residue field and surjective onto the actual local continuous cohomology submodule.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original matrix infinitesimal and coordinate derivation-linearity proofs re-read. Genuine actual original unramified universal representation and its full true residue theorem inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Actual original relative derivation cocycle/class linearity requires kernel proof. Cotangent residue-field linearity, explicit relative maximal-ideal cotangent quotient, full Selmer dimension theory, modular association and patching remain open.",
+  "productionLog": "arithmeticDerivationLinearity1635-focus.log"
+}

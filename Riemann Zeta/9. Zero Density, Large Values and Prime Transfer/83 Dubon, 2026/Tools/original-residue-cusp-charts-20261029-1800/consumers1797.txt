@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B K : Type*} [CommSemiring R] [CommSemiring A] [HopfAlgebra R A]
+  [CommSemiring B] [HopfAlgebra R B] [CommSemiring K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfPointsRestriction_apply`. -/
+theorem actual_hopf_points_restriction_hopfPointsRestriction_apply_source (h : A →ₐc[R] B)
+    (p : WithConv (B →ₐ[R] K)) (a : A) :
+    hopfPointsRestriction h p a = p (h a) :=
+  hopfPointsRestriction_apply h p a
+
+end
+

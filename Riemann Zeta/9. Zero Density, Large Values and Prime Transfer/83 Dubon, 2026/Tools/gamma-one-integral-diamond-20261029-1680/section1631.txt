@@ -1,0 +1,7 @@
+### Actual original arithmetic local-ring relative derivations — 10 October 2026
+
+Specialize the actual relative derivation/coefficient comparison to the literal original arithmetic local deformation ring using its proved true residue field and original maximal-adic quotient topology. Compose with its actual universal-ring first-order point comparison. Every original local first-order representation corresponds uniquely to a genuine relative residue derivation of that original completed local ring. Its map to the actual local cohomology classes is surjective, and equality is exactly strict conjugacy of the whole original lifted representations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalResidueDerivations](Extension/Dubon2026/ArithmeticLocalResidueDerivations.lean).

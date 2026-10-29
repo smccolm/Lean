@@ -1,0 +1,41 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `originalTraceUnframedUniversality_exists`. -/
+theorem actual_original_trace_unframed_universality_originalTraceUnframedUniversality_exists_source
+    (H : ProfiniteGrp.{0})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ.toMonoidHom))] (i₀ : ι) :
+    let S := closedMatrixTraceAlgebra (O := O)
+      (completedPresentationRepresentation (originalPresentedResidualRestriction H q σ) H q hq)
+    ∃ hlocal : IsLocalRing S,
+      letI := hlocal
+      IsNoetherianRing S ∧ IsAdic (IsLocalRing.maximalIdeal S) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal S) S ∧
+      ∃ (eS : IsLocalRing.ResidueField S ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : H →ₜ* GeneralLinearGroup ι S)
+        (hτres : (GeneralLinearGroup.map (localCoefficientReduction eS).toRingHom).comp
+          τ.toMonoidHom = σ.toMonoidHom),
+        ∀ (A : Type) [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+          [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+          (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+          (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+          Function.Bijective (originalCoefficientRepresentationClass eS eA H
+            σ.toMonoidHom τ hτres) :=
+  originalTraceUnframedUniversality_exists (L := L) H q hq σ i₀
+
+end
+

@@ -1,0 +1,7 @@
+### Actual genuine ordinary condition on original classes — 10 October 2026
+
+Define the actual rank-one invariant direct-summand condition on the existing original deformation quotient and derive well-definedness through genuine basis transport.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedOrdinaryCondition](Extension/Dubon2026/OriginalUnframedOrdinaryCondition.lean).

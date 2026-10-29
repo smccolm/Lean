@@ -1,0 +1,7 @@
+### Actual invariant line from ordinary matrix relations — 10 October 2026
+
+Use the literal original operator consisting of the chosen matrix minus its own determinant times the identity. Its residue is the same determinant-complement operator of the genuine nonidentity residual matrix, hence nonzero. The original ordinary relations construct a primitive fixed column. Extend that column to a genuine original basis and derive equality of the entire invariant module with the first coordinate line.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoOrdinaryInvariantLine](Extension/Dubon2026/MatrixTwoOrdinaryInvariantLine.lean).

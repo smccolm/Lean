@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `originalResidueDerivationFirstOrderLift_cocycle`. -/
+theorem actual_original_residue_derivation_matrices_originalResidueDerivationFirstOrderLift_cocycle_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    (σ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hres : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (d : OriginalResidueDerivations eR) (g : G) :
+    matrixFirstOrderCocycle σ (originalResidueDerivationFirstOrderLift eR ρ σ hres d) g =
+      originalResidueDerivationMatrix eR ρ d g * ((σ g)⁻¹).val :=
+  originalResidueDerivationFirstOrderLift_cocycle eR ρ σ hres d g
+
+end
+

@@ -1,0 +1,50 @@
+{
+  "recordedUTC": "2026-10-29T08:57:20.435506+00:00",
+  "files": [
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "pin": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT/GaloisRepresentation/Automorphic.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\ImperialCollegeLondon--FLT--GaloisRepresentation--Automorphic.lean.txt",
+      "gitBlob": "819aa79eebcaaca995ca50ca6d5e7fa7da11db73",
+      "sha256": "9C3F7BF25E60253BFBA5C93F5352B5DE56FCFE2CB682B3293036D6E45CBB702F",
+      "bytes": 9237
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "pin": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Concrete.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\ImperialCollegeLondon--FLT--AutomorphicForm--QuaternionAlgebra--HeckeOperators--Concrete.lean.txt",
+      "gitBlob": "1a22e89f74fc489f67f84facfacf9de94823e0f4",
+      "sha256": "C62B25C81234DD96CAD2B3FBC68144C85C13C85E2A137F55DAE0AE1DD44EB88A",
+      "bytes": 54426
+    },
+    {
+      "repo": "leanprover-community/mathlib4",
+      "pin": "d0207795ac79006da92d98544e1ce915ae386160",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/d0207795ac79006da92d98544e1ce915ae386160/Mathlib/NumberTheory/ModularForms/LFunction.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\leanprover-community--Mathlib--NumberTheory--ModularForms--LFunction.lean.txt",
+      "gitBlob": "f4dbdbd73a3f1de9f52aad848e9951dc006ebdd3",
+      "sha256": "EF0BA29C9CE0AEC4E65A954AED8ADDA7506B2B72BE994E6DFD5949C32EA65194",
+      "bytes": 11786
+    },
+    {
+      "repo": "leanprover-community/mathlib4",
+      "pin": "d0207795ac79006da92d98544e1ce915ae386160",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/d0207795ac79006da92d98544e1ce915ae386160/Mathlib/NumberTheory/ModularForms/NormTrace.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\leanprover-community--Mathlib--NumberTheory--ModularForms--NormTrace.lean.txt",
+      "gitBlob": "3f2ea2efa5edbbd2c112c92ba61523ac4d299a84",
+      "sha256": "2B2F9EE1D59801933355395851BBB943EBAE215A601B84A4AFB644E6220764FE",
+      "bytes": 14405
+    },
+    {
+      "repo": "leanprover-community/mathlib4",
+      "pin": "d0207795ac79006da92d98544e1ce915ae386160",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/d0207795ac79006da92d98544e1ce915ae386160/Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-refresh-20261029-1724\\leanprover-community--Mathlib--NumberTheory--ModularForms--LevelOne--DimensionFormula.lean.txt",
+      "gitBlob": "ebbddeef9a28a23298968090ecfcc10bfe074368",
+      "sha256": "7D2DA2F1DBD1B6353281DFD1DD0930DA745152A6FAFF35FE33ADC54DCC8F62DC",
+      "bytes": 16581
+    }
+  ]
+}

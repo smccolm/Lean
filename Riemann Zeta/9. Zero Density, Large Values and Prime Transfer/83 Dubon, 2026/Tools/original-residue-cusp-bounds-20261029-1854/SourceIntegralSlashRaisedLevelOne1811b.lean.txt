@@ -1,0 +1,55 @@
+import Dubon2026.SourceGammaOneHeckeFieldInclusion
+import Dubon2026.SourceIntegralSlashNormalizedCoordinate
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base coordinate of the actual cusp
+chart. Reuse the native modularStretch construction and its integral Fourier
+expansion. Restrict the actual level-one forms to Gamma1 and identify the
+raised E4-cube/discriminant ratio with the original j_N. No new analytic
+stretching or integral q-expansion construction is introduced. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+private theorem gammaOne_le_levelOneHecke (N : ℕ) :
+    Gamma1 N ≤ Gamma1 1 ⊓ Gamma0 (N * 1) := by
+  intro γ hγ
+  constructor
+  · change γ ∈ Gamma1 1
+    rw [Gamma1_mem]
+    exact ⟨Subsingleton.elim _ _, Subsingleton.elim _ _, Subsingleton.elim _ _⟩
+  · simpa only [Nat.mul_one] using Gamma1_in_Gamma0 N hγ
+
+/-- The actual level-one form evaluated at N times the upper-half-plane variable. -/
+def gammaOneRaisedLevelOne (N : ℕ) [NeZero N] {k : ℤ}
+    (f : ModularForm 𝒮ℒ k) : ModularForm (Gamma1 N) k :=
+  ModularNormPolynomial.restrict (Subgroup.map_mono (gammaOne_le_levelOneHecke N))
+    (modularStretch 1 N (ModularNormPolynomial.restrict
+      (Subgroup.map_le_range _ (Gamma1 1)) f))
+
+theorem coe_gammaOneRaisedLevelOne (N : ℕ) [NeZero N] {k : ℤ}
+    (f : ModularForm 𝒮ℒ k) : (⇑(gammaOneRaisedLevelOne N f) : ℍ → ℂ) =
+      (N : ℂ) ^ (1 - k) • ((⇑f : ℍ → ℂ) ∣[k] levelRaiseMatrix N) := rfl
+
+theorem gammaOneRaisedLevelOne_apply (N : ℕ) [NeZero N] {k : ℤ}
+    (f : ModularForm 𝒮ℒ k) (τ : ℍ) :
+    gammaOneRaisedLevelOne N f τ = f (levelRaiseMatrix N • τ) :=
+  modularStretch_apply 1 N
+    (ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 1)) f) τ
+
+theorem integralQExp_gammaOneRaisedLevelOne (N : ℕ) [NeZero N] {k : ℤ}
+    (f : ModularForm 𝒮ℒ k) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p) :
+    IsIntegralQExp (gammaOneRaisedLevelOne N f) (PowerSeries.expand N (NeZero.ne N) p) :=
+  modularStretch_integral 1 N
+    (ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 1)) f) hp
+
+theorem jqNModC_eq_raised_discriminant_ratio (N : ℕ) [NeZero N]
+    (K : Type*) [Field K] :
+    jqNModC K N = intSeriesC K (PowerSeries.expand N (NeZero.ne N) (eisenstein4 ^ 3)) /
+      intSeriesC K (PowerSeries.expand N (NeZero.ne N) discriminantSeries) := by
+  rw [intSeriesC_expand, intSeriesC_expand, ← map_div₀, ← jqModC_eq_discriminant_normalized]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

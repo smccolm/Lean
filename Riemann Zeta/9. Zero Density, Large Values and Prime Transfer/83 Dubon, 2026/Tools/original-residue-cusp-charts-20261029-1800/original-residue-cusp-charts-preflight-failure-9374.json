@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-29T11:43:54.792906+00:00",
+  "productionMutation": false,
+  "reason": "Two distinct retained scratch variants map to the same inert archive target. Preflight rejected before any production mutation. Successor preserves every source and exact hash using a distinct hash-suffixed archive name for conflicting bytes; identical bytes share one classified target.",
+  "sources": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateAlgebraicChartInjectivity1767a.lean",
+      "sha256": "55F6428816358450256139CD374EEC0750976E26923501D2B0FB79473EA1A1EB",
+      "bytes": 2555
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateAlgebraicChartInjectivity1767a.lean.txt",
+      "sha256": "F134008F51158AB413A7B173D05A23A12EFA46EE6E625B54C3E2C3B9061FFAE7",
+      "bytes": 2605
+    }
+  ],
+  "failedIntegrationSha256": "241A18C9C6A93B5EDB9832133C5A044387AA4D8D1D31D283B4E4FB73B10B51BD",
+  "successorSha256": "1E9D3B3BAC4A131D403D5552CBB7C05B031E410E18538D9FA7F35DE5B0367F91"
+}

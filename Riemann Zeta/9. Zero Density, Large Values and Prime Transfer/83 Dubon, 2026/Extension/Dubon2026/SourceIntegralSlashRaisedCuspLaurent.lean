@@ -1,0 +1,49 @@
+import Dubon2026.SourceIntegralSlashRaisedCuspReduction
+import Dubon2026.SourceEtaProductTransport
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Assemble the
+proved coefficient identity with native power-series expansion and Laurent
+root twisting. The only denominator is the actual triangular factor d^12. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem ofPowerSeries_reducedRaisedLevelOne (N a d : ℕ)
+    [NeZero N] [NeZero a] [NeZero d] (had : a * d = N)
+    {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (ζ : Kˣ)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (f : ModularForm 𝒮ℒ 12) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (g : SL(2, ℤ)) (B : ℕ) (c t : ℤ) (hc : g 1 0 = a * c)
+    (ht : g 1 1 * a - g 1 0 * (B : ℤ) = N * t) :
+    HahnSeries.ofPowerSeries ℤ K (reducedSlashSeries N (by decide)
+      (gammaOneRaisedLevelOne N f) (integralQExp_gammaOneRaisedLevelOne N f hp) g φ hN) =
+      qExpand K (a * a) (qTwist (ζ ^ ((a * B : ℕ) : ℤ)) (intSeriesC K p)) /
+        (d : LaurentSeries K) ^ 12 := by
+  have he : PowerSeries.C ((d : K) ^ 12) * (reducedSlashSeries N (by decide)
+      (gammaOneRaisedLevelOne N f) (integralQExp_gammaOneRaisedLevelOne N f hp) g φ hN) =
+      PowerSeries.expand (a * a) (NeZero.ne (a * a))
+        (PowerSeries.rescale ((ζ ^ ((a * B : ℕ) : ℤ) : Kˣ) : K)
+          (p.map (Int.castRingHom K))) := by
+    ext n
+    rw [PowerSeries.coeff_C_mul,
+      coeff_reducedRaisedLevelOne_cleared N a d had φ hN ζ hφ f hp g B c t hc ht,
+      PowerSeries.coeff_expand]
+    split_ifs <;> simp only [PowerSeries.coeff_rescale, PowerSeries.coeff_map, eq_intCast]
+  have hm := congrArg (HahnSeries.ofPowerSeries ℤ K) he
+  have hd : (d : K) ≠ 0 := by
+    intro hz
+    apply hN
+    rw [← had, Nat.cast_mul, hz, mul_zero]
+  have hdL : (d : LaurentSeries K) ≠ 0 := by
+    simpa only [map_natCast] using (HahnSeries.C_ne_zero hd : (HahnSeries.C (d : K) : LaurentSeries K) ≠ 0)
+  apply (eq_div_iff (pow_ne_zero 12 hdL)).2
+  rw [mul_comm]
+  rw [intSeriesC, qTwist_ofPowerSeries, qExpand_ofPowerSeries_eq_expand]
+  simpa only [map_mul, HahnSeries.ofPowerSeries_C, map_pow, map_natCast] using hm
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

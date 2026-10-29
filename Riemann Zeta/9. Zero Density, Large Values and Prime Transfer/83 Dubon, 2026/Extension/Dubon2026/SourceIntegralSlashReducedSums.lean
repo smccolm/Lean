@@ -1,0 +1,77 @@
+import Dubon2026.SourceIntegralSlashReducedScaling
+import Dubon2026.SourceIntegralSlashReducedOperations
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> reduced slash chart. Integer combinations of
+actual integral forms remain integral, and their cusp reductions are the same
+integer combinations. These finite identities feed the prime-field relation
+transfer; no freestanding module of formal forms is introduced.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem integralQExp_finset_int_smul {N : ℕ} {k : ℤ} {ι : Type*}
+    (s : Finset ι) (G : ι → ModularForm (Gamma1 N) k) (p : ι → PowerSeries ℤ)
+    (hp : ∀ i, IsIntegralQExp (G i) (p i)) (D : ι → ℤ) :
+    IsIntegralQExp (⇑(∑ i ∈ s, (D i : ℂ) • G i : ModularForm (Gamma1 N) k) : ℍ → ℂ)
+      (∑ i ∈ s, PowerSeries.C (D i) * p i) := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simpa only [Finset.sum_empty] using integralQExp_zero N k
+  | @insert i s hi ih =>
+    rw [Finset.sum_insert hi, Finset.sum_insert hi]
+    exact integralQExp_add ((D i : ℂ) • G i) (∑ j ∈ s, (D j : ℂ) • G j)
+      (integralQExp_int_smul (G i) (hp i) (D i)) ih
+
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (β : SL(2, ℤ))
+
+theorem reducedSlashSeries_zero {k : ℤ} (hk : Even k) :
+    reducedSlashSeries N hk (0 : ModularForm (Gamma1 N) k)
+      (integralQExp_zero N k) β φ hN = 0 := by
+  have he : slashCoefficientSeries N hk (0 : ModularForm (Gamma1 N) k)
+      (integralQExp_zero N k) β = 0 := by
+    apply PowerSeries.map_injective (RN N).subtype Subtype.val_injective
+    rw [slashCoefficientSeries_map, map_zero]
+    simp only [ModularForm.coe_zero, SlashAction.zero_slash, qExpansion_zero]
+  unfold reducedSlashSeries
+  rw [he, map_zero]
+
+theorem reducedSlashSeries_congr {k : ℤ} (hk : Even k)
+    (f F : ModularForm (Gamma1 N) k) {p P : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (hP : IsIntegralQExp F P) (he : f = F) :
+    reducedSlashSeries N hk f hp β φ hN = reducedSlashSeries N hk F hP β φ hN := by
+  subst F
+  rfl
+
+theorem reducedSlashSeries_finset_int_smul {k : ℤ} (hk : Even k) {ι : Type*}
+    (s : Finset ι) (G : ι → ModularForm (Gamma1 N) k) (p : ι → PowerSeries ℤ)
+    (hp : ∀ i, IsIntegralQExp (G i) (p i)) (D : ι → ℤ) :
+    reducedSlashSeries N hk (∑ i ∈ s, (D i : ℂ) • G i)
+      (integralQExp_finset_int_smul s G p hp D) β φ hN =
+        ∑ i ∈ s, PowerSeries.C (D i : K) * reducedSlashSeries N hk (G i) (hp i) β φ hN := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simpa only [Finset.sum_empty] using reducedSlashSeries_zero N φ hN β hk
+  | @insert i s hi ih =>
+    simp only [Finset.sum_insert hi]
+    rw [reducedSlashSeries_congr N φ hN β hk
+      (∑ j ∈ insert i s, (D j : ℂ) • G j)
+      ((D i : ℂ) • G i + ∑ j ∈ s, (D j : ℂ) • G j)
+      (p := ∑ j ∈ insert i s, PowerSeries.C (D j) * p j)
+      (P := PowerSeries.C (D i) * p i + ∑ j ∈ s, PowerSeries.C (D j) * p j)
+      (integralQExp_finset_int_smul (insert i s) G p hp D)
+      (integralQExp_add ((D i : ℂ) • G i) (∑ j ∈ s, (D j : ℂ) • G j)
+        (integralQExp_int_smul (G i) (hp i) (D i)) (integralQExp_finset_int_smul s G p hp D))
+      (Finset.sum_insert hi)]
+    rw [reducedSlashSeries_add N φ hN β hk ((D i : ℂ) • G i)
+      (∑ j ∈ s, (D j : ℂ) • G j)
+      (integralQExp_int_smul (G i) (hp i) (D i)) (integralQExp_finset_int_smul s G p hp D)]
+    rw [reducedSlashSeries_of_coe_int_smul N hk (G i) ((D i : ℂ) • G i)
+      (hp i) (integralQExp_int_smul (G i) (hp i) (D i)) β φ hN (D i) rfl, ih]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

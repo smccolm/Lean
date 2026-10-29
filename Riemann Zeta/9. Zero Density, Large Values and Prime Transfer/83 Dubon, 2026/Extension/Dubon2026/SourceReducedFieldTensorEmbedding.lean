@@ -1,0 +1,61 @@
+import Dubon2026.SourceReducedFieldScalarGeneration
+import Mathlib.LinearAlgebra.TensorProduct.Basis
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue fiber bounds -> extension of the actual prime-field diamond action.
+The native scalar tensor embeds faithfully into the actual larger original
+integral-ratio field. Its injectivity is proved by the existing coefficient
+independence theorem and Mathlib's base-changed basis; no linear-disjointness
+or independence certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField GammaOne
+open scoped MatrixGroups TensorProduct
+attribute [local instance] originalFieldScalarAlgebra
+
+private instance originalFieldScalarTower {K L : Type*} [Field K] [Field L] [Algebra K L]
+    (Γ : Subgroup SL(2, ℤ)) : IsScalarTower K L (qExpFunctionFieldC L Γ) :=
+  IsScalarTower.of_algebraMap_eq' rfl
+
+/-- Evaluate the scalar tensor in the actual original integral-ratio field. -/
+def originalFieldTensorEval {K L : Type*} [Field K] [Field L] [Algebra K L]
+    (Γ : Subgroup SL(2, ℤ)) :
+    L ⊗[K] qExpFunctionFieldC K Γ →ₐ[L] qExpFunctionFieldC L Γ :=
+  AlgHom.liftEquiv K L _ _ (originalFieldCoefficientHom Γ)
+
+theorem originalFieldTensorEval_tmul {K L : Type*} [Field K] [Field L] [Algebra K L]
+    (Γ : Subgroup SL(2, ℤ)) (a : L) (x : qExpFunctionFieldC K Γ) :
+    originalFieldTensorEval Γ (a ⊗ₜ[K] x) = a • originalFieldCoefficientHom Γ x := rfl
+
+private def originalFieldValLinear (K : Type*) [Field K] (Γ : Subgroup SL(2, ℤ)) :
+    qExpFunctionFieldC K Γ →ₗ[K] LaurentSeries K where
+  toFun := Subtype.val
+  map_add' _ _ := rfl
+  map_smul' a x := by
+    change algebraMap K (LaurentSeries K) a * x.val = a • x.val
+    rw [SourceDifferential.algebraMap_laurentSeries_apply_alt,
+      HahnSeries.single_zero_mul_eq_smul]
+
+theorem originalFieldTensorEval_injective {K L : Type*} [Field K] [Field L] [Algebra K L]
+    (Γ : Subgroup SL(2, ℤ)) : Function.Injective (originalFieldTensorEval (K := K) (L := L) Γ) := by
+  classical
+  let b := Module.Free.chooseBasis K (qExpFunctionFieldC K Γ)
+  have hb : LinearIndependent K (fun i => (b i : LaurentSeries K)) :=
+    b.linearIndependent.map_injOn (originalFieldValLinear K Γ)
+      (fun _ _ _ _ h => Subtype.ext h)
+  have hc := linearIndependent_coeffMap_algebraMap L hb
+  have hd : LinearIndependent L (fun i => originalFieldCoefficientHom (L := L) Γ (b i)) :=
+    LinearIndependent.of_comp (originalFieldValLinear L Γ) hc
+  have heq : (originalFieldTensorEval (K := K) (L := L) Γ).toLinearMap =
+      (b.baseChange L).constr L (fun i => originalFieldCoefficientHom Γ (b i)) := by
+    apply (b.baseChange L).ext
+    intro i
+    rw [Module.Basis.constr_basis]
+    simp only [AlgHom.toLinearMap_apply, Module.Basis.baseChange_apply,
+      originalFieldTensorEval_tmul, one_smul]
+  change Function.Injective (originalFieldTensorEval (K := K) (L := L) Γ).toLinearMap
+  rw [heq]
+  exact (b.baseChange L).injective_constr_of_linearIndependent hd
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

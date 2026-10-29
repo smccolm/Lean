@@ -1,0 +1,1 @@
+The existing original framed fixed-quotient equivalence preserves and reflects actual strict conjugacy, using an original representative of every quotient element. Descend that actual equivalence with the pinned Quotient.congr constructor to the existing original unframed deformation classes and prove its value on every original framed class.

@@ -1,0 +1,38 @@
+import SourceIntegralSlashFieldDiamondCovariance
+import SourceOriginalResidueCuspHomFamily
+import SourceOriginalResidueCuspPlaceFamily
+import SourceOriginalResidueCuspPlaceCovariance
+import SourceOriginalResidueCuspOrbitMap
+import SourceOriginalResidueFullBaseFinite
+import SourceOriginalResiduePoleBaseLabel
+import SourceOriginalResidueCuspFamilyBaseLabel
+import SourceOriginalResidueCuspFamilyExhaustion
+import SourceOriginalResidueCuspOrbitSurjection
+import SourceOriginalResidueCuspCount
+import Mathlib.Tactic
+
+open Lean
+
+private def runOriginalResidueCuspCountDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex]
+  let localModules : Array Name := #[`SourceIntegralSlashFieldDiamondCovariance, `SourceOriginalResidueCuspHomFamily, `SourceOriginalResidueCuspPlaceFamily, `SourceOriginalResidueCuspPlaceCovariance, `SourceOriginalResidueCuspOrbitMap, `SourceOriginalResidueFullBaseFinite, `SourceOriginalResiduePoleBaseLabel, `SourceOriginalResidueCuspFamilyBaseLabel, `SourceOriginalResidueCuspFamilyExhaustion, `SourceOriginalResidueCuspOrbitSurjection, `SourceOriginalResidueCuspCount, `SourceIntegralSlashRaisedLevelOne, `SourceIntegralSlashCuspTriangular, `SourceIntegralSlashRaisedCuspFormula, `SourceIntegralSlashTriangularParameter, `SourceIntegralSlashRaisedCuspCoefficients, `SourceIntegralSlashRaisedCuspReduction, `SourceIntegralSlashRaisedCuspLaurent, `SourceIntegralSlashRaisedCuspCoordinate, `SourceIntegralSlashCuspCoordinate, `SourceOriginalResidueFullCuspChart, `SourceOriginalResidueCuspBaseComparison, `SourceOriginalResidueCuspPlaceOverBase, `SourceOriginalResidueCuspMatrix, `SourceOriginalResidueLabeledCuspPlace, `SourceIntegralDiamondNormalizedAction, `SourceIntegralSlashFieldNormalizedRatio, `SourceIntegralDiamondScalarNormalizedAction, `SourceIntegralSlashDiamondGenerator, `SourceIntegralSlashDiamondStabilizer, `SourceOriginalResidueDiamondCuspChart, `SourceOriginalResidueCuspStabilizerPlace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_normalized, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom_j, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification_pos, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_order, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mem_iff, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_diamond_mul, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_left_signed, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace_mul_T_zpow, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace_translation, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_mk, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_j_neg, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueFullBase_inclusion_finite, `Dubon2026.SourceFunctionField.IntegralSlash.originalResiduePole_lies_over_labeledCusp, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFamily_over_label, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspPlace_of_j_pole, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace_surjective, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex_of_reduction, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidue_j_pole_card_le_complex, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspHom, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCuspRamification, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueCosetCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalResidueOrbitCuspPlace, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_diamond_generator, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN, `Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext, `Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix, `Dubon2026.SourceFunctionField.IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot, `Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq, `Dubon2026.SourceFunctionField.coeff_cusp_family_exhaustive, `Dubon2026.SourceCurve.Place.restrictAlongFinite, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_j_pole_card_eq_translation_orbits, `Nat.card_le_card_of_surjective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL RESIDUE CUSP COUNT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual residue cusp-count theorem. The reduction, common cusp family, base-label coverage and orbit surjection are constructed; the native complex cusp-orbit equality is consumed. Finite elliptic bounds and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runOriginalResidueCuspCountDependencyAudit

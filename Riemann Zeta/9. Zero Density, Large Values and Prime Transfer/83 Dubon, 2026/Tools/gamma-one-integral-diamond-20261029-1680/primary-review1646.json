@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ContinuousTraceZeroRestriction",
+  "mathematics": "Actual continuous trace-zero cocycles restrict along the original continuous group homomorphism. The same original trace-zero matrix gives the restricted coboundary, so restriction descends to genuine continuous H1. It commutes with the original full-adjoint inclusion. When the original matrix dimension is nonzero in the coefficient field, an actual trace-zero class restricts to zero exactly when its included original adjoint class does.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Actual trace-zero coefficient representation, continuous cocycles/coboundaries, quotient restriction and arithmetic inertia modules inspected. Pinned LinearEquiv.finrank_eq and Module.Finite.equiv inspected. Bellovin section2.1 rechecked live for actual continuous restriction. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "traceZeroRestriction1646-focus.log"
+}

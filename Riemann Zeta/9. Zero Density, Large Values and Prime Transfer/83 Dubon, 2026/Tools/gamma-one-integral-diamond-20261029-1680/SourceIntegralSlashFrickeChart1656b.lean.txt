@@ -1,0 +1,73 @@
+import SourceIntegralSlashCuspChart1655b
+import SourceEvenWeightFrickeCommonDenominator1649c
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> uniform level-power slash integrality. The Fricke transform of the
+actual level-M^2 cusp chart is the chart at beta*S with the exact native
+scalar normalization. Native q-expansion linearity avoids another
+analytic expansion construction. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups ModularForm
+variable {M : ℕ} [NeZero M] {k : ℤ}
+
+theorem levelRaise_mul_fricke_sq (M : ℕ) [NeZero M] :
+    levelRaiseMatrix M * frickeMatrix (M ^ 2) =
+      heckeTriangularMatrix M M 0 * (ModularGroup.S : GL (Fin 2) ℝ) *
+        levelRaiseMatrix M := by
+  have hS : ((ModularGroup.S : GL (Fin 2) ℝ) : Matrix (Fin 2) (Fin 2) ℝ) =
+      !![(0 : ℝ), -1; 1, 0] := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> norm_num [ModularGroup.S]
+  ext i j
+  simp only [Matrix.GeneralLinearGroup.coe_mul, frickeMatrix_val,
+    heckeTriangularMatrix_val, hS]
+  fin_cases i <;> fin_cases j <;>
+    simp [levelRaiseMatrix, Matrix.mul_apply, Fin.sum_univ_two, ModularGroup.S] <;>
+    push_cast <;> ring
+
+theorem fricke_cuspChart_eq (f : ModularForm (Gamma1 M) k) (β : SL(2, ℤ)) :
+    IntegralFricke.frickeForm (cuspChart f β) =
+      (M : ℂ) ^ (k - 2) • cuspChart f (β * ModularGroup.S) := by
+  have he : (β : GL (Fin 2) ℝ) * levelRaiseMatrix M * frickeMatrix (M ^ 2) =
+      ((β : GL (Fin 2) ℝ) * heckeTriangularMatrix M M 0 *
+        (ModularGroup.S : GL (Fin 2) ℝ)) * levelRaiseMatrix M := by
+    rw [mul_assoc, levelRaise_mul_fricke_sq, ← mul_assoc, ← mul_assoc]
+  have hs : ((⇑f : ℍ → ℂ) ∣[k] ((β : GL (Fin 2) ℝ) *
+      heckeTriangularMatrix M M 0 * (ModularGroup.S : GL (Fin 2) ℝ))) =
+      (M : ℂ) ^ (k - 2) •
+        ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ)) := by
+    have hm : ((β * ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ) =
+        (β : GL (Fin 2) ℝ) * (ModularGroup.S : GL (Fin 2) ℝ) :=
+      map_mul (mapGL ℝ) β ModularGroup.S
+    rw [hm, SlashAction.slash_mul, SlashAction.slash_mul, scalarMatrix_slash,
+      SlashAction.slash_mul]
+    exact ModularForm.SL_smul_slash k ModularGroup.S _ _
+  ext τ
+  change ((⇑(IntegralFricke.frickeForm (cuspChart f β)) : ℍ → ℂ) τ) = _
+  rw [IntegralFricke.coe_frickeForm, coe_cuspChart, ← SlashAction.slash_mul,
+    he, SlashAction.slash_mul, slash_levelRaise_apply, hs]
+  change (M : ℂ) ^ (k - 1) *
+      ((M : ℂ) ^ (k - 2) *
+        ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))
+          (levelRaiseMatrix M • τ)) =
+    (M : ℂ) ^ (k - 2) * cuspChart f (β * ModularGroup.S) τ
+  rw [cuspChart_apply]
+  ring
+
+theorem coeff_qExpansion_fricke_cuspChart (f : ModularForm (Gamma1 M) k)
+    (β : SL(2, ℤ)) (n : ℕ) :
+    (qExpansion 1 (IntegralFricke.frickeForm (cuspChart f β))).coeff n =
+      (M : ℂ) ^ (2 * k - 3) *
+        (qExpansion (M : ℝ)
+          ((⇑f : ℍ → ℂ) ∣[k] ((β * ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n := by
+  rw [fricke_cuspChart_eq, ModularForm.IsGLPos.coe_smul, ModularForm.qExpansion_smul one_pos
+    (SourceFricke.gammaOne_one_mem_strictPeriods (M ^ 2)),
+    PowerSeries.coeff_smul, smul_eq_mul, coeff_qExpansion_cuspChart,
+    ← mul_assoc, ← zpow_add₀ (Nat.cast_ne_zero.mpr (NeZero.ne M))]
+  congr 2
+  ring
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

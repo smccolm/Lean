@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> signed-index lower bound -> actual reduced diamond field action.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-action-audit-route-1700.json",
+    "sha256": "6974C617BA3E9B0DDA0E0B881705FA62529012241A0CFC879DA8F32122537371",
+    "review": {
+      "recordedUTC": "2026-10-29T07:41:40.574953+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> signed-index lower bound -> actual reduced diamond field action.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-field-action-1662\\manifest.json",
+          "sha256": "B171D64BDD614ED0281FBFE706E0BC5123CC0B3948DDCA9CE1289FB4B37723ED"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\reduced-diamond-native-reuse-review-1663.json",
+          "sha256": "4D6E390A6FB9959484B75DAFDA2CBF01A793C7BBC6335C348E7C1C22A6F0092F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\reduced-ratio-shorter-route-1676.json",
+          "sha256": "D8DC873F87E66B2113A98187E878AF6ED3FA4317AE8CC6B5DB3BBAC57C03553E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\reduced-diamond-action-doc-repair-1693.json",
+          "sha256": "4EB01CD1627E90EE1DCE845D20279E643D5A6C5E455A63DF66D6256839FE0C62"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Reduced Diamond Action Assessment 2026-10-29.md",
+          "sha256": "3B24511F9F5AB3E8EF4B1AB8341E71031F88BF6075EA978DD2B9232D23D16C79"
+        }
+      ],
+      "shorterRoute": "The pinned Apache-2.0 source is anthropics/fermats-last-theorem at 6e837e75355538c7f80bab5b956861e86c4eacc2, P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean. The local original ratio field, actual modularDiamond, even-weight representatives, integral slash consumer and sign invariance are reused. Same-weight cross-products avoid source weight casts. Addition follows from differences. Field closure and ring-homomorphism preservation of natural powers avoid two additional common-exponent constructions. General GammaH, odd-weight auxiliary forms and incidental generalizations are deferred because the exact required Gamma1 chain is served without them.",
+      "assumptionsToDischarge": [
+        "The literal reduction kernel consists exactly of integer series divisible by the coefficient prime. Applying the proved integral diamond construction to the divided form proves zero preservation; the inverse matrix proves its converse.",
+        "Actual integral diamond witnesses have identical normalized reductions, independently of the clearing exponent and integer series. Products and differences respect this reduction.",
+        "Any two same-weight integral ratios, even of different even weights, give the same transformed quotient. The cross-products f*g\u2032 and g*f\u2032 have the same weight, so the proved difference law and zero equivalence replace weight casts and a separate exponent-clearing argument.",
+        "The original reduced ratio set is proved closed under field operations and contains all ZMod constants. Thus every element of the original adjoined field has an actual ratio; native even-weight replacement supplies the needed representatives.",
+        "The actual pullback remains in the original field and preserves zero, one, addition and multiplication. Native field closure handles the level-power scalar without matching the two clearing exponents.",
+        "Actual slash composition and the proved ring-homomorphism laws establish composition. The inverse matrix supplies an actual inverse, all ZMod scalars are fixed, and matrix inversion supplies a genuine Gamma0 group action by algebra automorphisms.",
+        "Native even-weight sign invariance proves that the signed Gamma1 subgroup acts trivially. No reduction-relation, denominator, representative-existence, homomorphism, composition or invertibility premise remains."
+      ],
+      "remaining": "Exact kernel equality, fixation of the full modular base field in this audited scope, signed-index lower bound and original degree/genus preservation remain required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The literal reduction kernel consists exactly of integer series divisible by the coefficient prime. Applying the proved integral diamond construction to the divided form proves zero preservation; the inverse matrix proves its converse.",
+    "Actual integral diamond witnesses have identical normalized reductions, independently of the clearing exponent and integer series. Products and differences respect this reduction.",
+    "Any two same-weight integral ratios, even of different even weights, give the same transformed quotient. The cross-products f*g\u2032 and g*f\u2032 have the same weight, so the proved difference law and zero equivalence replace weight casts and a separate exponent-clearing argument.",
+    "The original reduced ratio set is proved closed under field operations and contains all ZMod constants. Thus every element of the original adjoined field has an actual ratio; native even-weight replacement supplies the needed representatives.",
+    "The actual pullback remains in the original field and preserves zero, one, addition and multiplication. Native field closure handles the level-power scalar without matching the two clearing exponents.",
+    "Actual slash composition and the proved ring-homomorphism laws establish composition. The inverse matrix supplies an actual inverse, all ZMod scalars are fixed, and matrix inversion supplies a genuine Gamma0 group action by algebra automorphisms.",
+    "Native even-weight sign invariance proves that the signed Gamma1 subgroup acts trivially. No reduction-relation, denominator, representative-existence, homomorphism, composition or invertibility premise remains."
+  ],
+  "remaining": "Exact kernel equality, fixation of the full modular base field in this audited scope, signed-index lower bound and original degree/genus preservation remain required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

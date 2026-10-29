@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable (K A V : Type*) [Field K] [Ring A] [Algebra K A]
+  [AddCommGroup V] [Module K V] [Module A V] [IsScalarTower K A V]
+  [IsSimpleModule A V] [FiniteDimensional K V] [IsAlgClosed K]
+
+/-- Exact original-object consumer of `simpleModule_algebraAction_surjective`. -/
+theorem actual_simple_module_burnside_simpleModule_algebraAction_surjective_source :
+    Function.Surjective (Module.toModuleEnd K (S := A) V) :=
+  simpleModule_algebraAction_surjective K A V
+
+end
+

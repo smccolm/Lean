@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixTwoDeterminantComplement",
+  "mathematics": "Show that an invertible two-dimensional matrix equal to its determinant times the identity must itself be the identity, by computing and cancelling its unit determinant. Separately derive a genuine original unit entry from an actual matrix nonzero under the local field residue map.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-ordinary-invariant-line-route-20261010.json: source Section6.2, actual original unit-coordinate basis, residue reflection, fixed vectors and determinant-complement operators inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "preCompilationApiFixes": [
+    "Pinned IsUnit.mul_right_inj cancels the unit on the left in a*b=a*c. Corrected the cancellation direction after exact API inspection; mathematical statement unchanged."
+  ],
+  "productionFixes": [
+    "Normalize the actual two-dimensional determinant square using pow_two. The determinant cancellation argument and nonvanishing statement are unchanged."
+  ],
+  "productionLog": "detComplement1768b-focus.log"
+}

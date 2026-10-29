@@ -1,0 +1,7 @@
+### Actual original residue-column independence — 10 October 2026
+
+Construct the genuine column matrix by applying each original matrix lift to the selected standard vector. Its true residue is the identity, so its determinant is a unit in the original local ring. Applying an original linear relation to that standard vector and using the invertible column matrix proves linear independence of the original lifted matrices.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualMatrixColumnIndependence](Extension/Dubon2026/ResidualMatrixColumnIndependence.lean).

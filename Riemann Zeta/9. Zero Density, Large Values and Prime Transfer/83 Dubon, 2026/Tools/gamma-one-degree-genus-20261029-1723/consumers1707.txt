@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `coefficientRepresentationMatrixAlgebra_residue_surjective`. -/
+theorem actual_coefficient_matrix_algebra_residue_coefficientRepresentationMatrixAlgebra_residue_surjective_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (S : Subalgebra O R) (ρ : G →* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ)))] :
+    Function.Surjective ((RingHom.mapMatrix (IsLocalRing.residue R)).comp
+      (coefficientRepresentationMatrixAlgebra S ρ).val.toRingHom) :=
+  coefficientRepresentationMatrixAlgebra_residue_surjective (L := L) eR S ρ
+
+end
+

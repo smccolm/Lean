@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable (O R : Type*) [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `relativeMaximalCotangent_finite`. -/
+theorem actual_relative_maximal_cotangent_relativeMaximalCotangent_finite_source [IsNoetherianRing R] :
+    Module.Finite (IsLocalRing.ResidueField R) (RelativeMaximalCotangent O R) :=
+  relativeMaximalCotangent_finite O R
+
+end
+

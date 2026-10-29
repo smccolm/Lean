@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G R K : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrixTwo_fixed_iff_second_zero_of_residue`. -/
+theorem actual_matrix_two_residual_invariant_axis_matrixTwo_fixed_iff_second_zero_of_residue_source (r : R →+* K) [IsLocalHom r]
+    (A : G → GeneralLinearGroup (Fin 2) R)
+    (hfirst : ∀ g, A g 0 0 = 1 ∧ A g 1 0 = 0)
+    (g₀ : G) (hA : GeneralLinearGroup.map r (A g₀) ≠ 1) (v : Fin 2 → R) :
+    (∀ g, (A g).val *ᵥ v = v) ↔ v 1 = 0 :=
+  matrixTwo_fixed_iff_second_zero_of_residue r A hfirst g₀ hA v
+
+end
+

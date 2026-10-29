@@ -1,0 +1,48 @@
+import SourceIntegralDiamondScalarAction1733b
+import Dubon2026.SourceLaurentCoefficientReindex
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> residue fiber bounds. The extended actual diamond action fixes the full
+modular base field. Each divisor j expansion is the literal coefficient image
+of its already fixed prime-field counterpart; native adjoin extensionality
+then fixes the generated field. No fixed-field identity is assumed. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open CongruenceSubgroup GammaOne ReducedDegreeTransport IntermediateField
+open scoped MatrixGroups
+attribute [local instance] originalFieldScalarAlgebra
+
+theorem fullBase_le_originalField (L : Type*) [Field L] (N : ℕ) :
+    modularFunctionFieldCoeff N L ≤ qExpFunctionFieldC L (Gamma1 N) :=
+  (fullBase_le_gammaZeroField L N).trans (qExpFunctionFieldC_mono L (Gamma1_in_Gamma0 N))
+
+theorem reducedFieldActionOver_fixes_fullBase (L : Type*) [Field L] (N ℓ : ℕ)
+    [NeZero N] [Fact ℓ.Prime] [Algebra (ZMod ℓ) L] (hℓN : ¬ ℓ ∣ N)
+    (γ : Gamma0 N) (x : qExpFunctionFieldC L (Gamma1 N))
+    (hx : (x : LaurentSeries L) ∈ modularFunctionFieldCoeff N L) :
+    reducedFieldActionOver L N ℓ hℓN γ x = x := by
+  let ι := IntermediateField.inclusion (fullBase_le_originalField L N)
+  have he : (reducedFieldActionOver L N ℓ hℓN γ).toAlgHom.comp ι = ι := by
+    apply IntermediateField.adjoin_algHom_ext
+    rintro y ⟨d, hd0, hd, rfl⟩
+    letI := hd0
+    let x₀ : qExpFunctionFieldC (ZMod ℓ) (Gamma1 N) :=
+      ⟨qExpand (ZMod ℓ) d (jqModC (ZMod ℓ)),
+        fullBase_le_originalReducedField N ℓ (jqd_mem_coeff_field N (ZMod ℓ) hd)⟩
+    have hp : reducedFieldAction N ℓ hℓN γ x₀ = x₀ :=
+      reducedFieldAction_fixes_fullBase N ℓ hℓN γ x₀ (jqd_mem_coeff_field N (ZMod ℓ) hd)
+    have hmap : originalFieldCoefficientHom (L := L) (Gamma1 N) x₀ =
+        ι ⟨qExpand L d (jqModC L), jqd_mem_coeff_field N L hd⟩ := by
+      apply Subtype.ext
+      change coeffMap (algebraMap (ZMod ℓ) L) (qExpand (ZMod ℓ) d (jqModC (ZMod ℓ))) =
+        qExpand L d (jqModC L)
+      rw [coeffMap_qExpand]
+      exact congrArg (qExpand L d) (map_jqModC (algebraMap (ZMod ℓ) L))
+    change reducedFieldActionOver L N ℓ hℓN γ
+      (ι ⟨qExpand L d (jqModC L), jqd_mem_coeff_field N L hd⟩) = _
+    rw [← hmap, reducedFieldActionOver_coeff, hp]
+    exact hmap
+  exact congrArg (fun φ => φ ⟨(x : LaurentSeries L), hx⟩) he
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

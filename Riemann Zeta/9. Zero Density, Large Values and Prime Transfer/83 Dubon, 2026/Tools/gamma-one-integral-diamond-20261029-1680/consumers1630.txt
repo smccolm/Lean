@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+
+/-- Exact original-object consumer of `originalResidueCotangentContinuousFiberEquiv_bijective`. -/
+theorem actual_original_relative_cotangent_points_originalResidueCotangentContinuousFiberEquiv_bijective_source
+    (hR : (inferInstance : TopologicalSpace R) = (IsLocalRing.maximalIdeal R).adicTopology)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O) :
+    Function.Bijective (originalResidueCotangentContinuousFiberEquiv hR eR) :=
+  originalResidueCotangentContinuousFiberEquiv_bijective hR eR
+
+end
+

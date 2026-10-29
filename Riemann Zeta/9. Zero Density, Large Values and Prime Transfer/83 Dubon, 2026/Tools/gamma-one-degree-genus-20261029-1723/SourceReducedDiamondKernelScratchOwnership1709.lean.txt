@@ -1,0 +1,20 @@
+import SourceIntegralDiamondFullBaseInclusion
+import SourceIntegralDiamondGammaZeroFixed
+import SourceIntegralDiamondEisensteinAction
+import SourceIntegralDiamondSignedMembership
+import SourceIntegralDiamondExactKernel
+import SourceIntegralDiamondFixedFieldDegree
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralDiamondFullBaseInclusion, `SourceIntegralDiamondGammaZeroFixed, `SourceIntegralDiamondEisensteinAction, `SourceIntegralDiamondSignedMembership, `SourceIntegralDiamondExactKernel, `SourceIntegralDiamondFixedFieldDegree]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

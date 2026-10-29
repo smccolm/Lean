@@ -1,0 +1,39 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O R A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+  [CommRing A] [IsLocalRing A] [IsNoetherianRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalCoefficientRepresentationClass_fixedQuotient_bijective`. -/
+theorem actual_original_coefficient_class_fixed_quotient_originalCoefficientRepresentationClass_fixedQuotient_bijective_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (τ : H →ₜ* GeneralLinearGroup ι R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (τq : fixedResidualProfiniteQuotient p H σ.ker
+      (originalResidualMatrixKernel_isClosed H σ hσ) →ₜ* GeneralLinearGroup ι R)
+    (hτq : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τq.toMonoidHom = (fixedResidualOriginalRepresentation p H σ hσ).toMonoidHom)
+    (hwhole : ∀ g : H, τ g = τq (QuotientGroup.mk'
+      (fixedResidualProPKernel p H σ.ker (originalResidualMatrixKernel_isClosed H σ hσ)) g))
+    (hbij : Function.Bijective (originalCoefficientRepresentationClass eR eA _
+      (fixedResidualOriginalRepresentation p H σ hσ).toMonoidHom τq hτq)) :
+    Function.Bijective (originalCoefficientRepresentationClass eR eA H σ τ hτ) :=
+  originalCoefficientRepresentationClass_fixedQuotient_bijective hA eR eA p hp H σ hσ τ hτ τq hτq hwhole hbij
+
+end
+

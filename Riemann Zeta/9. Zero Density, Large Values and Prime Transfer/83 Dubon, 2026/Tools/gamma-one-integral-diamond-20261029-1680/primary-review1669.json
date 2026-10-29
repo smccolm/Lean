@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CoefficientFiberProductRepresentation",
+  "mathematics": "Glue the actual original representation matrices at each original group element using the proved general-linear gluing construction. Both genuine coefficient projections determine the unit and product laws, so the result is an actual whole group representation. Its two entire projected representations are the supplied originals. The same genuine two-projection uniqueness at every original group element gives unique whole-representation gluing.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned actual RingHom.eqLocus and CommRingCat concrete pullbackCone inspected; Units mapping, local-hom reflection and actual matrix/unit topology APIs inspected. Existing CanonicalAdelicGL2Coordinates actual matrix-product/unit-continuity proof reviewed; current construction treats general matrix size and the actual compatible-pair subring. Levin Lecture5 original group-fiber-product role rechecked live10Oct2026. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Algebra/Category/Ring/Constructions.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Group/Matrix.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Applied each genuine gluing projection equality at the original product group element before simplifying homomorphism multiplication. This prevents bottom-up simplification from changing the dependent glued arguments before the equality is consumed. Fixed the proof and unused-simp diagnostics without suppression."
+  ],
+  "productionLog": "coefficientFiberRepresentation1669b-focus.log"
+}

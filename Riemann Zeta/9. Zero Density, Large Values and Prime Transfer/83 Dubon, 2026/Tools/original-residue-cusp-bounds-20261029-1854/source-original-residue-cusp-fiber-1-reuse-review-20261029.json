@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> original genus preservation -> reverse genus inequality -> residue fiber stabilizers and bounds.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-cusp-fiber-audit-route-1844.json",
+    "sha256": "7448BA251A2BB3BDC2CE531C25E55BF356ACB16E8A904567F30227F3B3C03441",
+    "review": {
+      "recordedUTC": "2026-10-29T12:52:26.098893+00:00",
+      "chain": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> original genus preservation -> reverse genus inequality -> residue fiber stabilizers and bounds.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-scratch-receipt.json",
+          "sha256": "BD4AD05D63EC51B39FCC74E4CB6E72068A3CB176DD7BDE6738D1A4940F4458FD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-fixed-fibers-1-scratch-receipt.json",
+          "sha256": "0A633BE1AB4A22873A2A3B81404B264A407B018FA7226C09E30106E6CB8D326D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-scalar-1-scratch-receipt.json",
+          "sha256": "68D4FB6A688FD790AFE84AC1F6131968A4B4F490E9C6FCDE00A2F989C9A24E2E"
+        }
+      ],
+      "shorterRoute": "Use the native Gamma0 residue homomorphism and proved exact signed Gamma1 kernel to prove commutativity of the actual residue diamond action. Native actual-action transitivity transports a fixed-place identity to every place in the same full-base fiber. Apply the constructed labeled cusp chart to obtain the signed-translation stabilizer on the complete actual fiber. No new quotient-group infrastructure or assumed commutativity/transitivity is needed. For the ensuing cusp cardinality bound, the separately documented native translation-orbit surjection route avoids the external double-coset classification; the actual fiber stabilizer result remains available for the required residue fiber comparison.",
+      "assumptionsToDischarge": [
+        "Commutativity of the actual original residue diamond action is proved from its exact kernel.",
+        "An actual diamond element fixing one place fixes every place above the same full-base valuation, using proved fiber transitivity.",
+        "For each native primitive cusp label, a cusp matrix is constructed whose signed-translation stabilizer fixes the entire actual residue fiber, without action, commutativity, transitivity or stabilizer premises."
+      ],
+      "remaining": "Cusp cardinality comparison, finite elliptic fiber bounds including characteristics two and three, and reverse genus inequality remain open. Original all-weight association, automorphy and literal higher continuation remain required. Acceptance 16/20; DUB17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Commutativity of the actual original residue diamond action is proved from its exact kernel.",
+    "An actual diamond element fixing one place fixes every place above the same full-base valuation, using proved fiber transitivity.",
+    "For each native primitive cusp label, a cusp matrix is constructed whose signed-translation stabilizer fixes the entire actual residue fiber, without action, commutativity, transitivity or stabilizer premises."
+  ],
+  "remaining": "Cusp cardinality comparison, finite elliptic fiber bounds including characteristics two and three, and reverse genus inequality remain open. Original all-weight association, automorphy and literal higher continuation remain required. Acceptance 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

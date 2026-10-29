@@ -1,0 +1,7 @@
+### Actual actual continuous whole representation conjugation — 10 October 2026
+
+Conjugate the whole original representation using the genuine inner group automorphism of the actual general-linear group. Prove the actual matrix evaluation formula and compatibility with every original coefficient reduction. An original conjugator reducing to the identity supplies strict conjugacy, and actual continuity of multiplication proves continuity of the same whole conjugated representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixRepresentationConjugation](Extension/Dubon2026/MatrixRepresentationConjugation.lean).

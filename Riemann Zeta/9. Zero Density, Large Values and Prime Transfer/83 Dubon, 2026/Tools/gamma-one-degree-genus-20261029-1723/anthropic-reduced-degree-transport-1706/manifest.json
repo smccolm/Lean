@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T08:05:45.491983+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-degree-transport-1706\\S_ModularCurve_finiteDimensional_and_finrank_adjoin_le_of_eq_coeffMap.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finiteDimensional_and_finrank_adjoin_le_of_eq_coeffMap.lean",
+      "bytes": 15025,
+      "sha256": "5EF06717CEB1F1B0A697BE5B1AE0F92D08652D69FE2BE81F62D705624B300239",
+      "gitBlob": "31ecd64dbd7e6940cbe0b1431068503d90b7c9d8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-degree-transport-1706\\S_ModularCurve_coeffMap_mem_qExpFunctionFieldC_and_eq_adjoin_image_coeffMap.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_coeffMap_mem_qExpFunctionFieldC_and_eq_adjoin_image_coeffMap.lean",
+      "bytes": 3808,
+      "sha256": "D68353B81C3705F35EC0430CD1639064DC56F4DF7D1AD100A740C21B0334DE02",
+      "gitBlob": "97e3c63f13fdbb4f77c06cfe69c503c5e87d3da1"
+    }
+  ],
+  "purpose": "Read-only primary-source review of original reduced-field coefficient transport: transfer finite coordinate degree from the native residue image to the prime-field action and transfer the proved signed-index bound back. This discharges the remaining finite-degree input in the exact Gamma1 degree-preservation chain for DUB-17/18; no external import or proof-option change.",
+  "externalBuild": false,
+  "externalImport": false
+}

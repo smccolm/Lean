@@ -1,0 +1,7 @@
+### Actual original continuous relative derivation cocycles — 10 October 2026
+
+The actual relative derivation coefficient map is continuous in the proved original maximal-adic topologies. Composing its genuine matrix map with the same original continuous representation gives actual first-order continuity; the proved dual-number product/adic comparison retains the original first-order topology. The actual residue-field-linear cocycle map therefore lands in genuine continuous cocycles and retains every original right-logarithmic matrix value.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalResidueDerivationContinuousCocycles](Extension/Dubon2026/OriginalResidueDerivationContinuousCocycles.lean).

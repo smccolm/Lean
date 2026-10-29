@@ -1,0 +1,7 @@
+### Actual genuine invariant direct-summand basis invariance — 10 October 2026
+
+Use the actual invertible matrix action to identify whole invariant submodules; transport the actual rank-one linear equivalence and complementary submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixInvariantSubmoduleConjugacy](Extension/Dubon2026/MatrixInvariantSubmoduleConjugacy.lean).

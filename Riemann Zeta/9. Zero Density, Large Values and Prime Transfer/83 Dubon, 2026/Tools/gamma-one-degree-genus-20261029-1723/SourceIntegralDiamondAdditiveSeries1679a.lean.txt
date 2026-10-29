@@ -1,0 +1,29 @@
+import SourceIntegralDiamondRatioRelation1678b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action.
+These literal integral Fourier identities supply the constants and addition
+needed to show that the original reduced ratio generators already form a
+field. No new function-field model or coefficient-lifting assumption is used. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+theorem integralQExp_add {N : ℕ} {k : ℤ}
+    (f h : ModularForm (Gamma1 N) k) {p q : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (hq : IsIntegralQExp h q) :
+    IsIntegralQExp (f + h) (p + q) := by
+  unfold IsIntegralQExp
+  rw [map_add, hp, hq, ModularForm.qExpansion_add one_pos
+    (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+
+theorem integralQExp_zero (N : ℕ) (k : ℤ) :
+    IsIntegralQExp (0 : ModularForm (Gamma1 N) k) 0 := by
+  simp [IsIntegralQExp, ModularForm.qExpansion_zero]
+
+theorem integralQExp_one (N : ℕ) :
+    IsIntegralQExp (1 : ModularForm (Gamma1 N) 0) 1 := by
+  simp [IsIntegralQExp, ModularForm.qExpansion_one]
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

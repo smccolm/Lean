@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrix_conjugate_fixed_iff`. -/
+theorem actual_matrix_conjugate_fixed_vectors_matrix_conjugate_fixed_iff_source (A U : GeneralLinearGroup ι R) (v : ι → R) :
+    (U⁻¹ * A * U).val *ᵥ (U⁻¹.val *ᵥ v) = U⁻¹.val *ᵥ v ↔ A.val *ᵥ v = v :=
+  matrix_conjugate_fixed_iff A U v
+
+end
+

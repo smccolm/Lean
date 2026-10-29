@@ -1,0 +1,92 @@
+import SourceIntegralSlashRaisedLevelOne
+import SourceIntegralSlashCuspTriangular
+import SourceIntegralSlashRaisedCuspFormula
+import SourceIntegralSlashTriangularParameter
+import SourceIntegralSlashRaisedCuspCoefficients
+import SourceIntegralSlashRaisedCuspReduction
+import SourceIntegralSlashRaisedCuspLaurent
+import SourceIntegralSlashRaisedCuspCoordinate
+import SourceIntegralSlashCuspCoordinate
+import SourceOriginalResidueFullCuspChart
+import SourceOriginalResidueCuspBaseComparison
+import SourceOriginalResidueCuspPlaceOverBase
+import SourceOriginalResidueCuspMatrix
+import SourceOriginalResidueLabeledCuspPlace
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace
+#print axioms Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne
+
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegralSlashRaisedLevelOne, `SourceIntegralSlashCuspTriangular, `SourceIntegralSlashRaisedCuspFormula, `SourceIntegralSlashTriangularParameter, `SourceIntegralSlashRaisedCuspCoefficients, `SourceIntegralSlashRaisedCuspReduction, `SourceIntegralSlashRaisedCuspLaurent, `SourceIntegralSlashRaisedCuspCoordinate, `SourceIntegralSlashCuspCoordinate, `SourceOriginalResidueFullCuspChart, `SourceOriginalResidueCuspBaseComparison, `SourceOriginalResidueCuspPlaceOverBase, `SourceOriginalResidueCuspMatrix, `SourceOriginalResidueLabeledCuspPlace]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply, `Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio, `Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash, `Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp, `Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared, `Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular, `Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom, `Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart, `Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix, `Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue labeled cusp postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue labeled cusp theorems discovered"
+  logInfo m!"SOURCE ORIGINAL RESIDUE LABELED CUSP AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+
+
+
+
+
+
+
+#lint in SourceIntegralSlashRaisedLevelOne
+#lint in SourceIntegralSlashCuspTriangular
+#lint in SourceIntegralSlashRaisedCuspFormula
+#lint in SourceIntegralSlashTriangularParameter
+#lint in SourceIntegralSlashRaisedCuspCoefficients
+#lint in SourceIntegralSlashRaisedCuspReduction
+#lint in SourceIntegralSlashRaisedCuspLaurent
+#lint in SourceIntegralSlashRaisedCuspCoordinate
+#lint in SourceIntegralSlashCuspCoordinate
+#lint in SourceOriginalResidueFullCuspChart
+#lint in SourceOriginalResidueCuspBaseComparison
+#lint in SourceOriginalResidueCuspPlaceOverBase
+#lint in SourceOriginalResidueCuspMatrix
+#lint in SourceOriginalResidueLabeledCuspPlace

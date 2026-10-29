@@ -1,0 +1,7 @@
+### Actual original class fiber-product bijection — 10 October 2026
+
+Take actual framed representatives of each genuinely compatible pair of original deformation classes. Convert their equality over the common original coefficient algebra into strict conjugacy of the whole common representations. Apply the proved original maximal-adic fixed-residue framed gluing. Its exact first projection and genuine second strict conjugacy recover the supplied original classes, proving actual surjectivity of the canonical class fiber-product map. Combine this with injectivity under original residual absolute irreducibility, and construct the resulting equivalence between the original class of the actual coefficient fiber product and the genuine fiber product of original classes.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalCoefficientClassFiberProductSurjectivity](Extension/Dubon2026/OriginalCoefficientClassFiberProductSurjectivity.lean).

@@ -1,0 +1,7 @@
+### Actual actual original topology under coefficient retraction — 10 October 2026
+
+Use the exact maximal-ideal-power reflection of the genuine local retraction in the inherited original subalgebra topology. Transport the original ambient topology equality explicitly before applying the proved completeness argument. This yields the actual subalgebra maximal-adic topology and completeness without replacing its original topology.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalAdicCoefficientRetractionCompleteness](Extension/Dubon2026/OriginalAdicCoefficientRetractionCompleteness.lean).

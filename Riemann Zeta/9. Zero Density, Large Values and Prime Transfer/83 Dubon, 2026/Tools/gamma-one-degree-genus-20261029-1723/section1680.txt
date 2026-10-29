@@ -1,0 +1,7 @@
+### Actual finite local coefficient maximal-adic topology — 10 October 2026
+
+For each actual finite local coefficient ring, derive Artinianness from finiteness and nilpotence of its actual maximal ideal using the pinned Artinian-local equivalence. Apply the already proved nilpotent-adic discreteness and finite-ring completeness results to that same original ring. Thus its maximal-adic topology is discrete and it is genuinely separated and complete for its actual maximal ideal.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteLocalCoefficientTopology](Extension/Dubon2026/FiniteLocalCoefficientTopology.lean).

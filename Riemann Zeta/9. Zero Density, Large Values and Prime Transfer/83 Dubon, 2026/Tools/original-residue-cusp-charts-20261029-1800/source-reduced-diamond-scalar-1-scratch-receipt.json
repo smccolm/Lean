@@ -1,0 +1,162 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T09:44:07.695946+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceReducedFieldScalarGeneration",
+    "SourceReducedFieldTensorEmbedding",
+    "SourceReducedFieldTensorFraction",
+    "SourceReducedFieldAutomorphismExtension",
+    "SourceReducedFieldAutomorphismExtensionLaws",
+    "SourceIntegralDiamondScalarAction",
+    "SourceIntegralDiamondScalarBaseFixed",
+    "SourceIntegralDiamondScalarFixedDegree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldScalarGeneration.lean",
+      "sha256": "EBADD90C8B1258234A3B10F55453A1CA539DC54C2E7162D1B28D4BF8A16587D0",
+      "oleanSha256": "8D07BA3E33B1E8F769ACDB576DA893E0BCF9F6A0E12D146D9E4AB2AEA3416B6A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldScalarGeneration-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldScalarGeneration-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorEmbedding.lean",
+      "sha256": "97A4EDAE2148739231969C366821B047F41BF0BE32763A19ED3D71D7A7B10035",
+      "oleanSha256": "D65F2058D433647C744CB5F6DE4B9CCBA4B7D745AC740937E985F6E6025E5FBC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorEmbedding-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorEmbedding-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorFraction.lean",
+      "sha256": "CBB363132D2753F439204893E63EE2AB97E568FDA11A22D393AFD9C4D1EB92EB",
+      "oleanSha256": "2DC92660174B6168B9B4AD5575F323906D44EBA81FB3333FFB7ED6F553E142EF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorFraction-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldTensorFraction-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtension.lean",
+      "sha256": "244B4166022896EBE920E6B41391EDAA004BB7655B2785761981843688D326C9",
+      "oleanSha256": "B5F6EF0B4E48BD9F9096106477AC2FCA1B44B4B259B26CDD43704BDB5DF63188",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtension-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtension-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtensionLaws.lean",
+      "sha256": "C82B5C728A18150DD9A476E286B0EBDECAE5CA6CEA4F9261E5F1614767D652CE",
+      "oleanSha256": "CB5BD97C9850DBB01171C4B416F5F42534174FF379294700A7FB086B892840A1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtensionLaws-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldAutomorphismExtensionLaws-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarAction.lean",
+      "sha256": "D3BC83DA8BFFE1E8E731123B468F5D244A836887BC3A9FD8CDEC177B82969963",
+      "oleanSha256": "64638A49CD6328787F2FADED966CC5AFF735AE6DF423CBC8FABE8819C2FA4910",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarAction-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarAction-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarBaseFixed.lean",
+      "sha256": "44614C433E08095B404B324F127C7C901465CDDCCA282BA0E0D70C7E0FB9F296",
+      "oleanSha256": "0B2E324F6BFC12BA10FBDE85099CA20E433E084D00501F803C8876A8EAB04144",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarBaseFixed-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarBaseFixed-1741.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedDegree.lean",
+      "sha256": "29EC2C040A1B727B93870F7F888787E4CF92DEE39CEA039E557DFCE5590054D1",
+      "oleanSha256": "86B813482D31DFE4FED0837A1926AC68A60FDA13EEA4E757D6BE6FA0AF34892E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedDegree-1741.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarFixedDegree-1741.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_eq_adjoin_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom_coe",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_tmul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval_injective",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_exists_tensor_fraction",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_isFractionRing",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_tensor",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_coeff",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalField_algHom_ext",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_one",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension_mul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom_injective",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_eq_one_iff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.fullBase_le_originalField",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_range_finite",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldScalarAlgebra",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldCoefficientHom",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorEval",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldTensorAlgebra",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtension",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.originalFieldAutomorphismExtensionHom",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondScalarAudit1.log",
+  "logSha256": "2580DD706A023D5E86CE118C4424F20DA5E871515F82A26CE1540EB1E6D8A967",
+  "auditSha256": "E80BA88C5C4D6A215AB74D7F6B42A364028925C24E58AD950499C7B4C0CA5BF8",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondScalarScratchOwnership1741.log",
+  "ownershipSha256": "53FC0DC60E7ECEB52345A0D876481665D192151733D6AF7A59320DE38D811E08",
+  "exhaustiveTheorems": 46,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 61,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondScalarDependencyAudit1.log",
+  "dependencyAuditSha256": "D9C043F34725E9361528F0EBEE6B58695A722560B823A33DA2583E143F6138AB",
+  "dependencyAuditSourceSha256": "AB1A5025764CFC92E2DCA23D25DD56C7A936817C66C967E491E1D0650D8B40E8",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_coeff",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_kernel",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_fixes_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.reduced_over_fixedField_degree_eq_signed_relativeIndex"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> modular residue fiber bounds -> original diamond action over the actual residue coefficient field.",
+  "discharged": [
+    "The actual original integral-ratio field over larger coefficients is generated by literal coefficient images. Native Laurent coefficient independence proves the injectivity of its scalar tensor, and native adjoin fractions prove that the actual field is that tensor fraction field.",
+    "Mathlib fraction-field equivalence transport extends every actual prime-field automorphism. Its literal coefficient formula, uniqueness, composition and injectivity are proved; no disjointness, action or extension-existence certificate is supplied.",
+    "The already proved original prime-field diamond action therefore extends to the actual larger coefficient field with precisely the signed Gamma1 kernel. Every divisor j generator is the image of its fixed prime-field counterpart, proving full modular base fixation. Native congruence finite index and Artin theory derive the exact degree over the actual fixed field."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Identification of that fixed field with the full modular base, the modular residue fiber bounds and the reverse genus inequality remain required. Original genus preservation is not yet complete. Integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN with every original criterion preserved.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-reduced-diamond-scalar-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "372225BC440A8766C93C86EDE60E9F3E42B07E3E8CB97BA5D5059E30CC50D54F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,57 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O L : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `arithmeticUnframedInertiaUniversality_exists`. -/
+theorem actual_arithmetic_unframed_inertia_universality_arithmeticUnframedInertiaUniversality_exists_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))] (i₀ : ι)
+    (δ : rationalArithmeticGaloisGroup a →* Oˣ)
+    (hδ : ∀ g, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g))
+    (P : HeightOneSpectrum (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P.asIdeal ≤ σ.ker) :
+    ∃ T : Subalgebra O (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ),
+      T = ArithmeticTraceCoefficientRing a ha p hp hpa σ hσ ∧
+      (letI : IsTopologicalRing T := inferInstanceAs (IsTopologicalRing T.toSubring)
+    ∃ hlocal : IsLocalRing T,
+      letI := hlocal
+      IsNoetherianRing T ∧ IsAdic (IsLocalRing.maximalIdeal T) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal T) T ∧
+      ∃ (eT : IsLocalRing.ResidueField T ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : rationalArithmeticGaloisGroup a →ₜ* GeneralLinearGroup ι T)
+        (hτ : (GeneralLinearGroup.map (localCoefficientReduction eT).toRingHom).comp
+          τ.toMonoidHom = σ),
+        let J := representationDeterminantIdeal τ.toMonoidHom δ ⊔
+          matrixRepresentationRelationIdeal τ.toMonoidHom (rationalArithmeticInertia a P.asIdeal)
+        ∃ hquot : IsLocalRing (T ⧸ J),
+          letI := hquot
+          IsNoetherianRing (T ⧸ J) ∧ IsAdic (IsLocalRing.maximalIdeal (T ⧸ J)) ∧
+          IsAdicComplete (IsLocalRing.maximalIdeal (T ⧸ J)) (T ⧸ J) ∧
+          ∀ (A : Type) [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+            [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+            (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+            (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+            ∃ e : OriginalContinuousCoefficientFiber (originalLocalQuotientResidueEquiv eT J) eA ≃
+              {c : OriginalUnframedDeformationClass eA (rationalArithmeticGaloisGroup a) σ //
+                originalUnframedHasDeterminant eA _ σ δ c ∧
+                originalUnframedKillsSubgroup eA _ σ (rationalArithmeticInertia a P.asIdeal) c},
+              ∀ f, (e f).val = originalCoefficientRepresentationClass eT eA _ σ τ hτ
+                (originalQuotientCoefficientRestriction eT eA J f).val) :=
+  arithmeticUnframedInertiaUniversality_exists (L := L) a ha p hp hpa σ hσ i₀ δ hδ P hP
+
+end
+

@@ -1,0 +1,60 @@
+import Dubon2026.SourceIntegralSlashRaisedCuspCoefficients
+import Dubon2026.SourceIntegralSlashReducedTranslation
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Multiply the
+actual weight-twelve cusp coefficients by d^12 before reduction. The literal
+level-integral ring then transports the triangular phase through the already
+proved prescribed-root map. This avoids new inverse-denominator machinery. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane GammaOne
+open GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem coeff_reducedRaisedLevelOne_cleared (N a d : ℕ)
+    [NeZero N] [NeZero a] [NeZero d] (had : a * d = N)
+    {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (ζ : Kˣ)
+    (hφ : ∀ z : Zbar,
+      (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+    (f : ModularForm 𝒮ℒ 12) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+    (g : SL(2, ℤ)) (B : ℕ) (c t : ℤ) (hc : g 1 0 = a * c)
+    (ht : g 1 1 * a - g 1 0 * (B : ℤ) = N * t) (n : ℕ) :
+    (d : K) ^ 12 * (reducedSlashSeries N (by decide)
+      (gammaOneRaisedLevelOne N f) (integralQExp_gammaOneRaisedLevelOne N f hp) g φ hN).coeff n =
+      if a * a ∣ n then (((ζ ^ ((a * B : ℕ) : ℤ) : Kˣ) : K) ^ (n / (a * a))) *
+        (p.coeff (n / (a * a)) : K) else 0 := by
+  let u : Zbar := ⟨zeta N ((a * B : ℕ) : ℤ), isIntegral_zeta N (NeZero.pos N) _⟩
+  have he : (d : RN N) ^ 12 * (slashCoefficientSeries N (by decide)
+      (gammaOneRaisedLevelOne N f) (integralQExp_gammaOneRaisedLevelOne N f hp) g).coeff n =
+      if a * a ∣ n then (integersToLevel N u) ^ (n / (a * a)) *
+        (p.coeff (n / (a * a)) : RN N) else 0 := by
+    apply Subtype.ext
+    simp only [slashCoefficientSeries, PowerSeries.coeff_mk]
+    change (d : ℂ) ^ 12 * (qExpansion (N : ℝ)
+      ((⇑(gammaOneRaisedLevelOne N f) : ℍ → ℂ) ∣[12] (g : GL (Fin 2) ℝ))).coeff n = _
+    rw [coeff_raisedLevelOne_cusp N a d had f g B c t hc ht]
+    have hd : (d : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne d
+    have hcancel : (d : ℂ) ^ 12 * (d : ℂ) ^ (-12 : ℤ) = 1 := by
+      rw [← zpow_natCast, ← zpow_add₀ hd]
+      norm_num
+    rw [← mul_assoc, hcancel, one_mul]
+    split_ifs with hn
+    · rw [← hp, PowerSeries.coeff_map]
+      rfl
+    · rfl
+  have h := congrArg (levelReduction N φ hN) he
+  change (d : K) ^ 12 * (levelReduction N φ hN)
+    ((slashCoefficientSeries N (by decide) (gammaOneRaisedLevelOne N f)
+      (integralQExp_gammaOneRaisedLevelOne N f hp) g).coeff n) = _
+  rw [map_mul, map_pow, map_natCast] at h
+  split_ifs with hn
+  · rw [if_pos hn, map_mul, map_pow, map_intCast] at h
+    exact h.trans (by rw [show levelReduction N φ hN (integersToLevel N u) =
+      (ζ ^ ((a * B : ℕ) : ℤ) : Kˣ) from levelReduction_zeta N φ hN ζ hφ _])
+  · rw [if_neg hn, map_zero] at h
+    exact h
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

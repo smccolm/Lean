@@ -1,0 +1,27 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+  [TopologicalSpace G] [TopologicalSpace R] [IsTopologicalRing R]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+omit [IsTopologicalRing R] in
+/-- Exact original-object consumer of `originalResidueDerivationContinuousCocycleLinearMap_apply`. -/
+theorem actual_original_residue_derivation_continuous_cocycles_originalResidueDerivationContinuousCocycleLinearMap_apply_source
+    (hR : (inferInstance : TopologicalSpace R) = (IsLocalRing.maximalIdeal R).adicTopology)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (σ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (hres : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (d : OriginalResidueDerivations eR) (g : G) :
+    (originalResidueDerivationContinuousCocycleLinearMap hR eR ρ hρ σ hσ hres d).val g =
+      originalResidueDerivationMatrix eR ρ d g * ((σ g)⁻¹).val :=
+  originalResidueDerivationContinuousCocycleLinearMap_apply hR eR ρ hρ σ hσ hres d g
+
+end
+

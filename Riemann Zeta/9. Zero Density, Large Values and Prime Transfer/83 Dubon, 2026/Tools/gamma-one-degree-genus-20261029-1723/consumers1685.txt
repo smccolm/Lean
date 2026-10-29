@@ -1,0 +1,44 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O A B C : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A] [Finite A]
+  [CommRing B] [IsLocalRing B] [Algebra O B] [WithIdeal B] [Finite B]
+  [CommRing C] [IsLocalRing C] [Algebra O C]
+
+/-- Exact original-object consumer of `originalCoefficientFiberProductClassSnd_eq_iff`. -/
+theorem actual_original_coefficient_fiber_product_classes_originalCoefficientFiberProductClassSnd_eq_iff_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eC : IsLocalRing.ResidueField C ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : A →ₐ[O] C) (g : B →ₐ[O] C) [IsLocalHom g.toRingHom]
+    (hg : Function.Surjective g)
+    (hfres : (localCoefficientReduction eC).comp f = localCoefficientReduction eA)
+    (hgres : (localCoefficientReduction eC).comp g = localCoefficientReduction eB)
+    (H : ProfiniteGrp)
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (ρ τ : OriginalCoefficientFiberProductFramedFiber eA f g hg H σ) :
+    (letI := coefficientFiberProductAlgebra f g
+     letI := coefficientFiberProduct_isLocalRing f.toRingHom g.toRingHom
+     letI : WithIdeal (CoefficientFiberProduct f.toRingHom g.toRingHom) :=
+       ⟨IsLocalRing.maximalIdeal _⟩
+     letI : TopologicalSpace (CoefficientFiberProduct f.toRingHom g.toRingHom) :=
+       (IsLocalRing.maximalIdeal _).adicTopology
+     originalCoefficientFiberProductClassSnd hA hB eA eB eC f g hg hfres hgres H σ
+         (originalUnframedClass (coefficientFiberProductResidueEquiv f g hg eA) H σ ρ) =
+       originalCoefficientFiberProductClassSnd hA hB eA eB eC f g hg hfres hgres H σ
+         (originalUnframedClass (coefficientFiberProductResidueEquiv f g hg eA) H σ τ) ↔
+     MatrixStrictlyConjugate (localCoefficientReduction eB).toRingHom
+       ((GeneralLinearGroup.map (coefficientFiberProductSnd f.toRingHom g.toRingHom)).comp ρ.val.toMonoidHom)
+       ((GeneralLinearGroup.map (coefficientFiberProductSnd f.toRingHom g.toRingHom)).comp τ.val.toMonoidHom)) :=
+  originalCoefficientFiberProductClassSnd_eq_iff hA hB eA eB eC f g hg hfres hgres H σ ρ τ
+
+end
+

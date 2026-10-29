@@ -1,0 +1,1 @@
+Apply the genuine left-ideal basis expansion to the action of every original group element on every original basis vector. Evaluate the resulting actual matrix identity on the selected standard vector. This proves the whole original matrix action is intertwined with its coefficient-basis representation by the actual column matrix, entry by entry.

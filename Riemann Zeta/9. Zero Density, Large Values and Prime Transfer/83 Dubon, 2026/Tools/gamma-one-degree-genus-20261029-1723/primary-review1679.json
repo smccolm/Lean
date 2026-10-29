@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CoefficientFiberProductResidue",
+  "mathematics": "Equip the actual compatible-pair coefficient ring with its original diagonal coefficient algebra. Prove compatibility of both genuine algebra projections. Use the already proved surjective local first projection and existing surjectiveLocalResidueAlgEquiv to identify its true residue field with the original residue field. Prove that every actual pair has the original first residue and that the entire genuine fiber-product reduction equals the first original reduction composed with the actual first algebra projection.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-original-coefficient-fiber-route-20261010.json: exact local original coefficient, residue quotient, finite nilpotent-adic and pinned Artinian/local topology APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/HopkinsLevitzki.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Generalized the existing LocalCoefficientFiberProduct coefficient type variables from Type to Type*; same compatible-pair ring, unit proofs and mathematical hypotheses.",
+    "Made the actual coefficient algebra an explicit abbrev as required for a class-valued construction, installed it in extensionality proofs, and removed a no-op dsimp. No diagnostics were suppressed."
+  ],
+  "productionLog": "coefficientFiberResidue1679b-focus.log"
+}

@@ -1,0 +1,7 @@
+### Actual ordinary ideal and genuine invariant direct summand — 10 October 2026
+
+Combine literal ideal annihilation with the genuine invariant rank-one direct-summand criterion for the same coefficient-changed original representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixOrdinaryIdealInvariantCriterion](Extension/Dubon2026/MatrixOrdinaryIdealInvariantCriterion.lean).

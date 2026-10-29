@@ -1,0 +1,88 @@
+import SourceIntegralSlashReducedSums1760d
+import SourceIntegralSlashReducedZero1758c
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash chart. Every coefficient
+relation among integral forms of the same even weight transfers to the actual
+reduced cusp series. A finite part of a prime-field basis reduces the relation
+to integer combinations and the already proved mod-ell zero theorem.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash,
+XHCuspEmbed.wtransfer. The original localized coefficient map and native
+integral-form operations replace the external coefficient-choice construction.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem reducedSlashSeries_linear_relation (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    {K : Type*} [Field K] [CharP K ℓ] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+    (β : SL(2, ℤ)) {k : ℤ} (hk : Even k) {ι : Type*} (s : Finset ι)
+    (G : ι → ModularForm (Gamma1 N) k) (p : ι → PowerSeries ℤ)
+    (hp : ∀ i, IsIntegralQExp (G i) (p i)) (c : ι → K)
+    (hc : ∀ n : ℕ, ∑ i ∈ s, c i * (p i).coeff n = 0) :
+    ∑ i ∈ s, c i • reducedSlashSeries N hk (G i) (hp i) β φ hN = 0 := by
+  classical
+  letI : Algebra (ZMod ℓ) K := (ZMod.castHom (dvd_refl ℓ) K).toAlgebra
+  let B := Module.Free.chooseBasis (ZMod ℓ) K
+  have step1 : ∀ b (n : ℕ), ∑ i ∈ s,
+      B.repr (c i) b * ((p i).coeff n : ZMod ℓ) = 0 := by
+    intro b n
+    have h := congrArg (fun x : K => B.repr x b) (hc n)
+    simp only [map_sum, map_zero, Finsupp.coe_zero, Pi.zero_apply,
+      Finsupp.coe_finset_sum, Finset.sum_apply] at h
+    rw [← h]
+    refine Finset.sum_congr rfl fun i _ => ?_
+    have e : c i * ((p i).coeff n : K) = ((p i).coeff n : ZMod ℓ) • c i := by
+      rw [Algebra.smul_def, map_intCast, mul_comm]
+    rw [e, LinearEquiv.map_smul, Finsupp.smul_apply, smul_eq_mul, mul_comm]
+  let D : _ → ι → ℤ := fun b i => ((B.repr (c i) b).val : ℤ)
+  have hD : ∀ b i, (D b i : ZMod ℓ) = B.repr (c i) b := fun b i => by
+    simp only [D, Int.cast_natCast, ZMod.natCast_zmod_val]
+  have hDK : ∀ b i, (D b i : K) = algebraMap (ZMod ℓ) K (B.repr (c i) b) := fun b i => by
+    rw [← hD, map_intCast]
+  have step2 : ∀ b, ∑ i ∈ s, (D b i : K) •
+      reducedSlashSeries N hk (G i) (hp i) β φ hN = 0 := by
+    intro b
+    simp_rw [PowerSeries.smul_eq_C_mul]
+    rw [← reducedSlashSeries_finset_int_smul N φ hN β hk s G p hp (D b)]
+    apply reducedSlashSeries_zero_of_prime_reduction N ℓ hk _ _ β φ hN
+    have hz : (∑ i ∈ s, PowerSeries.C (D b i) * p i).map
+        (Int.castRingHom (ZMod ℓ)) = 0 := by
+      ext n
+      simp only [PowerSeries.coeff_map, map_sum, PowerSeries.coeff_C_mul,
+        eq_intCast, Int.cast_sum, Int.cast_mul, hD, map_zero]
+      exact step1 b n
+    change HahnSeries.ofPowerSeries ℤ (ZMod ℓ)
+      ((∑ i ∈ s, PowerSeries.C (D b i) * p i).map (Int.castRingHom (ZMod ℓ))) = 0
+    rw [hz, map_zero]
+  let T := s.biUnion fun i => (B.repr (c i)).support
+  have hcT : ∀ i ∈ s, c i = ∑ b ∈ T, B.repr (c i) b • B b := by
+    intro i hi
+    conv_lhs => rw [← B.linearCombination_repr (c i)]
+    rw [Finsupp.linearCombination_apply,
+      Finsupp.sum_of_support_subset (B.repr (c i))
+        (Finset.subset_biUnion_of_mem (fun i => (B.repr (c i)).support) hi)
+        (fun b r => r • B b) (fun b _ => zero_smul _ _)]
+  calc
+    ∑ i ∈ s, c i • reducedSlashSeries N hk (G i) (hp i) β φ hN =
+        ∑ i ∈ s, ∑ b ∈ T, (B.repr (c i) b • B b) •
+          reducedSlashSeries N hk (G i) (hp i) β φ hN := by
+      refine Finset.sum_congr rfl fun i hi => ?_
+      nth_rw 1 [hcT i hi]
+      rw [Finset.sum_smul]
+    _ = ∑ b ∈ T, B b • ∑ i ∈ s, (D b i : K) •
+        reducedSlashSeries N hk (G i) (hp i) β φ hN := by
+      rw [Finset.sum_comm]
+      refine Finset.sum_congr rfl fun b _ => ?_
+      rw [Finset.smul_sum]
+      refine Finset.sum_congr rfl fun i _ => ?_
+      rw [smul_smul, hDK, Algebra.smul_def (B.repr (c i) b) (B b),
+        mul_comm ((algebraMap (ZMod ℓ) K) _)]
+    _ = 0 := by simp only [step2, smul_zero, Finset.sum_const_zero]
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

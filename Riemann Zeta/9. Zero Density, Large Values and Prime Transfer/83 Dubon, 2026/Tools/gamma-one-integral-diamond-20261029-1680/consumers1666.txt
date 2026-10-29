@@ -1,0 +1,27 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι A B L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing A] [CommRing B] [IsLocalRing A] [IsLocalRing B]
+  [Field L] [Algebra (IsLocalRing.ResidueField B) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `matrixRepresentation_stabilizer_lifts`. -/
+theorem actual_matrix_representation_stabilizer_lifting_matrixRepresentation_stabilizer_lifts_source
+    (f : A →+* B) (hf : Function.Surjective f)
+    (ρ : G →* GeneralLinearGroup ι A)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue B)).comp
+          ((GeneralLinearGroup.map f).comp ρ))))]
+    (U : GeneralLinearGroup ι B)
+    (hU : ∀ g, U * GeneralLinearGroup.map f (ρ g) = GeneralLinearGroup.map f (ρ g) * U) :
+    ∃ V : GeneralLinearGroup ι A,
+      GeneralLinearGroup.map f V = U ∧ ∀ g, V * ρ g = ρ g * V :=
+  matrixRepresentation_stabilizer_lifts (L := L) f hf ρ U hU
+
+end
+

@@ -1,0 +1,7 @@
+### Actual reverse ordinary relation criterion — 10 October 2026
+
+Use the actual invariant-line basis to conjugate every original matrix into a matrix fixing the first coordinate. Its original determinant equals its second diagonal entry. Therefore the genuine determinant-complement operator maps every original vector into the invariant line. All original matrices fix that image, proving every literal ordinary relation is zero.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTwoOrdinaryRelationConverse](Extension/Dubon2026/MatrixTwoOrdinaryRelationConverse.lean).

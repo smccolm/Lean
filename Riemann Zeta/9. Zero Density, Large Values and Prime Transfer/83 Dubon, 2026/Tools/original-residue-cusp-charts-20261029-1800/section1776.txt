@@ -1,0 +1,7 @@
+### Actual primitive vector in a rank-one direct summand — 10 October 2026
+
+An actual linear functional taking value one on an original two-coordinate vector forces at least one coordinate to be a unit in the local coefficient ring. Construct that functional from the genuine projection onto the original direct summand followed by its actual rank-one equivalence with the coefficient ring. The inverse image of one is the required primitive vector in the original submodule.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [SubmoduleRankOnePrimitiveVector](Extension/Dubon2026/SubmoduleRankOnePrimitiveVector.lean).

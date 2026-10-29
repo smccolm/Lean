@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι K L : Type} [Group G] [Fintype ι] [DecidableEq ι]
+  [Field K] [Field L] [Algebra K L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `matrixTraceZeroAdjointInvariants_eq_bot`. -/
+theorem actual_trace_zero_adjoint_invariants_matrixTraceZeroAdjointInvariants_eq_bot_source
+    (hn : (Fintype.card ι : K) ≠ 0) (ρ : G →* GeneralLinearGroup ι K)
+    [Representation.IsIrreducible (matrixStandardRepresentation (matrixCoefficientExtension (L := L) ρ))] :
+    (matrixTraceZeroAdjointRepresentation ρ).invariants = ⊥ :=
+  matrixTraceZeroAdjointInvariants_eq_bot (L := L) hn ρ
+
+end
+

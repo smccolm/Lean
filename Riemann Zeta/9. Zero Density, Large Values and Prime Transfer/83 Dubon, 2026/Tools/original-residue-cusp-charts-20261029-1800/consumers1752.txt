@@ -1,0 +1,34 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `fixedResidualTraceAlgebra_localData`. -/
+theorem actual_fixed_residual_trace_universal_ring_fixedResidualTraceAlgebra_localData_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+    (p : ℕ) (H : ProfiniteGrp.{0})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))]
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ))
+    (hS : Function.Surjective (profiniteGeneratorPresentation
+      (originalResidualProfiniteGroup p H σ hσ) S)) (i₀ : ι) :
+    let T := closedMatrixTraceAlgebra (O := O)
+      (fixedResidualFramedUniversalRepresentation p H σ hσ S hS)
+    ∃ hlocal : IsLocalRing T,
+      letI := hlocal
+      IsNoetherianRing T ∧ IsAdic (IsLocalRing.maximalIdeal T) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal T) T ∧
+      ∃ f : FixedResidualFramedCoefficientRing p H σ hσ S →ₐ[O] T,
+        (∀ x : T, f x = x) ∧ Continuous f :=
+  fixedResidualTraceAlgebra_localData (L := L) p H σ hσ S hS i₀
+
+end
+

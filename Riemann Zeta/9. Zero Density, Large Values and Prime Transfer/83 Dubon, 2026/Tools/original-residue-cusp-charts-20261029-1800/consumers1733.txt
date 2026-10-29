@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type} [Group G] [TopologicalSpace G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R]
+  [Algebra O R] [t : TopologicalSpace R] [IsTopologicalRing R]
+  [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+
+/-- Exact original-object consumer of `originalAdicContinuousTraceRepresentationDescent_exists`. -/
+theorem actual_original_adic_trace_representation_descent_originalAdicContinuousTraceRepresentationDescent_exists_source
+    {L : Type} [Field L] [Algebra (IsLocalRing.ResidueField R) L] [IsAlgClosed L]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R))
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →ₜ* GeneralLinearGroup ι R)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        ((GeneralLinearGroup.map (IsLocalRing.residue R)).comp ρ.toMonoidHom)))] (i₀ : ι) :
+    ∃ τ : G →ₜ* GeneralLinearGroup ι (closedMatrixTraceAlgebra (O := O) ρ.toMonoidHom),
+      MatrixStrictlyConjugate (IsLocalRing.residue R)
+        ((GeneralLinearGroup.map (closedMatrixTraceAlgebra (O := O) ρ.toMonoidHom).val.toRingHom).comp
+          τ.toMonoidHom) ρ.toMonoidHom :=
+  originalAdicContinuousTraceRepresentationDescent_exists (L := L) hR eR ρ i₀
+
+end
+

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalUnframedDeterminantOrdinaryQuotientEquivalence",
+  "mathematics": "Compose the existing original quotient coefficient-fiber equivalence with the restriction of the genuine whole class bijection. The proved literal sum-ideal criterion identifies exactly the original fixed-determinant ordinary classes. Its evaluation formula retains the same original matrices and the same quotient coefficient map.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "determinant-ordinary-next-drafts-20261010.json: source Sections6.1-6.2, actual determinant and ordinary coefficient ideals, original class evaluation and arithmetic trace universality inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "detOrdinaryEquiv1789-focus.log"
+}

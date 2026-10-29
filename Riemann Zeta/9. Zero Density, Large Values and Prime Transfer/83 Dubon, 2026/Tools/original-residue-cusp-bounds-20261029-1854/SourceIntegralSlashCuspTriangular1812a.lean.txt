@@ -1,0 +1,47 @@
+import Dubon2026.HeckeTriangular
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base coordinate of the actual cusp
+chart. Factor the actual level-raising matrix times the specified cusp matrix
+into an integral modular matrix and the already defined triangular Hecke
+matrix. Only this exact factorization is needed; the native slash and Fourier
+APIs provide the subsequent analytic identities.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_eq_slot_and_diamondPullbackModL_eq_qTwist,
+heckeDiag_mul_eq. Native levelRaiseMatrix and heckeTriangularMatrix replace
+the external matrix definitions. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open Matrix Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+theorem levelRaise_mul_cusp_triangular (N a d : ℕ) [NeZero N] [NeZero a] [NeZero d]
+    (had : a * d = N) (g : SL(2, ℤ)) (B : ℕ) (c t : ℤ)
+    (hc : g 1 0 = a * c) (ht : g 1 1 * a - g 1 0 * (B : ℤ) = N * t) :
+    ∃ δ : SL(2, ℤ), levelRaiseMatrix N * (g : GL (Fin 2) ℝ) =
+      (δ : GL (Fin 2) ℝ) * heckeTriangularMatrix a d B := by
+  have hdet := Matrix.SpecialLinearGroup.det_coe g
+  rw [Matrix.det_fin_two] at hdet
+  have hNad : (N : ℤ) = a * d := by exact_mod_cast had.symm
+  have ha : (a : ℤ) ≠ 0 := by exact_mod_cast NeZero.ne a
+  have h11 : g 1 1 = d * t + c * (B : ℤ) := by
+    have h1 : (a : ℤ) * (g 1 1 - d * t - c * (B : ℤ)) = 0 := by
+      linear_combination ht + (B : ℤ) * hc + t * hNad
+    have h2 := (mul_eq_zero.mp h1).resolve_left ha
+    linear_combination h2
+  let δ : SL(2, ℤ) := ⟨!![g 0 0 * d, a * g 0 1 - g 0 0 * B; c, t], by
+    rw [Matrix.det_fin_two_of]
+    linear_combination hdet + g 0 1 * hc - g 0 0 * h11⟩
+  refine ⟨δ, ?_⟩
+  have hNr : (N : ℝ) = a * d := by exact_mod_cast had.symm
+  have hcr : ((g 1 0 : ℤ) : ℝ) = a * c := by exact_mod_cast hc
+  have h11r : ((g 1 1 : ℤ) : ℝ) = d * t + c * (B : ℕ) := by exact_mod_cast h11
+  apply Units.ext
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [levelRaiseMatrix, GeneralLinearGroup.mkOfDetNeZero, heckeTriangularMatrix_val,
+      mapGL_coe_matrix, Matrix.mul_apply, Fin.sum_univ_two, δ, hNr, hcr, h11r] <;> ring
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

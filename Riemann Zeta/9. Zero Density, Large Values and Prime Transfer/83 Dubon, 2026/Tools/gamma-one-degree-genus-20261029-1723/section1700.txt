@@ -1,0 +1,7 @@
+### Actual original representation basis over closed traces — 10 October 2026
+
+Select a genuine finite full-matrix basis from the original representation using actual residual absolute irreducibility. Every product of two chosen original basis matrices and every product of an original representation matrix with a basis matrix is itself the actual representation value at a group product. Its trace therefore belongs to the same original closed trace algebra. Apply proved locality, unit reflection and trace-coordinate descent to derive membership of every original representation coordinate in that actual closed trace algebra.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalMatrixTraceBasis](Extension/Dubon2026/OriginalMatrixTraceBasis.lean).

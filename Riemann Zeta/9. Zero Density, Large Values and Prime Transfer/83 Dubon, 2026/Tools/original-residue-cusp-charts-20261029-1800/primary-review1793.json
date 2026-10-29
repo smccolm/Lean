@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "FiniteFreeHopfPoints",
+  "mathematics": "Reuse the pinned finite-algebra-hom API to derive finiteness and the rank bound for the actual field-valued points of the original finite free coordinate algebra. Cocommutativity supplies a commutative group using the previously constructed true point-group inverse.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-flat-hopf-points-drafts-20261010.json and finite-flat-primary-api-review-20261010.json: source Section6.3 and actual pinned Hopf, convolution, coefficient-composition and finite-free point APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf",
+    "https://math.stanford.edu/~conrad/papers/ramdef.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Declare the constructed class-valued commutative group as abbrev, preserving its actual convolution operations and meeting the reducibility requirement."
+  ],
+  "productionLog": "finitePoints1793-focus.log"
+}

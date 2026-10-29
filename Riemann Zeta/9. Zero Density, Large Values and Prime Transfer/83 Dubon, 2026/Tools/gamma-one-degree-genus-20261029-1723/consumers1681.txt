@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {A B C : Type*} [CommRing A] [CommRing B] [CommRing C]
+  [IsLocalRing A] [Finite A] [Finite B]
+
+/-- Exact original-object consumer of `finiteCoefficientFiberProduct_original_adicTopology_eq_product`. -/
+theorem actual_finite_coefficient_fiber_product_topology_finiteCoefficientFiberProduct_original_adicTopology_eq_product_source
+    [IsLocalRing B] [WithIdeal A] [WithIdeal B]
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (f : A →+* C) (g : B →+* C) [IsLocalHom g] :
+    (letI := coefficientFiberProduct_isLocalRing f g
+     (IsLocalRing.maximalIdeal (CoefficientFiberProduct f g)).adicTopology =
+       (inferInstance : TopologicalSpace (CoefficientFiberProduct f g))) :=
+  finiteCoefficientFiberProduct_original_adicTopology_eq_product hA hB f g
+
+end
+

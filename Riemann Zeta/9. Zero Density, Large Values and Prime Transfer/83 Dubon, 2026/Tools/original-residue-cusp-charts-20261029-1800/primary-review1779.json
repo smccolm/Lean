@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixOrdinaryRelationIdeal",
+  "mathematics": "Define the literal ordinary matrix polynomial operator, prove its exact coefficient-change formula and identify annihilation of the span of all its entries with vanishing of all actual changed operators.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "ordinary-quotient-next-drafts-20261010.json: source Section6.2, genuine invariant submodules, exact coefficient polynomials, original quotient fibers and residue compatibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Evaluate the four genuine Fin2 matrix entries before simplification, resolving coefficient maps on diagonal entries; omit the unused map_apply simp argument. A broad apply_ite simplification reached the recursion limit and was replaced by finite entry evaluation without raising limits."
+  ],
+  "productionLog": "ordinaryIdeal1779c-focus.log"
+}

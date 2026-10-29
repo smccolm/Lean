@@ -1,0 +1,54 @@
+import Mathlib.RingTheory.Localization.Integral
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> injectivity of the actual normalized-generator
+chart. The original coordinate degree makes the function field algebraic over
+its j coordinate. Native fraction-ring algebraicity and tower injectivity then
+reduce chart injectivity to transcendence of the computed image of j. This
+replaces the reference's separate minimal-polynomial denominator argument.
+The actual normalized-generator chart and its coordinate image remain separate
+consumers to construct; this lemma does not assume a field embedding. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntermediateField
+open scoped IntermediateField.algebraAdjoinAdjoin
+
+theorem coordinate_algebraic_chart_injective
+    {K F L : Type*} [Field K] [Field F] [Field L] [Algebra K F] [Algebra K L]
+    (A : Subalgebra K F) (x : F) (hx : x ∈ A)
+    [Algebra.IsAlgebraic K⟮x⟯ F] (φ : A →ₐ[K] L)
+    (hφx : Transcendental K (φ ⟨x, hx⟩)) : Function.Injective φ := by
+  let R := Algebra.adjoin K ({x} : Set F)
+  have hRA : R ≤ A := Algebra.adjoin_le (Set.singleton_subset_iff.mpr hx)
+  letI : Algebra R A := (Subalgebra.inclusion hRA).toAlgebra
+  letI : IsScalarTower R A F := IsScalarTower.of_algebraMap_eq' rfl
+  letI : Algebra.IsAlgebraic R F :=
+    (IsFractionRing.comap_isAlgebraic_iff (A := R) (K := K⟮x⟯) (C := F)).mpr
+      inferInstance
+  letI : Algebra.IsAlgebraic R A :=
+    Algebra.IsAlgebraic.tower_bot_of_injective (R := R) (S := A) (A := F)
+      Subtype.val_injective
+  letI : Algebra A L := φ.toRingHom.toAlgebra
+  letI : Algebra R L := (φ.comp (Subalgebra.inclusion hRA)).toRingHom.toAlgebra
+  letI : IsScalarTower R A L := IsScalarTower.of_algebraMap_eq' rfl
+  apply Algebra.IsAlgebraic.injective_tower_top (R := R) (A := L) A
+  rw [injective_iff_map_eq_zero]
+  intro a ha
+  have haR : (a : F) ∈ Algebra.adjoin K ({x} : Set F) := a.property
+  rw [Algebra.adjoin_singleton_eq_range_aeval] at haR
+  obtain ⟨p, hp⟩ := haR
+  have he : (Subalgebra.inclusion hRA) a = Polynomial.aeval (⟨x, hx⟩ : A) p := by
+    apply Subtype.ext
+    change (a : F) = A.val (Polynomial.aeval (⟨x, hx⟩ : A) p)
+    rw [← Polynomial.aeval_algHom_apply]
+    exact hp.symm
+  have hz : Polynomial.aeval (φ ⟨x, hx⟩) p = 0 := by
+    rw [Polynomial.aeval_algHom_apply, ← he]
+    exact ha
+  have hp0 : p = 0 := (transcendental_iff_injective.mp hφx) (by simpa using hz)
+  apply Subtype.ext
+  simpa [hp0] using hp.symm
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

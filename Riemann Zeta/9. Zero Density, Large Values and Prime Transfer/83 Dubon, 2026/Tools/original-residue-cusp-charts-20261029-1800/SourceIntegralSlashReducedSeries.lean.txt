@@ -1,0 +1,56 @@
+import SourceIntegralSlashCoefficientReduction
+import Dubon2026.SourceEvenWeightUniformSlashIntegrality
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash chart. Put the actual
+width-N Fourier expansion in the already proved level-integral coefficient
+ring, then apply its localization reduction. Every algebraic-integer lift
+after any clearing power gives precisely the same reduced series.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {k : ℤ} (hk : Even k)
+  (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ} (hp : IsIntegralQExp f p)
+  (β : SL(2, ℤ))
+
+/-- The actual Fourier coefficients of an integral form at the chosen cusp. -/
+def slashCoefficientSeries : PowerSeries (RN N) :=
+  PowerSeries.mk fun n => ⟨(qExpansion (N : ℝ)
+    ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))).coeff n, by
+      obtain ⟨a, ha⟩ := exists_level_power_integral_even_slash_coefficients hk f hp β
+      exact ⟨a, ha n⟩⟩
+
+theorem slashCoefficientSeries_map :
+    (slashCoefficientSeries N hk f hp β).map (RN N).subtype =
+      qExpansion (N : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ)) := by
+  ext n
+  rw [PowerSeries.coeff_map, slashCoefficientSeries, PowerSeries.coeff_mk]
+  rfl
+
+variable {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0)
+
+/-- Literal reduction of the width-N Fourier expansion through the level localization. -/
+def reducedSlashSeries : PowerSeries K :=
+  (slashCoefficientSeries N hk f hp β).map (levelReduction N φ hN)
+
+theorem map_clearedSlash_eq_smul_reducedSlash (a : ℕ) (F : PowerSeries Zbar)
+    (hF : F.map (algebraMap Zbar ℂ) = (N : ℂ) ^ a •
+      qExpansion (N : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (β : GL (Fin 2) ℝ))) :
+    F.map φ = (N : K) ^ a • reducedSlashSeries N hk f hp β φ hN := by
+  ext n
+  have hc := congrArg (PowerSeries.coeff n) hF
+  simp only [PowerSeries.coeff_map, PowerSeries.coeff_smul, smul_eq_mul] at hc
+  have he : integersToLevel N (F.coeff n) =
+      (N : RN N) ^ a * (slashCoefficientSeries N hk f hp β).coeff n := by
+    apply Subtype.ext
+    simpa only [slashCoefficientSeries, PowerSeries.coeff_mk] using hc
+  have h := congrArg (levelReduction N φ hN) he
+  rw [levelReduction_integers, map_mul, map_pow, map_natCast] at h
+  simpa only [reducedSlashSeries, PowerSeries.coeff_map, PowerSeries.coeff_smul,
+    smul_eq_mul] using h
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

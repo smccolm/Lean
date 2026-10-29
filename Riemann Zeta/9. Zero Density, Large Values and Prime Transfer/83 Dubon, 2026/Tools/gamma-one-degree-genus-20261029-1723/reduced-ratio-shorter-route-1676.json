@@ -1,0 +1,7 @@
+{
+  "dependency": "DUB-17/18 -> original Gamma1 degree/genus -> signed-index lower bound -> full reduced field action -> independence of all reduced integral-ratio representatives",
+  "source": "anthropic-reduced-field-action-1662/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt, cross and witness arithmetic",
+  "reuse": ["Native ModularForm.qExpansion_mul and qExpansion_sub", "Native SL2 slash multiplication and subtraction", "Proved actual integral diamond witnesses", "Proved witness independence and reduction-zero equivalence"],
+  "shorterRoute": "First prove multiplication and subtraction of the actual normalized reduction; these are also required for the eventual field homomorphism. For f/g=f'/g', use f*g' - g*f', with both products already of weight k+k'. Reduction-zero preservation then proves cross-relation preservation. This avoids the external cross theorem's second exponent-clearing calculation, bespoke analytic subtraction proof and weight mcast.",
+  "boundary": "The actual reduced field action, its signed kernel, index lower bound and degree/genus remain open until all original field elements and relations are consumed. No acceptance gate is closed."
+}

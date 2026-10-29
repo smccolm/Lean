@@ -1,0 +1,53 @@
+import Dubon2026.SourceReducedCoordinateDegreeTransport
+import Dubon2026.SourceReducedFieldCoefficientMap
+import Dubon2026.SourceGammaOneResidueRatioDegree
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> signed-index bound.
+The native finite residue-coordinate theorem and the actual integral-ratio
+inclusion give positive degree for the residue ratio field. Apply the proved
+coefficient transport to the literal prime-field and residue-field ratios.
+This discharges the finiteness input to the reduced diamond index argument
+and supplies its return degree inequality, without a degree-preservation or
+base-change equality hypothesis. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField GammaOne GammaOne.CoefficientReduction
+open scoped IntermediateField MatrixGroups
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (residueImage A Γ) := (residueImage A Γ).toSubalgebra.algebra
+
+theorem residue_integralRatio_degree_pos (hT : ModularGroup.T ∈ Γ) :
+    0 < relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk Γ) := by
+  letI : FiniteDimensional kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ) :=
+    (finite_residueCoordinate_and_degree_le A Γ hT).1
+  have hp : 0 < Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ) :=
+    Module.finrank_pos
+  rw [residue_coordinate_degree_eq_relfinrank A Γ] at hp
+  have hj : kk⟮jqModC kk⟯ ≤ qExpFunctionFieldC kk Γ :=
+    adjoin_simple_le_iff.mpr (jqModC_mem_integralRatioField kk Γ)
+  rw [← relfinrank_mul_relfinrank hj (qExpFunctionFieldC_le_residueImage A Γ)] at hp
+  exact Nat.pos_of_mul_pos_right hp
+
+theorem primeField_degree_pos_and_le_residue (ℓ : ℕ) [Fact ℓ.Prime] [CharP kk ℓ]
+    (hT : ModularGroup.T ∈ Γ) :
+    0 < relfinrank (ZMod ℓ)⟮jqModC (ZMod ℓ)⟯ (qExpFunctionFieldC (ZMod ℓ) Γ) ∧
+      relfinrank (ZMod ℓ)⟮jqModC (ZMod ℓ)⟯ (qExpFunctionFieldC (ZMod ℓ) Γ) ≤
+        relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk Γ) := by
+  let σ : ZMod ℓ →+* kk := ZMod.castHom (dvd_refl ℓ) kk
+  letI : Algebra (ZMod ℓ) kk := σ.toAlgebra
+  have hj : coeffMap (algebraMap (ZMod ℓ) kk) (jqModC (ZMod ℓ)) = jqModC kk :=
+    map_jqModC σ
+  have hp : 0 < relfinrank kk⟮coeffMap (algebraMap (ZMod ℓ) kk) (jqModC (ZMod ℓ))⟯
+      (qExpFunctionFieldC kk Γ) := by
+    rw [hj]
+    exact residue_integralRatio_degree_pos A Γ hT
+  have h := positive_relfinrank_and_le_of_coeffMap (qExpFunctionFieldC (ZMod ℓ) Γ)
+    (qExpFunctionFieldC kk Γ) (jqModC (ZMod ℓ))
+    (jqModC_mem_integralRatioField (ZMod ℓ) Γ) (transcendental_jqModC (ZMod ℓ))
+    (fun _ hx => coeffMap_mem_originalField σ Γ hx) hp
+  rwa [hj] at h
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

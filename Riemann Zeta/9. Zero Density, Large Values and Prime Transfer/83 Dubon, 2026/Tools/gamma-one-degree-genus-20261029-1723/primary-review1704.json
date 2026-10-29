@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixIdempotentNewtonBounds",
+  "mathematics": "Define the genuine cubic iteration starting at the original matrix X. Apply the proved noncommutative polynomial identities and actual matrix ideal-product bounds to show that its idempotency error and each successive difference have entries in I^(2^n). Prove that every actual iterate remains in the same coefficient subalgebra as the seed.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: original adic Cauchy compatibility, completeness, matrix topology, genuine residue maps and cubic error identities inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Reused existing production MatrixIdealPowerProducts, including its literal coefficient matrix ideal multiplication.",
+    "Qualified Ideal.top_mul in the same genuine ideal-product reduction. No hypotheses or conclusions changed."
+  ],
+  "productionLog": "matrixNewton1704b-focus.log"
+}

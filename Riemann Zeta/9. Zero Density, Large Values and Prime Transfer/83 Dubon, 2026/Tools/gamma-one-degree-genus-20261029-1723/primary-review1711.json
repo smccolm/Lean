@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CoefficientMatrixAlgebraReductionKernel",
+  "mathematics": "Prove that the constructed coefficient-algebra basis consists of the same original matrix basis vectors. For an actual algebra element with entries in the original ambient maximal ideal, its genuine full-matrix coordinates lie both in that ideal and in the original coefficient subalgebra. Locality of the inclusion puts these coefficients in the subalgebra maximal ideal. Its actual basis expansion then proves membership in that maximal ideal times the same matrix algebra.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-idempotent-left-ideal-route-20261010.json: actual idempotent left ideal, finite module Nakayama, original basis coordinates, true residue maps and local-ring column invertibility inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Made the actual transported span-basis coercion explicit and used Basis.coe_span_apply on the same original linearly independent family.",
+    "Reduced the original subalgebra scalar and matrix-value coercions explicitly in the genuine basis expansion. Removed ineffective simplification arguments; no source or mathematical changes."
+  ],
+  "productionLog": "coefficientKernel1711b-focus.log"
+}

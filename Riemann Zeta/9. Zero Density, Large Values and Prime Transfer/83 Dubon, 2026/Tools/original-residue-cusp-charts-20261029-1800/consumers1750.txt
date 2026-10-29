@@ -1,0 +1,25 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O L : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L]
+
+/-- Exact original-object consumer of `fixedResidualOriginalRepresentation_absoluteIrreducible`. -/
+theorem actual_fixed_residual_absolute_irreducibility_fixedResidualOriginalRepresentation_absoluteIrreducible_source
+    (p : ℕ) (H : ProfiniteGrp.{0})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))] :
+    Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L)
+        (fixedResidualOriginalRepresentation p H σ hσ).toMonoidHom)) :=
+  fixedResidualOriginalRepresentation_absoluteIrreducible (L := L) p H σ hσ
+
+end
+

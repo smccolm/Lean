@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [IsLocalRing R]
+  [t : TopologicalSpace R] [IsAdicComplete (IsLocalRing.maximalIdeal R) R]
+
+/-- Exact original-object consumer of `originalAdicCompleteLocal_compactSpace`. -/
+theorem actual_original_adic_complete_local_compactness_originalAdicCompleteLocal_compactSpace_source [IsNoetherianRing R]
+    [Finite (IsLocalRing.ResidueField R)]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R)) : CompactSpace R :=
+  originalAdicCompleteLocal_compactSpace hR
+
+end
+

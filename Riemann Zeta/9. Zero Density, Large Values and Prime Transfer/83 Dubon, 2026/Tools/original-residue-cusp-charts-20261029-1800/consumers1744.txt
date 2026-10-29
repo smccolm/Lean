@@ -1,0 +1,31 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O R A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `originalCoefficientRepresentationClass_eq_iff`. -/
+theorem actual_original_coefficient_representation_class_originalCoefficientRepresentationClass_eq_iff_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u}) (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (τ : H →ₜ* GeneralLinearGroup ι R)
+    (hτ : (GeneralLinearGroup.map (localCoefficientReduction eR).toRingHom).comp
+      τ.toMonoidHom = σ)
+    (f g : OriginalContinuousCoefficientFiber eR eA) :
+    originalCoefficientRepresentationClass eR eA H σ τ hτ f =
+        originalCoefficientRepresentationClass eR eA H σ τ hτ g ↔
+      MatrixStrictlyConjugate (localCoefficientReduction eA).toRingHom
+        ((GeneralLinearGroup.map f.val.toRingHom).comp τ.toMonoidHom)
+        ((GeneralLinearGroup.map g.val.toRingHom).comp τ.toMonoidHom) :=
+  originalCoefficientRepresentationClass_eq_iff eR eA H σ τ hτ f g
+
+end
+

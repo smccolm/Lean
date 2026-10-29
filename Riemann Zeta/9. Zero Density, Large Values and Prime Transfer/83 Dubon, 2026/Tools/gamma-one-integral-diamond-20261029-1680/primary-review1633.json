@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalResidueDerivationMatrices",
+  "mathematics": "Original relative residue derivations carry the genuine original residue-field action on their actual epsilon ideal. Evaluate each derivation on the same original representation matrix entries and evaluate its genuine dual-number coefficient lift on the entire original representation. The resulting real first-order lift has the given whole original residual representation. Its actual adjoint cocycle equals the original derivative matrix multiplied on the right by the inverse residual matrix, yielding a genuine residue-field-linear cocycle map.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original matrix infinitesimal and coordinate derivation-linearity proofs re-read. Genuine actual original unramified universal representation and its full true residue theorem inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Actual original relative derivation cocycle/class linearity requires kernel proof. Cotangent residue-field linearity, explicit relative maximal-ideal cotangent quotient, full Selmer dimension theory, modular association and patching remain open.",
+  "productionFixes": [
+    "Proved that actual residue-field and original-ring scalar actions commute on the genuine epsilon ideal by their original commutative dual-number multiplication, then used the pinned derivation module instance explicitly. This provides the original residue-field module, rather than assuming scalar compatibility. Matrix scalar formula then holds definitionally. Final focused exit0 with zero diagnostics consumed."
+  ],
+  "productionLog": "relativeMatrixLinearity1633b-focus.log"
+}

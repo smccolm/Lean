@@ -1,0 +1,58 @@
+import SourceCoordinateChartFractionExtension1778b
+import SourceIntegralSlashNormalizedAlgebra1777d
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. The actual
+normalized-generator algebra map extends to the whole original integral-ratio
+field. Its image of j is the proved transcendental j(q^N); a positive original
+coordinate degree supplies algebraicity. The next valuation-residue consumer
+discharges that degree premise from the proved original degree preservation. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntermediateField
+open scoped MatrixGroups IntermediateField
+local notation "Zbar" => integralClosure ℤ ℂ
+private local instance (N : ℕ) (K : Type*) [Field K] :
+    Algebra K (qExpFunctionFieldC K (Gamma1 N)) :=
+  (qExpFunctionFieldC K (Gamma1 N)).toSubalgebra.algebra
+
+theorem exists_originalReducedSlashFieldHom_of_coordinate_degree
+    (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {K : Type*} [Field K] [CharP K ℓ]
+    (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (β : SL(2, ℤ))
+    (hdegree : 0 < relfinrank K⟮jqModC K⟯ (qExpFunctionFieldC K (Gamma1 N))) :
+    ∃ Φ : qExpFunctionFieldC K (Gamma1 N) →ₐ[K] LaurentSeries K,
+      ∀ x (hx : x ∈ normalizedGenerators N K),
+        Φ ⟨x, normalizedGenerators_subset N K hx⟩ = normalizedSlashValue N φ hN β x := by
+  let G := normalizedGenerators N K
+  let F := IntermediateField.adjoin K G
+  have hF : qExpFunctionFieldC K (Gamma1 N) = F := originalField_eq_adjoin_normalizedGenerators N K
+  let j : F := ⟨jqModC K, IntermediateField.subset_adjoin K G (jqModC_mem_normalizedGenerators N K)⟩
+  have hjG : (j : LaurentSeries K) ∈ G := jqModC_mem_normalizedGenerators N K
+  have hcoord : Module.finrank K⟮j⟯ F = relfinrank K⟮jqModC K⟯ F := by
+    have hB : lift (IntermediateField.adjoin K ({j} : Set F)) = K⟮jqModC K⟯ :=
+      lift_adjoin_simple K F j
+    have h := relfinrank_map_map (IntermediateField.adjoin K ({j} : Set F))
+      (⊤ : IntermediateField K F) F.val
+    change relfinrank (lift (IntermediateField.adjoin K ({j} : Set F)))
+      (lift (⊤ : IntermediateField K F)) = _ at h
+    have ht : lift (⊤ : IntermediateField K F) = F := lift_top K F
+    rw [hB, ht, relfinrank_top_right] at h
+    exact h.symm
+  have hpos : 0 < Module.finrank K⟮j⟯ F := by rwa [hcoord, ← hF]
+  letI : Module.Free K⟮j⟯ F := Module.Free.of_divisionRing _ _
+  letI : FiniteDimensional K⟮j⟯ F := Module.finite_of_finrank_pos hpos
+  letI : Algebra.IsAlgebraic K⟮j⟯ F := Algebra.IsAlgebraic.of_finite _ _
+  obtain ⟨ψ, hψ⟩ := exists_normalizedSlashAlgebraHom N ℓ φ hN β
+  have ht : Transcendental K (ψ ⟨j, Algebra.subset_adjoin hjG⟩) := by
+    rw [hψ _ hjG]
+    exact normalizedSlashValue_jqModC_transcendental N ℓ φ hN β
+  obtain ⟨Φ, hΦ⟩ := exists_coordinate_chart_fraction_extension G j hjG ψ ht
+  let E : qExpFunctionFieldC K (Gamma1 N) ≃ₐ[K] F := IntermediateField.equivOfEq hF
+  refine ⟨Φ.comp E.toAlgHom, fun x hx => ?_⟩
+  have he : E ⟨x, normalizedGenerators_subset N K hx⟩ =
+      algebraMap (Algebra.adjoin K G) F ⟨x, Algebra.subset_adjoin hx⟩ := Subtype.ext rfl
+  rw [AlgHom.comp_apply, AlgEquiv.coe_algHom, he, hΦ]
+  exact hψ x hx
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

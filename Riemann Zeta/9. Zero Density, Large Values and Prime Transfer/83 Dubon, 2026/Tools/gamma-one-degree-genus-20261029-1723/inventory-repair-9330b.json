@@ -1,0 +1,237 @@
+{
+  "reason": "The strict paper runner rejected duplicate identical retained-file classifications. The promotion archived both a failed Lean source and its preserved .lean.txt evidence to the same inert target and registered that unchanged target twice. Retain every artifact and exactly one identical classification; no source, audit, runner or verification requirement is altered.",
+  "originalScaffoldSha256": "C9A78637F19A1CD7BE8FEE127E312EB82A1936E3B876831B7373A0B4B6F2BD34",
+  "previousPaperExit": 1,
+  "previousPaperConsoleSha256": "7E9F49B4BC57057EA83D33940D7FE2C5F104221BE3307A4F8153A9B132AF3AB3",
+  "duplicates": [
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneResidueGenusUpper1717a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneResidueGenusUpper1717a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "1FB9C9FA8A1B18E16923AFB0403CD1FABA0F10378934BF204BB102D8E345A4B1"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondAdditiveSeries1679a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondAdditiveSeries1679a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "E407E061B4562F7BAD9D893B8A8F4F600D5723548BF8651A1835B5C47999B8C3"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondComposition1687a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondComposition1687a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "5326810052881DA61866AFE85F5112C0F666262B1168103532CA7E9054F2504A"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondEisensteinAction1696a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondEisensteinAction1696a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "55566AEE1E0CE7A904786D97B2734A3FF24FD4E2C9389AC8E3C03F4460E9A55F"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldComposition1688a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldComposition1688a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "C35A4D4BAD4758B14100B116AC0864484046C4C2C608CA2AEB65032984887821"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldConstants1685a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldConstants1685a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "120A42A36EB651F2C630054F7A8B60B4358C5D428ED6384BEC34922122DC9C43"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldPull1683a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldPull1683a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "7EE1F7E043EFD2B56ADD9ED999806481B9C2EB800173C25712414763134F9BC2"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldPull1683b.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFieldPull1683b.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "658E5F16BDD0F724AFB2C1261CA1C3E589F244A53E70B76FAA07C2D063D29512"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFixedFieldDegree1699a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFixedFieldDegree1699a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "E7BADE0B97E8FCAC1BE3E784A2F972A2EB62B50A3E3775AAE62F99A7609C97D7"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "AD4E8BB4A75E149E76BCAA79EA2A1309B9BBDA70AB8AEADD1A60ECA1140513EE"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692b.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692b.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "9035BF51FD34A85CBE533BC7CD6B9C71ADB91CF1303E3B05476B021C805D2C9E"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692c.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondFullBaseInclusion1692c.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "A3CF48C0DEB649070629D5E155957B93A9A92ACB85B8B18FF55CA83E22913F61"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondIndexLower1704a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondIndexLower1704a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "7F345E30A851F5475FD920E234F3199E8C1FB49C705AFD2A5D6E5EF3E063AD8A"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondRatioClosure1681a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondRatioClosure1681a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "2FA277E2AF249945BFC6C53627A02887DCD05D7827430487978FA0276C219591"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondRatioRelation1678a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondRatioRelation1678a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "C651C0B83533345011CB7F9BED0AABF869BE7098DC2C6364E1F8BD3C4F511F22"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondReducedAddition1682a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondReducedAddition1682a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "85AB79298EAB46399C3E39005BE1D427952F501A274F0C9775B450A9B320F609"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondReducedOperations1677a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceIntegralDiamondReducedOperations1677a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "8520FD44544FB6E9F57163C1719396AF824BBCA7CAA0565CC53BFC9961581FC3"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedBaseCoordinateMap1702a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedBaseCoordinateMap1702a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "7CBDA4C9BF19AC5D2A4C7E0EC0E2AA0DFFFB95003923481168F5F5FF9470BBAC"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedBaseDegreeLower1703a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedBaseDegreeLower1703a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "4A260F82C4516727ED02A43711902D3E7729C0F15480BBCEAB294FA1C4F507F8"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldCoefficientMap1710a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldCoefficientMap1710a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "69A94C0B37DC5CF813154EC904585CFFE6ADE6E16087D1B3238AF8DDE6ABDFE3"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "39890DE19A7ADC0D61D97DEFB0A03E33CF744552C4CE06BF2627E2B74A466648"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721c.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721c.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "368A4B5507127F80FA4BBB63E83B7AF0E63462C15C92FDB66A3116F7DB4938E8"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721d.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721d.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "56E97F8291D7FCFD4FD4A4CE8CBBBE5A5D53C0BC5B0246C1663556B4E3288F05"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721e.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedFieldScalarGeneration1721e.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "B39993A8764E814CF1167B2D429D1266ECAFEE27D5007F9198EF79EA38CE8E50"
+    },
+    {
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedResidueDegreeTransport1712a.lean.txt",
+      "occurrences": 2,
+      "entry": {
+        "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedResidueDegreeTransport1712a.lean.txt",
+        "role": "Tools"
+      },
+      "sha256": "9378F3A47656BBE976EF95A12A0ABF949652F1B454376B0211FED4D6E9DB08D9"
+    }
+  ],
+  "retainedDistinctPaths": 34397,
+  "removedFiles": [],
+  "proofSourceChanges": [],
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}

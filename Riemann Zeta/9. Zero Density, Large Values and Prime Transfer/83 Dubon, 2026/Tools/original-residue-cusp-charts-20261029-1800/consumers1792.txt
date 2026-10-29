@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B C : Type*} [CommSemiring R] [CommSemiring A] [HopfAlgebra R A]
+  [CommSemiring B] [Algebra R B] [CommSemiring C] [Algebra R C]
+
+/-- Exact original-object consumer of `commutativeHopfPointsCoefficientAction_apply`. -/
+theorem actual_commutative_hopf_points_coefficient_change_commutativeHopfPointsCoefficientAction_apply_source (e : B ≃ₐ[R] B)
+    (p : WithConv (A →ₐ[R] B)) (a : A) :
+    commutativeHopfPointsCoefficientAction e p a = e (p a) :=
+  commutativeHopfPointsCoefficientAction_apply e p a
+
+end
+

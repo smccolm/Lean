@@ -1,0 +1,35 @@
+import Dubon2026.SourceIntegralSeriesScalarDescent
+import Dubon2026.SourceIntegralSeriesCommonDenominator
+import Dubon2026.SourceGammaOneAlgebraicCuspDenominator
+import Dubon2026.SourceIntegralDiscriminantCancellation
+import Dubon2026.SourceGammaOneAlgebraicFormDenominator
+import Dubon2026.SourceEvenWeightBalance
+import Dubon2026.SourceEvenWeightFrickeCommonDenominator
+import Dubon2026.SourceEvenWeightUniformFrickeIntegrality
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients]
+  let localModules : Array Name := #[`Dubon2026.SourceIntegralSeriesScalarDescent, `Dubon2026.SourceIntegralSeriesCommonDenominator, `Dubon2026.SourceGammaOneAlgebraicCuspDenominator, `Dubon2026.SourceIntegralDiscriminantCancellation, `Dubon2026.SourceGammaOneAlgebraicFormDenominator, `Dubon2026.SourceEvenWeightBalance, `Dubon2026.SourceEvenWeightFrickeCommonDenominator, `Dubon2026.SourceEvenWeightUniformFrickeIntegrality, `Dubon2026.SourceFrickeLevelIntegralRing, `Dubon2026.SourceFrickeGammaOneNormalizer, `Dubon2026.SourceFrickeTraceSubgroup, `Dubon2026.SourceFrickeTraceForms, `Dubon2026.SourceFrickeDenominatorUniformization, `Dubon2026.SourceEvenWeightFrickeTrace]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.IntegralFricke.exists_sum_smul_eq_of_forall_coeff_mem, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_integral_series_sum, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_cusp_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.integral_coeff_of_discriminant_mul, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_integer_denominator_of_algebraic_form_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.exists_even_weight_balance, `Dubon2026.SourceFunctionField.IntegralFricke.Gamma1_le_conj_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.coe_frickeForm, `Dubon2026.SourceFunctionField.IntegralFricke.isAlgebraic_of_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.exists_common_nat_denominator_even_fricke, `Dubon2026.SourceFunctionField.IntegralFricke.exists_level_power_integral_even_fricke_coefficients, `Dubon2026.SourceFunctionField.IntegralFricke.frickeForm, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_coeff_slash_fricke_mem_RN, `Dubon2026.SourceFunctionField.IntegralFricke.even_weight_level_power_fricke_of_common_denominator, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd, `Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary, `Dubon2026.SourceFricke.span_gammaOne_integral_cuspForms_eq_top, `Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit, `Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem, `Dubon2026.SourceFricke.gammaOneQCoeffLinear, `Dubon2026.cuspRestrictSubgroup, `Algebra.IsAlgebraic.exists_integral_multiples, `LinearMap.exists_leftInverse_of_injective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE EVEN WEIGHT FRICKE UNIFORM DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual uniform even-weight Fricke integrality consumer. The actual trace constructs coefficient algebraicity; integral cusp-span descent and discriminant cancellation construct a common denominator; proved arithmetic gives one level power for every coefficient. Full slash integrality, reduced field action and degree/genus remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

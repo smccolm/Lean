@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `relativeMaximalCotangentDerivation_surjective`. -/
+theorem actual_relative_maximal_cotangent_derivation_relativeMaximalCotangentDerivation_surjective_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O) :
+    Function.Surjective (relativeMaximalCotangentDerivation eR) :=
+  relativeMaximalCotangentDerivation_surjective eR
+
+end
+

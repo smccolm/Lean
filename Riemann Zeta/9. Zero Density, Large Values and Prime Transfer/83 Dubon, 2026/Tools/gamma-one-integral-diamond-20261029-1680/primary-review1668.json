@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixCoefficientFiberProduct",
+  "mathematics": "Construct a genuine ring equivalence between original matrices over the actual coefficient fiber product and compatible pairs of original coefficient matrices. Apply the previously constructed compatible-pair unit to the original invertible matrices and transport through the inverse ring equivalence. Its actual two projections are exactly the supplied original matrices. Equality of both original coefficient projections determines the whole invertible matrix, proving existence and uniqueness of actual general-linear gluing.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Pinned actual RingHom.eqLocus and CommRingCat concrete pullbackCone inspected; Units mapping, local-hom reflection and actual matrix/unit topology APIs inspected. Existing CanonicalAdelicGL2Coordinates actual matrix-product/unit-continuity proof reviewed; current construction treats general matrix size and the actual compatible-pair subring. Levin Lecture5 original group-fiber-product role rechecked live10Oct2026. No external Lean code imported.",
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L05.pdf",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Algebra/Category/Ring/Constructions.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/Topology/Algebra/Group/Matrix.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Made the original common matrix size explicit in both actual coefficient ring maps and used Matrix.ext with the two genuine indices before subtype extensionality, preventing recursive ext from descending into the coefficient pair too early. Original ring equivalence and unique invertible gluing unchanged."
+  ],
+  "productionLog": "matrixCoefficientFiber1668b-focus.log"
+}

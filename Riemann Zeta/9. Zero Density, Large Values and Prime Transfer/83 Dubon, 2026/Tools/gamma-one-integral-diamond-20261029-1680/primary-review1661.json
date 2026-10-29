@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "MatrixRepresentationBurnside",
+  "mathematics": "Apply the proved original algebra-action theorem to the genuine monoid-algebra module of the original irreducible representation. Its actual coefficient-linear equivalence with the original vector space transfers surjectivity to the same group-algebra action. Specializing to the original column-vector representation and expanding the genuine group-algebra element gives an actual finite coefficient combination of original representation matrices for every matrix. Therefore those same original matrices span the whole matrix algebra.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned jacobson_density proof, IsSimpleModule Schur, actual Representation.asModule/asModuleEquiv/asAlgebraHom and MonoidAlgebra.lift_apply inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/RingTheory/SimpleModule/Basic.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Made the canonical additive monoid underlying the original asModule additive group explicit, together with its genuine coefficient/group-algebra module structures, scalar tower, finite dimension and irreducibility-derived simple-module instance. Applied Burnside with explicit original module structures; the group-algebra action is definitionally the original asAlgebraHom. No statement change, resource change or suppressed diagnostic."
+  ],
+  "productionLog": "matrixBurnside1661d-focus.log"
+}

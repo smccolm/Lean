@@ -1,0 +1,79 @@
+import SourceIntegralSlashDiscriminantNormalization
+import SourceIntegralSlashReducedOperations
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual normalized-generator chart. Reduction
+commutes with weight casts and literal modular-form powers. In particular the
+discriminant powers used to bring different generator weights to a common weight
+have exactly the required reduced denominators. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (β : SL(2, ℤ))
+
+theorem reducedSlashSeries_mcast {k l : ℤ} (hk : Even k) (hl : Even l)
+    (h : k = l) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) :
+    reducedSlashSeries N hl (f.mcast h) hp β φ hN =
+      reducedSlashSeries N hk f hp β φ hN := by
+  subst l
+  rfl
+
+theorem reducedSlashSeries_one :
+    reducedSlashSeries N (by decide) (1 : ModularForm (Gamma1 N) 0)
+      (integralQExp_one N) β φ hN = 1 := by
+  have he : slashCoefficientSeries N (by decide) (1 : ModularForm (Gamma1 N) 0)
+      (integralQExp_one N) β = 1 := by
+    apply PowerSeries.map_injective (RN N).subtype Subtype.val_injective
+    rw [slashCoefficientSeries_map, map_one, ModularForm.one_coe_eq_one,
+      ModularForm.is_invariant_one', qExpansion_one]
+  unfold reducedSlashSeries
+  rw [he, map_one]
+
+theorem integralQExp_pow {k : ℤ} (f : ModularForm (Gamma1 N) k)
+    {p : PowerSeries ℤ} (hp : IsIntegralQExp f p) (n : ℕ) :
+    IsIntegralQExp (f.pow n) (p ^ n) := by
+  change (p ^ n).map (Int.castRingHom ℂ) = _
+  rw [map_pow, hp, ModularForm.qExpansion_pow one_pos
+    (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+
+theorem reducedSlashSeries_pow {k : ℤ} (hk : Even k)
+    (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) (n : ℕ) :
+    reducedSlashSeries N (hk.mul_left (n : ℤ)) (f.pow n)
+      (integralQExp_pow N f hp n) β φ hN =
+        reducedSlashSeries N hk f hp β φ hN ^ n := by
+  induction n with
+  | zero =>
+    conv_rhs => rw [pow_zero]
+    exact (reducedSlashSeries_mcast N φ hN β (by decide) (hk.mul_left (0 : ℤ))
+      (by simp) (1 : ModularForm (Gamma1 N) 0) (p := 1) (integralQExp_one N)).trans
+        (reducedSlashSeries_one N φ hN β)
+  | succ n ih =>
+    let hc : (n : ℤ) * k + k = (↑(n + 1) : ℤ) * k := by push_cast; ring
+    have he := reducedSlashSeries_mcast N φ hN β ((hk.mul_left (n : ℤ)).add hk)
+      (hk.mul_left (↑(n + 1) : ℤ)) hc ((f.pow n).mul f)
+      (p := p ^ n * p) (integralQExp_mul (f.pow n) f (integralQExp_pow N f hp n) hp)
+    exact he.trans ((reducedSlashSeries_mul N φ hN β (hk.mul_left (n : ℤ)) hk
+      (f.pow n) f (integralQExp_pow N f hp n) hp).trans (by rw [ih, pow_succ]))
+
+theorem reducedSlashSeries_discriminantPow (n : ℕ) :
+    reducedSlashSeries N (by exact (show Even (12 : ℤ) by decide).mul_right (n : ℤ))
+      (gammaOneDiscriminantPow N n) (integralQExp_gammaOneDiscriminantPow N n)
+      β φ hN =
+        reducedSlashSeries N (by decide) (gammaOneDiscriminant N)
+          (integralQExp_gammaOneDiscriminant N) β φ hN ^ n := by
+  exact (reducedSlashSeries_mcast N φ hN β
+    ((show Even (12 : ℤ) by decide).mul_left (n : ℤ))
+    ((show Even (12 : ℤ) by decide).mul_right (n : ℤ))
+    (mul_comm (n : ℤ) 12) ((gammaOneDiscriminant N).pow n)
+    (p := discriminantSeries ^ n)
+    (integralQExp_pow N (gammaOneDiscriminant N) (integralQExp_gammaOneDiscriminant N) n)).trans
+      (reducedSlashSeries_pow N φ hN β (by decide) (gammaOneDiscriminant N)
+        (integralQExp_gammaOneDiscriminant N) n)
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

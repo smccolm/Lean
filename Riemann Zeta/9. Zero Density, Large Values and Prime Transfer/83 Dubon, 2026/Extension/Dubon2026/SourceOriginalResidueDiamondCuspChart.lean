@@ -1,0 +1,39 @@
+import Dubon2026.SourceIntegralSlashDiamondStabilizer
+import Dubon2026.SourceOriginalResiduePrescribedCuspChart
+import Dubon2026.SourceOriginalResidueDiamondFixedField
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual residue diamond stabilizer chart. Consume
+the constructed prescribed-root cusp embedding and actual residue diamond
+action. Both the j(q^N) coordinate and signed-translation equivariance hold
+without a coefficient map, cusp map or equivariance certificate as an input.
+The second full-base coordinate is a separate remaining obligation. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open CongruenceSubgroup GammaOne IntegralDiamond
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+  [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem exists_originalResidueDiamondCuspFieldHom (hℓN : ¬ ℓ ∣ N)
+    (ζ : kkˣ) (hζ : IsPrimitiveRoot (ζ : kk) N) (β : SL(2, ℤ)) :
+    ∃ Φ : qExpFunctionFieldC kk (Gamma1 N) →ₐ[kk] LaurentSeries kk,
+      Φ ⟨jqModC kk, jqModC_mem_integralRatioField kk (Gamma1 N)⟩ =
+        qExpand kk N (jqModC kk) ∧
+      ∀ (γ : Gamma0 N) (j : ℤ),
+        (β⁻¹ * γ.val * β = ModularGroup.T ^ j ∨
+          β⁻¹ * γ.val * β = -(ModularGroup.T ^ j)) →
+        ∀ x : qExpFunctionFieldC kk (Gamma1 N),
+          Φ (originalResidueDiamondAction A N ℓ hℓN γ⁻¹ x) = qTwist (ζ ^ j) (Φ x) := by
+  letI : Algebra (ZMod ℓ) kk := (ZMod.castHom (dvd_refl ℓ) kk).toAlgebra
+  obtain ⟨φ, hN, Φ, hφ, hΦ, hj⟩ :=
+    exists_originalResiduePrescribedCuspFieldHom A N ℓ hℓN (ζ : kk) hζ β
+  refine ⟨Φ, hj, fun γ j hγ x => ?_⟩
+  exact originalReducedSlashFieldHom_diamond_stabilizer N ℓ hℓN φ hN ζ hφ β Φ hΦ γ j hγ x
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

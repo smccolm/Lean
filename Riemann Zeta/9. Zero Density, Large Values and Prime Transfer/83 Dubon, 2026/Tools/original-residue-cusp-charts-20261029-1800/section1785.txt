@@ -1,0 +1,7 @@
+### Actual original ordinary quotient class equivalence — 10 October 2026
+
+Restrict the proved whole class bijection along the literal ordinary coefficient quotient and prove that its class is evaluation of the same original universal matrices.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalUnframedOrdinaryQuotientEquivalence](Extension/Dubon2026/OriginalUnframedOrdinaryQuotientEquivalence.lean).

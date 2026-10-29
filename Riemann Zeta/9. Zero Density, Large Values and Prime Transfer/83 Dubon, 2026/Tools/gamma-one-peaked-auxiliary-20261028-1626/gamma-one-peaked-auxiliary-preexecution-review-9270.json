@@ -1,0 +1,61 @@
+{
+  "status": "Prepared only. Predecessor9184 canonical PASS and archived evidence required. Actual auxiliary existence is proved; downstream trace application remains required.",
+  "modules": 86,
+  "queries": 383,
+  "theorems": 325,
+  "constructions": 58,
+  "exhaustiveScratchChecks": 786,
+  "proofValueChecks": 444,
+  "scopes": 7,
+  "receipts": {
+    "integral-trace-revision-1537/source-integral-trace-2-scratch-receipt.json": "038E2FEBD18149725D23DD4FB382FE183C57CA7FBF3FDC469757C11A47687446",
+    "source-peaked-exponent-1-scratch-receipt.json": "774DC98A60414122D01D2C62CB3D0B05C7B1168EE7502E02FD7130BAF9A7D1C0",
+    "source-siegel-function-1-scratch-receipt.json": "5A5A58BC95FA685F88D9AD4F8A6C595C6EEFC403AE633546DC50EE540F6495DA",
+    "source-siegel-expansion-1-scratch-receipt.json": "DEF4A49141C95F193C5F164FF99DAF08403FF9D3BBA6658084D0928528B517A6",
+    "source-siegel-finite-product-1-scratch-receipt.json": "C2DEB2CC4528A5FBC93FF175D4686ED6C59919C0EF52193C4D985CB67E9F9CEC",
+    "source-peaked-modular-form-1-scratch-receipt.json": "C2D3BBC64350DC5F5504DA06EBB26517D4C40B007C0EDE2CFFC3DF88F89D459C",
+    "source-actual-peaked-auxiliary-1-scratch-receipt.json": "398BB7057E69BA7316C3DF874D292FC28CC006AE7E5EDB9C76F97DB729EC887D"
+  },
+  "expectedConsumers": 27085,
+  "expectedConstructions": 2939,
+  "fullGoal": "The constructed auxiliary must still be applied to the even-weight trace theorem on the correct conjugate subgroup. Uniform level-power slash integrality, the action on every reduced rational relation, the signed-index lower bound and original degree/genus preservation remain open. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "2DDA0E331C518DB9E2B61C37F6A8F41AFE3D90A084A83F0FCDC6742F2D918818"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_peaked_auxiliary_production_ownership_9270.py",
+      "sha256": "484F078728276F6086F9B11D41C6E333DE338B4A2E60725C93171FF53067E43D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_peaked_auxiliary_global_ownership_9270.py",
+      "sha256": "1BE51595098737D70E1454E68A817A7060D5276C35D3F16F60ACC8FDC5FCEADE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_peaked_auxiliary_ownership_9270.py",
+      "sha256": "4AB2236567D0CA92076ED8134BD9B5D11CF73E15FFEF55E48ED4049AFB8D8C95"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "3F681297E7A769E593F69D0B3E05C9D94252D84456716AE5F0A42952BD7D2676"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_peaked_auxiliary_9270.ps1",
+      "sha256": "803D3F6104691EC99D2F686F3DA1E9860B8610A7C268BBFD89A9754EFE13DAF4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_peaked_auxiliary_9270.ps1",
+      "sha256": "3F6081AA8786FA0BDB35E941A7CA7CD23281133E0CA4846D547A7AE71AAC9C8D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_peaked_auxiliary_canonical_9270.py",
+      "sha256": "FE94261A5BF27AF6338D7A544FBD0AB6EAEB4B9E03C0A19F8947EB76313F2672"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_peaked_auxiliary_9270.py",
+      "sha256": "9B28B8A5D068E1CC5B3048305C77E8A413D44C52D49607FF0BF001F9DD03881D"
+    }
+  ],
+  "productionMutation": false
+}

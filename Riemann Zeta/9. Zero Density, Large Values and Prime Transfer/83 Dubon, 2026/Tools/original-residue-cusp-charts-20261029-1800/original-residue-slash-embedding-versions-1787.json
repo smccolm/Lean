@@ -1,0 +1,17 @@
+{
+  "SourceIntegralSlashLevelOne": "1765b",
+  "SourceIntegralSlashDiscriminantNormalization": "1766e",
+  "SourceCoordinateAlgebraicChartInjectivity": "1767d",
+  "SourceIntegralSlashReducedPowers": "1769c",
+  "SourceIntegralSlashReducedEquality": "1770b",
+  "SourceIntegralSlashNormalizedGenerators": "1771a",
+  "SourceIntegralSlashNormalizedRatioEquality": "1772a",
+  "SourceIntegralSlashNormalizedMap": "1773a",
+  "SourceIntegralSlashNormalizedLinearRelations": "1774a",
+  "SourceIntegralSlashNormalizedCoordinate": "1775a",
+  "SourceMonoidGeneratorAlgebraLift": "1776b",
+  "SourceIntegralSlashNormalizedAlgebra": "1777d",
+  "SourceCoordinateChartFractionExtension": "1778b",
+  "SourceIntegralSlashFieldEmbedding": "1779h",
+  "SourceOriginalResidueSlashFieldEmbedding": "1780d"
+}

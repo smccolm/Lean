@@ -1,0 +1,7 @@
+### Actual actual original strict change-of-basis lifting — 10 October 2026
+
+Lift every entry of the original invertible matrix along the genuine coefficient surjection. Its determinant maps to the original unit determinant; actual local-hom unit reflection makes the lifted determinant a unit, producing a genuine invertible lifted matrix. Compatibility of the original coefficient reduction maps then proves that an original matrix reducing to the identity lifts to an actual matrix reducing to that same identity.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalCoefficientMatrixLifting](Extension/Dubon2026/LocalCoefficientMatrixLifting.lean).

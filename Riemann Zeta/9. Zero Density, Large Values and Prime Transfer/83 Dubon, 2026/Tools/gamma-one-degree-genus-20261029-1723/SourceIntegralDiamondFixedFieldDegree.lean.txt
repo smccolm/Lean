@@ -1,0 +1,41 @@
+import SourceIntegralDiamondExactKernel
+import Mathlib.FieldTheory.Fixed
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> signed-index lower bound.
+The proved exact kernel makes the actual image a finite group whose order
+is the signed relative index inside Gamma0. Native Artin fixed-field theory
+then gives the exact degree over its fixed field. No degree or finiteness
+certificate is supplied; the finite-index congruence subgroup proves the
+required finiteness. The full base-field degree comparison remains next. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open CongruenceSubgroup GammaOne IntermediateField
+open scoped MatrixGroups
+
+theorem reducedFieldAction_range_finite (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) : Finite (reducedFieldAction N ℓ hℓN).range := by
+  letI : (plusMinus (Gamma1 N)).FiniteIndex := Subgroup.finiteIndex_of_le (le_plusMinus _)
+  letI : (reducedFieldAction N ℓ hℓN).ker.FiniteIndex := by
+    rw [reducedFieldAction_kernel]
+    infer_instance
+  apply Nat.finite_of_card_ne_zero
+  rw [← Subgroup.index_ker]
+  exact Subgroup.FiniteIndex.index_ne_zero
+
+theorem reduced_fixedField_degree_eq_signed_relativeIndex
+    (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N) :
+    Module.finrank (IntermediateField.fixedField (reducedFieldAction N ℓ hℓN).range)
+      (qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) =
+        (plusMinus (Gamma1 N)).relIndex (Gamma0 N) := by
+  letI := reducedFieldAction_range_finite N ℓ hℓN
+  letI := Fintype.ofFinite (reducedFieldAction N ℓ hℓN).range
+  have hArtin : Module.finrank (IntermediateField.fixedField (reducedFieldAction N ℓ hℓN).range)
+      (qExpFunctionFieldC (ZMod ℓ) (Gamma1 N)) =
+        Fintype.card (reducedFieldAction N ℓ hℓN).range :=
+    FixedPoints.finrank_eq_card (reducedFieldAction N ℓ hℓN).range _
+  rw [hArtin, ← Nat.card_eq_fintype_card, ← Subgroup.index_ker,
+    reducedFieldAction_kernel]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

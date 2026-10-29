@@ -1,0 +1,151 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T08:34:14.899007+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceReducedBaseCoordinateMap",
+    "SourceReducedBaseDegreeLower",
+    "SourceIntegralDiamondIndexLower",
+    "SourceReducedCoordinateIndependence",
+    "SourceReducedCoordinateMapIndependence",
+    "SourceReducedFieldCoefficientMap",
+    "SourceReducedCoordinateDegreeTransport",
+    "SourceReducedResidueDegreeTransport",
+    "SourceGammaOneDegreePreservation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseCoordinateMap.lean",
+      "sha256": "E51926436C4B90326C34937212289B214F7556E36DFB48BB72A41307D1317A15",
+      "oleanSha256": "8FDAF917C6124F6A6AEE127F5F6E75F745005D6758090DFA1E2459CFEEA5D506",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseCoordinateMap-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseCoordinateMap-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseDegreeLower.lean",
+      "sha256": "054ED86E77B5A334ED7A5998BAED1216E4C5C8DBEC29B059907767454E4E5258",
+      "oleanSha256": "6D661BE43C86D8066D672A5F2CB6B430B94E9A2A4E870C9781B1429490CB0A73",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseDegreeLower-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedBaseDegreeLower-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondIndexLower.lean",
+      "sha256": "406978F7061B67D40C969FA8CB4A09DB794010F01BD1EFD1C95C6F10D5AF799C",
+      "oleanSha256": "0AFF78AE759D516120A1CBED64182DCED092AEA5DAF81ECB24FA4537C8EDD13E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondIndexLower-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondIndexLower-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateIndependence.lean",
+      "sha256": "A6E33CA266505DB492F75BAC018B5F2AF8758AD344E991A9ABB6B08AA4CAE26D",
+      "oleanSha256": "F17D0253C7E5A1FF22E15D470541C9DDD183E6A30F6505075EFBC1F673E74D64",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateIndependence-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateIndependence-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateMapIndependence.lean",
+      "sha256": "CECD21D8D0C61752ED3FE09D2BDECD8796ABF695A76EE9BA9424B6C4C01387EC",
+      "oleanSha256": "83F8A0E2FED11FF70E5DB0DBFD17A44F4A5B3603C3B14E0B29D2DB2BE17143E0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateMapIndependence-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateMapIndependence-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldCoefficientMap.lean",
+      "sha256": "4CEC3B54B26B8211D7DF00734B90A80941127A5AF195A900423A03AFBB00F46B",
+      "oleanSha256": "910EE5DB9875373534094CF317EC8434E208AF775EB5441C659AB45AE10CF458",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldCoefficientMap-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedFieldCoefficientMap-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateDegreeTransport.lean",
+      "sha256": "47AC5A766E66CF9993F3197F18A016C7D8F79A4D679956B3F0837D4EFEAEE2C3",
+      "oleanSha256": "491BF7E6081D225C00A6343E0C79C59E03926F53CFB67E42150957ED1B4B564E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateDegreeTransport-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedCoordinateDegreeTransport-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedResidueDegreeTransport.lean",
+      "sha256": "8480A61A1A99BFECB8D8032F34BB7335B116B938216319439B7177099B74AA52",
+      "oleanSha256": "2ACB8CC3A3A2FB994F8CB2B9C366CF09419BB60968B0DEC0E459A04CFA629EC7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReducedResidueDegreeTransport-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReducedResidueDegreeTransport-1718.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreePreservation.lean",
+      "sha256": "3D52D6D2BAEB5549BA1B3FE37E5DFE1BA959C4ADFE8664896C3D012D1D5F7BA5",
+      "oleanSha256": "230959CA665409A8BB93BAB83A901E545D9FCEE75EFE7662E5FD24706DAD8834",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreePreservation-1718.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreePreservation-1718.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos",
+    "Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeAudit1.log",
+  "logSha256": "6CEFA59EFE1B08DA3FD357EAC0CEF0CC481FD667A8365CBBD2066008D10034ED",
+  "auditSha256": "98C21AE0A890A9F3A324026F3EA69DDC43EB22C68D815BA4971152FED1EEF53F",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeScratchOwnership1718.log",
+  "ownershipSha256": "9C26AC1DAA29F12D4844F84205DC1A9A6680D56EAE3E1929451F3E971634874C",
+  "exhaustiveTheorems": 20,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 58,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeDependencyAudit1.log",
+  "dependencyAuditSha256": "A0A0ADC0BA6EBB7047E7EA1BDEB12DA2E3E3D742668DD19399D563D73FF10CF5",
+  "dependencyAuditSourceSha256": "C16B7D2CAEF837FA50921115FD6755887EB84963832F4829EB7E3FACEBE5F9C5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> actual signed-index lower bound and finite coordinate-degree transport.",
+  "discharged": [
+    "The actual j-substitution minimal polynomial maps to the algebraic closure. Its already proved degree there gives a lower bound over the original coefficient field. Native finite divisor generation and the simple-extension tower give the required full modular base degree inequality.",
+    "Full-base fixation, the exact reduced action kernel and Artin degree now give the total signed-index lower bound from positive coordinate degree. No action, kernel, base inclusion or base degree remains a premise.",
+    "Native Laurent coefficient independence and finite polynomial denominator clearing preserve independent finite families over the actual rational-function coordinate. Rank bounds derive finite degree over the original coefficient field; no independence, finiteness or base-change equality certificate is supplied.",
+    "The original integral-ratio field maps into the actual coefficient residue field. Native finite residue degree and integral-ratio inclusion give positive degree there, and coefficient transport supplies the prime-field positivity and return inequality.",
+    "The signed-index bound holds for the actual residue integral-ratio field. The native upper-degree consumer proves original Gamma1 coordinate degree preservation and equality of the actual residue image with the original integral-ratio field at every prime away from the level, including characteristics two and three."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Original genus preservation is still required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "638A6064D6C6AD88ADCEEA9D3F76D5A4189983D8B9CD9DC9338CD05F2E08A7E9",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

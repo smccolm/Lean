@@ -1,0 +1,678 @@
+import Dubon2026.SourceGammaOneEvenIntegralRatios
+import Dubon2026.SourceLevelOneCoefficientRing
+import Dubon2026.SourceLevelOneIntegralWeightFactor
+import Dubon2026.SourceTraceProductCoefficientRing
+import Dubon2026.SourceIntegralLevelOneTraceCoefficients
+import Dubon2026.SourceTraceExponentialCoefficientVanishing
+import Dubon2026.SourceIntegralTraceParameters
+import Dubon2026.SourceIntegralTracePowerCoefficients
+import Dubon2026.SourceIntegralTraceCoefficientExtraction
+import Dubon2026.SourceIntegralTraceModularForm
+import Dubon2026.SourceIntegralTraceCuspTransversal
+import Dubon2026.SourceIntegralTraceTranslates
+import Dubon2026.SourceIntegralTraceTranslationCoefficients
+import Dubon2026.SourceIntegralTracePeriodWidth
+import Dubon2026.SourceIntegralTraceAnalyticProducts
+import Dubon2026.SourceIntegralTraceSlashPeriods
+import Dubon2026.SourceIntegralTraceTranslationAssembly
+import Dubon2026.SourceIntegralTraceTransversalSplit
+import Dubon2026.SourceIntegralTraceDecomposition
+import Dubon2026.SourceIntegralTraceDegenerateCusp
+import Dubon2026.SourceEvenWeightPeakedTraceIntegrality
+import Dubon2026.SourceGammaOnePeakedCuspClasses
+import Dubon2026.SourcePeakedBernoulliFourier
+import Dubon2026.SourcePeakedBernoulliMoments
+import Dubon2026.SourcePeakedBernoulliResidueWeights
+import Dubon2026.SourcePeakedBernoulliCharacterInversion
+import Dubon2026.SourcePeakedBernoulliConvolution
+import Dubon2026.SourcePeakedBernoulliVanishing
+import Dubon2026.SourcePeakedBernoulliFourierInversion
+import Dubon2026.SourcePeakedBernoulliSpan
+import Dubon2026.SourcePeakedBernoulliProgressions
+import Dubon2026.SourcePeakedBernoulliTotient
+import Dubon2026.SourcePeakedExponentHelpers
+import Dubon2026.SourcePeakedExponents
+import Dubon2026.SourceGammaOnePeakedCuspOrders
+import Dubon2026.SourceSiegelJacobiFiniteProducts
+import Dubon2026.SourceSiegelJacobiGaussProduct
+import Dubon2026.SourceSiegelJacobiFiniteIdentity
+import Dubon2026.SourceSiegelJacobiProductBounds
+import Dubon2026.SourceSiegelJacobiDominatedLimit
+import Dubon2026.SourceSiegelJacobiRangeLimit
+import Dubon2026.SourceSiegelJacobiProductIdentity
+import Dubon2026.SourceSiegelFunction
+import Dubon2026.SourceSiegelProductCore
+import Dubon2026.SourceSiegelThetaIdentification
+import Dubon2026.SourceSiegelHolomorphic
+import Dubon2026.SourceSiegelEtaTransform
+import Dubon2026.SourceSiegelThetaTransform
+import Dubon2026.SourceSiegelInversion
+import Dubon2026.SourceSiegelSL2Transformation
+import Dubon2026.SourceSiegelLevelShiftFactors
+import Dubon2026.SourceSiegelLevelShifts
+import Dubon2026.SourceSiegelResidueReduction
+import Dubon2026.SourceSiegelProductTransformation
+import Dubon2026.SourceSiegelStableCoefficients
+import Dubon2026.SourceSiegelProductLocalUniform
+import Dubon2026.SourceSiegelProductTaylorExpansion
+import Dubon2026.SourceSiegelPolynomialFactors
+import Dubon2026.SourceSiegelIntegralCoefficients
+import Dubon2026.SourceSiegelQParameter
+import Dubon2026.SourceSiegelResidueProductIndices
+import Dubon2026.SourceSiegelResidueProductStreams
+import Dubon2026.SourceSiegelLeadingUnit
+import Dubon2026.SourceSiegelNormalizedProduct
+import Dubon2026.SourceSiegelCoefficientSeries
+import Dubon2026.SourceSiegelIntegralExpansion
+import Dubon2026.SourceSiegelFiniteSeriesProducts
+import Dubon2026.SourceSiegelProductCoefficients
+import Dubon2026.SourceSiegelProductLeadingCoefficient
+import Dubon2026.SourceSiegelProductPhases
+import Dubon2026.SourceSiegelFiniteProductExpansion
+import Dubon2026.SourcePeakedAuxiliaryFunction
+import Dubon2026.SourceSiegelCuspPermutation
+import Dubon2026.SourcePeakedAuxiliaryCuspDecay
+import Dubon2026.SourcePeakedAuxiliaryHolomorphic
+import Dubon2026.SourcePeakedAuxiliaryModularForm
+import Dubon2026.SourcePeakedDiscriminantSeries
+import Dubon2026.SourcePeakedSeriesOperations
+import Dubon2026.SourcePeakedShiftedCoefficients
+import Dubon2026.SourcePeakedShiftedSeries
+import Dubon2026.SourcePeakedWidthOneIdentification
+import Dubon2026.SourcePeakedIntegralQExpansion
+import Dubon2026.SourcePeakedTranslatedIntegralExpansion
+import Dubon2026.SourcePeakedScaledOrders
+import Dubon2026.SourcePeakedOrderGapDecay
+import Dubon2026.SourceActualPeakedAuxiliary
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field
+#print axioms Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_coeff_mem_of_initial_coeff_mem
+#print axioms Dubon2026.SourceFunctionField.LevelOneCoefficientRing.exists_integral_weight_factor
+#print axioms Dubon2026.SourceFunctionField.LevelOneCoefficientRing.coeff_mem_of_product_initial_coeff_mem
+#print axioms Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_trace_coeff_mem_of_initial_coeff_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_zero_of_exponential_decay
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.exists_trace_parameters
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_eq_zero_of_lt
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mul
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_mem_of_levelOne_trace_decomposition
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_neg_even
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.exists_levelOne_trace
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.exists_signed_cusp_transversal
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.Translates.periodic_trSum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.Translates.mdifferentiable_trSum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.Translates.isBoundedAtImInfty_trSum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.Translates.coeff_translation_sum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_multiple_width
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_one_mul_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.isBigO_mul_pow_exp
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.pow_slash_SL2
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_finset_sum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_finset_sum
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_slash
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_T_zpow_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_T_pow_apply
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.periodic_comp_ofComplex_of_slash_T_pow_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_S_slash_T_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_eq_of_mem_or_neg_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.periodic_of_pm_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.natCast_mem_strictPeriods
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.translation_sum_eq
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.coeff_qExpansion_one_sum_slash_T_pow
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.exists_width
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.sum_transversal_split
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.exists_integral_trace_decomposition
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.T_mem_of_S_mul_T_zpow_mem
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.slash_coeff_mem_of_coincident_cusps
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary
+#print axioms Dubon2026.SourceFunctionField.IntegralTrace.Translates.trSum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.gammaOne_peaked_cusp_classes
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt_cast
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eval_map_bernoulli_two
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.hasSum_cos_div_sq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.hasSum_cos_wt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_intCast
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_natCast
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cos_nat_mul_eq_cosZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_neg
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.abs_psi_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.tsum_psi_div_sq_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.summable_psi_div_sq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi_zero_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.natCast_mul_eq_of_mod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.tsum_psi_eq_sum_residues
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sum_units_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sum_char_mul_Zres
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_forall_sum_char_inv_mul_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_convolution
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sinZ_neg
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.stdAddChar_eq_cosZ_add_sinZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_psi_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam_neg
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_mem_span
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_neg
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_eq_zero_imp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.TE_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.mem_span_iff_even
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_Bt_aux
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_Bt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_eq_sum_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.periodic_shift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_mul_of_periodic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.emod_progression
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_affine_unit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_comp_val_affine
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.gcd_bookkeeping
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_Bt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_divisors_J2
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.filter_dvd_divisors
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_moebius_gcd_sq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_moebius_mul_div_eq_totient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.weight_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.filter_dvd_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_zmod_ite_dvd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_range_Bt_mul_mod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.inner_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_zmod_weight_Bt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_totient_mul_weight_dilate_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_le_sq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.neg_sq_le_W
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_one_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_W_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_sum_W_linear
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_W_add_mul_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.wt_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_mZ_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.exists_peaked_exponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_peaked_exponent_on_actual_cusps
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Zres
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sinZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.evenSub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.TE
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.Bt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.J2
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.residueWeight
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.one_sub_pow_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_zero_right
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_self
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_of_gt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_succ_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.gauss_q
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.finite_jtp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_pow_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.pow_succ_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_one_sub_pow_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow_real
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.multipliable_pfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.le_norm_qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.norm_qfact_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.sum_Icc_eq_tsum_fam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_Icc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.jacobiTheta_two_eq_tprod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun_def
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_level_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.norm_qq_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_one_sub_pow_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_c
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.jtp_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qParam_24
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.one_sub_eta_q
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_pref
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_theta_w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq_theta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableOn_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.mdifferentiable_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sqrt_bridge
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.cpow_half_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_T
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_all
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.natCast_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_snd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_snd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_fst
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_fst
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.intCast_zmod_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.exists_siegelFun_eq_mul_reduced
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pow_twelve_mul_eq_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.prod_siegelFun_pow_specialLinearGroup_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.fam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.Law
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coe_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.order_fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_mul_fac_of_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_prod_range_fac
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_pp_stable
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.eval_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasProdLocallyUniformlyOn_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.differentiableOn_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_derivative_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.iteratedDeriv_product_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_coeff_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_two_linear_factors_sub_one_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_norm_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_one_sub_C_mul_X
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.expand
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one_sub_C_mul_X
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.ite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_Pc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_eq_qParam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_qN_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.q_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qa_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pref_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.multipliable_one_sub_mul_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.neg_natCast_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegel_streams
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_Pc_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_inv_eq_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.N_mul_inv_one_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_one_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.polynomial_product_eq_streams
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegelFun_div_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_coef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_coef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_coef_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_series_nat
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_hasSum_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.prod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.coeff_prod_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.not_dvd_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_series_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exp_orderSum_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized_product_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_pow_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.tendsto_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.rho
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.orderSum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.constantCoeff_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_discriminant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.expands_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_X_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_natCast_zpow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.natCast_mem_strictPeriods_gammaOne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.isIntegral_phase
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_inv_eq_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_product_delta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_level_inverse_phase_leading
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_adjusted
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries_leading
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_qExpansion_slash_of_nonneg_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.Ord_scaleExponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_level_multiple_peaked_exponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_clearing_discriminant_power
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.orderSum_eq_Ord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_width_one_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.cusp_order_gap_bigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.scaleExponent
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneEvenIntegralRatios, `Dubon2026.SourceLevelOneCoefficientRing, `Dubon2026.SourceLevelOneIntegralWeightFactor, `Dubon2026.SourceTraceProductCoefficientRing, `Dubon2026.SourceIntegralLevelOneTraceCoefficients, `Dubon2026.SourceTraceExponentialCoefficientVanishing, `Dubon2026.SourceIntegralTraceParameters, `Dubon2026.SourceIntegralTracePowerCoefficients, `Dubon2026.SourceIntegralTraceCoefficientExtraction, `Dubon2026.SourceIntegralTraceModularForm, `Dubon2026.SourceIntegralTraceCuspTransversal, `Dubon2026.SourceIntegralTraceTranslates, `Dubon2026.SourceIntegralTraceTranslationCoefficients, `Dubon2026.SourceIntegralTracePeriodWidth, `Dubon2026.SourceIntegralTraceAnalyticProducts, `Dubon2026.SourceIntegralTraceSlashPeriods, `Dubon2026.SourceIntegralTraceTranslationAssembly, `Dubon2026.SourceIntegralTraceTransversalSplit, `Dubon2026.SourceIntegralTraceDecomposition, `Dubon2026.SourceIntegralTraceDegenerateCusp, `Dubon2026.SourceEvenWeightPeakedTraceIntegrality, `Dubon2026.SourceGammaOnePeakedCuspClasses, `Dubon2026.SourcePeakedBernoulliFourier, `Dubon2026.SourcePeakedBernoulliMoments, `Dubon2026.SourcePeakedBernoulliResidueWeights, `Dubon2026.SourcePeakedBernoulliCharacterInversion, `Dubon2026.SourcePeakedBernoulliConvolution, `Dubon2026.SourcePeakedBernoulliVanishing, `Dubon2026.SourcePeakedBernoulliFourierInversion, `Dubon2026.SourcePeakedBernoulliSpan, `Dubon2026.SourcePeakedBernoulliProgressions, `Dubon2026.SourcePeakedBernoulliTotient, `Dubon2026.SourcePeakedExponentHelpers, `Dubon2026.SourcePeakedExponents, `Dubon2026.SourceGammaOnePeakedCuspOrders, `Dubon2026.SourceSiegelJacobiFiniteProducts, `Dubon2026.SourceSiegelJacobiGaussProduct, `Dubon2026.SourceSiegelJacobiFiniteIdentity, `Dubon2026.SourceSiegelJacobiProductBounds, `Dubon2026.SourceSiegelJacobiDominatedLimit, `Dubon2026.SourceSiegelJacobiRangeLimit, `Dubon2026.SourceSiegelJacobiProductIdentity, `Dubon2026.SourceSiegelFunction, `Dubon2026.SourceSiegelProductCore, `Dubon2026.SourceSiegelThetaIdentification, `Dubon2026.SourceSiegelHolomorphic, `Dubon2026.SourceSiegelEtaTransform, `Dubon2026.SourceSiegelThetaTransform, `Dubon2026.SourceSiegelInversion, `Dubon2026.SourceSiegelSL2Transformation, `Dubon2026.SourceSiegelLevelShiftFactors, `Dubon2026.SourceSiegelLevelShifts, `Dubon2026.SourceSiegelResidueReduction, `Dubon2026.SourceSiegelProductTransformation, `Dubon2026.SourceSiegelStableCoefficients, `Dubon2026.SourceSiegelProductLocalUniform, `Dubon2026.SourceSiegelProductTaylorExpansion, `Dubon2026.SourceSiegelPolynomialFactors, `Dubon2026.SourceSiegelIntegralCoefficients, `Dubon2026.SourceSiegelQParameter, `Dubon2026.SourceSiegelResidueProductIndices, `Dubon2026.SourceSiegelResidueProductStreams, `Dubon2026.SourceSiegelLeadingUnit, `Dubon2026.SourceSiegelNormalizedProduct, `Dubon2026.SourceSiegelCoefficientSeries, `Dubon2026.SourceSiegelIntegralExpansion, `Dubon2026.SourceSiegelFiniteSeriesProducts, `Dubon2026.SourceSiegelProductCoefficients, `Dubon2026.SourceSiegelProductLeadingCoefficient, `Dubon2026.SourceSiegelProductPhases, `Dubon2026.SourceSiegelFiniteProductExpansion, `Dubon2026.SourcePeakedAuxiliaryFunction, `Dubon2026.SourceSiegelCuspPermutation, `Dubon2026.SourcePeakedAuxiliaryCuspDecay, `Dubon2026.SourcePeakedAuxiliaryHolomorphic, `Dubon2026.SourcePeakedAuxiliaryModularForm, `Dubon2026.SourcePeakedDiscriminantSeries, `Dubon2026.SourcePeakedSeriesOperations, `Dubon2026.SourcePeakedShiftedCoefficients, `Dubon2026.SourcePeakedShiftedSeries, `Dubon2026.SourcePeakedWidthOneIdentification, `Dubon2026.SourcePeakedIntegralQExpansion, `Dubon2026.SourcePeakedTranslatedIntegralExpansion, `Dubon2026.SourcePeakedScaledOrders, `Dubon2026.SourcePeakedOrderGapDecay, `Dubon2026.SourceActualPeakedAuxiliary]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio, `Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_coeff_mem_of_initial_coeff_mem, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.exists_integral_weight_factor, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.coeff_mem_of_product_initial_coeff_mem, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_trace_coeff_mem_of_initial_coeff_mem, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_zero_of_exponential_decay, `Dubon2026.SourceFunctionField.IntegralTrace.exists_trace_parameters, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_eq_zero_of_lt, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mul, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mem_of_levelOne_trace_decomposition, `Dubon2026.SourceFunctionField.IntegralTrace.slash_neg_even, `Dubon2026.SourceFunctionField.IntegralTrace.exists_levelOne_trace, `Dubon2026.SourceFunctionField.IntegralTrace.exists_signed_cusp_transversal, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.periodic_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.mdifferentiable_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.isBoundedAtImInfty_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.coeff_translation_sum, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_multiple_width, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_one_mul_pow, `Dubon2026.SourceFunctionField.IntegralTrace.isBigO_mul_pow_exp, `Dubon2026.SourceFunctionField.IntegralTrace.pow_slash_SL2, `Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_finset_sum, `Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_finset_sum, `Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_slash, `Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_slash, `Dubon2026.SourceFunctionField.IntegralTrace.slash_T_zpow_apply, `Dubon2026.SourceFunctionField.IntegralTrace.slash_T_pow_apply, `Dubon2026.SourceFunctionField.IntegralTrace.periodic_comp_ofComplex_of_slash_T_pow_eq, `Dubon2026.SourceFunctionField.IntegralTrace.slash_S_slash_T_eq, `Dubon2026.SourceFunctionField.IntegralTrace.slash_eq_of_mem_or_neg_mem, `Dubon2026.SourceFunctionField.IntegralTrace.periodic_of_pm_mem, `Dubon2026.SourceFunctionField.IntegralTrace.natCast_mem_strictPeriods, `Dubon2026.SourceFunctionField.IntegralTrace.translation_sum_eq, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_qExpansion_one_sum_slash_T_pow, `Dubon2026.SourceFunctionField.IntegralTrace.exists_width, `Dubon2026.SourceFunctionField.IntegralTrace.sum_transversal_split, `Dubon2026.SourceFunctionField.IntegralTrace.exists_integral_trace_decomposition, `Dubon2026.SourceFunctionField.IntegralTrace.T_mem_of_S_mul_T_zpow_mem, `Dubon2026.SourceFunctionField.IntegralTrace.slash_coeff_mem_of_coincident_cusps, `Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.gammaOne_peaked_cusp_classes, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt_cast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eval_map_bernoulli_two, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.hasSum_cos_div_sq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.hasSum_cos_wt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_intCast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_natCast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cos_nat_mul_eq_cosZ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ_neg, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.abs_psi_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.tsum_psi_div_sq_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.summable_psi_div_sq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi_zero_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.natCast_mul_eq_of_mod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.tsum_psi_eq_sum_residues, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sum_units_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sum_char_mul_Zres, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_forall_sum_char_inv_mul_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_convolution, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sinZ_neg, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.stdAddChar_eq_cosZ_add_sinZ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.eq_zero_of_psi_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam_neg, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_mem_span, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_neg, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T_eq_zero_imp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.TE_surjective, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.mem_span_iff_even, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_Bt_aux, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_Bt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_eq_sum_range, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.periodic_shift, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_mul_of_periodic, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.emod_progression, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_range_affine_unit, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_comp_val_affine, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.gcd_bookkeeping, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.sum_zmod_Bt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_divisors_J2, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.filter_dvd_divisors, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_moebius_gcd_sq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_moebius_mul_div_eq_totient, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.weight_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.filter_dvd_range, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_zmod_ite_dvd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_range_Bt_mul_mod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.inner_sum, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_zmod_weight_Bt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.sum_totient_mul_weight_dilate_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_le_sq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.neg_sq_le_W, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.W_one_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_W_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_sum_W_linear, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_W_add_mul_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.wt_pos, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.sum_mZ_mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.exists_peaked_exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_peaked_exponent_on_actual_cusps, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.one_sub_pow_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_zero_right, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_self, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_of_gt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_succ_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.gauss_q, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.finite_jtp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_pow_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.pow_succ_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_one_sub_pow_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow_real, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.multipliable_pfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_pos, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.le_norm_qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.norm_qfact_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.sum_Icc_eq_tsum_fam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_Icc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_range, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.jacobiTheta_two_eq_tprod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun_def, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_level_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.norm_qq_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_one_sub_pow_mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_c, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.jtp_term, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qParam_24, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.one_sub_eta_q, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_pref, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_theta_w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq_theta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableOn_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.mdifferentiable_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sqrt_bridge, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.cpow_half_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_T, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_all, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.natCast_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_snd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_snd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_fst, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_fst, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.intCast_zmod_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.exists_siegelFun_eq_mul_reduced, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pow_twelve_mul_eq_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.prod_siegelFun_pow_specialLinearGroup_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coe_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.order_fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_mul_fac_of_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_prod_range_fac, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_pp_stable, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.eval_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasProdLocallyUniformlyOn_product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.differentiableOn_product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_derivative_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.iteratedDeriv_product_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_coeff_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_eval, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_two_linear_factors_sub_one_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_norm_bound, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_one_sub_C_mul_X, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.expand, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one_sub_C_mul_X, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.ite, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_Pc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_eq_qParam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_qN_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.q_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qa_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pref_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.multipliable_one_sub_mul_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.neg_natCast_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegel_streams, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_Pc_eval, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_inv_eq_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.N_mul_inv_one_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_one_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.polynomial_product_eq_streams, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegelFun_div_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_series_nat, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_hasSum_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.prod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.coeff_prod_mem, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.not_dvd_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exp_orderSum_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized_product_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_pow_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.tendsto_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.constantCoeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_discriminant, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.expands_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_X_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_natCast_zpow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.natCast_mem_strictPeriods_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.isIntegral_phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_inv_eq_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_product_delta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_level_inverse_phase_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_adjusted, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_qExpansion_slash_of_nonneg_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.Ord_scaleExponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_level_multiple_peaked_exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_clearing_discriminant_power, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.orderSum_eq_Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_width_one_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.cusp_order_gap_bigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.IntegralTrace.Translates.trSum, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.wt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.cosZ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.psi, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Zres, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.sinZ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.fam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.T, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.evenSub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.TE, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution.Bt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient.J2, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents.residueWeight, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.fam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.Law, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.rho, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.orderSum, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.scaleExponent]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE PEAKED AUXILIARY AUDIT PASS: {count} theorems including private/generated declarations. Actual even-weight trace and constructed peaked auxiliary with exact integral expansions and cusp decay. Trace application, degree/genus and source gates OPEN;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneEvenIntegralRatios
+
+#lint in Dubon2026.SourceLevelOneCoefficientRing
+
+#lint in Dubon2026.SourceLevelOneIntegralWeightFactor
+
+#lint in Dubon2026.SourceTraceProductCoefficientRing
+
+#lint in Dubon2026.SourceIntegralLevelOneTraceCoefficients
+
+#lint in Dubon2026.SourceTraceExponentialCoefficientVanishing
+
+#lint in Dubon2026.SourceIntegralTraceParameters
+
+#lint in Dubon2026.SourceIntegralTracePowerCoefficients
+
+#lint in Dubon2026.SourceIntegralTraceCoefficientExtraction
+
+#lint in Dubon2026.SourceIntegralTraceModularForm
+
+#lint in Dubon2026.SourceIntegralTraceCuspTransversal
+
+#lint in Dubon2026.SourceIntegralTraceTranslates
+
+#lint in Dubon2026.SourceIntegralTraceTranslationCoefficients
+
+#lint in Dubon2026.SourceIntegralTracePeriodWidth
+
+#lint in Dubon2026.SourceIntegralTraceAnalyticProducts
+
+#lint in Dubon2026.SourceIntegralTraceSlashPeriods
+
+#lint in Dubon2026.SourceIntegralTraceTranslationAssembly
+
+#lint in Dubon2026.SourceIntegralTraceTransversalSplit
+
+#lint in Dubon2026.SourceIntegralTraceDecomposition
+
+#lint in Dubon2026.SourceIntegralTraceDegenerateCusp
+
+#lint in Dubon2026.SourceEvenWeightPeakedTraceIntegrality
+
+#lint in Dubon2026.SourceGammaOnePeakedCuspClasses
+
+#lint in Dubon2026.SourcePeakedBernoulliFourier
+
+#lint in Dubon2026.SourcePeakedBernoulliMoments
+
+#lint in Dubon2026.SourcePeakedBernoulliResidueWeights
+
+#lint in Dubon2026.SourcePeakedBernoulliCharacterInversion
+
+#lint in Dubon2026.SourcePeakedBernoulliConvolution
+
+#lint in Dubon2026.SourcePeakedBernoulliVanishing
+
+#lint in Dubon2026.SourcePeakedBernoulliFourierInversion
+
+#lint in Dubon2026.SourcePeakedBernoulliSpan
+
+#lint in Dubon2026.SourcePeakedBernoulliProgressions
+
+#lint in Dubon2026.SourcePeakedBernoulliTotient
+
+#lint in Dubon2026.SourcePeakedExponentHelpers
+
+#lint in Dubon2026.SourcePeakedExponents
+
+#lint in Dubon2026.SourceGammaOnePeakedCuspOrders
+
+#lint in Dubon2026.SourceSiegelJacobiFiniteProducts
+
+#lint in Dubon2026.SourceSiegelJacobiGaussProduct
+
+#lint in Dubon2026.SourceSiegelJacobiFiniteIdentity
+
+#lint in Dubon2026.SourceSiegelJacobiProductBounds
+
+#lint in Dubon2026.SourceSiegelJacobiDominatedLimit
+
+#lint in Dubon2026.SourceSiegelJacobiRangeLimit
+
+#lint in Dubon2026.SourceSiegelJacobiProductIdentity
+
+#lint in Dubon2026.SourceSiegelFunction
+
+#lint in Dubon2026.SourceSiegelProductCore
+
+#lint in Dubon2026.SourceSiegelThetaIdentification
+
+#lint in Dubon2026.SourceSiegelHolomorphic
+
+#lint in Dubon2026.SourceSiegelEtaTransform
+
+#lint in Dubon2026.SourceSiegelThetaTransform
+
+#lint in Dubon2026.SourceSiegelInversion
+
+#lint in Dubon2026.SourceSiegelSL2Transformation
+
+#lint in Dubon2026.SourceSiegelLevelShiftFactors
+
+#lint in Dubon2026.SourceSiegelLevelShifts
+
+#lint in Dubon2026.SourceSiegelResidueReduction
+
+#lint in Dubon2026.SourceSiegelProductTransformation
+
+#lint in Dubon2026.SourceSiegelStableCoefficients
+
+#lint in Dubon2026.SourceSiegelProductLocalUniform
+
+#lint in Dubon2026.SourceSiegelProductTaylorExpansion
+
+#lint in Dubon2026.SourceSiegelPolynomialFactors
+
+#lint in Dubon2026.SourceSiegelIntegralCoefficients
+
+#lint in Dubon2026.SourceSiegelQParameter
+
+#lint in Dubon2026.SourceSiegelResidueProductIndices
+
+#lint in Dubon2026.SourceSiegelResidueProductStreams
+
+#lint in Dubon2026.SourceSiegelLeadingUnit
+
+#lint in Dubon2026.SourceSiegelNormalizedProduct
+
+#lint in Dubon2026.SourceSiegelCoefficientSeries
+
+#lint in Dubon2026.SourceSiegelIntegralExpansion
+
+#lint in Dubon2026.SourceSiegelFiniteSeriesProducts
+
+#lint in Dubon2026.SourceSiegelProductCoefficients
+
+#lint in Dubon2026.SourceSiegelProductLeadingCoefficient
+
+#lint in Dubon2026.SourceSiegelProductPhases
+
+#lint in Dubon2026.SourceSiegelFiniteProductExpansion
+
+#lint in Dubon2026.SourcePeakedAuxiliaryFunction
+
+#lint in Dubon2026.SourceSiegelCuspPermutation
+
+#lint in Dubon2026.SourcePeakedAuxiliaryCuspDecay
+
+#lint in Dubon2026.SourcePeakedAuxiliaryHolomorphic
+
+#lint in Dubon2026.SourcePeakedAuxiliaryModularForm
+
+#lint in Dubon2026.SourcePeakedDiscriminantSeries
+
+#lint in Dubon2026.SourcePeakedSeriesOperations
+
+#lint in Dubon2026.SourcePeakedShiftedCoefficients
+
+#lint in Dubon2026.SourcePeakedShiftedSeries
+
+#lint in Dubon2026.SourcePeakedWidthOneIdentification
+
+#lint in Dubon2026.SourcePeakedIntegralQExpansion
+
+#lint in Dubon2026.SourcePeakedTranslatedIntegralExpansion
+
+#lint in Dubon2026.SourcePeakedScaledOrders
+
+#lint in Dubon2026.SourcePeakedOrderGapDecay
+
+#lint in Dubon2026.SourceActualPeakedAuxiliary

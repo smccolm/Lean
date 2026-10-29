@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CoefficientRetractionAdicTopology",
+  "mathematics": "Use the actual retraction equality for every maximal-ideal power to identify the inherited coefficient neighborhood basis with the subalgebra maximal-adic basis. For a closed subalgebra of the original complete coefficient ring, inherited completeness and separatedness then prove completeness for that same subalgebra maximal ideal.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-coefficient-retraction-route-20261010.json: original completion kernels, localizations, matrix-coordinate generation, continuous framed universality, local coefficient retractions and adic neighborhood bases inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Installed the same canonical inherited subring topological-ring and additive-subgroup uniform-group instances explicitly.",
+    "Derived actual CompleteSpace S directly from the given original closedness and proved ambient completeness. No statement, topology or resource limit changed. Initial attempts exposed only missing subtype instances;1732c passed cleanly."
+  ],
+  "productionLog": "retractionTopology1732c-focus.log"
+}

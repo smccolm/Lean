@@ -1,0 +1,7 @@
+### Actual actual matrix trace Gram determinant — 10 October 2026
+
+In an actual basis of the original full matrix algebra, express the genuine trace-dual matrices in that same basis. Prove that their coordinate matrix is an actual left inverse to the trace Gram matrix, by applying the original trace pairing to the whole basis expansions. Deduce that the genuine Gram determinant is a unit in the original coefficient ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixTraceGram](Extension/Dubon2026/MatrixTraceGram.lean).

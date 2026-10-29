@@ -1,0 +1,7 @@
+### Actual original adjoint invariant dimension — 10 October 2026
+
+The original scalar-matrix map is coefficient-linear into the actual original adjoint invariants and injective for nonempty matrix size. Genuine irreducibility after extension to an algebraically closed field makes it surjective by the proved scalar descent. The resulting original-field linear equivalence proves that the same actual original invariant submodule has dimension one.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixAdjointInvariantDimension](Extension/Dubon2026/MatrixAdjointInvariantDimension.lean).

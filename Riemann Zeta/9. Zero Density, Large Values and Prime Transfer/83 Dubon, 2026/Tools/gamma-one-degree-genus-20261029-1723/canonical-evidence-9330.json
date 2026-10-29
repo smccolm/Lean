@@ -1,0 +1,562 @@
+{
+  "status": "Canonical PASS of the original Gamma One reduced diamond action, degree preservation and genus upper comparison. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_degree_genus_9330.ps1",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/build_gamma_one_degree_genus_9330.ps1",
+      "sha256": "1DEF5292E09C6AAAAB7CAB0E7980B5E32C06A424CCF91CA464902F901F0E5E40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_degree_genus_ownership_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/compare_gamma_one_degree_genus_ownership_9330.py",
+      "sha256": "BA721DCC6E6E1ECF93EBD4EF8CCB87252E4358FEE6C66EDB4F4E0A1ACA936B3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-degree-genus-preexecution-review-9330.json",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/gamma-one-degree-genus-preexecution-review-9330.json",
+      "sha256": "1C63FCA20148EAA19A0F5015397FA18D05D5E06901D2F0469B698EDFCB3F5A36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-degree-genus-preflight-9330.json",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/gamma-one-degree-genus-preflight-9330.json",
+      "sha256": "18D7E72824614F75C44D3575E7DA5171677D19415B1719CD941F3207F36FB269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_degree_genus_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/integrate_source_gamma_one_degree_genus_9330.py",
+      "sha256": "E7AE12EE39EB81018EA31D9A726AB670588298D38146CFD6FEA6352DCF7B29C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_degree_genus_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/preflight_gamma_one_degree_genus_9330.py",
+      "sha256": "7D5990264BD13E3D28E9D9504E090D4263A09AD46B1BD862B82E6CD3FB1C1B17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_degree_genus_global_ownership_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/prepare_gamma_one_degree_genus_global_ownership_9330.py",
+      "sha256": "433B98120F83D9AAB5E517146CF654EED22CEDBFCD21C49C77985DF64BB2CFCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_degree_genus_production_ownership_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/prepare_gamma_one_degree_genus_production_ownership_9330.py",
+      "sha256": "3557CFA89CDB6131D44DAA5EFCFC2AC66A7680B25D3166FF5E9AD43CA2FE21F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_degree_genus_9330.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/record_source_gamma_one_degree_genus_9330.py",
+      "sha256": "5D1981DC0ECAE007AF329FAD0DC27DFB5726A50C00F80E4965E1D4F7E4BB6697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_degree_genus_9330b.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/record_source_gamma_one_degree_genus_9330b.py",
+      "sha256": "82918365B320BBCA79580C35B2722145D0B9209B51530B87C50FDF974A564253"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\repair_gamma_one_inventory_9330b.py",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/repair_gamma_one_inventory_9330b.py",
+      "sha256": "BD2E8F623801BF0360AE2958D182165B8A8AA2450592D8C5AD1A2F13CC61073D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-genus-ownership-comparison-9330.json",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/source-gamma-one-degree-genus-ownership-comparison-9330.json",
+      "sha256": "3C6D0115E1AAE033825B50F7CB598CEA26564A269AC8F46A949CE785A52A2977"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-genus-production-build-9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/source-gamma-one-degree-genus-production-build-9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-genus-production-build-9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/source-gamma-one-degree-genus-production-build-9330.log",
+      "sha256": "5FA4AEC3170A7BA6E464D838706987E93804863C70674F204A7FBA7ED98ABA91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-degree-genus-scratch-ownership-9330.json",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/source-gamma-one-degree-genus-scratch-ownership-9330.json",
+      "sha256": "54656F8441C34B9EFE2EE439D98C0DC130FE99E20D78BEAF2058A8E7F03A36E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeDependencyAudit1Production9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeDependencyAudit1Production9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeDependencyAudit1Production9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeDependencyAudit1Production9330.lean.txt",
+      "sha256": "F68DA2C67D8B24F012DC84C443CB54C5437CD708FDF29DE17C52771DE9A2DC08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeDependencyAudit1Production9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeDependencyAudit1Production9330.log",
+      "sha256": "A0A0ADC0BA6EBB7047E7EA1BDEB12DA2E3E3D742668DD19399D563D73FF10CF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusGlobalOwnership9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusGlobalOwnership9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusGlobalOwnership9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusGlobalOwnership9330.lean.txt",
+      "sha256": "23C3030EE1E252DFC6817D159CE6E097AC1E4CFE63909D835848EF83D85EA8F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusGlobalOwnership9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusGlobalOwnership9330.log",
+      "sha256": "1F6069B98FCE23BCCB0D3CABA19C231F64DA85CCF7EEFF76042E9870D4C29AAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusOwnership9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusOwnership9330.lean.txt",
+      "sha256": "3F278C64C41405ED498574D157AAC14AA743DA068F08B7C5FEA90B5CF429F2D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusOwnership9330.log",
+      "sha256": "6B620D79153D193DA67D0740534E2D3C4A988D464FFB069C7D67AB994A39F60F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusProductionAudit9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusProductionAudit9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusProductionAudit9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusProductionAudit9330.lean.txt",
+      "sha256": "586D173AB86ADB0D411B14419A8BBE74DE0043322EE97DD940467E561B2DEEDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusProductionAudit9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneDegreeGenusProductionAudit9330.log",
+      "sha256": "ABECC63C83CBA422DDFDE6A3584CD7704A8D97F00FC105339227AB3E27E68E3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperDependencyAudit1Production9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneGenusUpperDependencyAudit1Production9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperDependencyAudit1Production9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneGenusUpperDependencyAudit1Production9330.lean.txt",
+      "sha256": "9E824118B49D79A5FEEC8961CCA5D7F424F4308F8780963D405E6456B0047390"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperDependencyAudit1Production9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceGammaOneGenusUpperDependencyAudit1Production9330.log",
+      "sha256": "D587D5A60102B4E1659286FF35B4CDB01F51138FA0185458C154F97D9105B259"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondActionDependencyAudit1Production9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondActionDependencyAudit1Production9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondActionDependencyAudit1Production9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondActionDependencyAudit1Production9330.lean.txt",
+      "sha256": "90CDD20CFF53F8FA46BFB9BD82D0E80E5B4952C1139C5551C9CCA32BBF5F3F27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondActionDependencyAudit1Production9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondActionDependencyAudit1Production9330.log",
+      "sha256": "DB2423B89CE2FC82252071EA7FF9D3C0B9BC0C66992BDB5B56526388172EA2CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelDependencyAudit1Production9330.exit",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondKernelDependencyAudit1Production9330.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelDependencyAudit1Production9330.lean",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondKernelDependencyAudit1Production9330.lean.txt",
+      "sha256": "B83EA13EBE5D2BB8071BAB77F2367F93DEB71B0E9AAA757F776D8AE4E9127911"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelDependencyAudit1Production9330.log",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/SourceReducedDiamondKernelDependencyAudit1Production9330.log",
+      "sha256": "04190612E32B785C64DB9972DCF5D5A49DE118CB047C8FE9E8E886660C369820"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_degree_genus_9330.ps1",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/verify_gamma_one_degree_genus_9330.ps1",
+      "sha256": "5B43D0AA7E6FC21B481CC2C5B8AE44BBDDD1789979D62D68E9A6F347EF46A1E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_degree_genus_9330b.ps1",
+      "path": "Tools/gamma-one-degree-genus-20261029-1723/verify_gamma_one_degree_genus_9330b.ps1",
+      "sha256": "A468929C837704FF118A0E9DD2558167C3004EE89B7CF1F5D83FAF9A29C5CABF"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-29T11:12:33.174653+00:00",
+    "log": "logs/dubon-build-20261029-025328-725.log",
+    "sha256": "5262858ABCA7CF93D1C54E2D91D798F08ABD75764C3C47438CA0044FB7AD74A2",
+    "bytes": 15490713,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9330,
+    "projectTheorems": 59172,
+    "registeredConsumers": 27246,
+    "registeredConstructions": 2960,
+    "declarations": 36203,
+    "generated": 38807,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261029_024837.log",
+    "foundationSha256": "D3BC4C37A82482F668AD7897C8E5BAFBC6468B465841BC186C7362EC54431C98",
+    "countReconciliation": {
+      "previousTheorems": 58998,
+      "focusedTheorems": 174,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 174,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusGlobalOwnership9330.log",
+      "globalOwnershipSha256": "1F6069B98FCE23BCCB0D3CABA19C231F64DA85CCF7EEFF76042E9870D4C29AAF",
+      "globalOwnershipSourceSha256": "23C3030EE1E252DFC6817D159CE6E097AC1E4CFE63909D835848EF83D85EA8F3",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.log",
+      "ownershipSha256": "6B620D79153D193DA67D0740534E2D3C4A988D464FFB069C7D67AB994A39F60F"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 174,
+      "scratchDistinct": 174,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1_sourceGammaOneResidueGenusUpper._proof_1": "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1._proof_1",
+        "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1_sourceGammaOneResidueGenusUpper._proof_2": "_private.Dubon2026.SourceGammaOneResidueGenusUpper.0.Dubon2026.SourceFunctionField.IntegralDiamond.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldResidueImageGamma1._proof_2"
+      },
+      "productionFocused": 174,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceIntegralDiamondReduction",
+            "SourceIntegralDiamondZeroForward",
+            "SourceIntegralDiamondZeroEquivalence",
+            "SourceIntegralDiamondWitness",
+            "SourceIntegralDiamondNormalizedReduction",
+            "SourceIntegralDiamondChosenReduction",
+            "SourceIntegralDiamondSeriesOperations",
+            "SourceIntegralDiamondReducedOperations",
+            "SourceIntegralDiamondRatioRelation",
+            "SourceIntegralDiamondAdditiveSeries",
+            "SourceIntegralDiamondRatioClosure",
+            "SourceIntegralDiamondReducedAddition",
+            "SourceIntegralDiamondFieldPull",
+            "SourceIntegralDiamondFieldRange",
+            "SourceIntegralDiamondFieldConstants",
+            "SourceIntegralDiamondFieldOperations",
+            "SourceIntegralDiamondComposition",
+            "SourceIntegralDiamondFieldComposition",
+            "SourceIntegralDiamondFieldIdentity",
+            "SourceIntegralDiamondFieldAction"
+          ],
+          "count": 126,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondActionScratchOwnership1700.log",
+            "sha256": "380F4FFD80A30DADD51F701CC5CE362F972F51631DFE8755177096FF4E8905A2",
+            "sourceSha256": "4BCBECD358ED2EFA744846BE4403931B74DB96763B66C80BD0B160C5054FE8A5"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralDiamondFullBaseInclusion",
+            "SourceIntegralDiamondGammaZeroFixed",
+            "SourceIntegralDiamondEisensteinAction",
+            "SourceIntegralDiamondSignedMembership",
+            "SourceIntegralDiamondExactKernel",
+            "SourceIntegralDiamondFixedFieldDegree"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceReducedDiamondKernelScratchOwnership1709.log",
+            "sha256": "2999C127211FA5D423F27D8CF59E502F48DC61132904E2E71AAED0D7D0174EA9",
+            "sourceSha256": "799F7FF427E9A3108AA7E165318A0E10BA3DFF1269175980D67C06B6B833FED2"
+          }
+        },
+        {
+          "modules": [
+            "SourceReducedBaseCoordinateMap",
+            "SourceReducedBaseDegreeLower",
+            "SourceIntegralDiamondIndexLower",
+            "SourceReducedCoordinateIndependence",
+            "SourceReducedCoordinateMapIndependence",
+            "SourceReducedFieldCoefficientMap",
+            "SourceReducedCoordinateDegreeTransport",
+            "SourceReducedResidueDegreeTransport",
+            "SourceGammaOneDegreePreservation"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeScratchOwnership1718.log",
+            "sha256": "9C26AC1DAA29F12D4844F84205DC1A9A6680D56EAE3E1929451F3E971634874C",
+            "sourceSha256": "5873F7A9DB6C8F7B863EA2E51B6704BA80F69E35E30A6D968AFF9513CF45E12D"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResidueGenusUpper"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperScratchOwnership1722.log",
+            "sha256": "A0B61DD8C47F23324EC3E844FF506EEE0556799E911973D68B576EF0927825B3",
+            "sourceSha256": "948B86BE1E829EECF362F9EDA92C9A50D184617A13380C7CD76B49FC02336D98"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDegreeGenusOwnership9330.log",
+        "sha256": "6B620D79153D193DA67D0740534E2D3C4A988D464FFB069C7D67AB994A39F60F",
+        "sourceSha256": "3F278C64C41405ED498574D157AAC14AA743DA068F08B7C5FEA90B5CF429F2D7"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-004653-990.log",
+        "sha256": "161FA0C47ABF8D4482DDD1390D40DA07416D4F7DFF62EDFAE87099E969C5497E"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 36 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceIntegralDiamondReduction",
+            "scratchSha256": "E71B204B53BC59A6267C9444EBE100161C9BA2F100093585DA6DEE5BF0900C96",
+            "productionSha256": "DEC7FDB1C798E5A91FE0900BFFA65D256E1D7DE288B99673923D8ED7F45DAF16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondZeroForward",
+            "scratchSha256": "D48FC206AF72962D6471ECC94651316A764579EF4A96A94B8FA60213E81D0A13",
+            "productionSha256": "411B5EED828348EF20714DECE3AE8BF5BBAE3223789D070B3AE3FFAD66E8CC0B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondZeroEquivalence",
+            "scratchSha256": "A07C159EFA5E3C30BB2F489944C06BD6477FBEB5A850F09F1CF22ED8E8EAF82F",
+            "productionSha256": "284B663A31FFF9B4E55C798B392309FE42B3D719AB0528B4D4754FC5F038BC7A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondWitness",
+            "scratchSha256": "11808E80ED6D16DB241680D0FC3CFC165868D36B19814971417975708DB05122",
+            "productionSha256": "45996D5C8FF749B3CD5A4C784AE4DFE2149D56DBA537BC13EF67D1217A6B102A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondNormalizedReduction",
+            "scratchSha256": "BC00E00DDDDFACC479C996376085B6821A75959BD5B7DEA0C2DDDA11382CEEB3",
+            "productionSha256": "5B3DFA6ED96FCE5F42B3D6EAE28A92CA8F74081167D67F7CF2672E14348B9C72",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondChosenReduction",
+            "scratchSha256": "2A9473B6297A8EB13076827ACF4ABBBE30B5CB7930918B7A19D644BDEF0051EE",
+            "productionSha256": "8007E7E4E4E5EDB06653AE4E7D15DE5A158B96A9912206F34FDB45D3A151D261",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondSeriesOperations",
+            "scratchSha256": "9E0AD5885F643AD6845A74D4613AC9C8A620034F8463DAE5A587837D188427AC",
+            "productionSha256": "F4CF0D93F9937F7CDB9BB3B49B6B6CC2CBE2DBC574A7EB0C91D842D5B7FFFCA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondReducedOperations",
+            "scratchSha256": "DC0EEFED835BA310FF0D59FCF46FC51AE239BF4117949C668345C51BC1DEBACC",
+            "productionSha256": "3AB605EEF85B101E3E7B6492C8CFE7D673BA5C04606B82A9F8E8C68E749CF095",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondRatioRelation",
+            "scratchSha256": "4B465D6851363767DEC646613237542CDE1AEFB718819C6ED4EB6AA1752CAC2F",
+            "productionSha256": "DC42F9DE1DDC54C8336DD5646E7F187A7734B3587AC8AB139DDF48CC35416404",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondAdditiveSeries",
+            "scratchSha256": "6D0A0E61998436E217202AF1B2AB788A05FEA498A4069C927A3FF5AB72A6D865",
+            "productionSha256": "F2CE367474E7C23624E857287DD287A2509FF035C2CE3C086536A0FB2F9FC2F0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondRatioClosure",
+            "scratchSha256": "92BE74D55756F5D7C87486FC3C37FD8B59A2A48AA515B7FD1B8D7AB0A0F3AF5D",
+            "productionSha256": "982BD37E9C6ADB0364483C64930FB9AE83AF9A75948BB760F917B344A12747B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondReducedAddition",
+            "scratchSha256": "30161433CC8CE6F7C5EEE2443024ED19E563C0F350483F541FA981552EDF76BB",
+            "productionSha256": "01ED95BF0C12D96D53A9142F61120A00D0DEFA1C77B9ECEAF50BF42FA6DC7106",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldPull",
+            "scratchSha256": "807A1FF491E5AEC74EEB5C9E329EC65037D3F61C7295A973C58F86476619C270",
+            "productionSha256": "17091D1BC296F450FFA65F2B70AFE8AF8AE02EBBF862FB51DDF2BC7CD135D3C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldRange",
+            "scratchSha256": "94D00CF6D34F9AA3673ACD5AD370A800F47FEBE481D0C54472493720635D2089",
+            "productionSha256": "713DBAB1C1EBEB74435E03B19442D1409C9CC9D1AC636E226F5FCFF2ECE321C8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldConstants",
+            "scratchSha256": "D9E1F4E9222A05FDFC72788C4D54329796A97B80989821835CF1B70ACD4E9C52",
+            "productionSha256": "752DC8FA6C5880C47B619E0178A094FA57C23E1FBCF07E70B07CD6F28116D918",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldOperations",
+            "scratchSha256": "271D3BD1A752A1E31449DD93BCA323F76A3E0D60FB4A608EFBA3316C92FE8BC9",
+            "productionSha256": "34D6CDD004BE82DDE7355EC8C0FB483BE07D01DB7412C80B2DF249DD0F38FF0D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondComposition",
+            "scratchSha256": "EF21EE98E90E5041BE135BA38BD324DCAB506BB59AB7E0EEFAE72DF641D09B03",
+            "productionSha256": "35B241D5F2488A78156E5550B025C03DA6C38111D94756DACFBCD6916F18EB3E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldComposition",
+            "scratchSha256": "3DCA76B5F6E04852D17452AE22AC0B1E33BEB5F6ECCA3683EE0C6C40B4240A72",
+            "productionSha256": "CA3E21609938F60169CFAF8002F4BD81A6870EB2BD0BA7078B69195BD34CC319",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldIdentity",
+            "scratchSha256": "BB9BC3CDE4EB803EE7C441CEFBC023B3633EDB3111F9CE94414E111F565641E6",
+            "productionSha256": "8C6159A9C9E89D28507B41954CCA50C3F7AF0EB5F95198B56DA857A6EE7D14C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFieldAction",
+            "scratchSha256": "40DCEB78874C26B0927C65DA3459A3C0B3523136705AA4F8F244F8786F10AF67",
+            "productionSha256": "7FC4E4F9210458182B0AB30BFF3E274480AEEE77025814D8FD4B0735581142D5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFullBaseInclusion",
+            "scratchSha256": "0E7075085F446FF148B65627B1C9EE894B01D7256972D8E86D2EBEB11042551A",
+            "productionSha256": "0E7075085F446FF148B65627B1C9EE894B01D7256972D8E86D2EBEB11042551A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondGammaZeroFixed",
+            "scratchSha256": "97C3714F4BD17ED215ED322380B50B77284CAF16C72C6795886CE576E88FB8CC",
+            "productionSha256": "C0CFEF995D6DE171B0719694874ABDF871A252516E38D9DD96F48FEF1C5352EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondEisensteinAction",
+            "scratchSha256": "FEB7E98203293FE8C4659057DF85FE304F9C8FA58C6834A92450B7BEE9F5B029",
+            "productionSha256": "000A1926585955F63020721A9D430154FB8F401DA967576E3898AAE1FD2300EF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondSignedMembership",
+            "scratchSha256": "A7ADAFFBD27DC24E1664CD6BC8CDE717CFB4CE942B72C00427F52BDF7E5CB603",
+            "productionSha256": "5314ABC747D36668A9A3832EB3483A2D8BFAC36E85E1009D72CD89E2C951D8D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondExactKernel",
+            "scratchSha256": "41211BE5CD17440285E9999D66C41F7C235A4EF53A7F91535E570AF56CE91040",
+            "productionSha256": "DDB42681E882664ED36265F17FE3FF4A2902FA83748C6EDD07F4DD1E817AE056",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondFixedFieldDegree",
+            "scratchSha256": "B4E599FE4A0CE491E3A5F1F18A81ED8D061B13A9820DF07AD8DF50F93C179F6E",
+            "productionSha256": "3F10760DA16DE945387B180C0B8C0E504F84F50AF050B5EBDFF8AC141D5ABAF2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedBaseCoordinateMap",
+            "scratchSha256": "E51926436C4B90326C34937212289B214F7556E36DFB48BB72A41307D1317A15",
+            "productionSha256": "E51926436C4B90326C34937212289B214F7556E36DFB48BB72A41307D1317A15",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedBaseDegreeLower",
+            "scratchSha256": "054ED86E77B5A334ED7A5998BAED1216E4C5C8DBEC29B059907767454E4E5258",
+            "productionSha256": "2DE38659C6D7EBF550D1E3626B05A5ADA2B70B8523036C8D98D5D67406C7C01D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondIndexLower",
+            "scratchSha256": "406978F7061B67D40C969FA8CB4A09DB794010F01BD1EFD1C95C6F10D5AF799C",
+            "productionSha256": "165397709427131EE08EDF0DBD6B6E08984075F4B6E3046BCC7AA7F59EB0E9AB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedCoordinateIndependence",
+            "scratchSha256": "A6E33CA266505DB492F75BAC018B5F2AF8758AD344E991A9ABB6B08AA4CAE26D",
+            "productionSha256": "47EE0981546EF6757190B1DAE99372D2542A656AE26AD1C71C6DD7A2D1E474AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedCoordinateMapIndependence",
+            "scratchSha256": "CECD21D8D0C61752ED3FE09D2BDECD8796ABF695A76EE9BA9424B6C4C01387EC",
+            "productionSha256": "7989B462982D43059C36DE189AD1D3D80D35726D2A85F7C9426C8220E6334A10",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedFieldCoefficientMap",
+            "scratchSha256": "4CEC3B54B26B8211D7DF00734B90A80941127A5AF195A900423A03AFBB00F46B",
+            "productionSha256": "4CEC3B54B26B8211D7DF00734B90A80941127A5AF195A900423A03AFBB00F46B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedCoordinateDegreeTransport",
+            "scratchSha256": "47AC5A766E66CF9993F3197F18A016C7D8F79A4D679956B3F0837D4EFEAEE2C3",
+            "productionSha256": "6A9A0C315A018694A2C6FCA18F43110ED7A29FC0525D2A96E8251EFB30D69D13",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReducedResidueDegreeTransport",
+            "scratchSha256": "8480A61A1A99BFECB8D8032F34BB7335B116B938216319439B7177099B74AA52",
+            "productionSha256": "FEEEFE810C447B7B9C4D663DB9EF56120EF6F0776EBA026B8F417A9C6BFFD5B3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDegreePreservation",
+            "scratchSha256": "3D52D6D2BAEB5549BA1B3FE37E5DFE1BA959C4ADFE8664896C3D012D1D5F7BA5",
+            "productionSha256": "40DF8AA00D1440F3811E043B3B9A7B0DC84580799B37BC58E39E172A7F52E71A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueGenusUpper",
+            "scratchSha256": "B7F2192756324F6695444546B9BA126CA5C8E98E894F03FB5DE2F6A1EB39192E",
+            "productionSha256": "0CB8174717FA7874EBFF64EADF1EBD15B9FBB37A151029BC1C4C712254FD9369",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 174 distinct names from 174 exhaustive scratch checks are retained: 174 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The reverse genus inequality remains open; original genus preservation is not yet complete. Extension of the prime-field action to the residue coefficients and the required modular fiber bounds are the next dependencies. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9330b-console.log",
+      "sha256": "ECDA0BCD5012E8823EA6E342BDC25D655255D31A1FDE30445115C0C2C0EB3BD6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9330b-console.log",
+      "sha256": "1BEA241D4ED69BF41B4156D31BE8D74E4D7215ABD2395E430C65E8C763949BDC"
+    }
+  ]
+}

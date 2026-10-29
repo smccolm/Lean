@@ -1,0 +1,85 @@
+import SourceFrickeGammaOneNormalizer1631a
+import Dubon2026.SourceGammaOneCuspAuxiliaryForm
+import Dubon2026.SourceSL2CocycleMatrices
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> level-power slash
+integrality -> trace application. Construct the actual S-conjugate
+congruence subgroup, its finite index, both required translations and
+its inclusions in the translated modular-form groups. The comap by
+SL2 conjugation avoids an unnecessary GL injectivity detour; its
+membership equation is the literal source conjugacy condition.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_fricke_coeff. -/
+namespace Dubon2026.SourceFunctionField.IntegralFricke
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm Pointwise
+local notation "??(" M ")" => ((Gamma1 M : Subgroup SL(2, ?)) : Subgroup (GL (Fin 2) ?))
+
+/-- The actual S-conjugate of Gamma1 in the integral special linear group. -/
+def GammaS (N : ?) : Subgroup SL(2, ?) :=
+  (Gamma1 N).comap (MulAut.conj ModularGroup.S).toMonoidHom
+
+theorem mem_GammaS_iff {N : ?} {? : SL(2, ?)} :
+    ? ? GammaS N ? ModularGroup.S * ? * ModularGroup.S?? ? Gamma1 N := Iff.rfl
+
+theorem Gamma_le_GammaS (N : ?) : CongruenceSubgroup.Gamma N ? GammaS N := by
+  intro ? h?
+  have h := (Gamma_normal N).conj_mem ? h? ModularGroup.S
+  rw [mem_GammaS_iff]
+  simp_all [Gamma1_mem, Gamma_mem]
+
+instance instFiniteIndexGammaS (N : ?) [NeZero N] : (GammaS N).FiniteIndex :=
+  Subgroup.finiteIndex_of_le (Gamma_le_GammaS N)
+
+theorem T_pow_mem_GammaS (N : ?) : ModularGroup.T ^ N ? GammaS N := by
+  apply Gamma_le_GammaS N
+  simpa using ModularGroup_T_pow_mem_Gamma (N : ?) (N : ?) dvd_rfl
+
+theorem STS_mem_GammaS (N : ?) :
+    ModularGroup.S * ModularGroup.T * ModularGroup.S?? ? GammaS N := by
+  rw [mem_GammaS_iff]
+  have h : ModularGroup.S * (ModularGroup.S * ModularGroup.T * ModularGroup.S??) *
+      ModularGroup.S?? = ModularGroup.T := by
+    rw [ModularGroup.S_inv]
+    simp only [mul_neg, neg_mul, neg_neg, ? mul_assoc, SourceSL2Cocycle.S_mul_S, one_mul]
+    rw [mul_assoc, SourceSL2Cocycle.S_mul_S]
+    simp
+  rw [h]
+  simp [Gamma1_mem, ModularGroup.T]
+
+theorem mem_conj_iff (g x : GL (Fin 2) ?) (? : Subgroup (GL (Fin 2) ?)) :
+    x ? ConjAct.toConjAct g?? ? ? ? g * x * g?? ? ? := by
+  rw [Subgroup.mem_pointwise_smul_iff_inv_smul_mem, ? ConjAct.toConjAct_inv, inv_inv,
+    ConjAct.toConjAct_smul]
+
+theorem GammaS_le_conjS (N : ?) :
+    ((GammaS N : Subgroup SL(2, ?)) : Subgroup (GL (Fin 2) ?)) ?
+      ConjAct.toConjAct ((ModularGroup.S : SL(2, ?)) : GL (Fin 2) ?)?? ? ??(N) := by
+  rintro x ??, h?, rfl?
+  rw [mem_conj_iff]
+  refine ?ModularGroup.S * ? * ModularGroup.S??, h?, ?_?
+  simp only [map_mul, map_inv]
+
+theorem GammaS_le_conj_g? (N : ?) [NeZero N] :
+    ((GammaS N : Subgroup SL(2, ?)) : Subgroup (GL (Fin 2) ?)) ?
+      ConjAct.toConjAct (frickeMatrix N *
+        ((ModularGroup.S : SL(2, ?)) : GL (Fin 2) ?)??)?? ? ??(N) := by
+  rintro x ??, h?, rfl?
+  rw [mem_conj_iff]
+  have he : ModularGroup.S?? * ? * ModularGroup.S =
+      ModularGroup.S * ? * ModularGroup.S?? := by
+    rw [ModularGroup.S_inv, neg_mul, neg_mul, mul_neg]
+  have hmem := fricke_conj_mem (mem_GammaS_iff.mp h?)
+  rw [? he] at hmem
+  simpa only [map_mul, map_inv, mul_inv_rev, inv_inv, mul_assoc] using hmem
+
+theorem natCast_mem_strictPeriods_GammaS (N : ?) :
+    (N : ?) ? ((GammaS N : Subgroup SL(2, ?)) : Subgroup (GL (Fin 2) ?)).strictPeriods := by
+  rw [Subgroup.mem_strictPeriods_iff]
+  refine ?ModularGroup.T ^ N, T_pow_mem_GammaS N, ?_?
+  simpa only [zpow_natCast, Int.cast_natCast] using GammaOne.CuspAuxiliary.mapGL_T_zpow (N : ?)
+
+end
+end Dubon2026.SourceFunctionField.IntegralFricke

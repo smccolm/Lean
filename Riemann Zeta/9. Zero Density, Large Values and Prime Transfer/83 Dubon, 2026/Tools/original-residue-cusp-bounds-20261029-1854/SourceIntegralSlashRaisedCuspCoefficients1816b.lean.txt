@@ -1,0 +1,56 @@
+import SourceIntegralSlashRaisedCuspFormula1814a
+import SourceIntegralSlashTriangularParameter1815a
+import Dubon2026.SourceIntegralSlashCuspChart
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> second full-base cusp coordinate. Reuse the
+native Fourier sum, sparse-index reassembly and actual cusp period to compute
+the coefficients of the raised form at the specified cusp. No separate
+analytic coset-translate regularity framework is required. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane Function GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups ModularForm
+
+theorem coeff_raisedLevelOne_cusp (N a d : ℕ) [NeZero N] [NeZero a] [NeZero d]
+    (had : a * d = N) {k : ℤ} (f : ModularForm 𝒮ℒ k) (g : SL(2, ℤ))
+    (B : ℕ) (c t : ℤ) (hc : g 1 0 = a * c)
+    (ht : g 1 1 * a - g 1 0 * (B : ℤ) = N * t) (n : ℕ) :
+    (qExpansion (N : ℝ)
+      ((⇑(gammaOneRaisedLevelOne N f) : ℍ → ℂ) ∣[k] (g : GL (Fin 2) ℝ))).coeff n =
+      (d : ℂ) ^ (-k) * (if a * a ∣ n then
+        zeta N ((a * B : ℕ) : ℤ) ^ (n / (a * a)) *
+          (qExpansion 1 f).coeff (n / (a * a)) else 0) := by
+  symm
+  refine ModularFormClass.qExpansion_coeff_unique
+    (f := ModularForm.translate (gammaOneRaisedLevelOne N f) (g : GL (Fin 2) ℝ))
+    (c := fun m => (d : ℂ) ^ (-k) * (if a * a ∣ m then
+      zeta N ((a * B : ℕ) : ℤ) ^ (m / (a * a)) *
+        (qExpansion 1 f).coeff (m / (a * a)) else 0))
+    (Nat.cast_pos.mpr (NeZero.pos N)) (cusp_strictPeriod N g) ?_ n
+  intro τ
+  change HasSum _ (((⇑(gammaOneRaisedLevelOne N f) : ℍ → ℂ) ∣[k]
+    (g : GL (Fin 2) ℝ)) τ)
+  rw [gammaOneRaisedLevelOne_slash N a d had f g B c t hc ht, Pi.smul_apply, smul_eq_mul]
+  have hs := hasSum_qExpansion one_pos
+    (SlashInvariantFormClass.periodic_comp_ofComplex f one_mem_strictPeriods_SL)
+    f.holo' (ModularFormClass.bdd_at_infty f) (heckeTriangularMatrix a d B • τ)
+  have hs' : HasSum (fun m : ℕ =>
+      (zeta N ((a * B : ℕ) : ℤ) ^ m * (qExpansion 1 f).coeff m) •
+        (Periodic.qParam (N : ℝ) (τ : ℂ) ^ (a * a)) ^ m)
+      (f (heckeTriangularMatrix a d B • τ)) := by
+    convert hs using 1
+    funext m
+    rw [qParam_triangular_width N a d had, mul_pow]
+    simp only [smul_eq_mul]
+    ring
+  have h := (hasSum_pow_dvd_reindex (Nat.mul_pos (NeZero.pos a) (NeZero.pos a)) hs').mul_left
+    ((d : ℂ) ^ (-k))
+  convert h using 1
+  funext m
+  dsimp only
+  simp only [smul_eq_mul]
+  split_ifs <;> ring
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

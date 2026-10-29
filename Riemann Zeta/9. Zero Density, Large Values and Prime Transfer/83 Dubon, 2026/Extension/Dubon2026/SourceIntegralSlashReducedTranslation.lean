@@ -1,0 +1,55 @@
+import Dubon2026.SourceIntegralSlashReducedSeries
+import Dubon2026.SourceIntegralSlashTMove
+import Dubon2026.SourceLaurentRootTwist
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> diamond stabilizer equivariance. The native
+analytic T-translation formula already computes the actual cusp coefficients.
+Map its integral root of unity through the localized coefficient reduction to
+obtain the prescribed residue phase. No new analytic translation or generic
+cyclotomic machinery is needed. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke UpperHalfPlane CongruenceSubgroup
+open GammaOne.PeakedAuxiliary.EulerExpansion
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+variable (N : ℕ) [NeZero N] {K : Type*} [Field K]
+  (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (ζ : Kˣ)
+  (hφ : ∀ z : Zbar,
+    (z : ℂ) = Complex.exp (2 * Real.pi * Complex.I / N) → φ z = ζ)
+
+include hφ in
+theorem levelReduction_zeta (j : ℤ) :
+    levelReduction N φ hN (integersToLevel N
+      ⟨zeta N j, isIntegral_zeta N (NeZero.pos N) j⟩) = (ζ ^ j : Kˣ) := by
+  rw [levelReduction_integers]
+  let z : Zbar := ⟨zeta N 1, isIntegral_zeta N (NeZero.pos N) 1⟩
+  have hz : z ^ N = 1 := Subtype.ext (zeta_pow N (NeZero.pos N) 1)
+  let u : Zbarˣ := Units.ofPowEqOne z N hz (NeZero.ne N)
+  have hu : Units.map φ.toMonoidHom u = ζ := by
+    apply Units.ext
+    exact hφ z (by simp [z, zeta])
+  have hj : ((u ^ j : Zbarˣ) : Zbar) =
+      ⟨zeta N j, isIntegral_zeta N (NeZero.pos N) j⟩ := by
+    apply Subtype.ext
+    change (algebraMap Zbar ℂ) ((u ^ j : Zbarˣ) : Zbar) = zeta N j
+    have he : (Units.map (algebraMap Zbar ℂ).toMonoidHom u : ℂˣ) =
+        Units.mk0 (zeta N 1) (Complex.exp_ne_zero _) := Units.ext rfl
+    have hm := congrArg (fun v : ℂˣ => (v : ℂ))
+      (map_zpow (Units.map (algebraMap Zbar ℂ).toMonoidHom) u j)
+    change (algebraMap Zbar ℂ) ((u ^ j : Zbarˣ) : Zbar) = _ at hm
+    rw [hm, he]
+    change (↑(Units.mk0 (zeta N 1) (Complex.exp_ne_zero _) ^ j) : ℂ) = _
+    rw [Units.val_zpow_eq_zpow_val, Units.val_mk0]
+    simp only [zeta, Int.cast_one, mul_one]
+    rw [← Complex.exp_int_mul]
+    congr 1
+    ring
+  rw [← hj]
+  have hm := congrArg (fun v : Kˣ => (v : K)) (map_zpow (Units.map φ.toMonoidHom) u j)
+  change φ ((u ^ j : Zbarˣ) : Zbar) = _ at hm
+  exact hm.trans (congrArg (fun v : Kˣ => (v : K)) (congrArg (fun v : Kˣ => v ^ j) hu))
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

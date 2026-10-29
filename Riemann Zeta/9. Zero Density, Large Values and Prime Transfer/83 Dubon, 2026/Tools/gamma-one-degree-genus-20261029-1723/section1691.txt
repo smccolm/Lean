@@ -1,0 +1,7 @@
+### Actual closed coefficient subalgebra locality — 10 October 2026
+
+For a closed subalgebra of the original maximal-adic coefficient ring with the original residue field, approximate the inverse of an actual ambient unit by finite geometric sums in the same subalgebra. The residue identification supplies an original coefficient constant matching the inverse residue, so the geometric ratio belongs to the actual maximal ideal and its powers tend to zero. Closedness puts the actual inverse in the subalgebra. Thus the genuine inclusion reflects units and the existing subalgebra ring is local.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ClosedCoefficientSubalgebraLocality](Extension/Dubon2026/ClosedCoefficientSubalgebraLocality.lean).

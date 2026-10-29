@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "IdempotentNewtonStep",
+  "mathematics": "For the actual cubic polynomial 3x^2-2x^3 in an arbitrary associative ring, prove the exact difference from the original element, the exact squared-error improvement and compatibility with every coefficient ring homomorphism. This is the algebraic step for later lifting an actual matrix idempotent; no convergence or lifted idempotent is claimed.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "actual-closed-trace-coefficient-route-20261010.json: actual original coefficient subalgebras, pinned topology, geometric sum and trace APIs inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://pub.math.leidenuniv.nl/~smitbde/papers/bu-fermat-1995-desmit-lenstra.pdf"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "Imported the pinned Mathlib.Algebra.Module.NatInt instances required by noncomm_ring to normalize natural and integer scalar actions in an arbitrary associative ring. The original polynomial identities and ring generality are unchanged."
+  ],
+  "productionLog": "idempotentNewtonStep1694c-focus.log"
+}

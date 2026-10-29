@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-10-29T09:59:29.165758+00:00",
+  "reason": "The two consumer proofs reduce the canonical residue action definition during elaboration; its name occurs in their types but not their values. The construction is itself a required audited deliverable, so add its value as an explicit root. Retain every one of the 22 required value checks and all public, private/generated, axiom and linter checks. No mathematical source changes. The claim is the value closure of both consumers and the actual action construction, not that a definitional name survives reduction inside a consumer proof.",
+  "failedValueAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFixedFibersValuePreflight1749.log",
+  "failedValueAuditSha256": "411F9A16A8F404D652601443EA496FA77AC562C1DE466A3BBA38D2679EBC53BD",
+  "oldRoots": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_fixedField_eq_fullBase",
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamond_exists_comapEquiv_of_fullBase_comap_eq"
+  ],
+  "addedRoots": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.originalResidueDiamondAction"
+  ],
+  "removedChecks": [],
+  "proofChanges": []
+}

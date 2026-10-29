@@ -1,0 +1,73 @@
+import SourceReducedBaseCoordinateMap
+import SourceReducedBaseDegreeLower
+import SourceIntegralDiamondIndexLower
+import SourceReducedCoordinateIndependence
+import SourceReducedCoordinateMapIndependence
+import SourceReducedFieldCoefficientMap
+import SourceReducedCoordinateDegreeTransport
+import SourceReducedResidueDegreeTransport
+import SourceGammaOneDegreePreservation
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos
+#print axioms Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceReducedBaseCoordinateMap, `SourceReducedBaseDegreeLower, `SourceIntegralDiamondIndexLower, `SourceReducedCoordinateIndependence, `SourceReducedCoordinateMapIndependence, `SourceReducedFieldCoefficientMap, `SourceReducedCoordinateDegreeTransport, `SourceReducedResidueDegreeTransport, `SourceGammaOneDegreePreservation]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_aeval_coordinate, `Dubon2026.SourceFunctionField.IntegralDiamond.coeffMap_mem_coordinate, `Dubon2026.SourceFunctionField.IntegralDiamond.minpoly_coordinate_coeffMap_degree_le, `Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_j_substitution_minpoly_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.psi_le_fullBase_relfinrank, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_gammaOne_le_gammaZero, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_reduced_degree_of_pos, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_pow_mul, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.exists_common_denom, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.linearIndependent_coordinate_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_intSeries, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.coeffMap_mem_originalField, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.positive_relfinrank_and_le_of_coeffMap, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.residue_integralRatio_degree_pos, `Dubon2026.SourceFunctionField.ReducedDegreeTransport.primeField_degree_pos_and_le_residue, `Dubon2026.SourceFunctionField.IntegralDiamond.signed_index_le_residue_ratio_degree, `Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_degree_and_residueField_away_level]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Reduced diamond action postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Reduced diamond action theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE DEGREE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceReducedBaseCoordinateMap
+#lint in SourceReducedBaseDegreeLower
+#lint in SourceIntegralDiamondIndexLower
+#lint in SourceReducedCoordinateIndependence
+#lint in SourceReducedCoordinateMapIndependence
+#lint in SourceReducedFieldCoefficientMap
+#lint in SourceReducedCoordinateDegreeTransport
+#lint in SourceReducedResidueDegreeTransport
+#lint in SourceGammaOneDegreePreservation

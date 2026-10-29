@@ -1,0 +1,36 @@
+import Dubon2026.SourceIntegralSlashFieldEmbedding
+import Dubon2026.SourceReducedResidueDegreeTransport
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual residue cusp field embedding. The native
+finite residue-coordinate bound and original integral-ratio inclusion give the
+positive coordinate degree required by the short fraction-field extension. This
+constructs the actual residue-field chart for every algebraic-integer reduction
+map and every cusp matrix, including characteristics two and three away from the
+level. No degree, algebraicity, injectivity or field-embedding certificate remains.
+Stabilizer equivariance and the resulting fiber bounds remain to be proved. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne IntermediateField
+open scoped MatrixGroups IntermediateField
+local notation "Zbar" => integralClosure ℤ ℂ
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+private local instance : Algebra kk (qExpFunctionFieldC kk (Gamma1 N)) :=
+  (qExpFunctionFieldC kk (Gamma1 N)).toSubalgebra.algebra
+
+theorem exists_originalResidueSlashFieldHom (hℓN : ¬ ℓ ∣ N) (φ : Zbar →+* kk)
+    (β : SL(2, ℤ)) :
+    ∃ (hN : (N : kk) ≠ 0) (Φ : qExpFunctionFieldC kk (Gamma1 N) →ₐ[kk] LaurentSeries kk),
+      ∀ x (hx : x ∈ normalizedGenerators N kk),
+        Φ ⟨x, normalizedGenerators_subset N kk hx⟩ = normalizedSlashValue N φ hN β x := by
+  have hN : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  have hdegree : 0 < relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk (Gamma1 N)) := by
+    exact ReducedDegreeTransport.residue_integralRatio_degree_pos A (Gamma1 N)
+      (by simp [Gamma1_mem, ModularGroup.T])
+  obtain ⟨Φ, hΦ⟩ := exists_originalReducedSlashFieldHom_of_coordinate_degree N ℓ φ hN β hdegree
+  exact ⟨hN, Φ, hΦ⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

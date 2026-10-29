@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `fullMatrixTracePairing_bijective`. -/
+theorem actual_full_matrix_trace_pairing_fullMatrixTracePairing_bijective_source :
+    Function.Bijective (fullMatrixTracePairing (ι := ι) (R := R)) :=
+  fullMatrixTracePairing_bijective (ι := ι) (R := R)
+
+end
+

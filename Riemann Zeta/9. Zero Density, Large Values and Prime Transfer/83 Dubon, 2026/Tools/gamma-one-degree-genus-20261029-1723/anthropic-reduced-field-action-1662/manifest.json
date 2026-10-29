@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T06:24:12.745108+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-field-action-1662\\S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean",
+      "bytes": 59516,
+      "sha256": "69046BC603A61C02D34EA18E57DEA5582406E3F5B48BABD42763B18416626236",
+      "gitBlob": "278afb98de3c4a75fed87b14f0fdda49f8bea78b"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-reduced-field-action-1662\\S_ModularCurve_exists_isIntegralQExp_smul_slash_of_mem_Gamma0.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_slash_of_mem_Gamma0.lean",
+      "bytes": 4288,
+      "sha256": "DF4221865BF6C2C5365D4117BC61AA7B47EADFA2399DC0FEF721750ABBBD5F84",
+      "gitBlob": "dbd697d0c6f738ec4ef6b31437dad693beedc6b0"
+    }
+  ],
+  "purpose": "Read-only primary-source review of the exact reduced-field action serving the unresolved original Gamma1 signed-index/degree-genus input to DUB-17/18, after actual even-weight full slash integrality.",
+  "externalBuild": false,
+  "externalImport": false
+}

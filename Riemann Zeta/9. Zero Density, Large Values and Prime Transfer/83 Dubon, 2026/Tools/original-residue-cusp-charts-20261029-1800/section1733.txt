@@ -1,0 +1,7 @@
+### Actual whole trace descent in the actual original topology — 10 October 2026
+
+Transport the original coefficient topology along its proved equality with the true maximal-adic topology. Apply the already constructed whole continuous trace-ring descent and preserve its actual representation, original closed trace coefficients, original residue map and strict conjugacy in that same original topology.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalAdicTraceRepresentationDescent](Extension/Dubon2026/OriginalAdicTraceRepresentationDescent.lean).

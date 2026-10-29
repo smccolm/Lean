@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "OriginalResidueCotangentLinearity",
+  "mathematics": "The actual relative cotangent maps carry the original residue-field action on their genuine epsilon coefficients. The pinned universal differential equivalence with original relative derivations is proved linear over that same original residue field by actual pointwise addition and scalar multiplication. Its composition with the continuous coefficient-point classification is exactly the original cotangent-point classification.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original matrix infinitesimal and coordinate derivation-linearity proofs re-read. Genuine actual original unramified universal representation and its full true residue theorem inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0B28",
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf"
+  ],
+  "sourceBoundary": "Fully verified in assembled scope1645 with both sequential verifiers and zero diagnostics. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionFixes": [
+    "The LinearMap module requires SMulCommClass R K on the actual epsilon ideal, in that order. Proved this direction by the same actual commutative multiplication. With the genuine module established, scalar linearity of the universal differential comparison is pointwise definitional. Initial failed focus rejected."
+  ],
+  "productionLog": "relativeCotangentLinearity1636b-focus.log"
+}

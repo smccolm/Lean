@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A K : Type*} [CommRing R] [CommRing A] [HopfAlgebra R A]
+  [CommRing K] [Algebra R K]
+
+/-- Exact original-object consumer of `hopfPointsQuotientEvaluation_mk`. -/
+theorem actual_hopf_points_vanishing_ideal_hopfPointsQuotientEvaluation_mk_source (X : Set (WithConv (A →ₐ[R] K))) (a : A) (p : X) :
+    hopfPointsQuotientEvaluation X (Ideal.Quotient.mk (hopfPointsVanishingIdeal X) a) p = p.val a :=
+  hopfPointsQuotientEvaluation_mk X a p
+
+end
+

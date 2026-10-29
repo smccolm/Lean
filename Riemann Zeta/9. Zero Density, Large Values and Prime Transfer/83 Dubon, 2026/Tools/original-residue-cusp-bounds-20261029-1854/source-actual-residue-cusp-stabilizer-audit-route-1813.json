@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-10-29T11:54:13.018022+00:00",
+  "chain": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual residue cusp fixed places and full-base chart labels.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-reduced-cusp-translation-1-scratch-receipt.json",
+      "sha256": "D19D43610498F33F2515F887E39467E25E401CADB61E44C9CF4D732BD553680E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-prescribed-residue-cusp-chart-1-scratch-receipt.json",
+      "sha256": "422081529D4AECB4E9B9868A8AD343C4D60E4E2A832745508A9A46DD0BA5F64D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-original-residue-charts-1750\\manifest.json",
+      "sha256": "F3D47C18037B527D22332BFCF7CD08AC7EE6167D799A40CEA83757FC8A1D080D"
+    }
+  ],
+  "shorterRoute": "Use the actual existing diamond action and its native coefficient transport on discriminant-normalized generators. Its inverse level power cancels the exact cusp clearing scalar. Native field-generator extensionality extends signed-translation equivariance to the whole original field. The constructed prescribed residue chart and the native Laurent-place theorem yield a genuine j-pole fixed by the actual signed translation stabilizer. Native normalized-generator field operations give only the ratio formula needed for the raised weight-twelve second coordinate; a new general all-weight chart framework is unnecessary.",
+  "assumptionsToDischarge": [
+    "The actual residue cusp embedding is equivariant for the actual diamond action and signed translations, without an equivariance, action or map certificate.",
+    "A genuine residue cusp place with a j-pole is constructed and is fixed by the actual signed translation stabilizer. No place-existence or stabilizer assumption remains.",
+    "The existing cusp homomorphism maps weight-12r integral ratios to the literal quotient of reduced slash series, directly serving the second full-base coordinate."
+  ],
+  "remaining": "The full-base slot labeling via j_N, finite elliptic charts including characteristics two and three, residue fiber bounds and reverse genus inequality remain open. Original genus preservation, parabolic integral transfer, exceptional-prime removal, original all-weight association, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB17--20 OPEN under the full unchanged contract.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

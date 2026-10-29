@@ -1,0 +1,7 @@
+### Actual actual determinant and kernel invariance under strict conjugacy — 10 October 2026
+
+Apply the actual original strict-conjugacy identity to every whole representation matrix. The genuine group determinant map cancels the original conjugator, and conjugation preserves equality to the identity. Derive equality of all original determinants and of the entire actual representation kernels.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixStrictConjugacyConditions](Extension/Dubon2026/MatrixStrictConjugacyConditions.lean).

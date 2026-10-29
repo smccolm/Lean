@@ -1,0 +1,42 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O L : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [Field L] [Algebra (IsLocalRing.ResidueField O) L] [IsAlgClosed L]
+
+/-- Exact original-object consumer of `fixedResidualTraceUnframedUniversality_exists`. -/
+theorem actual_fixed_residual_trace_unframed_universality_fixedResidualTraceUnframedUniversality_exists_source
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{0})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    [Representation.IsIrreducible (matrixStandardRepresentation
+      (matrixCoefficientExtension (L := L) σ))]
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ))
+    (hS : Function.Surjective (profiniteGeneratorPresentation
+      (originalResidualProfiniteGroup p H σ hσ) S)) (i₀ : ι) :
+    let T := closedMatrixTraceAlgebra (O := O)
+      (fixedResidualFramedUniversalRepresentation p H σ hσ S hS)
+    ∃ hlocal : IsLocalRing T,
+      letI := hlocal
+      IsNoetherianRing T ∧ IsAdic (IsLocalRing.maximalIdeal T) ∧
+      IsAdicComplete (IsLocalRing.maximalIdeal T) T ∧
+      ∃ (eT : IsLocalRing.ResidueField T ≃ₐ[O] IsLocalRing.ResidueField O)
+        (τ : H →ₜ* GeneralLinearGroup ι T)
+        (hτres : (GeneralLinearGroup.map (localCoefficientReduction eT).toRingHom).comp
+          τ.toMonoidHom = σ),
+        ∀ (A : Type) [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+          [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+          (_hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+          (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O),
+          Function.Bijective (originalCoefficientRepresentationClass eT eA H σ τ hτres) :=
+  fixedResidualTraceUnframedUniversality_exists (L := L) p hp H σ hσ S hS i₀
+
+end
+

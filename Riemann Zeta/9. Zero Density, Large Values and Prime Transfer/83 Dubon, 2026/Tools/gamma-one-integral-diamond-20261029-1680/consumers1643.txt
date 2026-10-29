@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `originalMaximalCotangentDualLinearEquiv_apply`. -/
+theorem actual_original_relative_cotangent_dual_originalMaximalCotangentDualLinearEquiv_apply_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (f : OriginalResidueMaximalCotangentMaps eR) (x : RelativeMaximalCotangent O R) :
+    originalMaximalCotangentDualLinearEquiv eR f x = (f x).val.snd :=
+  originalMaximalCotangentDualLinearEquiv_apply eR f x
+
+end
+

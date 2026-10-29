@@ -1,0 +1,1 @@
+Extend the actual maximal-ideal reduction through the original true-residue equivalence into the same original extension field. The proved whole residual identity gives equality with the scalar extension of the original residual representation, on every group element and matrix entry.

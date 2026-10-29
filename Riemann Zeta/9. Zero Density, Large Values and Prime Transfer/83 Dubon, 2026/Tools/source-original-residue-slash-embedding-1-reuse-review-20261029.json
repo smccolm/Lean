@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual original residue cusp field embedding.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-slash-embedding-audit-route-1787.json",
+    "sha256": "5946E5E340443D3B8A2FE69697784E52B38DB21CF1CB974763B8117E94F3628A",
+    "review": {
+      "recordedUTC": "2026-10-29T11:16:29.012464+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> finite homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> cusp residue fiber bounds -> actual original residue cusp field embedding.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\original-residue-slash-embedding-route-1783.json",
+          "sha256": "941360835ECB9BC4200F62A0D299593E3ADC2E401EA63450DF01CBC7582C584E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\manifest.json",
+          "sha256": "4B2E1DEA12532879536650C383F71D7AA3D4E9EF80F94263D58DF43D8EB870A3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-chart-field-extension-1762\\manifest.json",
+          "sha256": "72AA1F7AF853CC2B28E74B847B05FB5B7E1AA26F0C708F697D80C20E233F8AC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-integral-slash-chart-relations-1-scratch-receipt.json",
+          "sha256": "EF5441CD2AAE11C264472093A6E052791CF6A053A29CAF507567F2F42C4E87A1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Residue Cusp Field Embedding Assessment 2026-10-29.md",
+          "sha256": "487ADFB55706D47DDB0C5B71B82F82ECB0850CAE304E7131A128A4EDE1E3A28B"
+        }
+      ],
+      "shorterRoute": "Reuse native discriminant expansions, original finite residue-coordinate degree, width substitution and j transcendence. MonoidAlgebra.lift and RingHom.liftOfRightInverse replace the external span and bilinear-map construction; IsFractionRing.comap_isAlgebraic_iff and Algebra.IsAlgebraic.injective_tower_top replace the separate minimal-polynomial denominator argument. These shorter routes have actual original-residue consumers. Every versioned module passes public/private/generated axiom checks, sixteen linters and all sixty required declaration-value dependencies. Failed versions and fresh successors are retained; no proof limit or audit requirement is weakened.",
+      "assumptionsToDischarge": [
+        "The actual discriminant has nonzero reduction at every cusp, including residue characteristics two and three away from the level. Native width change computes every integral level-one chart.",
+        "Actual integral forms of weight 12r divided by the original discriminant power generate the whole original integral-ratio function field, including arbitrary integer-weight representatives. Common discriminant powers transfer all finite linear relations, and the actual cusp values preserve multiplication and one.",
+        "The original j belongs to the normalized generators and maps exactly to j(q^N), whose transcendence was already proved. Native monoid-algebra evaluation and the kernel quotient construct the algebra map.",
+        "Native fraction-ring algebraicity and tower injectivity extend this map to the full original function field. The actual valuation-residue consumer uses the native finite residue-coordinate upper bound and original ratio inclusion to discharge positive degree. Exact signed-index equality is unnecessary for this embedding. No degree, algebraicity, injectivity or field-embedding certificate remains in that consumer."
+      ],
+      "remaining": "The map is constructed for every supplied algebraic-integer reduction homomorphism and every cusp matrix. Prescribed primitive-root reductions are a separate compiling successor, outside this receipt. Stabilizer equivariance, the residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under the unchanged full completion contract.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual discriminant has nonzero reduction at every cusp, including residue characteristics two and three away from the level. Native width change computes every integral level-one chart.",
+    "Actual integral forms of weight 12r divided by the original discriminant power generate the whole original integral-ratio function field, including arbitrary integer-weight representatives. Common discriminant powers transfer all finite linear relations, and the actual cusp values preserve multiplication and one.",
+    "The original j belongs to the normalized generators and maps exactly to j(q^N), whose transcendence was already proved. Native monoid-algebra evaluation and the kernel quotient construct the algebra map.",
+    "Native fraction-ring algebraicity and tower injectivity extend this map to the full original function field. The actual valuation-residue consumer uses the native finite residue-coordinate upper bound and original ratio inclusion to discharge positive degree. Exact signed-index equality is unnecessary for this embedding. No degree, algebraicity, injectivity or field-embedding certificate remains in that consumer."
+  ],
+  "remaining": "The map is constructed for every supplied algebraic-integer reduction homomorphism and every cusp matrix. Prescribed primitive-root reductions are a separate compiling successor, outside this receipt. Stabilizer equivariance, the residue fiber bounds and reverse genus inequality remain open. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance remains 16/20; DUB-17--20 OPEN under the unchanged full completion contract.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K ι : Type*} [CommRing R] [Field K]
+
+/-- Exact original-object consumer of `matrix_exists_unit_entry_of_residue`. -/
+theorem actual_matrix_two_determinant_complement_matrix_exists_unit_entry_of_residue_source (r : R →+* K) [IsLocalHom r]
+    (A : Matrix ι ι R) (hA : A.map r ≠ 0) : ∃ i j, IsUnit (A i j) :=
+  matrix_exists_unit_entry_of_residue r A hA
+
+end
+

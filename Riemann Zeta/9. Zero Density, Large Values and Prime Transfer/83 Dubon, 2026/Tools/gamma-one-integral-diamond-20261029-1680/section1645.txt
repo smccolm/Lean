@@ -1,0 +1,7 @@
+### Actual ordinary arithmetic cotangent dual dimension — 10 October 2026
+
+Specialize the actual ordinary residue-field dual to the literal relative maximal-ideal quotient of the completed arithmetic local ring. Its proved Noetherianity gives genuine finite-dimensionality. The original epsilon-coefficient equivalence composes with the actual local class map to give a residue-field-linear surjection onto the same local continuous cohomology condition. The pinned dimension inequality and equality of dual dimension bound the actual local class dimension by the dimension of the original literal cotangent quotient.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalCotangentDual](Extension/Dubon2026/ArithmeticLocalCotangentDual.lean).

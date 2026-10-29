@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R]
+  [Algebra O R] [WithIdeal R]
+
+/-- Exact original-object consumer of `closedMatrixTraceReduction_eq`. -/
+theorem actual_closed_matrix_trace_coefficient_ring_closedMatrixTraceReduction_eq_source
+    (hR : (WithIdeal.i : Ideal R) = IsLocalRing.maximalIdeal R)
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R) :
+    letI := closedMatrixTraceAlgebra_isLocalRing hR eR ρ
+    localCoefficientReduction (closedMatrixTraceResidueEquiv hR eR ρ) =
+      (localCoefficientReduction eR).comp (closedMatrixTraceAlgebra (O := O) ρ).val :=
+  closedMatrixTraceReduction_eq hR eR ρ
+
+end
+

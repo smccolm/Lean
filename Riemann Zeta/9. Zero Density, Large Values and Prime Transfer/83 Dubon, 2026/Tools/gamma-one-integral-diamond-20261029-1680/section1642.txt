@@ -1,0 +1,7 @@
+### Actual original arithmetic maximal-ideal cotangent classes — 10 October 2026
+
+Specialize the genuine maximal-ideal quotient comparison to the literal original completed arithmetic local ring and its true original residue field. Its proved Noetherianity gives finite-dimensionality of the actual relative maximal-ideal quotient. Genuine maps from that quotient classify the same whole original local first-order representations. Their class map is linear and surjective onto the original local continuous cohomology condition, and equality of classes is exactly strict conjugacy of their actual whole first-order lifts.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalMaximalCotangent](Extension/Dubon2026/ArithmeticLocalMaximalCotangent.lean).

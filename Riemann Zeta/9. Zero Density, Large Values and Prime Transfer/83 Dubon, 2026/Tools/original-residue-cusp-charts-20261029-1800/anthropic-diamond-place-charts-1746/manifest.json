@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T09:38:40.775174+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean",
+      "bytes": 80239,
+      "sha256": "BA0368354C022F02890EC363D1562776A45DB472334B41A5D21A670D89495E0C",
+      "gitBlob": "2a075a3d8edae1353917c6755427c01ddba11c38"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_neg.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_neg.lean",
+      "bytes": 41983,
+      "sha256": "4992848D34F526975BA2B884A01377496F40AFE308E543EC2180BE0D3C853A56",
+      "gitBlob": "608492f4e9b7aa5669453ef9637a2be679af2462"
+    }
+  ],
+  "purpose": "Read-only pinned source review of the actual diamond-stabilizer charts over finite and cusp residue fibers. Native Galois place transitivity and fixed-field degree arguments are already available; inspect these exact remaining chart statements before expanding the reverse-genus dependency. No external import or proof options adopted.",
+  "externalBuild": false,
+  "externalImport": false
+}

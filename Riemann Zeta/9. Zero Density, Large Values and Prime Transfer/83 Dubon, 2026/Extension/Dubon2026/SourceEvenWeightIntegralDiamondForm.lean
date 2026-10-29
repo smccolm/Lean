@@ -1,0 +1,63 @@
+import Dubon2026.SourceRationalModularDiamondFourier
+import Dubon2026.SourceEvenWeightUniformSlashIntegrality
+import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action.
+Construct an actual Gamma1 modular form with integer Fourier series
+whose function is a level power times the original Gamma0 diamond.
+Rationality is derived from the actual diamond germ; algebraic
+integrality is derived from the actual full-slash theorem. Rational
+algebraic integers are integers, so no denominator premise remains. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+theorem exists_level_power_integral_even_diamond_form (N : ℕ) [NeZero N]
+    {k : ℤ} (hk : Even k) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : GammaOne.IsIntegralQExp f p) (g : Gamma0 N) :
+    ∃ (a : ℕ) (F : ModularForm (Gamma1 N) k) (P : PowerSeries ℤ),
+      GammaOne.IsIntegralQExp F P ∧
+        (⇑F : ℍ → ℂ) = (N : ℂ) ^ a • ((⇑f : ℍ → ℂ) ∣[k] g.val) := by
+  classical
+  let G := GammaOne.modularDiamond N g f
+  have hy : (p.map (Int.castRingHom ℚ)).map (algebraMap ℚ ℂ) = qExpansion 1 f := by
+    rw [← hp]
+    ext n
+    simp only [PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+  have hrat := rational_modular_diamond_coeff N hk f (p.map (Int.castRingHom ℚ)) hy g
+  choose r hr using hrat
+  obtain ⟨a, ha⟩ := exists_level_power_integral_even_slash_coefficients hk f hp g.val
+  have hwidth (n : ℕ) :
+      (qExpansion (N : ℝ) ((⇑f : ℍ → ℂ) ∣[k] (g.val : GL (Fin 2) ℝ))).coeff (N * n) =
+        (qExpansion 1 G).coeff n := by
+    change (qExpansion (N : ℝ) G).coeff (N * n) = _
+    rw [SourceFricke.qExpansion_coeff_width G (NeZero.ne N)
+      (SlashInvariantFormClass.periodic_comp_ofComplex G (SourceFricke.gammaOne_one_mem_strictPeriods N))
+      G.holo' (ModularFormClass.bdd_at_infty G),
+      if_pos (dvd_mul_right N n), Nat.mul_div_cancel_left _ (NeZero.pos N)]
+  let q : ℕ → ℚ := fun n => (N : ℚ) ^ a * r n
+  have hq (n : ℕ) : algebraMap ℚ ℂ (q n) = (N : ℂ) ^ a * (qExpansion 1 G).coeff n := by
+    simp only [q, map_mul, map_pow, map_natCast, hr]
+    rfl
+  have hqint (n : ℕ) : IsIntegral ℤ (q n) := by
+    have hn := ha (N * n)
+    rw [hwidth n, ← hq n] at hn
+    exact (isIntegral_algebraMap_iff (algebraMap ℚ ℂ).injective).mp hn
+  have hz (n : ℕ) : ∃ z : ℤ, (z : ℚ) = q n := by
+    obtain ⟨z, hz⟩ := IsIntegrallyClosed.isIntegral_iff.mp (hqint n)
+    exact ⟨z, by simpa using hz⟩
+  choose z hz using hz
+  refine ⟨a, (N : ℂ) ^ a • G, PowerSeries.mk z, ?_, ?_⟩
+  · unfold GammaOne.IsIntegralQExp
+    rw [ModularForm.IsGLPos.coe_smul, ModularForm.qExpansion_smul one_pos
+      (SourceFricke.gammaOne_one_mem_strictPeriods N)]
+    ext n
+    rw [PowerSeries.coeff_map, PowerSeries.coeff_mk, PowerSeries.coeff_smul,
+      smul_eq_mul, ← hq n, ← hz n]
+    simp only [eq_intCast, map_intCast]
+  · rw [ModularForm.IsGLPos.coe_smul]
+    rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

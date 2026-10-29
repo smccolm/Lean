@@ -1,0 +1,7 @@
+### Actual idempotents in closed matrix algebras — 10 October 2026
+
+Use the actual cubic error bounds to prove that the idempotency errors tend to zero. Prove that every iterate retains the original seed reduction. Construct the actual coefficientwise limit by original adic completeness, use original matrix continuity and separatedness to prove it idempotent, and use closedness of the original subalgebra and of the original coefficient ideal to preserve algebra membership and the exact original reduction.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [AdicMatrixIdempotentLifting](Extension/Dubon2026/AdicMatrixIdempotentLifting.lean).

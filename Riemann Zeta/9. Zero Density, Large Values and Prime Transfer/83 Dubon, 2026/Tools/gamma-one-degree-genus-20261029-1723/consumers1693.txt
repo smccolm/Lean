@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [Algebra O R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `eqOn_closedMatrixTraceAlgebra_of_strictConjugate`. -/
+theorem actual_closed_matrix_trace_algebra_eqOn_closedMatrixTraceAlgebra_of_strictConjugate_source {B K : Type*}
+    [CommRing B] [Algebra O B] [CommRing K] [TopologicalSpace B] [T2Space B]
+    (ρ : G →* GeneralLinearGroup ι R) (f g : R →ₐ[O] B)
+    (hf : Continuous f) (hg : Continuous g) (r : B →+* K)
+    (h : MatrixStrictlyConjugate r
+      ((GeneralLinearGroup.map f.toRingHom).comp ρ)
+      ((GeneralLinearGroup.map g.toRingHom).comp ρ)) :
+    Set.EqOn f g (closedMatrixTraceAlgebra (O := O) ρ : Set R) :=
+  eqOn_closedMatrixTraceAlgebra_of_strictConjugate ρ f g hf hg r h
+
+end
+

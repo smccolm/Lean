@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O A B : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [CommRing B] [IsLocalRing B] [Algebra O B]
+
+/-- Exact original-object consumer of `originalFramedFiber_coefficient_trueResidue`. -/
+theorem actual_original_framed_true_residue_transport_originalFramedFiber_coefficient_trueResidue_source
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (k : A →ₐ[O] B)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA)
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (ρ : OriginalContinuousFramedFiber eA H σ) :
+    (GeneralLinearGroup.map (IsLocalRing.residue B)).comp
+        ((GeneralLinearGroup.map k.toRingHom).comp ρ.val.toMonoidHom) =
+      (GeneralLinearGroup.map eB.symm.toRingHom).comp σ :=
+  originalFramedFiber_coefficient_trueResidue eA eB k hres H σ ρ
+
+end
+

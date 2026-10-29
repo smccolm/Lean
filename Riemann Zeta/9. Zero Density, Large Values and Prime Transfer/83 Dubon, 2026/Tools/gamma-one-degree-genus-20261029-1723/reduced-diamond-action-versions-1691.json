@@ -1,0 +1,22 @@
+{
+  "SourceIntegralDiamondReduction": "1670b",
+  "SourceIntegralDiamondZeroForward": "1671a",
+  "SourceIntegralDiamondZeroEquivalence": "1672a",
+  "SourceIntegralDiamondWitness": "1673a",
+  "SourceIntegralDiamondNormalizedReduction": "1674a",
+  "SourceIntegralDiamondChosenReduction": "1675a",
+  "SourceIntegralDiamondSeriesOperations": "1676b",
+  "SourceIntegralDiamondReducedOperations": "1677b",
+  "SourceIntegralDiamondRatioRelation": "1678b",
+  "SourceIntegralDiamondAdditiveSeries": "1679b",
+  "SourceIntegralDiamondRatioClosure": "1681b",
+  "SourceIntegralDiamondReducedAddition": "1682b",
+  "SourceIntegralDiamondFieldPull": "1683c",
+  "SourceIntegralDiamondFieldRange": "1684a",
+  "SourceIntegralDiamondFieldConstants": "1685b",
+  "SourceIntegralDiamondFieldOperations": "1686a",
+  "SourceIntegralDiamondComposition": "1687b",
+  "SourceIntegralDiamondFieldComposition": "1688b",
+  "SourceIntegralDiamondFieldIdentity": "1689a",
+  "SourceIntegralDiamondFieldAction": "1690a"
+}

@@ -1,0 +1,7 @@
+### Actual finite free coordinate algebra genuine point bound — 10 October 2026
+
+Reuse the pinned finite-algebra-hom API to derive finiteness and the rank bound for the actual field-valued points of the original finite free coordinate algebra. Cocommutativity supplies a commutative group using the previously constructed true point-group inverse.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteFreeHopfPoints](Extension/Dubon2026/FiniteFreeHopfPoints.lean).

@@ -1,0 +1,7 @@
+### Actual actual retraction reflects every maximal-ideal power — 10 October 2026
+
+The actual coefficient retraction is surjective, so it maps the original maximal ideal onto the subalgebra maximal ideal. The original local inclusion maps powers in the opposite direction. Applying the genuine retraction to an element in each pulled-back original power proves exact equality with the corresponding subalgebra maximal-ideal power.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CoefficientRetractionIdealPowers](Extension/Dubon2026/CoefficientRetractionIdealPowers.lean).

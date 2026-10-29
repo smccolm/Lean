@@ -1,0 +1,7 @@
+### Actual original left ideal Nakayama spanning — 10 October 2026
+
+Take actual lifts in the original idempotent left ideal of the genuine residual column units. For each original left-ideal element, lift the coefficients of its actual residual column expansion and subtract the corresponding linear combination. The original reduction-kernel theorem puts the remainder in the coefficient maximal ideal times the ambient algebra; the proved idempotent transfer puts it in that maximal ideal times the same left ideal. Apply finite-module Nakayama over the original local coefficient ring to prove spanning.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [MatrixIdempotentLeftIdealSpanning](Extension/Dubon2026/MatrixIdempotentLeftIdealSpanning.lean).

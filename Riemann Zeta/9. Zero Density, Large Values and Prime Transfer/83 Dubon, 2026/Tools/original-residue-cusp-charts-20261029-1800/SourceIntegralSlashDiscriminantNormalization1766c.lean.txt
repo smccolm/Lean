@@ -1,0 +1,66 @@
+import SourceIntegralSlashLevelOne1765b
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash field embedding. The actual
+discriminant and its powers normalize integral forms of weight divisible by
+twelve. Its leading coefficient is one before and after reduction, including
+characteristics two and three. Native discriminant expansions and width change
+are reused; no nonvanishing assumption is introduced. -/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+local notation "Zbar" => integralClosure ℤ ℂ
+
+/-- The integral Fourier series of the original normalized discriminant. -/
+def discriminantSeries : PowerSeries ℤ := PowerSeries.X * dedekindEtaUnit
+
+/-- The original discriminant restricted to the literal Gamma1 subgroup. -/
+def gammaOneDiscriminant (N : ℕ) : ModularForm (Gamma1 N) 12 :=
+  ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N))
+    (CuspForm.discriminant : ModularForm 𝒮ℒ 12)
+
+theorem integralQExp_gammaOneDiscriminant (N : ℕ) :
+    IsIntegralQExp (gammaOneDiscriminant N) discriminantSeries :=
+  qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.symm
+
+theorem coeff_one_discriminantSeries : discriminantSeries.coeff 1 = 1 := by
+  rw [discriminantSeries, show (1 : ℕ) = 0 + 1 from rfl,
+    PowerSeries.coeff_succ_X_mul, PowerSeries.coeff_zero_eq_constantCoeff_apply,
+    constantCoeff_dedekindEtaUnit]
+
+theorem intSeriesC_discriminant_ne_zero (K : Type*) [Field K] :
+    intSeriesC K discriminantSeries ≠ 0 := by
+  intro h
+  have hc := congrArg (fun z : LaurentSeries K => z.coeff ((1 : ℕ) : ℤ)) h
+  simp only [intSeriesC, HahnSeries.ofPowerSeries_apply_coeff, PowerSeries.coeff_map,
+    coeff_one_discriminantSeries, map_one, HahnSeries.coeff_zero] at hc
+  exact one_ne_zero hc
+
+/-- The literal power of the restricted discriminant, with its weight in normalized order. -/
+def gammaOneDiscriminantPow (N n : ℕ) : ModularForm (Gamma1 N) (12 * (n : ℤ)) :=
+  ((gammaOneDiscriminant N).pow n).mcast (mul_comm _ _)
+
+theorem integralQExp_gammaOneDiscriminantPow (N : ℕ) [NeZero N] (n : ℕ) :
+    IsIntegralQExp (gammaOneDiscriminantPow N n) (discriminantSeries ^ n) := by
+  change (discriminantSeries ^ n).map (Int.castRingHom ℂ) = _
+  rw [gammaOneDiscriminantPow, ModularForm.qExpansion_mcast,
+    ModularForm.qExpansion_pow one_pos (SourceFricke.gammaOne_one_mem_strictPeriods N),
+    map_pow, integralQExp_gammaOneDiscriminant N]
+
+theorem reducedSlashSeries_discriminant_ne_zero (N : ℕ) [NeZero N]
+    {K : Type*} [Field K] (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (β : SL(2, ℤ)) :
+    HahnSeries.ofPowerSeries ℤ K
+      (reducedSlashSeries N (by decide) (gammaOneDiscriminant N)
+        (integralQExp_gammaOneDiscriminant N) β φ hN) ≠ 0 := by
+  intro h
+  have hc := congrArg (fun z : LaurentSeries K => z.coeff ((N : ℕ) : ℤ)) h
+  dsimp only at hc
+  rw [HahnSeries.ofPowerSeries_apply_coeff, HahnSeries.coeff_zero] at hc
+  rw [coeff_reducedSlashSeries_levelOne,
+    if_pos (dvd_refl N), Nat.div_self (NeZero.ne N), coeff_one_discriminantSeries,
+    Int.cast_one] at hc
+  exact one_ne_zero hc
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

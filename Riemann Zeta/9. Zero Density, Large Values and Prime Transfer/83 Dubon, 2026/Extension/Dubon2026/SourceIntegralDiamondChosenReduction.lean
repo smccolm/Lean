@@ -1,0 +1,48 @@
+import Dubon2026.SourceIntegralDiamondNormalizedReduction
+
+/-! DUB-17/18 -> original Gamma1 degree/genus -> reduced field action
+-> actual reduced slash on integer Fourier forms. Choose only from the
+proved existence of an actual level-cleared integral diamond form.
+Independence from every alternative witness and exact zero preservation
+are proved. Descent through all ratio relations remains downstream. -/
+namespace Dubon2026.SourceFunctionField.IntegralDiamond
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup GammaOne
+open scoped MatrixGroups ModularForm
+
+/-- An actual clearing exponent and integer series, constructed by the full slash proof. -/
+def diamondWitness (N : ℕ) [NeZero N] {k : ℤ} (hk : Even k)
+    (g : Gamma0 N) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) :
+    {w : ℕ × PowerSeries ℤ // IsIntegralQExp (scaledDiamond N g w.1 f) w.2} :=
+  let h := exists_integral_scaledDiamond N hk g f hp
+  ⟨(h.choose, h.choose_spec.choose), h.choose_spec.choose_spec⟩
+
+/-- The actual diamond Fourier reduction with the constructed level power removed. -/
+def reducedDiamond (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] {k : ℤ} (hk : Even k)
+    (g : Gamma0 N) (f : ModularForm (Gamma1 N) k) {p : PowerSeries ℤ}
+    (hp : IsIntegralQExp f p) : LaurentSeries (ZMod ℓ) :=
+  let w := diamondWitness N hk g f hp
+  normalizedRed N ℓ w.val.1 w.val.2
+
+theorem reducedDiamond_eq (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k : ℤ} (hk : Even k) (g : Gamma0 N) (f : ModularForm (Gamma1 N) k)
+    {p P : PowerSeries ℤ} {a : ℕ} (hp : IsIntegralQExp f p)
+    (hP : IsIntegralQExp (scaledDiamond N g a f) P) :
+    reducedDiamond N ℓ hk g f hp = normalizedRed N ℓ a P :=
+  normalizedRed_eq_of_witness N ℓ hℓN g f (diamondWitness N hk g f hp).property hP
+
+theorem reducedDiamond_zero_iff (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k : ℤ} (hk : Even k) (g : Gamma0 N) (f : ModularForm (Gamma1 N) k)
+    {p : PowerSeries ℤ} (hp : IsIntegralQExp f p) :
+    reducedDiamond N ℓ hk g f hp = 0 ↔ red ℓ p = 0 :=
+  normalizedRed_zero_iff_original N ℓ hℓN hk g f hp (diamondWitness N hk g f hp).property
+
+theorem reducedDiamond_ne_zero (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+    {k : ℤ} (hk : Even k) (g : Gamma0 N) (f : ModularForm (Gamma1 N) k)
+    {p : PowerSeries ℤ} (hp : IsIntegralQExp f p) (hp0 : red ℓ p ≠ 0) :
+    reducedDiamond N ℓ hk g f hp ≠ 0 :=
+  fun hz => hp0 ((reducedDiamond_zero_iff N ℓ hℓN hk g f hp).mp hz)
+
+end
+end Dubon2026.SourceFunctionField.IntegralDiamond

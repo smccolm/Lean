@@ -1,0 +1,51 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T08:49:36.197973+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResidueGenusUpper"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGenusUpper.lean",
+      "sha256": "B7F2192756324F6695444546B9BA126CA5C8E98E894F03FB5DE2F6A1EB39192E",
+      "oleanSha256": "BE5949F5FF4E51F08EFB62C4AEA0A7493DFCF2749E748682B4F2995AAC3186F1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGenusUpper-1722.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGenusUpper-1722.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_le_away_level"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_le_away_level"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperAudit1.log",
+  "logSha256": "FFE4049029B7F540CC3DC8AE4D54A3EFB28A3694251B4410DAA4FE832F4663E6",
+  "auditSha256": "EEDCFE18632BB46DE1C5B52A0A23C759B2747DEBE244FE4AF7D7B3545B894BEF",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperScratchOwnership1722.log",
+  "ownershipSha256": "A0B61DD8C47F23324EC3E844FF506EEE0556799E911973D68B576EF0927825B3",
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 62,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusUpperDependencyAudit1.log",
+  "dependencyAuditSha256": "D587D5A60102B4E1659286FF35B4CDB01F51138FA0185458C154F97D9105B259",
+  "dependencyAuditSourceSha256": "94430CC73F33FC7213E4C25D2C023874797204744263DD9BE26530F6C53F347E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralDiamond.gammaOne_residue_genus_le_away_level"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> upper bound on the actual residue genus.",
+  "discharged": [
+    "For the actual valuation subring of the algebraic closure of the rationals, original Gamma1 coordinate degree preservation and residue-field identification now supply the degree premise of the native separating-coordinate genus inequality.",
+    "The actual regular prolongation, proved residue separability and algebraic closure of the residue coefficients give genus(residue image) <= genus(original function field) for every prime not dividing the level, including two and three. No degree, genus or regular-prolongation certificate is assumed."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The reverse genus inequality is still required. Integral parabolic transfer, removal of the 3<p and fixed exceptional-prime restrictions, the required two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB-17--20 OPEN, with every original criterion preserved.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-genus-upper-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "0813CEE01893EA1EF28416FFF22FFFCE9B5A4268CC0C06FF984B81CF96FAADC9",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

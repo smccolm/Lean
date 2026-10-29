@@ -1,0 +1,29 @@
+import SourceIntegralSlashLevelOne
+import SourceIntegralSlashDiscriminantNormalization
+import SourceCoordinateAlgebraicChartInjectivity
+import SourceIntegralSlashReducedPowers
+import SourceIntegralSlashReducedEquality
+import SourceIntegralSlashNormalizedGenerators
+import SourceIntegralSlashNormalizedRatioEquality
+import SourceIntegralSlashNormalizedMap
+import SourceIntegralSlashNormalizedLinearRelations
+import SourceIntegralSlashNormalizedCoordinate
+import SourceMonoidGeneratorAlgebraLift
+import SourceIntegralSlashNormalizedAlgebra
+import SourceCoordinateChartFractionExtension
+import SourceIntegralSlashFieldEmbedding
+import SourceOriginalResidueSlashFieldEmbedding
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceIntegralSlashLevelOne, `SourceIntegralSlashDiscriminantNormalization, `SourceCoordinateAlgebraicChartInjectivity, `SourceIntegralSlashReducedPowers, `SourceIntegralSlashReducedEquality, `SourceIntegralSlashNormalizedGenerators, `SourceIntegralSlashNormalizedRatioEquality, `SourceIntegralSlashNormalizedMap, `SourceIntegralSlashNormalizedLinearRelations, `SourceIntegralSlashNormalizedCoordinate, `SourceMonoidGeneratorAlgebraLift, `SourceIntegralSlashNormalizedAlgebra, `SourceCoordinateChartFractionExtension, `SourceIntegralSlashFieldEmbedding, `SourceOriginalResidueSlashFieldEmbedding]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

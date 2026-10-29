@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticUnramifiedMatrixSpanning",
+  "mathematics": "The actual completed unramified fixed-determinant arithmetic coefficient ring has its proved original residue equivalence. Its genuine coefficient reduction is surjective with exactly the actual maximal ideal as kernel, and the proved whole universal representation residue identity identifies the actual reduced representation with the original residual arithmetic representation. Explicit absolute irreducibility of that original representation therefore supplies the genuine residual hypothesis of the proved local-ring spanning theorem. The same whole universal arithmetic matrices span their actual completed coefficient matrix algebra. The proved centralizer theorem then identifies every original invertible stabilizer as a scalar unit in that same completed coefficient ring.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned vector-space linear left inverse, actual field/residue map, standard matrix basis, Nakayama, and matrix/general-linear center APIs inspected. Stacks Nakayama00DV source rechecked live 10Oct2026. No external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/00DV",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/LinearAlgebra/Basis/VectorSpace.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/c5ea00351c28e24afc9f0f84379aa41082b1188f/Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Basic.lean"
+  ],
+  "sourceBoundary": "Focused production compilation passed; expanded verification pending. Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "productionLog": "arithmeticMatrixSpanning1665-focus.log"
+}

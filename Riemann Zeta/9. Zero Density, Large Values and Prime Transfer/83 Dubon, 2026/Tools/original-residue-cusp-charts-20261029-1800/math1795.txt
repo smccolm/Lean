@@ -1,0 +1,1 @@
+Use inversion and the identity in the constructed actual point group. The original subgroup vanishing ideal is stable under the original antipode, and its counit vanishes when the original base embeds in the point-value ring.

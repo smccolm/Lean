@@ -1,0 +1,192 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T12:43:25.835396+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceIntegralSlashRaisedLevelOne",
+    "SourceIntegralSlashCuspTriangular",
+    "SourceIntegralSlashRaisedCuspFormula",
+    "SourceIntegralSlashTriangularParameter",
+    "SourceIntegralSlashRaisedCuspCoefficients",
+    "SourceIntegralSlashRaisedCuspReduction",
+    "SourceIntegralSlashRaisedCuspLaurent",
+    "SourceIntegralSlashRaisedCuspCoordinate",
+    "SourceIntegralSlashCuspCoordinate",
+    "SourceOriginalResidueFullCuspChart",
+    "SourceOriginalResidueCuspBaseComparison",
+    "SourceOriginalResidueCuspPlaceOverBase",
+    "SourceOriginalResidueCuspMatrix",
+    "SourceOriginalResidueLabeledCuspPlace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne.lean",
+      "sha256": "FD5F31F36242688A12B99B265FDC05C7B8E734C1D208C39178F66AC921C7DDF0",
+      "oleanSha256": "1537ECB00D3A6CD17E352DC8FD50BB75D5971AAB378CECF9DA263F2F5B0E7F25",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedLevelOne-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular.lean",
+      "sha256": "4744BA8B0826B11006F208B6F849D9357625B33150B5E4BD95989B73F4F13697",
+      "oleanSha256": "5B83E723000C8170E67584507F312D7EAF66175E9ABCB93B040A60BDF07F4777",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspTriangular-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula.lean",
+      "sha256": "DB8D6E2B3E5B18BA40B8E4810D3BFAB3DE193C68640E705E91FBD142A3D1EB50",
+      "oleanSha256": "3D37B75C1FFB6065ED848CE717F226C26FBD4DF78892565CDB9D86AFA2B9C5AA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspFormula-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter.lean",
+      "sha256": "CA4A61055ECC924B96C613C711D3C3DEC07307326B909615803458296C4BBCE2",
+      "oleanSha256": "4489CEBD8FCC664FCFBFE78E98DAC51CE65DCEBA29F52966BB2E7FF26B4353BC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashTriangularParameter-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients.lean",
+      "sha256": "39B7E30AED715EC13EAFBA529EF47EC28979F4DBB05439E1AE2995CC21E8B909",
+      "oleanSha256": "A775C03AC7EC2FC92B957B49A47839DC04B3D4CE8E330FEEAECA44F6648AF49D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoefficients-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction.lean",
+      "sha256": "F59AEF0A764041A8C909A435452722A771A548F4636C5814F73E174ACA4A06CD",
+      "oleanSha256": "8354527934D5427C30DDD43B08708847E55549931729B1A3A84CECCE0AD7960B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspReduction-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent.lean",
+      "sha256": "FE8D4B00CEECCCF9F2CE580732617C859CDCDBDB053C1745B36F1D7542CB526B",
+      "oleanSha256": "3AD4A638F4773F6D470291C5EF1717F5E0BCD56F7C83FAEDDB2866E6F2F7406D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspLaurent-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate.lean",
+      "sha256": "80D950A2DBCA14A5ED3BB585295EC56848FE3547DD81E59038E61DB2EC98BE98",
+      "oleanSha256": "8E558CA29BC4CEB7C2FE4974A990AF5D9BF365764ACEF028C23F6877C6604299",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashRaisedCuspCoordinate-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate.lean",
+      "sha256": "4D0A602C28543B1B7FC7FC970F17BFC25A719739BD6B077168914DDB262EE105",
+      "oleanSha256": "1D5257849771BB96858B456BED985FBC03E1CA563F513850BD4FB6AFE7B868E2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralSlashCuspCoordinate-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart.lean",
+      "sha256": "90E06FF703FE52885E4E05213EA913894D7978A1158E6D2B59D80816AF4DC7F4",
+      "oleanSha256": "FB5F7B2328D181A914B6F8EF79DB0F946A35E02EDDB980A2A6F9CDCB9E90EC9B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueFullCuspChart-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison.lean",
+      "sha256": "FC8AAEE35C1E6F1E3592EA5249F94F6F2E0FF826B1DF7E44B600993106C61705",
+      "oleanSha256": "689A43C4B3D98BDA61E93507DB3820C6CA0B35DC09BAB435A3F364F7BF646D5F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspBaseComparison-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase.lean",
+      "sha256": "C1D7A755325DF5EA68642D166030FE2F06DCA9960B0065F8C2A54E03709CEB5F",
+      "oleanSha256": "6BFBD8ADF2BF185EE29CF0E59C2992EF55A312021A47F6CC09FC2954D17760BC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspPlaceOverBase-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix.lean",
+      "sha256": "E5B9D6557C5C4CBD636FE022A15798B3031318FF956DAE993C5D15230340F9EE",
+      "oleanSha256": "1228F9F958691B542146F7A88CF5CEB74D690C41F011383A204FA563A04F0CE9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueCuspMatrix-1830.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace.lean",
+      "sha256": "F6B3610DB8373C79569D7098C65FB4EDDA00DE34386FB5AEEC41C1861D410AF6",
+      "oleanSha256": "3E5D3E160EA427B39EDC681A77278B8EA7154CBA9AB726E9ABBA0FF0DF048965",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspPlace-1830.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash",
+    "Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.coe_gammaOneRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply",
+    "Dubon2026.SourceFunctionField.IntegralSlash.integralQExp_gammaOneRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.jqNModC_eq_raised_discriminant_ratio",
+    "Dubon2026.SourceFunctionField.IntegralSlash.levelRaise_mul_cusp_triangular",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_slash",
+    "Dubon2026.SourceFunctionField.IntegralSlash.qParam_triangular_width",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_raisedLevelOne_cusp",
+    "Dubon2026.SourceFunctionField.IntegralSlash.coeff_reducedRaisedLevelOne_cleared",
+    "Dubon2026.SourceFunctionField.IntegralSlash.ofPowerSeries_reducedRaisedLevelOne",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN_triangular",
+    "Dubon2026.SourceFunctionField.IntegralSlash.originalReducedSlashFieldHom_jqN",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueFullCuspFieldHom",
+    "Dubon2026.SourceFunctionField.IntegralSlash.fullBase_algHom_ext",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueCuspFixedPlace_over_chart",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_primitiveCuspMatrix",
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspAudit1.log",
+  "logSha256": "EF10CB1EE305CBD2DB34A1E0157A6DE9FB6FB1AD7A73FDB5C676DF8C24E7C077",
+  "auditSha256": "B3A0C2EF53304AB3ACB3A849825DCC21F86D8D4DCC093C209D97035345DEE669",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspScratchOwnership1830.log",
+  "ownershipSha256": "5D8F580FBBEBC4E4DEB8C4A4E24D74D54FD11263520C18FCE559C4797D976F1F",
+  "exhaustiveTheorems": 38,
+  "linterScopes": 14,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 33,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidueLabeledCuspDependencyAudit1.log",
+  "dependencyAuditSha256": "542DF588AC772306C0801E029710B4ED58B2F79416E190A2EBCBA385102D4305",
+  "dependencyAuditSourceSha256": "9871C8C721BFA28A65C0ABE572324778561024A85EB1F9F65A8107D8137698C1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralSlash.exists_originalResidueLabeledCuspFixedPlace",
+    "Dubon2026.SourceFunctionField.IntegralSlash.gammaOneRaisedLevelOne_apply"
+  ],
+  "dependency": "DUB17/18 -> literal higher continuation -> automorphy -> original all-weight association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus inequality -> residue cusp fiber bounds -> exact full-base cusp labels and their actual original-field stabilizers.",
+  "discharged": [
+    "The source integer-label formula for the actual j_N coordinate is proved from literal raised E4-cube and discriminant expansions in every allowed residue characteristic.",
+    "One constructed actual original-field homomorphism has both prescribed source coordinates and signed-translation diamond equivariance, without a map, coefficient-reduction or equivariance certificate.",
+    "For every existing primitive full-base cusp label, an actual integral cusp matrix and a genuine original residue-field place are constructed. Its exact base valuation restriction, j-pole and signed-translation stabilizer are proved; no matrix, place or extension certificate remains."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Transporting stabilizers over the whole fiber, cusp double-coset injection and fiber bounds, finite elliptic charts including characteristics two and three, and the reverse genus inequality remain required. Original genus preservation, parabolic integral transfer, exceptional-prime removal, original all-weight association, automorphy and literal higher continuation remain open. Acceptance stays 16/20; DUB17--20 OPEN under the unchanged full contract.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-residue-labeled-cusp-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "18C1A3F9002D1B3A905C5200566F8BE8DDC759E26F97C8A081C9C8B9AE9C21E3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

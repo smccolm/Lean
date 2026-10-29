@@ -1,0 +1,52 @@
+import Dubon2026.SourceFrickeLevelIntegralRing
+import Mathlib.RingTheory.Localization.Away.Basic
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> reverse genus inequality
+-> cusp residue fiber bounds -> actual reduced slash chart. Reuse the existing
+level-integral coefficient ring and Mathlib localization: this identifies that
+literal subring of C as the algebraic integers with the level inverted. Its
+universal map will reduce every actual slash coefficient without reconstructing
+coefficientwise choice and denominator-independence arithmetic.
+-/
+namespace Dubon2026.SourceFunctionField.IntegralSlash
+noncomputable section
+open IntegralFricke
+local notation "Zbar" => integralClosure ℤ ℂ
+
+/-- Inclusion of the actual complex algebraic integers into the level-integral ring. -/
+def integersToLevel (N : ℕ) : Zbar →+* RN N where
+  toFun x := ⟨x, 0, by simpa only [pow_zero, one_mul] using x.property⟩
+  map_zero' := rfl
+  map_one' := rfl
+  map_add' _ _ := rfl
+  map_mul' _ _ := rfl
+
+abbrev levelIntegerAlgebra (N : ℕ) : Algebra Zbar (RN N) :=
+  (integersToLevel N).toAlgebra
+attribute [local instance] levelIntegerAlgebra
+
+theorem level_natCast_isUnit (N : ℕ) [NeZero N] : IsUnit (N : RN N) := by
+  rw [isUnit_iff_exists_inv]
+  refine ⟨⟨(N : ℂ)⁻¹, inv_natCast_mem_RN⟩, Subtype.ext ?_⟩
+  change (N : ℂ) * (N : ℂ)⁻¹ = 1
+  exact mul_inv_cancel₀ (by exact_mod_cast NeZero.ne N)
+
+theorem levelInteger_isLocalization (N : ℕ) [NeZero N] :
+    IsLocalization.Away (N : Zbar) (RN N) := by
+  apply (isLocalization_iff (Submonoid.powers (N : Zbar)) (RN N)).mpr
+  refine ⟨?_, ?_, ?_⟩
+  · rintro ⟨y, n, rfl⟩
+    rw [map_pow, map_natCast]
+    exact (level_natCast_isUnit N).pow n
+  · intro z
+    obtain ⟨b, hb⟩ := z.property
+    refine ⟨(⟨(N : ℂ) ^ b * (z : ℂ), hb⟩, ⟨(N : Zbar) ^ b, b, rfl⟩), ?_⟩
+    apply Subtype.ext
+    change (z : ℂ) * (N : ℂ) ^ b = (N : ℂ) ^ b * (z : ℂ)
+    exact mul_comm _ _
+  · intro x y h
+    have hxy : x = y := Subtype.ext (congrArg (fun z : RN N => (z : ℂ)) h)
+    exact ⟨1, by rw [hxy]⟩
+
+end
+end Dubon2026.SourceFunctionField.IntegralSlash

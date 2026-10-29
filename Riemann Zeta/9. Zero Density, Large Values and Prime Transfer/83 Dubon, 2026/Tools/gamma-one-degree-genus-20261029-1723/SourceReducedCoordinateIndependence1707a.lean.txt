@@ -1,0 +1,89 @@
+import SourceReducedBaseCoordinateMap1702b
+import Dubon2026.SourceLaurentScalarIndependence
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> signed-index bound
+-> finite coordinate degree transport from the actual residue field.
+Reuse the native rational-coordinate independence proof over the coefficient
+field needed here. Transcendence makes the coordinate powers independent;
+finite polynomial denominator clearing prepares the coefficient extension.
+Only the finite-family direction needed for the degree inequality is selected.
+The original source is the pinned Apache-2.0 FLT solution at
+6e837e75355538c7f80bab5b956861e86c4eacc2; the existing native proof supplies
+the shorter route and no external proof options are adopted. -/
+namespace Dubon2026.SourceFunctionField.ReducedDegreeTransport
+noncomputable section
+open IntermediateField Polynomial
+open scoped IntermediateField
+variable {K L : Type*} [Field K] [Field L] {t : LaurentSeries K}
+
+theorem linearIndependent_pow_mul (htr : Transcendental K t) {ι : Type*}
+    {v : ι → LaurentSeries K} (hv : LinearIndependent (K⟮t⟯) v) :
+    LinearIndependent K fun p : ℕ × ι => t ^ p.1 * ((v p.2 : LaurentSeries K) : LaurentSeries K) := by
+  classical
+  rw [linearIndependent_iff'] at hv ⊢
+  intro S μ hS p hp
+  let c : ι → LaurentSeries K := fun i =>
+    ∑ q ∈ S, if q.2 = i then algebraMap K (LaurentSeries K) (μ q) * t ^ q.1 else 0
+  have hcmem : ∀ i, c i ∈ K⟮t⟯ := fun i => by
+    refine sum_mem fun q _ => ?_
+    split_ifs
+    · exact mul_mem ((K⟮t⟯).algebraMap_mem _) (pow_mem (mem_adjoin_simple_self K t) _)
+    · exact zero_mem _
+  have hrel : ∑ i ∈ S.image Prod.snd, (⟨c i, hcmem i⟩ : K⟮t⟯) • v i = 0 := by
+    have h1 : ∀ i, ((((⟨c i, hcmem i⟩ : K⟮t⟯) • v i : LaurentSeries K)) : LaurentSeries K)
+        = ∑ q ∈ S, if q.2 = i then
+            algebraMap K (LaurentSeries K) (μ q) * t ^ q.1 * ((v i : LaurentSeries K) : LaurentSeries K) else 0 := by
+      intro i
+      show c i * ((v i : LaurentSeries K) : LaurentSeries K) = _
+      rw [Finset.sum_mul]
+      exact Finset.sum_congr rfl fun q _ => by by_cases h : q.2 = i <;> simp [h]
+    simp_rw [h1]
+    rw [Finset.sum_comm]
+    refine Eq.trans (Finset.sum_congr rfl fun q hq => ?_) hS
+    rw [Finset.sum_ite_eq, if_pos (Finset.mem_image_of_mem Prod.snd hq), ← HahnSeries.single_zero_mul_eq_smul,
+      SourceDifferential.algebraMap_laurentSeries_apply_alt, mul_assoc]
+  have hci : (⟨c p.2, hcmem p.2⟩ : K⟮t⟯) = 0 := hv _ _ hrel p.2 (Finset.mem_image_of_mem Prod.snd hp)
+  have hc0 : c p.2 = 0 := congrArg Subtype.val hci
+  have hQ : aeval t (∑ q ∈ S, if q.2 = p.2 then monomial q.1 (μ q) else 0) = 0 := by
+    rw [map_sum, ← hc0]
+    exact Finset.sum_congr rfl fun q _ => by by_cases h : q.2 = p.2 <;> simp [h, aeval_monomial]
+  have hQ0 : (∑ q ∈ S, if q.2 = p.2 then monomial q.1 (μ q) else 0 : K[X]) = 0 :=
+    transcendental_iff_injective.mp htr (by rw [map_zero]; exact hQ)
+  have hco := congrArg (fun P : K[X] => P.coeff p.1) hQ0
+  beta_reduce at hco
+  rw [finsetSum_coeff, coeff_zero, Finset.sum_eq_single p] at hco
+  · simpa using hco
+  · intro q _ hqp
+    by_cases h2 : q.2 = p.2
+    · rw [if_pos h2, coeff_monomial, if_neg]
+      intro h1
+      exact hqp (Prod.ext h1 h2)
+    · rw [if_neg h2, coeff_zero]
+  · intro hpS
+    exact absurd hp hpS
+
+theorem exists_common_denom (j : LaurentSeries L) {ι : Type*} (s : Finset ι) (g : ι → L⟮j⟯) :
+    ∃ d : L[X], aeval (j) d ≠ 0 ∧
+      ∀ i ∈ s, ∃ p : L[X], aeval (j) d * (g i : LaurentSeries L) = aeval (j) p := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => exact ⟨1, by simp, by simp⟩
+  | insert a s has ih =>
+    obtain ⟨d, hd, hs⟩ := ih
+    obtain ⟨r, q, hrq⟩ := (mem_adjoin_simple_iff L _).mp (g a).2
+    by_cases hq : aeval (j) q = 0
+    · refine ⟨d, hd, ?_⟩
+      intro i hi
+      rcases Finset.mem_insert.mp hi with rfl | hi
+      · exact ⟨0, by rw [hrq, hq, div_zero, mul_zero, map_zero]⟩
+      · exact hs i hi
+    · refine ⟨d * q, by rw [map_mul]; exact mul_ne_zero hd hq, ?_⟩
+      intro i hi
+      rcases Finset.mem_insert.mp hi with rfl | hi
+      · refine ⟨d * r, ?_⟩
+        rw [hrq, map_mul, map_mul, mul_assoc, mul_div_cancel₀ _ hq]
+      · obtain ⟨p, hp⟩ := hs i hi
+        exact ⟨p * q, by rw [map_mul, map_mul, mul_right_comm, hp]⟩
+
+end
+end Dubon2026.SourceFunctionField.ReducedDegreeTransport

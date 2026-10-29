@@ -1,0 +1,7 @@
+### Actual original arithmetic derivation cocycle linear equivalence — 10 October 2026
+
+Differentiate the same original universal arithmetic representation by genuine relative derivations of its literal coefficient ring. Its proved original whole-lift comparison places the actual linear cocycle in the genuine local cocycle submodule. Composition of the original coefficient-point classification and whole-lift cocycle equivalence proves bijectivity, hence a residue-field-linear equivalence before quotienting by strict conjugacy.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalDerivationCocycles](Extension/Dubon2026/ArithmeticLocalDerivationCocycles.lean).
