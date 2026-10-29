@@ -1,0 +1,28 @@
+{
+  "reviewDate": "2026-10-08",
+  "topic": "Original fixed determinant and trace-zero condition; actual continuous adjoint H1 quotient and restriction",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "version": "arXiv:0809.0415v2, 18 July 2013",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Remark 2.29 and section 2.30",
+      "review": "Remark 2.29 relates the determinant tangent space to adjoint H1 for an irreducible representation. Section 2.30 treats topology separately. Our representation-lift classification does not require or claim determinant reconstruction.",
+      "formalUse": "Construct the actual continuous cocycle quotient and compare its equality relation with the original algebraic H1 for these continuous cocycles. Prove continuous-lift classification and original restriction. No identification of all algebraic H1 with continuous H1 is claimed."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Introduction; Theorem2.1; section2 fixed-determinant local deformation rings; Lemma2.7",
+      "review": "The arithmetic lifting argument uses deformation and pseudodeformation rings, local conditions, patched modules and adjoint Selmer information.",
+      "formalUse": "Prove the exact first-order determinant/trace-zero condition for original matrix lifts. Full fixed-determinant deformation representability, local p-adic Hodge conditions, Galois association, patching and Selmer vanishing remain unproved."
+    }
+  ],
+  "localApiReview": "Pinned Matrix.det_one_add_smul, actual determinant and trace naturality, GeneralLinearGroup.det, original groupCohomology.d₀₁ and cocycles₁, Submodule.Quotient.eq and Submodule.mapQ. Actual continuous cocycles modulo coboundaries are constructed from these original objects; no separate continuous cohomology result is assumed.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": [],
+  "implementationDate": "2026-10-09"
+}

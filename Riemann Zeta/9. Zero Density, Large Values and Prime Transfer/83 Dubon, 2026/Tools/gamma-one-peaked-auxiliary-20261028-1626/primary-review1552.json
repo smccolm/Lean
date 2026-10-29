@@ -1,0 +1,13 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "Localization.subalgebra.ofField, actual literal fraction carrier and IsLocalization instance",
+    "Subalgebra.algebra', actual scalar restriction through original tower",
+    "NumberField.RingOfIntegers.algebraMap.injective",
+    "IsScalarTower.algebraMap_apply and RingHom.codRestrict"
+  ],
+  "scope": "The canonical localized rings and field-map restriction still need scalar-tower, finite-unramified and integral-closure assembly before applying the actual tensor-compositum constructions to the original arithmetic extension. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionLog": "canonicalMaps1552b-focus.log"
+}

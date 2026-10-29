@@ -1,0 +1,410 @@
+{
+  "status": "Canonical PASS of the original conditional Frobenius normalization, native diamond transfer invariance and full-H1 diamond-one character. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_frobenius_diamond_9026.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/build_frobenius_diamond_9026.ps1",
+      "sha256": "77A7E369ED4D4A9DB3A775884AAB29B73D5DE475E3D78EB6EAA0F3AD2DA17864"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_frobenius_diamond_ownership_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/compare_frobenius_diamond_ownership_9026.py",
+      "sha256": "822528A7A8097EC3DFC439F28538DC269C106D551529C1F2350EF9AB6CB65770"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\frobenius-diamond-preexecution-review-9026.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/frobenius-diamond-preexecution-review-9026.json",
+      "sha256": "274DD4B1605002FB410CE7B144F3832D4A5FA382BC2925B4AFD6790A96719995"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\frobenius-diamond-preflight-9026.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/frobenius-diamond-preflight-9026.json",
+      "sha256": "1A5CBBF8CE8C79756F4EC3B50DB607EBFE6AD9F652D5AC40B94B35F50AE94D60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_frobenius_diamond_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/integrate_source_frobenius_diamond_9026.py",
+      "sha256": "E50BB732B2C71E3C8506BF0AE0AA284C62D23A8411CBE57F7FABF9B5F0842317"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_frobenius_diamond_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/preflight_frobenius_diamond_9026.py",
+      "sha256": "956202CBAB29227D0C81BB074E9D2C90890CACF9BA3E0E653250746EEB86E380"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_diamond_global_ownership_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_frobenius_diamond_global_ownership_9026.py",
+      "sha256": "077D93D2A2CB29F688771ADAE5B26192755EAB120DCFE34EB902B429D07CF7E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_diamond_production_ownership_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_frobenius_diamond_production_ownership_9026.py",
+      "sha256": "DDCE256EA69D1F22AC34280A1CA4383519331EB3222097BDBA4BCBB31B1D060B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_diamond_promotion_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/prepare_frobenius_diamond_promotion_9026.py",
+      "sha256": "3D958716763380118104F1AC4B759F355C0064BAC3F2D7C4497731DB5BFB4945"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_frobenius_diamond_9026.py",
+      "path": "Tools/frobenius-diamond-20261028-1267/record_source_frobenius_diamond_9026.py",
+      "sha256": "9085BAD2B4C49055720E50EBF322004A22C5B47D1479A601A59C5474B944E095"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-diamond-ownership-comparison-9026.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-diamond-ownership-comparison-9026.json",
+      "sha256": "3C98D994217C0F5B085A2919251B707B37CEA41CCC242B67E34D2781B8D8A2FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-diamond-production-build-9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-diamond-production-build-9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-diamond-production-build-9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-diamond-production-build-9026.log",
+      "sha256": "F68725CBC1D518B676638AF55FD16B93558194C36B8C00FD71C1128893F1B553"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-diamond-scratch-ownership-9026.json",
+      "path": "Tools/frobenius-diamond-20261028-1267/source-frobenius-diamond-scratch-ownership-9026.json",
+      "sha256": "3373567D04711D8971C7FA51E57F7B02864B70212E59E63AFF8765A80FF762C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1Production9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1Production9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1Production9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1Production9026.lean.txt",
+      "sha256": "03A96C7A54B4847F8963E94B862B7843E2BE8EB30D579A447DCA36C74C3B2CF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferDependencyAudit1Production9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceDiamondTransferDependencyAudit1Production9026.log",
+      "sha256": "9AE3B81B91AAB3448AEE9CA2228720E65EC9072898C6B7680268F75583EC3E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondGlobalOwnership9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondGlobalOwnership9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondGlobalOwnership9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondGlobalOwnership9026.lean.txt",
+      "sha256": "F07904E279CD6C6B1995D94ACDCC02C2DAFF29EAD606FFEB815AC42B20007838"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondGlobalOwnership9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondGlobalOwnership9026.log",
+      "sha256": "993483D0AA18CB3E976940EBDBC67381226CBA8B90E493447E876B2971173E93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondOwnership9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondOwnership9026.lean.txt",
+      "sha256": "C48B5B0788AB47710FE7C83837F925255E2C1D9ACA1B8B9D413B44C9F8C05502"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondOwnership9026.log",
+      "sha256": "D2769FB43BA9935488A624532AD85ADAD8496A37DAD42018FD3639D75BFCD589"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondProductionAudit9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondProductionAudit9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondProductionAudit9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondProductionAudit9026.lean.txt",
+      "sha256": "0B6D666E8EA0F2486C13405FB9293D4B4A4B92E5074E50AA0FA9BD20DD7FB4E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondProductionAudit9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusDiamondProductionAudit9026.log",
+      "sha256": "691215FCCDF1CF47DA43453ED5B53804535DD55106F1AEE7323E764548E19C66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1Production9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1Production9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1Production9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1Production9026.lean.txt",
+      "sha256": "600E17117E84DED498BDFD25F21CC4FA9B5DFBFB07E64D9245E2DC3B0D9A72CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationDependencyAudit1Production9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceFrobeniusNormalizationDependencyAudit1Production9026.log",
+      "sha256": "6806F9273D1D51E20150869EFBA86A7890E33BDE4CD35B787D75DBF85FD7A349"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1Production9026.exit",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1Production9026.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1Production9026.lean",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1Production9026.lean.txt",
+      "sha256": "A10151ED82F1001E59022FEAAE3DE2075558F49CECC87F9A474D690FF8B0A15C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterDependencyAudit1Production9026.log",
+      "path": "Tools/frobenius-diamond-20261028-1267/SourceHeckeDiamondCharacterDependencyAudit1Production9026.log",
+      "sha256": "EF18912274242FC46C06C221202F54F15F4F5E3697811FDECF02AA2261D28143"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_frobenius_diamond_9026.ps1",
+      "path": "Tools/frobenius-diamond-20261028-1267/verify_frobenius_diamond_9026.ps1",
+      "sha256": "21EFFC4166DAFFE1FBED3243C52EAC744D7425CEDA645EFAB9D2F1DA4690D67C"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-28T15:33:01.982118+00:00",
+    "log": "logs/dubon-build-20261028-071255-806.log",
+    "sha256": "483332F196E82E3088DA802EC2FC589A4EAE682676B201092E143D6EA4EE6C21",
+    "bytes": 14823978,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9026,
+    "projectTheorems": 57249,
+    "registeredConsumers": 26442,
+    "registeredConstructions": 2816,
+    "declarations": 35243,
+    "generated": 36242,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_070746.log",
+    "foundationSha256": "0625BC671ECA3EDEE74437218DD5C2740E291B174905CF8B9F755E686B84B7BE",
+    "countReconciliation": {
+      "previousTheorems": 57141,
+      "focusedTheorems": 108,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 108,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondGlobalOwnership9026.log",
+      "globalOwnershipSha256": "993483D0AA18CB3E976940EBDBC67381226CBA8B90E493447E876B2971173E93",
+      "globalOwnershipSourceSha256": "F07904E279CD6C6B1995D94ACDCC02C2DAFF29EAD606FFEB815AC42B20007838",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.log",
+      "ownershipSha256": "D2769FB43BA9935488A624532AD85ADAD8496A37DAD42018FD3639D75BFCD589"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 108,
+      "scratchDistinct": 108,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryFrobeniusNormalization": "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryFrobeniusNormalization._proof_1": "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryGaloisHecke": "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryGaloisHecke._proof_1": "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 108,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceHomogeneousHeckeDiamond",
+            "SourceGammaOneHeckeDiamondCoefficient",
+            "SourceGammaOneArithmeticTateOperators",
+            "SourceTateDualQuadratic",
+            "SourceGammaOneBinaryFrobeniusNormalization",
+            "SourceCoefficientDualAction",
+            "SourceGammaOneBinaryGaloisHecke"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.log",
+            "sha256": "B14EC0E495278F87874A3A67DE897567B06395429B166FCDE3FA2CFF18484E0B",
+            "sourceSha256": "628055247A8A7E3F4C0EC323F5BAE11006863F5020FEA9DFC32772F310C6ECD3"
+          }
+        },
+        {
+          "modules": [
+            "SourceInnerH1Identity",
+            "SourceH1TraceInner",
+            "SourceGammaOneDiamondRange",
+            "SourceH1TraceSubgroupEquality",
+            "SourceNormalizerH1Trace",
+            "SourceH1CompositionSquare",
+            "SourceNormalizerCoefficientValue",
+            "SourceGammaOneDiamondSubgroupSquare",
+            "SourceGammaOneDiamondTransfer"
+          ],
+          "count": 31,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.log",
+            "sha256": "34E834BC04CBF4E05A2662C7ED41D6762C732FC75D4487EA9FACB2BDCBE995F0",
+            "sourceSha256": "99787C7F156E17A590E823398E6648BD668AC56FE701D2EAE00E3B3678E57869"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeDiamondWords",
+            "SourceGammaOneHeckeDiamondDescent",
+            "SourcePrimitiveGammaOneHeckeDiamondCharacter"
+          ],
+          "count": 41,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.log",
+            "sha256": "982BA829B4024E1B7668DB551C10E849C08FAA50FAA825885C73E77E6C087FD9",
+            "sourceSha256": "723AAF685FA48B69D4F131E21D6A175B677E037DE5ECF050F6700AF9D7C8E2D3"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.log",
+        "sha256": "D2769FB43BA9935488A624532AD85ADAD8496A37DAD42018FD3639D75BFCD589",
+        "sourceSha256": "C48B5B0788AB47710FE7C83837F925255E2C1D9ACA1B8B9D413B44C9F8C05502"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-051626-555.log",
+        "sha256": "FCBE977305DA25E0DE76429EFAA55D2D499B016038E24293DCB349F0203C51F0"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceHomogeneousHeckeDiamond",
+            "scratchSha256": "5418C2B4BCB0B91B6B0A8C15EC2CA280F81034034331F2C3E791BCE76FE08354",
+            "productionSha256": "8CB491670DBF09AB3FB9C4D7B8141983C2A3C5952182DEC7B5BC533E36665E20",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeDiamondCoefficient",
+            "scratchSha256": "BC8E6EBE230CC01440CF6B63BA965B5AAFA5243842EFC2E47A565B7923D7B80B",
+            "productionSha256": "0C58D6D166A713C64F4D3ED8E0397AF80A5A5B98E443F06E4AA0FCFA303E4DA6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticTateOperators",
+            "scratchSha256": "7F9D271945303587AA5B515FCAD95181CFEA797C542F09228A2794F1F55F617C",
+            "productionSha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateDualQuadratic",
+            "scratchSha256": "99AB2E5C6A5F71CBB85246141D3C7F5A6A2756BB06246561AD78B6EBB2104ED2",
+            "productionSha256": "E9FC3FEB5C8E0D0EE1B335F8C3901C320D4D73D73C27C533A9BE61AFBE0B725D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryFrobeniusNormalization",
+            "scratchSha256": "84A56971677269D271A6BDF7613B725BA036B7B6343247AFCB58FC02A56851DD",
+            "productionSha256": "89519E05880AB958502D542C6F55A7B57D4F6211DEB3AC5BB6B674F4395A19B9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoefficientDualAction",
+            "scratchSha256": "8A84A3F08B676A96E90BF0A38FB5E32C42705F45007BFDEB1A82BD6054B4FB86",
+            "productionSha256": "1A7D7349F5FB045701E047AE1DA548DA8F480BECCCECC9596DFCD0D574902CAB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryGaloisHecke",
+            "scratchSha256": "7ECC677F9E2647DD1FB9D586882306F49B50F03550A498A3C9EF77DE89BD90E3",
+            "productionSha256": "1839AC3013C784BF17177071DECD625386F65450F64D2339979F1560803D8E62",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceInnerH1Identity",
+            "scratchSha256": "3E235C7A9A76CD06BF4970FAC3E4B178966F538BDFB24A89BF73B524D433B2EC",
+            "productionSha256": "11996948735E2B1DA8CDA50B9F67DB87667590BA0D1B3753B742BAE234B02E40",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceInner",
+            "scratchSha256": "21AC3DA9ADD755E6FB9106863F961412D20714A35CF6C339674EADECA348F0C3",
+            "productionSha256": "C20EEAE6B4F2B2E423A2A4FF44BFCD8B3BBD1304F46F25687EBC5BDCA0B8E571",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondRange",
+            "scratchSha256": "1E4E99CE0631D6DC7534AA786017B95B57D4C86BA9D607DC033EA0B3B207AF17",
+            "productionSha256": "D434C62865D4797356DA388AF19B9DC22BFE3922452B5A5FEF3366101500F944",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceSubgroupEquality",
+            "scratchSha256": "2969B3963088BFEBFB89F487D8F23B092ACCC76EDF2F0748158F7D9D4740B69E",
+            "productionSha256": "4738793A03BC08353764A5538B5CD8105B48D67B71E613B3862FC9C04561A431",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceNormalizerH1Trace",
+            "scratchSha256": "19BDA5EA08DD81E438E5A32508AE3AC1B958F1F7C6D6AF75C555515590111A12",
+            "productionSha256": "15281B03C926B90E26F8DFFB3D702FE3827531C9878E3522FE8078C23306EF28",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1CompositionSquare",
+            "scratchSha256": "240A64FD100DE47F95E6227C1362185585F47F656100373378F1B832C6970CA4",
+            "productionSha256": "EA9EDA3B8427CD21A9239802689FAC8C253A5D7B5122F60D229442B4940F67E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceNormalizerCoefficientValue",
+            "scratchSha256": "6DC183BB8D87E405DD00CE389B2A582CDA3C2AA25C87CA87C22DEB4026F25DEE",
+            "productionSha256": "8178562FE160611D88B87182F3DF1DE2B661BF7F5DEAC5E3B1C29A5024FD187F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondSubgroupSquare",
+            "scratchSha256": "4B907F40625AEB434EB670439B5A4DD9BD67BBDF82FF8CBC373D3BA79ABE00D4",
+            "productionSha256": "D47110DEB2CB57B0C2ECB792AF66CA0B44875062ED480C34C450F46EE3BB929E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiamondTransfer",
+            "scratchSha256": "FCCE2E9DBBD6DC7FC41A21896EEF70529A5BB9B47C791FDA513FD8FC9F8F9FF1",
+            "productionSha256": "176F14E34B6581CC8749655CC31938B5A7B1F489E6B6CA9BF030D4EF10593F3D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeDiamondWords",
+            "scratchSha256": "BAD39740F5C0A4F2BC94FA321AAC389D046B2F5EF96C2B3E3790B40111B9AF36",
+            "productionSha256": "0C4CBE2224DB6FCBB9245523D11F1EF34EA7A2E09FA80684C8EB168CA68F35AF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeDiamondDescent",
+            "scratchSha256": "017B2F6A10AFAD7F637EF7F52F81E56B328520F5B257418FFE64283ACFEB130A",
+            "productionSha256": "9C2559F3B62B43675A83E5894D6B163CFACF56DE38219829FBD635A47B51EB4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveGammaOneHeckeDiamondCharacter",
+            "scratchSha256": "5FB4A952682DD91BB8D029C9BE946D3ABE85DB2BC904CB540842B43FA7D2302F",
+            "productionSha256": "D1FD2C34C0E1ED41C17C60238985668C975B64CBB361FFEFC5ACC3E196F55AFE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 108 distinct names from 108 exhaustive scratch checks are retained: 108 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Original diamond transfer invariance and the full-H1 diamond-one finite character are proved, as are exact coefficient normalization and ambient Galois/Hecke compatibility. The Gamma1 geometric Frobenius relation remains the explicit input of the conditional normalization theorem. Original parabolic preimages or a faithful alternative, parabolic character factorization, Frobenius/inertia realization, exceptional primes, coefficient-field realization and original all-weight characteristic-zero association remain. Local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. An ambient Galois representation and finite characters do not supply a two-dimensional characteristic-zero association. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9026-console.log",
+      "sha256": "90F174424719359150D1FD3C65B77B33FA5ECE8B38E85BF4BFE8E17CA1C84C82"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9026-console.log",
+      "sha256": "5534C220FA46CD0AC2EBE3FE2BC021E3BE8DCF2CBAE0DBE3ED71E2EC722B243C"
+    }
+  ]
+}

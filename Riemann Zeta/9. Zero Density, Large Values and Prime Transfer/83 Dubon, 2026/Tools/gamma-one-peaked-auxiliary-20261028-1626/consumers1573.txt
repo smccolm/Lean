@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [DiscreteTopology R]
+
+/-- Exact original-object consumer of `rationalArithmeticResidual_has_profinite_presentation`. -/
+theorem actual_arithmetic_residual_profinite_presentation_rationalArithmeticResidual_has_profinite_presentation_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) :
+    (let hK := ρ.ker.isClosed_of_isOpen (continuousMatrixRepresentation_isOpen_ker ρ hρ)
+     ∃ S : Finset (fixedResidualProfiniteQuotient p (rationalArithmeticGaloisGroup a) ρ.ker hK),
+       Function.Surjective (profiniteGeneratorPresentation
+         (fixedResidualProfiniteQuotient p (rationalArithmeticGaloisGroup a) ρ.ker hK) S)) :=
+  rationalArithmeticResidual_has_profinite_presentation a ha p hp hpa ρ hρ
+
+end
+

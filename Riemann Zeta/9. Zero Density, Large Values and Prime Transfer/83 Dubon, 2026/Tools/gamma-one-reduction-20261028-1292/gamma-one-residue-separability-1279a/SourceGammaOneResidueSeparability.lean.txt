@@ -1,0 +1,56 @@
+import SourceGammaOneResidueCoordinateFinite
+import Dubon2026.SourcePerfectSeparatingCoordinate
+import Dubon2026.SourceModularCoordinateNotPower
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> good reduction
+and residue differentials -> separating coordinate. The actual residue j
+has a simple Laurent pole, ruling out every nontrivial power. The native
+perfect-constant criterion then proves separability, using the finite
+residue degree just derived from original Gamma1 functions. No degree
+equality, genus comparison or geometric Frobenius relation is assumed.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem pow_ne_residueJCoordinate (n : ℕ) (hn : 2 ≤ n) (u : Fb) :
+    u ^ n ≠ residueJCoordinate A Γ := by
+  intro h
+  exact pow_ne_jqModC kk n hn (u : LaurentSeries kk) (congrArg Subtype.val h)
+
+theorem isSeparable_residueCoordinate [Γ.FiniteIndex] [PerfectField kk]
+    (hT : ModularGroup.T ∈ Γ) :
+    Algebra.IsSeparable
+      (IntermediateField.adjoin kk ({residueJCoordinate A Γ} : Set Fb)) Fb := by
+  let J := IntermediateField.adjoin kk ({residueJCoordinate A Γ} : Set Fb)
+  haveI : FiniteDimensional J Fb := (finite_residueCoordinate_and_degree_le A Γ hT).1
+  haveI : Algebra.IsIntegral J Fb := Algebra.IsIntegral.of_finite J Fb
+  change Algebra.IsSeparable J Fb
+  obtain ⟨p, hp⟩ := CharP.exists kk
+  rcases CharP.char_is_prime_or_zero kk p with hprime | rfl
+  · haveI : Fact p.Prime := ⟨hprime⟩
+    haveI : CharP Fb p := charP_of_injective_algebraMap (algebraMap kk Fb).injective p
+    haveI : PerfectRing kk p := PerfectField.toPerfectRing p
+    refine ⟨fun y => ?_⟩
+    exact SourceCurve.isSeparable_of_forall_pow_ne p
+      (pow_ne_residueJCoordinate A Γ p hprime.two_le)
+      (Algebra.IsIntegral.isIntegral (R := J) y)
+  · haveI : CharZero kk := CharP.charP_to_charZero kk
+    haveI : CharZero J := charZero_of_injective_algebraMap (algebraMap kk J).injective
+    exact Algebra.IsAlgebraic.isSeparable_of_perfectField
+
+omit Γ in
+theorem gammaOne_isSeparable_residueCoordinate [PerfectField kk]
+    (M : ℕ) [NeZero M] :
+    let Δ := CongruenceSubgroup.Gamma1 M
+    Algebra.IsSeparable
+      (IntermediateField.adjoin kk ({residueJCoordinate A Δ} : Set (residueImage A Δ)))
+      (residueImage A Δ) := by
+  exact isSeparable_residueCoordinate A (CongruenceSubgroup.Gamma1 M)
+    (by simp [CongruenceSubgroup.Gamma1_mem, ModularGroup.T])
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

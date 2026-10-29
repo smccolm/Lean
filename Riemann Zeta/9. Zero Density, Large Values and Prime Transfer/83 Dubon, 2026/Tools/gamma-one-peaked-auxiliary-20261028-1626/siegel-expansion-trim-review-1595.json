@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-29T02:25:33.604066+00:00",
+  "reason": "Value-only preflight1594 found zeta_ne_zero unused by the exact source consumer. Remove the incidental helper; preserve all mathematical source conclusions and all failed/superseded evidence. No new hypothesis, audit exception or limit change.",
+  "revisions": [
+    {
+      "previous": "SourceSiegelLeadingUnit1589a",
+      "new": "SourceSiegelLeadingUnit1589b",
+      "oldSHA256": "CDB115FB086CDB0CEBE915726ADD165E6B98D88A6AF59C5364A80B20C8AF5D08",
+      "newSHA256": "A32D2990630A3232C264BF1E05F3CAE939EAA5CF8096ED5D10D47FA2A0331A7D"
+    },
+    {
+      "previous": "SourceSiegelNormalizedProduct1590b",
+      "new": "SourceSiegelNormalizedProduct1590c",
+      "oldSHA256": "E075777C24F1D928C1602311ABABDAD76C105B70B3410F0B4990196AA97AC2DE",
+      "newSHA256": "61678644D9B54E8948B9D84CA7D6CC8C71807C10B34FF63682836784D7AF9FD7"
+    },
+    {
+      "previous": "SourceSiegelCoefficientSeries1591b",
+      "new": "SourceSiegelCoefficientSeries1591c",
+      "oldSHA256": "4D716AA9A8C9EA9C652035F80323CC9F41095125499C553A77BBAF3F27D60BC5",
+      "newSHA256": "1FEC6C69E9D7998D015770637EE5752CAB936BE763439F23FEC070B33C808A4E"
+    },
+    {
+      "previous": "SourceSiegelIntegralExpansion1592b",
+      "new": "SourceSiegelIntegralExpansion1592c",
+      "oldSHA256": "91F1B7D8C81F2E024BF7B14F470A6600A86283BF77D77D4390B745519C9A0866",
+      "newSHA256": "45F30203787B554848C44DE86CFC25B8062FD15BA8620E5FCC8710F3B4B48F9F"
+    }
+  ]
+}

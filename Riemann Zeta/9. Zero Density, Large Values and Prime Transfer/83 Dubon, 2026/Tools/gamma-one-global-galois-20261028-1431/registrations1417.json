@@ -1,0 +1,16 @@
+[
+  "Dubon2026.dualNumberQuotient_comp_eq_iff",
+  "Dubon2026.dualNumberCoordinateKernel_square_zero",
+  "Dubon2026.firstOrderCoordinateCocycleEquiv_apply",
+  "Dubon2026.firstOrderCoordinateCocycleEquiv_surjective",
+  "Dubon2026.representationCoordinateConstantLift_reduction",
+  "Dubon2026.representationCoordinateDerivationEquiv_apply",
+  "Dubon2026.representationCoordinateDerivationCocycleEquiv_surjective",
+  "Dubon2026.representationFromCoordinates_comp",
+  "Dubon2026.representationCoordinateFiber_iff",
+  "Dubon2026.representationCoordinateFiberEquiv_apply",
+  "Dubon2026.SemanticRegression.actual_coordinate_derivation_representationCoordinateFiber_iff_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_derivation_firstOrderCoordinateCocycleEquiv_surjective_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_derivation_dualNumberQuotient_comp_eq_iff_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_derivation_representationCoordinateDerivationEquiv_apply_source"
+]

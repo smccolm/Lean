@@ -1,0 +1,67 @@
+import SourceIntegralLevelOneTraceCoefficients1509b
+import SourceIntegralTracePowerCoefficients1513a
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> even-weight
+slash integrality -> peaked auxiliary trace. This consumer derives the
+target coefficient from the exact three-part expansion of an actual
+level-one modular trace: integral translated terms, the distinguished
+slash product, and a remainder with the proved decay-order vanishing.
+The finite level-one criterion and leading-unit extraction are consumed
+in their proof values. Constructing the trace and auxiliary form remains
+separate; their Fourier decomposition is an explicit upstream input. -/
+namespace Dubon2026.SourceFunctionField.IntegralTrace
+noncomputable section
+open UpperHalfPlane ModularForm LevelOneCoefficientRing
+open scoped MatrixGroups
+
+theorem coeff_mem_of_levelOne_trace_decomposition
+    (R : Subring ℂ) (k : ℤ) (a b d r m₀ : ℕ) (δ : ℝ) (hδ : 0 ≤ δ)
+    (hw : k + (4 * (a : ℤ) + 6 * (b : ℤ)) = 12 * (d : ℤ))
+    (hd : d < r * m₀) (F : ModularForm 𝒮ℒ k) (A P U C : PowerSeries ℂ)
+    (hqF : qExpansion 1 (F : ℍ → ℂ) = A + P * U ^ r + C)
+    (hA : ∀ i, A.coeff i ∈ R) (hU : ∀ i, U.coeff i ∈ R)
+    (hU₀ : ∀ i < m₀, U.coeff i = 0)
+    (hU₁ : ∃ v ∈ R, v * U.coeff m₀ = 1)
+    (hC : ∀ i : ℕ, (i : ℝ) < r * ((m₀ : ℝ) + δ) → C.coeff i = 0)
+    (n : ℕ) (hn : (n : ℝ) < r * δ) : P.coeff n ∈ R := by
+  have hprod₀ : ∀ i < r * m₀, (P * U ^ r).coeff i = 0 := by
+    intro i hi
+    rw [PowerSeries.coeff_mul]
+    refine Finset.sum_eq_zero fun p hp => ?_
+    have hp' := Finset.HasAntidiagonal.mem_antidiagonal.mp hp
+    rw [coeff_pow_eq_zero_of_lt U m₀ r hU₀ p.2 (by omega), mul_zero]
+  have hrm : (r : ℝ) * m₀ ≤ r * ((m₀ : ℝ) + δ) := by
+    nlinarith [Nat.cast_nonneg (R := ℝ) r]
+  have hFlow : ∀ i ≤ d, (qExpansion 1 (F : ℍ → ℂ)).coeff i ∈ R := by
+    intro i hi
+    have hil : i < r * m₀ := hi.trans_lt hd
+    have hil' : (i : ℝ) < r * ((m₀ : ℝ) + δ) :=
+      lt_of_lt_of_le (by exact_mod_cast hil) hrm
+    rw [hqF, map_add, map_add, hprod₀ i hil, hC i hil', add_zero, add_zero]
+    exact hA i
+  have hFall := levelOne_trace_coeff_mem_of_initial_coeff_mem k a b d hw F R hFlow
+  have hprod : ∀ i : ℕ, (i : ℝ) < r * ((m₀ : ℝ) + δ) →
+      (P * U ^ r).coeff i ∈ R := by
+    intro i hi
+    have heq := congrArg (PowerSeries.coeff i) hqF
+    rw [map_add, map_add, hC i hi, add_zero] at heq
+    have heq' : (P * U ^ r).coeff i = (qExpansion 1 (F : ℍ → ℂ)).coeff i - A.coeff i := by
+      rw [heq]
+      ring
+    rw [heq']
+    exact R.sub_mem (hFall i) (hA i)
+  obtain ⟨v, hv, hvU⟩ := hU₁
+  apply coeff_mem_of_product_initial_coeff_mem R P (U ^ r) (r * m₀)
+    ⌈(r : ℝ) * ((m₀ : ℝ) + δ)⌉₊
+  · exact coeff_pow_eq_zero_of_lt U m₀ r hU₀
+  · refine ⟨v ^ r, R.pow_mem hv r, ?_⟩
+    rw [coeff_pow_mul U m₀ r hU₀, ← mul_pow, hvU, one_pow]
+  · exact coeff_pow_mem hU r
+  · intro i hi
+    exact hprod i (Nat.lt_ceil.mp hi)
+  · rw [Nat.lt_ceil]
+    push_cast
+    nlinarith
+
+end
+end Dubon2026.SourceFunctionField.IntegralTrace

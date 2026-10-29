@@ -1,0 +1,53 @@
+import Dubon2026.SourceTateDualArithmeticDiamond
+import Dubon2026.SourceGammaOneArithmeticDiamondPolynomial
+import Dubon2026.SourceGammaOneGeometricDiamond
+import Dubon2026.SourceGammaOneGaloisDiamondPolynomial
+import Dubon2026.SourceGammaOneTateDiamondRelations
+import Dubon2026.SourceGammaOneDiamondQuotientGalois
+import Dubon2026.SourceGammaOneDiamondQuotientPolynomial
+import Dubon2026.SourceGammaOneDiamondQuotientHecke
+import Dubon2026.SourceGammaOneTateTransfer
+import Dubon2026.SourceGammaOneDiamondQuotientTransfer
+import Dubon2026.SourceGammaOneDiamondQuotientNonzero
+import Dubon2026.SourceGammaOneDiamondQuotientAssembly
+import Dubon2026.SourceRationalLocalFrobenius
+import Dubon2026.SourceRationalLocalClosureEmbedding
+import Dubon2026.SourceGammaOneDiamondQuotientLocal
+import Dubon2026.SourceGammaOneDiamondQuotientHeckeFamily
+import Dubon2026.SourceGammaOneDiamondQuotientWords
+import Dubon2026.SourceGammaOneDiamondQuotientWordKernel
+import Dubon2026.SourceGammaOneDiamondQuotientCharacter
+import Dubon2026.SourceGammaOneDiamondQuotientCharacterAssembly
+import Dubon2026.SourceGammaOneDiamondQuotientGaloisHecke
+import Dubon2026.SourceGammaOneDiamondQuotientChosenFrobenius
+import Dubon2026.SourceGammaOneIntegralRatioResidue
+import Dubon2026.SourceGammaOneIntegralJRatio
+import Dubon2026.SourceGammaOneResidueRatioDegree
+import Dubon2026.SourceGammaOneIntegralRatioDegreeAssembly
+import Dubon2026.SourceIntegralEisensteinRows
+import Dubon2026.SourceIntegralEisensteinHolomorphic
+import Dubon2026.SourceIntegralEisensteinModular
+import Dubon2026.SourceGammaOneEisensteinSum
+import Dubon2026.SourceGammaOneEisensteinLattice
+import Dubon2026.SourceGammaOneEisensteinPositive
+import Dubon2026.SourceGammaOneEisensteinCoefficients
+import Dubon2026.SourceGammaOneIntegralEisenstein
+import Dubon2026.SourceGammaOneEisensteinSeparation
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceTateDualArithmeticDiamond, `Dubon2026.SourceGammaOneArithmeticDiamondPolynomial, `Dubon2026.SourceGammaOneGeometricDiamond, `Dubon2026.SourceGammaOneGaloisDiamondPolynomial, `Dubon2026.SourceGammaOneTateDiamondRelations, `Dubon2026.SourceGammaOneDiamondQuotientGalois, `Dubon2026.SourceGammaOneDiamondQuotientPolynomial, `Dubon2026.SourceGammaOneDiamondQuotientHecke, `Dubon2026.SourceGammaOneTateTransfer, `Dubon2026.SourceGammaOneDiamondQuotientTransfer, `Dubon2026.SourceGammaOneDiamondQuotientNonzero, `Dubon2026.SourceGammaOneDiamondQuotientAssembly, `Dubon2026.SourceRationalLocalFrobenius, `Dubon2026.SourceRationalLocalClosureEmbedding, `Dubon2026.SourceGammaOneDiamondQuotientLocal, `Dubon2026.SourceGammaOneDiamondQuotientHeckeFamily, `Dubon2026.SourceGammaOneDiamondQuotientWords, `Dubon2026.SourceGammaOneDiamondQuotientWordKernel, `Dubon2026.SourceGammaOneDiamondQuotientCharacter, `Dubon2026.SourceGammaOneDiamondQuotientCharacterAssembly, `Dubon2026.SourceGammaOneDiamondQuotientGaloisHecke, `Dubon2026.SourceGammaOneDiamondQuotientChosenFrobenius, `Dubon2026.SourceGammaOneIntegralRatioResidue, `Dubon2026.SourceGammaOneIntegralJRatio, `Dubon2026.SourceGammaOneResidueRatioDegree, `Dubon2026.SourceGammaOneIntegralRatioDegreeAssembly, `Dubon2026.SourceIntegralEisensteinRows, `Dubon2026.SourceIntegralEisensteinHolomorphic, `Dubon2026.SourceIntegralEisensteinModular, `Dubon2026.SourceGammaOneEisensteinSum, `Dubon2026.SourceGammaOneEisensteinLattice, `Dubon2026.SourceGammaOneEisensteinPositive, `Dubon2026.SourceGammaOneEisensteinCoefficients, `Dubon2026.SourceGammaOneIntegralEisenstein, `Dubon2026.SourceGammaOneEisensteinSeparation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

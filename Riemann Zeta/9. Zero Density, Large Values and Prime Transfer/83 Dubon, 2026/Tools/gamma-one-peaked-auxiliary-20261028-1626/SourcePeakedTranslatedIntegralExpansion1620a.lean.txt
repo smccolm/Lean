@@ -1,0 +1,57 @@
+import SourcePeakedShiftedSeries1613d
+import SourcePeakedAuxiliaryModularForm1607a
+import Dubon2026.SourceGammaOneCuspAuxiliaryForm
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> integral translated expansion.
+For the auxiliary the shifted cusp order is already proved nonnegative.
+The actual residue-row permutation and shifted product series therefore
+give the translated coefficients directly. Native conjugate strict periods
+and coefficient uniqueness avoid a new GammaS subgroup and a separate
+negative-order contradiction. The nonnegative-order hypothesis is explicit
+and will be discharged by the chosen discriminant power. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients
+noncomputable section
+open Complex UpperHalfPlane PowerSeries Filter Topology FiniteExpansion
+open scoped MatrixGroups ModularForm Pointwise
+
+theorem integral_qExpansion_slash_of_nonneg_order
+    (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t : ℕ)
+    (ϑ : ModularForm (CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ)) (12 * (t : ℤ)))
+    (hϑ : ∀ τ : ℍ, ϑ τ =
+      (∏ r : ZMod N, ∏ s : ZMod N,
+        siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) ^ (12 * N * m r s)) *
+        ModularForm.discriminant τ ^ t)
+    (β : SL(2, ℤ))
+    (horder : 0 ≤ Form.Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) + (N : ℤ) * t)
+    (n : ℕ) : IsIntegral ℤ ((qExpansion (N : ℝ)
+      ((⇑ϑ : ℍ → ℂ) ∣[12 * (t : ℤ)] (β : GL (Fin 2) ℝ))).coeff n) := by
+  have hΓ : CongruenceSubgroup.Gamma N ≤ CongruenceSubgroup.Gamma1 N := by
+    intro g hg
+    rw [CongruenceSubgroup.Gamma_mem] at hg
+    rw [CongruenceSubgroup.Gamma1_mem]
+    exact ⟨hg.1, hg.2.2.2, hg.2.2.1⟩
+  have hp := CuspAuxiliary.natCast_mem_strictPeriods_conj N hΓ β
+  have hNR : (0 : ℝ) < N := Nat.cast_pos.mpr (NeZero.pos N)
+  let F := ModularForm.translate ϑ (β : GL (Fin 2) ℝ)
+  have hfun : (⇑ϑ : ℍ → ℂ) = Form.thetaFun N m t := funext hϑ
+  have hF : ∀ τ : ℍ, F τ = Form.uFun N (Form.mT N m β) τ * ModularForm.discriminant τ ^ t := by
+    intro τ
+    change ((⇑ϑ : ℍ → ℂ) ∣[12 * (t : ℤ)] (β : GL (Fin 2) ℝ)) τ = _
+    rw [hfun, Form.thetaFun_slash_apply, Form.uFun_smul]
+  let M := (Form.Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) + (N : ℤ) * t).toNat
+  have hM : (M : ℤ) = orderSum N (Form.mT N m β) + (N : ℤ) * t := by
+    rw [Int.toNat_of_nonneg horder, Form.ord_eq]
+    rfl
+  have hsum : ∀ τ : ℍ, HasSum (fun k : ℕ => coeff k (shiftedSeries N (Form.mT N m β) t M) •
+      Function.Periodic.qParam (N : ℝ) τ ^ k) (F τ) := by
+    intro τ
+    rw [hF τ]
+    simpa only [smul_eq_mul] using hasSum_shiftedSeries N (Form.mT N m β) t M hM τ
+  have hcoef := ModularFormClass.qExpansion_coeff_unique hNR hp hsum n
+  change IsIntegral ℤ ((qExpansion (N : ℝ) (⇑F : ℍ → ℂ)).coeff n)
+  rw [← hcoef]
+  exact integral_shiftedSeries N (Form.mT N m β) t M n
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients

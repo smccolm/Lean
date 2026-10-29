@@ -1,0 +1,36 @@
+{
+  "recordedUTC": "2026-10-28T21:40:04.130079+00:00",
+  "files": [
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/TateCurve/DefectVanishing.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/TateCurve/DefectVanishing.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\DefectVanishing.lean.txt",
+      "sha256": "95EB60016B24AB1226E62BEFA9FA336C0E0A6D7D5A3470CDB51DA324B900C55F",
+      "bytes": 52679
+    },
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/TateCurve/TatePointMem.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/TateCurve/TatePointMem.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TatePointMem.lean.txt",
+      "sha256": "F849181ACCB75D8FEC9A18450CB6D62173EEC9BE95EF7F15F449823E35865C68",
+      "bytes": 7057
+    },
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/TateCurve/TatePointOnCurve.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/TateCurve/TatePointOnCurve.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TatePointOnCurve.lean.txt",
+      "sha256": "03EF1FC1F3513658A854F0744B026D56E6F9CFE3AD5BFAE6715BB2382474542D",
+      "bytes": 21821
+    }
+  ],
+  "inventoryBoundary": "The four new LANA trees are complete. The older Anthropic inventory is truncated: only two explicitly present paths were selected, with no absence inference from that inventory.",
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

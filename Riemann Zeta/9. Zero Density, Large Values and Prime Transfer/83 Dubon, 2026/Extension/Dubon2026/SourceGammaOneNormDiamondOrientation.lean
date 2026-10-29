@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneDiamondPicard
+
+/-! DUB-17/18 -> original Gamma1 Frobenius characteristic relation ->
+exact diamond normalization. The norm uses the field diamond with label
+p-inverse. The original Picard convention uses the inverse field action,
+so the corresponding Picard diamond is the inverse matrix lift, with label
+p. These identifications retain the source convention and prove the inverse. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M : ℕ) [NeZero M]
+local notation "FF" => functionFieldOver (Gamma1 M) Qbar
+
+theorem arithmeticDiamondAut_inverse_lift (g : Gamma0 M) :
+    (ConstantField.arithmeticDiamondAut M g⁻¹).symm = ConstantField.arithmeticDiamondAut M g := by
+  apply AlgEquiv.ext
+  intro f
+  change ConstantField.arithmeticDiamondHom M g⁻¹⁻¹ f = ConstantField.arithmeticDiamondHom M g f
+  rw [inv_inv]
+
+omit [NeZero M] in
+theorem norm_diamond_inverse_label (p : ℕ) (g : Gamma0 M)
+    (hlabel : (p : ZMod M) * (g.val 1 1 : ZMod M) = 1) :
+    ((g⁻¹).val 1 1 : ZMod M) = (p : ZMod M) := by
+  have hh : (p : ZMod M) * Gamma0Map M g = 1 := hlabel
+  have hi : Gamma0Map M g * Gamma0Map M g⁻¹ = 1 := by
+    rw [← map_mul, mul_inv_cancel, map_one]
+  change Gamma0Map M g⁻¹ = (p : ZMod M)
+  calc
+    Gamma0Map M g⁻¹ = 1 * Gamma0Map M g⁻¹ := (one_mul _).symm
+    _ = ((p : ZMod M) * Gamma0Map M g) * Gamma0Map M g⁻¹ := by rw [hh]
+    _ = (p : ZMod M) := by rw [mul_assoc, hi, mul_one]
+
+theorem arithmeticDiamondPicard_inverse_lift_mk (g : Gamma0 M)
+    (D : Divisor.degZero (K := Qbar) (F := FF)) :
+    arithmeticDiamondPicard M g⁻¹ (Pic0.mk D) =
+      Pic0.mk (fieldDegZeroEquiv (ConstantField.arithmeticDiamondAut M g)
+        (functionFieldOver_residue_bijective (Gamma1 M) (by simp [Gamma1_mem, ModularGroup.T]))
+        (functionFieldOver_residue_bijective (Gamma1 M) (by simp [Gamma1_mem, ModularGroup.T])) D) := by
+  rw [arithmeticDiamondPicard_mk, arithmeticDiamondAut_inverse_lift]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

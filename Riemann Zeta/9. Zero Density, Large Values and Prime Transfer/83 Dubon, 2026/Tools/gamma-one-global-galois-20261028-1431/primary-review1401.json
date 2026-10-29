@@ -1,0 +1,27 @@
+{
+  "reviewDate": "2026-10-08",
+  "topic": "Original strict conjugacy and actual adjoint first cohomology; independent continuity equivalence",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "version": "arXiv:0809.0415v2, 18 July 2013",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Remark 2.29 and section 2.30",
+      "review": "Remark 2.29 relates the determinant tangent space to adjoint H1 for an irreducible representation. Section 2.30 treats topology separately. Our representation-lift classification does not require or claim determinant reconstruction.",
+      "formalUse": "Prove actual strict conjugacy iff equality in the genuine algebraic H1 quotient, and separately prove continuity iff continuity of the original cocycle. No continuous cohomology, pseudodeformation representability, or arithmetic lifting result is inferred."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Introduction; Theorem2.1; section2 fixed-determinant local deformation rings; Lemma2.7",
+      "review": "The arithmetic lifting argument uses deformation and pseudodeformation rings, local conditions, patched modules and adjoint Selmer information.",
+      "formalUse": "The matrix lift/cocycle and strict-conjugacy results are preliminary algebra. They supply neither associated Galois representations nor local p-adic Hodge conditions, universal ring representability, patching or Selmer vanishing."
+    }
+  ],
+  "localApiReview": "Pinned Matrix.dualNumberEquiv, actual Units reduction, groupCohomology.d₀₁, coboundaries₁, H1π_eq_iff and H1_induction_on; actual dual-number product topology and Units.continuous_iff.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

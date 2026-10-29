@@ -1,0 +1,1 @@
+Reuse the existing actual all-matrix relation ideal. When the original residual representation kills the original subgroup, its exact coefficient-kernel criterion places the genuine relation ideal inside the true coefficient maximal ideal. The actual literal quotient is consequently a nontrivial local ring.

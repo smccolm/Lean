@@ -1,0 +1,30 @@
+import Dubon2026.SourceGammaOneHeckeDiamondWords
+import Dubon2026.SourceGammaOneHeckeDiamondDescent
+import Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneHeckeDiamondWords, `Dubon2026.SourceGammaOneHeckeDiamondDescent, `Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter, `Dubon2026.SourceInnerH1Identity, `Dubon2026.SourceH1TraceInner, `Dubon2026.SourceGammaOneDiamondRange, `Dubon2026.SourceH1TraceSubgroupEquality, `Dubon2026.SourceNormalizerH1Trace, `Dubon2026.SourceH1CompositionSquare, `Dubon2026.SourceNormalizerCoefficientValue, `Dubon2026.SourceGammaOneDiamondSubgroupSquare, `Dubon2026.SourceGammaOneDiamondTransfer]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val, `Dubon2026.sourceGammaOneHeckeDiamondWord_transfer, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel, `Dubon2026.sourceGammaOneDiamondToModulus_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond, `Dubon2026.sourceGammaOneHeckeDiamondOperators, `Dubon2026.sourceGammaOneHeckeDiamondAlgebra, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord, `Dubon2026.sourceGammaOneDiamondToModulus, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter, `Dubon2026.sourceGammaOneConstantH1Transfer_diamond, `Dubon2026.sourceGammaOneConstantH1Transfer_surjective, `Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke, `Dubon2026.sourceHeckeWord_intertwine_addHom, `Dubon2026.sourcePrimePower_six_isUnit]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE HECKE DIAMOND CHARACTER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closures of the original finite-character Fourier and diamond-one endpoints, through the literal extended operator image, native surjective transfer and original adic character. Parabolic and arithmetic two-dimensional realizations remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

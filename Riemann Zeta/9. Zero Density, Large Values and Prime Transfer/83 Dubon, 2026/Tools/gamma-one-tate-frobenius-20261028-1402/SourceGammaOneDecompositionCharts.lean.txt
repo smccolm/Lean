@@ -1,0 +1,71 @@
+import SourceGammaOneArithmeticCharts
+import SourceGammaOneSpecializationCharts
+import Dubon2026.SourceGammaOneResiduePlaceOrders
+
+/-! DUB-17/18 -> original Gamma1 Picard inertia and Frobenius -> arithmetic
+equivariance of specialization. The original and residue decomposition
+actions transport the exact same integral chart condition. No place-map
+equivariance is assumed; it follows from monic equations and literal residues. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve SourceCurve.RegularProlongation
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "Fb" => residueImage A Γ
+
+theorem nonunit_decompositionResiduePlace_iff (d : A.decompositionSubgroup ℚ)
+    (P : Place kk Fb) (f : Fb) :
+    f ∈ (decompositionResiduePlace A Γ d P).toValuationSubring.nonunits ↔
+      decompositionResidueAut A Γ d⁻¹ f ∈ P.toValuationSubring.nonunits := by
+  rw [ValuationSubring.mem_nonunits_iff_or, ValuationSubring.mem_nonunits_iff_or,
+    mem_decompositionResiduePlace_iff, map_inv₀]
+  simp only [map_eq_zero]
+
+theorem decompositionResidueAut_j (d : A.decompositionSubgroup ℚ) :
+    decompositionResidueAut A Γ d (residueJCoordinate A Γ) = residueJCoordinate A Γ := by
+  let x : coefficientGaussRing Γ A :=
+    ⟨jCoordinateOver Γ Qbar, jCoordinateOver_mem_gaussRing A Γ⟩
+  have hx : decompositionGaussHom A Γ d x = x :=
+    Subtype.ext (arithmeticRingAut_j Γ d.val)
+  have hj : residueToImage A Γ x = residueJCoordinate A Γ :=
+    regularProlongation_jCoordinateOver A Γ
+  have h := decompositionGaussHom_residueToImage A Γ d x
+  rw [hx, hj] at h
+  exact h.symm
+
+theorem decompositionResiduePlace_j_mem (d : A.decompositionSubgroup ℚ)
+    (P : Place kk Fb) :
+    residueJCoordinate A Γ ∈ (decompositionResiduePlace A Γ d P).toValuationSubring ↔
+      residueJCoordinate A Γ ∈ P.toValuationSubring := by
+  rw [mem_decompositionResiduePlace_iff, decompositionResidueAut_j]
+
+theorem chartReducesTo_decomposition (d : A.decompositionSubgroup ℚ)
+    (P : Place Qbar FF) (Q : Place kk Fb) (y : FF)
+    (hy : arithmeticRingAut Γ d.val.symm y = y)
+    (hP : ChartReducesTo A (regularProlongation A Γ) y P Q) :
+    ChartReducesTo A (regularProlongation A Γ) y
+      (arithmeticPlace Γ d.val P) (decompositionResiduePlace A Γ d Q) := by
+  intro f hf a ha
+  let f' := decompositionGaussHom A Γ d⁻¹ f
+  have hf' : IsIntegral (Algebra.adjoin Qbar {y}) (f' : FF) :=
+    arithmeticRingAut_isIntegral Γ d.val.symm y hy hf
+  have ha' : (f' : FF) - algebraMap Qbar FF (d⁻¹ • a) ∈ P.toValuationSubring.nonunits := by
+    have h := (nonunit_arithmeticPlace_iff Γ d.val P _).mp ha
+    rw [map_sub, arithmeticRingAut_constants] at h
+    exact h
+  have h := hP f' hf' (d⁻¹ • a) ha'
+  have hr := decompositionGaussHom_residueToImage A Γ d⁻¹ f
+  change residueToImage A Γ f' = _ at hr
+  change residueToImage A Γ f - algebraMap kk Fb (IsLocalRing.residue A a) ∈
+    (decompositionResiduePlace A Γ d Q).toValuationSubring.nonunits
+  rw [nonunit_decompositionResiduePlace_iff, map_sub, ← hr]
+  erw [decompositionResidueAut_constants A Γ d⁻¹,
+    ← IsLocalRing.ResidueField.residue_smul]
+  exact h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

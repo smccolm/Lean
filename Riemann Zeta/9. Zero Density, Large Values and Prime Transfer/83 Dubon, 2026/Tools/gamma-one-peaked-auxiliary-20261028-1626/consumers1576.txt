@@ -1,0 +1,35 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+omit [Group.FG G] [IsNoetherianRing O] [Finite (IsLocalRing.ResidueField O)] [IsAdicComplete (IsLocalRing.maximalIdeal A) A] in
+/-- Exact original-object consumer of `presentedFramedResidual_iff_whole`. -/
+theorem actual_original_presented_framed_fibers_presentedFramedResidual_iff_whole_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (f : H →ₜ* GeneralLinearGroup ι A) :
+    (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction (f.comp q)) =
+        (σ.toMonoidHom.comp q.toMonoidHom).comp
+          (ProfiniteGrp.ProfiniteCompletion.eta (GrpCat.of G)).hom ↔
+    (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      f.toMonoidHom = σ.toMonoidHom :=
+  presentedFramedResidual_iff_whole hA e H q hq σ f
+
+end
+

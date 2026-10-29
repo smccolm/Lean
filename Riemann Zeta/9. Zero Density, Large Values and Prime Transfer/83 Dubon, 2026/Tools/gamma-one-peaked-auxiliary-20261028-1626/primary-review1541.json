@@ -1,0 +1,13 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned APIs inspected; production compiled with zero diagnostics. Exact consumer and assembled1555 full verification pending.",
+  "pinnedApis": [
+    "Algebra.TensorProduct.productMap and pure-tensor evaluation",
+    "TensorProduct.induction_on",
+    "IsFractionRing.lift and lift_fieldRange",
+    "IsFractionRing.ringHom_fieldRange_eq_of_comp_eq",
+    "Subfield.closure_union"
+  ],
+  "boundary": "Literal original subfield compositum identified as a range; integral-closure transport and arithmetic realization still open.",
+  "productionLog": "tensorFraction1541b-focus.log"
+}

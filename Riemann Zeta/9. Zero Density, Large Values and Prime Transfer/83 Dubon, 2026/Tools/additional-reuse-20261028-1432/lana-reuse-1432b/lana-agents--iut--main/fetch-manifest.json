@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T21:37:44.193458+00:00",
+  "repository": "lana-agents/iut",
+  "branch": "main",
+  "revision": "f7335c863065cc6f92cc9a6210483125d6020f84",
+  "commitDate": "2026-10-26T20:17:31Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/lana-agents/iut",
+      "path": "repository.json",
+      "sha256": "7F7A42CF90FAF1E9B73BEBE50B53AB4DFFD0F7EC0844F6C62C8A210D0D80EFAB",
+      "bytes": 6129
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/iut/commits/main",
+      "path": "commit.json",
+      "sha256": "748411D656BE2928D1FE4D6CFC8B1B10D7A07A860ACE9480E83AE554858C759C",
+      "bytes": 13733
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/iut/git/trees/f7335c863065cc6f92cc9a6210483125d6020f84?recursive=1",
+      "path": "tree.json",
+      "sha256": "E82E904FBDF0BD6301EC68D5F6B63E90AEFF5D4EC6C3CEC6D6528A1F787B7D0F",
+      "bytes": 152697
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/iut/f7335c863065cc6f92cc9a6210483125d6020f84/README.md",
+      "path": "README.md.txt",
+      "sha256": "774EFFA8C7E8491E4D5487C454D34740954FDD39C2591B55741774B6DB476CE0",
+      "bytes": 84295
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/iut/f7335c863065cc6f92cc9a6210483125d6020f84/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/iut/f7335c863065cc6f92cc9a6210483125d6020f84/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "4EC2BB5EB1E2A719580F113B6096D233327AB048A954D0B5138998EFBEE427A1",
+      "bytes": 8456
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/iut/f7335c863065cc6f92cc9a6210483125d6020f84/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "bytes": 11357
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

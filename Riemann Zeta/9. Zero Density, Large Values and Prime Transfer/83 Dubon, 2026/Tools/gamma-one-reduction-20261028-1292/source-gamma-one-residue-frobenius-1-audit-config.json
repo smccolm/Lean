@@ -1,0 +1,75 @@
+{
+  "modules": [
+    "SourceGammaOneResidueFrobenius"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta",
+    "Dubon2026.SourceCurve.finite_over_transcendental_of_finite_coordinate",
+    "Dubon2026.SourceCurve.finite_hom_of_finite_image_coordinate"
+  ],
+  "localModules": [
+    "SourceGammaOneGaussCriterion",
+    "SourceGammaOneGaussValuation",
+    "SourceGammaOneGaussResidueHom",
+    "SourceGammaOneGaussResidueKernel",
+    "SourceGammaOneGaussConstants",
+    "SourceGammaOneGaussResidueImage",
+    "SourceGammaOneRegularProlongation",
+    "SourceGammaOneResidueJCoordinate",
+    "SourceReductionResidueCoordinateFinite",
+    "SourceGammaOneResidueCoordinateFinite",
+    "SourceGammaOneResidueSeparability",
+    "SourceGammaOneDecompositionGauss",
+    "SourceGammaOneResidueArithmetic",
+    "SourceGammaOneHeckeGauss",
+    "SourceGammaOneResidueHecke",
+    "SourceGammaOneResidueHeckeFinite",
+    "SourceGammaOneResidueFrobenius"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneResidueFrobenius": "SourceGammaOneResidueFrobenius1286d"
+  }
+}

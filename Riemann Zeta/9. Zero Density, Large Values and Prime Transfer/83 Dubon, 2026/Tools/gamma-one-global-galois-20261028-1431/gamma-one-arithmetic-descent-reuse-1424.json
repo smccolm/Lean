@@ -1,0 +1,25 @@
+{
+  "recordedUTC": "2026-10-28T21:10:34.995396+00:00",
+  "chain": "DUB-17/18 -> original all-weight association -> finite homogeneous-coefficient Galois action -> original prescribed-support arithmetic descent.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+      "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+      "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteFiniteUnramified.lean",
+      "sha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD"
+    }
+  ],
+  "selected": "Use the already proved exact pulled-back local valuation and transport of norm inertia. Native residue characteristic derives invertibility of the coefficient prime away from Q*p. Apply the existing original Gamma1 inertia result at that exact valuation, then target the existing continuous prescribed-support descent theorem; no new local field or ramification theory is needed.",
+  "remaining": "The actual coordinate-degree and genus equalities remain as separate explicit geometric inputs at each original valuation. Original character transfer/nonvanishing, two-dimensional realization, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false
+}

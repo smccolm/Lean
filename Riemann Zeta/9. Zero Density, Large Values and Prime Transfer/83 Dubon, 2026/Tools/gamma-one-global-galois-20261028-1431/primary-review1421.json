@@ -1,0 +1,18 @@
+{
+  "reviewDate": "2026-10-09",
+  "topic": "Actual coordinate generation, Kaehler module and original point ideal",
+  "localApiReview": [
+    "Group.fg_iff_monoid_fg",
+    "Submonoid.closure_induction",
+    "MvPolynomial.adjoin_range_X",
+    "Algebra.FiniteType.isNoetherianRing",
+    "KaehlerDifferential.linearMapEquivDerivation",
+    "KaehlerDifferential.finite",
+    "Ideal.quotientKerAlgEquivOfSurjective",
+    "RingHom.ker_isMaximal_of_surjective"
+  ],
+  "scope": "All group finite generation is abstract. Genuine original coordinate quotient, actual point action on epsilon ideal and original matrix cocycles are consumed. No topological finite-generation or profinite representability inference.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

@@ -1,0 +1,1 @@
+The true original relative dual-number residue and proved product/adic topology bridge give a bijection between all original continuous first-order lifts and the full framed coefficient fiber over the original local coefficient ring. Every original matrix is preserved in both directions.

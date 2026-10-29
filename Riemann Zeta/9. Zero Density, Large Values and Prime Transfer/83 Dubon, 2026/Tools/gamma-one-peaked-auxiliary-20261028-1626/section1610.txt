@@ -1,0 +1,7 @@
+### Actual actual universal unramified arithmetic representation — 9 October 2026
+
+The actual universal fixed-determinant arithmetic matrices descend continuously through the literal inertia coefficient quotient. The same original whole representation kills every element of the genuine chosen inertia subgroup, retains its prescribed original determinant and reduces to the entire original residual arithmetic representation.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedRepresentation](Extension/Dubon2026/ArithmeticUnramifiedRepresentation.lean).

@@ -1,0 +1,206 @@
+import Dubon2026.SourceGammaOnePrimeHeckeIndex
+import Dubon2026.SourceGammaOneSignedHeckeIndex
+import Dubon2026.SourceGammaOneHeckeCoordinateDegree
+import Dubon2026.SourceGammaOneHeckePrimeDegree
+import Dubon2026.SourceGammaOneCoprimeGeneration
+import Dubon2026.SourceGammaOneAdjacentJRatio
+import Dubon2026.SourceGammaOneRealizationRestriction
+import Dubon2026.SourceGammaOneAdjacentJNonmembership
+import Dubon2026.SourceGammaOneAdjacentJGeneration
+import Dubon2026.SourceGammaOneAdjacentJPolynomial
+import Dubon2026.SourceGammaOneAdjacentJEmbedding
+import Dubon2026.SourceGammaOneAdjacentJPreservation
+import Dubon2026.SourceGammaOneAdjacentJAutomorphism
+import Dubon2026.SourceGammaOneAdjacentJCoefficients
+import Dubon2026.SourceGammaOneHeckeNormEmbeddings
+import Dubon2026.SourceGammaOneHeckeEmbeddingCensus
+import Dubon2026.SourceGammaOneHeckeNormProduct
+import Dubon2026.SourceGammaOneAdjacentJDiamondMatrix
+import Dubon2026.SourceGammaOneAdjacentJDiamondAction
+import Dubon2026.SourceGammaOneRationalAnalyticGerms
+import Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms
+import Dubon2026.SourceGammaOneAdjacentJAnalyticAction
+import Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness
+import Dubon2026.SourceGammaOneAdjacentJReverseDiamond
+import Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond
+import Dubon2026.SourceGammaOneHeckeDiamondNorm
+import Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+import Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOneReduction_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_lower_subgroup_eq_borel_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_lower_relIndex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.plusMinus_gammaOne_hecke_eq_inf
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOneSignedReduction_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_signed_lower_subgroup_eq_borel_comap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_lower_relIndex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_hecke_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.coordinate_finrank_eq_relfinrank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.coordinate_relfinrank_baseChange
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_coordinate_relfinrank_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_hecke_coordinate_relfinrank_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_over_prime_relfinrank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finrank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_sup_gamma0_coprime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_modular_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_holomorphic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_represents
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_restrict_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.continuous_invariant_of_realize_germs
+#print axioms Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne_over_complex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_finrank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_generation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial_root
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_isIntegral
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_natDegree
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_reverse_root
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_mem_correspondence
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_embedding
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_embedding_preserves
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_endomorphism
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_endomorphism_bijective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_automorphism
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_over
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding_commutes
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_zero_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_succ_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_jBeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_bijective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.qExpand_norm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_gammaOne_hecke_norm_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJBase
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.targetAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaModule
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.twistEmbedding
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_label
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_adjacentJ_diamond_lift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_gl
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.rationalAnalyticGerm_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_restrict_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_smul_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_adjacentJ_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_base_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_j_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.eq_of_realize_upperHalfPlane_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_reverse_diamond_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJ_reverse_complex_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_forward
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_reverse_rational
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_reverse
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_arithmetic_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_diamond_norm_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.qbarDiamondAlgebraic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.qbarNormAlgebraic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperHalfPlaneGermRatAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.rationalComplexMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperHalfPlaneRealizeGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.rationalAnalyticGerm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOnePrimeHeckeIndex, `Dubon2026.SourceGammaOneSignedHeckeIndex, `Dubon2026.SourceGammaOneHeckeCoordinateDegree, `Dubon2026.SourceGammaOneHeckePrimeDegree, `Dubon2026.SourceGammaOneCoprimeGeneration, `Dubon2026.SourceGammaOneAdjacentJRatio, `Dubon2026.SourceGammaOneRealizationRestriction, `Dubon2026.SourceGammaOneAdjacentJNonmembership, `Dubon2026.SourceGammaOneAdjacentJGeneration, `Dubon2026.SourceGammaOneAdjacentJPolynomial, `Dubon2026.SourceGammaOneAdjacentJEmbedding, `Dubon2026.SourceGammaOneAdjacentJPreservation, `Dubon2026.SourceGammaOneAdjacentJAutomorphism, `Dubon2026.SourceGammaOneAdjacentJCoefficients, `Dubon2026.SourceGammaOneHeckeNormEmbeddings, `Dubon2026.SourceGammaOneHeckeEmbeddingCensus, `Dubon2026.SourceGammaOneHeckeNormProduct, `Dubon2026.SourceGammaOneAdjacentJDiamondMatrix, `Dubon2026.SourceGammaOneAdjacentJDiamondAction, `Dubon2026.SourceGammaOneRationalAnalyticGerms, `Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms, `Dubon2026.SourceGammaOneAdjacentJAnalyticAction, `Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness, `Dubon2026.SourceGammaOneAdjacentJReverseDiamond, `Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond, `Dubon2026.SourceGammaOneHeckeDiamondNorm, `Dubon2026.SourceGammaOneHeckeMixedLaurentReduction, `Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.gammaOneReduction_surjective, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_lower_subgroup_eq_borel_comap, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_lower_relIndex, `Dubon2026.SourceFunctionField.GammaOne.plusMinus_gammaOne_hecke_eq_inf, `Dubon2026.SourceFunctionField.GammaOne.gammaOneSignedReduction_surjective, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_signed_lower_subgroup_eq_borel_comap, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_lower_relIndex, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_hecke_index, `Dubon2026.SourceFunctionField.GammaOne.coordinate_finrank_eq_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.coordinate_relfinrank_baseChange, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_coordinate_relfinrank_eq_index, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_hecke_coordinate_relfinrank_eq_index, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_over_prime_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finrank, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_sup_gamma0_coprime, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_holomorphic, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_represents, `Dubon2026.SourceFunctionField.GammaOne.realize_restrict_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.continuous_invariant_of_realize_germs, `Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne_over_complex, `Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_finrank, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_generation, `Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial_root, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_isIntegral, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_natDegree, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_eq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_reverse_root, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_mem_correspondence, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_embedding, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_embedding_preserves, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_endomorphism, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_endomorphism_bijective, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_automorphism, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_over, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding_commutes, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_zero_apply, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_succ_apply, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_jBeta, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_injective, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_bijective, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.qExpand_norm, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_gammaOne_hecke_norm_product, `Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_mem, `Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_label, `Dubon2026.SourceFunctionField.GammaOne.exists_adjacentJ_diamond_lift, `Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_gl, `Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix_smul, `Dubon2026.SourceFunctionField.GammaOne.rationalAnalyticGerm_constants, `Dubon2026.SourceFunctionField.GammaOne.realize_restrict_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.realize_smul_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.realize_heckeBeta_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.realize_adjacentJ_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_base_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_j_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_realize_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.eq_of_realize_upperHalfPlane_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_reverse_diamond_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_reverse_complex_diamond, `Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_forward, `Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_reverse_rational, `Dubon2026.SourceFunctionField.GammaOne.geomAut_adjacentJ_reverse, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_arithmetic_diamond, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_diamond_norm_product, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product, `Dubon2026.SourceFunctionField.GammaOne.qbarDiamondAlgebraic, `Dubon2026.SourceFunctionField.GammaOne.qbarNormAlgebraic, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.adjacentJBase, `Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.targetAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaModule, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.twistEmbedding, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding, `Dubon2026.SourceFunctionField.GammaOne.adjacentJDiamondMatrix, `Dubon2026.SourceFunctionField.GammaOne.upperHalfPlaneGermRatAlgebra, `Dubon2026.SourceFunctionField.GammaOne.rationalComplexMap, `Dubon2026.SourceFunctionField.GammaOne.upperHalfPlaneRealizeGerm, `Dubon2026.SourceFunctionField.GammaOne.rationalAnalyticGerm, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE HECKE NORM AUDIT PASS: {count} theorems including private/generated declarations. Actual original degree, generation, embedding census, exact arithmetic diamond and norm product. Integral diamond input, degree/genus preservation, original Picard specialization and arithmetic realization remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOnePrimeHeckeIndex
+
+#lint in Dubon2026.SourceGammaOneSignedHeckeIndex
+
+#lint in Dubon2026.SourceGammaOneHeckeCoordinateDegree
+
+#lint in Dubon2026.SourceGammaOneHeckePrimeDegree
+
+#lint in Dubon2026.SourceGammaOneCoprimeGeneration
+
+#lint in Dubon2026.SourceGammaOneAdjacentJRatio
+
+#lint in Dubon2026.SourceGammaOneRealizationRestriction
+
+#lint in Dubon2026.SourceGammaOneAdjacentJNonmembership
+
+#lint in Dubon2026.SourceGammaOneAdjacentJGeneration
+
+#lint in Dubon2026.SourceGammaOneAdjacentJPolynomial
+
+#lint in Dubon2026.SourceGammaOneAdjacentJEmbedding
+
+#lint in Dubon2026.SourceGammaOneAdjacentJPreservation
+
+#lint in Dubon2026.SourceGammaOneAdjacentJAutomorphism
+
+#lint in Dubon2026.SourceGammaOneAdjacentJCoefficients
+
+#lint in Dubon2026.SourceGammaOneHeckeNormEmbeddings
+
+#lint in Dubon2026.SourceGammaOneHeckeEmbeddingCensus
+
+#lint in Dubon2026.SourceGammaOneHeckeNormProduct
+
+#lint in Dubon2026.SourceGammaOneAdjacentJDiamondMatrix
+
+#lint in Dubon2026.SourceGammaOneAdjacentJDiamondAction
+
+#lint in Dubon2026.SourceGammaOneRationalAnalyticGerms
+
+#lint in Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms
+
+#lint in Dubon2026.SourceGammaOneAdjacentJAnalyticAction
+
+#lint in Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness
+
+#lint in Dubon2026.SourceGammaOneAdjacentJReverseDiamond
+
+#lint in Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond
+
+#lint in Dubon2026.SourceGammaOneHeckeDiamondNorm
+
+#lint in Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+
+#lint in Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction

@@ -1,0 +1,1544 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-norm-promotion-route-1324.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/gamma-one-hecke-norm-promotion-route-1324.json",
+      "sha256": "871AC56BA642646E763706672E33838EFD9BEDA4C2B82F86C6300684B79740BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction.lean.txt",
+      "sha256": "9FC4759AC5FE88760092E627A523D8585DFBBC9D59E5383E1E5B4D73EE2E92C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316a.lean.txt",
+      "sha256": "175F50D028C9C387D552B4514D626B8B0F3B02A49746B09CF534514814ED1F6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316a.log",
+      "sha256": "D7F1501C60F35DE7185AFF6060F16862C8EC0AD01FB5B2556F7E5773A7B9F1B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316b.lean.txt",
+      "sha256": "E3D657FC314D7EB597EDE47AAB1EEC2FACBD0DF0A8027E859EBF8B9494E01D1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316b.log",
+      "sha256": "F7432125DFD62D6C37E8B203E6937E696EB9B19E4458D2C8044990D430D4A271"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316c.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316c.lean.txt",
+      "sha256": "E7601447D54C374316BD07E4C9B9C173F4C7D5087131BB3E43AD59A90F4DD71E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316c.log",
+      "sha256": "EFC5BCC02F619FCCAFA13289A36CB0B2E8115E2E98B053C359554C5442C35656"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316d.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316d.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316d.lean.txt",
+      "sha256": "38128CE4FC2B36B8E3B6289842F73428A19C60ADD40F644D79AEA4557C337690"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316d.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316d.log",
+      "sha256": "C4631A8E811DAA9337F34E009321FFC1D5D11F47D7A587789147612EE5F85100"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316e.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAnalyticAction1316e.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAnalyticAction1316e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond.lean.txt",
+      "sha256": "CA73A0FAC16881C40DF41283159003E3CE9809FE6FFE83FB950E010C0F414704"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318a.lean.txt",
+      "sha256": "F93B332EE009DE389CE63B053878F45463E465DC921D6CB3858647A0F6915713"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318a.log",
+      "sha256": "2FA2705F5A656EAC44735382CC805690FBC2123B34410E6EF23CB570662FF4DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318b.lean.txt",
+      "sha256": "61D386D005AFAC75B10CDBB5F72FA95A44E587036B37B3EBFFE9EBC6A2013D7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318b.log",
+      "sha256": "9D71FBDD385EA9A8A827B27C2D815C478FE57B312B8B55D9F2032D529EAAEDE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318c.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318c.lean.txt",
+      "sha256": "497DE602F9258F53FF91A392AA23D08097A06543D65581C9D187A957C06F91CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318c.log",
+      "sha256": "EAB7074BE1BD8B5D7559D090233E82F0080373FCCFC393F402E0D9BEFDE839E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318d.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318d.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318d.lean.txt",
+      "sha256": "C555BBC51FD6E57CE636481293568D62BAC99D612EA4055AB6CAA30117352581"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318d.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318d.log",
+      "sha256": "B8456BCAAFE3CD6231CC483F48B75E5BC65BEBD6793FBCFE018770292D907BB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318e.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJArithmeticDiamond1318e.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJArithmeticDiamond1318e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism.lean.txt",
+      "sha256": "E3976FCF7B0B7C0D7D351FA7DAF20CB5AAAEC5900AC08403498E9FB355FA0382"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism1306a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism1306a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism1306a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism1306a.lean.txt",
+      "sha256": "326DDC88E8127729609931E29CE83DF6D46380F570FEA976AF49AB88A0BEA943"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism1306a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism1306a.log",
+      "sha256": "804F4D29FD5F4B8045FDA2E76762F7E8B0DD2C019AB054090853BCCDE4BEA507"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism1306b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism1306b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJAutomorphism1306b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJAutomorphism1306b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJCoefficients.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJCoefficients.lean.txt",
+      "sha256": "67083D482A2B9BE98B5FC261ECA848E7D4436AF7A77272A1565DB3344F3AC32C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJCoefficients1307a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJCoefficients1307a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJCoefficients1307a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJCoefficients1307a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction.lean.txt",
+      "sha256": "FF50D831607FDF58FEFE84FE44627FC4E176CE662760CBDD90EA15D1AE9A4249"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction1313a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction1313a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction1313a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction1313a.lean.txt",
+      "sha256": "99141C80D669B327E23C375B41D6C2B4D968809FABF1EFCB31A84BFE3ED49926"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction1313a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction1313a.log",
+      "sha256": "52DF675B45038B390694CC8C7D7D41211FC5601812D088ECAEA28FD9B215CBE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction1313b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction1313b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondAction1313b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondAction1313b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondMatrix.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondMatrix.lean.txt",
+      "sha256": "0525433B61907700C8CCC536D55DFEB07C96714F833B554FB62B96A7222A2A94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondMatrix1312a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondMatrix1312a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJDiamondMatrix1312a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJDiamondMatrix1312a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJEmbedding.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJEmbedding.lean.txt",
+      "sha256": "120DCE9886ECBF2FEDA7DA8DD0D74C6F808C5A29D8456F7358BCA24E084FCC12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJEmbedding1304a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJEmbedding1304a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJEmbedding1304a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJEmbedding1304a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJGeneration.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJGeneration.lean.txt",
+      "sha256": "CD9DE8877B7B9DFEE73A3619969463FCE40E36C3599D67758947BF53ECE4A840"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJGeneration1302a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJGeneration1302a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJGeneration1302a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJGeneration1302a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership.lean.txt",
+      "sha256": "812A98C254361C9F15CF9DC60597191CF47E250F414CDA3675E6B885B2FB4B29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership1301a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership1301a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership1301a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership1301a.lean.txt",
+      "sha256": "F6A51FC176570429C518EA8D3EC9D2F909E2CAD673266A72BFD0B771720AA7FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership1301a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership1301a.log",
+      "sha256": "8E4FE03A2D5695A73096D6C99E840D6BBA48384AE9AAB600506C2309228173F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership1301b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership1301b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJNonmembership1301b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJNonmembership1301b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial.lean.txt",
+      "sha256": "0F8F355DABDFB61AF7D4A2545FBC10D2071AA9F55D2DA102CB64B7EEAFB0A447"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial1303a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial1303a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial1303a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial1303a.lean.txt",
+      "sha256": "3BEE2B330D6FE62EBDE288774EC760C44A4A210920E453348C45A7D59C8C0E54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial1303a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial1303a.log",
+      "sha256": "FA1B66C9894C0CFFD284A46ED37FA7CB4ADC1D2921D8019C75C9EFA4AE257F89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial1303b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial1303b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPolynomial1303b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPolynomial1303b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation.lean.txt",
+      "sha256": "A23ECF98CF4E92843D49A9C2280CCCCBED5E7287FA36C805A661DF63D83D7C41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305a.lean.txt",
+      "sha256": "AF763C2246312E59ACB1C3E9752717823A7AEED44A5DC041AE44B5C34F14EB9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305a.log",
+      "sha256": "A20A53A1ECFA4729514F0987E805C919BB28CC8C56DC444FC7E77707C3C87C6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305b.lean.txt",
+      "sha256": "54A17EC1C57B71D32075CDC93C7EF2F91DCEDD1248129532A85CDA25563C229E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305b.log",
+      "sha256": "1476EB769BAC96B2C99C6F1FB172A24D2B2E44FE87FF40D02FC6E9F2CDB7D852"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305c.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305c.lean.txt",
+      "sha256": "6E39859DC9DA7D52AB7E3711A817A3426238E08FB5DD06E9012FCDECE437A7AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305c.log",
+      "sha256": "3CCA40C7E8AD3E050D4E1C886407762F222B33269791BE651CEA53DEDF56BDE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305d.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJPreservation1305d.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJPreservation1305d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio.lean.txt",
+      "sha256": "9811FB66847739CBF23226F0C68B026B35135D38EC90FC656278D1EEEFC8344A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio1299a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio1299a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio1299a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio1299a.lean.txt",
+      "sha256": "CF562CB3180D96993B1D4A96372F1B8AB28F5CCD614E48371F01ABD1B5A7CB26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio1299a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio1299a.log",
+      "sha256": "3D5B1A959D1DEA93F5760DC55237A3B6B4D5ECAC0502383EEB1E39B43FD5A0E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio1299b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio1299b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJRatio1299b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJRatio1299b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond.lean.txt",
+      "sha256": "3C4078AFF33DA933A6FEFD159BDAEF894E1DDDCC0F7D74A5BF81DD3301EDCFF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317a.lean.txt",
+      "sha256": "086DBF1418120DF82D8054721CF917DE5D63FAB8977A683BF3D88069BC63C74D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317a.log",
+      "sha256": "15ED67F329BFB48444A41746BF8A661023DF79DA549A5D31856CB16DA66226F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317b.lean.txt",
+      "sha256": "CBB3AF532B5096861E790FC93D9355DD43F51C73800F9642A5C11DDCD33A0141"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317b.log",
+      "sha256": "BFD6689F41181765FA1F699B4AA5D61A2E670BBB16DF32EB048BA9C8D472320F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317c.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317c.lean.txt",
+      "sha256": "8A7AE45836863AFAD6900E73647619B969A6B0158280BF59F271E146E754BB8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317c.log",
+      "sha256": "9127BF84D41E79E70FD60B34F041E2C9531266EA4F6CC7BAD49E193344D49D05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317d.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317d.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317d.lean.txt",
+      "sha256": "A01A61F0C066C1D59A61AAF5D55B4E56EBAEAE99E2CF03C3EB39E8AAE40FC00F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317d.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317d.log",
+      "sha256": "C47E8C2A9B1693618C9760BA83956D4A626A1422258393D8A68EB779075E7EDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317e.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAdjacentJReverseDiamond1317e.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneAdjacentJReverseDiamond1317e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoprimeGeneration.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneCoprimeGeneration.lean.txt",
+      "sha256": "C3CB43D088637E26CEBE4C01A1E85A64B9D97B6E11E2930903A68F83F7D20672"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoprimeGeneration1298a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneCoprimeGeneration1298a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoprimeGeneration1298a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneCoprimeGeneration1298a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormAudit2.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormAudit2.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormAudit2.lean.txt",
+      "sha256": "00D1FBB48B1B72CE002D51F52D6C8C6338B823C57FC6735DD27CECBED052CE2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormAudit2.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormAudit2.log",
+      "sha256": "CBD569B6B9AA077517B68E86187F97C8D402B8987F7471FA44CC73D86B9334D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormDependencyAudit2.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormDependencyAudit2.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormDependencyAudit2.lean.txt",
+      "sha256": "45DAB8C2DD4D13BFC830E81CA004CDDCF0FC63A02825D2A95A7891296056A0F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormDependencyAudit2.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormDependencyAudit2.log",
+      "sha256": "66CC4B0A1EC3FE6EAB4C26143F729A378DE15938A5E0AA63CBDD83866FA5FAE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormScratchOwnership1321.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormScratchOwnership1321.lean.txt",
+      "sha256": "B58828F2544F78B264825CE0C61F1E2F8F5D6E06FB00DD217CD1D3705653F0A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormScratchOwnership1321b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormScratchOwnership1321b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormScratchOwnership1321b.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormScratchOwnership1321b.lean.txt",
+      "sha256": "B58828F2544F78B264825CE0C61F1E2F8F5D6E06FB00DD217CD1D3705653F0A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondNormScratchOwnership1321b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondNormScratchOwnership1321b.log",
+      "sha256": "B665EA2AAA46768FBE5AA57F15AAD7BD163B2E0F748F71453AAEC37457690750"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionAudit1.lean.txt",
+      "sha256": "D74CBD949BD5B850BA36183F22705A5AA50F601D86DB6EBA52452569458BEA80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionAudit1.log",
+      "sha256": "9686D4544B26776517E7E2A375394C3B907DE22C747A5478C213EF8F4A20F021"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionDependencyAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionDependencyAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionDependencyAudit1.lean.txt",
+      "sha256": "DFC7275A1A55B4C098DD442915E881CCD1889B6B494FF1FC53C1CC511DF2D396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionDependencyAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionDependencyAudit1.log",
+      "sha256": "98D99439A19A5E1D54648073F289C55F138B124CC7F101604157C6333443ED4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionScratchOwnership1325.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionScratchOwnership1325.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionScratchOwnership1325.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionScratchOwnership1325.lean.txt",
+      "sha256": "054EA2245FACF2667DB9410FF8A3DB0F81FC68332771AEAFD66E202D0AEE7D53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionScratchOwnership1325.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneDiamondReductionScratchOwnership1325.log",
+      "sha256": "F187BB7DDD96B3028890409BC24CBDE4C615508B9926611C962CB02146BEF516"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoordinateDegree.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeCoordinateDegree.lean.txt",
+      "sha256": "40E46E2A310532FC52CD84958AAA3B26494A168C41426AABA7D76C15C0C98AB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoordinateDegree1295a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeCoordinateDegree1295a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoordinateDegree1295a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeCoordinateDegree1295a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeAudit1.lean.txt",
+      "sha256": "2DC30018E39009AD96AD5F490A6FA15C7DFD1BC8FF74EC8F8E1787DE16F3A203"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeAudit1.log",
+      "sha256": "383D4BAF5AF4B0AB99A12124D36FB5D47E5AC475ABFD4FDC2686B16703C158D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeDependencyAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeDependencyAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeDependencyAudit1.lean.txt",
+      "sha256": "55E3863DDED8B1ED0E6E86D46A24F6D844911F1345ACC99389C6A7821992F29C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeDependencyAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeDependencyAudit1.log",
+      "sha256": "3101C7D35D15564186374454D447B8B2FF303F89E6AB9E36A6DC6376FEC0F59C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeScratchOwnership1297.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeScratchOwnership1297.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeScratchOwnership1297.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeScratchOwnership1297.lean.txt",
+      "sha256": "539F80B8589B4B3F01F7C592796A6BBF31B4406CBD0C955C2787886F70BA1120"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegreeScratchOwnership1297.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDegreeScratchOwnership1297.log",
+      "sha256": "7A2B1FF535E7199CE117D298FEA5973DD15AF498E1F62929520D70511C6BC8F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm.lean.txt",
+      "sha256": "3B83C50835EBD46A6C0C3EB85B62971274227F97DAB96CE886A6BF82629F7CCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm1319a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm1319a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm1319a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm1319a.lean.txt",
+      "sha256": "D3C24D7271E7C19A5933DF288849685E029959AFBEB88A0D2C7D12E012120D36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm1319a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm1319a.log",
+      "sha256": "B40BDB100FFC8770BFF3B699D02447F67BCB261A8DA05294B4D4766FC84DF70E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm1319b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm1319b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDiamondNorm1319b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeDiamondNorm1319b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeEmbeddingCensus.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeEmbeddingCensus.lean.txt",
+      "sha256": "3F7FC150CC28828775A03DF440DEE107673A131B068E2BA1F20CFB48035DA5E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeEmbeddingCensus1309a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeEmbeddingCensus1309a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeEmbeddingCensus1309a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeEmbeddingCensus1309a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction.lean.txt",
+      "sha256": "93463F3E842900FB03E5A27B641316388A3869BDDB87969F3758A299CE5749A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323a.lean.txt",
+      "sha256": "30D58A0427715B028F1EDF2C98079A7561FEC188F4C080BB618948F9C4572A51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323a.log",
+      "sha256": "8BCDC95E449CB59EE39D16B1E160CB3C7DAB70F7578E533414D6BBE27FFC5ABB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323b.lean.txt",
+      "sha256": "F4B084CF4D818DF9F1BF91E21BD186359D2A79E4C2B54509F55C8B301C832E55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323b.log",
+      "sha256": "8BB95A494E6BA753BFF91B34F435F7F5B78E8BD9EBA0F135912B8D0BD4E46E20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeIntegralDiamondReduction1323c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeMixedLaurentReduction.lean.txt",
+      "sha256": "DACCE0BAA3EE986FEAC17D509BF3E513D37F137447ED9DAD1DA83097AA1CE14D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction1322a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeMixedLaurentReduction1322a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction1322a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeMixedLaurentReduction1322a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings.lean.txt",
+      "sha256": "91815A54D3E2D190840DE280B8EB462FBEA5EC2AA06CE4B8349B88F568B5A027"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings1308a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings1308a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings1308a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings1308a.lean.txt",
+      "sha256": "45E308E6580CBB0B745DE9AEAC2F7AC9696ED711680D3B541589501A10DF8A03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings1308a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings1308a.log",
+      "sha256": "DD82C57ECE6935B2B252B545396B4230C52336CB22240A5003EA5B4A7998C5A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings1308b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings1308b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormEmbeddings1308b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormEmbeddings1308b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormProduct.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormProduct.lean.txt",
+      "sha256": "A503CEED74E59B181E17A1E8D14DBF6668411BE99346B30A2EB36FAE372A80FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormProduct1310a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormProduct1310a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeNormProduct1310a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckeNormProduct1310a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree.lean.txt",
+      "sha256": "E4897DE959F2891E4B6CAC9C577D6DD2D8AC09174B57D14693A1CD9837D5B24F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296a.log",
+      "sha256": "A678CFB78FA16761DEC55976CD2EA6EADADF3A78228712B871D071F663C29B6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296b.log",
+      "sha256": "5C16F728DE878C2EAA2135C87A7F64B156F5190E917EDA76EE62263520B1BF92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296c.log",
+      "sha256": "A1BFD042C38A420B8DF6F8805625886FDC35B7E867E005043E455D354C2D77F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296d.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrimeDegree1296d.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneHeckePrimeDegree1296d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormAudit1.lean.txt",
+      "sha256": "26F1B1F64CA193E1E9E5B7FE3E16C977E10D8D1DFE859141D6B4EF73E4AA4880"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormAudit1.log",
+      "sha256": "E7A80F34E955D7CA8154A3BBA611663A62218B56AB2164D2DC54C34471AC7B69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDependencyAudit1.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDependencyAudit1.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormDependencyAudit1.lean.txt",
+      "sha256": "9CD92C75C40B95CEC31D825004A052F6A7348C714D570F024D516ECDF5555755"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDependencyAudit1.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormDependencyAudit1.log",
+      "sha256": "7FB0375D0A5CEC26BE0F2D52BD6C4A704A7741A3F29BDD0E497F16E28E7B8E75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormScratchOwnership1311.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormScratchOwnership1311.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormScratchOwnership1311.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormScratchOwnership1311.lean.txt",
+      "sha256": "E23315D7E7BD322FF644ABBDA718E740304D65DF28F21E1313920DA35ABEFEEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormScratchOwnership1311.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneNormScratchOwnership1311.log",
+      "sha256": "96460837E5689BF48109FF8EE520DB37AA47D64763641D5E6C3F917F1EB2F3EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeIndex.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOnePrimeHeckeIndex.lean.txt",
+      "sha256": "5EFF97E8D6BF6B0776993006241ECB4217328543455442DB70DBB8DC757085E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeIndex1293a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOnePrimeHeckeIndex1293a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeIndex1293a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOnePrimeHeckeIndex1293a.log",
+      "sha256": "55B984BF37E88A332B22BAEC58B849498F91D8A53C3E70FB56A330A6F5DB9631"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeIndex1293b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOnePrimeHeckeIndex1293b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrimeHeckeIndex1293b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOnePrimeHeckeIndex1293b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms.lean.txt",
+      "sha256": "56273F8E6CC2D327B6499DEBB88CDB99E21B67B7A663D3984A17A5E524D76CB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314a.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314a.lean.txt",
+      "sha256": "F0FA951F602A1C6B4E1E38582B97E178E8B9104430B7ABA7B27FBDA19CE3D6B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314a.log",
+      "sha256": "0FCB392127EF9D0126B83F1140251CE81FBB8ADFD46CC5C767AD214FF670C2F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314b.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314b.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314b.lean.txt",
+      "sha256": "CA134DDB668996BDEBB4B0B39399C169F84D7BD57D6990E1E3455CB3F5BF265F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314b.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314b.log",
+      "sha256": "BF5CF493B4A37DD932D5B66EC006C110855EC37CAE6982EF6212BBF48D1CE38F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314c.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalAnalyticGerms1314c.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRationalAnalyticGerms1314c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationRestriction.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRealizationRestriction.lean.txt",
+      "sha256": "D3E6ADADB55811DE3D936BCA6C4EB0667C316A2FDB42F351F81E98947EE5CE64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationRestriction1300a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRealizationRestriction1300a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationRestriction1300a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneRealizationRestriction1300a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedHeckeIndex.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneSignedHeckeIndex.lean.txt",
+      "sha256": "CCC71E79C3CECB64DA7E44F329C9C47BBF48ED494A1BA12F9FAD60429A94BCCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedHeckeIndex1294a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneSignedHeckeIndex1294a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedHeckeIndex1294a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneSignedHeckeIndex1294a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneGermFaithfulness.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneGermFaithfulness.lean.txt",
+      "sha256": "5F5F42435465DDD522C44BFCEF54FC0B8D9B22475DACDE6D6E3D752BCB03CA0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneGermFaithfulness1320a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneGermFaithfulness1320a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneGermFaithfulness1320a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneGermFaithfulness1320a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneHeckeGerms.lean",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneHeckeGerms.lean.txt",
+      "sha256": "E77B72CE06F7F52763BDC8BD575E287679E5878234E2C6543212755D9EE44A35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneHeckeGerms1315a.exit",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneHeckeGerms1315a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperHalfPlaneHeckeGerms1315a.log",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/SourceGammaOneUpperHalfPlaneHeckeGerms1315a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_norm_1321.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/audit_gamma_one_diamond_norm_1321.ps1",
+      "sha256": "B3E56F0AE7356C7883665E71B4B637133443121E19B04AB6F9E9E56C436118B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_norm_1321b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/audit_gamma_one_diamond_norm_1321b.ps1",
+      "sha256": "0BE901FC8B689133C2444CC2EF9BF6CC5AF90C7073F35EF837475FEF0C0DCCB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_diamond_reduction_1325.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/audit_gamma_one_diamond_reduction_1325.ps1",
+      "sha256": "C1A1A1C0D7940AFB181B3AEEF9D0083881DFAE7401513E665D3CC233AA3E5A93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_hecke_degree_1297.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/audit_gamma_one_hecke_degree_1297.ps1",
+      "sha256": "76ABF42DAA4EF65A2B9E46912512BCB8AD4DB635481FE17420209EC546D33B4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_norm_1311.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/audit_gamma_one_norm_1311.ps1",
+      "sha256": "48F4AEDC664AB5825BA930BABC2BE31690B47FAF9167EB6C488F52D7E156EC38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_analytic_action_1316a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_analytic_action_1316a.ps1",
+      "sha256": "B459C59587A041EAAAFFA5E1BC9111B1A7DCABC73AD881EB7C7481ACF84CDFAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_analytic_action_1316b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_analytic_action_1316b.ps1",
+      "sha256": "22A4F68BEF907DA8C9943134D02B4A6C8B78AE548C1E9AE4CF3DEBF70E03FEEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_analytic_action_1316c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_analytic_action_1316c.ps1",
+      "sha256": "47E95D95D889E9DF652C294F05D2509F769209654481C2244C85370C84004C65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_analytic_action_1316d.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_analytic_action_1316d.ps1",
+      "sha256": "C5A886C3FBA328B46E7BDB400E1D8D02994C4DD35DD1FD4AFE7B8BFBDF59629E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_analytic_action_1316e.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_analytic_action_1316e.ps1",
+      "sha256": "3A74AFB681DFCCF4489105DBEA3A1AEDFB5D3A982BF93B7182714FC03B79A29B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_arithmetic_diamond_1318a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_arithmetic_diamond_1318a.ps1",
+      "sha256": "B0AC324FE57040C0F17174A40BF50D0826472BC3C97548983B4278A958C983FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_arithmetic_diamond_1318b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_arithmetic_diamond_1318b.ps1",
+      "sha256": "C87446C3B483E4862319C42CC8D19BFE8F1699F0F7CC4E20F8A67FD4C9FF948F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_arithmetic_diamond_1318c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_arithmetic_diamond_1318c.ps1",
+      "sha256": "94A61FC56A5AFE08DCB36791A78C715F17DA58CA799A188450C83F245B7E8367"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_arithmetic_diamond_1318d.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_arithmetic_diamond_1318d.ps1",
+      "sha256": "6DBAFD734140CD2CF2F23A5E6E73F3A836F2E6AAB24EB0D27E575FF932B2A7A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_arithmetic_diamond_1318e.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_arithmetic_diamond_1318e.ps1",
+      "sha256": "4B658634E6104AC809EA162C4E94A0C4C90C3BAEBAA84A6C7DA61F971429A808"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_automorphism_1306a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_automorphism_1306a.ps1",
+      "sha256": "AE54BADE03C3F629CF08B5B7C8457298C3F4B0B87192C7B7E07AD4ED6EA7667B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_automorphism_1306b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_automorphism_1306b.ps1",
+      "sha256": "8C100D1824AE14F2F2D6BDA0BBB13D8F84AEF0F350E298C7BA4A44F015139563"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_coefficients_1307a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_coefficients_1307a.ps1",
+      "sha256": "1D695EAA804225863CC5979DF1A7AE51DB4297EBCF75876D2EBCC8A92886C311"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_diamond_action_1313a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_diamond_action_1313a.ps1",
+      "sha256": "357A7C45A9945373CC08859E2FEA1F95A61EC57A19D6A33E9EBA566B89C652CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_diamond_action_1313b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_diamond_action_1313b.ps1",
+      "sha256": "C71746CF29F6ECC9AAB73F674EB944F20823F16845E3FDE09AC7AE928CCC30B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_diamond_matrix_1312a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_diamond_matrix_1312a.ps1",
+      "sha256": "C0CAEB7CE6FC8C78E9F6056D7B96BF60DC4A15FB5A7DFA0D589CE1CD32E4EDA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_embedding_1304a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_embedding_1304a.ps1",
+      "sha256": "4C5BC90C67C7045898566AD8971DFEA717CCEBA9A58B6EFC4FDF7CCA158A9A04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_generation_1302a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_generation_1302a.ps1",
+      "sha256": "0FB99CEE24B2F0C0636F632210A2E6C08F30684E783236B7CAA869453AB7EAD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_nonmembership_1301a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_nonmembership_1301a.ps1",
+      "sha256": "44AE63FE723227D3944233DFE04015FD3CA0B26F7018AC22D5C9A72EDEADEEA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_nonmembership_1301b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_nonmembership_1301b.ps1",
+      "sha256": "BF61A64001ECB924B0790CD4128881A18875DC8250A5F95649FC6639C78BC2F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_polynomial_1303a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_polynomial_1303a.ps1",
+      "sha256": "E9AF2E59475C8F931DC2F38872DCFCBA11F6357E137BB5BC3566A0084E7E9B59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_polynomial_1303b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_polynomial_1303b.ps1",
+      "sha256": "DA0BBC7BF965C711EC9F4C49AD002BCA05FDD076B79A7DA894073913BFF100AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_preservation_1305a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_preservation_1305a.ps1",
+      "sha256": "8EC92C50EF7EB56EA4076CFADBB8D513C75F45847532143C0BC9DA0F30D34474"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_preservation_1305b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_preservation_1305b.ps1",
+      "sha256": "109B0E4893991628AAFE14EF8F2C836D6706E0A88B23680BB78F089FCB7448B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_preservation_1305c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_preservation_1305c.ps1",
+      "sha256": "CABB59AE49844F89CB1C073BAEE406A9F04C0BB4E5AB3D5672ECA172C9AF1A77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_preservation_1305d.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_preservation_1305d.ps1",
+      "sha256": "A5C11DD3D401F211505E8A0A5041CD3E678758E48B09E3F27C336563135A7AFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_ratio_1299a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_ratio_1299a.ps1",
+      "sha256": "01BD6527CA042CB95614EF3F3DD2F94EBC6330E3F4DEBA2C19BD50DAEA33DBFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_ratio_1299b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_ratio_1299b.ps1",
+      "sha256": "D070ADC6A822DC7D00DC22EF36B2D56906535094DDE7C7CAE27B372C90A1C91E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_reverse_diamond_1317a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_reverse_diamond_1317a.ps1",
+      "sha256": "A386B707977C1C64481AD956B2EAB3C04C873A94AF3E3081B8BEC58224EE864F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_reverse_diamond_1317b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_reverse_diamond_1317b.ps1",
+      "sha256": "CA7CC62B1B0C7EE194B0D7C6BC87FF05C08A7D91E29E96D80874300B9CC7D2E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_reverse_diamond_1317c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_reverse_diamond_1317c.ps1",
+      "sha256": "47877B1F17B3CBCF385ED0A5F0274052329EF7530E08F0E8F78BAF35743503AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_reverse_diamond_1317d.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_reverse_diamond_1317d.ps1",
+      "sha256": "0A0E22B756B07839E555214AEBE9AAB0F0E83B8B407F4EF570AF1735F0DAFED8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_adjacent_j_reverse_diamond_1317e.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_adjacent_j_reverse_diamond_1317e.ps1",
+      "sha256": "CD30CA4A552D725BE124CE0C5609D649FE44FBCF9D9850DDEBEC8D77B4E0EA44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_coprime_generation_1298a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_coprime_generation_1298a.ps1",
+      "sha256": "61161E385A2553A04D771D54896440B80075F839BC4417793FC0F92B1AB2A99A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_embedding_census_1309a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_embedding_census_1309a.ps1",
+      "sha256": "19946BBDC93702D449F37396A1F8550DE1540D47C92D177494EFAC7F71C0B691"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_germ_faithfulness_1320a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_germ_faithfulness_1320a.ps1",
+      "sha256": "5D7609B33FDE174EDB664906F100F5FA8247A414B6F7F086A428AF3E8EA1177E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_coordinate_degree_1295a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_coordinate_degree_1295a.ps1",
+      "sha256": "1477212F896E68FF35EEEFC9940AC34867BD18ED5E5882338C26EE02B6F23942"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_diamond_norm_1319a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_diamond_norm_1319a.ps1",
+      "sha256": "53B2A00743952E59B5266CA08FBEB28F28845E991FA2EC7977996BA8E0FE3342"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_diamond_norm_1319b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_diamond_norm_1319b.ps1",
+      "sha256": "388A579A498D1D3CABA3C27F9FE404BAC3A606E2770607DB8B2752083E57B9DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_integral_diamond_reduction_1323a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_integral_diamond_reduction_1323a.ps1",
+      "sha256": "1563F07D286EF974F8EB462531934FCBC7A1B06E6E594E6ED838C1F965E3702B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_integral_diamond_reduction_1323b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_integral_diamond_reduction_1323b.ps1",
+      "sha256": "A048AE6303A63C1E671D09AEFCA864582CDA1C2A5F58032572215DDAB0076F46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_integral_diamond_reduction_1323c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_integral_diamond_reduction_1323c.ps1",
+      "sha256": "E232DD0979AB301A255DFF295DF8DB63927E33A4AB75167726053F9270BDE09A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_prime_degree_1296a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_prime_degree_1296a.ps1",
+      "sha256": "F8D4E224F5CD8A8C059B7650CAA378E9857DAFF76C2AAF2398F85D206DF060BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_prime_degree_1296b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_prime_degree_1296b.ps1",
+      "sha256": "53FD6FB64D5E3A2188FFE079B6F6A9F74DCCD3418A944F32AEC8B511F38632CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_prime_degree_1296c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_prime_degree_1296c.ps1",
+      "sha256": "D5342053EA4EABAAFCCDCCC81E98DD93C8AA47C5B58F842C6D3A5A5507513767"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_hecke_prime_degree_1296d.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_hecke_prime_degree_1296d.ps1",
+      "sha256": "26E58F3C7001E44788D4C1AB77040FFF925FEAA9AC283A50BB039DAFB6DFE90C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_mixed_laurent_reduction_1322a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_mixed_laurent_reduction_1322a.ps1",
+      "sha256": "2FD34B6D41793B81506962B31E1A5F3B53C8E617848B4CEFEA31CB34F612A329"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_norm_embeddings_1308a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_norm_embeddings_1308a.ps1",
+      "sha256": "94257CF4A8A714908272448C41C3817CB51683FE3B3749249032EA612AF52E43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_norm_embeddings_1308b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_norm_embeddings_1308b.ps1",
+      "sha256": "26EA20B00391AD54D7130B0CB823CC730D4AD9A2A1E0B8C189AF3BE36E05C4F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_norm_product_1310a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_norm_product_1310a.ps1",
+      "sha256": "1EDCE15603299E9993DFFBAB8A069F37AF2BDD7E54A9AAE27F66E6464E784583"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_prime_hecke_index_1293a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_prime_hecke_index_1293a.ps1",
+      "sha256": "2640EAF28A91719040ADA0693D142527C507291EA836C1A0792E6EB7879640FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_prime_hecke_index_1293b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_prime_hecke_index_1293b.ps1",
+      "sha256": "3009F9863BDA476FF81CA46DF1F6D627BAB3F7EE5FFF596278CA7AD682AEF764"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_rational_analytic_germs_1314a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_rational_analytic_germs_1314a.ps1",
+      "sha256": "66336406EDB39D95EA1F311008E12BD0FA43D397BAF6EB835F86443A30A2B0EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_rational_analytic_germs_1314b.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_rational_analytic_germs_1314b.ps1",
+      "sha256": "07203A32A2274C3E9BD5E621AB5E0F64368563503990A60CC68CD9D74E6F5EE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_rational_analytic_germs_1314c.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_rational_analytic_germs_1314c.ps1",
+      "sha256": "03F5A09A6136847A22D2B45902A22F7BEC024C0A9EBA53BE9C88C21143DCC554"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_realization_restriction_1300a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_realization_restriction_1300a.ps1",
+      "sha256": "3AA23C6CF6046777CA7454DBA152422DB5A0214895C328BAC361D190013C5EA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_signed_hecke_index_1294a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_signed_hecke_index_1294a.ps1",
+      "sha256": "1DD013E7E470D42793FF7A35501C273C0E781C106BFCED6BA3EADB1E60229F9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compile_gamma_one_upper_half_plane_hecke_germs_1315a.ps1",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/compile_gamma_one_upper_half_plane_hecke_germs_1315a.ps1",
+      "sha256": "3F57D678C647A787EBDB2ADFA08130F9786A3C58E7957B323592DC6EE51C9DD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_norm_audit_1321.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_diamond_norm_audit_1321.py",
+      "sha256": "45AE9B54AFF5681409F72B238E0D7252EFFF949AE742A3196139795380897483"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_norm_audit_1321b.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_diamond_norm_audit_1321b.py",
+      "sha256": "63221C6413CC9C6A4C886D10B5AB1F35E6D6CA430E0DBCB992FECED015755B32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_reduction_audit_1325.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_diamond_reduction_audit_1325.py",
+      "sha256": "CEA41086CF33FD424DDB8121E4DACBAC41FC94023D334C0D25F206C92C127806"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_degree_audit_1297.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_hecke_degree_audit_1297.py",
+      "sha256": "EE1CB6EDE993A6968C3ED8FE905D6FA91EFB4BA8B87FA80269FBCF4B7183E16E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_degree_audit_1297_generated.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_hecke_degree_audit_1297_generated.py",
+      "sha256": "B68876CBCC4C7B729229B2F8AEFC4AEB4BFC7CBB0B74A741662B9974DC52628E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_prime_degree_1296b.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_hecke_prime_degree_1296b.py",
+      "sha256": "20CD3AF281D534A8163256ECBA58B07B1BCA95C8E924E45D849C10686D43590F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_prime_degree_1296c.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_hecke_prime_degree_1296c.py",
+      "sha256": "06538B40C793AFCED52CF508131842B6C796BDE12E2008507FD05E9C735E6264"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_prime_degree_1296d.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_hecke_prime_degree_1296d.py",
+      "sha256": "41401B6A81BF591AAC691F7F5B6D26A506B7D20E72D92613B036339ED8AAD040"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_norm_audit_1311.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_norm_audit_1311.py",
+      "sha256": "FDBCAE616D9B54032DB1043352F2F25214AA72F69097B68A1DFB9AD9A2C32682"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_norm_embeddings_1308.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_norm_embeddings_1308.py",
+      "sha256": "1C908AC23DD2967BC1BABC2E6252194A520905524680D13584E6D583E6F48D33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_prime_hecke_index_1293b.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/prepare_gamma_one_prime_hecke_index_1293b.py",
+      "sha256": "8DAFE946A1AB8F31641B9BFE3EF6353D4866DE34791E30E1A65B5BADFA04433E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_norm_1321.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/record_gamma_one_diamond_norm_1321.py",
+      "sha256": "9BE9252A217D0929427820F873573617D13990103798362F758A42F69516048A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_norm_1321b.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/record_gamma_one_diamond_norm_1321b.py",
+      "sha256": "F6C5291D8D4EDC9D77575F80E8E16AC59592408CEB6BEB151AFDDD48A4BC88C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_reduction_1325.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/record_gamma_one_diamond_reduction_1325.py",
+      "sha256": "0080300506D5767C276E6759DD68D9D3C74A1AE867E76B30FDB724A8A452908B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_degree_1297.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/record_gamma_one_hecke_degree_1297.py",
+      "sha256": "5E9210DCA230DDAAD172808EFAAD1339C547E5C86792F8C40567145D926A92AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_norm_1311.py",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/record_gamma_one_norm_1311.py",
+      "sha256": "A37FF1A9226D9AFCC320A324B2A24D53473C97D19408A540A5D379F96DD534FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-norm-2-audit-config.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-norm-2-audit-config.json",
+      "sha256": "0D6DAFD20E2639D237934F4FFC79A35AD26CC9C557B6C93C36DE8C225A1B19E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-norm-2-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-norm-2-reuse-review-20261028.json",
+      "sha256": "0E0F1C9BCFC5DDA1F41BA222DA4E808D72431C28BF5D5723F3353D4BC2AF67E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-norm-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-norm-2-scratch-receipt.json",
+      "sha256": "8DB8032D96DFB3EBD0A76B1D67A39E4707FCB9921A102C8293C504FF4EB548E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-norm-audit-route-1321.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-norm-audit-route-1321.json",
+      "sha256": "FBB55EF40DD3437B7C3BA114D176B32D8E76BA5DA10B0A4C642FA6F37F5009F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-norm-audit-route-1321b.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-norm-audit-route-1321b.json",
+      "sha256": "3089199B3CF6CB29D623F778D58D3B287F294FFF996AD6E815F8128E66D9684B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-reduction-1-audit-config.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-reduction-1-audit-config.json",
+      "sha256": "A909E11079CAD340A088E78301704BC1B97F4F10FE10DBA55358672C93371F0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-reduction-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-reduction-1-reuse-review-20261028.json",
+      "sha256": "27615201D3FC79411D144BD681B1045E0FF6E130F14981FF53D2F94BA5E55F4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-reduction-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-reduction-1-scratch-receipt.json",
+      "sha256": "3BCC2E3E62001FA3D4070CDE54230B633E030BA41B7926E046017CADE4F64752"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-reduction-audit-route-1325.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-diamond-reduction-audit-route-1325.json",
+      "sha256": "A4EF217C300D9E33D9194DA7D5C409102B7E166FC6DB70F4F299EE27CA349155"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-degree-1-audit-config.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-hecke-degree-1-audit-config.json",
+      "sha256": "D8A2925A9BE78A0BD5526B9355714E8CE2C06E3BE308F671FF4697A4535C082B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-degree-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-hecke-degree-1-reuse-review-20261028.json",
+      "sha256": "76003411E397ADF07684FA1ECE489CCD87D5B2E973F63B88EC33C7A7E1434ED4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-degree-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-hecke-degree-1-scratch-receipt.json",
+      "sha256": "06F309311D6E9A558A30749CECD02BFA693551BAD9107CCA376913C78B6B5F86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-degree-audit-route-1297.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-hecke-degree-audit-route-1297.json",
+      "sha256": "23067897E20E6E2FEC64DCD1FB8843BC71AE794456963032E3388476194C4718"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-norm-1-audit-config.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-norm-1-audit-config.json",
+      "sha256": "550A10BE12F36BBC1CC7A77381158C5E6A07EBFEA4F2EFA960DEFD5D0D35D7A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-norm-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-norm-1-reuse-review-20261028.json",
+      "sha256": "DC2942D94FDB6A05174D9BDFB04295D04FA0C90CF91B31610D2B38108C11C1FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-norm-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-norm-1-scratch-receipt.json",
+      "sha256": "F4449953AAEF79EBF2DEA59C229438C0D4BEB93277034859ECE66AF44DBB454E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-norm-audit-route-1311.json",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/source-gamma-one-norm-audit-route-1311.json",
+      "sha256": "D8586A833AB539DBEFAD38BD870FE4785BED8A49745D364EF8C4064AB5994368"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-prime-degree-1296a\\SourceGammaOneHeckePrimeDegree.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/gamma-one-hecke-prime-degree-1296a/SourceGammaOneHeckePrimeDegree.lean.txt",
+      "sha256": "237F0DAD8B6E89E7D25E0BFB2B39993F6646933191D1B1587351A075D5101A7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-prime-degree-1296b\\SourceGammaOneHeckePrimeDegree.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/gamma-one-hecke-prime-degree-1296b/SourceGammaOneHeckePrimeDegree.lean.txt",
+      "sha256": "10A19022AC61F4C7B5D99D9DA1C4D4A2C92A44A33F84A62821CEB9E34F0EB753"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-prime-degree-1296c\\SourceGammaOneHeckePrimeDegree.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/gamma-one-hecke-prime-degree-1296c/SourceGammaOneHeckePrimeDegree.lean.txt",
+      "sha256": "03B3DC7133E9DD420BDCBCC66B10E4FD9B73ED3D9FA4AF0FDCAD7A92CC6A612B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-prime-hecke-index-1293a\\SourceGammaOnePrimeHeckeIndex.lean.txt",
+      "path": "Tools/gamma-one-hecke-norm-20261028-1324/gamma-one-prime-hecke-index-1293a/SourceGammaOnePrimeHeckeIndex.lean.txt",
+      "sha256": "5F25BBDF71214B2A89C6948E6F3B9E52B6E73489D10157CDD1018128AC4F5986"
+    }
+  ]
+}

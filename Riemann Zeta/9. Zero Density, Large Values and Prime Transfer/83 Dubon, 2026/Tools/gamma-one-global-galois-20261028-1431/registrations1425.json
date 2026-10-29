@@ -1,0 +1,17 @@
+[
+  "Dubon2026.coordinateDerivationCocycleLinearEquiv_apply",
+  "Dubon2026.representationCoordinateDerivationCocycleEquiv_value",
+  "Dubon2026.coordinateDerivationMatrix_add",
+  "Dubon2026.coordinateDerivationMatrix_smul",
+  "Dubon2026.coordinateTangentCohomologyMap_eq_zero_iff",
+  "Dubon2026.coordinateTangentCohomologyMap_surjective",
+  "Dubon2026.coordinateTangentCohomologyMap_eq_iff",
+  "Dubon2026.symmetricRepresentationCoordinateConstantLift",
+  "Dubon2026.symmetricCoordinateDerivationMap_apply",
+  "Dubon2026.symmetricCoordinateDerivationMap_lift",
+  "Dubon2026.symmetricCoordinateDerivationMap_firstOrder",
+  "Dubon2026.SemanticRegression.actual_coordinate_tangent_linear_representationCoordinateDerivationCocycleEquiv_value_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_tangent_linear_coordinateDerivationCocycleLinearEquiv_apply_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_tangent_linear_coordinateTangentCohomologyMap_eq_iff_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_tangent_linear_symmetricCoordinateDerivationMap_firstOrder_source"
+]

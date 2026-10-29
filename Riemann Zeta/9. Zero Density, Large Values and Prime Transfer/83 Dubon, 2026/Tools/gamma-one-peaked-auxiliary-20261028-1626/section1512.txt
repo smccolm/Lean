@@ -1,0 +1,8 @@
+### Actual original Selmer ideal-root bridge — 9 October 2026
+
+Two further production modules use original fractional ideals, prime multiplicities, principal ideals and the pinned Selmer group. Proved equality from prime multiplicities gives injectivity of every positive power on nonzero fractional ideals. The literal product of original prime ideals with divided multiplicities is nonzero and is an actual nth root whenever all original multiplicities are divisible by n. Its bundled unit version retains the exact power identity. The original principal-ideal multiplicity is identified with the negative integral logarithm of the pinned multiplicative valuation. The original valuation modulo n vanishes exactly when that integral valuation is divisible by n. Consequently, membership of each genuine original representative in the actual empty-set Selmer group is exactly divisibility of every principal-ideal multiplicity. This supplies actual ideal roots for the original Selmer representatives; no Selmer finiteness assumption is introduced.
+
+The map from the actual Selmer group to the original class group, its unit-image kernel, Selmer finiteness and the Galois/ramification bridge remain to be proved. Arithmetic Mazur finiteness, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FractionalIdealPowerRoots](Extension/Dubon2026/FractionalIdealPowerRoots.lean).
+- [PrincipalIdealValuationBridge](Extension/Dubon2026/PrincipalIdealValuationBridge.lean).

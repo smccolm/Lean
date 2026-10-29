@@ -1,0 +1,48 @@
+import Dubon2026.SourceGammaOneSpecializationCharts
+import Dubon2026.SourceGammaOnePicardTorsion
+
+/-! DUB-17/18 -> original Gamma1 Picard inertia -> the same specialization
+with its exact two chart descriptions and invertible-torsion injectivity.
+All three properties belong to one constructed reduction. Coordinate-degree
+and genus preservation remain explicit original geometric inputs. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve SourceCurve.RegularProlongation IntermediateField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "Fb" => residueImage A Δ
+
+theorem exists_gammaOne_constant_reduction_with_charts_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ R : ConstantReduction A FF Fb,
+      R.toRegularProlongation = regularProlongation A Δ ∧
+      (∀ P Q, residueJCoordinate A Δ ∈ Q.toValuationSubring →
+        (R.placeMap P = Q ↔ ChartDomain A P (jCoordinateOver Δ Qbar) ∧
+          ChartReducesTo A R.toRegularProlongation (jCoordinateOver Δ Qbar) P Q)) ∧
+      (∀ P Q, residueJCoordinate A Δ ∉ Q.toValuationSubring →
+        (R.placeMap P = Q ↔ ChartDomain A P (jCoordinateOver Δ Qbar)⁻¹ ∧
+          ChartReducesTo A R.toRegularProlongation (jCoordinateOver Δ Qbar)⁻¹ P Q)) ∧
+      ∀ m : ℕ, (m : kk) ≠ 0 →
+        Set.InjOn R.pic0Map (↑(Pic0.torsion (K := Qbar) (F := FF) m)) := by
+  have hT : ModularGroup.T ∈ Δ := by simp [CongruenceSubgroup.Gamma1_mem, ModularGroup.T]
+  haveI := finiteDimensional_jCoordinateOver hT Qbar
+  obtain ⟨r, hr₁, hr₂, hr⟩ :=
+    exists_principal_reduction_map_with_charts_of_degree_genus_eq A Δ hT hdeg hgen
+  let R : ConstantReduction A FF Fb := ConstantReduction.ofPlaceMap
+    (regularProlongation A Δ) r
+    (place_residue_bijective_of_finite_coordinate (jCoordinateOver Δ Qbar))
+    (residueImage_place_residue_bijective A Δ hT) hr
+  refine ⟨R, rfl, hr₁, hr₂, fun m hm x hx y hy hxy => ?_⟩
+  apply sub_eq_zero.mp
+  apply gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq A M hdeg hgen R rfl m hm (x - y)
+  · rw [nsmul_sub, Pic0.mem_torsion_iff.mp hx, Pic0.mem_torsion_iff.mp hy, sub_self]
+  · rw [map_sub, hxy, sub_self]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

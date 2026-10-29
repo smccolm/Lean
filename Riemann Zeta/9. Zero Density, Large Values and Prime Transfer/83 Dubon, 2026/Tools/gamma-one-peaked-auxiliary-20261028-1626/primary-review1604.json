@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "RationalArithmeticInertia",
+  "mathematics": "The genuine integer-ring inertia subgroup is defined inside the same original rational arithmetic Galois group used by the deformation constructions. Its closedness follows in the actual Krull topology. The proved whole-union inertia theorem shows that every original nonzero prime outside the exceptional integer has trivial inertia in this exact group, with its original rational scalar structure retained.",
+  "boundary": "Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "original-infinite-inertia-draft-review-20261009.json; exact pinned original inertia and ramification APIs inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0BUA",
+    "https://stacks.math.columbia.edu/tag/09E3"
+  ],
+  "sourceBoundary": "Actual finite-subextension inertia interpretation and original restriction; no full inverse-limit exact sequence or complete Selmer comparison claimed.",
+  "productionLog": "rationalInertia1604-focus.log"
+}

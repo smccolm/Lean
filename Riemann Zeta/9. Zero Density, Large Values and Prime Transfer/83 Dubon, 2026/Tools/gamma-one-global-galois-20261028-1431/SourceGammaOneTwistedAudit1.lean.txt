@@ -1,0 +1,81 @@
+import SourceTwistedCoefficientDualAction
+import SourceCyclotomicHomogeneousAction
+import SourceAbsoluteCyclotomicCharacter
+import SourceGammaOneTwistedGalois
+import SourceCyclotomicHomogeneousHecke
+import SourceGammaOneTwistedGaloisHecke
+import SourceAbsoluteCyclotomicLocal
+import SourceGammaOneTwistedGaloisFrobenius
+import SourceTwistedCoefficientDualTrivial
+import SourceGammaOneTwistedGaloisInertia
+import SourceGammaOneParabolicTateLift
+import SourceGammaOneParabolicGaloisFrobenius
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceTwistedCoefficientDualAction_operator
+#print axioms Dubon2026.sourceCyclotomicHomogeneousAction_apply
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_apply_root
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_frobenius_operator
+#print axioms Dubon2026.sourceCyclotomicHomogeneousAction_commute
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_prime
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_frobenius
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter_inertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq
+#print axioms Dubon2026.sourceTwistedCoefficientDualAction_eq_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_binaryTate_restriction_diamond_fixed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_frobenius_of_degree_genus_eq
+#print axioms Dubon2026.sourceTwistedCoefficientDualAction
+#print axioms Dubon2026.sourceCyclotomicHomogeneousAction
+#print axioms Dubon2026.sourceAbsoluteCyclotomicCharacter
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryCyclotomicCoefficientRep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceTwistedCoefficientDualAction, `SourceCyclotomicHomogeneousAction, `SourceAbsoluteCyclotomicCharacter, `SourceGammaOneTwistedGalois, `SourceCyclotomicHomogeneousHecke, `SourceGammaOneTwistedGaloisHecke, `SourceAbsoluteCyclotomicLocal, `SourceGammaOneTwistedGaloisFrobenius, `SourceTwistedCoefficientDualTrivial, `SourceGammaOneTwistedGaloisInertia, `SourceGammaOneParabolicTateLift, `SourceGammaOneParabolicGaloisFrobenius]
+  let theorems : Array Name := #[`Dubon2026.sourceTwistedCoefficientDualAction_operator, `Dubon2026.sourceCyclotomicHomogeneousAction_apply, `Dubon2026.sourceAbsoluteCyclotomicCharacter_apply_root, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_apply, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_frobenius_operator, `Dubon2026.sourceCyclotomicHomogeneousAction_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_prime, `Dubon2026.sourceAbsoluteCyclotomicCharacter_frobenius, `Dubon2026.sourceAbsoluteCyclotomicCharacter_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq, `Dubon2026.sourceTwistedCoefficientDualAction_eq_one, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.exists_binaryTate_restriction_diamond_fixed, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_frobenius_of_degree_genus_eq]
+  let constructions : Array Name := #[`Dubon2026.sourceTwistedCoefficientDualAction, `Dubon2026.sourceCyclotomicHomogeneousAction, `Dubon2026.sourceAbsoluteCyclotomicCharacter, `Dubon2026.SourceFunctionField.GammaOne.binaryCyclotomicCoefficientRep, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Frobenius Normalization postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Frobenius Normalization theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE TWISTED AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceTwistedCoefficientDualAction
+#lint in SourceCyclotomicHomogeneousAction
+#lint in SourceAbsoluteCyclotomicCharacter
+#lint in SourceGammaOneTwistedGalois
+#lint in SourceCyclotomicHomogeneousHecke
+#lint in SourceGammaOneTwistedGaloisHecke
+#lint in SourceAbsoluteCyclotomicLocal
+#lint in SourceGammaOneTwistedGaloisFrobenius
+#lint in SourceTwistedCoefficientDualTrivial
+#lint in SourceGammaOneTwistedGaloisInertia
+#lint in SourceGammaOneParabolicTateLift
+#lint in SourceGammaOneParabolicGaloisFrobenius

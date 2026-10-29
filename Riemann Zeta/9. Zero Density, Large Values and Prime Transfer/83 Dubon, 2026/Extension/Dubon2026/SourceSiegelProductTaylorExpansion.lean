@@ -1,0 +1,62 @@
+import Dubon2026.SourceSiegelProductLocalUniform
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> integral Siegel expansion.
+The native discriminant proof route identifies the derivatives of the
+actual locally uniform product with stabilized finite-product coefficients.
+Native Taylor expansion then proves the exact analytic series. This avoids
+the source candidate's general formal-product mapping and majorant-series
+machinery while retaining the literal analytic product and coefficients.
+Adapted from the existing SourceDiscriminantProductExpansion proof. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Polynomial Filter Topology
+
+theorem tendstoLocallyUniformlyOn_derivative_pp
+    (P : ℕ → ℂ[X]) (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖) (m : ℕ) :
+    TendstoLocallyUniformlyOn (fun N q => (derivative^[m] (pp P N)).eval q)
+      (deriv^[m] (product P)) atTop (Metric.ball (0 : ℂ) 1) := by
+  induction m with
+  | zero =>
+    simpa only [Function.iterate_zero, id_eq] using tendstoLocallyUniformlyOn_pp P C hC hbound
+  | succ m ih =>
+    have h := ih.deriv (Eventually.of_forall fun N => (Polynomial.differentiable _).differentiableOn)
+      Metric.isOpen_ball
+    rw [Function.iterate_succ', Function.iterate_succ']
+    refine h.congr fun N q _ => ?_
+    simp only [Function.comp_apply, Polynomial.deriv]
+
+theorem iteratedDeriv_product_zero
+    (P : ℕ → ℂ[X]) (hP : ∀ n, (P n).coeff 0 = 1)
+    (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖) (m : ℕ) :
+    iteratedDeriv m (product P) 0 = m.factorial * stableCoeff P m := by
+  have h0 : (0 : ℂ) ∈ Metric.ball (0 : ℂ) 1 := Metric.mem_ball_self one_pos
+  have hlim : Tendsto (fun N => (derivative^[m] (pp P N)).eval 0) atTop
+      (𝓝 (deriv^[m] (product P) 0)) :=
+    (tendstoLocallyUniformlyOn_derivative_pp P C hC hbound m).tendsto_at h0
+  have hev : (fun N => (derivative^[m] (pp P N)).eval 0) =ᶠ[atTop]
+      fun _ => (m.factorial : ℂ) * stableCoeff P m := by
+    refine eventually_atTop.mpr ⟨m, fun N hN => ?_⟩
+    simp only
+    rw [← Polynomial.coeff_zero_eq_eval_zero, Polynomial.coeff_iterate_derivative, zero_add,
+      Nat.descFactorial_self, nsmul_eq_mul, ← stableCoeff_eq hP hN]
+  rw [iteratedDeriv_eq_iterate]
+  exact tendsto_nhds_unique hlim (tendsto_const_nhds.congr' hev.symm)
+
+theorem hasSum_stableCoeff
+    (P : ℕ → ℂ[X]) (hP : ∀ n, (P n).coeff 0 = 1)
+    (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖)
+    {q : ℂ} (hq : ‖q‖ < 1) :
+    HasSum (fun m : ℕ => stableCoeff P m * q ^ m) (product P q) := by
+  have hq' : q ∈ Metric.ball (0 : ℂ) 1 := by simpa using hq
+  have h := Complex.hasSum_taylorSeries_on_ball (differentiableOn_product P C hC hbound) hq'
+  refine h.congr_fun fun m => ?_
+  rw [iteratedDeriv_product_zero P hP C hC hbound, sub_zero, smul_eq_mul, smul_eq_mul]
+  field_simp
+  rw [mul_div_assoc, div_self (Nat.cast_ne_zero.mpr (Nat.factorial_ne_zero m)), mul_one]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

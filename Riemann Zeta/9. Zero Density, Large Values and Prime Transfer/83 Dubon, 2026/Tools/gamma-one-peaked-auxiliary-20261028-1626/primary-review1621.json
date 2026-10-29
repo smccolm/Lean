@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticRelativeLocalDualNumberFramedEquiv",
+  "mathematics": "Restrict the actual relative dual-number framed equivalence to the original arithmetic inertia and prescribed determinant. The genuine original determinant compatibility proves that its image in residual dual numbers is the constant lift of the actual residual determinant. This identifies all original local first-order lifts with the full restricted original coefficient fiber.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original local residue maps, original continuous coefficient and framed fibers, actual quotient universality and local first-order classification inspected.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf",
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Actual relative dual-number point comparison only. No cotangent or derivation comparison, H1(ad0) identification, full Selmer dimension formula, modular association or patching claimed.",
+  "livePrimaryRecheck": "relative-first-order-route-20261010.json; external sources supply background only.",
+  "productionLog": "relativeLocalFramed1621-focus.log"
+}

@@ -1,0 +1,14 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned local API and mathematical review only; drafted production results require compilation.",
+  "pinnedApis": [
+    "Ideal.map_pow and Ideal.map_quotient_self: actual image ideal nilpotence in an original ideal-power quotient.",
+    "Ideal.mem_map_of_mem: genuine coefficient prime membership in the original image ideal.",
+    "CharP.cast_eq_zero and actual completed residual evaluation kernel: original residue prime lies in the true completed maximal ideal.",
+    "Existing actual finite completion quotients and matrix congruence p-group chain."
+  ],
+  "limitations": [
+    "No general pro-p theorem or continuous quotient factorization inferred from separate finite p-groups.",
+    "No external Lean imported."
+  ]
+}

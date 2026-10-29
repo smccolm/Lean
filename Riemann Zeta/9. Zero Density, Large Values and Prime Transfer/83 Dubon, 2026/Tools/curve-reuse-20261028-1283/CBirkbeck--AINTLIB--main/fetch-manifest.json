@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T14:46:47.712143+00:00",
+  "repository": "CBirkbeck/AINTLIB",
+  "branch": "main",
+  "revision": "c2da401c2d39df3392d823cba993aaf8a16369ca",
+  "commitDate": "2026-10-28T05:09:49Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB",
+      "path": "repository.json",
+      "sha256": "86C67D8B22BDFD99E3106F6ED9E4AB08185A3AA3D969E8E36D6192FFC535C774",
+      "bytes": 5192
+    },
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB/commits/main",
+      "path": "commit.json",
+      "sha256": "915C90CB94056EA1D04449B28F17635B6C0434DCD9381C5DD2EFB8D30F0BCDA4",
+      "bytes": 25264
+    },
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB/git/trees/c2da401c2d39df3392d823cba993aaf8a16369ca?recursive=1",
+      "path": "tree.json",
+      "sha256": "470B2BCBBEFAB23E6DB285BCC87C55684909AF31E68355EF2F08A3A14B3A8F54",
+      "bytes": 1335195
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/README.md",
+      "path": "README.md.txt",
+      "sha256": "C7D58094258F2139B856C7BFE2DA523B7EC42CFCD3F7193807278C12D66DBF35",
+      "bytes": 4943
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "11C697AEBE5B539D74F5069E497A588E7DFAB1C4EEB74313F28357E351C55CA3",
+      "bytes": 29
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "DCE6B9A87786385B26111BD4BD0E485434505A3C4867BB494F6643B11BCE298C",
+      "bytes": 3162
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

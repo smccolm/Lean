@@ -1,0 +1,7 @@
+### Actual localized integer integral closure — 9 October 2026
+
+One further production module identifies the actual localized original integer ring as the integral closure of the original localized base inside the original number field. Nonzero exceptional elements give genuine domain localizations. Integral closedness is transported through the actual localization; the original number field remains the actual fraction field. Finite-module structure over the localized base supplies integrality. A second theorem exposes the exact elementwise statement: an original field element is integral over that base if and only if it is the image of an original localized integer.
+
+The canonical localized rings, their actual ambient-field embeddings and tensor-compositum identifications still need assembly in the original arithmetic extension. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalizedIntegerIntegralClosure](Extension/Dubon2026/LocalizedIntegerIntegralClosure.lean).

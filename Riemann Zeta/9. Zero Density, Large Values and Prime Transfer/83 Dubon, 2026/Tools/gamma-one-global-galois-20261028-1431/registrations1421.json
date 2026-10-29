@@ -1,0 +1,16 @@
+[
+  "Dubon2026.representationCoordinateCotangent_finite",
+  "Dubon2026.representationCoordinateCotangentCocycleEquiv_surjective",
+  "Dubon2026.representationCoordinateAlgebra_finiteType",
+  "Dubon2026.representationCoordinateAlgebra_isNoetherian_of_fg",
+  "Dubon2026.representationCoordinateMatrix_adjoin",
+  "Dubon2026.representationCoordinateMatrix_mem_adjoin",
+  "Dubon2026.representationCoordinateMatrix_generators_adjoin",
+  "Dubon2026.representationCoordinateEvaluation_surjective",
+  "Dubon2026.representationCoordinatePointQuotientEquiv_mk",
+  "Dubon2026.representationCoordinatePointIdeal_isMaximal",
+  "Dubon2026.SemanticRegression.actual_coordinate_cotangent_representationCoordinateMatrix_generators_adjoin_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_cotangent_representationCoordinateAlgebra_isNoetherian_of_fg_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_cotangent_representationCoordinateCotangentCocycleEquiv_surjective_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_cotangent_representationCoordinatePointQuotientEquiv_mk_source"
+]

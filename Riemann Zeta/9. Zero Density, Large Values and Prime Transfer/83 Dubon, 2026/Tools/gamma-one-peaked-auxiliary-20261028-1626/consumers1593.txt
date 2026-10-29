@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `finiteDualNumber_maximal_isAdicComplete`. -/
+theorem actual_finite_nilpotent_adic_coefficients_finiteDualNumber_maximal_isAdicComplete_source (K : Type*) [Field K] [Finite K] :
+    IsAdicComplete (IsLocalRing.maximalIdeal (DualNumber K)) (DualNumber K) :=
+  finiteDualNumber_maximal_isAdicComplete K
+
+end
+

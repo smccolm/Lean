@@ -1,0 +1,50 @@
+{
+  "recordedUTC": "2026-10-28T14:47:50.673441+00:00",
+  "revision": "c2da401c2d39df3392d823cba993aaf8a16369ca",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/docs/README.md",
+      "path": "projects/ModularCurves/docs/README.md.txt",
+      "sha256": "14514721740E06C158AC513A46FF893E2AFB6ECD80E9CDCEA57CEA410F9C823D",
+      "bytes": 3135
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean",
+      "path": "projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean.txt",
+      "sha256": "615C009CDF3BEEEA756EE0D11C093A697052FB53E69D7F8200BEF6610E6B73FE",
+      "bytes": 196168
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/WeilPairing/Basic.lean",
+      "path": "projects/ModularCurves/ModularCurves/WeilPairing/Basic.lean.txt",
+      "sha256": "A4B5C440F05E176C0E6698299791E8D51838D117DABB861C2EBD526A151D078E",
+      "bytes": 33795
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/Moduli/GammaOneNaiveRelRep.lean",
+      "path": "projects/ModularCurves/ModularCurves/Moduli/GammaOneNaiveRelRep.lean.txt",
+      "sha256": "B98D58D6AFD841C5BB251D0ABF7ECBC27CCEA4FEDA4F3DF5C4D4A92A94EAEF04",
+      "bytes": 4670
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/Moduli/Representability.lean",
+      "path": "projects/ModularCurves/ModularCurves/Moduli/Representability.lean.txt",
+      "sha256": "E1B791051E3CC716E11651B245A894783C11D1C667FBE65A2FAD4B50EB66E056",
+      "bytes": 35281
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/Moduli/GammaHMaster.lean",
+      "path": "projects/ModularCurves/ModularCurves/Moduli/GammaHMaster.lean.txt",
+      "sha256": "FE09898AC37726FACF5297F307DA9ADFB5FFB029FB0035132D5BD4ED4064F2D8",
+      "bytes": 77090
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/LeanModularForms/LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean",
+      "path": "projects/LeanModularForms/LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean.txt",
+      "sha256": "C66154116F6EE4AB66946DDB4E924B8A680297351D2C3B07572802C2A1B8DD0E",
+      "bytes": 7230
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

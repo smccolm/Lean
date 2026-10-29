@@ -1,0 +1,7 @@
+### Actual canonical localized integer algebras — 9 October 2026
+
+One further production module installs the canonical localized coefficient algebra using the original field-map restriction. It derives the actual scalar tower with the original integer ring from that genuine algebra homomorphism and derives the tower into the original extension field from the exact ambient-field value. The canonical literal localized integer rings then form a finite algebra, are the actual integral closure inside the original extension field and are formally unramified exactly when every original prime outside the exceptional element has ramification index one. None of these coefficient maps or scalar-tower compatibility conditions is an external premise.
+
+The actual tensor-compositum constructions still need specialization to these canonical localized integer rings, followed by the directed-union arithmetic Galois realization and finite-subextension descent. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CanonicalLocalizedIntegerAlgebras](Extension/Dubon2026/CanonicalLocalizedIntegerAlgebras.lean).

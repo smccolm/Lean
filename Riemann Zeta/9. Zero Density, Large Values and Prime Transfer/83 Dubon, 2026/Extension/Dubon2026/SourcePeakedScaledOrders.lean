@@ -1,0 +1,70 @@
+import Dubon2026.SourceGammaOnePeakedCuspOrders
+import Dubon2026.SourcePeakedAuxiliaryModularForm
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary. Scale the proved
+separating exponents by N. Since the endpoint is existential, this retains
+the source conclusion and makes infinity-order divisibility immediate.
+This avoids the candidate's additive-orbit divisibility machinery. A finite
+absolute-order sum supplies a discriminant power clearing every cusp. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction
+noncomputable section
+open scoped MatrixGroups
+
+/-- The actual separating exponent family scaled by its level. -/
+def scaleExponent (N : ℕ) (m : ZMod N → ZMod N → ℕ) (r s : ZMod N) : ℕ := N * m r s
+
+theorem Ord_scaleExponent (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (x y : ZMod N) :
+    Form.Ord N (scaleExponent N m) x y = (N : ℤ) * Form.Ord N m x y := by
+  simp only [Form.Ord, scaleExponent, Nat.cast_mul, Finset.mul_sum, mul_assoc]
+
+theorem exists_level_multiple_peaked_exponent (N : ℕ) [NeZero N] (hN : 2 ≤ N) :
+    ∃ (m : ZMod N → ZMod N → ℕ) (A : ℤ),
+      m 0 0 = 0 ∧ (∀ r s : ZMod N, m r (s + r) = m r s) ∧
+      Form.Ord N m 1 0 = (N : ℤ) * A ∧ 0 < A ∧
+      ∀ β : SL(2, ℤ), β ∉ plusMinus (CongruenceSubgroup.Gamma1 N) →
+        (∀ j : ℤ, β * ModularGroup.T ^ j * ModularGroup.S⁻¹ ∉
+          plusMinus (CongruenceSubgroup.Gamma1 N)) →
+        Form.Ord N m 1 0 < Form.Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) := by
+  obtain ⟨m, Ord, hOrd, hzero, htrans, hpos, hsep⟩ := exists_peaked_exponent_on_actual_cusps N hN
+  have hactual : ∀ x y : ZMod N, Form.Ord N m x y = Ord x y := fun x y => (hOrd x y).symm
+  refine ⟨scaleExponent N m, Ord 1 0, ?_, ?_, ?_, hpos, ?_⟩
+  · simp only [scaleExponent, hzero, mul_zero]
+  · intro r s; simp only [scaleExponent, htrans]
+  · rw [Ord_scaleExponent, hactual]
+  · intro β hβ hβS
+    rw [Ord_scaleExponent, Ord_scaleExponent, hactual, hactual]
+    exact mul_lt_mul_of_pos_left (hsep β hβ hβS) (by exact_mod_cast NeZero.pos N)
+
+theorem exists_clearing_discriminant_power (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) :
+    ∃ t : ℕ, ∀ x y : ZMod N, 0 ≤ Form.Ord N m x y + (N : ℤ) * t := by
+  classical
+  let t : ℕ := ∑ x : ZMod N, ∑ y : ZMod N, (Form.Ord N m x y).natAbs
+  refine ⟨t, fun x y => ?_⟩
+  have h1 : (Form.Ord N m x y).natAbs ≤ t :=
+    (Finset.single_le_sum (f := fun y => (Form.Ord N m x y).natAbs) (fun _ _ => Nat.zero_le _)
+      (Finset.mem_univ y)).trans
+      (Finset.single_le_sum (f := fun x => ∑ y, (Form.Ord N m x y).natAbs) (fun _ _ => Nat.zero_le _)
+        (Finset.mem_univ x))
+  have h2 : -((Form.Ord N m x y).natAbs : ℤ) ≤ Form.Ord N m x y := by
+    rw [Int.natCast_natAbs]; exact neg_abs_le _
+  have hNpos : (0 : ℤ) < N := by exact_mod_cast NeZero.pos N
+  have ht0 : (0 : ℤ) ≤ t := by exact_mod_cast Nat.zero_le t
+  have hge : -(t : ℤ) ≤ Form.Ord N m x y := by omega
+  nlinarith
+
+theorem orderSum_eq_Ord (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) :
+    FiniteExpansion.orderSum N m = Form.Ord N m 1 0 := by
+  simp only [FiniteExpansion.orderSum, Form.Ord, mul_one, mul_zero, add_zero]
+
+theorem exists_width_one_order (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+    (A : ℤ) (hA : Form.Ord N m 1 0 = (N : ℤ) * A) (hpos : 0 < A) (t : ℕ) :
+    ∃ m₀ : ℕ, (N : ℤ) * m₀ = FiniteExpansion.orderSum N m + (N : ℤ) * t ∧
+      12 * (t : ℤ) < 12 * (m₀ : ℤ) := by
+  have h0 : 0 ≤ A + (t : ℤ) := by omega
+  refine ⟨(A + (t : ℤ)).toNat, ?_, ?_⟩
+  · rw [Int.toNat_of_nonneg h0, orderSum_eq_Ord, hA]; ring
+  · rw [Int.toNat_of_nonneg h0]; linarith
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction

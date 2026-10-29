@@ -1,0 +1,115 @@
+import SourcePeakedBernoulliVanishing
+import SourcePeakedBernoulliFourierInversion
+import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary form -> finite
+Bernoulli-order separation. The actual Bernoulli dilates span exactly
+the even rational functions on the residue ring. The kernel argument
+uses the proved Dirichlet convolution calculation and native finite
+Fourier inversion, followed by finite-dimensional linear algebra.
+No spanning or separating-exponent hypothesis is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+No upstream resource-limit option is adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+section F
+variable (N : ℕ) [NeZero N]
+
+/-- The actual rational Bernoulli-weight dilation family. -/
+def fam (s : ZMod N) : ZMod N → ℚ := fun r : ZMod N =>
+  ((6 * (((s * r).val : ℕ) : ℤ) ^ 2 - 6 * (N : ℤ) * (((s * r).val : ℕ) : ℤ) + (N : ℤ) ^ 2 : ℤ) : ℚ)
+
+omit [NeZero N] in
+theorem fam_apply (s r : ZMod N) : fam N s r = ((wt N (s * r).val : ℤ) : ℚ) := rfl
+
+variable {N}
+
+omit [NeZero N] in
+theorem wt_sub (t : ℕ) (ht : t ≤ N) : wt N (N - t) = wt N t := by
+  unfold wt; push_cast [Nat.cast_sub ht]; ring
+
+theorem fam_neg (s r : ZMod N) : fam N s (-r) = fam N s r := by
+  rw [fam_apply, fam_apply, mul_neg, ZMod.neg_val]
+  split_ifs with h
+  · rw [h, ZMod.val_zero]
+  · rw [wt_sub _ (ZMod.val_lt _).le]
+
+/-- The linear combination map for the Bernoulli dilation family. -/
+noncomputable def T : (ZMod N → ℚ) →ₗ[ℚ] (ZMod N → ℚ) :=
+  ∑ s : ZMod N, (LinearMap.proj s : (ZMod N → ℚ) →ₗ[ℚ] ℚ).smulRight (fam N s)
+
+theorem T_apply (c : ZMod N → ℚ) (r : ZMod N) : T c r = ∑ s : ZMod N, c s * fam N s r := by
+  simp [T, LinearMap.sum_apply, LinearMap.smulRight_apply, Finset.sum_apply, smul_eq_mul]
+
+theorem T_mem_span (c : ZMod N → ℚ) : T c ∈ Submodule.span ℚ (Set.range (fam N)) := by
+  rw [T, LinearMap.sum_apply]
+  exact Submodule.sum_mem _ fun s _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨s, rfl⟩)
+
+theorem T_neg (c : ZMod N → ℚ) (r : ZMod N) : T c (-r) = T c r := by
+  simp only [T_apply, fam_neg]
+
+/-- The subspace of even rational functions on the residue ring. -/
+def evenSub (N : ℕ) : Submodule ℚ (ZMod N → ℚ) where
+  carrier := {φ | ∀ r : ZMod N, φ (-r) = φ r}
+  add_mem' ha hb r := by simp [Pi.add_apply, ha r, hb r]
+  zero_mem' r := rfl
+  smul_mem' c φ hφ r := by simp [Pi.smul_apply, hφ r]
+
+theorem T_eq_zero_imp (c : ZMod N → ℚ) (hc : ∀ r : ZMod N, c (-r) = c r) (hT : T c = 0) : c = 0 := by
+  set g : ZMod N → ℝ := fun r => (c r : ℝ) with hg
+  have horth : ∀ s : ZMod N, ∑ r : ZMod N, g r * (wt N (s * r).val : ℝ) = 0 := by
+    intro s
+    have h := congrFun hT s
+    rw [T_apply, Pi.zero_apply] at h
+    have h' : ((∑ r : ZMod N, c r * fam N r s : ℚ) : ℝ) = 0 := by rw [h]; norm_cast
+    push_cast [fam_apply] at h'
+    rw [← h']
+    refine Finset.sum_congr rfl fun r _ => ?_
+    rw [mul_comm r s]
+  have hzero := eq_zero_of_psi_eq_zero g (fun r => by simp [hg, hc r]) (psi_eq_zero g horth)
+  funext r
+  have := congrFun hzero r
+  simp only [hg, Pi.zero_apply, Rat.cast_eq_zero] at this
+  exact this
+
+/-- The Bernoulli linear combination map restricted to the even subspace. -/
+noncomputable def TE : evenSub N →ₗ[ℚ] evenSub N :=
+  (T (N := N)).restrict fun φ _ => fun r => T_neg φ r
+
+theorem TE_surjective : Function.Surjective (TE (N := N)) := by
+  rw [← LinearMap.injective_iff_surjective]
+  intro x y hxy
+  apply Subtype.ext
+  have h : T (x : ZMod N → ℚ) - T (y : ZMod N → ℚ) = 0 := by
+    have := congrArg Subtype.val hxy
+    simp only [TE, LinearMap.restrict_apply] at this
+    rw [this, sub_self]
+  rw [← map_sub] at h
+  have := T_eq_zero_imp (x - y : ZMod N → ℚ) (fun r => by
+    have hx := x.2 r; have hy := y.2 r
+    simp only [Pi.sub_apply, hx, hy]) h
+  exact sub_eq_zero.mp this
+
+theorem mem_span_iff_even (φ : ZMod N → ℚ) :
+    φ ∈ Submodule.span ℚ (Set.range (fam N)) ↔ ∀ r : ZMod N, φ (-r) = φ r := by
+  constructor
+  · intro h
+    have hle : Submodule.span ℚ (Set.range (fam N)) ≤ evenSub N := by
+      rw [Submodule.span_le]
+      rintro _ ⟨s, rfl⟩
+      exact fun r => fam_neg s r
+    exact hle h
+  · intro h
+    obtain ⟨c, hc⟩ := TE_surjective (N := N) ⟨φ, h⟩
+    have : T (c : ZMod N → ℚ) = φ := by
+      have := congrArg Subtype.val hc
+      simpa only [TE, LinearMap.restrict_apply] using this
+    rw [← this]
+    exact T_mem_span _
+
+end F
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

@@ -1,0 +1,16 @@
+{
+  "reviewed": "2026-10-08",
+  "primaryTheorem": {
+    "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+    "location": "Theorem A, page117; normalization discussion pages120-121",
+    "finding": "The target is a regular algebraic cuspidal GL(n+1) automorphic lift for each positive symmetric order of a non-CM regular algebraic cuspidal GL2 representation over Q. Local parameters must match at every place. Its normalization uses geometric Frobenius. Constructing homogeneous diagonal determinants establishes a local normalization step, not the asserted global lifts."
+  },
+  "externalLeanReview": {
+    "url": "https://github.com/ImperialCollegeLondon/FLT/blob/main/FLT/GaloisRepresentation/Automorphic.lean",
+    "finding": "The inspected upstream file defines a restricted rank-two automorphic condition through weight-two quaternionic forms. It is a potential source of foundations, not a proof of the required all-order Newton–Thorne theorem. Search results did not establish an available audited implementation of that theorem. No external Lean code was imported."
+  },
+  "externalScopeStatement": {
+    "url": "https://github.com/ImperialCollegeLondon/FLT/blob/main/GENERAL.md",
+    "finding": "The upstream roadmap distinguishes reductions using major mathematical inputs from proving all such inputs. Any future reuse must inspect the exact statement, pinned revision, proof body and complete dependency closure."
+  }
+}

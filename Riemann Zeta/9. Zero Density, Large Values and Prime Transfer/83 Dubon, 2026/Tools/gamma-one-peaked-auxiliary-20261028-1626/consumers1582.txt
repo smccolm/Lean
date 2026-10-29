@@ -1,0 +1,27 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `arithmeticFramedUniversalRing_localData`. -/
+theorem actual_arithmetic_framed_universal_ring_arithmeticFramedUniversalRing_localData_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ) :
+    (letI := arithmeticFramedUniversalRing_isLocal a ha p hp hpa σ hσ
+     IsNoetherianRing (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ) ∧
+       IsAdicComplete (IsLocalRing.maximalIdeal (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ))
+         (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ) ∧
+       (inferInstance : TopologicalSpace (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ)) =
+         (IsLocalRing.maximalIdeal (ArithmeticFramedUniversalRing a ha p hp hpa σ hσ)).adicTopology) :=
+  arithmeticFramedUniversalRing_localData a ha p hp hpa σ hσ
+
+end
+

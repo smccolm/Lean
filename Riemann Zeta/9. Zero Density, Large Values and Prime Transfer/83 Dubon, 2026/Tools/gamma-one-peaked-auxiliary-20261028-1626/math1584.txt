@@ -1,0 +1,1 @@
+The actual original completed coefficient ring is compact. Its all-relation ideal is closed by the proved Noetherian compact coefficient theorem, so the original quotient topology is Hausdorff.

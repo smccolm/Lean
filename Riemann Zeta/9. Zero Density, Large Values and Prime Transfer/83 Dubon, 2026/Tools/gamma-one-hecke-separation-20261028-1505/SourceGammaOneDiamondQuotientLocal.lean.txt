@@ -1,0 +1,66 @@
+import SourceGammaOneDiamondQuotientHecke
+import Dubon2026.SourceRationalLocalValuation
+import SourceRationalLocalFrobenius
+import Dubon2026.SourceOriginalTateInertia
+
+/-! DUB-17/18 -> original all-weight association -> actual finite
+Hecke-character realization. Reuse the native original local Frobenius
+existence and its valuation transport. They derive Hecke stability on
+the genuine diamond quotient at each original good prime without a
+supplied decomposition element or residue Frobenius condition. Only
+coordinate-degree and genus preservation at that same valuation remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+private theorem coefficient_prime_ne_zero {k : Type*} [Field k]
+    (Q p n q : ℕ) (hq : q.Prime) [CharP k q]
+    (hcop : q.Coprime (Q * p ^ (n + 1))) : (p : k) ≠ 0 := by
+  rw [Ne, CharP.cast_eq_zero_iff k q]
+  intro h
+  exact (hq.coprime_iff_not_dvd.mp hcop)
+    (dvd_mul_of_dvd_right (h.trans (dvd_pow_self p (Nat.succ_ne_zero n))) Q)
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+variable (ell : sourceBinaryHeckePrime (Q * p ^ (n + 1)))
+variable (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure ell.val ell.property.1)
+local notation "A" => sourceRationalLocalValuation (Subtype.val ell) (And.left (Subtype.property ell)) e
+local notation "kk" => IsLocalRing.ResidueField A
+attribute [local instance] specializationResidueAlgebra
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+theorem gammaOne_diamond_relations_hecke_at_local_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ))
+    (hgen : genusFF kk (residueImage A Γ) = genusFF Qbar (functionFieldOver Γ Qbar)) :
+    binaryTateDiamondRelations Q p n w ≤
+      (binaryTateDiamondRelations Q p n w).comap (binaryTatePrimeOperators Q p n w ell) := by
+  letI := GaussReduction.residue_charP_of_prime_mem_nonunits A ell.val ell.property.1
+    (sourceRationalLocalValuation_prime ell.val ell.property.1 e)
+  have hp : (p : kk) ≠ 0 :=
+    coefficient_prime_ne_zero Q p n ell.val ell.property.1 ell.property.2
+  obtain ⟨d, hd⟩ := sourceRationalLocalValuation_exists_frobenius ell.val ell.property.1 e
+  have hs := gammaOne_diamond_relations_hecke_of_degree_genus_eq Q p n w A ell
+  have h1 := hs hdeg
+  have h2 := h1 hgen
+  exact h2 d hd hp
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

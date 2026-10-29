@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-10-28T14:47:50.452441+00:00",
+  "revision": "851a97f342b10a249b589531e1ec430487b2d469",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/MathlibExt/AlgebraicGeometry/EllipticCurve/GaloisRepresentation.lean",
+      "path": "MathlibExt/AlgebraicGeometry/EllipticCurve/GaloisRepresentation.lean.txt",
+      "sha256": "752E3C132265F16480A3D04967CFA5ECB35B5D3CDBE538F4A27C552CDAA28E70",
+      "bytes": 8578
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/MathlibExt/AlgebraicGeometry/EllipticCurve/NeronOggShafarevich.lean",
+      "path": "MathlibExt/AlgebraicGeometry/EllipticCurve/NeronOggShafarevich.lean.txt",
+      "sha256": "707B4BF9F7A6AFD7822648770A4A23DF017B3DF92FCB94D705E44DDBBA741DD4",
+      "bytes": 82751
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/v1/Atlas/EllipticCurves/code/ModularCurves.lean",
+      "path": "v1/Atlas/EllipticCurves/code/ModularCurves.lean.txt",
+      "sha256": "DAC3C2CB4531AEE17342952AADAB86782EE09BC40809991827CDA053654D8BC9",
+      "bytes": 40145
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/v1/Atlas/ArithmeticGeometry/code/PicardGroup.lean",
+      "path": "v1/Atlas/ArithmeticGeometry/code/PicardGroup.lean.txt",
+      "sha256": "E5CF9428B675BC4978C938450A81B6883B9EE2A7CBE08F6F65F287792E619702",
+      "bytes": 2062
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/v1/Atlas/AlgebraicGeometryI/code/DivisorsPicard.lean",
+      "path": "v1/Atlas/AlgebraicGeometryI/code/DivisorsPicard.lean.txt",
+      "sha256": "A13C40CC1031D8EF461F3AE0FE04B2E4638DFEB932DB79E09674D5DA8D54BF7D",
+      "bytes": 18879
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

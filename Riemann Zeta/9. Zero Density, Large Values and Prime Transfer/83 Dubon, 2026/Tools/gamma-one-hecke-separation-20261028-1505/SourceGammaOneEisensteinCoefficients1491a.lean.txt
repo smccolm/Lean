@@ -1,0 +1,78 @@
+import SourceGammaOneEisensteinLattice1484d
+
+/-! DUB-17/18 -> original all-weight association -> Gamma1 degree
+preservation -> integral Eisenstein separators. Mathlib's summable
+divisor-product series and its exact reindexing supply integer Fourier
+coefficients for the required residue classes, without additive characters
+or a general GammaH construction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open Complex
+
+/-- Integral coefficient from positive first-coordinate lattice rows. -/
+def positiveCoefficient (N : ℕ) (c : ZMod N) (n : ℕ) : ℤ :=
+  ∑ x ∈ n.divisorsAntidiagonal, if (x.1 : ZMod N) = c then (x.2 : ℤ) ^ (3 : ℕ) else 0
+
+private theorem positiveCoefficient_cast (N : ℕ) (c : ZMod N) (n : ℕ) :
+    (positiveCoefficient N c n : ℂ) =
+      ∑ x ∈ n.divisorsAntidiagonal, if (x.1 : ZMod N) = c then (x.2 : ℂ) ^ (3 : ℕ) else 0 := by
+  classical
+  simp only [positiveCoefficient, Int.cast_sum]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  split_ifs <;> push_cast <;> rfl
+
+private theorem filtered_product_summable (N : ℕ) (c : ZMod N) {r : ℂ} (hr : ‖r‖ < 1) :
+    Summable fun p : ℕ+ × ℕ+ => if ((p.1 : ℕ) : ZMod N) = c then
+      (p.2 : ℂ) ^ (3 : ℕ) * r ^ (p.1 * p.2 : ℕ) else 0 := by
+  classical
+  refine Summable.of_norm_bounded (summable_prod_mul_pow 3 hr).norm fun p => ?_
+  split_ifs <;> simp
+
+private theorem grouped_coefficient (N : ℕ) (c : ZMod N) (r : ℂ) (n : ℕ+) :
+    (∑' x : (n : ℕ).divisorsAntidiagonal,
+      if (((sigmaAntidiagonalEquivProd ⟨n, x⟩).1 : ℕ) : ZMod N) = c then
+        ((sigmaAntidiagonalEquivProd ⟨n, x⟩).2 : ℂ) ^ (3 : ℕ) *
+          r ^ ((sigmaAntidiagonalEquivProd ⟨n, x⟩).1 *
+            (sigmaAntidiagonalEquivProd ⟨n, x⟩).2 : ℕ) else 0) =
+      (positiveCoefficient N c n : ℂ) * r ^ (n : ℕ) := by
+  classical
+  rw [tsum_fintype, positiveCoefficient_cast, Finset.sum_mul, Finset.univ_eq_attach,
+    ← Finset.sum_attach ((n : ℕ).divisorsAntidiagonal)]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  have hx : x.1.1 * x.1.2 = n := (Nat.mem_divisorsAntidiagonal.mp x.2).1
+  change (if (x.1.1 : ZMod N) = c then (x.1.2 : ℂ) ^ 3 * r ^ (x.1.1 * x.1.2) else 0) = _
+  rw [hx]
+  split_ifs <;> simp
+
+theorem positiveCoefficient_summable (N : ℕ) (c : ZMod N) {r : ℂ} (hr : ‖r‖ < 1) :
+    Summable fun n : ℕ+ => (positiveCoefficient N c n : ℂ) * r ^ (n : ℕ) := by
+  have hs := sigmaAntidiagonalEquivProd.summable_iff.mpr (filtered_product_summable N c hr)
+  exact hs.sigma.congr fun n => grouped_coefficient N c r n
+
+theorem positive_series_eq_coefficients (N : ℕ) (c : ZMod N) {r : ℂ} (hr : ‖r‖ < 1) :
+    (∑' m : ℕ+, if ((m : ℕ) : ZMod N) = c then
+      ∑' d : ℕ+, (d : ℂ) ^ (3 : ℕ) * r ^ (m * d : ℕ) else 0) =
+      ∑' n : ℕ+, (positiveCoefficient N c n : ℂ) * r ^ (n : ℕ) := by
+  classical
+  have hs := filtered_product_summable N c hr
+  have hs' := sigmaAntidiagonalEquivProd.summable_iff.mpr hs
+  calc
+    _ = ∑' p : ℕ+ × ℕ+, if ((p.1 : ℕ) : ZMod N) = c then
+        (p.2 : ℂ) ^ (3 : ℕ) * r ^ (p.1 * p.2 : ℕ) else 0 := by
+      rw [hs.tsum_prod]
+      refine tsum_congr fun m => ?_
+      split_ifs <;> simp
+    _ = _ := by
+      rw [← sigmaAntidiagonalEquivProd.tsum_eq, hs'.tsum_sigma]
+      exact tsum_congr fun n => grouped_coefficient N c r n
+
+theorem positiveCoefficient_zero (N : ℕ) (c : ZMod N) : positiveCoefficient N c 0 = 0 := by
+  simp [positiveCoefficient]
+
+theorem positiveCoefficient_one (N : ℕ) (c : ZMod N) :
+    positiveCoefficient N c 1 = if (1 : ZMod N) = c then 1 else 0 := by
+  classical
+  simp [positiveCoefficient]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

@@ -1,0 +1,65 @@
+import SourceGammaOneKummerDegree1335a
+import Dubon2026.SourceCurveSeparableDifferentialBaseChange
+import Dubon2026.SourceCurveFiniteCoordinateCanonicalDegree
+import Dubon2026.SourceCurveUnramifiedCanonicalDegree
+
+/-! DUB-17/18 -> original Gamma1 Frobenius/inertia -> Picard torsion
+injectivity -> power lifting. Reuse the native canonical-degree and
+unramified differential-order identities for the actual Gamma1 Kummer
+cover. Its exact degree gives g(E)-1 = q*(g(F)-1). The competing residue
+genus inequality remains necessary to force a root in the original field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve Polynomial IntermediateField KaehlerDifferential
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "FF" => functionFieldOver Δ Qbar
+
+theorem gammaOne_kummer_genus_sub_one
+    {q : ℕ} [Fact q.Prime] {f : FF} (hf : ∀ g : FF, g ^ q ≠ f)
+    (hdvd : ∀ P : Place Qbar FF, (q : ℤ) ∣ P.ord f)
+    (E : Type*) [Field E] [Algebra FF E] [Algebra Qbar E] [IsScalarTower Qbar FF E]
+    [IsSplittingField FF E (X ^ q - C f)] :
+    (genusFF Qbar E : ℤ) - 1 = (q : ℤ) * ((genusFF Qbar FF : ℤ) - 1) := by
+  letI : CharZero FF := charZero_of_injective_algebraMap (algebraMap Qbar FF).injective
+  letI : FiniteDimensional FF E := IsSplittingField.finiteDimensional E (X ^ q - C f)
+  letI : FiniteDimensional Qbar⟮jCoordinateOver Δ Qbar⟯ FF :=
+    finiteDimensional_jCoordinateOver
+      (by simp [CongruenceSubgroup.Gamma1_mem, ModularGroup.T]) Qbar
+  let t := jCoordinateOver Δ Qbar
+  let u := algebraMap FF E t
+  have ht : Transcendental Qbar t := transcendental_jCoordinateOver Δ Qbar
+  have hu : Transcendental Qbar u :=
+    (transcendental_algebraMap_iff (algebraMap FF E).injective).mpr ht
+  letI : FiniteDimensional Qbar⟮u⟯ E := Module.finite_of_finrank_pos (by
+    rw [show u = algebraMap FF E t from rfl, finrank_adjoin_algebraMap_mul]
+    exact Nat.mul_pos Module.finrank_pos Module.finrank_pos)
+  have hDF : D Qbar FF t ≠ 0 := D_jCoordinateOver_ne_zero Δ Qbar
+  have hDE : D Qbar E u ≠ 0 := D_algebraMap_ne_zero_of_separable hDF
+  letI : Nontrivial Ω[FF⁄Qbar] := nontrivial_of_ne _ _ hDF
+  letI : Nontrivial Ω[E⁄Qbar] := nontrivial_of_ne _ _ hDE
+  letI : HasCanonicalDivisor (K := Qbar) (F := FF) :=
+    hasCanonicalDivisor_finite_coordinate t ht hDF
+  letI : HasCanonicalDivisor (K := Qbar) (F := E) :=
+    hasCanonicalDivisor_finite_coordinate u hu hDE
+  letI : ∀ v : Place Qbar FF, v.DCoordGenerates := finite_coordinate_place_dCoordGenerates t
+  letI : ∀ w : Place Qbar E, w.DCoordGenerates := finite_coordinate_place_dCoordGenerates u
+  letI : ∀ w : Place Qbar E, Module.Finite w.toValuationSubring Ω[w.toValuationSubring⁄Qbar] :=
+    finite_coordinate_place_differentials u
+  letI : ∀ w : Place Qbar E, Module.Finite Qbar w.ResidueField := finite_coordinate_place_residue u
+  letI : ∀ w : Place Qbar E, Algebra.IsSeparable Qbar w.ResidueField := fun _ => inferInstance
+  have hmap : KaehlerDifferential.map Qbar Qbar FF E (D Qbar FF t) ≠ 0 := by
+    rw [KaehlerDifferential.map_D]
+    exact hDE
+  obtain ⟨hdegree, he⟩ := gammaOne_kummer_degree_and_unramified M hf hdvd E
+  have hcan := canonical_degree_map_of_unramified
+    (place_residue_bijective_of_finite_coordinate t)
+    (place_residue_bijective_of_finite_coordinate u) he hDF hmap
+  have hbase := finite_coordinate_canonical_degree_eq_genusFF t ht hDF hDF
+  have htop := finite_coordinate_canonical_degree_eq_genusFF u hu hDE hmap
+  rw [hbase, htop, hdegree] at hcan
+  nlinarith
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,1 @@
+Open stabilizers for the original Krull topology give a continuous action on the actual integral closure equipped with its discrete topology. The original inertia subgroup is an intersection of closed preimages of the actual ideal under original action differences, hence is closed in the genuine Krull topology even for infinite algebraic extensions.

@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+  [IsGalois K Ω]
+
+/-- Exact original-object consumer of `unramified_prime_characters_finite_of_ambient_root`. -/
+theorem actual_unramified_cyclotomic_character_descent_unramified_prime_characters_finite_of_ambient_root_source
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite)
+    (hunram : ∀ F : FiniteGaloisIntermediateField K Ω,
+      ∀ v : HeightOneSpectrum (𝓞 K), v ∉ S →
+        ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+          v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (p : ℕ) (hp : p.Prime) {ζ : Ω} (hζ : IsPrimitiveRoot ζ p) :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  unramified_prime_characters_finite_of_ambient_root S hS hunram p hp hζ
+
+end
+

@@ -1,0 +1,219 @@
+{
+  "scratchSum": 51,
+  "scratchDistinct": 51,
+  "generatedNameRenamings": {},
+  "productionFocused": 51,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneResidueGeometry",
+        "SourceCurveSeparatingGenusMaximum",
+        "SourceReductionGenusPoleLifting",
+        "SourceReductionGenusIntegralCharts",
+        "SourceGammaOneGenusSpecialization",
+        "SourceGammaOneOriginalSpecialization"
+      ],
+      "count": 17,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationScratchOwnership1334.log",
+        "sha256": "4C3D3D930DF12293E453C5383BAE93FF957C666B9A70F1B7CDD87A37AB061335",
+        "sourceSha256": "7C674F997C35F3D764D681052DD00AE652D9EB85F46E00AD621EF6DE6C8D4B1D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneKummerDegree",
+        "SourceGammaOneKummerGenus",
+        "SourceJointSeparableFiniteOverlap",
+        "SourceJointSeparableConstants",
+        "SourceJointSeparableChartDimension",
+        "SourceJointSeparablePoleDimension",
+        "SourceJointSeparableGenus",
+        "SourceGammaOneKummerResidueGenus",
+        "SourceGammaOneKummerPowerLifting",
+        "SourceGammaOnePicardPrimeKernel",
+        "SourceGammaOnePicardTorsion"
+      ],
+      "count": 18,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerScratchOwnership1349.log",
+        "sha256": "0E5D333FCB8308CD5607025735425C3DFAE207E80BB8D78E76B0394EA8030889",
+        "sourceSha256": "79EAE24D46B64E7677A4509A3A40CC8B4245BBCD3C7FAB90760863F4457FEF50"
+      }
+    },
+    {
+      "modules": [
+        "SourceReductionCoordinateAutomorphism",
+        "SourceGammaOneDiamondGauss",
+        "SourceReductionMapReflection",
+        "SourceGammaOneHeckeGaussReflection",
+        "SourceGammaOneHeckeFractionProduct",
+        "SourceGammaOneHeckeGaussNorm"
+      ],
+      "count": 16,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormScratchOwnership1357.log",
+        "sha256": "439F14FC28F9523613A1C8D1CF3B217493CD8FCC95A1CADF8051284D02D1D24D",
+        "sourceSha256": "6FCF1BDD896B05FBF4EF31F9CB72E12B850498B82A1323C50857C169E008934C"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardReductionOwnership9097.log",
+    "sha256": "3EFE2E2AD00A560A902440F22A0D86D7CD690C784BA17EF9B9C0C1F38B4280F3",
+    "sourceSha256": "A84D7A8923CBDCB9C8B6D92C4271F3F9AD5E9BFE78F521084369C81FE70ADB87"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-104643-066.log",
+    "sha256": "619DA7B10AA96EE1DC805B340FDBE7D40DE28740A81CDF1BF320B9E653BF3019"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 23 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneResidueGeometry",
+        "scratchSha256": "EA4CF62ED725D3520F0A81E4AF4B90DF1A58DA5C39A2EE038AB0F822A9A60C59",
+        "productionSha256": "EA4CF62ED725D3520F0A81E4AF4B90DF1A58DA5C39A2EE038AB0F822A9A60C59",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCurveSeparatingGenusMaximum",
+        "scratchSha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137",
+        "productionSha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionGenusPoleLifting",
+        "scratchSha256": "15A41D3747A4F859C4105BBCDAB6F328F3A839A03690B125CBF337C608A1D974",
+        "productionSha256": "C0771E6C4042D4199BB7D5EB85182AB656289333B00FF0268A3CFB2D3AE0AAE0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionGenusIntegralCharts",
+        "scratchSha256": "8477E05815169F0231AA865C43EC12EF86E8B6421E4D25672D829C699D9C5E96",
+        "productionSha256": "F582345D35EF517ED015E259771230E7FC4B4E1CC50CD1AAF20B0AAFE290C282",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGenusSpecialization",
+        "scratchSha256": "D1373551585924BD6D5A652D2C270760C8266D007B4D9E26E6E6B90EBEA199C5",
+        "productionSha256": "F3622D0E184A077082B6A0D03BCB200C023B8AECC42837E0044D088260468443",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneOriginalSpecialization",
+        "scratchSha256": "60DA51745E7254DEC52F894CCE1AFF7AF4C570CDCA0C0A14FC44BEA309FA4AD8",
+        "productionSha256": "6C44F9433190014B9940AE56A2516A74EFA0533CB230E5FBEEDCEDE6D04325F8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneKummerDegree",
+        "scratchSha256": "24EF96D77D8B74D6295939347BBD7DB5034CF9B2A73E0F04A03BB21D1F50F0DC",
+        "productionSha256": "24EF96D77D8B74D6295939347BBD7DB5034CF9B2A73E0F04A03BB21D1F50F0DC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneKummerGenus",
+        "scratchSha256": "980C87276AAFD0D75D10FA906BAE442DF221312D2548237DA2B47FE6F9EAA950",
+        "productionSha256": "B5BDCFD12F80E76F3F4F44D807CF406C89ADDC4E57415053EDB4E9E5F3777DF8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceJointSeparableFiniteOverlap",
+        "scratchSha256": "7275BDCE41E42D98AEA2D1D741D418F7F34C7ACA2AE3169E78932494FA24C331",
+        "productionSha256": "7275BDCE41E42D98AEA2D1D741D418F7F34C7ACA2AE3169E78932494FA24C331",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceJointSeparableConstants",
+        "scratchSha256": "E2D66AAC28E57FEF78700FDFDCF235B82C5D3C8564AA5BF4906442B3A63C83D6",
+        "productionSha256": "A7C6CED2A446213906C141F1DC6A27DD812B790EF3B32622494E020F556F6AF7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceJointSeparableChartDimension",
+        "scratchSha256": "13649EF5AFB6B6C9D274BC5D4D760E54CFB2BAEC41DB8402AF1E288D71CF17A2",
+        "productionSha256": "8099DA3DE88C14F7401E1D658C4786430B8978B789CB98C1AE18DE28955E77BE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceJointSeparablePoleDimension",
+        "scratchSha256": "62E031316F038437B04368437AB75E85A31F6E77DD34521339A8801373C1B325",
+        "productionSha256": "B56382BF1BEA23C24471D6B407EF2DD953A1BD7B21C03249C522975484742CBE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceJointSeparableGenus",
+        "scratchSha256": "4AE90A37E5587ED00709B86AAD978586ED1C1C94A64526F13EC48ABF6B8BCB8B",
+        "productionSha256": "021C846749AAA499A637AC3569BAA1E2A680004F9D4D819634E4C37BE7543648",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneKummerResidueGenus",
+        "scratchSha256": "D77AB76F14865E589050E6EC4799B3278DB75232AAFAB7EDC97ECB8629368DED",
+        "productionSha256": "57116029ACD33EB8120BAF93D5923F3EC01189A282CC0070F573429EA746320A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneKummerPowerLifting",
+        "scratchSha256": "E83C953E46B7A3DC7AF11E3452D41751B76DBE625526C665DF4B8E9F97DD4394",
+        "productionSha256": "E8C9929A58F6806CE676BC271F6990C403963DE17D1DE7E98CA6784968F45936",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardPrimeKernel",
+        "scratchSha256": "A9F671B21E7A90020B8B317DD008F2DCE96986A8C3BF696FC45669D22F20CB3F",
+        "productionSha256": "929B88C74B1C682ECCB3EEB8E45795CAE367E4930F714F06F82FE5E607283D9C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePicardTorsion",
+        "scratchSha256": "D3FB872E45B5926DDF239AA7F0BDD40AD198C3CF777A8BD3D94B900A24C0162E",
+        "productionSha256": "18A69BD38DA79D34335E27F994C15D91F2C42A24F03FF8729CE6B6A7E4B701E5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionCoordinateAutomorphism",
+        "scratchSha256": "013EEC631020010EC9B1E7E55827DE212743BBBE7C8AA21763CFB63590C53BEE",
+        "productionSha256": "013EEC631020010EC9B1E7E55827DE212743BBBE7C8AA21763CFB63590C53BEE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiamondGauss",
+        "scratchSha256": "BCEB70E18B181990603F26D7F8C4425699B6335F6AD71C67CB1521A1D183A67C",
+        "productionSha256": "748C13B9826BE22D0610F20F45CEB38D3A61539A564ACA9D352D13D6ACDBE6CB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionMapReflection",
+        "scratchSha256": "CF1B3AC501EF30EC26E4B399725C199099EEC32757BA6DF6BAC61908842BB968",
+        "productionSha256": "CF1B3AC501EF30EC26E4B399725C199099EEC32757BA6DF6BAC61908842BB968",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGaussReflection",
+        "scratchSha256": "0E035753FFF8FF8C0C07C45D858B3043A5FA69327B25B16824B11810B3549FC8",
+        "productionSha256": "F901680CC00EFD4366D39A406B3C44B37C6C6A4EC9488435B60A057934ABE941",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeFractionProduct",
+        "scratchSha256": "61317CE531486552D0D0AD2412A12A25A583C23815BEB25F8EDD63A05D5118E6",
+        "productionSha256": "61317CE531486552D0D0AD2412A12A25A583C23815BEB25F8EDD63A05D5118E6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGaussNorm",
+        "scratchSha256": "112C1BFFD400E8FD1A8331F478747C01157D18F0073FCB2FFBABD588AA9E144A",
+        "productionSha256": "ADABE74662AF2AEC06F3DB5611A21F2668852B63FE27A4D443548B02246CD3AB",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

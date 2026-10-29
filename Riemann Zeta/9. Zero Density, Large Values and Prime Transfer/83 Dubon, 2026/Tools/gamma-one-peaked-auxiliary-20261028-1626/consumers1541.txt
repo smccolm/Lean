@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorFractionEmbedding_compositum`. -/
+theorem actual_tensor_fraction_compositum_ambientTensorFractionEmbedding_compositum_source
+    {L M : Type*} [Field L] [Field M]
+    [Algebra A L] [IsFractionRing A L] [Algebra B M] [IsFractionRing B M]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) (i : L →+* Ω) (j : M →+* Ω)
+    (hi : i.comp (algebraMap A L) = f.toRingHom)
+    (hj : j.comp (algebraMap B M) = g.toRingHom) :
+    (ambientTensorFractionEmbedding f g).fieldRange = i.fieldRange ⊔ j.fieldRange :=
+  ambientTensorFractionEmbedding_compositum f g i j hi hj
+
+end
+

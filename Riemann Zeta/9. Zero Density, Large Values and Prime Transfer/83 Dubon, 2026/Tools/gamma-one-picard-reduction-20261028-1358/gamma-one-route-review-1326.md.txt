@@ -1,0 +1,61 @@
+# Original Gamma1 specialization route review, 28 October 2026
+
+The unchanged endpoints are DUB-17, Dubon Theorem 2.6, and DUB-18,
+Corollary 8.2. Higher symmetric-power continuation still needs arithmetic
+automorphy for the original all-weight characteristic-zero association.
+Its finite Gamma1 Hecke-character realization needs the actual parabolic
+and Picard/H1/Tate comparisons, including Frobenius and inertia.
+
+## Finite exceptional primes
+
+Reviewed `PrimitiveHigherContinuationReduction`,
+`PrimitivePurityFromContinuation`, and `PrimitiveSquareIncompleteProduct`.
+The first requires continuation of the literal all-good-prime Euler product
+on Re(s) >= 1. The existing finite correction treats primes dividing the
+level, using proved bad-prime bounds. It does not restore arbitrary omitted
+good-prime factors. Restoring those factors would require their local
+nonvanishing bounds independently of the current purity theorem, which is
+derived from full higher continuation. Thus this is not yet a certified
+shorter route, and invoking that purity theorem here would be circular.
+No acceptance requirement or prime range is changed.
+
+## Native reuse before further expansion
+
+The repository already proves actual Fricke torsion-function separation,
+transformation, cyclotomic Laurent expansions, finite level fields and
+monic-j integrality (`SourceFrickeSeparation`, `SourceFrickeLevelFieldV3`,
+`SourceFrickeLaurentGeneratorIntegrality`,
+`SourceFrickeLaurentFieldConjugation` and their dependency chains).
+These are candidates for the original Gamma1 field/reduction comparison.
+Monic-j integrality alone is not p-adic Gauss integrality. The existing
+diamond rational-generator and cyclotomic-lift results prove rationality,
+not preservation of the coefficient valuation. No such implication is claimed.
+The adjacent-j correspondence automorphism itself need not be Gauss-isometric.
+
+The current curve-reuse supplement already records the inspected AINTLIB
+Gamma1 moduli/Tate/Weil-pairing proofs and ATLAS elliptic good-reduction torsion
+proof. Neither inspected chain provides the required identification of the
+original compact Gamma1 function field and its Picard specialization.
+These external files remain research snapshots, not new pinned dependencies.
+
+## Selected necessary next chain
+
+The native regular-prolongation, separating-coordinate principal-divisor,
+finite-place-residue, pole-space, dimension, chart-gluing and Picard quotient
+proofs can be reused on the original Gamma1 coefficient residue image.
+This avoids new curve interfaces or a new Riemann--Roch theory.
+
+1. Discharge actual residue principal divisors, finite place residues and
+   differential rank one using the proved finite separating reduced j.
+2. Apply the existing pole-space dimension argument in residue characteristic.
+   Equality of coordinate degrees and equality of actual adelic genera are
+   the two explicit remaining geometric inputs.
+3. Obtain both integral chart lifts, then an actual degree-preserving place
+   map compatible with principal divisors and its actual Picard pushforward.
+4. Continue to prime-to-residue torsion injectivity and the original Tate
+   Frobenius/inertia comparison. The degree/genus equalities and diamond
+   integrality still need proofs; constructing specialization conditionally
+   does not close either endpoint or good reduction.
+
+All production and documentation remain frozen during the 9074 assembled
+verification. New work is isolated in scratch with separate evidence.

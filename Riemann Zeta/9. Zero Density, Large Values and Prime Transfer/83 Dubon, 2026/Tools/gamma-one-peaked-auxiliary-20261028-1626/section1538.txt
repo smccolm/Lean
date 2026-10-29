@@ -1,0 +1,9 @@
+### Actual finite-base unramified extension transfer — 9 October 2026
+
+Three further production modules construct genuine height-one primes above every original prime in an integral extension of domains. Pinned Galois theory proves equality of the actual ramification indices above the same original number-field prime; one actual index of one therefore controls every original prime above it. The finite-base consumer takes an actual finite intermediate field and any of its actual finite Galois subextensions inside the original ambient extension. The genuine normal closure over the original base is finite and Galois. Lifting original primes into that closure, transferring the original base-field unramified hypothesis to the chosen prime and applying the exact multiplicative index formula twice prove unramifiedness over the new base. The exceptional set is literally the inverse image of the original exceptional prime set.
+
+This is a genuine transfer theorem from an explicit original unramified finite-subextension hypothesis; it does not construct the arithmetic Galois extension or prove the original ramification hypothesis. The required cyclotomic intermediate field, all-open-subgroup Mazur condition, final framed deformation-functor assembly, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteBaseUnramifiedExtensions](Extension/Dubon2026/FiniteBaseUnramifiedExtensions.lean).
+- [HeightOnePrimeLifting](Extension/Dubon2026/HeightOnePrimeLifting.lean).
+- [UnramifiedGaloisPrimeTransfer](Extension/Dubon2026/UnramifiedGaloisPrimeTransfer.lean).

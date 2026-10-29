@@ -1,0 +1,35 @@
+import Dubon2026.SourceTateDualQuadratic
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> normalization
+of the literal coefficient Frobenius identity H*F = F*F*D + ell.
+On the actual combined-diamond fixed part, the complementary coefficient
+matrix gives the required weight factor. Commutation and fixedness are
+explicit upstream inputs; this is not yet a global Galois representation. -/
+namespace Dubon2026
+noncomputable section
+variable {R S T V : Type*} [CommRing R] [CommRing S] [Algebra R S]
+  [AddCommGroup T] [Module R T] [AddCommGroup V]
+  [Module R V] [Module S V] [IsScalarTower R S V]
+
+theorem sourceTateDual_diamond_quadratic
+    (b u c : Module.End S V) (H F D : Module.End R T) (ell w : ℕ)
+    (hquad : H * F = F * F * D + ell • 1) (hcomm : Commute F D)
+    (hcoeff : u.comp c = b) (hscalar : u.comp b = (ell : S) ^ w • LinearMap.id)
+    (φ : T →ₗ[R] V) (hfixed : (c.restrictScalars R).comp (φ.comp D) = φ) :
+    (u.restrictScalars R).comp (((b.restrictScalars R).comp (φ.comp H)).comp F) =
+      (u.restrictScalars R).comp (((u.restrictScalars R).comp (φ.comp F)).comp F) +
+        (ell : S) ^ (w + 1) • φ := by
+  apply LinearMap.ext
+  intro x
+  change u (b (φ (H (F x)))) = u (u (φ (F (F x)))) + (ell : S) ^ (w + 1) • φ x
+  have hx : H (F x) = F (F (D x)) + ell • x := LinearMap.congr_fun hquad x
+  have hcx (y : T) : F (D y) = D (F y) := LinearMap.congr_fun hcomm.eq y
+  have hfx (y : T) : c (φ (D y)) = φ y := LinearMap.congr_fun hfixed y
+  have hbc (y : V) : b y = u (c y) := (LinearMap.congr_fun hcoeff y).symm
+  have hsc (y : V) : u (b y) = (ell : S) ^ w • y := LinearMap.congr_fun hscalar y
+  rw [hx, hcx x, hcx (F x), map_add, map_add, map_add,
+    map_nsmul, map_nsmul, map_nsmul, hbc (φ (D (F (F x)))), hfx, hsc]
+  rw [← Nat.cast_smul_eq_nsmul S, smul_smul, pow_succ']
+
+end
+end Dubon2026

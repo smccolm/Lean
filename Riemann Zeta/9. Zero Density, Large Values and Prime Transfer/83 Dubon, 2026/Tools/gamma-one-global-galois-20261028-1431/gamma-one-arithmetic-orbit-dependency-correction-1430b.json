@@ -1,0 +1,7 @@
+{
+  "reason": "Exact declaration lookup found the residue-characteristic theorem under Dubon2026.SourceFunctionField.GaussReduction. Correct the audit name only; the required proof edge and all mathematical sources remain unchanged. Preserve the first audit source/log and use a fresh dependency audit, config and receipt.",
+  "old": "Dubon2026.GaussReduction.residue_charP_of_prime_mem_nonunits",
+  "new": "Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits",
+  "proofEdges": 21,
+  "productionMutation": false
+}

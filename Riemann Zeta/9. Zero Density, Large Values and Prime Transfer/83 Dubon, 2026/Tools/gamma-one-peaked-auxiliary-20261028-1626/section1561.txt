@@ -1,0 +1,7 @@
+### Actual unramified Galois stage nonemptiness — 9 October 2026
+
+One further production module carries an actual base-field algebra equivalence to its genuine original integer-ring algebra equivalence. Formal unramifiedness transfers along that actual equivalence, and the pinned prime-local ramification theorem yields index one at every original finite prime. Applying this to the literal bottom finite Galois intermediate field constructs an original arithmetic stage and proves that the actual unramified-stage family is nonempty. No nonemptiness witness or primewise identity-extension ramification conclusion is assumed.
+
+Transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedGaloisStageNonempty](Extension/Dubon2026/UnramifiedGaloisStageNonempty.lean).

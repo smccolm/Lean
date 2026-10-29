@@ -1,0 +1,7 @@
+### Actual finite actual continuous arithmetic adjoint cohomology — 9 October 2026
+
+The actual original continuous first-order lift construction realizes every original continuous adjoint cocycle. Its proved finiteness gives finite continuous cocycles. The already proved original continuous cohomology-class surjectivity then gives finite actual continuous adjoint H1 and finite dimension over the original finite coefficient field. This uses the genuine continuous cocycle quotient by actual coboundaries; no local Selmer comparison or modular Galois association is asserted.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticContinuousAdjointFinite](Extension/Dubon2026/ArithmeticContinuousAdjointFinite.lean).

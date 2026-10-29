@@ -1,0 +1,78 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixUnit_det`. -/
+theorem actual_deformation_conditions_dualMatrixUnit_det_source (A : GeneralLinearGroup ι (DualNumber R)) :
+    Matrix.det A.val = (Matrix.det (dualMatrixReduction A).val,
+      Matrix.trace (dualMatrixInfinitesimal A) * Matrix.det (dualMatrixReduction A).val) :=
+  dualMatrixUnit_det A
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderLift_fixedDeterminant_iff`. -/
+theorem actual_deformation_conditions_matrixFirstOrderLift_fixedDeterminant_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) :
+    (∀ g, Matrix.det (τ.val g).val =
+      TrivSqZeroExt.inl (Matrix.det (ρ g).val)) ↔
+        ∀ g, Matrix.trace (matrixFirstOrderCocycle ρ τ g) = 0 :=
+  matrixFirstOrderLift_fixedDeterminant_iff ρ τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] in
+/-- Exact original-object consumer of `continuousMatrixFirstOrderClass_eq_iff`. -/
+theorem actual_deformation_conditions_continuousMatrixFirstOrderClass_eq_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (τ σ : MatrixFirstOrderLift ρ)
+    (hτ : Continuous τ.val) (hσ : Continuous σ.val) :
+    continuousMatrixFirstOrderClass ρ hρ τ hτ = continuousMatrixFirstOrderClass ρ hρ σ hσ ↔
+      MatrixFirstOrderStrictlyConjugate ρ τ σ :=
+  continuousMatrixFirstOrderClass_eq_iff ρ hρ τ σ hτ hσ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G H ι R : Type} [Group G] [Group H] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace H] [IsTopologicalGroup H]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] [IsTopologicalGroup H] in
+/-- Exact original-object consumer of `continuousMatrixAdjointH1Restriction_class`. -/
+theorem actual_deformation_conditions_continuousMatrixAdjointH1Restriction_class_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (φ : H →* G) (hφ : Continuous φ)
+    (τ : MatrixFirstOrderLift ρ) (hτ : Continuous τ.val) :
+    continuousMatrixAdjointH1Restriction ρ hρ φ hφ
+      (continuousMatrixFirstOrderClass ρ hρ τ hτ) =
+        continuousMatrixFirstOrderClass (ρ.comp φ) (hρ.comp hφ)
+          (matrixFirstOrderLiftRestriction ρ τ φ) (hτ.comp hφ) :=
+  continuousMatrixAdjointH1Restriction_class ρ hρ φ hφ τ hτ
+
+end
+

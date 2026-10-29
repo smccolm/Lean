@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `arithmeticUnramifiedFixedDeterminantClasses_firstOrder_iff`. -/
+theorem actual_arithmetic_unramified_fixed_determinant_classes_arithmeticUnramifiedFixedDeterminantClasses_firstOrder_iff_source (a : 𝓞 ℚ)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P ≤ ρ.ker)
+    (τ : MatrixFirstOrderLift ρ) (hτ : Continuous τ.val) :
+    continuousMatrixFirstOrderClass ρ hρ τ hτ ∈
+      arithmeticUnramifiedFixedDeterminantClasses a ρ hρ P ↔
+        (∀ g, Matrix.det (τ.val g).val = TrivSqZeroExt.inl (Matrix.det (ρ g).val)) ∧
+          rationalArithmeticInertia a P ≤ τ.val.ker :=
+  arithmeticUnramifiedFixedDeterminantClasses_firstOrder_iff a ρ hρ P hP τ hτ
+
+end
+

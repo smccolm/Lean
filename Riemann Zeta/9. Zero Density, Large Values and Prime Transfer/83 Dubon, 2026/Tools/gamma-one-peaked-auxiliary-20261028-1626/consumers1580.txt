@@ -1,0 +1,28 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `fixedResidualFramedCoefficientRing_localData`. -/
+theorem actual_fixed_residual_framed_coefficient_ring_fixedResidualFramedCoefficientRing_localData_source
+    (p : ℕ) (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ)) :
+    (letI := fixedResidualFramedCoefficientRing_isLocal p H σ hσ S
+     IsNoetherianRing (FixedResidualFramedCoefficientRing p H σ hσ S) ∧
+       IsAdicComplete (IsLocalRing.maximalIdeal (FixedResidualFramedCoefficientRing p H σ hσ S))
+         (FixedResidualFramedCoefficientRing p H σ hσ S) ∧
+       (inferInstance : TopologicalSpace (FixedResidualFramedCoefficientRing p H σ hσ S)) =
+         (IsLocalRing.maximalIdeal (FixedResidualFramedCoefficientRing p H σ hσ S)).adicTopology) :=
+  fixedResidualFramedCoefficientRing_localData p H σ hσ S
+
+end
+

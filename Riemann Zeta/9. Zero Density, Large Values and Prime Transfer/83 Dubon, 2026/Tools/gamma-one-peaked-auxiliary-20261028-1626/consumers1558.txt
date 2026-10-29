@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `intermediateField_sup_inclusion_ranges`. -/
+theorem actual_intermediate_field_sup_embeddings_intermediateField_sup_inclusion_ranges_source (E F : IntermediateField K Ω) :
+    (IntermediateField.inclusion (show E ≤ E ⊔ F from le_sup_left)).toRingHom.fieldRange ⊔
+      (IntermediateField.inclusion (show F ≤ E ⊔ F from le_sup_right)).toRingHom.fieldRange =
+        ⊤ :=
+  intermediateField_sup_inclusion_ranges E F
+
+end
+

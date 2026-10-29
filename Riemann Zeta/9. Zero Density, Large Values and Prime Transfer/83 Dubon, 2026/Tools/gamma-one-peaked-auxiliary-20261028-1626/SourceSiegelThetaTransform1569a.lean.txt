@@ -1,0 +1,52 @@
+import SourceSiegelEtaTransform1568a
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary existence -> the actual Siegel
+product transformation. Reuse the proved literal product/theta equality,
+native theta and eta transformations, and native generators of SL(2,Z).
+The twelfth-root multiplier is derived from the generator identities;
+no slash-invariance or multiplier-existence hypothesis is supplied.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_siegelFun_specialLinearGroup_smul. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Real MatrixGroups
+
+theorem theta_S (N : ℕ) (hN : N ≠ 0) (r s : ℤ) (τ : ℍ) :
+    jacobiTheta₂ (w N r s (-1 / (τ : ℂ))) (-1 / (τ : ℂ)) =
+      (-I * τ) ^ (1 / 2 : ℂ) * cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+        cexp (-π * I * (τ + 2 * w N s (-r) τ)) * jacobiTheta₂ (w N s (-r) τ) τ := by
+  have hN' : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hN
+  have hτ0 : (τ : ℂ) ≠ 0 := τ.ne_zero
+  have hA := cpow_half_ne_zero τ
+  have hz : (w N s (-r) τ + τ) / τ = w N r s (-1 / (τ : ℂ)) := by
+    unfold w; push_cast; field_simp; ring
+  symm
+  calc (-I * τ) ^ (1 / 2 : ℂ) * cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+        cexp (-π * I * (τ + 2 * w N s (-r) τ)) * jacobiTheta₂ (w N s (-r) τ) τ
+        = (-I * τ) ^ (1 / 2 : ℂ) * cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+            jacobiTheta₂ (w N s (-r) τ + τ) τ := by
+          rw [jacobiTheta₂_add_left']; ring
+    _ = (-I * τ) ^ (1 / 2 : ℂ) * cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+            (1 / (-I * τ) ^ (1 / 2 : ℂ) * cexp (-π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+              jacobiTheta₂ ((w N s (-r) τ + τ) / τ) (-1 / τ)) := by
+          rw [← jacobiTheta₂_functional_equation]
+    _ = jacobiTheta₂ ((w N s (-r) τ + τ) / τ) (-1 / τ) := by
+          have he : cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+              cexp (-π * I * (w N s (-r) τ + τ) ^ 2 / τ) = 1 := by
+            rw [← Complex.exp_add]
+            convert Complex.exp_zero using 2
+            ring
+          calc _ = ((-I * τ) ^ (1 / 2 : ℂ) * (1 / (-I * τ) ^ (1 / 2 : ℂ))) *
+                (cexp (π * I * (w N s (-r) τ + τ) ^ 2 / τ) *
+                  cexp (-π * I * (w N s (-r) τ + τ) ^ 2 / τ)) *
+                jacobiTheta₂ ((w N s (-r) τ + τ) / τ) (-1 / τ) := by ring
+            _ = _ := by rw [he, mul_one_div_cancel hA, one_mul, one_mul]
+    _ = _ := by rw [hz]
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderLift_subgroup_kernel_iff`. -/
+theorem actual_first_order_inertia_criterion_matrixFirstOrderLift_subgroup_kernel_iff_source
+    (ρ : G →* GeneralLinearGroup ι R) (τ : MatrixFirstOrderLift ρ)
+    (N : Subgroup G) (hN : N ≤ ρ.ker) :
+    N ≤ τ.val.ker ↔ ∀ g ∈ N, matrixFirstOrderCocycle ρ τ g = 0 :=
+  matrixFirstOrderLift_subgroup_kernel_iff ρ τ N hN
+
+end
+

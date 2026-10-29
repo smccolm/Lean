@@ -1,0 +1,1 @@
+Equip the actual residue quotient of the original local coefficient ring with its quotient topology. Openness of its original maximal ideal in the actual maximal-adic topology proves that quotient discrete. The original residue-field equivalence then makes the genuine coefficient reduction continuous, without adding continuity as an external premise.

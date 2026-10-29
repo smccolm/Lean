@@ -1,0 +1,187 @@
+{
+  "recordedUTC": "2026-10-29T01:19:05.990775+00:00",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "sources": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean",
+      "sha256": "2C1B21B7E3AB7C4FE00F728F1DD63A0C2C3A5909AA7A91AA9E2C3427261F7ECD",
+      "bytes": 17881,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean",
+      "sha256": "FA5EEC4DCDDF53E3DB0E24CD61E657B8A1FDF9E79B23329790AF49767C7D2404",
+      "bytes": 6034,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "6AB6B4B15B3495331DD18AE43946868B2394D3747867C5F92D745723AD632ABD",
+      "bytes": 14058,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "E0A10CD68A0560D35B8114CF418B74C55F5B58724E94411145130BB1CB2A01D9",
+      "bytes": 21119,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "24D719D15DAA7E315DF98135C0CC3E8C43D280C4D70B231FBAD4CE84CBA76EDE",
+      "bytes": 23244,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean",
+      "sha256": "F0AB6E7D1D0F4C1D9AE00CB092B7F1DA973E06A498515E362DD1E433A6431802",
+      "bytes": 22463,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 15,
+          "text": "set_option maxHeartbeats 800000"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean",
+      "sha256": "7006405AB04E885D8012684E81C803CD9DD0744535A8EC8465D4E5074C1F27C0",
+      "bytes": 8259,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean",
+      "sha256": "C20722CC3C4C00BE5C2034552CC001CB187241CC00B88FEAE3895FE5E2D41F57",
+      "bytes": 15899,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean",
+      "sha256": "15314A25B79B929F08E37EFC8B327FA5B3DB48DCB1C324FCE3C85F5BED4BED77",
+      "bytes": 10570,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean",
+      "sha256": "D9A554ECBFAB4BC0156CCCFD57978FE14182EC5FEB98EB74DBC4ECA179C89A43",
+      "bytes": 16609,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 136,
+          "text": "set_option maxHeartbeats 12800000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean",
+      "sha256": "4C7FCAEEB7111DF50DDA10A9375E77A9DF6F13B2E204EA1717A708931C33A222",
+      "bytes": 9773,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 9,
+          "text": "set_option linter.unusedSectionVars false"
+        }
+      ]
+    },
+    {
+      "path": "Definitions/Def_ModularCurve_SiegelFunction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\Def_ModularCurve_SiegelFunction.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_SiegelFunction.lean",
+      "sha256": "C57E7DBB3103D4BD823783EE13A34FFE4916A4BEACC22A77BC7F6B2D8E70A3EA",
+      "bytes": 1634,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    }
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspCosetPlaces.lean",
+      "sha256": "F3B409E4879591CCCEA066139F3749CE254403A4F30090DEF6F1048FCD96CE54"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspCosetBound.lean",
+      "sha256": "1833208EE93E99E7682568B4AEA922342D829ADC0D216566EED8904DEDDCB063"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRegularCuspQExpansion.lean",
+      "sha256": "72BA62FC37EF35E8B2BCB4D8BFC90BB2893688E1FDBBD91D13773E4F5E771DB1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeierstrassTorsionFourierExpansion.lean",
+      "sha256": "0F6B47AA646AE1BF54EC2F2B33FDF589AD4E203140C614101701F37E30B2C277"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralEisensteinSix.lean",
+      "sha256": "9E1C62381FA18F47B9665D0A4049EB4AF874CA004B975A1CB784B21EDA7382B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ZetaValues.lean",
+      "sha256": "25181D96A8F0664A37C0D62C9A62127F2264CFD1A57307A745A5FD1BC4F8BE96"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Fourier\\ZMod.lean",
+      "sha256": "BABA66E076526576739A74C2DCE093D3DB6AE22AFB137FA15A7437DEC30B8851"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\Dirichlet.lean",
+      "sha256": "C639073B793811A7B0C835C3C861F3035A088C664307050E2BA012D5C09ADDCC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\JacobiTheta\\OneVariable.lean",
+      "sha256": "934C07E0E9EF34ABA00CFACCD365D5E36EDBD66EA777CECB4443399E2E8A91AA"
+    }
+  ],
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius realization -> actual coordinate degree/genus preservation -> signed-index lower bound -> reduced field action -> level-power slash integrality -> even-weight peaked auxiliary existence.",
+  "selectedNext": "Prove the exact finite Bernoulli-weight separation using native Bernoulli Fourier series, finite Fourier inversion and the already proved Mathlib nonvanishing of Dirichlet L-series at 2. Construct the source nonnegative integer exponent family. The actual Siegel product, transformation, Fourier integrality and leading-unit comparison remain separately required.",
+  "sourceScope": "The source exponent family is invariant under (r,s) -> (r,s+r), excludes (0,0), and separates precisely the two exceptional signed cusp classes on unimodular columns. The actual modular form is the product of Siegel functions to 12*N*m(r,s), multiplied by a power of the original discriminant, of weight 12*t.",
+  "shorterRoutes": {
+    "evenWeight": "The audited-candidate native ratio identity f/g=(f*g)/(g*g) removes the odd-weight auxiliary branch without changing the original field.",
+    "cuspClasses": "Use the native Gamma1 entry conditions and determinant-one identity, without a new cusp/curve model. The exact classification compiles in SourceGammaOnePeakedCuspClasses1534a.",
+    "finiteFourier": "The candidate Bernoulli spanning proof reduces to Mathlib Fourier inversion and L-series nonvanishing at 2; no new Dirichlet continuation or generalized Bernoulli theory is needed.",
+    "geometricAlternative": "Native Riemann-Roch and cusp functions alone do not supply the required integral expansions and invertible leading coefficient. No shorter complete replacement for those arithmetic requirements has been established.",
+    "analyticProducts": "Native Jacobi and eta APIs are available, but the inspected Siegel transformation still requires its exact product/phase identities. Analytic generalizations unrelated to those identities are deferred."
+  },
+  "remaining": "Actual nonnegative separating exponent construction, Siegel-product modularity and precise Fourier/leading-unit formulas, peaked auxiliary existence, level-power denominator control, full reduced field action, degree/genus preservation, finite-modulus parabolic transfer, two-dimensional characteristic-zero realization, automorphy and literal higher continuation remain. Acceptance 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "productionMutation": false
+}

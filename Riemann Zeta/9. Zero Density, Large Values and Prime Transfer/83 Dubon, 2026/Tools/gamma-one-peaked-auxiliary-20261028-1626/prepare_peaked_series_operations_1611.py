@@ -1,0 +1,59 @@
+from pathlib import Path
+s=Path(__file__).parent
+a=s/'SourcePeakedDiscriminantSeries1610a.lean';b=s/'SourcePeakedDiscriminantSeries1610b.lean';assert not b.exists()
+b.write_text(a.read_text(encoding='utf-8').replace('import SourceSiegelFiniteSeriesProducts\n','import SourceSiegelFiniteSeriesProducts1596b\n'),encoding='utf-8')
+a.rename(a.with_suffix('.lean.txt'))
+c='''import SourcePeakedDiscriminantSeries1610b
+import SourceSiegelFiniteProductExpansion1601b
+import Dubon2026.SourceGammaOneFourierLinear
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> exact width-one expansion.
+The native q-series multiplication/power API needs only monomial and scalar
+consumers to represent the literal shifted product. Existing Gamma1 periods
+are reused. No duplicate absolute-convergence framework is introduced.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion
+noncomputable section
+open Complex UpperHalfPlane PowerSeries Filter Topology
+open scoped MatrixGroups ModularForm
+
+theorem expands_X_pow (h : ℝ) (k : ℕ) :
+    Expands h (PowerSeries.X ^ k) (fun τ => Function.Periodic.qParam h (τ : ℂ) ^ k) := by
+  intro τ
+  have hf : (fun n : ℕ => coeff n ((X : PowerSeries ℂ) ^ k) * Function.Periodic.qParam h (τ : ℂ) ^ n) =
+      fun n => if n = k then Function.Periodic.qParam h (τ : ℂ) ^ k else 0 := by
+    funext n
+    rw [coeff_X_pow]
+    split_ifs with hn
+    · rw [hn, one_mul]
+    · rw [zero_mul]
+  rw [hf]
+  exact hasSum_ite_eq k _
+
+theorem Expands.smul {h : ℝ} {A : PowerSeries ℂ} {F : ℍ → ℂ} (hA : Expands h A F) (c : ℂ) :
+    Expands h (c • A) (fun τ => c * F τ) := by
+  intro τ
+  simpa only [coeff_smul, smul_eq_mul, mul_assoc] using (hA τ).mul_left c
+
+theorem qParam_natCast_zpow (N : ℕ) (τ : ℍ) (z : ℤ) :
+    Function.Periodic.qParam (N : ℝ) (τ : ℂ) ^ z =
+      cexp (2 * Real.pi * I * (z : ℂ) * (τ : ℂ) / (N : ℂ)) := by
+  rw [Function.Periodic.qParam, ← Complex.exp_int_mul]
+  congr 1
+  push_cast
+  ring
+
+theorem natCast_mem_strictPeriods_gammaOne (N n : ℕ) :
+    (n : ℝ) ∈ ((CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ))).strictPeriods := by
+  simpa only [nsmul_eq_mul, Nat.cast_id, mul_one] using
+    (((CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ))).strictPeriods.nsmul_mem
+      (SourceFricke.gammaOne_one_mem_strictPeriods N) n)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion
+'''
+f=s/'SourcePeakedSeriesOperations1611a.lean';assert not f.exists();f.write_text(c,encoding='utf-8')
+print('Prepared consistent versioned imports and minimal monomial/scalar/period consumers.')

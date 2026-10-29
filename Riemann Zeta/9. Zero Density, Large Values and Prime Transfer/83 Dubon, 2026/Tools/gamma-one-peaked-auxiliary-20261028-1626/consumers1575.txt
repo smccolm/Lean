@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O A : Type*} [CommRing O] [IsLocalRing O]
+  [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+/-- Exact original-object consumer of `localCoefficientReduction_continuous`. -/
+theorem actual_local_coefficient_reduction_topology_localCoefficientReduction_continuous_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O) :
+    Continuous (localCoefficientReduction e) :=
+  localCoefficientReduction_continuous hA e
+
+end
+

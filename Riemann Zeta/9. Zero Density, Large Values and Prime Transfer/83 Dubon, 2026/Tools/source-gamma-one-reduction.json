@@ -1,0 +1,1113 @@
+{
+  "date": "28 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneGaussCriterion",
+    "Dubon2026.SourceGammaOneGaussValuation",
+    "Dubon2026.SourceGammaOneGaussResidueHom",
+    "Dubon2026.SourceGammaOneGaussResidueKernel",
+    "Dubon2026.SourceGammaOneGaussConstants",
+    "Dubon2026.SourceGammaOneGaussResidueImage",
+    "Dubon2026.SourceGammaOneRegularProlongation",
+    "Dubon2026.SourceGammaOneResidueJCoordinate",
+    "Dubon2026.SourceReductionResidueCoordinateFinite",
+    "Dubon2026.SourceGammaOneResidueCoordinateFinite",
+    "Dubon2026.SourceGammaOneResidueSeparability",
+    "Dubon2026.SourceGammaOneDecompositionGauss",
+    "Dubon2026.SourceGammaOneResidueArithmetic",
+    "Dubon2026.SourceGammaOneHeckeGauss",
+    "Dubon2026.SourceGammaOneResidueHecke",
+    "Dubon2026.SourceGammaOneResidueHeckeFinite",
+    "Dubon2026.SourceGammaOneResidueFrobenius",
+    "Dubon2026.SourceGammaOneResiduePlaces",
+    "Dubon2026.SourceGammaOneResiduePlaceOrders",
+    "Dubon2026.SourceGammaOneResidueFrobeniusPlaces"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic Hecke realization -> original Picard/Tate Frobenius and inertia -> actual function-field reduction, finite Hecke residue maps and residue-place correspondence.",
+  "discharged": "Primitive integral Laurent fractions construct the actual coefficient valuation on the original Gamma1 function field. Its literal coefficient reduction has the exact maximal-ideal kernel, actual residue image, constant restriction and nonzero scaling required for a regular prolongation. The original j-coordinate reduces to the literal j Laurent series; its residue coordinate field is finite with degree at most the original degree, and is separable under the explicitly stated perfect-residue-field hypothesis. Original arithmetic decomposition and both original Hecke maps preserve this valuation, with exact coefficient and q-substitution reduction identities. Inertia fixes the actual residue field and its genuine places; both residue Hecke maps are finite. For a decomposition element acting on residue constants by pth power, inverse coefficient action followed by absolute Frobenius is the actual constant-linear q-to-q^p map. It is integral, finite for the original finite-index subgroup containing T, and factors the original residue Hecke beta map through alpha. Its restriction on genuine residue places equals the decomposition permutation, and normalized orders are multiplied by p. These results retain the original field, valuation, Laurent embedding and maps.",
+  "boundary": "The arithmetic Frobenius action on constants remains an explicit premise. Residue degree upper bounds and finite maps do not establish degree equality or genus preservation. The original Hecke norm reduction identity, compatible original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain; thus the original geometric Tate Frobenius quadratic and inertia realization remain unproved. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN; all twenty acceptance tests unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,046-module scope: all thirteen retained regressions, 57,466 exhaustive theorem checks, 26,513 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T14:38:56.619148+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneGaussCriterion",
+        "SourceGammaOneGaussValuation",
+        "SourceGammaOneGaussResidueHom",
+        "SourceGammaOneGaussResidueKernel",
+        "SourceGammaOneGaussConstants",
+        "SourceGammaOneGaussResidueImage",
+        "SourceGammaOneRegularProlongation",
+        "SourceGammaOneResidueJCoordinate",
+        "SourceReductionResidueCoordinateFinite",
+        "SourceGammaOneResidueCoordinateFinite"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussCriterion.lean",
+          "sha256": "A32935B4FCC1CC0C78410576050E398CA82E413BBDF22D620105B933DFCE72DA",
+          "oleanSha256": "E11947679F9F18FD5CDD02182A9342300A9B0E2FF652D4966B0EA6A8B681497F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussCriterion1268b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussCriterion1268b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussValuation.lean",
+          "sha256": "E0A11E497B1D83C24E35139D4E6A6238FE48E11A05A5BA30CA0D563234D4E9B2",
+          "oleanSha256": "05DB08A82B523F80588FC4DFCBC26715E5B116F87A3AEEA79852E72D55A45998",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussValuation1269b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussValuation1269b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueHom.lean",
+          "sha256": "633BE0AA494C7211D3E1853583C41ED235B35D127175A811D57D5ECBE9367AC1",
+          "oleanSha256": "6717C1190427B65DF32079B42E3FEFDD5B5631531BE41AA19CA5B04893A94CF8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueHom1270b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueHom1270b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueKernel.lean",
+          "sha256": "D9A034E50E52F2AF9E252E0BF6829D7868D4F080D5A6D5B19A8BBE13A30E71EB",
+          "oleanSha256": "1C13E25EE059988AC6B2FF554BB17E7AFEC5B8299D0252703CDF667C8BFE00D6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueKernel1271a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueKernel1271a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussConstants.lean",
+          "sha256": "64A9926E8377C8F460E47851030383510B268FAAA55E1B4416BB113DE714CB0B",
+          "oleanSha256": "33931DC18709AEF6D9DAE16C1865B67DA47059E140EC19EBBD2A1B50BE8B67F8",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussConstants1272a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussConstants1272a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueImage.lean",
+          "sha256": "78C7F9E854230818500C42AAD0002D4C2C3C7F9C6CD7C442A914933DC94A9B60",
+          "oleanSha256": "778A5555DCAE380D14FCE5B8CAFD95032323885A1B3D369B4526C2EE793EFB0F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueImage1273b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussResidueImage1273b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularProlongation.lean",
+          "sha256": "B3F6F92CA46B2EADEFE2DF283922CBD8EEC80CC07B022C37CC059A70B6C529D3",
+          "oleanSha256": "A9875B62282CEEB5452515378C7EED7F6A6C7979CFFD3B0A4F10790B88655DB4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularProlongation1274a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularProlongation1274a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueJCoordinate.lean",
+          "sha256": "ED39384097D7F7E2A501E72CCFB116E260667D9CA51627D5E20FEC6E881E29FB",
+          "oleanSha256": "724211937E7BEA1ED6ABFD24BC13DE50FE5F935241F82368229FB30648E999C9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueJCoordinate1275a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueJCoordinate1275a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionResidueCoordinateFinite.lean",
+          "sha256": "C56BE57266B17BF507234ED2C61163845D90A3376735054CB5170B7FF4A74EA9",
+          "oleanSha256": "9AD43C50D8AD7D0F350518537FB285B1E4590ECBA489CC798E691FCB4862E044",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionResidueCoordinateFinite1276b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReductionResidueCoordinateFinite1276b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCoordinateFinite.lean",
+          "sha256": "55A0A669F12B029D133DFD4607C53D6AB54B1F33FB4D48E596ED5913299191F6",
+          "oleanSha256": "703E69C285CC1546DECC6D1A700B90A57F9E8E75D43AABE315AD81628FD87D7F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCoordinateFinite1277b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCoordinateFinite1277b.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_exists_primitive_fraction",
+        "Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_isInt_or_inv",
+        "Dubon2026.SourceFunctionField.GammaOne.mem_coefficientGaussRing_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_witness",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_apply",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.ι_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_ι",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.algebraMap_mem_gaussRing_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_smul'",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_smul_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_surjective",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_ker",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_residue_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_jCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jCoordinateOver_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_jCoordinateOver",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jq_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_rank_le",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_finite_and_finrank_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le",
+        "Dubon2026.SourceFunctionField.GammaOne.coefficientGaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueJCoordinate"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_exists_primitive_fraction",
+        "Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_isInt_or_inv",
+        "Dubon2026.SourceFunctionField.GammaOne.mem_coefficientGaussRing_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_witness",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_apply",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.ι_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_ι",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.algebraMap_mem_gaussRing_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_smul'",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_smul_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_surjective",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_ker",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_residue_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_jCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jCoordinateOver_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_jCoordinateOver",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jq_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_rank_le",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_finite_and_finrank_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.coefficientGaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueJCoordinate"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionAudit2.log",
+      "logSha256": "3B06FDA677491E6E78CD4CFB7C5F21539A5E6C27B9900C7663AC7D3E9F9FBBBB",
+      "auditSha256": "9E22F682357EDA9AC667BC5080C9F2D936C6514E1B1534B5A723B1BFBF0F3E72",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionScratchOwnership1278b.log",
+      "ownershipSha256": "B6FDAFF3B4C8FB257315AD7944B3F4A82CE7D000FA73D093E391358064DC7C3C",
+      "exhaustiveTheorems": 88,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionDependencyAudit2.log",
+      "dependencyAuditSha256": "E155FA61392DE51F649D312AB1299DA992D11B860CC2623EC8BD639EC4811E75",
+      "dependencyAuditSourceSha256": "5D2710DC51FF9C401B213B00A593046D02054810DC93A0F8F3FB9F5F484E9294",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic realization -> original geometric Tate Frobenius/inertia -> original good reduction and prime-to-residue Picard torsion specialization -> literal coefficient prolongation and finite residue coordinate.",
+      "discharged": [
+        "Every original q-expansion ratio has a primitive scaled integral fraction; the literal IsInt predicate on the original scalar-extended field is a valuation subring.",
+        "The actual coefficient reduction is well defined with maximal-ideal kernel, correct restriction to constants and nonzero constant rescaling. Its actual Laurent residue image receives a surjective residue map, constructing the full native RegularProlongation without caller assumptions.",
+        "The original j-coordinate reduces to the literal residue j-series, proved transcendental. The original finite-coordinate theorem and native independence lift prove finite residue degree and the upper bound by the original degree, including the actual Gamma1 levels."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. This is the original coefficient valuation and regular prolongation with finite residue coordinate and degree upper bound, not degree equality, genus preservation, place compatibility, good reduction or torsion injectivity. Original Hecke/diamond reduction, geometric Frobenius and inertia, parabolic character realization, exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reduction-2-reuse-review-20261028.json",
+      "reuseReviewSha256": "46256DF59E9ADC19E5C1F6BC5C72719744DE51EEC9BAC4BC895579605029F2B3",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T15:00:03.571430+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneResidueSeparability",
+        "SourceGammaOneDecompositionGauss",
+        "SourceGammaOneResidueArithmetic",
+        "SourceGammaOneHeckeGauss",
+        "SourceGammaOneResidueHecke",
+        "SourceGammaOneResidueHeckeFinite"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability.lean",
+          "sha256": "2864E32A2D9153D876838C24CFB4246FD35288E255FF411222938BF6250AD18B",
+          "oleanSha256": "4DEF5971EA0BC601B4202888C829FAC21FCAB799FB45B53E5124872D476FEA5A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability1279b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability1279b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss.lean",
+          "sha256": "3DDAC6339E317F046C2FCB56AB124BB57C6943A7D807BCF36EFAED2357311926",
+          "oleanSha256": "09B4A9A662581CDFB4583ABC9DEB20BD33BC9C7D9B9D7667F08576C9FDC4B647",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss1280a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss1280a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic.lean",
+          "sha256": "EF4887BE308A32CCDAEE69803CC82F4C7A92A0295725DDFC5C3E958253AB0D37",
+          "oleanSha256": "8C146C751A77C57325A648829912F70F34610B24987B106216DCA69EA2454A0C",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic1280a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic1280a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss.lean",
+          "sha256": "2C065FED10955848CDC57581FADAD21DD95EF28674396E5BE308325B988A3A45",
+          "oleanSha256": "B03616E8F6470B66A80D33710DD4399F6AA5C6CBE85B289744BE69F15F2B51C1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss1281b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss1281b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke.lean",
+          "sha256": "3D931B062C77E9897CD0B6789D1272FABD9220C6E783D8FA3EE0CDD7139C7D03",
+          "oleanSha256": "EB69FB7F6DB0EA3935D8B472E86BBF857C15DCAEA7FC6A4815B30B72857F4831",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke1281b.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke1281b.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite.lean",
+          "sha256": "BB9E9448B29FB5C333B6A88A8404F022DB84A7CF600ECEB32D151E9A573C8C0C",
+          "oleanSha256": "9F21580AADFADEE8293083356F41438F5FE9FF311971046C7E1F989397F6A8B4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite1282a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite1282a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityAudit1.log",
+      "logSha256": "9F527AFC6AD338B85686ECD36E969537F8EC82EEFB44FB002A9463F411298D05",
+      "auditSha256": "D97144A2E98A408A171B8F15E73FB9B592EC506477D8FBD3AEEE7A8EB5147459",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityScratchOwnership1285.log",
+      "ownershipSha256": "CF23D6DC46008FE5E9AC1747FFADA0E86D2BCC042494CA2AEE33E1DFE3DEBBBC",
+      "exhaustiveTheorems": 70,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 39,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityDependencyAudit1.log",
+      "dependencyAuditSha256": "C37852119EAEC24E4BE09FB30A76CCACB4ED0B6D7B3839461B10231F8CE8B9B8",
+      "dependencyAuditSourceSha256": "6BEAD2D810B81BB4AC1210A79060DD94FB49432362FF7DF1C6584EEC0B0A1B07",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic realization -> original geometric Tate Frobenius/inertia -> equivariant original good reduction, finite residue Hecke correspondence and Picard torsion specialization.",
+      "discharged": [
+        "The actual original Gamma1 residue j-coordinate separates the finite residue function field over perfect constants; its no-pth-power condition is proved from the literal Laurent pole.",
+        "The original arithmetic decomposition action preserves the constructed valuation. Literal reduction is equivariant; inertia fixes its actual residue image, and arithmetic Frobenius reduces by raising coefficients to the residue characteristic power.",
+        "Both original Gamma1 Hecke maps restrict to the constructed valuation and induce the actual inclusion and q-substitution on residue fields, with exact reduction compatibility. Both residue field maps are proved finite using original finite-coordinate inputs."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Function-level arithmetic/Hecke reduction and finite residue maps do not prove degree equality, genus preservation, place/Picard specialization, prime-to-residue torsion injectivity, or the two geometric Frobenius components. The original geometric Tate quadratic and inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-compatibility-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "E15A748AD130C9665EF712CC25BB913DE872F57E00085A86976DDDFD73B5B76A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T15:22:23.636583+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneResidueFrobenius"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius.lean",
+          "sha256": "06E34658052283529092F5B545115FF5A2EFC83735D087C373C094BD28641C17",
+          "oleanSha256": "E8EF2C0CB2F0DE0A1C8D0F91C8BF6931B2A04DDEE0F607A98F7FD800F9DFBB93",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius1286d.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius1286d.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusAudit1.log",
+      "logSha256": "B8DF51DE0F4C7528AA039EC36FE2977321746CA7D050CA0F55D97C542C282B19",
+      "auditSha256": "AF702E0C38415A3B9CE9A6A9074F256E917251C8CA698706C16B822B8C0E3FF0",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusScratchOwnership1287.log",
+      "ownershipSha256": "BD6A048C49C3EE1EA5ECA93AC52BEFB00E68695A9D42E019A2ED7260AF91E1F2",
+      "exhaustiveTheorems": 15,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusDependencyAudit1.log",
+      "dependencyAuditSha256": "8580DE24A939DDB54B7ADED232120611C70D1349C8682D9DB509EFF5B1EFD362",
+      "dependencyAuditSourceSha256": "5FE2A9301657DAAA2400C632CD6B557191D445E6DC39E15FBA15DAFF965A54F1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius -> actual residue Hecke correspondence -> geometric Frobenius factorization.",
+      "discharged": [
+        "For a decomposition element whose action on residue constants is pth power, the original residue image has a constant-linear geometric Frobenius with literal q to q^p Laurent action.",
+        "The actual endomorphism is integral, and finite for a finite-index original subgroup containing T.",
+        "The actual Gamma1 residue Hecke beta map factors through this endomorphism and the actual alpha inclusion."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The arithmetic Frobenius constant-action premise is explicit. No original norm identity, degree equality, genus preservation, place/Picard specialization or prime-to-residue torsion injectivity is proved by this module. The original geometric Tate quadratic, inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-frobenius-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "0979A8B513C8351186CA9D6341A6D4498F484C6964E64F2825FD67CB589182BE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-28T15:26:40.704332+00:00",
+      "date": "2026-10-28 America/Vancouver",
+      "modules": [
+        "SourceGammaOneResiduePlaces",
+        "SourceGammaOneResiduePlaceOrders",
+        "SourceGammaOneResidueFrobeniusPlaces"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces.lean",
+          "sha256": "2AB4A8EF29D2066923BAE29E039F729E570A80D456B7BE905525945142046A84",
+          "oleanSha256": "5A111CD918A3DE21CA023B9A5A8E7C6318F7EB39AA659E74325D50ADF0F85AF9",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces1288a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces1288a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders.lean",
+          "sha256": "BE7E40B93BC3BE5BF1FA9C293D51A80FB4CC559022FCD34C28EA026FD4211A7C",
+          "oleanSha256": "007D0985DDDE1B635B9F9F17D104B3E5E0F0E14063730C87CE0357859E24DD40",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders1289a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders1289a.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces.lean",
+          "sha256": "7C9F62FD05CD72426F3B8DA4552EDE4D42DB4CE3263A9C5D09B8BA18774DB57D",
+          "oleanSha256": "04034ABB18028B729E1C2426F825E478818395F8B300A55829279F21C80900A2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces1290a.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces1290a.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesAudit1.log",
+      "logSha256": "332B6B258F78F594366EEF5D45304CD1F2475EBFF450184D3FA25A94142F680B",
+      "auditSha256": "69697A71460AAB30491A23E68D8296C718C878928B89ACB0B60A845482DC7946",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesScratchOwnership1291.log",
+      "ownershipSha256": "DD73D8F5DE2FD50D991311063C375A3A97916016F1A0D25AE1F90954C8183099",
+      "exhaustiveTheorems": 45,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesDependencyAudit1.log",
+      "dependencyAuditSha256": "C257BA103CDBF8826B01D20A91255E845988B80AFA25F54DF714577A6EB42902",
+      "dependencyAuditSourceSha256": "2D0D982257E6B219C4F5CAE4C2D461983A602A808657EF50541DBCEA0662FCAE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+        "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+      ],
+      "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius and inertia -> equivariant specialization on places -> actual decomposition and geometric Frobenius on residue places.",
+      "discharged": [
+        "The actual decomposition action permutes all genuine places of the original Gamma1 residue field and preserves normalized orders with the precise inverse convention.",
+        "Original arithmetic inertia fixes the actual residue places.",
+        "For an actual decomposition element with pth-power action on residue constants, restriction along the original geometric Frobenius is exactly that decomposition permutation, with normalized orders multiplied by p."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The arithmetic Frobenius constant-action premise is explicit. The original norm identity, degree equality, genus preservation, original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain. Actions on residue places alone do not prove inertia or the Frobenius quadratic on the original Picard Tate module. Parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-places-1-reuse-review-20261028.json",
+      "reuseReviewSha256": "6ABD5E6F5EE02F5B3A7B52A312B4733C187918852233029A28ED0385E3ABE97E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-reduction-2-reuse-review-20261028.json",
+    "Tools/source-gamma-one-residue-compatibility-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-residue-frobenius-1-reuse-review-20261028.json",
+    "Tools/source-gamma-one-residue-places-1-reuse-review-20261028.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-reduction-20261028-1292/gamma-one-reduction-promotion-route-1292.json",
+    "sha256": "DBC45D530A72F0F840C264B47E7C324D897D2D2642B707197170FBACA6926104"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-reduction-20261028-1292/archive-manifest.json",
+    "sha256": "2BA484D8C9DE6765DD7EE7AE3746EE8373D0E705366B6C50F66B0503CB7CD309",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9046": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionDependencyAudit2Production9046.log",
+        "sha256": "E155FA61392DE51F649D312AB1299DA992D11B860CC2623EC8BD639EC4811E75",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le"
+        ],
+        "sourceSha256": "D2145DB28969F0D8B04610FE180B327F217392BAB23C19613A5A78362D033277"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityDependencyAudit1Production9046.log",
+        "sha256": "C37852119EAEC24E4BE09FB30A76CCACB4ED0B6D7B3839461B10231F8CE8B9B8",
+        "requiredProofValueEdges": 39,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite"
+        ],
+        "sourceSha256": "01CE5DB6CD98308BAD3E246F0F6B5B2BD12780BE8D69ACA50FA38445C0B256D8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusDependencyAudit1Production9046.log",
+        "sha256": "8580DE24A939DDB54B7ADED232120611C70D1349C8682D9DB509EFF5B1EFD362",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+        ],
+        "sourceSha256": "21C25C329D350BE73763443169EFD984DB50F66C88840A58459595821A0716E4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesDependencyAudit1Production9046.log",
+        "sha256": "C257BA103CDBF8826B01D20A91255E845988B80AFA25F54DF714577A6EB42902",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+          "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+        ],
+        "sourceSha256": "EC5905A4F7143A195796BEC30E5EC14629BA7A194C81753973FEB3F7317F9264"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionProductionAudit9046.log",
+    "sha256": "E15069F011B72BA0499411D6C522FB84830BDD8F09C52FD31D276DFC9F74DB6B",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reduction-production-build-9046.log",
+    "aggregateSha256": "BCAF548707C7BBD9AA74CE3FE6DFDB27D9B9B12AC565634D90AE07D6D03F94DD",
+    "productionModules": 9046,
+    "incrementModules": 20,
+    "axiomChecks": 91,
+    "exhaustiveIncrementTheorems": 218,
+    "linterScopes": 20,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 218,
+    "productionReuse": "Only project scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Original Gamma1 field, all nonzero levels, signed stabilizer normalization, original integer lattice and exact divisor orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 218,
+      "scratchDistinct": 218,
+      "generatedNameRenamings": {},
+      "productionFocused": 218,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneGaussCriterion",
+            "SourceGammaOneGaussValuation",
+            "SourceGammaOneGaussResidueHom",
+            "SourceGammaOneGaussResidueKernel",
+            "SourceGammaOneGaussConstants",
+            "SourceGammaOneGaussResidueImage",
+            "SourceGammaOneRegularProlongation",
+            "SourceGammaOneResidueJCoordinate",
+            "SourceReductionResidueCoordinateFinite",
+            "SourceGammaOneResidueCoordinateFinite"
+          ],
+          "count": 88,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionScratchOwnership1278b.log",
+            "sha256": "B6FDAFF3B4C8FB257315AD7944B3F4A82CE7D000FA73D093E391358064DC7C3C",
+            "sourceSha256": "644B54F516F68933ECDD891B7FDAEFBD788748F1D2B9A7EAA1B429F138DFC0AB"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResidueSeparability",
+            "SourceGammaOneDecompositionGauss",
+            "SourceGammaOneResidueArithmetic",
+            "SourceGammaOneHeckeGauss",
+            "SourceGammaOneResidueHecke",
+            "SourceGammaOneResidueHeckeFinite"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityScratchOwnership1285.log",
+            "sha256": "CF23D6DC46008FE5E9AC1747FFADA0E86D2BCC042494CA2AEE33E1DFE3DEBBBC",
+            "sourceSha256": "D6365005A512ACA20398D5BC1D933D4DF73A62721FCF3CD41152BB51103AE838"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResidueFrobenius"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusScratchOwnership1287.log",
+            "sha256": "BD6A048C49C3EE1EA5ECA93AC52BEFB00E68695A9D42E019A2ED7260AF91E1F2",
+            "sourceSha256": "3B739437C3A4587086414BD501B5EAD544F6E17710DFD807E973C6E3226D06DF"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResiduePlaces",
+            "SourceGammaOneResiduePlaceOrders",
+            "SourceGammaOneResidueFrobeniusPlaces"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesScratchOwnership1291.log",
+            "sha256": "DD73D8F5DE2FD50D991311063C375A3A97916016F1A0D25AE1F90954C8183099",
+            "sourceSha256": "51A894EF4F78DDB926FE95CA89B3671DDDA001B8D8DD2C2FCB71CBC3DD368FF7"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionOwnership9046.log",
+        "sha256": "1650927161F0189F7E274AD674952425A38A98ACD2857E8EBD74153BC7CB9302",
+        "sourceSha256": "C475E22C51648B2D33674DB6DF8C0C0AAF621F1DCFC87B83CAA50E988568DC41"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-071255-806.log",
+        "sha256": "483332F196E82E3088DA802EC2FC589A4EAE682676B201092E143D6EA4EE6C21"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneGaussCriterion",
+            "scratchSha256": "A32935B4FCC1CC0C78410576050E398CA82E413BBDF22D620105B933DFCE72DA",
+            "productionSha256": "47FB4B59B41045E77C2B65AAA666FF7540EF911FD425E796BB1ED62B5A82695C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussValuation",
+            "scratchSha256": "E0A11E497B1D83C24E35139D4E6A6238FE48E11A05A5BA30CA0D563234D4E9B2",
+            "productionSha256": "A1DCECA740CE61AD0DB2FA3E2CA880E73D462076F899664F1E444B8A0893C0A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueHom",
+            "scratchSha256": "633BE0AA494C7211D3E1853583C41ED235B35D127175A811D57D5ECBE9367AC1",
+            "productionSha256": "D595136BD2E092F90D44AFB1D4F83341F21FA74680BACA4422DB3B33F163510C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueKernel",
+            "scratchSha256": "D9A034E50E52F2AF9E252E0BF6829D7868D4F080D5A6D5B19A8BBE13A30E71EB",
+            "productionSha256": "523E5BFBDD96345F76CD2106D99424F923645DF0AA60D8275FB9FC849A3E0826",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussConstants",
+            "scratchSha256": "64A9926E8377C8F460E47851030383510B268FAAA55E1B4416BB113DE714CB0B",
+            "productionSha256": "4D97CDBC589DAE9B1DF525E5DB38452517FD07B25523090A7091A39AA5236AFF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueImage",
+            "scratchSha256": "78C7F9E854230818500C42AAD0002D4C2C3C7F9C6CD7C442A914933DC94A9B60",
+            "productionSha256": "1413B2151C8AF8F4B6B3B39C063FAE0E20EE74ADF94C6F14C37984A27EB6E2D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularProlongation",
+            "scratchSha256": "B3F6F92CA46B2EADEFE2DF283922CBD8EEC80CC07B022C37CC059A70B6C529D3",
+            "productionSha256": "E29D2C85EC694592A1A7F2FDE7DBC2D521B01CCD3E1A35FC7EC762F04B8CE8D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueJCoordinate",
+            "scratchSha256": "ED39384097D7F7E2A501E72CCFB116E260667D9CA51627D5E20FEC6E881E29FB",
+            "productionSha256": "DF7356B7AD2DA13122BDFE1744110D6D871FDD3F164B688D04C30F2F38639834",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReductionResidueCoordinateFinite",
+            "scratchSha256": "C56BE57266B17BF507234ED2C61163845D90A3376735054CB5170B7FF4A74EA9",
+            "productionSha256": "C069FF9B8AF97B1A190263FA2DBB2C9D6F0C58139E3BB2634B65BFEF80E3891D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueCoordinateFinite",
+            "scratchSha256": "55A0A669F12B029D133DFD4607C53D6AB54B1F33FB4D48E596ED5913299191F6",
+            "productionSha256": "3529C3661EE21C8B1BD76A554918A71DAC7DDB60A1ECE188ED440A68E40F7921",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueSeparability",
+            "scratchSha256": "2864E32A2D9153D876838C24CFB4246FD35288E255FF411222938BF6250AD18B",
+            "productionSha256": "235D4464583E5F2CBF5F8B68595ECC30431BDCC0F69BC2E057BEC336BD702958",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDecompositionGauss",
+            "scratchSha256": "3DDAC6339E317F046C2FCB56AB124BB57C6943A7D807BCF36EFAED2357311926",
+            "productionSha256": "44CD4F21B6B0E790E0B29D643E753680DBD16AB320FDA79780D94A1F91742514",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueArithmetic",
+            "scratchSha256": "EF4887BE308A32CCDAEE69803CC82F4C7A92A0295725DDFC5C3E958253AB0D37",
+            "productionSha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeGauss",
+            "scratchSha256": "2C065FED10955848CDC57581FADAD21DD95EF28674396E5BE308325B988A3A45",
+            "productionSha256": "8EC71620BD70DA742D2F8C1A19DAD774B5150BFA2A176FC0B4B31F51ECD76E63",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueHecke",
+            "scratchSha256": "3D931B062C77E9897CD0B6789D1272FABD9220C6E783D8FA3EE0CDD7139C7D03",
+            "productionSha256": "7F2E69FFC3425E551E2244860DA0BACA0475F906701CCACA4B124EBE1C282185",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueHeckeFinite",
+            "scratchSha256": "BB9E9448B29FB5C333B6A88A8404F022DB84A7CF600ECEB32D151E9A573C8C0C",
+            "productionSha256": "A6182B724FB3CAE2D3D9476770BB1A34CF3A482725A08899A113E9F24D0CBD66",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueFrobenius",
+            "scratchSha256": "06E34658052283529092F5B545115FF5A2EFC83735D087C373C094BD28641C17",
+            "productionSha256": "A2A0642E7F93BBCCAB319325D64981D53DDC10E1642B473011AA8814E22550A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResiduePlaces",
+            "scratchSha256": "2AB4A8EF29D2066923BAE29E039F729E570A80D456B7BE905525945142046A84",
+            "productionSha256": "B1C2656F821E9918655BCB1F67993677D4DE402EC25C7757D1FA2477B968F7EA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResiduePlaceOrders",
+            "scratchSha256": "BE7E40B93BC3BE5BF1FA9C293D51A80FB4CC559022FCD34C28EA026FD4211A7C",
+            "productionSha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueFrobeniusPlaces",
+            "scratchSha256": "7C9F62FD05CD72426F3B8DA4552EDE4D42DB4CE3263A9C5D09B8BA18774DB57D",
+            "productionSha256": "7012C6D4853BF5D0CE4606C2D22CC1F32B6543FAE9772491A9732835625AC01F",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 218 distinct names from 218 exhaustive scratch checks are retained: 218 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The arithmetic Frobenius action on constants remains an explicit premise. Residue degree upper bounds and finite maps do not establish degree equality or genus preservation. The original Hecke norm reduction identity, compatible original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain; thus the original geometric Tate Frobenius quadratic and inertia realization remain unproved. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN; all twenty acceptance tests unchanged."
+  },
+  "receipt9046": {
+    "recordedUTC": "2026-10-28T17:07:16.392295+00:00",
+    "log": "logs/dubon-build-20261028-084418-684.log",
+    "sha256": "49428569D0E0933B869B637841718A74CDC90AED0A2DDC1DC68CC195DCFA4F12",
+    "bytes": 14897762,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9046,
+    "projectTheorems": 57466,
+    "registeredConsumers": 26513,
+    "registeredConstructions": 2836,
+    "declarations": 35334,
+    "generated": 36514,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_083909.log",
+    "foundationSha256": "795101C83F0DF40E6D079B328A8BFB89C624E024B57E2CE161D1E6E42F07C034",
+    "countReconciliation": {
+      "previousTheorems": 57249,
+      "focusedTheorems": 218,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.GammaOne.qExpFunctionFieldC.eq_1"
+      ],
+      "addedTheorems": 217,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionGlobalOwnership9046.log",
+      "globalOwnershipSha256": "4CE08E9C11E44D5D531A844C9ED2ABFADA16EA5F12B557A243301153FB0E3F19",
+      "globalOwnershipSourceSha256": "38EDEFC5B76A2A4E32752DFD048DE3F71E473FA0551B511EBDC340D2D5E05F14",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionOwnership9046.log",
+      "ownershipSha256": "1650927161F0189F7E274AD674952425A38A98ACD2857E8EBD74153BC7CB9302"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 218,
+      "scratchDistinct": 218,
+      "generatedNameRenamings": {},
+      "productionFocused": 218,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneGaussCriterion",
+            "SourceGammaOneGaussValuation",
+            "SourceGammaOneGaussResidueHom",
+            "SourceGammaOneGaussResidueKernel",
+            "SourceGammaOneGaussConstants",
+            "SourceGammaOneGaussResidueImage",
+            "SourceGammaOneRegularProlongation",
+            "SourceGammaOneResidueJCoordinate",
+            "SourceReductionResidueCoordinateFinite",
+            "SourceGammaOneResidueCoordinateFinite"
+          ],
+          "count": 88,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionScratchOwnership1278b.log",
+            "sha256": "B6FDAFF3B4C8FB257315AD7944B3F4A82CE7D000FA73D093E391358064DC7C3C",
+            "sourceSha256": "644B54F516F68933ECDD891B7FDAEFBD788748F1D2B9A7EAA1B429F138DFC0AB"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResidueSeparability",
+            "SourceGammaOneDecompositionGauss",
+            "SourceGammaOneResidueArithmetic",
+            "SourceGammaOneHeckeGauss",
+            "SourceGammaOneResidueHecke",
+            "SourceGammaOneResidueHeckeFinite"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityScratchOwnership1285.log",
+            "sha256": "CF23D6DC46008FE5E9AC1747FFADA0E86D2BCC042494CA2AEE33E1DFE3DEBBBC",
+            "sourceSha256": "D6365005A512ACA20398D5BC1D933D4DF73A62721FCF3CD41152BB51103AE838"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResidueFrobenius"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusScratchOwnership1287.log",
+            "sha256": "BD6A048C49C3EE1EA5ECA93AC52BEFB00E68695A9D42E019A2ED7260AF91E1F2",
+            "sourceSha256": "3B739437C3A4587086414BD501B5EAD544F6E17710DFD807E973C6E3226D06DF"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneResiduePlaces",
+            "SourceGammaOneResiduePlaceOrders",
+            "SourceGammaOneResidueFrobeniusPlaces"
+          ],
+          "count": 45,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesScratchOwnership1291.log",
+            "sha256": "DD73D8F5DE2FD50D991311063C375A3A97916016F1A0D25AE1F90954C8183099",
+            "sourceSha256": "51A894EF4F78DDB926FE95CA89B3671DDDA001B8D8DD2C2FCB71CBC3DD368FF7"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionOwnership9046.log",
+        "sha256": "1650927161F0189F7E274AD674952425A38A98ACD2857E8EBD74153BC7CB9302",
+        "sourceSha256": "C475E22C51648B2D33674DB6DF8C0C0AAF621F1DCFC87B83CAA50E988568DC41"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-071255-806.log",
+        "sha256": "483332F196E82E3088DA802EC2FC589A4EAE682676B201092E143D6EA4EE6C21"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneGaussCriterion",
+            "scratchSha256": "A32935B4FCC1CC0C78410576050E398CA82E413BBDF22D620105B933DFCE72DA",
+            "productionSha256": "47FB4B59B41045E77C2B65AAA666FF7540EF911FD425E796BB1ED62B5A82695C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussValuation",
+            "scratchSha256": "E0A11E497B1D83C24E35139D4E6A6238FE48E11A05A5BA30CA0D563234D4E9B2",
+            "productionSha256": "A1DCECA740CE61AD0DB2FA3E2CA880E73D462076F899664F1E444B8A0893C0A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueHom",
+            "scratchSha256": "633BE0AA494C7211D3E1853583C41ED235B35D127175A811D57D5ECBE9367AC1",
+            "productionSha256": "D595136BD2E092F90D44AFB1D4F83341F21FA74680BACA4422DB3B33F163510C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueKernel",
+            "scratchSha256": "D9A034E50E52F2AF9E252E0BF6829D7868D4F080D5A6D5B19A8BBE13A30E71EB",
+            "productionSha256": "523E5BFBDD96345F76CD2106D99424F923645DF0AA60D8275FB9FC849A3E0826",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussConstants",
+            "scratchSha256": "64A9926E8377C8F460E47851030383510B268FAAA55E1B4416BB113DE714CB0B",
+            "productionSha256": "4D97CDBC589DAE9B1DF525E5DB38452517FD07B25523090A7091A39AA5236AFF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGaussResidueImage",
+            "scratchSha256": "78C7F9E854230818500C42AAD0002D4C2C3C7F9C6CD7C442A914933DC94A9B60",
+            "productionSha256": "1413B2151C8AF8F4B6B3B39C063FAE0E20EE74ADF94C6F14C37984A27EB6E2D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularProlongation",
+            "scratchSha256": "B3F6F92CA46B2EADEFE2DF283922CBD8EEC80CC07B022C37CC059A70B6C529D3",
+            "productionSha256": "E29D2C85EC694592A1A7F2FDE7DBC2D521B01CCD3E1A35FC7EC762F04B8CE8D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueJCoordinate",
+            "scratchSha256": "ED39384097D7F7E2A501E72CCFB116E260667D9CA51627D5E20FEC6E881E29FB",
+            "productionSha256": "DF7356B7AD2DA13122BDFE1744110D6D871FDD3F164B688D04C30F2F38639834",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceReductionResidueCoordinateFinite",
+            "scratchSha256": "C56BE57266B17BF507234ED2C61163845D90A3376735054CB5170B7FF4A74EA9",
+            "productionSha256": "C069FF9B8AF97B1A190263FA2DBB2C9D6F0C58139E3BB2634B65BFEF80E3891D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueCoordinateFinite",
+            "scratchSha256": "55A0A669F12B029D133DFD4607C53D6AB54B1F33FB4D48E596ED5913299191F6",
+            "productionSha256": "3529C3661EE21C8B1BD76A554918A71DAC7DDB60A1ECE188ED440A68E40F7921",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueSeparability",
+            "scratchSha256": "2864E32A2D9153D876838C24CFB4246FD35288E255FF411222938BF6250AD18B",
+            "productionSha256": "235D4464583E5F2CBF5F8B68595ECC30431BDCC0F69BC2E057BEC336BD702958",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDecompositionGauss",
+            "scratchSha256": "3DDAC6339E317F046C2FCB56AB124BB57C6943A7D807BCF36EFAED2357311926",
+            "productionSha256": "44CD4F21B6B0E790E0B29D643E753680DBD16AB320FDA79780D94A1F91742514",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueArithmetic",
+            "scratchSha256": "EF4887BE308A32CCDAEE69803CC82F4C7A92A0295725DDFC5C3E958253AB0D37",
+            "productionSha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeGauss",
+            "scratchSha256": "2C065FED10955848CDC57581FADAD21DD95EF28674396E5BE308325B988A3A45",
+            "productionSha256": "8EC71620BD70DA742D2F8C1A19DAD774B5150BFA2A176FC0B4B31F51ECD76E63",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueHecke",
+            "scratchSha256": "3D931B062C77E9897CD0B6789D1272FABD9220C6E783D8FA3EE0CDD7139C7D03",
+            "productionSha256": "7F2E69FFC3425E551E2244860DA0BACA0475F906701CCACA4B124EBE1C282185",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueHeckeFinite",
+            "scratchSha256": "BB9E9448B29FB5C333B6A88A8404F022DB84A7CF600ECEB32D151E9A573C8C0C",
+            "productionSha256": "A6182B724FB3CAE2D3D9476770BB1A34CF3A482725A08899A113E9F24D0CBD66",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueFrobenius",
+            "scratchSha256": "06E34658052283529092F5B545115FF5A2EFC83735D087C373C094BD28641C17",
+            "productionSha256": "A2A0642E7F93BBCCAB319325D64981D53DDC10E1642B473011AA8814E22550A9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResiduePlaces",
+            "scratchSha256": "2AB4A8EF29D2066923BAE29E039F729E570A80D456B7BE905525945142046A84",
+            "productionSha256": "B1C2656F821E9918655BCB1F67993677D4DE402EC25C7757D1FA2477B968F7EA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResiduePlaceOrders",
+            "scratchSha256": "BE7E40B93BC3BE5BF1FA9C293D51A80FB4CC559022FCD34C28EA026FD4211A7C",
+            "productionSha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueFrobeniusPlaces",
+            "scratchSha256": "7C9F62FD05CD72426F3B8DA4552EDE4D42DB4CE3263A9C5D09B8BA18774DB57D",
+            "productionSha256": "7012C6D4853BF5D0CE4606C2D22CC1F32B6543FAE9772491A9732835625AC01F",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 218 distinct names from 218 exhaustive scratch checks are retained: 218 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The arithmetic Frobenius action on constants remains an explicit premise. Residue degree upper bounds and finite maps do not establish degree equality or genus preservation. The original Hecke norm reduction identity, compatible original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain; thus the original geometric Tate Frobenius quadratic and inertia realization remain unproved. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN; all twenty acceptance tests unchanged."
+  }
+}

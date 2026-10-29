@@ -1,0 +1,177 @@
+import SourceSiegelJacobiFiniteProducts
+import SourceSiegelJacobiGaussProduct
+import SourceSiegelJacobiFiniteIdentity
+import SourceSiegelJacobiProductBounds
+import SourceSiegelJacobiDominatedLimit
+import SourceSiegelJacobiRangeLimit
+import SourceSiegelJacobiProductIdentity
+import SourceSiegelFunction
+import SourceSiegelProductCore
+import SourceSiegelThetaIdentification
+import SourceSiegelHolomorphic
+import SourceSiegelEtaTransform
+import SourceSiegelThetaTransform
+import SourceSiegelInversion
+import SourceSiegelSL2Transformation
+import SourceSiegelLevelShiftFactors
+import SourceSiegelLevelShifts
+import SourceSiegelResidueReduction
+import SourceSiegelProductTransformation
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.one_sub_pow_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_zero_right
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_self
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_of_gt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_succ_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.gauss_q
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.finite_jtp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_pow_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.pow_succ_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_one_sub_pow_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow_real
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.multipliable_pfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_pos
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.le_norm_qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.norm_qfact_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.sum_Icc_eq_tsum_fam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_Icc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.jacobiTheta_two_eq_tprod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun_def
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_level_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.norm_qq_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_one_sub_pow_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_c
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.jtp_term
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qParam_24
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.one_sub_eta_q
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_pref
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_theta_w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq_theta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableOn_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.mdifferentiable_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sqrt_bridge
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.cpow_half_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_T
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_S
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_all
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_level
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.natCast_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_snd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_snd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_fst
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_fst
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.intCast_zmod_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.exists_siegelFun_eq_mul_reduced
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pow_twelve_mul_eq_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.prod_siegelFun_pow_specialLinearGroup_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.fam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.w
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.Law
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceSiegelJacobiFiniteProducts, `SourceSiegelJacobiGaussProduct, `SourceSiegelJacobiFiniteIdentity, `SourceSiegelJacobiProductBounds, `SourceSiegelJacobiDominatedLimit, `SourceSiegelJacobiRangeLimit, `SourceSiegelJacobiProductIdentity, `SourceSiegelFunction, `SourceSiegelProductCore, `SourceSiegelThetaIdentification, `SourceSiegelHolomorphic, `SourceSiegelEtaTransform, `SourceSiegelThetaTransform, `SourceSiegelInversion, `SourceSiegelSL2Transformation, `SourceSiegelLevelShiftFactors, `SourceSiegelLevelShifts, `SourceSiegelResidueReduction, `SourceSiegelProductTransformation]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.one_sub_pow_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_zero_right, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_self, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_of_gt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom_succ_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.gauss_q, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.finite_jtp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_pow_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.pow_succ_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_one_sub_pow_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.summable_norm_neg_pow_real, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.multipliable_pfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_pos, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tprod_pfact_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.le_norm_qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.norm_qfact_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.sum_Icc_eq_tsum_fam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_Icc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.tendsto_sum_range, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.jacobiTheta_two_eq_tprod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun_def, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_level_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.norm_qq_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_one_sub_pow_mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_b_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.multipliable_c, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.jtp_term, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qParam_24, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.one_sub_eta_q, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiable_pref, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_theta_w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableAt_P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_eq_theta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableOn_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.mdifferentiable_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sqrt_bridge, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.eta_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.cpow_half_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.theta_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_T, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_S, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.law_all, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod_add_level_left, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_level, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.natCast_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_snd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_snd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_nat_mul_fst, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.siegelFun_add_int_mul_fst, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.intCast_zmod_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.exists_siegelFun_eq_mul_reduced, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pow_twelve_mul_eq_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.prod_siegelFun_pow_specialLinearGroup_smul]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qfact, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.qbinom, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct.fam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.qa, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.pref, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.sprod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.P, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.w, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.Law, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dS, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.dR]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel function postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel function theorems discovered"
+  logInfo m!"SOURCE SIEGEL FUNCTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceSiegelJacobiFiniteProducts
+#lint in SourceSiegelJacobiGaussProduct
+#lint in SourceSiegelJacobiFiniteIdentity
+#lint in SourceSiegelJacobiProductBounds
+#lint in SourceSiegelJacobiDominatedLimit
+#lint in SourceSiegelJacobiRangeLimit
+#lint in SourceSiegelJacobiProductIdentity
+#lint in SourceSiegelFunction
+#lint in SourceSiegelProductCore
+#lint in SourceSiegelThetaIdentification
+#lint in SourceSiegelHolomorphic
+#lint in SourceSiegelEtaTransform
+#lint in SourceSiegelThetaTransform
+#lint in SourceSiegelInversion
+#lint in SourceSiegelSL2Transformation
+#lint in SourceSiegelLevelShiftFactors
+#lint in SourceSiegelLevelShifts
+#lint in SourceSiegelResidueReduction
+#lint in SourceSiegelProductTransformation

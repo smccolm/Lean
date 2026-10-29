@@ -1,0 +1,57 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 23,
+  "queries": 36,
+  "theorems": 33,
+  "constructions": 3,
+  "exhaustiveScratchChecks": 51,
+  "proofValueChecks": 97,
+  "scopes": 3,
+  "receipts": {
+    "source-gamma-one-specialization-1-scratch-receipt.json": "B4A46110ECE61C258197939EFBDA9E048BACE84F19E216B553680831FAA53534",
+    "source-gamma-one-kummer-1-scratch-receipt.json": "74CFD24CC719EB59E16077D6011357656C1187F0F7796BE0283608F845F98BDF",
+    "source-gamma-one-gauss-norm-1-scratch-receipt.json": "63EACEEE6908866F27421952D186856D26BFC1A3BCA2BDFFE2F78EA14F668A55"
+  },
+  "expectedConsumers": 26617,
+  "expectedConstructions": 2853,
+  "fullGoal": "Actual Gamma1 j-coordinate degree equality and actual genus preservation remain open; this scope is conditional on those geometric equalities. Original norm/place/Picard compatibility and the geometric Tate Frobenius and inertia comparison remain. The Hecke correspondence at the residue prime cannot be assigned good reduction merely from good reduction of its base. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN; all twenty acceptance tests are unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_picard_reduction_9097.py",
+      "sha256": "FF605B73C9F83830C6B715A9F2C8CCB1EEB9EC084C38566F9D483EB3DEDD8D64"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_reduction_production_ownership_9097.py",
+      "sha256": "54CB04B8074E58C846D70E16614414CE8F945FC351E3AA462E6191093828A2F0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_reduction_global_ownership_9097.py",
+      "sha256": "081296D3C03065DE8E7ECBEEE742AC198B67CCC7D7E88FE22A401EDC032CE1F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_picard_reduction_ownership_9097.py",
+      "sha256": "F4410133B2B3460F2A45137329759CB152EA35118280F2426DFDE3F4CC847228"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_picard_reduction_9097.py",
+      "sha256": "65BC344C1A2334226F834F6402EBBAD575285270EA1CF402E0E2C370E250861E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_reduction_9097.ps1",
+      "sha256": "E93589ACCC31C3E6102BEA670373B6C5BDCE17615651A8F8CD0C36999EF6D952"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_picard_reduction_9097.ps1",
+      "sha256": "39876132C082111B70405D1B6208DFB048B5B6CEE64746491375AFAA7BFF8C9E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_picard_reduction_canonical_9097.py",
+      "sha256": "73AD451032329DCC214AE44AA4524CD0E66DF11155A6896A7D0DEB52A7DA4DAE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_picard_reduction_9097.py",
+      "sha256": "D1F48E85CEAC48E09AAA0B5F236DC4C6453792CA1F2B862866F7DB128DEE1BDE"
+    }
+  ],
+  "productionMutation": false
+}

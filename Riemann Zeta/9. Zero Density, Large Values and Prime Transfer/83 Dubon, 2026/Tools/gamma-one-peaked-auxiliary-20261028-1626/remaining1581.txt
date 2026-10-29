@@ -1,0 +1,1 @@
+Final framed deformation-functor assembly, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.

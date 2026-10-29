@@ -1,0 +1,101 @@
+import Dubon2026.SourceGammaOneTateTransfer
+import Dubon2026.SourceGammaOneDiamondQuotientGalois
+import Dubon2026.SourceGammaOneParabolicTransferCriterion
+
+/-! DUB-17/18 -> original all-weight association -> actual finite
+Hecke-character realization. The original transfer kills the proved
+diamond-minus-one relations and hence descends through the actual finite
+Galois quotient. Its Hecke compatibility is retained. The separately
+identified original parabolic-preimage input then yields preimages under
+this descended map; that upstream input is not asserted proved. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+
+private theorem relations_kernel {R W U I : Type*} [CommRing R]
+    [AddCommGroup W] [Module R W] [AddCommGroup U] [Module R U]
+    (D : I → Module.End R W) (α : W →ₗ[R] U) (hD : ∀ i x, α (D i x) = α x) :
+    Submodule.span R (Set.range fun z : I × W => D z.1 z.2 - z.2) ≤ LinearMap.ker α := by
+  apply Submodule.span_le.mpr
+  rintro _ ⟨⟨i, x⟩, rfl⟩
+  change α (D i x - x) = 0
+  rw [map_sub, hD, sub_self]
+
+private theorem descended_intertwining {R W U Z : Type*} [CommRing R]
+    [AddCommGroup W] [Module R W] [AddCommGroup U] [Module R U]
+    [AddCommGroup Z] [Module R Z] (q : W →ₗ[R] Z) (hq : Function.Surjective q)
+    (α : W →ₗ[R] U) (β : Z →ₗ[R] U) (H : Module.End R W)
+    (Hq : Module.End R Z) (H₀ : Module.End R U)
+    (hβ : ∀ x, β (q x) = α x) (hH : ∀ x, Hq (q x) = q (H x))
+    (hα : ∀ x, α (H x) = H₀ (α x)) : β.comp Hq = H₀.comp β := by
+  apply LinearMap.ext
+  intro z
+  obtain ⟨x, rfl⟩ := hq z
+  exact (congrArg β (hH x)).trans ((hβ (H x)).trans
+    ((hα x).trans (congrArg H₀ (hβ x).symm)))
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+theorem binaryTateDiamondRelations_le_transfer_ker (hlarge : 3 < p) :
+    binaryTateDiamondRelations Q p n w ≤ LinearMap.ker (binaryTateOriginalTransfer Q p n w hlarge) := by
+  have hs := relations_kernel (R := ZMod N) (W := T →ₗ[ℤ_[p]] V) (U := H1 V) (I := Gamma0 M)
+    (binaryTateDiamondOperator Q p n w) (binaryTateOriginalTransfer Q p n w hlarge)
+  exact hs (binaryTateOriginalTransfer_diamond Q p n w hlarge)
+
+/-- The original cohomology transfer on the genuine diamond quotient of the arithmetic Tate dual. -/
+def binaryDiamondQuotientOriginalTransfer (hlarge : 3 < p) :
+    ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w) →ₗ[ZMod N] H1 V :=
+  (binaryTateDiamondRelations Q p n w).liftQ (binaryTateOriginalTransfer Q p n w hlarge)
+    (binaryTateDiamondRelations_le_transfer_ker Q p n w hlarge)
+
+theorem binaryDiamondQuotientOriginalTransfer_mk (hlarge : 3 < p) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryDiamondQuotientOriginalTransfer Q p n w hlarge ((binaryTateDiamondRelations Q p n w).mkQ φ) =
+      binaryTateOriginalTransfer Q p n w hlarge φ := rfl
+
+theorem binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining (hlarge : 3 < p)
+    (ell : sourceBinaryHeckePrime (Q * N))
+    (Hq : Module.End (ZMod N) ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : Hq.comp (binaryTateDiamondRelations Q p n w).mkQ =
+      (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell)) :
+    (binaryDiamondQuotientOriginalTransfer Q p n w hlarge).comp Hq =
+      (sourceBinaryH1PrimeOperators (ZMod N) Q w (sourceGammaOneHeckePrimeForget Q N ell)).comp
+        (binaryDiamondQuotientOriginalTransfer Q p n w hlarge) := by
+  have hs := descended_intertwining (R := ZMod N) (W := T →ₗ[ℤ_[p]] V) (U := H1 V)
+    (binaryTateDiamondRelations Q p n w).mkQ (binaryTateDiamondRelations Q p n w).mkQ_surjective
+    (binaryTateOriginalTransfer Q p n w hlarge) (binaryDiamondQuotientOriginalTransfer Q p n w hlarge)
+    (binaryTatePrimeOperators Q p n w ell) Hq
+    (sourceBinaryH1PrimeOperators (ZMod N) Q w (sourceGammaOneHeckePrimeForget Q N ell))
+  have h1 := hs (binaryDiamondQuotientOriginalTransfer_mk Q p n w hlarge)
+  have h2 := h1 (fun φ => LinearMap.congr_fun hH φ)
+  exact h2 (binaryTateOriginalTransfer_hecke Q p n w hlarge ell)
+
+theorem binaryDiamondQuotientOriginalTransfer_parabolic_preimage (hlarge : 3 < p)
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q N w)
+    (x : H1 (sourceBinaryCoefficientRep ℤ Q w))
+    (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w)) :
+    ∃ z : (T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w,
+      binaryDiamondQuotientOriginalTransfer Q p n w hlarge z =
+        sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x := by
+  have h1 := hlift x
+  have h2 := h1 hx
+  obtain ⟨y, hy⟩ := h2
+  let E := binaryTateH1Equiv Q p n w hlarge
+  refine ⟨(binaryTateDiamondRelations Q p n w).mkQ (E.symm y), ?_⟩
+  have he := congrArg (fun z : binaryParabolicH1 Q N w =>
+    sourceGammaOneConstantH1Transfer Q N w z.val) (E.apply_symm_apply y)
+  exact he.trans hy
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

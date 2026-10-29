@@ -1,0 +1,41 @@
+import Dubon2026.SourceGammaOneResidueGeometry
+import Dubon2026.SourceCurveSeparatingGenusMaximum
+import Dubon2026.SourceReductionGenusPoleLifting
+import Dubon2026.SourceReductionGenusIntegralCharts
+import Dubon2026.SourceGammaOneGenusSpecialization
+import Dubon2026.SourceGammaOneOriginalSpecialization
+import Dubon2026.SourceGammaOneKummerDegree
+import Dubon2026.SourceGammaOneKummerGenus
+import Dubon2026.SourceJointSeparableFiniteOverlap
+import Dubon2026.SourceJointSeparableConstants
+import Dubon2026.SourceJointSeparableChartDimension
+import Dubon2026.SourceJointSeparablePoleDimension
+import Dubon2026.SourceJointSeparableGenus
+import Dubon2026.SourceGammaOneKummerResidueGenus
+import Dubon2026.SourceGammaOneKummerPowerLifting
+import Dubon2026.SourceGammaOnePicardPrimeKernel
+import Dubon2026.SourceGammaOnePicardTorsion
+import Dubon2026.SourceReductionCoordinateAutomorphism
+import Dubon2026.SourceGammaOneDiamondGauss
+import Dubon2026.SourceReductionMapReflection
+import Dubon2026.SourceGammaOneHeckeGaussReflection
+import Dubon2026.SourceGammaOneHeckeFractionProduct
+import Dubon2026.SourceGammaOneHeckeGaussNorm
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneResidueGeometry, `Dubon2026.SourceCurveSeparatingGenusMaximum, `Dubon2026.SourceReductionGenusPoleLifting, `Dubon2026.SourceReductionGenusIntegralCharts, `Dubon2026.SourceGammaOneGenusSpecialization, `Dubon2026.SourceGammaOneOriginalSpecialization, `Dubon2026.SourceGammaOneKummerDegree, `Dubon2026.SourceGammaOneKummerGenus, `Dubon2026.SourceJointSeparableFiniteOverlap, `Dubon2026.SourceJointSeparableConstants, `Dubon2026.SourceJointSeparableChartDimension, `Dubon2026.SourceJointSeparablePoleDimension, `Dubon2026.SourceJointSeparableGenus, `Dubon2026.SourceGammaOneKummerResidueGenus, `Dubon2026.SourceGammaOneKummerPowerLifting, `Dubon2026.SourceGammaOnePicardPrimeKernel, `Dubon2026.SourceGammaOnePicardTorsion, `Dubon2026.SourceReductionCoordinateAutomorphism, `Dubon2026.SourceGammaOneDiamondGauss, `Dubon2026.SourceReductionMapReflection, `Dubon2026.SourceGammaOneHeckeGaussReflection, `Dubon2026.SourceGammaOneHeckeFractionProduct, `Dubon2026.SourceGammaOneHeckeGaussNorm]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

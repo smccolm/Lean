@@ -1,0 +1,7 @@
+### Actual original integral inertia restriction — 9 October 2026
+
+The actual integer-ring inclusion intertwines original Galois automorphisms with their restrictions to original normal subfields. Hence actual inertia restricts to the inertia of the genuine contracted integer-ring ideal, with no finiteness hypothesis on the whole extension.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [IntegralInertiaRestriction](Extension/Dubon2026/IntegralInertiaRestriction.lean).

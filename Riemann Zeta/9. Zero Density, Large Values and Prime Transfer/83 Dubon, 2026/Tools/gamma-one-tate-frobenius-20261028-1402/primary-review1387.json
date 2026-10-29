@@ -1,0 +1,26 @@
+{
+  "reviewDate": "2026-10-08",
+  "topic": "Actual determinant laws of matrix representations and their symmetric powers",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "version": "arXiv:0809.0415v2, 18 July 2013",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Sections 1.1 and 1.5, including the matrix representation example before Proposition 1.6",
+      "review": "A polynomial law is a natural family on scalar extensions. Its degree and multiplication identities hold over every commutative coefficient algebra. A representation produces this family by the usual matrix determinant. Checking only the original coefficient ring would be insufficient.",
+      "formalUse": "Construct the actual group-algebra matrix map, its determinant and coefficient-extension family, exact naturality, dimension degree, tensor-extension identification, and original characteristic polynomial. This is only the representation-to-determinant construction, not the converse representation theorem or pseudodeformation representability."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Theorem A and introductory arithmetic lifting discussion",
+      "formalUse": "The determinant construction prepares a component of the remaining arithmetic lifting route. The Galois association, deformation and patching arguments, automorphy lifting, and analytic continuation are not supplied by the new matrix identities."
+    }
+  ],
+  "localApiReview": "Pinned MonoidAlgebra.lift, coefficient mapRingHom, Matrix.detMonoidHom, RingHom.map_det, Matrix.det_smul and Matrix.aeval_self_charpoly. The pinned scalarTensorEquiv assumes a commutative monoid; the actual arbitrary-group scalar-extension equivalence is constructed separately from its original tensor basis.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

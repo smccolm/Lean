@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `originalLocalizedIntegers_map_mem`. -/
+theorem actual_canonical_localized_integer_maps_originalLocalizedIntegers_map_mem_source (a : 𝓞 K) (ha : a ≠ 0)
+    (x : originalLocalizedIntegers K a ha) :
+    algebraMap K L x.val ∈ originalLocalizedIntegers L
+      (algebraMap (𝓞 K) (𝓞 L) a) (originalIntegerMap_ne_zero (L := L) a ha) :=
+  originalLocalizedIntegers_map_mem a ha x
+
+end
+

@@ -1,0 +1,7 @@
+### Actual compact Hausdorff original coefficient rings — 9 October 2026
+
+The actual original completed coefficient ring is compact. Its all-relation ideal is closed by the proved Noetherian compact coefficient theorem, so the original quotient topology is Hausdorff.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalPresentedCoefficientCompactness](Extension/Dubon2026/OriginalPresentedCoefficientCompactness.lean).

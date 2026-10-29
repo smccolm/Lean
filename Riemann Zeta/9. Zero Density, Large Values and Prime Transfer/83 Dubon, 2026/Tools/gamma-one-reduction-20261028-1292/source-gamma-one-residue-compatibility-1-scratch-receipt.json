@@ -1,0 +1,153 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T15:00:03.571430+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResidueSeparability",
+    "SourceGammaOneDecompositionGauss",
+    "SourceGammaOneResidueArithmetic",
+    "SourceGammaOneHeckeGauss",
+    "SourceGammaOneResidueHecke",
+    "SourceGammaOneResidueHeckeFinite"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability.lean",
+      "sha256": "2864E32A2D9153D876838C24CFB4246FD35288E255FF411222938BF6250AD18B",
+      "oleanSha256": "4DEF5971EA0BC601B4202888C829FAC21FCAB799FB45B53E5124872D476FEA5A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability1279b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueSeparability1279b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss.lean",
+      "sha256": "3DDAC6339E317F046C2FCB56AB124BB57C6943A7D807BCF36EFAED2357311926",
+      "oleanSha256": "09B4A9A662581CDFB4583ABC9DEB20BD33BC9C7D9B9D7667F08576C9FDC4B647",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss1280a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionGauss1280a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic.lean",
+      "sha256": "EF4887BE308A32CCDAEE69803CC82F4C7A92A0295725DDFC5C3E958253AB0D37",
+      "oleanSha256": "8C146C751A77C57325A648829912F70F34610B24987B106216DCA69EA2454A0C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic1280a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueArithmetic1280a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss.lean",
+      "sha256": "2C065FED10955848CDC57581FADAD21DD95EF28674396E5BE308325B988A3A45",
+      "oleanSha256": "B03616E8F6470B66A80D33710DD4399F6AA5C6CBE85B289744BE69F15F2B51C1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss1281b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGauss1281b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke.lean",
+      "sha256": "3D931B062C77E9897CD0B6789D1272FABD9220C6E783D8FA3EE0CDD7139C7D03",
+      "oleanSha256": "EB69FB7F6DB0EA3935D8B472E86BBF857C15DCAEA7FC6A4815B30B72857F4831",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke1281b.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHecke1281b.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite.lean",
+      "sha256": "BB9E9448B29FB5C333B6A88A8404F022DB84A7CF600ECEB32D151E9A573C8C0C",
+      "oleanSha256": "9F21580AADFADEE8293083356F41438F5FE9FF311971046C7E1F989397F6A8B4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite1282a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueHeckeFinite1282a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityAudit1.log",
+  "logSha256": "9F527AFC6AD338B85686ECD36E969537F8EC82EEFB44FB002A9463F411298D05",
+  "auditSha256": "D97144A2E98A408A171B8F15E73FB9B592EC506477D8FBD3AEEE7A8EB5147459",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityScratchOwnership1285.log",
+  "ownershipSha256": "CF23D6DC46008FE5E9AC1747FFADA0E86D2BCC042494CA2AEE33E1DFE3DEBBBC",
+  "exhaustiveTheorems": 70,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 39,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityDependencyAudit1.log",
+  "dependencyAuditSha256": "C37852119EAEC24E4BE09FB30A76CCACB4ED0B6D7B3839461B10231F8CE8B9B8",
+  "dependencyAuditSourceSha256": "6BEAD2D810B81BB4AC1210A79060DD94FB49432362FF7DF1C6584EEC0B0A1B07",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic realization -> original geometric Tate Frobenius/inertia -> equivariant original good reduction, finite residue Hecke correspondence and Picard torsion specialization.",
+  "discharged": [
+    "The actual original Gamma1 residue j-coordinate separates the finite residue function field over perfect constants; its no-pth-power condition is proved from the literal Laurent pole.",
+    "The original arithmetic decomposition action preserves the constructed valuation. Literal reduction is equivariant; inertia fixes its actual residue image, and arithmetic Frobenius reduces by raising coefficients to the residue characteristic power.",
+    "Both original Gamma1 Hecke maps restrict to the constructed valuation and induce the actual inclusion and q-substitution on residue fields, with exact reduction compatibility. Both residue field maps are proved finite using original finite-coordinate inputs."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Function-level arithmetic/Hecke reduction and finite residue maps do not prove degree equality, genus preservation, place/Picard specialization, prime-to-residue torsion injectivity, or the two geometric Frobenius components. The original geometric Tate quadratic and inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-compatibility-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "E15A748AD130C9665EF712CC25BB913DE872F57E00085A86976DDDFD73B5B76A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

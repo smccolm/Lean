@@ -1,0 +1,39 @@
+{
+  "recordedUTC": "2026-10-28T17:23:02.456674+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate Frobenius -> Hecke norm reduction -> the two-input Laurent product and exact arithmetic diamond norm.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeNormReduction.lean",
+      "sha256": "938DB4594404EBBD1AFFECC3678DEAB0F93A17ED9CBB9B2E27030CA3EFC5755C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeLaurentNormExtraction.lean",
+      "sha256": "E02BC3F001113716FB476E399329C50B96401E4CCCC345BFA7806A6C1C27D6CE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeLaurentProductReduction.lean",
+      "sha256": "E62A2F566AEAE2401E0D7EC746ED1C8278E6312B022D8D7EDC0223BA03EBD534"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckePrimeRootReduction.lean",
+      "sha256": "86112EA6C6EA5A112C7001D2B03D9E31AAC158CA10E83F0B36A30574B3D68E58"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentFrobenius.lean",
+      "sha256": "BF17EF6BBB546B763DF392A2F04B8C6C4D234D243A1EE799D97B2FF800217F25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientReindex.lean",
+      "sha256": "605C38843DBB0C9BE3482E0E101F5E57E73DE4E8C8CCAF7FFEF57870CE8A3599"
+    }
+  ],
+  "shorterRoute": "Reuse the existing primitive-root valuation unit, characteristic-p twist collapse, Laurent Frobenius and coefficient unexpansion. The necessary adaptation has exactly two integral Laurent inputs: the actual diamond image and the original function. The already proved actual beta norm product discharges the product hypothesis. No new valuation or norm infrastructure is introduced; integral preservation by the diamond is not assumed silently.",
+  "assumptionsToDischarge": [
+    "Given integral Laurent representatives of an original function and its actual arithmetic diamond image, the genuine Hecke norm has an integral representative with the exact coefficient-Frobenius-times-q-Frobenius residue. The norm product, complete embeddings, reverse-map identity and diamond label are no longer premises."
+  ],
+  "remaining": "An integral representative of the actual diamond image remains an explicit narrower input. It must be constructed from input integrality alone before claiming unconditional integral norm reduction. Residue degree equality, genus preservation, original-to-residue place/Picard specialization and torsion injectivity remain, hence original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

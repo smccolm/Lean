@@ -1,0 +1,30 @@
+import SourceTateDualArithmeticQuadratic
+import SourceGammaOneArithmeticFrobenius
+import SourceGammaOneGeometricArithmeticFrobenius
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq]
+  let localModules : Array Name := #[`SourceGammaOneResidueGeometry, `SourceCurveSeparatingGenusMaximum, `SourceReductionGenusPoleLifting, `SourceReductionGenusIntegralCharts, `SourceGammaOneGenusSpecialization, `SourceGammaOneOriginalSpecialization, `SourceGammaOneKummerDegree, `SourceGammaOneKummerGenus, `SourceJointSeparableFiniteOverlap, `SourceJointSeparableConstants, `SourceJointSeparableChartDimension, `SourceJointSeparablePoleDimension, `SourceJointSeparableGenus, `SourceGammaOneKummerResidueGenus, `SourceGammaOneKummerPowerLifting, `SourceGammaOnePicardPrimeKernel, `SourceGammaOnePicardTorsion, `SourceReductionCoordinateAutomorphism, `SourceGammaOneDiamondGauss, `SourceReductionMapReflection, `SourceGammaOneHeckeGaussReflection, `SourceGammaOneHeckeFractionProduct, `SourceGammaOneHeckeGaussNorm, `SourceGammaOneArithmeticCharts, `SourceGammaOneSpecializationCharts, `SourceGammaOneDecompositionCharts, `SourceGammaOneConstantReductionCharts, `SourceGammaOneSpecializationEquivariance, `SourceGammaOneInertiaPlaceReduction, `SourceGammaOneInertiaPicard, `SourceGammaOneTateInertia, `SourceGammaOneHeckePrincipalNorm, `SourceGammaOneResidueDivisors, `SourceGammaOneHeckeResidueNorm, `SourceGammaOneIntegralDivisorReduction, `SourceGammaOneHeckeIntegralAgreement, `SourceGammaOneHeckeTorsionDivisors, `SourceGammaOneResiduePicard, `SourceGammaOneReductionPicardEquivariance, `SourceGammaOneNormDiamondOrientation, `SourceGammaOneHeckePicardDescent, `SourceGammaOneHeckeTorsionPicard, `SourceTorsionReductionDiamond, `SourceGammaOnePicardFrobeniusRelation, `SourceTateTorsionQuadratic, `SourceGammaOneTateFrobeniusRelation, `SourceTateDualArithmeticQuadratic, `SourceGammaOneArithmeticFrobenius, `SourceGammaOneGeometricArithmeticFrobenius]
+  let required : Array Name := #[`Dubon2026.sourceTateDual_arithmetic_quadratic, `Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq, `Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square, `Dubon2026.homogeneousHeckeDiamond_square, `Dubon2026.binaryHomogeneousMonomialBasis_diagonal_ring, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm, `Dubon2026.TateModule.tateMap_diamond_quadratic, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the original all-weight inverse-action Frobenius polynomial Y*Hdual = Y*Y + ell^(w+1), where Y uses ell times the native Hecke coefficient matrix and inverse actual Tate Galois action. The literal twisted Picard relation is derived from the norm and specialization, and native homogeneous coefficients give the weight. Coordinate-degree, genus preservation and combined-diamond fixedness remain explicit; the global Galois representation and character realization are not claimed; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-10-29T00:47:01.523656+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean",
+      "sha256": "36FBEB3C8E9B6970D48A84C5B75EBC6B701345FFBCCB081CCB6126D178114586",
+      "bytes": 8895
+    },
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean",
+      "sha256": "88D31F3916831DCD184549083A83129C5C5794910E2CC9642BB0001DE5E651B9",
+      "bytes": 4293
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean",
+      "sha256": "D472F011AD0103224C525D7A9095D7460D1401660D170ACC49A45005B593F1A0",
+      "bytes": 6983
+    },
+    {
+      "path": "P2M/Sol/S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean",
+      "sha256": "5BEF789DA735B82931C6D2F5F0B130FE918F9298E03B1939D12AB2D05168774E",
+      "bytes": 8450
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

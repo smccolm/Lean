@@ -1,0 +1,27 @@
+import Dubon2026.HomogeneousDiagonalAction
+import Dubon2026.SourceBinaryH1HeckeCommute
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> genuine
+cyclotomic coefficient action on the original homogeneous module. Reuse
+the proved general-linear representation and actual unit diagonals; its
+value is exactly one cyclotomic scalar times the native Hecke matrix. -/
+namespace Dubon2026
+noncomputable section
+open MvPolynomial
+variable (R : Type*) [CommRing R] (w : ℕ)
+
+/-- The finite cyclotomic coefficient representation needed by arithmetic Frobenius. -/
+def sourceCyclotomicHomogeneousAction : Rˣ →* Module.End R (homogeneousSubmodule (Fin 2) R w) where
+  toFun u := (u : R) • homogeneousGLRepresentation w (gl2UnitDiagonalPair u 1)
+  map_one' := by simp only [Units.val_one, gl2UnitDiagonalPair_one, map_one, one_smul]
+  map_mul' u v := by
+    change ((u : R) * (v : R)) • homogeneousGLRepresentation w (gl2UnitDiagonalPair (u * v) 1) = _
+    rw [smul_mul_smul_comm, ← map_mul, gl2UnitDiagonalPair_mul, one_mul]
+
+theorem sourceCyclotomicHomogeneousAction_apply (u : Rˣ) :
+    sourceCyclotomicHomogeneousAction R w u =
+      (u : R) • homogeneousMatrixAction w (Matrix.diagonal ![(u : R), 1]) := by
+  rfl
+
+end
+end Dubon2026

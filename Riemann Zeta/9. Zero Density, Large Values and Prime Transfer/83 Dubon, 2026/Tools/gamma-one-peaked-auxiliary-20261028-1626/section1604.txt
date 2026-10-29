@@ -1,0 +1,7 @@
+### Actual original inertia in the actual rational arithmetic group — 9 October 2026
+
+The genuine integer-ring inertia subgroup is defined inside the same original rational arithmetic Galois group used by the deformation constructions. Its closedness follows in the actual Krull topology. The proved whole-union inertia theorem shows that every original nonzero prime outside the exceptional integer has trivial inertia in this exact group, with its original rational scalar structure retained.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RationalArithmeticInertia](Extension/Dubon2026/RationalArithmeticInertia.lean).

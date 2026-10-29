@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-10-29T00:17:12.359267+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_coeff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-depth-1495\\S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegral_level_pow_mul_qExpansion_slash_coeff.lean",
+      "sha256": "98D5D3DF7E68AB494853772E113F03E80B7D825954CCBADDC7881941931415F3",
+      "bytes": 36630
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

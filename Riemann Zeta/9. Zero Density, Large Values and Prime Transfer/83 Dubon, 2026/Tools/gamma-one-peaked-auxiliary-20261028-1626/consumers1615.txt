@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `arithmeticLocalFirstOrderClass_eq_iff`. -/
+theorem actual_arithmetic_local_first_order_classes_arithmeticLocalFirstOrderClass_eq_iff_source (a : 𝓞 ℚ)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P ≤ ρ.ker)
+    (τ υ : ArithmeticLocalFirstOrderLift a ρ P) :
+    arithmeticLocalFirstOrderClass a ρ hρ P hP τ = arithmeticLocalFirstOrderClass a ρ hρ P hP υ ↔
+      MatrixFirstOrderStrictlyConjugate ρ τ.val.val υ.val.val :=
+  arithmeticLocalFirstOrderClass_eq_iff a ρ hρ P hP τ υ
+
+end
+

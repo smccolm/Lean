@@ -1,0 +1,47 @@
+import SourceGammaOneHeckePicardDescent1381f
+import SourceGammaOneHeckeTorsionDivisors1374a
+import SourceGammaOneResiduePicard1375a
+import SourceGammaOneNormDiamondOrientation1377b
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> exact Hecke
+specialization on finite Picard torsion. Descend the proved integer-divisor
+identity through the native quotient, retaining the inverse matrix lift in
+the existing Picard diamond convention. The norm lift has label p-inverse;
+the Picard lift has label p by the separately proved inverse identity. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup ConstantField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M p : ℕ) [NeZero M] [Fact p.Prime]
+  [CharP (IsLocalRing.ResidueField A) p]
+local notation "Γ" => Gamma1 M
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq
+    (hcop : Nat.Coprime M p)
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ p) :
+    ∃ g : Gamma0 M, (p : ZMod M) * (g.val 1 1 : ZMod M) = 1 ∧
+      ∀ (R : ConstantReduction A FF Fb), R.toRegularProlongation = regularProlongation A Γ →
+        ∀ (x : Pic0 Qbar FF) (m : ℕ), m ≠ 0 → m • x = 0 →
+          R.pic0Map (heckePicard Qbar M p x) =
+            decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d
+              (R.pic0Map (arithmeticDiamondPicard M g⁻¹ x)) +
+            p • decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d⁻¹
+              (R.pic0Map x) := by
+  run_tac Lean.logInfo "obtain norm"
+  obtain ⟨g, hlabel, hdiv⟩ :=
+    exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq A M p hcop hdeg d hd
+  run_tac Lean.logInfo "introduce data"
+  refine ⟨g, hlabel, fun R hR x m hm hx => ?_⟩
+  run_tac Lean.logInfo "represent quotient"
+  obtain ⟨D, rfl⟩ := Pic0.mk_surjective x
+  run_tac Lean.logInfo "apply descent"
+  exact hecke_picard_reduction_mk_of_divisor_eq A M p R g d D (hdiv R hR D m hm hx)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

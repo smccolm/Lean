@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ContinuousFixedDeterminantClasses",
+  "mathematics": "The actual pointwise trace of continuous adjoint cocycles vanishes on every original coboundary, so it descends to original continuous H1. Its genuine kernel contains the class of an original continuous first-order lift exactly when that entire lifted determinant is the constant dual-number lift of the original residual determinant.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact pinned production ContinuousAdjointCohomology, FixedDeterminantFirstOrderLift, ArithmeticUnramifiedFirstOrderCriterion and ArithmeticContinuousAdjointFinite definitions and theorem bodies inspected. Uses actual trace-additivity and quotient descent; no external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf",
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Actual trace kernel in continuous adjoint H1 and its intersection with the original inertia restriction kernel. No unproved comparison with H1 of trace-zero coefficients, full Selmer, modular association or patching.",
+  "livePrimaryRecheck": "actual-local-first-order-route-20261009.json; Kisin 1.1.2/1.3.1 and Bellovin 3.1/4.1 read. Citations provide background, not Lean proof evidence.",
+  "productionFixes": [
+    "Used explicit original source/target modules and identity scalar map in Submodule.liftQ, following the existing ContinuousAdjointRestriction construction. This resolves an elaboration timeout without changing the actual quotient or raising limits."
+  ],
+  "productionLog": "fixedDetClasses1613b-focus.log"
+}

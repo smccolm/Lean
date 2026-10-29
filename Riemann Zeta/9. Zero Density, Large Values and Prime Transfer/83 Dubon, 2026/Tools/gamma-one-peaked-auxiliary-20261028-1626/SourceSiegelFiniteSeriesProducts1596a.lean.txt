@@ -1,0 +1,71 @@
+import Dubon2026.SourcePowerSeriesProduct
+import SourceIntegralTracePowerCoefficients
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> integral finite Siegel product.
+Reuse the native exact q-series product and the audited trace coefficient
+algebra. Only finite powers/products needed by the actual auxiliary are added.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion
+noncomputable section
+open Complex Filter Finset Topology
+
+variable (h : ℝ) (hh : 0 < h)
+
+/-- Exact q-series realization on the upper half-plane. -/
+def Expands (A : PowerSeries ℂ) (F : UpperHalfPlane → ℂ) : Prop :=
+  ∀ τ : UpperHalfPlane, HasSum (fun m : ℕ => PowerSeries.coeff m A * Function.Periodic.qParam h (τ : ℂ) ^ m) (F τ)
+
+variable {h}
+
+theorem Expands.one : Expands h 1 (fun _ => 1) := by
+  intro τ
+  have : (fun m : ℕ => PowerSeries.coeff m (1 : PowerSeries ℂ) * Function.Periodic.qParam h (τ : ℂ) ^ m) =
+      fun m => if m = 0 then 1 else 0 := by
+    funext m; rw [PowerSeries.coeff_one]; split_ifs with hm <;> simp [hm]
+  rw [this]
+  simpa using hasSum_ite_eq 0 (1 : ℂ)
+
+include hh in
+theorem Expands.mul {A B : PowerSeries ℂ} {F G : UpperHalfPlane → ℂ} (hA : Expands h A F) (hB : Expands h B G) :
+    Expands h (A * B) (fun τ => F τ * G τ) :=
+  fun τ => Dubon2026.SourceFunctionField.Realized.hasSum_qParam_mul h hh A B F G hA hB τ
+
+include hh in
+theorem Expands.pow {A : PowerSeries ℂ} {F : UpperHalfPlane → ℂ} (hA : Expands h A F) (k : ℕ) :
+    Expands h (A ^ k) (fun τ => F τ ^ k) := by
+  induction k with
+  | zero => simpa using (Expands.one (h := h))
+  | succ k ih =>
+    have := Expands.mul hh ih hA
+    simpa [pow_succ] using this
+
+include hh in
+theorem Expands.prod {ι : Type*} (s : Finset ι) {A : ι → PowerSeries ℂ} {F : ι → UpperHalfPlane → ℂ}
+    (hAF : ∀ i ∈ s, Expands h (A i) (F i)) :
+    Expands h (∏ i ∈ s, A i) (fun τ => ∏ i ∈ s, F i τ) := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simpa using (Expands.one (h := h))
+  | insert a s ha ih =>
+    have := Expands.mul hh (hAF a (Finset.mem_insert_self a s)) (ih fun i hi => hAF i (Finset.mem_insert_of_mem hi))
+    simpa [Finset.prod_insert ha] using this
+
+
+theorem coeff_prod_mem {R : Subring ℂ} {ι : Type*} (s : Finset ι)
+    (A : ι → PowerSeries ℂ) (h : ∀ i ∈ s, ∀ n, PowerSeries.coeff n (A i) ∈ R) (n : ℕ) :
+    PowerSeries.coeff n (∏ i ∈ s, A i) ∈ R := by
+  classical
+  induction s using Finset.induction_on with
+  | empty =>
+    simp only [Finset.prod_empty, PowerSeries.coeff_one]
+    split_ifs <;> simp [R.one_mem, R.zero_mem]
+  | insert a s ha ih =>
+    rw [Finset.prod_insert ha]
+    exact Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem
+      (h a (Finset.mem_insert_self a s)) (fun m => ih (fun i hi => h i (Finset.mem_insert_of_mem hi)) m) n
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion

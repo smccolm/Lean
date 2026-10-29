@@ -1,0 +1,92 @@
+import Mathlib.NumberTheory.ZetaValues
+import Mathlib.Data.ZMod.Basic
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary form -> finite
+Bernoulli-order separation. Reuse Mathlib's proved Bernoulli Fourier
+series to express the literal integer-normalized weight. This is the
+specific finite-dimensional spanning prerequisite of the source peak;
+no auxiliary form or cusp-order separation is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+The upstream raised heartbeat option is not adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+
+/-- The integer-normalized second Bernoulli weight determining the Siegel-product cusp order. -/
+def wt (N : ℕ) (t : ℕ) : ℤ := 6 * (t : ℤ) ^ 2 - 6 * (N : ℤ) * (t : ℤ) + (N : ℤ) ^ 2
+
+theorem wt_cast (N t : ℕ) : (wt N t : ℝ) = 6 * (t : ℝ) ^ 2 - 6 * (N : ℝ) * t + (N : ℝ) ^ 2 := by
+  unfold wt; push_cast; ring
+
+theorem eval_map_bernoulli_two (x : ℝ) :
+    (Polynomial.map (algebraMap ℚ ℝ) (Polynomial.bernoulli 2)).eval x = x ^ 2 - x + 1 / 6 := by
+  simp [Polynomial.bernoulli, Finset.sum_range_succ, bernoulli_one, bernoulli_two, Polynomial.eval_monomial]
+  ring
+
+theorem hasSum_cos_div_sq {x : ℝ} (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    HasSum (fun n : ℕ => 1 / (n : ℝ) ^ 2 * Real.cos (2 * π * n * x)) (π ^ 2 * (x ^ 2 - x + 1 / 6)) := by
+  have h := hasSum_one_div_nat_pow_mul_cos one_ne_zero hx
+  rw [show 2 * 1 = 2 from rfl, eval_map_bernoulli_two] at h
+  have e : ((-1 : ℝ) ^ (1 + 1) * (2 * π) ^ 2 / 2 / ((Nat.factorial 2 : ℕ) : ℝ)) = π ^ 2 := by
+    norm_num [Nat.factorial]; ring
+  rw [e] at h
+  exact h
+
+theorem hasSum_cos_wt (N t : ℕ) (hN : N ≠ 0) (ht : t ≤ N) :
+    HasSum (fun n : ℕ => 6 * (N : ℝ) ^ 2 / π ^ 2 * (1 / (n : ℝ) ^ 2 * Real.cos (2 * π * n * (t / N))))
+      (wt N t : ℝ) := by
+  have hx : (t : ℝ) / N ∈ Set.Icc (0 : ℝ) 1 := by
+    have hNpos : (0 : ℝ) < N := by exact_mod_cast Nat.pos_of_ne_zero hN
+    exact ⟨by positivity, by rw [div_le_one hNpos]; exact_mod_cast ht⟩
+  have h := (hasSum_cos_div_sq hx).mul_left (6 * (N : ℝ) ^ 2 / π ^ 2)
+  convert h using 1
+  · rfl
+  rw [wt_cast]
+  have hNr : (N : ℝ) ≠ 0 := by exact_mod_cast hN
+  field_simp
+
+variable {N : ℕ} [NeZero N]
+
+/-- The real cosine of the standard additive phase on the actual residue ring. -/
+noncomputable def cosZ (a : ZMod N) : ℝ := Real.cos (2 * π * a.val / N)
+
+theorem cosZ_intCast (m : ℤ) : cosZ ((m : ZMod N)) = Real.cos (2 * π * m / N) := by
+  unfold cosZ
+  have hval : (((m : ZMod N).val : ℤ)) = m % (N : ℤ) := ZMod.val_intCast m
+  have hN : (N : ℝ) ≠ 0 := by exact_mod_cast (NeZero.ne N)
+  have hdecomp : (m : ℝ) = (N : ℝ) * ((m / (N : ℤ) : ℤ) : ℝ) + (((m : ZMod N).val : ℕ) : ℝ) := by
+    have := Int.mul_ediv_add_emod m N
+    have h2 : ((((m : ZMod N).val : ℕ) : ℤ) : ℝ) = (((m : ZMod N).val : ℕ) : ℝ) := by norm_cast
+    rw [← h2, hval]
+    exact_mod_cast this.symm
+  rw [hdecomp]
+  rw [show 2 * π * ((N : ℝ) * ((m / (N : ℤ) : ℤ) : ℝ) + (((m : ZMod N).val : ℕ) : ℝ)) / N
+      = 2 * π * (((m : ZMod N).val : ℕ) : ℝ) / N + ((m / (N : ℤ) : ℤ) : ℝ) * (2 * π) by field_simp; ring]
+  rw [Real.cos_add_int_mul_two_pi]
+
+theorem cosZ_natCast (m : ℕ) : cosZ ((m : ZMod N)) = Real.cos (2 * π * m / N) := by
+  have := cosZ_intCast (N := N) (m : ℤ)
+  push_cast at this
+  exact this
+
+theorem cos_nat_mul_eq_cosZ (n : ℕ) (a : ZMod N) :
+    Real.cos (2 * π * n * (a.val / N)) = cosZ ((n : ZMod N) * a) := by
+  rw [← ZMod.natCast_zmod_val a, ← Nat.cast_mul, cosZ_natCast, ZMod.natCast_zmod_val]
+  push_cast
+  ring_nf
+
+theorem cosZ_neg (a : ZMod N) : cosZ (-a) = cosZ a := by
+  unfold cosZ
+  rw [ZMod.neg_val]
+  split_ifs with h
+  · subst h; simp
+  · have hle : a.val ≤ N := (ZMod.val_lt a).le
+    have hN : (N : ℝ) ≠ 0 := by exact_mod_cast (NeZero.ne N)
+    rw [Nat.cast_sub hle, show 2 * π * ((N : ℝ) - (a.val : ℝ)) / N = 2 * π - 2 * π * (a.val : ℝ) / N by
+      field_simp, Real.cos_two_pi_sub]
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

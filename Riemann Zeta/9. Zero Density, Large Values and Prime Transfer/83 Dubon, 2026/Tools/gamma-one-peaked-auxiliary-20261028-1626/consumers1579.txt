@@ -1,0 +1,42 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {O A B : Type u} [CommRing O] [IsLocalRing O]
+  [CommRing A] [IsLocalRing A] [Algebra O A]
+  [CommRing B] [IsLocalRing B] [Algebra O B]
+
+variable {G ι : Type u} [Group G] [Group.FG G] [Fintype ι] [DecidableEq ι]
+  [IsNoetherianRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [WithIdeal A] [WithIdeal B]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `originalPresentedFramedFiberEquiv_natural`. -/
+theorem actual_original_framed_fiber_naturality_originalPresentedFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA) :
+    (letI := originalPresentedCoefficientRing_isLocal H q σ
+     ∀ f : OriginalContinuousCoefficientFiber (completedPresentationResidueEquiv
+       (originalPresentedResidualRestriction H q σ) q.toMonoidHom.ker) eA,
+       originalPresentedFramedFiberEquiv hB eB H q hq σ
+         (originalCoefficientFiberPostcomp _ eA eB k hk hres f) =
+           originalFramedFiberPostcomp eA eB H σ.toMonoidHom k hk hres
+             (originalPresentedFramedFiberEquiv hA eA H q hq σ f)) :=
+  originalPresentedFramedFiberEquiv_natural hA hB eA eB H q hq σ k hk hres
+
+end
+

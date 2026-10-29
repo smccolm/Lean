@@ -1,0 +1,134 @@
+import SourceSiegelStableCoefficients1581a
+import SourceSiegelProductLocalUniform1582b
+import SourceSiegelProductTaylorExpansion1583b
+import SourceSiegelPolynomialFactors1584b
+import SourceSiegelIntegralCoefficients1585a
+import SourceSiegelQParameter1586a
+import SourceSiegelResidueProductIndices1587a
+import SourceSiegelResidueProductStreams1588b
+import SourceSiegelLeadingUnit1589a
+import SourceSiegelNormalizedProduct1590b
+import SourceSiegelCoefficientSeries1591b
+import SourceSiegelIntegralExpansion1592b
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_succ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coe_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.order_fac_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_mul_fac_of_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_prod_range_fac
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_pp_stable
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.eval_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasProdLocallyUniformlyOn_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.differentiableOn_product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_derivative_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.iteratedDeriv_product_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_coeff_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_two_linear_factors_sub_one_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_norm_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_one_sub_C_mul_X
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.expand
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one_sub_C_mul_X
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.ite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_Pc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_eq_qParam
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_qN_lt_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.q_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qa_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pref_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.multipliable_one_sub_mul_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.neg_natCast_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegel_streams
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_Pc_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_inv_eq_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.N_mul_inv_one_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_one_sub
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.polynomial_product_eq_streams
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegelFun_div_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_coef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_coef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_coef_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_series_nat
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_hasSum_siegelFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.product
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceSiegelStableCoefficients1581a, `SourceSiegelProductLocalUniform1582b, `SourceSiegelProductTaylorExpansion1583b, `SourceSiegelPolynomialFactors1584b, `SourceSiegelIntegralCoefficients1585a, `SourceSiegelQParameter1586a, `SourceSiegelResidueProductIndices1587a, `SourceSiegelResidueProductStreams1588b, `SourceSiegelLeadingUnit1589a, `SourceSiegelNormalizedProduct1590b, `SourceSiegelCoefficientSeries1591b, `SourceSiegelIntegralExpansion1592b]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp_succ, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coe_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.order_fac_sub_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_mul_fac_of_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_prod_range_fac, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_pp_stable, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.eval_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasProdLocallyUniformlyOn_product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.differentiableOn_product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tendstoLocallyUniformlyOn_derivative_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.iteratedDeriv_product_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_coeff_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_eval, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_two_linear_factors_sub_one_le, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc_norm_bound, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeff_one_sub_C_mul_X, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.expand, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.one_sub_C_mul_X, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt.ite, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_Pc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coeffInt_pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_eq_qParam, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_qN_lt_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.q_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qa_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qpow_mul_qa_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pref_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.multipliable_one_sub_mul_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_ite_natCast_eq_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.neg_natCast_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegel_streams, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.tprod_Pc_eval, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.norm_zeta_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_inv_eq_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_zeta_inv, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.N_mul_inv_one_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_one_sub, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.polynomial_product_eq_streams, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.siegelFun_div_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_series_nat, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.exists_integral_hasSum_siegelFun]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.fac, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.pp, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.stableCoeff, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.product, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.Pc, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.CoeffInt, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.qN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE SIEGEL EXPANSION PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceSiegelStableCoefficients1581a
+#lint in SourceSiegelProductLocalUniform1582b
+#lint in SourceSiegelProductTaylorExpansion1583b
+#lint in SourceSiegelPolynomialFactors1584b
+#lint in SourceSiegelIntegralCoefficients1585a
+#lint in SourceSiegelQParameter1586a
+#lint in SourceSiegelResidueProductIndices1587a
+#lint in SourceSiegelResidueProductStreams1588b
+#lint in SourceSiegelLeadingUnit1589a
+#lint in SourceSiegelNormalizedProduct1590b
+#lint in SourceSiegelCoefficientSeries1591b
+#lint in SourceSiegelIntegralExpansion1592b

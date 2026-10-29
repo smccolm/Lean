@@ -1,0 +1,11 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "Ideal.finite_factors for the actual nonzero principal ideal",
+    "Ideal.dvd_iff_le, span_singleton_le_iff_mem and span_singleton_eq_bot"
+  ],
+  "scope": "The specific arithmetic family, its directedness and supremum field, normality, transfer of its original ramification conditions to all actual finite subextensions and required cyclotomic inclusion still require assembly. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionLog": "exceptionalPrimes1557-focus.log"
+}

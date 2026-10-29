@@ -1,0 +1,35 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R S : Type*} [CommRing O] [CommRing R] [IsLocalRing R]
+  [CommRing S] [IsLocalRing S] [Algebra O R] [Algebra O S]
+
+/-- Exact original-object consumer of `localResidueAlgebraMap_surjective`. -/
+theorem actual_local_quotient_residue_localResidueAlgebraMap_surjective_source (f : R →ₐ[O] S) [IsLocalHom f.toRingHom]
+    (hf : Function.Surjective f) : Function.Surjective (localResidueAlgebraMap f) :=
+  localResidueAlgebraMap_surjective f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R : Type*} [CommRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `compactLocalAdicQuotient_maximal_complete`. -/
+theorem actual_local_quotient_residue_compactLocalAdicQuotient_maximal_complete_source
+    [TopologicalSpace R] [IsTopologicalRing R] [CompactSpace R] [T2Space R]
+    [IsNoetherianRing R] (J : Ideal R) [IsLocalRing (R ⧸ J)]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R)) :
+    IsAdicComplete (IsLocalRing.maximalIdeal (R ⧸ J)) (R ⧸ J) :=
+  compactLocalAdicQuotient_maximal_complete J hR
+
+end
+

@@ -1,0 +1,47 @@
+import SourcePeakedDiscriminantSeries
+import SourceSiegelFiniteProductExpansion1601b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> exact leading coefficient.
+Finite coefficient algebra derives integrality and the level-cleared leading
+inverse from the proved Siegel and discriminant series, not from a supplied
+coefficient certificate. Native audited coefficient multiplication and powers
+are reused. The actual monomial-shifted series is defined in its consumer. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients
+noncomputable section
+open Complex UpperHalfPlane PowerSeries Filter Topology FiniteExpansion
+
+theorem isIntegral_phase (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) : IsIntegral ℤ (phase N m) := by
+  refine IsIntegral.of_pow (NeZero.pos N) ?_
+  rw [phase_pow]
+  exact isIntegral_one
+
+theorem phase_ne_zero (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) : phase N m ≠ 0 := by
+  intro h
+  have hc := phase_pow N m
+  rw [h, zero_pow (NeZero.ne N)] at hc
+  exact zero_ne_one hc
+
+theorem phase_inv_eq_pow (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) :
+    (phase N m)⁻¹ = phase N m ^ (N - 1) := by
+  apply inv_eq_of_mul_eq_one_right
+  rw [← pow_succ', Nat.sub_add_cancel (NeZero.pos N), phase_pow]
+
+theorem integral_product_delta (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t n : ℕ) :
+    IsIntegral ℤ (coeff n (productSeries N m * deltaN N ^ t)) := by
+  show coeff n (productSeries N m * deltaN N ^ t) ∈ (integralClosure ℤ ℂ).toSubring
+  exact Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem
+    (fun j => integral_productSeries N m j)
+    (Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem (integral_deltaN N) t) n
+
+theorem integral_level_inverse_phase_leading (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+    (hm : m 0 0 = 0) :
+    IsIntegral ℤ ((N : ℂ) ^ (12 * N * ∑ r : ZMod N, ∑ s : ZMod N, m r s) *
+      (phase N m * coeff 0 (productSeries N m))⁻¹) := by
+  rw [mul_inv, phase_inv_eq_pow]
+  have h := ((isIntegral_phase N m).pow (N - 1)).mul
+    (integral_level_inverse_productSeries_zero N m hm)
+  convert h using 1; ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients

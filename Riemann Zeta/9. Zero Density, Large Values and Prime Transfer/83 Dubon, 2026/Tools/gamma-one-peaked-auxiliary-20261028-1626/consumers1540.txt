@@ -1,0 +1,39 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_isUnramifiedAt_iff_ramificationIdx_one`. -/
+theorem actual_unramified_tensor_image_numberField_isUnramifiedAt_iff_ramificationIdx_one_source
+    (v : HeightOneSpectrum (𝓞 K)) (w : HeightOneSpectrum (𝓞 L))
+    [w.asIdeal.LiesOver v.asIdeal] :
+    Algebra.IsUnramifiedAt (𝓞 K) w.asIdeal ↔
+      v.asIdeal.ramificationIdx w.asIdeal = 1 :=
+  numberField_isUnramifiedAt_iff_ramificationIdx_one v w
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorImage_isIntegralClosure`. -/
+theorem actual_unramified_tensor_image_ambientTensorImage_isIntegralClosure_source [IsDedekindDomain R]
+    [Module.Finite R A] [Module.Finite R B]
+    [Algebra.FormallyUnramified R A] [Algebra.FormallyUnramified R B]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) :
+    IsIntegralClosure (AmbientTensorImage f g) R (FractionRing (AmbientTensorImage f g)) :=
+  ambientTensorImage_isIntegralClosure f g
+
+end
+

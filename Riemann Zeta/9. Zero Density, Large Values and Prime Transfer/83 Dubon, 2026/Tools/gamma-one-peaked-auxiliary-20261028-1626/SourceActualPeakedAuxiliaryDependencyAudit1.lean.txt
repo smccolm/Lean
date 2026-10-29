@@ -1,0 +1,37 @@
+import SourcePeakedDiscriminantSeries
+import SourcePeakedSeriesOperations
+import SourcePeakedShiftedCoefficients
+import SourcePeakedShiftedSeries
+import SourcePeakedWidthOneIdentification
+import SourcePeakedIntegralQExpansion
+import SourcePeakedTranslatedIntegralExpansion
+import SourcePeakedScaledOrders
+import SourcePeakedOrderGapDecay
+import SourceActualPeakedAuxiliary
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd]
+  let localModules : Array Name := #[`SourcePeakedDiscriminantSeries, `SourcePeakedSeriesOperations, `SourcePeakedShiftedCoefficients, `SourcePeakedShiftedSeries, `SourcePeakedWidthOneIdentification, `SourcePeakedIntegralQExpansion, `SourcePeakedTranslatedIntegralExpansion, `SourcePeakedScaledOrders, `SourcePeakedOrderGapDecay, `SourceActualPeakedAuxiliary]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.constantCoeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_discriminant, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.expands_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_X_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_natCast_zpow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.natCast_mem_strictPeriods_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.isIntegral_phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_inv_eq_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_product_delta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_level_inverse_phase_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_adjusted, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_qExpansion_slash_of_nonneg_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.Ord_scaleExponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_level_multiple_peaked_exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_clearing_discriminant_power, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.orderSum_eq_Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_width_one_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.cusp_order_gap_bigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.scaleExponent, `Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit, `Dubon2026.hasSum_pow_dvd_reindex, `Dubon2026.SourceFricke.qParam_one_eq_pow, `Dubon2026.SourceFricke.gammaOne_one_mem_strictPeriods, `Dubon2026.SourceFricke.qExpansion_coeff_width, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj, `ModularFormClass.qExpansion_coeff_unique, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_peaked_exponent_on_actual_cusps, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ACTUAL PEAKED AUXILIARY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual even-weight Gamma1 peaked auxiliary, including proved exponent scaling, discriminant power choice, exact integral coefficients and leading inverse, weight/order gap and separated cusp decay. The auxiliary existence premise is discharged; its trace application, reduced field action and degree/genus preservation remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

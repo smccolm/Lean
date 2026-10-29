@@ -1,0 +1,91 @@
+import SourceSiegelResidueProductIndices
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> integral Siegel expansion.
+These identities connect the literal Siegel factors to the source q
+parameter and residue-selected polynomial products. Native q-parameter
+norm control is reused; no unrelated parameter or limiting theory is
+introduced. Adapted from anthropics/fermats-last-theorem, Apache-2.0,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Complex Filter Topology
+open scoped Real
+
+theorem neg_natCast_eq (N r : ℕ) (hrN : r ≤ N) : -(r : ZMod N) = ((N - r : ℕ) : ZMod N) := by
+  rw [Nat.cast_sub hrN, ZMod.natCast_self, zero_sub]
+
+theorem siegel_streams (N r : ℕ) (hrN : r < N) (ζ ζ' w : ℂ) (hw : ‖w‖ < 1) :
+    (if r = 0 then (1 : ℂ) else (1 - ζ * w ^ r)) *
+      ∏' n : ℕ, ((1 - ζ * w ^ ((n + 1) * N + r)) * (1 - ζ' * w ^ (n * N + (N - r)))) =
+    (∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then (1 - ζ * w ^ (k + 1)) else 1)) *
+    (∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then (1 - ζ' * w ^ (k + 1)) else 1)) := by
+  have hN : 0 < N := lt_of_le_of_lt (Nat.zero_le r) hrN
+
+  have hA : Multipliable fun n : ℕ => 1 - ζ * w ^ ((n + 1) * N + r) :=
+    multipliable_one_sub_mul_pow hw ζ _ fun n => by nlinarith
+  have hB : Multipliable fun n : ℕ => 1 - ζ' * w ^ (n * N + (N - r)) :=
+    multipliable_one_sub_mul_pow hw ζ' _ fun n => by
+      have : N - r ≥ 1 := by omega
+      nlinarith
+  rw [hA.tprod_mul hB]
+
+  have hBeq : (∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then (1 - ζ' * w ^ (k + 1)) else 1))
+      = ∏' n : ℕ, (1 - ζ' * w ^ (n * N + (N - r))) := by
+    rcases Nat.eq_zero_or_pos r with hr0 | hr0
+    · subst hr0
+      simp only [Nat.cast_zero, neg_zero, Nat.sub_zero]
+      rw [tprod_ite_natCast_eq_zero N hN (fun m => 1 - ζ' * w ^ m)]
+      exact tprod_congr fun n => by rw [Nat.succ_mul]
+    · rw [neg_natCast_eq N r hrN.le,
+        tprod_ite_natCast_eq N (N - r) (by omega) (by omega) (fun m => 1 - ζ' * w ^ m)]
+
+  have hAeq : (∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then (1 - ζ * w ^ (k + 1)) else 1))
+      = (if r = 0 then (1 : ℂ) else (1 - ζ * w ^ r)) * ∏' n : ℕ, (1 - ζ * w ^ ((n + 1) * N + r)) := by
+    rcases Nat.eq_zero_or_pos r with hr0 | hr0
+    · subst hr0
+      simp only [Nat.cast_zero, if_true, one_mul, Nat.add_zero]
+      exact tprod_ite_natCast_eq_zero N hN (fun m => 1 - ζ * w ^ m)
+    · rw [if_neg hr0.ne', tprod_ite_natCast_eq N r hr0 hrN (fun m => 1 - ζ * w ^ m)]
+
+      have hA' : Multipliable fun n : ℕ => 1 - ζ * w ^ ((n + 1) * N + r) := hA
+      have := tprod_eq_zero_mul' (f := fun n : ℕ => 1 - ζ * w ^ (n * N + r)) (by
+        simpa using hA')
+      simpa using this
+  rw [hAeq, hBeq, mul_assoc]
+
+theorem tprod_Pc_eval (N : ℕ) (r : ℕ) (hr : r < N) (u v : ℂ) {x : ℂ} (hx : ‖x‖ < 1) :
+    (if r = 0 then 1 - u else 1) *
+      ∏' k : ℕ, ((if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then 1 - u * x ^ (k + 1) else 1) *
+                 (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then 1 - v * x ^ (k + 1) else 1)) =
+    (1 - u * x ^ r) * ∏' n : ℕ, ((1 - u * x ^ ((n + 1) * N + r)) * (1 - v * x ^ (n * N + (N - r)))) := by
+  have hA : Multipliable fun k : ℕ =>
+      (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then 1 - u * x ^ (k + 1) else (1 : ℂ)) := by
+    have hs : Summable fun k : ℕ => ‖(if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N)
+        then 1 - u * x ^ (k + 1) else (1 : ℂ)) - 1‖ := by
+      refine Summable.of_nonneg_of_le (fun k => norm_nonneg _) (fun k => ?_)
+        (((summable_geometric_of_lt_one (norm_nonneg _) hx).mul_left ‖u‖).comp_injective
+          (add_left_injective 1))
+      split_ifs
+      · simp [norm_pow]
+      · rw [sub_self, norm_zero]; exact mul_nonneg (norm_nonneg _) (pow_nonneg (norm_nonneg _) _)
+    simpa using multipliable_one_add_of_summable hs
+  have hB : Multipliable fun k : ℕ =>
+      (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then 1 - v * x ^ (k + 1) else (1 : ℂ)) := by
+    have hs : Summable fun k : ℕ => ‖(if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N)
+        then 1 - v * x ^ (k + 1) else (1 : ℂ)) - 1‖ := by
+      refine Summable.of_nonneg_of_le (fun k => norm_nonneg _) (fun k => ?_)
+        (((summable_geometric_of_lt_one (norm_nonneg _) hx).mul_left ‖v‖).comp_injective
+          (add_left_injective 1))
+      split_ifs
+      · simp [norm_pow]
+      · rw [sub_self, norm_zero]; exact mul_nonneg (norm_nonneg _) (pow_nonneg (norm_nonneg _) _)
+    simpa using multipliable_one_add_of_summable hs
+  rw [hA.tprod_mul hB, ← siegel_streams N r hr u v x hx]
+  split_ifs with h
+  · subst h; simp only [pow_zero, mul_one]; ring
+  · ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

@@ -1,0 +1,95 @@
+{
+  "modules": [
+    "SourceGammaOneResiduePlaces",
+    "SourceGammaOneResiduePlaceOrders",
+    "SourceGammaOneResidueFrobeniusPlaces"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius",
+    "Dubon2026.SourceCurve.Place.eq_ord_of_addHom_of_nonneg_iff",
+    "Dubon2026.SourceCurve.Place.ord_zpow"
+  ],
+  "localModules": [
+    "SourceGammaOneGaussCriterion",
+    "SourceGammaOneGaussValuation",
+    "SourceGammaOneGaussResidueHom",
+    "SourceGammaOneGaussResidueKernel",
+    "SourceGammaOneGaussConstants",
+    "SourceGammaOneGaussResidueImage",
+    "SourceGammaOneRegularProlongation",
+    "SourceGammaOneResidueJCoordinate",
+    "SourceReductionResidueCoordinateFinite",
+    "SourceGammaOneResidueCoordinateFinite",
+    "SourceGammaOneResidueSeparability",
+    "SourceGammaOneDecompositionGauss",
+    "SourceGammaOneResidueArithmetic",
+    "SourceGammaOneHeckeGauss",
+    "SourceGammaOneResidueHecke",
+    "SourceGammaOneResidueHeckeFinite",
+    "SourceGammaOneResidueFrobenius",
+    "SourceGammaOneResiduePlaces",
+    "SourceGammaOneResiduePlaceOrders",
+    "SourceGammaOneResidueFrobeniusPlaces"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneResiduePlaces": "SourceGammaOneResiduePlaces1288a",
+    "SourceGammaOneResiduePlaceOrders": "SourceGammaOneResiduePlaceOrders1289a",
+    "SourceGammaOneResidueFrobeniusPlaces": "SourceGammaOneResidueFrobeniusPlaces1290a"
+  }
+}

@@ -1,0 +1,7 @@
+### Actual finite original continuous homomorphism sets — 9 October 2026
+
+Actual continuous group homomorphisms agreeing on the genuine finite topological generator set agree on the whole original group. Restriction to that finite set is injective, so the entire original continuous homomorphism set into any finite Hausdorff target is finite.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TopologicalGeneratorsFiniteHom](Extension/Dubon2026/TopologicalGeneratorsFiniteHom.lean).

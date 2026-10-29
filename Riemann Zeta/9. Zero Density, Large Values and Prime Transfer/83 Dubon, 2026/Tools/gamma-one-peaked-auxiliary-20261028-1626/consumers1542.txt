@@ -1,0 +1,25 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R A B Ω : Type*} [CommRing R] [CommRing A] [CommRing B] [Field Ω]
+  [Algebra R A] [Algebra R B] [Algebra R Ω]
+
+/-- Exact original-object consumer of `ambientTensorImage_mem_iff_compositum_integral`. -/
+theorem actual_tensor_compositum_integral_closure_ambientTensorImage_mem_iff_compositum_integral_source [IsDedekindDomain R]
+    [Module.Finite R A] [Module.Finite R B]
+    [Algebra.FormallyUnramified R A] [Algebra.FormallyUnramified R B]
+    {L M : Type*} [Field L] [Field M]
+    [Algebra A L] [IsFractionRing A L] [Algebra B M] [IsFractionRing B M]
+    (f : A →ₐ[R] Ω) (g : B →ₐ[R] Ω) (i : L →+* Ω) (j : M →+* Ω)
+    (hi : i.comp (algebraMap A L) = f.toRingHom)
+    (hj : j.comp (algebraMap B M) = g.toRingHom) (x : Ω) :
+    x ∈ AmbientTensorImage f g ↔
+      x ∈ i.fieldRange ⊔ j.fieldRange ∧ IsIntegral R x :=
+  ambientTensorImage_mem_iff_compositum_integral f g i j hi hj x
+
+end
+

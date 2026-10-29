@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "IntegralInertiaClosed",
+  "mathematics": "Open stabilizers for the original Krull topology give a continuous action on the actual integral closure equipped with its discrete topology. The original inertia subgroup is an intersection of closed preimages of the actual ideal under original action differences, hence is closed in the genuine Krull topology even for infinite algebraic extensions.",
+  "boundary": "Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "original-infinite-inertia-draft-review-20261009.json; exact pinned original inertia and ramification APIs inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0BUA",
+    "https://stacks.math.columbia.edu/tag/09E3"
+  ],
+  "sourceBoundary": "Actual finite-subextension inertia interpretation and original restriction; no full inverse-limit exact sequence or complete Selmer comparison claimed.",
+  "productionLog": "closedInertia1603-focus.log"
+}

@@ -1,0 +1,62 @@
+import SourceGammaOneIntegralEisenstein1493b
+import Dubon2026.SourceGammaOneJCoordinate
+
+/-! DUB-17/18 -> original all-weight association -> original Gamma1
+coordinate-degree preservation -> faithful diamond action after reduction.
+The integral Eisenstein forms divided by the original E4 distinguish the
+identity signed diamond class over every coefficient field. This specializes
+the upstream GammaH coset argument to Gamma1 and avoids coset averaging.
+The remaining field-action and degree arguments are separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open scoped MatrixGroups
+open UpperHalfPlane CongruenceSubgroup
+
+private theorem e4_series_ne_zero (K : Type*) [Field K] :
+    intSeriesC K eisenstein4 ≠ 0 := by
+  intro h
+  have h0 := congrArg (fun f : LaurentSeries K => f.coeff 0) h
+  have hz : (1 : K) = 0 := by
+    simpa [intSeriesC, PowerSeries.coeff_coe, eisenstein4] using h0
+  exact one_ne_zero hz
+
+/-- The separating function is a ratio of actual integral weight-four forms. -/
+def ratio (K : Type*) [Field K] (N : ℕ) (c : ZMod N) : LaurentSeries K :=
+  intSeriesC K (integralSeries N c) / intSeriesC K eisenstein4
+
+theorem ratio_mem_original_field (K : Type*) [Field K] (N : ℕ) [NeZero N]
+    (c : ZMod N) (hc : c ≠ 0) : ratio K N c ∈ qExpFunctionFieldC K (Gamma1 N) := by
+  let g : ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) 4 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N)) ModularForm.E₄
+  have hg : IsIntegralQExp g eisenstein4 := qExpansion_E4_eq_map_eisenstein4.symm
+  exact div_mem_qExpFunctionFieldC (normalizedForm N c) g
+    (normalizedForm_integral N c hc) hg (e4_series_ne_zero K)
+
+private theorem one_ne_neg_one (N : ℕ) (hN : 2 < N) : (1 : ZMod N) ≠ -1 := by
+  intro h
+  have h2 : (2 : ZMod N) = 0 := by linear_combination h
+  have hd : N ∣ 2 := (ZMod.natCast_eq_zero_iff 2 N).mp h2
+  exact (not_le_of_gt hN) (Nat.le_of_dvd (by decide) hd)
+
+theorem coefficient_identity_class (N : ℕ) (hN : 2 < N) : coefficient N 1 1 = 1 := by
+  rw [coefficient_one, if_pos rfl, if_neg (one_ne_neg_one N hN), add_zero]
+
+theorem coefficient_other_class (N : ℕ) (c : ZMod N) (hc : c ≠ 1) (hc' : c ≠ -1) :
+    coefficient N c 1 = 0 := by
+  rw [coefficient_one, if_neg (Ne.symm hc), if_neg, zero_add]
+  intro h
+  exact hc' (by linear_combination -h)
+
+theorem ratio_separates_signed_identity (K : Type*) [Field K] (N : ℕ) (hN : 2 < N)
+    (c : ZMod N) (hc : c ≠ 1) (hc' : c ≠ -1) : ratio K N c ≠ ratio K N 1 := by
+  intro h
+  have hn : intSeriesC K (integralSeries N c) = intSeriesC K (integralSeries N 1) :=
+    (div_left_inj' (e4_series_ne_zero K)).mp h
+  have h1 := congrArg (fun f : LaurentSeries K => f.coeff 1) hn
+  have hz : (0 : K) = 1 := by
+    simpa [intSeriesC, PowerSeries.coeff_coe, integralSeries,
+      coefficient_other_class N c hc hc', coefficient_identity_class N hN] using h1
+  exact zero_ne_one hz
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

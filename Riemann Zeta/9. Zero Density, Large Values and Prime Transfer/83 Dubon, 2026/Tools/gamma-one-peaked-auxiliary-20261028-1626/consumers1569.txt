@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω] [IsSepClosed Ω]
+
+/-- Exact original-object consumer of `originalQUnramifiedUnion_openSubgroup_prime_characters_finite`. -/
+theorem actual_unramified_union_open_subgroup_characters_originalQUnramifiedUnion_openSubgroup_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a) :
+    (let U := originalUnramifiedGaloisUnion (Ω := Ω) a
+     letI : Algebra ℚ U := U.algebra'
+     ∀ H : OpenSubgroup Gal(U/ℚ), Finite (H →ₜ* Multiplicative (ZMod p))) :=
+  originalQUnramifiedUnion_openSubgroup_prime_characters_finite a ha p hp hpa
+
+end
+

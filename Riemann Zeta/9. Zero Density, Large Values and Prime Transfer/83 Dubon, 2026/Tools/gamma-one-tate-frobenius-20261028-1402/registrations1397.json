@@ -1,0 +1,13 @@
+[
+  "Dubon2026.matrixFirstOrderCocycle_fromCocycle",
+  "Dubon2026.dualMatrixSnd_mul",
+  "Dubon2026.dualMatrixFst_val",
+  "Dubon2026.dualMatrixInfinitesimal_mul",
+  "Dubon2026.firstOrderLiftFromCocycle_cocycle",
+  "Dubon2026.matrixAdjointRep_apply",
+  "Dubon2026.matrixFirstOrderCocycle_apply",
+  "Dubon2026.SemanticRegression.actual_first_order_dualMatrixInfinitesimal_mul_source",
+  "Dubon2026.SemanticRegression.actual_first_order_matrixFirstOrderCocycle_apply_source",
+  "Dubon2026.SemanticRegression.actual_first_order_matrixFirstOrderCocycle_fromCocycle_source",
+  "Dubon2026.SemanticRegression.actual_first_order_firstOrderLiftFromCocycle_cocycle_source"
+]

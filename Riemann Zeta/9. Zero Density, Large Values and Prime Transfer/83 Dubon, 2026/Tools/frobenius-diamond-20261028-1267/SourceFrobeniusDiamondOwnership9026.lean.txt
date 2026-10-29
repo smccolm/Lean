@@ -1,0 +1,37 @@
+import Dubon2026.SourceHomogeneousHeckeDiamond
+import Dubon2026.SourceGammaOneHeckeDiamondCoefficient
+import Dubon2026.SourceGammaOneArithmeticTateOperators
+import Dubon2026.SourceTateDualQuadratic
+import Dubon2026.SourceGammaOneBinaryFrobeniusNormalization
+import Dubon2026.SourceCoefficientDualAction
+import Dubon2026.SourceGammaOneBinaryGaloisHecke
+import Dubon2026.SourceInnerH1Identity
+import Dubon2026.SourceH1TraceInner
+import Dubon2026.SourceGammaOneDiamondRange
+import Dubon2026.SourceH1TraceSubgroupEquality
+import Dubon2026.SourceNormalizerH1Trace
+import Dubon2026.SourceH1CompositionSquare
+import Dubon2026.SourceNormalizerCoefficientValue
+import Dubon2026.SourceGammaOneDiamondSubgroupSquare
+import Dubon2026.SourceGammaOneDiamondTransfer
+import Dubon2026.SourceGammaOneHeckeDiamondWords
+import Dubon2026.SourceGammaOneHeckeDiamondDescent
+import Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceHomogeneousHeckeDiamond, `Dubon2026.SourceGammaOneHeckeDiamondCoefficient, `Dubon2026.SourceGammaOneArithmeticTateOperators, `Dubon2026.SourceTateDualQuadratic, `Dubon2026.SourceGammaOneBinaryFrobeniusNormalization, `Dubon2026.SourceCoefficientDualAction, `Dubon2026.SourceGammaOneBinaryGaloisHecke, `Dubon2026.SourceInnerH1Identity, `Dubon2026.SourceH1TraceInner, `Dubon2026.SourceGammaOneDiamondRange, `Dubon2026.SourceH1TraceSubgroupEquality, `Dubon2026.SourceNormalizerH1Trace, `Dubon2026.SourceH1CompositionSquare, `Dubon2026.SourceNormalizerCoefficientValue, `Dubon2026.SourceGammaOneDiamondSubgroupSquare, `Dubon2026.SourceGammaOneDiamondTransfer, `Dubon2026.SourceGammaOneHeckeDiamondWords, `Dubon2026.SourceGammaOneHeckeDiamondDescent, `Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

@@ -1,0 +1,18 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Two production modules compiled with actual exit0 and zero diagnostics; expanded verification pending.",
+  "pinnedApis": [
+    "groupCohomology.isMulCoboundary₁_of_isMulCocycle₁_of_aut_to_units",
+    "InfiniteGalois.mem_range_algebraMap_iff_fixed",
+    "rootsOfUnityEquivOfPrimitiveRoots and its exact algebraMap value",
+    "QuotientGroup.eq_iff_div_mem for actual unit-power quotient"
+  ],
+  "scope": "The original infinite Galois-character finite-extension factorization, ramification-to-Selmer valuation bridge and descent from adjoining roots of unity remain unproved. These results do not yet establish arithmetic Mazur finiteness. Final framed deformation-functor assembly, fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "pinnedSourceRecheck": {
+    "Hilbert90": "Pinned Hilbert90.lean84 and LowDegree.lean621,673 inspected: the actual automorphism cocycle condition yields beta in the actual extension units with g(beta)/beta equal to the original cocycle.",
+    "rootsOfUnity": "Pinned PrimitiveRoots.lean529-542 inspected: primitive nth root in original base and injective original algebra map give the genuine roots-of-unity equivalence with the precise ambient-field value.",
+    "semantics": "Radical existence uses finite-dimensionality and actual Galois fixed-field descent. Character injectivity allows an arbitrary extension but requires the original base primitive nth root. Neither finite character count nor ramification-to-Selmer membership is assumed or claimed."
+  },
+  "productionLog": "kummer1518d-focus.log"
+}

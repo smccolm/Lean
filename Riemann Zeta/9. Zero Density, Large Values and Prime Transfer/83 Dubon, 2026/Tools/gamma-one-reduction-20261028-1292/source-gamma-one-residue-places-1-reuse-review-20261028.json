@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius and inertia -> equivariant specialization on places -> actual decomposition and geometric Frobenius on residue places.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-places-audit-route-1291.json",
+    "sha256": "616F4916C0E9293D493A32F75A65D0E5B68AB7B17AC5C2F776D60C604E80EC9D",
+    "review": {
+      "recordedUTC": "2026-10-28T15:23:58.476573+00:00",
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius and inertia -> equivariant specialization on places -> actual decomposition and geometric Frobenius on residue places.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+          "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueCoefficientPlaces.lean",
+          "sha256": "F30C9235D1080EBF4B5929E9598A2D54535F4A938F7D40EDFFDB3FEC63D8B8E8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueCoefficientPlaceOrders.lean",
+          "sha256": "6E155094C0B34B02D6A11310BE8724A3800CB4ECC2207FEFAF446BA72206FB10"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueGeometricFrobeniusPlaces.lean",
+          "sha256": "C9EF841C320994845CE661F7F4690E9894EB479C18898F76AF6D4399C02F4540"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-compatibility-1-scratch-receipt.json",
+          "sha256": "B10F72B14FABC7ACABF2EE142C35D6264C99E9586342E4D451E5EA657F538C76"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-frobenius-1-scratch-receipt.json",
+          "sha256": "8A95510D121F635B14FBAC329DF0E66D3A6DAA0538C66CFF6242866CD00A18C0"
+        }
+      ],
+      "shorterRoute": "Reuse the existing normalized discrete-order uniqueness and the native coefficient-place construction, specialized to the already constructed actual Gamma1 residue image. Literal valuation-ring transport proves discreteness. The actual coefficient automorphism supplies the inverse permutation and inertia identity. Comap along geometric Frobenius equals that coefficient place, so discreteness and the exact order multiplier p follow directly without adding a separate degree argument or generic scheme framework.",
+      "assumptionsToDischarge": [
+        "The actual decomposition action permutes all genuine places of the original Gamma1 residue field and preserves normalized orders with the precise inverse convention.",
+        "Original arithmetic inertia fixes the actual residue places.",
+        "For an actual decomposition element with pth-power action on residue constants, restriction along the original geometric Frobenius is exactly that decomposition permutation, with normalized orders multiplied by p."
+      ],
+      "remaining": "The arithmetic Frobenius constant-action premise is explicit. The original norm identity, degree equality, genus preservation, original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain. Actions on residue places alone do not prove inertia or the Frobenius quadratic on the original Picard Tate module. Parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual decomposition action permutes all genuine places of the original Gamma1 residue field and preserves normalized orders with the precise inverse convention.",
+    "Original arithmetic inertia fixes the actual residue places.",
+    "For an actual decomposition element with pth-power action on residue constants, restriction along the original geometric Frobenius is exactly that decomposition permutation, with normalized orders multiplied by p."
+  ],
+  "remaining": "The arithmetic Frobenius constant-action premise is explicit. The original norm identity, degree equality, genus preservation, original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain. Actions on residue places alone do not prove inertia or the Frobenius quadratic on the original Picard Tate module. Parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

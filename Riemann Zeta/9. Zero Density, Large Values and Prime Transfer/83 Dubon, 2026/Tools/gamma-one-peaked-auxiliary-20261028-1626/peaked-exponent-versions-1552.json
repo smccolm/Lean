@@ -1,0 +1,16 @@
+{
+  "SourceGammaOnePeakedCuspClasses": "1534a",
+  "SourcePeakedBernoulliFourier": "1539b",
+  "SourcePeakedBernoulliMoments": "1540a",
+  "SourcePeakedBernoulliResidueWeights": "1541a",
+  "SourcePeakedBernoulliCharacterInversion": "1542b",
+  "SourcePeakedBernoulliConvolution": "1543a",
+  "SourcePeakedBernoulliVanishing": "1544a",
+  "SourcePeakedBernoulliFourierInversion": "1545a",
+  "SourcePeakedBernoulliSpan": "1546a",
+  "SourcePeakedBernoulliProgressions": "1547a",
+  "SourcePeakedBernoulliTotient": "1548a",
+  "SourcePeakedExponentHelpers": "1549b",
+  "SourcePeakedExponents": "1550b",
+  "SourceGammaOnePeakedCuspOrders": "1551a"
+}

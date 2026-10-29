@@ -1,0 +1,59 @@
+{
+  "recordedUTC": "2026-10-28T19:21:35.668654+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Gamma1 Picard/H1/Tate realization -> exact arithmetic Frobenius-Hecke quadratic relation.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeIntegralAgreement.lean",
+      "sha256": "EF8DE380ADD791414F1FE8E7B409E1F97FDF03AFD8262DE22BA2DE972A62E591"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionDivisorAgreement.lean",
+      "sha256": "5FCC796A0A28C6EB2C8ADC40FCB169F129AB13483CFA0308146E914B0561DC31"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeTorsionReduction.lean",
+      "sha256": "AA753445A14CB91503F6E1519BAF51CB51520E469A79AEF23350B39F86C310CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrincipalNorm.lean",
+      "sha256": "A281E311709C679CF18C1163285D902AA1C7771A3AF9280443D476E20C575317"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondencePrincipalOrder.lean",
+      "sha256": "C56726DEB4538FD30891131F99C4BA2E26F7034E8EE930B647B9D49B1699DC15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePicard.lean",
+      "sha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueFrobeniusPlaces.lean",
+      "sha256": "7012C6D4853BF5D0CE4606C2D22CC1F32B6543FAE9772491A9732835625AC01F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResiduePlaceOrders.lean",
+      "sha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondPicard.lean",
+      "sha256": "004CA8D763E778517AFBB8D361606B1B8D21A98FCA52BC205C76978E82403062"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFieldEquivPicard.lean",
+      "sha256": "B08ADC99810F8418727D743C0F4443B4E7E182A60817C9DC7AC1099470E0F23A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrincipalDivisorTransport.lean",
+      "sha256": "D0954572CF81E8772AC3777EF44D7909333F8E0C781F66CE6CDB11E15AB84576"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrincipalDivisorIdentities.lean",
+      "sha256": "D7B91EFF6D432EB623F9FE99B3B5D733A1F6EB34121B3145279E15C80BD64EA5"
+    }
+  ],
+  "selected": "The existing Gamma0 proof compares actual Hecke principal divisors via the literal norm, then uses torsion-freeness of the target integer divisor group to cancel a principal multiple. Reuse this route on original Gamma1 fields. The new Gauss norm works on all valuation integers, so native primitive constant normalization replaces the stronger coefficientwise-integral Laurent fraction decomposition. No good-reduction model of the upper Hecke correspondence is needed for this comparison.",
+  "orientation": "Keep the exact field automorphism and lower-right label p*d=1 modulo M from the norm theorem. Native fieldDivisorEquiv e takes div(f) to div(e f). The existing arithmeticDiamondPicard g is defined using e.symm, so the norm term must use the inverse Picard convention or the inverse Gamma0 lift, with a proved identification. Do not silently identify the two orientations.",
+  "discharge": "Actual Hecke principal norm, residue coefficient/geometric divisor order identities, and Hecke compatibility on original finite Picard torsion, leading to the literal Tate quadratic.",
+  "remaining": "Actual original coordinate-degree equality and genus preservation remain. Parabolic and coefficient realization, original two-dimensional all-weight association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false
+}

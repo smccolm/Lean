@@ -1,0 +1,8 @@
+### Actual completed residual congruence images — 9 October 2026
+
+Two further production modules prove that every original ideal-compatible coefficient homomorphism carries the literal original matrix congruence kernel into the target matrix congruence kernel. The proof uses the genuine induced quotient homomorphism and the exact commutative square of original coefficient reductions. In particular, the original residual kernel maps into the already proved p-group over each actual ideal-power quotient. Its true reduction image is therefore a p-group as a subgroup of that actual target kernel. For the original completed residual ring, its genuine residue characteristic supplies the prime membership premise, and its proved finite maximal-power quotients make every actual congruence image finite.
+
+These are the actual finite congruence images of the original residual kernel. Congruence-neighborhood cofinality and factorization of all continuous finite quotients remain unproved, so no completed residual pro-p theorem is asserted. The original abstract Group.FG and Noetherian coefficient base remain explicit. Fixed residual pro-p quotients, Mazur finiteness, original arithmetic Galois association and deformation representability, local p-adic Hodge and Selmer conditions, patching, higher symmetric automorphic lifts and analytic continuation remain open. Unconditional Deligne, non-CM Sato–Tate and the final modular application remain open; DUB-01–16 remain accepted and DUB-17–20 remain OPEN.
+
+- [CompletedResidualCongruenceImages](Extension/Dubon2026/CompletedResidualCongruenceImages.lean).
+- [MatrixCongruenceKernelImages](Extension/Dubon2026/MatrixCongruenceKernelImages.lean).

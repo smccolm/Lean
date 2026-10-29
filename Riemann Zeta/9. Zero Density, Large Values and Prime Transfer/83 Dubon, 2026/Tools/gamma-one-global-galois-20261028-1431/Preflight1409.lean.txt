@@ -1,0 +1,74 @@
+import Dubon2026
+namespace Dubon2026.SemanticRegression
+open Filter MeasureTheory Asymptotics
+open scoped BigOperators Topology
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateMatrix_mul`. -/
+theorem actual_coordinate_representation_representationCoordinateMatrix_mul_source (g h : G) :
+    representationCoordinateMatrix G ι R (g * h) =
+      representationCoordinateMatrix G ι R g * representationCoordinateMatrix G ι R h :=
+  representationCoordinateMatrix_mul G ι R g h
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `universalMatrixRepresentation_entry`. -/
+theorem actual_coordinate_representation_universalMatrixRepresentation_entry_source (g : G) (i j : ι) :
+    (universalMatrixRepresentation G ι R g).val i j =
+      Ideal.Quotient.mk (representationCoordinateIdeal G ι R)
+        (MvPolynomial.X (g, i, j)) :=
+  universalMatrixRepresentation_entry G ι R g i j
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `universalMatrixRepresentation_evaluation`. -/
+theorem actual_coordinate_representation_universalMatrixRepresentation_evaluation_source (ρ : G →* GeneralLinearGroup ι S) :
+    (GeneralLinearGroup.map (representationCoordinateEvaluation (R := R) ρ).toRingHom).comp
+      (universalMatrixRepresentation G ι R) = ρ :=
+  universalMatrixRepresentation_evaluation ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S T : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing S] [Algebra R S] [CommRing T] [Algebra R T]
+
+/-- Exact original-object consumer of `representationCoordinateEvaluation_fromCoordinates`. -/
+theorem actual_coordinate_representation_representationCoordinateEvaluation_fromCoordinates_source
+    (f : RepresentationCoordinateAlgebra G ι R →ₐ[R] S) :
+    representationCoordinateEvaluation (representationFromCoordinates f) = f :=
+  representationCoordinateEvaluation_fromCoordinates f
+
+end
+
+
+end Dubon2026.SemanticRegression

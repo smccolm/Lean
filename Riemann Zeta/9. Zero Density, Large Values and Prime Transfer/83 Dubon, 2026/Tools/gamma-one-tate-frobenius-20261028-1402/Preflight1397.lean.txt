@@ -1,0 +1,72 @@
+import Dubon2026
+namespace Dubon2026.SemanticRegression
+open Filter MeasureTheory Asymptotics
+open scoped BigOperators Topology
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixInfinitesimal_mul`. -/
+theorem actual_first_order_dualMatrixInfinitesimal_mul_source (A B : GeneralLinearGroup ι (DualNumber R)) :
+    dualMatrixInfinitesimal (A * B) = dualMatrixInfinitesimal A +
+      (dualMatrixReduction A).val * dualMatrixInfinitesimal B *
+        ((dualMatrixReduction A)⁻¹).val :=
+  dualMatrixInfinitesimal_mul A B
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderCocycle_apply`. -/
+theorem actual_first_order_matrixFirstOrderCocycle_apply_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) (g : G) :
+    matrixFirstOrderCocycle ρ τ g = dualMatrixInfinitesimal (τ.val g) :=
+  matrixFirstOrderCocycle_apply ρ τ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderCocycle_fromCocycle`. -/
+theorem actual_first_order_matrixFirstOrderCocycle_fromCocycle_source (ρ : G →* GeneralLinearGroup ι R)
+    (c : groupCohomology.cocycles₁ (matrixAdjointRep ρ)) :
+    matrixFirstOrderCocycle ρ (firstOrderLiftFromCocycle ρ c) = c :=
+  matrixFirstOrderCocycle_fromCocycle ρ c
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `firstOrderLiftFromCocycle_cocycle`. -/
+theorem actual_first_order_firstOrderLiftFromCocycle_cocycle_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) :
+    firstOrderLiftFromCocycle ρ (matrixFirstOrderCocycle ρ τ) = τ :=
+  firstOrderLiftFromCocycle_cocycle ρ τ
+
+end
+
+
+end Dubon2026.SemanticRegression

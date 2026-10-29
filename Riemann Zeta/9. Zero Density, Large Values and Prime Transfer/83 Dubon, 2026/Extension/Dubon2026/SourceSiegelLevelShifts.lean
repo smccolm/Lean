@@ -1,0 +1,37 @@
+import Dubon2026.SourceSiegelLevelShiftFactors
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> Gamma1-invariant Siegel
+product. Prove the literal level shifts of the actual Siegel factors,
+reduce integer indices to residue representatives, and show that the
+source 12*N exponents kill all derived root-of-unity multipliers. Then
+the already constructed exponent translation invariance gives the actual
+Gamma1 invariance. No arbitrary multiplier or product invariance premise
+is introduced. Common analytic product facts are reused.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_siegelFun_add_level and
+S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.
+The upstream unused-section-variable suppression is not adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open scoped Real MatrixGroups
+
+theorem siegelFun_add_level (N : ℕ) (r s : ℤ) :
+    (∀ z : ℂ, siegelFun N r (s + N) z =
+        Complex.exp (Real.pi * Complex.I * ((r : ℂ) - (N : ℂ)) / (N : ℂ)) * siegelFun N r s z) ∧
+    (∀ τ : UpperHalfPlane, siegelFun N (r + N) s (τ : ℂ) =
+        -Complex.exp (-(Real.pi * Complex.I * (s : ℂ) / (N : ℂ))) * siegelFun N r s (τ : ℂ)) := by
+  rcases eq_or_ne N 0 with rfl | hN
+  · refine ⟨fun z => ?_, fun τ => ?_⟩ <;> simp [siegelFun_level_zero]
+  refine ⟨fun z => ?_, fun τ => ?_⟩
+  · rw [siegelFun_eq, siegelFun_eq, pref_add_level N hN,
+      sprod_add_level N hN, mul_assoc]
+  · rw [siegelFun_eq, siegelFun_eq, pref_add_level_left N hN,
+      sprod_add_level_left N hN r s τ.2]
+    have hw : qa N r s (τ : ℂ) ≠ 0 := qa_ne_zero N r s τ
+    field_simp
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-10-28T17:58:26.859696+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> Frobenius/inertia -> original coefficient specialization.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueSeparability.lean",
+      "sha256": "235D4464583E5F2CBF5F8B68595ECC30431BDCC0F69BC2E057BEC336BD702958"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+      "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGenusPoleLifting.lean",
+      "sha256": "34FBDA61D43D63960E2C898ACC364C12B8EEB43ECC58DF03BA3862ADB1D18664"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularIntegralChartLifting.lean",
+      "sha256": "0C427022965C04CA8EE7E7E850AA1BA7AB7B02DE4C5EC727CAA855F96336BCF5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionPrincipalDivisorMap.lean",
+      "sha256": "B2D502F6663BCE7E1CB96E1BCD01C26EB45BE290A0E33140FADEA1AB7DAD9B83"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGenusConstantReductionR2.lean",
+      "sha256": "0043387D083C0C7BDC193D1575A9007E5A05523DA3985ACCBFDAB5075E85E91D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionPicardR2.lean",
+      "sha256": "5DF3B8782E80AC86F8EFA13BBCA1B3BEDDEF1499E8355B3D5FE6A569AC46E44C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+      "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+    }
+  ],
+  "shorterRoute": "Reuse native separating-coordinate principal divisors, finite place residues, pole/genus dimension maxima, regular-prolongation residue dimensions and global two-chart gluing. The inverse chart is obtained by applying the same coordinate-lifting theorem to the inverse unit, using equality of the rational coordinate fields. No new curve, divisor, Riemann--Roch or Picard interface is introduced.",
+  "assumptionsToDischarge": [
+    "Actual original Gamma1 residue curve geometry is derived from its proved finite separating j.",
+    "Coordinate-degree equality and actual adelic-genus equality now imply both integral chart lifts and a degree-preserving place map compatible with every principal divisor.",
+    "The literal Gamma1 consumer discharges finite index and translation membership and returns a constant reduction whose regular prolongation is exactly the original coefficient reduction."
+  ],
+  "remaining": "Coordinate-degree equality and actual genus equality remain explicit geometric inputs. They, diamond integrality and prime-to-residue Picard torsion injectivity still require proofs. Original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "priorRouteReview": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-route-review-1326.md",
+    "sha256": "F11FE86E053CE5CB3E30A13FF60CAC35AD1F5605A91224031F6E1FCFCA2955E2"
+  },
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

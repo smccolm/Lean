@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "Field.exists_primitive_element",
+    "IntermediateField.adjoin_map, fieldRange_val and AlgHom.fieldRange_eq_map",
+    "IntermediateField.coe_iSup_of_directed and adjoin_simple_le_iff"
+  ],
+  "scope": "The specific arithmetic family, its directedness and supremum field, normality, transfer of its original ramification conditions to all actual finite subextensions and required cyclotomic inclusion still require assembly. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionFixes": [
+    "Typed the original intermediate-field supremum before taking its underlying set, preventing set-supremum elaboration."
+  ],
+  "productionLog": "directedDescent1556b-focus.log"
+}

@@ -1,0 +1,78 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `determinantCoefficientLaw_conjugate`. -/
+theorem actual_natural_determinant_determinantCoefficientLaw_conjugate_source (ρ σ : G →* GeneralLinearGroup ι R)
+    (A : GeneralLinearGroup ι R) (h : ∀ g, σ g = A * ρ g * A⁻¹)
+    (φ : R →+* S) (x : MonoidAlgebra S G) :
+    determinantCoefficientLaw σ φ x = determinantCoefficientLaw ρ φ x :=
+  determinantCoefficientLaw_conjugate ρ σ A h φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u v w z u'
+
+variable {R : Type u} {G : Type v} {ι : Type z}
+    [CommRing R] [Group G] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixGroupDeterminantLaw_baseChange`. -/
+theorem actual_natural_determinant_matrixGroupDeterminantLaw_baseChange_source {S : Type u'} [CommRing S]
+    (ρ : G →* GeneralLinearGroup ι R) (φ : R →+* S) :
+    (matrixGroupDeterminantLaw ρ : GroupDeterminantLaw.{u, v, w} R G (Fintype.card ι)).baseChange φ =
+      matrixGroupDeterminantLaw ((GeneralLinearGroup.map φ).comp ρ) :=
+  matrixGroupDeterminantLaw_baseChange ρ φ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {σ ι R S : Type*} [Fintype σ] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `matrixCombinationDeterminant_groupAlgebra`. -/
+theorem actual_natural_determinant_matrixCombinationDeterminant_groupAlgebra_source {G : Type*} [Group G]
+    (ρ : G →* GeneralLinearGroup ι R) (g : σ → G) :
+    Matrix.det (groupAlgebraMatrix ((GeneralLinearGroup.map
+      (MvPolynomial.C : R →+* MvPolynomial σ R)).comp ρ)
+        (∑ t, MonoidAlgebra.single (g t) (MvPolynomial.X t))) =
+      matrixCombinationDeterminant (fun t => (ρ (g t)).val) :=
+  matrixCombinationDeterminant_groupAlgebra ρ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {σ ι R : Type*} [Fintype σ] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixGroupDeterminantLaw_multicoefficient_continuous`. -/
+theorem actual_natural_determinant_matrixGroupDeterminantLaw_multicoefficient_continuous_source
+    {G : Type*} [Group G] [TopologicalSpace G]
+    [TopologicalSpace R] [IsTopologicalRing R]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) (d : σ →₀ ℕ) :
+    Continuous (fun g : σ → G => MvPolynomial.coeff d
+      ((matrixGroupDeterminantLaw ρ).eval (MvPolynomial σ R) MvPolynomial.C
+        (∑ t, MonoidAlgebra.single (g t) (MvPolynomial.X t)))) :=
+  matrixGroupDeterminantLaw_multicoefficient_continuous ρ hρ d
+
+end
+

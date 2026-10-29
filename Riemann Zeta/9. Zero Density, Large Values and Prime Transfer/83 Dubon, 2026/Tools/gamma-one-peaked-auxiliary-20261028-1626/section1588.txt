@@ -1,0 +1,7 @@
+### Actual actual arithmetic fixed-determinant complete local rings — 9 October 2026
+
+Construct the literal prescribed-determinant quotient of the already derived arithmetic framed ring. Original residual compatibility proves locality; actual compact Hausdorff quotient coefficients prove Noetherianity, maximal-adic completeness and equality of the genuine quotient topology with the original maximal-adic topology. The true residue field remains the original one.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticFixedDeterminantRing](Extension/Dubon2026/ArithmeticFixedDeterminantRing.lean).

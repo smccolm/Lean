@@ -1,0 +1,18 @@
+{
+  "recordedUTC": "2026-10-28T23:52:06.316641+00:00",
+  "reason": "The audited diamond quotient and transfer promotion has exactly two scopes, not the predecessor three. Corrected both UNUSED verification scripts before preflight or integration.",
+  "scopeCount": 2,
+  "productionMutation": false,
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_diamond_quotient_9161.py",
+      "beforeSha256": "C1398D10D57043B3168CCB4D4BAF46725BE1EE63DD553438B8214B72F12FFB6C",
+      "afterSha256": "068BD84F703651CC84C585288A3B3990889ED628D0C9B8ED62B4132618F4CB82"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_diamond_quotient_ownership_9161.py",
+      "beforeSha256": "155AE1D650F2D6D917783CA52D41FE3813111D443F822BD20182048D259CC560",
+      "afterSha256": "83B67D15255F6B31B75D8BEEF60A568627B4AFF710833E8A5992AE20040ACF6B"
+    }
+  ]
+}

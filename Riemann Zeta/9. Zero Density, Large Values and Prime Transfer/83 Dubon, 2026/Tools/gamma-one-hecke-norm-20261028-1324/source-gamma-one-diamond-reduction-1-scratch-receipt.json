@@ -1,0 +1,65 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T17:28:52.451243+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeMixedLaurentReduction",
+    "SourceGammaOneHeckeIntegralDiamondReduction"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction.lean",
+      "sha256": "DACCE0BAA3EE986FEAC17D509BF3E513D37F137447ED9DAD1DA83097AA1CE14D",
+      "oleanSha256": "05859ACF550C77C17E840CB69DB1DE18B9A2A573F2BD294DB8A5AD6963BC67FF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction1322a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeMixedLaurentReduction1322a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction.lean",
+      "sha256": "93463F3E842900FB03E5A27B641316388A3869BDDB87969F3758A299CE5749A5",
+      "oleanSha256": "02B70A408A2063A762545AEE1A98DD1F7E7060D84AD2FC7006AC6A0151CF9246",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323c.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralDiamondReduction1323c.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionAudit1.log",
+  "logSha256": "9686D4544B26776517E7E2A375394C3B907DE22C747A5478C213EF8F4A20F021",
+  "auditSha256": "D74CBD949BD5B850BA36183F22705A5AA50F601D86DB6EBA52452569458BEA80",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionScratchOwnership1325.log",
+  "ownershipSha256": "F187BB7DDD96B3028890409BC24CBDE4C615508B9926611C962CB02146BEF516",
+  "exhaustiveTheorems": 9,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondReductionDependencyAudit1.log",
+  "dependencyAuditSha256": "98D99439A19A5E1D54648073F289C55F138B124CC7F101604157C6333443ED4F",
+  "dependencyAuditSourceSha256": "DFC7275A1A55B4C098DD442915E881CCD1889B6B494FF1FC53C1CC511DF2D396",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate Frobenius -> Hecke norm reduction -> the two-input Laurent product and exact arithmetic diamond norm.",
+  "discharged": [
+    "Given integral Laurent representatives of an original function and its actual arithmetic diamond image, the genuine Hecke norm has an integral representative with the exact coefficient-Frobenius-times-q-Frobenius residue. The norm product, complete embeddings, reverse-map identity and diamond label are no longer premises."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. An integral representative of the actual diamond image remains an explicit narrower input. It must be constructed from input integrality alone before claiming unconditional integral norm reduction. Residue degree equality, genus preservation, original-to-residue place/Picard specialization and torsion injectivity remain, hence original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-reduction-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "27615201D3FC79411D144BD681B1045E0FF6E130F14981FF53D2F94BA5E55F4C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

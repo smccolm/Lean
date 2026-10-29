@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-10-29T02:39:41.245575+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> exact integral finite Siegel product expansion.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\siegel-finite-product-route-review-1596.json",
+      "sha256": "F9BF11EB93C0B95998B26250C445BEAA9AC50FA8A8979E98869374F4F6293703"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Finite Siegel Product Expansion Assessment 2026-10-28.md",
+      "sha256": "7092975152D03BD55203F9FD5203372CCA3160802E002615AB4DE1463C34E0C8"
+    }
+  ],
+  "shorterRoute": "Use explicit actual coefficients for every residue pair and handle the zero pair by exponent zero. Reuse native q-series multiplication/cusp limits and audited trace coefficient algebra. Split literal phase, leading inverse and exact source assembly with default proof limits.",
+  "assumptionsToDischarge": [
+    "Actual finite Siegel product has the exact normalized series with integral coefficients.",
+    "Its specified constant coefficient is nonzero from e(0,0)=0.",
+    "The specified level power times its leading inverse is integral.",
+    "The literal constant phase has Nth power one.",
+    "The normalized actual finite product tends to its leading coefficient at the cusp."
+  ],
+  "remaining": "Discriminant adjustment, exact auxiliary q-expansions, cusp order/decay estimates and actual peaked auxiliary existence. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

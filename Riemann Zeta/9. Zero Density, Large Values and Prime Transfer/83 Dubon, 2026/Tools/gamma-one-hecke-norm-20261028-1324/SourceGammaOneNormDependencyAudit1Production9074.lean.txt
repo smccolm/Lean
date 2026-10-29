@@ -1,0 +1,40 @@
+import Dubon2026.SourceGammaOneCoprimeGeneration
+import Dubon2026.SourceGammaOneAdjacentJRatio
+import Dubon2026.SourceGammaOneRealizationRestriction
+import Dubon2026.SourceGammaOneAdjacentJNonmembership
+import Dubon2026.SourceGammaOneAdjacentJGeneration
+import Dubon2026.SourceGammaOneAdjacentJPolynomial
+import Dubon2026.SourceGammaOneAdjacentJEmbedding
+import Dubon2026.SourceGammaOneAdjacentJPreservation
+import Dubon2026.SourceGammaOneAdjacentJAutomorphism
+import Dubon2026.SourceGammaOneAdjacentJCoefficients
+import Dubon2026.SourceGammaOneHeckeNormEmbeddings
+import Dubon2026.SourceGammaOneHeckeEmbeddingCensus
+import Dubon2026.SourceGammaOneHeckeNormProduct
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_gammaOne_hecke_norm_product]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOnePrimeHeckeIndex, `Dubon2026.SourceGammaOneSignedHeckeIndex, `Dubon2026.SourceGammaOneHeckeCoordinateDegree, `Dubon2026.SourceGammaOneHeckePrimeDegree, `Dubon2026.SourceGammaOneCoprimeGeneration, `Dubon2026.SourceGammaOneAdjacentJRatio, `Dubon2026.SourceGammaOneRealizationRestriction, `Dubon2026.SourceGammaOneAdjacentJNonmembership, `Dubon2026.SourceGammaOneAdjacentJGeneration, `Dubon2026.SourceGammaOneAdjacentJPolynomial, `Dubon2026.SourceGammaOneAdjacentJEmbedding, `Dubon2026.SourceGammaOneAdjacentJPreservation, `Dubon2026.SourceGammaOneAdjacentJAutomorphism, `Dubon2026.SourceGammaOneAdjacentJCoefficients, `Dubon2026.SourceGammaOneHeckeNormEmbeddings, `Dubon2026.SourceGammaOneHeckeEmbeddingCensus, `Dubon2026.SourceGammaOneHeckeNormProduct]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.gammaOne_sup_gamma0_coprime, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_holomorphic, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_represents, `Dubon2026.SourceFunctionField.GammaOne.realize_restrict_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.continuous_invariant_of_realize_germs, `Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne_over_complex, `Dubon2026.SourceFunctionField.GammaOne.prime_j_not_mem_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_finrank, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_adjacentJ_generation, `Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial_root, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_isIntegral, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_natDegree, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_eq, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_minpoly_reverse_root, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_mem_correspondence, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_embedding, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_embedding_preserves, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_endomorphism, `Dubon2026.SourceFunctionField.GammaOne.adjacentJ_endomorphism_bijective, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_automorphism, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_adjacentJ_over, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding_commutes, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_zero_apply, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_succ_apply, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_jBeta, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_injective, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding_bijective, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.qExpand_norm, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_gammaOne_hecke_norm_product, `Dubon2026.SourceFunctionField.GammaOne.adjacentJBase, `Dubon2026.SourceFunctionField.GammaOne.adjacentJPolynomial, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.targetAlgebra, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.alphaModule, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.twistEmbedding, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.lastEmbedding, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.embedding, `Dubon2026.SourceFunctionField.GammaOne.gammaOneReduction_surjective, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_lower_subgroup_eq_borel_comap, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_lower_relIndex, `Dubon2026.SourceFunctionField.GammaOne.plusMinus_gammaOne_hecke_eq_inf, `Dubon2026.SourceFunctionField.GammaOne.gammaOneSignedReduction_surjective, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_signed_lower_subgroup_eq_borel_comap, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_lower_relIndex, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_prime_signed_hecke_index, `Dubon2026.SourceFunctionField.GammaOne.coordinate_finrank_eq_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.coordinate_relfinrank_baseChange, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_coordinate_relfinrank_eq_index, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_hecke_coordinate_relfinrank_eq_index, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_over_prime_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finrank, `Dubon2026.SourceFunctionField.rational_prime_step_finrank_eq_of_not_mem, `Dubon2026.SourceFunctionField.PrimeDegreeAux.aeval_jqModC_ne_jqNModC_charZero, `Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinate, `Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_adjacent_relations, `Dubon2026.SourceFunctionField.extend_simple_embedding_in_expansion_range, `Dubon2026.SourceFunctionField.geomAut, `Dubon2026.SourceFunctionField.HeckeNorm.primeConjugates_injective, `Algebra.norm_eq_prod_embeddings, `AlgHom.bijective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE NORM DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual original Gamma1 expanded norm product, including coprime generation, analytic adjacent-j nonmembership, original simple-extension generation, exact minimal polynomial and reverse root, preserved reverse automorphism, algebraic coefficient extension and complete embedding census. Its diamond identification on general beta inputs and original Picard specialization remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

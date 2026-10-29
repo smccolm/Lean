@@ -1,0 +1,2849 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-galois-promotion-route-1431.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-global-galois-promotion-route-1431.json",
+      "sha256": "1EC21C2B17BD99B0F5B50C85B16E40783DE0DE8FEC6DBCF1195DA34BEF535075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1401.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1401.lean.txt",
+      "sha256": "7FE045B2633AA81ABBCF73D62BF91B1A14CDAA87EF552054F8D9B740B724BC5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1405.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1405.lean.txt",
+      "sha256": "28E2483897D2F9873F1115610A26F7550EEC4D060A767FA23C9F0445231BA2DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1409.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1409.lean.txt",
+      "sha256": "9457CD7A68C5DF2FEDA3054E83FFAA7CF5058B6E9F7892503D7B39ED4D2AC485"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1413.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1413.lean.txt",
+      "sha256": "E10863366AC8E686290A28879EA24B0F4ABEBCECF9B70A0AFAF11AA44A5752E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1417.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1417.lean.txt",
+      "sha256": "E3D86950CC56A316A4FC3F3DF9BADAD022FF4870EA7C0A163883D40F00637CC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1421.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1421.lean.txt",
+      "sha256": "CD64FDBFE242F79B45D351007350E9B2261C7B4B238FC185D61F92AE2C68FF4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1425.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1425.lean.txt",
+      "sha256": "786062C0E2959CAEE1927D14D1F458C6E105C48C78F298408753D179F60E950B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1429.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/Preflight1429.lean.txt",
+      "sha256": "7ECA6C5D9AABD1B83610D9926D6351AE905FAED1A3466CBACF65C2599F9292C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter.lean.txt",
+      "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400a.lean.txt",
+      "sha256": "21467E00C6E94378EBB1BD5EFA4F82BC387007CA74C272902456A2D539E714B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400a.log",
+      "sha256": "DBD73DECC47C9DAB09F6222884FF752CC905006064AB725CFA45DA9E3249D8FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400b.lean.txt",
+      "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter1400b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicCharacter1400b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal.lean.txt",
+      "sha256": "DB9632A5C7BB76222663A358B30C208C337A47AC6FCC7B11C563719DD0765590"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal1405a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal1405a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal1405a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal1405a.lean.txt",
+      "sha256": "5BBBDF174A56D5F15621BF1832BF5ADDC4DB07C5649DF9255F1B710C0D006980"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal1405a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceAbsoluteCyclotomicLocal1405a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction.lean.txt",
+      "sha256": "2EE0AEF696CF5B8664EEEC342A8368E8B7227EFCA3FC7D2731650CA17A965E86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399a.lean.txt",
+      "sha256": "2CBFDB97E6CD577ED494E9978F192E8F06BADBFBF95D9B5207803238DF55CED9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399a.log",
+      "sha256": "7F3FE468E4D57F604D81C4274275C446C5D5903E8FEA043FBE39D856620FE82C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399b.lean.txt",
+      "sha256": "2EE0AEF696CF5B8664EEEC342A8368E8B7227EFCA3FC7D2731650CA17A965E86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction1399b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousAction1399b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond-1429.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond-1429.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond-1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond-1429.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond.lean.txt",
+      "sha256": "9FDB9D460CE3A539EF155251250B188EA4794EC84367F03265C72095E390EBC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond1426a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond1426a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond1426a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond1426a.lean.txt",
+      "sha256": "9FDB9D460CE3A539EF155251250B188EA4794EC84367F03265C72095E390EBC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond1426a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousDiamond1426a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke.lean.txt",
+      "sha256": "18788CFDBE9633896E4FC7B99508067AD6DB91A03351CAE22A9A54863D886C79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403a.lean.txt",
+      "sha256": "332A35FA69351751C9ACFB66AA2F3BC6C455E8AA8B83CD2A4CF3DF6F8C0BD811"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403a.log",
+      "sha256": "E4C506081A94DAB6E4E0FBA234627617008D6B981705E23F734CDC117C41EC61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403b.lean.txt",
+      "sha256": "3F39FE9D19D6310FBD4A73A4AE6E8AB586125757A0F884630DB29E4D5BB5DB40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke1403b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceCyclotomicHomogeneousHecke1403b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitAudit1.lean.txt",
+      "sha256": "E2A6D7D1C82A12C52252009BEC87B0BEAE045ED7B23CF3D9DAF6807BFCC09538"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitAudit1.log",
+      "sha256": "04E237B96E9A157C19CDC7BABBF7BD78B72980E82C0165277903075BF67EF652"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit1.lean.txt",
+      "sha256": "6115156D5648990A974AA565F02E4B6A387EDD600B046172DFDD35B5E095EFC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit1.log",
+      "sha256": "4EE50F253B16868609522B4BC2AE42B076DEEAD01FCFAC0D946551FC03F4E04A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit2.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit2.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit2.lean.txt",
+      "sha256": "E03BD3BF8CB4A35B46B05AEE3D8CF3F9DFB95733E6463B91FF8F5FE4DBA6386C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit2.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitDependencyAudit2.log",
+      "sha256": "F6618A173CF060E36A64638987EBDB40EB77EB3B33D6F1AAF92F9116AFFCECE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitScratchOwnership1430.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitScratchOwnership1430.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitScratchOwnership1430.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitScratchOwnership1430.lean.txt",
+      "sha256": "E89E7B51958A2586E78C3DE57E9CC9CADF8266A5B6AA393234D31E67C4AB50D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitScratchOwnership1430.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneArithmeticOrbitScratchOwnership1430.log",
+      "sha256": "F7EB2298DA28B76E34BDFB7D08D508F9408E7AA066394A7531F6382C2E527E9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityAudit1.lean.txt",
+      "sha256": "16891CF08CF03ED396C908014FD7A38FEE483A28905B81A6D7B5B8C4AAC29254"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityAudit1.log",
+      "sha256": "7EC9CE8974CFCECCE316A3B391E908593E3FE98655AB69AF96B679452C3DCF5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityDependencyAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityDependencyAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityDependencyAudit1.lean.txt",
+      "sha256": "316E7EE28D9A11838B3BF1D4F5BBFA1DFC3FD062350256E1E1C7710C19427474"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityDependencyAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityDependencyAudit1.log",
+      "sha256": "4BBF7D48CB3E0E48F8ADF2CCAF2DB999AAC979145F18989153B2CF8CE336DBDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityScratchOwnership1423.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityScratchOwnership1423.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityScratchOwnership1423.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityScratchOwnership1423.lean.txt",
+      "sha256": "26F708570CE3F1AC4DA01EC7E845169A8C955C56435956CC53F53E9B07CCA8C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityScratchOwnership1423.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneContinuityScratchOwnership1423.log",
+      "sha256": "476CA77815B67C6940CB21990EAFEE4208E25E96C1A7B16B1E41DE263EB725F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit.lean.txt",
+      "sha256": "884437A8B8C8E58C3B2A5F0EBC20FC3C68E4AA4BDED2FAAEAF5A8F69B8FFA1BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414a.lean.txt",
+      "sha256": "4C5E1A1E6BB0872FED2B177449E06BD89D90247024BEE26002191F7D23966170"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414a.log",
+      "sha256": "6DDDBA1B78B118BD1EE9F21A4FE849CF7B4779C71FB7BA528FBE697FCE187F21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414b.lean.txt",
+      "sha256": "884437A8B8C8E58C3B2A5F0EBC20FC3C68E4AA4BDED2FAAEAF5A8F69B8FFA1BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit1414b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFinitePlaceOrbit1414b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual.lean.txt",
+      "sha256": "485C4602435526997C5466FEC262F5434616242916A5C797EE7B9FDEBD5CC7D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418a.lean.txt",
+      "sha256": "4A8F90926CDCE603403CE9A10B220EC5DBFD6F1845D7F88B5F82F5AE4F1092C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418a.log",
+      "sha256": "BB24841E082EF95EFB5E7D5D949000B013FC21DC18BEB8968E1194A902ED4576"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418b.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418b.lean.txt",
+      "sha256": "FA3C3AA0E919794CEA06E7C254E30EA30177B7C32D592C32A3C0F173FF6A372A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418b.log",
+      "sha256": "99EB89E301ADAB3E0D613FEEE81FBE8010E551FF89C0779E95463EE63EABDDAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418c.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418c.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418c.lean.txt",
+      "sha256": "20177A839C610B5BA4A03B7CF759733A646D9F2F65A19C49EDFB35DD91FED9B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual1418c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFiniteTateDual1418c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition.lean.txt",
+      "sha256": "41924ADD40B7BE5CA8A92611868E8CC7B0129620EC54441E60EB2725D30D666D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition1413a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition1413a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition1413a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition1413a.lean.txt",
+      "sha256": "41924ADD40B7BE5CA8A92611868E8CC7B0129620EC54441E60EB2725D30D666D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition1413a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneFunctionFieldDefinition1413a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius.lean.txt",
+      "sha256": "C27D8C97258F7F2D4717CCC1C9D63EC9232132EF05199DF186A0D4EE0AB9EC13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410a.lean.txt",
+      "sha256": "6AD6BC04E7AD7F588548628752FCA0585568569EB2E21E1588E5AAE8845A8017"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410a.log",
+      "sha256": "93B7754121770A085B126EA68F5F8ABC445CE746C2C64B182491A5C0130F02F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410b.lean.txt",
+      "sha256": "CB5ECEB15050DF8FE1666B0DCE4AD1A4CF2DD4AA5F6DE923D6CE6254A7B81680"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius1410b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisFrobenius1410b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit-1429.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit-1429.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit-1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit-1429.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit.lean.txt",
+      "sha256": "D2C99770A2B16969FE1C63E472DB5E5C41E9C724885E33A99DC4A768132F1DD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit1428a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit1428a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit1428a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit1428a.lean.txt",
+      "sha256": "A11DB2E65AA115A16900E45A39955388B47A4821502B593F3FCF2BBC92B77293"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit1428a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicGaloisOrbit1428a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift.lean.txt",
+      "sha256": "2DF236D6C50B48EA555D8236A968DE9539A4A4E356FD0E737C8D0B6AC6AEB943"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift1409a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift1409a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift1409a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift1409a.lean.txt",
+      "sha256": "0A13BDE2CBF71CF29B7E0ADD61276A78A0E4955CE2F000FD84876812CF95D9F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift1409a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneParabolicTateLift1409a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition.lean.txt",
+      "sha256": "F7E2E7F416D8C3FEE3562E361694B6860663AAE31C4970BA6F9CCFA3B83F4FFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416a.lean.txt",
+      "sha256": "1F3E78ABB10AB4179811F2E99CCFB454DE1CB52A86A39082B2AE43A0C212BCE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416a.log",
+      "sha256": "C383879DE820ADB7FC630760B42C4BE96C4DCD792B65A957DAD941C0F2FAEBD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416b.lean.txt",
+      "sha256": "B98E7BC1F5D8E3D3DEFCE2ED7A8835E2EDFE531147C00C42F134A479A9CEC0E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition1416b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePicardFieldDefinition1416b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition.lean.txt",
+      "sha256": "3F2E4312BD0A2CABC9BE1DEF2B94830474E478502A1135DB6AD79CC682CF6306"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition1415a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition1415a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition1415a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition1415a.lean.txt",
+      "sha256": "5BD9A8742699A77239EB11976DB3A8DFAE9B3B432AE4D492EE13D30F2B27B18B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition1415a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOnePlaceFieldDefinition1415a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence.lean.txt",
+      "sha256": "ADC49A170E6610B4F368942A1E842A44E1C909A0BD846C29BDC8031D4D23A3D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence1417a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence1417a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence1417a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence1417a.lean.txt",
+      "sha256": "FC234612F67F606B75DACCB127172DB324EA3B2AD29472DF3E9F26A2196FF6BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence1417a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTateOpenCongruence1417a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent-1429.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent-1429.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent-1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent-1429.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent.lean.txt",
+      "sha256": "8B546B7159A92DECF837060CC7AC19C054F2BD3BA83A13F4E2248A0B3E856472"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425a.lean.txt",
+      "sha256": "FDA5A9655AB61F091B7AA6F2F89E3F112C48D8CC7A1F23C2B26A1C2080B3F139"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425a.log",
+      "sha256": "E006B12A1A3983DF81A000F5DBA9AEEA96589C25C30ADDD2D197096B21E3F23C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425b.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425b.lean.txt",
+      "sha256": "312E78B422A910151C98FB3778128F65B971A3A39C128E17E465FB1F135D4F2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425b.log",
+      "sha256": "48C33E5CB9C368894163991DCBC687CA3B3DB59C8A132FEAC01ACB41726DD0F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425c.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425c.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425c.lean.txt",
+      "sha256": "07A25D68BF963BD558460C55262B213AB9161E4F508DD5C94FD62255390F4246"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent1425c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedArithmeticDescent1425c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedAudit1.lean.txt",
+      "sha256": "46BE7C9B8ABCA95C8A0A6C0147E9A8F755FEA837E22D1F24F32E9FF899636D78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedAudit1.log",
+      "sha256": "ADA30CE4D8F8A56BDE84261FC5CF1E4FC6A074F266142548C33F854EC2536C61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence.lean.txt",
+      "sha256": "99D7B91EBF1F960B8DB2DBF6F3F9E0D2FF9EA3F9A9D1DC1ABBA706BE83964CDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419a.lean.txt",
+      "sha256": "22E85AC2E5CA51D26889943472080A35FD8EE132C47E22513A45D21E8EAF0086"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419a.log",
+      "sha256": "8584F208EF028E04FBBFC3A96BD741F03ABB2E1C65B61AE6754ABD18C66E3604"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419b.lean.txt",
+      "sha256": "949958F341A503EEE40091EB29C8DCF1B28551889E3035AAB4A34D1C58B205AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence1419b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedCongruence1419b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity.lean.txt",
+      "sha256": "18768A4FA1129A857CF0BEC2393A9D11EB2FCC3370224812F1B9EA9F1EEB97AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420a.lean.txt",
+      "sha256": "7EBF355C5DF646A1CD3BAE8A11BE5BA23109F95778715E7138CB3DA0001FD802"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420a.log",
+      "sha256": "C19A13A07CE924BDE941DA1FB0E868D72B5BB1290E848F10FD69C03415BA6C93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420b.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420b.lean.txt",
+      "sha256": "9304FC05473D0C7EB29FD63373D91A27A4C53ACC8303F2C233EDB857B8E437E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420b.log",
+      "sha256": "519D76CC3035E051FBE86640E53931721719FEFFAE0EFF939311B50970DFF4DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420c.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420c.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420c.lean.txt",
+      "sha256": "0306285D02BD1AC55C1128E5607F3B193E179C50F6A49B41EFC583E582B89AC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420c.log",
+      "sha256": "3143F09EA4FD472CC79BCF08F1B4154B7906DDF48E92AB1C23D3E16CBB421928"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420d.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420d.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420d.lean.txt",
+      "sha256": "0F69AF4A3A1090477E7A4B3229C77FDA2936A5EDC01BFC0A13ED656B43B57733"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420d.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420d.log",
+      "sha256": "A692543083FF3455DE3C8E7BDF6CE3CD6C9B45D907365976E997C4CEC3165574"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420e.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420e.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420e.lean.txt",
+      "sha256": "96F6F153F10293FE23B7BF0C709283A08F0321BC7095E3C5D0A8D63ED7104C15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420e.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420e.log",
+      "sha256": "44E9E343E2AFAB0EB8EA0CDCD15FFEBAEB4C8EC75F28F83083123E4960CBD052"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420f.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420f.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420f.lean.txt",
+      "sha256": "7CBEC419122193465584C6049CE7B982F63E92A9D4AE79C211AC0DCCE30ED7B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity1420f.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedContinuity1420f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedDependencyAudit1.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedDependencyAudit1.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedDependencyAudit1.lean.txt",
+      "sha256": "7DAD51B33F3044C5D24D87257F8BEC179569811B25D0E408091A840BA462D94B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedDependencyAudit1.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedDependencyAudit1.log",
+      "sha256": "B0145A51C91A7C3B3AB65AB5E09BECA78119B90F621AB130EEE0C69C6984A9DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor-1422.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor-1422.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor-1422.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor-1422.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor.lean.txt",
+      "sha256": "344FE3DB311CF975D05F243CA3861124D58BCB16DAC7B1AABB8F5CF37AF82B86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421a.lean.txt",
+      "sha256": "DE40AACEC3F21971B786D868C9095901E3AD075C9431D8EEA8D25AE45E1296BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421a.log",
+      "sha256": "1F074436F5105D1492FFFCB9032CB274D6D0CAF328E2F485F3B05B7DEC98731E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421b.lean.txt",
+      "sha256": "F1D7DD5E6EED4B80A0A5192750586CEA1A0D5CD7B3D9A16CFCA1633866FA5E90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor1421b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedFiniteFactor1421b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois.lean.txt",
+      "sha256": "9EF2214832E53AE51B8AF52909CC318807CC4E265115DB7849834EC07F5903EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401a.lean.txt",
+      "sha256": "06F787098631414083B4D3AEDCE069B7956A4E4278726D14E9BD68590D74C5D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401b.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401b.lean.txt",
+      "sha256": "AD35F54D49872687825058D1A08E7139428D3047E00E319B55E7AD7B7FC207CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401c.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401c.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401c.lean.txt",
+      "sha256": "353BF9060BBCA3C7FDC5762A7E944D8FC2C4442F078A1840D111D20A8E36177E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401c.log",
+      "sha256": "2834AB15E78FD735F981F3E8A67679EEFC3A44EBF015529491C93DF426590C06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401d.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401d.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401d.lean.txt",
+      "sha256": "E31E9AC581BFF7595C56C33A4C91D6FFCDCB6F36A648F556B8510DBF86A5D862"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401d.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401d.log",
+      "sha256": "0883F726E147C6E017B496E3725AA4F43FFBA86114D0E1BAEABC3D584133ED26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401e.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401e.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401e.lean.txt",
+      "sha256": "93B55A719BFBA9159286C4D8D072C557C4134A9515539B9E5A121D67CCFE1505"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois1401e.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGalois1401e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond-1429.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond-1429.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond-1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond-1429.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond.lean.txt",
+      "sha256": "0B8AE8F39BE6F5DEFF98B52A8E467CB535851255BEEAA94EB7084B8232D9EDAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond1427a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond1427a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond1427a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond1427a.lean.txt",
+      "sha256": "1595D85527CEC009FA63545804C31457997B84E89DC9E93DE6E03CF4E8C3E1B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond1427a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisDiamond1427a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius.lean.txt",
+      "sha256": "712573BB061DC9BB536FC51AADA3D34D5DDBD661B32D628EDF49AADEB4AB2BFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406a.lean.txt",
+      "sha256": "CF1C27E293DB0453234AA39024B7CAB24CDE43B0D5078677391F5C6D971B07A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406a.log",
+      "sha256": "C80881CA5098061C49FCEC575E70BE4E5195F008876156B389A1A183739A6E84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406b.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406b.lean.txt",
+      "sha256": "C878AF244976506567921EB8301E403CD41C6B4FACA58FBD070B757F7CA1AD05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406b.log",
+      "sha256": "AFB62EAA478F4CCFA5ED4E0D189615ECACBDD2338D21CF5ED354E8C2A752D991"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406c.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406c.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406c.lean.txt",
+      "sha256": "3BE4BB534C05BB1C11ECE6BC6B42807762D5E15146B3DF4EEF6A4BC7AC22092F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406c.log",
+      "sha256": "749B7D9BB9F8E1F398986CAF5F2CF9A1A4E958C9DD6A23ACA8C90B11EF97C32A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406d.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406d.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406d.lean.txt",
+      "sha256": "959DCC3B11834D03F6D7060E8CEE72DCF8BBB68B0073923FAE06AEDF511B01E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius1406d.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisFrobenius1406d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke.lean.txt",
+      "sha256": "9AC7DA4CFAA4AA1E4D21552968B1E31E77B209582BD35917B942EFEE0B636176"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke1404a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke1404a.lean.txt",
+      "sha256": "B9F5F1303CABA44FE83D28AC48C271E7C4BA5186EA3ED01C6420C5C28F298502"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke1404b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke1404b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke1404b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke1404b.lean.txt",
+      "sha256": "DB9C15A91B5E12ABB9483A3636C6986C508D0C91E4A492D95E5235A58394AA37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke1404b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisHecke1404b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia.lean.txt",
+      "sha256": "BCD962238D34C7DD8580A03FB1432CB61E15473E2413F3F3BCB82768F160EE07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia1408a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia1408a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia1408a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia1408a.lean.txt",
+      "sha256": "0C21D0BA4DAFE6EFE205316162C700F6C93D0C71F5F6C683360D7F793B7106D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia1408a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedGaloisInertia1408a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia-1429.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia-1429.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia-1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia-1429.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia.lean.txt",
+      "sha256": "BC58D272B8F9C8B204C02856515447ED7AC7B25C2B0BA23AC92CFE88B102E294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424a.lean.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424a.lean.txt",
+      "sha256": "7BE1E2690BD9C1FBB27DB5AC0DF5AF9EA163444BDBA0DFE49215605F1E64ACCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424a.log",
+      "sha256": "12EF687F03A60DE5EAFB90E96A13D3EED3DA0F6D553B3254DC0CEB433150AA4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424b.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424b.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424b.lean.txt",
+      "sha256": "BC58D272B8F9C8B204C02856515447ED7AC7B25C2B0BA23AC92CFE88B102E294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia1424b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedNormInertia1424b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedScratchOwnership1412.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedScratchOwnership1412.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedScratchOwnership1412.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedScratchOwnership1412.lean.txt",
+      "sha256": "388714F7E746074472A7068247CDF37DBA93E35242E670E8E3D79521A271E5CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedScratchOwnership1412.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceGammaOneTwistedScratchOwnership1412.log",
+      "sha256": "E9B553AACBF86C23A827CF5EFA92C3A519F4E416B4169CD48F9C22172BA830C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction.lean.txt",
+      "sha256": "3AE335A6BC837CCDD455C9F8CC2DBAEEDBBF9CAFA1F15B28994A680D7B24AE19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction1398a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction1398a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction1398a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction1398a.lean.txt",
+      "sha256": "CF91C44E49B085E614E86AE071643E1A21B07D14EFB1F4D23B3D9387037F068C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction1398a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualAction1398a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial-1411.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial-1411.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial-1411.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial-1411.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial.lean.txt",
+      "sha256": "277CAE5540E9F560DF43C4FC7353C8CC5B7E064C4BBF21CE75ADAE381E167F3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial1407a.exit",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial1407a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial1407a.lean",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial1407a.lean.txt",
+      "sha256": "2D9AF2B9E2D876682B1DAFA0D1698210385E01CD2B83E9AA7B66B378AA756048"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial1407a.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/SourceTwistedCoefficientDualTrivial1407a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_arithmetic_orbit_1430.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/audit_gamma_one_arithmetic_orbit_1430.ps1",
+      "sha256": "A1DF71B8298E55C1672481AF80676FD855A558720A3457FBDCA3EC72B0E501FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_arithmetic_orbit_1430b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/audit_gamma_one_arithmetic_orbit_1430b.ps1",
+      "sha256": "693E5CF1AAAA865AD33B905795F7256A686912C5569979A31EC6858075C076BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_continuity_1423.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/audit_gamma_one_continuity_1423.ps1",
+      "sha256": "4DFF3000DAC0B42886006568926C25E317F7F5875B3697943E1AE047DF4554AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_twisted_1412.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/audit_gamma_one_twisted_1412.ps1",
+      "sha256": "8FC0C9312164685BA52884196121CE74FA19491726509B8CDC09FEA96F018E56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_descent_1425.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_arithmetic_descent_1425.ps1",
+      "sha256": "88543DC60D23482E487A357A0FE61F4479ADE7AE89754A02C24C207CCB3E0ADE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_descent_1425b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_arithmetic_descent_1425b.ps1",
+      "sha256": "65238FB62B3696D897D843143C1952C3A678F7AC56AD4A6F7A8B103301D3DF80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_descent_1425c.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_arithmetic_descent_1425c.ps1",
+      "sha256": "FE08E28B3FDD276AAD32B5EBE2DD75415ED33820BA72E98241CBB18CF6EF1999"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_orbit_canonical_1429.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_arithmetic_orbit_canonical_1429.ps1",
+      "sha256": "DC47C75A6B7071CA773F2E3E296D5FCBAA7CA2FF2D3494814774005AAD44B29D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_continuity_canonical_1422.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_continuity_canonical_1422.ps1",
+      "sha256": "69B0B496248ECE6261C6090A3FAFEA10121BAEE7A0C1BD183F4C198E2AB2B6DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_cyclotomic_hecke_1403a.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_cyclotomic_hecke_1403a.ps1",
+      "sha256": "26D30C09700047AA9B371139D7CBEE10BC5A8177D4715C384B18F5A2BF152165"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_cyclotomic_local_1405.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_cyclotomic_local_1405.ps1",
+      "sha256": "7AA5C278BB9732EDC2D87AC1CF3BA55A3AF0D189FF59BAAC3D0C424922A7DE86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_finite_tate_dual_1418.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_finite_tate_dual_1418.ps1",
+      "sha256": "FDE4281B573A0544992241BD56BD10F575E70383ABEF160552687EF47548DBC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_finite_tate_dual_1418b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_finite_tate_dual_1418b.ps1",
+      "sha256": "7194D897EA15B4E6C483883CE18AC6C03A727B1A442A42DFEA28ED117F7A5E53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_finite_tate_dual_1418c.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_finite_tate_dual_1418c.ps1",
+      "sha256": "71D341596B09EDCE49384F11B63AF308B23002FB7B26E19CEFC7A64342BC9925"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_function_definition_1413.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_function_definition_1413.ps1",
+      "sha256": "D0C0ABC3C4EA73612256987E0AEC2BFA4DB90D79B6A51DDB46E40B70DD54898D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_galois_frobenius_1406b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_galois_frobenius_1406b.ps1",
+      "sha256": "7B5F4BAC1C7A6CC4A407E90F988200134DD626BCB4B34C11FDC802FDD4BE8C51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_galois_frobenius_1406d.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_galois_frobenius_1406d.ps1",
+      "sha256": "D0A997368C3388E1269D77F22C1F4F96A1A7174A33989CCD877615C213E43488"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_galois_local_1407.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_galois_local_1407.ps1",
+      "sha256": "BEECB27F9DA1BC58C70B1AD61586119942DE5D411846142A55B2DCDD7303B8B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_global_coefficient_1399.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_global_coefficient_1399.ps1",
+      "sha256": "FCAFF46576F1B4D03C9E7353AFA1E9F55C3974DA3712376596BCAD9A9B812D43"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_norm_inertia_1424.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_norm_inertia_1424.ps1",
+      "sha256": "C47E6E83890964732102E19E725901F66C5625377096C5BFD875CD75672C486E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_norm_inertia_1424b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_norm_inertia_1424b.ps1",
+      "sha256": "2ECC344D38E535C6B2D3991D6DFE468284134E891F55A4E5D24AEE06292D0C7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_open_congruence_1417.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_open_congruence_1417.ps1",
+      "sha256": "33C83649FC70830FBFC61936F68BC6E3CF9E85D36E59F061032C29D6146F9EA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_parabolic_frobenius_1410.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_parabolic_frobenius_1410.ps1",
+      "sha256": "BDEECF7686773EC9A01E0320BC834C29A754D8A96E3F834E09E5288D68EDE736"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_parabolic_frobenius_1410b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_parabolic_frobenius_1410b.ps1",
+      "sha256": "69848310273950100000DD78E3615CB34F6EEF32ADD46CA10D428C3090571DC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_parabolic_galois_orbit_1428.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_parabolic_galois_orbit_1428.ps1",
+      "sha256": "6CF0193B95FFC8080E6408AB929FC858289079F53F23560A84A65DBDBF8E8860"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_parabolic_tate_1409.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_parabolic_tate_1409.ps1",
+      "sha256": "A9C46D75710E8C3C43925452B13A4E32F4D55617C1412C82CED34F2138D2376A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_definition_1416.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_picard_definition_1416.ps1",
+      "sha256": "B21356A8B54042D06C681B4343AEBABC049EB477982D96C005FFAFE2AEE004D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_definition_1416b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_picard_definition_1416b.ps1",
+      "sha256": "FD04E9982FDFD9B2EB4DE53485D1E1A195EF5BD08E841B5C6F2D573FA4DE1644"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_place_definition_1415.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_place_definition_1415.ps1",
+      "sha256": "EFA5CBA083A9D88B9C3A1F20DF38CB9B3997C7F29D97844614B090C105733EFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_place_orbit_1414.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_place_orbit_1414.ps1",
+      "sha256": "CF9685E9208C94ED18D801FD22E8365982F476B0E7CA12B60CDF000931E6258E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_place_orbit_1414b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_place_orbit_1414b.ps1",
+      "sha256": "DE9DCB60A5BB1ECBD472900137EC700744CD317D339BBC42145FBE90386D6DEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_canonical_1411.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_canonical_1411.ps1",
+      "sha256": "072E4D3FBD48DF680AFDE0F5B9AFF1B1474451878FBD5C1E217CFEF2E365FCB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_congruence_1419.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_congruence_1419.ps1",
+      "sha256": "A0FB6EBCBF0CFBAE3E978AB9A22DE10D14C1E67E1B91F62CBF4FFF959D4F601B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_congruence_1419b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_congruence_1419b.ps1",
+      "sha256": "D745168F1A561EA21E7BF34A4FDCBBDA0DFDE841E33DD311553BE063F1E3A1A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420.ps1",
+      "sha256": "435DECE83FF68829892F2D79D6AE672A4044C5B08F546E79D3C66C9200AA81B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420b.ps1",
+      "sha256": "F1109D5FF7988BE1F520130A32A554B47589DB3665898CBBED69C53B864FF4EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420c.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420c.ps1",
+      "sha256": "2128B54AC3F8A60724E00C815C5A4479D6A23E1C69F4B2A5AD11D0ADF0E94576"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420d.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420d.ps1",
+      "sha256": "930C83D554900E6C37F16D656677B21CBC5783E23725E729484380E9961B98E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420e.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420e.ps1",
+      "sha256": "FC7776CDB44C6AB3D4D6F65A66CFD13133EB30FA69A6BF23F2EF6E9FDD0575ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_continuity_1420f.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_continuity_1420f.ps1",
+      "sha256": "687A8636359C879727C2ED52A0590BC101AE1591B30D6477774605C9FAE9F731"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_diamond_1426.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_diamond_1426.ps1",
+      "sha256": "A86ABACB5819FFD84E53E6D9482CE6B0018ABCB5D6C7EE7BBE1DD54D532AF5EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_factor_1421.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_factor_1421.ps1",
+      "sha256": "31F875C1C5FBA7230E87A014C083101A35984653C0C9CA9554F79947D79A28C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_factor_1421b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_factor_1421b.ps1",
+      "sha256": "199991301C2E03DB57B8A94896F4CF04A130AC6B7D170AF3A498AB663010A1C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_galois_1401.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_galois_1401.ps1",
+      "sha256": "6D0D146CECCC7958113F2F86F2347649602F897E98417ED0182ED6DE8FFD9673"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_galois_1401b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_galois_1401b.ps1",
+      "sha256": "0C39AAD9F4D79653C8F98835B1087F63CA33D757B39230E45035B6053680AD0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_galois_1401c.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_galois_1401c.ps1",
+      "sha256": "E27E98A932042145E795E0E5AF9725080E62566329096E7AA38741F90BB70EBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_galois_1401d.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_galois_1401d.ps1",
+      "sha256": "0CA25229F9330B3432EB100477F3F698DD8BC1BB54AE4855BE8B8C45B0C2CA10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_galois_1401e.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_galois_1401e.ps1",
+      "sha256": "9EAFAFA013AF8FFD686E5C3B713CDF59F610CEAE79DA817642E78731C572099F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_hecke_1404.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_hecke_1404.ps1",
+      "sha256": "12DDE3616AFF4528C856EE9B5E301E9E7D4BA22D1D42724BAA03CE497104DD20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_hecke_1404b.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_hecke_1404b.ps1",
+      "sha256": "C8253177E3E82187DC4DFA10A9F6CA072A389217AD2F557403B48085D8330E96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_inertia_1408.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_inertia_1408.ps1",
+      "sha256": "6CDBF2CAA69393EBA19FA4960BDB3D877279DE65FAA015CB1D2ED77FBA17E32A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_twisted_trivial_1407.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/build_gamma_one_twisted_trivial_1407.ps1",
+      "sha256": "C42B02A168191AD514119B107EB3898968EDADAE97B32771E6A247E68680F1FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cohomology1401-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cohomology1401-focus.log",
+      "sha256": "DACCEF95C9A17CF9BFCE17BE4946B9C6AB9E91962E80043BB55481F1E29FEDCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cohomology1401b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cohomology1401b-focus.log",
+      "sha256": "1D85B8FF8995174FDDB01A5754611E2B1FC7C7C01DAC994F9EE4B2583CEF407D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cohomology1429a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cohomology1429a-focus.log",
+      "sha256": "D61E5D8D4C6B220516800544268922EBE4FB27D576DDE0ABD2F9BE7BD900169B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cohomology1429b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cohomology1429b-focus.log",
+      "sha256": "956DA6B3036A667DA07949A523C7207112C7914FD8B6D2743BFA1D39E50C1292"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cohomology1429c-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cohomology1429c-focus.log",
+      "sha256": "8974AFE27A1713047AB3A7076A2E5268CE9379A7E898F1209A656EC5621F97BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1401-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1401-focus.log",
+      "sha256": "86DBA315AA2C1C25CA2D8BCB9D4280035545E751C35795859562E5D1F34ECF61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1401.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1401.txt",
+      "sha256": "B0E18EEB019DD5119FACBEDDD671B71621EC56FFC6C8C39B281F3D9D3DA9FA52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1405-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1405-focus.log",
+      "sha256": "B47DB07C0AE357A51F3FD012D3ACC26FADAD754B01F7CE9372C8EF4A7D573E07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1405.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1405.txt",
+      "sha256": "A7A80724515E16E8D47B9753C0A4055DC539577BACB196A612B6588979457CB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1409-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1409-focus.log",
+      "sha256": "CA986164FFE041233FA2C4C1DD4FAE530FFFE9C5C7597D4D69F95304FEC312CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1409.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1409.txt",
+      "sha256": "810F52977F8A645AFE44B0BE07344F9472465C7A2A0DD50B4084AB61F853E95E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1413-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1413-focus.log",
+      "sha256": "32C687EBEA4A9451604028CF70BB8FB83500C451BCC986B49E11AF9F55A7B079"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1413.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1413.txt",
+      "sha256": "D67BDB77B3E1F2366E337B43D23CB186EBB4740FA3BDD112E4DFB6B00879CDB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1417-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1417-focus.log",
+      "sha256": "B16E01BC34414B744FFE673FC00A8B2A949E82E3F650EDA237BA0C50B47B7E23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1417.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1417.txt",
+      "sha256": "DC061B95A2385B49F4E61C87B835A8E57416696648B74676637B478DB8331970"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1421-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1421-focus.log",
+      "sha256": "2ACC9926B535A101287B551405245D0F90B3C34FEC1D27987D23203E7E576BD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1421.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1421.txt",
+      "sha256": "4E2E017DB3C7E0C97885B47202895597A96BEAFD9AEB0439DD4D82F0C47BBAE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1425-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1425-focus.log",
+      "sha256": "0B64D5978A08D87ECFE1C5D1020F56F59F22B32515B5BE40A86E01944295E04D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1425.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1425.txt",
+      "sha256": "5FBC37C816E96367E919BA16460E06432C5749C47A1A669D4A6567DAF6DAE2A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1429-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1429-focus.log",
+      "sha256": "30101A9C9D980C72CF3628B036D4AF1181F442BCCE9EF7F9F863AF8872900C10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1429.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/consumers1429.txt",
+      "sha256": "D6E67E0B518FF4715F7FB1B832D53A8AD217C8B398832FAD82F7477868CBE900"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405-focus.log",
+      "sha256": "BD02A7292F3A296F5372D50B0DE904BAB9A5548D2CE6925D8A53A33A5A9F535B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405b-focus.log",
+      "sha256": "79B356AC8A4B37C474C6DBDBFE8F0BD32138D5D04548C344306FF84F3CB4E995"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405c-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405c-focus.log",
+      "sha256": "8CB890088F752CCD7BCC7EBC3E40AE9957673D72C6388D5B268DB889B3E00D38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405d-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405d-focus.log",
+      "sha256": "7E02C837DED106E3936B59C02F4382EFB864D533DF104F066C77570308A2EC18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405e-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405e-focus.log",
+      "sha256": "C60D3517B6298ED87B734031699F0FD508A0AD7A129E6FB6EAC8F1D6D0230BCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405f-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405f-focus.log",
+      "sha256": "EFE82D866EB8D6BA6E6D004AA9997D7509620EA0EA55052B4704CC18EEE88F12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405g-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405g-focus.log",
+      "sha256": "CD56016825958ED67F7EF2C8B39D16F50176A2BD24AF970D80B5E78D106C5074"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405h-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405h-focus.log",
+      "sha256": "B9EB0DF5B634ECC6079571C57BCAF54BEF89B7CD81973895E336C49483C17853"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405i-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405i-focus.log",
+      "sha256": "AA0DB50ECBA10CD1B3A90F027C4E45E04527BF8C2B5308881E9513DBB69D0994"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405j-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405j-focus.log",
+      "sha256": "F21DC5F7FB750208EF8F0AB81C3736519559AF4F30F48B7DB7A05DC6AC1E822B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405k-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405k-focus.log",
+      "sha256": "3460ABB9CED986ADB6AF4D611E63ECE93440E4CCC05946ED83CDACFB09A8385F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405l-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405l-focus.log",
+      "sha256": "310205153DE2CF8F2B0BB0DF2E8177248CBB68CD6130B8AA1A96E276AC179023"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405m-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405m-focus.log",
+      "sha256": "6B66313E9572DFFEA55BA81085329C8623AA6F9CD5CDD0746145CD7027B9BDBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\continuous1405n-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/continuous1405n-focus.log",
+      "sha256": "4CC57D8E4405292D68746ABCA06FEF576C2AC4DE1F629AA3B87601DB0E34D1AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coordinate1409a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/coordinate1409a-focus.log",
+      "sha256": "30F65B7DF93B261A3224E7186271A84AA056B8F9E4B0378F8AB352208C5A27DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cotangent1421a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cotangent1421a-focus.log",
+      "sha256": "4A1229F637FDC700B967148AD8EBE3CACED049A0652B22538A505AB8003CDF12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cotangent1421b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/cotangent1421b-focus.log",
+      "sha256": "3A834061024418FFFB6AC3872ECFE77E2B5B87DD669D9FFBA75A3AF72D3AD443"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\derivations1417a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/derivations1417a-focus.log",
+      "sha256": "A7206F8740756CCBD0D1CA5ECBE20C225F5380F9270DE23F63CD6B33FD931C31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_galois_frobenius_1406c.ps1",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/diagnose_gamma_one_galois_frobenius_1406c.ps1",
+      "sha256": "2558B4F6981603A56BB09CD689CF6332AA1FC18EE09C6C256A6E4BC386FF68CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_galois_frobenius_1406c.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/diagnose_gamma_one_galois_frobenius_1406c.py",
+      "sha256": "DABB131DBEC16F46292D4CE736D7BB4E6036BEB6A8ACC61FE04C10C1434142B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1401.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1401.py",
+      "sha256": "1ED6898A9F1847C8E0DA52167EDDCE9DB6A90366C1C502869EA2017BA480C279"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1405.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1405.py",
+      "sha256": "36B3BD6261BBD581A5EA7B29FFD3F3032F7290DCB3287CB5D96AD67732947B67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1409.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1409.py",
+      "sha256": "DBEC7B19A48F3D7FE54AFF57CB4E5B2B06C3F48AC4C20F21682573F09DD98582"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1413.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1413.py",
+      "sha256": "2B5DE5B288F413DB24F2A8C95D89309043F305819C350499DAED2875736BA13E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1417.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1417.py",
+      "sha256": "7D701BAD0B3AC862EF68CF89BA72576AE1CE53148996D95E2960612D99BA30E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1421.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1421.py",
+      "sha256": "29E38D6697067744E17CEDD604565085091D4E9281B66F649FEE9CA3BF18827D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1425.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1425.py",
+      "sha256": "37F81A9882B1DEC9C39C1A45CF0ABBFF70A8D428517476C129BAA5A26BEDD9AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1429.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/docs1429.py",
+      "sha256": "427610199E7403CF754D912DCC12FC2CB038238049D7F0CCF82E1B9D89C22C53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1401-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1401-console.log",
+      "sha256": "6E8960341AF291E97135FFB276C5A4F23B96625F197651FC4DD7CF803FCBF609"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1405-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1405-console.log",
+      "sha256": "EDC4EDE550E28F5D58F29A3DF70626ACF41EBE01C9175A0EB52349A904C7457E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1409-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1409-console.log",
+      "sha256": "64D6F764F46A59A3DC68C31DEC9AFA5E071B1E4522DCFF2FC2BCF99E1D5785B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1413-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1413-console.log",
+      "sha256": "B77E25C51D24C1442F0B72DC435ECFA5739EEA5DA1C26869A1AAABA1168C9A1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1417-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1417-console.log",
+      "sha256": "4CE7CF12C22E4D9F9C1EBA31529452742EED5931CD4E14D4021A3A9291E62976"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1421-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1421-console.log",
+      "sha256": "84FFECABF92BBAF0D470C6FF2CDACC76605A14445DA728CCB963442FC6947BD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1425-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1425-console.log",
+      "sha256": "93D6D37F06546A7A861FA15B6EFFE0118815994FC25812D2D4AEC391D3CF1121"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1429-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/foundation1429-console.log",
+      "sha256": "9D414E27DD86BC45B174E7C442AA800BE533A31B83CE1EF657FB31B2C91DDE04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-descent-reuse-1424.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-arithmetic-descent-reuse-1424.json",
+      "sha256": "157F73F2033A356C7411FED827F23ED35BECECBECBA063CB6A917167AB6B7C70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-orbit-dependency-correction-1430b.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-arithmetic-orbit-dependency-correction-1430b.json",
+      "sha256": "3E5614DB919DE5777B68F2C6B70565531D3584C42A7C87393EE86EC1D902ECF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-orbit-versions-1429.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-arithmetic-orbit-versions-1429.json",
+      "sha256": "2C61FD3B189084B1F343A0CDEC6BC300789786BD767BA060D9149F0E73BA07E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-continuity-reuse-1413.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-continuity-reuse-1413.json",
+      "sha256": "536E0D7EC209ACD92264F72D16C8DB0504B79BFBD934D0AC646F73FE9BB0B5A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-continuity-versions-1422.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-continuity-versions-1422.json",
+      "sha256": "2CEF178B0D7397701E960C3A9BFDFC9BE9C67E10D1870E08C4B073BC63EFBC07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-local-reuse-1405.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-cyclotomic-local-reuse-1405.json",
+      "sha256": "7DED9807607174C90AFB25E1F8FD87258CD257A69177136237B3ADAA5D9D280E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-coefficient-route-1399.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-global-coefficient-route-1399.json",
+      "sha256": "45BDBFDE552465A33C060B2ED9F4826C61153D70FE17FCD1C42714E89FA6D14F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-tate-reuse-1409.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-parabolic-tate-reuse-1409.json",
+      "sha256": "00EF772385EF3A9791C3E287EB2ED5550F76016D2861D895E2D55AAD91EC0034"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-tate-frobenius-promotion-route-1402.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-tate-frobenius-promotion-route-1402.json",
+      "sha256": "3488DC47E6B3D21E8E7F43A249922F420DC9F7F2844CF18275304C63851BE921"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-twisted-diamond-reuse-1426.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-twisted-diamond-reuse-1426.json",
+      "sha256": "1FC812700445703B2F8FA35634D4907E7C4AEEA7B0D11AD66B356A3B9F2EFAAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-twisted-factor-reuse-1421.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-twisted-factor-reuse-1421.json",
+      "sha256": "6FF045F900D5F1059D811D9220C82480BD4C54291970169057CAD7256B3A0B25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-twisted-versions-1411.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-twisted-versions-1411.json",
+      "sha256": "A403BA37C0266805DCFB2D3E63FA81ECE4AAA1541C4A122BBB7C9B4A7C58939B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unit-lift-reuse-1425.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/gamma-one-unit-lift-reuse-1425.json",
+      "sha256": "AD8C9E393B2C53EC3C339C0B5688A4B3CF772388156848ABDE80904F96487279"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1401.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1401.txt",
+      "sha256": "6B91E5B21CB0B8C72279A8465BF6D2084508226DC3D765A903E2EF373431F611"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1405.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1405.txt",
+      "sha256": "9C69253037FB2EC1A782017877E346DB60F591B0CD942F5B7D97953D8F82303A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1409.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1409.txt",
+      "sha256": "4003153318406E0286ED61DE134F78D8DE6D568FACDC192C8A4B261192E9AD3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1413.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1413.txt",
+      "sha256": "EB4CE48CDBC26F67E172605CB5DC12114FDFA6F2392F9FCA95EC824ED72C3B30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1417.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1417.txt",
+      "sha256": "BE32B50754F8C289B1A6280F43472D1E85FEE865B8E6995F398B0087AA92B29D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1421.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1421.txt",
+      "sha256": "6B40B5305C005EB71249B07EFB9AF42EDFA8250C22024BCBE7E8E38BB30983E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1425.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1425.txt",
+      "sha256": "682E48B8D19301074F8B8ADFA8EF0A0587D3B4A9349C6EB427DC0742F7806B87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1429.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/math1429.txt",
+      "sha256": "6C1EB778847673DECC1022AFC3730F09BFAAD9E892259A95F6576A8A2E1B4447"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1401.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1401.json",
+      "sha256": "3462A33013B063EAF5A4122A350ECB861717C1C143C52E6F4F948617DB63782F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1405.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1405.json",
+      "sha256": "D3CA299397B01A00A1E4F94BAAA1A7CA367CC538AE443284438C2F99E598D093"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1409.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1409.json",
+      "sha256": "4F91DE09748B305889B483E8C010EDC75FEDFBF5D6ACE1D4FC6B63E972F62DC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1413.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1413.json",
+      "sha256": "31EE2FB64C8BDA541E6D7658F5D19743AB0FA1565BB7AAA4CC33E6AF03DF4822"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1417.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1417.json",
+      "sha256": "39F56873C122AB53BFF8CFEF2E018263517F66A9D5012C34CE9888D5BB9A2DEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1421.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1421.json",
+      "sha256": "D2AF347C07BB4B1268B640C9FD8187247CC793DEBDAEE3D706984FB112D7B64F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1425.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1425.json",
+      "sha256": "DCC34DE26554F286A9B2B572B991376EBBDF3EC4A5D8EFB8E56F94CC513CB6F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1429.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/modules1429.json",
+      "sha256": "C579D8DAEB913FC1F3120B56F29F535BBD6ABC2803DCA172BD0544CE11C54F88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1401-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1401-console.log",
+      "sha256": "4EB2302186E39362C7E4FC1E6EB6801B5B7275AD85845FA5857C3D8348167CFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1405-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1405-console.log",
+      "sha256": "AC0EF851AE6E49B996696403D0DF58A23A1EEFB9370638409C4BC9048CFD0187"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1409-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1409-console.log",
+      "sha256": "E26C9945CFCC58B6A8456E9D4A38AF4187B287A245B26A2E6EBD4A7BF2D874E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1413-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1413-console.log",
+      "sha256": "BA62D20F12C6A340F149A8865438F42C6F8BB54B2D64D61425254C1149E60161"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1417-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1417-console.log",
+      "sha256": "87FB56DE512080E168F8FE505B5F4253984CBF19B9A8BC68F9E9581D6B5B21BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1421-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1421-console.log",
+      "sha256": "E1F534DBFCF17BAEE259F4EEC25B61F0CAB9AD12D865582BC4BF366B673181B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1425-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1425-console.log",
+      "sha256": "547ED927F2244130E0274E7297499AE88969D81BA47BB8B971AEC047B8CBD58A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1429-console.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/paper1429-console.log",
+      "sha256": "082430B4F4B87FC38B78EB444D1F3134D752AEBCB1D330797D073C56BB5E4B71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parameters1413a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/parameters1413a-focus.log",
+      "sha256": "7F8F91360B3BBD8A790145DF9B19C30C5BB5E7A68A082A1B19C85FCEC8133291"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\parameters1413b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/parameters1413b-focus.log",
+      "sha256": "C81CE4678C1FBA92F402637513BA93B6869A285C89B2965A404492CFD378E086"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1401.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1401.log",
+      "sha256": "EE444404D5A3A5F02ABE8F066E72394E7BE9704C26DD43408A32A26A2BB6AECD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1405.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1405.log",
+      "sha256": "65C6B404876F81EBD80CACFFAB7670FD710F2057ADCFA3BC40EB6938338ECA35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1409.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1409.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1413.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1413.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1417.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1417.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1421.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1421.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1425.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1425.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1429.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1429.log",
+      "sha256": "0F2F0D5A31AC5C5D6F94336E617C76ABC1A89AE26B872E7DF35FD990CE3AD8F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1429b.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1429b.log",
+      "sha256": "0F2F0D5A31AC5C5D6F94336E617C76ABC1A89AE26B872E7DF35FD990CE3AD8F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1429c.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1429c.log",
+      "sha256": "D3E6FD465F9C5760B5A9F85D0EBCAE2C5A524D35C7466CA0157BD2EAB11D04B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1429d.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/preflight1429d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1401.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1401.py",
+      "sha256": "6FB2CBCA87CEE2248D9F6DD82AB572E92DAE67E0527361B1FE38DD31CC956287"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1405.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1405.py",
+      "sha256": "59DA935178A74819205F8C8A9886BF7607C634DD42702EB558CADAEB4468A642"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1409.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1409.py",
+      "sha256": "B63B048004F1F3FBAE29463F2A21ADFEFA0F9AC1AC0DCBE5A342F0C39BD4B261"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1413.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1413.py",
+      "sha256": "9C3A1169D7219884C5439D6D9E20F22EB14AAE9DAC93E441AE82DE71D5F6CC58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1417.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1417.py",
+      "sha256": "DB5BBBE20FB65B75C771A18C5EE99F5F8089604E23AFEFAF913622B810FD998B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1421.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1421.py",
+      "sha256": "99B3368A5959FE1852E9F9260F9B4B51ECE7BF759FE8FFF3AE942E44BF74B3BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1425.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1425.py",
+      "sha256": "B21DF17AD5D0268D01DAC47A5F8CFA1E78B6F4A1425B46F1DC5D81860E1D8338"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1429.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare1429.py",
+      "sha256": "E87F646C71A8AC482473CD844B955545699A87CE003FDA8F3A98D0416E8CCD53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_descent_1425.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_arithmetic_descent_1425.py",
+      "sha256": "2967900F08BD26FEF0DE77FDA2CFBE3A9664F8C3AC64AAC2BB9D5B97ECF0566B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_orbit_audit_1430.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_arithmetic_orbit_audit_1430.py",
+      "sha256": "D2E7A71B55EB23476930D7076823FF3F08687F03ACC44150DEA7C08AE22F5ED3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_orbit_audit_1430b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_arithmetic_orbit_audit_1430b.py",
+      "sha256": "FBD315A4823AF085053765AD4512A53F71E6B6AE8A38A3A6884C109AFEEA4BD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_orbit_canonical_1429.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_arithmetic_orbit_canonical_1429.py",
+      "sha256": "0222982EEA141618BDFD6F010909A2DC6294B4F092B0B2F8F548AB81DB8E9581"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_orbit_dependency_1430b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_arithmetic_orbit_dependency_1430b.py",
+      "sha256": "CF61831DED7367F26E058CFFA31FEB1FFFF7D9F303561312C6855EA6A801F845"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_continuity_audit_1423.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_continuity_audit_1423.py",
+      "sha256": "98BC76B4F7E94A4621BFD767A446E9E55D2067D21B747ADD281E2D7A45FFC1C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_continuity_canonical_1422.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_continuity_canonical_1422.py",
+      "sha256": "8705555B231FF05CC7B8E4619D47099DC524FCE47921FDBA1B2D188EE647E6CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_continuity_route_1413.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_continuity_route_1413.py",
+      "sha256": "145BFB73961FFD8DA38B635D5DA9DF286997DFB932F0EF2F11955C2A2BAEA5FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cyclotomic_local_1405.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_cyclotomic_local_1405.py",
+      "sha256": "1122FBB8492CB6B528D0F1B9BFBCF4B1991CA17DB50333E33458C519AEBBB438"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_tate_dual_1418.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_finite_tate_dual_1418.py",
+      "sha256": "39C146D4E1DF72C82EEA1E04B8EDAFFB0080B799EB856F8729164B6BCD17E529"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_galois_local_1407.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_galois_local_1407.py",
+      "sha256": "77E135A2B9E82493AC9634734FCB671819CAE013C6DC5E4FD33A394815F79FEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_global_coefficient_1399.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_global_coefficient_1399.py",
+      "sha256": "AB3D584B2E31462CADB52428BE3F809A6D54FFAB4CF62B13202048CD5B13DA58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_norm_inertia_1424.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_norm_inertia_1424.py",
+      "sha256": "930F4D45D06AE00470FECAA550606BCCADA5F7E85DE012C14ACBD5ACE4691FE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_open_congruence_1417.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_open_congruence_1417.py",
+      "sha256": "0EE2A2E7C590DCC0AEC8CC3952D2DDC53169AD2CB33101426612F3164A46CF9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_parabolic_frobenius_1410.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_parabolic_frobenius_1410.py",
+      "sha256": "0BEB7C2060D61DC57F891AB6ACF3488375BFA19BE6A659FC4B35BAE554311B82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_parabolic_galois_orbit_1428.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_parabolic_galois_orbit_1428.py",
+      "sha256": "B547BEB0A24F6C8714089122CCFCF9D024AC90FAB7A8C15C9350056CC0D15256"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_parabolic_tate_1409.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_parabolic_tate_1409.py",
+      "sha256": "0E5712EA94E2C1729E90505B92AD7BC4ED84B64B657E8FE8B1DB52EFF76266E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_definition_1416.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_picard_definition_1416.py",
+      "sha256": "9A46A7A055D97D0AEEF53FFFD4721D39FA0B25C4C86B54461B7A049A2A4AC5DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_place_definition_1415.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_place_definition_1415.py",
+      "sha256": "6ED95F92DE51962D63C505DD483D43C20CC582AD681F412D2E4311764C14465E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_place_orbit_1414.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_place_orbit_1414.py",
+      "sha256": "1192A7E62BCDDC4D3A02537A46682AAA55F768597962E0CA018C4E43E7B4030D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_frobenius_1402.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_tate_frobenius_1402.py",
+      "sha256": "E64ED885952FE3160C09CE8F6EA977EBAE2ADCCC0603C3751EA5D82A86B7FE15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_audit_1412.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_audit_1412.py",
+      "sha256": "402703A35E1069E31F6F7848C88C573642C3182BFB36545CC8BE07EC5CFF69D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_canonical_1411.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_canonical_1411.py",
+      "sha256": "8BEE345C7C755A3FBBA25C6347B1C8ABBFE793784A60C7397D65490BFCD19816"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_congruence_1419.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_congruence_1419.py",
+      "sha256": "8FB8978D25D149DD8D71C784A47DF7405E38648B3609D43D177DEDA63AB3796B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_continuity_1420.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_continuity_1420.py",
+      "sha256": "F6C736E5A6FF2C0DDE2255EB6D77C1991D4D8EB84E53D977A93BFB9EE4791F0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_diamond_1426.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_diamond_1426.py",
+      "sha256": "39FA988B955AA639D2240A9AF11600960C8F21065AC91E890CF0DA39C7DF3A0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_factor_1421.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_factor_1421.py",
+      "sha256": "4CE708E99BFE5FE93BC11C0FEDA93093405FE987F0A401E3AE14794EF8741393"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_galois_1401.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_galois_1401.py",
+      "sha256": "9D6897B03F44FF2BC5C8868708D3FBDBFD152CB737E2E51787C2DBAE9939464B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_hecke_1404.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_hecke_1404.py",
+      "sha256": "5F75553DCB60B95E67C031E5835B10B7384948CBCB2AE5C4A97F1996F761C1EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_twisted_inertia_1408.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/prepare_gamma_one_twisted_inertia_1408.py",
+      "sha256": "DAD0A078A9FCFA947EAE4E6023A2CD9DC583902879ACB6D5FD9A31CB17B20788"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1401.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1401.json",
+      "sha256": "267A79054491FFC034A6532950DB74CFB14927A18546D4364CD043273820565C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1405.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1405.json",
+      "sha256": "ED099D9FC93A156F00B1DF65115F086D71730CC03B00F7661B0E2FC71BCD693F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1409.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1409.json",
+      "sha256": "47160A5551A795A8BE9200675D584051AAA84661FAFDA422557365D700557EFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1413.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1413.json",
+      "sha256": "21EE7AC1938BCA9DF905B7BEFA6004E884B6F02986613947B5D59DEFDD3905A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1417.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1417.json",
+      "sha256": "9A253DB83F0E243DADE99AF1EDB4433529A0F1F9CB7F86AC9533A66E2413A888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1421.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1421.json",
+      "sha256": "F9764D53EA6BF3789CE46A1D0A765D3E471FAE18FC7175603C8EA0994F028C47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1425.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1425.json",
+      "sha256": "8131A5C518D44048CF4A2783F7C8645794EE724487CABA4FA90640839D689D84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1429.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/primary-review1429.json",
+      "sha256": "41089ECF2980CA2422734490B1AE76FE06004C0634594569E193376E0FE32D2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1401.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1401.py",
+      "sha256": "5CB28C5DA6223648556A5E86BF0BFF6A343E8DD0BB9C6380686369732381326B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1405.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1405.py",
+      "sha256": "715BD7ECD27BC99575428C6E59A64F763331E03C2C64A118DDBB53842C07F46C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1409.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1409.py",
+      "sha256": "1E3115A13BC6B408F79484F23FCADAE941DC1E4191FFE6CC275CDCF764B57E25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1413.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1413.py",
+      "sha256": "08B12C3A39579E030C544FA0524697BA78183A505050CDCDBF471C9DC1708E88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1417.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1417.py",
+      "sha256": "0C97BACB5173D63A0E8273B6E2A680A680798D588022FA49D98ECBC2269E93CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1421.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1421.py",
+      "sha256": "1A1A5C0A84F3BCAF1BD8B05B4E2C2CB5BD3FBD29D9753FB4B1B6C59C918230DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1425.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1425.py",
+      "sha256": "2B0A7A0F267A586FD4A8E3230783B1691A7E79D4F11A6C26C03BB76DA541B545"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1429.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record1429.py",
+      "sha256": "68A3EEAE4368B4346778DD0E0E1FC9502EF742DCEA750E33E9D55512ADFE3E1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_arithmetic_orbit_1430.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record_gamma_one_arithmetic_orbit_1430.py",
+      "sha256": "8B5EA4F91348AFB2BC258A087133E04285CD0C48140D01F82CB9F7EACF3EC711"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_arithmetic_orbit_1430b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record_gamma_one_arithmetic_orbit_1430b.py",
+      "sha256": "F7A9FB59F3849C76DCE92D01DA6E3EEF8B63481330874E471C5D3FAE76A5C5C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_continuity_1423.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record_gamma_one_continuity_1423.py",
+      "sha256": "C52AA70C07BCE0ED655D7CC861B94336F9E05231C39A088EB2205746E9A14D8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_twisted_1412.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/record_gamma_one_twisted_1412.py",
+      "sha256": "0822DB4D35EB03A2253F47FF7F470013D1C1F721A5D65CC3CD995A04D9F1C79E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1401.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1401.py",
+      "sha256": "6E74258909B95A8EC9F9613AB80F2A4DEAF4CD7E8A7FD0C8C62EBED01B662D5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1405.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1405.py",
+      "sha256": "631A6E14CB393F4FCF0563C9BB9ABD9BDE9E0F81840027498E0ABBB356CAC413"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1409.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1409.py",
+      "sha256": "77C74DACA32C66C78DC53FC33DE2B65C73269272F321442D7085C59A80417B42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1413.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1413.py",
+      "sha256": "11F0CD72F18D5EC89C72387CD7DB897D1395166BCB60F4D9E6C3653853176859"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1417.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1417.py",
+      "sha256": "4F7517AA7CE033B4F2C62B20C1617EFB2C5FF2B48D782550053889AD87F6C59C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1421.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1421.py",
+      "sha256": "B82A73E2D4AF71C336E2C6EC632B0B8A8AFEAC8C861D0D7A50F4E204C8E1C57D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1425.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1425.py",
+      "sha256": "27C9DA4527FA77C4DA95B3BA818A5FADEC86D74069411CF40F4B271BA0D88EA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1429.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/register1429.py",
+      "sha256": "08EAD00C49862AA3ED8482E63477F5F1446A90E5195935B29FC59AC4D573709D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1401.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1401.json",
+      "sha256": "0A9AC9CFCDF37AF30FE4F49283DC470593E9EB85797469BFF8C9F0DB7034D91C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1405.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1405.json",
+      "sha256": "7100E36A46B5F4204DB284FB488218EB3DEB35B92012F5170493F8A0B616A576"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1409.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1409.json",
+      "sha256": "FA3459C7E6AC1AC4C995D25D40376765C7B37C99433F7508853EB1D512C56F0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1413.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1413.json",
+      "sha256": "26E1A992E3A1A2301A91E12BEE3CE7855A2AEED094E3A11764677153632D760F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1417.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1417.json",
+      "sha256": "871054267D08A75C8B81D7A5913D42EA95036635AD698F0FEFC4762608CF714A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1421.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1421.json",
+      "sha256": "6312AEDA4C78251DA5E44C4EA9422F80E2AF6AC36BBB0D3ABC5B4ECC67FD8579"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1425.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1425.json",
+      "sha256": "9DD4AE41335228B72EE4B771514C4AF104869EF7A903C42A8D4AD42B1715A03C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1429.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/registrations1429.json",
+      "sha256": "FFF08C9F53B779805E5D2C8CC750340B083C653FE56EFACD595F4F3A515F3A88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1401.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1401.txt",
+      "sha256": "35DFB62A2003E5C388E579E463288C1F22CCD3491409353E1672350DFAC45562"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1405.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1405.txt",
+      "sha256": "BE80419840B487D6DFF15B6AB4FC11324645EB1EAD727CD39D63CF1A862FABB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1409.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1409.txt",
+      "sha256": "5452C7BD9E94FD5642F8A009DBF4C53E1B4BD988A5A9D1B0191156E24E73711E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1413.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1413.txt",
+      "sha256": "0A5582D56DFE1659FB88BD249108B1192FEA6C31CD4605073994711E9881FD3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1417.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1417.txt",
+      "sha256": "F20F3ADD46A42709DAA6AC5A12E8F5F0C6EA4F7C4CD77204A554CAFC713A3962"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1421.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1421.txt",
+      "sha256": "228053C672206127499B7F0AC982B5AD01F850F77FECD71798FB204A95B2E1AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1425.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1425.txt",
+      "sha256": "A4811215F837EDF3F82BED6C0E31AAE951BDC2724AD19787094159B20A368EFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1429.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/remaining1429.txt",
+      "sha256": "B0C6518477A11FF2B2E922A1E3E04FE3AB2DAA2CE1B336C8058C445C58E27805"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\repair_gamma_one_arithmetic_orbit_preparation_1430.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/repair_gamma_one_arithmetic_orbit_preparation_1430.py",
+      "sha256": "D9A26BC190CB054324A0AF98F5525343A5DAA284C369D7B3EC4130706724B77C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_absolute_cyclotomic_1400b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_absolute_cyclotomic_1400b.py",
+      "sha256": "1DD3ACE25528FD9055089F60AA42FA5C5B97AE0617D3C5AF5A22094CB485C079"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_arithmetic_descent_1425b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_arithmetic_descent_1425b.py",
+      "sha256": "F3EAA478D1304E2C2F82E7EB443ECDFBA3427AB60627560C23CE728158C4795B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_arithmetic_descent_1425c.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_arithmetic_descent_1425c.py",
+      "sha256": "3CB69BF9AB441AFF028D1012696DE716201425A785C424CE1B5307F6D5C322C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_coefficient_diagonal_1399b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_coefficient_diagonal_1399b.py",
+      "sha256": "FB1FCD8D5D245D7929F123EBC866F5A1AEDB45BAAFA0DEF54D400A6741698525"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_finite_dual_1418b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_finite_dual_1418b.py",
+      "sha256": "4F009BC6B47287FB449EE35A44185E33C2C799547233CFA6A2879C7C9DE80DE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_finite_dual_1418c.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_finite_dual_1418c.py",
+      "sha256": "DC398DAD8E35E8493497618C06A1004D4EB51D24549C2043A1261058986BD7F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_galois_frobenius_1406b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_galois_frobenius_1406b.py",
+      "sha256": "0A716C2BFB35696DAD39442F3B2D02A0D28F4F36FB6947FBB6D2F3959236FAD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_galois_frobenius_1406d.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_galois_frobenius_1406d.py",
+      "sha256": "B2E49A42DE977BC2B726727C6F6E86BC7A342747F747C9AD66E60D1BBB435888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_norm_inertia_1424b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_norm_inertia_1424b.py",
+      "sha256": "CEE6C89C63446DA18075C2F38840CD0714D1301D6BB6404EB38A21D7D615F1A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_definition_1416b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_picard_definition_1416b.py",
+      "sha256": "CCA0A66617DA7EB70101F264BB5B940FE3676B8C1956484CE4B00A4464672F8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_place_orbit_1414b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_place_orbit_1414b.py",
+      "sha256": "508FC109B9B87BA371764CC6C1FE26500649CB105141114B59AA315A50C4B61A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_congruence_1419b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_congruence_1419b.py",
+      "sha256": "139D2FDEB0F8912FB660A7152A48E2C86BF648BF6723FA1B822B4E58EED17461"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_continuity_1420b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_continuity_1420b.py",
+      "sha256": "BD340B47C49084A02243080FBE08AB372063823DED6139C08977CEC07618D5C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_continuity_1420c.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_continuity_1420c.py",
+      "sha256": "E134AEC61A0A714C3CABEAEBF036DC6197922E60B063DD2E4520F7F095968A3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_continuity_1420d.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_continuity_1420d.py",
+      "sha256": "73D63E4EF12B0DD2878079BE5BD12BC467066773104C5DDB49AAF79C21F36408"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_continuity_1420e.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_continuity_1420e.py",
+      "sha256": "CAAF6EFBA6B9358E776CE6732C6293DF3213B75E8B6C2DA4B91A2E15956F0628"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_continuity_1420f.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_continuity_1420f.py",
+      "sha256": "23A669A8FF050C2EAE3F670A2347BA4532627F6EA4B15AC4CE932D2A097894BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_factor_1421b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_factor_1421b.py",
+      "sha256": "14F543B8A3468419AC630610BB83B8639DA710F7030232ACBF64EAB5AE1C64D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_galois_1401d.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_galois_1401d.py",
+      "sha256": "4D6FC9C83DDF3A1629ED64928FBC52C81CDDDCB29439814479D697968A74CF10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_galois_1401e.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_galois_1401e.py",
+      "sha256": "380A69E043D1C865C522B8AAF2428FA59BC9C04AF9CE8F3C4B1548A1B61F4B57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_twisted_hecke_1404b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_gamma_one_twisted_hecke_1404b.py",
+      "sha256": "9EF78CE259FE81EFD945ED8B71874B807BB45D3A942BAD0EE87281CD8641C60D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_parabolic_frobenius_1410b.py",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/revise_parabolic_frobenius_1410b.py",
+      "sha256": "3C4A7DA490302D19093A35178D40E2CA6DDB97559F47F0D45B75BC9A02AA9B2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1409-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1409-focus.log",
+      "sha256": "B56F06C5DEE9A7D19A01B1B9BE53D06797D20D54831C2CA3F06BDE53219D9DEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1413-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1413-focus.log",
+      "sha256": "9CAEDD350ECF23CF185969B3802BB9C5F956C9B5BF8F6A21556ADC8AD8C42AAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1417-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1417-focus.log",
+      "sha256": "30E49AAE7ABAA9BA66778497F310E437C727EC825CE6DAD2EBCCA036FC68B4D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1421-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1421-focus.log",
+      "sha256": "59CAAE37F4DB4D4B0355CCE23A093E0AF909EA01CEE5F9E927B25F46731BC604"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1425-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1425-focus.log",
+      "sha256": "B6163E6942228D30CC6EEA19B952D922204D35793097DD57DE5AF4D6C25F927B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1429-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1429-focus.log",
+      "sha256": "540B2681F03F13191C661D7E64FC539F33CF9648FD6DFB363452CCAE5E71414E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\root1429b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/root1429b-focus.log",
+      "sha256": "B29D8A685936A0C5F7DC45BE2CB4912A0789C3F64B15FD1947552C60D888A1A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1401.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1401.txt",
+      "sha256": "FCDD86473E9710D451FE276A3675E1827F1CCA5ACBB686005318257184BF4292"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1405.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1405.txt",
+      "sha256": "8685EDCF1F5AF6C0A25E0113F27D425D205F0403355257EC9D3A3BE2DCEDD6E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1409.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1409.txt",
+      "sha256": "2063664E31DD83BEA4D74648350B04AFA6C2D05554C708EBE4F407738C869AFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1413.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1413.txt",
+      "sha256": "0590AF3B5D2D46CEC6B6EABE9959E152E5842966AE252942B9306C8BA653EF16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1417.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1417.txt",
+      "sha256": "B8C36684C7A1D631BF2DDCD04B8454FC097D898C6286F5FB1658D0D007EF140B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1421.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1421.txt",
+      "sha256": "4BA2BA4272410A25A8986B3895EFE0F500FFD9E4571AC4F868EC3FCFECF01E48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1425.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1425.txt",
+      "sha256": "785166417C4ADACE496255AD2E4183438B2B4101F645E136ED66BFA70B2F1E37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1429.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/section1429.txt",
+      "sha256": "F90352793C84C01B2AE625EE43A06E968C99B4BC9E27308EFA6A3D28FD2B404B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-1-audit-config.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-arithmetic-orbit-1-audit-config.json",
+      "sha256": "74FE5432C52EF2AF4C9AEF57BE61A13887FB7B1C61851E1C71BCE6DDE8D6B5F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-2-audit-config.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-arithmetic-orbit-2-audit-config.json",
+      "sha256": "D30226B4C842C875C5A816D66499C373B8C1B6DA7D337990B2DCCE42591860AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-2-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-arithmetic-orbit-2-reuse-review-20261028.json",
+      "sha256": "897D23571FA5A5AFB5CFEACF5007EEC7A30803C4CF99E2AAC046B95939383DF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-arithmetic-orbit-2-scratch-receipt.json",
+      "sha256": "99649640136065EA0642922E7EE603631C8FEA8EB9DDD024115C4B4A740AB221"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-audit-route-1430.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-arithmetic-orbit-audit-route-1430.json",
+      "sha256": "5E2CAF9644BE7CD499962F3AEA42B17DE05D5858FF5B8BEC4A83FD2F094997A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-continuity-1-audit-config.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-continuity-1-audit-config.json",
+      "sha256": "0246095CBB4DC07A65F20A6B82D378BC4C0A58BF9348CC58D8F12FA1329A41BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-continuity-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-continuity-1-reuse-review-20261028.json",
+      "sha256": "8A6B25E48DD91E02A53F89466EDE1A7F18FB33571E70F08FEB083F22823A9682"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-continuity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-continuity-1-scratch-receipt.json",
+      "sha256": "A12486EA185DC51821A193A3570A78F8E5D2A0DA5485AD99DB8236CB71AD7AB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-continuity-audit-route-1423.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-continuity-audit-route-1423.json",
+      "sha256": "BA90C53188FBC1DEDD3600F289472B7B32BC75E776B0DBB78C36DCD15FE96B07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-twisted-1-audit-config.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-twisted-1-audit-config.json",
+      "sha256": "2108F188196E2741E59DAE262DD6D4063D04847240E19340331E5E485E96F9C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-twisted-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-twisted-1-reuse-review-20261028.json",
+      "sha256": "6174BBEA1C51B031B65F14D0ED31CD4FAB79BD000D422A12AD1DF0EAA523263C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-twisted-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-twisted-1-scratch-receipt.json",
+      "sha256": "3ECACA183103DEDE06FBEF5AA00D20AB00F1BA7D92D39027B3C38A9052DD0E77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-twisted-audit-route-1412.json",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/source-gamma-one-twisted-audit-route-1412.json",
+      "sha256": "DE079F095CC64AA0DA125D33BB862DB1EA48954716C8340E99279C758582A270"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1401.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1401.txt",
+      "sha256": "A2BDB2BB1B74C1B720DC0F782F5C91CF3182CE45FDBE29325A3CD24066BC4A40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1405.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1405.txt",
+      "sha256": "871AD91854325DAEFED9597B6932099A9C3B1DD3110E88AB02167DB4C3EF9131"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1409.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1409.txt",
+      "sha256": "0DD5BB489EB0EF5A19A3078E86EB3FF515DB3975918A8D977638E580F580633B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1413.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1413.txt",
+      "sha256": "71C434431F75CAB2512C35460D3E1C6D30BCF01ECC70E7D537A17A683CCBE847"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1417.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1417.txt",
+      "sha256": "042D685DE8BEB83053E8D0BF61D07F71B2421906723204F7C44E01CED87AA1A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1421.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1421.txt",
+      "sha256": "C75319FEB3CDBB9BBB5F3AA96F73CA0B265CFE256B78AD18B24E9B016D81C7C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1425.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1425.txt",
+      "sha256": "A5E01B45BA6DD11A10AC7BEA3BA3570945836F1C4CCDB9EE1ACAA4DA67736147"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1429.txt",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/status1429.txt",
+      "sha256": "F0FABB9AD4349FFB358ACB214FDCFB05D1998A517CCAEAA961C593146C38D1EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\tangent1425a-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/tangent1425a-focus.log",
+      "sha256": "E727A9563721C2F5F71FC764DA040FEC0DF78713F4BDD36F01E5400394BAA9FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\tangent1425b-focus.log",
+      "path": "Tools/gamma-one-global-galois-20261028-1431/tangent1425b-focus.log",
+      "sha256": "8149BEC3869C2C2CD3CCDFC403F84D0512CE1657C091E56A1068530A9E5F9F5B"
+    }
+  ]
+}

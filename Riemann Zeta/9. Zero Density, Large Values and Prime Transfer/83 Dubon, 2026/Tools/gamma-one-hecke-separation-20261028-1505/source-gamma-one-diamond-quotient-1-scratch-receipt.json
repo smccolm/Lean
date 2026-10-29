@@ -1,0 +1,145 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T22:48:02.791158+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceTateDualArithmeticDiamond",
+    "SourceGammaOneArithmeticDiamondPolynomial",
+    "SourceGammaOneGeometricDiamond",
+    "SourceGammaOneGaloisDiamondPolynomial",
+    "SourceGammaOneTateDiamondRelations",
+    "SourceGammaOneDiamondQuotientGalois",
+    "SourceGammaOneDiamondQuotientPolynomial",
+    "SourceGammaOneDiamondQuotientHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticDiamond.lean",
+      "sha256": "35393FC3D7BC9F440E104F404349F4BEA4BDED7781B9F33D900DAE17860FB572",
+      "oleanSha256": "AA553D04F6D980822DAB130EEC0B2D3EF819EE82DBDC109A255BB30D3390FE0D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticDiamond-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticDiamond-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondPolynomial.lean",
+      "sha256": "860291B5C61AB00872CDE56FF00B256AE0DEF1C5E9CE6FB1367A4222135B6AD1",
+      "oleanSha256": "C7C083784B8E002B2792F6E11D21D6E20D76DB72D4A326654A77E81AA176B1F5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondPolynomial-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDiamondPolynomial-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricDiamond.lean",
+      "sha256": "3A9CB1463F496BDD235951B9F8B6B1F7DCD5A383ABD3BB34A30DC95E89D7B941",
+      "oleanSha256": "C1BBB6D61AEAB5B17E3F3464E21615F5DDFFAF3654BB662C3A373D6D052CEEF5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricDiamond-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricDiamond-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaloisDiamondPolynomial.lean",
+      "sha256": "5D0B0F284732A92C36E5B499A9CA481616248E7BBED815179FCE009DE1CE7DE7",
+      "oleanSha256": "11ADF2C11D594CD330AE49E06072B63427A58F527464E75CFA103AB35263F3EC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaloisDiamondPolynomial-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaloisDiamondPolynomial-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateDiamondRelations.lean",
+      "sha256": "16246A53ABA52024617B2FFB49D432F5B762F671A0CF5FF28ACEC2A3EFBDC7DF",
+      "oleanSha256": "D10328AA3291F72A5446656BE5BE74649767CC931F8ECDD1CFDEC0D54C73694D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateDiamondRelations-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateDiamondRelations-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGalois.lean",
+      "sha256": "AAE8B0EF8935566D5F8389CAEFA59DFA5AF5B1A02BE8B7A8950607832B023B58",
+      "oleanSha256": "6A58CB6BEBAF455F69251DAACC24EADD66E0E00B8D6E44335B146DF4783E4195",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGalois-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGalois-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientPolynomial.lean",
+      "sha256": "3B93335885F62E6CEDBB5C2B4DE55AF947D9710337E1B2459F7AED5014EBC847",
+      "oleanSha256": "11B40D223B91CF25A37F686C1C3A8885A4577A4CE9304819CBACCD7996D07F07",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientPolynomial-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientPolynomial-1441.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHecke.lean",
+      "sha256": "64AA1110872055233873CA396528B7845DB7EB0D36FBCF22A8FA24BC7080682D",
+      "oleanSha256": "D1FF8461528F7D2BC3B913866D4AF9A2640382DCCDC62D45AFF2E5FDB841E461",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHecke-1441.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHecke-1441.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceTateDual_arithmetic_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_diamond_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_diamond_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_diamond_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_generator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondOperator_galois_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_galois",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_mk_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_quotient_frobenius_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_frobenius_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondOperator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceTateDual_arithmetic_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_diamond_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_diamond_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_diamond_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_generator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondOperator_galois_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_galois",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_mk_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_quotient_frobenius_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_frobenius_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondOperator",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientAudit1.log",
+  "logSha256": "A89669DF0F9C1C20BA84DF9504EDF24852ACC8BDCA6798155FA8E4D3B50E2D2D",
+  "auditSha256": "F1996E64209BE74172FE5A13181C4901F436F8B43CA28E3A749A80A05A13F761",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientScratchOwnership1442.log",
+  "ownershipSha256": "458F3AA9CF0711DDE138EF3BE2582182ADDE6F5DC605AEF63EA984ABBF8AD9E9",
+  "exhaustiveTheorems": 59,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientDependencyAudit1.log",
+  "dependencyAuditSha256": "6491AB8C782222D2E56F2244F58F35BBA8C64B216062325A9267B39075AA51CE",
+  "dependencyAuditSourceSha256": "69C328A7AF39DD4E23FD8A55779EFD25346E2C9B9DCE8626B2E5FE5027CFFC3C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_frobenius_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_mk"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> finite Hecke-character realization -> diamond-one quotient of the actual homogeneous Tate dual",
+  "discharged": [
+    "Derive the combined-diamond-valued Frobenius relation on every original homogeneous Tate class.",
+    "Construct the actual diamond-minus-one quotient and derive Galois stability, finite action and discrete continuity.",
+    "Project the actual polynomial, derive original Hecke stability, and descend the genuine operator with its entire-quotient Frobenius identity."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Does not prove degree/genus preservation, nonzero Hecke-character realization, parabolic transfer, two-dimensionality or any acceptance gate. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-quotient-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "1D71F80449DA997BF1EEA2784F54209EF22564E4F5305405A2D56FABF9B8DCEF",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

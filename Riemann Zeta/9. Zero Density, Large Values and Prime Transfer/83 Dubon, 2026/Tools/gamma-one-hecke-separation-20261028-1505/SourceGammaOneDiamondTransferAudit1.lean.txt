@@ -1,0 +1,56 @@
+import SourceGammaOneTateTransfer
+import SourceGammaOneDiamondQuotientTransfer
+import SourceGammaOneDiamondQuotientNonzero
+import SourceGammaOneDiamondQuotientAssembly
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_diamond
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_le_transfer_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_parabolic_preimage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_nontrivial_of_transfer_away
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_transfer_frobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneTateTransfer, `SourceGammaOneDiamondQuotientTransfer, `SourceGammaOneDiamondQuotientNonzero, `SourceGammaOneDiamondQuotientAssembly]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_hecke, `Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_le_transfer_ker, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_mk, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_parabolic_preimage, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_nontrivial_of_transfer_away, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_transfer_frobenius]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer, `Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Frobenius Normalization postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Frobenius Normalization theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND TRANSFER AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneTateTransfer
+#lint in SourceGammaOneDiamondQuotientTransfer
+#lint in SourceGammaOneDiamondQuotientNonzero
+#lint in SourceGammaOneDiamondQuotientAssembly

@@ -1,0 +1,65 @@
+{
+  "recordedUTC": "2026-10-29T01:17:10.266757+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius realization -> degree/genus preservation -> signed-index lower bound -> reduced field action -> level-power slash integrality -> even-weight peaked auxiliary trace.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRatioClosure.lean",
+      "sha256": "DC2DF8D6368EE28EC85E7FF35B0A223155F5F1015397E2F37F8934C16909EF1C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelOneJPolynomial.lean",
+      "sha256": "05BC6772313606ADD0B7F2DC2377F84FC3E7FFC2D3C9663B6DCF4DA15F035429"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralEisensteinSix.lean",
+      "sha256": "9E1C62381FA18F47B9665D0A4049EB4AF874CA004B975A1CB784B21EDA7382B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQExpansionPeriodWidth.lean",
+      "sha256": "D3248C33170D3B78853CFE460E204D730EAAA4BFBFDB4562117DED33587D0287"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularCoefficientOrder.lean",
+      "sha256": "CE63AC4883884E54D11FE64629FD6C3FCFD7F9C21471C2C07A6E91DF88196060"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-slash-dependency-review-1501.json",
+      "sha256": "9C53F2C093AA4E26801D840052B9A1D4C5E0448FC264150AFF9EDC2CDF4AB5FB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-dependency-review-1532.json",
+      "sha256": "C90212C2F905D6811DA034CE8B34A22CC17240BB8D14E640E0F076C2B93F69EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Even Weight Integral Trace Assessment 2026-10-28.md",
+      "sha256": "C27A663AC56819E22B888BE0E67FFC3D32790F4A44A6C18B3AA8BB00A6B4B3B4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\revision-review-1537.json",
+      "sha256": "3ED9A74BB31C2266112E1A7EDC0E6A7BFC83AA6AC8AC693192C3A43769930E6E"
+    }
+  ],
+  "shorterRoute": "Reduce actual integral ratios to even weight; reuse native j-polynomial, integral E4/E6, signed subgroup and sparse Fourier reindexing. Prove the coincident-cusp case by equality with the original even-weight form. Split the actual trace assembly without increasing proof limits.",
+  "assumptionsToDischarge": [
+    "Every original field element has an integral even-weight ratio representation.",
+    "The first finitely many coefficients determine subring membership of all coefficients of the actual level-one trace.",
+    "A prescribed signed cusp transversal exists and constructs an actual level-one trace.",
+    "The original expansions imply integral translation-sum coefficients and exact trace decomposition.",
+    "Auxiliary exponential decay implies the required vanishing Fourier coefficients.",
+    "The separate peaked auxiliary hypotheses imply integrality of the actual even-weight S-slash coefficients."
+  ],
+  "remaining": "Peaked auxiliary existence and its source hypotheses remain explicit. Level-power slash integrality, the full reduced field action, signed-index lower bound, degree/genus preservation, finite-modulus parabolic transfer, the required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "revision": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\revision-review-1537.json",
+    "sha256": "3ED9A74BB31C2266112E1A7EDC0E6A7BFC83AA6AC8AC693192C3A43769930E6E",
+    "reason": "One missing translation-sum documentation string corrected in fresh canonical source paths. All original failed evidence preserved, mathematical statements and proof bodies unchanged, no suppression or exclusions."
+  }
+}

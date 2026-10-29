@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O : Type} [Fintype ι] [DecidableEq ι] [CommRing O] [IsLocalRing O]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [DiscreteTopology (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `relativeDualNumberFramedFiberEquiv_bijective`. -/
+theorem actual_relative_dual_number_framed_equiv_relativeDualNumberFramedFiberEquiv_bijective_source
+    (H : ProfiniteGrp) (ρ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    Function.Bijective (relativeDualNumberFramedFiberEquiv H ρ) :=
+  relativeDualNumberFramedFiberEquiv_bijective H ρ
+
+end
+

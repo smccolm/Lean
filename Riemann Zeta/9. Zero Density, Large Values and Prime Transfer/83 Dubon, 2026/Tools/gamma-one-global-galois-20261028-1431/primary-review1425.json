@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-09",
+  "topic": "Original tangent linearity and genuine symmetric coordinate derivative",
+  "localApiReview": [
+    "Derivation.compAlgebraMapL (Mathlib/RingTheory/Derivation/Basic.lean)",
+    "IsScalarTower.of_algHom and of_algebraMap_eq",
+    "groupCohomology.H1\u03c0, H1\u03c0_eq_zero_iff and H1_induction_on",
+    "LinearEquiv.ofBijective",
+    "Existing actual representationCoordinateDerivationEquiv_apply, symmetricRepresentationCoordinateMap_evaluation, symmetricFirstOrderLift and matrixFirstOrderStrictlyConjugate_iff"
+  ],
+  "scope": "Actual original epsilon entries prove linearity. Original coordinate-map equality constructs the scalar-tower compatibility for actual derivative precomposition. No Galois, continuous Selmer, pseudodeformation or automorphy conclusion is supplied.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

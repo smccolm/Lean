@@ -1,0 +1,99 @@
+import SourceSiegelInversion
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary existence -> the actual Siegel
+product transformation. Reuse the proved literal product/theta equality,
+native theta and eta transformations, and native generators of SL(2,Z).
+The twelfth-root multiplier is derived from the generator identities;
+no slash-invariance or multiplier-existence hypothesis is supplied.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_siegelFun_specialLinearGroup_smul. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Real MatrixGroups
+
+/-- The literal source transformation law with a common twelfth-root multiplier. -/
+def Law (N : ℕ) (α : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Prop :=
+  ∃ μ : ℂ, μ ^ 12 = 1 ∧ ∀ (r s : ℤ) (τ : UpperHalfPlane),
+    siegelFun N r s ((α • τ : UpperHalfPlane) : ℂ) =
+      μ * siegelFun N
+        (r * (α : Matrix (Fin 2) (Fin 2) ℤ) 0 0 + s * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 0)
+        (r * (α : Matrix (Fin 2) (Fin 2) ℤ) 0 1 + s * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 1) (τ : ℂ)
+
+theorem law_one (N : ℕ) : Law N 1 :=
+  ⟨1, one_pow _, fun r s τ => by simp⟩
+
+theorem law_T (N : ℕ) : Law N ModularGroup.T := by
+  refine ⟨cexp (π * I / 6), ?_, fun r s τ => ?_⟩
+  · rw [← Complex.exp_nat_mul]
+    convert Complex.exp_two_pi_mul_I using 2
+    push_cast; ring
+  · rw [UpperHalfPlane.modular_T_smul, UpperHalfPlane.coe_vadd]
+    simp only [ModularGroup.coe_T, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.empty_val']
+    push_cast
+    rw [add_comm (1 : ℂ), siegelFun_add_one]
+    congr 2 <;> ring
+
+theorem law_S (N : ℕ) : Law N ModularGroup.S := by
+  refine ⟨-I, by rw [neg_pow, show (12 : ℕ) = 2 * 6 by rfl, pow_mul, pow_mul, Complex.I_sq]; norm_num,
+    fun r s τ => ?_⟩
+  rw [UpperHalfPlane.modular_S_smul, UpperHalfPlane.coe_mk]
+  simp only [ModularGroup.coe_S, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+    Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.empty_val']
+  rw [show (-(τ : ℂ))⁻¹ = -1 / (τ : ℂ) by rw [inv_neg, neg_div, one_div], siegelFun_S]
+  congr 2 <;> ring
+
+theorem law_mul {N : ℕ} {α β : Matrix.SpecialLinearGroup (Fin 2) ℤ} (hα : Law N α) (hβ : Law N β) :
+    Law N (α * β) := by
+  obtain ⟨μ, hμ, hα⟩ := hα
+  obtain ⟨ν, hν, hβ⟩ := hβ
+  refine ⟨μ * ν, by rw [mul_pow, hμ, hν, one_mul], fun r s τ => ?_⟩
+  rw [mul_smul, hα, hβ, mul_assoc]
+  simp only [Matrix.SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two]
+  congr 3 <;> ring
+
+theorem law_inv {N : ℕ} {α : Matrix.SpecialLinearGroup (Fin 2) ℤ} (hα : Law N α) : Law N α⁻¹ := by
+  obtain ⟨μ, hμ, hα⟩ := hα
+  have hμ0 : μ ≠ 0 := by
+    rintro rfl
+    norm_num at hμ
+  refine ⟨μ⁻¹, by rw [inv_pow, hμ, inv_one], fun r s τ => ?_⟩
+  have hdet : (α : Matrix (Fin 2) (Fin 2) ℤ) 0 0 * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 1 -
+      (α : Matrix (Fin 2) (Fin 2) ℤ) 0 1 * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 0 = 1 := by
+    have := α.det_coe
+    rwa [Matrix.det_fin_two] at this
+  set r' : ℤ := r * ((α⁻¹ : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) 0 0 +
+    s * ((α⁻¹ : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) 1 0 with hr'
+  set s' : ℤ := r * ((α⁻¹ : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) 0 1 +
+    s * ((α⁻¹ : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) 1 1 with hs'
+  have h := hα r' s' (α⁻¹ • τ)
+  rw [smul_inv_smul] at h
+  have h1 : r' * (α : Matrix (Fin 2) (Fin 2) ℤ) 0 0 + s' * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 0 = r := by
+    simp only [hr', hs', Matrix.SpecialLinearGroup.coe_inv, Matrix.adjugate_fin_two, Matrix.of_apply,
+      Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      Matrix.empty_val']
+    linear_combination r * hdet
+  have h2 : r' * (α : Matrix (Fin 2) (Fin 2) ℤ) 0 1 + s' * (α : Matrix (Fin 2) (Fin 2) ℤ) 1 1 = s := by
+    simp only [hr', hs', Matrix.SpecialLinearGroup.coe_inv, Matrix.adjugate_fin_two, Matrix.of_apply,
+      Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      Matrix.empty_val']
+    linear_combination s * hdet
+  rw [h1, h2] at h
+  rw [h, ← mul_assoc, inv_mul_cancel₀ hμ0, one_mul]
+
+theorem law_all (N : ℕ) (α : Matrix.SpecialLinearGroup (Fin 2) ℤ) : Law N α := by
+  have hmem : α ∈ Subgroup.closure ({ModularGroup.S, ModularGroup.T} :
+      Set (Matrix.SpecialLinearGroup (Fin 2) ℤ)) := by
+    rw [SpecialLinearGroup.SL2Z_generators]; trivial
+  refine Subgroup.closure_induction (fun x hx => ?_) (law_one N) (fun x y _ _ hx hy => law_mul hx hy)
+    (fun x _ hx => law_inv hx) hmem
+  rcases hx with rfl | rfl
+  · exact law_S N
+  · exact law_T N
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

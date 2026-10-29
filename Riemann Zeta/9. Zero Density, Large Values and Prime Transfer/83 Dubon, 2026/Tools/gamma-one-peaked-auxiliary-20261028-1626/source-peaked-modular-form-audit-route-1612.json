@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-10-29T02:45:00.646929+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> literal discriminant-adjusted Gamma1 modular form and exact cusp bounds.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\peaked-modular-form-route-review-1603.json",
+      "sha256": "3923F7CFD7DFAA45D6625F9B2EA39943DEB8538FC177F737B5EABEE111A3BD37"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Siegel Modular Form and Cusp Bounds Assessment 2026-10-28.md",
+      "sha256": "E6B17081D1BFB9642AD0CD8DC5BF7563BD2199A1C37E310C8E5DDBA42CD70FC1"
+    }
+  ],
+  "shorterRoute": "Reuse actual Siegel holomorphy, SL2/Gamma1 product transport, exact finite-product cusp limit and native discriminant cusp-form decay. Prove only the finite residue-row permutation, literal slash identity and actual ModularForm assembly.",
+  "assumptionsToDischarge": [
+    "Actual Siegel product times the discriminant power is holomorphic and Gamma1 invariant.",
+    "Every actual transformed product has the exact original Bernoulli cusp order.",
+    "The source exponential estimate holds at every SL2 cusp.",
+    "Explicit nonnegative shifted orders imply boundedness at every cusp and supply an actual ModularForm."
+  ],
+  "remaining": "The nonnegative shifted-order hypothesis must be discharged by selecting the discriminant power. Exact integral width-one coefficients, leading inverse and separated decay still need assembly into the actual peaked auxiliary. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

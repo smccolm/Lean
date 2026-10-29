@@ -1,0 +1,57 @@
+import Dubon2026.SourceGammaOneResidueSeparability
+import Dubon2026.SourceModularCoefficientDifferentials
+import Dubon2026.SourceCurveFiniteCoordinateGeometry
+import Dubon2026.SourceResidueClosedValuationField
+
+/-! DUB-17/18 -> original Gamma1 arithmetic association -> Picard specialization
+-> the actual coefficient residue curve. Its reduced j coordinate is finite
+and separating by the existing original-field proofs. Native closed-constant
+principal-divisor descent and place-residue finiteness then apply directly.
+The simple pole of the literal j expansion supplies the nonzero differential.
+No equality of coordinate degrees, genus preservation or good-reduction model
+is assumed or asserted here; those remain necessary for specialization. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve SourceDifferential KaehlerDifferential
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem D_residueJCoordinate_ne_zero : D kk Fb (residueJCoordinate A Γ) ≠ 0 := by
+  intro h
+  have he := congrArg (diffQExp Fb) h
+  rw [diffQExp_D, map_zero] at he
+  exact qEuler_jqModC_ne_zero kk he
+
+variable [IsAlgClosed L] [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+include hT
+
+theorem residueImage_hasPrincipalDivisors : HasPrincipalDivisors kk Fb := by
+  haveI := valuation_residue_isAlgClosed A
+  haveI := (finite_residueCoordinate_and_degree_le A Γ hT).1
+  haveI := isSeparable_residueCoordinate A Γ hT
+  exact hasPrincipalDivisors_closed_of_separating_coordinate
+    (residueJCoordinate A Γ) (transcendental_residueJCoordinate A Γ)
+
+theorem residueImage_place_residue_bijective (v : Place kk Fb) :
+    Function.Bijective (algebraMap kk v.ResidueField) := by
+  haveI := valuation_residue_isAlgClosed A
+  haveI := (finite_residueCoordinate_and_degree_le A Γ hT).1
+  exact place_residue_bijective_of_finite_coordinate (residueJCoordinate A Γ) v
+
+theorem residueImage_isCurveOver : IsCurveOver kk Fb := by
+  haveI := valuation_residue_isAlgClosed A
+  haveI := isSeparable_residueCoordinate A Γ hT
+  haveI := residueImage_hasPrincipalDivisors A Γ hT
+  refine ⟨?_, ?_⟩
+  · intro v
+    exact Module.Finite.of_surjective (Algebra.linearMap kk v.ResidueField)
+      (residueImage_place_residue_bijective A Γ hT v).2
+  · exact ⟨inferInstance,
+      (finrank_eq_one_iff_of_nonzero _ (D_residueJCoordinate_ne_zero A Γ)).mpr
+        (span_D_eq_top_of_transcendental kk (residueJCoordinate A Γ)
+          (transcendental_residueJCoordinate A Γ))⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,92 @@
+import SourceGammaOneAdjacentJReverseDiamond
+import SourceGammaOneAdjacentJCoefficients
+import Dubon2026.SourceGammaOneArithmeticDiamond
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> arithmetic diamond
+term. The proved complex comparison descends through the fixed injective
+coefficient embedding. Extensionality on actual rational generators then
+gives the reverse equation on the entire original arithmetic field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open IntermediateField CongruenceSubgroup
+open scoped MatrixGroups
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+local notation "FF" => x1FunctionField M
+local notation "GG" => x1x0FunctionFieldC ℚ M (p * M)
+local notation "Qbar" => AlgebraicClosure ℚ
+local instance qbarDiamondAlgebraic : Algebra.IsAlgebraic ℚ Qbar :=
+  AlgebraicClosure.isAlgebraic ℚ
+
+omit [NeZero M] in
+theorem geomAut_adjacentJ_forward (L : Type*) [Field L] [Algebra ℚ L]
+    [Algebra.IsAlgebraic ℚ L] (σ : GG ≃ₐ[ℚ] GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (σ ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (x : functionFieldOver (Gamma1 M) L) :
+    geomAut L GG σ (heckeAlpha L M p x) = heckeBeta L M p x := by
+  have he : (geomAut L GG σ).toAlgHom.comp (heckeAlpha L M p) = heckeBeta L M p := by
+    apply IntermediateField.algHom_ext_of_eq_adjoin L rfl
+    rintro z ⟨a, ha, rfl⟩
+    have hG : a ∈ GG := x1FunctionFieldC_le_x1x0 ℚ M (p * M) ha
+    apply Subtype.ext
+    have hc := coe_geomAut_coeffEmb L GG σ ⟨a, hG⟩
+    change (geomAut L GG σ
+      ⟨coeffEmb L a, coeffEmb_mem_laurentBaseChange L hG⟩ : LaurentSeries L) =
+        qExpand L p (coeffEmb L a)
+    apply hc.trans
+    rw [hbase ⟨a, ha⟩ hG]
+    exact coeffMap_qExpand (algebraMap ℚ L) p a
+  exact DFunLike.congr_fun he x
+
+theorem geomAut_adjacentJ_reverse_rational (hcop : Nat.Coprime M p)
+    (σ : GG ≃ₐ[ℚ] GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (σ ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (hj : (σ ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq)
+    (γ : Gamma1 M) (hd : (p : ℤ) ∣ γ.val 1 1) (z : FF) :
+    geomAut Qbar GG σ (heckeBeta Qbar M p
+      ⟨coeffEmb Qbar z, coeffEmb_mem_laurentBaseChange Qbar z.property⟩) =
+        heckeAlpha Qbar M p (ConstantField.arithmeticDiamondAut M
+          ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+          ⟨coeffEmb Qbar z, coeffEmb_mem_laurentBaseChange Qbar z.property⟩) := by
+  let δ : Gamma0 M :=
+    ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+  have hz : qExpand ℚ p z.val ∈ GG :=
+    gamma1_degeneracy_map_le ℚ M p ⟨z, z.property, rfl⟩
+  have harg : heckeBeta Qbar M p
+      ⟨coeffEmb Qbar z, coeffEmb_mem_laurentBaseChange Qbar z.property⟩ =
+        ⟨coeffEmb Qbar (qExpand ℚ p z.val), coeffEmb_mem_laurentBaseChange Qbar hz⟩ := by
+    apply Subtype.ext
+    exact (coeffMap_qExpand (algebraMap ℚ Qbar) p z.val).symm
+  rw [harg]
+  apply Subtype.ext
+  apply (coe_geomAut_coeffEmb Qbar GG σ ⟨qExpand ℚ p z.val, hz⟩).trans
+  apply (coeffMap OriginalConstantField.sigma.toRingHom).injective
+  rw [OriginalConstantField.coeffMap_sigma_rational]
+  have he := ConstantField.fieldMap_arithmeticDiamondHom M δ
+    ⟨coeffEmb Qbar z, coeffEmb_mem_laurentBaseChange Qbar z.property⟩
+  rw [ConstantField.fieldMap_rational] at he
+  exact (adjacentJ_reverse_complex_diamond M p hcop σ hbase hj γ hd z hz).trans
+    (congrArg (fun a => (a : LaurentSeries ℂ)) he).symm
+
+theorem geomAut_adjacentJ_reverse (hcop : Nat.Coprime M p)
+    (σ : GG ≃ₐ[ℚ] GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (σ ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (hj : (σ ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq)
+    (γ : Gamma1 M) (hd : (p : ℤ) ∣ γ.val 1 1)
+    (x : functionFieldOver (Gamma1 M) Qbar) :
+    geomAut Qbar GG σ (heckeBeta Qbar M p x) =
+      heckeAlpha Qbar M p (ConstantField.arithmeticDiamondAut M
+        ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩ x) := by
+  let δ : Gamma0 M :=
+    ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+  have he : (geomAut Qbar GG σ).toAlgHom.comp (heckeBeta Qbar M p) =
+      (heckeAlpha Qbar M p).comp (ConstantField.arithmeticDiamondAut M δ).toAlgHom := by
+    apply IntermediateField.algHom_ext_of_eq_adjoin Qbar rfl
+    rintro z ⟨a, ha, rfl⟩
+    exact geomAut_adjacentJ_reverse_rational M p hcop σ hbase hj γ hd ⟨a, ha⟩
+  exact DFunLike.congr_fun he x
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,7 @@
+### Actual actual finite nilpotent-adic and dual-number completeness — 9 October 2026
+
+The genuine adic topology of an original ring with nilpotent defining ideal is discrete. Every actual finite coefficient ring is therefore complete for its original nilpotent ideal. The actual maximal ideal of the original dual-number algebra over a field has square zero, and over a finite field its maximal-adic completeness follows.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteNilpotentAdicCoefficients](Extension/Dubon2026/FiniteNilpotentAdicCoefficients.lean).

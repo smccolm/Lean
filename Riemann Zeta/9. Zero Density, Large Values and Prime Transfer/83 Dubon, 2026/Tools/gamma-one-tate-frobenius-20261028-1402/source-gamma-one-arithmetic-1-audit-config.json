@@ -1,0 +1,100 @@
+{
+  "modules": [
+    "SourceTateDualArithmeticQuadratic",
+    "SourceGammaOneArithmeticFrobenius",
+    "SourceGammaOneGeometricArithmeticFrobenius"
+  ],
+  "theorems": [
+    "Dubon2026.sourceTateDual_arithmetic_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "queries": [
+    "Dubon2026.sourceTateDual_arithmetic_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceTateDual_arithmetic_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq",
+    "Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square",
+    "Dubon2026.homogeneousHeckeDiamond_square",
+    "Dubon2026.binaryHomogeneousMonomialBasis_diagonal_ring",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm",
+    "Dubon2026.TateModule.tateMap_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois"
+  ],
+  "localModules": [
+    "SourceGammaOneResidueGeometry",
+    "SourceCurveSeparatingGenusMaximum",
+    "SourceReductionGenusPoleLifting",
+    "SourceReductionGenusIntegralCharts",
+    "SourceGammaOneGenusSpecialization",
+    "SourceGammaOneOriginalSpecialization",
+    "SourceGammaOneKummerDegree",
+    "SourceGammaOneKummerGenus",
+    "SourceJointSeparableFiniteOverlap",
+    "SourceJointSeparableConstants",
+    "SourceJointSeparableChartDimension",
+    "SourceJointSeparablePoleDimension",
+    "SourceJointSeparableGenus",
+    "SourceGammaOneKummerResidueGenus",
+    "SourceGammaOneKummerPowerLifting",
+    "SourceGammaOnePicardPrimeKernel",
+    "SourceGammaOnePicardTorsion",
+    "SourceReductionCoordinateAutomorphism",
+    "SourceGammaOneDiamondGauss",
+    "SourceReductionMapReflection",
+    "SourceGammaOneHeckeGaussReflection",
+    "SourceGammaOneHeckeFractionProduct",
+    "SourceGammaOneHeckeGaussNorm",
+    "SourceGammaOneArithmeticCharts",
+    "SourceGammaOneSpecializationCharts",
+    "SourceGammaOneDecompositionCharts",
+    "SourceGammaOneConstantReductionCharts",
+    "SourceGammaOneSpecializationEquivariance",
+    "SourceGammaOneInertiaPlaceReduction",
+    "SourceGammaOneInertiaPicard",
+    "SourceGammaOneTateInertia",
+    "SourceGammaOneHeckePrincipalNorm",
+    "SourceGammaOneResidueDivisors",
+    "SourceGammaOneHeckeResidueNorm",
+    "SourceGammaOneIntegralDivisorReduction",
+    "SourceGammaOneHeckeIntegralAgreement",
+    "SourceGammaOneHeckeTorsionDivisors",
+    "SourceGammaOneResiduePicard",
+    "SourceGammaOneReductionPicardEquivariance",
+    "SourceGammaOneNormDiamondOrientation",
+    "SourceGammaOneHeckePicardDescent",
+    "SourceGammaOneHeckeTorsionPicard",
+    "SourceTorsionReductionDiamond",
+    "SourceGammaOnePicardFrobeniusRelation",
+    "SourceTateTorsionQuadratic",
+    "SourceGammaOneTateFrobeniusRelation",
+    "SourceTateDualArithmeticQuadratic",
+    "SourceGammaOneArithmeticFrobenius",
+    "SourceGammaOneGeometricArithmeticFrobenius"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "compileEvidence": {
+    "SourceTateDualArithmeticQuadratic": "SourceTateDualArithmeticQuadratic-1396",
+    "SourceGammaOneArithmeticFrobenius": "SourceGammaOneArithmeticFrobenius-1396",
+    "SourceGammaOneGeometricArithmeticFrobenius": "SourceGammaOneGeometricArithmeticFrobenius-1396"
+  }
+}

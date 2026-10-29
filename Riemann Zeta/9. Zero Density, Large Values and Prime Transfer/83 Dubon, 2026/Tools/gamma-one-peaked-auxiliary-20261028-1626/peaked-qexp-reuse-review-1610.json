@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-29T02:43:46.294273+00:00",
+  "chain": "DUB-17/18 -> literal higher continuation -> original all-weight characteristic-zero association -> Gamma1 degree/genus preservation -> level-power slash integrality -> actual peaked auxiliary -> exact width-one leading coefficient and integral coefficients of the actual discriminant-adjusted Siegel product.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "sha256": "E0A10CD68A0560D35B8114CF418B74C55F5B58724E94411145130BB1CB2A01D9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantIntegralExpansion.lean",
+      "sha256": "BAD1520E5AE5BCD28FE138526FBFB19047EAC5D10DDD2BC55116652ECAC16693"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularDegeneracyCoefficients.lean",
+      "sha256": "8CA385239348EFE2DD2A164F64E539BE6E07D9035C7B393CE6F6458607E3237F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQExpansionPeriodWidth.lean",
+      "sha256": "D3248C33170D3B78853CFE460E204D730EAAA4BFBFDB4562117DED33587D0287"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFourierLinear.lean",
+      "sha256": "23ADD4FF88B5B8792E0C831693FC9D47A1F031C8C095418F0E41048280992019"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteSeriesProducts.lean",
+      "sha256": "E7F68E7E489C53F9C1A6AD95924E117C1E7DDB8390EF75FF8C6E7062F4DFFF72"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductExpansion.lean",
+      "sha256": "8CC732DBA4C62465B0D70684E7375D33E75A56F5BC6DB9825AF27BCF7E6DD879"
+    }
+  ],
+  "shorterRoute": "Reuse the existing exact integral discriminant expansion, sparse HasSum reindexing, Gamma1 strict period and coefficient width change. Reuse the audited Expands multiplication/power API rather than creating the external EvA absolute-convergence framework. Only the actual shifted discriminant series, monomial/scalar consumers and actual form coefficient identification are needed.",
+  "assumptionsToDischarge": [
+    "The actual discriminant divided by q_N^N has an integral series with constant coefficient one.",
+    "The actual adjusted Siegel form has the specified shifted product series.",
+    "Width-one coefficients vanish below the source order and the leading coefficient is nonzero.",
+    "One explicit level power clears both the leading inverse and all coefficient denominators."
+  ],
+  "remaining": "Select and scale the exponent family and discriminant power; combine exact coefficients with separated cusp decay into the actual peaked auxiliary. Reduced field action, degree/genus preservation and downstream arithmetic association/continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "proofLimitsChanged": false
+}

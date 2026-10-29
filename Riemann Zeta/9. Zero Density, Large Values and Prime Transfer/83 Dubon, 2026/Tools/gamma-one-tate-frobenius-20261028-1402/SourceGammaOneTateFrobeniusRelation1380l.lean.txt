@@ -1,0 +1,48 @@
+import SourceTateTorsionQuadratic1390a
+import SourceGammaOnePicardFrobeniusRelation1379n
+import Dubon2026.SourceGammaOneArithmeticTateOperators
+
+/-! DUB-17/18 -> original Gamma1 arithmetic association -> the literal
+Tate Frobenius/Hecke relation. Apply the proved Picard torsion identity to
+every native prime-power coordinate. The resulting coefficient-action
+identity is H*F = F*F*D + p, with diamond label p. Coordinate-degree and
+genus preservation remain explicit. The previously conditional untwisted
+normalization is not discharged by renaming this different relation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M p : ℕ) [NeZero M] [Fact p.Prime]
+  [CharP (IsLocalRing.ResidueField A) p]
+local notation "Γ" => Gamma1 M
+local notation "FF" => laurentBaseChange Qbar (x1FunctionField M)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq
+    (hcop : Nat.Coprime M p)
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF)
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ p)
+    (ell : ℕ) [Fact ell.Prime] (hell : (ell : kk) ≠ 0) :
+    ∃ g : Gamma0 M, (g.val 1 1 : ZMod M) = (p : ZMod M) ∧
+      arithmeticHeckeTate M ell p * arithmeticTateGaloisRep M ell d.val =
+        arithmeticTateGaloisRep M ell d.val * arithmeticTateGaloisRep M ell d.val *
+          arithmeticDiamondTate M ell g + p • 1 := by
+  run_tac Lean.logInfo "obtain ⟨g, hlabel, hrel⟩ :="
+  obtain ⟨g, hlabel, hrel⟩ :=
+    exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq A M p hcop hdeg hgen d hd
+  run_tac Lean.logInfo "refine ⟨g, hlabel, ?_⟩"
+  refine ⟨g, hlabel, ?_⟩
+  run_tac Lean.logInfo "apply TateModule.tateMap_diamond_quadratic"
+  apply TateModule.tateMap_diamond_quadratic
+  run_tac Lean.logInfo "intro n x hx"
+  intro n x hx
+  run_tac Lean.logInfo "exact hrel (ell ^ n) (by simpa only [Nat.cast_pow] using pow_ne_zero n"
+  exact hrel (ell ^ n) (by simpa only [Nat.cast_pow] using pow_ne_zero n hell)
+    x (Pic0.mem_torsion_iff.mpr hx)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

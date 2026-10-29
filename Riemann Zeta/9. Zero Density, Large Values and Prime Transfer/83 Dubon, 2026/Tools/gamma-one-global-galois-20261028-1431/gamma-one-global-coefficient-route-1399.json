@@ -1,0 +1,43 @@
+{
+  "recordedUTC": "2026-10-28T20:19:45.056006+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> genuine homogeneous-valued Tate Galois action matching the derived inverse-action Frobenius polynomial.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCoefficientDualAction.lean",
+      "sha256": "1A7D7349F5FB045701E047AE1DA548DA8F480BECCCECC9596DFCD0D574902CAB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryGaloisHecke.lean",
+      "sha256": "1839AC3013C784BF17177071DECD625386F65450F64D2339979F1560803D8E62"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\MatrixPolynomialAction.lean",
+      "sha256": "2C503B28E75AB8FBC30E16819C86594A66C0EFDEF5DDD04423DBBC7FCEF9497B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\GL2UnitDiagonalPair.lean",
+      "sha256": "A44463EAAC175BF76A3897477356E116737AB2CE4EB61F201E9B89D58AE694A9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousDeterminantTwist.lean",
+      "sha256": "71441A7AF18EACBF49F3B66F6DAA6FC85AE794CBC365DF7A718C64CDEEDBDC03"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveRootCyclotomicContinuity.lean",
+      "sha256": "3E561F1C342F6722A15DB6A8A1A26607222CF53E46495D36FE884E2794FCBADD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticCyclotomicCharacter.lean",
+      "sha256": "6BB9B14B3AF4054A62888344F4D30C038DC21A1C5BEC366E2A140020676E834D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclotomicLocal.lean",
+      "sha256": "5F68052D522B48BC1697339344445F975162808DE59C1430DB74FF67D77E56F5"
+    }
+  ],
+  "selected": "Reuse the actual homogeneous GL representation and two-unit diagonal multiplication to obtain the coefficient action u times diag(u,1). Pair it with inverse precomposition on the existing actual Tate action. Reuse native primitive-root cyclotomic exponent and continuity theorems for the global character; do not reconstruct cyclotomic characters or Tate spaces.",
+  "discharge": "Construct the global coefficient/twisted dual action and its Hecke compatibility, then identify actual Frobenius and inertia using the already derived original Tate identities.",
+  "remaining": "Coordinate-degree and genus preservation, combined-diamond and original finite Hecke-character realization, original global arithmetic/unramified descent, two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false,
+  "proofLimitsChanged": false
+}

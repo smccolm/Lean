@@ -1,0 +1,55 @@
+import SourceGammaOneHeckeTorsionPicard1378h
+import SourceGammaOneReductionPicardEquivariance1376c
+import Dubon2026.SourceGammaOneDiamondGaloisPicard
+
+/-! DUB-17/18 -> original Gamma1 arithmetic association -> actual Picard
+Frobenius relation. Equivariant specialization and invertible-torsion
+injectivity transport the exact norm-derived relation to the original field.
+The literal coefficient Frobenius relation is H*F = F*F*D + p, with the
+Picard diamond D labelled p. Normalization to a target Galois representation
+is a subsequent obligation; no untwisted quadratic is claimed here. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup ConstantField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M p : ℕ) [NeZero M] [Fact p.Prime]
+  [CharP (IsLocalRing.ResidueField A) p]
+local notation "Γ" => Gamma1 M
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq
+    (hcop : Nat.Coprime M p)
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF)
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ p) :
+    ∃ g : Gamma0 M, (g.val 1 1 : ZMod M) = (p : ZMod M) ∧
+      ∀ (m : ℕ), (m : kk) ≠ 0 → ∀ (x : Pic0 Qbar FF), x ∈ Pic0.torsion m →
+        heckePicard Qbar M p (gamma1ArithmeticPicardRep Qbar M d.val x) =
+          gamma1ArithmeticPicardRep Qbar M d.val
+            (gamma1ArithmeticPicardRep Qbar M d.val (arithmeticDiamondPicard M g x)) + p • x := by
+  obtain ⟨g, hlabel, hhecke⟩ :=
+    exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq A M p hcop hdeg d hd
+  obtain ⟨R, hR, hinj, he⟩ :=
+    exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq A M hdeg hgen
+  refine ⟨g⁻¹, norm_diamond_inverse_label M p g hlabel, ?_⟩
+  intro m hm x hx
+  have hm0 : m ≠ 0 := fun hz => hm (by rw [hz, Nat.cast_zero])
+  have hFx := gamma1ArithmeticPicardRep_torsion M d.val m x hx
+  have hDx := arithmeticDiamondPicard_torsion M g⁻¹ m x hx
+  have hFDx := gamma1ArithmeticPicardRep_torsion M d.val m _ hDx
+  have hFFDx := gamma1ArithmeticPicardRep_torsion M d.val m _ hFDx
+  have hleft : heckePicard Qbar M p (gamma1ArithmeticPicardRep Qbar M d.val x) ∈ Pic0.torsion m := by
+    apply Pic0.mem_torsion_iff.mpr
+    rw [← map_nsmul, Pic0.mem_torsion_iff.mp hFx, map_zero]
+  apply hinj m hm hleft (add_mem hFFDx ((Pic0.torsion m).nsmul_mem hx p))
+  rw [map_add, map_nsmul,
+    hhecke R hR _ m hm0 (Pic0.mem_torsion_iff.mp hFx),
+    ← arithmeticDiamondPicard_galois M g⁻¹ d.val x]
+  simp only [he, decompositionResiduePicard_inverse]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

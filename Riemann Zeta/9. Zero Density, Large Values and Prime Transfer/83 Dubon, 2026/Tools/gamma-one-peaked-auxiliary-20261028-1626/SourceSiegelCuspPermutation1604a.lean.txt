@@ -1,0 +1,98 @@
+import SourcePeakedAuxiliaryFunction1603a
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> discriminant-adjusted Siegel
+modular form and its exact cusp bounds. Consume actual literal products,
+the proved finite-product cusp limit and native discriminant decay. The
+nonnegative shifted-order hypothesis is explicit and will be discharged
+when selecting the discriminant power; no auxiliary existence is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups ModularForm Manifold
+variable (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+
+/-- The reduced top-left matrix entry. -/
+def e00 (β : SL(2, ℤ)) : ZMod N := ((β 0 0 : ℤ) : ZMod N)
+/-- The reduced top-right matrix entry. -/
+def e01 (β : SL(2, ℤ)) : ZMod N := ((β 0 1 : ℤ) : ZMod N)
+/-- The reduced bottom-left matrix entry. -/
+def e10 (β : SL(2, ℤ)) : ZMod N := ((β 1 0 : ℤ) : ZMod N)
+/-- The reduced bottom-right matrix entry. -/
+def e11 (β : SL(2, ℤ)) : ZMod N := ((β 1 1 : ℤ) : ZMod N)
+
+omit [NeZero N] in
+theorem det_rel (β : SL(2, ℤ)) : e00 N β * e11 N β - e01 N β * e10 N β = 1 := by
+  have h := β.det_coe
+  rw [Matrix.det_fin_two] at h
+  have h' := congrArg (fun z : ℤ => (z : ZMod N)) h
+  simp only [Int.cast_sub, Int.cast_mul, Int.cast_one] at h'
+  simpa [e00, e01, e10, e11] using h'
+
+/-- The actual permutation of residue rows induced by an SL2 matrix. -/
+def rowMul (β : SL(2, ℤ)) : ZMod N × ZMod N ≃ ZMod N × ZMod N where
+  toFun p := (p.1 * e00 N β + p.2 * e10 N β, p.1 * e01 N β + p.2 * e11 N β)
+  invFun p := (p.1 * e11 N β - p.2 * e10 N β, -(p.1 * e01 N β) + p.2 * e00 N β)
+  left_inv p := by
+    obtain ⟨r, s⟩ := p
+    have h := det_rel N β
+    ext
+    · simp only; linear_combination r * h
+    · simp only; linear_combination s * h
+  right_inv p := by
+    obtain ⟨x, y⟩ := p
+    have h := det_rel N β
+    ext
+    · simp only; linear_combination x * h
+    · simp only; linear_combination y * h
+
+/-- The exponent family transported by the inverse row permutation. -/
+def mT (β : SL(2, ℤ)) (r' s' : ZMod N) : ℕ := m ((rowMul N β).symm (r', s')).1 ((rowMul N β).symm (r', s')).2
+
+omit [NeZero N] in
+theorem mT_zero (hm0 : m 0 0 = 0) (β : SL(2, ℤ)) : mT N m β 0 0 = 0 := by
+  have : (rowMul N β).symm (0, 0) = (0, 0) := by
+    rw [Equiv.symm_apply_eq]; ext <;> simp [rowMul]
+  simp [mT, this, hm0]
+
+omit [NeZero N] in
+theorem mT_rowMul (β : SL(2, ℤ)) (r s : ZMod N) :
+    mT N m β (rowMul N β (r, s)).1 (rowMul N β (r, s)).2 = m r s := by
+  simp [mT]
+
+theorem idx_cast (r s : ZMod N) (a b : ℤ) :
+    ((((r.val : ℤ) * a + (s.val : ℤ) * b : ℤ) : ZMod N).val : ℤ) = (((r * (a : ZMod N) + s * (b : ZMod N)) : ZMod N).val : ℤ) := by
+  congr 2
+  push_cast
+  rw [ZMod.natCast_zmod_val, ZMod.natCast_zmod_val]
+
+theorem uFun_smul (β : SL(2, ℤ)) (τ : ℍ) : uFun N m (β • τ) = uFun N (mT N m β) τ := by
+  rw [uFun, (Siegel.prod_siegelFun_pow_specialLinearGroup_smul N m).1 β τ, uFun]
+  simp_rw [idx_cast]
+
+  rw [← Fintype.prod_prod_type' (f := fun r s => siegelFun N ((r * (↑(β 0 0) : ZMod N) + s * ↑(β 1 0)).val : ℤ)
+      ((r * (↑(β 0 1) : ZMod N) + s * ↑(β 1 1)).val : ℤ) (τ : ℂ) ^ (12 * N * m r s)),
+    ← Fintype.prod_prod_type' (f := fun r s => siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) ^ (12 * N * mT N m β r s))]
+  refine Fintype.prod_equiv (rowMul N β) _ _ fun p => ?_
+  obtain ⟨r, s⟩ := p
+  rw [mT_rowMul]
+  rfl
+
+theorem ord_eq (β : SL(2, ℤ)) :
+    Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) =
+      ∑ r : ZMod N, ∑ s : ZMod N, (mT N m β r s : ℤ) * (6 * (r.val : ℤ) ^ 2 - 6 * (N : ℤ) * (r.val : ℤ) + (N : ℤ) ^ 2) := by
+  rw [Ord, ← Fintype.sum_prod_type' (f := fun r s => (m r s : ℤ) *
+      (6 * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) ^ 2
+        - 6 * (N : ℤ) * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) + (N : ℤ) ^ 2)),
+    ← Fintype.sum_prod_type' (f := fun r s => (mT N m β r s : ℤ) * (6 * (r.val : ℤ) ^ 2 - 6 * (N : ℤ) * (r.val : ℤ) + (N : ℤ) ^ 2))]
+  refine Fintype.sum_equiv (rowMul N β) _ _ fun p => ?_
+  obtain ⟨r, s⟩ := p
+  rw [mT_rowMul]
+  rfl
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form

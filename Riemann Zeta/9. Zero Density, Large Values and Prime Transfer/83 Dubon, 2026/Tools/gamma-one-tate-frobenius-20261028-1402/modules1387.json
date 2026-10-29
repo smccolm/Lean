@@ -1,0 +1,9 @@
+[
+  "GroupAlgebraMatrix",
+  "MatrixRepresentationDeterminant",
+  "DeterminantCoefficientLaw",
+  "GroupAlgebraScalarExtension",
+  "SymmetricDeterminantLaw",
+  "MatrixTensorDeterminant",
+  "DeterminantCharacteristicPolynomial"
+]

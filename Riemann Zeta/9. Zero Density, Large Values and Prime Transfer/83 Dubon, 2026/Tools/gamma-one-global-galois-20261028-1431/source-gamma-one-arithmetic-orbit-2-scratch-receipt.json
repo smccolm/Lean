@@ -1,0 +1,96 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T21:33:25.769267+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneTwistedNormInertia",
+    "SourceGammaOneTwistedArithmeticDescent",
+    "SourceCyclotomicHomogeneousDiamond",
+    "SourceGammaOneTwistedGaloisDiamond",
+    "SourceGammaOneParabolicGaloisOrbit"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia.lean",
+      "sha256": "BC58D272B8F9C8B204C02856515447ED7AC7B25C2B0BA23AC92CFE88B102E294",
+      "oleanSha256": "3591404FFF9A202612D848D34ADD467200F6AC8A9FA8A4DA3B195D25C16987D7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia-1429.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedNormInertia-1429.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent.lean",
+      "sha256": "8B546B7159A92DECF837060CC7AC19C054F2BD3BA83A13F4E2248A0B3E856472",
+      "oleanSha256": "EE0C334F4E522681BD186DCDCF0C26CF4B05C891AB767F0802CA7943E6A9F296",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent-1429.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedArithmeticDescent-1429.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond.lean",
+      "sha256": "9FDB9D460CE3A539EF155251250B188EA4794EC84367F03265C72095E390EBC1",
+      "oleanSha256": "7BF53DC739879DD0AA15498CFFE7E06C4E35CE82172BC9074157CCA54BBAA2E4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond-1429.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousDiamond-1429.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond.lean",
+      "sha256": "0B8AE8F39BE6F5DEFF98B52A8E467CB535851255BEEAA94EB7084B8232D9EDAC",
+      "oleanSha256": "9577633049262FF0D908402B203619269A61394F14518BF320939495FE86BE0E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond-1429.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond-1429.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit.lean",
+      "sha256": "D2C99770A2B16969FE1C63E472DB5E5C41E9C724885E33A99DC4A768132F1DD0",
+      "oleanSha256": "64D38ED1C86E0E93D2AA0B445596FB67FE0903007D3E93DB78FB92851AAD81A4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit-1429.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisOrbit-1429.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_diagonal_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_orbit_frobenius_of_degree_genus_eq"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_diagonal_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_orbit_frobenius_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitAudit1.log",
+  "logSha256": "04E237B96E9A157C19CDC7BABBF7BD78B72980E82C0165277903075BF67EF652",
+  "auditSha256": "E2A6D7D1C82A12C52252009BEC87B0BEAE045ED7B23CF3D9DAF6807BFCC09538",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitScratchOwnership1430.log",
+  "ownershipSha256": "F7EB2298DA28B76E34BDFB7D08D508F9408E7AA066394A7531F6382C2E527E9E",
+  "exhaustiveTheorems": 15,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticOrbitDependencyAudit2.log",
+  "dependencyAuditSha256": "F6618A173CF060E36A64638987EBDB40EB77EB3B33D6F1AAF92F9116AFFCECE5",
+  "dependencyAuditSourceSha256": "E03BD3BF8CB4A35B46B05AEE3D8CF3F9DFB95733E6463B91FF8F5FE4DBA6386C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_orbit_frobenius_of_degree_genus_eq"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight association -> finite homogeneous-coefficient Galois action -> original prescribed-support arithmetic descent.",
+  "discharged": [
+    "Derive norm-inertia triviality at the literal pulled-back rational local valuation from original coordinate-degree and genus equality.",
+    "Reuse the proved continuous unit lift and original arithmetic quotient descent; no continuity, unit action, inertia identity or arithmetic factorization is supplied.",
+    "Derive combined-diamond stability under the genuine global Galois action using the exact original diagonal coefficient and Picard commutations.",
+    "Derive the Frobenius polynomial on every Galois translate of the actual Tate lift of an original parabolic class. Diamond fixedness is derived; the existing Tate/H1 comparison requires 3<p."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Original coordinate-degree and genus equalities remain explicit. Nonzero parabolic Hecke-character realization/transfer, exceptional coefficient primes, two-dimensional all-weight arithmetic association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-orbit-2-reuse-review-20261028.json",
+  "reuseReviewSha256": "897D23571FA5A5AFB5CFEACF5007EEC7A30803C4CF99E2AAC046B95939383DF0",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

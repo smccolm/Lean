@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_prime_characters_finite`. -/
+theorem actual_unramified_union_prime_characters_originalUnramifiedUnion_prime_characters_finite_source
+    (a : 𝓞 K) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime)
+    {ζ : K} (hζ : IsPrimitiveRoot ζ p) :
+    Finite (Gal((originalUnramifiedGaloisUnion (Ω := Ω) a)/K) →ₜ*
+      Multiplicative (ZMod p)) :=
+  originalUnramifiedUnion_prime_characters_finite a ha p hp hζ
+
+end
+

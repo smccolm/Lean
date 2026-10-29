@@ -1,0 +1,140 @@
+import Dubon2026.SourceSiegelJacobiGaussProduct
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary existence -> literal Siegel-product
+holomorphy and SL2 transformation -> Jacobi theta product identity. The
+finite Gaussian identity is the source finite approximation needed to
+identify the actual product with Mathlib's analytic theta function.
+Native q-series multiplication and cusp limits are already proved and
+will be reused. No abstract q-series generalization is introduced.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_jacobiTheta_two_eq_tprod. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct
+open Finset
+
+private theorem prod_zpow' {q : ℂ} (hq0 : q ≠ 0) (s : Finset ℕ) (f : ℕ → ℤ) :
+    ∏ i ∈ s, q ^ f i = q ^ (∑ i ∈ s, f i) := by
+  classical
+  induction s using Finset.induction with
+  | empty => simp
+  | insert a s ha ih => rw [Finset.prod_insert ha, Finset.sum_insert ha, ih, ← zpow_add₀ hq0]
+
+private theorem two_dvd_mul_pred (k : ℕ) : 2 ∣ k * (k - 1) := by
+  rcases k with _ | k'
+  · norm_num
+  · simp only [Nat.add_sub_cancel]
+    rw [mul_comm]
+    exact (Nat.even_mul_succ_self k').two_dvd
+
+theorem finite_jtp {q : ℂ} (hq0 : q ≠ 0) (hq : ‖q‖ < 1) {x : ℂ} (hx : x ≠ 0) (N : ℕ) :
+    ∏ j ∈ Finset.range N, ((1 + x * q ^ (2 * j + 1)) * (1 + x⁻¹ * q ^ (2 * j + 1)))
+      = ∑ k ∈ Finset.range (2 * N + 1),
+          qbinom (q ^ 2) (2 * N) k * q ^ (((k : ℤ) - N) ^ 2) * x ^ ((k : ℤ) - N) := by
+  have hQ2 : ‖q ^ 2‖ < 1 := by
+    rw [norm_pow]
+    exact pow_lt_one₀ (norm_nonneg _) hq two_ne_zero
+  have G := gauss_q hQ2 (x * q ^ ((1 : ℤ) - 2 * N)) (2 * N)
+
+  have hfac : ∀ j : ℕ, 1 + x * q ^ ((1 : ℤ) - 2 * N) * (q ^ 2) ^ j
+      = 1 + x * q ^ (2 * (j : ℤ) + 1 - 2 * N) := by
+    intro j
+    congr 1
+    rw [show ((q : ℂ) ^ 2) ^ j = q ^ ((2 * j : ℕ)) by rw [← pow_mul],
+      ← zpow_natCast q (2 * j), mul_assoc, ← zpow_add₀ hq0]
+    congr 2
+    push_cast
+    ring
+  rw [Finset.prod_congr rfl (fun j _ => hfac j),
+    show Finset.range (2 * N) = Finset.range (N + N) from by rw [two_mul],
+    Finset.prod_range_add] at G
+
+  have hup : ∀ j : ℕ, 1 + x * q ^ (2 * ((N + j : ℕ) : ℤ) + 1 - 2 * N)
+      = 1 + x * q ^ (2 * j + 1) := by
+    intro j
+    congr 1
+    rw [show (2 * ((N + j : ℕ) : ℤ) + 1 - 2 * N) = ((2 * j + 1 : ℕ) : ℤ) by push_cast; ring,
+      zpow_natCast]
+
+  have hlow : ∀ j ∈ Finset.range N, 1 + x * q ^ (2 * (j : ℤ) + 1 - 2 * N)
+      = (x * q ^ (2 * (j : ℤ) + 1 - 2 * N)) * (1 + x⁻¹ * q ^ ((2 * (N - 1 - j) + 1 : ℕ))) := by
+    intro j hj
+    rw [Finset.mem_range] at hj
+    have h1 : j ≤ N - 1 := by omega
+    have h2 : 1 ≤ N := by omega
+    have hc : ((2 * (N - 1 - j) + 1 : ℕ) : ℤ) = -(2 * (j : ℤ) + 1 - 2 * N) := by
+      push_cast [Nat.cast_sub h1, Nat.cast_sub h2]
+      ring
+    have hcancel : x * q ^ (2 * (j : ℤ) + 1 - 2 * N)
+        * (x⁻¹ * q ^ (-(2 * (j : ℤ) + 1 - 2 * N))) = 1 := by
+      rw [mul_mul_mul_comm, mul_inv_cancel₀ hx, ← zpow_add₀ hq0, add_neg_cancel, zpow_zero,
+        one_mul]
+    rw [mul_add, mul_one, ← zpow_natCast q (2 * (N - 1 - j) + 1), hc, hcancel]
+    ring
+  rw [Finset.prod_congr rfl hlow, Finset.prod_congr rfl (fun j _ => hup j),
+    Finset.prod_mul_distrib] at G
+
+  have hodd : ∀ n : ℕ, ∑ j ∈ Finset.range n, (2 * (j : ℤ) + 1) = (n : ℤ) ^ 2 := by
+    intro n
+    induction n with
+    | zero => simp
+    | succ n ih =>
+      rw [Finset.sum_range_succ, ih]
+      push_cast
+      ring
+  have hsum : ∑ j ∈ Finset.range N, (2 * (j : ℤ) + 1 - 2 * N) = -(N : ℤ) ^ 2 := by
+    rw [Finset.sum_sub_distrib, hodd N, Finset.sum_const, Finset.card_range, nsmul_eq_mul]
+    ring
+  have hscal : ∏ j ∈ Finset.range N, (x * q ^ (2 * (j : ℤ) + 1 - 2 * N))
+      = x ^ N * q ^ (-(N : ℤ) ^ 2) := by
+    rw [Finset.prod_mul_distrib, Finset.prod_const, Finset.card_range, prod_zpow' hq0, hsum]
+  rw [hscal] at G
+
+  have hrefl : ∏ j ∈ Finset.range N, (1 + x⁻¹ * q ^ (2 * (N - 1 - j) + 1))
+      = ∏ j ∈ Finset.range N, (1 + x⁻¹ * q ^ (2 * j + 1)) :=
+    Finset.prod_range_reflect (fun j => 1 + x⁻¹ * q ^ (2 * j + 1)) N
+  rw [hrefl] at G
+
+  have hRterm : ∀ k ∈ Finset.range (2 * N + 1),
+      qbinom (q ^ 2) (2 * N) k * (q ^ 2) ^ (k * (k - 1) / 2) * (x * q ^ ((1 : ℤ) - 2 * N)) ^ k
+        = x ^ N * q ^ (-(N : ℤ) ^ 2)
+          * (qbinom (q ^ 2) (2 * N) k * q ^ (((k : ℤ) - N) ^ 2) * x ^ ((k : ℤ) - N)) := by
+    intro k _
+    have he : ((q : ℂ) ^ 2) ^ (k * (k - 1) / 2) = q ^ ((k * (k - 1) : ℕ)) := by
+      rw [← pow_mul, Nat.mul_div_cancel' (two_dvd_mul_pred k)]
+    have hx' : (x * q ^ ((1 : ℤ) - 2 * N)) ^ k
+        = x ^ k * q ^ (((1 : ℤ) - 2 * N) * k) := by
+      rw [mul_pow, ← zpow_natCast (q ^ ((1 : ℤ) - 2 * N)) k, ← zpow_mul]
+    have hxsplit : (x : ℂ) ^ k = x ^ ((k : ℤ) - N) * x ^ N := by
+      rw [← zpow_natCast x k, ← zpow_natCast x N, ← zpow_add₀ hx]
+      congr 1
+      ring
+    have hkk : ((k * (k - 1) : ℕ) : ℤ) = (k : ℤ) ^ 2 - k := by
+      rcases k with _ | k'
+      · norm_num
+      · push_cast [Nat.add_sub_cancel]
+        ring
+    have hqcollect : (q : ℂ) ^ ((k * (k - 1) : ℕ) : ℤ) * q ^ (((1 : ℤ) - 2 * N) * k)
+        = q ^ (((k : ℤ) - N) ^ 2) * q ^ (-(N : ℤ) ^ 2) := by
+      rw [← zpow_add₀ hq0, ← zpow_add₀ hq0]
+      congr 1
+      rw [hkk]
+      ring
+    rw [he, ← zpow_natCast q (k * (k - 1)), hx', hxsplit]
+    calc qbinom (q ^ 2) (2 * N) k * q ^ ((k * (k - 1) : ℕ) : ℤ)
+          * (x ^ ((k : ℤ) - N) * x ^ N * q ^ (((1 : ℤ) - 2 * N) * k))
+        = qbinom (q ^ 2) (2 * N) k * x ^ ((k : ℤ) - N) * x ^ N
+            * (q ^ ((k * (k - 1) : ℕ) : ℤ) * q ^ (((1 : ℤ) - 2 * N) * k)) := by ring
+      _ = qbinom (q ^ 2) (2 * N) k * x ^ ((k : ℤ) - N) * x ^ N
+            * (q ^ (((k : ℤ) - N) ^ 2) * q ^ (-(N : ℤ) ^ 2)) := by rw [hqcollect]
+      _ = x ^ N * q ^ (-(N : ℤ) ^ 2)
+            * (qbinom (q ^ 2) (2 * N) k * q ^ (((k : ℤ) - N) ^ 2) * x ^ ((k : ℤ) - N)) := by
+          ring
+  rw [Finset.sum_congr rfl hRterm, ← Finset.mul_sum, mul_assoc] at G
+  have hC : (x ^ N * q ^ (-(N : ℤ) ^ 2) : ℂ) ≠ 0 :=
+    mul_ne_zero (pow_ne_zero N hx) (zpow_ne_zero _ hq0)
+  have G2 := mul_left_cancel₀ hC G
+  rw [Finset.prod_mul_distrib, ← G2]
+  ring
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct

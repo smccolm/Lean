@@ -1,0 +1,63 @@
+import Dubon2026.SourceGammaOneResidueDivisors
+import Dubon2026.SourceCurvePicardGroup
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> the actual residue
+Picard coefficient action. The proved place permutation preserves degree
+and transports every principal order divisor, so it descends through the
+native degree-zero Picard quotient. The inverse remains explicit. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem decompositionResidueDivisorEquiv_symm (d : A.decompositionSubgroup ℚ) (D : Divisor kk Fb) :
+    (decompositionResidueDivisorEquiv A Γ d).symm D = decompositionResidueDivisorEquiv A Γ d⁻¹ D := by
+  ext P
+  change D (decompositionResiduePlace A Γ d P) = D (decompositionResiduePlace A Γ d⁻¹⁻¹ P)
+  rw [inv_inv]
+
+theorem decompositionResidueDivisor_principal (d : A.decompositionSubgroup ℚ)
+    (D : Divisor kk Fb) (hD : Divisor.IsPrincipal D) :
+    Divisor.IsPrincipal (decompositionResidueDivisorEquiv A Γ d D) := by
+  obtain ⟨f, hf, hD⟩ := hD
+  exact ⟨decompositionResidueAut A Γ d f, (map_ne_zero _).mpr hf,
+    decompositionResidueDivisorEquiv_order A Γ d D f hD⟩
+
+variable [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+
+/-- The actual residue decomposition action restricted to degree-zero divisors. -/
+def decompositionResidueDegZero (d : A.decompositionSubgroup ℚ) :
+    Divisor.degZero (K := kk) (F := Fb) →+ Divisor.degZero (K := kk) (F := Fb) where
+  toFun D := ⟨decompositionResidueDivisorEquiv A Γ d D.val, by
+    change Divisor.degree (decompositionResidueDivisorEquiv A Γ d D.val) = 0
+    rw [decompositionResidueDivisorEquiv_degree A Γ hT]
+    exact D.property⟩
+  map_zero' := Subtype.ext (map_zero _)
+  map_add' D E := Subtype.ext (map_add _ D.val E.val)
+
+/-- The genuine coefficient action on the actual residue Picard quotient. -/
+def decompositionResiduePicard (d : A.decompositionSubgroup ℚ) : Pic0 kk Fb →+ Pic0 kk Fb :=
+  QuotientAddGroup.map _ _ (decompositionResidueDegZero A Γ hT d) (by
+    intro D hD
+    exact decompositionResidueDivisor_principal A Γ d D.val hD)
+
+theorem decompositionResiduePicard_mk (d : A.decompositionSubgroup ℚ)
+    (D : Divisor.degZero (K := kk) (F := Fb)) :
+    decompositionResiduePicard A Γ hT d (Pic0.mk D) =
+      Pic0.mk (decompositionResidueDegZero A Γ hT d D) := rfl
+
+theorem decompositionResiduePicard_inverse (d : A.decompositionSubgroup ℚ) (x : Pic0 kk Fb) :
+    decompositionResiduePicard A Γ hT d⁻¹ (decompositionResiduePicard A Γ hT d x) = x := by
+  obtain ⟨D, rfl⟩ := Pic0.mk_surjective x
+  rw [decompositionResiduePicard_mk, decompositionResiduePicard_mk]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  change decompositionResidueDivisorEquiv A Γ d⁻¹ (decompositionResidueDivisorEquiv A Γ d D.val) = D.val
+  rw [← decompositionResidueDivisorEquiv_symm, AddEquiv.symm_apply_apply]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

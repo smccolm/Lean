@@ -1,0 +1,77 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "recordedUTC": "2026-10-28T20:24:39.665426+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceTateDualArithmeticQuadratic",
+    "SourceGammaOneArithmeticFrobenius",
+    "SourceGammaOneGeometricArithmeticFrobenius"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic.lean",
+      "sha256": "4052DE1344C6032B07D9B6D089EF3B0CC77EB8668854D445DF2E8BE1EAF831BA",
+      "oleanSha256": "BECFA3DBE39CFAFC92063B810037D33EE1C7813E03F752CD577EE59DD5833D2F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic-1396.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic-1396.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius.lean",
+      "sha256": "75C0FCE9EFACD005156D75D0985698E0F4265E9E907C9CFF7EEB4F19392B0C6A",
+      "oleanSha256": "749BF5EBB5DB4E7B77B8656E264A407EB65A4C3ABAF2041F872B68D7358E030B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius-1396.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius-1396.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius.lean",
+      "sha256": "B2104F10BD4FC5A5DD659950F9CD2175D7F14019C7E8D7E533C309D78530826E",
+      "oleanSha256": "8A015D3B05260069B0770F24B5B64FC641B2608AB3570712BC6AA1F4DEE56A38",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius-1396.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius-1396.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceTateDual_arithmetic_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceTateDual_arithmetic_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator_quadratic_of_picard",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateArithmeticFrobeniusOperator"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit1.log",
+  "logSha256": "757A248A0FD3AE7D7813477ED741B0023F3182FD3A0B352FB9841F7A87359E0D",
+  "auditSha256": "49FE5F727DC4A51B567B466A2450C043FEC80EC6F5203216019D0B4ACB716F60",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticScratchOwnership1397.log",
+  "ownershipSha256": "45AA782CC4E4E10C9E17217FEEED1ED83D8E042E641BD0FCE005A0BA08548024",
+  "exhaustiveTheorems": 13,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1.log",
+  "dependencyAuditSha256": "A8630C47E4823DD9C89E418ABB12AED79EB326E48CC33D7214D3A6A1F2ECD567",
+  "dependencyAuditSourceSha256": "721ABC29B277BED741FC86CC37C85B82BAB80703A184FA1F994FA5724E3C588F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> actual Gamma1 Picard/H1/Tate realization -> arithmetic Frobenius polynomial.",
+  "discharged": [
+    "The literal original twisted Picard/Tate relation yields a scalar weight polynomial for the inverse coefficient action with the existing homogeneous Hecke matrix and one cyclotomic factor.",
+    "The original all-weight coefficient-valued Tate dual satisfies Y*Hdual = Y^2 + ell^(w+1) on its actual combined-diamond fixed part.",
+    "The final original-object consumer derives the required Picard/Tate relation from the actual norm and geometric specialization; it does not accept a Frobenius quadratic as a hypothesis."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate-degree and genus preservation, global cyclotomic coefficient Galois action, combined-diamond character realization, parabolic and original all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "B351435F14FB1C18A6FD0DC23CD7AA026F16DA8EE8FE5A9FD3A33364565EDB33",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

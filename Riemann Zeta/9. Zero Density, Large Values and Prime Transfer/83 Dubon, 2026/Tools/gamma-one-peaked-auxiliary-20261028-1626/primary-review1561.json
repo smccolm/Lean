@@ -1,0 +1,17 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "NumberField.RingOfIntegers.mapAlgEquiv",
+    "Algebra.FormallyUnramified.of_equiv",
+    "Ideal.ramificationIdx_eq_one_of_isUnramifiedAt",
+    "IntermediateField.botEquiv and FiniteGaloisIntermediateField literal bottom"
+  ],
+  "scope": "Transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionFixes": [
+    "Typed the original integer-ring algebra equivalence before applying formal unramifiedness, resolving the canonical self-algebra diamond.",
+    "Derived the NumberField instance of the literal bottom intermediate field from its finite original degree."
+  ],
+  "productionLog": "stageNonempty1561c-focus.log"
+}

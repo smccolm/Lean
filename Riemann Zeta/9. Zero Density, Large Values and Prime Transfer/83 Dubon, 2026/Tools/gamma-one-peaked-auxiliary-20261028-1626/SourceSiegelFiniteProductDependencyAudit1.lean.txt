@@ -1,0 +1,32 @@
+import SourceSiegelFiniteSeriesProducts
+import SourceSiegelProductCoefficients
+import SourceSiegelProductLeadingCoefficient
+import SourceSiegelProductPhases
+import SourceSiegelFiniteProductExpansion
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow]
+  let localModules : Array Name := #[`SourceSiegelFiniteSeriesProducts, `SourceSiegelProductCoefficients, `SourceSiegelProductLeadingCoefficient, `SourceSiegelProductPhases, `SourceSiegelFiniteProductExpansion]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.prod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.coeff_prod_mem, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.not_dvd_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exp_orderSum_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized_product_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_pow_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.tendsto_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.rho, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.orderSum, `Dubon2026.SourceFunctionField.Realized.hasSum_qParam_mul, `Dubon2026.SourceFunctionField.Realized.tendsto_atImInfty, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.hasSum_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_coef, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.isIntegral_N_mul_inv_coef_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion.zeta_ne_one]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE SIEGEL FINITE PRODUCT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the literal finite Siegel product integral expansion, specified nonzero leading coefficient, level-cleared inverse, phase root of unity and cusp limit. Discriminant adjustment, cusp estimates and peaked auxiliary existence remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

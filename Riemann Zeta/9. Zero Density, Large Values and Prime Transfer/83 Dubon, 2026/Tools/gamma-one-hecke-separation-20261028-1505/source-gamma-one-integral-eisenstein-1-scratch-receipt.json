@@ -1,0 +1,193 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.gammaOneRowSum_coe"
+  ],
+  "recordedUTC": "2026-10-29T00:30:30.697995+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceIntegralEisensteinRows",
+    "SourceIntegralEisensteinHolomorphic",
+    "SourceIntegralEisensteinModular",
+    "SourceGammaOneEisensteinSum",
+    "SourceGammaOneEisensteinLattice",
+    "SourceGammaOneEisensteinPositive",
+    "SourceGammaOneEisensteinCoefficients",
+    "SourceGammaOneIntegralEisenstein",
+    "SourceGammaOneEisensteinSeparation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinRows.lean",
+      "sha256": "8B4FF4EB32F4981CA6E0BFF2DE79A16D3DCF83E1E39685D70AC4E62E6E4616BB",
+      "oleanSha256": "754B90E08C5FF6D9BD1252A1EBAB24FFEB88739C5F868F6C1368EDF95E43B3F0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinRows-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinRows-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinHolomorphic.lean",
+      "sha256": "B4D1386BFBCD3DAED5209C993EBACDBE8171CBFEB4BB48A28595FAAAD1EAB8AA",
+      "oleanSha256": "FCB08295D32AC1B361067BD99AE44CF3DF79A58D095DCDFBD75F7930EE276C32",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinHolomorphic-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinHolomorphic-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinModular.lean",
+      "sha256": "289A760FA2A57FCB0F051F57F7ECEEEAE11A24359DE4362C5B9D4C8FCFA5FCB7",
+      "oleanSha256": "2D9F27EC1CD585D310EBF60267788146F0DD0F58B634A2871CA9F2BF854E5F2F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinModular-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEisensteinModular-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSum.lean",
+      "sha256": "19FA54F5A0FFB2BD645A69C9D6D0B5CFEFA48A1525D488D2D3ADDDF45CCB2B61",
+      "oleanSha256": "9C52AE6A3231935020391C6435976990364401AF04BD09DCA3B09DACDF2DD359",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSum-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSum-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinLattice.lean",
+      "sha256": "DEF671082D1A9423BBA13636C298DBFF47297299486726201A328723B673E023",
+      "oleanSha256": "7308DF6B9341E70FFF86097C7B40A57DB37373D83A3F9DE2656A3B0867672682",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinLattice-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinLattice-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinPositive.lean",
+      "sha256": "D94321D458F63C6101DAC80DF15A6E1AE6ED0EDDD408E6AFFB5AED76947DA988",
+      "oleanSha256": "1E0D53BE678954A65DE33BBF2BCCDC956FCAEAB091F9D28DAA00EF0AEAAD38D0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinPositive-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinPositive-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinCoefficients.lean",
+      "sha256": "6F5A0B3AEB6D814F17765497C889F771DAB32B41D9391345B0C2DEC6D45543D9",
+      "oleanSha256": "B5CEAC8C9AE9A4A2A6F21E2636BD7E3388EC42C1180E1472FAE96CFF76F4650C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinCoefficients-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinCoefficients-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisenstein.lean",
+      "sha256": "C4A3ADBC5DD2D5FBE8B43043D9969E06640E741EDDAA8E00A40BDD54741A0F1A",
+      "oleanSha256": "9BB59731BF69F99776A14D7F451C243EE96BA294889E965ECA98B902478ED354",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisenstein-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisenstein-1500.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSeparation.lean",
+      "sha256": "3C15F10F3F9547795584C0099012E999088B9B4E2F2469B6F26DEBA9D895F5E5",
+      "oleanSha256": "E82F65B991A5699C268DF998195C17FEBF0BBAC9DEE9FB385C527F84917CE6A0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSeparation-1500.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEisensteinSeparation-1500.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series_locallyUniform",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant_mdifferentiable",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant_bounded",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.modularForm_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.gammaOneRowSum_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_eq_integer_lattice",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.kappa_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_eq_positive_series",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_summable",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positive_series_eq_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_one",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_one",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_hasSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_integral",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_mem_original_field",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_identity_class",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_other_class",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_separates_signed_identity",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rows",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.modularForm",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.gammaOneRowSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.kappa",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.integralSeries",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series_locallyUniform",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant_mdifferentiable",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant_bounded",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.modularForm_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.gammaOneRowSum_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_eq_integer_lattice",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.kappa_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum_eq_positive_series",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_summable",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positive_series_eq_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient_one",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_one",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_hasSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_integral",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_mem_original_field",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_identity_class",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient_other_class",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_separates_signed_identity"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rows",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.series",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.slashInvariant",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.modularForm",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.rowSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.gammaOneRowSum",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.kappa",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.positiveCoefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.integralSeries",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisensteinAudit1.log",
+  "logSha256": "DBEEA8F9DD7E99396C9DFB8EBABC11B4B841A42B37D79D607A8F15B61338B095",
+  "auditSha256": "1CF6FC24DD235CD7BF4A15E911FDA502A4F5502C9290CFA74392760F286BB6A7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisensteinScratchOwnership1501.log",
+  "ownershipSha256": "978869C542BDFCB7B9060E06DE5EA16BC3B9A990DF34317D90933DEEA3976796",
+  "exhaustiveTheorems": 85,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 42,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralEisensteinDependencyAudit1.log",
+  "dependencyAuditSha256": "A78336E01D077D7F204A9DE89E96875C7545D6BF5A94F895C09412A7E6E85C62",
+  "dependencyAuditSourceSha256": "F8A63E78F566949B447037BEF938690A9F53DF0EB38E29D61838023505F66F1B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_mem_original_field",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.ratio_separates_signed_identity",
+    "Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein.normalizedForm_slash"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius arithmetic realization -> exact degree/genus preservation -> signed-index lower bound -> integral Eisenstein diamond separation.",
+  "discharged": [
+    "Existence of actual holomorphic cusp-bounded weight-four congruence lattice forms.",
+    "Exact Gamma0 slash transformation of the actual Gamma1 row-sum forms.",
+    "Integral Fourier coefficients for their literal Lipschitz normalization.",
+    "Membership of E_c/E4 in the actual integral-ratio field over every field.",
+    "Separation of the identity signed diamond class for N>2 after reduction in every characteristic."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Level-power slash integrality or a rigorous replacement is still needed for the full reduced field action. Signed-index degree lower bound, degree/genus preservation, finite-modulus parabolic transfer, required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-eisenstein-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "CC0A66447277404DC36E622569F7BF877B12389236C7CB4D3D5C39CDF388F58A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

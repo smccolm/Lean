@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_inertia_eq_bot`. -/
+theorem actual_unramified_union_infinite_inertia_originalUnramifiedUnion_inertia_eq_bot_source
+    (a : 𝓞 K) (ha : a ≠ 0)
+    (P : Ideal (𝓞 (originalUnramifiedGaloisUnion (Ω := Ω) a)))
+    [P.IsPrime] (hP : P ≠ ⊥)
+    (haP : algebraMap (𝓞 K) (𝓞 (originalUnramifiedGaloisUnion (Ω := Ω) a)) a ∉ P) :
+    P.inertia Gal((originalUnramifiedGaloisUnion (Ω := Ω) a)/K) = ⊥ :=
+  originalUnramifiedUnion_inertia_eq_bot a ha P hP haP
+
+end
+

@@ -1,0 +1,68 @@
+{
+  "recordedUTC": "2026-10-28T23:26:54.555496+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "commitDate": "2026-09-24T14:06:36Z",
+  "previousInspectedRevision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "headChanged": false,
+  "treeComplete": true,
+  "leanFiles": 29511,
+  "candidates": {
+    "parabolic.*(surject|transfer|coind|shapiro|restrict|lifting|lift)": [
+      "P2M/Sol/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean"
+    ],
+    "(surject|transfer|coind|shapiro|restrict|lifting|lift).*parabolic": [],
+    "(SL2|SpecialLinear|specialLinear).*(H1|[Cc]ohom|[Cc]ocycle)": [],
+    "(H1|[Cc]ohom|[Cc]ocycle).*(SL2|SpecialLinear|specialLinear)": [
+      "P2M/Sol/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean",
+      "P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "P2M/Sol/S_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_algebra_of_charP_three.lean",
+      "P2M/Sol/S_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_of_charP_three.lean"
+    ],
+    "parabolic.*(dual|pairing|perfect)": [
+      "P2M/Sol/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean",
+      "P2M/Sol/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean",
+      "P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_baseChange_tateModule_jH.lean",
+      "P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH.lean",
+      "P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean",
+      "P2M/Sol/S_ModularCurve_exists_linearEquiv_parabolicHoms_dual_periodLatticeOf_apply_periodOf_of_isCongruenceSubgroup.lean",
+      "P2M/Sol/S_ModularCurve_exists_linearEquiv_parabolicHoms_dual_periodLattice_apply_period.lean"
+    ],
+    "(dual|pairing|perfect).*parabolic": [
+      "P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_map_iDegL_parabolicHoms.lean",
+      "P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean",
+      "P2M/Sol/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean",
+      "P2M/Sol/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean"
+    ]
+  },
+  "files": [
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/HEAD",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\head.json",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F",
+      "bytes": 6123
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\root-tree.json",
+      "sha256": "9239C5E0A3233EAECE666EDE409CED7362255C32A130C9556902C260577E642C",
+      "bytes": 4326
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/33b47c70085a36c9438d4dce3767aab0df3e5634",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\p2m-tree.json",
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690",
+      "bytes": 860
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/de7258d401c4837ba43428afd7ae9b21f86e93e0?recursive=1",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\sol-tree.json",
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68",
+      "bytes": 9239922
+    }
+  ],
+  "scope": "Filename discovery in the pinned P2M/Sol subtree only; no absence inference if truncated, and filenames are not proof verification.",
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

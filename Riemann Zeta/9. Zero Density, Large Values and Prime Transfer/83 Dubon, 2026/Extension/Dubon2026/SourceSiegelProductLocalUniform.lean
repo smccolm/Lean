@@ -1,0 +1,67 @@
+import Dubon2026.SourceSiegelStableCoefficients
+import Mathlib.NumberTheory.ModularForms.DedekindEta
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> integral Siegel expansion.
+The actual polynomial product converges locally uniformly under the
+explicit single-factor norm bound. This is the same geometric compact
+bound used by native eta convergence, and supplies the derivative limit
+for the stabilized coefficient calculation. The bound will be proved for
+the actual two Siegel factors; no expansion or integrality is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Polynomial Filter Topology
+
+/-- The literal analytic infinite product of the source polynomial factors. -/
+def product (P : ℕ → ℂ[X]) (z : ℂ) : ℂ := ∏' n : ℕ, (P n).eval (z ^ (n + 1))
+
+theorem hasProdLocallyUniformlyOn_product
+    (P : ℕ → ℂ[X]) (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖) :
+    HasProdLocallyUniformlyOn (fun n z => (P n).eval (z ^ (n + 1)))
+      (product P) (Metric.ball (0 : ℂ) 1) := by
+  unfold product
+  apply hasProdLocallyUniformlyOn_of_forall_compact Metric.isOpen_ball
+  intro K hK hcK
+  rcases K.eq_empty_or_nonempty with hN | hN
+  · simpa [hasProdUniformlyOn_iff_tendstoUniformlyOn, hN] using tendstoUniformlyOn_empty
+  · obtain ⟨q₀, hq₀, _, hmax⟩ := hcK.exists_sSup_image_eq_and_ge hN
+      (show ContinuousOn (fun q : ℂ => ‖q‖) K by fun_prop)
+    have hq₀lt : ‖q₀‖ < 1 := by simpa using hK hq₀
+    have hs : Summable (fun n : ℕ => C * ‖q₀‖ ^ (n + 1)) :=
+      ((summable_nat_add_iff 1).mpr
+        (summable_geometric_of_lt_one (norm_nonneg _) hq₀lt)).mul_left C
+    have h := Summable.hasProdUniformlyOn_nat_one_add hcK hs
+      (f := fun n x => (P n).eval (x ^ (n + 1)) - 1)
+      (Eventually.of_forall fun n x hx => ?_) (fun _ => by fun_prop)
+    · simpa only [add_sub_cancel] using h
+    · have hxlt : ‖x‖ < 1 := by simpa using hK hx
+      calc
+        ‖(P n).eval (x ^ (n + 1)) - 1‖ ≤ C * ‖x ^ (n + 1)‖ :=
+          hbound n _ (by rw [norm_pow]; exact pow_le_one₀ (norm_nonneg _) hxlt.le)
+        _ ≤ C * ‖q₀‖ ^ (n + 1) := by
+          rw [norm_pow]
+          exact mul_le_mul_of_nonneg_left
+            (pow_le_pow_left₀ (norm_nonneg _) (hmax x hx) (n + 1)) hC
+
+theorem differentiableOn_product
+    (P : ℕ → ℂ[X]) (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖) :
+    DifferentiableOn ℂ (product P) (Metric.ball (0 : ℂ) 1) :=
+  (hasProdLocallyUniformlyOn_product P C hC hbound).differentiableOn
+    (Eventually.of_forall fun _ => by
+      simpa [Finset.prod_fn] using DifferentiableOn.finsetProd (fun _ _ => by fun_prop))
+    Metric.isOpen_ball
+
+theorem tendstoLocallyUniformlyOn_pp
+    (P : ℕ → ℂ[X]) (C : ℝ) (hC : 0 ≤ C)
+    (hbound : ∀ n (x : ℂ), ‖x‖ ≤ 1 → ‖(P n).eval x - 1‖ ≤ C * ‖x‖) :
+    TendstoLocallyUniformlyOn (fun N z => (pp P N).eval z) (product P) atTop
+      (Metric.ball (0 : ℂ) 1) := by
+  have h := (hasProdLocallyUniformlyOn_product P C hC hbound).tendstoLocallyUniformlyOn_finsetRange
+  refine h.congr fun N z _ => ?_
+  simp [eval_pp]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

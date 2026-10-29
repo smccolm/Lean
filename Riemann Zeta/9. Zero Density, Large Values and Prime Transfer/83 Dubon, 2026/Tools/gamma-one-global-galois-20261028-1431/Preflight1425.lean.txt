@@ -1,0 +1,80 @@
+import Dubon2026
+namespace Dubon2026.SemanticRegression
+open Filter MeasureTheory Asymptotics
+open scoped BigOperators Topology
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateDerivationCocycleEquiv_value`. -/
+theorem actual_coordinate_tangent_linear_representationCoordinateDerivationCocycleEquiv_value_source
+    (ρ : G →* GeneralLinearGroup ι R) (d : RepresentationCoordinateDerivations ρ) (g : G) :
+    representationCoordinateDerivationCocycleEquiv ρ d g =
+      coordinateDerivationMatrix ρ d g * ((ρ g)⁻¹).val :=
+  representationCoordinateDerivationCocycleEquiv_value ρ d g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `coordinateDerivationCocycleLinearEquiv_apply`. -/
+theorem actual_coordinate_tangent_linear_coordinateDerivationCocycleLinearEquiv_apply_source
+    (ρ : G →* GeneralLinearGroup ι R) (d : RepresentationCoordinateDerivations ρ) :
+    coordinateDerivationCocycleLinearEquiv ρ d =
+      representationCoordinateDerivationCocycleEquiv ρ d :=
+  coordinateDerivationCocycleLinearEquiv_apply ρ d
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `coordinateTangentCohomologyMap_eq_iff`. -/
+theorem actual_coordinate_tangent_linear_coordinateTangentCohomologyMap_eq_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (d e : RepresentationCoordinateDerivations ρ) :
+    coordinateTangentCohomologyMap ρ d = coordinateTangentCohomologyMap ρ e ↔
+      MatrixFirstOrderStrictlyConjugate ρ
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ d))
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ e)) :=
+  coordinateTangentCohomologyMap_eq_iff ρ d e
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricCoordinateDerivationMap_firstOrder`. -/
+theorem actual_coordinate_tangent_linear_symmetricCoordinateDerivationMap_firstOrder_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (d : RepresentationCoordinateDerivations ρ) :
+    firstOrderRepresentationCoordinateEquiv (symmetricMatrixRepresentation n ρ)
+      (representationCoordinateDerivationEquiv (symmetricMatrixRepresentation n ρ)
+        (symmetricCoordinateDerivationMap n ρ d)) =
+      symmetricFirstOrderLift n ρ
+        (firstOrderRepresentationCoordinateEquiv ρ (representationCoordinateDerivationEquiv ρ d)) :=
+  symmetricCoordinateDerivationMap_firstOrder n ρ d
+
+end
+
+
+end Dubon2026.SemanticRegression

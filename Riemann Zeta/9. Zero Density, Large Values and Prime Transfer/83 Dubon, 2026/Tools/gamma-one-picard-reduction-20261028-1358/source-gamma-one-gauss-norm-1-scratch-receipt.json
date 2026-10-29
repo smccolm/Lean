@@ -1,0 +1,108 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T19:05:33.671714+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceReductionCoordinateAutomorphism",
+    "SourceGammaOneDiamondGauss",
+    "SourceReductionMapReflection",
+    "SourceGammaOneHeckeGaussReflection",
+    "SourceGammaOneHeckeFractionProduct",
+    "SourceGammaOneHeckeGaussNorm"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism.lean",
+      "sha256": "013EEC631020010EC9B1E7E55827DE212743BBBE7C8AA21763CFB63590C53BEE",
+      "oleanSha256": "72F5DA66DD94BDF00B7B5197086AF005F24605AA5B5E9A6F94B12B0BDBB97850",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism-1356.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss.lean",
+      "sha256": "BCEB70E18B181990603F26D7F8C4425699B6335F6AD71C67CB1521A1D183A67C",
+      "oleanSha256": "D9B75B5FC32AA2B5C88BC90B156666C943B8EEE9B35BD255D2E0B837846D1A42",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss-1356.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection.lean",
+      "sha256": "CF1B3AC501EF30EC26E4B399725C199099EEC32757BA6DF6BAC61908842BB968",
+      "oleanSha256": "4F9D7FD5125614F699A4E3A72D66AC493756D6F0B5A17B9AFAFBC269AE53DED2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection-1356.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection.lean",
+      "sha256": "0E035753FFF8FF8C0C07C45D858B3043A5FA69327B25B16824B11810B3549FC8",
+      "oleanSha256": "01EEE104C957DE77F33C41F1FA0B695EFD55487B6930C4752DF5754582DF807D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection-1356.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct.lean",
+      "sha256": "61317CE531486552D0D0AD2412A12A25A583C23815BEB25F8EDD63A05D5118E6",
+      "oleanSha256": "FA795F992BA9340EB01DF206478B58E79247246B17258975387D9B872DCB163C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct-1356.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm.lean",
+      "sha256": "112C1BFFD400E8FD1A8331F478747C01157D18F0073FCB2FFBABD588AA9E144A",
+      "oleanSha256": "B882C09009A23A1A2897BF85F019966F26BA81914EC71D041030A477D28C17DD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm-1356.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm-1356.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormAudit1.log",
+  "logSha256": "2BB3855A8A0EBCC8892D845F80247B0D4DC55CD9C3641C22AA593BC988B575F4",
+  "auditSha256": "8D4BA6FE71C167962AF0A340B687B4DB9BC0D804D59EA6C073095732DF2607F5",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormScratchOwnership1357.log",
+  "ownershipSha256": "439F14FC28F9523613A1C8D1CF3B217493CD8FCC95A1CADF8051284D02D1D24D",
+  "exhaustiveTheorems": 16,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormDependencyAudit1.log",
+  "dependencyAuditSha256": "582D8B2FE472AAC369B1A5E1D35BFA3C58CF1880991199ECAE61519CD8725DCA",
+  "dependencyAuditSourceSha256": "DA77763D90A49C4CB40E0050B844378F976E9F8264BB08AA0336BBEB3A0DA9E1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> geometric Frobenius/inertia -> actual Hecke norm and residue compatibility.",
+  "discharged": [
+    "Actual coordinate-degree preservation implies preservation of the original coefficient Gauss ring by every arithmetic diamond.",
+    "The original beta Hecke map reflects as well as preserves Gauss integrality, with no degree or genus premise.",
+    "Integral fraction witnesses give the exact diamond product and a nonzero reduced denominator.",
+    "For every nonzero level M and prime p coprime to M, actual coordinate-degree preservation gives Gauss integrality of the original beta norm and residue equal to coefficient Frobenius of the arithmetic diamond image times q-to-q^p of the original residue. The matrix label is still p*d=1 modulo M."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual original Gamma1 coordinate-degree equality and genus preservation remain open. Under both, the separately audited specialization/Kummer scope constructs a Picard map injective on every invertible torsion subgroup. Original norm/place/Picard compatibility, Tate Frobenius/inertia, parabolic arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "CD6C0663929955FFE906E96C964607FDB3CB3C48613FF19EB7A0A993CCE7E811",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

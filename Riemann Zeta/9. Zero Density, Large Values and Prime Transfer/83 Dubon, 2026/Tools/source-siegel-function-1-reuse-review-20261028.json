@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> peaked auxiliary existence -> actual Siegel holomorphy, SL2 transformation and Gamma1-invariant finite product.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-siegel-function-audit-route-1580.json",
+    "sha256": "C9CB26EE5DD88E27CF7DAD480CAECD59616AFE2BFAFFEA5751508A3127428078",
+    "review": {
+      "recordedUTC": "2026-10-29T02:00:35.777252+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> peaked auxiliary existence -> actual Siegel holomorphy, SL2 transformation and Gamma1-invariant finite product.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\siegel-jacobi-route-review-1557.json",
+          "sha256": "0DAC53847F87CE866365040C980E4B3FB1F60BEC22871BAFAA4F83A4591A5A64"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\siegel-source-entry-review-1579.json",
+          "sha256": "A912E906CE0EDDAAD932D82624E3489D7BDD8A67795FCF7CB563AECC2EB63BC7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\siegel-expansion-shorter-route-1578.json",
+          "sha256": "F6D385198E60E40921179DC00272090AC85266F8589027654CA6E84A8B68D575"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Literal Siegel Function Reuse Assessment 2026-10-28.md",
+          "sha256": "9E2E55B1BA7A78DBAA69577B707CCD30334ED4AF330C274BE17E6B8E6EB60739"
+        }
+      ],
+      "shorterRoute": "Reuse native theta and eta APIs, native SL2 generators and native geometric-product convergence. Prove only the literal Jacobi product connection, actual Siegel factor identities and the finite product transport. Common facts are shared, and unnecessary nonzero-level parameters and unused source helpers are omitted.",
+      "assumptionsToDischarge": [
+        "The actual Jacobi theta function equals the literal infinite product.",
+        "The source Siegel factor is holomorphic on the upper half-plane.",
+        "The actual SL2 transformation multiplier is a twelfth root of unity.",
+        "Literal level shifts reduce integer indices to residues with multipliers annihilated by the source exponent.",
+        "The actual 12*N exponent product satisfies SL2 transport and Gamma1 invariance from exponent translation invariance."
+      ],
+      "remaining": "Integral Fourier expansions, level-cleared leading inverse, discriminant adjustment, source decay/order estimates and actual peaked auxiliary existence. Full reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, remaining arithmetic inputs, automorphy and literal higher continuation remain. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual Jacobi theta function equals the literal infinite product.",
+    "The source Siegel factor is holomorphic on the upper half-plane.",
+    "The actual SL2 transformation multiplier is a twelfth root of unity.",
+    "Literal level shifts reduce integer indices to residues with multipliers annihilated by the source exponent.",
+    "The actual 12*N exponent product satisfies SL2 transport and Gamma1 invariance from exponent translation invariance."
+  ],
+  "remaining": "Integral Fourier expansions, level-cleared leading inverse, discriminant adjustment, source decay/order estimates and actual peaked auxiliary existence. Full reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, remaining arithmetic inputs, automorphy and literal higher continuation remain. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,14 @@
+{
+  "SourceSiegelStableCoefficients": "1581a",
+  "SourceSiegelProductLocalUniform": "1582b",
+  "SourceSiegelProductTaylorExpansion": "1583b",
+  "SourceSiegelPolynomialFactors": "1584b",
+  "SourceSiegelIntegralCoefficients": "1585a",
+  "SourceSiegelQParameter": "1586a",
+  "SourceSiegelResidueProductIndices": "1587a",
+  "SourceSiegelResidueProductStreams": "1588b",
+  "SourceSiegelLeadingUnit": "1589a",
+  "SourceSiegelNormalizedProduct": "1590b",
+  "SourceSiegelCoefficientSeries": "1591b",
+  "SourceSiegelIntegralExpansion": "1592b"
+}

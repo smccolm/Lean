@@ -1,0 +1,7 @@
+### Actual continuous trace-zero coefficient cocycles — 10 October 2026
+
+The actual continuous cocycles of the original trace-zero coefficient representation include in the original continuous matrix cocycles. The inclusion is coefficient-linearly equivalent to the genuine pointwise trace kernel, with original subtype topology and cocycle equations proved in both directions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousTraceZeroCocycles](Extension/Dubon2026/ContinuousTraceZeroCocycles.lean).

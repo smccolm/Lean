@@ -1,0 +1,10 @@
+### Original first-order matrix lifts and actual adjoint cocycles — 8 October 2026
+
+Four further production modules use the pinned actual dual-number matrix equivalence to extract the original ordinary and epsilon components. The original matrix product gives the exact first-order product rule; multiplying the epsilon component by the inverse of the actual reduction gives the adjoint cocycle identity. The original matrix representation defines its actual conjugation representation and the corresponding genuine Mathlib representation-category object. A first-order lift is the literal fiber of genuine dual-number group representations under the actual coefficient-reduction map. Its first-order matrix is proved to belong to Mathlib’s actual adjoint cocycle module. Conversely, every original adjoint cocycle gives the literal matrices rho(g)+epsilon c(g)rho(g); the cocycle identity proves their multiplication law, the group homomorphism gives actual invertible matrices, and their reduction is exactly the original representation. Extracting the cocycle recovers the input cocycle, and reconstructing from a genuine lift recovers that entire original dual-number representation. These explicit inverse constructions give the actual lift/cocycle equivalence.
+
+This is the algebraic first-order lift/cocycle correspondence. Strict conjugacy modulo the actual coboundary module, the resulting H1 classification, continuous deformation conditions and universal deformation representability remain separate obligations. Associated Galois representations, higher symmetric automorphic lifts and analytic continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [CocycleFirstOrderLift](Extension/Dubon2026/CocycleFirstOrderLift.lean).
+- [DualMatrixInfinitesimal](Extension/Dubon2026/DualMatrixInfinitesimal.lean).
+- [FirstOrderDeformationEquiv](Extension/Dubon2026/FirstOrderDeformationEquiv.lean).
+- [MatrixAdjointCocycles](Extension/Dubon2026/MatrixAdjointCocycles.lean).

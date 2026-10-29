@@ -1,0 +1,34 @@
+import Dubon2026.SourceHomogeneousHeckeDiamond
+import Dubon2026.SourceGammaOneHeckeDiamondCoefficient
+import Dubon2026.SourceGammaOneArithmeticTateOperators
+import Dubon2026.SourceTateDualQuadratic
+import Dubon2026.SourceGammaOneBinaryFrobeniusNormalization
+import Dubon2026.SourceCoefficientDualAction
+import Dubon2026.SourceGammaOneBinaryGaloisHecke
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.homogeneousHeckeDiamond_square, `Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond, `Dubon2026.sourceTateDual_quadratic, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard, `Dubon2026.sourceCoefficientDualAction_operator, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep, `Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator, `Dubon2026.sourceCoefficientDualAction, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep]
+  let localModules : Array Name := #[`Dubon2026.SourceHomogeneousHeckeDiamond, `Dubon2026.SourceGammaOneHeckeDiamondCoefficient, `Dubon2026.SourceGammaOneArithmeticTateOperators, `Dubon2026.SourceTateDualQuadratic, `Dubon2026.SourceGammaOneBinaryFrobeniusNormalization, `Dubon2026.SourceCoefficientDualAction, `Dubon2026.SourceGammaOneBinaryGaloisHecke]
+  let required : Array Name := #[`Dubon2026.homogeneousHeckeDiamond_square, `Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond, `Dubon2026.sourceTateDual_quadratic, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard, `Dubon2026.sourceCoefficientDualAction_operator, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep, `Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator, `Dubon2026.sourceCoefficientDualAction, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep, `Dubon2026.binaryHomogeneousMonomialBasis_diagonal_ring, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, `Dubon2026.SourceFunctionField.GammaOne.heckePicard_arithmetic, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate_galois, `Dubon2026.TateModule.mapEnd, `LinearMap.lcomp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FROBENIUS NORMALIZATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual homogeneous coefficient square, original arithmetic Tate Hecke and diamond commutation, conditional original Frobenius normalization, and contragredient Galois compatibility with every native prime Hecke operator. The geometric Gamma1 Frobenius relation, inertia, parabolic character descent, exceptional primes and characteristic-zero association remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

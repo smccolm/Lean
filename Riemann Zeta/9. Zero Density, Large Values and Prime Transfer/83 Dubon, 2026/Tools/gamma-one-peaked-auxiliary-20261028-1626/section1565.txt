@@ -1,0 +1,7 @@
+### Actual rational cyclotomic ramification — 9 October 2026
+
+The actual conductor exclusion identifies an original rational prime not dividing the conductor. The pinned rational cyclotomic ramification theorem gives index one over Z, and actual prime-local formal unramifiedness transfers through the original integer-ring tower to give index one over O(Q). No base-ring ramification-index identity is assumed.
+
+Actual cyclotomic stage inclusion and all-open arithmetic character finiteness remain open. Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [CyclotomicUnramifiedPrimes](Extension/Dubon2026/CyclotomicUnramifiedPrimes.lean).

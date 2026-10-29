@@ -1,0 +1,119 @@
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R ι : Type*} [CommSemiring R] [Fintype ι]
+
+/-- Exact original-object consumer of `matrixPolynomialAction_mul`. -/
+theorem actual_arithmetic_symmetric_matrixPolynomialAction_mul_source (g h : Matrix ι ι R) :
+    matrixPolynomialAction (g * h) = (matrixPolynomialAction g).comp (matrixPolynomialAction h) :=
+  matrixPolynomialAction_mul g h
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R ι : Type*} [CommSemiring R] [Fintype ι]
+
+/-- Exact original-object consumer of `matrixCoefficientPolynomial_eval`. -/
+theorem actual_arithmetic_symmetric_matrixCoefficientPolynomial_eval_source (p : MvPolynomial ι R) (d : ι →₀ ℕ) (a : Matrix ι ι R) :
+    MvPolynomial.eval (fun ij : ι × ι => a ij.1 ij.2) (matrixCoefficientPolynomial p d) =
+      MvPolynomial.coeff d (matrixPolynomialAction a p) :=
+  matrixCoefficientPolynomial_eval p d a
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R]
+open MvPolynomial Module
+
+/-- Exact original-object consumer of `homogeneousMonomial_span`. -/
+theorem actual_arithmetic_symmetric_homogeneousMonomial_span_source {ι : Type*} (n : ℕ) :
+    Submodule.span R (Set.range (fun d : {d : ι →₀ ℕ | d.degree = n} =>
+      homogeneousMonomial (R := R) n d.val d.property)) = ⊤ :=
+  homogeneousMonomial_span n
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R S ι : Type*} [CommRing R] [CommRing S] [Fintype ι]
+
+/-- Exact original-object consumer of `homogeneousCoefficientMap_GL`. -/
+theorem actual_arithmetic_symmetric_homogeneousCoefficientMap_GL_source [DecidableEq ι] (n : ℕ) (φ : R →+* S)
+    (g : Matrix.GeneralLinearGroup ι R) (p : homogeneousSubmodule ι R n) :
+    homogeneousCoefficientMap n φ (homogeneousGLRepresentation (R := R) (ι := ι) n g p) =
+      homogeneousGLRepresentation (R := S) (ι := ι) n
+        (Matrix.GeneralLinearGroup.map (n := ι) φ g)
+        (homogeneousCoefficientMap n φ p) :=
+  homogeneousCoefficientMap_GL n φ g p
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_val`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_val_source (n : ℕ) (g : GeneralLinearGroup (Fin 2) R) :
+    (homogeneousSymmetricGL n g).val =
+      LinearMap.toMatrix (binaryHomogeneousMonomialBasis n) (binaryHomogeneousMonomialBasis n)
+        (homogeneousGLRepresentation n g) :=
+  homogeneousSymmetricGL_val n g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R S : Type*} [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_map`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_map_source (n : ℕ) (φ : R →+* S)
+    (g : GeneralLinearGroup (Fin 2) R) :
+    GeneralLinearGroup.map φ (homogeneousSymmetricGL n g) =
+      homogeneousSymmetricGL n (GeneralLinearGroup.map φ g) :=
+  homogeneousSymmetricGL_map n φ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `homogeneousSymmetricGL_continuous`. -/
+theorem actual_arithmetic_symmetric_homogeneousSymmetricGL_continuous_source (n : ℕ) :
+    Continuous (homogeneousSymmetricGL (R := R) n) :=
+  homogeneousSymmetricGL_continuous n
+
+end
+
+section
+
+open IsDedekindDomain Matrix MvPolynomial Module
+
+variable {G R S : Type*} [Group G] [CommRing R]
+    [CommRing S]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_map`. -/
+theorem actual_arithmetic_symmetric_symmetricMatrixRepresentation_map_source (n : ℕ) (ρ : G →* GeneralLinearGroup (Fin 2) R)
+    (φ : R →+* S) :
+    (GeneralLinearGroup.map φ).comp (symmetricMatrixRepresentation n ρ) =
+      symmetricMatrixRepresentation n ((GeneralLinearGroup.map φ).comp ρ) :=
+  symmetricMatrixRepresentation_map n ρ φ
+
+end
+

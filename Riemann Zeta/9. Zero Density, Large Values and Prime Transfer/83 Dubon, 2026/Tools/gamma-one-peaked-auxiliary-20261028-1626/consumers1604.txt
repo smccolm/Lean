@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `rationalArithmeticInertia_eq_bot`. -/
+theorem actual_rational_arithmetic_inertia_rationalArithmeticInertia_eq_bot_source (a : 𝓞 ℚ) (ha : a ≠ 0) :
+    (let U := rationalUnramifiedExtension a
+     letI : Algebra ℚ U := U.algebra'
+     ∀ (P : Ideal (𝓞 U)), P.IsPrime → P ≠ ⊥ →
+       algebraMap (𝓞 ℚ) (𝓞 U) a ∉ P → rationalArithmeticInertia a P = ⊥) :=
+  rationalArithmeticInertia_eq_bot a ha
+
+end
+

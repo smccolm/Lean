@@ -1,0 +1,58 @@
+import SourceGammaOneHeckeGauss
+
+/-! DUB-17/18 -> original Gamma1 geometric Frobenius -> residue Hecke
+correspondence. The actual residue images inherit both field maps from
+literal reduction. This discharges map existence and compatibility on
+functions, retaining the actual inclusion and q-substitution. Finite map
+degrees, place specialization and the two Frobenius components remain.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open CongruenceSubgroup
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (M d : ℕ)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Γ" => Gamma1 M
+local notation "Δ" => Gamma1 M ⊓ Gamma0 (d * M)
+
+theorem residueImage_heckeAlpha_le : residueImage A Γ ≤ residueImage A Δ := by
+  intro x hx
+  obtain ⟨f, hf⟩ := residueToImage_surjective A Γ ⟨x, hx⟩
+  have he : resHom A Γ f = x := congrArg Subtype.val hf
+  rw [← he, ← heckeAlphaGauss_resHom A M d]
+  exact resHom_mem_residueImage A Δ _
+
+/-- Inclusion on the literal residue images of the actual Hecke fields. -/
+def residueHeckeAlpha : residueImage A Γ →ₐ[kk] residueImage A Δ :=
+  IntermediateField.inclusion (residueImage_heckeAlpha_le A M d)
+
+theorem residueHeckeAlpha_reduction (f : coefficientGaussRing Γ A) :
+    residueHeckeAlpha A M d (residueToImage A Γ f) =
+      residueToImage A Δ (heckeAlphaGauss A M d f) :=
+  Subtype.ext (heckeAlphaGauss_resHom A M d f).symm
+
+variable [NeZero d]
+
+theorem qExpand_mem_residueImage {x : LaurentSeries kk} (hx : x ∈ residueImage A Γ) :
+    qExpand kk d x ∈ residueImage A Δ := by
+  obtain ⟨f, hf⟩ := residueToImage_surjective A Γ ⟨x, hx⟩
+  have he : resHom A Γ f = x := congrArg Subtype.val hf
+  rw [← he, ← heckeBetaGauss_resHom A M d]
+  exact resHom_mem_residueImage A Δ _
+
+/-- The original q-substitution on the actual residue Hecke fields. -/
+def residueHeckeBeta : residueImage A Γ →ₐ[kk] residueImage A Δ where
+  toFun x := ⟨qExpand kk d x.val, qExpand_mem_residueImage A M d x.property⟩
+  map_one' := Subtype.ext (map_one (qExpand kk d))
+  map_mul' x y := Subtype.ext (map_mul (qExpand kk d) x.val y.val)
+  map_zero' := Subtype.ext (map_zero (qExpand kk d))
+  map_add' x y := Subtype.ext (map_add (qExpand kk d) x.val y.val)
+  commutes' c := Subtype.ext ((qExpandAlgHom kk d).commutes c)
+
+theorem residueHeckeBeta_reduction (f : coefficientGaussRing Γ A) :
+    residueHeckeBeta A M d (residueToImage A Γ f) =
+      residueToImage A Δ (heckeBetaGauss A M d f) :=
+  Subtype.ext (heckeBetaGauss_resHom A M d f).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

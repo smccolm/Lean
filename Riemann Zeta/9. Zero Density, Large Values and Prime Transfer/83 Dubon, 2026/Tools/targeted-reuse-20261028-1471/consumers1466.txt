@@ -1,0 +1,37 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R S ι : Type*} [CommRing R] [CommRing S] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixCongruenceKernel_powerImage_isPGroup`. -/
+theorem actual_completed_congruence_image_matrixCongruenceKernel_powerImage_isPGroup_source (I : Ideal R) {p : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I) (n : ℕ) :
+    IsPGroup p ((MatrixCongruenceKernel (ι := ι) I).map
+      (GeneralLinearGroup.map (n := ι) (R := R) (S := R ⧸ I ^ n)
+        (Ideal.Quotient.mk (I ^ n)))) :=
+  matrixCongruenceKernel_powerImage_isPGroup I hp hpI n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+
+/-- Exact original-object consumer of `completedResidualCongruenceImage_isPGroup`. -/
+theorem actual_completed_congruence_image_completedResidualCongruenceImage_isPGroup_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p] (n : ℕ) :
+    IsPGroup p (CompletedResidualCongruenceImage ρ n) :=
+  completedResidualCongruenceImage_isPGroup ρ p hp n
+
+end
+

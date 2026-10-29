@@ -1,0 +1,23 @@
+{
+  "SourceGammaOneEvenIntegralRatios": "1502a",
+  "SourceLevelOneCoefficientRing": "1504a",
+  "SourceLevelOneIntegralWeightFactor": "1506a",
+  "SourceTraceProductCoefficientRing": "1508a",
+  "SourceIntegralLevelOneTraceCoefficients": "1509b",
+  "SourceTraceExponentialCoefficientVanishing": "1511a",
+  "SourceIntegralTraceParameters": "1512a",
+  "SourceIntegralTracePowerCoefficients": "1513a",
+  "SourceIntegralTraceCoefficientExtraction": "1514c",
+  "SourceIntegralTraceModularForm": "1515a",
+  "SourceIntegralTraceCuspTransversal": "1516a",
+  "SourceIntegralTraceTranslates": "1517b",
+  "SourceIntegralTraceTranslationCoefficients": "1518b",
+  "SourceIntegralTracePeriodWidth": "1519b",
+  "SourceIntegralTraceAnalyticProducts": "1522a",
+  "SourceIntegralTraceSlashPeriods": "1523b",
+  "SourceIntegralTraceTranslationAssembly": "1524a",
+  "SourceIntegralTraceTransversalSplit": "1525b",
+  "SourceIntegralTraceDecomposition": "1526b",
+  "SourceIntegralTraceDegenerateCusp": "1527c",
+  "SourceEvenWeightPeakedTraceIntegrality": "1529a"
+}

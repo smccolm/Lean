@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T21:37:44.378547+00:00",
+  "repository": "lana-agents/elliptic-curves",
+  "branch": "main",
+  "revision": "e70086a9c442dcfe76152fa03777091c50985d43",
+  "commitDate": "2026-10-25T03:12:15Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/lana-agents/elliptic-curves",
+      "path": "repository.json",
+      "sha256": "F329DDF5C17CE98DA117591B228E67DFB16872A711AFDA6B69142115E76FC8A1",
+      "bytes": 6606
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/elliptic-curves/commits/main",
+      "path": "commit.json",
+      "sha256": "D1E47A5D83078C9D980CAA50293F700714700EDDFAD5720956817E2D21FD9A8A",
+      "bytes": 73797
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/elliptic-curves/git/trees/e70086a9c442dcfe76152fa03777091c50985d43?recursive=1",
+      "path": "tree.json",
+      "sha256": "B20D3BFB0FD4BF3F80E4B4441FCFBFB083A97C9CE91B81E0A42FB5130962F3D8",
+      "bytes": 136035
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/README.md",
+      "path": "README.md.txt",
+      "sha256": "ED0A346FB46D98FE1AEB6F83B0C7227F22DDD9C009CD859E14D14C50E4103FFE",
+      "bytes": 599804
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "EF35EC69AE444235102DEEED4C0F69CAD58E1A3F0D00297185405BDC0C82385F",
+      "bytes": 3149
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30",
+      "bytes": 11358
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

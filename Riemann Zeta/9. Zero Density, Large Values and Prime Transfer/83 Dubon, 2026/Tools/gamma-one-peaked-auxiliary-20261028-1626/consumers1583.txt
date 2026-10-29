@@ -1,0 +1,40 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι O A : Type} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [DiscreteTopology (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+  [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+variable {B : Type} [CommRing B] [IsLocalRing B] [IsNoetherianRing B]
+  [Algebra O B] [WithIdeal B] [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `arithmeticFramedFiberEquiv_natural`. -/
+theorem actual_arithmetic_framed_universality_arithmeticFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP (IsLocalRing.ResidueField O) p]
+    (σ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA) :
+    (letI := arithmeticFramedUniversalRing_isLocal a ha p hp hpa σ hσ
+     ∀ f : OriginalContinuousCoefficientFiber
+       (arithmeticFramedUniversalResidueEquiv a ha p hp hpa σ hσ) eA,
+       arithmeticFramedFiberEquiv hB eB a ha p hp hpa σ hσ
+         (originalCoefficientFiberPostcomp _ eA eB k hk hres f) =
+           originalFramedFiberPostcomp eA eB (rationalArithmeticGaloisGroup a) σ k hk hres
+             (arithmeticFramedFiberEquiv hA eA a ha p hp hpa σ hσ f)) :=
+  arithmeticFramedFiberEquiv_natural hA hB eA eB a ha p hp hpa σ hσ k hk hres
+
+end
+

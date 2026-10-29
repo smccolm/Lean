@@ -1,0 +1,71 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T15:22:23.636583+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResidueFrobenius"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius.lean",
+      "sha256": "06E34658052283529092F5B545115FF5A2EFC83735D087C373C094BD28641C17",
+      "oleanSha256": "E8EF2C0CB2F0DE0A1C8D0F91C8BF6931B2A04DDEE0F607A98F7FD800F9DFBB93",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius1286d.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobenius1286d.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusAudit1.log",
+  "logSha256": "B8DF51DE0F4C7528AA039EC36FE2977321746CA7D050CA0F55D97C542C282B19",
+  "auditSha256": "AF702E0C38415A3B9CE9A6A9074F256E917251C8CA698706C16B822B8C0E3FF0",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusScratchOwnership1287.log",
+  "ownershipSha256": "BD6A048C49C3EE1EA5ECA93AC52BEFB00E68695A9D42E019A2ED7260AF91E1F2",
+  "exhaustiveTheorems": 15,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusDependencyAudit1.log",
+  "dependencyAuditSha256": "8580DE24A939DDB54B7ADED232120611C70D1349C8682D9DB509EFF5B1EFD362",
+  "dependencyAuditSourceSha256": "5FE2A9301657DAAA2400C632CD6B557191D445E6DC39E15FBA15DAFF965A54F1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius -> actual residue Hecke correspondence -> geometric Frobenius factorization.",
+  "discharged": [
+    "For a decomposition element whose action on residue constants is pth power, the original residue image has a constant-linear geometric Frobenius with literal q to q^p Laurent action.",
+    "The actual endomorphism is integral, and finite for a finite-index original subgroup containing T.",
+    "The actual Gamma1 residue Hecke beta map factors through this endomorphism and the actual alpha inclusion."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The arithmetic Frobenius constant-action premise is explicit. No original norm identity, degree equality, genus preservation, place/Picard specialization or prime-to-residue torsion injectivity is proved by this module. The original geometric Tate quadratic, inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-frobenius-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "0979A8B513C8351186CA9D6341A6D4498F484C6964E64F2825FD67CB589182BE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

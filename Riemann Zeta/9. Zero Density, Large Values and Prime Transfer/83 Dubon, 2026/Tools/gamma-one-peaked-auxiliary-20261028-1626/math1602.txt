@@ -1,0 +1,1 @@
+Every actual prime of the whole original arithmetic extension above a base prime outside the exceptional integer has trivial genuine inertia. Actual integral lying-over supplies such primes, so their existence and original inertia conclusion are derived together.

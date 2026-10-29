@@ -1,0 +1,21 @@
+[
+  "Dubon2026.adicCongruenceKernel_compactSpace",
+  "Dubon2026.adicCongruenceKernel_continuous_quotient_isPGroup",
+  "Dubon2026.adicResidualProfiniteKernel_commonKernel_eq_bot",
+  "Dubon2026.completeLocalAdic_t2Space",
+  "Dubon2026.completeLocalAdic_compactSpace",
+  "Dubon2026.completedPresentationRelationIdeal_le_maximal",
+  "Dubon2026.completedPresentationRelationIdeal_ne_top",
+  "Dubon2026.completedPresentationCoefficientQuotient_isLocalRing",
+  "Dubon2026.completedResidualRepresentationEvaluation_continuous",
+  "Dubon2026.completedUniversalProfiniteRepresentation_reduction",
+  "Dubon2026.originalResidualMatrixKernel_isClosed",
+  "Dubon2026.originalResidual_fixedKernel_le_every_coefficient_lift",
+  "Dubon2026.originalResidualCoefficientFactor_mk",
+  "Dubon2026.originalResidualCoefficientFactor_continuous",
+  "Dubon2026.SemanticRegression.actual_original_residue_uniform_factors_completedUniversalProfiniteRepresentation_reduction_source",
+  "Dubon2026.SemanticRegression.actual_original_residue_uniform_factors_completedPresentationRelationIdeal_le_maximal_source",
+  "Dubon2026.SemanticRegression.actual_original_residue_uniform_factors_completeLocalAdic_compactSpace_source",
+  "Dubon2026.SemanticRegression.actual_original_residue_uniform_factors_adicResidualProfiniteKernel_commonKernel_eq_bot_source",
+  "Dubon2026.SemanticRegression.actual_original_residue_uniform_factors_originalResidual_fixedKernel_le_every_coefficient_lift_source"
+]

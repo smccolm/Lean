@@ -1,0 +1,7 @@
+### Actual unramified cyclotomic character descent — 9 October 2026
+
+From an actual primitive root in the original Galois extension, construct the actual cyclotomic base K(zeta). Transfer the genuine finite exceptional-prime set and original finite-subextension unramifiedness to that base, apply proved root-containing Kummer and Selmer character finiteness, and descend through the actual coprime cyclotomic degree. The root need not lie in the original base field.
+
+All-open character finiteness for the constructed arithmetic union remains open. Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedCyclotomicCharacterDescent](Extension/Dubon2026/UnramifiedCyclotomicCharacterDescent.lean).

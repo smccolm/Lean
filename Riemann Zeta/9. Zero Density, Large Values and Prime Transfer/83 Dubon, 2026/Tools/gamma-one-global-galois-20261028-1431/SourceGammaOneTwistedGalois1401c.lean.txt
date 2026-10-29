@@ -1,0 +1,58 @@
+import SourceAbsoluteCyclotomicCharacter1400b
+import SourceCyclotomicHomogeneousAction1399b
+import SourceTwistedCoefficientDualAction1398a
+import SourceGammaOneArithmeticFrobenius
+import Dubon2026.SourceGammaOneBinaryGaloisHecke
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> genuine
+coefficient-valued Tate Galois action. The actual cyclotomic character
+supplies the original homogeneous coefficient matrix and scalar; inverse
+precomposition uses the original Picard Tate Galois action. Its Frobenius
+value matches the derived normalization. Character realization, continuity
+on its finite realization and original unramified descent remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+/-- The genuine cyclotomic action on the original homogeneous coefficients. -/
+def binaryCyclotomicCoefficientRep : (Qbar ≃ₐ[ℚ] Qbar) →* Module.End (ZMod N) V :=
+  (sourceCyclotomicHomogeneousAction (ZMod N) w).comp
+    (sourceAbsoluteCyclotomicCharacter N).toMonoidHom
+
+/-- The original homogeneous-valued Tate Galois representation with its cyclotomic coefficient action. -/
+def binaryArithmeticTateGaloisRep :
+    (Qbar ≃ₐ[ℚ] Qbar) →* Module.End (ZMod N) (T →ₗ[ℤ_[p]] V) :=
+  sourceTwistedCoefficientDualAction (binaryCyclotomicCoefficientRep Q p n w)
+    (arithmeticTateGaloisRep M p)
+
+theorem binaryArithmeticTateGaloisRep_frobenius_operator
+    (ell : sourceBinaryHeckePrime (Q * N)) (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hχ : (sourceAbsoluteCyclotomicCharacter N σ : ZMod N) = (ell.val : ZMod N)) :
+    binaryArithmeticTateGaloisRep Q p n w σ =
+      binaryTateArithmeticFrobeniusOperator Q p n w ell σ := by
+  apply LinearMap.ext
+  intro φ
+  apply LinearMap.ext
+  intro x
+  change (sourceAbsoluteCyclotomicCharacter N σ : ZMod N) •
+      homogeneousMatrixAction w (Matrix.diagonal ![(sourceAbsoluteCyclotomicCharacter N σ : ZMod N), 1])
+        (φ (arithmeticTateGaloisRep M p σ⁻¹ x)) =
+    (ell.val : ZMod N) • homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1])
+      (φ (arithmeticTateGaloisRep M p σ⁻¹ x))
+  rw [hχ]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

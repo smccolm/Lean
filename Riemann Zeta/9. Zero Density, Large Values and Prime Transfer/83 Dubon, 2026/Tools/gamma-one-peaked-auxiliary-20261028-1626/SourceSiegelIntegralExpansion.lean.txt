@@ -1,0 +1,73 @@
+import SourceSiegelCoefficientSeries
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> exact integral Siegel expansion.
+Consume the actual residue reindexing and actual polynomial products to
+identify their analytic limit with the normalized literal Siegel function.
+The stabilized finite-product coefficients then supply its exact HasSum;
+integrality and the level-cleared leading inverse are proved separately.
+The native Taylor route replaces the source candidate's formal product W.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Complex Polynomial Filter Topology
+open scoped Real
+
+theorem exists_integral_series_nat (N : ℕ) (r : ℕ) (s : ℤ) (hrN : r < N) (hs : r = 0 → ¬ (N : ℤ) ∣ s) :
+    ∃ c : ℕ → ℂ, (∀ n : ℕ, IsIntegral ℤ (c n)) ∧
+      c 0 = (if (r : ℤ) = 0 then 1 - Complex.exp (2 * Real.pi * Complex.I * (s : ℂ) / (N : ℂ)) else 1) ∧
+      IsIntegral ℤ ((N : ℂ) * (c 0)⁻¹) ∧
+      (∀ τ : UpperHalfPlane,
+        HasSum
+          (fun n : ℕ => c n * Complex.exp (2 * Real.pi * Complex.I * (n : ℂ) * (τ : ℂ) / (N : ℂ)))
+          (siegelFun N (r : ℤ) s (τ : ℂ) /
+            (-Complex.exp (Real.pi * Complex.I * (s : ℂ) * (((r : ℤ) : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+              Complex.exp (2 * Real.pi * Complex.I *
+                (6 * ((r : ℤ) : ℂ) ^ 2 - 6 * ((r : ℤ) : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) * (τ : ℂ) /
+                  (12 * (N : ℂ) ^ 2))))) ∧
+      Filter.Tendsto
+        (fun τ : UpperHalfPlane => siegelFun N (r : ℤ) s (τ : ℂ) /
+            (-Complex.exp (Real.pi * Complex.I * (s : ℂ) * (((r : ℤ) : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+              Complex.exp (2 * Real.pi * Complex.I *
+                (6 * ((r : ℤ) : ℂ) ^ 2 - 6 * ((r : ℤ) : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) * (τ : ℂ) /
+                  (12 * (N : ℂ) ^ 2))))
+        UpperHalfPlane.atImInfty (nhds (c 0)) := by
+  have hN : 0 < N := by omega
+  refine ⟨coef N r s, fun m => isIntegral_coef N hN r s m, ?_, isIntegral_N_mul_inv_coef_zero N hN r s hs,
+    fun τ => ?_, ?_⟩
+  · rw [coef_zero]; simp only [Nat.cast_eq_zero]; rfl
+  · have hq : ∀ m : ℕ, cexp (2 * π * I * (m : ℂ) * (τ : ℂ) / (N : ℂ)) = qN N τ ^ m := fun m => by
+      rw [qN, ← Complex.exp_nat_mul]; congr 1; ring
+    simp_rw [hq]
+    exact hasSum_coef N hN r hrN s τ
+  · have h := fun τ : UpperHalfPlane => hasSum_coef N hN r hrN s τ
+    simp_rw [qN_eq_qParam] at h
+    exact Dubon2026.SourceFunctionField.Realized.tendsto_atImInfty (by exact_mod_cast hN) h
+
+theorem exists_integral_hasSum_siegelFun (N : ℕ) (r s : ℤ)
+    (hr : 0 ≤ r) (hrN : r < N) (hs : r = 0 → ¬ (N : ℤ) ∣ s) :
+    ∃ c : ℕ → ℂ, (∀ n : ℕ, IsIntegral ℤ (c n)) ∧
+      c 0 = (if r = 0 then 1 - Complex.exp (2 * Real.pi * Complex.I * (s : ℂ) / (N : ℂ)) else 1) ∧
+      IsIntegral ℤ ((N : ℂ) * (c 0)⁻¹) ∧
+      (∀ τ : UpperHalfPlane,
+        HasSum
+          (fun n : ℕ => c n * Complex.exp (2 * Real.pi * Complex.I * (n : ℂ) * (τ : ℂ) / (N : ℂ)))
+          (siegelFun N r s (τ : ℂ) /
+            (-Complex.exp (Real.pi * Complex.I * (s : ℂ) * ((r : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+              Complex.exp (2 * Real.pi * Complex.I *
+                (6 * (r : ℂ) ^ 2 - 6 * (r : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) * (τ : ℂ) /
+                  (12 * (N : ℂ) ^ 2))))) ∧
+      Filter.Tendsto
+        (fun τ : UpperHalfPlane => siegelFun N r s (τ : ℂ) /
+            (-Complex.exp (Real.pi * Complex.I * (s : ℂ) * ((r : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+              Complex.exp (2 * Real.pi * Complex.I *
+                (6 * (r : ℂ) ^ 2 - 6 * (r : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) * (τ : ℂ) /
+                  (12 * (N : ℂ) ^ 2))))
+        UpperHalfPlane.atImInfty (nhds (c 0)) := by
+  obtain ⟨r, rfl⟩ := Int.eq_ofNat_of_zero_le hr
+  exact exists_integral_series_nat N r s (by exact_mod_cast hrN) (fun h => hs (by exact_mod_cast h))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

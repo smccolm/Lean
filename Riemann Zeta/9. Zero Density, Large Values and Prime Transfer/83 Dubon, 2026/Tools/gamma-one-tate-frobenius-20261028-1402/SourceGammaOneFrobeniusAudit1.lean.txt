@@ -1,0 +1,97 @@
+import SourceGammaOneHeckePrincipalNorm
+import SourceGammaOneResidueDivisors
+import SourceGammaOneHeckeResidueNorm
+import SourceGammaOneIntegralDivisorReduction
+import SourceGammaOneHeckeIntegralAgreement
+import SourceGammaOneHeckeTorsionDivisors
+import SourceGammaOneResiduePicard
+import SourceGammaOneReductionPicardEquivariance
+import SourceGammaOneNormDiamondOrientation
+import SourceGammaOneHeckePicardDescent
+import SourceGammaOneHeckeTorsionPicard
+import SourceTorsionReductionDiamond
+import SourceGammaOnePicardFrobeniusRelation
+import SourceTateTorsionQuadratic
+import SourceGammaOneTateFrobeniusRelation
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_degree
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_inverse_divisor_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss_residue_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_residue_norm_of_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_reduction_integral_divisor_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_symm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisor_principal
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_inverse
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_equivariant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_equivariant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondAut_inverse_lift
+#print axioms Dubon2026.SourceFunctionField.GammaOne.norm_diamond_inverse_label
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_inverse_lift_mk
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.hecke_picard_reduction_mk_of_divisor_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq
+#print axioms Dubon2026.sourceTorsionReduction_diamond_quadratic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq
+#print axioms Dubon2026.TateModule.tateMap_diamond_quadratic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDegZero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneHeckePrincipalNorm, `SourceGammaOneResidueDivisors, `SourceGammaOneHeckeResidueNorm, `SourceGammaOneIntegralDivisorReduction, `SourceGammaOneHeckeIntegralAgreement, `SourceGammaOneHeckeTorsionDivisors, `SourceGammaOneResiduePicard, `SourceGammaOneReductionPicardEquivariance, `SourceGammaOneNormDiamondOrientation, `SourceGammaOneHeckePicardDescent, `SourceGammaOneHeckeTorsionPicard, `SourceTorsionReductionDiamond, `SourceGammaOnePicardFrobeniusRelation, `SourceTateTorsionQuadratic, `SourceGammaOneTateFrobeniusRelation]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_apply, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_degree, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_inverse_divisor_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss_residue_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_residue_norm_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_reduction_integral_divisor_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_symm, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisor_principal, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_mk, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_inverse, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_equivariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_equivariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondAut_inverse_lift, `Dubon2026.SourceFunctionField.GammaOne.norm_diamond_inverse_label, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_inverse_lift_mk, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.hecke_picard_reduction_mk_of_divisor_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq, `Dubon2026.sourceTorsionReduction_diamond_quadratic, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq, `Dubon2026.TateModule.tateMap_diamond_quadratic, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDegZero, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Frobenius Normalization postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Frobenius Normalization theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE FROBENIUS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneHeckePrincipalNorm
+#lint in SourceGammaOneResidueDivisors
+#lint in SourceGammaOneHeckeResidueNorm
+#lint in SourceGammaOneIntegralDivisorReduction
+#lint in SourceGammaOneHeckeIntegralAgreement
+#lint in SourceGammaOneHeckeTorsionDivisors
+#lint in SourceGammaOneResiduePicard
+#lint in SourceGammaOneReductionPicardEquivariance
+#lint in SourceGammaOneNormDiamondOrientation
+#lint in SourceGammaOneHeckePicardDescent
+#lint in SourceGammaOneHeckeTorsionPicard
+#lint in SourceTorsionReductionDiamond
+#lint in SourceGammaOnePicardFrobeniusRelation
+#lint in SourceTateTorsionQuadratic
+#lint in SourceGammaOneTateFrobeniusRelation

@@ -1,0 +1,102 @@
+import SourceSiegelQParameter
+import Mathlib.Analysis.SpecialFunctions.Log.Summable
+import Mathlib.Data.ZMod.Basic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> integral Siegel expansion.
+These identities connect the literal Siegel factors to the source q
+parameter and residue-selected polynomial products. Native q-parameter
+norm control is reused; no unrelated parameter or limiting theory is
+introduced. Adapted from anthropics/fermats-last-theorem, Apache-2.0,
+revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Complex Filter Topology
+open scoped Real
+
+theorem multipliable_one_sub_mul_pow {w : ℂ} (hw : ‖w‖ < 1) (c : ℂ) (a : ℕ → ℕ)
+    (ha : ∀ n, n ≤ a n) : Multipliable fun n : ℕ => 1 - c * w ^ (a n) := by
+  have hs : Summable fun n : ℕ => ‖-(c * w ^ (a n))‖ := by
+    refine Summable.of_nonneg_of_le (fun n => norm_nonneg _) (fun n => ?_)
+      ((summable_geometric_of_lt_one (norm_nonneg _) hw).mul_left ‖c‖)
+    rw [norm_neg, norm_mul, norm_pow]
+    exact mul_le_mul_of_nonneg_left (pow_le_pow_of_le_one (norm_nonneg _) hw.le (ha n))
+      (norm_nonneg _)
+  simpa [sub_eq_add_neg] using multipliable_one_add_of_summable hs
+
+theorem tprod_ite_natCast_eq (N r : ℕ) (hr0 : 0 < r) (hrN : r < N) (f : ℕ → ℂ) :
+    ∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then f (k + 1) else 1) =
+      ∏' n : ℕ, f (n * N + r) := by
+  have hN : 0 < N := lt_of_le_of_lt (Nat.zero_le r) hrN
+  set F : ℕ → ℂ := fun k => if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then f (k + 1) else 1
+    with hF
+  set g : ℕ → ℕ := fun n => n * N + r - 1 with hg
+  have hg1 : ∀ n, g n + 1 = n * N + r := fun n => by simp only [hg]; omega
+  have hginj : Function.Injective g := by
+    intro a b hab
+    have h1 := hg1 a
+    have h2 := hg1 b
+    have : a * N = b * N := by omega
+    exact Nat.eq_of_mul_eq_mul_right hN this
+  have hcond : ∀ n, ((g n + 1 : ℕ) : ZMod N) = (r : ZMod N) := fun n => by
+    rw [hg1]; push_cast; simp
+  have hsupp : Function.mulSupport F ⊆ Set.range g := by
+    intro k hk
+    rw [Function.mem_mulSupport] at hk
+    have hc : ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) := by
+      by_contra hc
+      exact hk (by simp only [hF, if_neg hc])
+    rw [ZMod.natCast_eq_natCast_iff', Nat.mod_eq_of_lt hrN] at hc
+    have hdm := Nat.div_add_mod (k + 1) N
+    rw [hc] at hdm
+    refine ⟨(k + 1) / N, ?_⟩
+    show (k + 1) / N * N + r - 1 = k
+    rw [Nat.mul_comm ((k + 1) / N) N]
+    generalize N * ((k + 1) / N) = t at hdm ⊢
+    omega
+  calc ∏' k, F k = ∏' n, F (g n) := (hginj.tprod_eq hsupp).symm
+    _ = ∏' n, f (n * N + r) := tprod_congr fun n => by
+        show (if ((g n + 1 : ℕ) : ZMod N) = (r : ZMod N) then f (g n + 1) else 1) = _
+        rw [if_pos (hcond n), hg1]
+
+theorem tprod_ite_natCast_eq_zero (N : ℕ) (hN : 0 < N) (f : ℕ → ℂ) :
+    ∏' k : ℕ, (if ((k + 1 : ℕ) : ZMod N) = 0 then f (k + 1) else 1) =
+      ∏' n : ℕ, f ((n + 1) * N) := by
+  set F : ℕ → ℂ := fun k => if ((k + 1 : ℕ) : ZMod N) = 0 then f (k + 1) else 1 with hF
+  set g : ℕ → ℕ := fun n => n * N + (N - 1) with hg
+  have hg1 : ∀ n, g n + 1 = (n + 1) * N := fun n => by
+    simp only [hg]; rw [Nat.succ_mul]; omega
+  have hginj : Function.Injective g := by
+    intro a b hab
+    have h1 := hg1 a
+    have h2 := hg1 b
+    rw [Nat.succ_mul] at h1 h2
+    have : a * N = b * N := by omega
+    exact Nat.eq_of_mul_eq_mul_right hN this
+  have hcond : ∀ n, ((g n + 1 : ℕ) : ZMod N) = 0 := fun n => by
+    rw [hg1]; push_cast; simp
+  have hsupp : Function.mulSupport F ⊆ Set.range g := by
+    intro k hk
+    rw [Function.mem_mulSupport] at hk
+    have hc : ((k + 1 : ℕ) : ZMod N) = 0 := by
+      by_contra hc
+      exact hk (by simp only [hF, if_neg hc])
+    rw [ZMod.natCast_eq_zero_iff] at hc
+    obtain ⟨d, hd⟩ := hc
+    have hd1 : 1 ≤ d := by
+      rcases d with _ | d
+      · simp at hd
+      · omega
+    refine ⟨d - 1, ?_⟩
+    have : g (d - 1) + 1 = k + 1 := by
+      rw [hg1, Nat.sub_add_cancel hd1, Nat.mul_comm, ← hd]
+    omega
+  calc ∏' k, F k = ∏' n, F (g n) := (hginj.tprod_eq hsupp).symm
+    _ = ∏' n, f ((n + 1) * N) := tprod_congr fun n => by
+        show (if ((g n + 1 : ℕ) : ZMod N) = 0 then f (g n + 1) else 1) = _
+        rw [if_pos (hcond n), hg1]
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

@@ -1,0 +1,70 @@
+import SourceGammaOneResiduePlaces
+
+/-! DUB-17/18 -> original Gamma1 Frobenius/inertia on Picard torsion ->
+residue divisor comparison. Native uniqueness of normalized discrete
+orders gives the exact order formula for the genuine decomposition
+action and its permutation of all places. Inertia fixes these actual
+residue places. Original specialization and torsion injectivity remain.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem decompositionResiduePlace_ord (d : A.decompositionSubgroup ℚ)
+    (v : Place kk Fb) (f : Fb) :
+    (decompositionResiduePlace A Γ d v).ord f =
+      v.ord (decompositionResidueAut A Γ d⁻¹ f) := by
+  rcases eq_or_ne f 0 with rfl | hf
+  · rw [map_zero, Place.ord_zero, Place.ord_zero]
+  symm
+  apply (decompositionResiduePlace A Γ d v).eq_ord_of_addHom_of_nonneg_iff
+    (fun x => v.ord (decompositionResidueAut A Γ d⁻¹ x))
+  · intro x y hx hy
+    rw [map_mul, v.ord_mul (by simpa using hx) (by simpa using hy)]
+  · refine ⟨(decompositionResidueAut A Γ d⁻¹).symm v.uniformizer, ?_, ?_⟩
+    · simpa only [map_zero] using
+        (decompositionResidueAut A Γ d⁻¹).symm.injective.ne v.uniformizer_ne_zero
+    · rw [RingEquiv.apply_symm_apply, v.ord_uniformizer]
+  · intro x _
+    exact v.mem_iff_ord_nonneg.symm
+  · exact hf
+
+/-- The original decomposition action permutes all places of the actual residue field. -/
+def decompositionResiduePlaceEquiv (d : A.decompositionSubgroup ℚ) :
+    Place kk Fb ≃ Place kk Fb where
+  toFun := decompositionResiduePlace A Γ d
+  invFun := decompositionResiduePlace A Γ d⁻¹
+  left_inv v := by
+    apply Place.ext
+    ext x
+    change decompositionResidueAut A Γ d⁻¹
+      (decompositionResidueAut A Γ d⁻¹⁻¹ x) ∈ v.toValuationSubring ↔ x ∈ v.toValuationSubring
+    rw [inv_inv, decompositionResidueAut_inv, RingEquiv.symm_apply_apply]
+  right_inv v := by
+    apply Place.ext
+    ext x
+    change decompositionResidueAut A Γ d⁻¹⁻¹
+      (decompositionResidueAut A Γ d⁻¹ x) ∈ v.toValuationSubring ↔ x ∈ v.toValuationSubring
+    rw [inv_inv, decompositionResidueAut_inv, RingEquiv.apply_symm_apply]
+
+theorem decompositionResiduePlace_ord_action (d : A.decompositionSubgroup ℚ)
+    (v : Place kk Fb) (f : Fb) :
+    (decompositionResiduePlace A Γ d v).ord (decompositionResidueAut A Γ d f) = v.ord f := by
+  rw [decompositionResiduePlace_ord, decompositionResidueAut_inv, RingEquiv.symm_apply_apply]
+
+theorem decompositionResiduePlace_eq_self_of_inertia (d : A.decompositionSubgroup ℚ)
+    (hd : d ∈ A.inertiaSubgroup ℚ) (v : Place kk Fb) :
+    decompositionResiduePlace A Γ d v = v := by
+  apply Place.ext
+  ext x
+  change decompositionResidueAut A Γ d⁻¹ x ∈ v.toValuationSubring ↔ x ∈ v.toValuationSubring
+  rw [decompositionResidueAut_eq_one_of_inertia A Γ d⁻¹ ((A.inertiaSubgroup ℚ).inv_mem hd)]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

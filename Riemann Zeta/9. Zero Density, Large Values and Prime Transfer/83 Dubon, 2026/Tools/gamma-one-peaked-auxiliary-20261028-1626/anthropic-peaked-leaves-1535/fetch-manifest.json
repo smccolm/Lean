@@ -1,0 +1,59 @@
+{
+  "recordedUTC": "2026-10-29T01:12:40.412291+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.lean",
+      "sha256": "F0AB6E7D1D0F4C1D9AE00CB092B7F1DA973E06A498515E362DD1E433A6431802",
+      "bytes": 22463
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_sum_levelBernoulliWeight_add_mul.lean",
+      "sha256": "7006405AB04E885D8012684E81C803CD9DD0744535A8EC8465D4E5074C1F27C0",
+      "bytes": 8259
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero.lean",
+      "sha256": "C20722CC3C4C00BE5C2034552CC001CB187241CC00B88FEAE3895FE5E2D41F57",
+      "bytes": 15899
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_differentiableOn_siegelFun.lean",
+      "sha256": "15314A25B79B929F08E37EFC8B327FA5B3DB48DCB1C324FCE3C85F5BED4BED77",
+      "bytes": 10570
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean",
+      "sha256": "D9A554ECBFAB4BC0156CCCFD57978FE14182EC5FEB98EB74DBC4ECA179C89A43",
+      "bytes": 16609
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.lean",
+      "sha256": "4C7FCAEEB7111DF50DDA10A9375E77A9DF6F13B2E204EA1717A708931C33A222",
+      "bytes": 9773
+    },
+    {
+      "path": "Definitions/Def_ModularCurve_SiegelFunction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\Def_ModularCurve_SiegelFunction.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_SiegelFunction.lean",
+      "sha256": "C57E7DBB3103D4BD823783EE13A34FFE4916A4BEACC22A77BC7F6B2D8E70A3EA",
+      "bytes": 1634
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

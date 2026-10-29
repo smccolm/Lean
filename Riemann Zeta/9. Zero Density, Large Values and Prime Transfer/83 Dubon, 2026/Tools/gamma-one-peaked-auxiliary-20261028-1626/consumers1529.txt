@@ -1,0 +1,51 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `cyclotomic_prime_finrank_coprime`. -/
+theorem actual_cyclotomic_galois_character_descent_cyclotomic_prime_finrank_coprime_source (p : ℕ) (hp : p.Prime)
+    [IsCyclotomicExtension {p} K L] : (Module.finrank K L).Coprime p :=
+  cyclotomic_prime_finrank_coprime p hp
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `finiteBase_fixingSubgroup_characters_finite`. -/
+theorem actual_cyclotomic_galois_character_descent_finiteBase_fixingSubgroup_characters_finite_source [IsGalois K Ω]
+    {T : Type*} [Group T] [TopologicalSpace T]
+    (F : IntermediateField K Ω) [FiniteDimensional K F]
+    [Finite (Gal(Ω/F) →ₜ* T)] : Finite (F.fixingSubgroup →ₜ* T) :=
+  finiteBase_fixingSubgroup_characters_finite F
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `cyclotomic_continuous_prime_characters_finite`. -/
+theorem actual_cyclotomic_galois_character_descent_cyclotomic_continuous_prime_characters_finite_source
+    (p : ℕ) (hp : p.Prime) (F : IntermediateField K Ω)
+    [IsCyclotomicExtension {p} K F]
+    [Finite (Gal(Ω/F) →ₜ* Multiplicative (ZMod p))] :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  cyclotomic_continuous_prime_characters_finite p hp F
+
+end
+

@@ -1,0 +1,65 @@
+{
+  "recordedUTC": "2026-10-28T20:08:24.560860+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> actual Gamma1 Picard/H1/Tate realization -> arithmetic Frobenius polynomial.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardFrobeniusQuadratic.lean",
+      "sha256": "5725DC20AFFA0A743316CD736EB97DF2C30370224259447809B0E417A9F30FD9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateFrobeniusQuadratic.lean",
+      "sha256": "2A3CEFA675B0EA9E6346AF5E7BBBF855529962C0C95C75BB08B6520F87320EAE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateEndomorphisms.lean",
+      "sha256": "1C08EF698C1BF1E0449FC7FFBA3FFA318EA3F6BABD13F61BB2686F4A859E7ACE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateDualQuadratic.lean",
+      "sha256": "E9FC3FEB5C8E0D0EE1B335F8C3901C320D4D73D73C27C533A9BE61AFBE0B725D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeDiamondCoefficient.lean",
+      "sha256": "0C58D6D166A713C64F4D3ED8E0397AF80A5A5B98E443F06E4AA0FCFA303E4DA6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryFrobeniusNormalization.lean",
+      "sha256": "89519E05880AB958502D542C6F55A7B57D4F6211DEB3AC5BB6B674F4395A19B9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryGaloisHecke.lean",
+      "sha256": "1839AC3013C784BF17177071DECD625386F65450F64D2339979F1560803D8E62"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticTateOperators.lean",
+      "sha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78"
+    }
+  ],
+  "selected": "The literal original norm proves H*F = F*F*D + ell with Picard diamond label ell. On the combined-diamond fixed dual, use Y = ell * b(ell) * precompose(F inverse), where b is the existing homogeneous Hecke matrix. Native b squared = ell^w * coefficientDiamond gives Y*Hdual = Y^2 + ell^(w+1). This inverse action is the correct direction for a genuine dual Galois action and needs no new complementary coefficient matrix.",
+  "deferred": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualDiamondQuadratic1383a.lean.txt",
+      "sha256": "90591621D6513E012727822641C40AD84C137405932EDA2A758A6E2EDA06C9EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousComplementaryHecke1384a.lean.txt",
+      "sha256": "EDA0D2252987681F33D532F9023C31225974DB94B0C771FEE74D9BDCB52B6CA2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplementaryDiamond1385a.lean.txt",
+      "sha256": "1BE55B7F09B9AF7FCA249EE0B003DA581972D457EF886ACC77828693A8CF6B93"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientFrobenius1386a.lean.txt",
+      "sha256": "0E65FE09016A4239B71E85866EFBE3B5400A9185C72682D53F9FBCB2D35437C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCoefficientFrobenius1388a.lean.txt",
+      "sha256": "16CC23B1D3CDB5CD34757EDB4ED82D21780B965C3C7C2A0CBC386BCE8DBAB393"
+    }
+  ],
+  "deferredReason": "The four complementary-operator modules compiled, but the inverse-action route directly serves the genuine Galois representation using existing coefficient identities. The uncompiled complementary geometric consumer is also deferred. None is promoted or counted in the selected scope.",
+  "remaining": "Coordinate-degree and genus preservation, global cyclotomic coefficient Galois action, combined-diamond character realization, parabolic and original all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "proofLimitsChanged": false,
+  "productionMutation": false
+}

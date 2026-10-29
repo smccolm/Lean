@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "UnramifiedUnionFiniteInertia",
+  "mathematics": "Use the exact proved finite-field containment criterion of the actual arithmetic unramified union. Every original finite Galois subfield has original ramification index one outside the exceptional element, hence its genuine original inertia subgroup is trivial there. Every original inertia automorphism fixes every element of that entire original finite field. No infinite-stage inertia identification or local Selmer comparison is asserted.",
+  "boundary": "Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "original-arithmetic-inertia-draft-review-20261009.json; exact pinned original inertia and ramification APIs inspected; no external Lean code imported.",
+  "productionLog": "unramifiedInertia1599-focus.log"
+}

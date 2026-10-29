@@ -1,0 +1,48 @@
+import SourceGammaOneEvenIntegralRatios
+import SourceLevelOneCoefficientRing
+import SourceLevelOneIntegralWeightFactor
+import SourceTraceProductCoefficientRing
+import SourceIntegralLevelOneTraceCoefficients
+import SourceTraceExponentialCoefficientVanishing
+import SourceIntegralTraceParameters
+import SourceIntegralTracePowerCoefficients
+import SourceIntegralTraceCoefficientExtraction
+import SourceIntegralTraceModularForm
+import SourceIntegralTraceCuspTransversal
+import SourceIntegralTraceTranslates
+import SourceIntegralTraceTranslationCoefficients
+import SourceIntegralTracePeriodWidth
+import SourceIntegralTraceAnalyticProducts
+import SourceIntegralTraceSlashPeriods
+import SourceIntegralTraceTranslationAssembly
+import SourceIntegralTraceTransversalSplit
+import SourceIntegralTraceDecomposition
+import SourceIntegralTraceDegenerateCusp
+import SourceEvenWeightPeakedTraceIntegrality
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary, `Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field]
+  let localModules : Array Name := #[`SourceGammaOneEvenIntegralRatios, `SourceLevelOneCoefficientRing, `SourceLevelOneIntegralWeightFactor, `SourceTraceProductCoefficientRing, `SourceIntegralLevelOneTraceCoefficients, `SourceTraceExponentialCoefficientVanishing, `SourceIntegralTraceParameters, `SourceIntegralTracePowerCoefficients, `SourceIntegralTraceCoefficientExtraction, `SourceIntegralTraceModularForm, `SourceIntegralTraceCuspTransversal, `SourceIntegralTraceTranslates, `SourceIntegralTraceTranslationCoefficients, `SourceIntegralTracePeriodWidth, `SourceIntegralTraceAnalyticProducts, `SourceIntegralTraceSlashPeriods, `SourceIntegralTraceTranslationAssembly, `SourceIntegralTraceTransversalSplit, `SourceIntegralTraceDecomposition, `SourceIntegralTraceDegenerateCusp, `SourceEvenWeightPeakedTraceIntegrality]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio, `Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_coeff_mem_of_initial_coeff_mem, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.exists_integral_weight_factor, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.coeff_mem_of_product_initial_coeff_mem, `Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_trace_coeff_mem_of_initial_coeff_mem, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_zero_of_exponential_decay, `Dubon2026.SourceFunctionField.IntegralTrace.exists_trace_parameters, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_eq_zero_of_lt, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mul, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_mem_of_levelOne_trace_decomposition, `Dubon2026.SourceFunctionField.IntegralTrace.slash_neg_even, `Dubon2026.SourceFunctionField.IntegralTrace.exists_levelOne_trace, `Dubon2026.SourceFunctionField.IntegralTrace.exists_signed_cusp_transversal, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.periodic_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.mdifferentiable_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.isBoundedAtImInfty_trSum, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.coeff_translation_sum, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_multiple_width, `Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_one_mul_pow, `Dubon2026.SourceFunctionField.IntegralTrace.isBigO_mul_pow_exp, `Dubon2026.SourceFunctionField.IntegralTrace.pow_slash_SL2, `Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_finset_sum, `Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_finset_sum, `Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_slash, `Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_slash, `Dubon2026.SourceFunctionField.IntegralTrace.slash_T_zpow_apply, `Dubon2026.SourceFunctionField.IntegralTrace.slash_T_pow_apply, `Dubon2026.SourceFunctionField.IntegralTrace.periodic_comp_ofComplex_of_slash_T_pow_eq, `Dubon2026.SourceFunctionField.IntegralTrace.slash_S_slash_T_eq, `Dubon2026.SourceFunctionField.IntegralTrace.slash_eq_of_mem_or_neg_mem, `Dubon2026.SourceFunctionField.IntegralTrace.periodic_of_pm_mem, `Dubon2026.SourceFunctionField.IntegralTrace.natCast_mem_strictPeriods, `Dubon2026.SourceFunctionField.IntegralTrace.translation_sum_eq, `Dubon2026.SourceFunctionField.IntegralTrace.coeff_qExpansion_one_sum_slash_T_pow, `Dubon2026.SourceFunctionField.IntegralTrace.exists_width, `Dubon2026.SourceFunctionField.IntegralTrace.sum_transversal_split, `Dubon2026.SourceFunctionField.IntegralTrace.exists_integral_trace_decomposition, `Dubon2026.SourceFunctionField.IntegralTrace.T_mem_of_S_mul_T_zpow_mem, `Dubon2026.SourceFunctionField.IntegralTrace.slash_coeff_mem_of_coincident_cusps, `Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary, `Dubon2026.SourceFunctionField.IntegralTrace.Translates.trSum, `Dubon2026.SourceFunctionField.GammaOne.mem_qExpFunctionFieldC_iff, `Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff, `Dubon2026.SourceFunctionField.exists_levelOne_j_polynomial, `Dubon2026.SourceFunctionField.qExpansion_E4_eq_map_eisenstein4, `Dubon2026.SourceFricke.eisensteinQSeries_six_eq_integer_map, `Dubon2026.SourceFricke.eisensteinQSeries_map, `Dubon2026.SourceFricke.qExpansion_coeff_width, `Dubon2026.hasSum_pow_dvd_reindex, `UpperHalfPlane.qExpansion_coeff_eq_intervalIntegral, `UpperHalfPlane.qExpansion_coeff_unique]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE INTEGRAL TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual even-weight peaked-auxiliary trace theorem and the original-field even-ratio reduction. Trace construction, Fourier decomposition, coefficient vanishing and extraction are derived. Peaked auxiliary existence, level-power slash integrality, degree/genus preservation and parabolic transfer remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,7 @@
+### Actual natural classification of original arithmetic fixed-determinant lifts — 9 October 2026
+
+Genuine continuous residue-preserving maps from the actual arithmetic determinant quotient classify all original continuous framed lifts with the prescribed determinant at every arithmetic Galois element. Compose the proved quotient coefficient-map equivalence with the actual arithmetic universal equivalence restricted by its exact determinant-ideal criterion. Prove evaluation and naturality under actual coefficient morphisms. No modular Galois association, unframed deformation quotient or p-adic Hodge condition is asserted.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticFixedDeterminantUniversality](Extension/Dubon2026/ArithmeticFixedDeterminantUniversality.lean).

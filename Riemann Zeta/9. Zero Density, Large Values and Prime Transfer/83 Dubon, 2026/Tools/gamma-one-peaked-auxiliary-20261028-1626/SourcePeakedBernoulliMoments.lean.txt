@@ -1,0 +1,73 @@
+import SourcePeakedBernoulliFourier
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary existence ->
+Bernoulli-order separation. Orthogonality to the literal Bernoulli
+weights forces the corresponding convergent cosine-moment sums to
+vanish. Reuses the proved Bernoulli Fourier series; no separating
+exponent or auxiliary existence premise is introduced.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+No upstream resource-limit option is adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+variable {N : ℕ} [NeZero N]
+
+/-- The cosine moment of a function on the actual residue ring. -/
+noncomputable def psi (g : ZMod N → ℝ) (k : ZMod N) : ℝ := ∑ r : ZMod N, g r * cosZ (k * r)
+
+theorem abs_psi_le (g : ZMod N → ℝ) (k : ZMod N) : |psi g k| ≤ ∑ r : ZMod N, |g r| := by
+  unfold psi
+  refine (Finset.abs_sum_le_sum_abs _ _).trans (Finset.sum_le_sum fun r _ => ?_)
+  rw [abs_mul]
+  exact mul_le_of_le_one_right (abs_nonneg _) (Real.abs_cos_le_one _)
+
+theorem tsum_psi_div_sq_eq_zero (g : ZMod N → ℝ)
+    (horth : ∀ s : ZMod N, ∑ r : ZMod N, g r * (wt N (s * r).val : ℝ) = 0) (s : ZMod N) :
+    ∑' n : ℕ, psi g ((n : ZMod N) * s) / (n : ℝ) ^ 2 = 0 := by
+  have hN : N ≠ 0 := NeZero.ne N
+  have hsum : ∀ r : ZMod N, HasSum (fun n : ℕ => 6 * (N : ℝ) ^ 2 / π ^ 2 *
+      (1 / (n : ℝ) ^ 2 * Real.cos (2 * π * n * (((s * r).val : ℝ) / N)))) (wt N (s * r).val : ℝ) :=
+    fun r => hasSum_cos_wt N (s * r).val hN (ZMod.val_lt _).le
+  have h1 : HasSum (fun n : ℕ => ∑ r : ZMod N, g r * (6 * (N : ℝ) ^ 2 / π ^ 2 *
+      (1 / (n : ℝ) ^ 2 * Real.cos (2 * π * n * (((s * r).val : ℝ) / N)))))
+      (∑ r : ZMod N, g r * (wt N (s * r).val : ℝ)) :=
+    hasSum_sum fun r _ => (hsum r).mul_left (g r)
+  rw [horth s] at h1
+  have h2 : (fun n : ℕ => ∑ r : ZMod N, g r * (6 * (N : ℝ) ^ 2 / π ^ 2 *
+      (1 / (n : ℝ) ^ 2 * Real.cos (2 * π * n * (((s * r).val : ℝ) / N))))) =
+      fun n : ℕ => 6 * (N : ℝ) ^ 2 / π ^ 2 * (psi g ((n : ZMod N) * s) / (n : ℝ) ^ 2) := by
+    funext n
+    simp only [psi, Finset.sum_div, Finset.mul_sum]
+    refine Finset.sum_congr rfl fun r _ => ?_
+    rw [cos_nat_mul_eq_cosZ, mul_assoc ((n : ℕ) : ZMod N) s r]
+    ring
+  rw [h2] at h1
+  have h3 := h1.tsum_eq
+  rw [tsum_mul_left] at h3
+  have hc : 6 * (N : ℝ) ^ 2 / π ^ 2 ≠ 0 := by
+    have : (N : ℝ) ≠ 0 := by exact_mod_cast hN
+    positivity
+  exact (mul_eq_zero.mp h3).resolve_left hc
+
+theorem summable_psi_div_sq (g : ZMod N → ℝ) (s : ZMod N) :
+    Summable fun n : ℕ => psi g ((n : ZMod N) * s) / (n : ℝ) ^ 2 := by
+  refine Summable.of_norm_bounded ((summable_one_div_nat_pow.mpr one_lt_two).mul_left (∑ r : ZMod N, |g r|))
+    fun n => ?_
+  rw [Real.norm_eq_abs, abs_div, abs_of_nonneg (by positivity : (0 : ℝ) ≤ (n : ℝ) ^ 2), one_div, div_eq_mul_inv]
+  exact mul_le_mul_of_nonneg_right (abs_psi_le g _) (by positivity)
+
+theorem psi_zero_eq_zero (g : ZMod N → ℝ)
+    (horth : ∀ s : ZMod N, ∑ r : ZMod N, g r * (wt N (s * r).val : ℝ) = 0) : psi g 0 = 0 := by
+  have h := tsum_psi_div_sq_eq_zero g horth 0
+  simp only [mul_zero] at h
+  have hz : ∑' n : ℕ, psi g 0 / (n : ℝ) ^ 2 = psi g 0 * (π ^ 2 / 6) := by
+    rw [← hasSum_zeta_two.tsum_eq, ← tsum_mul_left]
+    exact tsum_congr fun n => by ring
+  rw [hz] at h
+  have : π ^ 2 / 6 ≠ 0 := by positivity
+  exact (mul_eq_zero.mp h).resolve_right this
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

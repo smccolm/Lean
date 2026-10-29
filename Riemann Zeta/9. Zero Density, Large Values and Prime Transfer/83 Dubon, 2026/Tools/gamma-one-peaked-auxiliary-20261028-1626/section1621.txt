@@ -1,0 +1,7 @@
+### Actual original prescribed-determinant relative first-order fiber — 10 October 2026
+
+Restrict the actual relative dual-number framed equivalence to the original arithmetic inertia and prescribed determinant. The genuine original determinant compatibility proves that its image in residual dual numbers is the constant lift of the actual residual determinant. This identifies all original local first-order lifts with the full restricted original coefficient fiber.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticRelativeLocalDualNumberFramedEquiv](Extension/Dubon2026/ArithmeticRelativeLocalDualNumberFramedEquiv.lean).

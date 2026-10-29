@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-10-28T22:34:05.701384+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> finite Hecke-character realization -> diamond-one quotient of the actual homogeneous Tate dual",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-polynomial-route-1433.json",
+      "sha256": "E43A53564FE348EAB86400ECF17E75D90B91036DAB4BFF7AB570539D27FEBEFF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateDualArithmeticQuadratic.lean",
+      "sha256": "4052DE1344C6032B07D9B6D089EF3B0CC77EB8668854D445DF2E8BE1EAF831BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticFrobenius.lean",
+      "sha256": "D4DDB7E2E03BE3A5E9C094A1294FF47F4D6625F97D8A796CCBCF0157201F1F40"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGeometricArithmeticFrobenius.lean",
+      "sha256": "B3634AB27699DD20C98BE653714BC1CC3A894CBDCA8F0C6E7F11434FF8A94B8E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Basic.lean",
+      "sha256": "7DD9C54ED4B7C7085A6B7647A9BF2C52827141203B62126BC37285DE9E82223B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Quotient\\Basic.lean",
+      "sha256": "BF4955BD47A6021E9F263FF8A110AFACF5B520B74F5B68EF663B1D4C56D523BB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisDiamond.lean",
+      "sha256": "0B8AE8F39BE6F5DEFF98B52A8E467CB535851255BEEAA94EB7084B8232D9EDAC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity.lean",
+      "sha256": "18768A4FA1129A857CF0BEC2393A9D11EB2FCC3370224812F1B9EA9F1EEB97AD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual.lean",
+      "sha256": "485C4602435526997C5466FEC262F5434616242916A5C797EE7B9FDEBD5CC7D4"
+    }
+  ],
+  "shorterRoute": "Existing fixed-class proof performs the same calculation but substitutes diamond fixedness. Retain that term. Reuse the original geometric Tate identity and actual cyclotomic Frobenius value. Native search found no existing diamond coinvariant construction. Mathlib Submodule quotient/span APIs avoid a new group-action construction; Representation.Coinvariants would additionally require packaging a diamond representation. The Frobenius polynomial and invertible quotient Galois action derive Hecke stability directly, avoiding a separate Hecke/diamond commutation expansion.",
+  "assumptionsToDischarge": [
+    "Derive the combined-diamond-valued Frobenius relation on every original homogeneous Tate class.",
+    "Construct the actual diamond-minus-one quotient and derive Galois stability, finite action and discrete continuity.",
+    "Project the actual polynomial, derive original Hecke stability, and descend the genuine operator with its entire-quotient Frobenius identity."
+  ],
+  "remaining": "Does not prove degree/genus preservation, nonzero Hecke-character realization, parabolic transfer, two-dimensionality or any acceptance gate. 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

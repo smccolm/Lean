@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-10-29T02:55:37.203775+00:00",
+  "chain": "DUB-17/18 -> original all-weight characteristic-zero association -> Gamma1 degree/genus preservation -> level-power slash integrality -> actual even-weight peaked auxiliary -> integral slash-S expansion and source order arithmetic.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean.txt",
+      "sha256": "0B629AC709AB833B35AB41A70A9A857E9403CF9B145B6354DAE3898A18FF27A9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "sha256": "24D719D15DAA7E315DF98135C0CC3E8C43D280C4D70B231FBAD4CE84CBA76EDE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelCuspPermutation1604a.lean",
+      "sha256": "1E9512789539500EE468E385B69E8809F99AEE0F9C3D25320341BB927403F712"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedShiftedSeries1613c.lean",
+      "sha256": "6BABDD477BE84602071CCCD4F36977B421C3D12BBE01E252448B33341B287A84"
+    }
+  ],
+  "shorterRoute": "The required auxiliary is existential. Scale the already constructed separating exponent family by N; this preserves nonnegativity, translation invariance, zero pair, positivity and strict cusp separation while making the infinity order visibly divisible by N. This avoids the candidate additive-orbit divisibility framework without changing the source endpoint. Choose the discriminant power to make every shifted order nonnegative. Then the proved row permutation and a minimally generalized monomial shift give the integral expansion of every translated actual form, using the existing strict-period-under-conjugation theorem and native coefficient uniqueness. The external unrestricted slash-S theorem infers nonnegative order from boundedness and builds a new GammaS subgroup; those generalities are unnecessary for the chosen auxiliary, whose nonnegative order is already proved.",
+  "assumptionsToDischarge": [
+    "Every shifted cusp order is nonnegative for the chosen discriminant power.",
+    "The actual infinity order is a level multiple by proved exponent scaling.",
+    "Actual slash-S coefficients are integral, using the constructed nonnegative shift.",
+    "All hypotheses of the existing even-weight trace integrality theorem are supplied by a constructed auxiliary."
+  ],
+  "remaining": "Implement the scaling and power choice, translated coefficient consumer and actual auxiliary assembly; then apply the trace theorem and continue to reduced field action, degree/genus and downstream arithmetic association. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "proofLimitsChanged": false
+}

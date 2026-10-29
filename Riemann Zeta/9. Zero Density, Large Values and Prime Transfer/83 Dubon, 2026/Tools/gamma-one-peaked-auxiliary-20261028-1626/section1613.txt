@@ -1,0 +1,7 @@
+### Actual continuous fixed-determinant adjoint classes — 9 October 2026
+
+The actual pointwise trace of continuous adjoint cocycles vanishes on every original coboundary, so it descends to original continuous H1. Its genuine kernel contains the class of an original continuous first-order lift exactly when that entire lifted determinant is the constant dual-number lift of the original residual determinant.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousFixedDeterminantClasses](Extension/Dubon2026/ContinuousFixedDeterminantClasses.lean).

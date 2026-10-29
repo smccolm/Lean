@@ -1,0 +1,11 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "upstream": [
+    "Pinned Mathlib/RingTheory/Unramified/Locus.lean: basicOpen_subset_unramifiedLocus_iff",
+    "Pinned Mathlib/RingTheory/Unramified/Field.lean: FormallyUnramified.of_isSeparable",
+    "Pinned Mathlib/NumberTheory/RamificationInertia/Unramified.lean: actual ramification-index equivalence"
+  ],
+  "boundary": "Actual away-localized original integer ring; localization integral-closure identification and arithmetic Galois realization remain open.",
+  "productionLog": "unramifiedAway1548b-focus.log"
+}

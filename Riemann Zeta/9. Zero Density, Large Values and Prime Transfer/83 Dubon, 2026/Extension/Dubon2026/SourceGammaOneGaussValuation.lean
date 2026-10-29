@@ -1,0 +1,49 @@
+import Dubon2026.SourceGammaOneGaussCriterion
+import Dubon2026.SourceGammaOneScalarExtension
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original good
+reduction -> literal coefficient valuation. Restrict the proved integral
+fraction criterion to the existing scalar-extended modular-ratio field.
+The same construction serves the Gamma1 curve and its original Hecke
+correspondence subgroup. Good reduction and genus preservation are not
+conclusions of this valuation construction.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open IntermediateField GaussReduction
+open scoped MatrixGroups
+variable {L : Type*} [Field L] [Algebra ℚ L]
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) (A : ValuationSubring L)
+
+/-- The actual coefficient valuation on the original scalar-extended function field. -/
+def coefficientGaussRing : ValuationSubring (functionFieldOver Γ L) where
+  carrier := {f | IsInt A (f : LaurentSeries L)}
+  mul_mem' {f g} hf hg := by
+    change IsInt A ((f * g : functionFieldOver Γ L) : LaurentSeries L)
+    rw [IntermediateField.coe_mul]
+    exact hf.mul hg
+  one_mem' := by
+    change IsInt A ((1 : functionFieldOver Γ L) : LaurentSeries L)
+    exact IsInt.one
+  add_mem' {f g} hf hg := by
+    change IsInt A ((f + g : functionFieldOver Γ L) : LaurentSeries L)
+    rw [IntermediateField.coe_add]
+    exact hf.add hg
+  zero_mem' := by
+    change IsInt A ((0 : functionFieldOver Γ L) : LaurentSeries L)
+    exact IsInt.zero
+  neg_mem' {f} hf := by
+    change IsInt A ((-f : functionFieldOver Γ L) : LaurentSeries L)
+    rw [IntermediateField.coe_neg]
+    exact hf.neg
+  mem_or_inv_mem' f := by
+    have hx : (f : LaurentSeries L) ∈ qExpFunctionFieldC L Γ := by
+      rw [← functionFieldOver_eq_qExpFunctionFieldC Γ L]
+      exact f.property
+    exact qExpFunctionField_isInt_or_inv A Γ hx
+
+theorem mem_coefficientGaussRing_iff (f : functionFieldOver Γ L) :
+    f ∈ coefficientGaussRing Γ A ↔ IsInt A (f : LaurentSeries L) := Iff.rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

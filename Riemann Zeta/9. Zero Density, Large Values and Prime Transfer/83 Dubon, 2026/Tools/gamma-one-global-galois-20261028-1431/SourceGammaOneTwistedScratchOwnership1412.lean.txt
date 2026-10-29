@@ -1,0 +1,26 @@
+import SourceTwistedCoefficientDualAction
+import SourceCyclotomicHomogeneousAction
+import SourceAbsoluteCyclotomicCharacter
+import SourceGammaOneTwistedGalois
+import SourceCyclotomicHomogeneousHecke
+import SourceGammaOneTwistedGaloisHecke
+import SourceAbsoluteCyclotomicLocal
+import SourceGammaOneTwistedGaloisFrobenius
+import SourceTwistedCoefficientDualTrivial
+import SourceGammaOneTwistedGaloisInertia
+import SourceGammaOneParabolicTateLift
+import SourceGammaOneParabolicGaloisFrobenius
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceTwistedCoefficientDualAction, `SourceCyclotomicHomogeneousAction, `SourceAbsoluteCyclotomicCharacter, `SourceGammaOneTwistedGalois, `SourceCyclotomicHomogeneousHecke, `SourceGammaOneTwistedGaloisHecke, `SourceAbsoluteCyclotomicLocal, `SourceGammaOneTwistedGaloisFrobenius, `SourceTwistedCoefficientDualTrivial, `SourceGammaOneTwistedGaloisInertia, `SourceGammaOneParabolicTateLift, `SourceGammaOneParabolicGaloisFrobenius]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

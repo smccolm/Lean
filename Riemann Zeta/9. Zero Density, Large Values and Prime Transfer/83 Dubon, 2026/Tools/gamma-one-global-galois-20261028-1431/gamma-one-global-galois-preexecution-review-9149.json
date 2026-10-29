@@ -1,0 +1,57 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 26,
+  "queries": 39,
+  "theorems": 33,
+  "constructions": 6,
+  "exhaustiveScratchChecks": 113,
+  "proofValueChecks": 80,
+  "scopes": 3,
+  "receipts": {
+    "source-gamma-one-twisted-1-scratch-receipt.json": "3ECACA183103DEDE06FBEF5AA00D20AB00F1BA7D92D39027B3C38A9052DD0E77",
+    "source-gamma-one-continuity-1-scratch-receipt.json": "A12486EA185DC51821A193A3570A78F8E5D2A0DA5485AD99DB8236CB71AD7AB8",
+    "source-gamma-one-arithmetic-orbit-2-scratch-receipt.json": "99649640136065EA0642922E7EE603631C8FEA8EB9DDD024115C4B4A740AB221"
+  },
+  "expectedConsumers": 26695,
+  "expectedConstructions": 2863,
+  "fullGoal": "Actual Gamma1 j-coordinate degree equality and genus preservation remain open and explicit in the local and arithmetic-descent consumers. The finite Tate-dual action and its faithful finite Galois factor do not yet give the required two-dimensional Hecke-character realization. Nonzero original parabolic character realization/transfer or a faithful alternative, exceptional coefficient primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. The parabolic Tate comparison retains 3<p; the continuity/finite-factor proof does not impose that restriction. The earlier differently normalized untwisted conditional relation is not claimed discharged. Acceptance stays 16/20; DUB-17--20 OPEN; all twenty acceptance tests are unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_global_galois_9149.py",
+      "sha256": "7512DE416D1F67465FB126ADE305C1BCF9427E2D586961F117182B4725C9EF38"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_global_galois_production_ownership_9149.py",
+      "sha256": "ECABFCF3C45A379D218D39D0CA5B350DDFF33FB00BE16B7D0E06AA4B157D0302"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_global_galois_global_ownership_9149.py",
+      "sha256": "79A77DFDA6B853B7F65E07AB10EA8C3847CFE82DAA17BA12D59FAB3AC334F340"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_global_galois_ownership_9149.py",
+      "sha256": "24B3770DD488CFBDFD0A002D19ABDE5F97A018E1B80EFB78B47BD4D75D042AF2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_global_galois_9149.py",
+      "sha256": "46136DA2F4B5B793BB7975FB2E319A8703A9213AFEB959DCB049CF20DE6B4032"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_global_galois_9149.ps1",
+      "sha256": "D2043FE52B79250744EBDBF59D4F4207CAAFA8B8C0368E74BB4741AF7C97DBAA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_global_galois_9149.ps1",
+      "sha256": "79C30807011437D9801F849A7FE39E60AFF5440B6CBF7651776C87245470DD07"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_global_galois_canonical_9149.py",
+      "sha256": "CB501E5F07A3600F995BADDFFDFF59674E23F7E699C8552EABD0B8461B03702B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_global_galois_9149.py",
+      "sha256": "1A083A65084E657A031B9B21E73B26B51E7368A5644DFC51E47AA22F96A4038A"
+    }
+  ],
+  "productionMutation": false
+}

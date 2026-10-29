@@ -1,0 +1,8 @@
+### Actual finite Galois radicals and Kummer injectivity — 9 October 2026
+
+Two further production modules use the genuine Hilbert-90 theorem for actual finite field extensions to construct an extension-field unit whose original Galois ratios equal each given base-unit-valued character. If the original character is killed by n, its radical has nth power in the original base field, by the actual Galois fixed-field theorem. Separately, the genuine equivalence of nth roots of unity proves that every original extension-field nth root is fixed when the base contains a primitive nth root. If two actual radicals have equal base-field classes modulo nth powers, their normalized ratio is such a root of unity. Their original Galois ratios, and hence their original characters, are equal. The comparison theorem does not require a finite extension; existence of the radicals is proved here only for finite Galois extensions.
+
+The original infinite Galois-character finite-extension factorization, ramification-to-Selmer valuation bridge and descent from adjoining roots of unity remain unproved. These results do not yet establish arithmetic Mazur finiteness. Final framed deformation-functor assembly, fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteGaloisCharacterRadicals](Extension/Dubon2026/FiniteGaloisCharacterRadicals.lean).
+- [GaloisCharacterKummerInjectivity](Extension/Dubon2026/GaloisCharacterKummerInjectivity.lean).

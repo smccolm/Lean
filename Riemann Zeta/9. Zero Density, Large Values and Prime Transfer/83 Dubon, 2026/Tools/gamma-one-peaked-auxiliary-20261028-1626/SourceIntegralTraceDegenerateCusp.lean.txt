@@ -1,0 +1,64 @@
+import SourceIntegralTraceSlashPeriods
+import Dubon2026.SourceQExpansionPeriodWidth
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> even-weight
+slash integrality -> peaked auxiliary trace. In the coincident-cusp
+case, even weight makes the S-slash equal the original form. The native
+width-change theorem then gives coefficient integrality immediately,
+without the upstream odd-weight auxiliary argument. The even-ratio
+reduction proves that this restricted branch covers the original field
+generators. The group conjugation calculation is adapted from the pinned
+Anthropic trace proof, revision 6e837e75355538c7f80bab5b956861e86c4eacc2,
+Apache-2.0. -/
+namespace Dubon2026.SourceFunctionField.IntegralTrace
+noncomputable section
+open scoped MatrixGroups ModularForm Manifold
+open UpperHalfPlane
+
+theorem T_mem_of_S_mul_T_zpow_mem (Γ : Subgroup SL(2, ℤ))
+    (hS : ModularGroup.S * ModularGroup.T * ModularGroup.S⁻¹ ∈ Γ) {j : ℤ}
+    (hdeg : ModularGroup.S * ModularGroup.T ^ j ∈ Γ ∨ -(ModularGroup.S * ModularGroup.T ^ j) ∈ Γ) :
+    ModularGroup.T ∈ Γ := by
+  have key : ∀ γ : SL(2, ℤ), (γ = ModularGroup.S * ModularGroup.T ^ j ∨ γ = -(ModularGroup.S * ModularGroup.T ^ j)) →
+      γ⁻¹ * (ModularGroup.S * ModularGroup.T * ModularGroup.S⁻¹) * γ = ModularGroup.T := by
+    rintro γ (rfl | rfl)
+    · group
+    · rw [inv_neg, neg_mul, neg_mul, mul_neg, neg_neg]
+      group
+  rcases hdeg with h | h
+  · rw [← key _ (Or.inl rfl)]
+    exact Γ.mul_mem (Γ.mul_mem (Γ.inv_mem h) hS) h
+  · rw [← key _ (Or.inr rfl)]
+    exact Γ.mul_mem (Γ.mul_mem (Γ.inv_mem h) hS) h
+
+theorem slash_coeff_mem_of_coincident_cusps
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] (h : ℕ) (hh : 0 < h)
+    (hS : ModularGroup.S * ModularGroup.T * ModularGroup.S⁻¹ ∈ Γ)
+    (R : Subring ℂ) {k : ℤ} (hk : Even k)
+    (G : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k)
+    (hG : ∀ n, (qExpansion (h : ℝ) (⇑G : ℍ → ℂ)).coeff n ∈ R)
+    (hdeg : ∃ j : ℤ, ModularGroup.S * ModularGroup.T ^ j ∈ Γ ∨
+      -(ModularGroup.S * ModularGroup.T ^ j) ∈ Γ) (n : ℕ) :
+    (qExpansion 1 ((⇑G : ℍ → ℂ) ∣[k]
+      ((ModularGroup.S : SL(2, ℤ)) : GL (Fin 2) ℝ))).coeff n ∈ R := by
+  obtain ⟨j, hj⟩ := hdeg
+  have hT1 := T_mem_of_S_mul_T_zpow_mem Γ hS hj
+  have hGj := slash_eq_of_mem_or_neg_mem G hk _ hj
+  rw [← ModularForm.SL_slash] at hGj
+  have hGS := congrArg (fun F : ℍ → ℂ => F ∣[k] (ModularGroup.T ^ j)⁻¹) hGj
+  simp only at hGS
+  rw [← SlashAction.slash_mul, mul_inv_cancel_right, ModularForm.SL_slash,
+    ModularForm.SL_slash] at hGS
+  have hGS' := hGS.trans (slash_eq_of_mem_or_neg_mem G hk (ModularGroup.T ^ j)⁻¹
+    (Or.inl (Γ.inv_mem (Γ.zpow_mem hT1 j))))
+  rw [hGS']
+  have hper : Function.Periodic ((⇑G : ℍ → ℂ) ∘ ofComplex) (1 : ℝ) := by
+    simpa using periodic_of_pm_mem G hk 1 (Or.inl (by simpa using hT1))
+  have hc := SourceFricke.qExpansion_coeff_width (⇑G) hh.ne' hper
+    (ModularFormClass.holo G) (ModularFormClass.bdd_at_infty G) (h * n)
+  rw [if_pos (dvd_mul_right h n), Nat.mul_div_cancel_left n hh] at hc
+  rw [← hc]
+  exact hG _
+
+end
+end Dubon2026.SourceFunctionField.IntegralTrace

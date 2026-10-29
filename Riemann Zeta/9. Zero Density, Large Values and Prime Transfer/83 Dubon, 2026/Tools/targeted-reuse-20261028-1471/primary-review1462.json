@@ -1,0 +1,18 @@
+{
+  "status": "Pinned API review; four actual-object D-only UNCOMPILED drafts prepared. No new source gate accepted.",
+  "actualObject": "The literal kernel of GL_n(A) -> GL_n(A/m) for the original finite local coefficient ring, and its genuine inverse system over maximal-ideal powers.",
+  "usefulPinnedApis": [
+    "Mathlib/Algebra/CharP/Lemmas.lean: Commute.exists_add_pow_prime_eq proves the actual noncommutative commuting binomial formula (x+y)^p=x^p+y^p+p*x*y*r, requiring only p prime.",
+    "Mathlib/LinearAlgebra/Matrix/Ideal.lean: Ideal.matrix, mem_matrix, matrix_bot; TwoSidedIdeal.matrix and its literal entry characterization.",
+    "Mathlib/GroupTheory/PGroup.lean: IsPGroup, of_injective/of_surjective/to_quotient and comap_of_ker_isPGroup.",
+    "Mathlib/Algebra/CharP/LocalRing.lean: charP_zero_or_prime_power; its proof uses the literal residue-field characteristic, but its exported statement alone does not identify the prime."
+  ],
+  "candidateProof": [
+    "Use actual coefficient-ideal membership of each matrix entry, proving multiplication sends I^r and I^s entries into I^(r+s).",
+    "For a genuine matrix congruent to 1 modulo I^r, use the pinned commuting binomial formula with 1 and X-1; p in I and r>=1 imply X^p is congruent to1 modulo I^(r+1).",
+    "Iterate and consume actual nilpotence of the finite local coefficient maximal ideal. This gives a literal p-power order for every original residual-kernel matrix, hence IsPGroup.",
+    "Use actual finite power quotients of the complete coefficient ring to obtain the pro-p residual kernel; the fixed residual-kernel universal quotient remains a separate construction."
+  ],
+  "remaining": "Mazur F, topological finite generation, actual Galois association and deformation representability are still unproved. No arithmetic consequence is inferred from this route.",
+  "additionalPinnedApi": "Mathlib/RingTheory/HopkinsLevitzki.lean: Artinian implies Noetherian; actual local maximal ideal nilpotent."
+}

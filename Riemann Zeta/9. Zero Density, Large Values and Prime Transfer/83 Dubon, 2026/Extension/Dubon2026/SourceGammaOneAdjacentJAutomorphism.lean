@@ -1,0 +1,56 @@
+import Dubon2026.SourceGammaOneAdjacentJPreservation
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> coefficient extension
+of the reverse map. Its square fixes the actual j-coordinate; the original
+finite j-extension makes that square surjective. Hence the reverse map
+itself is an automorphism. This does not assert involutivity: identifying
+its square with the precise diamond action remains required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open IntermediateField CongruenceSubgroup
+open scoped MatrixGroups
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+local notation "Γ" => Gamma1 M ⊓ Gamma0 (p * M)
+local notation "FF" => x1FunctionField M
+local notation "GG" => x1x0FunctionFieldC ℚ M (p * M)
+
+theorem adjacentJ_endomorphism_bijective (w : GG →+* GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (w ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (hj : (w ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq) :
+    Function.Bijective w := by
+  letI : Algebra ℚ GG := (GG).toSubalgebra.algebra
+  let j : GG := jCoordinate Γ
+  let jp : GG := ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩
+  have hwj : w j = jp :=
+    Subtype.ext (hbase ⟨jq, jq_mem_qExpFunctionField (Gamma1 M)⟩ (jq_mem_qExpFunctionField Γ))
+  have hwp : w jp = j := Subtype.ext hj
+  let K := IntermediateField.adjoin ℚ ({j} : Set GG)
+  letI : Algebra ℚ K := K.algebra'
+  have hT : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, Gamma0_mem, ModularGroup.T]
+  haveI : FiniteDimensional K GG := finiteDimensional_jCoordinate hT
+  have hc : (w.comp w).toRatAlgHom.comp K.val = K.val := by
+    apply IntermediateField.algHom_ext_of_eq_adjoin ℚ rfl
+    rintro z (rfl : z = j)
+    change w (w j) = j
+    rw [hwj, hwp]
+  let w2 : GG →ₐ[K] GG :=
+    { toRingHom := w.comp w
+      commutes' := fun r => DFunLike.congr_fun hc r }
+  have hs : Function.Surjective w2 := w2.bijective.surjective
+  refine ⟨w.injective, fun y => ?_⟩
+  obtain ⟨x, hx⟩ := hs y
+  exact ⟨w x, hx⟩
+
+theorem exists_gammaOne_adjacentJ_automorphism (hcop : Nat.Coprime M p) :
+    ∃ w : GG ≃ₐ[ℚ] GG,
+      (∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+        (w ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val) ∧
+      (w ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq := by
+  obtain ⟨σ, hbase, hj⟩ := exists_gammaOne_adjacentJ_endomorphism M p hcop
+  let e := RingEquiv.ofBijective σ (adjacentJ_endomorphism_bijective M p σ hbase hj)
+  let w : GG ≃ₐ[ℚ] GG := { e with commutes' := σ.map_rat_algebraMap }
+  exact ⟨w, hbase, hj⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

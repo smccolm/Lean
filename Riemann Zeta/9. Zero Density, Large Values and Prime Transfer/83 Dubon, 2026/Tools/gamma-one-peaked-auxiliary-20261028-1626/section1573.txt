@@ -1,0 +1,7 @@
+### Actual original arithmetic residual profinite presentation — 9 October 2026
+
+For the actual rational arithmetic Galois group and an original continuous matrix representation with discrete coefficients, derive both finiteness of the original residual quotient and finiteness of original prime characters on its exact kernel. The previously proved fixed residual quotient theorem then supplies a genuinely surjective profinite presentation on finitely many original generators, with all original relations in the actual kernel. No finite-relation theorem or modular Galois association is asserted.
+
+Final framed deformation-functor assembly, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticResidualProfinitePresentation](Extension/Dubon2026/ArithmeticResidualProfinitePresentation.lean).

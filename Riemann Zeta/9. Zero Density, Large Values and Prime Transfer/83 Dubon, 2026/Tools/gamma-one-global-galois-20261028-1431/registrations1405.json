@@ -1,0 +1,17 @@
+[
+  "Dubon2026.matrixAdjointCoboundary_continuous",
+  "Dubon2026.continuousMatrixAdjointH1_eq_iff",
+  "Dubon2026.continuousMatrixFirstOrderClass_eq_iff",
+  "Dubon2026.continuousMatrixFirstOrderClass_surjective",
+  "Dubon2026.continuousMatrixAdjointRestriction_coboundary",
+  "Dubon2026.continuousMatrixAdjointH1Restriction_class",
+  "Dubon2026.dualMatrixStrictUnit_det",
+  "Dubon2026.dualMatrixUnit_factor",
+  "Dubon2026.dualMatrixUnit_det",
+  "Dubon2026.matrixFirstOrderLift_fixedDeterminant_iff",
+  "Dubon2026.matrixAdjointCoboundary_trace_zero",
+  "Dubon2026.SemanticRegression.actual_deformation_conditions_dualMatrixUnit_det_source",
+  "Dubon2026.SemanticRegression.actual_deformation_conditions_matrixFirstOrderLift_fixedDeterminant_iff_source",
+  "Dubon2026.SemanticRegression.actual_deformation_conditions_continuousMatrixFirstOrderClass_eq_iff_source",
+  "Dubon2026.SemanticRegression.actual_deformation_conditions_continuousMatrixAdjointH1Restriction_class_source"
+]

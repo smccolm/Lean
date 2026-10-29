@@ -1,0 +1,12 @@
+[
+  "AdelicDirichletQuadratic",
+  "AdelicNonCMQuadraticTwist",
+  "AdelicNonCMSelfTwist",
+  "AdelicPrimitiveQuadraticClassification",
+  "AdelicQuadraticCharacterRigidity",
+  "AdelicQuadraticCharacterValues",
+  "AdelicQuadraticDirichletClassification",
+  "AdelicSelfTwistQuadratic",
+  "DirichletPrimitiveAdelicCharacter",
+  "FiniteAdeleResidueChangeLevel"
+]

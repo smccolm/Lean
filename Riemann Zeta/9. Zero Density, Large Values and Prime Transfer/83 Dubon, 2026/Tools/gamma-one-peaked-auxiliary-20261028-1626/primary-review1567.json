@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "UnramifiedCyclotomicCharacterDescent",
+  "mathematics": "From an actual primitive root in the original Galois extension, construct the actual cyclotomic base K(zeta). Transfer the genuine finite exceptional-prime set and original finite-subextension unramifiedness to that base, apply proved root-containing Kummer and Selmer character finiteness, and descend through the actual coprime cyclotomic degree. The root need not lie in the original base field.",
+  "boundary": "All-open character finiteness for the constructed arithmetic union remains open. Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "cyclotomic-unramified-stage-draft-review-20261009.json; exact pinned APIs inspected. No external Lean code imported.",
+  "productionFixes": [
+    "Supplied original base and ambient fields to the pinned cyclotomic-adjoin equivalence, following the1566 API check."
+  ],
+  "productionLog": "cyclotomicDescent1567-focus.log"
+}

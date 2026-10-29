@@ -1,0 +1,1 @@
+The actual quotient induces the true original residue-field equivalence. Continuous residue-preserving coefficient maps from that local quotient are bijective with the original continuous residue-preserving coefficient maps killing its actual ideal. Quotient continuity and both inverse identities are proved for the entire original maps.

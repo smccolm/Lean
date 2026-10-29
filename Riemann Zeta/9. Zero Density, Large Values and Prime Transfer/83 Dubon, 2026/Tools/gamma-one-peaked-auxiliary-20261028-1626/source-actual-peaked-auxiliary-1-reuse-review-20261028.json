@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> even-weight trace -> constructed actual peaked auxiliary.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-actual-peaked-auxiliary-audit-route-1625.json",
+    "sha256": "CE92CE2DCBB0343E864BFC97831F2632F539F98A8DC8D5CFF8BBE36A18CBA429",
+    "review": {
+      "recordedUTC": "2026-10-29T03:07:01.638519+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> even-weight trace -> constructed actual peaked auxiliary.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\peaked-qexp-reuse-review-1610.json",
+          "sha256": "A4294B569204E86224F3E5921C0547FE9DE9F7D66FF1F9E5C1D30AE52153DA4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\peaked-cusp-shorter-route-1619.json",
+          "sha256": "66E8B4AC1B8E167AAF2D0C5ECB3A0DCF735D0058DFD7C8EF66B0F02A64617E17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Actual Peaked Auxiliary Assessment 2026-10-28.md",
+          "sha256": "9B13D46E98CD5A15D912E358BE5B704FB6893C8752218019FD626ECDC0B9DAE0"
+        }
+      ],
+      "shorterRoute": "Scale the actual separating exponent family by N to obtain source order divisibility; choose a finite absolute-order bound for the discriminant power. Use native integral discriminant expansion, sparse reindexing, width change and conjugate periods to identify actual shifted coefficients. Nonnegative orders are derived before translated series assembly. The exact source existential endpoint is preserved.",
+      "assumptionsToDischarge": [
+        "The actual separating exponent family has level-multiple positive infinity order and retains strict separation.",
+        "A concrete discriminant power makes every actual cusp order nonnegative.",
+        "The actual width-one expansion has the exact leading order, nonzero leading coefficient and level-cleared inverse.",
+        "The actual translated Fourier coefficients are integral, yielding the required slash-S coefficients.",
+        "The actual Gamma1 modular form has weight divisible by twelve, strict weight/order gap and separated decay with positive gap 1/N.",
+        "The source peaked-auxiliary existence premise is completely discharged."
+      ],
+      "remaining": "Apply the constructed auxiliary to the even-weight trace theorem on the correct conjugate subgroup. Uniform level-power slash integrality, reduced field action, signed-index lower bound, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual separating exponent family has level-multiple positive infinity order and retains strict separation.",
+    "A concrete discriminant power makes every actual cusp order nonnegative.",
+    "The actual width-one expansion has the exact leading order, nonzero leading coefficient and level-cleared inverse.",
+    "The actual translated Fourier coefficients are integral, yielding the required slash-S coefficients.",
+    "The actual Gamma1 modular form has weight divisible by twelve, strict weight/order gap and separated decay with positive gap 1/N.",
+    "The source peaked-auxiliary existence premise is completely discharged."
+  ],
+  "remaining": "Apply the constructed auxiliary to the even-weight trace theorem on the correct conjugate subgroup. Uniform level-power slash integrality, reduced field action, signed-index lower bound, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

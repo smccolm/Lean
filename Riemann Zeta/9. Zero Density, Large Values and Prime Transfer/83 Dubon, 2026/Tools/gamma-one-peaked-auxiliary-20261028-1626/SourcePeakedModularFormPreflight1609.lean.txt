@@ -1,0 +1,72 @@
+import SourcePeakedAuxiliaryFunction1603a
+import SourceSiegelCuspPermutation1604a
+import SourcePeakedAuxiliaryCuspDecay1605a
+import SourcePeakedAuxiliaryHolomorphic1606a
+import SourcePeakedAuxiliaryModularForm1607a
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePeakedAuxiliaryFunction1603a, `SourceSiegelCuspPermutation1604a, `SourcePeakedAuxiliaryCuspDecay1605a, `SourcePeakedAuxiliaryHolomorphic1606a, `SourcePeakedAuxiliaryModularForm1607a]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE PEAKED MODULAR FORM PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourcePeakedAuxiliaryFunction1603a
+#lint in SourceSiegelCuspPermutation1604a
+#lint in SourcePeakedAuxiliaryCuspDecay1605a
+#lint in SourcePeakedAuxiliaryHolomorphic1606a
+#lint in SourcePeakedAuxiliaryModularForm1607a

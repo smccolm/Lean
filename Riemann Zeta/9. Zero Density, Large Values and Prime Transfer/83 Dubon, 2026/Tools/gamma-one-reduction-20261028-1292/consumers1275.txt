@@ -1,0 +1,73 @@
+
+/-- Exact original-object consumer of `finiteDimensional_polynomial_kernel_of_eigenspaces`. -/
+theorem actual_compact_type_finiteDimensional_polynomial_kernel_of_eigenspaces_source {V : Type*} [AddCommGroup V] [Module ℂ V] (T : Module.End ℂ V)
+    (hT : ∀ c : ℂ, FiniteDimensional ℂ (Module.End.eigenspace T c))
+    (p : Polynomial ℂ) (hp : p.Monic) : FiniteDimensional ℂ (LinearMap.ker (Polynomial.aeval T p)) :=
+  finiteDimensional_polynomial_kernel_of_eigenspaces T hT p hp
+
+/-- Exact original-object consumer of `eigenspace_eq_of_dense_eigenfamily`. -/
+theorem actual_compact_type_eigenspace_eq_of_dense_eigenfamily_source {V ι : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    (T : Module.End ℂ V) (hT : ∀ x y, inner ℂ (T x) (T y) = inner ℂ x y)
+    (u : ι → V) (θ : ι → ℂ) (hθ : ∀ i, ‖θ i‖ = 1)
+    (hu : ∀ i, T (u i) = θ i • u i)
+    (hd : (Submodule.span ℂ (Set.range u)).topologicalClosure = ⊤)
+    (c : ℂ) (S : Submodule ℂ V) [CompleteSpace S]
+    (hS : S ≤ Module.End.eigenspace T c)
+    (hm : ∀ i, θ i = c → u i ∈ S) : Module.End.eigenspace T c = S :=
+  eigenspace_eq_of_dense_eigenfamily T hT u θ hθ hu hd c S hS hm
+
+/-- Exact original-object consumer of `adelicSignedFiniteFamily_dense`. -/
+theorem actual_compact_type_adelicSignedFiniteFamily_dense_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) :
+    (Submodule.span ℂ (Set.range (adelicSignedFiniteFamily f))).topologicalClosure = ⊤ :=
+  adelicSignedFiniteFamily_dense f hf
+
+/-- Exact original-object consumer of `adelicIrrationalRotation_eigenspace`. -/
+theorem actual_compact_type_adelicIrrationalRotation_eigenspace_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (i : ℕ ⊕ ℕ) :
+    Module.End.eigenspace (adelicIrrationalRotation f) (integerIrrationalCharacter (adelicSignedRaisingWeight k i)) =
+      adelicIntegerRotationWeightSpace f (adelicSignedRaisingWeight k i) :=
+  adelicIrrationalRotation_eigenspace f hf i
+
+/-- Exact original-object consumer of `adelicIrrationalRotation_fixed_eigenspace_finiteDimensional`. -/
+theorem actual_compact_type_adelicIrrationalRotation_fixed_eigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) (c : ℂ) :
+    FiniteDimensional ℂ (Module.End.eigenspace (adelicIrrationalRotation f) c ⊓
+      adelicFiniteSubgroupFixedSpace f J : Submodule ℂ (AdelicCyclicHilbert f)) :=
+  adelicIrrationalRotation_fixed_eigenspace_finiteDimensional f hf hk J hJ c
+
+/-- Exact original-object consumer of `finiteDimensional_intertwining_of_eigenspaces`. -/
+theorem actual_compact_type_finiteDimensional_intertwining_of_eigenspaces_source {V W : Type*} [AddCommGroup V] [Module ℂ V] [AddCommGroup W] [Module ℂ W]
+    {G : Type*} [Monoid G] [FiniteDimensional ℂ V]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W) (g : G)
+    (hg : ∀ c : ℂ, FiniteDimensional ℂ (Module.End.eigenspace (σ g) c)) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap ρ σ) :=
+  finiteDimensional_intertwining_of_eigenspaces ρ σ g hg
+
+/-- Exact original-object consumer of `adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional`. -/
+theorem actual_compact_type_adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hf : f ≠ 0) (hk : 0 < k)
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))) (c : ℂ) :
+    FiniteDimensional ℂ (Module.End.eigenspace
+      (adelicFiniteFixedRealRepresentation f J (toGL (realRotationCurve (Real.pi * Real.sqrt 2)))) c) :=
+  adelicFiniteFixedRealRepresentation_eigenspace_finiteDimensional f J hf hk hJ c
+
+/-- Exact original-object consumer of `adelicRealType_finiteMultiplicity`. -/
+theorem actual_compact_type_adelicRealType_finiteMultiplicity_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))))
+    {G V : Type*} [Monoid G] [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V]
+    (ι : G →* GeneralLinearGroup (Fin 2) ℝ) (g : G)
+    (hg : ι g = toGL (realRotationCurve (Real.pi * Real.sqrt 2))) (σ : Representation ℂ G V) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap σ ((adelicFiniteFixedRealRepresentation f J).comp ι)) :=
+  adelicRealType_finiteMultiplicity f hf hk J hJ ι g hg σ
+
+/-- Exact original-object consumer of `adelicOrthogonalType_admissible`. -/
+theorem actual_compact_type_adelicOrthogonalType_admissible_source {N : ℕ} [NeZero N] {k : ℤ} (f : CuspForm ((Gamma0 N).map (mapGL ℝ)) k) (hf : f ≠ 0) (hk : 0 < k)
+    (J : Subgroup (Matrix.GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ)))
+    (hJ : IsOpen (J : Set (Matrix.GeneralLinearGroup (Fin 2) (FiniteAdeleRing ℤ ℚ))))
+    {V : Type*} [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V]
+    (σ : Representation ℂ (Matrix.orthogonalGroup (Fin 2) ℝ) V) :
+    FiniteDimensional ℂ (Representation.IntertwiningMap σ
+      ((adelicFiniteFixedRealRepresentation f J).comp realOrthogonalGL2Embedding)) :=
+  adelicOrthogonalType_admissible f hf hk J hJ σ
+

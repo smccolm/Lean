@@ -1,0 +1,61 @@
+import SourceGammaOneGaussConstants
+import Mathlib.Algebra.Field.Subfield.Basic
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original good
+reduction -> actual residue field. The proved kernel identifies the literal
+coefficient residue image with the valuation ring's genuine residue field.
+Use that actual image as the residue target, retaining its explicit Laurent
+embedding. Equality with a separately defined characteristic-p modular-ratio
+field and genus preservation are not assumed or asserted.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open IntermediateField GaussReduction
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "FF" => functionFieldOver Γ L
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "R" => coefficientGaussRing Γ A
+
+/-- The actual residue field embeds by literal coefficient reduction. -/
+def residueEmbedding : IsLocalRing.ResidueField R →+* LaurentSeries kk :=
+  Ideal.Quotient.lift _ (resHom A Γ) (fun f hf => (resHom_eq_zero_iff A Γ f).mpr hf)
+
+theorem residueEmbedding_residue (f : R) :
+    residueEmbedding A Γ (IsLocalRing.residue R f) = resHom A Γ f := rfl
+
+/-- The literal residue image, with its original constant-field structure. -/
+def residueImage : IntermediateField kk (LaurentSeries kk) where
+  toSubfield := (residueEmbedding A Γ).fieldRange
+  algebraMap_mem' a := by
+    obtain ⟨c, rfl⟩ := IsLocalRing.residue_surjective a
+    have hc : algebraMap L FF c ∈ R := (algebraMap_mem_gaussRing_iff A Γ c).mpr c.property
+    refine ⟨IsLocalRing.residue R ⟨algebraMap L FF c, hc⟩, ?_⟩
+    exact resHom_algebraMap A Γ c hc
+
+theorem resHom_mem_residueImage (f : R) : resHom A Γ f ∈ residueImage A Γ :=
+  ⟨IsLocalRing.residue R f, rfl⟩
+
+/-- The original integral function reduces to its actual residue-image element. -/
+def residueToImage : R →+* residueImage A Γ where
+  toFun f := ⟨resHom A Γ f, resHom_mem_residueImage A Γ f⟩
+  map_one' := Subtype.ext (map_one _)
+  map_mul' f g := Subtype.ext (map_mul _ f g)
+  map_zero' := Subtype.ext (map_zero _)
+  map_add' f g := Subtype.ext (map_add _ f g)
+
+theorem residueToImage_surjective : Function.Surjective (residueToImage A Γ) := by
+  intro x
+  obtain ⟨z, hz⟩ := x.property
+  obtain ⟨f, rfl⟩ := IsLocalRing.residue_surjective z
+  exact ⟨f, Subtype.ext hz⟩
+
+theorem residueToImage_ker :
+    RingHom.ker (residueToImage A Γ) = IsLocalRing.maximalIdeal R := by
+  ext f
+  change residueToImage A Γ f = 0 ↔ _
+  rw [Subtype.ext_iff]
+  exact resHom_eq_zero_iff A Γ f
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,7 @@
+### Actual original first-order subgroup triviality criterion — 9 October 2026
+
+At every original group element with identity residual matrix, the actual first-order dual-number representation is the identity exactly when its original adjoint cocycle vanishes. The proved original reconstruction recovers the whole lifted matrix. Consequently original subgroup triviality is equivalent to original cocycle vanishing on that entire subgroup.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FirstOrderInertiaCriterion](Extension/Dubon2026/FirstOrderInertiaCriterion.lean).

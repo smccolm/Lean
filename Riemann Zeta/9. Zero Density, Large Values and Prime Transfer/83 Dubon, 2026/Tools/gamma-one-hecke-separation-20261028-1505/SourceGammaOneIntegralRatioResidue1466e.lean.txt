@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOneGaussResidueImage
+import Dubon2026.SourceGammaOneScalarExtension
+import Dubon2026.SourceHasseCoefficientTransport
+
+/-! DUB-17/18 -> original all-weight association -> original Gamma1
+good reduction -> coordinate-degree preservation. The external integral
+Eisenstein separation route works in the characteristic-p integral-ratio
+field. Prove its inclusion into the actual residue image used by the native
+Tate/Frobenius consumers. Reuse the original scalar-extension identity and
+the already constructed coefficient Gauss residue map. No degree or genus
+equality is assumed. The reverse inclusion is not asserted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open IntermediateField GaussReduction
+open scoped MatrixGroups
+
+private theorem integer_series_map {R K : Type*} [CommRing R] [Field K]
+    (f : R →+* K) (p : PowerSeries ℤ) :
+    coeffMap f (p.map (Int.castRingHom R) : LaurentSeries R) = intSeriesC K p := by
+  rw [coeffMap_ofPowerSeries]
+  congr 1
+  ext n
+  simp only [PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup SL(2, ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+
+private theorem residue_fraction_mem (u v : LaurentSeries A)
+    (hv : ϖ A v ≠ 0)
+    (hz : ι A u / ι A v ∈ functionFieldOver Γ L) :
+    ϖ A u / ϖ A v ∈ residueImage A Γ := by
+  have hiv0 : ι A v ≠ 0 := fun h =>
+    (ϖ_ne_zero_ne_zero hv) ((ι_eq_zero_iff A v).mp h)
+  let z : functionFieldOver Γ L := ⟨ι A u / ι A v, hz⟩
+  have hzv : (z : LaurentSeries L) * ι A v = ι A u := div_mul_cancel₀ _ hiv0
+  have hzint : z ∈ coefficientGaussRing Γ A := ⟨u, v, hv, hzv⟩
+  have hr := resHom_mem_residueImage A Γ ⟨z, hzint⟩
+  have he := resHom_eq A Γ (f := ⟨z, hzint⟩) (x := u) (y := v) hv hzv
+  exact he ▸ hr
+
+theorem intFormRatiosC_subset_residueImage :
+    intFormRatiosC kk Γ ⊆ (residueImage A Γ : Set (LaurentSeries kk)) := by
+  rintro x ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩
+  let u : LaurentSeries A := pf.map (Int.castRingHom A)
+  let v : LaurentSeries A := pg.map (Int.castRingHom A)
+  have hiu : ι A u = intSeriesC L pf := integer_series_map A.subtype pf
+  have hiv : ι A v = intSeriesC L pg := integer_series_map A.subtype pg
+  have hru : ϖ A u = intSeriesC kk pf := integer_series_map (IsLocalRing.residue A) pf
+  have hrv : ϖ A v = intSeriesC kk pg := integer_series_map (IsLocalRing.residue A) pg
+  have hv : ϖ A v ≠ 0 := hrv ▸ hg0
+  have hiv0 : ι A v ≠ 0 := fun h =>
+    (ϖ_ne_zero_ne_zero hv) ((ι_eq_zero_iff A v).mp h)
+  have hgL : intSeriesC L pg ≠ 0 := hiv ▸ hiv0
+  have hz : ι A u / ι A v ∈ functionFieldOver Γ L := by
+    rw [hiu, hiv, functionFieldOver_eq_qExpFunctionFieldC]
+    exact div_mem_qExpFunctionFieldC f g hf hg hgL
+  have hr := residue_fraction_mem A Γ u v hv hz
+  rw [hru, hrv] at hr
+  exact hr
+
+theorem qExpFunctionFieldC_le_residueImage :
+    qExpFunctionFieldC kk Γ ≤ residueImage A Γ := by
+  rw [qExpFunctionFieldC, adjoin_le_iff]
+  exact intFormRatiosC_subset_residueImage A Γ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

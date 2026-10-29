@@ -1,0 +1,16 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "IntermediateField.normal_iSup for the actual original normal intermediate fields",
+    "Characteristic-zero separability over the original number field",
+    "Actual project finite Galois compositum ramification theorem, still uncompiled draft"
+  ],
+  "scope": "The actual stage nonemptiness, transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionFixes": [
+    "Removed an unused NumberField hypothesis from literal stage inclusion.",
+    "Typed the original intermediate-field supremum before its carrier coercion and supplied original base/ambient fields to normal_iSup."
+  ],
+  "productionLog": "stageUnion1560c-focus.log"
+}

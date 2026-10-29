@@ -1,0 +1,56 @@
+import Dubon2026.SourceGammaOneTwistedGalois
+import Dubon2026.SourceCyclotomicHomogeneousDiamond
+import Dubon2026.SourceGammaOneDiamondCoefficientMatrix
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> finite
+Hecke-character Galois realization. The genuine global Galois action
+commutes with the original combined coefficient/Picard diamond operator.
+Its fixed classes therefore remain fixed throughout their Galois orbit,
+discharging the stability input needed to use the Frobenius polynomial
+on those translates. No geometric degree/genus equality is used here. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryArithmeticTateGaloisRep_diamond (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (g : Gamma0 M) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryArithmeticTateGaloisRep Q p n w σ
+        (((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+          (φ.comp (arithmeticDiamondTate M p g))) =
+      ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+        ((binaryArithmeticTateGaloisRep Q p n w σ φ).comp (arithmeticDiamondTate M p g)) := by
+  have hc : Commute (binaryCyclotomicCoefficientRep Q p n w σ)
+      (sourceGammaOneBinaryDiamondCoefficient Q N w g) := by
+    rw [sourceGammaOneBinaryDiamondCoefficient_eq_diagonal]
+    exact sourceCyclotomicHomogeneousAction_diagonal_commute (ZMod N) w
+      (sourceAbsoluteCyclotomicCharacter N σ) (g.val 1 1 : ZMod N) (g.val 0 0 : ZMod N)
+  exact sourceTwistedCoefficientDualAction_operator
+    (binaryCyclotomicCoefficientRep Q p n w) (arithmeticTateGaloisRep M p) σ
+    (sourceGammaOneBinaryDiamondCoefficient Q N w g) (arithmeticDiamondTate M p g)
+    (arithmeticTateGaloisRep_diamond M p g σ⁻¹) hc φ
+
+theorem binaryArithmeticTateGaloisRep_diamond_fixed (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (g : Gamma0 M) (φ : T →ₗ[ℤ_[p]] V)
+    (hφ : ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+      (φ.comp (arithmeticDiamondTate M p g)) = φ) :
+    ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+      ((binaryArithmeticTateGaloisRep Q p n w σ φ).comp (arithmeticDiamondTate M p g)) =
+        binaryArithmeticTateGaloisRep Q p n w σ φ := by
+  exact (binaryArithmeticTateGaloisRep_diamond Q p n w σ g φ).symm.trans
+    (congrArg (binaryArithmeticTateGaloisRep Q p n w σ) hφ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

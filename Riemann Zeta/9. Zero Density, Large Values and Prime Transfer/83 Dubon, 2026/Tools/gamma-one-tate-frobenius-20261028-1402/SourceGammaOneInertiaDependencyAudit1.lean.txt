@@ -1,0 +1,35 @@
+import SourceGammaOneArithmeticCharts
+import SourceGammaOneSpecializationCharts
+import SourceGammaOneDecompositionCharts
+import SourceGammaOneConstantReductionCharts
+import SourceGammaOneSpecializationEquivariance
+import SourceGammaOneInertiaPlaceReduction
+import SourceGammaOneInertiaPicard
+import SourceGammaOneTateInertia
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq]
+  let localModules : Array Name := #[`SourceGammaOneResidueGeometry, `SourceCurveSeparatingGenusMaximum, `SourceReductionGenusPoleLifting, `SourceReductionGenusIntegralCharts, `SourceGammaOneGenusSpecialization, `SourceGammaOneOriginalSpecialization, `SourceGammaOneKummerDegree, `SourceGammaOneKummerGenus, `SourceJointSeparableFiniteOverlap, `SourceJointSeparableConstants, `SourceJointSeparableChartDimension, `SourceJointSeparablePoleDimension, `SourceJointSeparableGenus, `SourceGammaOneKummerResidueGenus, `SourceGammaOneKummerPowerLifting, `SourceGammaOnePicardPrimeKernel, `SourceGammaOnePicardTorsion, `SourceGammaOneArithmeticCharts, `SourceGammaOneSpecializationCharts, `SourceGammaOneDecompositionCharts, `SourceGammaOneConstantReductionCharts, `SourceGammaOneSpecializationEquivariance, `SourceGammaOneInertiaPlaceReduction, `SourceGammaOneInertiaPicard, `SourceGammaOneTateInertia]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_mem_adjoin, `Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_isIntegral, `Dubon2026.SourceFunctionField.GammaOne.nonunit_arithmeticPlace_iff, `Dubon2026.SourceFunctionField.GammaOne.chartDomain_arithmeticPlace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_with_charts_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonunit_decompositionResiduePlace_iff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_j, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_j_mem, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.chartReducesTo_decomposition, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_with_charts_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_invariant_on_inertia_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_invariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_invariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticPicard_eq_self_of_inertia_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq, `Dubon2026.SourceCurve.RegularProlongation.integral_charts_lift_of_degree_genus_eq, `Dubon2026.SourceCurve.RegularProlongation.exists_principal_divisor_reduction_map_with_charts, `Dubon2026.SourceCurve.ConstantReduction.ofPlaceMap, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_exists_power_of_residue_power_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_genus_sub_one, `Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra, `Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut, `Dubon2026.SourceFunctionField.GammaOne.arithmeticPicard, `Dubon2026.SourceFunctionField.GammaOne.gamma1ArithmeticPicardRep, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep, `Dubon2026.TateModule.torsion]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE INERTIA DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of inertia triviality on the actual original Gamma1 Tate representation. Exact chart equivariance, specialization-place inertia invariance and Picard invertible-torsion injectivity are derived. Coordinate-degree and genus preservation remain explicit; the two-dimensional arithmetic association and Frobenius relation are not claimed; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

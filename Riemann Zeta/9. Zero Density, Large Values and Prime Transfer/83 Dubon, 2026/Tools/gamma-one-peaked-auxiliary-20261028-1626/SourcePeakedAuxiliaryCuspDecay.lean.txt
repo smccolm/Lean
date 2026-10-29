@@ -1,0 +1,80 @@
+import SourceSiegelCuspPermutation
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> discriminant-adjusted Siegel
+modular form and its exact cusp bounds. Consume actual literal products,
+the proved finite-product cusp limit and native discriminant decay. The
+nonnegative shifted-order hypothesis is explicit and will be discharged
+when selecting the discriminant power; no auxiliary existence is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups ModularForm Manifold
+variable (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+
+theorem discr_isBigO : (fun τ : ℍ => ModularForm.discriminant τ) =O[atImInfty] fun τ : ℍ => Real.exp (-(2 * Real.pi) * τ.im) := by
+  have h := CuspFormClass.exp_decay_atImInfty (h := 1) CuspForm.discriminant one_pos one_mem_strictPeriods_SL
+  rw [CuspForm.coe_discriminant] at h
+  refine h.congr_right fun τ => ?_
+  congr 1
+  ring
+
+theorem norm_C_eq_one {C : ℂ} (hC : C ^ N = 1) : ‖C‖ = 1 :=
+  Complex.norm_eq_one_of_pow_eq_one hC (NeZero.ne N)
+
+theorem thetaFun_slash_isBigO (hm0 : m 0 0 = 0) (t : ℕ) (β : SL(2, ℤ)) :
+    ((thetaFun N m t) ∣[12 * (t : ℤ)] (β : GL (Fin 2) ℝ)) =O[atImInfty]
+      fun τ : ℍ => Real.exp (-(2 * Real.pi *
+        (((Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) : ℤ) : ℝ) / (N : ℝ) + (t : ℝ))) * τ.im) := by
+
+  obtain ⟨C, d, hC, -, -, hd0, -, -, htend⟩ :=
+    FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow N (mT N m β) (mT_zero N m hm0 β)
+  set E : ℤ := ∑ r : ZMod N, ∑ s : ZMod N, (mT N m β r s : ℤ) * (6 * (r.val : ℤ) ^ 2 - 6 * (N : ℤ) * (r.val : ℤ) + (N : ℤ) ^ 2) with hE
+  have hOrd : Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) = E := ord_eq N m β
+
+  have hEC : ((∑ r : ZMod N, ∑ s : ZMod N,
+      (mT N m β r s : ℤ) * (6 * (r.val : ℤ) ^ 2 - 6 * (N : ℤ) * (r.val : ℤ) + (N : ℤ) ^ 2)) : ℂ) = ((E : ℤ) : ℂ) := by
+    rw [hE]; push_cast; rfl
+  rw [hEC] at htend
+  set L : ℍ → ℂ := fun τ => C * Complex.exp (2 * Real.pi * Complex.I * ((E : ℤ) : ℂ) * (τ : ℂ) / (N : ℂ)) with hL
+  set F : ℍ → ℂ := fun τ => (∏ r : ZMod N, ∏ s : ZMod N,
+      siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) ^ (12 * N * mT N m β r s)) / L τ with hF
+  have hCne : C ≠ 0 := fun h0 => by
+    rw [h0, zero_pow (NeZero.ne N)] at hC; exact zero_ne_one hC
+  have hLne : ∀ τ, L τ ≠ 0 := fun τ => mul_ne_zero hCne (Complex.exp_ne_zero _)
+  have hsplit : ∀ τ : ℍ, ((thetaFun N m t) ∣[12 * (t : ℤ)] (β : GL (Fin 2) ℝ)) τ = L τ * F τ * ModularForm.discriminant τ ^ t := by
+    intro τ
+    rw [thetaFun_slash_apply, uFun_smul, hF]
+    simp only
+    rw [mul_div_cancel₀ _ (hLne τ)]
+    rfl
+
+  have hLnorm : ∀ τ : ℍ, ‖L τ‖ = Real.exp (-(2 * Real.pi * ((E : ℝ) / (N : ℝ))) * τ.im) := by
+    intro τ
+    rw [hL]
+    simp only [norm_mul, norm_C_eq_one N hC, one_mul, Complex.norm_exp]
+    congr 1
+    have : (2 * (Real.pi : ℂ) * Complex.I * (E : ℂ) * (τ : ℂ) / (N : ℂ)).re = -(2 * Real.pi * ((E : ℝ) / (N : ℝ))) * τ.im := by
+      rw [show (2 * (Real.pi : ℂ) * Complex.I * (E : ℂ) * (τ : ℂ) / (N : ℂ)) =
+          ((2 * Real.pi * (E : ℝ) / (N : ℝ) : ℝ) : ℂ) * (Complex.I * (τ : ℂ)) by push_cast; ring]
+      rw [Complex.re_ofReal_mul, Complex.I_mul_re, UpperHalfPlane.coe_im]
+      ring
+    exact this
+  have hLO : L =O[atImInfty] fun τ : ℍ => Real.exp (-(2 * Real.pi * ((E : ℝ) / (N : ℝ))) * τ.im) :=
+    Asymptotics.IsBigO.of_bound 1 (Filter.Eventually.of_forall fun τ => by
+      rw [hLnorm, one_mul, Real.norm_of_nonneg (Real.exp_nonneg _)])
+  have hFO : F =O[atImInfty] (fun _ : ℍ => (1 : ℝ)) := htend.isBigO_one ℝ
+  have hΔO : (fun τ : ℍ => ModularForm.discriminant τ ^ t) =O[atImInfty] fun τ : ℍ => Real.exp (-(2 * Real.pi) * τ.im) ^ t :=
+    discr_isBigO.pow t
+  have hprod := (hLO.mul hFO).mul hΔO
+  refine (hprod.congr_left fun τ => (hsplit τ).symm).congr_right fun τ => ?_
+  rw [mul_one, ← Real.exp_nat_mul, ← Real.exp_add, hOrd]
+  congr 1
+  ring
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form

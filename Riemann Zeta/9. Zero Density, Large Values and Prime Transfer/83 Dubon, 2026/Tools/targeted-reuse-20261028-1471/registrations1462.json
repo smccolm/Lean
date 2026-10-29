@@ -1,0 +1,16 @@
+[
+  "Dubon2026.artinianResidualMatrixKernel_isPGroup",
+  "Dubon2026.matrixCongruenceKernel_coefficients",
+  "Dubon2026.matrixCongruenceKernel_isPGroup",
+  "Dubon2026.matrixIdeal_mul_mem",
+  "Dubon2026.matrixIdeal_pow_mem",
+  "Dubon2026.matrixIdeal_mul_right_mem",
+  "Dubon2026.matrixIdeal_natCast_mem",
+  "Dubon2026.matrix_prime_congruence",
+  "Dubon2026.matrix_primePower_congruence",
+  "Dubon2026.matrix_primePower_eq_one_of_nilpotent",
+  "Dubon2026.SemanticRegression.actual_congruence_kernel_matrixIdeal_pow_mem_source",
+  "Dubon2026.SemanticRegression.actual_congruence_kernel_matrix_primePower_congruence_source",
+  "Dubon2026.SemanticRegression.actual_congruence_kernel_matrixCongruenceKernel_isPGroup_source",
+  "Dubon2026.SemanticRegression.actual_congruence_kernel_artinianResidualMatrixKernel_isPGroup_source"
+]

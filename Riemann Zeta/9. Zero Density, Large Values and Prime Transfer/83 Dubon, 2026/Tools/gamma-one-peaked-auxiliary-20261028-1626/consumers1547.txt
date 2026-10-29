@@ -1,0 +1,29 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationRepresentation_trueResidue`. -/
+theorem actual_completed_presentation_true_residue_completedPresentationRepresentation_trueResidue_source
+    [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q)
+    [IsLocalRing (CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker)]
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσeta : ∀ g, σ (q (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g)) = ρ g) :
+    (GeneralLinearGroup.map (n := ι)
+      (localCoefficientReduction (completedPresentationResidueEquiv ρ
+        q.toMonoidHom.ker)).toRingHom).comp
+        (completedPresentationRepresentation ρ H q hq) = σ.toMonoidHom :=
+  completedPresentationRepresentation_trueResidue ρ H q hq σ hσeta
+
+end
+

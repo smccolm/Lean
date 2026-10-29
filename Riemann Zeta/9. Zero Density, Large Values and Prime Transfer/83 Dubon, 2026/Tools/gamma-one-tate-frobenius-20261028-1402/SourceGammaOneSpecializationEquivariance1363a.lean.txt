@@ -1,0 +1,53 @@
+import SourceGammaOneDecompositionCharts1361a
+import SourceGammaOneConstantReductionCharts1362a
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> arithmetic
+equivariance of actual specialization places. Transport the proved exact
+chart descriptions under the original and residue coefficient actions.
+The same reduction retains its injectivity on every invertible torsion group;
+only coordinate-degree and genus preservation remain geometric premises. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve SourceCurve.RegularProlongation IntermediateField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "Fb" => residueImage A Δ
+
+theorem exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ R : ConstantReduction A FF Fb,
+      R.toRegularProlongation = regularProlongation A Δ ∧
+      (∀ m : ℕ, (m : kk) ≠ 0 →
+        Set.InjOn R.pic0Map (↑(Pic0.torsion (K := Qbar) (F := FF) m))) ∧
+      ∀ (d : A.decompositionSubgroup ℚ) (P : Place Qbar FF),
+        R.placeMap (arithmeticPlace Δ d.val P) = decompositionResiduePlace A Δ d (R.placeMap P) := by
+  obtain ⟨R, hR, h₁, h₂, hinj⟩ :=
+    exists_gammaOne_constant_reduction_with_charts_of_degree_genus_eq A M hdeg hgen
+  refine ⟨R, hR, hinj, ?_⟩
+  intro d P
+  let Q := R.placeMap P
+  let Q' := decompositionResiduePlace A Δ d Q
+  have htransport (y : FF) (hy : arithmeticRingAut Δ d.val.symm y = y)
+      (h : ChartDomain A P y ∧ ChartReducesTo A R.toRegularProlongation y P Q) :
+      ChartDomain A (arithmeticPlace Δ d.val P) y ∧
+        ChartReducesTo A R.toRegularProlongation y (arithmeticPlace Δ d.val P) Q' := by
+    refine ⟨chartDomain_arithmeticPlace Δ A d P y hy h.1, ?_⟩
+    rw [hR] at h ⊢
+    exact chartReducesTo_decomposition A Δ d P Q y hy h.2
+  have hQiff : residueJCoordinate A Δ ∈ Q'.toValuationSubring ↔
+      residueJCoordinate A Δ ∈ Q.toValuationSubring := decompositionResiduePlace_j_mem A Δ d Q
+  by_cases hQ : residueJCoordinate A Δ ∈ Q.toValuationSubring
+  · exact (h₁ _ Q' (hQiff.mpr hQ)).mpr
+      (htransport _ (arithmeticRingAut_j Δ d.val.symm) ((h₁ P Q hQ).mp rfl))
+  · apply (h₂ _ Q' (fun h => hQ (hQiff.mp h))).mpr
+    apply htransport _ _ ((h₂ P Q hQ).mp rfl)
+    rw [map_inv₀, arithmeticRingAut_j]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

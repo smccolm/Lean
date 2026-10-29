@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius -> actual residue Hecke correspondence -> geometric Frobenius factorization.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-frobenius-audit-route-1287.json",
+    "sha256": "0EC789E30C62116DD2983DCC205D9708EDBE107C1BDF2914E71B23589A308A23",
+    "review": {
+      "recordedUTC": "2026-10-28T15:19:43.179440+00:00",
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius -> actual residue Hecke correspondence -> geometric Frobenius factorization.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentFrobenius.lean",
+          "sha256": "BF17EF6BBB546B763DF392A2F04B8C6C4D234D243A1EE799D97B2FF800217F25"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueGeometricFrobenius.lean",
+          "sha256": "C339D2DEB8AD5A2308D10E8DB949DF80B9E2CFE1253DEB127D02C22B839D6472"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCoordinateHom.lean",
+          "sha256": "610917D767E662F56B65EA8C49C4A697E186DCF9C177B13E419CC46EC147DA6F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+          "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-compatibility-1-scratch-receipt.json",
+          "sha256": "B10F72B14FABC7ACABF2EE142C35D6264C99E9586342E4D451E5EA657F538C76"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Basic.lean",
+          "sha256": "5C2C34CFDD8C2C4FA5D02F36A63F1FFC51A246DAEEEC245260AD38D21676153C"
+        }
+      ],
+      "shorterRoute": "Reuse the native Laurent Frobenius identity, actual decomposition residue automorphism, native finite-coordinate exchange and Mathlib coe_inclusion. Inverse coefficient action followed by the absolute pth power gives the actual constant-linear q-substitution on the original residue image. The explicit monic polynomial proves integrality; the native finite-coordinate theorem proves finiteness. The second original residue Hecke map is the first map after this Frobenius. Named Mathlib inclusion evaluation avoids kernel normalization of the concrete intermediate-field record without increasing limits.",
+      "assumptionsToDischarge": [
+        "For a decomposition element whose action on residue constants is pth power, the original residue image has a constant-linear geometric Frobenius with literal q to q^p Laurent action.",
+        "The actual endomorphism is integral, and finite for a finite-index original subgroup containing T.",
+        "The actual Gamma1 residue Hecke beta map factors through this endomorphism and the actual alpha inclusion."
+      ],
+      "remaining": "The arithmetic Frobenius constant-action premise is explicit. No original norm identity, degree equality, genus preservation, place/Picard specialization or prime-to-residue torsion injectivity is proved by this module. The original geometric Tate quadratic, inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false
+    }
+  },
+  "discharged": [
+    "For a decomposition element whose action on residue constants is pth power, the original residue image has a constant-linear geometric Frobenius with literal q to q^p Laurent action.",
+    "The actual endomorphism is integral, and finite for a finite-index original subgroup containing T.",
+    "The actual Gamma1 residue Hecke beta map factors through this endomorphism and the actual alpha inclusion."
+  ],
+  "remaining": "The arithmetic Frobenius constant-action premise is explicit. No original norm identity, degree equality, genus preservation, place/Picard specialization or prime-to-residue torsion injectivity is proved by this module. The original geometric Tate quadratic, inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

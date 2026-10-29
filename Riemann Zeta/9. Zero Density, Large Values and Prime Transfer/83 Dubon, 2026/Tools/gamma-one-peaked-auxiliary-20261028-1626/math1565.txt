@@ -1,0 +1,1 @@
+The actual conductor exclusion identifies an original rational prime not dividing the conductor. The pinned rational cyclotomic ramification theorem gives index one over Z, and actual prime-local formal unramifiedness transfers through the original integer-ring tower to give index one over O(Q). No base-ring ramification-index identity is assumed.

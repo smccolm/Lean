@@ -1,0 +1,33 @@
+{
+  "recordedUTC": "2026-10-28T21:19:25.141650+00:00",
+  "chain": "DUB-17/18 -> original all-weight association -> finite Hecke-character Galois realization -> Frobenius polynomial throughout the Galois orbit of original parabolic classes.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction.lean",
+      "sha256": "3AE335A6BC837CCDD455C9F8CC2DBAEEDBBF9CAFA1F15B28994A680D7B24AE19"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke.lean",
+      "sha256": "18788CFDBE9633896E4FC7B99508067AD6DB91A03351CAE22A9A54863D886C79"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius.lean",
+      "sha256": "712573BB061DC9BB536FC51AADA3D34D5DDBD661B32D628EDF49AADEB4AB2BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondCoefficientMatrix.lean",
+      "sha256": "1F31C3E480236A56886D3C35D9BD8F4AD5CC87D989436825F010BE6342EEBAB6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticTateOperators.lean",
+      "sha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryNormalizerTate.lean",
+      "sha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0"
+    }
+  ],
+  "selected": "Reuse the existing twisted-dual operator commutation and literal Picard diamond commutation. The native normalizer coefficient is a diagonal matrix; extend only the already proved diagonal coefficient commutation to its two actual entries. Then derive stability of diamond fixedness and consume the original Frobenius polynomial on every Galois translate.",
+  "remaining": "Original coordinate degree/genus equalities, nonzero character realization and parabolic transfer remain; these lemmas do not construct a two-dimensional realization or close DUB-17--20.",
+  "productionMutation": false
+}

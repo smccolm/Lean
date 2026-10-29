@@ -1,0 +1,138 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T19:28:50.303026+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneArithmeticCharts",
+    "SourceGammaOneSpecializationCharts",
+    "SourceGammaOneDecompositionCharts",
+    "SourceGammaOneConstantReductionCharts",
+    "SourceGammaOneSpecializationEquivariance",
+    "SourceGammaOneInertiaPlaceReduction",
+    "SourceGammaOneInertiaPicard",
+    "SourceGammaOneTateInertia"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts.lean",
+      "sha256": "EAE0F8091F7A0ACFB17039C0B139A76C8CDCEECB5D3A08B264A90112592A6AF2",
+      "oleanSha256": "406266D6465E7E1336F4F1EC4006E482959A7A8BAB553041482F4DC9F24DDA77",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts.lean",
+      "sha256": "029B641BB22C408D6193FF662850E9D4DC3233AED275D6D8E2C7602E98497898",
+      "oleanSha256": "E576AFA265CC69425623ABD02451AD446D033C3E48674AFE128A556343883793",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts.lean",
+      "sha256": "0FDE41A31690806043C96AD2AEAB42A61A63BD6743A19EFB39325EEDF31F06DE",
+      "oleanSha256": "01B2DF67DB7A9C72C0E62DBD0AC131E68D77529E6B5F4CA702FBD1008C95967E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts.lean",
+      "sha256": "D27C84298F6DAAE912F3ED2ADE3723E28F94BF91BB3F35E36BDD8A646C8AE149",
+      "oleanSha256": "1219EABD2C4DE10C4B65BA85A682FD0F5816CAF8032457E28CE712810AA1F84C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance.lean",
+      "sha256": "8F976E295A9AEDA0EC0F39068AF3ACB15EA0D52617D3C54BBA1EBFF5E2C3207C",
+      "oleanSha256": "9D734357F0C435995A57E6F0B171F4F86E0FFAA8F3AEEC65C9A941A4FE9A4609",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction.lean",
+      "sha256": "33DB103BB63A88F3579C5BDB310F776A2A6CE663CE07708CBB8D97BDF7FC9391",
+      "oleanSha256": "250EDB33C965EF939A0EDA7F431BD13AF21CF9E106B3E6718CBFCADA35E62ABF",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard.lean",
+      "sha256": "505EFDF0E2B36D25BF9D5838719CC57AF8422A9092A63434A45848402364ADB5",
+      "oleanSha256": "80EFFDB06C623AB14847A2ECF07ED479BAFF835F1DF14F3999BC0F76EC74D2A8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard-1367.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia.lean",
+      "sha256": "23FF3A074593CC3669BD0C82373532C675B28C08CCF97871C75C82118640D363",
+      "oleanSha256": "386E9E0E0DA175FA3BD57A85F13FA47B9BC91A50EE2E73061449E530F89FDE4A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia-1367.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia-1367.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_mem_adjoin",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.nonunit_arithmeticPlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.chartDomain_arithmeticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_with_charts_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonunit_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_j",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_j_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.chartReducesTo_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_with_charts_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_invariant_on_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticPicard_eq_self_of_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_mem_adjoin",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_isIntegral",
+    "Dubon2026.SourceFunctionField.GammaOne.nonunit_arithmeticPlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.chartDomain_arithmeticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_with_charts_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.nonunit_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_j",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_j_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.chartReducesTo_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_with_charts_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_invariant_on_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticPicard_eq_self_of_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaAudit1.log",
+  "logSha256": "0D5A06CA537A9F1C6118128A5796677EBD7A4DE1A5A13B726217878DC6670C29",
+  "auditSha256": "E8005160831772EC57D3B3B33EB97A8C456200043F8CBF661285F8F5D2C2BA13",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaScratchOwnership1368.log",
+  "ownershipSha256": "E7836C656D10690B70197D31670B2F1C17FE35BAB9177C3FA59AE0799E3D93E2",
+  "exhaustiveTheorems": 20,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 35,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1.log",
+  "dependencyAuditSha256": "80193C9C5F41A7DB60E66A553E7AD14BC70BAEA35273E224EF8B73B4F7D70D80",
+  "dependencyAuditSourceSha256": "80FC33A75C843D918EBEA38A8F049EAB519570373DD5871A0520A85611A3E38B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Picard/H1/Tate realization -> original Gamma1 inertia on invertible Picard torsion.",
+  "discharged": [
+    "The same actual original Gamma1 constant reduction is decomposition-equivariant on places and injective on every invertible Picard torsion group.",
+    "Arithmetic inertia fixes the actual specialization of places, hence Picard classes after reduction.",
+    "Coordinate-degree and genus preservation therefore imply inertia triviality on the actual original Gamma1 Picard torsion and its Tate representation, for every invertible Tate prime."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual original Gamma1 coordinate-degree equality and genus preservation remain. Hecke norm/place/Picard compatibility and the geometric Frobenius characteristic relation remain, as do parabolic and coefficient realization, original all-weight two-dimensional association, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "3C3288118AEF32658CDEA5E208D51FBD8133FF36FEC3434D1631E3BC5317673A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

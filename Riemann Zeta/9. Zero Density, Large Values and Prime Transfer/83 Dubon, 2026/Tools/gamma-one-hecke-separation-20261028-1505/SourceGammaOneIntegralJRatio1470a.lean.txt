@@ -1,0 +1,64 @@
+import Dubon2026.SourceGammaOneJCoordinate
+
+/-! DUB-17/18 -> original Gamma1 good reduction -> integral-ratio degree
+comparison. The original j is a same-weight integral modular-form ratio over
+every residue characteristic. Reuse the original E4 and discriminant expansions
+and the integral eta-unit identity; no new modular form or j normalization is
+introduced. This identifies the base field for the new residue inclusion. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups
+
+private theorem integral_j_ratio (K : Type*) [Field K] :
+    intSeriesC K (PowerSeries.X * dedekindEtaUnit) ≠ 0 ∧
+      jqModC K = intSeriesC K (eisenstein4 ^ 3) /
+        intSeriesC K (PowerSeries.X * dedekindEtaUnit) := by
+  let t : PowerSeries ℤ →+* LaurentSeries K :=
+    (HahnSeries.ofPowerSeries ℤ K).comp (PowerSeries.map (Int.castRingHom K))
+  have ht (p : PowerSeries ℤ) : t p = intSeriesC K p := rfl
+  have hx : t PowerSeries.X = HahnSeries.single (1 : ℤ) (1 : K) := by
+    simp [t]
+  have hu : t dedekindEtaUnit * t dedekindEtaUnitInv = 1 := by
+    rw [← map_mul, dedekindEtaUnit_mul_inv, map_one]
+  have hu0 : t dedekindEtaUnit ≠ 0 := left_ne_zero_of_mul_eq_one hu
+  have hx0 : t PowerSeries.X ≠ 0 := by
+    rw [hx]
+    exact HahnSeries.single_ne_zero.mpr one_ne_zero
+  have hd : t (PowerSeries.X * dedekindEtaUnit) ≠ 0 := by
+    rw [map_mul]
+    exact mul_ne_zero hx0 hu0
+  refine ⟨hd, (eq_div_iff hd).mpr ?_⟩
+  change (HahnSeries.single (-1 : ℤ) (1 : K) * t jNum) *
+    t (PowerSeries.X * dedekindEtaUnit) = t (eisenstein4 ^ 3)
+  rw [jNum, map_mul, map_mul, hx]
+  calc
+    _ = (HahnSeries.single (-1 : ℤ) (1 : K) * HahnSeries.single (1 : ℤ) (1 : K)) *
+        t (eisenstein4 ^ 3) * (t dedekindEtaUnit * t dedekindEtaUnitInv) := by ring
+    _ = t (eisenstein4 ^ 3) := by
+      rw [hu, mul_one, HahnSeries.single_mul_single]
+      norm_num
+
+theorem jqModC_mem_integralRatioField (K : Type*) [Field K]
+    (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) :
+    jqModC K ∈ qExpFunctionFieldC K Γ := by
+  let f : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 12 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ Γ)
+      ((ModularForm.E₄.pow 3).mcast (by norm_num))
+  let g : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 12 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ Γ)
+      (CuspForm.discriminant : ModularForm 𝒮ℒ 12)
+  have hf : IsIntegralQExp f (eisenstein4 ^ 3) := by
+    change (eisenstein4 ^ 3).map (Int.castRingHom ℂ) =
+      qExpansion 1 ((((ModularForm.E₄.pow 3).mcast (by norm_num)) : ModularForm 𝒮ℒ 12) : ℍ → ℂ)
+    rw [ModularForm.qExpansion_mcast,
+      ModularForm.qExpansion_pow one_pos one_mem_strictPeriods_SL,
+      qExpansion_E4_eq_map_eisenstein4, map_pow]
+  have hg : IsIntegralQExp g (PowerSeries.X * dedekindEtaUnit) :=
+    qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.symm
+  obtain ⟨hd, hj⟩ := integral_j_ratio K
+  rw [hj]
+  exact div_mem_qExpFunctionFieldC f g hf hg hd
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

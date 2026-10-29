@@ -1,0 +1,12 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "IsIntegralClosure actual injectivity and elementwise integral/image criterion",
+    "IsIntegralClosure.equiv R A B A' and literal algebraMap compatibility",
+    "Algebra.FormallyUnramified.of_equiv"
+  ],
+  "scope": "The actual unramified-compositum theorem still needs specialization to the canonical localized integer rings and original number-field compositum, followed by the directed-union arithmetic Galois realization and finite-subextension descent. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionLog": "compositumClosure1554-focus.log"
+}

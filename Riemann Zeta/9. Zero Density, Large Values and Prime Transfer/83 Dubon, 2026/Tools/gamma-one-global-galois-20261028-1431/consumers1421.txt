@@ -1,0 +1,67 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G ι R : Type*) [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateMatrix_generators_adjoin`. -/
+theorem actual_coordinate_cotangent_representationCoordinateMatrix_generators_adjoin_source (S : Set G)
+    (hS : Submonoid.closure S = ⊤) :
+    Algebra.adjoin R (Set.range (fun t : S × ι × ι =>
+      representationCoordinateMatrix G ι R t.1.val t.2.1 t.2.2)) = ⊤ :=
+  representationCoordinateMatrix_generators_adjoin G ι R S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateAlgebra_isNoetherian_of_fg`. -/
+theorem actual_coordinate_cotangent_representationCoordinateAlgebra_isNoetherian_of_fg_source [Group.FG G] [IsNoetherianRing R] :
+    IsNoetherianRing (RepresentationCoordinateAlgebra G ι R) :=
+  representationCoordinateAlgebra_isNoetherian_of_fg 
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateCotangentCocycleEquiv_surjective`. -/
+theorem actual_coordinate_cotangent_representationCoordinateCotangentCocycleEquiv_surjective_source
+    (ρ : G →* GeneralLinearGroup ι R) :
+    Function.Surjective (representationCoordinateCotangentCocycleEquiv ρ) :=
+  representationCoordinateCotangentCocycleEquiv_surjective ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinatePointQuotientEquiv_mk`. -/
+theorem actual_coordinate_cotangent_representationCoordinatePointQuotientEquiv_mk_source (ρ : G →* GeneralLinearGroup ι R)
+    (x : RepresentationCoordinateAlgebra G ι R) :
+    representationCoordinatePointQuotientEquiv ρ
+      (Ideal.Quotient.mk (representationCoordinatePointIdeal ρ) x) =
+        representationCoordinateEvaluation (R := R) ρ x :=
+  representationCoordinatePointQuotientEquiv_mk ρ x
+
+end
+

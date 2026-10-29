@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {O R A : Type*} [CommRing O] [IsLocalRing O]
+  [CommRing R] [IsLocalRing R] [Algebra O R] [TopologicalSpace R] [IsTopologicalRing R]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [TopologicalSpace A]
+
+/-- Exact original-object consumer of `originalLocalQuotientCoefficientFiberEquiv_bijective`. -/
+theorem actual_local_quotient_coefficient_fibers_originalLocalQuotientCoefficientFiberEquiv_bijective_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (J : Ideal R) [IsLocalRing (R ⧸ J)] :
+    Function.Bijective (originalLocalQuotientCoefficientFiberEquiv eR eA J) :=
+  originalLocalQuotientCoefficientFiberEquiv_bijective eR eA J
+
+end
+

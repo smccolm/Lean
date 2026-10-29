@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-10-29T05:22:22.998771+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> actual finite homogeneous Gamma1 Hecke-character realization -> original degree/genus preservation -> reduced field action -> uniform level-power slash integrality -> even-weight trace with a constructed actual peaked auxiliary.",
+  "discharged": "The even-weight trace argument constructs the actual level-one trace, its exact Fourier decomposition and the decay/coefficient extraction, leaving only the stated peaked-auxiliary input. Original integral ratios admit even-weight numerator/denominator representatives in the same field. The new auxiliary-existence theorem constructs that real Gamma1 modular form for every level at least two, with weight divisible by twelve, strict weight/leading-order gap, integral level-cleared width-one and slash-S expansions, nonzero leading coefficient, level-cleared leading inverse and separated cusp decay. The actual separating exponent family, literal Siegel holomorphy and transformation laws, exact integral single-factor and finite-product expansions, discriminant adjustment and all cusp estimates are proved. Native theta/eta, Taylor convergence, q-series multiplication, integral discriminant, sparse reindexing, strict periods and coefficient width change are reused. No auxiliary-existence, coefficient-integrality or cusp-decay certificate is assumed in the final construction.",
+  "remaining": "The constructed auxiliary must still be applied to the even-weight trace theorem on the correct conjugate subgroup. Uniform level-power slash integrality, the action on every reduced rational relation, the signed-index lower bound and original degree/genus preservation remain open. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The arithmetic transfer still retains 3<p and the fixed exceptional-prime exclusion. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "route": "The updated reuse search selects the pinned original Gamma1 degree/genus route and proves only its required dependencies. Even-weight ratios avoid an unnecessary odd-weight auxiliary branch. Native locally uniform convergence and Taylor expansion replace the candidate general formal-product/majorant machinery. Explicit coefficients avoid a chosen dummy series at the zero residue pair. Scaling the separating exponents by N makes infinity-order divisibility immediate; a finite absolute-order sum clears every cusp, so native translated coefficient uniqueness replaces the unrestricted negative-order framework. Seven independently audited scratch scopes are promoted together with import qualification only, retaining exact axiom, linter, value-dependency and ownership checks and one sequential foundation/paper verification. Frozen paper, root pins and owner-only BAT remain unchanged.",
+  "receipts": {
+    "integral-trace-revision-1537/source-integral-trace-2-scratch-receipt.json": "038E2FEBD18149725D23DD4FB382FE183C57CA7FBF3FDC469757C11A47687446",
+    "source-peaked-exponent-1-scratch-receipt.json": "774DC98A60414122D01D2C62CB3D0B05C7B1168EE7502E02FD7130BAF9A7D1C0",
+    "source-siegel-function-1-scratch-receipt.json": "5A5A58BC95FA685F88D9AD4F8A6C595C6EEFC403AE633546DC50EE540F6495DA",
+    "source-siegel-expansion-1-scratch-receipt.json": "DEF4A49141C95F193C5F164FF99DAF08403FF9D3BBA6658084D0928528B517A6",
+    "source-siegel-finite-product-1-scratch-receipt.json": "C2DEB2CC4528A5FBC93FF175D4686ED6C59919C0EF52193C4D985CB67E9F9CEC",
+    "source-peaked-modular-form-1-scratch-receipt.json": "C2D3BBC64350DC5F5504DA06EBB26517D4C40B007C0EDE2CFFC3DF88F89D459C",
+    "source-actual-peaked-auxiliary-1-scratch-receipt.json": "398BB7057E69BA7316C3DF874D292FC28CC006AE7E5EDB9C76F97DB729EC887D"
+  },
+  "modules": 86,
+  "queries": 383,
+  "exhaustiveScratchChecks": 786,
+  "proofValueChecks": 444,
+  "scopes": 7,
+  "productionMutation": false
+}

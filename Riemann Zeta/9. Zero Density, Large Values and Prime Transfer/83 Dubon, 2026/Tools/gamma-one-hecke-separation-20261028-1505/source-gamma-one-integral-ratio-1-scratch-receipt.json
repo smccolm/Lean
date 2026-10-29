@@ -1,0 +1,90 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T00:09:23.857509+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneIntegralRatioResidue",
+    "SourceGammaOneIntegralJRatio",
+    "SourceGammaOneResidueRatioDegree",
+    "SourceGammaOneIntegralRatioDegreeAssembly"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue.lean",
+      "sha256": "2A5A378FF819BAD95FDCFBEB6513ABA8E896296DFB21E4ABEBA108AFE62F751B",
+      "oleanSha256": "9316492958181824299E7433635E5302A230A5EA15AB1634279878912B0222A4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue-1480.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue-1480.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralJRatio.lean",
+      "sha256": "9209529C7806B8223DEA8CDA2B5B2EFCD4F9CA633546D7272E6495ECC4ACD579",
+      "oleanSha256": "0E21660E463E87CFDE489ED30BC9B8103478E2BDB83A3C868675EF4F3F4EEC06",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralJRatio-1480.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralJRatio-1480.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueRatioDegree.lean",
+      "sha256": "C27A1D3DE9E86785A7B0A841A0CCEBA655A42DDEB64B0A8841C31D82837B7FCE",
+      "oleanSha256": "CE9EB04BFA1E4AEA4AD2E54932CA066B685FDEACF370B8DFA8302F51CAE7A070",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueRatioDegree-1480.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueRatioDegree-1480.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioDegreeAssembly.lean",
+      "sha256": "F219FED72EC1595724D06AC09819001C105EBCD7AE9D8D76741C336308DDF5F4",
+      "oleanSha256": "EE2C8412794897B16583D0F5EB43DDCF92F93B53BFD97873E4517B9F73885109",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioDegreeAssembly-1480.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioDegreeAssembly-1480.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioAudit1.log",
+  "logSha256": "20B33BC2EA036EABAF9D1CF6254D70DF175B003B42547E7E757D21956ADB66C8",
+  "auditSha256": "09B0286FCECAE6D89AB11968D8C127A17F01170EAAC77E77508A5A69D05E9777",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioScratchOwnership1481.log",
+  "ownershipSha256": "AB0199B3558E04BDD6DC4FDF3481EE9B2455B84758F957248EBC3DF0E202A42D",
+  "exhaustiveTheorems": 12,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioDependencyAudit1.log",
+  "dependencyAuditSha256": "93C58D22AB28BFCE07CD5704767A381445FE54F5B37A067CD58CDCB063C3E214",
+  "dependencyAuditSourceSha256": "D13474E477CBE177882C60D657DDCD1B6F8E02D562CF56C574AAFA0B5DBD0FE5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius arithmetic realization -> exact coordinate-degree and genus preservation -> original integral-ratio and actual residue-field comparison.",
+  "discharged": [
+    "Every residue-characteristic integral modular-form ratio belongs to the actual native residue image.",
+    "The original j belongs to that integral-ratio field in every residue characteristic.",
+    "Its coordinate degree is bounded by the actual residue degree and then by the original characteristic-zero degree.",
+    "The precise external signed-index lower bound implies native degree preservation and equality of the actual residue image with the residue integral-ratio field."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The signed-index lower bound is not yet proved natively; its integral Eisenstein and integral-slash route is being adapted. Genus preservation, exact integral parabolic transfer, the required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-ratio-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "8BB393B561327C57FCCB6F52FD5782CE46F6338A2BE9DD4B53C27C8CB828DB26",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

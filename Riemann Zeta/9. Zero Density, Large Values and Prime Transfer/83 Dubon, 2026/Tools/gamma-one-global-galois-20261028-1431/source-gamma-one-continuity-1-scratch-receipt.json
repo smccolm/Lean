@@ -1,0 +1,145 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T21:20:17.131154+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneFunctionFieldDefinition",
+    "SourceGammaOneFinitePlaceOrbit",
+    "SourceGammaOnePlaceFieldDefinition",
+    "SourceGammaOnePicardFieldDefinition",
+    "SourceGammaOneTateOpenCongruence",
+    "SourceGammaOneFiniteTateDual",
+    "SourceGammaOneTwistedCongruence",
+    "SourceGammaOneTwistedContinuity",
+    "SourceGammaOneTwistedFiniteFactor"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition.lean",
+      "sha256": "41924ADD40B7BE5CA8A92611868E8CC7B0129620EC54441E60EB2725D30D666D",
+      "oleanSha256": "BE25144312F74056399BA9D3C57B5C3710DFDFC789D30912E5F1CEF8B4B10623",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDefinition-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit.lean",
+      "sha256": "884437A8B8C8E58C3B2A5F0EBC20FC3C68E4AA4BDED2FAAEAF5A8F69B8FFA1BF",
+      "oleanSha256": "064522800A7FD3954D3C5E09809CE0EDBF8CC82BBB936FB4F18AD07DBFE8CA7B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceOrbit-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition.lean",
+      "sha256": "3F2E4312BD0A2CABC9BE1DEF2B94830474E478502A1135DB6AD79CC682CF6306",
+      "oleanSha256": "E458CB7D45B6A6C416B221F978FF2EABD2B21A4CC11EC21A4BE96CADC2561537",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceFieldDefinition-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition.lean",
+      "sha256": "F7E2E7F416D8C3FEE3562E361694B6860663AAE31C4970BA6F9CCFA3B83F4FFD",
+      "oleanSha256": "87FAA97362CA65169F88C39EDA4850B3E4887F09138F7718F8EE40E10F357AF6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFieldDefinition-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence.lean",
+      "sha256": "ADC49A170E6610B4F368942A1E842A44E1C909A0BD846C29BDC8031D4D23A3D3",
+      "oleanSha256": "AF5E808F73373BC8D9760B613B5F564AFB43E9000894604FD02EAEDFDEE240D0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateOpenCongruence-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual.lean",
+      "sha256": "485C4602435526997C5466FEC262F5434616242916A5C797EE7B9FDEBD5CC7D4",
+      "oleanSha256": "4BCCE191FF2A1041CF042A0D071E2F916E954659E38CD74E4EDB23E6F49EF5D2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteTateDual-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence.lean",
+      "sha256": "99D7B91EBF1F960B8DB2DBF6F3F9E0D2FF9EA3F9A9D1DC1ABBA706BE83964CDB",
+      "oleanSha256": "07FF804660E80A1FAC88C2A333431E8D89259DEC1CBD5A20DCB706A87F56142F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedCongruence-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity.lean",
+      "sha256": "18768A4FA1129A857CF0BEC2393A9D11EB2FCC3370224812F1B9EA9F1EEB97AD",
+      "oleanSha256": "31B0A4CB9F237B5EAC0838625B4F69F4E708BCA736418B189AF1ACA7910F568F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedContinuity-1422.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor.lean",
+      "sha256": "344FE3DB311CF975D05F243CA3861124D58BCB16DAC7B1AABB8F5CF37AF82B86",
+      "oleanSha256": "1A393E9E0B7E48B1492E852B917228140A2A4AB95F512B2591B150F77AB75A70",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor-1422.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedFiniteFactor-1422.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_function_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_place_galois_orbit_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_place_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_picard_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOnePicard_isOpen_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGalois_congruence_isOpen",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGalois_uniform_congruence_isOpen",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateDual_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateDual_eq_of_proj_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_eq_one_of_congruence",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_faithful_finite_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOnePicardArithmeticAction"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_function_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_place_galois_orbit_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_place_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_picard_fieldOfDefinition",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOnePicard_isOpen_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGalois_congruence_isOpen",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGalois_uniform_congruence_isOpen",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateDual_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateDual_eq_of_proj_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_eq_one_of_congruence",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_continuous",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_faithful_finite_factor"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOnePicardArithmeticAction"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityAudit1.log",
+  "logSha256": "7EC9CE8974CFCECCE316A3B391E908593E3FE98655AB69AF96B679452C3DCF5D",
+  "auditSha256": "16891CF08CF03ED396C908014FD7A38FEE483A28905B81A6D7B5B8C4AAC29254",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityScratchOwnership1423.log",
+  "ownershipSha256": "476CA77815B67C6940CB21990EAFEE4208E25E96C1A7B16B1E41DE263EB725F5",
+  "exhaustiveTheorems": 43,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 27,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneContinuityDependencyAudit1.log",
+  "dependencyAuditSha256": "4BBF7D48CB3E0E48F8ADF2CCAF2DB999AAC979145F18989153B2CF8CE336DBDF",
+  "dependencyAuditSourceSha256": "316E7EE28D9A11838B3BF1D4F5BBFA1DFC3FD062350256E1E1C7710C19427474",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_faithful_finite_factor",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateDual_finite"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Hecke-character realization -> continuity of the genuine Gamma1 cyclotomic/Tate Galois action.",
+  "discharged": [
+    "Derive finite fields of definition for the exact Gamma1 functions, places and Picard classes; hence their actual stabilizers are open.",
+    "Reuse the exact Tate projection kernel and original period basis to obtain open uniform congruences.",
+    "Prove finiteness of the actual homogeneous-valued Tate dual and its factorization through the indicated torsion coordinate.",
+    "Derive continuity of its genuine global Galois action and apply the native faithful finite fixed-field theorem. No geometric degree/genus assumption is needed for these continuity conclusions."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The original coordinate-degree and genus equalities remain for inertia/Frobenius. Original parabolic character transfer/nonvanishing, exceptional coefficient primes, two-dimensional all-weight arithmetic association, automorphy and literal higher continuation remain. Faithful finite Galois factorization is proved; prescribed unramified arithmetic descent is not yet claimed. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-continuity-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "8A6B25E48DD91E02A53F89466EDE1A7F18FB33571E70F08FEB083F22823A9682",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

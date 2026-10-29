@@ -1,0 +1,66 @@
+import Dubon2026.SourceSiegelStableCoefficients
+import Mathlib.Data.ZMod.Basic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> integral Siegel expansion.
+Use the exact two residue-selected linear factors of the source product.
+The direct bound by 3*norm(x) supplies the local-uniform/Taylor route,
+avoiding the candidate's auxiliary coefficient-majorant polynomial theory.
+The polynomial definition and finite coefficient identities are adapted
+from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Polynomial
+
+/-- The literal residue-selected linear factors of the normalized Siegel product. -/
+def Pc (N : ℕ) (r : ℕ) (u v : ℂ) (k : ℕ) : ℂ[X] :=
+  (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then 1 - C u * X else 1) *
+    (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then 1 - C v * X else 1)
+
+theorem Pc_coeff_zero (N r : ℕ) (u v : ℂ) (k : ℕ) : (Pc N r u v k).coeff 0 = 1 := by
+  unfold Pc
+  split_ifs <;> simp [Polynomial.coeff_one, Polynomial.mul_coeff_zero]
+
+theorem Pc_eval (N r : ℕ) (u v : ℂ) (k : ℕ) (x : ℂ) :
+    (Pc N r u v k).eval x =
+      (if ((k + 1 : ℕ) : ZMod N) = (r : ZMod N) then 1 - u * x else 1) *
+        (if ((k + 1 : ℕ) : ZMod N) = -(r : ZMod N) then 1 - v * x else 1) := by
+  unfold Pc
+  split_ifs <;> simp
+
+theorem norm_two_linear_factors_sub_one_le
+    {u v x : ℂ} (hu : ‖u‖ ≤ 1) (hv : ‖v‖ ≤ 1) (hx : ‖x‖ ≤ 1) :
+    ‖(1 - u * x) * (1 - v * x) - 1‖ ≤ 3 * ‖x‖ := by
+  have hu' : ‖u * x‖ ≤ ‖x‖ := by
+    rw [norm_mul]
+    exact mul_le_of_le_one_left (norm_nonneg _) hu
+  have hv' : ‖v * x‖ ≤ ‖x‖ := by
+    rw [norm_mul]
+    exact mul_le_of_le_one_left (norm_nonneg _) hv
+  calc
+    _ = ‖(u * x) * (v * x) - u * x - v * x‖ := by congr 1; ring
+    _ ≤ ‖(u * x) * (v * x)‖ + ‖u * x‖ + ‖v * x‖ :=
+      (norm_sub_le _ _).trans (add_le_add (norm_sub_le _ _) le_rfl)
+    _ ≤ ‖x‖ * ‖x‖ + ‖x‖ + ‖x‖ := by
+      rw [norm_mul]
+      exact add_le_add (add_le_add
+        (mul_le_mul hu' hv' (norm_nonneg _) (norm_nonneg _)) hu') hv'
+    _ ≤ 3 * ‖x‖ := by nlinarith [norm_nonneg x]
+
+theorem Pc_norm_bound (N r : ℕ) {u v : ℂ}
+    (hu : ‖u‖ ≤ 1) (hv : ‖v‖ ≤ 1) (k : ℕ) (x : ℂ) (hx : ‖x‖ ≤ 1) :
+    ‖(Pc N r u v k).eval x - 1‖ ≤ 3 * ‖x‖ := by
+  rw [Pc_eval]
+  split_ifs
+  · exact norm_two_linear_factors_sub_one_le hu hv hx
+  · simpa only [zero_mul, sub_zero] using
+      norm_two_linear_factors_sub_one_le (u := u) (v := 0) hu (by simp) hx
+  · simpa only [zero_mul, sub_zero] using
+      norm_two_linear_factors_sub_one_le (u := 0) (v := v) (by simp) hv hx
+  · simp only [mul_one, sub_self, norm_zero]
+    positivity
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

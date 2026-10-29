@@ -1,0 +1,62 @@
+import Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+import Dubon2026.SourceGammaOneHeckeGauss
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> Gauss-integral Hecke
+norm reduction. Actual Gauss integrality supplies fractions of integral
+Laurent series with nonzero reduced denominator. The existing two-input
+diamond product works on numerator and denominator separately; its reduced
+denominator stays nonzero. This is the precise fraction calculation needed
+to consume diamond preservation without assuming coefficientwise integrality. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.HeckeNorm
+noncomputable section
+open GaussReduction
+variable {L : Type*} [Field L] (A : ValuationSubring L) (p : ℕ) [Fact p.Prime]
+local notation "kk" => IsLocalRing.ResidueField A
+
+theorem diamondLaurentProduct_coeffMap (ζ : Lˣ) (hζ : IsPrimitiveRoot (ζ : L) p)
+    (u y : LaurentSeries A) :
+    ι A (diamondLaurentProduct A p hζ u y) =
+      (∏ b ∈ Finset.range p, qTwist (ζ ^ b) (ι A u)) *
+        qExpand L p (qExpand L p (ι A y)) := by
+  have hunit : Units.map A.subtype.toMonoidHom (primeRootValuationUnit A p hζ) = ζ := by
+    apply Units.ext
+    exact primeRootValuationUnit_coe A p hζ
+  change coeffMap A.subtype (diamondLaurentProduct A p hζ u y) = _
+  rw [diamondLaurentProduct, map_mul, map_prod, coeffMap_qExpand, coeffMap_qExpand]
+  congr 1
+  apply Finset.prod_congr rfl
+  intro b _
+  rw [coeffMap_qTwist_commRing, map_pow, hunit]
+
+theorem exists_diamond_fraction_product_witness [CharP kk p]
+    (ζ : Lˣ) (hζ : IsPrimitiveRoot (ζ : L) p)
+    (u y n : LaurentSeries L)
+    (hprod : qExpand L p n =
+      (∏ b ∈ Finset.range p, qTwist (ζ ^ b) u) * qExpand L p (qExpand L p y))
+    (ua ub ya yb : LaurentSeries A) (hub : ϖ A ub ≠ 0) (hyb : ϖ A yb ≠ 0)
+    (hu : u * ι A ub = ι A ua) (hy : y * ι A yb = ι A ya) :
+    ∃ a b : LaurentSeries A, ϖ A b ≠ 0 ∧ qExpand L p n * ι A b = ι A a ∧
+      ϖ A a / ϖ A b = qExpand kk p
+        (coeffMap (frobenius kk p) (ϖ A ua / ϖ A ub) *
+          qExpand kk p (ϖ A ya / ϖ A yb)) := by
+  classical
+  let a := diamondLaurentProduct A p hζ ua ya
+  let b := diamondLaurentProduct A p hζ ub yb
+  have hb : ϖ A b ≠ 0 := by
+    change coeffMap (IsLocalRing.residue A) (diamondLaurentProduct A p hζ ub yb) ≠ 0
+    rw [diamondLaurentProduct_residue]
+    exact (map_ne_zero _).mpr (mul_ne_zero ((map_ne_zero _).mpr hub) ((map_ne_zero _).mpr hyb))
+  refine ⟨a, b, hb, ?_, ?_⟩
+  · change qExpand L p n * ι A (diamondLaurentProduct A p hζ ub yb) =
+      ι A (diamondLaurentProduct A p hζ ua ya)
+    rw [diamondLaurentProduct_coeffMap A p ζ hζ, diamondLaurentProduct_coeffMap A p ζ hζ,
+      hprod, ← hu, ← hy]
+    simp only [map_mul, Finset.prod_mul_distrib]
+    ring
+  · change coeffMap (IsLocalRing.residue A) (diamondLaurentProduct A p hζ ua ya) /
+      coeffMap (IsLocalRing.residue A) (diamondLaurentProduct A p hζ ub yb) = _
+    rw [diamondLaurentProduct_residue, diamondLaurentProduct_residue]
+    simp only [map_div₀, map_mul, mul_div_mul_comm]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.HeckeNorm

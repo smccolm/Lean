@@ -1,0 +1,15 @@
+### Original determinant family, tensor extension and continuous characteristic coefficients — 8 October 2026
+
+Nine further production modules extend each actual matrix representation to its genuine group algebra and take the literal matrix determinant. Entrywise coefficient maps commute with this original action and determinant. The resulting family is natural under every further coefficient homomorphism, multiplicative, normalized and homogeneous of the actual representation dimension over every coefficient extension. For arbitrary groups, including noncommutative groups, an algebra isomorphism identifies the literal scalar-extended group algebra with the group algebra over the extended ring; it is derived from the original tensor and group bases. The determinant on that literal tensor extension has the exact simple-tensor formula and degree on every tensor; both the tensor identification and its determinant family are natural under every coefficient-algebra homomorphism. The genuine homogeneous symmetric-power representation therefore gives a determinant family of degree n+1, with exact reduction before or after symmetric powers. Evaluating the actual family on X-g is proved equal to the characteristic polynomial of the original group matrix, and this polynomial annihilates that matrix by the existing audited Cayley-Hamilton theorem. No matrix action, coefficient compatibility, determinant identity or tensor equivalence is assumed. Every original characteristic coefficient is the evaluation of an actual universal polynomial in the matrix entries and hence is continuous over any topological coefficient ring. Thus the determinant families of every original continuous representation and its genuine symmetric powers have continuous characteristic coefficients.
+
+These results construct the representation-to-determinant family and its original-object identities. They do not construct the Galois representation associated to the original cusp form, represent a pseudodeformation functor, or prove automorphy lifting. Higher symmetric automorphic lifts and analytic continuation remain open, as do unconditional Deligne, non-CM Sato-Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [ContinuousRepresentationDeterminant](Extension/Dubon2026/ContinuousRepresentationDeterminant.lean).
+- [DeterminantCharacteristicPolynomial](Extension/Dubon2026/DeterminantCharacteristicPolynomial.lean).
+- [DeterminantCoefficientLaw](Extension/Dubon2026/DeterminantCoefficientLaw.lean).
+- [GroupAlgebraMatrix](Extension/Dubon2026/GroupAlgebraMatrix.lean).
+- [GroupAlgebraScalarExtension](Extension/Dubon2026/GroupAlgebraScalarExtension.lean).
+- [MatrixCharacteristicContinuity](Extension/Dubon2026/MatrixCharacteristicContinuity.lean).
+- [MatrixRepresentationDeterminant](Extension/Dubon2026/MatrixRepresentationDeterminant.lean).
+- [MatrixTensorDeterminant](Extension/Dubon2026/MatrixTensorDeterminant.lean).
+- [SymmetricDeterminantLaw](Extension/Dubon2026/SymmetricDeterminantLaw.lean).

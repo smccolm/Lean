@@ -1,0 +1,61 @@
+import SourceGammaOneDiamondQuotientTransfer
+import Dubon2026.SourceParabolicCongruenceException
+
+/-! DUB-17/18 -> original all-weight association -> finite original
+Hecke-character realization. The original parabolic congruence theorem
+and the actual descended transfer show that the diamond quotient is
+nonzero whenever the separately identified parabolic-preimage input
+holds, away from the original fixed exceptional integer. Nonvanishing
+is derived from the original form's unital adic character, not assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+open scoped ValuativeRel
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+theorem binaryDiamondQuotient_nontrivial_of_transfer_away
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (hcop : IsCoprime (p : ℤ) (sourcePrimitiveParabolicExceptionalInteger f hk))
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q N w) :
+    Nontrivial ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w) := by
+  classical
+  by_contra hn
+  letI : Subsingleton ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w) :=
+    not_nontrivial_iff_subsingleton.mp hn
+  have hred (x : H1 (sourceBinaryCoefficientRep ℤ Q w))
+      (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w)) :
+      sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w x = 0 := by
+    have hs := binaryDiamondQuotientOriginalTransfer_parabolic_preimage Q p n w hlarge
+    have h1 := hs hlift
+    have h2 := h1 x
+    obtain ⟨z, hz⟩ := h2 hx
+    exact hz.symm.trans ((congrArg (binaryDiamondQuotientOriginalTransfer Q p n w hlarge)
+      (Subsingleton.elim z 0)).trans (map_zero _))
+  have hs := sourcePrimitiveParabolicH1AdicQuotientCharacter_zero f hk τ p Fact.out hcop n
+    (1 : sourceBinaryH1HeckeAlgebra Q w)
+  have hzero := hs (fun x hx => hred x hx)
+  have he : (1 : 𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1)) = 0 := by
+    simpa only [map_one] using hzero
+  have htop := (Ideal.Quotient.zero_eq_one_iff).mp he.symm
+  have hle : (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1) ≤ IsLocalRing.maximalIdeal 𝒪[E] :=
+    Ideal.pow_le_self (Nat.succ_ne_zero n)
+  rw [htop] at hle
+  exact (inferInstance : (IsLocalRing.maximalIdeal 𝒪[E]).IsMaximal).ne_top (top_unique hle)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

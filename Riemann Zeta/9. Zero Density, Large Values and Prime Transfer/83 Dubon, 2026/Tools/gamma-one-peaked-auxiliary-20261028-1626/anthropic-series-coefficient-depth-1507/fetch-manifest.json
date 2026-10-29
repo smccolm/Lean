@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-10-29T00:39:04.570722+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-series-coefficient-depth-1507\\S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean",
+      "sha256": "ECEC19F38C19F56140BFB0DDF6BFA476D11E80513C6D0FA4601CE31EEB1FA8F8",
+      "bytes": 1876
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

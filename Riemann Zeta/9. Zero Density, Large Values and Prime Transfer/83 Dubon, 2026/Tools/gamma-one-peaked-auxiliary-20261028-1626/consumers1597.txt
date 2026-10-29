@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type} [Fintype ι] [DecidableEq ι] [Field K] [Finite K]
+  [TopologicalSpace K] [DiscreteTopology K]
+
+/-- Exact original-object consumer of `arithmeticContinuousAdjointH1_finiteDimensional`. -/
+theorem actual_arithmetic_continuous_adjoint_finite_arithmeticContinuousAdjointH1_finiteDimensional_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP K p]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι K) (hρ : Continuous ρ) :
+    Module.Finite K (ContinuousMatrixAdjointH1 ρ hρ) :=
+  arithmeticContinuousAdjointH1_finiteDimensional a ha p hp hpa ρ hρ
+
+end
+

@@ -1,0 +1,70 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeMixedLaurentReduction",
+    "SourceGammaOneHeckeIntegralDiamondReduction"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product",
+    "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe",
+    "Dubon2026.SourceFunctionField.primeRootValuationUnit_residue",
+    "Dubon2026.SourceFunctionField.qExpand_heckeLaurentUnexpand",
+    "Dubon2026.SourceFunctionField.pow_char_eq_coeffMap_frobenius_qExpand",
+    "Dubon2026.SourceFunctionField.qExpand_injective"
+  ],
+  "localModules": [
+    "SourceGammaOnePrimeHeckeIndex",
+    "SourceGammaOneSignedHeckeIndex",
+    "SourceGammaOneHeckeCoordinateDegree",
+    "SourceGammaOneHeckePrimeDegree",
+    "SourceGammaOneCoprimeGeneration",
+    "SourceGammaOneAdjacentJRatio",
+    "SourceGammaOneRealizationRestriction",
+    "SourceGammaOneAdjacentJNonmembership",
+    "SourceGammaOneAdjacentJGeneration",
+    "SourceGammaOneAdjacentJPolynomial",
+    "SourceGammaOneAdjacentJEmbedding",
+    "SourceGammaOneAdjacentJPreservation",
+    "SourceGammaOneAdjacentJAutomorphism",
+    "SourceGammaOneAdjacentJCoefficients",
+    "SourceGammaOneHeckeNormEmbeddings",
+    "SourceGammaOneHeckeEmbeddingCensus",
+    "SourceGammaOneHeckeNormProduct",
+    "SourceGammaOneAdjacentJDiamondMatrix",
+    "SourceGammaOneAdjacentJDiamondAction",
+    "SourceGammaOneRationalAnalyticGerms",
+    "SourceGammaOneUpperHalfPlaneHeckeGerms",
+    "SourceGammaOneAdjacentJAnalyticAction",
+    "SourceGammaOneUpperHalfPlaneGermFaithfulness",
+    "SourceGammaOneAdjacentJReverseDiamond",
+    "SourceGammaOneAdjacentJArithmeticDiamond",
+    "SourceGammaOneHeckeDiamondNorm",
+    "SourceGammaOneHeckeMixedLaurentReduction",
+    "SourceGammaOneHeckeIntegralDiamondReduction"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneHeckeMixedLaurentReduction": "SourceGammaOneHeckeMixedLaurentReduction1322a",
+    "SourceGammaOneHeckeIntegralDiamondReduction": "SourceGammaOneHeckeIntegralDiamondReduction1323c"
+  }
+}

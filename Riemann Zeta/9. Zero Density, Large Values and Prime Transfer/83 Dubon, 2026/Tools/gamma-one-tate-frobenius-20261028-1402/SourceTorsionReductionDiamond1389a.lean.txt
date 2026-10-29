@@ -1,0 +1,18 @@
+import Mathlib.Algebra.Group.Hom.Defs
+
+/-! DUB-17/18 -> original Gamma1 Frobenius -> transport of the actual
+torsion correspondence through an equivariant reduction. This calculation
+is consumed by the original norm and specialization proofs. It separates
+finite additive algebra from the large concrete Picard quotient types. -/
+namespace Dubon2026
+variable {J B : Type*} [AddCommGroup J] [AddCommGroup B]
+
+theorem sourceTorsionReduction_diamond_quadratic
+    (r : J →+ B) (H F D : J →+ J) (C Ci : B →+ B) (p : ℕ) (x : J)
+    (hhecke : r (H (F x)) = C (r (D (F x))) + p • Ci (r (F x)))
+    (he : ∀ y, r (F y) = C (r y)) (hinv : ∀ y, Ci (C y) = y)
+    (hcomm : ∀ y, D (F y) = F (D y)) :
+    r (H (F x)) = r (F (F (D x)) + p • x) := by
+  rw [hhecke, hcomm, he, hinv, map_add, map_nsmul, he]
+
+end Dubon2026

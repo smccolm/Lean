@@ -1,0 +1,115 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedUniversalProfiniteRepresentation_reduction`. -/
+theorem actual_original_residue_uniform_factors_completedUniversalProfiniteRepresentation_reduction_source
+    [T2Space (IsLocalRing.ResidueField O)]
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g) :
+    (GeneralLinearGroup.map (n := ι)
+      (completedResidualRepresentationEvaluation ρ).toRingHom).comp
+        (completedUniversalProfiniteRepresentation ρ).toMonoidHom = σ :=
+  completedUniversalProfiniteRepresentation_reduction ρ σ hσ hσeta
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationRelationIdeal_le_maximal`. -/
+theorem actual_original_residue_uniform_factors_completedPresentationRelationIdeal_le_maximal_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ σ.ker) :
+    completedPresentationRelationIdeal ρ N ≤
+      IsLocalRing.maximalIdeal (ResidualRepresentationCompletion ρ) :=
+  completedPresentationRelationIdeal_le_maximal ρ σ hσ hσeta N hN
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {A : Type*} [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+  [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+  [Finite (IsLocalRing.ResidueField A)]
+
+/-- Exact original-object consumer of `completeLocalAdic_compactSpace`. -/
+theorem actual_original_residue_uniform_factors_completeLocalAdic_compactSpace_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A) : CompactSpace A :=
+  completeLocalAdic_compactSpace hA
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [WithIdeal R] [T2Space R] [CompactSpace R]
+  [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `adicResidualProfiniteKernel_commonKernel_eq_bot`. -/
+theorem actual_original_residue_uniform_factors_adicResidualProfiniteKernel_commonKernel_eq_bot_source
+    (p : ℕ) (hp : p.Prime) (hpI : (p : R) ∈ (WithIdeal.i : Ideal R)) :
+    profiniteProPKernel p (adicResidualProfiniteKernel (R := R) (ι := ι)) = ⊥ :=
+  adicResidualProfiniteKernel_commonKernel_eq_bot p hp hpI
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {ι O A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [IsNoetherianRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalResidual_fixedKernel_le_every_coefficient_lift`. -/
+theorem actual_original_residue_uniform_factors_originalResidual_fixedKernel_le_every_coefficient_lift_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (f : H →* GeneralLinearGroup ι A) (hf : Continuous f)
+    (hres : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp f = σ) :
+    fixedResidualProPKernel p H σ.ker (originalResidualMatrixKernel_isClosed H σ hσ) ≤ f.ker :=
+  originalResidual_fixedKernel_le_every_coefficient_lift hA e p hp H σ hσ f hf hres
+
+end
+

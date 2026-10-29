@@ -1,0 +1,81 @@
+import SourceSiegelFiniteSeriesProducts
+import SourceSiegelProductCoefficients
+import SourceSiegelProductLeadingCoefficient
+import SourceSiegelProductPhases
+import SourceSiegelFiniteProductExpansion
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.prod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.coeff_prod_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.not_dvd_val
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_series_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exp_orderSum_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized_product_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_pow_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.tendsto_productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.rho
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.orderSum
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceSiegelFiniteSeriesProducts, `SourceSiegelProductCoefficients, `SourceSiegelProductLeadingCoefficient, `SourceSiegelProductPhases, `SourceSiegelFiniteProductExpansion]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.mul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.prod, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.coeff_prod_mem, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.not_dvd_val, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries_zero_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_series_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.integral_level_inverse_productSeries_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exp_orderSum_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized_product_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_pow_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.hasSum_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.tendsto_productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.rho, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expo, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.normalized, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.series, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.productSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.orderSum]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE SIEGEL FINITE PRODUCT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceSiegelFiniteSeriesProducts
+#lint in SourceSiegelProductCoefficients
+#lint in SourceSiegelProductLeadingCoefficient
+#lint in SourceSiegelProductPhases
+#lint in SourceSiegelFiniteProductExpansion

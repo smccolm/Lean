@@ -1,0 +1,12 @@
+{
+  "SourcePeakedDiscriminantSeries": "1610b",
+  "SourcePeakedSeriesOperations": "1611b",
+  "SourcePeakedShiftedCoefficients": "1615b",
+  "SourcePeakedShiftedSeries": "1613d",
+  "SourcePeakedWidthOneIdentification": "1617b",
+  "SourcePeakedIntegralQExpansion": "1618b",
+  "SourcePeakedTranslatedIntegralExpansion": "1620a",
+  "SourcePeakedScaledOrders": "1621a",
+  "SourcePeakedOrderGapDecay": "1622a",
+  "SourceActualPeakedAuxiliary": "1623a"
+}

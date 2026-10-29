@@ -1,0 +1,25 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `localizedNumberFieldIntegers_integral_iff`. -/
+theorem actual_localized_integer_integral_closure_localizedNumberFieldIntegers_integral_iff_source
+    (a : 𝓞 K) (ha : a ≠ 0) (Rₐ Sₐ : Type*) [CommRing Rₐ] [CommRing Sₐ]
+    [Algebra (𝓞 K) Rₐ] [Algebra (𝓞 K) Sₐ] [Algebra (𝓞 L) Sₐ]
+    [Algebra Rₐ Sₐ] [IsScalarTower (𝓞 K) (𝓞 L) Sₐ]
+    [IsScalarTower (𝓞 K) Rₐ Sₐ]
+    [IsLocalization.Away a Rₐ]
+    [IsLocalization.Away (algebraMap (𝓞 K) (𝓞 L) a) Sₐ]
+    [Algebra Rₐ L] [Algebra Sₐ L] [IsScalarTower (𝓞 L) Sₐ L]
+    [IsScalarTower Rₐ Sₐ L] (x : L) :
+    IsIntegral Rₐ x ↔ ∃ y : Sₐ, algebraMap Sₐ L y = x :=
+  localizedNumberFieldIntegers_integral_iff a ha Rₐ Sₐ x
+
+end
+

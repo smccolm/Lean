@@ -1,0 +1,72 @@
+import Dubon2026.SourceSiegelProductCoefficients
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> leading unit of the actual
+finite Siegel product. The exact constant coefficient, its nonvanishing and
+its level-cleared inverse are derived from the explicit factor coefficients.
+The zero pair contributes the zeroth power, directly from e(0,0)=0.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion
+noncomputable section
+open Complex Filter Finset Topology
+open scoped Real
+
+theorem not_dvd_val {N : ℕ} [NeZero N] {s : ZMod N} (hs : s ≠ 0) :
+    ¬ (N : ℤ) ∣ (s.val : ℤ) := by
+  intro h
+  apply hs
+  rw [Int.natCast_dvd_natCast] at h
+  rw [← ZMod.val_eq_zero]
+  exact Nat.eq_zero_of_dvd_of_lt h (ZMod.val_lt s)
+
+theorem productSeries_zero_eq (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ) :
+    PowerSeries.coeff 0 (productSeries N e) =
+      ∏ s : ZMod N, (1 - EulerExpansion.zeta N (s.val : ℤ)) ^ (12 * N * e 0 s) := by
+  classical
+  rw [productSeries_zero, Finset.prod_eq_single (0 : ZMod N)]
+  · refine Finset.prod_congr rfl fun s _ => ?_
+    simp [series_zero, exponent]
+  · intro r _ hr
+    exact Finset.prod_eq_one fun s _ => by rw [series_zero, if_neg hr, one_pow]
+  · intro h; exact absurd (Finset.mem_univ _) h
+
+theorem productSeries_zero_ne_zero (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ)
+    (he : e 0 0 = 0) : PowerSeries.coeff 0 (productSeries N e) ≠ 0 := by
+  rw [productSeries_zero_eq, Finset.prod_ne_zero_iff]
+  intro s _
+  by_cases hs : s = 0
+  · subst hs; simp [he]
+  · exact pow_ne_zero _ (sub_ne_zero.mpr
+      (EulerExpansion.zeta_ne_one N (Nat.pos_of_ne_zero (NeZero.ne N)) (s.val : ℤ) (not_dvd_val hs)).symm)
+
+theorem integral_level_inverse_series_zero (N : ℕ) [NeZero N] (r s : ZMod N)
+    (hrs : ¬ (r = 0 ∧ s = 0)) :
+    IsIntegral ℤ ((N : ℂ) * (PowerSeries.coeff 0 (series N r s))⁻¹) := by
+  rw [series, PowerSeries.coeff_mk]
+  refine EulerExpansion.isIntegral_N_mul_inv_coef_zero N (Nat.pos_of_ne_zero (NeZero.ne N))
+    r.val (s.val : ℤ) fun hr => ?_
+  rw [ZMod.val_eq_zero] at hr
+  exact not_dvd_val (fun hs => hrs ⟨hr, hs⟩)
+
+theorem integral_level_inverse_productSeries_zero (N : ℕ) [NeZero N]
+    (e : ZMod N → ZMod N → ℕ) (he : e 0 0 = 0) :
+    IsIntegral ℤ ((N : ℂ) ^ (12 * N * ∑ r : ZMod N, ∑ s : ZMod N, e r s) *
+      (PowerSeries.coeff 0 (productSeries N e))⁻¹) := by
+  classical
+  have hpow : (N : ℂ) ^ (12 * N * ∑ r : ZMod N, ∑ s : ZMod N, e r s) =
+      ∏ r : ZMod N, ∏ s : ZMod N, (N : ℂ) ^ exponent N e r s := by
+    simp only [exponent, Finset.prod_pow_eq_pow_sum, Finset.mul_sum]
+  rw [hpow, productSeries_zero, ← Finset.prod_inv_distrib, ← Finset.prod_mul_distrib]
+  refine IsIntegral.prod _ fun r _ => ?_
+  rw [← Finset.prod_inv_distrib, ← Finset.prod_mul_distrib]
+  refine IsIntegral.prod _ fun s _ => ?_
+  rw [← inv_pow, ← mul_pow]
+  by_cases hrs : r = 0 ∧ s = 0
+  · obtain ⟨rfl, rfl⟩ := hrs
+    simpa only [exponent, he, mul_zero, pow_zero] using (isIntegral_one : IsIntegral ℤ (1 : ℂ))
+  · exact (integral_level_inverse_series_zero N r s hrs).pow _
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion

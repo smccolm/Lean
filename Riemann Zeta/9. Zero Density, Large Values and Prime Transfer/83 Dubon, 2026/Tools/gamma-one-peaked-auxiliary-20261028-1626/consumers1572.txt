@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite`. -/
+theorem actual_rational_arithmetic_galois_group_rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    (H : OpenSubgroup (rationalArithmeticGaloisGroup a)) :
+    Finite (H →ₜ* Multiplicative (ZMod p)) :=
+  rationalArithmeticGaloisGroup_openSubgroup_prime_characters_finite a ha p hp hpa H
+
+end
+

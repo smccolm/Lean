@@ -1,0 +1,12 @@
+{
+  "SourceRationalLocalFrobenius": "1450a",
+  "SourceRationalLocalClosureEmbedding": "1456a",
+  "SourceGammaOneDiamondQuotientLocal": "1449f",
+  "SourceGammaOneDiamondQuotientHeckeFamily": "1454b",
+  "SourceGammaOneDiamondQuotientWords": "1451e",
+  "SourceGammaOneDiamondQuotientWordKernel": "1455b",
+  "SourceGammaOneDiamondQuotientCharacter": "1452c",
+  "SourceGammaOneDiamondQuotientCharacterAssembly": "1457c",
+  "SourceGammaOneDiamondQuotientGaloisHecke": "1458a",
+  "SourceGammaOneDiamondQuotientChosenFrobenius": "1459b"
+}

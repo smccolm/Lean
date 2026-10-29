@@ -1,0 +1,90 @@
+{
+  "recordedUTC": "2026-10-28T21:39:08.789283+00:00",
+  "files": [
+    {
+      "repository": "lana-agents/elliptic-curves",
+      "revision": "e70086a9c442dcfe76152fa03777091c50985d43",
+      "path": "EllipticCurves/Reduction/GoodReductionCriterion.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/EllipticCurves/Reduction/GoodReductionCriterion.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Reduction\\GoodReductionCriterion.lean.txt",
+      "sha256": "3F224844541F534BCED155C0894FB342B5AFC65276D00610442BC36693461B33",
+      "bytes": 19390
+    },
+    {
+      "repository": "lana-agents/elliptic-curves",
+      "revision": "e70086a9c442dcfe76152fa03777091c50985d43",
+      "path": "EllipticCurves/Reduction/NeronOggShafarevich.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/EllipticCurves/Reduction/NeronOggShafarevich.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Reduction\\NeronOggShafarevich.lean.txt",
+      "sha256": "291E8E95962079BB72249DB8AF949533B33C6EEC450936CEB7DECE1D3BA2517A",
+      "bytes": 6579
+    },
+    {
+      "repository": "lana-agents/elliptic-curves",
+      "revision": "e70086a9c442dcfe76152fa03777091c50985d43",
+      "path": "EllipticCurves/Torsion/StructureGeneral.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-curves/e70086a9c442dcfe76152fa03777091c50985d43/EllipticCurves/Torsion/StructureGeneral.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Torsion\\StructureGeneral.lean.txt",
+      "sha256": "2BDA93ED4DC9482FA929DE0D90C6517A564F6097DAE5EC5130EA4ECB84A082EE",
+      "bytes": 16960
+    },
+    {
+      "repository": "lana-agents/elliptic-reduction",
+      "revision": "d33f935cae5cdd3bb58eeb7446d24df0c276cb21",
+      "path": "EllipticReduction/Basic.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/elliptic-reduction/d33f935cae5cdd3bb58eeb7446d24df0c276cb21/EllipticReduction/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-reduction\\EllipticReduction\\Basic.lean.txt",
+      "sha256": "8CECA740CFFBC58F7ABC2B208B4E6C8812B0F31E9AE95C15E04866E40A6ED0DE",
+      "bytes": 343
+    },
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/TateCurve/TateUniformization.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/TateCurve/TateUniformization.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TateUniformization.lean.txt",
+      "sha256": "B76192BC35A24075238CB61F9BE165938C1997662A3A16A813A8F11E49439DE8",
+      "bytes": 5300
+    },
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/TateCurve/WeierstrassIdentity.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/TateCurve/WeierstrassIdentity.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\WeierstrassIdentity.lean.txt",
+      "sha256": "AEC1AAAA03BA255485364B72BB746C14A2A0B1BB27ECDDF682A6A07C66F70A4D",
+      "bytes": 5042
+    },
+    {
+      "repository": "lana-agents/tate-curves-theta",
+      "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+      "path": "TateCurvesTheta/Converse/ReductionType.lean",
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/TateCurvesTheta/Converse/ReductionType.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\Converse\\ReductionType.lean.txt",
+      "sha256": "298517C9D4B9C1E812AE3AECD7E4F46476BBE9D0EA9BBB6C2D99AA8AA1D06057",
+      "bytes": 18833
+    },
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1par_projLineRepSL_equiv_parabolicHoms.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1par_projLineRepSL_equiv_parabolicHoms.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\anthropics--fermats-last-theorem\\P2M\\Sol\\S_HeckeEis_exists_coeffH1par_projLineRepSL_equiv_parabolicHoms.lean.txt",
+      "sha256": "5D19375605B630F11B7C5C43A1BD3EECBE3E231FD23D6E23AE87C6FE94352F19",
+      "bytes": 40546
+    },
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_HeckeEis_exists_modularForm_coeffCocycles_sub_cocycle_mem_coeffParabolicCocycles.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_modularForm_coeffCocycles_sub_cocycle_mem_coeffParabolicCocycles.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\anthropics--fermats-last-theorem\\P2M\\Sol\\S_HeckeEis_exists_modularForm_coeffCocycles_sub_cocycle_mem_coeffParabolicCocycles.lean.txt",
+      "sha256": "1C951542915A7E5BFF4FBE5786F755CC1C9CC66118CA1BE34CD367D757D6A507",
+      "bytes": 26902
+    }
+  ],
+  "inventoryBoundary": "The four new LANA trees are complete. The older Anthropic inventory is truncated: only two explicitly present paths were selected, with no absence inference from that inventory.",
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

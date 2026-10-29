@@ -1,0 +1,1 @@
+Original residual determinant compatibility places every actual determinant relation inside the original coefficient maximal ideal. Thus the literal determinant quotient is nontrivial and local, and its true residue-field equivalence preserves every original coefficient reduction.

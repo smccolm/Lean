@@ -1,0 +1,53 @@
+import Dubon2026.SourceGammaOneTateDiamondRelations
+import Dubon2026.SourceGammaOneDiamondTransfer
+import Dubon2026.SourceGammaOneTransferHecke
+import Dubon2026.SourceGammaOneBinaryDiamondTateH1
+
+/-! DUB-17/18 -> original all-weight association -> finite Hecke-character
+realization. Compose the actual Tate/parabolic-H1 comparison with the
+original cohomology transfer. Its native diamond and Hecke identities
+give a diamond-invariant Hecke-compatible map to the original coefficient
+H1. No parabolic preimage or surjectivity is asserted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+/-- Actual original cohomology transfer after the arithmetic Tate/parabolic comparison. -/
+def binaryTateOriginalTransfer (hlarge : 3 < p) : (T →ₗ[ℤ_[p]] V) →ₗ[ZMod N] H1 V :=
+  (sourceGammaOneConstantH1Transfer Q N w).comp
+    ((binaryParabolicH1 Q N w).subtype.comp (binaryTateH1Equiv Q p n w hlarge).toLinearMap)
+
+theorem binaryTateOriginalTransfer_diamond (hlarge : 3 < p) (g : Gamma0 M)
+    (φ : T →ₗ[ℤ_[p]] V) :
+    binaryTateOriginalTransfer Q p n w hlarge (binaryTateDiamondOperator Q p n w g φ) =
+      binaryTateOriginalTransfer Q p n w hlarge φ := by
+  have h := binaryTateH1Equiv_diamond Q p n w hlarge g
+    (sourceGammaOneBinaryDiamondCoefficient Q N w g) φ
+  exact (congrArg (sourceGammaOneConstantH1Transfer Q N w) h).trans
+    (sourceGammaOneConstantH1Transfer_diamond Q N w g (binaryTateH1Equiv Q p n w hlarge φ).val)
+
+theorem binaryTateOriginalTransfer_hecke (hlarge : 3 < p)
+    (ell : sourceBinaryHeckePrime (Q * N)) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryTateOriginalTransfer Q p n w hlarge (binaryTatePrimeOperators Q p n w ell φ) =
+      sourceBinaryH1PrimeOperators (ZMod N) Q w (sourceGammaOneHeckePrimeForget Q N ell)
+        (binaryTateOriginalTransfer Q p n w hlarge φ) := by
+  letI : NeZero ell.val := ⟨ell.property.1.ne_zero⟩
+  have h := binaryTateH1Equiv_prime Q p n w hlarge ell φ
+  have ht := LinearMap.congr_fun
+    (sourceGammaOneConstantH1Transfer_hecke Q N ell.val w ell.property.1 ell.property.2)
+    (binaryTateH1Equiv Q p n w hlarge φ).val
+  exact (congrArg (sourceGammaOneConstantH1Transfer Q N w) h).trans ht.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

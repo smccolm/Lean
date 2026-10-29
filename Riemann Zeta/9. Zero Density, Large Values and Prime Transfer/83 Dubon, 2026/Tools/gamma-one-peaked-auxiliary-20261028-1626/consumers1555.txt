@@ -1,0 +1,25 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L M Ω : Type*} [Field K] [Field L] [Field M] [Field Ω]
+  [NumberField K] [NumberField L] [NumberField M] [NumberField Ω]
+  [Algebra K L] [Algebra K M] [Algebra K Ω] [Algebra L Ω] [Algebra M Ω]
+  [IsScalarTower K L Ω] [IsScalarTower K M Ω]
+
+/-- Exact original-object consumer of `numberField_unramified_compositum`. -/
+theorem actual_number_field_unramified_compositum_numberField_unramified_compositum_source (a : 𝓞 K) (ha : a ≠ 0)
+    (hL : ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (hM : ∀ w : HeightOneSpectrum (𝓞 M), algebraMap (𝓞 K) (𝓞 M) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (htop : (algebraMap L Ω).fieldRange ⊔ (algebraMap M Ω).fieldRange = ⊤) :
+    ∀ w : HeightOneSpectrum (𝓞 Ω), algebraMap (𝓞 K) (𝓞 Ω) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  numberField_unramified_compositum a ha hL hM htop
+
+end
+

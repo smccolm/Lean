@@ -1,0 +1,199 @@
+import SourceSiegelJacobiFiniteIdentity
+import SourceSiegelJacobiRangeLimit
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> Siegel holomorphy and
+SL2 transformation. Assemble the actual Jacobi theta triple product from
+the proved finite Gaussian identity, native theta-series summability and
+the proved dominated limit. The identity uses Mathlib's original theta
+function and the literal infinite product, without an equality premise.
+Native eta-product convergence replaces the duplicated source proof;
+unused source helper facts are omitted.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_jacobiTheta_two_eq_tprod. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct
+noncomputable section
+open scoped Real
+open Complex Finset Filter Topology
+
+variable (τ : ℂ)
+
+private def q : ℂ := Complex.exp (π * I * τ)
+
+private def Q : ℂ := Complex.exp (2 * π * I * τ)
+
+private def w (z : ℂ) : ℂ := Complex.exp (2 * π * I * z)
+
+private lemma q_sq : q τ ^ 2 = Q τ := by
+  unfold q Q; rw [← Complex.exp_nat_mul]; ring_nf
+
+omit τ in
+private lemma w_ne_zero (z : ℂ) : w z ≠ 0 := Complex.exp_ne_zero _
+
+private lemma q_ne_zero : q τ ≠ 0 := Complex.exp_ne_zero _
+
+private lemma norm_q_lt_one (hτ : 0 < τ.im) : ‖q τ‖ < 1 := by
+  unfold q
+  rw [Complex.norm_exp]
+  have him : (↑π * I * τ).re = -π * τ.im := by
+    simp [Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im,
+          Complex.ofReal_re, Complex.ofReal_im]
+  rw [him]
+  have : (0 : ℝ) < π * τ.im := mul_pos Real.pi_pos hτ
+  exact Real.exp_lt_one_iff.mpr (by linarith)
+
+private lemma norm_Q_lt_one (hτ : 0 < τ.im) : ‖Q τ‖ < 1 := by
+  rw [← q_sq, norm_pow]
+  exact pow_lt_one₀ (norm_nonneg _) (norm_q_lt_one τ hτ) two_ne_zero
+
+section TermRw
+
+private lemma fac1_eq (n : ℕ) :
+    1 - Complex.exp (2 * π * I * (n + 1) * τ) = 1 - Q τ ^ (n + 1) := by
+  unfold Q
+  rw [show (2 * π * I * (↑n + 1) * τ : ℂ) = (↑(n + 1 : ℕ) : ℂ) * (2 * π * I * τ) from by
+        push_cast; ring, Complex.exp_nat_mul]
+
+private lemma fac2_eq (z : ℂ) (n : ℕ) :
+    1 + Complex.exp (π * I * (2 * n + 1) * τ + 2 * π * I * z)
+      = 1 + q τ ^ (2 * n + 1) * w z := by
+  unfold q w
+  rw [show (π * I * (2 * ↑n + 1) * τ + 2 * π * I * z : ℂ)
+        = (↑(2 * n + 1 : ℕ) : ℂ) * (π * I * τ) + (2 * π * I * z) from by push_cast; ring,
+      Complex.exp_add, Complex.exp_nat_mul]
+
+private lemma fac3_eq (z : ℂ) (n : ℕ) :
+    1 + Complex.exp (π * I * (2 * n + 1) * τ - 2 * π * I * z)
+      = 1 + q τ ^ (2 * n + 1) * (w z)⁻¹ := by
+  unfold q w
+  rw [show (π * I * (2 * ↑n + 1) * τ - 2 * π * I * z : ℂ)
+        = (↑(2 * n + 1 : ℕ)) * (π * I * τ) + (-(2 * π * I * z)) by push_cast; ring,
+    Complex.exp_add, Complex.exp_nat_mul, Complex.exp_neg]
+
+private lemma term_eq_qw (z : ℂ) (j : ℤ) :
+    jacobiTheta₂_term j z τ = q τ ^ (j ^ 2) * w z ^ j := by
+  unfold jacobiTheta₂_term q w
+  rw [← Complex.exp_int_mul, ← Complex.exp_int_mul, ← Complex.exp_add]
+  congr 1; push_cast; ring
+
+end TermRw
+
+section Mult
+
+private lemma summable_q_odd_mul (hτ : 0 < τ.im) (x : ℂ) :
+    Summable (fun n : ℕ => ‖q τ ^ (2 * n + 1) * x‖) := by
+  simp only [norm_mul, norm_pow]
+  refine Summable.mul_right _ ?_
+  have hrw : ∀ n : ℕ, ‖q τ‖ ^ (2 * n + 1) = ‖q τ‖ * (‖q τ‖ ^ 2) ^ n := by
+    intro n; rw [← pow_mul, ← pow_succ']
+  refine ((summable_geometric_of_lt_one (by positivity) ?_).mul_left ‖q τ‖).congr
+    (fun n => (hrw n).symm)
+  rw [← norm_pow, q_sq]; exact norm_Q_lt_one τ hτ
+
+private lemma multipliable_Eu (hτ : 0 < τ.im) :
+    Multipliable (fun n : ℕ => 1 - Q τ ^ (n + 1)) :=
+  ModularForm.multipliable_one_sub_pow (norm_Q_lt_one τ hτ)
+
+private lemma multipliable_Pplus (hτ : 0 < τ.im) (x : ℂ) :
+    Multipliable (fun n : ℕ => 1 + q τ ^ (2 * n + 1) * x) :=
+  Complex.multipliable_one_add_of_summable ((summable_q_odd_mul τ hτ x).of_norm)
+
+end Mult
+
+section Split
+
+private def Eu : ℂ := ∏' n : ℕ, (1 - Q τ ^ (n + 1))
+
+private def Pp (x : ℂ) : ℂ := ∏' n : ℕ, (1 + q τ ^ (2 * n + 1) * x)
+
+private lemma statement_RHS_eq (z : ℂ) (hτ : 0 < τ.im) :
+    (∏' n : ℕ, ((1 - Complex.exp (2 * π * I * (n + 1) * τ)) *
+        (1 + Complex.exp (π * I * (2 * n + 1) * τ + 2 * π * I * z)) *
+        (1 + Complex.exp (π * I * (2 * n + 1) * τ - 2 * π * I * z))))
+      = Eu τ * Pp τ (w z) * Pp τ ((w z)⁻¹) := by
+  unfold Eu Pp
+  rw [← Multipliable.tprod_mul (multipliable_Eu τ hτ) (multipliable_Pplus τ hτ (w z)),
+      ← Multipliable.tprod_mul ((multipliable_Eu τ hτ).mul (multipliable_Pplus τ hτ (w z)))
+        (multipliable_Pplus τ hτ ((w z)⁻¹))]
+  refine tprod_congr (fun n => ?_)
+  rw [fac1_eq τ n, fac2_eq τ z n, fac3_eq τ z n]
+
+end Split
+
+section LhsLimit
+
+open Finset in
+
+private def LHS_N (x : ℂ) (N : ℕ) : ℂ :=
+  ∏ j ∈ range N, (1 + q τ ^ (2 * j + 1) * x) * (1 + q τ ^ (2 * j + 1) * x⁻¹)
+
+open Finset in
+private lemma tendsto_LHS_N (hτ : 0 < τ.im) (x : ℂ) :
+    Filter.Tendsto (LHS_N τ x) Filter.atTop (nhds (Pp τ x * Pp τ x⁻¹)) := by
+  unfold LHS_N Pp
+  have h1 := (multipliable_Pplus τ hτ x).tendsto_prod_tprod_nat
+  have h2 := (multipliable_Pplus τ hτ x⁻¹).tendsto_prod_tprod_nat
+  have := h1.mul h2
+  refine this.congr (fun N => ?_)
+  rw [← prod_mul_distrib]
+
+end LhsLimit
+
+section Assembly
+
+private theorem theta_eq_Eu_Pp (z : ℂ) (hτ : 0 < τ.im)
+    (hEu_ne : Eu τ ≠ 0)
+    (hR2 : Filter.Tendsto (LHS_N τ (w z)) Filter.atTop
+      (nhds ((Eu τ)⁻¹ * jacobiTheta₂ z τ))) :
+    jacobiTheta₂ z τ = Eu τ * Pp τ (w z) * Pp τ ((w z)⁻¹) := by
+  have hPP := tendsto_LHS_N τ hτ (w z)
+  have heq := tendsto_nhds_unique hR2 hPP
+
+  rw [mul_assoc, ← heq, mul_inv_cancel_left₀ hEu_ne]
+
+open Finset in
+
+private lemma LHS_N_eq_sum_term (z : ℂ) (N : ℕ) (a : ℕ → ℂ)
+    (hR1 : ∏ j ∈ range N, ((1 + (w z) * q τ ^ (2*j+1)) * (1 + (w z)⁻¹ * q τ ^ (2*j+1)))
+            = ∑ k ∈ range (2*N+1),
+                a k * q τ ^ (((k:ℤ) - N)^2) * w z ^ ((k:ℤ) - N)) :
+    LHS_N τ (w z) N
+      = ∑ k ∈ range (2*N+1), a k * jacobiTheta₂_term ((k:ℤ) - N) z τ := by
+  unfold LHS_N
+  rw [show ∏ j ∈ range N, (1 + q τ ^ (2*j+1) * w z) * (1 + q τ ^ (2*j+1) * (w z)⁻¹)
+        = ∏ j ∈ range N, ((1 + (w z) * q τ ^ (2*j+1)) * (1 + (w z)⁻¹ * q τ ^ (2*j+1))) from
+      prod_congr rfl (fun j _ => by ring), hR1]
+  refine sum_congr rfl (fun k _ => ?_)
+  rw [term_eq_qw τ z ((k:ℤ) - N), mul_assoc]
+
+end Assembly
+
+
+theorem jacobiTheta_two_eq_tprod (z τ : ℂ) (hτ : 0 < τ.im) :
+    jacobiTheta₂ z τ = ∏' n : ℕ,
+      ((1 - Complex.exp (2 * π * I * (n + 1) * τ)) *
+        (1 + Complex.exp (π * I * (2 * n + 1) * τ + 2 * π * I * z)) *
+        (1 + Complex.exp (π * I * (2 * n + 1) * τ - 2 * π * I * z))) := by
+  rw [statement_RHS_eq τ z hτ]
+  have hQ : ‖Q τ‖ < 1 := norm_Q_lt_one τ hτ
+  have hEu_ne : Eu τ ≠ 0 := tprod_one_sub_pow_ne_zero hQ
+  have ht : Summable (fun j : ℤ => ‖jacobiTheta₂_term j z τ‖) :=
+    ((summable_jacobiTheta₂_term_iff z τ).mpr hτ).norm
+  refine theta_eq_Eu_Pp τ z hτ hEu_ne ?_
+
+  have hTsr := tendsto_sum_range (Q := Q τ) hQ
+    (t := fun j => jacobiTheta₂_term j z τ) ht
+    (fun N k => qbinom (Q τ) (2 * N) k)
+    (fun N k hk => if_pos hk)
+
+  refine hTsr.congr (fun N => ?_)
+  rw [← LHS_N_eq_sum_term τ z N (fun k => qbinom (Q τ) (2 * N) k) ?_]
+
+  have hR1 := finite_jtp (q := q τ) (q_ne_zero τ) (norm_q_lt_one τ hτ)
+    (x := w z) (w_ne_zero z) N
+  rw [q_sq τ] at hR1
+  exact hR1
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.JacobiProduct

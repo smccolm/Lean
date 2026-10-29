@@ -1,0 +1,172 @@
+import Dubon2026.SourcePeakedBernoulliProgressions
+import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+import Mathlib.Data.Nat.Totient
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary -> nonnegative
+integer exponents. The weighted Bernoulli mean vanishes for nonzero
+dilates. This forces the zero coefficient of the separating profile to
+vanish, which is necessary to exclude the undefined Siegel factor (0,0).
+The proof reuses Mathlib Moebius inversion and the already proved exact
+residue progression identity; no separate distribution proof is copied.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_sum_totient_mul_levelBernoulliWeight_dilate_eq_zero. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient
+open Finset
+open Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Distribution
+
+/-- The quadratic Moebius convolution used to cancel the weighted Bernoulli mean. -/
+def J2 (n : ℕ) : ℤ := ∑ x ∈ n.divisorsAntidiagonal, (ArithmeticFunction.moebius x.1 : ℤ) • (x.2 : ℤ) ^ 2
+
+theorem sum_divisors_J2 (n : ℕ) (hn : 0 < n) : ∑ i ∈ n.divisors, J2 i = (n : ℤ) ^ 2 :=
+  (ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq (f := J2) (g := fun n => (n : ℤ) ^ 2)).mpr
+    (fun _ _ => rfl) n hn
+
+theorem filter_dvd_divisors (n s : ℕ) (hn : n ≠ 0) :
+    n.divisors.filter (· ∣ s) = (Nat.gcd s n).divisors := by
+  ext i
+  simp only [Finset.mem_filter, Nat.mem_divisors, Nat.dvd_gcd_iff]
+  constructor
+  · rintro ⟨⟨hin, -⟩, his⟩
+    exact ⟨⟨his, hin⟩, Nat.gcd_ne_zero_right hn⟩
+  · rintro ⟨⟨his, hin⟩, -⟩
+    exact ⟨⟨hin, hn⟩, his⟩
+
+theorem sum_moebius_gcd_sq (s N : ℕ) (hN : 0 < N) (hs : ¬ N ∣ s) :
+    ∑ x ∈ N.divisorsAntidiagonal, (ArithmeticFunction.moebius x.1 : ℤ) • (Nat.gcd s x.2 : ℤ) ^ 2 = 0 := by
+  let F : ℕ → ℤ := fun n => if n ∣ s then J2 n else 0
+  have key : ∀ n > 0, ∑ i ∈ n.divisors, F i = (Nat.gcd s n : ℤ) ^ 2 := by
+    intro n hn
+    simp only [F]
+    rw [← Finset.sum_filter, filter_dvd_divisors n s hn.ne', sum_divisors_J2 _ (Nat.gcd_pos_of_pos_right _ hn)]
+  have := (ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq (f := F) (g := fun n => (Nat.gcd s n : ℤ) ^ 2)).mp
+    key N hN
+  rw [this]
+  simp [F, hs]
+
+theorem sum_moebius_mul_div_eq_totient (g : ℕ) (hg : 0 < g) :
+    ∑ a ∈ g.divisors, (ArithmeticFunction.moebius a : ℤ) * (g / a : ℕ) = (Nat.totient g : ℤ) := by
+  have h := (ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq (f := fun n => (Nat.totient n : ℤ))
+    (g := fun n => (n : ℤ))).mp (fun n _ => by exact_mod_cast Nat.sum_totient n) g hg
+  rw [← h, Nat.sum_divisorsAntidiagonal (f := fun a b => (ArithmeticFunction.moebius a : ℤ) • (b : ℤ))]
+  simp
+
+theorem weight_eq_sum (N : ℕ) (hN : 0 < N) (r : ℕ) :
+    ((N / Nat.gcd r N : ℕ) : ℤ) * (Nat.totient (Nat.gcd r N) : ℤ) =
+      ∑ a ∈ N.divisors, if a ∣ r then (ArithmeticFunction.moebius a : ℤ) * (N / a : ℕ) else 0 := by
+  set g := Nat.gcd r N with hgdef
+  have hgN : g ∣ N := Nat.gcd_dvd_right r N
+  have hgpos : 0 < g := Nat.gcd_pos_of_pos_right r hN
+  obtain ⟨M, hM⟩ := hgN
+  have hNg : N / g = M := by rw [hM, Nat.mul_div_cancel_left _ hgpos]
+  rw [← Finset.sum_filter, filter_dvd_divisors N r hN.ne', ← hgdef, hNg, ← sum_moebius_mul_div_eq_totient g hgpos,
+    Finset.mul_sum]
+  refine Finset.sum_congr rfl fun a ha => ?_
+  obtain ⟨hag, -⟩ := Nat.mem_divisors.mp ha
+  obtain ⟨b, hb⟩ := hag
+  have hapos : 0 < a := Nat.pos_of_ne_zero (by rintro rfl; rw [zero_mul] at hb; omega)
+  have h1 : g / a = b := by rw [hb, Nat.mul_div_cancel_left _ hapos]
+  have h2 : N / a = M * b := by rw [hM, hb, show a * b * M = a * (M * b) by ring, Nat.mul_div_cancel_left _ hapos]
+  rw [h1, h2]
+  push_cast
+  ring
+
+theorem filter_dvd_range (a L : ℕ) (ha : 0 < a) :
+    (Finset.range (a * L)).filter (a ∣ ·) = (Finset.range L).map ⟨(a * ·), mul_right_injective₀ ha.ne'⟩ := by
+  ext n
+  simp only [Finset.mem_filter, Finset.mem_range, Finset.mem_map, Function.Embedding.coeFn_mk]
+  constructor
+  · rintro ⟨hn, ⟨j, rfl⟩⟩
+    exact ⟨j, Nat.lt_of_mul_lt_mul_left hn, rfl⟩
+  · rintro ⟨j, hj, rfl⟩
+    exact ⟨Nat.mul_lt_mul_of_pos_left hj ha, dvd_mul_right a j⟩
+
+theorem sum_zmod_ite_dvd (N a L : ℕ) [NeZero N] (hN : N = a * L) (G : ZMod N → ℤ) :
+    ∑ r : ZMod N, (if a ∣ r.val then G r else 0) = ∑ j ∈ Finset.range L, G ((a * j : ℕ) : ZMod N) := by
+  subst hN
+  have ha : 0 < a := Nat.pos_of_ne_zero (by rintro rfl; exact NeZero.ne (0 * L) (by rw [zero_mul]))
+  rw [sum_zmod_eq_sum_range (a * L)]
+  have h1 : ∀ n ∈ Finset.range (a * L), (if a ∣ (n : ZMod (a * L)).val then G n else 0) = if a ∣ n then G n else 0 := by
+    intro n hn
+    rw [ZMod.val_natCast_of_lt (Finset.mem_range.mp hn)]
+  rw [Finset.sum_congr rfl h1, ← Finset.sum_filter, filter_dvd_range a L ha, Finset.sum_map]
+  rfl
+
+theorem sum_range_Bt_mul_mod (L : ℕ) (hL : 0 < L) (s : ℕ) :
+    ∑ j ∈ Finset.range L, Bt L (((j * s) % L : ℕ) : ℤ) = L * (Nat.gcd s L : ℤ) ^ 2 := by
+  haveI : NeZero L := ⟨hL.ne'⟩
+  have h := sum_zmod_Bt L 0 s
+  rw [sum_zmod_eq_sum_range L] at h
+  have hg : (Int.gcd (s : ℤ) (L : ℤ) : ℤ) = (Nat.gcd s L : ℤ) := by rw [Int.gcd_natCast_natCast]
+  simp only [Int.cast_zero, zero_add, Int.cast_natCast, EuclideanDomain.zero_mod, hg] at h
+  rw [← Finset.sum_congr rfl (fun j hj => ?_)] at h
+  · rw [h]; ring
+  · congr 2
+    rw [← Nat.cast_mul, ZMod.val_natCast]
+
+theorem inner_sum (N a L : ℕ) [NeZero N] (hN : N = a * L) (s : ZMod N) :
+    ∑ j ∈ Finset.range L, Bt N (((s * ((a * j : ℕ) : ZMod N)).val : ℤ)) =
+      (a : ℤ) ^ 2 * (L * (Nat.gcd s.val L : ℤ) ^ 2) := by
+  subst hN
+  have ha : 0 < a := Nat.pos_of_ne_zero (by rintro rfl; exact NeZero.ne (0 * L) (by rw [zero_mul]))
+  have hL : 0 < L := Nat.pos_of_ne_zero (by rintro rfl; exact NeZero.ne (a * 0) (by rw [mul_zero]))
+  rw [← sum_range_Bt_mul_mod L hL s.val, Finset.mul_sum]
+  refine Finset.sum_congr rfl fun j hj => ?_
+  have hval : (s * ((a * j : ℕ) : ZMod (a * L))).val = a * ((j * s.val) % L) := by
+    rw [ZMod.val_mul, ZMod.val_natCast, Nat.mul_mod, Nat.mod_mod, ← Nat.mul_mod,
+      show s.val * (a * j) = a * (j * s.val) by ring, Nat.mul_mod_mul_left]
+  rw [hval, Bt, Bt]
+  push_cast
+  ring
+
+theorem sum_zmod_weight_Bt (N : ℕ) [NeZero N] (s : ZMod N) (hs : s ≠ 0) :
+    ∑ r : ZMod N, (((N / Nat.gcd r.val N : ℕ) : ℤ) * (Nat.totient (Nat.gcd r.val N) : ℤ)) *
+      Bt N (((s * r).val : ℤ)) = 0 := by
+  have hN : 0 < N := Nat.pos_of_ne_zero (NeZero.ne N)
+
+  have hw : ∀ r : ZMod N, (((N / Nat.gcd r.val N : ℕ) : ℤ) * (Nat.totient (Nat.gcd r.val N) : ℤ)) *
+      Bt N (((s * r).val : ℤ)) =
+      ∑ a ∈ N.divisors, if a ∣ r.val then (ArithmeticFunction.moebius a : ℤ) * (N / a : ℕ) * Bt N (((s * r).val : ℤ)) else 0 := by
+    intro r
+    rw [weight_eq_sum N hN r.val, Finset.sum_mul]
+    refine Finset.sum_congr rfl fun a _ => ?_
+    split_ifs <;> simp
+  rw [Fintype.sum_congr _ _ hw, Finset.sum_comm]
+
+  have hterm : ∀ a ∈ N.divisors,
+      ∑ r : ZMod N, (if a ∣ r.val then (ArithmeticFunction.moebius a : ℤ) * (N / a : ℕ) * Bt N (((s * r).val : ℤ)) else 0) =
+        (N : ℤ) ^ 2 * ((ArithmeticFunction.moebius a : ℤ) • (Nat.gcd s.val (N / a) : ℤ) ^ 2) := by
+    intro a ha
+    obtain ⟨⟨L, hL⟩, -⟩ := Nat.mem_divisors.mp ha
+    have hapos : 0 < a := Nat.pos_of_ne_zero (by rintro rfl; rw [zero_mul] at hL; exact (NeZero.ne N) hL)
+    have hNa : N / a = L := by rw [hL, Nat.mul_div_cancel_left _ hapos]
+    have h1 : ∑ r : ZMod N, (if a ∣ r.val then (ArithmeticFunction.moebius a : ℤ) * (N / a : ℕ) * Bt N (((s * r).val : ℤ)) else 0) =
+        (ArithmeticFunction.moebius a : ℤ) * (N / a : ℕ) * ∑ r : ZMod N, (if a ∣ r.val then Bt N (((s * r).val : ℤ)) else 0) := by
+      rw [Finset.mul_sum]
+      refine Finset.sum_congr rfl fun r _ => ?_
+      split_ifs <;> simp
+    rw [h1, sum_zmod_ite_dvd N a L hL, inner_sum N a L hL s, hNa]
+    have hNz : (N : ℤ) = (a : ℤ) * (L : ℤ) := by exact_mod_cast hL
+    rw [smul_eq_mul, hNz]
+    ring
+  rw [Finset.sum_congr rfl hterm, ← Finset.mul_sum,
+    ← Nat.sum_divisorsAntidiagonal (f := fun a b => (ArithmeticFunction.moebius a : ℤ) • (Nat.gcd s.val b : ℤ) ^ 2),
+    sum_moebius_gcd_sq s.val N hN ?_, mul_zero]
+
+  intro hdvd
+  have h0 : s.val = 0 := Nat.eq_zero_of_dvd_of_lt hdvd (ZMod.val_lt s)
+  exact hs ((ZMod.val_eq_zero s).mp h0)
+
+
+theorem sum_totient_mul_weight_dilate_eq_zero (N : ℕ) [NeZero N]
+    (s : ZMod N) (hs : s ≠ 0) :
+    ∑ r : ZMod N,
+        (((N / Nat.gcd r.val N) * Nat.totient (Nat.gcd r.val N) : ℕ) : ℤ) *
+          (6 * (((s * r).val : ℕ) : ℤ) ^ 2 - 6 * (N : ℤ) * (((s * r).val : ℕ) : ℤ) + (N : ℤ) ^ 2) = 0 := by
+  calc _ = ∑ r : ZMod N, (((N / Nat.gcd r.val N : ℕ) : ℤ) * (Nat.totient (Nat.gcd r.val N) : ℤ)) *
+        Bt N (((s * r).val : ℤ)) :=
+        Finset.sum_congr rfl fun r _ => by simp only [Bt]; push_cast; ring
+    _ = 0 := sum_zmod_weight_Bt N s hs
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli.Totient

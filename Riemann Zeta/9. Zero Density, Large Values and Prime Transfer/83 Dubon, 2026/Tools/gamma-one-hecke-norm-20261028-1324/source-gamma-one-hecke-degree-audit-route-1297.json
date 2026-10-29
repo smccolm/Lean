@@ -1,0 +1,64 @@
+{
+  "recordedUTC": "2026-10-28T15:48:40.133098+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 geometric Tate Frobenius -> actual original Hecke norm reduction -> complete original embedding census -> exact original alpha inclusion degree p+1.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrincipalCoprimeReduction.lean",
+      "sha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelProjectiveCosets.lean",
+      "sha256": "BC100629AB53C45F54C0ED3645569D97BBB5CCF4FB45A28F459457E24E0DF5BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelIndexFormula.lean",
+      "sha256": "80F8A3E8F947FA2AAE8B8FA4AD8B3528473F10825B029C0CCF3B2097BBF08354"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelPsiPrimeStep.lean",
+      "sha256": "64D66E46D18B710AECF1F9FDCD290CA1EE8AF2079A5DE9947A786837DD0EDA70"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeJDegree.lean",
+      "sha256": "38D371D281184713C83CF963EA4561B7D488AF5892B061044E19800078E25389"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDegreeBaseChange.lean",
+      "sha256": "3B6D4E8AF8B5DAC33B2432BA335726FF6FD1A7A8534143303CF34C6D0E44B896"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransport.lean",
+      "sha256": "0E0030AC82E69E99C02BCEF2115A73D3D4222C657CB2AC97CDBD0727B27E0D55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrimeDegree.lean",
+      "sha256": "7643829E7C0118FB698C09416F5F96B66BEE0D836CAA59E2DBCE8D6D37DBC479"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeEmbeddingCensus.lean",
+      "sha256": "F38948E97A6EFF67B1BEEC20785D52ADE73669D779B09AFFD237DE7FA908F311"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldFinite.lean",
+      "sha256": "765E46C3933771F28522D2DA46FAA19BEC2A3ADB1E264BF6FE978A05609893D8"
+    }
+  ],
+  "shorterRoute": "Existing principal-level lifting gives surjectivity modulo a coprime prime for the actual Gamma1 group. Pulling back the native Borel identifies the literal lower correspondence subgroup. The proved Gamma0 index gives p+1, also after adjoining central negative identity. Existing complex j-fiber degrees and Laurent base-change degree transport then identify the two original coordinate degrees. Native relative-degree multiplicativity and the signed index ratio prove the actual alpha inclusion degree. Explicit Algebra.toModule selects the actual inclusion scalar action and avoids typeclass normalization without raising limits. No new projective-line count, modular polynomial or Atkin hypothesis is introduced.",
+  "assumptionsToDischarge": [
+    "At every nonzero level M and prime p coprime to M, the original Gamma1 lower Hecke subgroup has relative index p+1, with the same exact relative index after the required central-sign enlargement.",
+    "The j-coordinate degrees of both original fields equal their signed subgroup indices over every characteristic-zero coefficient field.",
+    "The original alpha field inclusion has degree p+1 under its actual scalar action, removing the dimension input for a complete p+1 embedding census."
+  ],
+  "remaining": "The exact field degree does not construct the explicit conjugate embeddings or prove their values on the second Hecke map. The original Gamma1 norm identity with its diamond convention, residue degree equality, genus preservation, original-to-residue place/Picard specialization and torsion injectivity remain. Consequently the original geometric Tate quadratic/inertia, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

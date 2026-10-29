@@ -1,0 +1,59 @@
+{
+  "status": "Prepared only. Predecessor 9149 canonical PASS and archive required. Unused 9161 plan superseded before production mutation.",
+  "modules": 35,
+  "queries": 83,
+  "theorems": 65,
+  "constructions": 18,
+  "exhaustiveScratchChecks": 270,
+  "proofValueChecks": 145,
+  "scopes": 5,
+  "receipts": {
+    "source-gamma-one-diamond-quotient-1-scratch-receipt.json": "36D6E5A8D74D00EB7863F6C4D560B7E25D45CBC6671C8584B33AE0917C375EA6",
+    "source-gamma-one-diamond-transfer-1-scratch-receipt.json": "A7F777C2CB879C67231D8851F98588B1312F3CA281052EDF66D499FBCD13DD7C",
+    "source-gamma-one-quotient-character-1-scratch-receipt.json": "643A8EBD290E51279AA557AC97F4E31C10AD2FF4885D0CB321388E51C5CDA225",
+    "source-gamma-one-integral-ratio-1-scratch-receipt.json": "95B44F96C86CF4C35E0436C8D8FC73B45D7AE55872FD9EBDF7216F757571F834",
+    "source-gamma-one-integral-eisenstein-1-scratch-receipt.json": "77C86933A132211CF30B3470F416F643969A93202C0B3D9F04C2C5330D39AC10"
+  },
+  "expectedConsumers": 26760,
+  "expectedConstructions": 2881,
+  "fullGoal": "Original degree and genus preservation remain unproved and explicit in the quotient Frobenius/Hecke/character construction. The integral parabolic-preimage theorem remains open; full-H1 surjectivity does not replace it. The transfer retains 3<p and the fixed exceptional-prime exclusion. Integral Eisenstein separation does not yet supply the action on every reduced rational relation: level-power slash integrality or a rigorous replacement, the signed-index lower bound and the genus argument remain. The required two-dimensional characteristic-zero realization, exceptional coefficient primes, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original acceptance test is unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_hecke_separation_9184.py",
+      "sha256": "464F7035D87EAF228BA8C50861593C5882F17620B9E6068C11F50DE835A3CF9F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_separation_production_ownership_9184.py",
+      "sha256": "4CC51B105B49A15A84D222F738766A3C5FF2291A47C8BEC3CD9F8894AC87BCEE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_separation_global_ownership_9184.py",
+      "sha256": "30909037D41170D0B6A179344E01E2D410E69A8ACE8C3A464166DFED51FA1219"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_separation_ownership_9184.py",
+      "sha256": "C8AFFC117F765CB8E86232B93F9A7EF00745AC541F7F35A3BE3558960E03EC40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_hecke_separation_9184.py",
+      "sha256": "9F70E12CF376FE0723DB334395D38D2E7EDE034579992BE263BD381CCB827246"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_separation_9184.ps1",
+      "sha256": "3C0CA93589903E19F0BACC5D1D5D11B7FD57D3AD893CFC715A90C0442E1A639D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_hecke_separation_9184.ps1",
+      "sha256": "56347D39251436D8D357204BC7B50829C497AFC28E8C17FDE79A1AE77BFED65C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_hecke_separation_canonical_9184.py",
+      "sha256": "7BCE20803189A07F150DC0B490B641F35264566635D9EC9CAE6BF871A4C73D5F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_hecke_separation_9184.py",
+      "sha256": "0F7D940C08966A9E251DA0EB19BB42651ED3037958DE46730F87D9D019F4F20B"
+    }
+  ],
+  "productionMutation": false
+}

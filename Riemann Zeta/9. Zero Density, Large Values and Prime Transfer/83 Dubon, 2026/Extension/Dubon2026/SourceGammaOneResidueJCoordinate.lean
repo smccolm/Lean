@@ -1,0 +1,52 @@
+import Dubon2026.SourceGammaOneRegularProlongation
+import Dubon2026.SourceResidueIntegralSpecialization
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original good
+reduction -> the genuine residue function field coordinate. Literal coefficient
+reduction carries the original j to the original integral j-series in the
+actual residue image. Native j transcendence proves that this image is not
+merely a constant field. Finite coordinate degree and genus comparison remain.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open GaussReduction
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+
+theorem integral_jCoordinate :
+    ι A (jqModC A) = (jCoordinateOver Γ L : LaurentSeries L) := by
+  change coeffMap A.subtype (jqModC A) = coeffEmb L jq
+  rw [coeffEmb_jq]
+  simpa only [qExpand_one_apply] using coefficientMap_j_expansion A.subtype 1
+
+theorem jCoordinateOver_mem_gaussRing :
+    jCoordinateOver Γ L ∈ coefficientGaussRing Γ A := by
+  refine ⟨jqModC A, 1, by simp, ?_⟩
+  rw [map_one, mul_one]
+  exact (integral_jCoordinate A Γ).symm
+
+theorem resHom_jCoordinateOver :
+    resHom A Γ ⟨jCoordinateOver Γ L, jCoordinateOver_mem_gaussRing A Γ⟩ = jqModC kk := by
+  rw [resHom_eq A Γ (x := jqModC A) (y := 1) (by simp)
+    (by rw [map_one, mul_one]; exact (integral_jCoordinate A Γ).symm), map_one, div_one]
+  simpa only [qExpand_one_apply] using coefficientMap_j_expansion (IsLocalRing.residue A) 1
+
+theorem jq_mem_residueImage : jqModC kk ∈ residueImage A Γ := by
+  rw [← resHom_jCoordinateOver A Γ]
+  exact resHom_mem_residueImage A Γ _
+
+/-- The original j-coordinate in the actual coefficient residue field. -/
+def residueJCoordinate : residueImage A Γ := ⟨jqModC kk, jq_mem_residueImage A Γ⟩
+
+theorem transcendental_residueJCoordinate : Transcendental kk (residueJCoordinate A Γ) := by
+  intro h
+  exact transcendental_jqModC kk (h.algebraMap (A := LaurentSeries kk))
+
+theorem regularProlongation_jCoordinateOver :
+    (regularProlongation A Γ).residue
+      ⟨jCoordinateOver Γ L, jCoordinateOver_mem_gaussRing A Γ⟩ = residueJCoordinate A Γ :=
+  Subtype.ext (resHom_jCoordinateOver A Γ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

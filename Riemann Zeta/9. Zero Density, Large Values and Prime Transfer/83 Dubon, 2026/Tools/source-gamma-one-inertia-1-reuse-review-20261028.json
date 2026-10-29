@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Picard/H1/Tate realization -> original Gamma1 inertia on invertible Picard torsion.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-audit-route-1368.json",
+    "sha256": "B8F3CA8A5FB407A9E8A948B2CFCA5448492CB952A4CB21C6CE4B65A99BBFA9D6",
+    "review": {
+      "recordedUTC": "2026-10-28T19:18:41.903457+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Picard/H1/Tate realization -> original Gamma1 inertia on invertible Picard torsion.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-inertia-route-1359.json",
+          "sha256": "A4C08C5C6A406F25F08B2FAB3038BEE50668B182CE429C5A53782269A5499284"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-scratch-receipt.json",
+          "sha256": "B4A46110ECE61C258197939EFBDA9E048BACE84F19E216B553680831FAA53534"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-scratch-receipt.json",
+          "sha256": "74CFD24CC719EB59E16077D6011357656C1187F0F7796BE0283608F845F98BDF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticIntegralCharts.lean",
+          "sha256": "A354D6CE7F86AD0D2095CACAE68330BBE209BC780CEB0389979E83858ABDD64C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalInertiaChartTransport.lean",
+          "sha256": "A6A7E96313AB425CAC9DB1CD95062C49CCB9FE4CF7D2A1CFD7A1AFD86F3462F2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDecompositionChartTransport.lean",
+          "sha256": "C63CDD2CDA4B760B40E26BA90F3E732656B28539A3FE9AB3D7A0439C06DC70CE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionPrincipalDivisorCharts.lean",
+          "sha256": "1F5B62D3DD3F056F69F538209A0D292D5E13DC79572C04F97EF01D8775CF2BD3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPlaces.lean",
+          "sha256": "EEC07B3FBB7D3845475DA79F10F642C2829432E31A6259233C5B23F88EA9118B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPicard.lean",
+          "sha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueArithmetic.lean",
+          "sha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResiduePlaces.lean",
+          "sha256": "B1C2656F821E9918655BCB1F67993677D4DE402EC25C7757D1FA2477B968F7EA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResiduePlaceOrders.lean",
+          "sha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularDecompositionPlaceReduction.lean",
+          "sha256": "B436356159658E1E448C9446DBA46E78B7B945223F4C585436ECA01BE7D46FF0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeArithmetic.lean",
+          "sha256": "01F5889544B1A50D6D347DD0B74F72526B4EABF9AB28EDC8DB5363195AB9415F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticTateOperators.lean",
+          "sha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateFunctor.lean",
+          "sha256": "0C8132F7AE057CC43621870EF0EC5072CCF2D1F6980688921D4889D33AD2217C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+          "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+        }
+      ],
+      "shorterRoute": "Reuse native exact two-chart gluing, monic-equation transport, original arithmetic place and Picard actions, actual residue decomposition action and the newly proved Picard torsion kernel theorem. Retain the chart specification of the already constructed specialization; derive its arithmetic equivariance and inertia triviality without a new curve or valuation framework.",
+      "assumptionsToDischarge": [
+        "The same actual original Gamma1 constant reduction is decomposition-equivariant on places and injective on every invertible Picard torsion group.",
+        "Arithmetic inertia fixes the actual specialization of places, hence Picard classes after reduction.",
+        "Coordinate-degree and genus preservation therefore imply inertia triviality on the actual original Gamma1 Picard torsion and its Tate representation, for every invertible Tate prime."
+      ],
+      "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain. Hecke norm/place/Picard compatibility and the geometric Frobenius characteristic relation remain, as do parabolic and coefficient realization, original all-weight two-dimensional association, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The same actual original Gamma1 constant reduction is decomposition-equivariant on places and injective on every invertible Picard torsion group.",
+    "Arithmetic inertia fixes the actual specialization of places, hence Picard classes after reduction.",
+    "Coordinate-degree and genus preservation therefore imply inertia triviality on the actual original Gamma1 Picard torsion and its Tate representation, for every invertible Tate prime."
+  ],
+  "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain. Hecke norm/place/Picard compatibility and the geometric Frobenius characteristic relation remain, as do parabolic and coefficient realization, original all-weight two-dimensional association, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

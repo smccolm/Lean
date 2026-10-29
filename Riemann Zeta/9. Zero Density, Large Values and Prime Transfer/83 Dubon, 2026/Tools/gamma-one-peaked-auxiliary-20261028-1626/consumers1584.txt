@@ -1,0 +1,22 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `originalPresentedCoefficientRing_t2Space`. -/
+theorem actual_original_presented_coefficient_compactness_originalPresentedCoefficientRing_t2Space_source
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (σ : H →ₜ* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) :
+    T2Space (OriginalPresentedCoefficientRing H q σ) :=
+  originalPresentedCoefficientRing_t2Space H q σ
+
+end
+

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "UnramifiedUnionFiniteBaseCharacters",
+  "mathematics": "For every actual finite intermediate base in the constructed rational arithmetic union, the actual roots inside that union and the derived original finite-subextension ramification conditions feed the genuine cyclotomic descent. The original prime divides the original nonzero exceptional integer. No finite-character, Galois, finite-prime-set or ramification certificate is assumed.",
+  "boundary": "The original open-subgroup transfer remains open. Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "cyclotomic-unramified-stage-draft-review-20261009.json; exact pinned APIs inspected. No external Lean code imported.",
+  "productionFixes": [
+    "Made the original union and finite intermediate-field rational scalar structures explicit in the full quantified statement.",
+    "Consumed the original generic ramification theorem directly to retain its canonical integer-ring maps.",
+    "Reduced the literal let-bindings before introducing the actual finite field and finite-dimension instance."
+  ],
+  "productionLog": "finiteBaseCharacters1568e-focus.log"
+}

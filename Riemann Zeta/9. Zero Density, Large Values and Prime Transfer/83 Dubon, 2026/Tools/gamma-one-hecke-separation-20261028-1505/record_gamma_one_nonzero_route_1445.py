@@ -1,0 +1,9 @@
+from pathlib import Path
+import hashlib,json
+s=Path(__file__).parent
+repo=Path(r'E:\Lean\Riemann Zeta');src=repo/'9. Zero Density, Large Values and Prime Transfer/83 Dubon, 2026/Extension/Dubon2026'
+fs=[src/(n+'.lean') for n in ['SourceParabolicCongruenceException','SourceParabolicAdicOperatorKernel','SourceGammaOneParabolicTransferCriterion']]
+fs += [s/'SourceGammaOneDiamondQuotientTransfer1444b.lean',repo/'.lake/packages/mathlib/Mathlib/RingTheory/Ideal/Operations.lean',repo/'.lake/packages/mathlib/Mathlib/RingTheory/Ideal/Quotient/Basic.lean']
+r=dict(chain='DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight association -> finite original Hecke-character realization -> nonzero actual diamond quotient',reuse=[dict(path=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest().upper()) for f in fs],selected='If the genuine diamond quotient were zero, the descended original transfer and the exact parabolic-preimage input would annihilate every coefficient-reduced original integral parabolic class. Apply the existing original parabolic congruence theorem to the identity Hecke operator. Its unital adic character then forces the positive power of the local maximal ideal to contain one, contradicting the native ideal-power bound and maximality. No separate nonzero vector or eigensystem is assumed.',remaining='The original parabolic-preimage input, 3<p and coprimality with the original fixed exceptional integer remain explicit. Degree/genus preservation is not needed for this nonvanishing deduction. No two-dimensional realization or gate closure is claimed.',proofLimitsChanged=False)
+t=s/'gamma-one-diamond-nonzero-route-1445.json';assert not t.exists();t.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+print('Recorded the native identity-character nonvanishing argument and its exact remaining assumptions.')

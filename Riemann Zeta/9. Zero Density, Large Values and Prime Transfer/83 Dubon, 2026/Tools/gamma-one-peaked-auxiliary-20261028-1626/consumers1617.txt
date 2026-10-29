@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type} [Fintype ι] [DecidableEq ι] [Field K]
+  [TopologicalSpace K] [DiscreteTopology K]
+
+/-- Exact original-object consumer of `arithmeticLocalDualNumberFramedFiberEquiv_bijective`. -/
+theorem actual_arithmetic_local_dual_number_framed_equiv_arithmeticLocalDualNumberFramedFiberEquiv_bijective_source (a : 𝓞 ℚ)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι K)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a))) :
+    Function.Bijective (arithmeticLocalDualNumberFramedFiberEquiv a ρ P) :=
+  arithmeticLocalDualNumberFramedFiberEquiv_bijective a ρ P
+
+end
+

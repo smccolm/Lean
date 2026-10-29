@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R A : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [CommRing R] [Algebra O R]
+  [CommRing A] [Algebra O A]
+
+/-- Exact original-object consumer of `representationDeterminantIdeal_le_kernel_iff`. -/
+theorem actual_representation_determinant_ideal_representationDeterminantIdeal_le_kernel_iff_source
+    (ρ : G →* GeneralLinearGroup ι R) (δ : G →* Oˣ) (f : R →ₐ[O] A) :
+    representationDeterminantIdeal ρ δ ≤ RingHom.ker f.toRingHom ↔
+      ∀ g : G, GeneralLinearGroup.det (GeneralLinearGroup.map (n := ι) f.toRingHom (ρ g)) =
+        Units.map (algebraMap O A) (δ g) :=
+  representationDeterminantIdeal_le_kernel_iff ρ δ f
+
+end
+

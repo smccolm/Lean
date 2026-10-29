@@ -1,0 +1,106 @@
+{
+  "recordedUTC": "2026-10-28T20:46:17.180289+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> genuine homogeneous-valued Tate Galois action matching the derived inverse-action Frobenius polynomial.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-coefficient-route-1399.json",
+      "sha256": "45BDBFDE552465A33C060B2ED9F4826C61153D70FE17FCD1C42714E89FA6D14F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-local-reuse-1405.json",
+      "sha256": "7DED9807607174C90AFB25E1F8FD87258CD257A69177136237B3ADAA5D9D280E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-parabolic-tate-reuse-1409.json",
+      "sha256": "00EF772385EF3A9791C3E287EB2ED5550F76016D2861D895E2D55AAD91EC0034"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCoefficientDualAction.lean",
+      "sha256": "1A7D7349F5FB045701E047AE1DA548DA8F480BECCCECC9596DFCD0D574902CAB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryGaloisHecke.lean",
+      "sha256": "1839AC3013C784BF17177071DECD625386F65450F64D2339979F1560803D8E62"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\MatrixPolynomialAction.lean",
+      "sha256": "2C503B28E75AB8FBC30E16819C86594A66C0EFDEF5DDD04423DBBC7FCEF9497B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\GL2UnitDiagonalPair.lean",
+      "sha256": "A44463EAAC175BF76A3897477356E116737AB2CE4EB61F201E9B89D58AE694A9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousDeterminantTwist.lean",
+      "sha256": "71441A7AF18EACBF49F3B66F6DAA6FC85AE794CBC365DF7A718C64CDEEDBDC03"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveRootCyclotomicContinuity.lean",
+      "sha256": "3E561F1C342F6722A15DB6A8A1A26607222CF53E46495D36FE884E2794FCBADD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticCyclotomicCharacter.lean",
+      "sha256": "6BB9B14B3AF4054A62888344F4D30C038DC21A1C5BEC366E2A140020676E834D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclotomicLocal.lean",
+      "sha256": "5F68052D522B48BC1697339344445F975162808DE59C1430DB74FF67D77E56F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationFrobeniusRoots.lean",
+      "sha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationCyclotomicFrobenius.lean",
+      "sha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalCyclotomicAction.lean",
+      "sha256": "6FA18DC07E9C2571108BBB70A2F38A1DD334918B5DA7ADEE72248CF7856AAD76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\LocalResidueRootSeparation.lean",
+      "sha256": "8B24F3023EAA80CA7143BEFC91AB1DECA65532B26CF9EBF74C6C84EA3B370622"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueArithmetic.lean",
+      "sha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneParabolicRestriction.lean",
+      "sha256": "7BF4C14136A5AEEAEF3AED45A7364ACD86C0E2D0264479DD5194F1B8D4BF1FD1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondRestriction.lean",
+      "sha256": "7F7BCADFDCD4B7D718F9EDCD2AB7C75E4432AB0F2896359A0A3BFD690981A17D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateH1.lean",
+      "sha256": "896CB247EC12F82BA98F4C885640184309C2865BBE2FC88B48778017D32A42A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryDiamondTateH1.lean",
+      "sha256": "898324FCC226768B9395A98E1B062DD31D99EEDB1BBC22340D1F82FBED6856DC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryNormalizerTate.lean",
+      "sha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0"
+    }
+  ],
+  "shorterRoute": [
+    "Reuse the actual homogeneous GL representation and two-unit diagonal multiplication to obtain the coefficient action u times diag(u,1). Pair it with inverse precomposition on the existing actual Tate action. Reuse native primitive-root cyclotomic exponent and continuity theorems for the global character; do not reconstruct cyclotomic characters or Tate spaces.",
+    "Native valuation_frobenius_root already applies to every residue-invertible root order at the exact arbitrary source valuation. Apply the primitive-root exponent characterization directly; set q=1 for inertia. No new valuation-root integrality, root separation, local field, or cyclotomic foundation is needed.",
+    "Use the already proved literal restriction into binary parabolic H1 and the native Tate/H1 equivalence. The native restriction diamond theorem and Tate/H1 diamond square derive fixedness of its actual Tate preimage. No new cohomology or period model is necessary."
+  ],
+  "assumptionsToDischarge": [
+    "Construct a genuine global Galois representation on the original homogeneous-valued Tate dual using the native cyclotomic character and inverse actual Tate action.",
+    "Derive its Hecke commutation and actual cyclotomic Frobenius/inertia values from existing valuation-root and original Picard results.",
+    "Derive the actual Galois Frobenius polynomial from the norm-derived Tate relation rather than accepting it as an input.",
+    "Derive combined-diamond fixedness for the actual Tate preimage of every original parabolic class, then consume that same class in the Galois Frobenius polynomial."
+  ],
+  "remaining": "The original coordinate-degree and genus equalities remain. The comparison retains 3<p. Neither nonvanishing of restriction nor surjective parabolic transfer is claimed. Finite continuous character realization, exceptional primes, original two-dimensional all-weight arithmetic association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

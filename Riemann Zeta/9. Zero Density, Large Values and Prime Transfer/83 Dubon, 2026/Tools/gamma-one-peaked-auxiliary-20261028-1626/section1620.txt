@@ -1,0 +1,7 @@
+### Actual original relative dual-number framed comparison — 10 October 2026
+
+The true original relative dual-number residue and proved product/adic topology bridge give a bijection between all original continuous first-order lifts and the full framed coefficient fiber over the original local coefficient ring. Every original matrix is preserved in both directions.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RelativeDualNumberFramedEquiv](Extension/Dubon2026/RelativeDualNumberFramedEquiv.lean).

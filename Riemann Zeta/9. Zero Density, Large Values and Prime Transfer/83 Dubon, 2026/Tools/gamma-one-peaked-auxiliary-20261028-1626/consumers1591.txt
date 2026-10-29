@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G H : Type*} [Group G] [Group H]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace H] [T2Space H]
+
+/-- Exact original-object consumer of `finite_continuousMonoidHom_of_topological_generators`. -/
+theorem actual_topological_generators_finite_hom_finite_continuousMonoidHom_of_topological_generators_source
+    [Finite H] (S : Finset G)
+    (hS : (Subgroup.closure (S : Set G)).topologicalClosure = ⊤) :
+    Finite (G →ₜ* H) :=
+  finite_continuousMonoidHom_of_topological_generators S hS
+
+end
+

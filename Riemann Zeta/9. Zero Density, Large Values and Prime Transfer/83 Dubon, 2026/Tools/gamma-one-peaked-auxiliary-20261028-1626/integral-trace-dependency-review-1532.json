@@ -1,0 +1,90 @@
+{
+  "recordedUTC": "2026-10-29T01:08:52.794666+00:00",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean",
+      "sha256": "0B629AC709AB833B35AB41A70A9A857E9403CF9B145B6354DAE3898A18FF27A9",
+      "bytes": 13463,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean",
+      "sha256": "A4674721FF4B8055BB9F6EFC521CAD6E84416B6F81FD992A2212A42E76839FD8",
+      "bytes": 7784,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean",
+      "sha256": "DA29593080FABA17889E50AA58D5AAF9B6215BF89FD492EAC53E0B3B4225764D",
+      "bytes": 2966,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-series-coefficient-depth-1507\\S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_coeff_mem_subring_of_coeff_mul_mem.lean",
+      "sha256": "ECEC19F38C19F56140BFB0DDF6BFA476D11E80513C6D0FA4601CE31EEB1FA8F8",
+      "bytes": 1876,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff.lean",
+      "sha256": "36FBEB3C8E9B6970D48A84C5B75EBC6B701345FFBCCB081CCB6126D178114586",
+      "bytes": 8895,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_eq_zero_of_isBigO_exp_neg.lean",
+      "sha256": "88D31F3916831DCD184549083A83129C5C5794910E2CC9642BB0001DE5E651B9",
+      "bytes": 4293,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_levelOne_coe_eq_sum_slash.lean",
+      "sha256": "D472F011AD0103224C525D7A9095D7460D1401660D170ACC49A45005B593F1A0",
+      "bytes": 6983,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-dependencies-1510\\S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CongruenceSubgroup_exists_finset_transversal_adapted_T_S.lean",
+      "sha256": "5BEF789DA735B82931C6D2F5F0B130FE918F9298E03B1939D12AB2D05168774E",
+      "bytes": 8450,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_mul_width.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-width-1517\\S_UpperHalfPlane_qExpansion_coeff_mul_width.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_mul_width.lean",
+      "sha256": "46BD37B185F6C161DA051F39C3EA42ADF1FA4660BBE0E1884A55241E66865710",
+      "bytes": 3870,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "scope": "Nine additional exact source files inspected for the even-weight trace and peaked auxiliary construction. No external import or transitive upstream kernel audit claimed."
+}

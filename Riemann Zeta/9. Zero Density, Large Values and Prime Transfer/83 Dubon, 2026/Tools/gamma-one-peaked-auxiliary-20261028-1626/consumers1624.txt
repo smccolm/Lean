@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] in
+/-- Exact original-object consumer of `continuousTraceZeroCocycleEquiv_bijective`. -/
+theorem actual_continuous_trace_zero_cocycles_continuousTraceZeroCocycleEquiv_bijective_source (ρ : G →* GeneralLinearGroup ι R) :
+    Function.Bijective (continuousTraceZeroCocycleEquiv ρ) :=
+  continuousTraceZeroCocycleEquiv_bijective ρ
+
+end
+

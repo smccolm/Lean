@@ -1,0 +1,12 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned API review followed by actual production compilation PASS, ideal1512d-focus.log; expanded verification pending.",
+  "pinnedApis": [
+    "FractionalIdeal.count_pow/count_finprod/finite_factors/finprod_heightOneSpectrum_factorization'",
+    "Actual original IsLocalization.sec and FractionalIdeal.count_well_defined",
+    "Actual HeightOneSpectrum.valuationOfNeZero and valuationOfNeZeroMod",
+    "Original IsDedekindDomain.selmerGroup membership"
+  ],
+  "scope": "Literal fractional-ideal roots and actual original Selmer normalization only. Full arithmetic finiteness remains open.",
+  "externalCodeImported": false
+}

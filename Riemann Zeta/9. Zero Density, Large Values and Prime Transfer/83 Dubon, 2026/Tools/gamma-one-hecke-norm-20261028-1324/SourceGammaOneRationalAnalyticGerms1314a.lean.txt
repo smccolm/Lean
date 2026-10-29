@@ -1,0 +1,52 @@
+import Dubon2026.SourceGammaOneRealizationAlgebra
+import Dubon2026.SourceGammaOneAnalyticGerms
+import Dubon2026.SourceGermPullback
+
+/-! DUB-17/18 -> original Gamma1 norm reduction -> analytic identification
+of the reverse map and its diamond action. Restrict the existing complex
+realization to the actual rational field and use upper-half-plane germs.
+This reuses the native quotient germ laws and avoids extending arbitrary
+automorphisms to transcendental coefficient fields. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter
+open scoped MatrixGroups Topology
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- Literal rational-to-complex coefficient inclusion for the original field. -/
+def rationalComplexMap : qExpFunctionFieldC ℚ Γ →+* functionFieldOver Γ ℂ where
+  toFun x := ⟨coeffEmb ℂ x, coeffEmb_mem_laurentBaseChange ℂ x.property⟩
+  map_one' := Subtype.ext (map_one (coeffEmb ℂ))
+  map_zero' := Subtype.ext (map_zero (coeffEmb ℂ))
+  map_add' x y := Subtype.ext (map_add (coeffEmb ℂ) (x : LaurentSeries ℚ) y)
+  map_mul' x y := Subtype.ext (map_mul (coeffEmb ℂ) (x : LaurentSeries ℚ) y)
+
+/-- Actual rational-field realization in punctured upper-half-plane germs. -/
+def rationalAnalyticGerm (hT : ModularGroup.T ∈ Γ) (τ : ℍ) :
+    qExpFunctionFieldC ℚ Γ →+* Germ (𝓝[≠] τ) ℂ where
+  toFun x := (realize Γ (coeffEmb ℂ x) : Germ (𝓝[≠] τ) ℂ)
+  map_zero' := Germ.coe_eq.mpr (Eventually.of_forall fun z => by
+    simpa only [map_zero] using realize_algebraMap hT 0 z)
+  map_one' := Germ.coe_eq.mpr (Eventually.of_forall fun z => by
+    simpa only [map_one] using realize_algebraMap hT 1 z)
+  map_add' x y := by
+    apply Germ.coe_eq.mpr
+    exact SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp
+      (realize_add_eventuallyEq hT (rationalComplexMap Γ x) (rationalComplexMap Γ y) τ)
+  map_mul' x y := by
+    apply Germ.coe_eq.mpr
+    exact SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp
+      (realize_mul_eventuallyEq hT (rationalComplexMap Γ x) (rationalComplexMap Γ y) τ)
+
+theorem rationalAnalyticGerm_constants (hT : ModularGroup.T ∈ Γ) (τ : ℍ) (c : ℚ) :
+    rationalAnalyticGerm Γ hT τ (algebraMap ℚ (qExpFunctionFieldC ℚ Γ) c) =
+      ((fun _ : ℍ => (c : ℂ)) : Germ (𝓝[≠] τ) ℂ) := by
+  apply Germ.coe_eq.mpr
+  apply Eventually.of_forall
+  intro z
+  change realize Γ (coeffEmb ℂ (algebraMap ℚ (LaurentSeries ℚ) c)) z = (c : ℂ)
+  rw [RingHom.map_rat_algebraMap]
+  exact realize_algebraMap hT (c : ℂ) z
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

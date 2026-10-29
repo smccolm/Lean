@@ -1,0 +1,40 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {A B : Type*} [CommRing A] [IsDedekindDomain A]
+  [CommRing B] [IsDedekindDomain B] [Algebra A B]
+  [Algebra.IsIntegral A B] [Module.IsTorsionFree A B]
+
+/-- Exact original-object consumer of `heightOneUnder_preimage_finite`. -/
+theorem actual_finite_prime_base_change_heightOneUnder_preimage_finite_source
+    (S : Set (HeightOneSpectrum A)) (hS : S.Finite) :
+    {w : HeightOneSpectrum B | w.under A ∈ S}.Finite :=
+  heightOneUnder_preimage_finite S hS
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S T : Type*} [CommRing R] [IsDomain R]
+  [CommRing S] [IsDedekindDomain S] [CommRing T] [IsDedekindDomain T]
+  [Algebra R S] [Algebra S T] [Algebra R T] [IsScalarTower R S T]
+  [Module.IsTorsionFree R S] [Module.IsTorsionFree S T]
+
+/-- Exact original-object consumer of `unramifiedIdealTower_indices`. -/
+theorem actual_finite_prime_base_change_unramifiedIdealTower_indices_source
+    (p : Ideal R) (P : Ideal S) (Q : Ideal T)
+    [Q.IsPrime] [Q.LiesOver P] [P.LiesOver p]
+    (h : p.ramificationIdx Q = 1) :
+    p.ramificationIdx P = 1 ∧ P.ramificationIdx Q = 1 :=
+  unramifiedIdealTower_indices p P Q h
+
+end
+

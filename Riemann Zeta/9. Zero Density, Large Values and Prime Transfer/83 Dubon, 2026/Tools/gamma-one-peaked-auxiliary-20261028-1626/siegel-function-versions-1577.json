@@ -1,0 +1,21 @@
+{
+  "SourceSiegelJacobiFiniteProducts": "1557a",
+  "SourceSiegelJacobiGaussProduct": "1558a",
+  "SourceSiegelJacobiFiniteIdentity": "1559a",
+  "SourceSiegelJacobiProductBounds": "1560a",
+  "SourceSiegelJacobiDominatedLimit": "1561a",
+  "SourceSiegelJacobiRangeLimit": "1562a",
+  "SourceSiegelJacobiProductIdentity": "1563a",
+  "SourceSiegelFunction": "1564a",
+  "SourceSiegelProductCore": "1565a",
+  "SourceSiegelThetaIdentification": "1566a",
+  "SourceSiegelHolomorphic": "1567a",
+  "SourceSiegelEtaTransform": "1568a",
+  "SourceSiegelThetaTransform": "1569a",
+  "SourceSiegelInversion": "1570a",
+  "SourceSiegelSL2Transformation": "1571a",
+  "SourceSiegelLevelShiftFactors": "1572a",
+  "SourceSiegelLevelShifts": "1573a",
+  "SourceSiegelResidueReduction": "1574b",
+  "SourceSiegelProductTransformation": "1575b"
+}

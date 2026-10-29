@@ -1,0 +1,83 @@
+import SourceReductionGenusPoleLifting1329c
+import Dubon2026.SourceIntegralChartPoleBound
+
+/-! DUB-17/18 -> original Gamma1 Picard specialization -> the two integral
+charts. The pole-space theorem gives integral coordinate lifts. Apply that
+same theorem to the inverse unit coordinate, using the native equality of
+the two rational coordinate fields; no second lifting framework is needed.
+Only coordinate-degree and actual genus equality remain explicit. -/
+namespace Dubon2026.SourceCurve.RegularProlongation
+noncomputable section
+open IsLocalRing IntermediateField
+variable {L : Type*} [Field L] [CharZero L] [IsAlgClosed L]
+  {A : ValuationSubring L} {F : Type*} [Field F] [Algebra L F]
+  {Fbar : Type*} [Field Fbar] [Algebra (ResidueField A) Fbar]
+local notation "kk" => ResidueField A
+
+theorem exists_integral_coordinate_lift_of_degree_genus_eq
+    (R : RegularProlongation A F Fbar) (x : R.integers)
+    (hx : Transcendental kk (R.residue x))
+    [FiniteDimensional kk⟮R.residue x⟯ Fbar]
+    [Algebra.IsSeparable kk⟮R.residue x⟯ Fbar]
+    (hdeg : Module.finrank L⟮(x : F)⟯ F = Module.finrank kk⟮R.residue x⟯ Fbar)
+    (hgen : genusFF kk Fbar = genusFF L F)
+    (g : Fbar) (hg : IsIntegral (Algebra.adjoin kk {R.residue x}) g) :
+    ∃ f : R.integers, IsIntegral (Algebra.adjoin L {(x : F)}) (f : F) ∧
+      R.residue f = g := by
+  have hfin : 0 < Module.finrank kk⟮R.residue x⟯ Fbar := Module.finrank_pos
+  haveI : FiniteDimensional L⟮(x : F)⟯ F := Module.finite_of_finrank_pos (hdeg ▸ hfin)
+  have hxL := transcendental_of_residue_transcendental R x hx
+  let D := poleDivisor (x : F)
+    (finite_function_support_of_separating_coordinate (x : F) hxL (x : F))
+  let Db := poleDivisor (R.residue x)
+    (finite_function_support_of_separating_coordinate (R.residue x) hx (R.residue x))
+  have hD : ∀ v, D v = max 0 (-v.ord (x : F)) := fun _ => max_comm _ _
+  have hDb : ∀ v, Db v = max 0 (-v.ord (R.residue x)) := fun _ => max_comm _ _
+  obtain ⟨m₀, hm₀⟩ := exists_pole_bound_of_integral_adjoin _ _ hg Db hDb
+  obtain ⟨m₁, hm₁⟩ := exists_pole_space_lifts_of_degree_genus_eq R x hx hdeg hgen D hD Db hDb
+  obtain ⟨f, hf, hfg⟩ := hm₁ (max m₀ m₁) (le_max_right _ _) g (hm₀ _ (le_max_left _ _))
+  exact ⟨f, (integral_charts_of_pole_bound (x : F) hxL D hD _ hf).1, hfg⟩
+
+theorem integral_charts_lift_of_degree_genus_eq
+    (R : RegularProlongation A F Fbar) (x : R.integers)
+    (hx : Transcendental kk (R.residue x))
+    [FiniteDimensional kk⟮R.residue x⟯ Fbar]
+    [Algebra.IsSeparable kk⟮R.residue x⟯ Fbar]
+    (hdeg : Module.finrank L⟮(x : F)⟯ F = Module.finrank kk⟮R.residue x⟯ Fbar)
+    (hgen : genusFF kk Fbar = genusFF L F) :
+    (∀ g : Fbar, IsIntegral (Algebra.adjoin kk {R.residue x}) g →
+      ∃ f : R.integers, IsIntegral (Algebra.adjoin L {(x : F)}) (f : F) ∧ R.residue f = g) ∧
+    (∀ g : Fbar, IsIntegral (Algebra.adjoin kk {(R.residue x)⁻¹}) g →
+      ∃ f : R.integers, IsIntegral (Algebra.adjoin L {(x : F)⁻¹}) (f : F) ∧ R.residue f = g) := by
+  refine ⟨exists_integral_coordinate_lift_of_degree_genus_eq R x hx hdeg hgen, ?_⟩
+  have hx0 : R.residue x ≠ 0 := fun h => hx (h ▸ isAlgebraic_zero)
+  obtain ⟨u, hu⟩ := R.isUnit_of_residue_ne_zero hx0
+  let xi : R.integers := ↑u⁻¹
+  have hxiF : (xi : F) = (x : F)⁻¹ := by
+    change R.integers.subtype ↑u⁻¹ = (x : F)⁻¹
+    rw [map_units_inv, hu]
+    rfl
+  have hxib : R.residue xi = (R.residue x)⁻¹ := by
+    change R.residue ↑u⁻¹ = _
+    rw [map_units_inv, hu]
+  have hxi : Transcendental kk (R.residue xi) := by
+    rw [hxib]
+    exact fun h => hx (IsAlgebraic.inv_iff.mp h)
+  haveI : FiniteDimensional kk⟮R.residue xi⟯ Fbar := by
+    rw [hxib, adjoin_singleton_inv_eq]
+    infer_instance
+  haveI : Algebra.IsSeparable kk⟮R.residue xi⟯ Fbar := by
+    rw [hxib, adjoin_singleton_inv_eq]
+    infer_instance
+  have hdegxi : Module.finrank L⟮(xi : F)⟯ F = Module.finrank kk⟮R.residue xi⟯ Fbar := by
+    rw [hxiF, hxib, adjoin_singleton_inv_eq, adjoin_singleton_inv_eq]
+    exact hdeg
+  intro g hg
+  have hgxi : IsIntegral (Algebra.adjoin kk {R.residue xi}) g := by rwa [hxib]
+  obtain ⟨f, hf, hfg⟩ := exists_integral_coordinate_lift_of_degree_genus_eq
+    R xi hxi hdegxi hgen g hgxi
+  refine ⟨f, ?_, hfg⟩
+  rwa [hxiF] at hf
+
+end
+end Dubon2026.SourceCurve.RegularProlongation

@@ -1,0 +1,7 @@
+### Actual restricted original dual-number framed comparison — 9 October 2026
+
+Restrict the genuine original dual-number framed equivalence to the actual arithmetic determinant and inertia equations. Every original continuous local first-order representation corresponds uniquely to an actual framed coefficient lift satisfying these same two equations, with its original true residue maps and original topology. The determinant is the constant dual-number lift of the actual residual determinant.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalDualNumberFramedEquiv](Extension/Dubon2026/ArithmeticLocalDualNumberFramedEquiv.lean).

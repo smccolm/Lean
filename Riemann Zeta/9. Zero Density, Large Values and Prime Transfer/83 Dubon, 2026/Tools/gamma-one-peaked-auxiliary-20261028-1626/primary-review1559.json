@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "FiniteGaloisIntermediateField actual lattice and original supremum",
+    "IntermediateField.inclusion and IsScalarTower.of_algHom",
+    "Actual original compositum and inclusion-range bridges, still uncompiled drafts"
+  ],
+  "scope": "The actual arithmetic family and its directed union still need construction, nonemptiness, normality, transfer of the original ramification conditions to all actual finite subextensions and required cyclotomic inclusion. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionFixes": [
+    "Typed the original finite Galois supremum explicitly before taking its integer ring; the statement retains the same literal field supremum."
+  ],
+  "productionLog": "galoisSup1559b-focus.log"
+}

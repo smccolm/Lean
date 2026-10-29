@@ -1,0 +1,7 @@
+### Actual finite actual arithmetic framed coefficient fibers — 9 October 2026
+
+For the original arithmetic Galois group, derive residual quotient finiteness and prime-order character finiteness on the original residual kernel. The genuine fixed residual quotient therefore has actual finite topological generators. Uniform factorization of all original lifts identifies the entire framed fiber over any actual finite complete local coefficient ring with a finite subset of genuine continuous quotient representations.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticFramedFiniteCoefficients](Extension/Dubon2026/ArithmeticFramedFiniteCoefficients.lean).

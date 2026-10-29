@@ -1,0 +1,32 @@
+{
+  "recordedUTC": "2026-10-28T14:49:47.601563+00:00",
+  "revision": "c2da401c2d39df3392d823cba993aaf8a16369ca",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/ModularCurve/YOneAssembly.lean",
+      "path": "projects/ModularCurves/ModularCurves/ModularCurve/YOneAssembly.lean.txt",
+      "sha256": "9291D6154334BCE65755FC15352B80894820A21E832004836E891EE592E577E7",
+      "bytes": 49873
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/ModularCurve/YOneAtlasClassify.lean",
+      "path": "projects/ModularCurves/ModularCurves/ModularCurve/YOneAtlasClassify.lean.txt",
+      "sha256": "111FA4FC93B5035B14D0223E9A6D5B43C19A0117634CC2F0F321C076308FF1AB",
+      "bytes": 379780
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/WeilPairing/KMDataset.lean",
+      "path": "projects/ModularCurves/ModularCurves/WeilPairing/KMDataset.lean.txt",
+      "sha256": "FB540D4059168A9642402DFF4BD3A0111736B1AD667185D1B82191D06CF94C23",
+      "bytes": 26695
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/c2da401c2d39df3392d823cba993aaf8a16369ca/projects/ModularCurves/ModularCurves/WeilPairing/KMCompatibility.lean",
+      "path": "projects/ModularCurves/ModularCurves/WeilPairing/KMCompatibility.lean.txt",
+      "sha256": "3B7A33C049F360AC05B5668AEE472E7E605AC4B474A1F45CF25350297711F27B",
+      "bytes": 14852
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,68 @@
+import Dubon2026.SourceSiegelThetaIdentification
+import Mathlib.NumberTheory.ModularForms.Discriminant
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary existence -> the actual Siegel
+product transformation. Reuse the proved literal product/theta equality,
+native theta and eta transformations, and native generators of SL(2,Z).
+The twelfth-root multiplier is derived from the generator identities;
+no slash-invariance or multiplier-existence hypothesis is supplied.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_siegelFun_specialLinearGroup_smul. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Real MatrixGroups
+
+theorem sqrt_bridge {τ : ℂ} (hτ : 0 < τ.im) :
+    (Complex.sqrt I)⁻¹ * Complex.sqrt τ = (-I * τ) ^ (1 / 2 : ℂ) := by
+  have hτ0 : τ ≠ 0 := fun h => by simp [h] at hτ
+  have hI : (-I : ℂ) ≠ 0 := by simp
+  have hlog : Complex.log (-I * τ) = Complex.log (-I) + Complex.log τ := by
+    rw [Complex.log_mul_eq_add_log_iff hI hτ0, Complex.arg_neg_I]
+    have h1 : 0 ≤ Complex.arg τ := Complex.arg_nonneg_iff.mpr hτ.le
+    have h2 : Complex.arg τ < π := Complex.arg_lt_pi_iff.mpr (Or.inr hτ.ne')
+    have hπ := Real.pi_pos
+    constructor <;> linarith
+  have hcpow : (-I * τ) ^ (1 / 2 : ℂ) = Complex.sqrt (-I) * Complex.sqrt τ := by
+    rw [Complex.cpow_def_of_ne_zero (mul_ne_zero hI hτ0), hlog, add_mul, Complex.exp_add,
+      Complex.sqrt, Complex.sqrt, Complex.cpow_def_of_ne_zero hI, Complex.cpow_def_of_ne_zero hτ0]
+    norm_num
+  have hc : ((√(2⁻¹) : ℝ) : ℂ) * ((√(2⁻¹) : ℝ) : ℂ) = 2⁻¹ := by
+    rw [← Complex.ofReal_mul, Real.mul_self_sqrt (by norm_num)]
+    push_cast
+    ring
+  have hprod : Complex.sqrt I * Complex.sqrt (-I) = 1 := by
+    rw [Complex.sqrt_I, Complex.sqrt_neg_I]
+    calc (((√(2⁻¹) : ℝ) : ℂ) * (1 + I)) * (((√(2⁻¹) : ℝ) : ℂ) * (1 - I))
+          = (((√(2⁻¹) : ℝ) : ℂ) * ((√(2⁻¹) : ℝ) : ℂ)) * (1 - I ^ 2) := by ring
+      _ = 1 := by rw [hc, Complex.I_sq]; norm_num
+  rw [hcpow, inv_eq_of_mul_eq_one_right hprod]
+
+theorem eta_S (τ : ℍ) :
+    ModularForm.eta (-1 / (τ : ℂ)) = (-I * τ) ^ (1 / 2 : ℂ) * ModularForm.eta τ := by
+  have h := ModularForm.eta_comp_eq_csqrt_I_inv τ.2
+  simp only [Function.comp_apply, Pi.smul_apply, Pi.mul_apply, smul_eq_mul] at h
+  rw [h, ← mul_assoc, sqrt_bridge τ.2]
+
+theorem P_S (τ : ℍ) :
+    P (-1 / (τ : ℂ)) = (-I * τ) ^ (1 / 2 : ℂ) * cexp (-(π * I * (-1 / (τ : ℂ)) / 12)) *
+      cexp (π * I * τ / 12) * P τ := by
+  have h := eta_S τ
+  rw [eta_eq, eta_eq] at h
+  have he : cexp (-(π * I * (-1 / (τ : ℂ)) / 12)) * cexp (π * I * (-1 / (τ : ℂ)) / 12) = 1 := by
+    rw [← Complex.exp_add, neg_add_cancel, Complex.exp_zero]
+  calc P (-1 / (τ : ℂ))
+        = cexp (-(π * I * (-1 / (τ : ℂ)) / 12)) * (cexp (π * I * (-1 / (τ : ℂ)) / 12) * P (-1 / (τ : ℂ))) := by
+          rw [← mul_assoc, he, one_mul]
+    _ = _ := by rw [h]; ring
+
+theorem cpow_half_ne_zero (τ : ℍ) : (-I * (τ : ℂ)) ^ (1 / 2 : ℂ) ≠ 0 := by
+  rw [Ne, Complex.cpow_eq_zero_iff, not_and_or]
+  exact Or.inl (mul_ne_zero (by simp) τ.ne_zero)
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

@@ -1,0 +1,71 @@
+import SourcePeakedBernoulliMoments1540a
+import Mathlib.Analysis.Fourier.ZMod
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary form -> finite
+Bernoulli-order separation. The actual Bernoulli dilates span exactly
+the even rational functions on the residue ring. The kernel argument
+uses the proved Dirichlet convolution calculation and native finite
+Fourier inversion, followed by finite-dimensional linear algebra.
+No spanning or separating-exponent hypothesis is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+No upstream resource-limit option is adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+variable {N : ℕ} [NeZero N]
+
+/-- The sine component of the standard residue-ring additive phase. -/
+noncomputable def sinZ (a : ZMod N) : ℝ := Real.sin (2 * π * a.val / N)
+
+theorem sinZ_neg (a : ZMod N) : sinZ (-a) = -sinZ a := by
+  unfold sinZ
+  rw [ZMod.neg_val]
+  split_ifs with h
+  · subst h; simp
+  · have hle : a.val ≤ N := (ZMod.val_lt a).le
+    have hN : (N : ℝ) ≠ 0 := by exact_mod_cast (NeZero.ne N)
+    rw [Nat.cast_sub hle, show 2 * π * ((N : ℝ) - (a.val : ℝ)) / N = 2 * π - 2 * π * (a.val : ℝ) / N by
+      field_simp, Real.sin_two_pi_sub]
+
+theorem stdAddChar_eq_cosZ_add_sinZ (a : ZMod N) :
+    (ZMod.stdAddChar a : ℂ) = (cosZ a : ℂ) + (sinZ a : ℂ) * Complex.I := by
+  rw [ZMod.stdAddChar_apply, ZMod.toCircle_apply, cosZ, sinZ]
+  rw [show (2 * (π : ℂ) * Complex.I * (a.val : ℂ) / (N : ℂ)) = ((2 * π * (a.val : ℝ) / N : ℝ) : ℂ) * Complex.I by
+    push_cast; ring]
+  rw [Complex.exp_mul_I]
+  push_cast
+  ring
+
+theorem eq_zero_of_psi_eq_zero (g : ZMod N → ℝ) (heven : ∀ r : ZMod N, g (-r) = g r)
+    (hpsi : ∀ k : ZMod N, psi g k = 0) : g = 0 := by
+  set G : ZMod N → ℂ := fun r => (g r : ℂ) with hG
+
+  have hsin : ∀ k : ZMod N, ∑ j : ZMod N, g j * sinZ (j * k) = 0 := by
+    intro k
+    have h := (Equiv.sum_comp (Equiv.neg (ZMod N)) (fun j => g j * sinZ (j * k))).symm
+    simp only [Equiv.neg_apply, heven, neg_mul, sinZ_neg, mul_neg, Finset.sum_neg_distrib] at h
+    linarith
+  have hF : ZMod.dft G = 0 := by
+    funext k
+    rw [ZMod.dft_apply, Pi.zero_apply]
+    simp only [smul_eq_mul, stdAddChar_eq_cosZ_add_sinZ, cosZ_neg, sinZ_neg, hG]
+    have hc : ∑ j : ZMod N, g j * cosZ (j * k) = 0 := by
+      have := hpsi k; unfold psi at this
+      rw [← this]
+      exact Finset.sum_congr rfl fun j _ => by rw [mul_comm j k]
+    have h1 : ∑ x : ZMod N, ((cosZ (x * k) : ℂ) + ((-sinZ (x * k) : ℝ) : ℂ) * Complex.I) * (g x : ℂ)
+        = ((∑ j : ZMod N, g j * cosZ (j * k) : ℝ) : ℂ) - ((∑ j : ZMod N, g j * sinZ (j * k) : ℝ) : ℂ) * Complex.I := by
+      push_cast
+      rw [Finset.sum_mul, ← Finset.sum_sub_distrib]
+      exact Finset.sum_congr rfl fun j _ => by ring
+    rw [h1, hc, hsin]
+    simp
+  have hG0 : G = 0 := (LinearEquiv.map_eq_zero_iff ZMod.dft).mp hF
+  funext r
+  have := congrFun hG0 r
+  simpa [hG] using this
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

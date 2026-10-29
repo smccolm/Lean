@@ -1,0 +1,51 @@
+import SourceGammaOneResidueJCoordinate
+import SourceReductionResidueCoordinateFinite
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original good
+reduction -> finite residue function field. Instantiate the native independence
+lift with the constructed coefficient prolongation and the genuine reduced j.
+The original finite-coordinate theorem discharges the characteristic-zero
+degree input. No finite residue degree, degree equality or genus hypothesis
+is supplied by the caller.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.FiniteIndex]
+local notation "FF" => functionFieldOver Γ L
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem finite_residueCoordinate_and_degree_le (hT : ModularGroup.T ∈ Γ) :
+    FiniteDimensional (IntermediateField.adjoin kk ({residueJCoordinate A Γ} : Set Fb)) Fb ∧
+      Module.finrank (IntermediateField.adjoin kk ({residueJCoordinate A Γ} : Set Fb)) Fb ≤
+        Module.finrank (IntermediateField.adjoin L ({jCoordinateOver Γ L} : Set FF)) FF := by
+  letI := finiteDimensional_jCoordinateOver hT L
+  have hx : Transcendental kk
+      ((regularProlongation A Γ).residue
+        ⟨jCoordinateOver Γ L, jCoordinateOver_mem_gaussRing A Γ⟩) := by
+    rw [regularProlongation_jCoordinateOver]
+    exact transcendental_residueJCoordinate A Γ
+  have h := SourceCurve.RegularProlongation.residue_coordinate_finite_and_finrank_le
+    (regularProlongation A Γ)
+    ⟨jCoordinateOver Γ L, jCoordinateOver_mem_gaussRing A Γ⟩ hx
+  erw [regularProlongation_jCoordinateOver A Γ] at h
+  exact h
+
+omit [Γ.FiniteIndex] in
+theorem gammaOne_finite_residueCoordinate_and_degree_le (M : ℕ) [NeZero M] :
+    let Δ := CongruenceSubgroup.Gamma1 M
+    FiniteDimensional
+        (IntermediateField.adjoin kk ({residueJCoordinate A Δ} : Set (residueImage A Δ)))
+        (residueImage A Δ) ∧
+      Module.finrank
+        (IntermediateField.adjoin kk ({residueJCoordinate A Δ} : Set (residueImage A Δ)))
+        (residueImage A Δ) ≤
+      Module.finrank
+        (IntermediateField.adjoin L ({jCoordinateOver Δ L} : Set (functionFieldOver Δ L)))
+        (functionFieldOver Δ L) := by
+  exact finite_residueCoordinate_and_degree_le A (CongruenceSubgroup.Gamma1 M)
+    (by simp [CongruenceSubgroup.Gamma1_mem, ModularGroup.T])
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

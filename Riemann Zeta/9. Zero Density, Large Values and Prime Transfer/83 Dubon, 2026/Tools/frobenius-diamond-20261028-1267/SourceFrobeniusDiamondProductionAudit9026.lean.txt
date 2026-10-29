@@ -1,0 +1,136 @@
+import Dubon2026.SourceHomogeneousHeckeDiamond
+import Dubon2026.SourceGammaOneHeckeDiamondCoefficient
+import Dubon2026.SourceGammaOneArithmeticTateOperators
+import Dubon2026.SourceTateDualQuadratic
+import Dubon2026.SourceGammaOneBinaryFrobeniusNormalization
+import Dubon2026.SourceCoefficientDualAction
+import Dubon2026.SourceGammaOneBinaryGaloisHecke
+import Dubon2026.SourceInnerH1Identity
+import Dubon2026.SourceH1TraceInner
+import Dubon2026.SourceGammaOneDiamondRange
+import Dubon2026.SourceH1TraceSubgroupEquality
+import Dubon2026.SourceNormalizerH1Trace
+import Dubon2026.SourceH1CompositionSquare
+import Dubon2026.SourceNormalizerCoefficientValue
+import Dubon2026.SourceGammaOneDiamondSubgroupSquare
+import Dubon2026.SourceGammaOneDiamondTransfer
+import Dubon2026.SourceGammaOneHeckeDiamondWords
+import Dubon2026.SourceGammaOneHeckeDiamondDescent
+import Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.homogeneousHeckeDiamond_square
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond
+#print axioms Dubon2026.sourceTateDual_quadratic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard
+#print axioms Dubon2026.sourceCoefficientDualAction_operator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator
+#print axioms Dubon2026.sourceCoefficientDualAction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep
+#print axioms Dubon2026.sourceInnerH1_identity
+#print axioms Dubon2026.sourceSubgroupH1Trace_inner
+#print axioms Dubon2026.sourceGammaOneDiagonalRange_conj
+#print axioms Dubon2026.sourceSubgroupH1Trace_equality
+#print axioms Dubon2026.sourceSubgroupH1Trace_normalizer
+#print axioms Dubon2026.sourceH1Composition_square
+#print axioms Dubon2026.sourceSubgroupEqualityCoefficient_linear
+#print axioms Dubon2026.sourceNormalizerCoefficientMorphism_linear
+#print axioms Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square
+#print axioms Dubon2026.sourceGammaOneConstantH1Transfer_diamond
+#print axioms Dubon2026.sourceInnerCoefficientMorphism
+#print axioms Dubon2026.sourceSubgroupEqualityCoefficient
+#print axioms Dubon2026.sourceNormalizerSubgroupHom
+#print axioms Dubon2026.sourceNormalizerCoefficientMorphism
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_transfer
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel
+#print axioms Dubon2026.sourceGammaOneDiamondToModulus_comp
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondOperators
+#print axioms Dubon2026.sourceGammaOneHeckeDiamondAlgebra
+#print axioms Dubon2026.sourceGammaOneOriginalHeckeDiamondWord
+#print axioms Dubon2026.sourceGammaOneDiamondToModulus
+#print axioms Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceHomogeneousHeckeDiamond, `Dubon2026.SourceGammaOneHeckeDiamondCoefficient, `Dubon2026.SourceGammaOneArithmeticTateOperators, `Dubon2026.SourceTateDualQuadratic, `Dubon2026.SourceGammaOneBinaryFrobeniusNormalization, `Dubon2026.SourceCoefficientDualAction, `Dubon2026.SourceGammaOneBinaryGaloisHecke, `Dubon2026.SourceInnerH1Identity, `Dubon2026.SourceH1TraceInner, `Dubon2026.SourceGammaOneDiamondRange, `Dubon2026.SourceH1TraceSubgroupEquality, `Dubon2026.SourceNormalizerH1Trace, `Dubon2026.SourceH1CompositionSquare, `Dubon2026.SourceNormalizerCoefficientValue, `Dubon2026.SourceGammaOneDiamondSubgroupSquare, `Dubon2026.SourceGammaOneDiamondTransfer, `Dubon2026.SourceGammaOneHeckeDiamondWords, `Dubon2026.SourceGammaOneHeckeDiamondDescent, `Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter]
+  let theorems : Array Name := #[`Dubon2026.homogeneousHeckeDiamond_square, `Dubon2026.sourceGammaOneHeckeDiamondCoefficient_square, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_hecke, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond, `Dubon2026.sourceTateDual_quadratic, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator_quadratic_of_picard, `Dubon2026.sourceCoefficientDualAction_operator, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep_prime, `Dubon2026.sourceInnerH1_identity, `Dubon2026.sourceSubgroupH1Trace_inner, `Dubon2026.sourceGammaOneDiagonalRange_conj, `Dubon2026.sourceSubgroupH1Trace_equality, `Dubon2026.sourceSubgroupH1Trace_normalizer, `Dubon2026.sourceH1Composition_square, `Dubon2026.sourceSubgroupEqualityCoefficient_linear, `Dubon2026.sourceNormalizerCoefficientMorphism_linear, `Dubon2026.sourceGammaOneSubgroupH1Iso_diamond_square, `Dubon2026.sourceGammaOneConstantH1Transfer_diamond, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_val, `Dubon2026.sourceGammaOneHeckeDiamondWord_transfer, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord_change, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_zero, `Dubon2026.sourceGammaOneHeckeDiamondWord_modulus_kernel, `Dubon2026.sourceGammaOneDiamondToModulus_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_comp, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_hecke, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter_diamond]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep, `Dubon2026.SourceFunctionField.GammaOne.arithmeticHeckeTate, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondTate, `Dubon2026.SourceFunctionField.GammaOne.binaryTateFrobeniusOperator, `Dubon2026.sourceCoefficientDualAction, `Dubon2026.SourceFunctionField.GammaOne.binaryTateGaloisRep, `Dubon2026.sourceInnerCoefficientMorphism, `Dubon2026.sourceSubgroupEqualityCoefficient, `Dubon2026.sourceNormalizerSubgroupHom, `Dubon2026.sourceNormalizerCoefficientMorphism, `Dubon2026.sourceGammaOneHeckeDiamondOperators, `Dubon2026.sourceGammaOneHeckeDiamondAlgebra, `Dubon2026.sourceGammaOneOriginalHeckeDiamondWord, `Dubon2026.sourceGammaOneDiamondToModulus, `Dubon2026.sourcePrimitiveGammaOneHeckeDiamondCharacter]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE FROBENIUS DIAMOND AUDIT PASS: {count} theorems including private/generated declarations. Exact conditional Frobenius normalization, original Galois/Hecke compatibility, native transfer invariance and full-H1 diamond-one character. Geometric Frobenius/inertia, parabolic and characteristic-zero realization remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceHomogeneousHeckeDiamond
+
+#lint in Dubon2026.SourceGammaOneHeckeDiamondCoefficient
+
+#lint in Dubon2026.SourceGammaOneArithmeticTateOperators
+
+#lint in Dubon2026.SourceTateDualQuadratic
+
+#lint in Dubon2026.SourceGammaOneBinaryFrobeniusNormalization
+
+#lint in Dubon2026.SourceCoefficientDualAction
+
+#lint in Dubon2026.SourceGammaOneBinaryGaloisHecke
+
+#lint in Dubon2026.SourceInnerH1Identity
+
+#lint in Dubon2026.SourceH1TraceInner
+
+#lint in Dubon2026.SourceGammaOneDiamondRange
+
+#lint in Dubon2026.SourceH1TraceSubgroupEquality
+
+#lint in Dubon2026.SourceNormalizerH1Trace
+
+#lint in Dubon2026.SourceH1CompositionSquare
+
+#lint in Dubon2026.SourceNormalizerCoefficientValue
+
+#lint in Dubon2026.SourceGammaOneDiamondSubgroupSquare
+
+#lint in Dubon2026.SourceGammaOneDiamondTransfer
+
+#lint in Dubon2026.SourceGammaOneHeckeDiamondWords
+
+#lint in Dubon2026.SourceGammaOneHeckeDiamondDescent
+
+#lint in Dubon2026.SourcePrimitiveGammaOneHeckeDiamondCharacter

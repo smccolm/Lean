@@ -1,0 +1,7 @@
+### Actual actual unramified fixed-determinant arithmetic coefficient ring — 9 October 2026
+
+Form the literal quotient of the existing fixed-determinant arithmetic ring by all actual inertia matrix relations at a chosen original arithmetic prime. Original residual unramifiedness and determinant compatibility make it local with the true original residue field. Its original quotient topology, Noetherianity and maximal-adic completeness are derived from the actual compact Hausdorff original coefficient ring.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedDeformationRing](Extension/Dubon2026/ArithmeticUnramifiedDeformationRing.lean).

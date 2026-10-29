@@ -1,0 +1,56 @@
+import Dubon2026.SourceGammaOneHeckeDiamondNorm
+import Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> actual Hecke norm
+reduction. The proved embedding census and exact arithmetic diamond
+discharge the norm-product premise. With integral representatives of the
+input and its actual diamond image, the original norm is integral and its
+residue is coefficient Frobenius of the diamond image times q-Frobenius
+of the input. Producing the diamond representative from input integrality
+alone, and original Picard specialization, remain explicit obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup
+open scoped MatrixGroups
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M p : ℕ) [NeZero M] [hp : Fact p.Prime]
+variable (A : ValuationSubring Qbar) [CharP (IsLocalRing.ResidueField A) p]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => laurentBaseChange Qbar (x1FunctionField M)
+attribute [local instance] HeckeNorm.alphaAlgebra HeckeNorm.alphaModule
+
+theorem exists_gammaOne_hecke_norm_integral_reduction_of_diamond
+    (hcop : Nat.Coprime M p) :
+    ∃ g : Gamma0 M, (p : ZMod M) * (g.val 1 1 : ZMod M) = 1 ∧
+      ∀ (y : LaurentSeries A) (hy : coeffMap A.subtype y ∈ FF)
+        (u : LaurentSeries A),
+        coeffMap A.subtype u =
+          (ConstantField.arithmeticDiamondAut M g ⟨coeffMap A.subtype y, hy⟩ : LaurentSeries Qbar) →
+      ∃ y' : LaurentSeries A,
+        coeffMap A.subtype y' =
+          (Algebra.norm FF (heckeBeta Qbar M p ⟨coeffMap A.subtype y, hy⟩) : LaurentSeries Qbar) ∧
+        coeffMap (IsLocalRing.residue A) y' =
+          coeffMap (frobenius kk p) (coeffMap (IsLocalRing.residue A) u) *
+            qExpand kk p (coeffMap (IsLocalRing.residue A) y) := by
+  haveI : Algebra.IsAlgebraic ℚ Qbar := AlgebraicClosure.isAlgebraic ℚ
+  haveI : NeZero (p : ℚ) := ⟨Nat.cast_ne_zero.mpr hp.out.ne_zero⟩
+  obtain ⟨z, hz⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot Qbar p
+  let ζ : Qbarˣ := Units.map A.subtype.toMonoidHom (primeRootValuationUnit A p hz)
+  have hζ : IsPrimitiveRoot (ζ : Qbar) p := by
+    change IsPrimitiveRoot ((primeRootValuationUnit A p hz : A) : Qbar) p
+    rw [primeRootValuationUnit_coe]
+    exact hz
+  obtain ⟨g, hlabel, hn⟩ := exists_gammaOne_hecke_norm_beta_product M p hcop ζ hζ
+  refine ⟨g, hlabel, ?_⟩
+  intro y hy u hu
+  apply HeckeNorm.exists_integral_reduction_of_diamond_product A p hz u y
+  rw [HeckeNorm.diamondLaurentProduct, map_mul, map_prod, coeffMap_qExpand, coeffMap_qExpand]
+  rw [hn]
+  congr 1
+  apply Finset.prod_congr rfl
+  intro b _
+  rw [coeffMap_qTwist_commRing, map_pow, hu]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

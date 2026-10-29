@@ -1,0 +1,192 @@
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+
+/-- Exact source consumer of `smoothInducedCharacter_continuous`. -/
+theorem actual_induced_coefficient_smoothInducedCharacter_continuous_source (B : Subgroup G) (χ : B →* ℂ)
+    (f : smoothInducedCharacterSpace B χ) : Continuous f.val :=
+  smoothInducedCharacter_continuous B χ f
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (B K : Subgroup G) (χ : B →* ℂ) [CompactSpace K]
+    [MeasurableSpace K] [BorelSpace K] (μ : Measure K) [IsFiniteMeasure μ]
+
+/-- Exact source consumer of `smoothInducedCompactAverage_fixed`. -/
+theorem actual_induced_coefficient_smoothInducedCompactAverage_fixed_source [IsProbabilityMeasure μ]
+    (f : smoothInducedCharacterSpace B χ)
+    (hf : ∀ k : K, smoothInducedCharacterRepresentation B χ k.val f = f) :
+    smoothInducedCompactAverage B K χ μ f = f.val 1 :=
+  smoothInducedCompactAverage_fixed B K χ μ f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+/-- Exact source consumer of `finitePlaceInducedAverage_spherical`. -/
+theorem actual_induced_coefficient_finitePlaceInducedAverage_spherical_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ) :
+    finitePlaceInducedAverage v z₁ z₂ (finitePlaceInducedSpherical v z₁ z₂) = 1 :=
+  finitePlaceInducedAverage_spherical v z₁ z₂
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G V : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    (ρ : Representation ℂ G V) (K : Subgroup G) (ℓ : V →ₗ[ℂ] ℂ)
+    (hℓ : ∀ k : K, ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (y : V) (hy : ∀ k : K, ρ k.val y = y)
+
+include hℓ hy
+
+/-- Exact source consumer of `sphericalFunctional_scalar_double_coset`. -/
+theorem actual_induced_coefficient_sphericalFunctional_scalar_double_coset_source (c a : G)
+    (hc : ∀ x : V, ρ c x = x) (l r : K) :
+    ℓ (ρ (c * l.val * a * r.val) y) = ℓ (ρ a y) :=
+  sphericalFunctional_scalar_double_coset ρ K ℓ hℓ y hy c a hc l r
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+
+variable
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+
+include hℓ hy
+
+/-- Exact source consumer of `finitePlaceFunctionalRadial_forward`. -/
+theorem actual_induced_coefficient_finitePlaceFunctionalRadial_forward_source (n : ℕ) (i : Option (ZMod p))
+    (hi : i ≠ some 0) :
+    ℓ (ρ (finitePlaceHeckeRadialMatrix 1 p (Nat.coprime_one_right p)
+      (rationalPrimePlace p (Fact.out : p.Prime)) n i) y) =
+      finitePlaceFunctionalRadial p ρ ℓ y (n + 1) :=
+  finitePlaceFunctionalRadial_forward p ρ ℓ y hℓ hy n i hi
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+    (hc : ∀ u x, ρ (GeneralLinearGroup.scalar (Fin 2) u) x = x)
+
+include hℓ hy hc
+
+/-- Exact source consumer of `finitePlaceFunctionalHecke_eigen_recurrence`. -/
+theorem actual_induced_coefficient_finitePlaceFunctionalHecke_eigen_recurrence_source (μ : ℂ)
+    (heigen : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) ρ y = μ • y) :
+    μ * finitePlaceFunctionalRadial p ρ ℓ y 0 =
+      ((p : ℂ) + 1) * finitePlaceFunctionalRadial p ρ ℓ y 1 ∧
+    ∀ n, μ * finitePlaceFunctionalRadial p ρ ℓ y (n + 1) =
+      finitePlaceFunctionalRadial p ρ ℓ y n +
+        (p : ℂ) * finitePlaceFunctionalRadial p ρ ℓ y (n + 2) :=
+  finitePlaceFunctionalHecke_eigen_recurrence p ρ ℓ y hℓ hy hc μ heigen
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {V : Type*} [AddCommGroup V] [Module ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (ℓ : V →ₗ[ℂ] ℂ) (y : V)
+    (hℓ : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)),
+      ∀ x : V, ℓ (ρ k.val x) = ℓ x)
+    (hy : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ k.val y = y)
+    (hc : ∀ u x, ρ (GeneralLinearGroup.scalar (Fin 2) u) x = x)
+    (hn : ℓ y = 1) (z : ℂ)
+    (heigen : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) ρ y =
+      ((Real.sqrt p : ℂ) * z) • y)
+
+include hℓ hy hc hn heigen
+
+/-- Exact source consumer of `finitePlaceFunctional_unitary_unique`. -/
+theorem actual_induced_coefficient_finitePlaceFunctional_unitary_unique_source {W : Type*} [NormedAddCommGroup W]
+    [InnerProductSpace ℂ W]
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hσ : ∀ g a b, inner ℂ (σ g a) (σ g b) = inner ℂ a b)
+    (hσc : ∀ u a, σ (GeneralLinearGroup.scalar (Fin 2) u) a = a)
+    (w : W) (hw : inner ℂ w w = 1)
+    (hwK : ∀ k : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ k.val w = w)
+    (hwT : finitePlaceHeckeTrace 1 p (Nat.coprime_one_right p) σ w =
+      ((Real.sqrt p : ℂ) * z) • w)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ℓ (ρ g y) = inner ℂ w (σ g w) :=
+  finitePlaceFunctional_unitary_unique p ρ ℓ y hℓ hy hc hn z heigen σ hσ hσc w hw hwK hwT g
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+variable {G V W : Type*} [Group G] [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (v : V) (w : W) (ℓ : W →ₗ[ℂ] ℂ)
+    (hcoeff : ∀ g, ℓ (σ g w) = inner ℂ v (ρ g v))
+
+include hρ hcoeff
+
+/-- Exact source consumer of `sphericalCoefficient_linearCombination_ker_le`. -/
+theorem actual_induced_coefficient_sphericalCoefficient_linearCombination_ker_le_source :
+    (Finsupp.linearCombination ℂ (fun g => σ g w)).ker ≤
+      (Finsupp.linearCombination ℂ (fun g => ρ g v)).ker :=
+  sphericalCoefficient_linearCombination_ker_le ρ σ hρ v w ℓ hcoeff
+
+end
+
+section
+
+open IsDedekindDomain Matrix MeasureTheory
+
+/-- Exact source consumer of `primitiveLocalInduced_smooth_coefficient`. -/
+theorem actual_induced_coefficient_primitiveLocalInduced_smooth_coefficient_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    primitiveLocalInducedAverage F p Fact.out
+      (normalizedLocalPrincipalRepresentation (rationalPrimePlace p (Fact.out : p.Prime))
+        (primitiveSatakePlusUnit F p) (primitiveSatakeMinusUnit F p) g
+        (primitiveLocalInducedSpherical F p Fact.out)) =
+    inner ℂ (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)) g
+        (adelicLocalUnitReference F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) :=
+  primitiveLocalInduced_smooth_coefficient F hpN g
+
+end
+

@@ -1,0 +1,132 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T02:47:51.179492+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourcePeakedAuxiliaryFunction",
+    "SourceSiegelCuspPermutation",
+    "SourcePeakedAuxiliaryCuspDecay",
+    "SourcePeakedAuxiliaryHolomorphic",
+    "SourcePeakedAuxiliaryModularForm"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryFunction.lean",
+      "sha256": "8BDE2F520D51FDE63B34568B0DED07FCB271A2099461B578653E7BFDE1B2A381",
+      "oleanSha256": "91CA5B1B18C411BFC948A6E8A8F2D2F5C709CA5072D1FF72579DC0FAF65F9050",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryFunction-1612.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryFunction-1612.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelCuspPermutation.lean",
+      "sha256": "668EEA83847DDCF9AEB52402A95ACF0ECF84F623794A6AC4C2D3C5B97A24692D",
+      "oleanSha256": "D2C322BE01FE86A8BF54044A693344028259D597627F0E303D5AFFFFD5180190",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelCuspPermutation-1612.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelCuspPermutation-1612.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryCuspDecay.lean",
+      "sha256": "2EF80C37622431E1EC02030E69C684B1284E894788D65A5C81F4D1209CC6EC0C",
+      "oleanSha256": "CEA9B7525F2B05C096F0185E7012C8FD8C9C7535F94D6B6E82854BBE3A3C6CDA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryCuspDecay-1612.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryCuspDecay-1612.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryHolomorphic.lean",
+      "sha256": "85667816541A661D67DC8C97DFFA1A04D5B2473E8F3ADF048F9FF35A715D7577",
+      "oleanSha256": "41F363D373682D636056F4C8780B316B1EF237F0F1F345601F330A9B91C964E7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryHolomorphic-1612.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryHolomorphic-1612.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryModularForm.lean",
+      "sha256": "EC55768A94F07D0CA97B5BF7ACC2A25DB2076AE8DEE3D0F3EB97E15618252A51",
+      "oleanSha256": "84119C656F671129CB2FD20FAFC72A82F091D283B487733C762145CB3A03BB8B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryModularForm-1612.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedAuxiliaryModularForm-1612.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT",
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormAudit1.log",
+  "logSha256": "3D9ADE54A3430FCFBFEB91E83FE3EB7FA411F34867C04649CD46AFB1589D48C0",
+  "auditSha256": "A2A12A3BBC08F372CC7293D73CDD82CDA45C8D642FDA10776419DD158296E818",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormScratchOwnership1612.log",
+  "ownershipSha256": "5165D8F03AF8D9C451EF463915E93A6939BC62C255987B25D53A313CB4EE4438",
+  "exhaustiveTheorems": 39,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeakedModularFormDependencyAudit1.log",
+  "dependencyAuditSha256": "EBE93E3FC8F9B9DC1B6D4381B90B73CBDC9CECBA5C8EED2DA8F891AE3CC261C6",
+  "dependencyAuditSourceSha256": "6A125F663358FE7444900020CDD2F2C8AADE71FF4781E7482A488EABFFF3EB9B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> literal discriminant-adjusted Gamma1 modular form and exact cusp bounds.",
+  "discharged": [
+    "Actual Siegel product times the discriminant power is holomorphic and Gamma1 invariant.",
+    "Every actual transformed product has the exact original Bernoulli cusp order.",
+    "The source exponential estimate holds at every SL2 cusp.",
+    "Explicit nonnegative shifted orders imply boundedness at every cusp and supply an actual ModularForm."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The nonnegative shifted-order hypothesis must be discharged by selecting the discriminant power. Exact integral width-one coefficients, leading inverse and separated decay still need assembly into the actual peaked auxiliary. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-peaked-modular-form-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "CBA38497D4568E2CA4F41436759665458455F4AFEF4549AA85ABFC132C1145F9",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

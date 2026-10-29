@@ -1,0 +1,77 @@
+import SourceGammaOneOriginalSpecialization
+import SourceGammaOneKummerGenus1336a
+import SourceJointSeparableGenus1343a
+import Dubon2026.SourceKummerRegularProlongationsR2
+
+/-! DUB-17/18 -> original Gamma1 arithmetic association -> Picard/Tate
+specialization -> prime-to-residue torsion injectivity. A putative missing
+prime root defines the actual unramified Kummer cover. Its q distinct
+reductions give the proved joint genus inequality, contradicting its
+unramified genus formula when the original and residue genera agree.
+Only coordinate-degree and genus equality remain explicit; power lifting,
+common constants, finite overlap and the genus inequality are all derived. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve Polynomial IntermediateField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Δ
+
+theorem gammaOne_exists_power_of_residue_power_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF)
+    {q : ℕ} [hqp : Fact q.Prime] (hq : (q : kk) ≠ 0)
+    (f : coefficientGaussRing Δ A)
+    (hdvd : ∀ P : Place Qbar FF, (q : ℤ) ∣ P.ord (f : FF))
+    {w : Fb} (hw0 : w ≠ 0) (hw : w ^ q = residueToImage A Δ f) :
+    ∃ g : FF, g ^ q = (f : FF) := by
+  classical
+  by_contra hnone
+  have hf : ∀ g : FF, g ^ q ≠ (f : FF) := fun g hg => hnone ⟨g, hg⟩
+  let E := (X ^ q - C (f : FF)).SplittingField
+  letI : NeZero q := ⟨hqp.out.ne_zero⟩
+  letI : FiniteDimensional FF E := IsSplittingField.finiteDimensional E (X ^ q - C (f : FF))
+  have hT : ModularGroup.T ∈ Δ := by simp [CongruenceSubgroup.Gamma1_mem, ModularGroup.T]
+  letI : FiniteDimensional Qbar⟮jCoordinateOver Δ Qbar⟯ FF := finiteDimensional_jCoordinateOver hT Qbar
+  have hdim : FiniteDimensional kk⟮residueJCoordinate A Δ⟯ Fb :=
+    (finite_residueCoordinate_and_degree_le A Δ hT).1
+  have hsep : Algebra.IsSeparable kk⟮residueJCoordinate A Δ⟯ Fb :=
+    isSeparable_residueCoordinate A Δ hT
+  obtain ⟨hdegree, _⟩ := gammaOne_kummer_degree_and_unramified M hf hdvd E
+  obtain ⟨S, hSinj, hS⟩ := @RegularProlongation.exists_kummer_regular_prolongations
+    Qbar FF Fb inferInstance inferInstance inferInstance A inferInstance inferInstance
+    inferInstance (specializationResidueAlgebra A Δ) (regularProlongation A Δ)
+    q inferInstance f hf hq w hw0 hw E inferInstance inferInstance inferInstance inferInstance inferInstance
+  let t : E := algebraMap FF E (jCoordinateOver Δ Qbar)
+  have ht (i : Fin q) : t ∈ (S i).integers := by
+    change jCoordinateOver Δ Qbar ∈ (S i).integers.comap (algebraMap FF E)
+    rw [(hS i).1]
+    exact jCoordinateOver_mem_gaussRing A Δ
+  have hres (i : Fin q) : (S i).residue ⟨t, ht i⟩ = residueJCoordinate A Δ :=
+    ((hS i).2 ⟨t, ht i⟩ ⟨jCoordinateOver Δ Qbar, jCoordinateOver_mem_gaussRing A Δ⟩ rfl).trans
+      (regularProlongation_jCoordinateOver A Δ)
+  have heq : q * Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb = Module.finrank Qbar⟮t⟯ E := by
+    rw [show t = algebraMap FF E (jCoordinateOver Δ Qbar) from rfl,
+      finrank_adjoin_algebraMap_mul, hdegree, hdeg, Nat.mul_comm]
+  have hfinite : FiniteDimensional Qbar⟮t⟯ E := Module.finite_of_finrank_pos (by
+    rw [← heq]
+    haveI := hdim
+    exact Nat.mul_pos hqp.out.pos Module.finrank_pos)
+  have hineq := @RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate
+    A E inferInstance inferInstance q inferInstance Fb inferInstance (specializationResidueAlgebra A Δ)
+    S hSinj t ht hfinite (residueJCoordinate A Δ) (transcendental_residueJCoordinate A Δ)
+    hres hdim hsep heq
+  rw [hgen] at hineq
+  have hineqZ : (q : ℤ) * (genusFF Qbar FF : ℤ) ≤ (genusFF Qbar E : ℤ) := by
+    exact_mod_cast hineq
+  have hidentity := gammaOne_kummer_genus_sub_one M hf hdvd E
+  have hq2 : (2 : ℤ) ≤ q := by exact_mod_cast hqp.out.two_le
+  nlinarith only [hineqZ, hidentity, hq2]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

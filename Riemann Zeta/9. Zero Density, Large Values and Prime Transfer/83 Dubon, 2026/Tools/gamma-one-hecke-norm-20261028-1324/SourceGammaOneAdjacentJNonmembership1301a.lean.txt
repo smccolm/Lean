@@ -1,0 +1,85 @@
+import SourceGammaOneCoprimeGeneration
+import SourceGammaOneAdjacentJRatio
+import SourceGammaOneRealizationRestriction
+import Dubon2026.SourceInvariantAnalyticJPolynomial
+import Dubon2026.SourceCuspLaurentPolynomial
+import Dubon2026.SourceQExpansionLaurentWidth
+import Dubon2026.SourceJPrimeNonpolynomial
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> complete embedding
+census -> adjacent-j generator. Hypothetical membership gives genuine
+Gamma1 invariance through the original modular-ratio realization. Coprime
+generation then gives full modular invariance. Native cusp pole clearing,
+level-one polynomial classification and Laurent uniqueness contradict
+the already proved prime j-series obstruction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Filter Matrix.SpecialLinearGroup
+open scoped MatrixGroups Manifold Topology ModularForm
+
+theorem prime_j_not_mem_gammaOne_over_complex (M p : ℕ)
+    [NeZero M] [Fact p.Prime] (hcop : Nat.Coprime M p) :
+    coeffEmb ℂ (qExpand ℚ p jq) ∉ functionFieldOver (Gamma1 M) ℂ := by
+  intro hmem
+  let x : functionFieldOver (Gamma1 M) ℂ := ⟨_, hmem⟩
+  let F : ℍ → ℂ := fun τ => JMultiplicity.jf (levelRaiseMatrix p • τ)
+  have hF : MDiff F := adjacentJ_holomorphic p
+  obtain ⟨g, h, hh, hhn, hx, he⟩ := adjacentJ_modular_ratio p
+  let Δ := Gamma1 M ⊓ Gamma0 p
+  have hT : ModularGroup.T ∈ Δ := by
+    simp [Δ, Gamma1_mem, Gamma0_mem, ModularGroup.T]
+  have hgerm (τ : ℍ) : (F ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)]
+      fun z => realize (Gamma1 M) (x : LaurentSeries ℂ) (ofComplex z) := by
+    let g' := ModularNormPolynomial.restrict (Subgroup.map_mono (show Δ ≤ Gamma0 p from inf_le_right)) g
+    let h' := ModularNormPolynomial.restrict (Subgroup.map_mono (show Δ ≤ Gamma0 p from inf_le_right)) h
+    have hx' : (x : LaurentSeries ℂ) * ModularRatios.qL h' = ModularRatios.qL g' := hx
+    filter_upwards [realize_restrict_eventuallyEq (show Δ ≤ Gamma1 M from inf_le_left) hT x τ]
+      with z hz
+    rw [← hz, realize_eq_div Δ hT g' h' x hx' (ofComplex z) (hhn (ofComplex z))]
+    exact (eq_div_iff (hhn (ofComplex z))).mpr (he (ofComplex z))
+  have hi1 := continuous_invariant_of_realize_germs (show ModularGroup.T ∈ Gamma1 M from hT.1)
+    x F hF.continuous hgerm
+  have hi0 := holomorphic_quotient_invariant g h hh F hF he
+  let S : Subgroup SL(2, ℤ) :=
+    { carrier := {γ | ∀ τ : ℍ, F (γ • τ) = F τ}
+      one_mem' := by intro τ; rw [one_smul]
+      mul_mem' := by
+        intro a b ha hb τ
+        rw [mul_smul, ha, hb]
+      inv_mem' := by
+        intro a ha τ
+        simpa only [smul_inv_smul] using (ha (a⁻¹ • τ)).symm }
+  have hle : Gamma1 M ⊔ Gamma0 p ≤ S := sup_le hi1 hi0
+  rw [gammaOne_sup_gamma0_coprime M p hcop] at hle
+  have hi : ∀ γ : SL(2, ℤ), F ∣[(0 : ℤ)] γ = F := by
+    intro γ
+    funext τ
+    rw [ModularForm.SL_slash_apply, neg_zero, zpow_zero, mul_one]
+    exact hle (Subgroup.mem_top γ) τ
+  have hΓ : Gamma p ≤ Gamma0 p := by
+    intro γ hγ
+    exact (Gamma0_mem p γ).mpr (Gamma_mem.mp hγ).2.2.1
+  obtain ⟨m, hm⟩ := holomorphic_quotient_cusp_pole_bound p hΓ g h hh F hF he 1
+  have hm' : IsBoundedAtImInfty (F * (ModularForm.discriminant : ℍ → ℂ) ^ m) := by
+    simpa only [one_smul, Function.comp_def, CuspForm.coe_discriminant] using hm
+  obtain ⟨P, _, hP⟩ := SourceFricke.exists_polynomial_j_of_poleBounded_invariant m F hF hi hm'
+  have hj : CuspTaylor.Represents (jqModC ℂ) (cuspFunction 1 JMultiplicity.jf) := by
+    simpa only [jqNModC_one, Nat.cast_one] using represents_jqNModC 1
+  have hrep := adjacentJ_represents p
+  change CuspTaylor.Represents (coeffEmb ℂ (qExpand ℚ p jq)) (cuspFunction 1 F) at hrep
+  rw [hP] at hrep
+  have hseries := (hj.cusp_aeval P).eq_series hrep
+  have hcoeff : coeffEmb ℂ (qExpand ℚ p jq) = jqNModC ℂ p := by
+    calc
+      _ = qExpand ℂ p (coeffEmb ℂ jq) := coeffMap_qExpand (algebraMap ℚ ℂ) p jq
+      _ = _ := by rw [coeffEmb_jq]; rfl
+  rw [hcoeff] at hseries
+  exact PrimeDegreeAux.aeval_jqModC_ne_jqNModC_charZero p P hseries
+
+theorem prime_j_not_mem_gammaOne (M p : ℕ) [NeZero M] [Fact p.Prime]
+    (hcop : Nat.Coprime M p) : qExpand ℚ p jq ∉ x1FunctionField M := by
+  intro hm
+  exact prime_j_not_mem_gammaOne_over_complex M p hcop (coeffEmb_mem_laurentBaseChange ℂ hm)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

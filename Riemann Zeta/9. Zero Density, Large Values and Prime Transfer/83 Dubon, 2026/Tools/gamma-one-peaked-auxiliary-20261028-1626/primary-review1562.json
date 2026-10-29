@@ -1,0 +1,13 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "IntermediateField.equivMap for the exact original ambient image",
+    "Module.Finite.of_surjective on its actual linear equivalence",
+    "AlgHom.codRestrict to the original stage subalgebra",
+    "Actual finite-subextension directed descent and arithmetic stage family, still uncompiled drafts"
+  ],
+  "scope": "Transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionLog": "unionFiniteStage1562-focus.log"
+}

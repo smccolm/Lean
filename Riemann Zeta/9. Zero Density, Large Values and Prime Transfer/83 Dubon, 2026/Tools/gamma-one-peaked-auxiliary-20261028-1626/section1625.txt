@@ -1,0 +1,7 @@
+### Actual continuous trace-zero coefficient coboundaries — 10 October 2026
+
+The actual degree-zero map for the original trace-zero representation lands in its continuous cocycles. Inclusion preserves the same actual full-adjoint coboundary. When the original matrix dimension is nonzero in the coefficient field, the proved scalar correction of an actual matrix shows that a genuine trace-zero coefficient cocycle is a full-adjoint coboundary exactly when it is a coboundary of an actual trace-zero matrix.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ContinuousTraceZeroCoboundaries](Extension/Dubon2026/ContinuousTraceZeroCoboundaries.lean).

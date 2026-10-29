@@ -1,0 +1,39 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `continuousGaloisKummerClass_eq_of_radical`. -/
+theorem actual_galois_class_independence_restriction_continuousGaloisKummerClass_eq_of_radical_source
+    [TopologicalSpace Kˣ] [DiscreteTopology Kˣ] (n : ℕ)
+    (χ : ContinuousGaloisExponentCharacters (K := K) (Ω := Ω) n)
+    (a : Kˣ) (β : Ωˣ)
+    (hβ : β ^ n = Units.map (algebraMap K Ω).toMonoidHom a)
+    (hχ : ∀ g : Gal(Ω/K), g • β / β =
+      Units.map (algebraMap K Ω).toMonoidHom (χ.val g)) :
+    continuousGaloisKummerClass n χ =
+      QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range a :=
+  continuousGaloisKummerClass_eq_of_radical n χ a β hβ hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `coprime_quotient_continuous_characters_finite`. -/
+theorem actual_galois_class_independence_restriction_coprime_quotient_continuous_characters_finite_source
+    {G T : Type*} [Group G] [CommGroup T] [TopologicalSpace G] [TopologicalSpace T]
+    (H : Subgroup G) [H.Normal]
+    (hcard : (Nat.card (G ⧸ H)).Coprime (Nat.card T))
+    [Finite (H →ₜ* T)] : Finite (G →ₜ* T) :=
+  coprime_quotient_continuous_characters_finite H hcard
+
+end
+

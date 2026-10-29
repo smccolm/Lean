@@ -1,0 +1,99 @@
+import Dubon2026.SourceIntegralTraceCuspTransversal
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> even-weight
+slash integrality -> peaked auxiliary trace. Exact finite translation and
+signed transversal identities used by the actual trace decomposition.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularForm_qExpansion_slash_coeff_mem_of_peaked_auxiliary. -/
+namespace Dubon2026.SourceFunctionField.IntegralTrace
+noncomputable section
+open scoped MatrixGroups ModularForm Manifold
+open UpperHalfPlane GammaOne
+theorem exists_width (Γ : Subgroup SL(2, ℤ)) (h : ℕ) (hh : 0 < h) (hT : ModularGroup.T ^ h ∈ Γ) :
+    ∃ h₀ : ℕ, 0 < h₀ ∧ h₀ ∣ h ∧ (ModularGroup.T ^ h₀ ∈ Γ ∨ -(ModularGroup.T ^ h₀) ∈ Γ) ∧
+      (∀ j : ℕ, 0 < j → j < h₀ → ModularGroup.T ^ j ∉ Γ ∧ -(ModularGroup.T ^ j) ∉ Γ) := by
+  classical
+  let P : ℕ → Prop := fun n => 0 < n ∧ (ModularGroup.T ^ n ∈ Γ ∨ -(ModularGroup.T ^ n) ∈ Γ)
+  have hex : ∃ n, P n := ⟨h, hh, Or.inl hT⟩
+  have hspec : P (Nat.find hex) := Nat.find_spec hex
+  have hmin : ∀ j, 0 < j → j < Nat.find hex → ModularGroup.T ^ j ∉ Γ ∧ -(ModularGroup.T ^ j) ∉ Γ := by
+    intro j hj hjlt
+    have hnot : ¬ P j := Nat.find_min hex hjlt
+    exact ⟨fun hm => hnot ⟨hj, Or.inl hm⟩, fun hm => hnot ⟨hj, Or.inr hm⟩⟩
+  refine ⟨Nat.find hex, hspec.1, ?_, hspec.2, hmin⟩
+  have hr : ModularGroup.T ^ (h % Nat.find hex) ∈ plusMinus Γ := by
+    have h1 : ModularGroup.T ^ h ∈ plusMinus Γ := (mem_plusMinus_iff Γ _).mpr (Or.inl hT)
+    have h2 : ModularGroup.T ^ Nat.find hex ∈ plusMinus Γ := (mem_plusMinus_iff Γ _).mpr hspec.2
+    have heq : ModularGroup.T ^ h =
+        (ModularGroup.T ^ Nat.find hex) ^ (h / Nat.find hex) * ModularGroup.T ^ (h % Nat.find hex) := by
+      rw [← pow_mul, ← pow_add, Nat.div_add_mod]
+    rw [heq] at h1
+    exact (Subgroup.mul_mem_cancel_left _ (Subgroup.pow_mem _ h2 _)).mp h1
+  by_contra hndvd
+  have hpos : 0 < h % Nat.find hex := Nat.pos_of_ne_zero (fun h0 => hndvd (Nat.dvd_of_mod_eq_zero h0))
+  have hlt : h % Nat.find hex < Nat.find hex := Nat.mod_lt _ hspec.1
+  rcases (mem_plusMinus_iff Γ _).mp hr with hr | hr
+  · exact (hmin _ hpos hlt).1 hr
+  · exact (hmin _ hpos hlt).2 hr
+
+private theorem T_pow_injective : Function.Injective fun j : ℕ => (ModularGroup.T ^ j : SL(2, ℤ)) := by
+  intro i j hij
+  have := congrArg (fun g : SL(2, ℤ) => (g : Matrix (Fin 2) (Fin 2) ℤ) 0 1) hij
+  simp only at this
+  rw [← zpow_natCast, ← zpow_natCast, ModularGroup.coe_T_zpow, ModularGroup.coe_T_zpow] at this
+  simpa using this
+
+private theorem S_ne_T_pow (j : ℕ) : (ModularGroup.S : SL(2, ℤ)) ≠ ModularGroup.T ^ j := by
+  intro hij
+  have := congrArg (fun g : SL(2, ℤ) => (g : Matrix (Fin 2) (Fin 2) ℤ) 1 0) hij
+  simp only at this
+  rw [← zpow_natCast, ModularGroup.coe_T_zpow, ModularGroup.coe_S] at this
+  simp at this
+
+theorem sum_transversal_split {M : Type*} [AddCommGroup M] (s : Finset SL(2, ℤ)) (h₀ : ℕ)
+    (hTs : ∀ j : ℕ, j < h₀ → ModularGroup.T ^ j ∈ s) (hSs : ModularGroup.S ∈ s) (φ : SL(2, ℤ) → M) :
+    ∑ x ∈ s, φ x = (∑ j ∈ Finset.range h₀, φ (ModularGroup.T ^ j)) + φ ModularGroup.S +
+      ∑ x ∈ s.filter (fun x => (∀ j : ℕ, j < h₀ → x ≠ ModularGroup.T ^ j) ∧ x ≠ ModularGroup.S), φ x := by
+  classical
+
+  set A : Finset SL(2, ℤ) := (Finset.range h₀).image fun j => ModularGroup.T ^ j with hA
+  set C : Finset SL(2, ℤ) := s.filter (fun x => (∀ j : ℕ, j < h₀ → x ≠ ModularGroup.T ^ j) ∧ x ≠ ModularGroup.S) with hC
+  have hAs : A ⊆ s := by
+    intro x hx
+    obtain ⟨j, hj, rfl⟩ := Finset.mem_image.mp hx
+    exact hTs j (Finset.mem_range.mp hj)
+  have hs : s = (insert ModularGroup.S A) ∪ C := by
+    ext x
+    simp only [Finset.mem_union, Finset.mem_insert, Finset.mem_filter, hC]
+    constructor
+    · intro hx
+      by_cases h1 : x = ModularGroup.S
+      · exact Or.inl (Or.inl h1)
+      by_cases h2 : ∃ j : ℕ, j < h₀ ∧ x = ModularGroup.T ^ j
+      · obtain ⟨j, hj, rfl⟩ := h2
+        exact Or.inl (Or.inr (Finset.mem_image.mpr ⟨j, Finset.mem_range.mpr hj, rfl⟩))
+      · push Not at h2
+        exact Or.inr ⟨hx, fun j hj => h2 j hj, h1⟩
+    · rintro ((rfl | hx) | ⟨hx, -⟩)
+      · exact hSs
+      · exact hAs hx
+      · exact hx
+  have hdisj : Disjoint (insert ModularGroup.S A) C := by
+    rw [Finset.disjoint_left]
+    intro x hx hxC
+    rw [Finset.mem_filter] at hxC
+    rcases Finset.mem_insert.mp hx with rfl | hx
+    · exact hxC.2.2 rfl
+    · obtain ⟨j, hj, rfl⟩ := Finset.mem_image.mp hx
+      exact hxC.2.1 j (Finset.mem_range.mp hj) rfl
+  have hSA : ModularGroup.S ∉ A := by
+    intro h
+    obtain ⟨j, -, hj⟩ := Finset.mem_image.mp h
+    exact S_ne_T_pow j hj.symm
+  rw [hs, Finset.sum_union hdisj, Finset.sum_insert hSA, hA,
+    Finset.sum_image fun i _ j _ hij => T_pow_injective hij]
+  abel
+
+end
+end Dubon2026.SourceFunctionField.IntegralTrace

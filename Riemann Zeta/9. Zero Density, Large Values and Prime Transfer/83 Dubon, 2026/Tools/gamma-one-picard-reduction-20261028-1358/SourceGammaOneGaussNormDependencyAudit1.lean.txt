@@ -1,0 +1,33 @@
+import SourceReductionCoordinateAutomorphism
+import SourceGammaOneDiamondGauss
+import SourceReductionMapReflection
+import SourceGammaOneHeckeGaussReflection
+import SourceGammaOneHeckeFractionProduct
+import SourceGammaOneHeckeGaussNorm
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq]
+  let localModules : Array Name := #[`SourceGammaOneResidueGeometry, `SourceCurveSeparatingGenusMaximum, `SourceReductionGenusPoleLifting, `SourceReductionGenusIntegralCharts, `SourceGammaOneGenusSpecialization, `SourceGammaOneOriginalSpecialization, `SourceReductionCoordinateAutomorphism, `SourceGammaOneDiamondGauss, `SourceReductionMapReflection, `SourceGammaOneHeckeGaussReflection, `SourceGammaOneHeckeFractionProduct, `SourceGammaOneHeckeGaussNorm]
+  let required : Array Name := #[`Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq, `Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation, `Dubon2026.SourceCurve.RegularProlongation.isIntegral_coordinate_intersection, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec, `Dubon2026.SourceFunctionField.primeRootValuationUnit_coe, `Dubon2026.SourceFunctionField.qExpand_injective, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE GAUSS NORM DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of actual original Gamma1 Hecke norm Gauss integrality and its exact diamond/coefficient-Frobenius/q-Frobenius residue formula. Coordinate-degree preservation derives diamond Gauss preservation; native integral fraction witnesses and primitive normalization derive the full norm reduction. No coefficientwise-integral diamond representative is required. Actual degree and genus preservation and original Tate Frobenius/inertia remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

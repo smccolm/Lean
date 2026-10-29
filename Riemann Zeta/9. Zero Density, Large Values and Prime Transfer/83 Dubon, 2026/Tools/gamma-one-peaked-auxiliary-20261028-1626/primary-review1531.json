@@ -1,0 +1,18 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned APIs inspected; production compiled with zero diagnostics. Exact consumers and assembled1531 full verification pending.",
+  "pinnedApis": [
+    "NumberField.of_module_finite for actual finite Galois intermediate fields",
+    "Original RingOfIntegers algebra towers and actual HeightOneSpectrum ramification indices"
+  ],
+  "dependencies": [
+    "Actual original finite Galois character factors and Hilbert-90 radicals",
+    "Actual original unramified radical Selmer membership",
+    "Actual original radical-independent injective Kummer class",
+    "Actual original number-field Selmer finiteness",
+    "Actual original prime-order character embedding in field units"
+  ],
+  "scope": "The actual arithmetic Galois extension and its unramified finite-subextension hypotheses have not yet been constructed or proved. Its required cyclotomic intermediate field and the full all-open-subgroup Mazur condition remain open. Final framed deformation-functor assembly, fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionLog": "characters1531-focus.log"
+}

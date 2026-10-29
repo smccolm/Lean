@@ -1,0 +1,33 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `sUnitValuations_mem_ker_iff`. -/
+theorem actual_number_field_s_unit_sUnitValuations_mem_ker_iff_source (S : Set (HeightOneSpectrum R))
+    (x : S.unit K) :
+    x ∈ (sUnitValuations (K := K) S).ker ↔
+      x.val ∈ (∅ : Set (HeightOneSpectrum R)).unit K :=
+  sUnitValuations_mem_ker_iff S x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField
+
+
+/-- Exact original-object consumer of `numberField_sUnit_powerQuotient_finite`. -/
+theorem actual_number_field_s_unit_numberField_sUnit_powerQuotient_finite_source (K : Type*) [Field K] [NumberField K]
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite) (n : ℕ) (hn : n ≠ 0) :
+    Finite (S.unit K ⧸ (powMonoidHom (α := S.unit K) n).range) :=
+  numberField_sUnit_powerQuotient_finite K S hS n hn
+
+end
+

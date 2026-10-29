@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
+
+/-- Exact original-object consumer of `matrixAdjointCoboundary_traceFree_representative`. -/
+theorem actual_trace_free_adjoint_coboundaries_matrixAdjointCoboundary_traceFree_representative_source
+    (hn : (Fintype.card ι : K) ≠ 0) (ρ : G →* GeneralLinearGroup ι K)
+    (X : Matrix ι ι K) :
+    ∃ Y : Matrix ι ι K, Matrix.trace Y = 0 ∧
+      ∀ g, groupCohomology.d₀₁ (matrixAdjointRep ρ) Y g =
+        groupCohomology.d₀₁ (matrixAdjointRep ρ) X g :=
+  matrixAdjointCoboundary_traceFree_representative hn ρ X
+
+end
+

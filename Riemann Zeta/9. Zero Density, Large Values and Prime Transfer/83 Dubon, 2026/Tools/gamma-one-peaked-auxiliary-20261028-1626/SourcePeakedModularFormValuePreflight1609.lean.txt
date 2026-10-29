@@ -1,0 +1,32 @@
+import SourcePeakedAuxiliaryFunction1603a
+import SourceSiegelCuspPermutation1604a
+import SourcePeakedAuxiliaryCuspDecay1605a
+import SourcePeakedAuxiliaryHolomorphic1606a
+import SourcePeakedAuxiliaryModularForm1607a
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow]
+  let localModules : Array Name := #[`SourcePeakedAuxiliaryFunction1603a, `SourceSiegelCuspPermutation1604a, `SourcePeakedAuxiliaryCuspDecay1605a, `SourcePeakedAuxiliaryHolomorphic1606a, `SourcePeakedAuxiliaryModularForm1607a]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_slash, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.det_rel, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT_rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.idx_cast, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.ord_eq, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.discr_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.norm_C_eq_one, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun_slash_isBigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mdifferentiable_thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta_apply, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.uFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.thetaFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e00, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e01, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e10, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.e11, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.rowMul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.mT, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form.theta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.prod_siegelFun_pow_specialLinearGroup_smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel.differentiableOn_siegelFun, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.exists_integral_hasSum_prod_siegelFun_pow, `CuspFormClass.exp_decay_atImInfty, `SlashInvariantForm.slash_action_generators_SL2Z]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE PEAKED MODULAR FORM PREFLIGHT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual discriminant-adjusted Gamma1 modular form and its exact exponential bound at every SL2 cusp, under explicit nonnegative shifted-order hypotheses. Selection of the discriminant power, exact auxiliary q-expansions and peaked auxiliary existence remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

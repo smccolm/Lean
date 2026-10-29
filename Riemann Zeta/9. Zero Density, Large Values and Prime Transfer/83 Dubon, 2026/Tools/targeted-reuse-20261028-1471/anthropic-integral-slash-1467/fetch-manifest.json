@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-10-28T23:40:20.640451+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean",
+      "sha256": "C318F9DA75142F614BD714D5026233CDBEFE07139A284DCC40DBD4450842B8C8",
+      "bytes": 6891
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean",
+      "sha256": "2BE6066BFA7CB9EBB51F3DAEE21CC8AC778DDFBCC0C4F3512069B8853D17C6BC",
+      "bytes": 49082
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean",
+      "sha256": "5085319636FFDD9F8E7692CB1FA57E3B2F1334C2B14F30D4F3B3E2F9DD7BE4A0",
+      "bytes": 54019
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

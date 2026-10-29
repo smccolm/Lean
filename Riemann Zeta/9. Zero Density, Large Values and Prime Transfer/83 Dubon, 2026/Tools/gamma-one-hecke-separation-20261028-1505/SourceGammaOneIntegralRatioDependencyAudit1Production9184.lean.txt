@@ -1,0 +1,31 @@
+import Dubon2026.SourceGammaOneIntegralRatioResidue
+import Dubon2026.SourceGammaOneIntegralJRatio
+import Dubon2026.SourceGammaOneResidueRatioDegree
+import Dubon2026.SourceGammaOneIntegralRatioDegreeAssembly
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneIntegralRatioResidue, `Dubon2026.SourceGammaOneIntegralJRatio, `Dubon2026.SourceGammaOneResidueRatioDegree, `Dubon2026.SourceGammaOneIntegralRatioDegreeAssembly]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage, `Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.div_mem_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le, `Dubon2026.SourceFunctionField.GammaOne.coordinate_finrank_eq_relfinrank, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_coordinate_relfinrank_eq_index, `Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv, `Dubon2026.SourceFunctionField.qExpansion_E4_eq_map_eisenstein4, `Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit, `IntermediateField.relfinrank_mul_relfinrank, `IntermediateField.relfinrank_eq_one_iff, `Dubon2026.SourceFunctionField.GaussReduction.ι_eq_zero_iff]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE INTEGRAL RATIO DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual integral-ratio inclusion, literal j membership, residue degree comparison and the native original degree/field equality consumer. The exact signed-index lower bound remains an explicit upstream obligation; genus and parabolic transfer remain open; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

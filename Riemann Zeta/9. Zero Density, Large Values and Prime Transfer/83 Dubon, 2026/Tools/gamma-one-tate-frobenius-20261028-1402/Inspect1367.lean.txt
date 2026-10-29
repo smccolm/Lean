@@ -1,0 +1,6 @@
+import Dubon2026.AdelicLocalClosedHeckeEigen
+import Dubon2026.FinitePlaceSphericalFormula
+set_option pp.explicit true in
+#print Dubon2026.adelicLocalCyclicClosedSpanInnerProduct
+set_option pp.explicit true in
+#check @Dubon2026.adelicLocalCyclicRepresentation_inner

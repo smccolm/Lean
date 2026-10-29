@@ -1,0 +1,297 @@
+{
+  "recordedUTC": "2026-10-28T15:33:22.184895+00:00",
+  "repositories": [
+    {
+      "repository": "CBirkbeck/AINTLIB",
+      "branch": "dev/modular-curves",
+      "revision": "dfc30e5082a97472b11138c5325b3acad7ec5071",
+      "commitDate": "2026-08-24T08:49:58Z"
+    },
+    {
+      "repository": "CBirkbeck/AINTLIB",
+      "branch": "main",
+      "revision": "c2da401c2d39df3392d823cba993aaf8a16369ca",
+      "commitDate": "2026-10-28T05:09:49Z"
+    },
+    {
+      "repository": "facebookresearch/atlas-lean",
+      "branch": "main",
+      "revision": "851a97f342b10a249b589531e1ec430487b2d469",
+      "commitDate": "2026-10-28T14:35:48Z"
+    }
+  ],
+  "projectPinsChanged": false,
+  "files": [
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/candidates.json",
+      "sha256": "EE434A9AC7DCDE63754ABE88DFD495DEF5487319E90FDF9310E8D7187EBBADD9",
+      "bytes": 107753
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/commit.json",
+      "sha256": "96ED2A94840B5046D8A527AE639216A70C75A848A47151000E10D150EA3322CA",
+      "bytes": 17557
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/fetch-manifest.json",
+      "sha256": "C40B93320358857BFD77FE6BB48EFF3F11C67F614DD04EEDEABBB48CD5664C08",
+      "bytes": 2194
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/lake-manifest.json.txt",
+      "sha256": "331016DDDE1E75A10FBE15A1976E5312F022BAC330D2A8677EE3D5C25B8FDB3A",
+      "bytes": 3134
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/lean-toolchain.txt",
+      "sha256": "CDBC6C372A2B37AD94430A6CEC69CEDFA4D36F255BFD968773FD91BF7A1746BF",
+      "bytes": 29
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/README.md.txt",
+      "sha256": "E0723F334F58AF8541575449ABF72227C2D9E335DF4F90C5511DF3BA8D3A3D99",
+      "bytes": 3063
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/repository.json",
+      "sha256": "86C67D8B22BDFD99E3106F6ED9E4AB08185A3AA3D969E8E36D6192FFC535C774",
+      "bytes": 5192
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--dev--modular-curves/tree.json",
+      "sha256": "FC5ECB11C1CD48C4EA739A19D8B0CE31CD518C0C9D1397231BF26CCA464CA12B",
+      "bytes": 1332919
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/candidate-fetch-manifest-1283c.json",
+      "sha256": "C78932F435072EDA839F25041C5EA21DF1425CB5BB5002706A3CDCFE2FDC72BA",
+      "bytes": 2842
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/candidate-fetch-manifest-1283d.json",
+      "sha256": "2A43455EBE35D3D0761EA3B827302BD289F4EF8136CA79569FCB8DB69039D260",
+      "bytes": 1759
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/candidates.json",
+      "sha256": "67839557B5CA47959C9D3461D38932A0D693A5882821965B89EFBA07D72B637C",
+      "bytes": 107695
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/commit.json",
+      "sha256": "915C90CB94056EA1D04449B28F17635B6C0434DCD9381C5DD2EFB8D30F0BCDA4",
+      "bytes": 25264
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/fetch-manifest.json",
+      "sha256": "DCF02EBB88F7CD522C8FEE9E738342FFF12F7EC1C7676B7C768E382DB7261869",
+      "bytes": 2166
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/lake-manifest.json.txt",
+      "sha256": "DCE6B9A87786385B26111BD4BD0E485434505A3C4867BB494F6643B11BCE298C",
+      "bytes": 3162
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/lean-toolchain.txt",
+      "sha256": "11C697AEBE5B539D74F5069E497A588E7DFAB1C4EEB74313F28357E351C55CA3",
+      "bytes": 29
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/LeanModularForms/LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean.txt",
+      "sha256": "C66154116F6EE4AB66946DDB4E924B8A680297351D2C3B07572802C2A1B8DD0E",
+      "bytes": 7230
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/docs/README.md.txt",
+      "sha256": "14514721740E06C158AC513A46FF893E2AFB6ECD80E9CDCEA57CEA410F9C823D",
+      "bytes": 3135
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/GroupScheme/NIsogeny.lean.txt",
+      "sha256": "615C009CDF3BEEEA756EE0D11C093A697052FB53E69D7F8200BEF6610E6B73FE",
+      "bytes": 196168
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/ModularCurve/YOneAssembly.lean.txt",
+      "sha256": "9291D6154334BCE65755FC15352B80894820A21E832004836E891EE592E577E7",
+      "bytes": 49873
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/ModularCurve/YOneAtlasClassify.lean.txt",
+      "sha256": "111FA4FC93B5035B14D0223E9A6D5B43C19A0117634CC2F0F321C076308FF1AB",
+      "bytes": 379780
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/Moduli/GammaHMaster.lean.txt",
+      "sha256": "FE09898AC37726FACF5297F307DA9ADFB5FFB029FB0035132D5BD4ED4064F2D8",
+      "bytes": 77090
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/Moduli/GammaOneNaiveRelRep.lean.txt",
+      "sha256": "B98D58D6AFD841C5BB251D0ABF7ECBC27CCEA4FEDA4F3DF5C4D4A92A94EAEF04",
+      "bytes": 4670
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/Moduli/Representability.lean.txt",
+      "sha256": "E1B791051E3CC716E11651B245A894783C11D1C667FBE65A2FAD4B50EB66E056",
+      "bytes": 35281
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/WeilPairing/Basic.lean.txt",
+      "sha256": "A4B5C440F05E176C0E6698299791E8D51838D117DABB861C2EBD526A151D078E",
+      "bytes": 33795
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/WeilPairing/KMCompatibility.lean.txt",
+      "sha256": "3B7A33C049F360AC05B5668AEE472E7E605AC4B474A1F45CF25350297711F27B",
+      "bytes": 14852
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/projects/ModularCurves/ModularCurves/WeilPairing/KMDataset.lean.txt",
+      "sha256": "FB540D4059168A9642402DFF4BD3A0111736B1AD667185D1B82191D06CF94C23",
+      "bytes": 26695
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/README.md.txt",
+      "sha256": "C7D58094258F2139B856C7BFE2DA523B7EC42CFCD3F7193807278C12D66DBF35",
+      "bytes": 4943
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/repository.json",
+      "sha256": "86C67D8B22BDFD99E3106F6ED9E4AB08185A3AA3D969E8E36D6192FFC535C774",
+      "bytes": 5192
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/CBirkbeck--AINTLIB--main/tree.json",
+      "sha256": "470B2BCBBEFAB23E6DB285BCC87C55684909AF31E68355EF2F08A3A14B3A8F54",
+      "bytes": 1335195
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/candidate-fetch-manifest-1283c.json",
+      "sha256": "D8E3E1ABE90EE0890655C49A7BDDB7A52CE72F8BA93F54DDB5FF3C0B893974A8",
+      "bytes": 2086
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/candidates.json",
+      "sha256": "3FFF6AEF07911087975D663ABE0EC4857C3B26BD1FB3B36391BA85520B480B71",
+      "bytes": 5267
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/commit.json",
+      "sha256": "D52C12A5EE9504B9C026E860CAB9BCE8DE786DDD4BFD69E55F311EF7277B8AE2",
+      "bytes": 12254
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/fetch-manifest.json",
+      "sha256": "D8F7CCCD536BDE5346149046953531AE8F59E5FB4095FCEB003B519D0F0DDE4E",
+      "bytes": 2246
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/lake-manifest.json.txt",
+      "sha256": "843076DB4BBCE37806A2ABC1622DE13F06070B5ED7234A9D6B38A2F9A07CF38E",
+      "bytes": 3450
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C",
+      "bytes": 25
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/LICENSE.txt",
+      "sha256": "FC78801EADEC58B04E0D5CABE735EB6808E23F47B0CB92B89B55792019B54131",
+      "bytes": 11463
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/MathlibExt/AlgebraicGeometry/EllipticCurve/GaloisRepresentation.lean.txt",
+      "sha256": "752E3C132265F16480A3D04967CFA5ECB35B5D3CDBE538F4A27C552CDAA28E70",
+      "bytes": 8578
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/MathlibExt/AlgebraicGeometry/EllipticCurve/NeronOggShafarevich.lean.txt",
+      "sha256": "707B4BF9F7A6AFD7822648770A4A23DF017B3DF92FCB94D705E44DDBBA741DD4",
+      "bytes": 82751
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/README.md.txt",
+      "sha256": "9543D721CB6CE7144A3098896C8D588F515B275396AF4B05D33CA74D3D4DB9B5",
+      "bytes": 3220
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/repository.json",
+      "sha256": "FF3061259EDEC6845AC51578D0FF3DA27C1C6CCB48C21C9714759CAC480A2CD7",
+      "bytes": 6763
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/tree.json",
+      "sha256": "F88B235726CF93CD48E16A5B60C2ADC612E66DB5A039E61493CD976DB1342725",
+      "bytes": 4876550
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/v1/Atlas/AlgebraicGeometryI/code/DivisorsPicard.lean.txt",
+      "sha256": "A13C40CC1031D8EF461F3AE0FE04B2E4638DFEB932DB79E09674D5DA8D54BF7D",
+      "bytes": 18879
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/v1/Atlas/ArithmeticGeometry/code/PicardGroup.lean.txt",
+      "sha256": "E5CF9428B675BC4978C938450A81B6883B9EE2A7CBE08F6F65F287792E619702",
+      "bytes": 2062
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/facebookresearch--atlas-lean--main/v1/Atlas/EllipticCurves/code/ModularCurves.lean.txt",
+      "sha256": "DAC3C2CB4531AEE17342952AADAB86782EE09BC40809991827CDA053654D8BC9",
+      "bytes": 40145
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/fetch_curve_reuse_1283.py",
+      "sha256": "D55A0DC006DCAB21AC166C1D0A10C2FB12CD67EC066C233D892CAA39C0D7E90B",
+      "bytes": 2622
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/prepare_curve_reuse_fetch_1283b.py",
+      "sha256": "541C51AD89CB9264D0AAFA0B31D4037A4A0AAAFBB4D264E67850BE0A0D01382B",
+      "bytes": 254
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/fetch_curve_reuse_1283b.py",
+      "sha256": "446FB2E6D8B3E39A5765A8895FC74CDC100EB35E198E944F3A0363913D3E564E",
+      "bytes": 2662
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/fetch_curve_candidates_1283c.py",
+      "sha256": "74AC4278E6AE828CEAFD7CF2799A1233C805A8D8A006E27E00EF072E94BA3989",
+      "bytes": 2101
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/fetch_curve_candidates_1283d.py",
+      "sha256": "C7740FFA83684307B1B452A24F99B835F2CC6071E469986B83A5ED920B7EA776",
+      "bytes": 1346
+    },
+    {
+      "path": "Tools/curve-reuse-20261028-1283/register_curve_reuse_1284.py",
+      "sha256": "6F138360165100ABCA55FB1F46333FD6D31A3D1AC6B889F8140410FD1A404709",
+      "bytes": 3916
+    },
+    {
+      "path": "Dubon Curve Reuse Supplement 2026-10-28.md",
+      "sha256": "2E845E981EF7946B575AD4F90B4DE3357F285C7A9D5A5654B48C8E01257087C6",
+      "bytes": 7098
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "externalAxiomAudit": false,
+  "productionProofAdoption": false,
+  "dependency": "DUB17/18 -> literal higher symmetric continuation -> automorphy -> original all-weight association -> original Gamma1 geometric reduction, arithmetic Picard/Tate Frobenius and inertia comparison",
+  "status": "AINTLIB contains substantive newer naive Gamma1 and scheme Weil-pairing bodies, but selected quotient geometry retains admissions and no original compact-curve specialization bridge was verified. ATLAS proves elliptic good-reduction torsion inertia with explicit good-reduction assumptions; it does not discharge the arbitrary-genus original Gamma1 input. Retain native fraction, coordinate and correspondence route; defer unrelated infrastructure. Bounded source review only. 16/20; DUB17--20 OPEN."
+}

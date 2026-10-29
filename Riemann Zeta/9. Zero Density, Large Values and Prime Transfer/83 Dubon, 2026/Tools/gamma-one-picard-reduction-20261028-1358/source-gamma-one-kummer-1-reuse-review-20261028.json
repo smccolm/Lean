@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> Frobenius/inertia -> prime-to-residue Picard specialization injectivity.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-audit-route-1349.json",
+    "sha256": "158A6D11C3B4BF3A6EDA70AD5AA1F121DA8CF7031F4426650B20FE8B9D495EE1",
+    "review": {
+      "recordedUTC": "2026-10-28T18:31:36.387648+00:00",
+      "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> Frobenius/inertia -> prime-to-residue Picard specialization injectivity.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveKummerUnramified.lean",
+          "sha256": "CDE508F69DED8505F024EC2EDCA04B53B252AA135B739473404BCDFBB49A451C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonicalDegree.lean",
+          "sha256": "E6E48B592C2C6D0190677D89F4E03F7433BDB0F31944F7E4048438D2A32D8179"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUnramifiedCanonicalDegree.lean",
+          "sha256": "DD0705FDEC1BAAED535668A6FA4A6FE78166E68110B47BCC182BF75FC3034362"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceKummerRegularProlongationsR2.lean",
+          "sha256": "39C28C6E37C118604B711501F1126BA4B1711C07C57068802931AC020E3BFFA0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartFullBasis.lean",
+          "sha256": "DC9C6F5E6D4BA60A11F7D0E1EFD2A6AA5865E96802BFB1A0D9B7247FE95928A2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartIntegralCoordinates.lean",
+          "sha256": "B318483BF1852486611C1FEE3AF4019191BEFEEAD2DA7B3C7E836A26039AA5DA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartGoodDenominators.lean",
+          "sha256": "81D44ABA1A7D40A328B0677E17E40E472D45A0D5AE241B0B9C69D32DA092DFAB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartFiniteOverlap.lean",
+          "sha256": "DE5C05E8944BA7925A9D9449AFEC56EBD87013CDD7B96227D2A69932143B442E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartConstantsOfFiniteOverlap.lean",
+          "sha256": "A885686623E6AC237F12AE680AE38B104D46FC8A809896C7A52D8105662B170D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointChartUniformResidues.lean",
+          "sha256": "87531E4F8AD2F13932CE9A91CFFED3FCF4B51A16B666FA89EB44F87259284103"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointReductionDimension.lean",
+          "sha256": "8000DAD79B7A253F7F6BE1E86DC4781513F06172D359786C21EB6BEB0D3652D0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJointReductionPoleCharts.lean",
+          "sha256": "2CFDBA3F4A8BC3BD63ABC06014237C061960B8B620788B18247496E5B5BD403D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSeparableCoordinateChartGeneration.lean",
+          "sha256": "7A6D026581337D50D588FCF84784FB5160D8BAC8C271F49BB90F0A724C0E8212"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerPowerLifting.lean",
+          "sha256": "FA92A70C2FDC183A79D5C36CE21E57DEA1D2497D193E0B83DB5BA6B4DFF1E038"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularJointGenusInequality.lean",
+          "sha256": "E06412D35F5C8A8E80C361F04FDCCB285E8A9B70F4FAA12FD28A3E6652E59C93"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGenusTorsionInjectivity.lean",
+          "sha256": "481AC59AA70E8717EEA432E5944B3216C35B8EF7E29656049829E2FA7D4A4410"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionPrimeKernel.lean",
+          "sha256": "39D129CD3F8C3D99C356BF410B88E10383A7D8B022F999089CC3C4601EDAB6F3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueSeparability.lean",
+          "sha256": "235D4464583E5F2CBF5F8B68595ECC30431BDCC0F69BC2E057BEC336BD702958"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\curve-reuse-20261028-1283\\review-manifest.json",
+          "sha256": "3075C49521C88FF5415A9817FE2C2930D312660EC0D1CB1969DFA6D3D87C0D23"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-route-review-1326.md",
+          "sha256": "F11FE86E053CE5CB3E30A13FF60CAC35AD1F5605A91224031F6E1FCFCA2955E2"
+        }
+      ],
+      "shorterRoute": "Reuse native Kummer valuation, unramified canonical-degree, full joint basis, integral-coordinate, denominator, finite-overlap, common-constants and pole-dimension proofs directly. Their generic separating-coordinate composition bypasses the Gamma0-specific wrapper chain. The original Gamma1 consumer derives its reductions and total coordinate degree; the native strong-induction argument handles all invertible torsion orders. The superseded Gamma1 chart wrappers remain inert snapshots and are not promoted.",
+      "assumptionsToDischarge": [
+        "The actual original Gamma1 Kummer cover has degree q, is unramified, and satisfies g(E)-1=q*(g(F)-1).",
+        "Separating reduced j and total degree derive finite overlap, common constants, joint residue/pole dimensions and q*g(residue)<=g(E).",
+        "Actual coordinate-degree and genus equality force prime-root lifting and trivial prime-order and all invertible-order Picard kernels.",
+        "The constructed original constant reduction, with exactly the original coefficient regular prolongation, has an injective map on every invertible Picard torsion subgroup."
+      ],
+      "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain explicit geometric inputs; they and diamond integrality are not proved here. Original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual original Gamma1 Kummer cover has degree q, is unramified, and satisfies g(E)-1=q*(g(F)-1).",
+    "Separating reduced j and total degree derive finite overlap, common constants, joint residue/pole dimensions and q*g(residue)<=g(E).",
+    "Actual coordinate-degree and genus equality force prime-root lifting and trivial prime-order and all invertible-order Picard kernels.",
+    "The constructed original constant reduction, with exactly the original coefficient regular prolongation, has an injective map on every invertible Picard torsion subgroup."
+  ],
+  "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain explicit geometric inputs; they and diamond integrality are not proved here. Original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

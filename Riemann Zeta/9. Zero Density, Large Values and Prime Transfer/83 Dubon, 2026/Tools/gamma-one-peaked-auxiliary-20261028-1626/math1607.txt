@@ -1,0 +1,1 @@
+The actual arithmetic fixed-determinant ring is compact in its original quotient topology. The original completed framed coefficient ring is compact Hausdorff and Noetherian, so its genuine determinant ideal is closed and the actual fixed-determinant quotient is Hausdorff as well.

@@ -1,0 +1,36 @@
+import SourceGammaOneGaussResidueImage
+import Dubon2026.SourceCurveRegularProlongation
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original good
+reduction -> constructed regular prolongation. Assemble the actual coefficient
+valuation and its genuine residue image, with surjectivity, exact kernel,
+constant reduction and primitive scaling all proved. This source structure
+does not include a place map or genus equality; no good-reduction claim is
+made by constructing it.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+
+/-- The original modular-ratio field's actual coefficient reduction before genus comparison. -/
+def regularProlongation : SourceCurve.RegularProlongation A
+    (functionFieldOver Γ L) (residueImage A Γ) where
+  integers := coefficientGaussRing Γ A
+  residue := residueToImage A Γ
+  algebraMap_mem_iff := algebraMap_mem_gaussRing_iff A Γ
+  residue_surjective := residueToImage_surjective A Γ
+  ker_residue := residueToImage_ker A Γ
+  residue_algebraMap a := Subtype.ext (resHom_algebraMap A Γ a _)
+  exists_smul_mem f hf := by
+    obtain ⟨c, hc, he⟩ := exists_smul_mem_gaussRing A Γ f hf
+    refine ⟨c, hc, ?_⟩
+    intro h
+    exact he (congrArg Subtype.val h)
+
+theorem regularProlongation_residue_coe (f : coefficientGaussRing Γ A) :
+    ((regularProlongation A Γ).residue f :
+      LaurentSeries (IsLocalRing.ResidueField A)) = resHom A Γ f := rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

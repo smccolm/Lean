@@ -1,0 +1,57 @@
+{
+  "recordedUTC": "2026-10-28T14:57:49.177530+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic realization -> original geometric Tate Frobenius/inertia -> equivariant original good reduction, finite residue Hecke correspondence and Picard torsion specialization.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoordinateNotPower.lean",
+      "sha256": "A5CCF6EEA80EE03B23BE891155876894D13AF93ACDC559AAD5A67444699E4684"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePerfectSeparatingCoordinate.lean",
+      "sha256": "E3CB098A1B09B6A1A4E3252E6977B147B64A8F0DAFA31D6FC27518152F58B99F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDecompositionGaussAction.lean",
+      "sha256": "ACA2D2C97948CB7CEC9B690B996C5FAD09611FE6D8DBE4DF2B2CAE0AFDD09D8D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalInertiaIntegralFunctions.lean",
+      "sha256": "505066759D42B686B16A34F52ECE3A84AFCB77D282C83810829848BDD4A289C2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticField.lean",
+      "sha256": "05F57D64D000909CD27FCD040E84A01521AA086DE084589FA59CCE29023A124B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeDegeneracy.lean",
+      "sha256": "49AD28A56A065A9C2E7D9B98CA042F749A4E3C463D6B631B92DEC0A9AAB46AC7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeFieldFinite.lean",
+      "sha256": "765E46C3933771F28522D2DA46FAA19BEC2A3ADB1E264BF6FE978A05609893D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCoordinateHom.lean",
+      "sha256": "610917D767E662F56B65EA8C49C4A697E186DCF9C177B13E419CC46EC147DA6F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+      "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-reduction-2-scratch-receipt.json",
+      "sha256": "9BE462BC9A8BFBC620D65095601BA44D299B59A8DE983A9FE23901F866165CB2"
+    }
+  ],
+  "shorterRoute": "The native simple pole of j rules out pth powers, and the existing perfect-constant criterion proves separability. The native decomposition action on integral fractions restricts the existing original Gamma1 arithmetic automorphism. Surjectivity of the actual residue image constructs its genuine coefficient action; native inertia membership makes this action trivial. Both original Hecke field maps preserve the same valuation; native coefficient/substitution commutation gives their literal reductions. Reuse the existing coordinate-exchange and finite-hom theorems to prove both residue maps finite. Explicit named preservation lemmas and Mathlib codRestrict avoid kernel normalization of a large concrete ring-map record. No proof limit is changed.",
+  "assumptionsToDischarge": [
+    "The actual original Gamma1 residue j-coordinate separates the finite residue function field over perfect constants; its no-pth-power condition is proved from the literal Laurent pole.",
+    "The original arithmetic decomposition action preserves the constructed valuation. Literal reduction is equivariant; inertia fixes its actual residue image, and arithmetic Frobenius reduces by raising coefficients to the residue characteristic power.",
+    "Both original Gamma1 Hecke maps restrict to the constructed valuation and induce the actual inclusion and q-substitution on residue fields, with exact reduction compatibility. Both residue field maps are proved finite using original finite-coordinate inputs."
+  ],
+  "remaining": "Function-level arithmetic/Hecke reduction and finite residue maps do not prove degree equality, genus preservation, place/Picard specialization, prime-to-residue torsion injectivity, or the two geometric Frobenius components. The original geometric Tate quadratic and inertia on original Picard torsion, parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "preservedFailures": "Original kernel-timeout and unused-instance diagnostics are retained with inert failed source. The successor replaces concrete ring-map record normalization by native codRestrict and explicit preservation proofs; the unused Algebra assumption is omitted only for the pure Laurent substitution lemma. No mathematical statement was weakened.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

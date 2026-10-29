@@ -1,0 +1,22 @@
+[
+  "Dubon2026.principalIdeal_of_base_unit",
+  "Dubon2026.emptySelmerClassMap_fromUnit",
+  "Dubon2026.emptySelmerClassMap_kernel_le_unitRange",
+  "Dubon2026.emptySelmerClassMap_kernel_eq_unitRange",
+  "Dubon2026.emptySelmerRepresentativeProjection_surjective",
+  "Dubon2026.emptySelmerRepresentativeProjection_kernel_le",
+  "Dubon2026.emptySelmerClassMap_apply_representative",
+  "Dubon2026.emptySelmerClassMap_pow",
+  "Dubon2026.numberField_emptySelmer_unitRange_finite",
+  "Dubon2026.numberField_emptySelmer_finite",
+  "Dubon2026.numberField_selmer_finite",
+  "Dubon2026.emptySelmerRepresentativeIdealRoot_pow",
+  "Dubon2026.fractionalIdealUnits_pow_injective",
+  "Dubon2026.emptySelmerRepresentativeIdealRoot_one",
+  "Dubon2026.emptySelmerRepresentativeIdealRoot_mul",
+  "Dubon2026.emptySelmerRepresentativeIdealRoot_of_power",
+  "Dubon2026.SemanticRegression.actual_number_field_selmer_finite_emptySelmerRepresentativeIdealRoot_mul_source",
+  "Dubon2026.SemanticRegression.actual_number_field_selmer_finite_emptySelmerClassMap_apply_representative_source",
+  "Dubon2026.SemanticRegression.actual_number_field_selmer_finite_emptySelmerClassMap_kernel_eq_unitRange_source",
+  "Dubon2026.SemanticRegression.actual_number_field_selmer_finite_numberField_selmer_finite_source"
+]

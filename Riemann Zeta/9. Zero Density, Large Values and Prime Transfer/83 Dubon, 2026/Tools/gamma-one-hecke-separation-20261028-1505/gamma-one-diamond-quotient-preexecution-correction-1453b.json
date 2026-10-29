@@ -1,0 +1,14 @@
+{
+  "reason": "Before any generated script was executed, align the two remaining module-count assertions/receipt fields with all twelve audited modules. No proof, audit scope or executed evidence changed.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_diamond_quotient_ownership_9161.py",
+      "sha256": "155AE1D650F2D6D917783CA52D41FE3813111D443F822BD20182048D259CC560"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_diamond_quotient_9161.py",
+      "sha256": "C1398D10D57043B3168CCB4D4BAF46725BE1EE63DD553438B8214B72F12FFB6C"
+    }
+  ],
+  "productionMutation": false
+}

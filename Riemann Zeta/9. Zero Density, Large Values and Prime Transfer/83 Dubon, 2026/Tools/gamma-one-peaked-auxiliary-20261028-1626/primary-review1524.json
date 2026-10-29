@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned APIs inspected; all three production modules compiled with zero diagnostics. Exact consumers and assembled1531 full verification pending.",
+  "pinnedPrimaryTheorem": "Ideal.IsDedekindDomain.emultiplicity_map_eq_ramificationIdx_mul",
+  "pinnedSource": "Mathlib/NumberTheory/RamificationInertia/Ramification.lean:310",
+  "route": [
+    "For actual primes lying over one another and actual ramification index one, the principal-ideal multiplicities agree under the original algebraMap.",
+    "The genuine intValuation formula in terms of multiplicity gives equality of original integral valuations.",
+    "Actual fraction representations and the genuine algebra tower commute, extending equality to original fraction fields and their units.",
+    "An actual radical equation beta^n=algebraMap(a) then makes the original integral valuation divisible by n, giving the pinned Selmer condition outside the actual ramified set."
+  ],
+  "boundary": "Ramification is an explicit genuine hypothesis here. Connecting original continuous arithmetic Galois characters to finite extensions unramified outside the source set and root-of-unity descent remain unproved.",
+  "externalCodeImported": false,
+  "productionLog": "unramified1524c-focus.log"
+}

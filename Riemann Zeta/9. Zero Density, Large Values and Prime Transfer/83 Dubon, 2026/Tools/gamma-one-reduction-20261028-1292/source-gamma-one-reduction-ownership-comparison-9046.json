@@ -1,0 +1,208 @@
+{
+  "scratchSum": 218,
+  "scratchDistinct": 218,
+  "generatedNameRenamings": {},
+  "productionFocused": 218,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneGaussCriterion",
+        "SourceGammaOneGaussValuation",
+        "SourceGammaOneGaussResidueHom",
+        "SourceGammaOneGaussResidueKernel",
+        "SourceGammaOneGaussConstants",
+        "SourceGammaOneGaussResidueImage",
+        "SourceGammaOneRegularProlongation",
+        "SourceGammaOneResidueJCoordinate",
+        "SourceReductionResidueCoordinateFinite",
+        "SourceGammaOneResidueCoordinateFinite"
+      ],
+      "count": 88,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionScratchOwnership1278b.log",
+        "sha256": "B6FDAFF3B4C8FB257315AD7944B3F4A82CE7D000FA73D093E391358064DC7C3C",
+        "sourceSha256": "644B54F516F68933ECDD891B7FDAEFBD788748F1D2B9A7EAA1B429F138DFC0AB"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneResidueSeparability",
+        "SourceGammaOneDecompositionGauss",
+        "SourceGammaOneResidueArithmetic",
+        "SourceGammaOneHeckeGauss",
+        "SourceGammaOneResidueHecke",
+        "SourceGammaOneResidueHeckeFinite"
+      ],
+      "count": 70,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueCompatibilityScratchOwnership1285.log",
+        "sha256": "CF23D6DC46008FE5E9AC1747FFADA0E86D2BCC042494CA2AEE33E1DFE3DEBBBC",
+        "sourceSha256": "D6365005A512ACA20398D5BC1D933D4DF73A62721FCF3CD41152BB51103AE838"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneResidueFrobenius"
+      ],
+      "count": 15,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusScratchOwnership1287.log",
+        "sha256": "BD6A048C49C3EE1EA5ECA93AC52BEFB00E68695A9D42E019A2ED7260AF91E1F2",
+        "sourceSha256": "3B739437C3A4587086414BD501B5EAD544F6E17710DFD807E973C6E3226D06DF"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneResiduePlaces",
+        "SourceGammaOneResiduePlaceOrders",
+        "SourceGammaOneResidueFrobeniusPlaces"
+      ],
+      "count": 45,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesScratchOwnership1291.log",
+        "sha256": "DD73D8F5DE2FD50D991311063C375A3A97916016F1A0D25AE1F90954C8183099",
+        "sourceSha256": "51A894EF4F78DDB926FE95CA89B3671DDDA001B8D8DD2C2FCB71CBC3DD368FF7"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionOwnership9046.log",
+    "sha256": "1650927161F0189F7E274AD674952425A38A98ACD2857E8EBD74153BC7CB9302",
+    "sourceSha256": "C475E22C51648B2D33674DB6DF8C0C0AAF621F1DCFC87B83CAA50E988568DC41"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-071255-806.log",
+    "sha256": "483332F196E82E3088DA802EC2FC589A4EAE682676B201092E143D6EA4EE6C21"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneGaussCriterion",
+        "scratchSha256": "A32935B4FCC1CC0C78410576050E398CA82E413BBDF22D620105B933DFCE72DA",
+        "productionSha256": "47FB4B59B41045E77C2B65AAA666FF7540EF911FD425E796BB1ED62B5A82695C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGaussValuation",
+        "scratchSha256": "E0A11E497B1D83C24E35139D4E6A6238FE48E11A05A5BA30CA0D563234D4E9B2",
+        "productionSha256": "A1DCECA740CE61AD0DB2FA3E2CA880E73D462076F899664F1E444B8A0893C0A0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGaussResidueHom",
+        "scratchSha256": "633BE0AA494C7211D3E1853583C41ED235B35D127175A811D57D5ECBE9367AC1",
+        "productionSha256": "D595136BD2E092F90D44AFB1D4F83341F21FA74680BACA4422DB3B33F163510C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGaussResidueKernel",
+        "scratchSha256": "D9A034E50E52F2AF9E252E0BF6829D7868D4F080D5A6D5B19A8BBE13A30E71EB",
+        "productionSha256": "523E5BFBDD96345F76CD2106D99424F923645DF0AA60D8275FB9FC849A3E0826",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGaussConstants",
+        "scratchSha256": "64A9926E8377C8F460E47851030383510B268FAAA55E1B4416BB113DE714CB0B",
+        "productionSha256": "4D97CDBC589DAE9B1DF525E5DB38452517FD07B25523090A7091A39AA5236AFF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGaussResidueImage",
+        "scratchSha256": "78C7F9E854230818500C42AAD0002D4C2C3C7F9C6CD7C442A914933DC94A9B60",
+        "productionSha256": "1413B2151C8AF8F4B6B3B39C063FAE0E20EE74ADF94C6F14C37984A27EB6E2D1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularProlongation",
+        "scratchSha256": "B3F6F92CA46B2EADEFE2DF283922CBD8EEC80CC07B022C37CC059A70B6C529D3",
+        "productionSha256": "E29D2C85EC694592A1A7F2FDE7DBC2D521B01CCD3E1A35FC7EC762F04B8CE8D2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueJCoordinate",
+        "scratchSha256": "ED39384097D7F7E2A501E72CCFB116E260667D9CA51627D5E20FEC6E881E29FB",
+        "productionSha256": "DF7356B7AD2DA13122BDFE1744110D6D871FDD3F164B688D04C30F2F38639834",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionResidueCoordinateFinite",
+        "scratchSha256": "C56BE57266B17BF507234ED2C61163845D90A3376735054CB5170B7FF4A74EA9",
+        "productionSha256": "C069FF9B8AF97B1A190263FA2DBB2C9D6F0C58139E3BB2634B65BFEF80E3891D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueCoordinateFinite",
+        "scratchSha256": "55A0A669F12B029D133DFD4607C53D6AB54B1F33FB4D48E596ED5913299191F6",
+        "productionSha256": "3529C3661EE21C8B1BD76A554918A71DAC7DDB60A1ECE188ED440A68E40F7921",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueSeparability",
+        "scratchSha256": "2864E32A2D9153D876838C24CFB4246FD35288E255FF411222938BF6250AD18B",
+        "productionSha256": "235D4464583E5F2CBF5F8B68595ECC30431BDCC0F69BC2E057BEC336BD702958",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDecompositionGauss",
+        "scratchSha256": "3DDAC6339E317F046C2FCB56AB124BB57C6943A7D807BCF36EFAED2357311926",
+        "productionSha256": "44CD4F21B6B0E790E0B29D643E753680DBD16AB320FDA79780D94A1F91742514",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueArithmetic",
+        "scratchSha256": "EF4887BE308A32CCDAEE69803CC82F4C7A92A0295725DDFC5C3E958253AB0D37",
+        "productionSha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeGauss",
+        "scratchSha256": "2C065FED10955848CDC57581FADAD21DD95EF28674396E5BE308325B988A3A45",
+        "productionSha256": "8EC71620BD70DA742D2F8C1A19DAD774B5150BFA2A176FC0B4B31F51ECD76E63",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueHecke",
+        "scratchSha256": "3D931B062C77E9897CD0B6789D1272FABD9220C6E783D8FA3EE0CDD7139C7D03",
+        "productionSha256": "7F2E69FFC3425E551E2244860DA0BACA0475F906701CCACA4B124EBE1C282185",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueHeckeFinite",
+        "scratchSha256": "BB9E9448B29FB5C333B6A88A8404F022DB84A7CF600ECEB32D151E9A573C8C0C",
+        "productionSha256": "A6182B724FB3CAE2D3D9476770BB1A34CF3A482725A08899A113E9F24D0CBD66",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueFrobenius",
+        "scratchSha256": "06E34658052283529092F5B545115FF5A2EFC83735D087C373C094BD28641C17",
+        "productionSha256": "A2A0642E7F93BBCCAB319325D64981D53DDC10E1642B473011AA8814E22550A9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResiduePlaces",
+        "scratchSha256": "2AB4A8EF29D2066923BAE29E039F729E570A80D456B7BE905525945142046A84",
+        "productionSha256": "B1C2656F821E9918655BCB1F67993677D4DE402EC25C7757D1FA2477B968F7EA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResiduePlaceOrders",
+        "scratchSha256": "BE7E40B93BC3BE5BF1FA9C293D51A80FB4CC559022FCD34C28EA026FD4211A7C",
+        "productionSha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneResidueFrobeniusPlaces",
+        "scratchSha256": "7C9F62FD05CD72426F3B8DA4552EDE4D42DB4CE3263A9C5D09B8BA18774DB57D",
+        "productionSha256": "7012C6D4853BF5D0CE4606C2D22CC1F32B6543FAE9772491A9732835625AC01F",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

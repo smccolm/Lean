@@ -1,0 +1,7 @@
+### Actual residual-compatible determinant coefficient quotients — 9 October 2026
+
+Original residual determinant compatibility places every actual determinant relation inside the original coefficient maximal ideal. Thus the literal determinant quotient is nontrivial and local, and its true residue-field equivalence preserves every original coefficient reduction.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ResidualDeterminantQuotient](Extension/Dubon2026/ResidualDeterminantQuotient.lean).

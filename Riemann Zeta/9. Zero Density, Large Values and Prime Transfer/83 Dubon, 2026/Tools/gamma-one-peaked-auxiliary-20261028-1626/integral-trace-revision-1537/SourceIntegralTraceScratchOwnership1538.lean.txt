@@ -1,0 +1,35 @@
+import SourceGammaOneEvenIntegralRatios
+import SourceLevelOneCoefficientRing
+import SourceLevelOneIntegralWeightFactor
+import SourceTraceProductCoefficientRing
+import SourceIntegralLevelOneTraceCoefficients
+import SourceTraceExponentialCoefficientVanishing
+import SourceIntegralTraceParameters
+import SourceIntegralTracePowerCoefficients
+import SourceIntegralTraceCoefficientExtraction
+import SourceIntegralTraceModularForm
+import SourceIntegralTraceCuspTransversal
+import SourceIntegralTraceTranslates
+import SourceIntegralTraceTranslationCoefficients
+import SourceIntegralTracePeriodWidth
+import SourceIntegralTraceAnalyticProducts
+import SourceIntegralTraceSlashPeriods
+import SourceIntegralTraceTranslationAssembly
+import SourceIntegralTraceTransversalSplit
+import SourceIntegralTraceDecomposition
+import SourceIntegralTraceDegenerateCusp
+import SourceEvenWeightPeakedTraceIntegrality
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneEvenIntegralRatios, `SourceLevelOneCoefficientRing, `SourceLevelOneIntegralWeightFactor, `SourceTraceProductCoefficientRing, `SourceIntegralLevelOneTraceCoefficients, `SourceTraceExponentialCoefficientVanishing, `SourceIntegralTraceParameters, `SourceIntegralTracePowerCoefficients, `SourceIntegralTraceCoefficientExtraction, `SourceIntegralTraceModularForm, `SourceIntegralTraceCuspTransversal, `SourceIntegralTraceTranslates, `SourceIntegralTraceTranslationCoefficients, `SourceIntegralTracePeriodWidth, `SourceIntegralTraceAnalyticProducts, `SourceIntegralTraceSlashPeriods, `SourceIntegralTraceTranslationAssembly, `SourceIntegralTraceTransversalSplit, `SourceIntegralTraceDecomposition, `SourceIntegralTraceDegenerateCusp, `SourceEvenWeightPeakedTraceIntegrality]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

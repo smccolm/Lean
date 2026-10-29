@@ -1,0 +1,36 @@
+import Dubon2026.SourceHomogeneousHeckeDiamond
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> the actual
+coefficient Frobenius normalization. The complementary diagonal action is
+computed on the existing homogeneous monomial basis, in every weight and
+over rings. These identities feed the literal twisted Picard relation. -/
+namespace Dubon2026
+noncomputable section
+variable {R : Type*} [CommRing R]
+
+theorem homogeneousComplementaryHecke_diamond (w : ℕ) (a d : R) (h : d * a = 1) :
+    (homogeneousMatrixAction w (Matrix.diagonal ![1, d])).comp
+        (homogeneousMatrixAction w (Matrix.diagonal ![d, a])) =
+      homogeneousMatrixAction w (Matrix.diagonal ![d, 1]) := by
+  apply (binaryHomogeneousMonomialBasis w).ext
+  intro i
+  simp only [LinearMap.comp_apply, binaryHomogeneousMonomialBasis_diagonal_ring,
+    one_pow, one_mul, mul_one, map_smul, smul_smul]
+  congr 1
+  calc
+    (d ^ i.val * a ^ (w - i.val)) * d ^ (w - i.val) =
+        d ^ i.val * (d * a) ^ (w - i.val) := by rw [mul_pow]; ring
+    _ = d ^ i.val := by rw [h, one_pow, mul_one]
+
+theorem homogeneousComplementaryHecke_product (w : ℕ) (d : R) :
+    (homogeneousMatrixAction w (Matrix.diagonal ![1, d])).comp
+        (homogeneousMatrixAction w (Matrix.diagonal ![d, 1])) =
+      d ^ w • LinearMap.id := by
+  apply (binaryHomogeneousMonomialBasis w).ext
+  intro i
+  simp only [LinearMap.comp_apply, binaryHomogeneousMonomialBasis_diagonal_ring,
+    one_pow, one_mul, mul_one, map_smul, smul_smul, LinearMap.smul_apply, LinearMap.id_apply]
+  rw [← pow_add, Nat.add_sub_of_le (Nat.le_of_lt_succ i.isLt)]
+
+end
+end Dubon2026

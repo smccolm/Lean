@@ -1,0 +1,67 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixIdeal_pow_mem`. -/
+theorem actual_congruence_kernel_matrixIdeal_pow_mem_source (I : Ideal R) {X : Matrix ι ι R}
+    (hX : X ∈ I.matrix ι) (n : ℕ) : X ^ n ∈ (I ^ n).matrix ι :=
+  matrixIdeal_pow_mem I hX n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrix_primePower_congruence`. -/
+theorem actual_congruence_kernel_matrix_primePower_congruence_source (I : Ideal R) {p : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I)
+    (X : Matrix ι ι R) (hX : X - 1 ∈ I.matrix ι) (n : ℕ) :
+    X ^ (p ^ n) - 1 ∈ (I ^ (n + 1)).matrix ι :=
+  matrix_primePower_congruence I hp hpI X hX n
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R ι : Type*} [CommRing R] [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `matrixCongruenceKernel_isPGroup`. -/
+theorem actual_congruence_kernel_matrixCongruenceKernel_isPGroup_source (I : Ideal R) {p N : ℕ}
+    (hp : p.Prime) (hpI : (p : R) ∈ I) (hI : I ^ N = ⊥) :
+    IsPGroup p (MatrixCongruenceKernel (ι := ι) I) :=
+  matrixCongruenceKernel_isPGroup I hp hpI hI
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {A ι : Type*} [CommRing A] [IsLocalRing A] [IsArtinianRing A]
+  [Fintype ι] [DecidableEq ι]
+
+/-- Exact original-object consumer of `artinianResidualMatrixKernel_isPGroup`. -/
+theorem actual_congruence_kernel_artinianResidualMatrixKernel_isPGroup_source (p : ℕ) (hp : p.Prime)
+    [CharP (IsLocalRing.ResidueField A) p] :
+    IsPGroup p ((GeneralLinearGroup.map (n := ι) (R := A)
+      (S := IsLocalRing.ResidueField A) (IsLocalRing.residue A)).ker) :=
+  artinianResidualMatrixKernel_isPGroup p hp
+
+end
+

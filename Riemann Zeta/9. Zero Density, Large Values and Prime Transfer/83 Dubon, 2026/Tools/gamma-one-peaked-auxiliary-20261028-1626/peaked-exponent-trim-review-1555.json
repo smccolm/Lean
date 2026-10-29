@@ -1,0 +1,11 @@
+{
+  "reason": "Exhaustive preflight found one unused NeZero binder in the even-function subspace; remove it. Proof-value preflight identified two unused auxiliary lemmas, summable_Zres and mem_evenSub; defer both rather than promote incidental lemmas. Native Fourier inversion uses the actual linear equivalence and LinearEquiv.map_eq_zero_iff, not a theorem named ZMod.dft_injective. The actual cusp endpoint statement is unchanged. All prior sources and failed logs remain intact.",
+  "changes": {
+    "SourcePeakedBernoulliResidueWeights": "1541b",
+    "SourcePeakedBernoulliConvolution": "1543b",
+    "SourcePeakedBernoulliVanishing": "1544b",
+    "SourcePeakedBernoulliSpan": "1546b",
+    "SourcePeakedExponents": "1550c",
+    "SourceGammaOnePeakedCuspOrders": "1551b"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  "Dubon2026.determinantMulticoefficientPolynomial_eval",
+  "Dubon2026.determinantMulticoefficient_continuous",
+  "Dubon2026.matrixGroupDeterminantLaw_multicoefficient_continuous",
+  "Dubon2026.matrixGroupDeterminantLaw_eval",
+  "Dubon2026.matrixGroupDeterminantLaw_conjugate",
+  "Dubon2026.matrixGroupDeterminantLaw_baseChange",
+  "Dubon2026.matrixCombinationDeterminant_map",
+  "Dubon2026.matrixCombinationDeterminant_groupAlgebra",
+  "Dubon2026.groupAlgebraMatrix_conjugate",
+  "Dubon2026.matrixRepresentationDeterminant_conjugate",
+  "Dubon2026.determinantCoefficientLaw_conjugate",
+  "Dubon2026.SemanticRegression.actual_natural_determinant_determinantCoefficientLaw_conjugate_source",
+  "Dubon2026.SemanticRegression.actual_natural_determinant_matrixGroupDeterminantLaw_baseChange_source",
+  "Dubon2026.SemanticRegression.actual_natural_determinant_matrixCombinationDeterminant_groupAlgebra_source",
+  "Dubon2026.SemanticRegression.actual_natural_determinant_matrixGroupDeterminantLaw_multicoefficient_continuous_source"
+]

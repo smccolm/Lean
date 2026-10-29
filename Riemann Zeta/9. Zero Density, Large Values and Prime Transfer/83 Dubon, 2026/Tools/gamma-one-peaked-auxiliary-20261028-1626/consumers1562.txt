@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_finite_subextension_embeds_stage`. -/
+theorem actual_unramified_union_finite_stage_originalUnramifiedUnion_finite_subextension_embeds_stage_source
+    (a : 𝓞 K) (ha : a ≠ 0)
+    (E : IntermediateField K (originalUnramifiedGaloisUnion (Ω := Ω) a))
+    [FiniteDimensional K E] :
+    ∃ (F : OriginalUnramifiedGaloisStage (Ω := Ω) a) (i : E →ₐ[K] F.val),
+      ∀ x : E, (i x : Ω) = (x.val : Ω) :=
+  originalUnramifiedUnion_finite_subextension_embeds_stage a ha E
+
+end
+

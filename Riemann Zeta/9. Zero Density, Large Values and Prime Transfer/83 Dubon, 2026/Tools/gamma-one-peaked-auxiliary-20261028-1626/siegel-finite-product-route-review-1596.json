@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-10-29T02:26:42.753016+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> exact integral finite Siegel product expansion.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-leaves-1535\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow.lean.txt",
+      "sha256": "D9A554ECBFAB4BC0156CCCFD57978FE14182EC5FEB98EB74DBC4ECA179C89A43"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerSeriesProduct.lean",
+      "sha256": "0F21255FEE550F387AB0D2953099A90E63422EB2CF0EBC653783CEF25ADDFDD6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRealizedPowerSeries.lean",
+      "sha256": "E2C80E84F3E12085779DA4277023928159805246264CAB231CD8EEAD14D79939"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTracePowerCoefficients.lean",
+      "sha256": "9EF6F227FA80C0C50398F2EF2860A709F9CDE1C0F1F1510AD3B291160C5BF5E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelCoefficientSeries1591c.lean",
+      "sha256": "1FEC6C69E9D7998D015770637EE5752CAB936BE763439F23FEC070B33C808A4E"
+    }
+  ],
+  "shorterRoute": "Reuse the proved native q-series multiplication and cusp-limit theorems, and the audited trace coefficient multiplication/power lemmas. Our explicit single-factor coefficients represent every residue pair, including (0,0); exponent zero handles that factor exactly. This eliminates the candidate choice construction, dummy series and repeated integrality algebra. Split finite-series closure, literal phases, leading coefficient and final assembly; no raised proof limits.",
+  "assumptionsToDischarge": [
+    "Actual finite product has the exact source normalized series with integral coefficients.",
+    "Its specified constant coefficient is nonzero from e(0,0)=0.",
+    "Its level-cleared constant coefficient inverse is integral.",
+    "Its literal phase satisfies C^N=1.",
+    "Its cusp limit equals that constant coefficient."
+  ],
+  "remaining": "Discriminant adjustment, cusp order and decay bounds, and actual peaked auxiliary existence. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "proofLimitsChanged": false
+}

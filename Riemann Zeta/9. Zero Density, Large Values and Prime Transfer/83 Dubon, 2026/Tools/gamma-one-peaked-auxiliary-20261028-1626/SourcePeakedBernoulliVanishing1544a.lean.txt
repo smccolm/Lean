@@ -1,0 +1,59 @@
+import SourcePeakedBernoulliConvolution1543a
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary form -> finite
+Bernoulli-order separation. The actual Bernoulli dilates span exactly
+the even rational functions on the residue ring. The kernel argument
+uses the proved Dirichlet convolution calculation and native finite
+Fourier inversion, followed by finite-dimensional linear algebra.
+No spanning or separating-exponent hypothesis is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+No upstream resource-limit option is adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+variable {N : ℕ} [NeZero N]
+
+theorem psi_eq_zero (g : ZMod N → ℝ)
+    (horth : ∀ s : ZMod N, ∑ r : ZMod N, g r * (wt N (s * r).val : ℝ) = 0) (k : ZMod N) : psi g k = 0 := by
+  suffices H : ∀ M : ℕ, ∀ k : ZMod N, addOrderOf k = M → psi g k = 0 from H _ k rfl
+  intro M
+  induction M using Nat.strong_induction_on with
+  | _ M ih =>
+    intro k hk
+    by_cases hk0 : k = 0
+    · subst hk0; exact psi_zero_eq_zero g horth
+    have hM1 : M ≠ 1 := fun h1 => hk0 (AddMonoid.addOrderOf_eq_one_iff.mp (hk.trans h1))
+    have hMpos : 0 < M := hk ▸ addOrderOf_pos k
+    haveI : NeZero M := ⟨hMpos.ne'⟩
+    have hM2 : 1 < M := lt_of_le_of_ne hMpos (Ne.symm hM1)
+    haveI : Fact (1 < M) := ⟨hM2⟩
+    set a : ZMod M → ℝ := fun c => psi g (((c.val : ℕ) : ZMod N) * k) with ha
+
+    have hnu : ∀ c : ZMod M, ¬ IsUnit c → a c = 0 := by
+      intro c hc
+      by_cases hc0 : c.val = 0
+      · simp only [ha, hc0, Nat.cast_zero, zero_mul]; exact psi_zero_eq_zero g horth
+      refine ih (addOrderOf (((c.val : ℕ) : ZMod N) * k)) ?_ _ rfl
+      rw [← nsmul_eq_mul, addOrderOf_nsmul' k hc0, hk]
+      have hg : 1 < Nat.gcd M c.val := by
+        have hcop : ¬ Nat.Coprime c.val M := by
+          intro hcop; apply hc
+          rw [← ZMod.natCast_zmod_val c]
+          exact (ZMod.isUnit_iff_coprime c.val M).mpr hcop
+        rw [Nat.coprime_iff_gcd_eq_one, Nat.gcd_comm] at hcop
+        have hpos : 0 < Nat.gcd M c.val := Nat.gcd_pos_of_pos_left _ hMpos
+        omega
+      exact Nat.div_lt_self hMpos hg
+
+    have hconv : ∀ u : (ZMod M)ˣ, ∑ c : ZMod M, a (c * u) * Zres M c = 0 := by
+      intro u
+      have h := tsum_psi_div_sq_eq_zero g horth (((((u : ZMod M)).val : ℕ) : ZMod N) * k)
+      rw [tsum_psi_eq_sum_residues g k M hk ((u : ZMod M)).val] at h
+      simpa only [ha, ZMod.natCast_zmod_val] using h
+    have h1 := eq_zero_of_convolution M a hnu hconv 1
+    simpa only [ha, Units.val_one, ZMod.val_one, Nat.cast_one, one_mul] using h1
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

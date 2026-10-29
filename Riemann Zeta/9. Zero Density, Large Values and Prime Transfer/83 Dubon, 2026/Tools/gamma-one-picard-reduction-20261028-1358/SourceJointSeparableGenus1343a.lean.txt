@@ -1,0 +1,80 @@
+import SourceJointSeparablePoleDimension1342b
+import Dubon2026.SourceCurveRepartitionIndex
+import Dubon2026.SourceCurveSeparatingPoleDegree
+import Dubon2026.SourceCurvePositiveDivisorStabilization
+
+/-! DUB-17/18 -> original Gamma1 Picard torsion injectivity -> Kummer
+power lifting. The native genus maximum and eventual pole-space dimension
+formula cancel the common total pole degree in the proved joint bound.
+This is the required sum-of-residue-genera inequality on the actual fields;
+it requires neither a supplied common-constants assertion nor a supplied
+genus inequality. Its Gamma1 consumer supplies the coordinate degree data. -/
+namespace Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly
+noncomputable section
+open IsLocalRing IntermediateField
+local notation "Qbar" => AlgebraicClosure ℚ
+
+theorem genus_inequality_of_separating_residue_coordinate
+    (A : ValuationSubring Qbar) {E : Type*} [Field E] [Algebra Qbar E]
+    (q : ℕ) [NeZero q] (B : Type*) [Field B] [Algebra (ResidueField A) B]
+    (S : Fin q → RegularProlongation A E B)
+    (hSinj : Function.Injective fun i => (S i).integers)
+    (t : E) (ht : ∀ i, t ∈ (S i).integers)
+    [FiniteDimensional Qbar⟮t⟯ E]
+    (y : B) (hy : Transcendental (ResidueField A) y)
+    (hres : ∀ i, (S i).residue ⟨t, ht i⟩ = y)
+    [FiniteDimensional (ResidueField A)⟮y⟯ B]
+    [Algebra.IsSeparable (ResidueField A)⟮y⟯ B]
+    (heq : q * Module.finrank (ResidueField A)⟮y⟯ B = Module.finrank Qbar⟮t⟯ E) :
+    q * genusFF (ResidueField A) B ≤ genusFF Qbar E := by
+  classical
+  haveI := SourceFunctionField.valuation_residue_isAlgClosed A
+  have htrL : Transcendental Qbar t :=
+    transcendental_of_residue_transcendental (S 0) ⟨t, ht 0⟩ (by rw [hres]; exact hy)
+  haveI := hasPrincipalDivisors_closed_of_separating_coordinate t htrL
+  haveI : ∀ v : Place Qbar E, Module.Finite Qbar v.ResidueField := finite_coordinate_place_residue t
+  haveI := finite_lSpace_of_separating_coordinate t htrL 0
+  haveI := hasPrincipalDivisors_closed_of_separating_coordinate y hy
+  haveI : ∀ v : Place (ResidueField A) B, Module.Finite (ResidueField A) v.ResidueField :=
+    finite_coordinate_place_residue y
+  haveI := finite_lSpace_of_separating_coordinate y hy 0
+  let D := poleDivisor t (finite_function_support_of_separating_coordinate t htrL t)
+  let Db := poleDivisor y (finite_function_support_of_separating_coordinate y hy y)
+  have hD : ∀ v : Place Qbar E, D v = max 0 (-v.ord t) := fun _ => max_comm _ _
+  have hDb : ∀ v : Place (ResidueField A) B, Db v = max 0 (-v.ord y) := fun _ => max_comm _ _
+  have hdeg : Divisor.degree D = (q : ℤ) * Divisor.degree Db := by
+    rw [show D = poleDivisor t _ from rfl, show Db = poleDivisor y _ from rfl,
+      degree_poleDivisor_eq_finrank t htrL, degree_poleDivisor_eq_finrank_separating y hy, ← heq]
+    push_cast
+    rfl
+  obtain ⟨γ, D₀, hmax⟩ := separating_coordinate_degree_dimension_maximum t htrL
+  have hγ : (genusFF Qbar E : ℤ) = γ := by
+    rw [genusFF_eq_zero_index]
+    exact separating_coordinate_index_zero_eq_maximum t htrL hmax
+  obtain ⟨γb, Db₀, hmaxb⟩ := separating_coordinate_degree_dimension_maximum y hy
+  have hγb : (genusFF (ResidueField A) B : ℤ) = γb := by
+    rw [genusFF_eq_zero_index]
+    exact separating_coordinate_index_zero_eq_maximum y hy hmaxb
+  have hpos : 0 < Divisor.degree Db := by
+    rw [show Db = poleDivisor y _ from rfl, degree_poleDivisor_eq_finrank_separating y hy]
+    exact_mod_cast (Module.finrank_pos : 0 < Module.finrank (ResidueField A)⟮y⟯ B)
+  obtain ⟨m₁, hm₁⟩ := hmaxb.exists_forall_degree_nsmul_sub_ell_eq hpos
+  obtain ⟨m₀, hm₀⟩ := pole_dimension_bound_of_separating_residue_coordinate
+    A q B S hSinj t ht y hy hres heq D hD Db hDb
+  let m := max m₀ m₁
+  have hcount : (ell (m • D) : ℤ) + q ≤ (q : ℤ) * ell (m • Db) + 1 := by
+    exact_mod_cast hm₀ m (le_max_left _ _)
+  have hbound := hmax.isMax (m • D)
+  have hbase := hm₁ m (le_max_right _ _)
+  have hdegm : Divisor.degree (m • D) = (q : ℤ) * Divisor.degree (m • Db) := by
+    rw [map_nsmul, map_nsmul, hdeg]
+    simp only [nsmul_eq_mul]
+    ring
+  have hbaseq := congrArg (fun z : ℤ => (q : ℤ) * z) hbase
+  have hgen : (q : ℤ) * (genusFF (ResidueField A) B : ℤ) ≤ (genusFF Qbar E : ℤ) := by
+    rw [hγ, hγb]
+    nlinarith
+  exact_mod_cast hgen
+
+end
+end Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly

@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K E L : Type*} [Field K] [Field E] [Field L]
+  [Algebra K E] [Algebra K L] [Algebra E L] [IsScalarTower K E L] [Normal K E]
+
+/-- Exact original-object consumer of `integral_inertia_restrictNormal_mem`. -/
+theorem actual_integral_inertia_restriction_integral_inertia_restrictNormal_mem_source
+    (P : Ideal (𝓞 L)) (σ : Gal(L/K)) (hσ : σ ∈ P.inertia Gal(L/K)) :
+    σ.restrictNormal E ∈ (P.under (𝓞 E)).inertia Gal(E/K) :=
+  integral_inertia_restrictNormal_mem P σ hσ
+
+end
+

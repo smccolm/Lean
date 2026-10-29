@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticResidualKernelCharacters",
+  "mathematics": "The actual kernel of an original continuous matrix representation of the constructed rational arithmetic Galois group is open by its original discrete matrix entries. Applying the proved all-open arithmetic character theorem gives finite original prime-character sets on that same kernel, providing the arithmetic character input required by the existing fixed residual quotient construction.",
+  "boundary": "Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "cyclotomic-unramified-stage-draft-review-20261009.json; exact pinned APIs inspected. No external Lean code imported.",
+  "productionFixes": [
+    "Retained the canonical rational scalar structure inside the full quantified original representation statement."
+  ],
+  "productionLog": "arithmeticKernel1570-focus.log"
+}

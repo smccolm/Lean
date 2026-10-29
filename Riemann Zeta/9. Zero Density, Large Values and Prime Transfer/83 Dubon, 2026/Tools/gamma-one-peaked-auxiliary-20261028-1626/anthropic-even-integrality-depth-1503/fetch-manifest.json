@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-10-29T00:28:38.346543+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_gamma1_peaked_auxiliary_form_twelve_dvd.lean",
+      "sha256": "0B629AC709AB833B35AB41A70A9A857E9403CF9B145B6354DAE3898A18FF27A9",
+      "bytes": 13463
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_levelOne_qExpansion_coeff_mem_of_coeff_le_mem.lean",
+      "sha256": "A4674721FF4B8055BB9F6EFC521CAD6E84416B6F81FD992A2212A42E76839FD8",
+      "bytes": 7784
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-even-integrality-depth-1503\\S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_levelOne_qExpansion_eq_map_int_constantCoeff_one.lean",
+      "sha256": "DA29593080FABA17889E50AA58D5AAF9B6215BF89FD492EAC53E0B3B4225764D",
+      "bytes": 2966
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

@@ -1,0 +1,7 @@
+### Actual unramified Galois stage union — 9 October 2026
+
+One further production module defines the actual family of original finite Galois intermediate fields satisfying the original primewise unramifiedness condition outside the original integer. Their literal supremum is the constructed extension. Every original stage lies in it, and the proved finite Galois compositum theorem gives directedness when the original integer is nonzero. Normality of the original field supremum, together with characteristic-zero separability, proves that this literal union is a genuine Galois extension. This does not yet prove its finite-subextension ramification property, stage nonemptiness or cyclotomic inclusion.
+
+The actual stage nonemptiness, transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedGaloisStageUnion](Extension/Dubon2026/UnramifiedGaloisStageUnion.lean).

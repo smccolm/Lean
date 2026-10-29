@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L] [FiniteDimensional K L] [IsGalois K L]
+
+/-- Exact original-object consumer of `numberField_card_inertia_eq_ramificationIdx`. -/
+theorem actual_number_field_inertia_ramification_numberField_card_inertia_eq_ramificationIdx_source
+    (v : HeightOneSpectrum (𝓞 K)) (w : HeightOneSpectrum (𝓞 L))
+    [w.asIdeal.LiesOver v.asIdeal] :
+    Nat.card (w.asIdeal.inertia Gal(L/K)) = v.asIdeal.ramificationIdx w.asIdeal :=
+  numberField_card_inertia_eq_ramificationIdx v w
+
+end
+

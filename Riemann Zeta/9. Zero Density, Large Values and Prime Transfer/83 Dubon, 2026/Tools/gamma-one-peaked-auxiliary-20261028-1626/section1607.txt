@@ -1,0 +1,7 @@
+### Actual original fixed-determinant arithmetic coefficient compactness — 9 October 2026
+
+The actual arithmetic fixed-determinant ring is compact in its original quotient topology. The original completed framed coefficient ring is compact Hausdorff and Noetherian, so its genuine determinant ideal is closed and the actual fixed-determinant quotient is Hausdorff as well.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticFixedDeterminantCompactness](Extension/Dubon2026/ArithmeticFixedDeterminantCompactness.lean).

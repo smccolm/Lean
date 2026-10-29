@@ -1,0 +1,439 @@
+
+FILE S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean.txt
+import Mathlib
+import Definitions.Def_CohCarrier_Inst
+import Definitions.Def_CohCarrier_CharInvolution
+import Definitions.Def_ModularCurve_PeriodMap
+import Definitions.Def_GaloisRep_ComplexConjugation
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_ModularCurve_XHOperators
+import Theorems.Thm_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution
+import Theorems.Thm_ModularCurve_frobeniusQuadratic_tateModule_jH
+import Theorems.Thm_ModularCurve_galois_smul_genOpH_comm
+import Theorems.Thm_ModularCurve_JH_exists_finiteDimensional_smul_eq_self_of_torsion
+import Theorems.Thm_ModularCurve_moduleFinite_and_free_padicInt_tateModule_jH
+import Theorems.Thm_ModularCurve_heckeDiamondInputsHAll
+import Theorems.Thm_ModularCurve_Period_exists_basis_parabolicHoms_of_isAddTorsionFree
+import Theorems.Thm_CohCarrier_H1_moduleFinite
+import Theorems.Thm_CohCarrier_heckeT_diamondRaw_comm
+import Theorems.Thm_CohCarrier_heckeT_comp_coeff
+import Theorems.Thm_CohCarrier_exists_gamma0_lift_dvd
+import Theorems.Thm_ModularGroup_exists_eq_conj_T_zpow_of_trace_sq_eq_four
+import Theorems.Thm_ValuationSubring_IsFrobeniusAt_apply_eq_pow_of_pow_eq_one
+import P2M.Util
+theorem solution
+    {𝒪 : Type} [CommRing 𝒪] [IsDomain 𝒪] [IsDiscreteValuationRing 𝒪] [CharZero 𝒪]
+    {k : Type} [Field k] [Algebra 𝒪 k] (hk : Function.Surjective (algebraMap 𝒪 k))
+    (p : ℕ) [Fact p.Prime] [CharP k p]
+    (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) (S : Set ℕ) :
+    ∃ (V : Type) (_ : AddCommGroup V) (_ : Module k V) (_ : FiniteDimensional k V)
+      (σV : (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ) →* (V →ₗ[k] V))
+      (t : CohCarrier.Gen M S → (V →ₗ[k] V))
+      (Φ : CohCarrier.H1 M H 𝒪 →ₗ[𝒪] Module.Dual k V),
+      IsOpen ((σV.ker : Subgroup (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ)) :
+        Set (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ)) ∧
+      (∀ (g : CohCarrier.Gen M S) (τ : AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ),
+        t g * σV τ = σV τ * t g) ∧
+      (∀ (g : CohCarrier.Gen M S) (v : CohCarrier.H1 M H 𝒪),
+        v ∈ ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M H) 𝒪 →
+          Φ (CohCarrier.opFamily M H S 𝒪 g v) = (Φ v) ∘ₗ t g) ∧
+      (∀ v : CohCarrier.H1 M H 𝒪,
+        v ∈ ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M H) 𝒪 →
+          Φ (CohCarrier.charInvolution M H 𝒪 𝒪 v) = (Φ v) ∘ₗ σV complexConjugation) ∧
+      (ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M H) 𝒪).map Φ = ⊤ ∧
+      (∀ v : CohCarrier.H1 M H 𝒪,
+        v ∈ ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M H) 𝒪 →
+          (Φ v = 0 ↔ v ∈ IsLocalRing.maximalIdeal 𝒪 •
+            ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M H) 𝒪)) ∧
+      (∀ (ℓ : ℕ) (hℓ : ℓ.Prime) (hℓS : ℓ ∉ S) (hℓM : ¬ ℓ ∣ M), ℓ ≠ p →
+        ∀ A : ValuationSubring (AlgebraicClosure ℚ), A.LiesOverPrime ℓ →
+          ∀ σ : AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ, A.IsFrobeniusAt σ ℓ →
+            σV σ * σV σ - t (CohCarrier.Gen.T ℓ hℓ hℓS hℓM) * σV σ +
+              (ℓ : k) • t (CohCarrier.Gen.dia
+                (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM))) = 0) := by
+  classical
+  letI : Algebra ℤ_[p] k := padicAlgebra p k
+
+  have hin := heckeDiamondInputsHAll M H
+  obtain ⟨Φ₀', hHecke', hConj', hsurj', hinj'⟩ :=
+    exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution M p H S hin
+
+  obtain ⟨Φ₀, rfl⟩ : ∃ Φ₀ : H1 M H ℤ_[p] →ₗ[ℤ_[p]] (Tp M H p →ₗ[ℤ_[p]] ℤ_[p]), Φ₀ = Φ₀' := ⟨Φ₀', rfl⟩
+  have hHecke : ∀ (g : Gen M S) (v : H1 M H ℤ_[p]), v ∈ par M H ℤ_[p] →
+      Φ₀ (opFamily M H S ℤ_[p] g v) = (Φ₀ v) ∘ₗ TOp M H S p g := hHecke'
+  have hConj : ∀ v ∈ par M H ℤ_[p],
+      Φ₀ (charInvolution M H ℤ_[p] ℤ_[p] v) = (Φ₀ v) ∘ₗ Trho M H p complexConjugation := hConj'
+  have hsurj : (par M H ℤ_[p]).map Φ₀ = ⊤ := hsurj'
+  have hinj : ∀ v ∈ par M H ℤ_[p], Φ₀ v = 0 → v = 0 := hinj'
+  clear hHecke' hConj' hsurj' hinj'
+
+  obtain ⟨n, b, hb⟩ := ModularCurve.Period.exists_basis_parabolicHoms_of_isAddTorsionFree (GammaH M H)
+  obtain ⟨b𝒪, hb𝒪⟩ := hb 𝒪
+  obtain ⟨bp, hbp⟩ := hb ℤ_[p]
+  obtain ⟨π, hπ⟩ := exists_proj M H 𝒪
+
+  obtain ⟨ζ, hζ⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot (AlgebraicClosure ℚ) M
+
+  have hDmul := tDia_mul M H S p Φ₀ hHecke hsurj
+  have hDone := tDia_one M H S p Φ₀ hHecke hsurj
+  have hDneg := tDia_neg_one M H S p Φ₀ hHecke hsurj
+  have hTD := tOp_mul_tDia M H S p Φ₀ hHecke hsurj
+  have hTR := TOp_mul_Trho M H S p
+
+  obtain ⟨χ, hχdef⟩ : ∃ χ : (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ) →* (ZMod M)ˣ,
+      χ = hζ.autToPow ℚ := ⟨_, rfl⟩
+  obtain ⟨D, hDdef⟩ : ∃ D : (ZMod M)ˣ →* Module.End k (ESPar.V k p M H),
+      D = tD k p M H S hDmul hDone := ⟨_, rfl⟩
+  obtain ⟨R, hRdef⟩ : ∃ R : (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ) →* Module.End k (ESPar.V k p M H),
+      R = ρk k p M H := ⟨_, rfl⟩
+  have hDR : ∀ u τ, D u * R τ = R τ * D u := fun u τ => by
+    rw [hDdef, tD_apply, hRdef, ρk_apply, ← LinearMap.baseChange_mul, ← LinearMap.baseChange_mul, hTR]
+  obtain ⟨t, htdef⟩ : ∃ t : Gen M S → Module.End k (ESPar.V k p M H),
+      t = fun g => (TOp M H S p g).baseChange k := ⟨_, rfl⟩
+  have ht : ∀ g, t g = (TOp M H S p g).baseChange k := fun g => by rw [htdef]
+  have htD : ∀ g u, t g * D u = D u * t g := fun g u => by
+    rw [ht, hDdef, tD_apply, ← LinearMap.baseChange_mul, ← LinearMap.baseChange_mul, hTD]
+  have htR : ∀ g τ, t g * R τ = R τ * t g := fun g τ => by
+    rw [ht, hRdef, ρk_apply, ← LinearMap.baseChange_mul, ← LinearMap.baseChange_mul, hTR]
+  have hker : RingHom.ker (algebraMap 𝒪 k) = IsLocalRing.maximalIdeal 𝒪 := ker_algebraMap_eq_maximalIdeal k hk
+  refine ⟨ESPar.V k p M H, inferInstance, inferInstance, inferInstance, sigmaV k p M H χ D R hDR, t,
+    ESPar.Φ (k := k) Φ₀ b𝒪 bp π, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  ·
+    obtain ⟨L, hLfin, hL⟩ :=
+      JH.exists_finiteDimensional_smul_eq_self_of_torsion M H p (Fact.out : p.Prime).pos
+    haveI := hLfin
+    have hU : IsOpen (((L.fixingSubgroup ⊓ χ.ker :
+        Subgroup (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ))) :
+        Set (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ)) := by
+      rw [Subgroup.coe_inf, hχdef]
+      exact (IntermediateField.fixingSubgroup_isOpen L).inter (isOpen_ker_autToPow hζ)
+    refine Subgroup.isOpen_mono ?_ hU
+    intro τ hτ
+    obtain ⟨hτL, hτχ⟩ := Subgroup.mem_inf.mp hτ
+    rw [MonoidHom.mem_ker] at hτχ ⊢
+    have hRτ : R τ = 1 := by
+      rw [hRdef]
+      exact ρk_eq_one_of_fix k p M H τ (hL τ ((IntermediateField.mem_fixingSubgroup_iff L τ).mp hτL))
+    rw [sigmaV_apply, hτχ, map_one, hRτ, one_mul]
+  ·
+    intro g τ
+    rw [sigmaV_apply, ← mul_assoc, htD, mul_assoc, htR, ← mul_assoc]
+  ·
+    intro g v hv
+    rw [ht]
+    exact transport Φ₀ b𝒪 bp π hπ b hb𝒪 hbp (opFamily M H S ℤ g) (opFamily M H S 𝒪 g)
+      (opFamily M H S ℤ_[p] g) (fun φ => opFamily_comp_coeff M H S ℤ (Int.castAddHom 𝒪) g φ)
+      (fun φ => opFamily_comp_coeff M H S ℤ (Int.castAddHom ℤ_[p]) g φ)
+      (fun w hw => opFamily_mem_par M H S ℤ g w hw) (fun w hw => opFamily_mem_par M H S 𝒪 g w hw)
+      (TOp M H S p g) (hHecke g) v hv
+  ·
+    intro v hv
+    have h := transport (k := k) Φ₀ b𝒪 bp π hπ b hb𝒪 hbp (charInvolution M H ℤ ℤ) (charInvolution M H 𝒪 𝒪)
+      (charInvolution M H ℤ_[p] ℤ_[p]) (fun φ => rfl) (fun φ => rfl)
+      (fun w hw => charInvolution_mem_par M H ℤ w hw) (fun w hw => charInvolution_mem_par M H 𝒪 w hw)
+      (Trho M H p complexConjugation) hConj v hv
+    have hc : sigmaV k p M H χ D R hDR complexConjugation =
+        (Trho M H p complexConjugation).baseChange k := by
+      rw [sigmaV_apply, hχdef, autToPow_complexConjugation hζ, hDdef, tD_apply, hDneg,
+        LinearMap.baseChange_one, one_mul, hRdef, ρk_apply]
+    rw [hc]
+    exact h
+  ·
+    rw [eq_top_iff]
+    intro F _
+    have hF : F ∈ Submodule.span k (Set.range (ψ (k := k) Φ₀ bp)) := by
+      rw [span_ψ_eq_top Φ₀ bp hsurj]; exact Submodule.mem_top
+    obtain ⟨c, hc⟩ := (Submodule.mem_span_range_iff_exists_fun k).mp hF
+    choose a ha using fun i => hk (c i)
+    let w : ↥(par M H 𝒪) := ∑ i, a i • b𝒪 i
+    refine Submodule.mem_map.mpr ⟨(w : H1 M H 𝒪), w.2, ?_⟩
+    rw [Φ_apply_of_mem Φ₀ b𝒪 bp π hπ _ w.2, Subtype.coe_eta, Φpar_sum_smul, ← hc]
+    exact Finset.sum_congr rfl fun i _ => by rw [ha]
+  ·
+    intro v hv
+    constructor
+    · intro h0
+      rw [Φ_apply_of_mem Φ₀ b𝒪 bp π hπ v hv, Φpar_apply] at h0
+      have hli := linearIndependent_ψ (k := k) Φ₀ bp hsurj hinj
+      have hcoef : ∀ i, algebraMap 𝒪 k (b𝒪.repr ⟨v, hv⟩ i) = 0 :=
+        Fintype.linearIndependent_iff.mp hli _ h0
+      have hmem : ∀ i, b𝒪.repr ⟨v, hv⟩ i ∈ IsLocalRing.maximalIdeal 𝒪 := fun i => by
+        rw [← hker, RingHom.mem_ker]; exact hcoef i
+      have hv' : v = ∑ i, b𝒪.repr ⟨v, hv⟩ i • ((b𝒪 i : ↥(par M H 𝒪)) : H1 M H 𝒪) := by
+        have := congrArg (fun z : ↥(par M H 𝒪) => (z : H1 M H 𝒪)) (b𝒪.sum_repr ⟨v, hv⟩)
+        simpa only [Submodule.coe_sum, Submodule.coe_smul] using this.symm
+      rw [hv']
+      exact Submodule.sum_mem _ fun i _ => Submodule.smul_mem_smul (hmem i) (b𝒪 i).2
+    · intro hmem
+      refine Submodule.smul_induction_on hmem (fun r hr w hw => ?_) (fun x y hx hy => ?_)
+      · have hr0 : algebraMap 𝒪 k r = 0 := by rw [← RingHom.mem_ker, hker]; exact hr
+        rw [LinearMap.map_smul, ← algebraMap_smul k r, hr0, zero_smul]
+      · rw [map_add, hx, hy, add_zero]
+  ·
+    intro ℓ hℓ hℓS hℓM hℓp A hA σ hσ
+    have hχσ : χ σ = ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM) := by
+      rw [hχdef]; exact autToPow_frobenius hζ hℓ hℓM A hA σ hσ
+    have hE := congrArg (Module.End.baseChangeHom ℤ_[p] k (Tp M H p))
+      (frobenius_end M H S p hin hℓ hℓS hℓM hℓp A hA σ hσ)
+    rw [map_add, map_sub, map_mul, map_mul, map_mul, map_natCast, map_zero] at hE
+    have hE' : D (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM)) * (R σ * R σ) -
+        t (.T ℓ hℓ hℓS hℓM) * R σ + (ℓ : Module.End k (ESPar.V k p M H)) = 0 := by
+      rw [hDdef, tD_apply, ht, hRdef, ρk_apply]
+      exact hE
+    have hDℓ : t (.dia (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM))) =
+        D (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM)) := by
+      rw [ht, hDdef, tD_apply]
+    have hRD : R σ * D (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM)) =
+        D (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM)) * R σ := (hDR _ σ).symm
+    have hTDu := htD (.T ℓ hℓ hℓS hℓM) (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM))
+    rw [sigmaV_apply, hχσ, hDℓ, Nat.cast_smul_eq_nsmul, nsmul_eq_mul]
+    generalize D (ZMod.unitOfCoprime ℓ ((Nat.Prime.coprime_iff_not_dvd hℓ).mpr hℓM)) = Dℓ,
+      R σ = Rσ, t (.T ℓ hℓ hℓS hℓM) = Tℓ at hE' hRD hTDu ⊢
+    calc Dℓ * Rσ * (Dℓ * Rσ) - Tℓ * (Dℓ * Rσ) + (ℓ : Module.End k (ESPar.V k p M H)) * Dℓ
+        = Dℓ * (Dℓ * (Rσ * Rσ)) - Dℓ * (Tℓ * Rσ) + Dℓ * ℓ := by
+          rw [mul_assoc Dℓ Rσ (Dℓ * Rσ), ← mul_assoc Rσ Dℓ Rσ, hRD, mul_assoc Dℓ Rσ Rσ,
+            ← mul_assoc Tℓ Dℓ Rσ, hTDu, mul_assoc Dℓ Tℓ Rσ, Nat.cast_comm]
+      _ = Dℓ * (Dℓ * (Rσ * Rσ) - Tℓ * Rσ + ℓ) := by
+          rw [mul_add]; erw [mul_sub (α := Module.End k (ESPar.V k p M H))]
+      _ = 0 := by rw [hE', mul_zero]
+
+
+FILE S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_XHOperators
+import Definitions.Def_ModularCurve_PeriodOf
+import Definitions.Def_CohCarrier_CharInvolution
+import Definitions.Def_GaloisRep_ComplexConjugation
+import Theorems.Thm_ModularCurve_exists_heckeEquivariant_linearEquiv_tateModule_jH_padicInt_tensor_periodLatticeOf_charInvolution
+import Theorems.Thm_ModularCurve_exists_linearEquiv_parabolicHoms_dual_periodLatticeOf_apply_periodOf_of_isCongruenceSubgroup
+import Theorems.Thm_ModularCurve_exists_basis_periodLatticeOf_linearIndependent_real_span_eq_top_of_isCongruenceSubgroup
+import Theorems.Thm_ModularCurve_Period_exists_basis_parabolicHoms_of_isAddTorsionFree
+import Theorems.Thm_CohCarrier_H1_moduleFinite
+import Theorems.Thm_ModularGroup_exists_eq_conj_T_zpow_of_trace_sq_eq_four
+import P2M.Util
+theorem solution
+    (M p : ℕ) [NeZero M] [Fact p.Prime] (H : Subgroup (ZMod M)ˣ) (S : Set ℕ)
+    (hin : ModularCurve.HeckeDiamondInputsHAll M H) :
+    ∃ Φ : CohCarrier.H1 M H ℤ_[p] →ₗ[ℤ_[p]]
+        (TateModule p (ModularCurve.JH M H) →ₗ[ℤ_[p]] ℤ_[p]),
+      (∀ (g : CohCarrier.Gen M S) (v : CohCarrier.H1 M H ℤ_[p]),
+        v ∈ ModularCurve.Period.parabolicHoms ℤ_[p] (CohCarrier.GammaH M H) ℤ_[p] →
+          Φ (CohCarrier.opFamily M H S ℤ_[p] g v) = (Φ v) ∘ₗ ModularCurve.tateGenOpH M H S p g) ∧
+      (∀ v ∈ ModularCurve.Period.parabolicHoms ℤ_[p] (CohCarrier.GammaH M H) ℤ_[p],
+        Φ (CohCarrier.charInvolution M H ℤ_[p] ℤ_[p] v) =
+          (Φ v) ∘ₗ ModularCurve.JH.tateGaloisRep M H p complexConjugation) ∧
+      (ModularCurve.Period.parabolicHoms ℤ_[p] (CohCarrier.GammaH M H) ℤ_[p]).map Φ = ⊤ ∧
+      (∀ v ∈ ModularCurve.Period.parabolicHoms ℤ_[p] (CohCarrier.GammaH M H) ℤ_[p], Φ v = 0 → v = 0) := by
+  have hcong : CongruenceSubgroup.IsCongruenceSubgroup (CohCarrier.GammaH M H) :=
+    CongruenceSubgroup.isCongruenceSubgroup_trans _ _ (ModularCurve.Gamma1_le_GammaH M H)
+      (CongruenceSubgroup.Gamma1_is_congruence M)
+
+  refine (ModularCurve.exists_basis_periodLatticeOf_linearIndependent_real_span_eq_top_of_isCongruenceSubgroup
+      (CohCarrier.GammaH M H) hcong).elim fun m hm => hm.elim fun c _ => ?_
+
+  refine (ModularCurve.exists_linearEquiv_parabolicHoms_dual_periodLatticeOf_apply_periodOf_of_isCongruenceSubgroup
+      (CohCarrier.GammaH M H) hcong).elim fun EV hEV => ?_
+
+  refine (ModularCurve.exists_heckeEquivariant_linearEquiv_tateModule_jH_padicInt_tensor_periodLatticeOf_charInvolution
+      M p H S hin).elim fun e he => ?_
+  refine ModularCurve.JCompConjRed.assemble M p H S c EV hEV e ?_
+  rintro (_ | g) ψ hψ χ χ' hχ hχ' x
+  · exact he.2 ψ hψ χ χ' hχ hχ' x
+  · exact he.1 g ψ hψ χ χ' hχ hχ' x
+
+
+FILE S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_QExpReductionModL
+import Definitions.Def_ModularCurve_XH
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Theorems.Thm_ModularCurve_exists_transcendental_finiteDimensional_qExpFunctionFieldC_residueField
+import Theorems.Thm_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq
+import Theorems.Thm_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd
+import Theorems.Thm_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd
+import P2M.Util
+theorem solution (M : ℕ)
+    [NeZero M] (H : Subgroup (ZMod M)ˣ) {ℓ : ℕ} [Fact ℓ.Prime] (hℓM : ¬ ℓ ∣ M)
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime ℓ) :
+    (∃ x : ModularCurve.xHFunctionFieldC (IsLocalRing.ResidueField A) M H,
+        Transcendental (IsLocalRing.ResidueField A) x ∧
+          FiniteDimensional
+            (IntermediateField.adjoin (IsLocalRing.ResidueField A)
+              ({x} : Set (ModularCurve.xHFunctionFieldC (IsLocalRing.ResidueField A) M H)))
+            (ModularCurve.xHFunctionFieldC (IsLocalRing.ResidueField A) M H)) ∧
+      ModularCurve.ReductionInputsQExpModL A (CohCarrier.GammaH M H) := by
+  haveI : (CohCarrier.GammaH M H).FiniteIndex :=
+    Subgroup.finiteIndex_of_le (Gamma1_le_GammaH M H)
+  have hT : ModularGroup.T ∈ CohCarrier.GammaH M H := translation_mem_GammaH M H
+  obtain ⟨x, -, htr, hfin, -⟩ :=
+    ModularCurve.exists_transcendental_finiteDimensional_qExpFunctionFieldC_residueField
+      (AlgebraicClosure ℚ) A (CohCarrier.GammaH M H) hT
+  refine ⟨⟨x, htr, hfin⟩, ?_⟩
+  exact ModularCurve.reductionInputsQExpModL_of_finrank_le_of_genusFF_eq (CohCarrier.GammaH M H) hT A
+    (fun x y hx hy =>
+      ModularCurve.finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd M H hℓM A hA x y hx hy)
+    (ModularCurve.genusFF_gammaH_residueField_eq_of_not_dvd M H hℓM A hA)
+
+
+FILE S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_ModularCurve_JqCoeff
+import Definitions.Def_CohCarrier_Level
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_ModularCurve_XH
+import Theorems.Thm_ModularCurve_finrank_adjoin_jqModC_laurentBaseChange_qExpFunctionFieldC_le_index
+import Theorems.Thm_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField
+import P2M.Util
+theorem solution (M : ℕ) [NeZero M]
+    (H : Subgroup (ZMod M)ˣ) {ℓ : ℕ} [Fact ℓ.Prime] (hℓM : ¬ ℓ ∣ M)
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime ℓ)
+    (x : ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A) (CohCarrier.GammaH M H))
+    (y : ModularCurve.laurentBaseChange (AlgebraicClosure ℚ)
+      (ModularCurve.qExpFunctionFieldC ℚ (CohCarrier.GammaH M H)))
+    (hx : (x : LaurentSeries (IsLocalRing.ResidueField A)) =
+      ModularCurve.jqModC (IsLocalRing.ResidueField A))
+    (hy : (y : LaurentSeries (AlgebraicClosure ℚ)) = ModularCurve.jqModC (AlgebraicClosure ℚ)) :
+    Module.finrank
+        (IntermediateField.adjoin (AlgebraicClosure ℚ)
+          ({y} : Set (ModularCurve.laurentBaseChange (AlgebraicClosure ℚ)
+            (ModularCurve.qExpFunctionFieldC ℚ (CohCarrier.GammaH M H)))))
+        (ModularCurve.laurentBaseChange (AlgebraicClosure ℚ)
+          (ModularCurve.qExpFunctionFieldC ℚ (CohCarrier.GammaH M H))) ≤
+      Module.finrank
+        (IntermediateField.adjoin (IsLocalRing.ResidueField A)
+          ({x} : Set (ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A)
+            (CohCarrier.GammaH M H))))
+        (ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A) (CohCarrier.GammaH M H)) := by
+  haveI : (CohCarrier.GammaH M H).FiniteIndex :=
+    Subgroup.finiteIndex_of_le (ModularCurve.Gamma1_le_GammaH M H)
+  have hT : ModularGroup.T ∈ CohCarrier.GammaH M H := ModularCurve.translation_mem_GammaH M H
+  refine le_trans
+    (ModularCurve.finrank_adjoin_jqModC_laurentBaseChange_qExpFunctionFieldC_le_index
+      (AlgebraicClosure ℚ) (CohCarrier.GammaH M H) hT
+      (CohCarrier.GammaH M (H ⊔ Subgroup.zpowers (-1))) (GammaH_mono le_sup_left)
+      (mem_or_neg_mem_of_mem_GammaH_sup H) y hy) ?_
+  exact ModularCurve.index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField
+    M H hℓM A hA x hx
+
+
+FILE S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_CohCarrier_Level
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_AlgebraicCurve_Repartitions
+import Definitions.Def_ModularCurve_XH
+import Theorems.Thm_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd
+import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
+import P2M.Util
+theorem solution (M : ℕ) [NeZero M]
+    (H : Subgroup (ZMod M)ˣ) {ℓ : ℕ} [Fact ℓ.Prime] (hℓM : ¬ ℓ ∣ M)
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime ℓ) :
+    AlgebraicCurve.genusFF (IsLocalRing.ResidueField A)
+        (ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A) (CohCarrier.GammaH M H)) =
+      AlgebraicCurve.genusFF (AlgebraicClosure ℚ)
+        (ModularCurve.laurentBaseChange (AlgebraicClosure ℚ)
+          (ModularCurve.qExpFunctionFieldC ℚ (CohCarrier.GammaH M H))) := by
+  haveI := ValuationSubring.isAlgClosed_residueField A
+  haveI := GenusGammaHGlue.charP_residueField ℓ A hA
+  exact ModularCurve.genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd M H hℓM
+    (IsLocalRing.ResidueField A)
+
+
+FILE S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_ModularCurve_JqCoeff
+import Definitions.Def_CohCarrier_Level
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_ModularCurve_XH
+import Definitions.Def_ModularCurve_X0ModL
+import Theorems.Thm_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod
+import Theorems.Thm_ModularCurve_finiteDimensional_and_finrank_adjoin_le_of_eq_coeffMap
+import Theorems.Thm_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq
+import Theorems.Thm_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
+import Theorems.Thm_ModularCurve_Gamma0_index
+import Theorems.Thm_ModularCurve_exists_transcendental_finiteDimensional_qExpFunctionFieldC_residueField
+import Theorems.Thm_ModularCurve_transcendental_jqModC
+import Theorems.Thm_ModularCurve_jqModC_mem_intFormRatiosC
+import P2M.Util
+theorem solution
+    (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) {ℓ : ℕ} [Fact ℓ.Prime] (hℓM : ¬ ℓ ∣ M)
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime ℓ)
+    (x : ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A) (CohCarrier.GammaH M H))
+    (hx : (x : LaurentSeries (IsLocalRing.ResidueField A)) =
+      ModularCurve.jqModC (IsLocalRing.ResidueField A)) :
+    (CohCarrier.GammaH M (H ⊔ Subgroup.zpowers (-1))).index ≤
+      Module.finrank
+        (IntermediateField.adjoin (IsLocalRing.ResidueField A)
+          ({x} : Set (ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A)
+            (CohCarrier.GammaH M H))))
+        (ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField A) (CohCarrier.GammaH M H)) := by
+  haveI := charP_residueField ℓ A hA
+
+  obtain ⟨x', hx', -, hfin, -⟩ :=
+    exists_transcendental_finiteDimensional_qExpFunctionFieldC_residueField (AlgebraicClosure ℚ) A
+      (CohCarrier.GammaH M H) (translation_mem_GammaH M H)
+  have hxx' : x' = x := Subtype.ext (hx'.trans hx.symm)
+  subst hxx'
+  haveI := hfin
+
+  set φ : ZMod ℓ →+* IsLocalRing.ResidueField A := ZMod.castHom (dvd_refl ℓ) (IsLocalRing.ResidueField A)
+  set x₀ : Fbar ℓ M H :=
+    ⟨jqModC (ZMod ℓ), intFormRatiosC_subset (ZMod ℓ) _ (jqModC_mem_intFormRatiosC (ZMod ℓ) _)⟩ with hx₀
+  have hx₀' : (x₀ : LaurentSeries (ZMod ℓ)) = jqModC (ZMod ℓ) := rfl
+  have htr : Transcendental (ZMod ℓ) (x₀ : LaurentSeries (ZMod ℓ)) := transcendental_jqModC (ZMod ℓ)
+  have hxφ : (x' : LaurentSeries (IsLocalRing.ResidueField A)) = coeffMap φ (x₀ : LaurentSeries (ZMod ℓ)) := by
+    rw [hx', hx₀', coeffMap_jqModC]
+  obtain ⟨hfin₀, hle⟩ := finiteDimensional_and_finrank_adjoin_le_of_eq_coeffMap φ (CohCarrier.GammaH M H)
+    x₀ x' htr hxφ
+  haveI := hfin₀
+
+  obtain ⟨ρ, -, h2, h3, h4, h5⟩ := exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod ℓ M hℓM H
+  exact (index_le_finrank_zmod hℓM ρ h2 h3 h4 h5 x₀ hx₀').trans hle
+
+end
+p2m_reactivate "P2MW.S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.XHIgusaDegree"
+
+
+FILE S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_ModularCurve_JqCoeff
+import Definitions.Def_CohCarrier_Level
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_FLTPrelim_Ramification
+import Theorems.Thm_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField
+import Theorems.Thm_ModularCurve_coeffMap_mem_qExpFunctionFieldC_and_eq_adjoin_image_coeffMap
+import P2M.Util
+theorem solution
+    (q : ℕ) [Fact q.Prime] (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) (hqM : ¬ q ∣ M)
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime q)
+    (k₀ : IntermediateField ℚ (AlgebraicClosure ℚ))
+    (hκ : ∀ a : (AlgebraicClosure ℚ), a ∈ A → ∃ c : ↥k₀, (c : (AlgebraicClosure ℚ)) ∈ A ∧
+      ∃ h : a - c ∈ A, (⟨_, h⟩ : A) ∈ IsLocalRing.maximalIdeal A)
+    (x : ↥(ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))))
+      (CohCarrier.GammaH M H)))
+    (hx : (x : LaurentSeries (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))))) =
+      ModularCurve.jqModC (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))))) :
+    (CohCarrier.GammaH M H ⊔ Subgroup.zpowers (-1 : Matrix.SpecialLinearGroup (Fin 2) ℤ)).index ≤
+      Module.finrank
+        ↥(IntermediateField.adjoin (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))))
+          ({x} : Set ↥(ModularCurve.qExpFunctionFieldC
+            (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ)))) (CohCarrier.GammaH M H))))
+        ↥(ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))))
+          (CohCarrier.GammaH M H))  := by
+  classical
+  obtain ⟨-, hθsurj⟩ := θ_bijective A k₀ hκ
+  have hx' : ((Ψ (θ A k₀) (CohCarrier.GammaH M H) x :
+      ↥(ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField ↥A) (CohCarrier.GammaH M H))) :
+        LaurentSeries (IsLocalRing.ResidueField ↥A)) = ModularCurve.jqModC _ := by
+    rw [coe_Ψ, hx]
+    change (ModularCurve.jqModC _).map _ = _
+    exact ModularCurve.map_jqModC _
+  have h1 := ModularCurve.index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField M H hqM A hA
+    (Ψ (θ A k₀) (CohCarrier.GammaH M H) x) hx'
+  rw [← GammaH_sup_eq] at h1
+  rw [finrank_adjoin_eq (θ A k₀) (CohCarrier.GammaH M H) hθsurj x]
+  exact h1

@@ -1,0 +1,23 @@
+[
+  "Iut/Anabelian/TateTorsion.lean",
+  "Iut/Anabelian/Torsion.lean",
+  "Iut/Concrete/TorsionFieldGalois.lean",
+  "Iut/Cor312/ThetaData/ReductionNorm.lean",
+  "Iut/Cor312/ThetaData/TateFamilyOfTorsion.lean",
+  "Iut/Cor312/ThetaData/TwoTorsion.lean",
+  "Iut/EtaleTheta/Env/Reduction.lean",
+  "Iut/Frobenioid/UnrPairing.lean",
+  "Iut/Reconstruction/Local/Torsion.lean",
+  "Iut/Torsion/Count.lean",
+  "Iut/Torsion/Divisible.lean",
+  "Iut/Torsion/EDS.lean",
+  "Iut/Torsion/Identities.lean",
+  "Iut/Tower/IntegralTorsion.lean",
+  "Iut/Tower/ReductionKernel.lean",
+  "Iut/Tower/TorsionRigid.lean",
+  "Iut/Tripod/CyclicTorsion.lean",
+  "Iut/Tripod/TorsionBasis.lean",
+  "Iut/Tripod/TorsionDegree.lean",
+  "Iut/Tripod/TorsionNewton.lean",
+  "Iut/Tripod/TpdTorsionRep.lean"
+]

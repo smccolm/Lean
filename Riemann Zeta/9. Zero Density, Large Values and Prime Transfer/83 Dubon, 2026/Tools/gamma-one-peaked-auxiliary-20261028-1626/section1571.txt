@@ -1,0 +1,7 @@
+### Actual original finite-field criterion for the arithmetic union — 9 October 2026
+
+Every original finite intermediate field contained in the literal arithmetic union lies in an actual original finite unramified stage by directed descent. Actual lifted primes and the original ramification tower identity therefore give its original unramifiedness condition. For original finite Galois fields, this proves the exact equivalence between containment in the constructed union and unramifiedness outside the original exceptional integer.
+
+Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedUnionFiniteFieldCriterion](Extension/Dubon2026/UnramifiedUnionFiniteFieldCriterion.lean).

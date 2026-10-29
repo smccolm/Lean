@@ -1,0 +1,35 @@
+import SourceGammaOneOriginalSpecialization
+import Dubon2026.SourceJointChartWeightedSpans
+
+/-! DUB-17/18 -> original Gamma1 Picard torsion injectivity -> Kummer
+residue genus comparison. These are the native joint chart submodules on
+the actual Gamma1 residue image. Fixing their coefficient algebra explicitly
+avoids unrelated scalar-tower searches; no dimension statement is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+
+/-- The literal residue span of the coordinate chart on the original cover. -/
+def gammaOneJointChart (A : ValuationSubring Qbar) (M q : ℕ)
+    {E : Type*} [Field E] [Algebra Qbar E]
+    (S : Fin q → RegularProlongation A E (residueImage A (CongruenceSubgroup.Gamma1 M)))
+    (t : E) : Submodule (IsLocalRing.ResidueField A)
+      (Fin q → residueImage A (CongruenceSubgroup.Gamma1 M)) :=
+  @RegularProlongation.JointChartAssembly.ST Qbar inferInstance A E inferInstance
+    inferInstance (Fin q) (fun _ => (residueImage A (CongruenceSubgroup.Gamma1 M) : Type))
+    (fun _ => inferInstance) (fun _ => specializationResidueAlgebra A (CongruenceSubgroup.Gamma1 M)) S t
+
+/-- The literal weighted inverse-chart residue span on the original cover. -/
+def gammaOneJointWeightedChart (A : ValuationSubring Qbar) (M q : ℕ)
+    {E : Type*} [Field E] [Algebra Qbar E]
+    (S : Fin q → RegularProlongation A E (residueImage A (CongruenceSubgroup.Gamma1 M)))
+    (t : E) (m : ℕ) : Submodule (IsLocalRing.ResidueField A)
+      (Fin q → residueImage A (CongruenceSubgroup.Gamma1 M)) :=
+  @RegularProlongation.JointChartAssembly.weightedST Qbar E inferInstance A inferInstance
+    inferInstance (Fin q) (fun _ => (residueImage A (CongruenceSubgroup.Gamma1 M) : Type))
+    (fun _ => inferInstance) (fun _ => specializationResidueAlgebra A (CongruenceSubgroup.Gamma1 M)) S t m
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

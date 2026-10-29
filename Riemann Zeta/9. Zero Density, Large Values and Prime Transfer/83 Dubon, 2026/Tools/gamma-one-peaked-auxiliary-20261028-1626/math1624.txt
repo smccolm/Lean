@@ -1,0 +1,1 @@
+The actual continuous cocycles of the original trace-zero coefficient representation include in the original continuous matrix cocycles. The inclusion is coefficient-linearly equivalent to the genuine pointwise trace kernel, with original subtype topology and cocycle equations proved in both directions.

@@ -1,0 +1,25 @@
+{
+  "recordedUTC": "2026-10-28T21:06:48.278444+00:00",
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> genuine finite homogeneous-coefficient Galois realization -> actual faithful finite Galois factor and original unramified descent.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousGaloisFaithfulFiniteFactor.lean",
+      "sha256": "41BA0BAD23E36C5039515A418868504E5B243233CB72D1E8571760B10BC7EABE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+      "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteFiniteUnramified.lean",
+      "sha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD"
+    }
+  ],
+  "selected": "Reuse the already proved faithful open-kernel fixed-field construction. Actual Tate-dual continuity supplies the open kernel; the group-source representation takes values in units automatically. Retain the faithful factor needed by the existing original arithmetic-descent theorem instead of rebuilding finite Galois or ramification foundations.",
+  "remaining": "Original degree/genus equalities, parabolic character transfer/nonvanishing, two-dimensional association, exceptional primes, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false
+}

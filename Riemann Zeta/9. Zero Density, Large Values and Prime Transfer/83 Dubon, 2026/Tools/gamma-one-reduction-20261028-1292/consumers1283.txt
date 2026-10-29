@@ -1,0 +1,113 @@
+
+/-- Exact original-object consumer of `sphericalChebyshevCoefficient_recurrence`. -/
+theorem actual_spherical_formula_sphericalChebyshevCoefficient_recurrence_source (q r z : ℂ) (hr : r ≠ 0)
+    (hs : r ^ 2 = q) (hq : q + 1 ≠ 0) (n : ℕ) :
+    (r * z) * sphericalChebyshevCoefficient q r z (n + 1) =
+      sphericalChebyshevCoefficient q r z n + q * sphericalChebyshevCoefficient q r z (n + 2) :=
+  sphericalChebyshevCoefficient_recurrence q r z hr hs hq n
+
+/-- Exact original-object consumer of `radial_recurrence_chebyshev_formula`. -/
+theorem actual_spherical_formula_radial_recurrence_chebyshev_formula_source (p : ℕ) [NeZero p] (r z : ℂ)
+    (hr : r ≠ 0) (hs : r ^ 2 = (p : ℂ)) (φ : ℕ → ℂ)
+    (hb : (r * z) * φ 0 = ((p : ℂ) + 1) * φ 1)
+    (hrec : ∀ n, (r * z) * φ (n + 1) = φ n + (p : ℂ) * φ (n + 2)) (n : ℕ) :
+    φ n = φ 0 * sphericalChebyshevCoefficient p r z n :=
+  radial_recurrence_chebyshev_formula p r z hr hs φ hb hrec n
+
+/-- Exact original-object consumer of `sphericalChebyshevCoefficient_satake`. -/
+theorem actual_spherical_formula_sphericalChebyshevCoefficient_satake_source {α β : ℂ} (hprod : α * β = 1)
+    (q r : ℂ) (n : ℕ) :
+    sphericalChebyshevCoefficient q r (α + β) (n + 2) =
+      (r ^ (n + 2))⁻¹ *
+        (q * satakeSymmetricTrace α β (n + 2) - satakeSymmetricTrace α β n) / (q + 1) :=
+  sphericalChebyshevCoefficient_satake hprod q r n
+
+/-- Exact original-object consumer of `primitive_sphericalChebyshevCoefficient_primePower`. -/
+theorem actual_spherical_formula_primitive_sphericalChebyshevCoefficient_primePower_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (F : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) (n : ℕ) :
+    sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) (n + 2) =
+      ((Real.sqrt p : ℂ) ^ (n + 2))⁻¹ *
+        ((p : ℂ) * normalizedCuspCoefficients F.toCuspForm (p ^ (n + 2)) -
+          normalizedCuspCoefficients F.toCuspForm (p ^ n)) / ((p : ℂ) + 1) :=
+  primitive_sphericalChebyshevCoefficient_primePower F hp hpQ n
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_spherical_formula`. -/
+theorem actual_spherical_formula_adelicCyclicLocal_primitive_spherical_formula_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+    (g : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    ∃ n : ℕ, inner ℂ x (adelicCyclicLocalRepresentation F.toCuspForm
+      (rationalPrimePlace p (Fact.out : p.Prime)) g (adelicCyclicHilbertGenerator F.toCuspForm)) =
+      inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) *
+        sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) n :=
+  adelicCyclicLocal_primitive_spherical_formula F hpN x hx g
+
+/-- Exact original-object consumer of `adelicCyclicLocal_primitive_radial_primePowers`. -/
+theorem actual_spherical_formula_adelicCyclicLocal_primitive_radial_primePowers_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N)
+    (x : AdelicCyclicHilbert F.toCuspForm)
+    (hx : x ∈ adelicLocalFixedSpace F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime))) (n : ℕ) :
+    @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      x (adelicCyclicHilbertGenerator F.toCuspForm) (n + 2) =
+    inner ℂ x (adelicCyclicHilbertGenerator F.toCuspForm) *
+      (((Real.sqrt p : ℂ) ^ (n + 2))⁻¹ *
+        ((p : ℂ) * normalizedCuspCoefficients F.toCuspForm (p ^ (n + 2)) -
+          normalizedCuspCoefficients F.toCuspForm (p ^ n)) / ((p : ℂ) + 1)) :=
+  adelicCyclicLocal_primitive_radial_primePowers F hpN x hx n
+
+/-- Exact original-object consumer of `adelicLocalUnitReference_radial_formula`. -/
+theorem actual_spherical_formula_adelicLocalUnitReference_radial_formula_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (n : ℕ) :
+    @finitePlaceRadialCoefficient (AdelicCyclicHilbert F.toCuspForm)
+      inferInstance inferInstance p inferInstance inferInstance
+      (adelicCyclicLocalRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))
+      (adelicCyclicUnitReference F.toCuspForm) (adelicCyclicUnitReference F.toCuspForm) n =
+      sphericalChebyshevCoefficient p (Real.sqrt p) (normalizedCuspCoefficients F.toCuspForm p) n :=
+  adelicLocalUnitReference_radial_formula F hpN n
+
+/-- Exact original-object consumer of `finitePlace_unit_spherical_cartan_formula`. -/
+theorem actual_spherical_formula_finitePlace_unit_spherical_cartan_formula_source {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hscalar : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (v : V) (hv : inner ℂ v v = 1)
+    (hfixed : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val v = v)
+    (z : ℂ) (heigen : @finitePlaceHeckeTrace V inferInstance inferInstance 1 p
+      inferInstance inferInstance inferInstance (Nat.coprime_one_right p) ρ v = ((Real.sqrt p : ℂ) * z) • v)
+    (u : ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)ˣ) (n : ℕ)
+    (l r : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime))) :
+    inner ℂ v (ρ (GeneralLinearGroup.scalar (Fin 2) u * l.val *
+      (GeneralLinearGroup.map (finiteAdelePlace (rationalPrimePlace p (Fact.out : p.Prime)))
+        (finiteAdelicHeckeDiagonal p)) ^ n * r.val) v) =
+      sphericalChebyshevCoefficient p (Real.sqrt p) z n :=
+  finitePlace_unit_spherical_cartan_formula p ρ hρ hscalar v hv hfixed z heigen u n l r
+
+/-- Exact original-object consumer of `finitePlace_unit_spherical_orbit_gram`. -/
+theorem actual_spherical_formula_finitePlace_unit_spherical_orbit_gram_source {V W : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [NormedAddCommGroup W] [InnerProductSpace ℂ W]
+    (p : ℕ) [NeZero p] [Fact p.Prime]
+    (ρ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) V)
+    (σ : Representation ℂ (GeneralLinearGroup (Fin 2)
+      ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (hσ : ∀ g x y, inner ℂ (σ g x) (σ g y) = inner ℂ x y)
+    (hcρ : ∀ u z, ρ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (hcσ : ∀ u z, σ (GeneralLinearGroup.scalar (Fin 2) u) z = z)
+    (v : V) (w : W) (hv : inner ℂ v v = 1) (hw : inner ℂ w w = 1)
+    (hvK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), ρ g.val v = v)
+    (hwK : ∀ g : finitePlaceGL2Gamma0 1 (rationalPrimePlace p (Fact.out : p.Prime)), σ g.val w = w)
+    (z : ℂ)
+    (hzv : @finitePlaceHeckeTrace V inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) ρ v = ((Real.sqrt p : ℂ) * z) • v)
+    (hzw : @finitePlaceHeckeTrace W inferInstance inferInstance 1 p inferInstance inferInstance
+      inferInstance (Nat.coprime_one_right p) σ w = ((Real.sqrt p : ℂ) * z) • w)
+    (g h : GeneralLinearGroup (Fin 2) ((rationalPrimePlace p (Fact.out : p.Prime)).adicCompletion ℚ)) :
+    inner ℂ (ρ g v) (ρ h v) = inner ℂ (σ g w) (σ h w) :=
+  finitePlace_unit_spherical_orbit_gram p ρ σ hρ hσ hcρ hcσ v w hv hw hvK hwK z hzv hzw g h
+

@@ -1,0 +1,80 @@
+import SourcePeakedAuxiliaryCuspDecay
+import SourcePeakedAuxiliaryHolomorphic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> discriminant-adjusted Siegel
+modular form and its exact cusp bounds. Consume actual literal products,
+the proved finite-product cusp limit and native discriminant decay. The
+nonnegative shifted-order hypothesis is explicit and will be discharged
+when selecting the discriminant power; no auxiliary existence is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups ModularForm Manifold
+variable (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+
+/-- The discriminant-adjusted literal product as an actual modular form. -/
+noncomputable def theta (hm0 : m 0 0 = 0) (hm : ∀ r s : ZMod N, m r (s + r) = m r s) (t : ℕ)
+    (ht : ∀ β : SL(2, ℤ), 0 ≤ Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) + (N : ℤ) * t) :
+    ModularForm (CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ)) (12 * (t : ℤ)) where
+  toFun := thetaFun N m t
+  slash_action_eq' A hA := by
+    obtain ⟨γ, hγ, rfl⟩ := hA
+    funext τ
+    change ((thetaFun N m t) ∣[12 * (t : ℤ)] (γ : GL (Fin 2) ℝ)) τ = thetaFun N m t τ
+    rw [thetaFun_slash_apply, thetaFun, uFun, uFun,
+      (Siegel.prod_siegelFun_pow_specialLinearGroup_smul N m).2 hm γ hγ τ]
+  holo' := mdifferentiable_thetaFun N m t
+  bdd_at_cusps' {c} hc := by
+    rw [Subgroup.IsArithmetic.isCusp_iff_isCusp_SL2Z] at hc
+    rw [OnePoint.isBoundedAt_iff_forall_SL2Z hc]
+    intro γ _
+
+    have hO := thetaFun_slash_isBigO N m hm0 t γ
+    rw [ModularForm.SL_slash]
+    change Filter.BoundedAtFilter atImInfty ((thetaFun N m t) ∣[12 * (t : ℤ)] (γ : GL (Fin 2) ℝ))
+    refine hO.trans (Asymptotics.IsBigO.of_bound 1 (Filter.Eventually.of_forall fun τ => ?_))
+    have hpos : 0 ≤ (((Ord N m ((γ 0 0 : ℤ) : ZMod N) ((γ 1 0 : ℤ) : ZMod N) : ℤ) : ℝ) / (N : ℝ) + (t : ℝ)) := by
+      have h1 := ht γ
+      have hNpos : (0 : ℝ) < (N : ℝ) := Nat.cast_pos.2 (NeZero.pos N)
+      have h2 : (0 : ℝ) ≤ ((Ord N m ((γ 0 0 : ℤ) : ZMod N) ((γ 1 0 : ℤ) : ZMod N) : ℤ) : ℝ) + (N : ℝ) * (t : ℝ) := by
+        exact_mod_cast h1
+      have : (((Ord N m ((γ 0 0 : ℤ) : ZMod N) ((γ 1 0 : ℤ) : ZMod N) : ℤ) : ℝ) / (N : ℝ) + (t : ℝ)) =
+          ((((Ord N m ((γ 0 0 : ℤ) : ZMod N) ((γ 1 0 : ℤ) : ZMod N) : ℤ) : ℝ) + (N : ℝ) * (t : ℝ))) / (N : ℝ) := by
+        field_simp
+      rw [this]
+      exact div_nonneg h2 hNpos.le
+    rw [Real.norm_of_nonneg (Real.exp_nonneg _), Pi.one_apply, norm_one, mul_one, Real.exp_le_one_iff, neg_mul]
+    exact neg_nonpos.2 (mul_nonneg (mul_nonneg (by positivity) hpos) τ.im_pos.le)
+
+theorem theta_apply (hm0 : m 0 0 = 0) (hm : ∀ r s : ZMod N, m r (s + r) = m r s) (t : ℕ)
+    (ht : ∀ β : SL(2, ℤ), 0 ≤ Ord N m ((β 0 0 : ℤ) : ZMod N) ((β 1 0 : ℤ) : ZMod N) + (N : ℤ) * t) (τ : ℍ) :
+    theta N m hm0 hm t ht τ = uFun N m τ * ModularForm.discriminant τ ^ t := rfl
+
+theorem exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow
+    (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (hm0 : m 0 0 = 0)
+    (hm : ∀ r s : ZMod N, m r (s + r) = m r s) (t : ℕ)
+    (ht : ∀ β : SL(2, ℤ),
+      0 ≤ (∑ r : ZMod N, ∑ s : ZMod N, (m r s : ℤ) *
+          (6 * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) ^ 2
+            - 6 * (N : ℤ) * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) + (N : ℤ) ^ 2)) + (N : ℤ) * t) :
+    ∃ ϑ : ModularForm (CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ)) (12 * (t : ℤ)),
+      (∀ τ : UpperHalfPlane, ϑ τ =
+        (∏ r : ZMod N, ∏ s : ZMod N,
+          siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) ^ (12 * N * m r s)) *
+          ModularForm.discriminant τ ^ t) ∧
+      ∀ β : SL(2, ℤ),
+        ((⇑ϑ : UpperHalfPlane → ℂ) ∣[12 * (t : ℤ)] (β : GL (Fin 2) ℝ)) =O[UpperHalfPlane.atImInfty]
+          fun τ : UpperHalfPlane =>
+            Real.exp (-(2 * Real.pi *
+              ((((∑ r : ZMod N, ∑ s : ZMod N, (m r s : ℤ) *
+                (6 * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) ^ 2
+                  - 6 * (N : ℤ) * ((r * ((β 0 0 : ℤ) : ZMod N) + s * ((β 1 0 : ℤ) : ZMod N)).val : ℤ) + (N : ℤ) ^ 2)) : ℤ) : ℝ) / (N : ℝ) + (t : ℝ))) * τ.im) := by
+  refine ⟨theta N m hm0 hm t ht, theta_apply N m hm0 hm t ht, fun β => ?_⟩
+  exact thetaFun_slash_isBigO N m hm0 t β
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form

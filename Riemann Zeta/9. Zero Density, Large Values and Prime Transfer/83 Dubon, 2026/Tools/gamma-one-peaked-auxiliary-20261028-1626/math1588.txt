@@ -1,0 +1,1 @@
+Construct the literal prescribed-determinant quotient of the already derived arithmetic framed ring. Original residual compatibility proves locality; actual compact Hausdorff quotient coefficients prove Noetherianity, maximal-adic completeness and equality of the genuine quotient topology with the original maximal-adic topology. The true residue field remains the original one.

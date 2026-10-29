@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "pinnedApis": [
+    "RingHom.map_fieldRange and fieldRange_eq_map",
+    "AlgHom.fieldRange_toSubfield, IntermediateField.fieldRange_val and sup_toSubfield",
+    "Subfield.map_sup and comap_map"
+  ],
+  "scope": "The specific arithmetic family, its directedness and supremum field, normality, transfer of its original ramification conditions to all actual finite subextensions and required cyclotomic inclusion still require assembly. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "externalCodeImported": false,
+  "productionFixes": [
+    "Changed original embedding range expressions definitionally to the actual intermediate-field range before applying its pinned value-range identity."
+  ],
+  "productionLog": "supEmbeddings1558b-focus.log"
+}

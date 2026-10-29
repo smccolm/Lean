@@ -1,0 +1,93 @@
+{
+  "recordedUTC": "2026-10-28T21:09:30.041336+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Hecke-character realization -> continuity of the genuine Gamma1 cyclotomic/Tate Galois action.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-continuity-reuse-1413.json",
+      "sha256": "536E0D7EC209ACD92264F72D16C8DB0504B79BFBD934D0AC646F73FE9BB0B5A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-twisted-factor-reuse-1421.json",
+      "sha256": "6FF045F900D5F1059D811D9220C82480BD4C54291970169057CAD7256B3A0B25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFiniteFieldOfDefinition.lean",
+      "sha256": "870E2B9A85E638904DA690E52D33E47CBC8489EE457E76FF81D387C1B6882C4D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceOrbit.lean",
+      "sha256": "7C58E283A2A4C100E93008746CD970C3A4C69288721C5D8FBF936D1FD6C9C00E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceFieldOfDefinition.lean",
+      "sha256": "60EE470802794D3300DC5D5864AA7D48155D6AE5629F05D027834766F7659BFF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardFieldOfDefinition.lean",
+      "sha256": "185D35A887811E81CBA143C6F5D60AE8F7E3677B39D9C101FD3A895146DDF667"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateAdicContinuity.lean",
+      "sha256": "735C3215426FB9D0BFC31A48A85A3F37F99F2A9B76CAAAC3A2CC978360BDDE61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateProjections.lean",
+      "sha256": "7F40A0D4084401F4DA3CDF8665EF71F9CC7CD824975F13D2C863F90D080A3047"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticDivisors.lean",
+      "sha256": "09103CD9A1936745261423CE975FCF607472103C0C8C1D356C7271614AF716CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticTateOperators.lean",
+      "sha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneArithmeticPeriodInclusion.lean",
+      "sha256": "729E6369BDBA7E0DBE41D93B3575E80FD7FD0DA2ADA832ACBF1D12BE369E4383"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateH1.lean",
+      "sha256": "896CB247EC12F82BA98F4C885640184309C2865BBE2FC88B48778017D32A42A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCoordinateValues.lean",
+      "sha256": "DC91DF8BA44C0BABE8F8CAF3FC3F525A46B35E247E3811EC44C46FB8E749F552"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparatingFunctionSupport.lean",
+      "sha256": "64098590465173566E725283FF9DC7C3BBAB7BE0EC31E3C0653CB8741CBEF911"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousGaloisFaithfulFiniteFactor.lean",
+      "sha256": "41BA0BAD23E36C5039515A418868504E5B243233CB72D1E8571760B10BC7EABE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalLocalValuation.lean",
+      "sha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAbsoluteFiniteUnramified.lean",
+      "sha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD"
+    }
+  ],
+  "shorterRoute": [
+    "Adapt the already proved original finite-field-of-definition argument to the exact Gamma1 integral-ratio field. Reuse finite separating-coordinate support and residue fields to bound place orbits, finite support to fix Picard classes, the exact Tate projection kernel, and the existing period base-change finite generation. Derive open stabilizers of the finite dual; no new topological Tate theory or general scheme descent is needed.",
+    "Reuse the already proved faithful open-kernel fixed-field construction. Actual Tate-dual continuity supplies the open kernel; the group-source representation takes values in units automatically. Retain the faithful factor needed by the existing original arithmetic-descent theorem instead of rebuilding finite Galois or ramification foundations."
+  ],
+  "assumptionsToDischarge": [
+    "Derive finite fields of definition for the exact Gamma1 functions, places and Picard classes; hence their actual stabilizers are open.",
+    "Reuse the exact Tate projection kernel and original period basis to obtain open uniform congruences.",
+    "Prove finiteness of the actual homogeneous-valued Tate dual and its factorization through the indicated torsion coordinate.",
+    "Derive continuity of its genuine global Galois action and apply the native faithful finite fixed-field theorem. No geometric degree/genus assumption is needed for these continuity conclusions."
+  ],
+  "remaining": "The original coordinate-degree and genus equalities remain for inertia/Frobenius. Original parabolic character transfer/nonvanishing, exceptional coefficient primes, two-dimensional all-weight arithmetic association, automorphy and literal higher continuation remain. Faithful finite Galois factorization is proved; prescribed unramified arithmetic descent is not yet claimed. 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

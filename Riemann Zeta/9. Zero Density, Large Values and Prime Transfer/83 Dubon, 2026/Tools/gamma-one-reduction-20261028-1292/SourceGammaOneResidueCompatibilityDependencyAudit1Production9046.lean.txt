@@ -1,0 +1,33 @@
+import Dubon2026.SourceGammaOneResidueSeparability
+import Dubon2026.SourceGammaOneDecompositionGauss
+import Dubon2026.SourceGammaOneResidueArithmetic
+import Dubon2026.SourceGammaOneHeckeGauss
+import Dubon2026.SourceGammaOneResidueHecke
+import Dubon2026.SourceGammaOneResidueHeckeFinite
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneGaussCriterion, `Dubon2026.SourceGammaOneGaussValuation, `Dubon2026.SourceGammaOneGaussResidueHom, `Dubon2026.SourceGammaOneGaussResidueKernel, `Dubon2026.SourceGammaOneGaussConstants, `Dubon2026.SourceGammaOneGaussResidueImage, `Dubon2026.SourceGammaOneRegularProlongation, `Dubon2026.SourceGammaOneResidueJCoordinate, `Dubon2026.SourceReductionResidueCoordinateFinite, `Dubon2026.SourceGammaOneResidueCoordinateFinite, `Dubon2026.SourceGammaOneResidueSeparability, `Dubon2026.SourceGammaOneDecompositionGauss, `Dubon2026.SourceGammaOneResidueArithmetic, `Dubon2026.SourceGammaOneHeckeGauss, `Dubon2026.SourceGammaOneResidueHecke, `Dubon2026.SourceGammaOneResidueHeckeFinite]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_surjective, `Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta, `Dubon2026.SourceFunctionField.GaussReduction.isInt_coeffMap_decomposition, `Dubon2026.SourceFunctionField.GaussReduction.coeffMap_residue_decomposition, `Dubon2026.SourceFunctionField.pow_ne_jqModC, `Dubon2026.SourceCurve.isSeparable_of_forall_pow_ne, `Dubon2026.SourceCurve.finite_over_transcendental_of_finite_coordinate, `Dubon2026.SourceCurve.finite_hom_of_finite_image_coordinate]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE RESIDUE COMPATIBILITY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closures of the original Gamma1 separating-coordinate, arithmetic inertia/Frobenius coefficient reduction, and finite original Hecke residue-map endpoints. The original field maps, literal residue image and native finite-coordinate exchange are consumed. Degree equality, genus preservation, place and Picard specialization, torsion injectivity and the geometric Frobenius quadratic remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

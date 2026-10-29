@@ -1,0 +1,15 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `heightOnePrimes_containing_nonzero_finite`. -/
+theorem actual_finite_exceptional_integer_primes_heightOnePrimes_containing_nonzero_finite_source
+    {R : Type*} [CommRing R] [IsDedekindDomain R] (a : R) (ha : a ≠ 0) :
+    {v : HeightOneSpectrum R | a ∈ v.asIdeal}.Finite :=
+  heightOnePrimes_containing_nonzero_finite a ha
+
+end
+

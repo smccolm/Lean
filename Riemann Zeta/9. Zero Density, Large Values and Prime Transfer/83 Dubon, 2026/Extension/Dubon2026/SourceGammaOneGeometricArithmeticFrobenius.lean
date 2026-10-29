@@ -1,0 +1,66 @@
+import Dubon2026.SourceGammaOneTateFrobeniusRelation
+import Dubon2026.SourceGammaOneArithmeticFrobenius
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> the
+inverse-action Frobenius polynomial on the original coefficient-valued Tate
+dual. Consume the actual norm, Picard, specialization and torsion results;
+the Frobenius identity is derived, not assumed. Coordinate-degree, genus
+preservation, and combined-diamond fixedness remain explicit. Global
+Galois realization and finite Hecke-character descent are not claimed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+variable (A : ValuationSubring Qbar)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+attribute [local instance] specializationResidueAlgebra
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq
+    (ell : sourceBinaryHeckePrime (Q * N)) [CharP kk ell.val]
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar (functionFieldOver Γ Qbar))
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ ell.val)
+    (hp : (p : kk) ≠ 0) :
+    ∃ g : Gamma0 M, (g.val 1 1 : ZMod N) = (ell.val : ZMod N) ∧
+      ∀ (φ : T →ₗ[ℤ_[p]] V),
+        ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+          (φ.comp (arithmeticDiamondTate M p g)) = φ →
+        binaryTateArithmeticFrobeniusOperator Q p n w ell d.val
+            (binaryTatePrimeOperators Q p n w ell φ) =
+          binaryTateArithmeticFrobeniusOperator Q p n w ell d.val
+            (binaryTateArithmeticFrobeniusOperator Q p n w ell d.val φ) +
+            (ell.val : ZMod N) ^ (w + 1) • φ := by
+  letI : Fact ell.val.Prime := ⟨ell.property.1⟩
+  have hcop : Nat.Coprime M ell.val := by
+    obtain ⟨hQ, hN⟩ := Nat.coprime_mul_iff_right.mp ell.property.2
+    exact (hQ.mul_right (hN.pow_right 2)).symm
+  have hs := exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq A M ell.val
+  have h1 := hs hcop
+  have h2 := h1 hdeg
+  have h3 := h2 hgen
+  have h4 := h3 d hd p hp
+  obtain ⟨g, hg, hquad⟩ := h4
+  have hNM : N ∣ M := dvd_mul_of_dvd_right (dvd_pow_self N (by decide : 2 ≠ 0)) Q
+  have hlabel : (g.val 1 1 : ZMod N) = (ell.val : ZMod N) := by
+    simpa only [map_intCast, map_natCast] using congrArg (ZMod.castHom hNM (ZMod N)) hg
+  refine ⟨g, hlabel, fun φ hφ => ?_⟩
+  exact binaryTateArithmeticFrobeniusOperator_quadratic_of_picard
+    Q p n w ell g hlabel d.val hquad φ hφ
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

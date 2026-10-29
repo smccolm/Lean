@@ -1,0 +1,26 @@
+{
+  "reviewDate": "2026-10-08",
+  "topic": "Original first-order representations over dual numbers and actual adjoint cocycles",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "version": "arXiv:0809.0415v2, 18 July 2013",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Sections2.24–2.29, especially the adjoint H1 deformation discussion in Remark2.29",
+      "review": "A polynomial law is a natural family on scalar extensions. Its degree and multiplication identities hold over every commutative coefficient algebra. A representation produces this family by the usual matrix determinant. Checking only the original coefficient ring would be insufficient. Continuity is expressed by continuity of characteristic coefficients.",
+      "formalUse": "Construct the actual algebraic lift/cocycle equivalence for original matrix representations over dual numbers. The strict-conjugacy/H1 quotient, continuous conditions, representability and Galois or automorphy theorems are not inferred."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Theorem A and introductory arithmetic lifting discussion",
+      "formalUse": "The determinant construction prepares a component of the remaining arithmetic lifting route. The Galois association, deformation and patching arguments, automorphy lifting, and analytic continuation are not supplied by the new matrix identities."
+    }
+  ],
+  "localApiReview": "Pinned Matrix.dualNumberEquiv (its matrix and coefficient types are Type0), TrivSqZeroExt.fstHom, DualNumber.snd_mul, actual GL coefficient map, Rep.of, groupCohomology.cocycles₁ and mem_cocycles₁_iff. No new scalar-extension or group-cohomology foundation is copied.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

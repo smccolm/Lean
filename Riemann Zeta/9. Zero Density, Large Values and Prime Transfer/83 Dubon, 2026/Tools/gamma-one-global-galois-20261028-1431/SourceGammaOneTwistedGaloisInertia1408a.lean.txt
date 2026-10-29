@@ -1,0 +1,60 @@
+import SourceGammaOneTwistedGalois1401e
+import SourceAbsoluteCyclotomicLocal1405a
+import SourceTwistedCoefficientDualTrivial1407a
+import SourceGammaOneTateInertia
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> inertia
+on the genuine homogeneous-valued Tate Galois action. Actual cyclotomic
+inertia and the original Tate inertia theorem discharge both action inputs.
+Coordinate-degree and genus preservation remain the geometric assumptions;
+this is not yet a finite two-dimensional character realization. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+local notation "Qbar" => AlgebraicClosure ℚ
+
+private theorem absoluteCyclotomic_mapped_inertia
+    (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    (hN : (N : IsLocalRing.ResidueField A) ≠ 0) (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hσ : σ ∈ (A.inertiaSubgroup ℚ).map (A.decompositionSubgroup ℚ).subtype) :
+    sourceAbsoluteCyclotomicCharacter N σ = 1 := by
+  obtain ⟨d, hd, rfl⟩ := hσ
+  exact sourceAbsoluteCyclotomicCharacter_inertia A N hN d hd
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+variable (A : ValuationSubring Qbar)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+attribute [local instance] specializationResidueAlgebra
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar (functionFieldOver Γ Qbar))
+    (hp : (p : kk) ≠ 0) (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hσ : σ ∈ (A.inertiaSubgroup ℚ).map (A.decompositionSubgroup ℚ).subtype) :
+    binaryArithmeticTateGaloisRep Q p n w σ = 1 := by
+  have hχ := absoluteCyclotomic_mapped_inertia A N
+    (by simpa only [Nat.cast_pow] using pow_ne_zero (n + 1) hp) σ hσ
+  have hV : binaryCyclotomicCoefficientRep Q p n w σ = 1 :=
+    (congrArg (sourceCyclotomicHomogeneousAction (ZMod N) w) hχ).trans
+      (sourceCyclotomicHomogeneousAction (ZMod N) w).map_one
+  have hs := gammaOne_arithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq A M
+  have h1 := hs hdeg
+  have h2 := h1 hgen
+  have hT := h2 p hp σ⁻¹ (((A.inertiaSubgroup ℚ).map (A.decompositionSubgroup ℚ).subtype).inv_mem hσ)
+  exact sourceTwistedCoefficientDualAction_eq_one
+    (binaryCyclotomicCoefficientRep Q p n w) (arithmeticTateGaloisRep M p) σ hV hT
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

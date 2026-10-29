@@ -1,0 +1,13 @@
+[
+  "Dubon2026.fractionalIdeal_eq_of_counts",
+  "Dubon2026.fractionalIdeal_eq_of_pow_eq",
+  "Dubon2026.fractionalIdealCountRoot_ne_zero",
+  "Dubon2026.fractionalIdealCountRoot_count",
+  "Dubon2026.fractionalIdealCountRoot_pow",
+  "Dubon2026.fractionalIdealCountRootUnit_pow",
+  "Dubon2026.principalIdeal_count_eq_neg_valuation",
+  "Dubon2026.valuationOfNeZeroMod_eq_one_iff",
+  "Dubon2026.emptySelmer_mem_iff_principal_counts",
+  "Dubon2026.SemanticRegression.actual_selmer_ideal_root_fractionalIdealCountRootUnit_pow_source",
+  "Dubon2026.SemanticRegression.actual_selmer_ideal_root_emptySelmer_mem_iff_principal_counts_source"
+]

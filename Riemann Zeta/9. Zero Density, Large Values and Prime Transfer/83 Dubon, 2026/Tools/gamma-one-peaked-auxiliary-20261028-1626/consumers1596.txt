@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι K : Type} [Fintype ι] [DecidableEq ι] [Field K] [Finite K]
+  [TopologicalSpace K] [DiscreteTopology K]
+
+/-- Exact original-object consumer of `arithmeticContinuousFirstOrderLift_finite`. -/
+theorem actual_arithmetic_first_order_finite_arithmeticContinuousFirstOrderLift_finite_source
+    (a : 𝓞 ℚ) (ha : a ≠ 0) (p : ℕ) (hp : p.Prime) (hpa : (p : 𝓞 ℚ) ∣ a)
+    [CharP K p]
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι K) (hρ : Continuous ρ) :
+    Finite {τ : MatrixFirstOrderLift ρ // Continuous τ.val} :=
+  arithmeticContinuousFirstOrderLift_finite a ha p hp hpa ρ hρ
+
+end
+

@@ -1,0 +1,85 @@
+import SourceGammaOneEisensteinPositive
+import SourceGammaOneEisensteinCoefficients
+import Dubon2026.SourceGammaOneFourierLinear
+
+/-! DUB-17/18 -> original all-weight association -> original Gamma1 degree
+preservation -> integral Eisenstein separation. The actual normalized
+weight-four Gamma1 forms have the displayed integral Fourier series and
+the exact Gamma0 slash action. Native Fourier uniqueness and the proved
+Gamma1 period are reused. No degree/genus hypothesis is used. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open scoped MatrixGroups CongruenceSubgroup ModularForm
+open UpperHalfPlane hiding I
+open Complex CongruenceSubgroup
+
+/-- Positive and negative lattice rows give the literal integer coefficients. -/
+def coefficient (N : ℕ) (c : ZMod N) (n : ℕ) : ℤ :=
+  positiveCoefficient N c n + positiveCoefficient N (-c) n
+
+/-- The integral expansion before any coefficient-field reduction. -/
+def integralSeries (N : ℕ) (c : ZMod N) : PowerSeries ℤ :=
+  PowerSeries.mk (coefficient N c)
+
+/-- The actual weight-four lattice form with its Lipschitz factor removed. -/
+def normalizedForm (N : ℕ) [NeZero N] (c : ZMod N) :
+    ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) 4 :=
+  kappa⁻¹ • gammaOneRowSum N c
+
+theorem normalizedForm_coe (N : ℕ) [NeZero N] (c : ZMod N) :
+    (normalizedForm N c : ℍ → ℂ) = kappa⁻¹ • rowSum N c := rfl
+
+theorem normalizedForm_slash (N : ℕ) [NeZero N] (c : ZMod N)
+    (γ : SL(2, ℤ)) (hγ : γ ∈ Gamma0 N) :
+    (normalizedForm N c : ℍ → ℂ) ∣[(4 : ℤ)] γ =
+      (normalizedForm N (c * (γ 0 0 : ZMod N)) : ℍ → ℂ) := by
+  rw [normalizedForm_coe, normalizedForm_coe, ModularForm.SL_smul_slash, rowSum_slash N c γ hγ]
+
+theorem coefficient_zero (N : ℕ) (c : ZMod N) : coefficient N c 0 = 0 := by
+  simp [coefficient, positiveCoefficient_zero]
+
+theorem coefficient_one (N : ℕ) (c : ZMod N) :
+    coefficient N c 1 = (if (1 : ZMod N) = c then 1 else 0) +
+      (if (1 : ZMod N) = -c then 1 else 0) := by
+  rw [coefficient, positiveCoefficient_one, positiveCoefficient_one]
+
+private theorem coefficient_summable (N : ℕ) (c : ZMod N) {r : ℂ} (hr : ‖r‖ < 1) :
+    Summable fun n : ℕ => (coefficient N c n : ℂ) * r ^ n := by
+  apply summable_pnat_iff_summable_nat.mp
+  simpa only [coefficient, Int.cast_add, add_mul] using
+    (positiveCoefficient_summable N c hr).add (positiveCoefficient_summable N (-c) hr)
+
+private theorem rowSum_expansion (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) (z : ℍ) :
+    rowSum N c z = kappa * ∑' n : ℕ, (coefficient N c n : ℂ) *
+      cexp (2 * Real.pi * I * z) ^ n := by
+  have hr := UpperHalfPlane.norm_exp_two_pi_I_lt_one z
+  have hs1 := positiveCoefficient_summable N c hr
+  have hs2 := positiveCoefficient_summable N (-c) hr
+  rw [rowSum_eq_positive_series N c hc z,
+    positive_series_eq_coefficients N c hr, positive_series_eq_coefficients N (-c) hr,
+    ← mul_add, ← hs1.tsum_add hs2,
+    ← tsum_zero_pnat_eq_tsum_nat (coefficient_summable N c hr),
+    coefficient_zero, Int.cast_zero, zero_mul, zero_add]
+  congr 1
+  exact tsum_congr fun _ => by rw [coefficient, Int.cast_add, add_mul]
+
+theorem normalizedForm_hasSum (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) (z : ℍ) :
+    HasSum (fun n : ℕ => (coefficient N c n : ℂ) *
+      cexp (2 * Real.pi * I * z) ^ n) (normalizedForm N c z) := by
+  change HasSum _ (kappa⁻¹ * rowSum N c z)
+  rw [rowSum_expansion N c hc z, ← mul_assoc, inv_mul_cancel₀ kappa_ne_zero, one_mul]
+  exact (coefficient_summable N c (UpperHalfPlane.norm_exp_two_pi_I_lt_one z)).hasSum
+
+theorem normalizedForm_integral (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    IsIntegralQExp (normalizedForm N c) (integralSeries N c) := by
+  ext n
+  simp only [PowerSeries.coeff_map, integralSeries, PowerSeries.coeff_mk, eq_intCast]
+  refine ModularFormClass.qExpansion_coeff_unique (f := normalizedForm N c)
+    (c := fun m => (coefficient N c m : ℂ))
+    zero_lt_one (SourceFricke.gammaOne_one_mem_strictPeriods N) ?_ n
+  intro z
+  simpa only [smul_eq_mul, Function.Periodic.qParam, Complex.ofReal_one, div_one] using
+    normalizedForm_hasSum N c hc z
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

@@ -1,0 +1,56 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω T : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+  [Group T]
+
+/-- Exact original-object consumer of `continuous_galois_finite_factor`. -/
+theorem actual_continuous_galois_kummer_continuous_galois_finite_factor_source [TopologicalSpace T] [DiscreteTopology T]
+    (χ : Gal(Ω/K) →ₜ* T) :
+    ∃ F : FiniteGaloisIntermediateField K Ω,
+      ∃ ψ : Gal(F/K) →* T, ∀ g : Gal(Ω/K),
+        ψ (AlgEquiv.restrictNormalHom F g) = χ g :=
+  continuous_galois_finite_factor χ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+
+/-- Exact original-object consumer of `continuous_galois_character_exists_radical`. -/
+theorem actual_continuous_galois_kummer_continuous_galois_character_exists_radical_source
+    [TopologicalSpace Kˣ] [DiscreteTopology Kˣ]
+    (χ : Gal(Ω/K) →ₜ* Kˣ) (n : ℕ) (hχ : ∀ g : Gal(Ω/K), χ g ^ n = 1) :
+    ∃ (a : Kˣ) (β : Ωˣ),
+      β ^ n = Units.map (algebraMap K Ω).toMonoidHom a ∧
+      ∀ g : Gal(Ω/K), g • β / β = Units.map (algebraMap K Ω).toMonoidHom (χ g) :=
+  continuous_galois_character_exists_radical χ n hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω]
+  [TopologicalSpace Kˣ] [DiscreteTopology Kˣ]
+
+/-- Exact original-object consumer of `continuousGaloisKummerClass_injective`. -/
+theorem actual_continuous_galois_kummer_continuousGaloisKummerClass_injective_source (n : ℕ) [NeZero n]
+    (hζ : (primitiveRoots n K).Nonempty) :
+    Function.Injective (continuousGaloisKummerClass (K := K) (Ω := Ω) n) :=
+  continuousGaloisKummerClass_injective n hζ
+
+end
+

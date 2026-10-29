@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "TraceFreeAdjointCoboundaries",
+  "mathematics": "When the actual matrix dimension is nonzero in the original coefficient field, subtract its genuine scalar trace part from an original matrix. The resulting actual matrix has trace zero, and its entire original adjoint coboundary is unchanged at every group element. Thus every original adjoint coboundary has a trace-zero matrix representative under this explicit characteristic condition. No comparison of continuous H1 with trace-zero coefficient cohomology is assumed.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original dual-number framed and local first-order definitions, genuine determinant/inertia criteria, matrix adjoint action and pinned trace APIs inspected. No external Lean proof imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf",
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "No arbitrary-original-coefficient-ring tangent comparison, H1(ad0) identification, full Selmer dimension theorem, modular association or patching is claimed.",
+  "livePrimaryRecheck": "actual-local-first-order-route-20261009.json; citations give background only; all new claims require actual kernel proofs.",
+  "productionLog": "traceFreeCoboundary1618-focus.log"
+}

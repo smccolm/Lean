@@ -1,0 +1,33 @@
+import SourceSiegelJacobiFiniteProducts
+import SourceSiegelJacobiGaussProduct
+import SourceSiegelJacobiFiniteIdentity
+import SourceSiegelJacobiProductBounds
+import SourceSiegelJacobiDominatedLimit
+import SourceSiegelJacobiRangeLimit
+import SourceSiegelJacobiProductIdentity
+import SourceSiegelFunction
+import SourceSiegelProductCore
+import SourceSiegelThetaIdentification
+import SourceSiegelHolomorphic
+import SourceSiegelEtaTransform
+import SourceSiegelThetaTransform
+import SourceSiegelInversion
+import SourceSiegelSL2Transformation
+import SourceSiegelLevelShiftFactors
+import SourceSiegelLevelShifts
+import SourceSiegelResidueReduction
+import SourceSiegelProductTransformation
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceSiegelJacobiFiniteProducts, `SourceSiegelJacobiGaussProduct, `SourceSiegelJacobiFiniteIdentity, `SourceSiegelJacobiProductBounds, `SourceSiegelJacobiDominatedLimit, `SourceSiegelJacobiRangeLimit, `SourceSiegelJacobiProductIdentity, `SourceSiegelFunction, `SourceSiegelProductCore, `SourceSiegelThetaIdentification, `SourceSiegelHolomorphic, `SourceSiegelEtaTransform, `SourceSiegelThetaTransform, `SourceSiegelInversion, `SourceSiegelSL2Transformation, `SourceSiegelLevelShiftFactors, `SourceSiegelLevelShifts, `SourceSiegelResidueReduction, `SourceSiegelProductTransformation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

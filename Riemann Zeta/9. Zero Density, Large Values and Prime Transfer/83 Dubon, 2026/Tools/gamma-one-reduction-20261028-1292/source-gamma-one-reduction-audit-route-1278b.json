@@ -1,0 +1,65 @@
+{
+  "recordedUTC": "2026-10-28T14:36:25.436196+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 arithmetic realization -> original geometric Tate Frobenius/inertia -> original good reduction and prime-to-residue Picard torsion specialization -> literal coefficient prolongation and finite residue coordinate.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneScalarExtension.lean",
+      "sha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldFinite.lean",
+      "sha256": "8EBCA373565B53DDDE9018C7A18B957FC1B7822B74D325310B9E8581E7B5905C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularPrimitiveScaling.lean",
+      "sha256": "88A187724CD5F0DFFE88293BB618F37AEBE05B1DE65051489884939D33E960B9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussFractions.lean",
+      "sha256": "0F82D11FC45A2B1E551402C109F4F84BAA2C89B328315F6C9D360208DB595A80"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussResidueHom.lean",
+      "sha256": "6CDAC407711B121CABF174930E57CF31917999D2D27C51C0F286461CDF2833FE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussResidueKernel.lean",
+      "sha256": "8F7319EEB348EA58B8B44BB759F0CE449982EA00F53E41E300420A8F08DA8687"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussValuationRing.lean",
+      "sha256": "3EFC46B797C5C4A810FA128AEE8C55AE22D8E30F3FB26778BA90FED030C32A02"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionFrame.lean",
+      "sha256": "2DBD1DB39C27992475A1B3F63537665B5F253BE972C81AC539DEFA3B14FCB65C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardFrobeniusQuadratic.lean",
+      "sha256": "5725DC20AFFA0A743316CD736EB97DF2C30370224259447809B0E417A9F30FD9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFrobeniusPicardReduction.lean",
+      "sha256": "08E2BFC38BE3A8935B55DB2D6B34186AD1E4F8DA5B6EFA655B78F93C87937489"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeTorsionReduction.lean",
+      "sha256": "AA753445A14CB91503F6E1519BAF51CB51520E469A79AEF23350B39F86C310CF"
+    }
+  ],
+  "shorterRoute": "Reuse native finite integer coefficient spans, primitive scaling, fraction operations and coordinate-field independence lifting. Restrict the fraction valuation to the original scalar-extended Gamma1 function field. Construct its actual residue field image in Laurent series and prove its exact kernel and constant action, without assuming an identification with a separately defined characteristic-p modular function field. The literal original j-coordinate reduces to the native integral j-series. Its transcendence and the existing original finite-degree theorem give finite residue degree by the native independence lift; no separate valuation-extension theorem or new scheme/cohomology framework is needed.",
+  "assumptionsToDischarge": [
+    "Every original q-expansion ratio has a primitive scaled integral fraction; the literal IsInt predicate on the original scalar-extended field is a valuation subring.",
+    "The actual coefficient reduction is well defined with maximal-ideal kernel, correct restriction to constants and nonzero constant rescaling. Its actual Laurent residue image receives a surjective residue map, constructing the full native RegularProlongation without caller assumptions.",
+    "The original j-coordinate reduces to the literal residue j-series, proved transcendental. The original finite-coordinate theorem and native independence lift prove finite residue degree and the upper bound by the original degree, including the actual Gamma1 levels."
+  ],
+  "remaining": "This is the original coefficient valuation and regular prolongation with finite residue coordinate and degree upper bound, not degree equality, genus preservation, place compatibility, good reduction or torsion injectivity. Original Hecke/diamond reduction, geometric Frobenius and inertia, parabolic character realization, exceptional-prime exclusion, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "preservedFailures": "Superseded successful bodies and failed elaborations are preserved as inert sources and original logs. Fixes concern exact native namespace, intermediate-field construction and dependent coordinate rewriting; no statement weakening, limit increase or diagnostic suppression.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

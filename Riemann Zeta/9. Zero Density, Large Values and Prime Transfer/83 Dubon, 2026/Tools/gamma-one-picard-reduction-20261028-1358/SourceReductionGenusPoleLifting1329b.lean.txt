@@ -1,0 +1,87 @@
+import SourceCurveSeparatingGenusMaximum1328a
+import Dubon2026.SourceReductionPoleSpace
+import Dubon2026.SourceReductionDimension
+import Dubon2026.SourceCurveRepartitionIndex
+import Dubon2026.SourceCurvePositiveDivisorStabilization
+import Dubon2026.SourceResidueClosedValuationField
+
+/-! DUB-17/18 -> original Gamma1 Picard specialization -> integral charts.
+Reuse the existing modular pole-space proof on the original regular
+prolongation. Equal coordinate degrees preserve the residue-span dimension;
+equal actual adelic genera make this span the whole sufficiently large
+residue pole space. These two geometric comparisons remain explicit inputs.
+The next consumer uses this for the genuine Gamma1 coefficient prolongation. -/
+namespace Dubon2026.SourceCurve.RegularProlongation
+noncomputable section
+open IsLocalRing IntermediateField
+variable {L : Type*} [Field L] [CharZero L] [IsAlgClosed L]
+  {A : ValuationSubring L} {F : Type*} [Field F] [Algebra L F]
+  {Fbar : Type*} [Field Fbar] [Algebra (ResidueField A) Fbar]
+local notation "kk" => ResidueField A
+
+theorem exists_pole_space_lifts_of_degree_genus_eq
+    (R : RegularProlongation A F Fbar) (x : R.integers)
+    (hx : Transcendental kk (R.residue x))
+    [FiniteDimensional kk⟮R.residue x⟯ Fbar]
+    [Algebra.IsSeparable kk⟮R.residue x⟯ Fbar]
+    (hdeg : Module.finrank L⟮(x : F)⟯ F = Module.finrank kk⟮R.residue x⟯ Fbar)
+    (hgen : genusFF kk Fbar = genusFF L F)
+    (D : Divisor L F) (hD : ∀ v, D v = max 0 (-v.ord (x : F)))
+    (Db : Divisor kk Fbar) (hDb : ∀ v, Db v = max 0 (-v.ord (R.residue x))) :
+    ∃ m₁ : ℕ, ∀ m : ℕ, m₁ ≤ m → ∀ g : Fbar, g ∈ LSpace (m • Db) →
+      ∃ f : R.integers, (f : F) ∈ LSpace (m • D) ∧ R.residue f = g := by
+  haveI := SourceFunctionField.valuation_residue_isAlgClosed A
+  have hfin : 0 < Module.finrank kk⟮R.residue x⟯ Fbar := Module.finrank_pos
+  haveI : FiniteDimensional L⟮(x : F)⟯ F := Module.finite_of_finrank_pos (hdeg ▸ hfin)
+  have hxL := transcendental_of_residue_transcendental R x hx
+  haveI := hasPrincipalDivisors_closed_of_separating_coordinate (x : F) hxL
+  haveI := hasPrincipalDivisors_closed_of_separating_coordinate (R.residue x) hx
+  haveI : ∀ v : Place kk Fbar, Module.Finite kk v.ResidueField :=
+    finite_coordinate_place_residue (R.residue x)
+  haveI := finite_lSpace_of_separating_coordinate (R.residue x) hx 0
+  obtain ⟨γ, D₀, hmax⟩ := separating_coordinate_degree_dimension_maximum (x : F) hxL
+  obtain ⟨γb, Db₀, hmaxb⟩ := separating_coordinate_degree_dimension_maximum (R.residue x) hx
+  have hγ := separating_coordinate_index_zero_eq_maximum (x : F) hxL hmax
+  have hγb := separating_coordinate_index_zero_eq_maximum (R.residue x) hx hmaxb
+  have hindex : indexOfSpecialty (0 : Divisor kk Fbar) =
+      indexOfSpecialty (0 : Divisor L F) :=
+    genusFF_eq_zero_index.symm.trans (hgen.trans genusFF_eq_zero_index)
+  have hγeq : γ = γb := by
+    have he := congrArg (fun n : ℕ => (n : ℤ)) hindex
+    exact hγ.symm.trans (he.symm.trans hγb)
+  have hsL := finite_function_support_of_separating_coordinate (x : F) hxL (x : F)
+  have hsb := finite_function_support_of_separating_coordinate (R.residue x) hx (R.residue x)
+  have heD : D = poleDivisor (x : F) hsL := by
+    ext v
+    rw [hD, poleDivisor_apply, max_comm]
+  have heDb : Db = poleDivisor (R.residue x) hsb := by
+    ext v
+    rw [hDb, poleDivisor_apply, max_comm]
+  have hdD : Divisor.degree D = (Module.finrank L⟮(x : F)⟯ F : ℤ) := by
+    rw [heD, degree_poleDivisor_eq_finrank_separating (x : F) hxL hsL]
+  have hdDb : Divisor.degree Db = (Module.finrank kk⟮R.residue x⟯ Fbar : ℤ) := by
+    rw [heDb, degree_poleDivisor_eq_finrank_separating (R.residue x) hx hsb]
+  have hdegD : Divisor.degree D = Divisor.degree Db := by rw [hdD, hdDb, hdeg]
+  have hpos : 0 < Divisor.degree Db := by rw [hdDb]; exact_mod_cast hfin
+  obtain ⟨m₁, hm₁⟩ := hmaxb.exists_forall_degree_nsmul_sub_ell_eq hpos
+  refine ⟨m₁, fun m hm g hg => ?_⟩
+  haveI := finite_lSpace_of_separating_coordinate (x : F) hxL (m • D)
+  haveI := finite_lSpace_of_separating_coordinate (R.residue x) hx (m • Db)
+  let S : Submodule kk Fbar := Submodule.span kk
+    {h : Fbar | ∃ f : R.integers, (f : F) ∈ LSpace (m • D) ∧ R.residue f = h}
+  have hS : S ≤ LSpace (m • Db) := by
+    apply Submodule.span_le.mpr
+    rintro _ ⟨f, hf, rfl⟩
+    exact residue_mem_pole_space R x hx hfin hdeg hD hDb m hf
+  have hdim : Module.finrank kk S = ell (m • D) :=
+    finrank_span_residue_eq_finrank' R x hx hfin hdeg (LSpace (m • D))
+  have hlarge := hm₁ m hm
+  have hbound := hmax.isMax (m • D)
+  have hdegm : Divisor.degree (m • D) = Divisor.degree (m • Db) := by
+    rw [map_nsmul, map_nsmul, hdegD]
+  have hle : ell (m • Db) ≤ Module.finrank kk S := by rw [hdim]; omega
+  have he : S = LSpace (m • Db) := Submodule.eq_of_le_of_finrank_le hS hle
+  exact mem_of_mem_span R (LSpace (m • D)) (he ▸ hg)
+
+end
+end Dubon2026.SourceCurve.RegularProlongation

@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {F : Type*} [Field F] [NumberField F]
+
+/-- Exact original-object consumer of `rationalCyclotomic_originalBase_ramificationIdx_one`. -/
+theorem actual_rational_cyclotomic_ramification_rationalCyclotomic_originalBase_ramificationIdx_one_source
+    (m : ℕ) [NeZero m] [IsCyclotomicExtension {m} ℚ F]
+    (w : HeightOneSpectrum (𝓞 F)) (hm : (m : 𝓞 F) ∉ w.asIdeal) :
+    (w.asIdeal.under (𝓞 ℚ)).ramificationIdx w.asIdeal = 1 :=
+  rationalCyclotomic_originalBase_ramificationIdx_one m w hm
+
+end
+

@@ -1,0 +1,21 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Primary source/API review preceded implementation; actual production and full focused audit now PASS. Sequential foundation/paper verification pending.",
+  "pinnedApis": [
+    "Set.unit and Set.unitEquivUnitsInteger; IsDedekindDomain.integer_empty",
+    "HeightOneSpectrum.valuationOfNeZero and valuationOfNeZero_eq",
+    "Module.Finite.of_exact; original number-field Dirichlet unit theorem",
+    "CommGroup.isTorsion_quotient_range_powMonoidHom and finite_of_fg_torsion"
+  ],
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/249BW09Page/homework/hmwk3.pdf",
+    "https://www.math.ucla.edu/~sharifi/notes/iwasawa-ch01.html"
+  ],
+  "scope": "Actual S-unit finiteness infrastructure. Full Galois-character Kummer bridge remains unproved.",
+  "externalCodeImported": false,
+  "recheck": {
+    "date": "2026-10-09",
+    "Conrad": "Exercise2: unramified finite subextensions/composita and Kummer-unit quotients. Full two-page text inspected.",
+    "Sharifi": "Chapter1 Proposition1.4.5 gives actual S-unit/Kummer cohomology/class-group exact sequence. Our current unit result is only its infrastructure; no Galois cohomology comparison claimed."
+  }
+}

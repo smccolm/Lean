@@ -1,0 +1,22 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Four production modules compiled with exit 0 and zero diagnostics; expanded consumer, audit and sequential verification pending.",
+  "pinnedApis": [
+    "Original ClassGroup.equiv K and number-field class-group finiteness",
+    "Original number-field Dirichlet unit theorem and finitely generated torsion-group finiteness",
+    "Original IsDedekindDomain.selmerGroup.fromUnit_ker and valuation_ker_eq",
+    "FractionalIdeal.spanSingleton_eq_spanSingleton and MonoidHom.finite_iff_finite_ker_range"
+  ],
+  "primarySources": [
+    "https://math.stanford.edu/~conrad/249BW09Page/homework/hmwk3.pdf",
+    "https://www.math.ucla.edu/~sharifi/notes/iwasawa-ch01.html"
+  ],
+  "scope": "Actual pinned Kummer Selmer groups of field units, not the later deformation Selmer groups. Original continuous Galois-character comparison remains unproved.",
+  "externalCodeImported": false,
+  "recheck20261009": {
+    "Conrad": "Exercise2(ii) constructs the actual maximal unramified extension using closure under intermediate extensions and composites. Exercise2(iii)-(iv) relates unit powers and Kummer extensions under its explicit roots-of-unity and class-group hypotheses.",
+    "Sharifi": "Proposition1.4.5 gives S-unit quotient to H1 to class-group n-torsion exactness, under explicit inclusion of places over n and infinite places.",
+    "distinction": "The proposed Lean1516 theorem proves finiteness of the original valuation-defined Kummer Selmer group for arbitrary finite S and positive n. It does not claim the full Galois H1 identification without its necessary original field and ramification bridges."
+  },
+  "productionLog": "selmer1516e-focus.log"
+}

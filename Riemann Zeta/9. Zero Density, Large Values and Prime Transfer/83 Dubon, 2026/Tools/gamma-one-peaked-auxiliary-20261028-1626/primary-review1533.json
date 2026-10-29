@@ -1,0 +1,12 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned APIs inspected; both production modules compiled with zero diagnostics. Exact consumers and assembled1555 full verification pending.",
+  "pinnedApis": [
+    "IsDedekindDomain.HeightOneSpectrum.under",
+    "IsDedekindDomain.primesOver_finite and actual Fintype primesOver",
+    "Ideal.ramificationIdx_algebra_tower'",
+    "Nat.mul_eq_one"
+  ],
+  "sourceBoundary": "These are actual prime contraction and ramification consequences, not an arithmetic Galois realization or all-open-subgroup character-finiteness theorem.",
+  "productionLog": "primeBase1533b-focus.log"
+}

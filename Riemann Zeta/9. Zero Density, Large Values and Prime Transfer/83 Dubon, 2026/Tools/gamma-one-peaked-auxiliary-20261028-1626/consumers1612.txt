@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `arithmeticUnramifiedAdjointClasses_firstOrder_inertia_iff`. -/
+theorem actual_arithmetic_unramified_first_order_criterion_arithmeticUnramifiedAdjointClasses_firstOrder_inertia_iff_source
+    (a : 𝓞 ℚ)
+    (ρ : rationalArithmeticGaloisGroup a →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (P : Ideal (𝓞 (rationalUnramifiedExtension a)))
+    (hP : rationalArithmeticInertia a P ≤ ρ.ker)
+    (τ : MatrixFirstOrderLift ρ) (hτ : Continuous τ.val) :
+    continuousMatrixFirstOrderClass ρ hρ τ hτ ∈ arithmeticUnramifiedAdjointClasses a ρ hρ P ↔
+      rationalArithmeticInertia a P ≤ τ.val.ker :=
+  arithmeticUnramifiedAdjointClasses_firstOrder_inertia_iff a ρ hρ P hP τ hτ
+
+end
+

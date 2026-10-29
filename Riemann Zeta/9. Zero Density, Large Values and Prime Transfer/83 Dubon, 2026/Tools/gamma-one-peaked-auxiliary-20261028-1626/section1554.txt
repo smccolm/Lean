@@ -1,0 +1,7 @@
+### Actual unramified compositum integral closure — 9 October 2026
+
+One further production module proves that, when the original fraction-field images generate the actual ambient field, the genuine tensor image is the integral closure of the original base in that original ambient field. The proof uses the actual tensor-image membership criterion and the literal full-compositum equality. Uniqueness of genuine integral closures then identifies any actual integral closure there with this original tensor image and transfers its proved formal unramifiedness. No compositum unramifiedness or tensor-image identification is assumed.
+
+The actual unramified-compositum theorem still needs specialization to the canonical localized integer rings and original number-field compositum, followed by the directed-union arithmetic Galois realization and finite-subextension descent. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedCompositumIntegralClosure](Extension/Dubon2026/UnramifiedCompositumIntegralClosure.lean).

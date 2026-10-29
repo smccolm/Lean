@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `canonicalLocalizedIntegerAlgebra_data`. -/
+theorem actual_canonical_localized_integer_algebras_canonicalLocalizedIntegerAlgebra_data_source (a : 𝓞 K) (ha : a ≠ 0) :
+    (let Rₐ := originalLocalizedIntegers K a ha
+     let Sₐ := originalLocalizedIntegers L (algebraMap (𝓞 K) (𝓞 L) a)
+       (originalIntegerMap_ne_zero (L := L) a ha)
+     letI : Algebra Rₐ Sₐ := (originalLocalizedIntegersMap (L := L) a ha).toRingHom.toAlgebra
+     Module.Finite Rₐ Sₐ ∧ IsIntegralClosure Sₐ Rₐ L ∧
+       (Algebra.FormallyUnramified Rₐ Sₐ ↔
+         ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+           (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)) :=
+  canonicalLocalizedIntegerAlgebra_data a ha
+
+end
+

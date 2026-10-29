@@ -1,0 +1,20 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R : Type*} [CommRing R] [IsLocalRing R]
+  [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `localQuotient_maximal_adicTopology`. -/
+theorem actual_local_quotient_topology_equality_localQuotient_maximal_adicTopology_source
+    (J : Ideal R) [IsLocalRing (R ⧸ J)]
+    (hR : IsAdic (IsLocalRing.maximalIdeal R)) :
+    (inferInstance : TopologicalSpace (R ⧸ J)) =
+      (IsLocalRing.maximalIdeal (R ⧸ J)).adicTopology :=
+  localQuotient_maximal_adicTopology J hR
+
+end
+

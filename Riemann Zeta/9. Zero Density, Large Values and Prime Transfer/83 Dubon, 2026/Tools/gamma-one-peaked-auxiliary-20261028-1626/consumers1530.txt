@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K : Type*} [Field K]
+
+variable {Ω : Type*} [Field Ω] [Algebra K Ω]
+  [TopologicalSpace Kˣ]
+
+/-- Exact original-object consumer of `prime_characters_finite_of_unit_exponent_characters`. -/
+theorem actual_prime_root_unit_characters_prime_characters_finite_of_unit_exponent_characters_source (p : ℕ) (hp : p.Prime)
+    {ζ : K} (hζ : IsPrimitiveRoot ζ p)
+    [Finite (ContinuousGaloisExponentCharacters (K := K) (Ω := Ω) p)] :
+    Finite (Gal(Ω/K) →ₜ* Multiplicative (ZMod p)) :=
+  prime_characters_finite_of_unit_exponent_characters p hp hζ
+
+end
+

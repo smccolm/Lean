@@ -1,0 +1,7 @@
+### Actual finite Galois unramified supremum — 9 October 2026
+
+One further production module applies the genuine number-field unramified-compositum theorem to the literal supremum of two original finite Galois intermediate fields. It constructs both actual inclusion algebras and original base scalar towers. The proved inclusion-range identity discharges the full field-generation condition. Consequently every original prime of that literal finite Galois supremum outside the same exceptional integer has ramification index one. Neither the supremum ramification conclusion nor its actual compositum generation is assumed.
+
+The actual arithmetic family and its directed union still need construction, nonemptiness, normality, transfer of the original ramification conditions to all actual finite subextensions and required cyclotomic inclusion. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [FiniteGaloisUnramifiedSup](Extension/Dubon2026/FiniteGaloisUnramifiedSup.lean).

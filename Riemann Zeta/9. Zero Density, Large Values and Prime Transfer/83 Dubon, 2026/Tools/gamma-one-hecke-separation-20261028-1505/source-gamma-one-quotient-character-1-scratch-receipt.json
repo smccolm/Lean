@@ -1,0 +1,154 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.sourceQuotientOperatorCharacterData"
+  ],
+  "recordedUTC": "2026-10-28T23:41:58.862081+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceRationalLocalFrobenius",
+    "SourceRationalLocalClosureEmbedding",
+    "SourceGammaOneDiamondQuotientLocal",
+    "SourceGammaOneDiamondQuotientHeckeFamily",
+    "SourceGammaOneDiamondQuotientWords",
+    "SourceGammaOneDiamondQuotientWordKernel",
+    "SourceGammaOneDiamondQuotientCharacter",
+    "SourceGammaOneDiamondQuotientCharacterAssembly",
+    "SourceGammaOneDiamondQuotientGaloisHecke",
+    "SourceGammaOneDiamondQuotientChosenFrobenius"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalFrobenius.lean",
+      "sha256": "36DD523C5BBB1FDFF4E6A244FA4ACBE821B1846DE87144A8B3A72AC9A5FC8F0A",
+      "oleanSha256": "A9A9E622705BBC1C7F6C8B9F97BD3DFAB14DE135C883F12E20AE6BBC08DAEEA7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalFrobenius-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalFrobenius-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalClosureEmbedding.lean",
+      "sha256": "EF0820F2A2E0B3F866BED5C92AEF93B0EE7D62AEF5C5D10F5A8FBEEFD5B27063",
+      "oleanSha256": "03C74CD67D6D0092A7F73129AE6F20111E310084BC9E118D6D3802FB9913746C",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalClosureEmbedding-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalClosureEmbedding-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientLocal.lean",
+      "sha256": "6C8A81AFC62A756254B99C0A3AB57DDBBD1609CDDE77D7E717B34E9853D70930",
+      "oleanSha256": "C6FB939D93C402941F682152FB5AFA90D83A871E21A67774770881DB9B3402D0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientLocal-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientLocal-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHeckeFamily.lean",
+      "sha256": "9EE9DFB3D6D03F385A309A3935B66FC4591E77593995434E087C47D4E0AD17A9",
+      "oleanSha256": "C20A399D7D8A082D492D21CD02CC278D8819E212ABD849C91D51635C7413EB54",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHeckeFamily-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientHeckeFamily-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWords.lean",
+      "sha256": "6B20190B9B843D924338EA36A705D6607BB551AD24F9504C0764E79643338D0E",
+      "oleanSha256": "5C4D933D36D60C492EA34E531E1C2EC67E72B35B058B4ADF01138DBBD7320BD9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWords-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWords-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWordKernel.lean",
+      "sha256": "1C7322C25300C06B173AE2B3253CFD785A58D379D94AA8281ED23847B5784E5D",
+      "oleanSha256": "2BD71C4992898EA4FB53DFE5EE60365CA4ED5A0634DCB6134D2555B994A82E18",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWordKernel-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientWordKernel-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacter.lean",
+      "sha256": "06DD406B2F08C366518F3725965B01CF1A093063DAD15BE56D4CC4F9573FAD77",
+      "oleanSha256": "FEF32E16848AC13D82C3404F2D3905AB2EA8CEDC4387DCDB37D2A972D4807375",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacter-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacter-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacterAssembly.lean",
+      "sha256": "3F83594F73825AAE528DCD4DC6E268DBF221E92D61D5284DCBAEB454C7B669BD",
+      "oleanSha256": "282978BC5FA4E67DD7BDDD0F0081376FB5BBBDF849AA521127D36DFC03D637FA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacterAssembly-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientCharacterAssembly-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGaloisHecke.lean",
+      "sha256": "D6A45BD30847F1E7BBCDB86BC05E7B0D8B582AB35294E27ACD9787D91CC24AA6",
+      "oleanSha256": "2F218EBC6ED9AED3C9C0780778EC796E44CAD46C2A4B9A7297397CA93F7FCE68",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGaloisHecke-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientGaloisHecke-1460.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientChosenFrobenius.lean",
+      "sha256": "7D7405C6D71CF708B3B2F51BB108021F55BA45138CA30714CEC2572B2ADFDBB9",
+      "oleanSha256": "461EC7AFB9D806994B73024838A2046DE4CDFABB0FDBAD968B9C3EAE01FF2A66",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientChosenFrobenius-1460.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientChosenFrobenius-1460.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceRationalLocalValuation_exists_frobenius",
+    "Dubon2026.sourceRationalLocalClosure_nonempty_embedding",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_at_local_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_degree_genus_transfer",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_prime_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_word_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_quotient_hecke_frobenius_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.sourceQuotientOperatorCharacterData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceRationalLocalValuation_exists_frobenius",
+    "Dubon2026.sourceRationalLocalClosure_nonempty_embedding",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_at_local_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_relations_hecke_family_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_hecke_family_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_word_kernel",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_original_character_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_degree_genus_transfer",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_prime_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_word_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_quotient_hecke_frobenius_of_intertwining"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.sourceQuotientOperatorCharacterData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCharacterAudit1.log",
+  "logSha256": "51C7BD110E8905A0FE16F4EE1D874A1A3E3CAB93B6CA488C85A4230C922401AD",
+  "auditSha256": "4F984B05B9F031DF1479E56FC3CD4E00E2522D8AAB6D5916782EA9A6AA1F8483",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCharacterScratchOwnership1461.log",
+  "ownershipSha256": "046A96519FFF3D4CD3F330701ADB3EF48DB2826157EEC5544E1251AA9BA37E9C",
+  "exhaustiveTheorems": 73,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 32,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCharacterDependencyAudit1.log",
+  "dependencyAuditSha256": "521D81BA3A4F424F55D30825052F9BAC7D908E053F0A4B23C4EE19D775B5DC42",
+  "dependencyAuditSourceSha256": "56A829ABDB6153A72391CF6C5614D2E0AFEC2CC9D1577EE1395F57DBB06A8DA1",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_character_of_degree_genus_transfer",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientGaloisRep_word_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_diamond_quotient_hecke_frobenius_of_intertwining"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight association -> finite original Hecke-character realization -> all-good-prime Hecke operators on the genuine diamond quotient",
+  "discharged": [
+    "Derive the original local decomposition/Frobenius witness and coefficient-prime invertibility at every actual good prime.",
+    "Construct the complete actual quotient Hecke family from separate original coordinate-degree and genus families.",
+    "Use actual Tate/H1 transfer and exact original parabolic preimages to derive the whole-word kernel inclusion and original adic character on the literal operator image.",
+    "Retain Galois commutation for all integral words and the exact Frobenius identity for the chosen original operators."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate-degree and genus preservation and the original integral parabolic-transfer theorem remain open. The character comparison retains 3<p and avoidance of the original fixed exceptional integer. The original two-dimensional characteristic-zero association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. No acceptance gate is closed. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-quotient-character-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "4AC13C0007C2145E7E5985BBBD8C4CEAEDDC83BDD313FA8FF74BBC42F40A1993",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

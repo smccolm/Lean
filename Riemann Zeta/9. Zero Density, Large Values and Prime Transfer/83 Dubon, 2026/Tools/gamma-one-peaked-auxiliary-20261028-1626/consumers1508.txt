@@ -1,0 +1,118 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedCoefficientMapOfProfiniteLift_entire`. -/
+theorem actual_continuous_presentation_universality_completedCoefficientMapOfProfiniteLift_entire_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ*
+      GeneralLinearGroup ι A)
+    (hτ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction τ) = ρ) :
+    (GeneralLinearGroup.map (n := ι) (completedCoefficientMapOfProfiniteLift ρ e τ hτ).toRingHom).comp
+      (completedUniversalProfiniteRepresentation ρ).toMonoidHom = τ.toMonoidHom :=
+  completedCoefficientMapOfProfiniteLift_entire hA ρ e τ hτ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `profiniteRelationCoefficientMap_unique`. -/
+theorem actual_continuous_presentation_universality_profiniteRelationCoefficientMap_unique_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (τ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ*
+      GeneralLinearGroup ι A)
+    (hτ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction τ) = ρ)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ τ.toMonoidHom.ker)
+    (f : CompletedPresentationCoefficientQuotient ρ N →ₐ[O] A)
+    (hf : ∀ g : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G),
+      GeneralLinearGroup.map (n := ι) f.toRingHom
+        (GeneralLinearGroup.map (n := ι)
+          (Ideal.Quotient.mk (completedPresentationRelationIdeal ρ N))
+          (completedUniversalProfiniteRepresentation ρ g)) = τ g) :
+    f = profiniteRelationCoefficientMap hA ρ e τ hτ N hN :=
+  profiniteRelationCoefficientMap_unique hA ρ e τ hτ N hN f hf
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentedGroupRepresentation_continuous`. -/
+theorem actual_continuous_presentation_universality_completedPresentedGroupRepresentation_continuous_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q) : Continuous (completedPresentationRepresentation ρ H q hq) :=
+  completedPresentedGroupRepresentation_continuous ρ H q hq
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+universe u
+
+variable {G ι O A : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+  [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `completedPresentationCoefficient_exists_unique`. -/
+theorem actual_continuous_presentation_universality_completedPresentationCoefficient_exists_unique_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (H : ProfiniteGrp.{u})
+    (q : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →ₜ* H)
+    (hq : Function.Surjective q) (σ : H →ₜ* GeneralLinearGroup ι A)
+    (hσ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction e).toRingHom).comp
+      (profiniteMatrixRestriction (σ.comp q)) = ρ) :
+    ∃! f : CompletedPresentationCoefficientQuotient ρ q.toMonoidHom.ker →ₐ[O] A,
+      (∀ h : H, GeneralLinearGroup.map (n := ι) f.toRingHom
+        (completedPresentationRepresentation ρ H q hq h) = σ h) ∧
+      Continuous f ∧
+      ((localCoefficientReduction e).comp f).comp
+        (Ideal.Quotient.mkₐ O (completedPresentationRelationIdeal ρ q.toMonoidHom.ker)) =
+          completedResidualRepresentationEvaluation ρ :=
+  completedPresentationCoefficient_exists_unique hA ρ e H q hq σ hσ
+
+end
+

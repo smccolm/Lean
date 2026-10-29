@@ -1,0 +1,58 @@
+import SourceGammaOneAdjacentJGeneration
+import Dubon2026.SourceIntegralPrimeLaurentRoots
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> explicit embeddings.
+The native integral modular polynomial, exact simple-extension degree and
+reverse adjacent Laurent relation identify the actual minimal polynomial
+and the reverse root. No symmetry or root-existence premise is added. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Polynomial IntermediateField PrimeDegreeAux IntegralJCoordinate CongruenceSubgroup
+open scoped MatrixGroups
+variable (M p : ℕ) [Fact p.Prime]
+
+/-- The actual lower-field inclusion followed by q-dilation. -/
+def adjacentJBase : x1FunctionField M →+* LaurentSeries ℚ :=
+  (qExpand ℚ p).comp (algebraMap (x1FunctionField M) (LaurentSeries ℚ))
+
+/-- The exact integral modular polynomial at the original Gamma1 j-coordinate. -/
+def adjacentJPolynomial : Polynomial (x1FunctionField M) :=
+  relationAtSeed (modularPolynomial p) (⟨jq, jq_mem_qExpFunctionField (Gamma1 M)⟩ : x1FunctionField M)
+
+theorem adjacentJPolynomial_root :
+    Polynomial.aeval (qExpand ℚ p jq) (adjacentJPolynomial M p) = 0 := by
+  rw [Polynomial.aeval_def, ← Polynomial.eval_map, adjacentJPolynomial, relationAtSeed_map]
+  simpa only [qExpand_one_apply, one_mul] using
+    (modularPolynomial_prime_adjacent_relations p ℚ 1).1
+
+theorem adjacentJ_isIntegral : IsIntegral (x1FunctionField M) (qExpand ℚ p jq) :=
+  ⟨adjacentJPolynomial M p, (modularPolynomial_monic p).map _, adjacentJPolynomial_root M p⟩
+
+variable [NeZero M]
+
+theorem adjacentJ_minpoly_natDegree (hcop : Nat.Coprime M p) :
+    (minpoly (x1FunctionField M) (qExpand ℚ p jq)).natDegree = p + 1 := by
+  rw [← IntermediateField.adjoin.finrank (adjacentJ_isIntegral M p)]
+  exact gammaOne_adjacentJ_finrank M p hcop
+
+theorem adjacentJ_minpoly_eq (hcop : Nat.Coprime M p) :
+    minpoly (x1FunctionField M) (qExpand ℚ p jq) = adjacentJPolynomial M p := by
+  have hm : (adjacentJPolynomial M p).Monic := (modularPolynomial_monic p).map _
+  have hd : (adjacentJPolynomial M p).natDegree = p + 1 :=
+    ((modularPolynomial_monic p).natDegree_map _).trans (modularPolynomial_prime_natDegree p)
+  symm
+  apply Polynomial.eq_of_monic_of_dvd_of_natDegree_le
+    (minpoly.monic (adjacentJ_isIntegral M p)) hm
+    (minpoly.dvd _ _ (adjacentJPolynomial_root M p))
+  rw [hd, adjacentJ_minpoly_natDegree M p hcop]
+
+theorem adjacentJ_minpoly_reverse_root (hcop : Nat.Coprime M p) :
+    (minpoly (x1FunctionField M) (qExpand ℚ p jq)).eval₂ (adjacentJBase M p) jq = 0 := by
+  rw [adjacentJ_minpoly_eq M p hcop, ← Polynomial.eval_map,
+    adjacentJPolynomial, relationAtSeed_map]
+  change (relationAtSeed (modularPolynomial p) (qExpand ℚ p jq)).eval jq = 0
+  simpa only [qExpand_one_apply, one_mul] using
+    (modularPolynomial_prime_adjacent_relations p ℚ 1).2
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

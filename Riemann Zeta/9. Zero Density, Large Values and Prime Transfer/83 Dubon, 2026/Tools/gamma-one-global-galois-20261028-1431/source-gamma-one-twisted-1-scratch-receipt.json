@@ -1,0 +1,180 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T20:59:22.451719+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceTwistedCoefficientDualAction",
+    "SourceCyclotomicHomogeneousAction",
+    "SourceAbsoluteCyclotomicCharacter",
+    "SourceGammaOneTwistedGalois",
+    "SourceCyclotomicHomogeneousHecke",
+    "SourceGammaOneTwistedGaloisHecke",
+    "SourceAbsoluteCyclotomicLocal",
+    "SourceGammaOneTwistedGaloisFrobenius",
+    "SourceTwistedCoefficientDualTrivial",
+    "SourceGammaOneTwistedGaloisInertia",
+    "SourceGammaOneParabolicTateLift",
+    "SourceGammaOneParabolicGaloisFrobenius"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction.lean",
+      "sha256": "3AE335A6BC837CCDD455C9F8CC2DBAEEDBBF9CAFA1F15B28994A680D7B24AE19",
+      "oleanSha256": "53693887DC61C105DE3EDD7918025B66BAAB38CAE801156C18FF296FBD0B4997",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualAction-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction.lean",
+      "sha256": "2EE0AEF696CF5B8664EEEC342A8368E8B7227EFCA3FC7D2731650CA17A965E86",
+      "oleanSha256": "FC45AA0546209D0AAC568222C729C076824ECEEAC913F7B6DC83F8AC4C3C8C19",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousAction-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter.lean",
+      "sha256": "01E9CE25BD3FEE0938AEC5B90C961F7A2291B567E5BC6E262DB1E0B3F302F0C8",
+      "oleanSha256": "72CA232DC7D39A6A3D99BE308AB0CD730BF6549A52E3D17E8705067ABED8175D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicCharacter-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois.lean",
+      "sha256": "9EF2214832E53AE51B8AF52909CC318807CC4E265115DB7849834EC07F5903EE",
+      "oleanSha256": "1DA62780A4F83BE946A40BB9EC6ADCE7A742E50BE758AE8132E5B3C5469CCC05",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGalois-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke.lean",
+      "sha256": "18788CFDBE9633896E4FC7B99508067AD6DB91A03351CAE22A9A54863D886C79",
+      "oleanSha256": "DBB4C1CA0D31C9CFBDCAFEF63440BB497645D5A185687267912A3306B682E186",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHomogeneousHecke-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke.lean",
+      "sha256": "9AC7DA4CFAA4AA1E4D21552968B1E31E77B209582BD35917B942EFEE0B636176",
+      "oleanSha256": "C042274444E865CA9C8EAB11B425FBF01F08516032CBE401F066E2085CACC1BB",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisHecke-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal.lean",
+      "sha256": "DB9632A5C7BB76222663A358B30C208C337A47AC6FCC7B11C563719DD0765590",
+      "oleanSha256": "EE2731922D0FE960B33B5038ECF16A9F9E5E755DA0CE60143779E7EF9F9349EC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteCyclotomicLocal-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius.lean",
+      "sha256": "712573BB061DC9BB536FC51AADA3D34D5DDBD661B32D628EDF49AADEB4AB2BFD",
+      "oleanSha256": "AF6E6684B6B878C317605C984043FE4CA7B7D764DEAA445CE60B6AD682C343CD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisFrobenius-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial.lean",
+      "sha256": "277CAE5540E9F560DF43C4FC7353C8CC5B7E064C4BBF21CE75ADAE381E167F3F",
+      "oleanSha256": "09D6DAF02491C247E33E16EB9657EC2AF83C7BAB74FE661C4DBA2B3B0D2992ED",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTwistedCoefficientDualTrivial-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia.lean",
+      "sha256": "BCD962238D34C7DD8580A03FB1432CB61E15473E2413F3F3BCB82768F160EE07",
+      "oleanSha256": "3FACD247ECD7A78810E80C2AEA5CE5476D582460AD7F687528BE5C6558B67070",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedGaloisInertia-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift.lean",
+      "sha256": "2DF236D6C50B48EA555D8236A968DE9539A4A4E356FD0E737C8D0B6AC6AEB943",
+      "oleanSha256": "5F233574409CD4D73683662217A5D469CFD7D346713D866FB4519A62F510E6E3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicTateLift-1411.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius.lean",
+      "sha256": "C27D8C97258F7F2D4717CCC1C9D63EC9232132EF05199DF186A0D4EE0AB9EC13",
+      "oleanSha256": "498F68967C3E20B019D22C7044AD98CDE1F568AFD40F0569E18A8DE03901F0AD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius-1411.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneParabolicGaloisFrobenius-1411.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceTwistedCoefficientDualAction_operator",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_apply",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_apply_root",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_frobenius_operator",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_prime",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_frobenius",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq",
+    "Dubon2026.sourceTwistedCoefficientDualAction_eq_one",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_binaryTate_restriction_diamond_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_frobenius_of_degree_genus_eq",
+    "Dubon2026.sourceTwistedCoefficientDualAction",
+    "Dubon2026.sourceCyclotomicHomogeneousAction",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryCyclotomicCoefficientRep",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceTwistedCoefficientDualAction_operator",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_apply",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_apply_root",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_frobenius_operator",
+    "Dubon2026.sourceCyclotomicHomogeneousAction_commute",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_prime",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_frobenius",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq",
+    "Dubon2026.sourceTwistedCoefficientDualAction_eq_one",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_binaryTate_restriction_diamond_fixed",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_frobenius_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceTwistedCoefficientDualAction",
+    "Dubon2026.sourceCyclotomicHomogeneousAction",
+    "Dubon2026.sourceAbsoluteCyclotomicCharacter",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryCyclotomicCoefficientRep",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedAudit1.log",
+  "logSha256": "ADA30CE4D8F8A56BDE84261FC5CF1E4FC6A074F266142548C33F854EC2536C61",
+  "auditSha256": "46BE7C9B8ABCA95C8A0A6C0147E9A8F755FEA837E22D1F24F32E9FF899636D78",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedScratchOwnership1412.log",
+  "ownershipSha256": "E9B553AACBF86C23A827CF5EFA92C3A519F4E416B4169CD48F9C22172BA830C8",
+  "exhaustiveTheorems": 55,
+  "linterScopes": 12,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 32,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTwistedDependencyAudit1.log",
+  "dependencyAuditSha256": "B0145A51C91A7C3B3AB65AB5E09BECA78119B90F621AB130EEE0C69C6984A9DD",
+  "dependencyAuditSourceSha256": "7DAD51B33F3044C5D24D87257F8BEC179569811B25D0E408091A840BA462D94B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_frobenius_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_prime"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> genuine homogeneous-valued Tate Galois action matching the derived inverse-action Frobenius polynomial.",
+  "discharged": [
+    "Construct a genuine global Galois representation on the original homogeneous-valued Tate dual using the native cyclotomic character and inverse actual Tate action.",
+    "Derive its Hecke commutation and actual cyclotomic Frobenius/inertia values from existing valuation-root and original Picard results.",
+    "Derive the actual Galois Frobenius polynomial from the norm-derived Tate relation rather than accepting it as an input.",
+    "Derive combined-diamond fixedness for the actual Tate preimage of every original parabolic class, then consume that same class in the Galois Frobenius polynomial."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The original coordinate-degree and genus equalities remain. The comparison retains 3<p. Neither nonvanishing of restriction nor surjective parabolic transfer is claimed. Finite continuous character realization, exceptional primes, original two-dimensional all-weight arithmetic association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-twisted-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "6174BBEA1C51B031B65F14D0ED31CD4FAB79BD000D422A12AD1DF0EAA523263C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

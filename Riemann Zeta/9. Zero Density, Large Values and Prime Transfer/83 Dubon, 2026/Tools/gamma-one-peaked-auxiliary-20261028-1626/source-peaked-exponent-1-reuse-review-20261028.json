@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius realization -> degree/genus preservation -> signed-index lower bound -> reduced field action -> level-power slash integrality -> even-weight peaked auxiliary existence -> actual integer exponent family and cusp-order separation.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-peaked-exponent-audit-route-1556.json",
+    "sha256": "D6E152F49F002C78124A0679D5A1E6FDD619A2D2AB69B2C5EAF36103384E8884",
+    "review": {
+      "recordedUTC": "2026-10-29T01:41:54.267358+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius realization -> degree/genus preservation -> signed-index lower bound -> reduced field action -> level-power slash integrality -> even-weight peaked auxiliary existence -> actual integer exponent family and cusp-order separation.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\peaked-auxiliary-route-review-1539.json",
+          "sha256": "0A8096A5E3777E7E97541B3B0B7C077317EA141B81DD0D0EE42A2FCEE4E6791F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\peaked-exponent-trim-review-1555.json",
+          "sha256": "FE801CF6D8EDA84FDB3D32098BA4E9C0AC541F385FF4D5912A3964AD153D4E17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Peaked Auxiliary Exponent Assessment 2026-10-28.md",
+          "sha256": "2F2DD55EA449DA47B0DF7836A90764EB2B97A1F75F298B73EB01E66CB89A2AC1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+          "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerSeriesProduct.lean",
+          "sha256": "0F21255FEE550F387AB0D2953099A90E63422EB2CF0EBC653783CEF25ADDFDD6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRealizedPowerSeries.lean",
+          "sha256": "E2C80E84F3E12085779DA4277023928159805246264CAB231CD8EEAD14D79939"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ZetaValues.lean",
+          "sha256": "25181D96A8F0664A37C0D62C9A62127F2264CFD1A57307A745A5FD1BC4F8BE96"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LSeries\\Dirichlet.lean",
+          "sha256": "C639073B793811A7B0C835C3C861F3035A088C664307050E2BA012D5C09ADDCC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Fourier\\ZMod.lean",
+          "sha256": "BABA66E076526576739A74C2DCE093D3DB6AE22AFB137FA15A7437DEC30B8851"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ArithmeticFunction\\Moebius.lean",
+          "sha256": "B1EC56EBCCEB63F54195116EC36F3C8945BE00684C28C84E739A2B3E78376A1C"
+        }
+      ],
+      "shorterRoute": "Use existing Fourier inversion, Bernoulli expansion, character orthogonality and Dirichlet L(2,chi) nonvanishing. Use a pointwise bound for the affine sum. Defer two unused helpers and remove an unnecessary NeZero parameter. Existing exact power-series multiplication and cusp limits are reserved for the next analytic branch.",
+      "assumptionsToDischarge": [
+        "Bernoulli dilates span the actual even rational residue functions.",
+        "The totient-weighted mean vanishes for every nonzero Bernoulli dilate.",
+        "An actual nonnegative integer exponent family exists with zero (0,0) exponent, translation invariance and positive strictly separated source cusp orders.",
+        "Determinant-one columns are primitive and the source exceptional residue conditions coincide with the original signed Gamma1 cusp classes."
+      ],
+      "remaining": "Actual analytic Siegel product construction, its integral expansions, leading unit and decay; level-power slash integrality; reduced field action; degree/genus preservation; integral parabolic transfer; two-dimensional characteristic-zero realization; arithmetic automorphy and literal higher continuation. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Bernoulli dilates span the actual even rational residue functions.",
+    "The totient-weighted mean vanishes for every nonzero Bernoulli dilate.",
+    "An actual nonnegative integer exponent family exists with zero (0,0) exponent, translation invariance and positive strictly separated source cusp orders.",
+    "Determinant-one columns are primitive and the source exceptional residue conditions coincide with the original signed Gamma1 cusp classes."
+  ],
+  "remaining": "Actual analytic Siegel product construction, its integral expansions, leading unit and decay; level-power slash integrality; reduced field action; degree/genus preservation; integral parabolic transfer; two-dimensional characteristic-zero realization; arithmetic automorphy and literal higher continuation. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

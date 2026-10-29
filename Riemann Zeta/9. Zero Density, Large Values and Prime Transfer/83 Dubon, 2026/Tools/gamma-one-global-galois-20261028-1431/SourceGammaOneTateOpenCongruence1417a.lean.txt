@@ -1,0 +1,56 @@
+import SourceGammaOnePicardFieldDefinition1416b
+import Dubon2026.SourceGammaOneArithmeticPeriodInclusion
+import Dubon2026.SourceTateProjections
+import Mathlib.LinearAlgebra.TensorProduct.Basis
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> continuous
+finite homogeneous-valued Tate Galois action. The exact native Tate
+projection kernel turns the actual Picard stabilizers into open congruence
+conditions. The already proved period-tensor equivalence supplies a finite
+basis, so one finite intersection controls every actual Tate vector. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup IsLocalRing
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+local notation "J" => Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar)
+local notation "T" => TateModule p J
+
+theorem arithmeticTateGalois_congruence_isOpen (n : ℕ) (x : T) :
+    IsOpen {σ : Qbar ≃ₐ[ℚ] Qbar | arithmeticTateGaloisRep M p σ x - x ∈
+      (maximalIdeal ℤ_[p] ^ n) • (⊤ : Submodule ℤ_[p] T)} := by
+  have he : {σ : Qbar ≃ₐ[ℚ] Qbar | arithmeticTateGaloisRep M p σ x - x ∈
+      (maximalIdeal ℤ_[p] ^ n) • (⊤ : Submodule ℤ_[p] T)} =
+      (MulAction.stabilizer (Qbar ≃ₐ[ℚ] Qbar) ((x : ℕ → J) n) :
+        Set (Qbar ≃ₐ[ℚ] Qbar)) := by
+    ext σ
+    change arithmeticTateGaloisRep M p σ x - x ∈
+      (maximalIdeal ℤ_[p] ^ n) • (⊤ : Submodule ℤ_[p] T) ↔ σ • ((x : ℕ → J) n) = _
+    rw [← TateModule.proj_eq_zero_iff, map_sub, sub_eq_zero]
+    rfl
+  rw [he]
+  exact gammaOnePicard_isOpen_stabilizer M ((x : ℕ → J) n)
+
+theorem arithmeticTateGalois_uniform_congruence_isOpen (n : ℕ) :
+    IsOpen {σ : Qbar ≃ₐ[ℚ] Qbar | ∀ x : T, arithmeticTateGaloisRep M p σ x - x ∈
+      (maximalIdeal ℤ_[p] ^ n) • (⊤ : Submodule ℤ_[p] T)} := by
+  let b := ((integralPeriodBasis M).baseChange ℤ_[p]).map
+    (arithmeticPicardTatePeriodTensorEquiv M p).symm
+  let U := (maximalIdeal ℤ_[p] ^ n) • (⊤ : Submodule ℤ_[p] T)
+  have he : {σ : Qbar ≃ₐ[ℚ] Qbar | ∀ x : T, arithmeticTateGaloisRep M p σ x - x ∈ U} =
+      ⋂ i, {σ : Qbar ≃ₐ[ℚ] Qbar | arithmeticTateGaloisRep M p σ (b i) - b i ∈ U} := by
+    ext σ
+    simp only [Set.mem_setOf_eq, Set.mem_iInter]
+    constructor
+    · exact fun h i => h (b i)
+    · intro h x
+      let f : T →ₗ[ℤ_[p]] T := arithmeticTateGaloisRep M p σ - LinearMap.id
+      have hu : U.comap f = ⊤ := (Submodule.eq_top_iff_forall_basis_mem b).mpr h
+      have hx : x ∈ U.comap f := by rw [hu]; exact Submodule.mem_top
+      exact hx
+  change IsOpen {σ : Qbar ≃ₐ[ℚ] Qbar | ∀ x : T, arithmeticTateGaloisRep M p σ x - x ∈ U}
+  rw [he]
+  exact isOpen_iInter_of_finite (fun i => arithmeticTateGalois_congruence_isOpen M p n (b i))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

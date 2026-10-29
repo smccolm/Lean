@@ -1,0 +1,58 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 28,
+  "queries": 85,
+  "theorems": 71,
+  "constructions": 14,
+  "exhaustiveScratchChecks": 141,
+  "proofValueChecks": 184,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-hecke-degree-1-scratch-receipt.json": "06F309311D6E9A558A30749CECD02BFA693551BAD9107CCA376913C78B6B5F86",
+    "source-gamma-one-norm-1-scratch-receipt.json": "F4449953AAEF79EBF2DEA59C229438C0D4BEB93277034859ECE66AF44DBB454E",
+    "source-gamma-one-diamond-norm-2-scratch-receipt.json": "8DB8032D96DFB3EBD0A76B1D67A39E4707FCB9921A102C8293C504FF4EB548E5",
+    "source-gamma-one-diamond-reduction-1-scratch-receipt.json": "3BCC2E3E62001FA3D4070CDE54230B633E030BA41B7926E046017CADE4F64752"
+  },
+  "expectedConsumers": 26584,
+  "expectedConstructions": 2850,
+  "fullGoal": "An integral representative of the actual diamond image remains an explicit narrower input in the integral reduction theorem. Producing it from input integrality alone is required for unconditional integral norm reduction. Residue degree equality, genus preservation, compatible original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain; thus original geometric Tate Frobenius and inertia remain open. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN; all twenty acceptance tests unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_hecke_norm_9074.py",
+      "sha256": "D5427468E34626C0DA87D7FB5BDADBDEB037DC7F8AFCAA7312C3879C3EF86E59"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_norm_production_ownership_9074.py",
+      "sha256": "CBDA1A726E17E3BD22DC984EDE29EB1ED176A8C079EB34CBE06AC90403DC09A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_norm_global_ownership_9074.py",
+      "sha256": "BD9E6022440E0AF8996CF48D89BDC1BA54FE5DE6DFE2817B6C49F869A2594440"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_norm_ownership_9074.py",
+      "sha256": "9FAF131F2F9D4D8659393F993A9CB0167ED39CE914687917B1EFA76A54655B17"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_hecke_norm_9074.py",
+      "sha256": "78D86FCAA90E405C001CBC1E98F87569DCDB7D1778E5729F53F1D1E36A2B5AE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_norm_9074.ps1",
+      "sha256": "7F1EAD1368EEF2451C39DBF7D37113C371B45A2E66AF6F3DFB17EEAAA01DE02D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_hecke_norm_9074.ps1",
+      "sha256": "FDF01A30B16144CD7065A89071B96E75F123A2980E180E34C5D32E95F1B61E86"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_hecke_norm_canonical_9074.py",
+      "sha256": "365B11C53828C4762759047C00CB7DB9352CE600D3242A945A99981D75028CCC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_hecke_norm_9074.py",
+      "sha256": "B0DB6E915AC81B6358F7B5973840BAA9A00FD8AD28DFBCB1864F89CCA715D7F1"
+    }
+  ],
+  "productionMutation": false
+}

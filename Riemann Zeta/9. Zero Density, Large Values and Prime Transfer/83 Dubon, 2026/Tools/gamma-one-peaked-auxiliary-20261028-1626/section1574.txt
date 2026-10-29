@@ -1,0 +1,7 @@
+### Actual original full framed fibers on the fixed residual quotient — 9 October 2026
+
+Construct the original continuous residual representation on the genuine fixed residual quotient and prove an equivalence between the whole original continuous framed lift fiber and the whole fixed-quotient fiber. The proved uniform pro-p kernel theorem factors every complete Noetherian local coefficient lift. Both inverse identities preserve every original matrix, and no conjugacy quotient is introduced.
+
+Final framed deformation-functor assembly, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [OriginalResidualFramedFibers](Extension/Dubon2026/OriginalResidualFramedFibers.lean).

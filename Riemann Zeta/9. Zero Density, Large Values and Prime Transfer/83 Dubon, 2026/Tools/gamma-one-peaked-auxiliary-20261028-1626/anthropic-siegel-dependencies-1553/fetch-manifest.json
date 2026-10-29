@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-29T01:36:48.519786+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_jacobiTheta_two_eq_tprod.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_jacobiTheta_two_eq_tprod.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_jacobiTheta_two_eq_tprod.lean",
+      "sha256": "A9FD0397884FD11A0807D93224414ADA897FC16200713348F704F49743D65498",
+      "bytes": 30346
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean",
+      "sha256": "FD8487F547BE7165566DBD5D1E7AD5E98C272E046CBD21F570FAD18B50368D44",
+      "bytes": 54217
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_hasSum_qParam_mul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_hasSum_qParam_mul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_hasSum_qParam_mul.lean",
+      "sha256": "F4BA460F37A5E226BFADAFF9D29D83CD9E260EACDB87B4AF6CF187AD9ACD42BC",
+      "bytes": 4303
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_siegelFun_specialLinearGroup_smul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_siegelFun_specialLinearGroup_smul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_siegelFun_specialLinearGroup_smul.lean",
+      "sha256": "DF9578668B475FED923C55A9CB6A63FE88F4F40D0864F6053CDDA574913196FF",
+      "bytes": 19326
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_siegelFun_add_level.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_SiegelUnit_siegelFun_add_level.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_siegelFun_add_level.lean",
+      "sha256": "D968AC294010F409BB162EC27FF96D83D61EE62473ED222AA7BBE9ED754C585E",
+      "bytes": 6307
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

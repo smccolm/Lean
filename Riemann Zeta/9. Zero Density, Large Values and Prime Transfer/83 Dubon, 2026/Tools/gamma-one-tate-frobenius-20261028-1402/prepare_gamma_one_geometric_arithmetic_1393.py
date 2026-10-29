@@ -1,0 +1,18 @@
+from pathlib import Path
+import json, hashlib
+from datetime import datetime, timezone
+p=Path(__file__).parent
+f=p/'SourceGammaOneGeometricCoefficientFrobenius1388a.lean';s=f.read_text(encoding='utf-8')
+for a,b in [('SourceGammaOneTateFrobeniusRelation1380h','SourceGammaOneTateFrobeniusRelation1380n'),('SourceGammaOneCoefficientFrobenius1386a','SourceGammaOneArithmeticFrobenius1392b'),('exists_gammaOne_coefficient_frobenius_quadratic','exists_gammaOne_arithmetic_frobenius_quadratic'),('binaryTateCoefficientFrobeniusOperator','binaryTateArithmeticFrobeniusOperator')]:s=s.replace(a,b)
+s=s.replace('normalized Frobenius polynomial on the original coefficient-valued Tate','inverse-action Frobenius polynomial on the original coefficient-valued Tate')
+t=p/'SourceGammaOneGeometricArithmeticFrobenius1393a.lean';assert not t.exists();t.write_text(s,encoding='utf-8')
+deferred=['SourceTateDualDiamondQuadratic1383a','SourceHomogeneousComplementaryHecke1384a','SourceGammaOneComplementaryDiamond1385a','SourceGammaOneCoefficientFrobenius1386a','SourceGammaOneGeometricCoefficientFrobenius1388a']
+for name in deferred:
+    f=p/(name+'.lean');t=f.with_suffix('.lean.txt');assert not t.exists();f.rename(t)
+sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest().upper()
+r=Path(r'E:\Lean\Riemann Zeta\9. Zero Density, Large Values and Prime Transfer\83 Dubon, 2026\Extension\Dubon2026')
+reuse=[r/n for n in ['SourceOriginalPicardFrobeniusQuadratic.lean','SourceOriginalTateFrobeniusQuadratic.lean','SourceTateEndomorphisms.lean','SourceTateDualQuadratic.lean','SourceGammaOneHeckeDiamondCoefficient.lean','SourceGammaOneBinaryFrobeniusNormalization.lean','SourceGammaOneBinaryGaloisHecke.lean','SourceGammaOneArithmeticTateOperators.lean']]
+record=dict(recordedUTC=datetime.now(timezone.utc).isoformat(),chain='DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> actual Gamma1 Picard/H1/Tate realization -> arithmetic Frobenius polynomial.',reuse=[dict(path=str(x),sha256=sha(x)) for x in reuse],selected='The literal original norm proves H*F = F*F*D + ell with Picard diamond label ell. On the combined-diamond fixed dual, use Y = ell * b(ell) * precompose(F inverse), where b is the existing homogeneous Hecke matrix. Native b squared = ell^w * coefficientDiamond gives Y*Hdual = Y^2 + ell^(w+1). This inverse action is the correct direction for a genuine dual Galois action and needs no new complementary coefficient matrix.',deferred=[dict(path=str(p/(x+'.lean.txt')),sha256=sha(p/(x+'.lean.txt'))) for x in deferred],deferredReason='The four complementary-operator modules compiled, but the inverse-action route directly serves the genuine Galois representation using existing coefficient identities. The uncompiled complementary geometric consumer is also deferred. None is promoted or counted in the selected scope.',remaining='Coordinate-degree and genus preservation, global cyclotomic coefficient Galois action, combined-diamond character realization, parabolic and original all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.',proofLimitsChanged=False,productionMutation=False)
+t=p/'gamma-one-arithmetic-frobenius-route-1393.json';assert not t.exists();t.write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
+s=(p/'build_gamma_one_picard_descent_1381f.ps1').read_text(encoding='utf-8').replace('SourceGammaOneHeckePicardDescent1381f','SourceGammaOneGeometricArithmeticFrobenius1393a')
+t=p/'build_gamma_one_geometric_arithmetic_1393.ps1';assert not t.exists();t.write_text(s,encoding='utf-8')

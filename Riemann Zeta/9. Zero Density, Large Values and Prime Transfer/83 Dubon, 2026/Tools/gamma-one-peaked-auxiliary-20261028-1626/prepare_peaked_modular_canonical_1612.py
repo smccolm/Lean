@@ -1,0 +1,25 @@
+from pathlib import Path
+import ast
+s=Path(__file__).parent
+c=(s/'run_prepare_siegel_finite_product_canonical_1608.py').read_text(encoding='utf-8')
+a=c.index("report='");b=c.index("rf='",a)
+middle="""report='Dubon Siegel Modular Form and Cusp Bounds Assessment 2026-10-28.md'
+write(report,'''# Siegel modular form and cusp bounds — 28 October 2026
+
+The exact unresolved chain is DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 → literal higher continuation → automorphy → original all-weight characteristic-zero association → original Gamma1 degree/genus preservation → reduced field action → level-power slash integrality → actual peaked auxiliary. Acceptance remains 16/20; DUB-17–20 OPEN.
+
+This scope constructs the actual discriminant-adjusted finite Siegel product as a Gamma1 modular form under the explicit source hypotheses: the zero-pair exponent is zero, the exponent family is translation invariant, and every shifted cusp order is nonnegative. Holomorphy follows from the audited literal Siegel holomorphy and native discriminant cusp form. An actual invertible residue-row permutation transports the product at every SL2 cusp, preserving the original exponent family and exact Bernoulli order. The proved finite-product cusp limit and native discriminant decay yield the source exponential bound at every cusp. Those bounds supply boundedness in the actual ModularForm constructor.
+
+The [pinned source proof](https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean) is split into five modules at default proof limits. Existing native Gamma0 holomorphic quotient lifting was inspected; it does not supply the explicit Gamma1 Siegel product or the required Bernoulli cusp rates. Native discriminant decay and the already proved Siegel transformation/expansion statements are reused directly.
+
+All five versioned modules passed exhaustive axiom checks, sixteen linters each and value-only dependency checks. Canonical scratch ownership, axiom and dependency evidence are recorded separately. No external build/direct import or changed root pin is claimed.
+
+The nonnegative shifted-order hypothesis still needs a proved choice of discriminant power for the constructed separating exponent family. Exact integral width-one coefficients, leading inverse and the comparison with separated decay also remain before actual peaked auxiliary existence. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. This scope is conditional where stated and awaits production promotion and assembled verification.
+''')
+route=dict(recordedUTC=datetime.now(timezone.utc).isoformat(),chain='DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> literal discriminant-adjusted Gamma1 modular form and exact cusp bounds.',reuseChecked=[dict(path=str(s/n),sha256=sha(s/n)) for n in ['peaked-modular-form-route-review-1603.json',report]],shorterRoute='Reuse actual Siegel holomorphy, SL2/Gamma1 product transport, exact finite-product cusp limit and native discriminant cusp-form decay. Prove only the finite residue-row permutation, literal slash identity and actual ModularForm assembly.',assumptionsToDischarge=['Actual Siegel product times the discriminant power is holomorphic and Gamma1 invariant.','Every actual transformed product has the exact original Bernoulli cusp order.','The source exponential estimate holds at every SL2 cusp.','Explicit nonnegative shifted orders imply boundedness at every cusp and supply an actual ModularForm.'],remaining='The nonnegative shifted-order hypothesis must be discharged by selecting the discriminant power. Exact integral width-one coefficients, leading inverse and separated decay still need assembly into the actual peaked auxiliary. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.',externalBuild=False,externalImport=False,rootPinsChanged=False,proofLimitsChanged=False)
+"""
+c=c[:a]+middle+c[b:]
+c=c.replace('siegel-finite-product','peaked-modular-form').replace('SourceSiegelFiniteProduct','SourcePeakedModularForm').replace('SIEGEL FINITE PRODUCT','PEAKED MODULAR FORM').replace('1608','1612').replace('1602','1609').replace('siegel_expansion','peaked_modular_form')
+ast.parse(c)
+f=s/'run_prepare_peaked_modular_canonical_1612.py';assert not f.exists();f.write_text(c,encoding='utf-8')
+exec(compile(c,str(f),'exec'))

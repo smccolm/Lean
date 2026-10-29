@@ -1,0 +1,132 @@
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+
+/-- Exact source consumer of `smoothInducedCharacterRepresentation_smooth`. -/
+theorem actual_induced_smoothInducedCharacterRepresentation_smooth_source (B : Subgroup G) (χ : B →* ℂ)
+    (f : smoothInducedCharacterSpace B χ) :
+    ∃ H : Subgroup G, IsOpen (H : Set G) ∧
+      ∀ h ∈ H, smoothInducedCharacterRepresentation B χ h f = f :=
+  smoothInducedCharacterRepresentation_smooth B χ f
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+variable {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (B K : Subgroup G) (χ : B →* ℂ)
+    (hdec : ∀ g : G, ∃ b : B, ∃ k : K, g = b.val * k.val)
+
+/-- Exact source consumer of `iwasawaInducedSection_fixed_line`. -/
+theorem actual_induced_iwasawaInducedSection_fixed_line_source (hK : IsOpen (K : Set G))
+    (hχ : ∀ b : B, b.val ∈ K → χ b = 1)
+    (f : smoothInducedCharacterSpace B χ)
+    (hf : ∀ k : K, smoothInducedCharacterRepresentation B χ k.val f = f) :
+    f = f.val 1 • iwasawaInducedSection B K χ hdec hK hχ :=
+  iwasawaInducedSection_fixed_line B K χ hdec hK hχ f hf
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `valuationSubring_gl2_firstRow_pivot`. -/
+theorem actual_induced_valuationSubring_gl2_firstRow_pivot_source {K : Type*} [Field K] (A : ValuationSubring K)
+    (g : GeneralLinearGroup (Fin 2) K) :
+    ∃ j : Fin 2, g.val 0 j ≠ 0 ∧ ∀ s : Fin 2, g.val 0 s / g.val 0 j ∈ A :=
+  valuationSubring_gl2_firstRow_pivot A g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceGL2_iwasawa`. -/
+theorem actual_induced_finitePlaceGL2_iwasawa_source (v : HeightOneSpectrum ℤ)
+    (g : GeneralLinearGroup (Fin 2) (v.adicCompletion ℚ)) :
+    ∃ b : gl2UpperZeroSubgroup (v.adicCompletion ℚ), ∃ k : finitePlaceGL2Gamma0 1 v,
+      g = b.val * k.val :=
+  finitePlaceGL2_iwasawa v g
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceUnramifiedCharacter_prime`. -/
+theorem actual_induced_finitePlaceUnramifiedCharacter_prime_source (p : ℕ) [NeZero p] (hp : p.Prime) (z : ℂˣ) :
+    finitePlaceUnramifiedCharacter (rationalPrimePlace p hp) z
+      (finitePlacePrimeUnit p (rationalPrimePlace p hp)) = z :=
+  finitePlaceUnramifiedCharacter_prime p hp z
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceLowerCharacter_integral`. -/
+theorem actual_induced_finitePlaceLowerCharacter_integral_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (b : gl2UpperZeroSubgroup (v.adicCompletion ℚ)) (hb : b.val ∈ finitePlaceGL2Gamma0 1 v) :
+    finitePlaceLowerCharacter v z₁ z₂ b = 1 :=
+  finitePlaceLowerCharacter_integral v z₁ z₂ b hb
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `finitePlaceInducedSpherical_fixed_line`. -/
+theorem actual_induced_finitePlaceInducedSpherical_fixed_line_source (v : HeightOneSpectrum ℤ) (z₁ z₂ : ℂˣ)
+    (f : FinitePlaceInducedSpace v z₁ z₂)
+    (hf : ∀ k : finitePlaceGL2Gamma0 1 v,
+      smoothInducedCharacterRepresentation _ (finitePlaceLowerCharacter v z₁ z₂) k.val f = f) :
+    f = f.val 1 • finitePlaceInducedSpherical v z₁ z₂ :=
+  finitePlaceInducedSpherical_fixed_line v z₁ z₂ f hf
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+
+
+/-- Exact source consumer of `normalizedLocalPrincipalRepresentation_scalar`. -/
+theorem actual_induced_normalizedLocalPrincipalRepresentation_scalar_source (v : HeightOneSpectrum ℤ) (α β : ℂˣ)
+    (hαβ : α * β = 1) (u : (v.adicCompletion ℚ)ˣ)
+    (f : NormalizedLocalPrincipalSeries v α β) :
+    normalizedLocalPrincipalRepresentation v α β (GeneralLinearGroup.scalar (Fin 2) u) f = f :=
+  normalizedLocalPrincipalRepresentation_scalar v α β hαβ u f
+
+end
+
+section
+
+/-- Exact source consumer of `primitiveSatake_non_special`. -/
+theorem actual_induced_primitiveSatake_non_special_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 2 ≤ k) {p : ℕ} (hp : p.Prime) (hpN : ¬p ∣ N) :
+    primitiveSatakePlus F p / primitiveSatakeMinus F p ≠ (p : ℂ) ∧
+      primitiveSatakePlus F p / primitiveSatakeMinus F p ≠ (p : ℂ)⁻¹ :=
+  primitiveSatake_non_special F hk hp hpN
+
+end

@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-29T01:09:34.203811+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_peaked_exponent.lean",
+      "sha256": "2C1B21B7E3AB7C4FE00F728F1DD63A0C2C3A5909AA7A91AA9E2C3427261F7ECD",
+      "bytes": 17881
+    },
+    {
+      "path": "P2M/Sol/S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CongruenceSubgroup_mem_or_neg_mem_Gamma1_iff_and_exists_T_zpow_S_inv_iff.lean",
+      "sha256": "FA5EEC4DCDDF53E3DB0E24CD61E657B8A1FDF9E79B23329790AF49767C7D2404",
+      "bytes": 6034
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "6AB6B4B15B3495331DD18AE43946868B2394D3747867C5F92D745723AD632ABD",
+      "bytes": 14058
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "E0A10CD68A0560D35B8114CF418B74C55F5B58724E94411145130BB1CB2A01D9",
+      "bytes": 21119
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_isIntegral_qExpansion_slash_S_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean",
+      "sha256": "24D719D15DAA7E315DF98135C0CC3E8C43D280C4D70B231FBAD4CE84CBA76EDE",
+      "bytes": 23244
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

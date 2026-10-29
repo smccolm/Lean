@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius arithmetic realization -> exact coordinate-degree and genus preservation -> original integral-ratio and actual residue-field comparison.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-ratio-audit-route-1481.json",
+    "sha256": "514C537101055BE92D2B44973EFF0F0491D7CB4AEF6E748A67C6AC83A3A3EBC9",
+    "review": {
+      "recordedUTC": "2026-10-28T23:59:12.654308+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius arithmetic realization -> exact coordinate-degree and genus preservation -> original integral-ratio and actual residue-field comparison.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGaussResidueImage.lean",
+          "sha256": "1413B2151C8AF8F4B6B3B39C063FAE0E20EE74ADF94C6F14C37984A27EB6E2D1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGaussResidueHom.lean",
+          "sha256": "D595136BD2E092F90D44AFB1D4F83341F21FA74680BACA4422DB3B33F163510C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneScalarExtension.lean",
+          "sha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+          "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueCoordinateFinite.lean",
+          "sha256": "3529C3661EE21C8B1BD76A554918A71DAC7DDB60A1ECE188ED440A68E40F7921"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeCoordinateDegree.lean",
+          "sha256": "84AEF13E71AEB1B408C2EA90329ACE2475D6B7502AEC813DE10D171CC007D4AA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-review-1471.json",
+          "sha256": "74B5DFC7AB8EB07E3F4995181F8D84EAA39D6F6A9CF976284AE31D1A8F8D8EB4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Targeted Reuse Review 2026-10-28.md",
+          "sha256": "F908B7A63B4EA2CC77CC1F5D6EDA82CB6A7337E9C988A525C054381DC1A16268"
+        }
+      ],
+      "shorterRoute": "The complete upstream Sol subtree exposed an integral Eisenstein coset separation route to the signed-index lower bound. Reuse the native scalar-extension identity, Gauss residue construction, j/E4/discriminant normalization, finite residue upper bound and original signed-index degree. The new comparison identifies the actual residue object without assuming a good-reduction model. No further Fricke integrality or general GammaH infrastructure is developed in this scope.",
+      "assumptionsToDischarge": [
+        "Every residue-characteristic integral modular-form ratio belongs to the actual native residue image.",
+        "The original j belongs to that integral-ratio field in every residue characteristic.",
+        "Its coordinate degree is bounded by the actual residue degree and then by the original characteristic-zero degree.",
+        "The precise external signed-index lower bound implies native degree preservation and equality of the actual residue image with the residue integral-ratio field."
+      ],
+      "remaining": "The signed-index lower bound is not yet proved natively; its integral Eisenstein and integral-slash route is being adapted. Genus preservation, exact integral parabolic transfer, the required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Every residue-characteristic integral modular-form ratio belongs to the actual native residue image.",
+    "The original j belongs to that integral-ratio field in every residue characteristic.",
+    "Its coordinate degree is bounded by the actual residue degree and then by the original characteristic-zero degree.",
+    "The precise external signed-index lower bound implies native degree preservation and equality of the actual residue image with the residue integral-ratio field."
+  ],
+  "remaining": "The signed-index lower bound is not yet proved natively; its integral Eisenstein and integral-slash route is being adapted. Genus preservation, exact integral parabolic transfer, the required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

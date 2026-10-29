@@ -1,0 +1,153 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `groupAlgebraMatrix_map`. -/
+theorem actual_matrix_determinant_groupAlgebraMatrix_map_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (x : MonoidAlgebra R G) :
+    φ.mapMatrix (groupAlgebraMatrix ρ x) =
+      groupAlgebraMatrix ((GeneralLinearGroup.map φ).comp ρ)
+        (MonoidAlgebra.mapRingHom G φ x) :=
+  groupAlgebraMatrix_map ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `matrixRepresentationDeterminant_map`. -/
+theorem actual_matrix_determinant_matrixRepresentationDeterminant_map_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (x : MonoidAlgebra R G) :
+    φ (matrixRepresentationDeterminant ρ x) =
+      matrixRepresentationDeterminant ((GeneralLinearGroup.map φ).comp ρ)
+        (MonoidAlgebra.mapRingHom G φ x) :=
+  matrixRepresentationDeterminant_map ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S T : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S] [CommRing T]
+
+/-- Exact original-object consumer of `determinantCoefficientLaw_natural`. -/
+theorem actual_matrix_determinant_determinantCoefficientLaw_natural_source (ρ : G →* GeneralLinearGroup ι R)
+    (φ : R →+* S) (ψ : S →+* T) (x : MonoidAlgebra S G) :
+    ψ (determinantCoefficientLaw ρ φ x) =
+      determinantCoefficientLaw ρ (ψ.comp φ) (MonoidAlgebra.mapRingHom G ψ x) :=
+  determinantCoefficientLaw_natural ρ φ ψ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G R S : Type*} [Group G] [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `groupAlgebraScalarExtensionEquiv_tmul`. -/
+theorem actual_matrix_determinant_groupAlgebraScalarExtensionEquiv_tmul_source (a : S) (x : MonoidAlgebra R G) :
+    groupAlgebraScalarExtensionEquiv (a ⊗ₜ[R] x) =
+      a • MonoidAlgebra.mapRingHom G (algebraMap R S) x :=
+  groupAlgebraScalarExtensionEquiv_tmul a x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G R S : Type*} [Group G] [CommRing R] [CommRing S]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_determinant_baseChange`. -/
+theorem actual_matrix_determinant_symmetricMatrixRepresentation_determinant_baseChange_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (φ : R →+* S)
+    (x : MonoidAlgebra S G) :
+    determinantCoefficientLaw (symmetricMatrixRepresentation n ρ) φ x =
+      matrixRepresentationDeterminant
+        (symmetricMatrixRepresentation n ((GeneralLinearGroup.map φ).comp ρ)) x :=
+  symmetricMatrixRepresentation_determinant_baseChange n ρ φ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R S : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+    [CommRing R] [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `matrixTensorDeterminant_natural`. -/
+theorem actual_matrix_determinant_matrixTensorDeterminant_natural_source {T : Type*} [CommRing T] [Algebra R T]
+    (ρ : G →* GeneralLinearGroup ι R) (ψ : S →ₐ[R] T)
+    (x : S ⊗[R] MonoidAlgebra R G) :
+    ψ (matrixTensorDeterminant ρ x) =
+      matrixTensorDeterminant ρ
+        (Algebra.TensorProduct.map ψ (AlgHom.id R (MonoidAlgebra R G)) x) :=
+  matrixTensorDeterminant_natural ρ ψ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `determinantCharacteristicPolynomial_annihilates`. -/
+theorem actual_matrix_determinant_determinantCharacteristicPolynomial_annihilates_source
+    (ρ : G →* GeneralLinearGroup ι R) (g : G) :
+    Polynomial.aeval (ρ g).val (determinantCharacteristicPolynomial ρ g) = 0 :=
+  determinantCharacteristicPolynomial_annihilates ρ g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {ι R : Type*} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixCharacteristicCoefficient_continuous`. -/
+theorem actual_matrix_determinant_matrixCharacteristicCoefficient_continuous_source [TopologicalSpace R] [IsTopologicalRing R]
+    (k : ℕ) : Continuous (fun A : Matrix ι ι R => A.charpoly.coeff k) :=
+  matrixCharacteristicCoefficient_continuous k
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+variable {G ι R : Type*} [Group G] [TopologicalSpace G]
+    [Fintype ι] [DecidableEq ι] [CommRing R]
+    [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `symmetricMatrixRepresentation_determinant_continuous`. -/
+theorem actual_matrix_determinant_symmetricMatrixRepresentation_determinant_continuous_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (hρ : Continuous ρ) (k : ℕ) :
+    Continuous (fun g =>
+      (determinantCharacteristicPolynomial (symmetricMatrixRepresentation n ρ) g).coeff k) :=
+  symmetricMatrixRepresentation_determinant_continuous n ρ hρ k
+
+end
+

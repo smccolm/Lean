@@ -1,0 +1,69 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R A B : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing R] [CommRing A] [CommRing B] [Algebra R A] [Algebra R B]
+
+/-- Exact original-object consumer of `representationCoordinateFiber_iff`. -/
+theorem actual_coordinate_derivation_representationCoordinateFiber_iff_source
+    (ρ : G →* GeneralLinearGroup ι B) (π : A →ₐ[R] B)
+    (f : RepresentationCoordinateAlgebra G ι R →ₐ[R] A) :
+    (GeneralLinearGroup.map π.toRingHom).comp (representationFromCoordinates f) = ρ ↔
+      π.comp f = representationCoordinateEvaluation (R := R) ρ :=
+  representationCoordinateFiber_iff ρ π f
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `firstOrderCoordinateCocycleEquiv_surjective`. -/
+theorem actual_coordinate_derivation_firstOrderCoordinateCocycleEquiv_surjective_source (ρ : G →* GeneralLinearGroup ι R) :
+    Function.Surjective (firstOrderCoordinateCocycleEquiv ρ) :=
+  firstOrderCoordinateCocycleEquiv_surjective ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+
+/-- Exact original-object consumer of `dualNumberQuotient_comp_eq_iff`. -/
+theorem actual_coordinate_derivation_dualNumberQuotient_comp_eq_iff_source (f g : A →ₐ[R] DualNumber R) :
+    (Ideal.Quotient.mkₐ R (TrivSqZeroExt.kerIdeal R R)).comp f =
+      (Ideal.Quotient.mkₐ R (TrivSqZeroExt.kerIdeal R R)).comp g ↔
+        (TrivSqZeroExt.fstHom R R R).comp f = (TrivSqZeroExt.fstHom R R R).comp g :=
+  dualNumberQuotient_comp_eq_iff f g
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `representationCoordinateDerivationEquiv_apply`. -/
+theorem actual_coordinate_derivation_representationCoordinateDerivationEquiv_apply_source (ρ : G →* GeneralLinearGroup ι R)
+    (d : RepresentationCoordinateDerivations ρ) (x : RepresentationCoordinateAlgebra G ι R) :
+    (representationCoordinateDerivationEquiv ρ d).val x =
+      (d x : DualNumber R) + representationCoordinateConstantLift ρ x :=
+  representationCoordinateDerivationEquiv_apply ρ d x
+
+end
+

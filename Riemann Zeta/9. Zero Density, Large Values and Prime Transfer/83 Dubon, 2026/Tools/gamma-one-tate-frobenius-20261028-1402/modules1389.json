@@ -1,0 +1,11 @@
+[
+  "ContinuousRepresentationDeterminant",
+  "DeterminantCharacteristicPolynomial",
+  "DeterminantCoefficientLaw",
+  "GroupAlgebraMatrix",
+  "GroupAlgebraScalarExtension",
+  "MatrixCharacteristicContinuity",
+  "MatrixRepresentationDeterminant",
+  "MatrixTensorDeterminant",
+  "SymmetricDeterminantLaw"
+]

@@ -1,0 +1,139 @@
+import Dubon2026.SourcePeakedBernoulliProgressions
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary -> integer
+exponent construction. These are the precise finite sum and size bounds
+used by that construction. The uniform affine-sum bound is proved
+directly from the pointwise quadratic bound, avoiding the longer source
+gcd argument. The normalized Bernoulli polynomial is reused unchanged.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_peaked_exponent. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents
+open Finset
+
+theorem W_zero (N : ℕ) : Bernoulli.wt N 0 = (N : ℤ) ^ 2 := by simp [Bernoulli.wt]
+
+theorem W_le_sq {N v : ℕ} (hv : v ≤ N) : Bernoulli.wt N v ≤ (N : ℤ) ^ 2 := by
+  have : (v : ℤ) ≤ N := by exact_mod_cast hv
+  have h0 : (0 : ℤ) ≤ v := by exact_mod_cast Nat.zero_le v
+  simp only [Bernoulli.wt]
+  nlinarith
+
+theorem neg_sq_le_W (N v : ℕ) : -(N : ℤ) ^ 2 ≤ Bernoulli.wt N v := by
+  simp only [Bernoulli.wt]
+  nlinarith [sq_nonneg (2 * (v : ℤ) - N)]
+
+theorem W_one_sub (N v : ℕ) : Bernoulli.wt N 1 - Bernoulli.wt N v = 6 * ((v : ℤ) - 1) * ((N : ℤ) - 1 - v) := by
+  simp only [Bernoulli.wt]; push_cast; ring
+
+section sums
+
+variable {N : ℕ} [NeZero N]
+
+theorem sum_W_val : ∑ u : ZMod N, Bernoulli.wt N u.val = N := by
+  have h := Bernoulli.Distribution.sum_zmod_Bt N 0 1
+  simp only [Int.cast_zero, Int.cast_one, zero_add, mul_one] at h
+  have hg : Int.gcd 1 (N : ℤ) = 1 := by simp
+  rw [hg] at h
+  simp only [Nat.cast_one, Int.emod_one, mul_zero, sub_zero, one_pow, zero_add, mul_one,
+    ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow] at h
+  simpa [Bernoulli.wt, Bernoulli.Distribution.Bt] using h
+
+theorem sum_sum_W_linear (x y a b : ZMod N) (hab : a * x + b * y = 1) :
+    ∑ r : ZMod N, ∑ s : ZMod N, Bernoulli.wt N (r * x + s * y).val = (N : ℤ) ^ 2 := by
+  set F : ZMod N → ℤ := fun u => ∑ r : ZMod N, ∑ s : ZMod N, Bernoulli.wt N (r * x + s * y + u).val with hF
+  have hshift : ∀ u, F u = F 0 := by
+    intro u
+    simp only [hF]
+
+    have e1 : ∑ r : ZMod N, ∑ s : ZMod N, Bernoulli.wt N ((r + u * a) * x + (s + u * b) * y + 0).val =
+        ∑ r : ZMod N, ∑ s : ZMod N, Bernoulli.wt N (r * x + s * y + 0).val := by
+      rw [Fintype.sum_equiv (Equiv.addRight (u * a))
+        (fun r => ∑ s : ZMod N, Bernoulli.wt N ((r + u * a) * x + (s + u * b) * y + 0).val)
+        (fun r => ∑ s : ZMod N, Bernoulli.wt N (r * x + (s + u * b) * y + 0).val) (fun r => rfl)]
+      refine Finset.sum_congr rfl fun r _ => ?_
+      exact Fintype.sum_equiv (Equiv.addRight (u * b))
+        (fun s => Bernoulli.wt N (r * x + (s + u * b) * y + 0).val) (fun s => Bernoulli.wt N (r * x + s * y + 0).val) (fun s => rfl)
+    rw [← e1]
+    refine Finset.sum_congr rfl fun r _ => Finset.sum_congr rfl fun s _ => ?_
+    congr 2
+    linear_combination (-u) * hab
+  have havg : ∑ u : ZMod N, F u = (N : ℤ) * F 0 := by
+    rw [Finset.sum_congr rfl fun u _ => hshift u, Finset.sum_const, Finset.card_univ, ZMod.card,
+      nsmul_eq_mul]
+  have havg' : ∑ u : ZMod N, F u = (N : ℤ) ^ 2 * N := by
+    simp only [hF]
+    rw [Finset.sum_comm]
+    have inner : ∀ r : ZMod N, ∑ u : ZMod N, ∑ s : ZMod N, Bernoulli.wt N (r * x + s * y + u).val = (N : ℤ) * N := by
+      intro r
+      rw [Finset.sum_comm]
+      have : ∀ s : ZMod N, ∑ u : ZMod N, Bernoulli.wt N (r * x + s * y + u).val = N := by
+        intro s
+        rw [Fintype.sum_equiv (Equiv.addLeft (r * x + s * y)) (fun u => Bernoulli.wt N (r * x + s * y + u).val)
+          (fun u => Bernoulli.wt N u.val) (fun u => rfl)]
+        exact sum_W_val
+      rw [Finset.sum_congr rfl fun s _ => this s, Finset.sum_const, Finset.card_univ, ZMod.card,
+        nsmul_eq_mul]
+    rw [Finset.sum_congr rfl fun r _ => inner r, Finset.sum_const, Finset.card_univ, ZMod.card,
+      nsmul_eq_mul]
+    ring
+  have hN : (N : ℤ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  have : (N : ℤ) * F 0 = (N : ℤ) * (N : ℤ) ^ 2 := by rw [← havg, havg']; ring
+  have hF0 := mul_left_cancel₀ hN this
+  simpa [hF] using hF0
+
+theorem sum_W_add_mul_le (x y : ZMod N) :
+    ∑ s : ZMod N, Bernoulli.wt N (x + s * y).val ≤ (N : ℤ) ^ 3 := by
+  calc
+    _ ≤ ∑ _s : ZMod N, (N : ℤ) ^ 2 :=
+      Finset.sum_le_sum fun s _ => W_le_sq (ZMod.val_lt (x + s * y)).le
+    _ = (N : ℤ) ^ 3 := by simp [pow_succ, mul_comm]
+
+end sums
+
+section construction
+variable {N : ℕ} [NeZero N]
+
+/-- The positive totient weight for the Bernoulli mean constraint. -/
+def residueWeight (N : ℕ) (r : ZMod N) : ℕ := (N / Nat.gcd r.val N) * Nat.totient (Nat.gcd r.val N)
+
+theorem wt_pos (r : ZMod N) : 0 < residueWeight N r := by
+  have hNpos : 0 < N := Nat.pos_of_ne_zero (NeZero.ne N)
+  have hg : 0 < Nat.gcd r.val N := Nat.gcd_pos_of_pos_right _ hNpos
+  refine Nat.mul_pos (Nat.div_pos (Nat.gcd_le_right _ hNpos) hg) (Nat.totient_pos.mpr hg)
+
+theorem sum_mZ_mul (K : ℤ) (C : ZMod N → ℤ) (w : ZMod N → ZMod N → ℤ) :
+    ∑ r : ZMod N, ∑ s : ZMod N,
+      (K - K * (if r = 0 ∧ s = 0 then 1 else 0) - (if r = 1 then 1 else 0) + (if r = 0 then C s else 0)) * w r s =
+      K * (∑ r : ZMod N, ∑ s : ZMod N, w r s) - K * w 0 0 - (∑ s : ZMod N, w 1 s) + ∑ s : ZMod N, C s * w 0 s := by
+  have e1 : ∑ r : ZMod N, ∑ s : ZMod N, K * w r s = K * ∑ r : ZMod N, ∑ s : ZMod N, w r s := by
+    rw [Finset.mul_sum]; refine Finset.sum_congr rfl fun r _ => ?_; rw [Finset.mul_sum]
+  have e2 : ∑ r : ZMod N, ∑ s : ZMod N, (K * (if r = 0 ∧ s = 0 then 1 else 0)) * w r s = K * w 0 0 := by
+    rw [Finset.sum_eq_single (0 : ZMod N)]
+    · rw [Finset.sum_eq_single (0 : ZMod N)]
+      · simp
+      · intro s _ hs; simp [hs]
+      · intro h; exact absurd (Finset.mem_univ _) h
+    · intro r _ hr; apply Finset.sum_eq_zero; intro s _; simp [hr]
+    · intro h; exact absurd (Finset.mem_univ _) h
+  have e3 : ∑ r : ZMod N, ∑ s : ZMod N, (if r = 1 then (1 : ℤ) else 0) * w r s = ∑ s : ZMod N, w 1 s := by
+    rw [Finset.sum_eq_single (1 : ZMod N)]
+    · simp
+    · intro r _ hr; apply Finset.sum_eq_zero; intro s _; simp [hr]
+    · intro h; exact absurd (Finset.mem_univ _) h
+  have e4 : ∑ r : ZMod N, ∑ s : ZMod N, (if r = 0 then C s else 0) * w r s = ∑ s : ZMod N, C s * w 0 s := by
+    rw [Finset.sum_eq_single (0 : ZMod N)]
+    · simp
+    · intro r _ hr; apply Finset.sum_eq_zero; intro s _; simp [hr]
+    · intro h; exact absurd (Finset.mem_univ _) h
+  have : ∀ r s : ZMod N,
+      (K - K * (if r = 0 ∧ s = 0 then 1 else 0) - (if r = 1 then 1 else 0) + (if r = 0 then C s else 0)) * w r s =
+        K * w r s - (K * (if r = 0 ∧ s = 0 then 1 else 0)) * w r s - (if r = 1 then (1 : ℤ) else 0) * w r s +
+          (if r = 0 then C s else 0) * w r s := by
+    intro r s; ring
+  simp only [this, Finset.sum_add_distrib, Finset.sum_sub_distrib]
+  rw [e1, e2, e3, e4]
+
+end construction
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Exponents

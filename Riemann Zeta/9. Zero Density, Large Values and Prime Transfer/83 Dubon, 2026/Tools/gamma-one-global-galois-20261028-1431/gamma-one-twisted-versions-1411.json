@@ -1,0 +1,14 @@
+{
+  "SourceTwistedCoefficientDualAction": "1398a",
+  "SourceCyclotomicHomogeneousAction": "1399b",
+  "SourceAbsoluteCyclotomicCharacter": "1400b",
+  "SourceGammaOneTwistedGalois": "1401e",
+  "SourceCyclotomicHomogeneousHecke": "1403b",
+  "SourceGammaOneTwistedGaloisHecke": "1404b",
+  "SourceAbsoluteCyclotomicLocal": "1405a",
+  "SourceGammaOneTwistedGaloisFrobenius": "1406d",
+  "SourceTwistedCoefficientDualTrivial": "1407a",
+  "SourceGammaOneTwistedGaloisInertia": "1408a",
+  "SourceGammaOneParabolicTateLift": "1409a",
+  "SourceGammaOneParabolicGaloisFrobenius": "1410b"
+}

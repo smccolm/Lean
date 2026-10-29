@@ -1,0 +1,7 @@
+### Actual prime characters on all original open arithmetic subgroups — 9 October 2026
+
+Every actual open subgroup of the constructed rational arithmetic Galois group has a genuine finite fixed field by the pinned infinite Galois correspondence. Original finite-base character finiteness transfers through the actual fixing-subgroup equivalence with both original Krull topologies. Thus all such original open subgroups have finitely many original continuous prime-order characters.
+
+Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedUnionOpenSubgroupCharacters](Extension/Dubon2026/UnramifiedUnionOpenSubgroupCharacters.lean).

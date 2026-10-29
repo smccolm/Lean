@@ -1,0 +1,11 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "upstream": [
+    "Pinned Mathlib/RingTheory/Localization/Finiteness.lean: Module.Finite.of_isLocalization",
+    "Pinned Mathlib/RingTheory/Unramified/Basic.lean: of_equiv and of_restrictScalars",
+    "Actual original number-field away-unramified theorem: UNCOMPILED1548"
+  ],
+  "boundary": "Actual compatible localized integer algebras; original integral-closure identification and arithmetic Galois realization remain open.",
+  "productionLog": "localizedAlgebras1549-focus.log"
+}

@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `dualNumberGL_continuous_iff`. -/
+theorem actual_dual_number_adic_topology_dualNumberGL_continuous_iff_source
+    (K : Type*) [Field K] [TopologicalSpace K] [DiscreteTopology K]
+    {X ι : Type*} [TopologicalSpace X] [Fintype ι] [DecidableEq ι]
+    (f : X → Matrix.GeneralLinearGroup ι (DualNumber K)) :
+    (letI : TopologicalSpace (DualNumber K) :=
+       (IsLocalRing.maximalIdeal (DualNumber K)).adicTopology
+     Continuous f) ↔ Continuous f :=
+  dualNumberGL_continuous_iff K f
+
+end
+

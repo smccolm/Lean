@@ -1,0 +1,133 @@
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    (ρ : Representation ℂ G V) (v : V)
+
+/-- Exact original-object consumer of `representation_orbit_linearCombination`. -/
+theorem actual_induced_quotient_representation_orbit_linearCombination_source (g : G) (a : G →₀ ℂ) :
+    ρ g (Finsupp.linearCombination ℂ (fun h => ρ h v) a) =
+      Finsupp.linearCombination ℂ (fun h => ρ h v) (a.mapDomain (fun h => g * h)) :=
+  representation_orbit_linearCombination ρ v g a
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V W : Type*} [Group G] [NormedAddCommGroup V] [InnerProductSpace ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (hρ : ∀ g x y, inner ℂ (ρ g x) (ρ g y) = inner ℂ x y)
+    (v : V) (w : W) (ℓ : W →ₗ[ℂ] ℂ)
+    (hcoeff : ∀ g, ℓ (σ g w) = inner ℂ v (ρ g v))
+
+/-- Exact original-object consumer of `sphericalCoefficientIntertwiner_surjective`. -/
+theorem actual_induced_quotient_sphericalCoefficientIntertwiner_surjective_source
+    (hspan : Submodule.span ℂ (Set.range (fun g => ρ g v)) = ⊤) :
+    Function.Surjective (sphericalCoefficientIntertwiner ρ σ hρ v w ℓ hcoeff) :=
+  sphericalCoefficientIntertwiner_surjective ρ σ hρ v w ℓ hcoeff hspan
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+variable {G V W : Type*} [Group G] [AddCommGroup V] [Module ℂ V]
+    [AddCommGroup W] [Module ℂ W]
+    (ρ : Representation ℂ G V) (σ : Representation ℂ G W)
+    (T : Representation.IntertwiningMap ρ σ)
+
+/-- Exact original-object consumer of `intertwiningQuotientEquiv_intertwines`. -/
+theorem actual_induced_quotient_intertwiningQuotientEquiv_intertwines_source (hs : Function.Surjective T)
+    (g : G) (x : V ⧸ T.toLinearMap.ker) :
+    T.toLinearMap.quotKerEquivOfSurjective hs (intertwiningQuotientRepresentation ρ σ T g x) =
+      σ g (T.toLinearMap.quotKerEquivOfSurjective hs x) :=
+  intertwiningQuotientEquiv_intertwines ρ σ T hs g x
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveLocalInduced_spherical_constituent`. -/
+theorem actual_induced_quotient_primitiveLocalInduced_spherical_constituent_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) :
+    Nonempty (Representation.Equiv (primitiveLocalInducedQuotientRepresentation F hpN)
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) ∧
+      (adelicLocalSmoothRepresentation F.toCuspForm
+        (rationalPrimePlace p (Fact.out : p.Prime))).IsIrreducible :=
+  primitiveLocalInduced_spherical_constituent F hpN
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousMatrixAction_diagonal_monomial`. -/
+theorem actual_induced_quotient_homogeneousMatrixAction_diagonal_monomial_source {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (a : ι → ℂ) (n : ℕ) (d : ι →₀ ℕ) (hd : d.degree = n) :
+    homogeneousMatrixAction n (Matrix.diagonal a) (homogeneousMonomial n d hd) =
+      (d.prod (fun i m => a i ^ m)) • homogeneousMonomial n d hd :=
+  homogeneousMatrixAction_diagonal_monomial a n d hd
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousMonomial_span`. -/
+theorem actual_induced_quotient_homogeneousMonomial_span_source {ι : Type*} (n : ℕ) :
+    Submodule.span ℂ (Set.range (fun d : {d : ι →₀ ℕ | d.degree = n} =>
+      homogeneousMonomial n d.val d.property)) = ⊤ :=
+  homogeneousMonomial_span n
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `homogeneousUnitDiagonal_euler`. -/
+theorem actual_induced_quotient_homogeneousUnitDiagonal_euler_source (a b : ℂˣ) (n : ℕ) :
+    homogeneousMatrixEulerPolynomial n (gl2UnitDiagonalPair a b).val =
+      symmetricEulerPolynomial a.val b.val n :=
+  homogeneousUnitDiagonal_euler a b n
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveLocalInduced_actual_symmetric_factor`. -/
+theorem actual_induced_quotient_primitiveLocalInduced_actual_symmetric_factor_source {N p : ℕ} [NeZero N] [NeZero p]
+    [Fact p.Prime] {k : ℤ} (F : PrimitiveCuspForm N k) (hpN : p.Coprime N) (r : ℕ) (s : ℂ) :
+    Nonempty (Representation.Equiv (primitiveLocalInducedQuotientRepresentation F hpN)
+      (adelicLocalSmoothRepresentation F.toCuspForm (rationalPrimePlace p (Fact.out : p.Prime)))) ∧
+    primeSpectralEulerFactor (primitiveSymmetricSpectralRoots F r) ⟨p, Fact.out⟩ s =
+      ((primitiveSymmetricMatrixEulerPolynomial F p r).eval ((p : ℂ) ^ (-s)))⁻¹ :=
+  primitiveLocalInduced_actual_symmetric_factor F hpN r s
+
+end
+
+section
+
+open IsDedekindDomain Matrix
+
+/-- Exact original-object consumer of `primitiveSymmetricMatrix_hasProd_far`. -/
+theorem actual_induced_quotient_primitiveSymmetricMatrix_hasProd_far_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : PrimitiveCuspForm N k) (hk : 2 ≤ k) (r : ℕ) {s : ℂ} (hs : (r : ℝ) + 1 < s.re) :
+    HasProd (fun p : Nat.Primes => primitiveSymmetricMatrixLocalFactor F r p s)
+      (primitiveSymmetricLFunction F r s) :=
+  primitiveSymmetricMatrix_hasProd_far F hk r hs
+
+end
+

@@ -1,0 +1,46 @@
+import Dubon2026.SourceGammaOnePrimeHeckeIndex
+import Dubon2026.SourceGammaOneSignedHeckeIndex
+import Dubon2026.SourceGammaOneHeckeCoordinateDegree
+import Dubon2026.SourceGammaOneHeckePrimeDegree
+import Dubon2026.SourceGammaOneCoprimeGeneration
+import Dubon2026.SourceGammaOneAdjacentJRatio
+import Dubon2026.SourceGammaOneRealizationRestriction
+import Dubon2026.SourceGammaOneAdjacentJNonmembership
+import Dubon2026.SourceGammaOneAdjacentJGeneration
+import Dubon2026.SourceGammaOneAdjacentJPolynomial
+import Dubon2026.SourceGammaOneAdjacentJEmbedding
+import Dubon2026.SourceGammaOneAdjacentJPreservation
+import Dubon2026.SourceGammaOneAdjacentJAutomorphism
+import Dubon2026.SourceGammaOneAdjacentJCoefficients
+import Dubon2026.SourceGammaOneHeckeNormEmbeddings
+import Dubon2026.SourceGammaOneHeckeEmbeddingCensus
+import Dubon2026.SourceGammaOneHeckeNormProduct
+import Dubon2026.SourceGammaOneAdjacentJDiamondMatrix
+import Dubon2026.SourceGammaOneAdjacentJDiamondAction
+import Dubon2026.SourceGammaOneRationalAnalyticGerms
+import Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms
+import Dubon2026.SourceGammaOneAdjacentJAnalyticAction
+import Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness
+import Dubon2026.SourceGammaOneAdjacentJReverseDiamond
+import Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond
+import Dubon2026.SourceGammaOneHeckeDiamondNorm
+import Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+import Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOnePrimeHeckeIndex, `Dubon2026.SourceGammaOneSignedHeckeIndex, `Dubon2026.SourceGammaOneHeckeCoordinateDegree, `Dubon2026.SourceGammaOneHeckePrimeDegree, `Dubon2026.SourceGammaOneCoprimeGeneration, `Dubon2026.SourceGammaOneAdjacentJRatio, `Dubon2026.SourceGammaOneRealizationRestriction, `Dubon2026.SourceGammaOneAdjacentJNonmembership, `Dubon2026.SourceGammaOneAdjacentJGeneration, `Dubon2026.SourceGammaOneAdjacentJPolynomial, `Dubon2026.SourceGammaOneAdjacentJEmbedding, `Dubon2026.SourceGammaOneAdjacentJPreservation, `Dubon2026.SourceGammaOneAdjacentJAutomorphism, `Dubon2026.SourceGammaOneAdjacentJCoefficients, `Dubon2026.SourceGammaOneHeckeNormEmbeddings, `Dubon2026.SourceGammaOneHeckeEmbeddingCensus, `Dubon2026.SourceGammaOneHeckeNormProduct, `Dubon2026.SourceGammaOneAdjacentJDiamondMatrix, `Dubon2026.SourceGammaOneAdjacentJDiamondAction, `Dubon2026.SourceGammaOneRationalAnalyticGerms, `Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms, `Dubon2026.SourceGammaOneAdjacentJAnalyticAction, `Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness, `Dubon2026.SourceGammaOneAdjacentJReverseDiamond, `Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond, `Dubon2026.SourceGammaOneHeckeDiamondNorm, `Dubon2026.SourceGammaOneHeckeMixedLaurentReduction, `Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

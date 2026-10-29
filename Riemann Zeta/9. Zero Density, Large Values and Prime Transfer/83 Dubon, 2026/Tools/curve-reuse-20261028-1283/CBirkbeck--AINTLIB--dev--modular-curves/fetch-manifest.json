@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T14:46:47.683142+00:00",
+  "repository": "CBirkbeck/AINTLIB",
+  "branch": "dev/modular-curves",
+  "revision": "dfc30e5082a97472b11138c5325b3acad7ec5071",
+  "commitDate": "2026-08-24T08:49:58Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB",
+      "path": "repository.json",
+      "sha256": "86C67D8B22BDFD99E3106F6ED9E4AB08185A3AA3D969E8E36D6192FFC535C774",
+      "bytes": 5192
+    },
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB/commits/dev/modular-curves",
+      "path": "commit.json",
+      "sha256": "96ED2A94840B5046D8A527AE639216A70C75A848A47151000E10D150EA3322CA",
+      "bytes": 17557
+    },
+    {
+      "url": "https://api.github.com/repos/CBirkbeck/AINTLIB/git/trees/dfc30e5082a97472b11138c5325b3acad7ec5071?recursive=1",
+      "path": "tree.json",
+      "sha256": "FC5ECB11C1CD48C4EA739A19D8B0CE31CD518C0C9D1397231BF26CCA464CA12B",
+      "bytes": 1332919
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/dfc30e5082a97472b11138c5325b3acad7ec5071/README.md",
+      "path": "README.md.txt",
+      "sha256": "E0723F334F58AF8541575449ABF72227C2D9E335DF4F90C5511DF3BA8D3A3D99",
+      "bytes": 3063
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/dfc30e5082a97472b11138c5325b3acad7ec5071/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "CDBC6C372A2B37AD94430A6CEC69CEDFA4D36F255BFD968773FD91BF7A1746BF",
+      "bytes": 29
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/dfc30e5082a97472b11138c5325b3acad7ec5071/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "331016DDDE1E75A10FBE15A1976E5312F022BAC330D2A8677EE3D5C25B8FDB3A",
+      "bytes": 3134
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CBirkbeck/AINTLIB/dfc30e5082a97472b11138c5325b3acad7ec5071/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

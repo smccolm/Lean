@@ -1,0 +1,199 @@
+{
+  "recordedUTC": "2026-10-29T01:15:58.647410+00:00",
+  "reason": "The first frozen scratch audit failed exactly docBlame on the public trSum definition. Fresh independent source paths add its missing documentation string; all mathematical statements and proof bodies are unchanged. The original canonical sources, logs, scripts and failed audit remain immutable. No linter suppression or exclusion.",
+  "modules": [
+    {
+      "module": "SourceGammaOneEvenIntegralRatios",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEvenIntegralRatios.lean",
+      "originalSha256": "83AC191EC6D4B7F22C6D6A6BC4DB5F2912A6A54A76057D9BAD1457DC50953BCC",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceGammaOneEvenIntegralRatios.lean",
+      "newSha256": "453B03172D34D871B26F2F74AAD057474E7EA48E575552ED1F5DD74457D3230E",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceLevelOneCoefficientRing",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneCoefficientRing.lean",
+      "originalSha256": "112B5324F20DB51534474175C849552E11EA7474AC625A769FF78FA42B6A4B6E",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneCoefficientRing.lean",
+      "newSha256": "5668EACE6D77280BC71457E4E8C8212D8706D87114C5C94BBF70F66AAEA3A6D0",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceLevelOneIntegralWeightFactor",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneIntegralWeightFactor.lean",
+      "originalSha256": "96C9F6D1CA131B0352D3FBF4E846C9ED4303AD898CF3E7106EFE4C310E2B1CB3",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneIntegralWeightFactor.lean",
+      "newSha256": "71ED34A2587841A877152B7A96592D77D257134944A8198C61B86DEAC5E1BAC5",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceTraceProductCoefficientRing",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceTraceProductCoefficientRing.lean",
+      "originalSha256": "1BE1D0360E3E126FB8E901E57E1D66977A86EE7EA106C7239B8D7DC937D1A831",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceProductCoefficientRing.lean",
+      "newSha256": "EB3D731BD06BBA3850150690D92B957C686A4CA596E2F62FEC6458498A136C41",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralLevelOneTraceCoefficients",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralLevelOneTraceCoefficients.lean",
+      "originalSha256": "8DA5F438A256AA3A15CD00CD9627282764B3A45A683C25CA5C3E72B8DF72FDAB",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralLevelOneTraceCoefficients.lean",
+      "newSha256": "C1AA217D5E7A0D1325DF66693BFD9CA1090D690297929D04DC6339C90E7BBC7D",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceTraceExponentialCoefficientVanishing",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceTraceExponentialCoefficientVanishing.lean",
+      "originalSha256": "A1F0C68F22CF3A8B08EC8E1C5748439D51E1900D8E94A753692E218F83F7D2E6",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceExponentialCoefficientVanishing.lean",
+      "newSha256": "356A6A18680A1E2783A69E5FF2EA190A28057445B7DC1940E747304CB9258D2B",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceParameters",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceParameters.lean",
+      "originalSha256": "7D95D664DA7E50A1513B2612BF0A49374E9270E75D240F39FD0ED816CA382316",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceParameters.lean",
+      "newSha256": "0B137171E8428B1B23F949865024778E43B004B946EE513EE1F47983D04A83FF",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTracePowerCoefficients",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTracePowerCoefficients.lean",
+      "originalSha256": "9EF6F227FA80C0C50398F2EF2860A709F9CDE1C0F1F1510AD3B291160C5BF5E9",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePowerCoefficients.lean",
+      "newSha256": "9947DFFF85D0CE8C61267124BA6A96CB6BD3B04AE051193F5E9C38BE97937184",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceCoefficientExtraction",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceCoefficientExtraction.lean",
+      "originalSha256": "BD587D4A0D8BFF924194E76792F019E89F9ABB259CDD5C51857C7D9C9F99BF09",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCoefficientExtraction.lean",
+      "newSha256": "3DFE953B0BF96C8816A25DDF51945BD9E800304C8A6BC7DDBC7408FAA890372C",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceModularForm",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceModularForm.lean",
+      "originalSha256": "9A0961B2468106F568DFD0EE06C06578B3AED34F04FE9EFAEABF260EAE76A234",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceModularForm.lean",
+      "newSha256": "B7CC4183A2309DEBAA46EE24ECE40466D80E3036A0EF8ACA976BCAE4EE6818DD",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceCuspTransversal",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceCuspTransversal.lean",
+      "originalSha256": "F3974674A2D76CED3E1784B64E401E8DA9756A222A4F664B309810575E4B924B",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCuspTransversal.lean",
+      "newSha256": "8FB9D0ABB443849D5881EA31D6ACD5C24E0D2D88273EF9A6016CDFBC49C20B46",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceTranslates",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceTranslates.lean",
+      "originalSha256": "00367BA0ADEAF4610B2283A682434729FBB91CC75AA9849491DAA1A9CDEFCEB1",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslates.lean",
+      "newSha256": "CCAE169C699E92C4E7E7FC3945E31EDDEF165DB9619A90E84A5315829139C953",
+      "proofBodyChanged": false,
+      "documentationAdded": true
+    },
+    {
+      "module": "SourceIntegralTraceTranslationCoefficients",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceTranslationCoefficients.lean",
+      "originalSha256": "1E9FD81636CCA4689288CF8E3C501FC69BE822FE6190AC8C2F16A5D52E0C0FDA",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationCoefficients.lean",
+      "newSha256": "BC819CD65D6C1D098678A1BC3391441534E0CA9937F9EFCC9B6014B46E60CF41",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTracePeriodWidth",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTracePeriodWidth.lean",
+      "originalSha256": "B9AD825AADBC7F760761892A17CEFE22168A3FCBECE146538B98ADA6519C4645",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePeriodWidth.lean",
+      "newSha256": "D6D3786C435E1C31663CB291C743F87A53BDDC75518FAE1FF46C44CEA12798F8",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceAnalyticProducts",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceAnalyticProducts.lean",
+      "originalSha256": "69D0E7BC65A3EC1B3B3B7C47088BA75B5E91C3D33853E15A24D96F3AD9A29B5F",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceAnalyticProducts.lean",
+      "newSha256": "499638157C90C5BD2BD27F1F28C39B5836C49E471E6C27E4B773FD76EE338849",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceSlashPeriods",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceSlashPeriods.lean",
+      "originalSha256": "8C432F746D673FF02A96B3A0EA4C4133D6A21D23A0F321CED199754972A5CA73",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceSlashPeriods.lean",
+      "newSha256": "D555E0609867B241C5450E33AE9867EB1265E9CE28DEDFC8B4B5BF69B2B360B2",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceTranslationAssembly",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceTranslationAssembly.lean",
+      "originalSha256": "6DDA6501BF1869D6F254FB9212D490B06109DB7D2249F26AB7EA2C7D96CC1B8A",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationAssembly.lean",
+      "newSha256": "E4BBC0A2AFF31A057D1A52240A51C4C530A2F818C4FF01DC7C2F4406170C2A31",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceTransversalSplit",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceTransversalSplit.lean",
+      "originalSha256": "BD86CA78F1952405556432FCFFD1C054F116A96E6B03D522119808FC4B30E956",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTransversalSplit.lean",
+      "newSha256": "F78473B2ADDB26B7F8B7EEC84A5497B9BD92C9C91B8A972C8B398DE9CDCD69B8",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceDecomposition",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceDecomposition.lean",
+      "originalSha256": "488F3B6DB7BA95D9039C86DFBFFED233E69FEDAB0C13CFFC7D449C203EBB311B",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDecomposition.lean",
+      "newSha256": "0EF5ACB9E055B73163A29E8B9D4F49ABBCD7C48210096DEFD8F93534DCB25C7C",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceIntegralTraceDegenerateCusp",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceDegenerateCusp.lean",
+      "originalSha256": "E308F590E564331EC00DFE7EE725D4D4CDF8BBA448E3915768A6F0E77FACEA8A",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDegenerateCusp.lean",
+      "newSha256": "B44D04F31C11F6811754845E5492D881645D16F7DFA93C9F0B2B381007982A28",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    },
+    {
+      "module": "SourceEvenWeightPeakedTraceIntegrality",
+      "originalCanonical": "E:\\Lean\\.tmp\\dubon83\\SourceEvenWeightPeakedTraceIntegrality.lean",
+      "originalSha256": "6453E7F7474EC59C0755B61DEEE6CF6A515285043C4C8F4540815B34AC1DE202",
+      "newCanonical": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceEvenWeightPeakedTraceIntegrality.lean",
+      "newSha256": "6AA79446D33EA2296AFF1E812C4804318E1C63F8853DFAD61A563B969DF4F26B",
+      "proofBodyChanged": false,
+      "documentationAdded": false
+    }
+  ],
+  "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTraceAudit1.log",
+  "failedAuditSha256": "91C461B2CAA5EE95D48CB0F071F5FBD10C50ADCDAE66D5D869093F4FE76C9FB9",
+  "productionMutation": false,
+  "proofLimitsChanged": false
+}

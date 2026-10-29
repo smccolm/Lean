@@ -1,0 +1,23 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `finiteGalois_sup_unramified`. -/
+theorem actual_finite_galois_unramified_sup_finiteGalois_sup_unramified_source (a : 𝓞 K) (ha : a ≠ 0)
+    (F G : FiniteGaloisIntermediateField K Ω)
+    (hF : ∀ w : HeightOneSpectrum (𝓞 F), algebraMap (𝓞 K) (𝓞 F) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1)
+    (hG : ∀ w : HeightOneSpectrum (𝓞 G), algebraMap (𝓞 K) (𝓞 G) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1) :
+    ∀ w : HeightOneSpectrum (𝓞 (F ⊔ G : FiniteGaloisIntermediateField K Ω)),
+      algebraMap (𝓞 K) (𝓞 (F ⊔ G : FiniteGaloisIntermediateField K Ω)) a ∉ w.asIdeal →
+        (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1 :=
+  finiteGalois_sup_unramified a ha F G hF hG
+
+end
+

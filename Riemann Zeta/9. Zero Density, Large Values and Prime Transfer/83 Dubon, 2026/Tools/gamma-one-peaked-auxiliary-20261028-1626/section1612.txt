@@ -1,0 +1,7 @@
+### Actual actual arithmetic unramified first-order local comparison — 9 October 2026
+
+For an original residually unramified arithmetic representation, the actual inertia-coboundary criterion for its continuous adjoint local condition reduces to original cocycle vanishing on genuine inertia. Original first-order matrix reconstruction identifies this exactly with the same lifted arithmetic representation killing every element of the actual inertia subgroup. This proves the local H1 condition matches genuine first-order unramifiedness.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedFirstOrderCriterion](Extension/Dubon2026/ArithmeticUnramifiedFirstOrderCriterion.lean).

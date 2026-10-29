@@ -1,0 +1,188 @@
+import Dubon2026.SourceGammaOneGaussCriterion
+import Dubon2026.SourceGammaOneGaussValuation
+import Dubon2026.SourceGammaOneGaussResidueHom
+import Dubon2026.SourceGammaOneGaussResidueKernel
+import Dubon2026.SourceGammaOneGaussConstants
+import Dubon2026.SourceGammaOneGaussResidueImage
+import Dubon2026.SourceGammaOneRegularProlongation
+import Dubon2026.SourceGammaOneResidueJCoordinate
+import Dubon2026.SourceReductionResidueCoordinateFinite
+import Dubon2026.SourceGammaOneResidueCoordinateFinite
+import Dubon2026.SourceGammaOneResidueSeparability
+import Dubon2026.SourceGammaOneDecompositionGauss
+import Dubon2026.SourceGammaOneResidueArithmetic
+import Dubon2026.SourceGammaOneHeckeGauss
+import Dubon2026.SourceGammaOneResidueHecke
+import Dubon2026.SourceGammaOneResidueHeckeFinite
+import Dubon2026.SourceGammaOneResidueFrobenius
+import Dubon2026.SourceGammaOneResiduePlaces
+import Dubon2026.SourceGammaOneResiduePlaceOrders
+import Dubon2026.SourceGammaOneResidueFrobeniusPlaces
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_exists_primitive_fraction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_isInt_or_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.mem_coefficientGaussRing_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_witness
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.ι_mem_gaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_ι
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.algebraMap_mem_gaussRing_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_smul'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_smul_mem_gaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding_residue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_ker
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_residue_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_jCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jCoordinateOver_mem_gaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_jCoordinateOver
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jq_mem_residueImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver
+#print axioms Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_rank_le
+#print axioms Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_finite_and_finrank_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.coefficientGaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueJCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneGaussCriterion, `Dubon2026.SourceGammaOneGaussValuation, `Dubon2026.SourceGammaOneGaussResidueHom, `Dubon2026.SourceGammaOneGaussResidueKernel, `Dubon2026.SourceGammaOneGaussConstants, `Dubon2026.SourceGammaOneGaussResidueImage, `Dubon2026.SourceGammaOneRegularProlongation, `Dubon2026.SourceGammaOneResidueJCoordinate, `Dubon2026.SourceReductionResidueCoordinateFinite, `Dubon2026.SourceGammaOneResidueCoordinateFinite, `Dubon2026.SourceGammaOneResidueSeparability, `Dubon2026.SourceGammaOneDecompositionGauss, `Dubon2026.SourceGammaOneResidueArithmetic, `Dubon2026.SourceGammaOneHeckeGauss, `Dubon2026.SourceGammaOneResidueHecke, `Dubon2026.SourceGammaOneResidueHeckeFinite, `Dubon2026.SourceGammaOneResidueFrobenius, `Dubon2026.SourceGammaOneResiduePlaces, `Dubon2026.SourceGammaOneResiduePlaceOrders, `Dubon2026.SourceGammaOneResidueFrobeniusPlaces]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_exists_primitive_fraction, `Dubon2026.SourceFunctionField.GammaOne.qExpFunctionField_isInt_or_inv, `Dubon2026.SourceFunctionField.GammaOne.mem_coefficientGaussRing_iff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_witness, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_apply, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.ι_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_ι, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.algebraMap_mem_gaussRing_iff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coe_smul', `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_smul_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding_residue, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_surjective, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_ker, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_residue_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_jCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jCoordinateOver_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.jq_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver, `Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_rank_le, `Dubon2026.SourceCurve.RegularProlongation.residue_coordinate_finite_and_finrank_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_finite_residueCoordinate_and_degree_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.pow_ne_residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isSeparable_residueCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_isSeparable_residueCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.coeffMap_decomposition_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom_residueToImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_eq_one_of_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage_arithmetic_frobenius_coeff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlpha_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.isInt_qExpand, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_heckeAlpha_le, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpand_mem_residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_reduction, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_hecke_hom_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_symm_constants, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coefficient, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_isIntegral, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_finite, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta_eq_alpha_geometricFrobenius, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.coefficientGaussRing, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resL, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueEmbedding, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueToImage, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueJCoordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionGaussHom, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeAlphaGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeAlpha, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueHeckeBeta, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE REDUCTION AUDIT PASS: {count} theorems including private/generated declarations. Actual original coefficient reduction, finite residue correspondence, conditional Frobenius factorization and residue-place orders. Degree/genus preservation, original Picard specialization and arithmetic realization remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneGaussCriterion
+
+#lint in Dubon2026.SourceGammaOneGaussValuation
+
+#lint in Dubon2026.SourceGammaOneGaussResidueHom
+
+#lint in Dubon2026.SourceGammaOneGaussResidueKernel
+
+#lint in Dubon2026.SourceGammaOneGaussConstants
+
+#lint in Dubon2026.SourceGammaOneGaussResidueImage
+
+#lint in Dubon2026.SourceGammaOneRegularProlongation
+
+#lint in Dubon2026.SourceGammaOneResidueJCoordinate
+
+#lint in Dubon2026.SourceReductionResidueCoordinateFinite
+
+#lint in Dubon2026.SourceGammaOneResidueCoordinateFinite
+
+#lint in Dubon2026.SourceGammaOneResidueSeparability
+
+#lint in Dubon2026.SourceGammaOneDecompositionGauss
+
+#lint in Dubon2026.SourceGammaOneResidueArithmetic
+
+#lint in Dubon2026.SourceGammaOneHeckeGauss
+
+#lint in Dubon2026.SourceGammaOneResidueHecke
+
+#lint in Dubon2026.SourceGammaOneResidueHeckeFinite
+
+#lint in Dubon2026.SourceGammaOneResidueFrobenius
+
+#lint in Dubon2026.SourceGammaOneResiduePlaces
+
+#lint in Dubon2026.SourceGammaOneResiduePlaceOrders
+
+#lint in Dubon2026.SourceGammaOneResidueFrobeniusPlaces

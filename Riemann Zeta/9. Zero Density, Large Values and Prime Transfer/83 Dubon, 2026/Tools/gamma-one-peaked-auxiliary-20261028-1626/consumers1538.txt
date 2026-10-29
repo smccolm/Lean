@@ -1,0 +1,62 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S : Type*} [CommRing R] [IsDomain R] [CommRing S] [IsDomain S]
+  [Algebra R S] [Algebra.IsIntegral R S] [Module.IsTorsionFree R S]
+
+/-- Exact original-object consumer of `heightOnePrime_exists_liesOver`. -/
+theorem actual_finite_base_unramified_heightOnePrime_exists_liesOver_source (v : HeightOneSpectrum R) :
+    ∃ w : HeightOneSpectrum S, w.asIdeal.LiesOver v.asIdeal :=
+  heightOnePrime_exists_liesOver v
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L] [IsGalois K L]
+
+/-- Exact original-object consumer of `numberField_galois_unramified_at_every_prime`. -/
+theorem actual_finite_base_unramified_numberField_galois_unramified_at_every_prime_source
+    (v : HeightOneSpectrum (𝓞 K))
+    (h : ∃ w : HeightOneSpectrum (𝓞 L), w.asIdeal.LiesOver v.asIdeal ∧
+      v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (z : HeightOneSpectrum (𝓞 L)) [z.asIdeal.LiesOver v.asIdeal] :
+    v.asIdeal.ramificationIdx z.asIdeal = 1 :=
+  numberField_galois_unramified_at_every_prime v h z
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+  [IsGalois K Ω]
+
+/-- Exact original-object consumer of `finiteBase_unramified_finite_subextensions`. -/
+theorem actual_finite_base_unramified_finiteBase_unramified_finite_subextensions_source
+    (S : Set (HeightOneSpectrum (𝓞 K)))
+    (hunram : ∀ F : FiniteGaloisIntermediateField K Ω,
+      ∀ v : HeightOneSpectrum (𝓞 K), v ∉ S →
+        ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+          v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (E : IntermediateField K Ω) [FiniteDimensional K E] [NumberField E]
+    (F : FiniteGaloisIntermediateField E Ω)
+    (v : HeightOneSpectrum (𝓞 E)) (hv : v.under (𝓞 K) ∉ S) :
+    ∃ w : HeightOneSpectrum (𝓞 F), w.asIdeal.LiesOver v.asIdeal ∧
+      v.asIdeal.ramificationIdx w.asIdeal = 1 :=
+  finiteBase_unramified_finite_subextensions S hunram E F v hv
+
+end
+

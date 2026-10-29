@@ -1,0 +1,36 @@
+import SourceAbsoluteCyclotomicCharacter
+import Dubon2026.SourceValuationFrobeniusRoots
+
+/-! DUB-17/18 -> original all-weight Galois realization -> cyclotomic
+Frobenius and inertia at the exact original valuation. Reuse the existing
+valuation-root theorem, so no root-separation or valuation-ring foundation
+is reconstructed. The conductor is only required to be residue-invertible. -/
+namespace Dubon2026
+noncomputable section
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+local notation "kk" => IsLocalRing.ResidueField A
+
+theorem sourceAbsoluteCyclotomicCharacter_frobenius (q : ℕ)
+    (hN : (N : kk) ≠ 0) (d : A.decompositionSubgroup ℚ)
+    (hd : ∀ a : kk, d • a = a ^ q) :
+    (sourceAbsoluteCyclotomicCharacter N d.val : ZMod N) = (q : ZMod N) := by
+  obtain ⟨ζ, hζ⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot Qbar N
+  have he := valuation_frobenius_root A N q (NeZero.ne N) hN d hd ζ hζ.pow_eq_one
+  apply ZMod.val_injective
+  apply hζ.pow_inj (ZMod.val_lt _) (ZMod.val_lt _)
+  rw [← sourceAbsoluteCyclotomicCharacter_apply_root N d.val hζ, he,
+    ZMod.val_natCast, hζ.eq_orderOf, pow_mod_orderOf]
+
+theorem sourceAbsoluteCyclotomicCharacter_inertia (hN : (N : kk) ≠ 0)
+    (d : A.decompositionSubgroup ℚ) (hd : d ∈ A.inertiaSubgroup ℚ) :
+    sourceAbsoluteCyclotomicCharacter N d.val = 1 := by
+  have hact (a : kk) : d • a = a ^ 1 := by
+    have h := MonoidHom.mem_ker.mp hd
+    simpa only [pow_one] using congrArg (fun e : RingAut kk => e a) h
+  apply Units.ext
+  simpa only [Nat.cast_one, Units.val_one] using
+    sourceAbsoluteCyclotomicCharacter_frobenius A N 1 hN d hact
+
+end
+end Dubon2026

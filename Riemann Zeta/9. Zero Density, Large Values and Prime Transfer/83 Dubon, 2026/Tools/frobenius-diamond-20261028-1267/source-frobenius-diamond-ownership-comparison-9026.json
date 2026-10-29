@@ -1,0 +1,196 @@
+{
+  "scratchSum": 108,
+  "scratchDistinct": 108,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryFrobeniusNormalization": "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+    "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryFrobeniusNormalization._proof_1": "_private.Dubon2026.SourceGammaOneBinaryFrobeniusNormalization.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+    "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryGaloisHecke": "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+    "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneBinaryGaloisHecke._proof_1": "_private.Dubon2026.SourceGammaOneBinaryGaloisHecke.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+  },
+  "productionFocused": 108,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceHomogeneousHeckeDiamond",
+        "SourceGammaOneHeckeDiamondCoefficient",
+        "SourceGammaOneArithmeticTateOperators",
+        "SourceTateDualQuadratic",
+        "SourceGammaOneBinaryFrobeniusNormalization",
+        "SourceCoefficientDualAction",
+        "SourceGammaOneBinaryGaloisHecke"
+      ],
+      "count": 36,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusNormalizationScratchOwnership1250.log",
+        "sha256": "B14EC0E495278F87874A3A67DE897567B06395429B166FCDE3FA2CFF18484E0B",
+        "sourceSha256": "628055247A8A7E3F4C0EC323F5BAE11006863F5020FEA9DFC32772F310C6ECD3"
+      }
+    },
+    {
+      "modules": [
+        "SourceInnerH1Identity",
+        "SourceH1TraceInner",
+        "SourceGammaOneDiamondRange",
+        "SourceH1TraceSubgroupEquality",
+        "SourceNormalizerH1Trace",
+        "SourceH1CompositionSquare",
+        "SourceNormalizerCoefficientValue",
+        "SourceGammaOneDiamondSubgroupSquare",
+        "SourceGammaOneDiamondTransfer"
+      ],
+      "count": 31,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceDiamondTransferScratchOwnership1262.log",
+        "sha256": "34E834BC04CBF4E05A2662C7ED41D6762C732FC75D4487EA9FACB2BDCBE995F0",
+        "sourceSha256": "99787C7F156E17A590E823398E6648BD668AC56FE701D2EAE00E3B3678E57869"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckeDiamondWords",
+        "SourceGammaOneHeckeDiamondDescent",
+        "SourcePrimitiveGammaOneHeckeDiamondCharacter"
+      ],
+      "count": 41,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeDiamondCharacterScratchOwnership1267.log",
+        "sha256": "982BA829B4024E1B7668DB551C10E849C08FAA50FAA825885C73E77E6C087FD9",
+        "sourceSha256": "723AAF685FA48B69D4F131E21D6A175B677E037DE5ECF050F6700AF9D7C8E2D3"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusDiamondOwnership9026.log",
+    "sha256": "D2769FB43BA9935488A624532AD85ADAD8496A37DAD42018FD3639D75BFCD589",
+    "sourceSha256": "C48B5B0788AB47710FE7C83837F925255E2C1D9ACA1B8B9D413B44C9F8C05502"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-051626-555.log",
+    "sha256": "FCBE977305DA25E0DE76429EFAA55D2D499B016038E24293DCB349F0203C51F0"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceHomogeneousHeckeDiamond",
+        "scratchSha256": "5418C2B4BCB0B91B6B0A8C15EC2CA280F81034034331F2C3E791BCE76FE08354",
+        "productionSha256": "8CB491670DBF09AB3FB9C4D7B8141983C2A3C5952182DEC7B5BC533E36665E20",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeDiamondCoefficient",
+        "scratchSha256": "BC8E6EBE230CC01440CF6B63BA965B5AAFA5243842EFC2E47A565B7923D7B80B",
+        "productionSha256": "0C58D6D166A713C64F4D3ED8E0397AF80A5A5B98E443F06E4AA0FCFA303E4DA6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneArithmeticTateOperators",
+        "scratchSha256": "7F9D271945303587AA5B515FCAD95181CFEA797C542F09228A2794F1F55F617C",
+        "productionSha256": "AF87DA4C75EC087BC19B9F6ACDD124AC27B4CE2A96B8F7C47FD1A5284561ED78",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTateDualQuadratic",
+        "scratchSha256": "99AB2E5C6A5F71CBB85246141D3C7F5A6A2756BB06246561AD78B6EBB2104ED2",
+        "productionSha256": "E9FC3FEB5C8E0D0EE1B335F8C3901C320D4D73D73C27C533A9BE61AFBE0B725D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneBinaryFrobeniusNormalization",
+        "scratchSha256": "84A56971677269D271A6BDF7613B725BA036B7B6343247AFCB58FC02A56851DD",
+        "productionSha256": "89519E05880AB958502D542C6F55A7B57D4F6211DEB3AC5BB6B674F4395A19B9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCoefficientDualAction",
+        "scratchSha256": "8A84A3F08B676A96E90BF0A38FB5E32C42705F45007BFDEB1A82BD6054B4FB86",
+        "productionSha256": "1A7D7349F5FB045701E047AE1DA548DA8F480BECCCECC9596DFCD0D574902CAB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneBinaryGaloisHecke",
+        "scratchSha256": "7ECC677F9E2647DD1FB9D586882306F49B50F03550A498A3C9EF77DE89BD90E3",
+        "productionSha256": "1839AC3013C784BF17177071DECD625386F65450F64D2339979F1560803D8E62",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceInnerH1Identity",
+        "scratchSha256": "3E235C7A9A76CD06BF4970FAC3E4B178966F538BDFB24A89BF73B524D433B2EC",
+        "productionSha256": "11996948735E2B1DA8CDA50B9F67DB87667590BA0D1B3753B742BAE234B02E40",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1TraceInner",
+        "scratchSha256": "21AC3DA9ADD755E6FB9106863F961412D20714A35CF6C339674EADECA348F0C3",
+        "productionSha256": "C20EEAE6B4F2B2E423A2A4FF44BFCD8B3BBD1304F46F25687EBC5BDCA0B8E571",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiamondRange",
+        "scratchSha256": "1E4E99CE0631D6DC7534AA786017B95B57D4C86BA9D607DC033EA0B3B207AF17",
+        "productionSha256": "D434C62865D4797356DA388AF19B9DC22BFE3922452B5A5FEF3366101500F944",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1TraceSubgroupEquality",
+        "scratchSha256": "2969B3963088BFEBFB89F487D8F23B092ACCC76EDF2F0748158F7D9D4740B69E",
+        "productionSha256": "4738793A03BC08353764A5538B5CD8105B48D67B71E613B3862FC9C04561A431",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNormalizerH1Trace",
+        "scratchSha256": "19BDA5EA08DD81E438E5A32508AE3AC1B958F1F7C6D6AF75C555515590111A12",
+        "productionSha256": "15281B03C926B90E26F8DFFB3D702FE3827531C9878E3522FE8078C23306EF28",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1CompositionSquare",
+        "scratchSha256": "240A64FD100DE47F95E6227C1362185585F47F656100373378F1B832C6970CA4",
+        "productionSha256": "EA9EDA3B8427CD21A9239802689FAC8C253A5D7B5122F60D229442B4940F67E6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNormalizerCoefficientValue",
+        "scratchSha256": "6DC183BB8D87E405DD00CE389B2A582CDA3C2AA25C87CA87C22DEB4026F25DEE",
+        "productionSha256": "8178562FE160611D88B87182F3DF1DE2B661BF7F5DEAC5E3B1C29A5024FD187F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiamondSubgroupSquare",
+        "scratchSha256": "4B907F40625AEB434EB670439B5A4DD9BD67BBDF82FF8CBC373D3BA79ABE00D4",
+        "productionSha256": "D47110DEB2CB57B0C2ECB792AF66CA0B44875062ED480C34C450F46EE3BB929E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiamondTransfer",
+        "scratchSha256": "FCCE2E9DBBD6DC7FC41A21896EEF70529A5BB9B47C791FDA513FD8FC9F8F9FF1",
+        "productionSha256": "176F14E34B6581CC8749655CC31938B5A7B1F489E6B6CA9BF030D4EF10593F3D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeDiamondWords",
+        "scratchSha256": "BAD39740F5C0A4F2BC94FA321AAC389D046B2F5EF96C2B3E3790B40111B9AF36",
+        "productionSha256": "0C4CBE2224DB6FCBB9245523D11F1EF34EA7A2E09FA80684C8EB168CA68F35AF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeDiamondDescent",
+        "scratchSha256": "017B2F6A10AFAD7F637EF7F52F81E56B328520F5B257418FFE64283ACFEB130A",
+        "productionSha256": "9C2559F3B62B43675A83E5894D6B163CFACF56DE38219829FBD635A47B51EB4A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveGammaOneHeckeDiamondCharacter",
+        "scratchSha256": "5FB4A952682DD91BB8D029C9BE946D3ABE85DB2BC904CB540842B43FA7D2302F",
+        "productionSha256": "D1FD2C34C0E1ED41C17C60238985668C975B64CBB361FFEFC5ACC3E196F55AFE",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

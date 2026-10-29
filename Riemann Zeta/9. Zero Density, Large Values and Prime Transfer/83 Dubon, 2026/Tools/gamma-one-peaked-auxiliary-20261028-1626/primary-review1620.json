@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "RelativeDualNumberFramedEquiv",
+  "mathematics": "The true original relative dual-number residue and proved product/adic topology bridge give a bijection between all original continuous first-order lifts and the full framed coefficient fiber over the original local coefficient ring. Every original matrix is preserved in both directions.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact original local residue maps, original continuous coefficient and framed fibers, actual quotient universality and local first-order classification inspected.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf",
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Actual relative dual-number point comparison only. No cotangent or derivation comparison, H1(ad0) identification, full Selmer dimension formula, modular association or patching claimed.",
+  "livePrimaryRecheck": "relative-first-order-route-20261010.json; external sources supply background only.",
+  "productionLog": "relativeFramed1620-focus.log"
+}

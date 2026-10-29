@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneHeckeMixedLaurentReduction
+import Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOnePrimeHeckeIndex, `Dubon2026.SourceGammaOneSignedHeckeIndex, `Dubon2026.SourceGammaOneHeckeCoordinateDegree, `Dubon2026.SourceGammaOneHeckePrimeDegree, `Dubon2026.SourceGammaOneCoprimeGeneration, `Dubon2026.SourceGammaOneAdjacentJRatio, `Dubon2026.SourceGammaOneRealizationRestriction, `Dubon2026.SourceGammaOneAdjacentJNonmembership, `Dubon2026.SourceGammaOneAdjacentJGeneration, `Dubon2026.SourceGammaOneAdjacentJPolynomial, `Dubon2026.SourceGammaOneAdjacentJEmbedding, `Dubon2026.SourceGammaOneAdjacentJPreservation, `Dubon2026.SourceGammaOneAdjacentJAutomorphism, `Dubon2026.SourceGammaOneAdjacentJCoefficients, `Dubon2026.SourceGammaOneHeckeNormEmbeddings, `Dubon2026.SourceGammaOneHeckeEmbeddingCensus, `Dubon2026.SourceGammaOneHeckeNormProduct, `Dubon2026.SourceGammaOneAdjacentJDiamondMatrix, `Dubon2026.SourceGammaOneAdjacentJDiamondAction, `Dubon2026.SourceGammaOneRationalAnalyticGerms, `Dubon2026.SourceGammaOneUpperHalfPlaneHeckeGerms, `Dubon2026.SourceGammaOneAdjacentJAnalyticAction, `Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness, `Dubon2026.SourceGammaOneAdjacentJReverseDiamond, `Dubon2026.SourceGammaOneAdjacentJArithmeticDiamond, `Dubon2026.SourceGammaOneHeckeDiamondNorm, `Dubon2026.SourceGammaOneHeckeMixedLaurentReduction, `Dubon2026.SourceGammaOneHeckeIntegralDiamondReduction]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_integral_reduction_of_diamond_product, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_integral_reduction_of_diamond, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product, `Dubon2026.SourceFunctionField.primeRootValuationUnit_coe, `Dubon2026.SourceFunctionField.primeRootValuationUnit_residue, `Dubon2026.SourceFunctionField.qExpand_heckeLaurentUnexpand, `Dubon2026.SourceFunctionField.pow_char_eq_coeffMap_frobenius_qExpand, `Dubon2026.SourceFunctionField.qExpand_injective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND REDUCTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual original Gamma1 integral Hecke norm reduction with explicit integral representatives of the original input and its actual diamond image. The norm-product, embedding census, reverse-map identity and diamond label are derived; producing the diamond integral representative from input integrality alone, genus preservation and original Picard specialization remain unresolved; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

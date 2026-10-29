@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `finiteIntermediateField_le_directed_stage`. -/
+theorem actual_finite_subextension_directed_descent_finiteIntermediateField_le_directed_stage_source
+    {ι : Type*} [Nonempty ι] (F : ι → IntermediateField K Ω)
+    (hdir : Directed (· ≤ ·) F)
+    (E : IntermediateField K Ω) [FiniteDimensional K E] [Algebra.IsSeparable K E]
+    (hE : E ≤ ⨆ i, F i) : ∃ i, E ≤ F i :=
+  finiteIntermediateField_le_directed_stage F hdir E hE
+
+end
+

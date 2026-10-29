@@ -1,0 +1,64 @@
+import Dubon2026.SourceGammaOnePicardPrimeKernel
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> Picard
+specialization. Strong induction removes every invertible torsion order
+from the kernel using the proved prime-order case. The same constructed
+constant reduction therefore has an injective Picard torsion map. Actual
+coordinate-degree and genus preservation remain the two geometric inputs;
+no torsion injectivity, Kummer lifting or good-reduction model is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Δ
+
+theorem gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF)
+    (R : ConstantReduction A FF Fb)
+    (hR : R.toRegularProlongation = regularProlongation A Δ)
+    (m : ℕ) (hm : (m : kk) ≠ 0)
+    (z : Pic0 Qbar FF) (hmz : m • z = 0) (hz : R.pic0Map z = 0) : z = 0 := by
+  induction m using Nat.strong_induction_on generalizing z with
+  | h m ih =>
+    by_cases hm1 : m = 1
+    · simpa only [hm1, one_nsmul] using hmz
+    obtain ⟨q, hq, k, rfl⟩ := Nat.exists_prime_and_dvd hm1
+    letI : Fact q.Prime := ⟨hq⟩
+    have hqk : (q : kk) ≠ 0 := by
+      intro he
+      exact hm (by rw [Nat.cast_mul, he, zero_mul])
+    have hkk : (k : kk) ≠ 0 := by
+      intro he
+      exact hm (by rw [Nat.cast_mul, he, mul_zero])
+    have hkpos : 0 < k := Nat.pos_of_ne_zero (fun he => hkk (by rw [he, Nat.cast_zero]))
+    have hklt : k < q * k := by nlinarith [hq.two_le]
+    have hkz : k • z = 0 :=
+      gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq A M hdeg hgen R hR hqk
+        (k • z) (by rw [← mul_nsmul, Nat.mul_comm]; exact hmz)
+        (by rw [map_nsmul, hz, nsmul_zero])
+    exact ih k hklt hkk z hkz hz
+
+theorem exists_gammaOne_picard_torsion_injective_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ R : ConstantReduction A FF Fb,
+      R.toRegularProlongation = regularProlongation A Δ ∧
+      ∀ m : ℕ, (m : kk) ≠ 0 →
+        Set.InjOn R.pic0Map (↑(Pic0.torsion (K := Qbar) (F := FF) m)) := by
+  obtain ⟨R, hR⟩ := exists_gammaOne_constant_reduction_of_degree_genus_eq A M hdeg hgen
+  refine ⟨R, hR, fun m hm x hx y hy hxy => ?_⟩
+  apply sub_eq_zero.mp
+  apply gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq A M hdeg hgen R hR m hm (x - y)
+  · rw [nsmul_sub, Pic0.mem_torsion_iff.mp hx, Pic0.mem_torsion_iff.mp hy, sub_self]
+  · rw [map_sub, hxy, sub_self]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,76 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricTangentCohomologyLift_ker`. -/
+theorem actual_symmetric_cohomology_residual_symmetricTangentCohomologyLift_ker_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) :
+    LinearMap.ker (coordinateTangentCohomologyMap ρ) ≤
+      LinearMap.ker (symmetricTangentCohomologyLift n ρ) :=
+  symmetricTangentCohomologyLift_ker n ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricAdjointCohomologyMap_firstOrder`. -/
+theorem actual_symmetric_cohomology_residual_symmetricAdjointCohomologyMap_firstOrder_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (τ : MatrixFirstOrderLift ρ) :
+    symmetricAdjointCohomologyMap n ρ
+      (groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ)) =
+      groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+        (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ τ)) :=
+  symmetricAdjointCohomologyMap_firstOrder n ρ τ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `residualRepresentationCoordinateQuotientEquiv_mk`. -/
+theorem actual_symmetric_cohomology_residual_residualRepresentationCoordinateQuotientEquiv_mk_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (x : RepresentationCoordinateAlgebra G ι O) :
+    residualRepresentationCoordinateQuotientEquiv ρ
+      (Ideal.Quotient.mk (residualRepresentationCoordinateIdeal ρ) x) =
+        representationCoordinateEvaluation (R := O) ρ x :=
+  residualRepresentationCoordinateQuotientEquiv_mk ρ x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι O : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O]
+
+/-- Exact original-object consumer of `integralRepresentationCoordinates_isUnit`. -/
+theorem actual_symmetric_cohomology_residual_integralRepresentationCoordinates_isUnit_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (τ : MatrixRepresentationFiber ρ (Algebra.ofId O (IsLocalRing.ResidueField O)))
+    (x : RepresentationCoordinateAlgebra G ι O) (hx : x ∉ residualRepresentationCoordinateIdeal ρ) :
+    IsUnit (representationCoordinateEvaluation (R := O) τ.val x) :=
+  integralRepresentationCoordinates_isUnit ρ τ x hx
+
+end
+

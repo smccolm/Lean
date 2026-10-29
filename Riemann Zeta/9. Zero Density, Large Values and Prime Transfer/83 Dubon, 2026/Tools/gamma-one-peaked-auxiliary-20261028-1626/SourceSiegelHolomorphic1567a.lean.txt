@@ -1,0 +1,69 @@
+import SourceSiegelThetaIdentification1566a
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary. Use the literal Siegel
+infinite product and identify it with the original analytic Jacobi theta
+function divided by the native nonvanishing eta product. This discharges
+holomorphy of the required factors and supplies common identities for
+their SL2 transformation; modularity and integral expansions remain
+separate obligations. No abstract function replaces the product.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+Def_ModularCurve_SiegelFunction and
+S_ModularCurve_SiegelUnit_differentiableOn_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Manifold Real MatrixGroups
+
+theorem differentiable_w (N : ℕ) (r s : ℤ) : Differentiable ℂ (w N r s) := by
+  unfold w; fun_prop
+
+theorem differentiable_pref (N : ℕ) (r s : ℤ) : Differentiable ℂ (pref N r s) := by
+  unfold pref; fun_prop
+
+theorem differentiableAt_theta_w (N : ℕ) (r s : ℤ) {τ : ℂ} (hτ : 0 < τ.im) :
+    DifferentiableAt ℂ (fun z => jacobiTheta₂ (w N r s z) z) τ := by
+  have h1 : DifferentiableAt ℂ (fun p : ℂ × ℂ => jacobiTheta₂ p.1 p.2) (w N r s τ, τ) :=
+    (hasFDerivAt_jacobiTheta₂ (w N r s τ) hτ).differentiableAt
+  have h2 : DifferentiableAt ℂ (fun z => (w N r s z, z)) τ :=
+    ((differentiable_w N r s) τ).prodMk differentiableAt_id
+  have h3 : DifferentiableAt ℂ ((fun p : ℂ × ℂ => jacobiTheta₂ p.1 p.2) ∘ (fun z => (w N r s z, z))) τ :=
+    DifferentiableAt.comp (g := fun p : ℂ × ℂ => jacobiTheta₂ p.1 p.2) (f := fun z => (w N r s z, z)) τ h1 h2
+  exact h3
+
+theorem differentiableAt_P {τ : ℂ} (hτ : 0 < τ.im) : DifferentiableAt ℂ P τ := by
+  have h := ModularForm.differentiableAt_eta_tprod (z := τ) hτ
+  have hfun : (fun x => ∏' n, (1 - ModularForm.eta_q n x)) = P := by
+    funext x
+    exact tprod_congr (fun n => one_sub_eta_q n x)
+  rwa [hfun] at h
+
+theorem siegelFun_eq_theta (N : ℕ) (hN : N ≠ 0) (r s : ℤ) {τ : ℂ} (hτ : 0 < τ.im) :
+    siegelFun N r s τ = pref N r s τ * (jacobiTheta₂ (w N r s τ) τ / P τ) := by
+  rw [siegelFun_eq, theta_eq N hN r s hτ, mul_div_cancel_left₀ _ (P_ne_zero hτ)]
+
+theorem differentiableOn_siegelFun (N : ℕ) (r s : ℤ) :
+    DifferentiableOn ℂ (fun z : ℂ => siegelFun N r s z) {z : ℂ | 0 < z.im} := by
+  rcases eq_or_ne N 0 with rfl | hN
+  · simp only [siegelFun_level_zero]
+    exact differentiableOn_const 0
+  · have h : DifferentiableOn ℂ (fun z => pref N r s z * (jacobiTheta₂ (w N r s z) z / P z)) {z : ℂ | 0 < z.im} :=
+      fun z hz => (((differentiable_pref N r s) z).mul
+        ((differentiableAt_theta_w N r s hz).div (differentiableAt_P hz) (P_ne_zero hz))).differentiableWithinAt
+    exact h.congr fun z hz => siegelFun_eq_theta N hN r s hz
+
+theorem mdifferentiable_siegelFun (N : ℕ) (r s : ℤ) :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (fun τ : ℍ => siegelFun N r s (τ : ℂ)) := by
+  intro τ
+  rw [UpperHalfPlane.mdifferentiableAt_iff]
+  have hd : DifferentiableAt ℂ (fun z : ℂ => siegelFun N r s z) (τ : ℂ) :=
+    (differentiableOn_siegelFun N r s).differentiableAt (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)
+  refine hd.congr_of_eventuallyEq ?_
+  filter_upwards [UpperHalfPlane.eventuallyEq_coe_comp_ofComplex τ.im_pos] with z hz
+  simp only [Function.comp_apply, id_eq] at hz
+  simp only [Function.comp_apply, hz]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

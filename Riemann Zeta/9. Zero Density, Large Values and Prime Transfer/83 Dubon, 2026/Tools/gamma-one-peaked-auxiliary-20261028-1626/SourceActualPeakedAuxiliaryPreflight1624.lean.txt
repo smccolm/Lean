@@ -1,0 +1,92 @@
+import SourcePeakedDiscriminantSeries1610b
+import SourcePeakedSeriesOperations1611b
+import SourcePeakedShiftedCoefficients1615b
+import SourcePeakedShiftedSeries1613d
+import SourcePeakedWidthOneIdentification1617b
+import SourcePeakedIntegralQExpansion1618b
+import SourcePeakedTranslatedIntegralExpansion1620a
+import SourcePeakedScaledOrders1621a
+import SourcePeakedOrderGapDecay1622a
+import SourceActualPeakedAuxiliary1623a
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.constantCoeff_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_discriminant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.expands_deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_X_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_natCast_zpow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.natCast_mem_strictPeriods_gammaOne
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.isIntegral_phase
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_inv_eq_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_product_delta
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_level_inverse_phase_leading
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_adjusted
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries_leading
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_qExpansion_slash_of_nonneg_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.Ord_scaleExponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_level_multiple_peaked_exponent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_clearing_discriminant_power
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.orderSum_eq_Ord
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_width_one_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.cusp_order_gap_bigO
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.deltaN
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.shiftedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.adjustedSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.scaleExponent
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePeakedDiscriminantSeries1610b, `SourcePeakedSeriesOperations1611b, `SourcePeakedShiftedCoefficients1615b, `SourcePeakedShiftedSeries1613d, `SourcePeakedWidthOneIdentification1617b, `SourcePeakedIntegralQExpansion1618b, `SourcePeakedTranslatedIntegralExpansion1620a, `SourcePeakedScaledOrders1621a, `SourcePeakedOrderGapDecay1622a, `SourceActualPeakedAuxiliary1623a]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.constantCoeff_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_discriminant, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.expands_deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.expands_X_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.Expands.smul, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.qParam_natCast_zpow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion.natCast_mem_strictPeriods_gammaOne, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.isIntegral_phase, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.phase_inv_eq_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_product_delta, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_level_inverse_phase_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.hasSum_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_adjusted, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.coeff_adjustedSeries_leading, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.qExpansion_one_coeff_of_coe_eq_prod_siegelFun_pow_mul_discriminant_pow, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.integral_qExpansion_slash_of_nonneg_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.Ord_scaleExponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_level_multiple_peaked_exponent, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_clearing_discriminant_power, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.orderSum_eq_Ord, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.exists_width_one_order, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.cusp_order_gap_bigO, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.exists_gamma1_peaked_auxiliary_form_twelve_dvd]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.deltaN, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.shiftedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients.adjustedSeries, `Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Construction.scaleExponent]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Siegel expansion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Siegel expansion theorems discovered"
+  logInfo m!"SOURCE ACTUAL PEAKED AUXILIARY PREFLIGHT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourcePeakedDiscriminantSeries1610b
+#lint in SourcePeakedSeriesOperations1611b
+#lint in SourcePeakedShiftedCoefficients1615b
+#lint in SourcePeakedShiftedSeries1613d
+#lint in SourcePeakedWidthOneIdentification1617b
+#lint in SourcePeakedIntegralQExpansion1618b
+#lint in SourcePeakedTranslatedIntegralExpansion1620a
+#lint in SourcePeakedScaledOrders1621a
+#lint in SourcePeakedOrderGapDecay1622a
+#lint in SourceActualPeakedAuxiliary1623a

@@ -1,0 +1,454 @@
+{
+  "status": "Canonical PASS of the original Gamma One conditional inertia, norm-derived Tate Frobenius and inverse-action all-weight polynomial. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_frobenius_9123.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_frobenius_9123.ps1",
+      "sha256": "09F117F7549EB3DE25C93702318D20BBC373B6E4B26771A6EE426B7C3E44A94D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_tate_frobenius_ownership_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/compare_gamma_one_tate_frobenius_ownership_9123.py",
+      "sha256": "0E278E5F812DCFB9EC4243BEEDDC8418816C192770EED4DEC164992CCB438FC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-tate-frobenius-preexecution-review-9123.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-tate-frobenius-preexecution-review-9123.json",
+      "sha256": "22CD8B8CA444FD25127D4F11AB829034C73BCEF73B022DA41C84984B59F04FC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-tate-frobenius-preflight-9123.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-tate-frobenius-preflight-9123.json",
+      "sha256": "93629151A447A563C8317646F5D6666CB79B631D21F1FF92433A478C99830603"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_tate_frobenius_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/integrate_source_gamma_one_tate_frobenius_9123.py",
+      "sha256": "A6AD92ED0709B05B1DB0E88AC3B32AFA33761110954C0079936663F196AF96BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_tate_frobenius_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/preflight_gamma_one_tate_frobenius_9123.py",
+      "sha256": "BD83B44EDFD2061AFEB5936A72E8F3052604488B8674AF6AF0226DE3791B654B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_frobenius_global_ownership_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_tate_frobenius_global_ownership_9123.py",
+      "sha256": "FB6F8868A907E91E1B1CCE943D5A74E9DBC9AC7ECB97E556D1A6A99AC095EFF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_frobenius_production_ownership_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_tate_frobenius_production_ownership_9123.py",
+      "sha256": "7CCF742F2D6B3E63F08DABD25FEF7949C78F9AA00AF013EC876FA27CD6E7E747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_tate_frobenius_9123.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record_source_gamma_one_tate_frobenius_9123.py",
+      "sha256": "96635358D593ED91B816FE85EFA301C8A24026F432A90FF245DEDFF76833E3C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-tate-frobenius-ownership-comparison-9123.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-tate-frobenius-ownership-comparison-9123.json",
+      "sha256": "2A775950E134D39D694BA20B0D62B6CA5947C1F0663A18E5A024A2BCD050BBF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-tate-frobenius-production-build-9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-tate-frobenius-production-build-9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-tate-frobenius-production-build-9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-tate-frobenius-production-build-9123.log",
+      "sha256": "D57B5022038968C63B7B335295EB9C4519E317508B1C8FDE7EC8F758B1CDD118"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-tate-frobenius-scratch-ownership-9123.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-tate-frobenius-scratch-ownership-9123.json",
+      "sha256": "78406AC74607FC664A45CFB1DC74A50C8CD4C6C17AE1A8FA913A3D65FDA3B61F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1Production9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1Production9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1Production9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1Production9123.lean.txt",
+      "sha256": "6346668193DCE42EE40D51AFE9753C9B99A414F321D6141CF5FCE2805177CBC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1Production9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1Production9123.log",
+      "sha256": "A8630C47E4823DD9C89E418ABB12AED79EB326E48CC33D7214D3A6A1F2ECD567"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1Production9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1Production9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1Production9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1Production9123.lean.txt",
+      "sha256": "589AA51BABC588B6791DBD3A755E85E35DCF1AC3D0B0A50109D826F78B53DD50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1Production9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1Production9123.log",
+      "sha256": "154F699D841DB6F624A33DD678DDED1CA859DC357632586FA6A426075189C56D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1Production9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1Production9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1Production9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1Production9123.lean.txt",
+      "sha256": "A712371AE7F45E9861F4F60BDE9841BB98E7126B607982DC70E912F3210976EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1Production9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1Production9123.log",
+      "sha256": "80193C9C5F41A7DB60E66A553E7AD14BC70BAEA35273E224EF8B73B4F7D70D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusGlobalOwnership9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusGlobalOwnership9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusGlobalOwnership9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusGlobalOwnership9123.lean.txt",
+      "sha256": "59C7F872FEB592C517E0A44E5F4AD7E308EA7B1D1F4CB93C2513424C1D4FB60D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusGlobalOwnership9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusGlobalOwnership9123.log",
+      "sha256": "0EAE04E528265EB37E6808EAC9899C51B106C083CC03251AE9688433A902966E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusOwnership9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusOwnership9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusOwnership9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusOwnership9123.lean.txt",
+      "sha256": "D3AFDF28AA3A7BD95FCBA8B041E0D0E0B9C55621C5D9901C3A8FEC4E99FD42F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusOwnership9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusOwnership9123.log",
+      "sha256": "81B09B669137EB894648319467B9A3F10E5D0ADDB3439FADEAA9329D654641A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusProductionAudit9123.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusProductionAudit9123.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusProductionAudit9123.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusProductionAudit9123.lean.txt",
+      "sha256": "D0427E0E99103213F2A663E50345680198B6E032C6F80F9B15AFF052E94BC75D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusProductionAudit9123.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusProductionAudit9123.log",
+      "sha256": "B6B047EF28F9A61129117E7134FCED6691F44B6E966B5D02DB658311839DF92E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_tate_frobenius_9123.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/verify_gamma_one_tate_frobenius_9123.ps1",
+      "sha256": "415375425998E7F3EF638CF1FCFE3DBF1065BE20639CFB4CA9B1564B91C42536"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-28T22:52:05.468808+00:00",
+    "log": "logs/dubon-build-20261028-142234-414.log",
+    "sha256": "F3E599DE9F1150CC4C436C6E7CB27664D7FD32F2A9065C1DF31986C18C092D40",
+    "bytes": 14987318,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9123,
+    "projectTheorems": 57737,
+    "registeredConsumers": 26662,
+    "registeredConstructions": 2857,
+    "declarations": 35504,
+    "generated": 37192,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261028_141402.log",
+    "foundationSha256": "65A6CD9EE8618D51CD1016168BAEF000E5E0FE1CD5E6A4860411F86A5A0A4647",
+    "countReconciliation": {
+      "previousTheorems": 57656,
+      "focusedTheorems": 81,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 81,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusGlobalOwnership9123.log",
+      "globalOwnershipSha256": "0EAE04E528265EB37E6808EAC9899C51B106C083CC03251AE9688433A902966E",
+      "globalOwnershipSourceSha256": "59C7F872FEB592C517E0A44E5F4AD7E308EA7B1D1F4CB93C2513424C1D4FB60D",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusOwnership9123.log",
+      "ownershipSha256": "81B09B669137EB894648319467B9A3F10E5D0ADDB3439FADEAA9329D654641A4"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 81,
+      "scratchDistinct": 81,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceGammaOneArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneArithmeticFrobenius": "_private.Dubon2026.SourceGammaOneArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneArithmeticFrobenius._proof_1": "_private.Dubon2026.SourceGammaOneArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1",
+        "_private.Dubon2026.SourceGammaOneGeometricArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneGeometricArithmeticFrobenius": "_private.Dubon2026.SourceGammaOneGeometricArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instIsScalarTowerPadicIntZModHPowNatHAddOfNatVSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep",
+        "_private.Dubon2026.SourceGammaOneGeometricArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep_sourceGammaOneGeometricArithmeticFrobenius._proof_1": "_private.Dubon2026.SourceGammaOneGeometricArithmeticFrobenius.0.Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.instModulePadicIntVZModHPowNatHAddOfNatSubtypeSpecialLinearGroupFinIntMemSubgroupGamma0SourceBinaryCoefficientRep._proof_1"
+      },
+      "productionFocused": 81,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneArithmeticCharts",
+            "SourceGammaOneSpecializationCharts",
+            "SourceGammaOneDecompositionCharts",
+            "SourceGammaOneConstantReductionCharts",
+            "SourceGammaOneSpecializationEquivariance",
+            "SourceGammaOneInertiaPlaceReduction",
+            "SourceGammaOneInertiaPicard",
+            "SourceGammaOneTateInertia"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaScratchOwnership1368.log",
+            "sha256": "E7836C656D10690B70197D31670B2F1C17FE35BAB9177C3FA59AE0799E3D93E2",
+            "sourceSha256": "DB609465CBA1FF03A647D5B43E8CE65C0C9889F2341F96E71836FAA7E28CB121"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckePrincipalNorm",
+            "SourceGammaOneResidueDivisors",
+            "SourceGammaOneHeckeResidueNorm",
+            "SourceGammaOneIntegralDivisorReduction",
+            "SourceGammaOneHeckeIntegralAgreement",
+            "SourceGammaOneHeckeTorsionDivisors",
+            "SourceGammaOneResiduePicard",
+            "SourceGammaOneReductionPicardEquivariance",
+            "SourceGammaOneNormDiamondOrientation",
+            "SourceGammaOneHeckePicardDescent",
+            "SourceGammaOneHeckeTorsionPicard",
+            "SourceTorsionReductionDiamond",
+            "SourceGammaOnePicardFrobeniusRelation",
+            "SourceTateTorsionQuadratic",
+            "SourceGammaOneTateFrobeniusRelation"
+          ],
+          "count": 48,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusScratchOwnership1395.log",
+            "sha256": "F57BFCF874D09CC694580722EB99C4205DDE04B89047E2A8962040D4EB4F54F8",
+            "sourceSha256": "8029E810226FB0B751058308818F5F0AAC9BB698FD30EA0CA6C4854C7D67E176"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateDualArithmeticQuadratic",
+            "SourceGammaOneArithmeticFrobenius",
+            "SourceGammaOneGeometricArithmeticFrobenius"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticScratchOwnership1397.log",
+            "sha256": "45AA782CC4E4E10C9E17217FEEED1ED83D8E042E641BD0FCE005A0BA08548024",
+            "sourceSha256": "3FE276095830F43A72EC0B60D55B041E3F8DF83A7BB21C1F1B9B45462922DED3"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusOwnership9123.log",
+        "sha256": "81B09B669137EB894648319467B9A3F10E5D0ADDB3439FADEAA9329D654641A4",
+        "sourceSha256": "D3AFDF28AA3A7BD95FCBA8B041E0D0E0B9C55621C5D9901C3A8FEC4E99FD42F2"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261028-123004-635.log",
+        "sha256": "AD58FDC9C029C4E7BED937774E4359A96D969CDB9ECAEEDC26AAD2F59A932813"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneArithmeticCharts",
+            "scratchSha256": "EAE0F8091F7A0ACFB17039C0B139A76C8CDCEECB5D3A08B264A90112592A6AF2",
+            "productionSha256": "EAE0F8091F7A0ACFB17039C0B139A76C8CDCEECB5D3A08B264A90112592A6AF2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSpecializationCharts",
+            "scratchSha256": "029B641BB22C408D6193FF662850E9D4DC3233AED275D6D8E2C7602E98497898",
+            "productionSha256": "4A02527F73D7B83A01FDA85EC0D8826FAE0FB2A8FF18273B0926284DA324DD8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDecompositionCharts",
+            "scratchSha256": "0FDE41A31690806043C96AD2AEAB42A61A63BD6743A19EFB39325EEDF31F06DE",
+            "productionSha256": "008B7B19E283C9F0CF7618D2FCB40CF10CDDE0DE60674151BE0F79F95AF81D14",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneConstantReductionCharts",
+            "scratchSha256": "D27C84298F6DAAE912F3ED2ADE3723E28F94BF91BB3F35E36BDD8A646C8AE149",
+            "productionSha256": "185173E6468C4AC69303D49BD09C378B7F4708B746FFFA94A2F3F4997A2DF6E0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSpecializationEquivariance",
+            "scratchSha256": "8F976E295A9AEDA0EC0F39068AF3ACB15EA0D52617D3C54BBA1EBFF5E2C3207C",
+            "productionSha256": "452F05F5DB08A9B82FB84E616EC8F18C7EE6F9662F488D57CAC0B4157EE76155",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneInertiaPlaceReduction",
+            "scratchSha256": "33DB103BB63A88F3579C5BDB310F776A2A6CE663CE07708CBB8D97BDF7FC9391",
+            "productionSha256": "81E1FF26C73B2ED7E4B0ADFCD561C968D624DD228C1A2BB9FE80A53C56D64582",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneInertiaPicard",
+            "scratchSha256": "505EFDF0E2B36D25BF9D5838719CC57AF8422A9092A63434A45848402364ADB5",
+            "productionSha256": "6B420450148F915D39EC16E0AABFFF7DE41127EF3C98DFDBACEF7392BA9B704C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTateInertia",
+            "scratchSha256": "23FF3A074593CC3669BD0C82373532C675B28C08CCF97871C75C82118640D363",
+            "productionSha256": "69E72B09D9F93E9E33989A26FCC36504D973BB96CCD47056A2BD455D2E08EF31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckePrincipalNorm",
+            "scratchSha256": "3A3643DB2C2F2D5273A56A4819857ED30E37F82B2BC3B2A662A0326F91BD6073",
+            "productionSha256": "3A3643DB2C2F2D5273A56A4819857ED30E37F82B2BC3B2A662A0326F91BD6073",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResidueDivisors",
+            "scratchSha256": "1378CCEB3B3C99AFA7D784D51C94351811FCD3A823291ADC29A84178AF4176AA",
+            "productionSha256": "EC512D43F0B4916B01FBB5F6A2860A7B215E81B58C0A583436B6E43F82DF39C8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeResidueNorm",
+            "scratchSha256": "5BDB4C967C1B75EBEEA44400C88FAB998B222D440226AF17367966F298BD9E21",
+            "productionSha256": "01877F1A40916EBD23A7FB94B6487E64926AA40F1A0DA2864EFB98EBEB78DA51",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralDivisorReduction",
+            "scratchSha256": "E59E874403551429C91A605C38B6430CB043D87BBE483E66AD0FA0B0D9998D17",
+            "productionSha256": "A98ED124B7CC2BD4EF8EBA825976154DD7BA82923AE15E78E0BF4C64DD3F7DB0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeIntegralAgreement",
+            "scratchSha256": "54AF46D6A0F9E14C18EF386CC123B555936F19C8CBC408F369C557EAA409B1E2",
+            "productionSha256": "93DFDCE961D607418DDC8D9A0959D07E773F6AF84B8A11CE18F151A08D176472",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeTorsionDivisors",
+            "scratchSha256": "5A97534F6E3A9A446F83D873D3C585683CB7759E6A58FE7FDA5BE5F2A387CEEF",
+            "productionSha256": "7C764DD4A72A1BF68C3DE518A18EAEE0D0D4E22FB0CA15C0E1ED40A50FEB4B53",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneResiduePicard",
+            "scratchSha256": "BB10EA65DB42AB7368B28458F88318A27BBB8DFD0621C6B096A67CC6431BBFEE",
+            "productionSha256": "C8C1F7C8E67209E085DDC2228B845F4AB118195C8C59F39E5035DBFD85AFF0A1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneReductionPicardEquivariance",
+            "scratchSha256": "974893CB3D66F1EA0A860C2380323FEC301EAA7762F6526761D34947AEE69EAB",
+            "productionSha256": "5824DD01D956FE599B327FCB27B6D905774ED2B996C135D44D5F50EA9D79412C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneNormDiamondOrientation",
+            "scratchSha256": "2C0596A4207232619EF1193CB67BB8A84A53DC4F90359FF7E1B05986D84529DC",
+            "productionSha256": "2C0596A4207232619EF1193CB67BB8A84A53DC4F90359FF7E1B05986D84529DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckePicardDescent",
+            "scratchSha256": "076D1206045B3F6F7C7056AD22C9E280A138CE91352F95F9DA3350D353F71F90",
+            "productionSha256": "27F1DF1457A221F20282C6787C4B328318F29DBE521EFA66F91F514FECEAB7CF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeTorsionPicard",
+            "scratchSha256": "3AA330161AB442F9BE6DBF85426362D1526A57F82C1FB92EC19D27BE827CA847",
+            "productionSha256": "F5146EC00304FA456F8D5F86B448A25EDDF5ABE16D51040C426AFB1924059B67",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTorsionReductionDiamond",
+            "scratchSha256": "B0E66E49934DFA1F03B93F628D6C8B621191C69E206AE28D9861C571677F663D",
+            "productionSha256": "B0E66E49934DFA1F03B93F628D6C8B621191C69E206AE28D9861C571677F663D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePicardFrobeniusRelation",
+            "scratchSha256": "B30985A07A83E3C15573EFE8BBFBAB119D3CD470717434118C4E7F252D845A80",
+            "productionSha256": "AC1C8D2E98CCB651C457AE3F98CC9CF6985899FD89980BA01654ABE72E4D6A60",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateTorsionQuadratic",
+            "scratchSha256": "2B073CD2EC7068290AAB3C2817F3CF45348FF772FBDBAF39218A79C8D656DC79",
+            "productionSha256": "2B073CD2EC7068290AAB3C2817F3CF45348FF772FBDBAF39218A79C8D656DC79",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTateFrobeniusRelation",
+            "scratchSha256": "C6452EB1D85A7907043BA22D976608FDABA486C8B2499FA99972C3B71910AA23",
+            "productionSha256": "C9C0478067728354BFCC66CC1521CA354B47B806418B3A43266CBC29A06D6DB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateDualArithmeticQuadratic",
+            "scratchSha256": "4052DE1344C6032B07D9B6D089EF3B0CC77EB8668854D445DF2E8BE1EAF831BA",
+            "productionSha256": "4052DE1344C6032B07D9B6D089EF3B0CC77EB8668854D445DF2E8BE1EAF831BA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneArithmeticFrobenius",
+            "scratchSha256": "75C0FCE9EFACD005156D75D0985698E0F4265E9E907C9CFF7EEB4F19392B0C6A",
+            "productionSha256": "D4DDB7E2E03BE3A5E9C094A1294FF47F4D6625F97D8A796CCBCF0157201F1F40",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGeometricArithmeticFrobenius",
+            "scratchSha256": "B2104F10BD4FC5A5DD659950F9CD2175D7F14019C7E8D7E533C309D78530826E",
+            "productionSha256": "B3634AB27699DD20C98BE653714BC1CC3A894CBDCA8F0C6E7F11434FF8A94B8E",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 81 distinct names from 81 exhaustive scratch checks are retained: 81 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Actual Gamma1 j-coordinate degree equality and actual genus preservation remain open. The Frobenius and inertia statements remain conditional on those narrower geometric inputs. Combined-diamond fixedness, genuine global finite Galois/Hecke-character realization, parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. The newly derived twisted coefficient relation does not silently discharge the earlier differently normalized conditional relation. Acceptance stays 16/20; DUB-17--20 OPEN; all twenty acceptance tests are unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9123-console.log",
+      "sha256": "5395008E6F775C0466CD7BCE760573D29DF803AB865EC51AEDF0FC03DCBD4224"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9123-console.log",
+      "sha256": "99E9D3DD57294F20AE709D9F7619FD226DB14320CB443ECF4E5E5EC4684C582C"
+    }
+  ]
+}

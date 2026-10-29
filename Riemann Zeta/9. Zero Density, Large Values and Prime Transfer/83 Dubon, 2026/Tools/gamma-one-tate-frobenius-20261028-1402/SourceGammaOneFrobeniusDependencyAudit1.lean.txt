@@ -1,0 +1,42 @@
+import SourceGammaOneHeckePrincipalNorm
+import SourceGammaOneResidueDivisors
+import SourceGammaOneHeckeResidueNorm
+import SourceGammaOneIntegralDivisorReduction
+import SourceGammaOneHeckeIntegralAgreement
+import SourceGammaOneHeckeTorsionDivisors
+import SourceGammaOneResiduePicard
+import SourceGammaOneReductionPicardEquivariance
+import SourceGammaOneNormDiamondOrientation
+import SourceGammaOneHeckePicardDescent
+import SourceGammaOneHeckeTorsionPicard
+import SourceTorsionReductionDiamond
+import SourceGammaOnePicardFrobeniusRelation
+import SourceTateTorsionQuadratic
+import SourceGammaOneTateFrobeniusRelation
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq]
+  let localModules : Array Name := #[`SourceGammaOneResidueGeometry, `SourceCurveSeparatingGenusMaximum, `SourceReductionGenusPoleLifting, `SourceReductionGenusIntegralCharts, `SourceGammaOneGenusSpecialization, `SourceGammaOneOriginalSpecialization, `SourceGammaOneKummerDegree, `SourceGammaOneKummerGenus, `SourceJointSeparableFiniteOverlap, `SourceJointSeparableConstants, `SourceJointSeparableChartDimension, `SourceJointSeparablePoleDimension, `SourceJointSeparableGenus, `SourceGammaOneKummerResidueGenus, `SourceGammaOneKummerPowerLifting, `SourceGammaOnePicardPrimeKernel, `SourceGammaOnePicardTorsion, `SourceReductionCoordinateAutomorphism, `SourceGammaOneDiamondGauss, `SourceReductionMapReflection, `SourceGammaOneHeckeGaussReflection, `SourceGammaOneHeckeFractionProduct, `SourceGammaOneHeckeGaussNorm, `SourceGammaOneArithmeticCharts, `SourceGammaOneSpecializationCharts, `SourceGammaOneDecompositionCharts, `SourceGammaOneConstantReductionCharts, `SourceGammaOneSpecializationEquivariance, `SourceGammaOneInertiaPlaceReduction, `SourceGammaOneInertiaPicard, `SourceGammaOneTateInertia, `SourceGammaOneHeckePrincipalNorm, `SourceGammaOneResidueDivisors, `SourceGammaOneHeckeResidueNorm, `SourceGammaOneIntegralDivisorReduction, `SourceGammaOneHeckeIntegralAgreement, `SourceGammaOneHeckeTorsionDivisors, `SourceGammaOneResiduePicard, `SourceGammaOneReductionPicardEquivariance, `SourceGammaOneNormDiamondOrientation, `SourceGammaOneHeckePicardDescent, `SourceGammaOneHeckeTorsionPicard, `SourceTorsionReductionDiamond, `SourceGammaOnePicardFrobeniusRelation, `SourceTateTorsionQuadratic, `SourceGammaOneTateFrobeniusRelation]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_apply, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_degree, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_inverse_divisor_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss_residue_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_residue_norm_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_reduction_integral_divisor_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_symm, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisor_principal, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_mk, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_inverse, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_equivariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_equivariant, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondAut_inverse_lift, `Dubon2026.SourceFunctionField.GammaOne.norm_diamond_inverse_label, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_inverse_lift_mk, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.hecke_picard_reduction_mk_of_divisor_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq, `Dubon2026.sourceTorsionReduction_diamond_quadratic, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq, `Dubon2026.TateModule.tateMap_diamond_quadratic, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDegZero, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard, `Dubon2026.SourceCurve.Divisor.geometricCorrespondence_order, `Dubon2026.SourceCurve.RegularProlongation.exists_smul_mem, `Dubon2026.SourceCurve.RegularProlongation.isUnit_of_residue_ne_zero, `Dubon2026.SourceCurve.Pic0.mk_mem_torsion_iff, `Dubon2026.SourceFunctionField.GammaOne.ConstantField.principal_smul, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_coe, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_place_residue_bijective, `Dubon2026.SourceCurve.fieldDivisorEquiv, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_galois, `Dubon2026.SourceFunctionField.GammaOne.gamma1ArithmeticPicardRep_torsion, `Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_torsion, `Dubon2026.TateModule.torsion, `Dubon2026.TateModule.tateMap]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE FROBENIUS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the exact original Gamma1 Tate relation H*F = F*F*D + p with Picard diamond label p. The actual norm, divisor cancellation, Picard quotient descent, equivariant specialization and invertible-torsion injectivity are consumed. Coordinate-degree and genus preservation remain; no untwisted relation, global all-weight Galois representation, or acceptance gate is claimed; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

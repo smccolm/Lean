@@ -1,0 +1,37 @@
+import SourceGammaOneSpecializationEquivariance1363b
+
+/-! DUB-17/18 -> original Gamma1 Tate inertia -> actual specialization
+of places. The proved decomposition equivariance and trivial residue inertia
+action give invariance of the same specialization that is injective on
+invertible Picard torsion. Degree and genus preservation remain explicit. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => CongruenceSubgroup.Gamma1 M
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "Fb" => residueImage A Δ
+
+theorem exists_gammaOne_reduction_invariant_on_inertia_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF)
+    : ∃ R : ConstantReduction A FF Fb,
+      R.toRegularProlongation = regularProlongation A Δ ∧
+      (∀ m : ℕ, (m : kk) ≠ 0 →
+        Set.InjOn R.pic0Map (↑(Pic0.torsion (K := Qbar) (F := FF) m))) ∧
+      ∀ τ : Qbar ≃ₐ[ℚ] Qbar,
+        τ ∈ (A.inertiaSubgroup ℚ).map (A.decompositionSubgroup ℚ).subtype →
+        ∀ P : Place Qbar FF, R.placeMap (arithmeticPlace Δ τ P) = R.placeMap P := by
+  obtain ⟨R, hR, hinj, hplace⟩ :=
+    exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq A M hdeg hgen
+  refine ⟨R, hR, hinj, ?_⟩
+  intro τ hτ P
+  obtain ⟨d, hd, rfl⟩ := hτ
+  rw [hplace, decompositionResiduePlace_eq_self_of_inertia A Δ d hd]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

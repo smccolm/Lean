@@ -1,0 +1,88 @@
+import Dubon2026.SourceGammaOneAdjacentJAnalyticAction
+import Dubon2026.SourceGammaOneUpperHalfPlaneGermFaithfulness
+import Dubon2026.SourceGammaOneDiamondAnalyticGerms
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> reverse-map diamond
+term. Equality in the genuine analytic germ ring identifies the reverse
+map on every beta input with the actual complex diamond. The precise
+integral matrix, and hence its inverse lower-right label, is retained. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups Topology
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+local notation "Γ" => Gamma1 M ⊓ Gamma0 (p * M)
+local notation "FF" => x1FunctionField M
+local notation "GG" => x1x0FunctionFieldC ℚ M (p * M)
+
+theorem adjacentJ_reverse_diamond_eventuallyEq (hcop : Nat.Coprime M p)
+    (w : GG ≃ₐ[ℚ] GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (w ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (hj : (w ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq)
+    (γ : Gamma1 M) (hd : (p : ℤ) ∣ γ.val 1 1)
+    (z : FF) (hz : qExpand ℚ p z.val ∈ GG) (τ : ℍ) :
+    realize Γ (coeffEmb ℂ (w ⟨qExpand ℚ p z.val, hz⟩)) =ᶠ[𝓝[≠] τ]
+      realize Γ (diamondFieldHom M
+        ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+        (rationalComplexMap (Gamma1 M) z) : LaurentSeries ℂ) := by
+  have hH : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, Gamma0_mem, ModularGroup.T]
+  let f := rationalComplexMap (Gamma1 M) z
+  let δ : Gamma0 M :=
+    ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+  let W : GL (Fin 2) ℝ := (γ.val : GL (Fin 2) ℝ) * levelRaiseMatrix p
+  have htW : Tendsto (fun t : ℍ => W • t) (𝓝[≠] τ) (𝓝[≠] (W • τ)) :=
+    le_of_eq ((Homeomorph.smul W).map_punctured_nhds_eq τ)
+  have hb : (heckeBeta ℂ M p f : LaurentSeries ℂ) = coeffEmb ℂ (qExpand ℚ p z.val) := by
+    rw [heckeBeta_coe]
+    exact (coeffMap_qExpand (algebraMap ℚ ℂ) p z.val).symm
+  have hw := adjacentJ_realize_upperHalfPlane_eventuallyEq M p hcop w hbase hj γ hd
+    ⟨qExpand ℚ p z.val, hz⟩ τ
+  have hbeta := (realize_heckeBeta_upperHalfPlane_eventuallyEq M p hH.1 hH f
+    (W • τ)).comp_tendsto htW
+  rw [hb] at hbeta
+  have hdiamond : realize (Gamma1 M) (diamondFieldHom M δ f : LaurentSeries ℂ)
+      =ᶠ[𝓝[≠] τ] fun t => realize (Gamma1 M) (f : LaurentSeries ℂ) (δ.val • t) :=
+    SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp
+      (realize_diamondFieldHom_eventuallyEq M δ f τ)
+  have halpha := realize_restrict_upperHalfPlane_eventuallyEq inf_le_left hH
+    (diamondFieldHom M δ f) τ
+  filter_upwards [hw, hbeta, hdiamond, halpha] with t hw' hb' hd' ha'
+  simp only [Function.comp_apply, W, mul_smul] at hb'
+  change realize Γ (coeffEmb ℂ (w ⟨qExpand ℚ p z.val, hz⟩)) t =
+    realize Γ (diamondFieldHom M δ f : LaurentSeries ℂ) t
+  rw [hw']
+  calc
+    _ = realize (Gamma1 M) (f : LaurentSeries ℂ)
+        (levelRaiseMatrix p • (γ.val • (levelRaiseMatrix p • t))) := hb'
+    _ = realize (Gamma1 M) (f : LaurentSeries ℂ) (δ.val • t) := by
+      rw [adjacentJDiamondMatrix_smul p γ.val hd]
+    _ = _ := hd'.symm.trans ha'.symm
+
+theorem adjacentJ_reverse_complex_diamond (hcop : Nat.Coprime M p)
+    (w : GG ≃ₐ[ℚ] GG)
+    (hbase : ∀ (z : FF) (hz : (z : LaurentSeries ℚ) ∈ GG),
+      (w ⟨z, hz⟩ : LaurentSeries ℚ) = qExpand ℚ p z.val)
+    (hj : (w ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ : LaurentSeries ℚ) = jq)
+    (γ : Gamma1 M) (hd : (p : ℤ) ∣ γ.val 1 1)
+    (z : FF) (hz : qExpand ℚ p z.val ∈ GG) :
+    coeffEmb ℂ (w ⟨qExpand ℚ p z.val, hz⟩) =
+      (diamondFieldHom M
+        ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+        (rationalComplexMap (Gamma1 M) z) : LaurentSeries ℂ) := by
+  let τ : ℍ := ⟨Complex.I, by norm_num⟩
+  have hH : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, Gamma0_mem, ModularGroup.T]
+  let δ : Gamma0 M :=
+    ⟨adjacentJDiamondMatrix p γ.val hd, adjacentJDiamondMatrix_mem M p γ hd⟩
+  have he : rationalComplexMap Γ (w ⟨qExpand ℚ p z.val, hz⟩) =
+      heckeAlpha ℂ M p (diamondFieldHom M δ (rationalComplexMap (Gamma1 M) z)) := by
+    apply eq_of_realize_upperHalfPlane_eventuallyEq hH _ _ τ
+    rw [heckeAlpha_coe]
+    exact adjacentJ_reverse_diamond_eventuallyEq M p hcop w hbase hj γ hd z hz τ
+  have hc := congrArg (fun a : functionFieldOver Γ ℂ => (a : LaurentSeries ℂ)) he
+  dsimp only at hc
+  rw [heckeAlpha_coe] at hc
+  exact hc
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

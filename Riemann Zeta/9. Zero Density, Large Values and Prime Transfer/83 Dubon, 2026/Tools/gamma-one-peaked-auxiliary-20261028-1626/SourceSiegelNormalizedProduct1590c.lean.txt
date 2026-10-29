@@ -1,0 +1,52 @@
+import SourceSiegelResidueProductStreams1588b
+import SourceSiegelPolynomialFactors1584b
+import SourceSiegelProductTaylorExpansion1583b
+import SourceSiegelLeadingUnit1589b
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> peaked auxiliary -> exact integral Siegel expansion.
+Consume the actual residue reindexing and actual polynomial products to
+identify their analytic limit with the normalized literal Siegel function.
+The stabilized finite-product coefficients then supply its exact HasSum;
+integrality and the level-cleared leading inverse are proved separately.
+The native Taylor route replaces the source candidate's formal product W.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion
+noncomputable section
+open Complex Polynomial Filter Topology
+open scoped Real
+
+theorem polynomial_product_eq_streams (N : ℕ) (r : ℕ)
+    (hr : r < N) (u v : ℂ) {x : ℂ} (hx : ‖x‖ < 1) :
+    (if r = 0 then 1 - u else 1) * product (Pc N r u v) x =
+      (1 - u * x ^ r) * ∏' n : ℕ,
+        ((1 - u * x ^ ((n + 1) * N + r)) * (1 - v * x ^ (n * N + (N - r)))) := by
+  unfold product
+  simp_rw [Pc_eval]
+  exact tprod_Pc_eval N r hr u v hx
+
+theorem siegelFun_div_eq (N : ℕ) (hN : 0 < N) (r : ℕ) (hr : r < N) (s : ℤ) (τ : UpperHalfPlane) :
+    siegelFun N r s (τ : ℂ) /
+        (-cexp (π * I * (s : ℂ) * (((r : ℤ) : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+          cexp (2 * π * I * (6 * ((r : ℤ) : ℂ) ^ 2 - 6 * ((r : ℤ) : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) * (τ : ℂ) /
+            (12 * (N : ℂ) ^ 2))) =
+      (1 - zeta N s * qN N τ ^ r) *
+        ∏' n : ℕ, ((1 - zeta N s * qN N τ ^ ((n + 1) * N + r)) *
+          (1 - (zeta N s)⁻¹ * qN N τ ^ (n * N + (N - r)))) := by
+  rw [siegelFun_def]
+  simp only [Int.cast_natCast]
+  rw [pref_eq N hN r s]
+  have hA : -cexp (π * I * (s : ℂ) * ((r : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+      cexp (π * I * (((r : ℂ) / (N : ℂ)) ^ 2 - (r : ℂ) / (N : ℂ) + 1 / 6) * (τ : ℂ)) ≠ 0 :=
+    mul_ne_zero (neg_ne_zero.mpr (Complex.exp_ne_zero _)) (Complex.exp_ne_zero _)
+  rw [mul_assoc (_ * _) (1 - _) _, mul_div_cancel_left₀ _ hA]
+  congr 1
+  · rw [qa_eq N hN r s τ]; rfl
+  · refine tprod_congr fun n => ?_
+    rw [qpow_mul_qa N hN r s τ n, qpow_mul_qa_inv N hN r hr s τ n]; rfl
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.EulerExpansion

@@ -1,0 +1,44 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+variable {A : Type u} [CommRing A] [IsLocalRing A] [IsNoetherianRing A]
+  [Algebra O A] [WithIdeal A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+variable {B : Type u} [CommRing B] [IsLocalRing B] [IsNoetherianRing B]
+  [Algebra O B] [WithIdeal B] [IsAdicComplete (IsLocalRing.maximalIdeal B) B]
+
+/-- Exact original-object consumer of `fixedResidualFramedFiberEquiv_natural`. -/
+theorem actual_fixed_residual_framed_universality_fixedResidualFramedFiberEquiv_natural_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (hB : (WithIdeal.i : Ideal B) = IsLocalRing.maximalIdeal B)
+    (eA : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (eB : IsLocalRing.ResidueField B ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (S : Finset (originalResidualProfiniteGroup p H σ hσ))
+    (hS : Function.Surjective (profiniteGeneratorPresentation
+      (originalResidualProfiniteGroup p H σ hσ) S))
+    (k : A →ₐ[O] B) (hk : Continuous k)
+    (hres : (localCoefficientReduction eB).comp k = localCoefficientReduction eA) :
+    (letI := fixedResidualFramedCoefficientRing_isLocal p H σ hσ S
+     ∀ f : OriginalContinuousCoefficientFiber
+       (fixedResidualFramedCoefficientResidueEquiv p H σ hσ S) eA,
+       fixedResidualFramedFiberEquiv hB eB p hp H σ hσ S hS
+         (originalCoefficientFiberPostcomp _ eA eB k hk hres f) =
+           originalFramedFiberPostcomp eA eB H σ k hk hres
+             (fixedResidualFramedFiberEquiv hA eA p hp H σ hσ S hS f)) :=
+  fixedResidualFramedFiberEquiv_natural hA hB eA eB p hp H σ hσ S hS k hk hres
+
+end
+

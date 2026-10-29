@@ -1,0 +1,303 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T01:24:42.436355+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneEvenIntegralRatios",
+    "SourceLevelOneCoefficientRing",
+    "SourceLevelOneIntegralWeightFactor",
+    "SourceTraceProductCoefficientRing",
+    "SourceIntegralLevelOneTraceCoefficients",
+    "SourceTraceExponentialCoefficientVanishing",
+    "SourceIntegralTraceParameters",
+    "SourceIntegralTracePowerCoefficients",
+    "SourceIntegralTraceCoefficientExtraction",
+    "SourceIntegralTraceModularForm",
+    "SourceIntegralTraceCuspTransversal",
+    "SourceIntegralTraceTranslates",
+    "SourceIntegralTraceTranslationCoefficients",
+    "SourceIntegralTracePeriodWidth",
+    "SourceIntegralTraceAnalyticProducts",
+    "SourceIntegralTraceSlashPeriods",
+    "SourceIntegralTraceTranslationAssembly",
+    "SourceIntegralTraceTransversalSplit",
+    "SourceIntegralTraceDecomposition",
+    "SourceIntegralTraceDegenerateCusp",
+    "SourceEvenWeightPeakedTraceIntegrality"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceGammaOneEvenIntegralRatios.lean",
+      "sha256": "83AC191EC6D4B7F22C6D6A6BC4DB5F2912A6A54A76057D9BAD1457DC50953BCC",
+      "oleanSha256": "9BF24D2434CEB6F55E4B2389274EB7DA52737CB50BE6C88D81691D67F0BA4A35",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceGammaOneEvenIntegralRatios-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceGammaOneEvenIntegralRatios-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneCoefficientRing.lean",
+      "sha256": "112B5324F20DB51534474175C849552E11EA7474AC625A769FF78FA42B6A4B6E",
+      "oleanSha256": "AEA9E7D592D3EB7F39DF3A5931F6ABCED5F57336A40B7258644F0F8C9F9B57A3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneCoefficientRing-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneCoefficientRing-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneIntegralWeightFactor.lean",
+      "sha256": "96C9F6D1CA131B0352D3FBF4E846C9ED4303AD898CF3E7106EFE4C310E2B1CB3",
+      "oleanSha256": "1A5468A7471E4F2D40EA91721D28E29FB1E33923361B8847B2A606D3B402A350",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneIntegralWeightFactor-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceLevelOneIntegralWeightFactor-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceProductCoefficientRing.lean",
+      "sha256": "1BE1D0360E3E126FB8E901E57E1D66977A86EE7EA106C7239B8D7DC937D1A831",
+      "oleanSha256": "A5C3E1B99C616D5C0A33354282060D7C4AFF137C83E5536D460B316733C32EEC",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceProductCoefficientRing-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceProductCoefficientRing-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralLevelOneTraceCoefficients.lean",
+      "sha256": "8DA5F438A256AA3A15CD00CD9627282764B3A45A683C25CA5C3E72B8DF72FDAB",
+      "oleanSha256": "3BFD670E085444B81828553C95FDBD1D177CEA681EC338DC0A6A80B837524445",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralLevelOneTraceCoefficients-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralLevelOneTraceCoefficients-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceExponentialCoefficientVanishing.lean",
+      "sha256": "A1F0C68F22CF3A8B08EC8E1C5748439D51E1900D8E94A753692E218F83F7D2E6",
+      "oleanSha256": "3594185C81F0DE5B46A1060897DE74DB4418C3C0CA99D21EE44CCB4D38C3F564",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceExponentialCoefficientVanishing-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceTraceExponentialCoefficientVanishing-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceParameters.lean",
+      "sha256": "7D95D664DA7E50A1513B2612BF0A49374E9270E75D240F39FD0ED816CA382316",
+      "oleanSha256": "56BE6FF72F3EA599DC87D0FD123FE6CD2B13DA397F195A95B2567D1D507E762E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceParameters-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceParameters-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePowerCoefficients.lean",
+      "sha256": "9EF6F227FA80C0C50398F2EF2860A709F9CDE1C0F1F1510AD3B291160C5BF5E9",
+      "oleanSha256": "0823084E510780AF1F718CAC50FC4DFFE000060C5528D5B5EEFF35DBEA5C606B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePowerCoefficients-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePowerCoefficients-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCoefficientExtraction.lean",
+      "sha256": "BD587D4A0D8BFF924194E76792F019E89F9ABB259CDD5C51857C7D9C9F99BF09",
+      "oleanSha256": "FC5EC60147E3AB0FC1F0A97D2D8BB1B246844118553FAA047FB2B6F81DF13895",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCoefficientExtraction-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCoefficientExtraction-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceModularForm.lean",
+      "sha256": "9A0961B2468106F568DFD0EE06C06578B3AED34F04FE9EFAEABF260EAE76A234",
+      "oleanSha256": "5DD0447D386FF60825E82FDA5154088A417BA3A92BB4CD9376CB355D0BE12333",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceModularForm-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceModularForm-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCuspTransversal.lean",
+      "sha256": "F3974674A2D76CED3E1784B64E401E8DA9756A222A4F664B309810575E4B924B",
+      "oleanSha256": "259C094A18050162576BA3AA9B79299EEFF50D35F9A23C4A9BE3F503CCB9C18B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCuspTransversal-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceCuspTransversal-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslates.lean",
+      "sha256": "63345AEFC3ED42EEE4C63372825C0F2322814DCC4FEF46FDDF5449BD8B4F2AEA",
+      "oleanSha256": "695F8F63EA55545D1C24732ABC62BD9EF9891A41A331F4984F6A4FFC5270C5B0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslates-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslates-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationCoefficients.lean",
+      "sha256": "1E9FD81636CCA4689288CF8E3C501FC69BE822FE6190AC8C2F16A5D52E0C0FDA",
+      "oleanSha256": "3A2E02E9C9D339DB6F377720B30DD43D83911BDE5E27F8DEBE71F9DF87B7C763",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationCoefficients-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationCoefficients-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePeriodWidth.lean",
+      "sha256": "B9AD825AADBC7F760761892A17CEFE22168A3FCBECE146538B98ADA6519C4645",
+      "oleanSha256": "6526C56AF4CCBCD967D331FBF20E1B180CFCE1D0D5387A8C392FC3084928E66B",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePeriodWidth-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTracePeriodWidth-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceAnalyticProducts.lean",
+      "sha256": "69D0E7BC65A3EC1B3B3B7C47088BA75B5E91C3D33853E15A24D96F3AD9A29B5F",
+      "oleanSha256": "102874825E1FD0986B1DD3840A6969F108D9D60362A21F8436F946CA385B42B6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceAnalyticProducts-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceAnalyticProducts-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceSlashPeriods.lean",
+      "sha256": "8C432F746D673FF02A96B3A0EA4C4133D6A21D23A0F321CED199754972A5CA73",
+      "oleanSha256": "2E941E0A75777B99458E5070F63FB08191342D118FADC7B536E25F6A8397422D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceSlashPeriods-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceSlashPeriods-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationAssembly.lean",
+      "sha256": "6DDA6501BF1869D6F254FB9212D490B06109DB7D2249F26AB7EA2C7D96CC1B8A",
+      "oleanSha256": "699FEA8DF0ABF390564342ED7BE6CB0043625688EDE75EFB6DEDA531BAC03B53",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationAssembly-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTranslationAssembly-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTransversalSplit.lean",
+      "sha256": "BD86CA78F1952405556432FCFFD1C054F116A96E6B03D522119808FC4B30E956",
+      "oleanSha256": "1B945DD65250D8EDDD8394666406A584BCCD45D7AFEF4D8A73E8200855C4D505",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTransversalSplit-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceTransversalSplit-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDecomposition.lean",
+      "sha256": "488F3B6DB7BA95D9039C86DFBFFED233E69FEDAB0C13CFFC7D449C203EBB311B",
+      "oleanSha256": "259EAD606B2426741E6B24DEACD09F7ED02A8C63C5779B1B84BD64BDF31FE4B1",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDecomposition-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDecomposition-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDegenerateCusp.lean",
+      "sha256": "E308F590E564331EC00DFE7EE725D4D4CDF8BBA448E3915768A6F0E77FACEA8A",
+      "oleanSha256": "35C32415074A0F6A38EE39D9426671BB7D24F7411EF6E60906DF5FB0E1120212",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDegenerateCusp-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDegenerateCusp-1537.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceEvenWeightPeakedTraceIntegrality.lean",
+      "sha256": "6453E7F7474EC59C0755B61DEEE6CF6A515285043C4C8F4540815B34AC1DE202",
+      "oleanSha256": "94E465A85340595AB4099F37EC0E2B414A8087794231A98347E8158065CDB042",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceEvenWeightPeakedTraceIntegrality-1537.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceEvenWeightPeakedTraceIntegrality-1537.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_coeff_mem_of_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.exists_integral_weight_factor",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.coeff_mem_of_product_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_trace_coeff_mem_of_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_zero_of_exponential_decay",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_trace_parameters",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_eq_zero_of_lt",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mul",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_mem_of_levelOne_trace_decomposition",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_neg_even",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_levelOne_trace",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_signed_cusp_transversal",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.periodic_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.mdifferentiable_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.isBoundedAtImInfty_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.coeff_translation_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_multiple_width",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_one_mul_pow",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBigO_mul_pow_exp",
+    "Dubon2026.SourceFunctionField.IntegralTrace.pow_slash_SL2",
+    "Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_finset_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_finset_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_slash",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_slash",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_T_zpow_apply",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_T_pow_apply",
+    "Dubon2026.SourceFunctionField.IntegralTrace.periodic_comp_ofComplex_of_slash_T_pow_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_S_slash_T_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_eq_of_mem_or_neg_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.periodic_of_pm_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.natCast_mem_strictPeriods",
+    "Dubon2026.SourceFunctionField.IntegralTrace.translation_sum_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_qExpansion_one_sum_slash_T_pow",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_width",
+    "Dubon2026.SourceFunctionField.IntegralTrace.sum_transversal_split",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_integral_trace_decomposition",
+    "Dubon2026.SourceFunctionField.IntegralTrace.T_mem_of_S_mul_T_zpow_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_coeff_mem_of_coincident_cusps",
+    "Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.trSum"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_coeff_mem_of_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.exists_integral_weight_factor",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.coeff_mem_of_product_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.LevelOneCoefficientRing.levelOne_trace_coeff_mem_of_initial_coeff_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_zero_of_exponential_decay",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_trace_parameters",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_eq_zero_of_lt",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mul",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_mul_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_mem_of_levelOne_trace_decomposition",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_neg_even",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_levelOne_trace",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_signed_cusp_transversal",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.periodic_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.mdifferentiable_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.isBoundedAtImInfty_trSum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.coeff_translation_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_coeff_multiple_width",
+    "Dubon2026.SourceFunctionField.IntegralTrace.qExpansion_one_mul_pow",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBigO_mul_pow_exp",
+    "Dubon2026.SourceFunctionField.IntegralTrace.pow_slash_SL2",
+    "Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_finset_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_finset_sum",
+    "Dubon2026.SourceFunctionField.IntegralTrace.mdifferentiable_slash",
+    "Dubon2026.SourceFunctionField.IntegralTrace.isBoundedAtImInfty_slash",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_T_zpow_apply",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_T_pow_apply",
+    "Dubon2026.SourceFunctionField.IntegralTrace.periodic_comp_ofComplex_of_slash_T_pow_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_S_slash_T_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_eq_of_mem_or_neg_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.periodic_of_pm_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.natCast_mem_strictPeriods",
+    "Dubon2026.SourceFunctionField.IntegralTrace.translation_sum_eq",
+    "Dubon2026.SourceFunctionField.IntegralTrace.coeff_qExpansion_one_sum_slash_T_pow",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_width",
+    "Dubon2026.SourceFunctionField.IntegralTrace.sum_transversal_split",
+    "Dubon2026.SourceFunctionField.IntegralTrace.exists_integral_trace_decomposition",
+    "Dubon2026.SourceFunctionField.IntegralTrace.T_mem_of_S_mul_T_zpow_mem",
+    "Dubon2026.SourceFunctionField.IntegralTrace.slash_coeff_mem_of_coincident_cusps",
+    "Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.IntegralTrace.Translates.trSum"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceAudit2.log",
+  "logSha256": "1C81B6971C7723F4298D6D086750BC500EC63081904F369794FB7A3812FB1817",
+  "auditSha256": "CF632EC01FD8CA849508F51682D8B7CEC53D8CEF86036305691ED8CDC243FC45",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceScratchOwnership1538.log",
+  "ownershipSha256": "44F54F7BEEB311305EB44BA66C26792D371DC73FD1F62C97777B424D3F84F43B",
+  "exhaustiveTheorems": 144,
+  "linterScopes": 21,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 54,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\SourceIntegralTraceDependencyAudit2.log",
+  "dependencyAuditSha256": "219BD33BBD7DF0F6F111340AFC4BB21D6CA0A556ECE0F94B6DE1E07DDBF1A0F0",
+  "dependencyAuditSourceSha256": "FE254313649C1075D533D31F44EB7E10D3517D7F2CD352FED77E7B5C3E31E980",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.IntegralTrace.even_weight_slash_coeff_mem_of_peaked_auxiliary",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_even_integral_ratio_of_original_field"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius realization -> degree/genus preservation -> signed-index lower bound -> reduced field action -> level-power slash integrality -> even-weight peaked auxiliary trace.",
+  "discharged": [
+    "Every original field element has an integral even-weight ratio representation.",
+    "The first finitely many coefficients determine subring membership of all coefficients of the actual level-one trace.",
+    "A prescribed signed cusp transversal exists and constructs an actual level-one trace.",
+    "The original expansions imply integral translation-sum coefficients and exact trace decomposition.",
+    "Auxiliary exponential decay implies the required vanishing Fourier coefficients.",
+    "The separate peaked auxiliary hypotheses imply integrality of the actual even-weight S-slash coefficients."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Peaked auxiliary existence and its source hypotheses remain explicit. Level-power slash integrality, the full reduced field action, signed-index lower bound, degree/genus preservation, finite-modulus parabolic transfer, the required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\integral-trace-revision-1537\\source-integral-trace-2-reuse-review-20261028.json",
+  "reuseReviewSha256": "7104AF6AAE1024B37F042D4AA07CB82FB02D3AF9C8DC333B9D6C999E4FDBCB1D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

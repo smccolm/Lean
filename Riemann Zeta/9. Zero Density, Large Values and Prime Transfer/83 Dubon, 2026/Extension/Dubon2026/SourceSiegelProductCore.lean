@@ -1,0 +1,116 @@
+import Dubon2026.SourceSiegelFunction
+import Mathlib.NumberTheory.ModularForms.DedekindEta
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary. Use the literal Siegel
+infinite product and identify it with the original analytic Jacobi theta
+function divided by the native nonvanishing eta product. This discharges
+holomorphy of the required factors and supplies common identities for
+their SL2 transformation; modularity and integral expansions remain
+separate obligations. No abstract function replaces the product.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+Def_ModularCurve_SiegelFunction and
+S_ModularCurve_SiegelUnit_differentiableOn_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Manifold Real MatrixGroups
+
+/-- The original upper-half-plane exponential parameter. -/
+def qq (τ : ℂ) : ℂ := cexp (2 * π * I * τ)
+
+/-- The actual torsion exponential phase in the Siegel product. -/
+def qa (N : ℕ) (r s : ℤ) (τ : ℂ) : ℂ := cexp (2 * π * I * ((r : ℂ) * τ + (s : ℂ)) / (N : ℂ))
+
+/-- The source exponential normalization of the Siegel product. -/
+def pref (N : ℕ) (r s : ℤ) (τ : ℂ) : ℂ :=
+  -cexp (π * I * (s : ℂ) * ((r : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2) *
+    cexp (π * I * (((r : ℂ) / (N : ℂ)) ^ 2 - (r : ℂ) / (N : ℂ) + 1 / 6) * τ)
+
+/-- The literal product factors after the source exponential normalization. -/
+def sprod (N : ℕ) (r s : ℤ) (τ : ℂ) : ℂ :=
+  (1 - qa N r s τ) * ∏' n : ℕ, ((1 - qq τ ^ (n + 1) * qa N r s τ) *
+    (1 - qq τ ^ (n + 1) * (qa N r s τ)⁻¹))
+
+theorem siegelFun_eq (N : ℕ) (r s : ℤ) (τ : ℂ) :
+    siegelFun N r s τ = pref N r s τ * sprod N r s τ := by
+  rw [siegelFun_def]; unfold pref sprod qq qa; simp only [mul_assoc]
+
+theorem siegelFun_level_zero (r s : ℤ) (τ : ℂ) : siegelFun 0 r s τ = 0 := by
+  simp [siegelFun]
+
+theorem qq_add_one (τ : ℂ) : qq (τ + 1) = qq τ := by
+  unfold qq
+  rw [show 2 * π * I * (τ + 1) = 2 * π * I * τ + 2 * π * I by ring, Complex.exp_add,
+    Complex.exp_two_pi_mul_I, mul_one]
+
+theorem qa_add_one (N : ℕ) (r s : ℤ) (τ : ℂ) : qa N r s (τ + 1) = qa N r (r + s) τ := by
+  unfold qa
+  push_cast
+  ring_nf
+
+theorem pref_add_one (N : ℕ) (hN : N ≠ 0) (r s : ℤ) (τ : ℂ) :
+    pref N r s (τ + 1) = cexp (π * I / 6) * pref N r (r + s) τ := by
+  unfold pref
+  have hN' : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hN
+  rw [neg_mul, neg_mul, mul_neg, neg_inj, ← Complex.exp_add, ← mul_assoc, ← Complex.exp_add,
+    ← Complex.exp_add]
+  congr 1
+  push_cast
+  field_simp
+  ring
+
+theorem sprod_add_one (N : ℕ) (r s : ℤ) (τ : ℂ) : sprod N r s (τ + 1) = sprod N r (r + s) τ := by
+  unfold sprod
+  rw [qq_add_one, qa_add_one]
+
+theorem siegelFun_add_one (N : ℕ) (r s : ℤ) (τ : ℂ) :
+    siegelFun N r s (τ + 1) = cexp (π * I / 6) * siegelFun N r (r + s) τ := by
+  rcases eq_or_ne N 0 with rfl | hN
+  · simp [siegelFun_level_zero]
+  rw [siegelFun_eq, siegelFun_eq, pref_add_one N hN, sprod_add_one, mul_assoc]
+
+theorem norm_qq_lt_one {τ : ℂ} (hτ : 0 < τ.im) : ‖qq τ‖ < 1 := by
+  unfold qq
+  rw [Complex.norm_exp]
+  have : (2 * π * I * τ).re = -(2 * π * τ.im) := by
+    simp [Complex.mul_re, Complex.mul_im]
+  rw [this, Real.exp_lt_one_iff]
+  have := Real.pi_pos
+  nlinarith
+
+theorem qa_ne_zero (N : ℕ) (r s : ℤ) (τ : ℂ) : qa N r s τ ≠ 0 := Complex.exp_ne_zero _
+
+/-- The actual Euler product in the native eta function. -/
+def P (τ : ℂ) : ℂ := ∏' n : ℕ, (1 - qq τ ^ (n + 1))
+
+theorem multipliable_P {τ : ℂ} (hτ : 0 < τ.im) : Multipliable fun n : ℕ => 1 - qq τ ^ (n + 1) :=
+  ModularForm.multipliable_one_sub_pow (norm_qq_lt_one hτ)
+
+theorem multipliable_one_sub_pow_mul {q : ℂ} (hq : ‖q‖ < 1) (c : ℂ) (k : ℕ) :
+    Multipliable fun n : ℕ => 1 - q ^ (n + k) * c := by
+  have hs : Summable fun n : ℕ => ‖-(q ^ (n + k) * c)‖ := by
+    simp only [norm_neg, norm_mul, norm_pow, pow_add]
+    have := (summable_geometric_of_lt_one (norm_nonneg _) hq).mul_right (‖q‖ ^ k * ‖c‖)
+    refine this.congr fun n => ?_
+    ring
+  simpa [sub_eq_add_neg] using multipliable_one_add_of_summable hs
+
+theorem multipliable_b {τ : ℂ} (hτ : 0 < τ.im) (N : ℕ) (r s : ℤ) :
+    Multipliable fun n : ℕ => 1 - qq τ ^ n * qa N r s τ := by
+  simpa using multipliable_one_sub_pow_mul (norm_qq_lt_one hτ) (qa N r s τ) 0
+
+theorem multipliable_b_succ {τ : ℂ} (hτ : 0 < τ.im) (N : ℕ) (r s : ℤ) :
+    Multipliable fun n : ℕ => 1 - qq τ ^ (n + 1) * qa N r s τ :=
+  multipliable_one_sub_pow_mul (norm_qq_lt_one hτ) (qa N r s τ) 1
+
+theorem multipliable_c {τ : ℂ} (hτ : 0 < τ.im) (N : ℕ) (r s : ℤ) :
+    Multipliable fun n : ℕ => 1 - qq τ ^ (n + 1) * (qa N r s τ)⁻¹ :=
+  multipliable_one_sub_pow_mul (norm_qq_lt_one hτ) (qa N r s τ)⁻¹ 1
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

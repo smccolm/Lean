@@ -1,0 +1,61 @@
+import Dubon2026.SourceReductionCoordinateAutomorphism
+import Dubon2026.SourceGammaOneOriginalSpecialization
+import Dubon2026.SourceGammaOneArithmeticDiamond
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> Hecke norm reduction.
+The literal arithmetic diamond fixes the original j coordinate and all
+constants. Native finite-coordinate integrality therefore makes it preserve
+the original coefficient Gauss ring under coordinate-degree preservation.
+This concerns integral fraction witnesses, not coefficientwise integral
+Laurent expansions. The next norm consumer must respect that distinction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Δ" => Gamma1 M
+local notation "FF" => functionFieldOver Δ Qbar
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Δ
+
+theorem arithmeticDiamond_mem_gaussRing_of_degree_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (g : Gamma0 M) {f : FF} (hf : f ∈ coefficientGaussRing Δ A) :
+    ConstantField.arithmeticDiamondAut M g f ∈ coefficientGaussRing Δ A := by
+  let R := regularProlongation A Δ
+  let x : R.integers := ⟨jCoordinateOver Δ Qbar, jCoordinateOver_mem_gaussRing A Δ⟩
+  have hres : R.residue x = residueJCoordinate A Δ := regularProlongation_jCoordinateOver A Δ
+  have hx : Transcendental kk (R.residue x) := by
+    rw [hres]
+    exact transcendental_residueJCoordinate A Δ
+  have hdim : FiniteDimensional kk⟮R.residue x⟯ Fb := by
+    rw [hres]
+    exact (finite_residueCoordinate_and_degree_le A Δ
+      (by simp [Gamma1_mem, ModularGroup.T])).1
+  have hfin : 0 < Module.finrank kk⟮R.residue x⟯ Fb := by
+    haveI := hdim
+    exact Module.finrank_pos
+  have hdegx : Module.finrank Qbar⟮(x : FF)⟯ FF = Module.finrank kk⟮R.residue x⟯ Fb := by
+    rw [hres]
+    exact hdeg
+  have hfix : (ConstantField.arithmeticDiamondAut M g).toAlgHom (x : FF) = (x : FF) :=
+    ConstantField.arithmeticDiamondHom_j M g
+  exact @RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq
+    Qbar inferInstance A FF inferInstance inferInstance Fb inferInstance
+    (specializationResidueAlgebra A Δ) R x hx hfin hdegx
+    (ConstantField.arithmeticDiamondAut M g).toAlgHom hfix f hf
+
+/-- The original arithmetic diamond restricted to the actual Gauss ring. -/
+def arithmeticDiamondGauss
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Δ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Δ⟯ Fb)
+    (g : Gamma0 M) : coefficientGaussRing Δ A →+* coefficientGaussRing Δ A :=
+  (((ConstantField.arithmeticDiamondAut M g).toRingHom).comp
+      (coefficientGaussRing Δ A).subtype).codRestrict
+    (coefficientGaussRing Δ A).toSubring
+    (fun f => arithmeticDiamond_mem_gaussRing_of_degree_eq A M hdeg g f.2)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,1 @@
+For an actual finite Galois extension of original number fields, derive residue separability from the actual finite prime residue field. The genuine original inertia subgroup has cardinality equal to the original ramification index. Index one therefore makes the actual inertia subgroup trivial and every original inertia automorphism fixes the entire original field.

@@ -1,0 +1,20 @@
+[
+  "Dubon2026.matrixFirstOrderCocycle_continuous",
+  "Dubon2026.firstOrderLiftFromCocycle_continuous_val",
+  "Dubon2026.firstOrderLiftFromCocycle_continuous",
+  "Dubon2026.matrixFirstOrderLift_continuous_iff",
+  "Dubon2026.dualMatrixStrictUnit_reduction",
+  "Dubon2026.dualMatrixStrictUnit_inv",
+  "Dubon2026.dualMatrixStrictUnit_infinitesimal",
+  "Dubon2026.dualMatrixStrictUnit_of_reduction",
+  "Dubon2026.dualMatrixInfinitesimal_strictConjugate",
+  "Dubon2026.matrixFirstOrderStrictlyConjugate_iff",
+  "Dubon2026.matrixFirstOrderCohomology_surjective",
+  "Dubon2026.matrixFirstOrderConjugate_apply",
+  "Dubon2026.matrixFirstOrderConjugate_cocycle",
+  "Dubon2026.matrixFirstOrderConjugate_coboundary",
+  "Dubon2026.SemanticRegression.actual_strict_deformation_dualMatrixInfinitesimal_strictConjugate_source",
+  "Dubon2026.SemanticRegression.actual_strict_deformation_matrixFirstOrderConjugate_coboundary_source",
+  "Dubon2026.SemanticRegression.actual_strict_deformation_matrixFirstOrderStrictlyConjugate_iff_source",
+  "Dubon2026.SemanticRegression.actual_strict_deformation_matrixFirstOrderLift_continuous_iff_source"
+]

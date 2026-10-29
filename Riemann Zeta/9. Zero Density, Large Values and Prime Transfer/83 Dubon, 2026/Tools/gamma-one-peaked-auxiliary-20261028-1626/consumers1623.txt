@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixTraceZeroAdjointCoboundary_val`. -/
+theorem actual_trace_zero_adjoint_representation_matrixTraceZeroAdjointCoboundary_val_source (ρ : G →* GeneralLinearGroup ι R)
+    (X : matrixTraceZeroSubmodule ι R) (g : G) :
+    (groupCohomology.d₀₁ (matrixTraceZeroAdjointRep ρ) X g).val =
+      groupCohomology.d₀₁ (matrixAdjointRep ρ) X.val g :=
+  matrixTraceZeroAdjointCoboundary_val ρ X g
+
+end
+

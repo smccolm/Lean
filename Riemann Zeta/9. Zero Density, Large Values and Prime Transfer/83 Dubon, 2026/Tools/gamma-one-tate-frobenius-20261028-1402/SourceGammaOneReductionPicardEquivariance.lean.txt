@@ -1,0 +1,73 @@
+import SourceGammaOneSpecializationEquivariance
+import SourceGammaOneResiduePicard
+import Dubon2026.SourceGammaOneHeckeArithmetic
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> the actual residue
+Picard action. The proved specialization-place equivariance extends by
+finite additivity to divisors and descends through the actual Picard quotient.
+The same constructed reduction retains invertible-torsion injectivity.
+Coordinate-degree and genus preservation remain the geometric inputs. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup
+attribute [local instance] specializationResidueAlgebra
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M : ℕ) [NeZero M]
+local notation "Γ" => Gamma1 M
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "Fb" => residueImage A Γ
+
+omit [NeZero M] in
+theorem reduction_arithmeticDivisor_equivariant
+    (R : ConstantReduction A FF Fb) (d : A.decompositionSubgroup ℚ)
+    (hplace : ∀ P : Place Qbar FF,
+      R.placeMap (arithmeticPlace Γ d.val P) = decompositionResiduePlace A Γ d (R.placeMap P))
+    (D : Divisor Qbar FF) :
+    R.divMap (arithmeticDivisorEquiv Γ d.val D) =
+      decompositionResidueDivisorEquiv A Γ d (R.divMap D) := by
+  induction D using Finsupp.induction with
+  | zero => erw [map_zero]
+  | single_add P n D _ _ ih =>
+    erw [map_add, map_add, map_add, map_add, ih]
+    congr 1
+    change Finsupp.mapDomain R.placeMap
+        (Finsupp.equivMapDomain (arithmeticPlaceEquiv Γ d.val) (Finsupp.single P n)) =
+      Finsupp.equivMapDomain (decompositionResiduePlaceEquiv A Γ d)
+        (Finsupp.mapDomain R.placeMap (Finsupp.single P n))
+    rw [Finsupp.equivMapDomain_single, Finsupp.mapDomain_single,
+      Finsupp.mapDomain_single, Finsupp.equivMapDomain_single]
+    exact congrArg (fun Q => Finsupp.single Q n) (hplace P)
+
+theorem reduction_arithmeticPicard_equivariant
+    (R : ConstantReduction A FF Fb) (d : A.decompositionSubgroup ℚ)
+    (hplace : ∀ P : Place Qbar FF,
+      R.placeMap (arithmeticPlace Γ d.val P) = decompositionResiduePlace A Γ d (R.placeMap P))
+    (x : Pic0 Qbar FF) :
+    R.pic0Map (gamma1ArithmeticPicardRep Qbar M d.val x) =
+      decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d (R.pic0Map x) := by
+  obtain ⟨D, rfl⟩ := Pic0.mk_surjective x
+  have hT : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, ModularGroup.T]
+  change Pic0.mk (R.degZeroMap (arithmeticDegZero Γ hT d.val D)) =
+    decompositionResiduePicard A Γ hT d (Pic0.mk (R.degZeroMap D))
+  rw [decompositionResiduePicard_mk]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  exact reduction_arithmeticDivisor_equivariant A M R d hplace D.val
+
+theorem exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ FF =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ R : ConstantReduction A FF Fb,
+      R.toRegularProlongation = regularProlongation A Γ ∧
+      (∀ m : ℕ, (m : kk) ≠ 0 → Set.InjOn R.pic0Map (↑(Pic0.torsion (K := Qbar) (F := FF) m))) ∧
+      ∀ (d : A.decompositionSubgroup ℚ) (x : Pic0 Qbar FF),
+        R.pic0Map (gamma1ArithmeticPicardRep Qbar M d.val x) =
+          decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d (R.pic0Map x) := by
+  obtain ⟨R, hR, hinj, hplace⟩ :=
+    exists_gammaOne_reduction_decomposition_equivariant_of_degree_genus_eq A M hdeg hgen
+  exact ⟨R, hR, hinj, fun d x => reduction_arithmeticPicard_equivariant A M R d (hplace d) x⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

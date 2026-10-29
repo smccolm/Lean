@@ -1,0 +1,32 @@
+import SourceGammaOneTwistedNormInertia
+import SourceGammaOneTwistedArithmeticDescent
+import SourceCyclotomicHomogeneousDiamond
+import SourceGammaOneTwistedGaloisDiamond
+import SourceGammaOneParabolicGaloisOrbit
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_orbit_frobenius_of_degree_genus_eq]
+  let localModules : Array Name := #[`SourceGammaOneResidueGeometry, `SourceCurveSeparatingGenusMaximum, `SourceReductionGenusPoleLifting, `SourceReductionGenusIntegralCharts, `SourceGammaOneGenusSpecialization, `SourceGammaOneOriginalSpecialization, `SourceGammaOneKummerDegree, `SourceGammaOneKummerGenus, `SourceJointSeparableFiniteOverlap, `SourceJointSeparableConstants, `SourceJointSeparableChartDimension, `SourceJointSeparablePoleDimension, `SourceJointSeparableGenus, `SourceGammaOneKummerResidueGenus, `SourceGammaOneKummerPowerLifting, `SourceGammaOnePicardPrimeKernel, `SourceGammaOnePicardTorsion, `SourceGammaOneArithmeticCharts, `SourceGammaOneSpecializationCharts, `SourceGammaOneDecompositionCharts, `SourceGammaOneConstantReductionCharts, `SourceGammaOneSpecializationEquivariance, `SourceGammaOneInertiaPlaceReduction, `SourceGammaOneInertiaPicard, `SourceGammaOneTateInertia, `SourceReductionCoordinateAutomorphism, `SourceGammaOneDiamondGauss, `SourceReductionMapReflection, `SourceGammaOneHeckeGaussReflection, `SourceGammaOneHeckeFractionProduct, `SourceGammaOneHeckeGaussNorm, `SourceGammaOneHeckePrincipalNorm, `SourceGammaOneResidueDivisors, `SourceGammaOneHeckeResidueNorm, `SourceGammaOneIntegralDivisorReduction, `SourceGammaOneHeckeIntegralAgreement, `SourceGammaOneHeckeTorsionDivisors, `SourceGammaOneResiduePicard, `SourceGammaOneReductionPicardEquivariance, `SourceGammaOneNormDiamondOrientation, `SourceGammaOneHeckePicardDescent, `SourceGammaOneHeckeTorsionPicard, `SourceTorsionReductionDiamond, `SourceGammaOnePicardFrobeniusRelation, `SourceTateTorsionQuadratic, `SourceGammaOneTateFrobeniusRelation, `SourceTateDualArithmeticQuadratic, `SourceGammaOneArithmeticFrobenius, `SourceGammaOneGeometricArithmeticFrobenius, `SourceTwistedCoefficientDualAction, `SourceCyclotomicHomogeneousAction, `SourceAbsoluteCyclotomicCharacter, `SourceGammaOneTwistedGalois, `SourceCyclotomicHomogeneousHecke, `SourceGammaOneTwistedGaloisHecke, `SourceAbsoluteCyclotomicLocal, `SourceGammaOneTwistedGaloisFrobenius, `SourceTwistedCoefficientDualTrivial, `SourceGammaOneTwistedGaloisInertia, `SourceGammaOneParabolicTateLift, `SourceGammaOneParabolicGaloisFrobenius, `SourceGammaOneFunctionFieldDefinition, `SourceGammaOneFinitePlaceOrbit, `SourceGammaOnePlaceFieldDefinition, `SourceGammaOnePicardFieldDefinition, `SourceGammaOneTateOpenCongruence, `SourceGammaOneFiniteTateDual, `SourceGammaOneTwistedCongruence, `SourceGammaOneTwistedContinuity, `SourceGammaOneTwistedFiniteFactor, `SourceGammaOneTwistedNormInertia, `SourceGammaOneTwistedArithmeticDescent, `SourceCyclotomicHomogeneousDiamond, `SourceGammaOneTwistedGaloisDiamond, `SourceGammaOneParabolicGaloisOrbit]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.binaryArithmeticTateGaloisRep_arithmetic_descent_of_degree_genus_eq, `Dubon2026.sourceCyclotomicHomogeneousAction_diagonal_commute, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_diamond_fixed, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_parabolic_binaryTate_galois_orbit_frobenius_of_degree_genus_eq, `Dubon2026.absolute_continuous_normInertia_arithmetic_descent, `ContinuousMonoidHom.toHomUnits, `Dubon2026.sourceRationalLocalValuation_inertia, `Dubon2026.sourceRationalLocalValuation_prime, `Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits, `Dubon2026.SourceFunctionField.GammaOne.binaryArithmeticTateGaloisRep_continuous, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq, `Dubon2026.sourceGammaOneBinaryDiamondCoefficient_eq_diagonal, `Dubon2026.SourceFunctionField.GammaOne.arithmeticTateGaloisRep_diamond, `Dubon2026.sourceTwistedCoefficientDualAction_operator, `Dubon2026.sourceCyclotomicHomogeneousAction_apply, `Dubon2026.SourceFunctionField.GammaOne.exists_binaryTate_restriction_diamond_fixed, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq, `Dubon2026.sourceGammaOneBinaryRestrictionH1_diamond, `Dubon2026.SourceFunctionField.GammaOne.binaryTateH1Equiv]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE ARITHMETIC ORBIT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the proof value closure of the actual prescribed-support arithmetic descent and the original parabolic Tate Galois-orbit Frobenius polynomial. Continuity, unit lift, original norm-inertia triviality, diamond stability and original parabolic diamond fixedness are derived. Only the original degree/genus equalities remain for these local conclusions; original character nonvanishing and two-dimensional realization remain; DUB17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

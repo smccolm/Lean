@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "UnramifiedUnionInfiniteInertia",
+  "mathematics": "For an original nonzero prime outside the exceptional integer in the actual infinite arithmetic union, contract to each genuine finite Galois subfield. The original ramification-index-one theorem makes every restricted inertia automorphism trivial. Every original field element lies in an actual finite normal closure, so the entire original inertia subgroup is trivial.",
+  "boundary": "Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "original-infinite-inertia-draft-review-20261009.json; exact pinned original inertia and ramification APIs inspected; no external Lean code imported.",
+  "primarySources": [
+    "https://stacks.math.columbia.edu/tag/0BUA",
+    "https://stacks.math.columbia.edu/tag/09E3"
+  ],
+  "sourceBoundary": "Actual finite-subextension inertia interpretation and original restriction; no full inverse-limit exact sequence or complete Selmer comparison claimed.",
+  "productionLog": "infiniteInertia1601-focus.log"
+}

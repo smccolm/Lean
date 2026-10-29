@@ -1,0 +1,9 @@
+[
+  "TateCurvesTheta/Converse/ReductionType.lean",
+  "TateCurvesTheta/Converse/WeierstrassIso.lean",
+  "TateCurvesTheta/TateCurve/SplitReduction.lean",
+  "TateCurvesTheta/TateCurve/TateUniformization.lean",
+  "TateCurvesTheta/TateCurve/Weierstrass.lean",
+  "TateCurvesTheta/TateCurve/WeierstrassIdentity.lean",
+  "TateCurvesTheta/Uniformization.lean"
+]

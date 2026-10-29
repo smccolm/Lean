@@ -1,0 +1,14 @@
+{
+  "reviewDate": "2026-10-09",
+  "status": "Pinned local API review only; all new drafts uncompiled.",
+  "pinnedApis": [
+    "Ideal.quotientMap and quotientMap_mk: genuine original coefficient quotient square.",
+    "GeneralLinearGroup.map_comp: actual whole matrix base change commutes with original coefficient composition.",
+    "IsPGroup.to_le: the actual reduction image inherits the proved p-group structure of the literal target kernel.",
+    "Original completed residual evaluation kernel and actual finite power quotients."
+  ],
+  "limitations": [
+    "No cofinality of congruence neighborhoods or pro-p inference from separate images.",
+    "No external Lean imported."
+  ]
+}

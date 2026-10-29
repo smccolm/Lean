@@ -1,0 +1,45 @@
+import Dubon2026.SourceGammaOneGaussResidueHom
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius/inertia -> original
+good reduction -> literal coefficient reduction. Reuse the original
+integral-fraction residue proof on the actual Gamma1 scalar-extended field.
+The residue formula is independent of its integral fraction witness.
+These maps and kernel/constant identities do not assert genus preservation
+or good reduction; those remain subsequent mathematical obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open Polynomial IntermediateField GaussReduction
+
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "FF" => functionFieldOver Γ L
+local notation "kk" => IsLocalRing.ResidueField A
+
+theorem resHom_eq_zero_iff (f : coefficientGaussRing Γ A) :
+    resHom A Γ f = 0 ↔ f ∈ IsLocalRing.maximalIdeal (coefficientGaussRing Γ A) := by
+  rw [IsLocalRing.mem_maximalIdeal, mem_nonunits_iff]
+  obtain ⟨hy, h⟩ := wit_spec A Γ f
+  constructor
+  · rintro h0 ⟨u, rfl⟩
+    have := congrArg (resHom A Γ) u.mul_inv
+    rw [map_mul, h0, zero_mul, map_one] at this
+    exact zero_ne_one this
+  · intro hu
+    by_contra h0
+    apply hu
+    rw [resHom_eq A Γ hy h, div_eq_zero_iff, or_iff_left hy] at h0
+    have hf0 : ((f : FF) : LaurentSeries L) ≠ 0 := by
+      intro hf
+      rw [hf, zero_mul, eq_comm, ι_eq_zero_iff] at h
+      exact h0 (by rw [h, map_zero])
+    have hf0' : (f : FF) ≠ 0 := fun h' => hf0 (by rw [h']; rfl)
+    have hinv : (f : FF)⁻¹ ∈ coefficientGaussRing Γ A := by
+      refine ⟨(wit A Γ f).2, (wit A Γ f).1, h0, ?_⟩
+      rw [IntermediateField.coe_inv]
+      exact IsInt.inv_of (A := A) h0 h
+    exact ⟨⟨f, ⟨(f : FF)⁻¹, hinv⟩, Subtype.ext (mul_inv_cancel₀ hf0'),
+      Subtype.ext (inv_mul_cancel₀ hf0')⟩, rfl⟩
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

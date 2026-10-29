@@ -1,0 +1,50 @@
+{
+  "reviewDate": "2026-10-09",
+  "topic": "Actual representation coordinate fibers and derivations",
+  "localApiReview": {
+    "Mathlib/RingTheory/Derivation/ToSquareZero.lean": [
+      "derivationToSquareZeroEquivLift",
+      "liftOfDerivationToSquareZero_apply"
+    ],
+    "Mathlib/Algebra/TrivSqZeroExt/Ideal.lean": [
+      "kerIdeal",
+      "kerIdeal_sq"
+    ],
+    "Mathlib/Algebra/Algebra/Tower.lean": [
+      "IsScalarTower.of_algHom"
+    ],
+    "existingDubon": [
+      "representationCoordinateEquiv",
+      "representationCoordinateEvaluation_natural",
+      "matrixFirstOrderLiftEquiv"
+    ]
+  },
+  "mathematicalScope": "Apply the actual square-zero equivalence to the concrete original representation coordinate algebra, with the module action constructed from the original representation evaluation and constant dual-number inclusion. This supplies no profinite representability or Galois/Selmer conclusion.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": [],
+  "sourceScopeRecheck": {
+    "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+    "locations": "Introduction; Section 2, Lemma 2.7",
+    "inference": "The arithmetic argument needs complete local deformation and pseudodeformation rings, local conditions, Galois cohomology and patched module support. The present coordinate-fiber and derivation proofs supply algebraic prerequisites only; they establish none of those arithmetic inputs."
+  },
+  "frozenPaperRecheck20261009": {
+    "checkedAtUtc": "2026-10-09",
+    "source": "https://arxiv.org/abs/2609.17875",
+    "observedSubmissionHistory": [
+      {
+        "version": "v1",
+        "dateUtc": "2026-09-15 22:04:33"
+      }
+    ],
+    "result": "The live primary arXiv history displays only v1; no v2 entry was found. The frozen v1 remains the target.",
+    "targetedSearches": [
+      "\"Eric Dubon\" \"Zero-Density Concentration\" Lean GitHub",
+      "site:github.com \"2609.17875\"",
+      "site:github.com \"Eric Dubon\" Lean"
+    ],
+    "repositorySearchResult": "These targeted web searches did not identify a relevant public Lean repository. This is a search outcome, not a proof that none exists. Unrelated search results were not used as technical evidence.",
+    "pinsChanged": false,
+    "externalCodeImported": false
+  }
+}

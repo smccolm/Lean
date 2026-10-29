@@ -1,0 +1,19 @@
+[
+  "Dubon2026.completedPresentationRepresentation_original",
+  "Dubon2026.completedPresentedGroupRepresentation_continuous",
+  "Dubon2026.completedPresentationCoefficient_exists_unique",
+  "Dubon2026.completedCoefficientMapOfProfiniteLift_abstract",
+  "Dubon2026.completedCoefficientMapOfProfiniteLift_reduction",
+  "Dubon2026.completedCoefficientMapOfProfiniteLift_uniformContinuous",
+  "Dubon2026.completedCoefficientMapOfProfiniteLift_entire",
+  "Dubon2026.completedCoefficientMapOfProfiniteLift_unique",
+  "Dubon2026.profiniteRelationCoefficientMap_mk",
+  "Dubon2026.profiniteRelationCoefficientMap_continuous",
+  "Dubon2026.profiniteRelationCoefficientMap_reduction",
+  "Dubon2026.profiniteRelationCoefficientMap_entire",
+  "Dubon2026.profiniteRelationCoefficientMap_unique",
+  "Dubon2026.SemanticRegression.actual_continuous_presentation_universality_completedCoefficientMapOfProfiniteLift_entire_source",
+  "Dubon2026.SemanticRegression.actual_continuous_presentation_universality_profiniteRelationCoefficientMap_unique_source",
+  "Dubon2026.SemanticRegression.actual_continuous_presentation_universality_completedPresentedGroupRepresentation_continuous_source",
+  "Dubon2026.SemanticRegression.actual_continuous_presentation_universality_completedPresentationCoefficient_exists_unique_source"
+]

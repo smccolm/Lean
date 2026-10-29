@@ -1,0 +1,222 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T20:22:50.466338+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckePrincipalNorm",
+    "SourceGammaOneResidueDivisors",
+    "SourceGammaOneHeckeResidueNorm",
+    "SourceGammaOneIntegralDivisorReduction",
+    "SourceGammaOneHeckeIntegralAgreement",
+    "SourceGammaOneHeckeTorsionDivisors",
+    "SourceGammaOneResiduePicard",
+    "SourceGammaOneReductionPicardEquivariance",
+    "SourceGammaOneNormDiamondOrientation",
+    "SourceGammaOneHeckePicardDescent",
+    "SourceGammaOneHeckeTorsionPicard",
+    "SourceTorsionReductionDiamond",
+    "SourceGammaOnePicardFrobeniusRelation",
+    "SourceTateTorsionQuadratic",
+    "SourceGammaOneTateFrobeniusRelation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm.lean",
+      "sha256": "3A3643DB2C2F2D5273A56A4819857ED30E37F82B2BC3B2A662A0326F91BD6073",
+      "oleanSha256": "9EB3C712230544203E1DEE5B7B0C7AEF9293007CFBEFF2FB03557231DC8B0DFE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors.lean",
+      "sha256": "1378CCEB3B3C99AFA7D784D51C94351811FCD3A823291ADC29A84178AF4176AA",
+      "oleanSha256": "2EEBECBAF98C7BB48F9711ECFDEAE0428C4B0D798A77F8E0A26DC23A5A4C7F68",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm.lean",
+      "sha256": "5BDB4C967C1B75EBEEA44400C88FAB998B222D440226AF17367966F298BD9E21",
+      "oleanSha256": "220FAB4B9349FB1E9ADCB5B521779A0BBCF79D37781FCA156944CF578B395E29",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction.lean",
+      "sha256": "E59E874403551429C91A605C38B6430CB043D87BBE483E66AD0FA0B0D9998D17",
+      "oleanSha256": "2B69B966F284CEDBF4B130756F2230143F957EA322997376B94F5329385A6C44",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement.lean",
+      "sha256": "54AF46D6A0F9E14C18EF386CC123B555936F19C8CBC408F369C557EAA409B1E2",
+      "oleanSha256": "8AE9040FC662791192CB8368B2E0A0F9FC430E2D95B4BD9B443FF42DD8953BB2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors.lean",
+      "sha256": "5A97534F6E3A9A446F83D873D3C585683CB7759E6A58FE7FDA5BE5F2A387CEEF",
+      "oleanSha256": "B13055D8BADA4564D8157AC4E696522D0664A69445C5D1D649838AC6A3E0B5B4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard.lean",
+      "sha256": "BB10EA65DB42AB7368B28458F88318A27BBB8DFD0621C6B096A67CC6431BBFEE",
+      "oleanSha256": "8CEFAB235E658E58325EF0F236B7E19BE244D4945AA913F83FAA5CE37C2FE341",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance.lean",
+      "sha256": "974893CB3D66F1EA0A860C2380323FEC301EAA7762F6526761D34947AEE69EAB",
+      "oleanSha256": "45DCF1E557090EEC6AC2A1F473CDF9AC97D239F908B8631FC6E9EC309BBD2D05",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation.lean",
+      "sha256": "2C0596A4207232619EF1193CB67BB8A84A53DC4F90359FF7E1B05986D84529DC",
+      "oleanSha256": "5DD37308020CD3A328B2A41622FF55FC62CE9EFA1D81D4AEF3C217270650BBF5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent.lean",
+      "sha256": "076D1206045B3F6F7C7056AD22C9E280A138CE91352F95F9DA3350D353F71F90",
+      "oleanSha256": "EAF37CA2AA43688B264851813311FC1B5D7D5E4D6C5CE8523BCAA59DEE9E3663",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard.lean",
+      "sha256": "3AA330161AB442F9BE6DBF85426362D1526A57F82C1FB92EC19D27BE827CA847",
+      "oleanSha256": "85A857C3D5844F4E6856E80D5E05789B501F42AEEC7F6715C557F95D58ED4B44",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond.lean",
+      "sha256": "B0E66E49934DFA1F03B93F628D6C8B621191C69E206AE28D9861C571677F663D",
+      "oleanSha256": "C5D9EF846E90E24E2981FD026B634732FA92B5E22351D742B2E885738DCC19A3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation.lean",
+      "sha256": "B30985A07A83E3C15573EFE8BBFBAB119D3CD470717434118C4E7F252D845A80",
+      "oleanSha256": "F5741529568E145644C852586345CC4358A9F708D8A77F7ABEE7FE397274E1E4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic.lean",
+      "sha256": "2B073CD2EC7068290AAB3C2817F3CF45348FF772FBDBAF39218A79C8D656DC79",
+      "oleanSha256": "42FAB188C5BFC4B522CEB5A19BB9C2902C32ACAC404DFD1D54B919788D9A08D2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic-1394.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation.lean",
+      "sha256": "C6452EB1D85A7907043BA22D976608FDABA486C8B2499FA99972C3B71910AA23",
+      "oleanSha256": "786845758A339C816D6159942FDE8DB76445BA75E7234AC41EF4B8657A6CB2E5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation-1394.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation-1394.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_degree",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_inverse_divisor_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss_residue_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_residue_norm_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_reduction_integral_divisor_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_symm",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisor_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_inverse",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_equivariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_equivariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondAut_inverse_lift",
+    "Dubon2026.SourceFunctionField.GammaOne.norm_diamond_inverse_label",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_inverse_lift_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.hecke_picard_reduction_mk_of_divisor_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq",
+    "Dubon2026.sourceTorsionReduction_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq",
+    "Dubon2026.TateModule.tateMap_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDegZero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_principal_norm",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_degree",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_inverse_divisor_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss_residue_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_residue_norm_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_reduction_integral_divisor_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_divisor_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv_symm",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisor_principal",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard_inverse",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticDivisor_equivariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.reduction_arithmeticPicard_equivariant",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_reduction_picard_equivariant_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondAut_inverse_lift",
+    "Dubon2026.SourceFunctionField.GammaOne.norm_diamond_inverse_label",
+    "Dubon2026.SourceFunctionField.GammaOne.arithmeticDiamondPicard_inverse_lift_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.hecke_picard_reduction_mk_of_divisor_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_reduction_torsion_picard_of_degree_eq",
+    "Dubon2026.sourceTorsionReduction_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_frobenius_relation_of_degree_genus_eq",
+    "Dubon2026.TateModule.tateMap_diamond_quadratic",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDivisorEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueDegZero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePicard"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusAudit1.log",
+  "logSha256": "7D29089CC97973815623F4E344C808A23F7D79B873F59DBA9ABE675855961614",
+  "auditSha256": "BA1CDF5C43D383E328A5D7B3BAD6A898836FDF91C6224E6C8DAC3CA0DACB27C0",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusScratchOwnership1395.log",
+  "ownershipSha256": "F57BFCF874D09CC694580722EB99C4205DDE04B89047E2A8962040D4EB4F54F8",
+  "exhaustiveTheorems": 48,
+  "linterScopes": 15,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 49,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1.log",
+  "dependencyAuditSha256": "154F699D841DB6F624A33DD678DDED1CA859DC357632586FA6A426075189C56D",
+  "dependencyAuditSourceSha256": "514828AB19882BA1DCC0890E92E818BCCE16C9829DEABAE0980759CA5A78FBA2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_tate_frobenius_relation_of_degree_genus_eq"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Gamma1 Picard/H1/Tate realization -> exact arithmetic Frobenius-Hecke quadratic relation.",
+  "discharged": [
+    "The actual original Gamma1 Hecke divisor correspondence equals the divisor of the literal alpha norm of beta.",
+    "The actual residue norm gives coefficient-Frobenius diamond plus p times inverse coefficient Frobenius on integral principal divisors.",
+    "Primitive constant normalization and torsion-free integer-divisor cancellation extend the equality to every finite Picard torsion class without an upper-correspondence good-reduction model.",
+    "The same equivariant specialization and invertible-torsion injection transport the identity to original Picard torsion and actual Tate sequences: H*F = F*F*D + p, with Picard diamond label p."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual original Gamma1 coordinate-degree equality and genus preservation remain. The derived twisted coefficient relation does not close the previously conditional differently normalized relation. Its inverse-action coefficient normalization, global Galois realization, parabolic and coefficient/character realization, all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "C6444A87A9CCAEC2F79076A9AF18327D6239CA9D0C0E29AEFA4D2AA5D85C4A1D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

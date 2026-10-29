@@ -1,0 +1,7 @@
+### Actual actual unramified fixed-determinant framed classification — 9 October 2026
+
+Compose the genuine local quotient coefficient-map equivalence with the actual whole fixed-determinant arithmetic framed equivalence and the existing exact all-matrix kernel criterion. This classifies every original continuous framed lift with prescribed determinant and trivial actual inertia at the chosen prime. The classification is bijective, preserves every original arithmetic matrix and is natural under every genuine continuous residue-preserving coefficient map.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedUniversality](Extension/Dubon2026/ArithmeticUnramifiedUniversality.lean).

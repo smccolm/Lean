@@ -1,0 +1,79 @@
+import Dubon2026.SourceGammaOneResidueGeometry
+import Dubon2026.SourceReductionGenusIntegralCharts
+import Dubon2026.SourceReductionPrincipalDivisorMap
+import Dubon2026.SourceGammaOneCurveGeometry
+import Dubon2026.SourceCurveConstantReductionR2
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original Gamma1 arithmetic
+association -> Picard/H1/Tate realization -> original-to-residue specialization.
+Construct a genuine degree-preserving place map compatible with principal
+divisors for the original integral-ratio field and its actual coefficient
+residue image. The native two-chart gluing and constant-reduction constructor
+are reused. Coordinate-degree equality and equality of the actual adelic
+genera remain explicit narrower hypotheses; no good-reduction or torsion
+injectivity conclusion is claimed without their remaining proofs. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve SourceCurve.RegularProlongation
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.FiniteIndex]
+  (hT : ModularGroup.T ∈ Γ)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "FF" => functionFieldOver Γ Qbar
+local notation "Fb" => residueImage A Γ
+
+/-- The literal residue-image constant algebra. -/
+@[reducible] local instance specializationResidueAlgebra : Algebra kk Fb :=
+  (residueImage A Γ).toSubalgebra.algebra
+
+include hT
+
+theorem exists_principal_reduction_map_of_degree_genus_eq
+    (hdeg : Module.finrank (IntermediateField.adjoin Qbar {jCoordinateOver Γ Qbar}) FF =
+      Module.finrank (IntermediateField.adjoin kk {residueJCoordinate A Γ}) Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ r : Place Qbar FF → Place kk Fb,
+      ∀ f : coefficientGaussRing Γ A, residueToImage A Γ f ≠ 0 →
+        ∀ D : Divisor Qbar FF, (∀ P, D P = P.ord (f : FF)) →
+          ∀ Q, Finsupp.mapDomain r D Q = Q.ord (residueToImage A Γ f) := by
+  haveI := valuation_residue_isAlgClosed A
+  haveI := functionFieldOver_isCurveOver Γ Qbar hT
+  haveI := residueImage_isCurveOver A Γ hT
+  let R := regularProlongation A Γ
+  let x : R.integers := ⟨jCoordinateOver Γ Qbar, jCoordinateOver_mem_gaussRing A Γ⟩
+  have hres : R.residue x = residueJCoordinate A Γ := regularProlongation_jCoordinateOver A Γ
+  have hx : Transcendental kk (R.residue x) := by
+    rw [hres]
+    exact transcendental_residueJCoordinate A Γ
+  have hdim : FiniteDimensional (IntermediateField.adjoin kk {R.residue x}) Fb := by
+    rw [hres]
+    exact (finite_residueCoordinate_and_degree_le A Γ hT).1
+  have hsep : Algebra.IsSeparable (IntermediateField.adjoin kk {R.residue x}) Fb := by
+    rw [hres]
+    exact isSeparable_residueCoordinate A Γ hT
+  have hdegx : Module.finrank (IntermediateField.adjoin Qbar {(x : FF)}) FF =
+      Module.finrank (IntermediateField.adjoin kk {R.residue x}) Fb := by
+    rw [hres]
+    exact hdeg
+  have hfin : 0 < Module.finrank (IntermediateField.adjoin kk {R.residue x}) Fb := by
+    haveI := hdim
+    exact Module.finrank_pos
+  have hcharts := @integral_charts_lift_of_degree_genus_eq
+    Qbar _ _ _ A FF _ _ Fb _ _ R x hx hdim hsep hdegx hgen
+  exact @exists_principal_divisor_reduction_map
+    Qbar _ _ _ A FF _ _ _ Fb _ _ _ R x hx hsep hfin hdegx hcharts
+
+theorem exists_constant_reduction_of_degree_genus_eq
+    (hdeg : Module.finrank (IntermediateField.adjoin Qbar {jCoordinateOver Γ Qbar}) FF =
+      Module.finrank (IntermediateField.adjoin kk {residueJCoordinate A Γ}) Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar FF) :
+    ∃ R : ConstantReduction A FF Fb, R.toRegularProlongation = regularProlongation A Γ := by
+  haveI := finiteDimensional_jCoordinateOver hT Qbar
+  obtain ⟨r, hr⟩ := exists_principal_reduction_map_of_degree_genus_eq A Γ hT hdeg hgen
+  exact ⟨ConstantReduction.ofPlaceMap (regularProlongation A Γ) r
+    (place_residue_bijective_of_finite_coordinate (jCoordinateOver Γ Qbar))
+    (residueImage_place_residue_bijective A Γ hT) hr, rfl⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,1 @@
+Restrict the actual relative dual-number framed equivalence to the original arithmetic inertia and prescribed determinant. The genuine original determinant compatibility proves that its image in residual dual numbers is the constant lift of the actual residual determinant. This identifies all original local first-order lifts with the full restricted original coefficient fiber.

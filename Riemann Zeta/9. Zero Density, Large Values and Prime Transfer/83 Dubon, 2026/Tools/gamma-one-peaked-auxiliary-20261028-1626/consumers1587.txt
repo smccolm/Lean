@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι O R : Type*} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [CommRing R] [IsLocalRing R] [Algebra O R]
+
+/-- Exact original-object consumer of `representationDeterminantQuotient_isLocal`. -/
+theorem actual_residual_determinant_quotient_representationDeterminantQuotient_isLocal_source
+    (eR : IsLocalRing.ResidueField R ≃ₐ[O] IsLocalRing.ResidueField O)
+    (ρ : G →* GeneralLinearGroup ι R)
+    (σ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hρ : (GeneralLinearGroup.map (n := ι) (localCoefficientReduction eR).toRingHom).comp ρ = σ)
+    (δ : G →* Oˣ)
+    (hδ : ∀ g : G, GeneralLinearGroup.det (σ g) =
+      Units.map (algebraMap O (IsLocalRing.ResidueField O)) (δ g)) :
+    IsLocalRing (R ⧸ representationDeterminantIdeal ρ δ) :=
+  representationDeterminantQuotient_isLocal eR ρ σ hρ δ hδ
+
+end
+

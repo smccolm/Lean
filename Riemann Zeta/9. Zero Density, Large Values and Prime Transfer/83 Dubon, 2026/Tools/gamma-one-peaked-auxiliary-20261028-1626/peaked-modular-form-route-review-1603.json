@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-29T02:38:06.581179+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> discriminant-adjusted Siegel product as an actual modular form with exact cusp decay.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-peaked-core-1533\\S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow.lean.txt",
+      "sha256": "6AB6B4B15B3495331DD18AE43946868B2394D3747867C5F92D745723AD632ABD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelHolomorphic.lean",
+      "sha256": "0DDF84618FFA48AB20C7DE768F55488FBB4929947A5ECA12726FF2305E90B25F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelProductTransformation.lean",
+      "sha256": "B275809DABB5ADFDB1E96C2475E4C8AD8696E83B4924A6BAAAAA9435AE7D22D6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSiegelFiniteProductExpansion1601b.lean",
+      "sha256": "4A6AE8320FD1813BBA98395E911BC88E5515574E5E5EE5DF3A5A9B541C47259F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHolomorphicDiscriminantLift.lean",
+      "sha256": "A212BA8D9511E23DF75B4826202D1C4FAD523B0317B349B664057155E9833C26"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantIntegralExpansion.lean",
+      "sha256": "BAD1520E5AE5BCD28FE138526FBFB19047EAC5D10DDD2BC55116652ECAC16693"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQExpansionPeriodWidth.lean",
+      "sha256": "D3248C33170D3B78853CFE460E204D730EAAA4BFBFDB4562117DED33587D0287"
+    }
+  ],
+  "shorterRoute": "Reuse the actual audited Siegel holomorphy and SL2/Gamma1 product transformations, the newly proved exact finite-product cusp limit, and native discriminant cusp-form decay. The existing holomorphic discriminant lift targets Gamma0 quotients and lacks these explicit Siegel Bernoulli orders; adapt only the finite row permutation, literal slash identity and cusp-bound assembly. Reuse existing integral discriminant expansion and width-change theorem in the subsequent q-expansion step instead of the external duplicate Eisenstein divisibility proof.",
+  "assumptionsToDischarge": [
+    "Actual discriminant-adjusted product is holomorphic and Gamma1 invariant.",
+    "Every transformed literal product has the exact Bernoulli cusp order from the original exponent family.",
+    "The source exponential bound holds at every SL2 cusp.",
+    "Nonnegative shifted cusp orders give an actual ModularForm rather than a boundedness certificate."
+  ],
+  "remaining": "Select the discriminant power, prove exact integral q-expansions and leading coefficient bounds, and assemble the actual even-weight peaked auxiliary. Degree/genus preservation and downstream original arithmetic association/continuation remain open. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "proofLimitsChanged": false
+}

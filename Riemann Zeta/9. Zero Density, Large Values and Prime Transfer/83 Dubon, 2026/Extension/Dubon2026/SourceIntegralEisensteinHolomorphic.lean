@@ -1,0 +1,54 @@
+import Dubon2026.SourceIntegralEisensteinRows
+
+/-! DUB-17/18 -> original Gamma1 coordinate-degree preservation -> integral
+weight-four Eisenstein separation. Prove holomorphicity of the actual
+congruence lattice sum by the existing Mathlib lattice majorant and locally
+uniform convergence theorem. This supplies the analytic condition of the
+specific separating modular forms, without another general convergence API.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open scoped MatrixGroups CongruenceSubgroup ModularForm Topology Manifold Matrix
+open UpperHalfPlane hiding I
+open EisensteinSeries Filter Complex
+
+theorem series_locallyUniform (N : ℕ) (a : Fin 2 → ZMod N) :
+    TendstoLocallyUniformly (fun (s : Finset (rows N a)) (z : ℍ) => ∑ x ∈ s, eisSummand 4 x z)
+      (series N a) Filter.atTop := by
+  have hsum : Summable fun x : rows N a => ‖x.val‖ ^ (-4 : ℤ) := by
+    exact_mod_cast (summable_one_div_norm_rpow (show (2 : ℝ) < 4 by norm_num)).subtype (rows N a)
+  simp only [tendstoLocallyUniformly_iff_forall_isCompact]
+  intro K hK
+  obtain ⟨A, B, hB, HABK⟩ := subset_verticalStrip_of_isCompact hK
+  refine (tendstoUniformlyOn_tsum (hu := hsum.mul_left <| r ⟨⟨A, B⟩, hB⟩ ^ (-4 : ℤ))
+    (fun p z hz => ?_)).mono HABK
+  simpa only [eisSummand, one_div, ← zpow_neg, norm_zpow, ← Real.rpow_intCast,
+    Int.cast_neg] using summand_bound_of_mem_verticalStrip (by norm_num : (0 : ℝ) ≤ 4) p hB hz
+
+private theorem series_locallyUniformOn (N : ℕ) (a : Fin 2 → ZMod N) :
+    TendstoLocallyUniformlyOn (fun (s : Finset (rows N a)) =>
+      ↑ₕ(fun (z : ℍ) => ∑ x ∈ s, eisSummand 4 x z)) (↑ₕ(slashInvariant N a))
+      Filter.atTop {z : ℂ | 0 < z.im} := by
+  rw [← upperHalfPlaneSet, ← UpperHalfPlane.range_coe, ← Set.image_univ]
+  apply TendstoLocallyUniformlyOn.comp (s := ⊤) _ _ _ (OpenPartialHomeomorph.continuousOn_symm _)
+  · simp only [Set.top_eq_univ, tendstoLocallyUniformlyOn_univ]
+    exact series_locallyUniform N a
+  · simp only [Topology.IsOpenEmbedding.toOpenPartialHomeomorph_target, Set.top_eq_univ,
+      Set.mapsTo_range_iff, Set.mem_univ, forall_const]
+
+theorem slashInvariant_mdifferentiable (N : ℕ) (a : Fin 2 → ZMod N) :
+    MDiff (slashInvariant N a) := by
+  intro τ
+  suffices DifferentiableAt ℂ (↑ₕslashInvariant N a) τ.1 by
+    convert!
+      MDifferentiableAt.comp τ (DifferentiableAt.mdifferentiableAt this) τ.mdifferentiable_coe
+    exact funext fun z => (comp_ofComplex (slashInvariant N a) z).symm
+  refine DifferentiableOn.differentiableAt ?_ (isOpen_upperHalfPlaneSet.mem_nhds τ.2)
+  exact (series_locallyUniformOn N a).differentiableOn
+    (Eventually.of_forall fun s => DifferentiableOn.fun_sum
+      fun _ _ => eisSummand_extension_differentiableOn _ _) isOpen_upperHalfPlaneSet
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

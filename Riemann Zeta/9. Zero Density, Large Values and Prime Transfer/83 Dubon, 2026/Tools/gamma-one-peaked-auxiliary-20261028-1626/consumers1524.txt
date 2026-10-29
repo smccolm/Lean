@@ -1,0 +1,67 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+
+/-- Exact original-object consumer of `unramified_intValuation_algebraMap`. -/
+theorem actual_unramified_radical_selmer_unramified_intValuation_algebraMap_source
+    (v : HeightOneSpectrum R) (w : HeightOneSpectrum S) [w.asIdeal.LiesOver v.asIdeal]
+    (he : v.asIdeal.ramificationIdx w.asIdeal = 1) (r : R) :
+    w.intValuation (algebraMap R S r) = v.intValuation r :=
+  unramified_intValuation_algebraMap v w he r
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S K L : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+  [Field K] [Field L] [Algebra R K] [IsFractionRing R K]
+  [Algebra S L] [IsFractionRing S L] [Algebra K L] [Algebra R L]
+  [IsScalarTower R K L] [IsScalarTower R S L]
+
+/-- Exact original-object consumer of `unramified_valuationOfNeZero_algebraMap`. -/
+theorem actual_unramified_radical_selmer_unramified_valuationOfNeZero_algebraMap_source
+    (v : HeightOneSpectrum R) (w : HeightOneSpectrum S) [w.asIdeal.LiesOver v.asIdeal]
+    (he : v.asIdeal.ramificationIdx w.asIdeal = 1) (x : Kˣ) :
+    w.valuationOfNeZero (Units.map (algebraMap K L).toMonoidHom x) =
+      v.valuationOfNeZero x :=
+  unramified_valuationOfNeZero_algebraMap v w he x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R S K L : Type*} [CommRing R] [CommRing S]
+  [IsDedekindDomain R] [IsDedekindDomain S] [Algebra R S] [FaithfulSMul R S]
+  [Field K] [Field L] [Algebra R K] [IsFractionRing R K]
+  [Algebra S L] [IsFractionRing S L] [Algebra K L] [Algebra R L]
+  [IsScalarTower R K L] [IsScalarTower R S L]
+
+/-- Exact original-object consumer of `unramified_radical_mem_selmer`. -/
+theorem actual_unramified_radical_selmer_unramified_radical_mem_selmer_source
+    (T : Set (HeightOneSpectrum R))
+    (hunram : ∀ v : HeightOneSpectrum R, v ∉ T →
+      ∃ w : HeightOneSpectrum S, w.asIdeal.LiesOver v.asIdeal ∧
+        v.asIdeal.ramificationIdx w.asIdeal = 1)
+    (n : ℕ) (a : Kˣ) (β : Lˣ)
+    (hβ : β ^ n = Units.map (algebraMap K L).toMonoidHom a) :
+    QuotientGroup.mk' (powMonoidHom (α := Kˣ) n).range a ∈
+      IsDedekindDomain.selmerGroup (R := R) (K := K) (S := T) (n := n) :=
+  unramified_radical_mem_selmer T hunram n a β hβ
+
+end
+

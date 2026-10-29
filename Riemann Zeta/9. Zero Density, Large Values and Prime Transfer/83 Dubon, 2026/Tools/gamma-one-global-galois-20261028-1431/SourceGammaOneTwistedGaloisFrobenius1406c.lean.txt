@@ -1,0 +1,69 @@
+import SourceGammaOneTwistedGaloisHecke1404b
+import SourceAbsoluteCyclotomicLocal1405a
+import SourceGammaOneGeometricArithmeticFrobenius
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> Frobenius
+on the genuine homogeneous-valued Tate Galois representation. The actual
+cyclotomic exponent is derived at the same valuation and Frobenius as the
+norm-derived Tate relation. Only coordinate-degree/genus preservation and
+combined-diamond fixedness remain; no Frobenius or cyclotomic value is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+variable (A : ValuationSubring Qbar)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+attribute [local instance] specializationResidueAlgebra
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem exists_gammaOne_galois_frobenius_quadratic_of_degree_genus_eq
+    (ell : sourceBinaryHeckePrime (Q * N)) [CharP kk ell.val]
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar (functionFieldOver Γ Qbar))
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ ell.val)
+    (hp : (p : kk) ≠ 0) :
+    ∃ g : Gamma0 M, (g.val 1 1 : ZMod N) = (ell.val : ZMod N) ∧
+      ∀ (φ : T →ₗ[ℤ_[p]] V),
+        ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+          (φ.comp (arithmeticDiamondTate M p g)) = φ →
+        binaryArithmeticTateGaloisRep Q p n w d.val (binaryTatePrimeOperators Q p n w ell φ) =
+          binaryArithmeticTateGaloisRep Q p n w d.val
+            (binaryArithmeticTateGaloisRep Q p n w d.val φ) +
+            (ell.val : ZMod N) ^ (w + 1) • φ := by
+  run_tac Lean.logInfo "have hs := exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genu"
+  have hs := exists_gammaOne_arithmetic_frobenius_quadratic_of_degree_genus_eq Q p n w A ell
+  run_tac Lean.logInfo "have h1 := hs hdeg"
+  have h1 := hs hdeg
+  run_tac Lean.logInfo "have h2 := h1 hgen"
+  have h2 := h1 hgen
+  run_tac Lean.logInfo "have h3 := h2 d hd hp"
+  have h3 := h2 d hd hp
+  run_tac Lean.logInfo "obtain ⟨g, hg, hq⟩ := h3"
+  obtain ⟨g, hg, hq⟩ := h3
+  run_tac Lean.logInfo "have hχ := sourceAbsoluteCyclotomicCharacter_frobenius A N ell.val"
+  have hχ := sourceAbsoluteCyclotomicCharacter_frobenius A N ell.val
+    (by simpa only [Nat.cast_pow] using pow_ne_zero (n + 1) hp) d hd
+  run_tac Lean.logInfo "have he := binaryArithmeticTateGaloisRep_frobenius_operator Q p n w ell "
+  have he := binaryArithmeticTateGaloisRep_frobenius_operator Q p n w ell d.val hχ
+  run_tac Lean.logInfo "refine ⟨g, hg, fun φ hφ => ?_⟩"
+  refine ⟨g, hg, fun φ hφ => ?_⟩
+  run_tac Lean.logInfo "have heq := congrArg (fun op : Module.End (ZMod N) (T →ₗ[ℤ_[p]] V) =>"
+  have heq := congrArg (fun op : Module.End (ZMod N) (T →ₗ[ℤ_[p]] V) =>
+    op (binaryTatePrimeOperators Q p n w ell φ) = op (op φ) + (ell.val : ZMod N) ^ (w + 1) • φ) he
+  run_tac Lean.logInfo "exact heq.mpr (hq φ hφ)"
+  exact heq.mpr (hq φ hφ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

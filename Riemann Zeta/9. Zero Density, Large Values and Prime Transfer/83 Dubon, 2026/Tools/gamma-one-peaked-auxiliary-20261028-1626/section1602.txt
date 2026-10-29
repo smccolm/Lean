@@ -1,0 +1,7 @@
+### Actual original arithmetic primes with trivial inertia — 9 October 2026
+
+Every actual prime of the whole original arithmetic extension above a base prime outside the exceptional integer has trivial genuine inertia. Actual integral lying-over supplies such primes, so their existence and original inertia conclusion are derived together.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedUnionPrimeInertia](Extension/Dubon2026/UnramifiedUnionPrimeInertia.lean).

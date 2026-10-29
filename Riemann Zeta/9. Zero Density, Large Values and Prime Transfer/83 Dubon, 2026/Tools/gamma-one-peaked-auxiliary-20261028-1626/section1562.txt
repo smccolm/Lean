@@ -1,0 +1,7 @@
+### Actual unramified-union finite-stage embedding — 9 October 2026
+
+One further production module maps an actual finite intermediate field of the constructed arithmetic union through its original ambient inclusion. The genuine intermediate-field image equivalence gives finite dimensionality of this actual ambient image. Nonemptiness and directedness of the original arithmetic stages, together with the proved finite-subextension descent, place that entire image inside an original unramified finite Galois stage. Restricting the actual ambient inclusion constructs the original stage embedding with its exact ambient-field value on every element. No embedding or finite-stage containment is assumed.
+
+Transfer of the original ramification conditions to every actual finite subextension of this constructed union and required cyclotomic inclusion remain open. Specialization to the chosen algebraic closure and maximality also require the actual comparison. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedUnionFiniteStage](Extension/Dubon2026/UnramifiedUnionFiniteStage.lean).

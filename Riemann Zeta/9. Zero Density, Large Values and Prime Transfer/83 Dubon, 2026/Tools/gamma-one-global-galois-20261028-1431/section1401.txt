@@ -1,0 +1,10 @@
+### Original strict conjugacy, adjoint first cohomology and continuity — 8 October 2026
+
+Four further production modules construct the literal strict change-of-basis matrix I+epsilon X, prove its explicit inverse, and show that every dual-number invertible matrix reducing to the identity has this form with its original infinitesimal matrix. Actual conjugation changes the original lift cocycle by the exact adjoint coboundary. Equality in Mathlib’s genuine first cohomology is proved equivalent to strict conjugacy of the original first-order representations, and every actual first-cohomology class is represented by an original lift. Separately, for the original continuous representation over a topological coefficient ring, the genuine lift is continuous if and only if its original adjoint cocycle is continuous. Both matrix and inverse coordinates use their actual topologies.
+
+The cohomology classification is algebraic; the separate continuity equivalence does not identify algebraic H1 with continuous cohomology or impose local Selmer conditions. Universal deformation representability, associated Galois representations, higher symmetric automorphic lifts and analytic continuation remain open, as do unconditional Deligne, non-CM Sato–Tate and the final modular application. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+- [ContinuousFirstOrderDeformation](Extension/Dubon2026/ContinuousFirstOrderDeformation.lean).
+- [DualMatrixStrictUnits](Extension/Dubon2026/DualMatrixStrictUnits.lean).
+- [FirstOrderCohomologyClassification](Extension/Dubon2026/FirstOrderCohomologyClassification.lean).
+- [FirstOrderStrictConjugation](Extension/Dubon2026/FirstOrderStrictConjugation.lean).

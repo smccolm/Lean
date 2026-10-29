@@ -1,0 +1,119 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T18:01:59.955998+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResidueGeometry",
+    "SourceCurveSeparatingGenusMaximum",
+    "SourceReductionGenusPoleLifting",
+    "SourceReductionGenusIntegralCharts",
+    "SourceGammaOneGenusSpecialization",
+    "SourceGammaOneOriginalSpecialization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry.lean",
+      "sha256": "EA4CF62ED725D3520F0A81E4AF4B90DF1A58DA5C39A2EE038AB0F822A9A60C59",
+      "oleanSha256": "8AAF373DB1AEE5D5EE9949A7E3C4962A0B4462A8214BCD13208F930E2952AE74",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry-1333.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum.lean",
+      "sha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137",
+      "oleanSha256": "78150B218F289ADB3586376C1BD2C5D970CF0268527AD8E947374D5566228715",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum-1333.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting.lean",
+      "sha256": "15A41D3747A4F859C4105BBCDAB6F328F3A839A03690B125CBF337C608A1D974",
+      "oleanSha256": "19A82E4E6177D2411FA772D0F4C2761CA1351FC36094F4F940876FE0EEF9870F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting-1333.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts.lean",
+      "sha256": "8477E05815169F0231AA865C43EC12EF86E8B6421E4D25672D829C699D9C5E96",
+      "oleanSha256": "59A06D5B26B3A743409B5386580980EA69D0E642F2ABAF32D1576247E8AD24CD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts-1333.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization.lean",
+      "sha256": "D1373551585924BD6D5A652D2C270760C8266D007B4D9E26E6E6B90EBEA199C5",
+      "oleanSha256": "720FAC966A4797C9EC7C8A808292D640753D9BC9B30BA6D569420747B716D611",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization-1333.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization.lean",
+      "sha256": "60DA51745E7254DEC52F894CCE1AFF7AF4C570CDCA0C0A14FC44BEA309FA4AD8",
+      "oleanSha256": "7EC01E5AD1669F64E0389508CFB8578052F54A2DD6C910183445B9C9D877308E",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization-1333.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization-1333.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.D_residueJCoordinate_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_hasPrincipalDivisors",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_isCurveOver",
+    "Dubon2026.SourceCurve.finite_lSpace_of_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_degree_dimension_maximum",
+    "Dubon2026.SourceCurve.separating_coordinate_index_zero_eq_maximum",
+    "Dubon2026.SourceCurve.RegularProlongation.exists_pole_space_lifts_of_degree_genus_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.exists_integral_coordinate_lift_of_degree_genus_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.integral_charts_lift_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_constant_reduction_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.D_residueJCoordinate_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_hasPrincipalDivisors",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_isCurveOver",
+    "Dubon2026.SourceCurve.finite_lSpace_of_separating_coordinate",
+    "Dubon2026.SourceCurve.separating_coordinate_degree_dimension_maximum",
+    "Dubon2026.SourceCurve.separating_coordinate_index_zero_eq_maximum",
+    "Dubon2026.SourceCurve.RegularProlongation.exists_pole_space_lifts_of_degree_genus_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.exists_integral_coordinate_lift_of_degree_genus_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.integral_charts_lift_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_constant_reduction_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationAudit1.log",
+  "logSha256": "4E4DF5325508BEF763DF511E5E675319C63D65E8742AEB7784A2EFB3B7406A03",
+  "auditSha256": "A68BEB1DA553D333648C19984927D0A76A5F0EEA555164D693D85B7B46D29488",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationScratchOwnership1334.log",
+  "ownershipSha256": "4C3D3D930DF12293E453C5383BAE93FF957C666B9A70F1B7CDD87A37AB061335",
+  "exhaustiveTheorems": 17,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 28,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationDependencyAudit1.log",
+  "dependencyAuditSha256": "5B269B7601D21F4F63FD4F6FEAD8F617C540B52DE4FA266D7A6A05959E23010E",
+  "dependencyAuditSourceSha256": "4CE95221FC0C693AC25933D6854B20A10AD11BF8E2E5320BC4076F5945053031",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_of_degree_genus_eq"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> Frobenius/inertia -> original coefficient specialization.",
+  "discharged": [
+    "Actual original Gamma1 residue curve geometry is derived from its proved finite separating j.",
+    "Coordinate-degree equality and actual adelic-genus equality now imply both integral chart lifts and a degree-preserving place map compatible with every principal divisor.",
+    "The literal Gamma1 consumer discharges finite index and translation membership and returns a constant reduction whose regular prolongation is exactly the original coefficient reduction."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate-degree equality and actual genus equality remain explicit geometric inputs. They, diamond integrality and prime-to-residue Picard torsion injectivity still require proofs. Original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "99DA99EB04E3C8E777A29D20B85EDF8F7B759059F00DC8AE00D1AC22A9FAA522",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

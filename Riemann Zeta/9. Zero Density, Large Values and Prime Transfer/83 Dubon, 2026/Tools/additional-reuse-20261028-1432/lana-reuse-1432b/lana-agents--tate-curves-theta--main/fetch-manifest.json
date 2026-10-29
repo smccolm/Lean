@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T21:37:45.906522+00:00",
+  "repository": "lana-agents/tate-curves-theta",
+  "branch": "main",
+  "revision": "d1fba94861c886b671f4137ab35e24b7474c9e00",
+  "commitDate": "2026-10-11T23:05:40Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/lana-agents/tate-curves-theta",
+      "path": "repository.json",
+      "sha256": "301CB7BF475CC0991C28B86B2E41069021D9E606646DBC738A6F6D773AE3B2C0",
+      "bytes": 6760
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/tate-curves-theta/commits/main",
+      "path": "commit.json",
+      "sha256": "7AA04D1B768E2372DB993A116D28C8D0F5C5EFCF77A4BB04337BB8E87624C4A0",
+      "bytes": 26582
+    },
+    {
+      "url": "https://api.github.com/repos/lana-agents/tate-curves-theta/git/trees/d1fba94861c886b671f4137ab35e24b7474c9e00?recursive=1",
+      "path": "tree.json",
+      "sha256": "0340CFEAFE66849F894AD6E4931EEF3536D89EEF105085E5E31FE4A97153A49A",
+      "bytes": 26176
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/README.md",
+      "path": "README.md.txt",
+      "sha256": "30F9EE203E79E3C3EBF815B9048969CC2744EB23E82A0FF471B38FDBED6313BB",
+      "bytes": 15858
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "57E5C28D3621923F4C09F39AF29DAF5F786C340B5F97F7AE2280DCFFF1848619",
+      "bytes": 3889
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lana-agents/tate-curves-theta/d1fba94861c886b671f4137ab35e24b7474c9e00/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+      "bytes": 11357
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

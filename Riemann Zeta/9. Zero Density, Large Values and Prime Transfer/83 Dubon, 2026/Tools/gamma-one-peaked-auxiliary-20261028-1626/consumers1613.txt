@@ -1,0 +1,21 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+omit [IsTopologicalGroup G] in
+/-- Exact original-object consumer of `continuousFixedDeterminantClasses_firstOrder_iff`. -/
+theorem actual_continuous_fixed_determinant_classes_continuousFixedDeterminantClasses_firstOrder_iff_source
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ)
+    (τ : MatrixFirstOrderLift ρ) (hτ : Continuous τ.val) :
+    continuousMatrixFirstOrderClass ρ hρ τ hτ ∈ continuousFixedDeterminantClasses ρ hρ ↔
+      ∀ g, Matrix.det (τ.val g).val = TrivSqZeroExt.inl (Matrix.det (ρ g).val) :=
+  continuousFixedDeterminantClasses_firstOrder_iff ρ hρ τ hτ
+
+end
+

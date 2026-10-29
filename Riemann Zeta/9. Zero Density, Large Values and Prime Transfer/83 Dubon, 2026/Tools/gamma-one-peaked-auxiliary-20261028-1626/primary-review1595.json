@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "DualNumberAdicTopology",
+  "mathematics": "For a discrete original coefficient field, the actual dual-number maximal-adic topology is proved equal to its original product topology. The actual square-zero maximal ideal makes the first topology discrete, and discreteness of the original field makes the genuine product topology discrete. Continuity of the actual dual-number general linear group representations is therefore unchanged between those original topologies.",
+  "boundary": "Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "finite-arithmetic-adjoint-cohomology-route-20261009.json; existing production constructions and exact pinned APIs inspected. No external Lean code imported.",
+  "productionLog": "dualTopology1595-focus.log"
+}

@@ -1,0 +1,85 @@
+{
+  "modules": [
+    "SourceReductionCoordinateAutomorphism",
+    "SourceGammaOneDiamondGauss",
+    "SourceReductionMapReflection",
+    "SourceGammaOneHeckeGaussReflection",
+    "SourceGammaOneHeckeFractionProduct",
+    "SourceGammaOneHeckeGaussNorm"
+  ],
+  "theorems": [
+    "Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss"
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq",
+    "Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation",
+    "Dubon2026.SourceCurve.RegularProlongation.isIntegral_coordinate_intersection",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondHom_j",
+    "Dubon2026.SourceFunctionField.GammaOne.ConstantField.arithmeticDiamondAut",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBetaGauss_resHom",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_hecke_norm_beta_product",
+    "Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.wit_spec",
+    "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe",
+    "Dubon2026.SourceFunctionField.qExpand_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.transcendental_residueJCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.regularProlongation_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra"
+  ],
+  "localModules": [
+    "SourceGammaOneResidueGeometry",
+    "SourceCurveSeparatingGenusMaximum",
+    "SourceReductionGenusPoleLifting",
+    "SourceReductionGenusIntegralCharts",
+    "SourceGammaOneGenusSpecialization",
+    "SourceGammaOneOriginalSpecialization",
+    "SourceReductionCoordinateAutomorphism",
+    "SourceGammaOneDiamondGauss",
+    "SourceReductionMapReflection",
+    "SourceGammaOneHeckeGaussReflection",
+    "SourceGammaOneHeckeFractionProduct",
+    "SourceGammaOneHeckeGaussNorm"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceReductionCoordinateAutomorphism": "SourceReductionCoordinateAutomorphism-1356",
+    "SourceGammaOneDiamondGauss": "SourceGammaOneDiamondGauss-1356",
+    "SourceReductionMapReflection": "SourceReductionMapReflection-1356",
+    "SourceGammaOneHeckeGaussReflection": "SourceGammaOneHeckeGaussReflection-1356",
+    "SourceGammaOneHeckeFractionProduct": "SourceGammaOneHeckeFractionProduct-1356",
+    "SourceGammaOneHeckeGaussNorm": "SourceGammaOneHeckeGaussNorm-1356"
+  }
+}

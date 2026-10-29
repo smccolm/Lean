@@ -1,0 +1,61 @@
+import SourcePeakedBernoulliResidueWeights1541a
+import SourcePeakedBernoulliCharacterInversion1542b
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> level-power
+slash integrality -> actual even-weight peaked auxiliary form -> finite
+Bernoulli-order separation. Residue-class reciprocal-square weights are
+diagonalized by the actual Dirichlet characters. Native character
+orthogonality and nonvanishing of L(2,chi) discharge the finite convolution
+kernel; no new analytic-continuation or nonvanishing hypothesis is used.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_mem_span_levelBernoulliWeight_dilate_iff_even.
+No upstream resource-limit option is adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli
+open Finset Real
+open scoped Real
+variable {N : ℕ} [NeZero N]
+open Complex
+
+theorem eq_zero_of_convolution (M : ℕ) [NeZero M] (a : ZMod M → ℝ)
+    (hnu : ∀ c : ZMod M, ¬ IsUnit c → a c = 0)
+    (hconv : ∀ u : (ZMod M)ˣ, ∑ c : ZMod M, a (c * u) * Zres M c = 0) (b : (ZMod M)ˣ) : a b = 0 := by
+  set A : ZMod M → ℂ := fun c => (a c : ℂ) with hA
+  suffices hAb : A b = 0 by simpa [hA] using hAb
+  refine eq_zero_of_forall_sum_char_inv_mul_eq_zero M A (fun χ => ?_) b
+  have hL : LSeries (fun n : ℕ => χ (n : ZMod M)) 2 ≠ 0 :=
+    DirichletCharacter.LSeries_ne_zero_of_one_lt_re χ (by norm_num)
+
+  have hconvU : ∀ u : (ZMod M)ˣ, ∑ c : (ZMod M)ˣ, A ((c : ZMod M) * u) * (Zres M c : ℂ) = 0 := by
+    intro u
+    have h := congrArg (fun x : ℝ => (x : ℂ)) (hconv u)
+    simp only [Complex.ofReal_sum, Complex.ofReal_mul, Complex.ofReal_zero] at h
+    rw [← h, eq_comm]
+    refine (sum_units_eq_sum (fun c => A (c * (u : ZMod M)) * (Zres M c : ℂ)) fun c hc => ?_).symm
+    have hcu : ¬ IsUnit (c * (u : ZMod M)) := fun h' => hc (by simpa using h'.mul (Units.isUnit u⁻¹))
+    simp [hA, hnu _ hcu]
+
+  have hfactor : ∑ u : (ZMod M)ˣ, χ ((u⁻¹ : (ZMod M)ˣ) : ZMod M) *
+        ∑ c : (ZMod M)ˣ, A ((c : ZMod M) * u) * (Zres M c : ℂ)
+      = (∑ v : (ZMod M)ˣ, χ ((v⁻¹ : (ZMod M)ˣ) : ZMod M) * A v) *
+          ∑ c : (ZMod M)ˣ, χ (c : ZMod M) * (Zres M c : ℂ) := by
+    simp_rw [Finset.mul_sum]
+    rw [Finset.sum_comm]
+    refine Finset.sum_congr rfl fun c _ => ?_
+
+    rw [Finset.sum_mul, ← Equiv.sum_comp (Equiv.mulLeft c⁻¹)]
+    refine Finset.sum_congr rfl fun v _ => ?_
+    simp only [Equiv.coe_mulLeft, mul_inv_rev, inv_inv, Units.val_mul, map_mul, Units.mul_inv_cancel_left]
+    ring
+  have htotal : ∑ u : (ZMod M)ˣ, χ ((u⁻¹ : (ZMod M)ˣ) : ZMod M) *
+      ∑ c : (ZMod M)ˣ, A ((c : ZMod M) * u) * (Zres M c : ℂ) = 0 :=
+    Finset.sum_eq_zero fun u _ => by rw [hconvU u, mul_zero]
+  rw [hfactor] at htotal
+
+  have hsecond : ∑ c : (ZMod M)ˣ, χ (c : ZMod M) * (Zres M c : ℂ) = LSeries (fun n : ℕ => χ (n : ZMod M)) 2 := by
+    rw [sum_units_eq_sum (fun c => χ c * (Zres M c : ℂ)) fun c hc => by simp [MulChar.map_nonunit χ hc]]
+    exact sum_char_mul_Zres M χ
+  rw [hsecond] at htotal
+  exact (mul_eq_zero.mp htotal).resolve_right hL
+
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Bernoulli

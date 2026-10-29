@@ -1,0 +1,88 @@
+import SourceSiegelProductCore
+import SourceSiegelJacobiProductIdentity
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary. Use the literal Siegel
+infinite product and identify it with the original analytic Jacobi theta
+function divided by the native nonvanishing eta product. This discharges
+holomorphy of the required factors and supplies common identities for
+their SL2 transformation; modularity and integral expansions remain
+separate obligations. No abstract function replaces the product.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+Def_ModularCurve_SiegelFunction and
+S_ModularCurve_SiegelUnit_differentiableOn_siegelFun. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open UpperHalfPlane hiding I
+open scoped Manifold Real MatrixGroups
+
+/-- The affine theta argument identifying the original Siegel product. -/
+def w (N : ℕ) (r s : ℤ) (τ : ℂ) : ℂ := ((r : ℂ) * τ + (s : ℂ)) / (N : ℂ) + (1 - τ) / 2
+
+theorem jtp_term (N : ℕ) (hN : N ≠ 0) (r s : ℤ) (τ : ℂ) (n : ℕ) :
+    (1 - cexp (2 * π * I * (n + 1) * τ)) *
+      (1 + cexp (π * I * (2 * n + 1) * τ + 2 * π * I * w N r s τ)) *
+      (1 + cexp (π * I * (2 * n + 1) * τ - 2 * π * I * w N r s τ)) =
+      (1 - qq τ ^ (n + 1)) * ((1 - qq τ ^ n * qa N r s τ) *
+        (1 - qq τ ^ (n + 1) * (qa N r s τ)⁻¹)) := by
+  have hN' : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hN
+  have e1 : cexp (2 * π * I * (n + 1) * τ) = qq τ ^ (n + 1) := by
+    rw [show 2 * π * I * (n + 1) * τ = ((n + 1 : ℕ) : ℂ) * (2 * π * I * τ) by push_cast; ring,
+      Complex.exp_nat_mul, qq]
+  have e2 : cexp (π * I * (2 * n + 1) * τ + 2 * π * I * w N r s τ) = -(qq τ ^ n * qa N r s τ) := by
+    have : π * I * (2 * n + 1) * τ + 2 * π * I * w N r s τ =
+        (n : ℂ) * (2 * π * I * τ) + 2 * π * I * ((r : ℂ) * τ + (s : ℂ)) / (N : ℂ) + π * I := by
+      unfold w; field_simp; ring
+    rw [this, Complex.exp_add, Complex.exp_add, Complex.exp_nat_mul, Complex.exp_pi_mul_I, qq, qa]
+    ring
+  have e3 : cexp (π * I * (2 * n + 1) * τ - 2 * π * I * w N r s τ) =
+      -(qq τ ^ (n + 1) * (qa N r s τ)⁻¹) := by
+    have : π * I * (2 * n + 1) * τ - 2 * π * I * w N r s τ =
+        ((n + 1 : ℕ) : ℂ) * (2 * π * I * τ) + -(2 * π * I * ((r : ℂ) * τ + (s : ℂ)) / (N : ℂ)) +
+          -(π * I) := by
+      unfold w; push_cast; field_simp; ring
+    rw [this, Complex.exp_add, Complex.exp_add, Complex.exp_nat_mul, Complex.exp_neg,
+      Complex.exp_neg, Complex.exp_pi_mul_I, qq, qa]
+    ring
+  rw [e1, e2, e3]; ring
+
+theorem theta_eq (N : ℕ) (hN : N ≠ 0) (r s : ℤ) {τ : ℂ} (hτ : 0 < τ.im) :
+    jacobiTheta₂ (w N r s τ) τ = P τ * sprod N r s τ := by
+  rw [JacobiProduct.jacobiTheta_two_eq_tprod _ _ hτ, tprod_congr (jtp_term N hN r s τ)]
+  have hP := multipliable_P hτ
+  have hb := multipliable_b hτ N r s
+  have hb1 := multipliable_b_succ hτ N r s
+  have hc := multipliable_c hτ N r s
+  have hbc : Multipliable fun n : ℕ => (1 - qq τ ^ n * qa N r s τ) *
+      (1 - qq τ ^ (n + 1) * (qa N r s τ)⁻¹) := (hb.hasProd.mul hc.hasProd).multipliable
+  have h3 : ∏' n : ℕ, (1 - qq τ ^ n * qa N r s τ) =
+      (1 - qq τ ^ 0 * qa N r s τ) * ∏' n : ℕ, (1 - qq τ ^ (n + 1) * qa N r s τ) :=
+    tprod_eq_zero_mul' hb1
+  rw [hP.tprod_mul hbc, hb.tprod_mul hc, h3, pow_zero, one_mul, mul_assoc, ← hb1.tprod_mul hc]
+  simp only [P, sprod]
+
+theorem qParam_24 (τ : ℂ) : Function.Periodic.qParam 24 τ = cexp (π * I * τ / 12) := by
+  unfold Function.Periodic.qParam
+  congr 1
+  push_cast
+  ring
+
+theorem one_sub_eta_q (n : ℕ) (τ : ℂ) : 1 - ModularForm.eta_q n τ = 1 - qq τ ^ (n + 1) := by
+  simp only [ModularForm.eta_q, Function.Periodic.qParam, qq]
+  congr 3
+  push_cast
+  ring
+
+theorem eta_eq (τ : ℂ) : ModularForm.eta τ = cexp (π * I * τ / 12) * P τ := by
+  unfold ModularForm.eta P
+  rw [qParam_24, tprod_congr (fun n => one_sub_eta_q n τ)]
+
+theorem P_ne_zero {τ : ℂ} (hτ : 0 < τ.im) : P τ ≠ 0 := by
+  have h := ModularForm.eta_tprod_ne_zero (z := τ) hτ
+  rwa [tprod_congr (fun n => one_sub_eta_q n τ)] at h
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

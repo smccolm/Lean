@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedUnion_finiteGalois_inertia_eq_bot`. -/
+theorem actual_unramified_union_finite_inertia_originalUnramifiedUnion_finiteGalois_inertia_eq_bot_source
+    (a : 𝓞 K) (ha : a ≠ 0) (F : FiniteGaloisIntermediateField K Ω)
+    (hF : F.toIntermediateField ≤ originalUnramifiedGaloisUnion (Ω := Ω) a)
+    (w : HeightOneSpectrum (𝓞 F)) (hw : algebraMap (𝓞 K) (𝓞 F) a ∉ w.asIdeal) :
+    w.asIdeal.inertia Gal(F/K) = ⊥ :=
+  originalUnramifiedUnion_finiteGalois_inertia_eq_bot a ha F hF w hw
+
+end
+

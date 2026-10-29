@@ -1,0 +1,91 @@
+import SourceGammaOneGaloisDiamondPolynomial1436c
+import SourceGammaOneDiamondQuotientGalois1438h
+
+/-! DUB-17/18 -> original all-weight association -> finite Hecke-character
+quotient. Project the genuine norm-derived Frobenius polynomial through
+the original diamond relations. Their generators make the diamond term
+equal to one without a fixed-vector assumption. The resulting identity
+uses the actual quotient Galois representation and original Hecke operator. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+
+private theorem quotient_polynomial {R W Z : Type*} [CommRing R]
+    [AddCommMonoid W] [Module R W] [AddCommMonoid Z] [Module R Z]
+    (q : W →ₗ[R] Z) (F : Module.End R W) (Fq : Module.End R Z)
+    (H D : Module.End R W) (a : R)
+    (hc : ∀ x, Fq (q x) = q (F x))
+    (hp : ∀ x, F (H x) = F (F x) + a • D x)
+    (hd : ∀ x, q (D x) = q x) (x : W) :
+    Fq (q (H x)) = Fq (Fq (q x)) + a • q x := by
+  rw [hc, hc, hc, hp, map_add, map_smul, hd]
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+variable (A : ValuationSubring Qbar)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+attribute [local instance] specializationResidueAlgebra
+
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+private theorem quotient_of_diamond (ell : sourceBinaryHeckePrime (Q * N))
+    (g : Gamma0 M) (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (hq : ∀ φ : T →ₗ[ℤ_[p]] V,
+      binaryArithmeticTateGaloisRep Q p n w σ (binaryTatePrimeOperators Q p n w ell φ) =
+        binaryArithmeticTateGaloisRep Q p n w σ (binaryArithmeticTateGaloisRep Q p n w σ φ) +
+        (ell.val : ZMod N) ^ (w + 1) •
+          ((sourceGammaOneBinaryDiamondCoefficient Q N w g).restrictScalars ℤ_[p]).comp
+            (φ.comp (arithmeticDiamondTate M p g))) :
+    ∀ φ : T →ₗ[ℤ_[p]] V,
+      binaryDiamondQuotientGaloisRep Q p n w σ
+          ((binaryTateDiamondRelations Q p n w).mkQ (binaryTatePrimeOperators Q p n w ell φ)) =
+        binaryDiamondQuotientGaloisRep Q p n w σ
+          (binaryDiamondQuotientGaloisRep Q p n w σ
+            ((binaryTateDiamondRelations Q p n w).mkQ φ)) +
+          (ell.val : ZMod N) ^ (w + 1) • (binaryTateDiamondRelations Q p n w).mkQ φ := by
+  let q := (binaryTateDiamondRelations Q p n w).mkQ
+  let F := binaryArithmeticTateGaloisRep Q p n w σ
+  let Fq := binaryDiamondQuotientGaloisRep Q p n w σ
+  let H := binaryTatePrimeOperators Q p n w ell
+  let D := binaryTateDiamondOperator Q p n w g
+  have h4 := quotient_polynomial q F Fq H D ((ell.val : ZMod N) ^ (w + 1))
+  have h5 := h4 (binaryDiamondQuotientGaloisRep_mk Q p n w σ)
+  have h6 := h5 hq
+  have h7 := h6 (binaryTateDiamondRelations_mk_diamond Q p n w g)
+  exact h7
+
+theorem gammaOne_diamond_quotient_frobenius_of_degree_genus_eq
+    (ell : sourceBinaryHeckePrime (Q * N)) [CharP kk ell.val]
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (hgen : genusFF kk Fb = genusFF Qbar (functionFieldOver Γ Qbar))
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ ell.val)
+    (hp : (p : kk) ≠ 0) :
+    ∀ φ : T →ₗ[ℤ_[p]] V,
+      binaryDiamondQuotientGaloisRep Q p n w d.val
+          ((binaryTateDiamondRelations Q p n w).mkQ (binaryTatePrimeOperators Q p n w ell φ)) =
+        binaryDiamondQuotientGaloisRep Q p n w d.val
+          (binaryDiamondQuotientGaloisRep Q p n w d.val
+            ((binaryTateDiamondRelations Q p n w).mkQ φ)) +
+          (ell.val : ZMod N) ^ (w + 1) • (binaryTateDiamondRelations Q p n w).mkQ φ := by
+  have hs := exists_gammaOne_galois_frobenius_diamond_quadratic_of_degree_genus_eq Q p n w A ell
+  have h1 := hs hdeg
+  have h2 := h1 hgen
+  have h3 := h2 d hd hp
+  obtain ⟨g, _, hq⟩ := h3
+  exact quotient_of_diamond Q p n w ell g d.val hq
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

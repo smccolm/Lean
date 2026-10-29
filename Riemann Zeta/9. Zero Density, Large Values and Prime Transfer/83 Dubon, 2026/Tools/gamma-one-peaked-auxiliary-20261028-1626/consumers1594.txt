@@ -1,0 +1,18 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+
+
+/-- Exact original-object consumer of `dualNumberOriginalResidueEquiv_reduction`. -/
+theorem actual_dual_number_original_residue_dualNumberOriginalResidueEquiv_reduction_source (K : Type*) [Field K]
+    (z : DualNumber K) :
+    localCoefficientReduction (dualNumberOriginalResidueEquiv K) z =
+      IsLocalRing.residue K z.fst :=
+  dualNumberOriginalResidueEquiv_reduction K z
+
+end
+

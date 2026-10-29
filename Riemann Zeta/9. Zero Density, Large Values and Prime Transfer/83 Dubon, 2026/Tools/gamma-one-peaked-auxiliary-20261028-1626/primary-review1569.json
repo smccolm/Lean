@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "UnramifiedUnionOpenSubgroupCharacters",
+  "mathematics": "Every actual open subgroup of the constructed rational arithmetic Galois group has a genuine finite fixed field by the pinned infinite Galois correspondence. Original finite-base character finiteness transfers through the actual fixing-subgroup equivalence with both original Krull topologies. Thus all such original open subgroups have finitely many original continuous prime-order characters.",
+  "boundary": "Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "cyclotomic-unramified-stage-draft-review-20261009.json; exact pinned APIs inspected. No external Lean code imported.",
+  "productionFixes": [
+    "Made the actual union rational algebra explicit in the full open-subgroup quantifier and used the fixed field canonical algebra; same original Krull topology and subgroup."
+  ],
+  "productionLog": "openCharacters1569-focus.log"
+}

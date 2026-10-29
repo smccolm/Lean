@@ -1,0 +1,57 @@
+import Dubon2026.SourceJSeedRatioValues
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> explicit embedding
+census -> adjacent-j nonmembership. Reuse the actual discriminant/E4
+seed and native degeneracy map to expose the analytic function, exact
+Laurent series and a nowhere-zero denominator of j(d tau). This supplies
+the analytic entry and cusp bounds for the original field argument. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups Manifold
+
+theorem adjacentJ_modular_ratio (d : ℕ) [NeZero d] :
+    ∃ (g h : ModularForm (Gamma0 d : Subgroup (GL (Fin 2) ℝ)) 24),
+      h ≠ 0 ∧ (∀ τ : ℍ, h τ ≠ 0) ∧
+      coeffEmb ℂ (qExpand ℚ d jq) * ModularRatios.qL h = ModularRatios.qL g ∧
+      ∀ τ : ℍ, JMultiplicity.jf (levelRaiseMatrix d • τ) * h τ = g τ := by
+  obtain ⟨g, h, _, he, hgval, hhval⟩ := exists_jq_cusp_ratio_with_values
+  have hd : d * 1 ∣ d := by simp
+  let G := cuspDegeneracyMap d hd 24 g
+  let H := cuspDegeneracyMap d hd 24 h
+  have hH (τ : ℍ) : H τ ≠ 0 := by
+    dsimp only [H]
+    rw [cuspDegeneracyMap_apply, hhval]
+    exact mul_ne_zero (ModularForm.discriminant_ne_zero _) (ModularForm.discriminant_ne_zero _)
+  refine ⟨CuspForm.toModularFormₗ G, CuspForm.toModularFormₗ H, ?_, hH, ?_, ?_⟩
+  · intro hz
+    exact hH default (congrArg (fun f : ModularForm (Gamma0 d) 24 => f default) hz)
+  · change coeffEmb ℂ (qExpand ℚ d jq) * (qExpansion 1 H : LaurentSeries ℂ) =
+      (qExpansion 1 G : LaurentSeries ℂ)
+    rw [coeffMap_qExpand, coeffEmb_jq]
+    dsimp only [H, G]
+    rw [cuspDegeneracyMap_laurent, cuspDegeneracyMap_laurent, ← map_mul, he]
+  · intro τ
+    change JMultiplicity.jf (levelRaiseMatrix d • τ) * H τ = G τ
+    dsimp only [H, G]
+    rw [cuspDegeneracyMap_apply, cuspDegeneracyMap_apply, hgval, hhval]
+    dsimp only [JMultiplicity.jf]
+    field_simp
+
+theorem adjacentJ_holomorphic (d : ℕ) [NeZero d] :
+    MDiff (fun τ : ℍ => JMultiplicity.jf (levelRaiseMatrix d • τ)) :=
+  JMultiplicity.mdifferentiable_jf.comp (mdifferentiable_smul (levelRaiseMatrix_det_pos d))
+
+theorem adjacentJ_represents (d : ℕ) [NeZero d] :
+    CuspTaylor.Represents (coeffEmb ℂ (qExpand ℚ d jq))
+      (cuspFunction 1 (fun τ : ℍ => JMultiplicity.jf (levelRaiseMatrix d • τ))) := by
+  obtain ⟨g, h, hh, _, hx, he⟩ := adjacentJ_modular_ratio d
+  have hT : ModularGroup.T ∈ Gamma0 d := by simp [Gamma0_mem, ModularGroup.T]
+  have hd : coeffEmb ℂ (qExpand ℚ d jq) = ModularRatios.qL g / ModularRatios.qL h :=
+    (eq_div_iff (ModularRatios.qL_ne_zero hT h hh)).mpr hx
+  rw [hd]
+  exact quotient_cusp_represents one_pos (hper hT) g h hh _ he
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

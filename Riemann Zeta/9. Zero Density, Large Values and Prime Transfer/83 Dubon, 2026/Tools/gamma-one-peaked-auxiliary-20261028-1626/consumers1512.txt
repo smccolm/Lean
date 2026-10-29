@@ -1,0 +1,38 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `fractionalIdealCountRootUnit_pow`. -/
+theorem actual_selmer_ideal_root_fractionalIdealCountRootUnit_pow_source (n : ℕ) (I : (FractionalIdeal R⁰ K)ˣ)
+    (hdiv : ∀ v : HeightOneSpectrum R, (n : ℤ) ∣ FractionalIdeal.count K v I.val) :
+    fractionalIdealCountRootUnit n I ^ n = I :=
+  fractionalIdealCountRootUnit_pow n I hdiv
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmer_mem_iff_principal_counts`. -/
+theorem actual_selmer_ideal_root_emptySelmer_mem_iff_principal_counts_source (n : ℕ) (x : Kˣ) :
+    QuotientGroup.mk' (powMonoidHom (α := Kˣ) n).range x ∈
+        (IsDedekindDomain.selmerGroup (R := R) (K := K)
+          (S := ∅) (n := n)) ↔
+      ∀ v : HeightOneSpectrum R,
+        (n : ℤ) ∣ FractionalIdeal.count K v (toPrincipalIdeal R K x).val :=
+  emptySelmer_mem_iff_principal_counts n x
+
+end
+

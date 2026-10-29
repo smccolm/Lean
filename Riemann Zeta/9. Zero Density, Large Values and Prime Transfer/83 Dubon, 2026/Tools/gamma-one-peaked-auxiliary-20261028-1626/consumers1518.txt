@@ -1,0 +1,41 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `finiteGaloisCharacter_exists_radical`. -/
+theorem actual_galois_kummer_character_finiteGaloisCharacter_exists_radical_source [FiniteDimensional K L] [IsGalois K L]
+    (χ : Gal(L/K) →* Kˣ) (n : ℕ) (hχ : ∀ g : Gal(L/K), χ g ^ n = 1) :
+    ∃ (a : Kˣ) (β : Lˣ),
+      β ^ n = Units.map (algebraMap K L).toMonoidHom a ∧
+      ∀ g : Gal(L/K), g • β / β = Units.map (algebraMap K L).toMonoidHom (χ g) :=
+  finiteGaloisCharacter_exists_radical χ n hχ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L]
+
+/-- Exact original-object consumer of `galois_characters_eq_of_radical_power_class`. -/
+theorem actual_galois_kummer_character_galois_characters_eq_of_radical_power_class_source (n : ℕ) [NeZero n]
+    (hζ : (primitiveRoots n K).Nonempty) (χ ψ : Gal(L/K) →* Kˣ)
+    (a b : Kˣ) (β γ : Lˣ)
+    (hβ : β ^ n = Units.map (algebraMap K L).toMonoidHom a)
+    (hγ : γ ^ n = Units.map (algebraMap K L).toMonoidHom b)
+    (hχ : ∀ g : Gal(L/K), g • β / β = Units.map (algebraMap K L).toMonoidHom (χ g))
+    (hψ : ∀ g : Gal(L/K), g • γ / γ = Units.map (algebraMap K L).toMonoidHom (ψ g))
+    (hab : QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range a =
+      QuotientGroup.mk' (powMonoidHom n : Kˣ →* Kˣ).range b) : χ = ψ :=
+  galois_characters_eq_of_radical_power_class n hζ χ ψ a b β γ hβ hγ hχ hψ hab
+
+end
+

@@ -1,0 +1,111 @@
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `realQuadraticCharacter_negative`. -/
+theorem actual_classification_realQuadraticCharacter_negative_source (ψ : ℝˣ →* ℂ) (hψ : ∀ u, ψ u ^ 2 = 1)
+    (u : ℝˣ) (hu : u.val < 0) : ψ u = ψ (-1) :=
+  realQuadraticCharacter_negative ψ hψ u hu
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `rationalIdele_principal_factor`. -/
+theorem actual_classification_rationalIdele_principal_factor_source (q : ℚˣ) :
+    Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q =
+      rationalIdeleRealEmbedding (Units.map (Rat.castHom ℝ).toMonoidHom q) *
+        rationalIdeleFiniteEmbedding (Units.map (algebraMap ℚ (FiniteAdeleRing ℤ ℚ)).toMonoidHom q) :=
+  rationalIdele_principal_factor q
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `finiteAdeleResidue_units_surjective`. -/
+theorem actual_classification_finiteAdeleResidue_units_surjective_source (D : ℕ) [NeZero D] :
+    Function.Surjective (Units.map (finiteAdeleResidue D).toMonoidHom) :=
+  finiteAdeleResidue_units_surjective D
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+    [CompactSpace R] [T2Space R] [Infinite R]
+
+
+/-- Exact source consumer of `compactRing_positive_integer_ideal_small`. -/
+theorem actual_classification_compactRing_positive_integer_ideal_small_source (hd : DenseRange (Int.cast : ℤ → R))
+    (U : Set R) (hU : U ∈ 𝓝 (0 : R)) :
+    ∃ D : ℕ, 0 < D ∧ ∀ x : R, (D : R) * x ∈ U :=
+  compactRing_positive_integer_ideal_small hd U hU
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `finiteAdeleLevelMultiple_cofinal`. -/
+theorem actual_classification_finiteAdeleLevelMultiple_cofinal_source (U : Set (FiniteAdeleRing ℤ ℚ)) (hU : U ∈ 𝓝 0) :
+    ∃ D : ℕ, 0 < D ∧ ∀ x, finiteAdeleLevelMultiple D x → x ∈ U :=
+  finiteAdeleLevelMultiple_cofinal U hU
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+variable {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R]
+    [CompactSpace R] [T2Space R] [Infinite R]
+
+
+/-- Exact source consumer of `compactRing_unit_congruence_small`. -/
+theorem actual_classification_compactRing_unit_congruence_small_source (hd : DenseRange (Int.cast : ℤ → R))
+    (W : Set Rˣ) (hW : W ∈ 𝓝 1) :
+    ∃ D : ℕ, 0 < D ∧ ∀ u : Rˣ, (D : R) ∣ u.val - 1 → u ∈ W :=
+  compactRing_unit_congruence_small hd W hW
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `integralIdele_quadratic_congruence`. -/
+theorem actual_classification_integralIdele_quadratic_congruence_source {ψ : finiteAdeleIntegerSubringˣ →* ℂ}
+    (hc : Continuous ψ) (hq : ∀ u, ψ u ^ 2 = 1) :
+    ∃ D : ℕ, ∃ hD : 0 < D, ∀ u : finiteAdeleIntegerSubringˣ,
+      @finiteAdeleResidue D ⟨ne_of_gt hD⟩ u.val = 1 → ψ u = 1 :=
+  integralIdele_quadratic_congruence hc hq
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix Filter Set Topology
+
+
+/-- Exact source consumer of `integralIdele_quadratic_dirichlet_exists`. -/
+theorem actual_classification_integralIdele_quadratic_dirichlet_exists_source
+    (φ : finiteAdeleIntegerSubringˣ →* ℂ) (hc : Continuous φ) (hq : ∀ u, φ u ^ 2 = 1) :
+    ∃ D : ℕ, ∃ hD : 0 < D, ∃ χ : DirichletCharacter ℂ D,
+      χ.IsQuadratic ∧ ∀ u : finiteAdeleIntegerSubringˣ,
+        χ (@finiteAdeleResidue D ⟨ne_of_gt hD⟩ u.val) = φ u :=
+  integralIdele_quadratic_dirichlet_exists φ hc hq
+
+end

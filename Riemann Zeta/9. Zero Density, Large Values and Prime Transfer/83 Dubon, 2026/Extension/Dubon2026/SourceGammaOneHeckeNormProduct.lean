@@ -1,0 +1,60 @@
+import Dubon2026.SourceGammaOneHeckeEmbeddingCensus
+import Dubon2026.SourceGammaOneAdjacentJCoefficients
+import Mathlib.RingTheory.Norm.Transitivity
+
+/-! DUB-17/18 -> original Gamma1 geometric Frobenius -> Hecke norm
+reduction. The complete actual embedding census gives the literal expanded
+norm product. The original reverse automorphism discharges every census
+input. Identifying its value on general beta inputs with the precise
+diamond action, and reducing that product, remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.HeckeNorm
+noncomputable section
+open IntermediateField
+variable (L : Type*) [Field L] [Algebra ℚ L]
+variable (M p : ℕ) [NeZero M] [Fact p.Prime]
+local notation "FF" => laurentBaseChange L (x1FunctionField M)
+local notation "GG" => laurentBaseChange L (x1x0FunctionFieldC ℚ M (p * M))
+local notation "EE" => AlgebraicClosure (LaurentSeries L)
+attribute [local instance] alphaAlgebra alphaModule
+
+theorem qExpand_norm (hcop : Nat.Coprime M p) (ζ : Lˣ) (hζ : IsPrimitiveRoot (ζ : L) p)
+    (w : GG ≃ₐ[L] GG)
+    (hforward : ∀ x, w (heckeAlpha L M p x) = heckeBeta L M p x)
+    (hjback : w (heckeBeta L M p (jCoordinateOver (CongruenceSubgroup.Gamma1 M) L)) =
+      heckeAlpha L M p (jCoordinateOver (CongruenceSubgroup.Gamma1 M) L))
+    (v : GG) :
+    qExpand L p (Algebra.norm FF v : LaurentSeries L) =
+      (∏ b ∈ Finset.range p, qTwist (ζ ^ b) (w v : LaurentSeries L)) *
+        qExpand L p (v : LaurentSeries L) := by
+  classical
+  letI := targetAlgebra L M p
+  haveI : CharZero L := charZero_of_injective_algebraMap (algebraMap ℚ L).injective
+  haveI : CharZero FF := charZero_of_injective_algebraMap (algebraMap L FF).injective
+  haveI : FiniteDimensional FF GG := Module.finite_of_finrank_pos (by
+    rw [heckeAlpha_finrank L M p hcop.symm]
+    exact Nat.succ_pos p)
+  apply (algebraMap (LaurentSeries L) EE).injective
+  have hnorm := Algebra.norm_eq_prod_embeddings (K := FF) (L := GG) (E := EE) v
+  have hmap : algebraMap FF EE (Algebra.norm FF v) =
+      algebraMap (LaurentSeries L) EE (qExpand L p (Algebra.norm FF v : LaurentSeries L)) :=
+    congrArg (algebraMap (LaurentSeries L) EE) (heckeBeta_coe L M p (Algebra.norm FF v))
+  rw [← hmap, hnorm,
+    ← (embedding_bijective L M p hcop ζ hζ w hforward hjback).prod_comp (fun σ => σ v),
+    Fin.prod_univ_succ, map_mul, map_prod, Finset.prod_range]
+  simp only [embedding_zero_apply, embedding_succ_apply]
+  exact mul_comm _ _
+
+theorem exists_gammaOne_hecke_norm_product [Algebra.IsAlgebraic ℚ L]
+    (hcop : Nat.Coprime M p) (ζ : Lˣ) (hζ : IsPrimitiveRoot (ζ : L) p) :
+    ∃ w : GG ≃ₐ[L] GG,
+      (∀ x, w (heckeAlpha L M p x) = heckeBeta L M p x) ∧
+      w (heckeBeta L M p (jCoordinateOver (CongruenceSubgroup.Gamma1 M) L)) =
+        heckeAlpha L M p (jCoordinateOver (CongruenceSubgroup.Gamma1 M) L) ∧
+      ∀ v : GG, qExpand L p (Algebra.norm FF v : LaurentSeries L) =
+        (∏ b ∈ Finset.range p, qTwist (ζ ^ b) (w v : LaurentSeries L)) *
+          qExpand L p (v : LaurentSeries L) := by
+  obtain ⟨w, hforward, hjback⟩ := exists_gammaOne_adjacentJ_over L M p hcop
+  exact ⟨w, hforward, hjback, qExpand_norm L M p hcop ζ hζ w hforward hjback⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.HeckeNorm

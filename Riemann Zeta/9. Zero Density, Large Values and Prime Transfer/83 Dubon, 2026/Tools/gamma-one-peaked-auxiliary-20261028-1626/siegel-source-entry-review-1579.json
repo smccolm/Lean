@@ -1,0 +1,10 @@
+{
+  "reason": "The initial 19-module preflight passed exhaustive axioms and all 16 linters per module. The value dependency check found exactly one missing public entry: siegelFun_def. The actual product factorization now rewrites with this literal-definition theorem instead of unfolding the definition directly. This is the same mathematical equality and proof route; it establishes the advertised source entry in the actual endpoint proof term, without adding a premise or detached check. Earlier evidence remains intact.",
+  "versionChange": {
+    "SourceSiegelProductCore": [
+      "1565a",
+      "1565b"
+    ]
+  },
+  "downstreamBodiesUnchanged": true
+}

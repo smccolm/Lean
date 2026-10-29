@@ -1,0 +1,87 @@
+import Dubon2026.SourceQExpansionPeriodWidth
+import Mathlib.Tactic
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> even-weight
+slash integrality -> peaked auxiliary trace. The finite translation sum
+is periodic of width one and has the required holomorphic, bounded and
+Fourier properties. Reuse the native period-power identity, avoiding the
+upstream bespoke function wrapper. Adapted from
+anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_UpperHalfPlane_qExpansion_coeff_sum_vAdd_eq_mul_coeff. -/
+namespace Dubon2026.SourceFunctionField.IntegralTrace.Translates
+noncomputable section
+open UpperHalfPlane Filter Function Complex Function.Complex
+open scoped Real Topology Manifold
+variable (f : ℍ → ℂ) (h₀ : ℕ)
+
+/-- The finite sum over the integer translations of one original cusp period. -/
+def trSum : ℍ → ℂ := fun τ => ∑ j ∈ Finset.range h₀, f (((j : ℕ) : ℝ) +ᵥ τ)
+
+variable {f h₀}
+
+private theorem vadd_eq_ofComplex (x : ℝ) (τ : ℍ) : x +ᵥ τ = ofComplex ((τ : ℂ) + x) := by
+  have him : 0 < ((τ : ℂ) + x).im := by simpa using τ.im_pos
+  rw [ofComplex_apply_of_im_pos him]
+  ext
+  simp [coe_vadd, add_comm]
+
+private theorem translate_comp_ofComplex (x : ℝ) {z : ℂ} (hz : 0 < z.im) :
+    f (x +ᵥ ofComplex z) = (f ∘ ofComplex) (z + x) := by
+  rw [comp_apply, vadd_eq_ofComplex, ofComplex_apply_of_im_pos hz]
+
+private theorem trSum_comp_ofComplex_of_im_pos {z : ℂ} (hz : 0 < z.im) :
+    trSum f h₀ (ofComplex z) = ∑ j ∈ Finset.range h₀, (f ∘ ofComplex) (z + ((j : ℕ) : ℝ)) := by
+  simp only [trSum]
+  exact Finset.sum_congr rfl fun j _ => translate_comp_ofComplex (f := f) _ hz
+
+theorem periodic_trSum (hper : Periodic (f ∘ ofComplex) (h₀ : ℝ)) :
+    Periodic (trSum f h₀ ∘ ofComplex) (1 : ℝ) := by
+  intro w
+  by_cases hw : 0 < im w
+  · have hw1 : 0 < im (w + (1 : ℝ)) := by simpa using hw
+    simp only [comp_apply]
+    rw [trSum_comp_ofComplex_of_im_pos hw1, trSum_comp_ofComplex_of_im_pos hw]
+    have key : ∀ g : ℕ → ℂ, g h₀ = g 0 →
+        ∑ j ∈ Finset.range h₀, g (j + 1) = ∑ j ∈ Finset.range h₀, g j := by
+      intro g hg
+      have := (Finset.sum_range_succ' g h₀).symm.trans (Finset.sum_range_succ g h₀)
+      rw [← hg] at this
+      exact add_right_cancel this
+    have e1 : ∀ j : ℕ, w + ((1 : ℝ) : ℂ) + (((j : ℕ) : ℝ) : ℂ) = w + ((((j + 1 : ℕ)) : ℝ) : ℂ) := by
+      intro j; push_cast; ring
+    simp only [e1]
+    refine key (fun j => (f ∘ ofComplex) (w + (((j : ℕ) : ℝ) : ℂ))) ?_
+    have := hper w
+    simpa [add_comm, add_left_comm] using this
+  · push Not at hw
+    have hw1 : im (w + (1 : ℝ)) ≤ 0 := by simpa using hw
+    simp only [comp_apply, ofComplex_apply_eq_of_im_nonpos hw1 hw]
+
+theorem mdifferentiable_trSum (hhol : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) f) :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (trSum f h₀) := by
+  rw [UpperHalfPlane.mdifferentiable_iff] at hhol ⊢
+  have heq : Set.EqOn (trSum f h₀ ∘ ofComplex)
+      (fun z => ∑ j ∈ Finset.range h₀, (f ∘ ofComplex) (z + ((j : ℕ) : ℝ))) {z | 0 < z.im} :=
+    fun z hz => trSum_comp_ofComplex_of_im_pos hz
+  refine DifferentiableOn.congr ?_ heq
+  refine DifferentiableOn.fun_sum fun j _ => ?_
+  refine hhol.comp ((differentiable_id.add_const _).differentiableOn) fun z hz => ?_
+  simpa using hz
+
+theorem isBoundedAtImInfty_trSum (hbdd : IsBoundedAtImInfty f) : IsBoundedAtImInfty (trSum f h₀) := by
+  have htend : ∀ x : ℝ, Tendsto (fun τ : ℍ => x +ᵥ τ) atImInfty atImInfty := by
+    intro x
+    simp only [atImInfty, tendsto_comap_iff]
+    have : (UpperHalfPlane.im ∘ fun τ : ℍ => x +ᵥ τ) = UpperHalfPlane.im := by
+      funext τ; simp [vadd_im]
+    rw [this]
+    exact tendsto_comap
+  have h1 : ∀ j ∈ Finset.range h₀,
+      (fun τ : ℍ => f (((j : ℕ) : ℝ) +ᵥ τ)) =O[atImInfty] (1 : ℍ → ℝ) := fun j _ =>
+    (hbdd.comp_tendsto (htend _))
+  refine (Asymptotics.IsBigO.sum h1).congr' (Eventually.of_forall fun τ => ?_) EventuallyEq.rfl
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.IntegralTrace.Translates

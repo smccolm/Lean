@@ -1,0 +1,60 @@
+import SourcePeakedShiftedSeries1613c
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> exact width-one coefficients.
+Consume the actual modular form's equality with the literal Siegel product.
+Native coefficient uniqueness and width change identify its coefficients
+with the constructed shifted series; no coefficient identity is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients
+noncomputable section
+open Complex UpperHalfPlane PowerSeries Filter Topology FiniteExpansion
+open scoped MatrixGroups ModularForm
+
+theorem qExpansion_one_coeff_adjusted (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t : ℕ)
+    (ϑ : ModularForm (CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ)) (12 * (t : ℤ)))
+    (hϑ : ∀ τ : ℍ, ϑ τ =
+      (∏ r : ZMod N, ∏ s : ZMod N,
+        siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) ^ (12 * N * m r s)) *
+        ModularForm.discriminant τ ^ t)
+    (m₀ : ℕ) (hm₀ : (N : ℤ) * m₀ = orderSum N m + (N : ℤ) * t) (n : ℕ) :
+    (qExpansion 1 (⇑ϑ : ℍ → ℂ)).coeff n = coeff (N * n) (adjustedSeries N m t m₀) := by
+  have hNpos : 0 < N := NeZero.pos N
+  have hNR : (0 : ℝ) < N := Nat.cast_pos.mpr hNpos
+  have hp := SourceFricke.gammaOne_one_mem_strictPeriods N
+  haveI : Fact (IsCusp OnePoint.infty (CongruenceSubgroup.Gamma1 N : Subgroup (GL (Fin 2) ℝ))) :=
+    ⟨Subgroup.isCusp_of_mem_strictPeriods one_pos hp⟩
+  have hT : ∀ τ : ℍ, HasSum (fun k : ℕ => coeff k (adjustedSeries N m t m₀) •
+      Function.Periodic.qParam (N : ℝ) τ ^ k) (ϑ τ) := by
+    intro τ
+    rw [hϑ τ]
+    simpa only [smul_eq_mul] using hasSum_adjustedSeries N m t m₀ hm₀ τ
+  have hcoefN : ∀ k : ℕ, coeff k (adjustedSeries N m t m₀) =
+      (qExpansion (N : ℝ) (⇑ϑ : ℍ → ℂ)).coeff k := fun k =>
+    ModularFormClass.qExpansion_coeff_unique hNR (natCast_mem_strictPeriods_gammaOne N N) hT k
+  have hper : Function.Periodic ((⇑ϑ : ℍ → ℂ) ∘ UpperHalfPlane.ofComplex) 1 :=
+    SlashInvariantFormClass.periodic_comp_ofComplex (f := ϑ) hp
+  have h := SourceFricke.qExpansion_coeff_width (⇑ϑ) (NeZero.ne N) hper
+    (ModularFormClass.holo ϑ) (ModularFormClass.bdd_at_infty ϑ) (N * n)
+  rw [if_pos (dvd_mul_right N n), Nat.mul_div_cancel_left n hNpos] at h
+  rw [← h, hcoefN]
+
+theorem coeff_adjustedSeries (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t m₀ k : ℕ) :
+    coeff k (adjustedSeries N m t m₀) = phase N m *
+      if N * m₀ ≤ k then coeff (k - N * m₀) (productSeries N m * deltaN N ^ t) else 0 := by
+  simp only [adjustedSeries, coeff_smul, smul_eq_mul, coeff_X_pow_mul']
+
+theorem coeff_adjustedSeries_leading (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t m₀ : ℕ) :
+    coeff (N * m₀) (adjustedSeries N m t m₀) = phase N m * coeff 0 (productSeries N m) := by
+  rw [coeff_adjustedSeries, if_pos le_rfl, Nat.sub_self, coeff_zero_eq_constantCoeff_apply,
+    map_mul, map_pow, constantCoeff_deltaN, one_pow, mul_one,
+    ← coeff_zero_eq_constantCoeff_apply]
+
+theorem integral_adjustedSeries (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ) (t m₀ k : ℕ) :
+    IsIntegral ℤ (coeff k (adjustedSeries N m t m₀)) := by
+  rw [coeff_adjustedSeries]
+  split_ifs
+  · exact (isIntegral_phase N m).mul (integral_product_delta N m t _)
+  · rw [mul_zero]; exact isIntegral_zero
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Coefficients

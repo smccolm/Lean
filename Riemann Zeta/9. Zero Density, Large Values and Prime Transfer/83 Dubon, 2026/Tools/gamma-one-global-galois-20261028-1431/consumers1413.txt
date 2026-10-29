@@ -1,0 +1,80 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [DiscreteTopology R]
+
+/-- Exact original-object consumer of `continuousMatrixRepresentation_quotient_finite`. -/
+theorem actual_finite_symmetric_parameters_continuousMatrixRepresentation_quotient_finite_source [CompactSpace G]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) : Finite (G ⧸ ρ.ker) :=
+  continuousMatrixRepresentation_quotient_finite ρ hρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type*} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `continuousMatrixRepresentation_noetherianCoordinates`. -/
+theorem actual_finite_symmetric_parameters_continuousMatrixRepresentation_noetherianCoordinates_source
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G]
+    [TopologicalSpace R] [DiscreteTopology R] [IsNoetherianRing R]
+    (ρ : G →* GeneralLinearGroup ι R) (hρ : Continuous ρ) :
+    IsNoetherianRing (RepresentationCoordinateAlgebra (G ⧸ ρ.ker) ι R) ∧
+      ∃ f : RepresentationCoordinateAlgebra (G ⧸ ρ.ker) ι R →ₐ[R] R,
+        ((GeneralLinearGroup.map f.toRingHom).comp
+          (universalMatrixRepresentation (G ⧸ ρ.ker) ι R)).comp
+            (QuotientGroup.mk' ρ.ker) = ρ :=
+  continuousMatrixRepresentation_noetherianCoordinates ρ hρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable (G R : Type*) [Group G] [CommRing R]
+
+variable {G R} {S : Type*} [CommRing S] [Algebra R S]
+
+/-- Exact original-object consumer of `symmetricRepresentationCoordinateMap_evaluation`. -/
+theorem actual_finite_symmetric_parameters_symmetricRepresentationCoordinateMap_evaluation_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) S) :
+    representationCoordinateEvaluation (R := R) (symmetricMatrixRepresentation n ρ) =
+      (representationCoordinateEvaluation (R := R) ρ).comp
+        (symmetricRepresentationCoordinateMap G R n) :=
+  symmetricRepresentationCoordinateMap_evaluation n ρ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G R : Type} [Group G] [CommRing R]
+
+/-- Exact original-object consumer of `symmetricFirstOrderLift_cohomology`. -/
+theorem actual_finite_symmetric_parameters_symmetricFirstOrderLift_cohomology_source (n : ℕ)
+    (ρ : G →* GeneralLinearGroup (Fin 2) R) (τ σ : MatrixFirstOrderLift ρ)
+    (h : groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ) =
+      groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ σ)) :
+    groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+      (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ τ)) =
+        groupCohomology.H1π (matrixAdjointRep (symmetricMatrixRepresentation n ρ))
+          (matrixFirstOrderCocycle _ (symmetricFirstOrderLift n ρ σ)) :=
+  symmetricFirstOrderLift_cohomology n ρ τ σ h
+
+end
+

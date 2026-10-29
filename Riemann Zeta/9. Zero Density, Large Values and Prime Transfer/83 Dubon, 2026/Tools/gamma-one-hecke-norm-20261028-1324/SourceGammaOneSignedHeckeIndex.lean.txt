@@ -1,0 +1,73 @@
+import SourceGammaOnePrimeHeckeIndex
+
+/-! DUB-17/18 -> original Gamma1 geometric Frobenius -> original norm
+identity -> exact field degree. The analytic field degrees use the
+subgroups enlarged by the central negative identity. Native coprime
+lifting gives their exact relative index as well; this retains the
+central-sign factor required at small levels. The field-degree and norm
+consumers are still separate obligations.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup SourceLevelProjective
+open scoped MatrixGroups GammaOne
+
+theorem plusMinus_gammaOne_hecke_eq_inf (M n : ℕ) :
+    plusMinus (Gamma1 M ⊓ Gamma0 (n * M)) = plusMinus (Gamma1 M) ⊓ Gamma0 (n * M) := by
+  ext g
+  simp only [mem_plusMinus_iff, Subgroup.mem_inf]
+  have hn : -g ∈ Gamma0 (n * M) ↔ g ∈ Gamma0 (n * M) := by simp [Gamma0_mem]
+  rw [hn]
+  tauto
+
+theorem gammaOneSignedReduction_surjective (M n : ℕ) [NeZero M] [NeZero n]
+    (h : Nat.Coprime M n) :
+    Function.Surjective
+      ((Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod n))).comp
+        (plusMinus (Gamma1 M)).subtype) := by
+  intro B
+  obtain ⟨g, hg⟩ := gammaOneReduction_surjective M n h B
+  exact ⟨⟨g.val, le_plusMinus _ g.property⟩, hg⟩
+
+theorem gammaOne_signed_lower_subgroup_eq_borel_comap (M n : ℕ)
+    (h : Nat.Coprime n M) :
+    (plusMinus (Gamma1 M ⊓ Gamma0 (n * M))).subgroupOf (plusMinus (Gamma1 M)) =
+      (borel (ZMod n)).comap
+        ((Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod n))).comp
+          (plusMinus (Gamma1 M)).subtype) := by
+  rw [plusMinus_gammaOne_hecke_eq_inf]
+  ext g
+  change (g.val ∈ plusMinus (Gamma1 M) ∧ g.val ∈ Gamma0 (n * M)) ↔ _
+  rw [and_iff_right g.property]
+  change g.val ∈ Gamma0 (n * M) ↔ ((g.val 1 0 : ℤ) : ZMod n) = 0
+  rw [Gamma0_mem, ZMod.intCast_zmod_eq_zero_iff_dvd, ZMod.intCast_zmod_eq_zero_iff_dvd,
+    Nat.cast_mul]
+  have hgM : ((g.val 1 0 : ℤ) : ZMod M) = 0 := by
+    rcases (mem_plusMinus_iff _ _).mp g.property with hg | hg
+    · exact ((Gamma1_mem M g.val).mp hg).2.2
+    · have he := ((Gamma1_mem M (-g.val)).mp hg).2.2
+      simpa using he
+  have hM : (M : ℤ) ∣ g.val 1 0 := (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp hgM
+  exact ⟨fun hn => dvd_trans (dvd_mul_right (n : ℤ) M) hn,
+    fun hn => (Nat.isCoprime_iff_coprime.mpr h).mul_dvd hn hM⟩
+
+theorem gammaOne_prime_signed_lower_relIndex (M p : ℕ) [NeZero M] [Fact p.Prime]
+    (h : Nat.Coprime p M) :
+    (plusMinus (Gamma1 M ⊓ Gamma0 (p * M))).relIndex (plusMinus (Gamma1 M)) = p + 1 := by
+  have hu := gammaOne_prime_lower_relIndex M p h
+  rw [Subgroup.relIndex, gammaOne_lower_subgroup_eq_borel_comap M p h,
+    Subgroup.index_comap_of_surjective _ (gammaOneReduction_surjective M p h.symm)] at hu
+  rw [Subgroup.relIndex, gammaOne_signed_lower_subgroup_eq_borel_comap M p h,
+    Subgroup.index_comap_of_surjective _ (gammaOneSignedReduction_surjective M p h.symm)]
+  exact hu
+
+theorem gammaOne_prime_signed_hecke_index (M p : ℕ) [NeZero M] [Fact p.Prime]
+    (h : Nat.Coprime p M) :
+    (plusMinus (Gamma1 M ⊓ Gamma0 (p * M))).index =
+      (p + 1) * (plusMinus (Gamma1 M)).index := by
+  have hle : plusMinus (Gamma1 M ⊓ Gamma0 (p * M)) ≤ plusMinus (Gamma1 M) :=
+    sup_le_sup_right inf_le_left _
+  rw [← Subgroup.relIndex_mul_index hle, gammaOne_prime_signed_lower_relIndex M p h]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

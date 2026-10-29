@@ -1,0 +1,31 @@
+import Dubon2026.SourceCyclotomicHomogeneousAction
+
+/-! DUB-17/18 -> original all-weight Galois/Hecke-character realization.
+The genuine cyclotomic homogeneous action commutes with the original
+diagonal Hecke coefficient matrix. Reuse multiplicativity of the existing
+matrix representation, with no scalar-coefficient replacement. -/
+namespace Dubon2026
+noncomputable section
+variable (R : Type*) [CommRing R] (w : ℕ)
+
+theorem sourceCyclotomicHomogeneousAction_commute (u : Rˣ) (d : R) :
+    Commute (sourceCyclotomicHomogeneousAction R w u)
+      (homogeneousMatrixAction w (Matrix.diagonal ![d, 1])) := by
+  have hdiag : Commute (Matrix.diagonal ![(u : R), 1]) (Matrix.diagonal ![d, 1]) := by
+    change Matrix.diagonal ![(u : R), 1] * Matrix.diagonal ![d, 1] =
+      Matrix.diagonal ![d, 1] * Matrix.diagonal ![(u : R), 1]
+    rw [Matrix.diagonal_mul_diagonal, Matrix.diagonal_mul_diagonal]
+    congr 1
+    funext i
+    fin_cases i <;> simp [mul_comm]
+  have hpoly := hdiag.map (homogeneousMatrixRepresentation w)
+  rw [sourceCyclotomicHomogeneousAction_apply]
+  change ((u : R) • homogeneousMatrixAction w (Matrix.diagonal ![(u : R), 1])) *
+      homogeneousMatrixAction w (Matrix.diagonal ![d, 1]) =
+    homogeneousMatrixAction w (Matrix.diagonal ![d, 1]) *
+      ((u : R) • homogeneousMatrixAction w (Matrix.diagonal ![(u : R), 1]))
+  rw [smul_mul_assoc, mul_smul_comm]
+  exact congrArg ((u : R) • ·) hpoly.eq
+
+end
+end Dubon2026

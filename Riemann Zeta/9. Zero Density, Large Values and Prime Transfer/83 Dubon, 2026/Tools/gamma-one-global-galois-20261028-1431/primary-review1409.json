@@ -1,0 +1,25 @@
+{
+  "reviewDate": "2026-10-09",
+  "topic": "Concrete coordinate algebra and actual universal matrix representations",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Theorem2.22 and Corollary2.23; section2.30",
+      "review": "The cited henselian determinant reconstruction and local deformation statements are stronger than the ordinary representation coordinate-algebra construction here.",
+      "formalUse": "The concrete coordinate algebra is constructed independently from the literal matrix identity and multiplication equations, and its full evaluation universal property is proved. No henselian reconstruction, Azumaya assertion, complete local deformation ring, or profinite representability is imported from this source."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Introduction and section2",
+      "formalUse": "The concrete algebraic representation functor is preliminary to the stronger arithmetic deformation rings in the lifting argument. It does not supply Galois association, local conditions, Selmer vanishing, or patching."
+    }
+  ],
+  "localApiReview": "Pinned MvPolynomial.aeval, algHom_ext, actual Ideal.span and Ideal.Quotient.liftₐ/algHom_ext, GeneralLinearGroup.map and MonoidHom.toHomUnits. Repository and Mathlib searches found no existing matching coordinate-algebra package; existing polynomial, quotient and matrix foundations are reused.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

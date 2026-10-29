@@ -1,0 +1,58 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 20,
+  "queries": 91,
+  "theorems": 71,
+  "constructions": 20,
+  "exhaustiveScratchChecks": 218,
+  "proofValueChecks": 96,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-reduction-2-scratch-receipt.json": "9BE462BC9A8BFBC620D65095601BA44D299B59A8DE983A9FE23901F866165CB2",
+    "source-gamma-one-residue-compatibility-1-scratch-receipt.json": "B10F72B14FABC7ACABF2EE142C35D6264C99E9586342E4D451E5EA657F538C76",
+    "source-gamma-one-residue-frobenius-1-scratch-receipt.json": "8A95510D121F635B14FBAC329DF0E66D3A6DAA0538C66CFF6242866CD00A18C0",
+    "source-gamma-one-residue-places-1-scratch-receipt.json": "298499191235ABA610A23E4651D52E24D565B8C406234F4D1E6A6EED0307E0DD"
+  },
+  "expectedConsumers": 26513,
+  "expectedConstructions": 2836,
+  "fullGoal": "The arithmetic Frobenius action on constants remains an explicit premise. Residue degree upper bounds and finite maps do not establish degree equality or genus preservation. The original Hecke norm reduction identity, compatible original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain; thus the original geometric Tate Frobenius quadratic and inertia realization remain unproved. Parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN; all twenty acceptance tests unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_reduction_9046.py",
+      "sha256": "D212F30CD1B9A59F640358FD8B623C2C3BFBFBB86916231A71F3AAFFFF424ED7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reduction_production_ownership_9046.py",
+      "sha256": "E60F6A5D930B6D7736E16DD1BE75F455E10B90D788FA660FDF9E0CAE47415202"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_reduction_global_ownership_9046.py",
+      "sha256": "C863BFF02903179129CDDD4373ED2A3FD8C21622ED86CF4C50FD9C847ABFD4A0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_reduction_ownership_9046.py",
+      "sha256": "F6DD2BEFA6D4108AC13294AB6B14BCB846DBBAE7C40002AA6F7A31D7563F551A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_reduction_9046.py",
+      "sha256": "B9A6FE99102E655C5C852100C16D3B0362CE2901733B82999D4A2331AC2F3EA8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_reduction_9046.ps1",
+      "sha256": "82131BC68C9062722A5AB084AEF643DA84B278CAACB875BDFF4B9709EE26F6E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_reduction_9046.ps1",
+      "sha256": "42BC2D7B62984CD067A6DFF200815A7CF569644773F99BBA3D5865308E1608EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_reduction_canonical_9046.py",
+      "sha256": "7061F390941AB7F30B57778C409510555A70CF079EFE72839C12A65B36A53FC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_reduction_9046.py",
+      "sha256": "B370001F174EC6ED22104209F91D2DD272AC650C1B5396F6631D50E548F9E6DD"
+    }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,142 @@
+import Dubon2026.SourceGammaOneResidueGeometry
+import Dubon2026.SourceCurveSeparatingGenusMaximum
+import Dubon2026.SourceReductionGenusPoleLifting
+import Dubon2026.SourceReductionGenusIntegralCharts
+import Dubon2026.SourceGammaOneGenusSpecialization
+import Dubon2026.SourceGammaOneOriginalSpecialization
+import Dubon2026.SourceGammaOneKummerDegree
+import Dubon2026.SourceGammaOneKummerGenus
+import Dubon2026.SourceJointSeparableFiniteOverlap
+import Dubon2026.SourceJointSeparableConstants
+import Dubon2026.SourceJointSeparableChartDimension
+import Dubon2026.SourceJointSeparablePoleDimension
+import Dubon2026.SourceJointSeparableGenus
+import Dubon2026.SourceGammaOneKummerResidueGenus
+import Dubon2026.SourceGammaOneKummerPowerLifting
+import Dubon2026.SourceGammaOnePicardPrimeKernel
+import Dubon2026.SourceGammaOnePicardTorsion
+import Dubon2026.SourceReductionCoordinateAutomorphism
+import Dubon2026.SourceGammaOneDiamondGauss
+import Dubon2026.SourceReductionMapReflection
+import Dubon2026.SourceGammaOneHeckeGaussReflection
+import Dubon2026.SourceGammaOneHeckeFractionProduct
+import Dubon2026.SourceGammaOneHeckeGaussNorm
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.D_residueJCoordinate_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_hasPrincipalDivisors
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_place_residue_bijective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_isCurveOver
+#print axioms Dubon2026.SourceCurve.finite_lSpace_of_separating_coordinate
+#print axioms Dubon2026.SourceCurve.separating_coordinate_degree_dimension_maximum
+#print axioms Dubon2026.SourceCurve.separating_coordinate_index_zero_eq_maximum
+#print axioms Dubon2026.SourceCurve.RegularProlongation.exists_pole_space_lifts_of_degree_genus_eq
+#print axioms Dubon2026.SourceCurve.RegularProlongation.exists_integral_coordinate_lift_of_degree_genus_eq
+#print axioms Dubon2026.SourceCurve.RegularProlongation.integral_charts_lift_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_constant_reduction_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_degree_and_unramified
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_genus_sub_one
+#print axioms Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_separating_residue_coordinates
+#print axioms Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_separating_residue_coordinates
+#print axioms Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.eventual_chart_dimension_of_separating_residue_coordinate
+#print axioms Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.pole_dimension_bound_of_separating_residue_coordinate
+#print axioms Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_kummer_residue_genus_inequality_of_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_exists_power_of_residue_power_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_residue_lSpace_zero_eq_range
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_torsion_injective_of_degree_genus_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOnePowerLiftOriginalAlgebra
+#print axioms Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq
+#print axioms Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneResidueGeometry, `Dubon2026.SourceCurveSeparatingGenusMaximum, `Dubon2026.SourceReductionGenusPoleLifting, `Dubon2026.SourceReductionGenusIntegralCharts, `Dubon2026.SourceGammaOneGenusSpecialization, `Dubon2026.SourceGammaOneOriginalSpecialization, `Dubon2026.SourceGammaOneKummerDegree, `Dubon2026.SourceGammaOneKummerGenus, `Dubon2026.SourceJointSeparableFiniteOverlap, `Dubon2026.SourceJointSeparableConstants, `Dubon2026.SourceJointSeparableChartDimension, `Dubon2026.SourceJointSeparablePoleDimension, `Dubon2026.SourceJointSeparableGenus, `Dubon2026.SourceGammaOneKummerResidueGenus, `Dubon2026.SourceGammaOneKummerPowerLifting, `Dubon2026.SourceGammaOnePicardPrimeKernel, `Dubon2026.SourceGammaOnePicardTorsion, `Dubon2026.SourceReductionCoordinateAutomorphism, `Dubon2026.SourceGammaOneDiamondGauss, `Dubon2026.SourceReductionMapReflection, `Dubon2026.SourceGammaOneHeckeGaussReflection, `Dubon2026.SourceGammaOneHeckeFractionProduct, `Dubon2026.SourceGammaOneHeckeGaussNorm]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.D_residueJCoordinate_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_hasPrincipalDivisors, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_place_residue_bijective, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residueImage_isCurveOver, `Dubon2026.SourceCurve.finite_lSpace_of_separating_coordinate, `Dubon2026.SourceCurve.separating_coordinate_degree_dimension_maximum, `Dubon2026.SourceCurve.separating_coordinate_index_zero_eq_maximum, `Dubon2026.SourceCurve.RegularProlongation.exists_pole_space_lifts_of_degree_genus_eq, `Dubon2026.SourceCurve.RegularProlongation.exists_integral_coordinate_lift_of_degree_genus_eq, `Dubon2026.SourceCurve.RegularProlongation.integral_charts_lift_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_principal_reduction_map_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_constant_reduction_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_constant_reduction_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_degree_and_unramified, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_genus_sub_one, `Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_separating_residue_coordinates, `Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_separating_residue_coordinates, `Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.eventual_chart_dimension_of_separating_residue_coordinate, `Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.pole_dimension_bound_of_separating_residue_coordinate, `Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_kummer_residue_genus_inequality_of_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_exists_power_of_residue_power_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_residue_lSpace_zero_eq_range, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_torsion_injective_of_degree_genus_eq, `Dubon2026.SourceCurve.RegularProlongation.algHom_mem_integers_of_coordinate_degree_eq, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamond_mem_gaussRing_of_degree_eq, `Dubon2026.SourceCurve.RegularProlongation.map_mem_iff_of_preserves_integers, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.heckeBeta_mem_gaussRing_iff, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.diamondLaurentProduct_coeffMap, `Dubon2026.SourceFunctionField.GammaOne.HeckeNorm.exists_diamond_fraction_product_witness, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_hecke_gauss_norm_reduction_of_degree_eq]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.specializationResidueAlgebra, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOnePowerLiftOriginalAlgebra, `Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.arithmeticDiamondGauss]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE PICARD REDUCTION AUDIT PASS: {count} theorems including private/generated declarations. Actual original specialization and torsion injectivity from coordinate-degree/genus equality; diamond Gauss preservation and exact norm residue from degree equality. Actual geometric equalities, norm/place/Picard compatibility and arithmetic realization remain;16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneResidueGeometry
+
+#lint in Dubon2026.SourceCurveSeparatingGenusMaximum
+
+#lint in Dubon2026.SourceReductionGenusPoleLifting
+
+#lint in Dubon2026.SourceReductionGenusIntegralCharts
+
+#lint in Dubon2026.SourceGammaOneGenusSpecialization
+
+#lint in Dubon2026.SourceGammaOneOriginalSpecialization
+
+#lint in Dubon2026.SourceGammaOneKummerDegree
+
+#lint in Dubon2026.SourceGammaOneKummerGenus
+
+#lint in Dubon2026.SourceJointSeparableFiniteOverlap
+
+#lint in Dubon2026.SourceJointSeparableConstants
+
+#lint in Dubon2026.SourceJointSeparableChartDimension
+
+#lint in Dubon2026.SourceJointSeparablePoleDimension
+
+#lint in Dubon2026.SourceJointSeparableGenus
+
+#lint in Dubon2026.SourceGammaOneKummerResidueGenus
+
+#lint in Dubon2026.SourceGammaOneKummerPowerLifting
+
+#lint in Dubon2026.SourceGammaOnePicardPrimeKernel
+
+#lint in Dubon2026.SourceGammaOnePicardTorsion
+
+#lint in Dubon2026.SourceReductionCoordinateAutomorphism
+
+#lint in Dubon2026.SourceGammaOneDiamondGauss
+
+#lint in Dubon2026.SourceReductionMapReflection
+
+#lint in Dubon2026.SourceGammaOneHeckeGaussReflection
+
+#lint in Dubon2026.SourceGammaOneHeckeFractionProduct
+
+#lint in Dubon2026.SourceGammaOneHeckeGaussNorm

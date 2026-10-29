@@ -1,0 +1,17 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {Ω : Type*} [Field Ω] [CharZero Ω] [Algebra ℚ Ω]
+
+/-- Exact original-object consumer of `originalQUnramifiedUnion_exists_primitiveRoot`. -/
+theorem actual_unramified_union_cyclotomic_roots_originalQUnramifiedUnion_exists_primitiveRoot_source [IsSepClosed Ω]
+    (a : 𝓞 ℚ) (m : ℕ) [NeZero m] (hma : (m : 𝓞 ℚ) ∣ a) :
+    ∃ ζ : originalUnramifiedGaloisUnion (Ω := Ω) a, IsPrimitiveRoot ζ m :=
+  originalQUnramifiedUnion_exists_primitiveRoot a m hma
+
+end
+

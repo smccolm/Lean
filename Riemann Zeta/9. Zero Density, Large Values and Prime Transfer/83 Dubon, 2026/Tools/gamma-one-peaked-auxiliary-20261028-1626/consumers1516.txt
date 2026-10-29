@@ -1,0 +1,68 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerRepresentativeIdealRoot_mul`. -/
+theorem actual_number_field_selmer_finite_emptySelmerRepresentativeIdealRoot_mul_source (n : ℕ) (hn : n ≠ 0)
+    (x y : EmptySelmerRepresentativeUnits (R := R) (K := K) n) :
+    emptySelmerRepresentativeIdealRoot n (x * y) =
+      emptySelmerRepresentativeIdealRoot n x * emptySelmerRepresentativeIdealRoot n y :=
+  emptySelmerRepresentativeIdealRoot_mul n hn x y
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerClassMap_apply_representative`. -/
+theorem actual_number_field_selmer_finite_emptySelmerClassMap_apply_representative_source (n : ℕ) (hn : n ≠ 0)
+    (x : EmptySelmerRepresentativeUnits (R := R) (K := K) n) :
+    emptySelmerClassMap n hn (emptySelmerRepresentativeProjection n x) =
+      emptySelmerRepresentativeClass n hn x :=
+  emptySelmerClassMap_apply_representative n hn x
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {R K : Type*} [CommRing R] [IsDedekindDomain R]
+  [Field K] [Algebra R K] [IsFractionRing R K]
+
+/-- Exact original-object consumer of `emptySelmerClassMap_kernel_eq_unitRange`. -/
+theorem actual_number_field_selmer_finite_emptySelmerClassMap_kernel_eq_unitRange_source (n : ℕ) (hn : n ≠ 0) :
+    (emptySelmerClassMap (R := R) (K := K) n hn).ker =
+      (IsDedekindDomain.selmerGroup.fromUnit (R := R) (K := K) (n := n)).range :=
+  emptySelmerClassMap_kernel_eq_unitRange n hn
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+/-- Exact original-object consumer of `numberField_selmer_finite`. -/
+theorem actual_number_field_selmer_finite_numberField_selmer_finite_source (K : Type*) [Field K] [NumberField K]
+    (S : Set (HeightOneSpectrum (𝓞 K))) (hS : S.Finite) (n : ℕ) (hn : n ≠ 0) :
+    Finite (IsDedekindDomain.selmerGroup (R := 𝓞 K) (K := K) (S := S) (n := n)) :=
+  numberField_selmer_finite K S hS n hn
+
+end
+

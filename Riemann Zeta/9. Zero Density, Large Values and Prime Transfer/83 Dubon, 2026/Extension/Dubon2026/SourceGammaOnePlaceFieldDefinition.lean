@@ -1,0 +1,52 @@
+import Dubon2026.SourceGammaOneFunctionFieldDefinition
+import Dubon2026.SourceGammaOneFinitePlaceOrbit
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> continuous
+finite homogeneous-valued Tate action -> finite fields of definition of
+actual Gamma1 places. Reuse the original finite-orbit separation argument,
+with the proved exact Gamma1 function and orbit inputs. A finite compositum
+fixes the literal valuation ring; no finite-orbit continuity is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+local notation "Qbar" => AlgebraicClosure ℚ
+
+theorem gammaOne_place_fieldOfDefinition (N : ℕ) [NeZero N]
+    (v : Place Qbar (functionFieldOver (Gamma1 N) Qbar)) :
+    ∃ E : IntermediateField ℚ Qbar, FiniteDimensional ℚ E ∧
+      ∀ σ : Qbar ≃ₐ[ℚ] Qbar, σ ∈ E.fixingSubgroup → arithmeticPlace (Gamma1 N) σ v = v := by
+  classical
+  have key (w : Place Qbar (functionFieldOver (Gamma1 N) Qbar)) :
+      ∃ E : IntermediateField ℚ Qbar, FiniteDimensional ℚ E ∧
+        (w ≠ v → ∀ σ : Qbar ≃ₐ[ℚ] Qbar, σ ∈ E.fixingSubgroup → arithmeticPlace (Gamma1 N) σ v ≠ w) := by
+    by_cases hw : w = v
+    · subst w
+      exact ⟨⊥, inferInstance, fun hn => (hn rfl).elim⟩
+    · have hex : ∃ x : functionFieldOver (Gamma1 N) Qbar,
+          ¬ (x ∈ v.toValuationSubring ↔ x ∈ w.toValuationSubring) := by
+        by_contra h
+        push Not at h
+        exact hw (Place.ext (SetLike.ext h)).symm
+      obtain ⟨x, hx⟩ := hex
+      obtain ⟨E, hE, hfix⟩ := gammaOne_function_fieldOfDefinition N x
+      refine ⟨E, hE, fun _ σ hσ heq => ?_⟩
+      have hs : arithmeticRingAut (Gamma1 N) σ.symm x = x :=
+        hfix σ.symm (E.fixingSubgroup.inv_mem hσ)
+      have hm : x ∈ (arithmeticPlace (Gamma1 N) σ v).toValuationSubring ↔ x ∈ v.toValuationSubring := by
+        change arithmeticRingAut (Gamma1 N) σ.symm x ∈ v.toValuationSubring ↔ x ∈ v.toValuationSubring
+        rw [hs]
+      rw [heq] at hm
+      exact hx hm.symm
+  choose E hE hsep using key
+  letI : ∀ w, FiniteDimensional ℚ (E w) := hE
+  let S := (gammaOne_place_galois_orbit_finite N v).toFinset
+  refine ⟨⨆ w ∈ S, E w, IntermediateField.finiteDimensional_iSup_of_finset, fun σ hσ => ?_⟩
+  by_contra hn
+  have hm : arithmeticPlace (Gamma1 N) σ v ∈ S :=
+    (gammaOne_place_galois_orbit_finite N v).mem_toFinset.mpr ⟨σ, rfl⟩
+  have hle : E (arithmeticPlace (Gamma1 N) σ v) ≤ ⨆ w ∈ S, E w :=
+    le_iSup₂_of_le _ hm le_rfl
+  exact hsep (arithmeticPlace (Gamma1 N) σ v) hn σ (IntermediateField.fixingSubgroup_le hle hσ) rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

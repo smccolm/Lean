@@ -1,0 +1,81 @@
+import Dubon2026.SourceSiegelFiniteSeriesProducts
+import Dubon2026.SourceSiegelCoefficientSeries
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> integral finite Siegel product.
+Use the explicit stabilized coefficients for every residue pair. The actual
+(0,0) factor is represented too; its zero exponent will remove it without
+a dummy series or a choice of unrelated coefficients. Reuse the native
+q-series product and the audited trace coefficient ring lemmas.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion
+noncomputable section
+open Complex Filter Finset Topology
+open scoped Real
+
+/-- The literal constant phase of a Siegel factor. -/
+def rho (N : ℕ) (r s : ZMod N) : ℂ :=
+  -cexp (π * I * ((s.val : ℤ) : ℂ) * (((r.val : ℤ) : ℂ) - (N : ℂ)) / (N : ℂ) ^ 2)
+
+/-- The literal exponential factor at the cusp. -/
+def expo (N : ℕ) (r : ZMod N) (τ : UpperHalfPlane) : ℂ :=
+  cexp (2 * π * I * (6 * ((r.val : ℤ) : ℂ) ^ 2 - 6 * ((r.val : ℤ) : ℂ) * (N : ℂ) + (N : ℂ) ^ 2) *
+    (τ : ℂ) / (12 * (N : ℂ) ^ 2))
+
+/-- The normalized actual Siegel function. -/
+def normalized (N : ℕ) (r s : ZMod N) (τ : UpperHalfPlane) : ℂ :=
+  siegelFun N (r.val : ℤ) (s.val : ℤ) (τ : ℂ) / (rho N r s * expo N r τ)
+
+/-- The actual single-factor coefficient series. -/
+def series (N : ℕ) (r s : ZMod N) : PowerSeries ℂ :=
+  PowerSeries.mk (EulerExpansion.coef N r.val (s.val : ℤ))
+
+/-- The source exponent which removes the transformation multipliers. -/
+def exponent (N : ℕ) (e : ZMod N → ZMod N → ℕ) (r s : ZMod N) : ℕ := 12 * N * e r s
+
+/-- The finite product of the actual coefficient series. -/
+def productSeries (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ) : PowerSeries ℂ :=
+  ∏ r : ZMod N, ∏ s : ZMod N, series N r s ^ exponent N e r s
+
+theorem expands_series (N : ℕ) [NeZero N] (r s : ZMod N) :
+    Expands (N : ℝ) (series N r s) (normalized N r s) := by
+  intro τ
+  have h := EulerExpansion.hasSum_coef N (Nat.pos_of_ne_zero (NeZero.ne N))
+    r.val (ZMod.val_lt r) (s.val : ℤ) τ
+  simpa only [EulerExpansion.qN_eq_qParam, series, PowerSeries.coeff_mk] using h
+
+theorem integral_series (N : ℕ) [NeZero N] (r s : ZMod N) (n : ℕ) :
+    PowerSeries.coeff n (series N r s) ∈ (integralClosure ℤ ℂ).toSubring := by
+  rw [series, PowerSeries.coeff_mk]
+  exact EulerExpansion.isIntegral_coef N (Nat.pos_of_ne_zero (NeZero.ne N)) r.val (s.val : ℤ) n
+
+theorem expands_productSeries (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ) :
+    Expands (N : ℝ) (productSeries N e)
+      (fun τ => ∏ r : ZMod N, ∏ s : ZMod N, normalized N r s τ ^ exponent N e r s) := by
+  have hN : (0 : ℝ) < N := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne N)
+  refine Expands.prod hN Finset.univ (A := fun r => ∏ s : ZMod N, series N r s ^ exponent N e r s)
+    (F := fun r τ => ∏ s : ZMod N, normalized N r s τ ^ exponent N e r s) fun r _ => ?_
+  refine Expands.prod hN Finset.univ (A := fun s => series N r s ^ exponent N e r s)
+    (F := fun s τ => normalized N r s τ ^ exponent N e r s) fun s _ => ?_
+  exact Expands.pow hN (expands_series N r s) _
+
+theorem integral_productSeries (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ) (n : ℕ) :
+    IsIntegral ℤ (PowerSeries.coeff n (productSeries N e)) := by
+  show PowerSeries.coeff n (productSeries N e) ∈ (integralClosure ℤ ℂ).toSubring
+  refine coeff_prod_mem Finset.univ _ (fun r _ m => ?_) n
+  refine coeff_prod_mem Finset.univ _ (fun s _ j => ?_) m
+  exact Dubon2026.SourceFunctionField.IntegralTrace.coeff_pow_mem (integral_series N r s) _ j
+
+theorem series_zero (N : ℕ) [NeZero N] (r s : ZMod N) :
+    PowerSeries.coeff 0 (series N r s) = if r = 0 then 1 - EulerExpansion.zeta N (s.val : ℤ) else 1 := by
+  simp only [series, PowerSeries.coeff_mk, EulerExpansion.coef_zero, ZMod.val_eq_zero]
+
+theorem productSeries_zero (N : ℕ) [NeZero N] (e : ZMod N → ZMod N → ℕ) :
+    PowerSeries.coeff 0 (productSeries N e) =
+      ∏ r : ZMod N, ∏ s : ZMod N, (PowerSeries.coeff 0 (series N r s)) ^ exponent N e r s := by
+  simp only [productSeries, PowerSeries.coeff_zero_eq_constantCoeff, map_prod, map_pow]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.FiniteExpansion

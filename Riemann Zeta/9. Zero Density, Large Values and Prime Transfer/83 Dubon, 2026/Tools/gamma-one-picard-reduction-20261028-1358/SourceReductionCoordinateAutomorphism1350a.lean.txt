@@ -1,0 +1,52 @@
+import Dubon2026.SourceReductionFiniteIntegrality
+import Mathlib.RingTheory.Valuation.Integral
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> integral Hecke norm
+reduction -> diamond integrality. Under coordinate-degree preservation,
+the native finite-coordinate theorem makes every prolongation integer
+integral over the intersection with the rational coordinate field.
+An endomorphism fixing that coordinate fixes the intersection pointwise;
+valuation integral closedness therefore preserves integrality. This avoids
+a separate valuation-uniqueness or modular integral-model construction. -/
+namespace Dubon2026.SourceCurve.RegularProlongation
+noncomputable section
+open IsLocalRing IntermediateField
+variable {L : Type*} [Field L] {A : ValuationSubring L}
+variable {F : Type*} [Field F] [Algebra L F]
+variable {Fb : Type*} [Field Fb] [Algebra (ResidueField A) Fb]
+
+theorem algHom_mem_integers_of_coordinate_degree_eq
+    (R : RegularProlongation A F Fb) (x : R.integers)
+    (hx : Transcendental (ResidueField A) (R.residue x))
+    (hfin : 0 < Module.finrank (adjoin (ResidueField A) {R.residue x}) Fb)
+    (hdeg : Module.finrank (adjoin L {(x : F)}) F =
+      Module.finrank (adjoin (ResidueField A) {R.residue x}) Fb)
+    (σ : F →ₐ[L] F) (hσ : σ (x : F) = (x : F))
+    {f : F} (hf : f ∈ R.integers) : σ f ∈ R.integers := by
+  have hfix : ∀ z ∈ adjoin L {(x : F)}, σ z = z := by
+    intro z hz
+    induction hz using IntermediateField.adjoin_induction with
+    | mem z hz =>
+        rw [Set.mem_singleton_iff] at hz
+        subst z
+        exact hσ
+    | algebraMap c => exact σ.commutes c
+    | add z w _ _ hz hw => rw [map_add, hz, hw]
+    | inv z _ hz => rw [map_inv₀, hz]
+    | mul z w _ _ hz hw => rw [map_mul, hz, hw]
+  let S : Subring F := (adjoin L {(x : F)}).toSubfield.toSubring ⊓ R.integers.toSubring
+  have hiS : IsIntegral S f := isIntegral_coordinate_intersection R x hx hfin hdeg ⟨f, hf⟩
+  let φ : S →+* R.integers :=
+    { toFun := fun z => ⟨z, z.2.2⟩
+      map_one' := rfl
+      map_mul' := rfl
+      map_zero' := rfl
+      map_add' := rfl }
+  have hi : IsIntegral R.integers (σ f) := hiS.map_of_comp_eq φ σ.toRingHom (by
+    ext z
+    exact (hfix (z : F) z.2.1).symm)
+  obtain ⟨z, hz⟩ := (IsIntegrallyClosed.isIntegral_iff (R := R.integers) (K := F)).mp hi
+  exact hz ▸ z.2
+
+end
+end Dubon2026.SourceCurve.RegularProlongation

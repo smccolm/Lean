@@ -1,0 +1,349 @@
+
+FILE S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean.txt
+import Definitions.Def_CohCarrier_Inst
+import Definitions.Def_ModularCurve_PeriodMap
+import Mathlib.LinearAlgebra.TensorProduct.Tower
+import Mathlib.RingTheory.TensorProduct.Basic
+import Mathlib.RingTheory.TensorProduct.Free
+import Theorems.Thm_CohCarrier_heckeT_mem_parabolicHoms
+import Theorems.Thm_CohCarrier_heckeT_comm_of_prime
+import Theorems.Thm_ModularCurve_Period_exists_basis_parabolicHoms_castAddHom_comp
+import Theorems.Thm_CohCarrier_heckeT_comp_coeff
+import P2M.Util
+theorem solution
+    (N : ℕ) [NeZero N] (K : Type) [Field K] [CharZero K] (Ω : Type) [Field Ω] [Algebra K Ω] :
+    ∃ (hpar : ∀ (p : ℕ) (hp : p.Prime) (w : CohCarrier.H1 N ⊤ K),
+        w ∈ ModularCurve.Period.parabolicHoms K (CohCarrier.GammaH N ⊤) K →
+          (haveI : NeZero p :=
+
+
+FILE S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean.txt
+import Definitions.Def_CohCarrier_Inst
+import Definitions.Def_ModularCurve_PeriodMap
+import Definitions.Def_ModularCurve_PDPairing
+import Theorems.Thm_ModularCurve_PDPairing_exists_forall_smul_eq_pairZ_and_perfect_mod_three
+import Theorems.Thm_ModularCurve_PDPairing_pairZFun_jDeg0_iDeg0
+import Theorems.Thm_ModularCurve_PDPairing_pairZ_nondegenerate_mod
+import Theorems.Thm_ModularCurve_PDPairing_isFreeGroup_Gamma_four
+import Theorems.Thm_ModularCurve_Period_exists_basis_parabolicHoms_of_isAddTorsionFree
+import Theorems.Thm_ModularCurve_PDPairing_heckeT0_apply_eq_heckeT_top_apply
+import Theorems.Thm_CohCarrier_isParabolicHom_heckeT_top
+import Theorems.Thm_CohCarrier_jDegL_mem_parabolicHoms
+import Mathlib.LinearAlgebra.Matrix.SesquilinearForm
+import Mathlib.LinearAlgebra.Basis.Bilinear
+import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
+import Mathlib.Data.ZMod.Basic
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.Algebra.Module.NatInt
+import Mathlib.RingTheory.LocalRing.Basic
+import Mathlib.Data.Int.GCD
+import P2M.Util
+theorem solution
+    {𝒪 : Type} [CommRing 𝒪] [IsDomain 𝒪] [CharZero 𝒪] [IsLocalRing 𝒪]
+    (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) (hpu : ¬ IsUnit (p : 𝒪)) :
+    ∃ B : (M : ℕ) → ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪) →ₗ[𝒪]
+        ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪) →ₗ[𝒪] 𝒪,
+      (∀ (M : ℕ) [NeZero M],
+        Function.Bijective (B M) ∧
+        (∀ (ℓ : ℕ) [NeZero ℓ] (x y Tx Ty : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪)),
+            (Tx : CohCarrier.H1 M ⊤ 𝒪) = CohCarrier.heckeT M ⊤ ℓ 𝒪 x →
+            (Ty : CohCarrier.H1 M ⊤ 𝒪) = CohCarrier.heckeT M ⊤ ℓ 𝒪 y → B M Tx y = B M x Ty) ∧
+        (∀ (d : (ZMod M)ˣ) (x y Dx Dy : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪)),
+            (Dx : CohCarrier.H1 M ⊤ 𝒪) = CohCarrier.diamondL M ⊤ 𝒪 d x →
+            (Dy : CohCarrier.H1 M ⊤ 𝒪) = CohCarrier.diamondL M ⊤ 𝒪 d y → B M Dx y = B M x Dy)) ∧
+      (∀ (M M' : ℕ) [NeZero M'] (d d' : ℕ) [NeZero d] [NeZero d']
+          (h : CohCarrier.LevelLE M M' ⊤ ⊤ d) (h' : CohCarrier.LevelLE M M' ⊤ ⊤ d') (hdd' : d * d' = M' / M)
+          (x : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪))
+          (y : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M' ⊤) 𝒪))
+          (ix : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M' ⊤) 𝒪))
+          (jy : ↥(ModularCurve.Period.parabolicHoms 𝒪 (CohCarrier.GammaH M ⊤) 𝒪)),
+          (ix : CohCarrier.H1 M' ⊤ 𝒪) = CohCarrier.iDegL M M' ⊤ ⊤ d 𝒪 𝒪 h x →
+          (jy : CohCarrier.H1 M ⊤ 𝒪) = CohCarrier.jDegL M M' ⊤ ⊤ d' 𝒪 𝒪 h' y →
+          B M jy x = B M' y ix) :=
+
+
+FILE S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt
+import Mathlib
+import Theorems.Thm_groupCohomology_subsingleton_H1_specialLinearGroup_fin_two_traceZero_algebra_of_charP_three
+import P2M.Util
+theorem solution
+    {k : Type} [Field k] [Finite k] [CharP k 3] (F : Subfield k)
+    {V : Type} [AddCommGroup V] [Module k V] (b : Module.Basis (Fin 2) k V)
+    (g : GL (Fin 2) k)
+    {S : Type} [Group S] (σ : S →* Module.End k V) (hσ : Function.Injective σ)
+    (hσS : ∀ s : S, ∃ m : SL(2, F), LinearMap.toMatrix b b (σ s) =
+      (g : Matrix (Fin 2) (Fin 2) k) *
+        (Matrix.SpecialLinearGroup.map F.subtype m : Matrix (Fin 2) (Fin 2) k) *
+          ((g⁻¹ : GL (Fin 2) k) : Matrix (Fin 2) (Fin 2) k))
+    (hSσ : ∀ m : SL(2, F), ∃ s : S, LinearMap.toMatrix b b (σ s) =
+      (g : Matrix (Fin 2) (Fin 2) k) *
+        (Matrix.SpecialLinearGroup.map F.subtype m : Matrix (Fin 2) (Fin 2) k) *
+          ((g⁻¹ : GL (Fin 2) k) : Matrix (Fin 2) (Fin 2) k))
+    [Module (ZMod 3) (LinearMap.ker (LinearMap.trace k V))]
+    (A : Rep (ZMod 3) S)
+    (e : A ≃ₗ[ZMod 3] Module.Dual (ZMod 3) (LinearMap.ker (LinearMap.trace k V)))
+    (he : ∀ (s : S) (a : A) (X Y : LinearMap.ker (LinearMap.trace k V)),
+      (Y : Module.End k V) = σ s⁻¹ * X * σ s → e (A.ρ s a) X = e a Y) :
+    Subsingleton (H1 A) :=
+
+
+FILE S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean.txt
+import Definitions.Def_Gamma0CoeffCohomologyEigen
+import Definitions.Def_CuspidalType_IsCuspidalOfType
+import Definitions.Def_CohCarrier_Level
+import Theorems.Thm_HeckeEis_coeffHeckeFun_mem_coeffCocycles
+import Theorems.Thm_HeckeEis_coeffHeckeFun_mem_coeffCoboundaries
+import Theorems.Thm_HeckeEis_sum_repr_sub_coeffHeckeFun_mem_coeffCoboundaries
+import Theorems.Thm_HeckeEis_diagElem_comp_comp_red_heckeConj_eq_comp_red_comp_diagElem_of_ne_zero
+import Theorems.Thm_HeckeEis_coresHom_eq_transfer
+import P2M.Util
+theorem solution
+    (N q : ℕ) [Fact q.Prime] (K : Type) [Field K] [CharZero K]
+    {Wc : Type} [AddCommGroup Wc] [Module K Wc] (W : Representation K (CuspidalType.GL2 q) Wc)
+    (red : Gamma0 N →* CuspidalType.GL2 q)
+    (hred : red = (Matrix.SpecialLinearGroup.toGL.comp
+      (Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod q)))).comp (Gamma0 N).subtype)
+    (H₁ : Subgroup (ZMod (N * q ^ 2))ˣ)
+    (hH₁ : H₁ = (ZMod.unitsMap ((dvd_pow_self q two_ne_zero).mul_left N)).ker)
+    (conj : ↥red.ker →* ↥(CohCarrier.GammaH (N * q ^ 2) H₁))
+    (hconj : ∀ x : ↥red.ker,
+      (conj x : Matrix.SpecialLinearGroup (Fin 2) ℤ) 0 0 = ((x : Gamma0 N) : Matrix.SpecialLinearGroup (Fin 2) ℤ) 0 0 ∧
+      (q : ℤ) * (conj x : Matrix.SpecialLinearGroup (Fin 2) ℤ) 0 1 =
+        ((x : Gamma0 N) : Matrix.SpecialLinearGroup (Fin 2) ℤ) 0 1 ∧
+      (conj x : Matrix.SpecialLinearGroup (Fin 2) ℤ) 1 0 =
+        (q : ℤ) * ((x : Gamma0 N) : Matrix.SpecialLinearGroup (Fin 2) ℤ) 1 0 ∧
+      (conj x : Matrix.SpecialLinearGroup (Fin 2) ℤ) 1 1 =
+        ((x : Gamma0 N) : Matrix.SpecialLinearGroup (Fin 2) ℤ) 1 1) :
+    ∃ S : HeckeEis.coeffH1 (W.comp red) →ₗ[K] CohCarrier.H1 (N * q ^ 2) H₁ Wc,
+      (∀ (z : ↥(HeckeEis.coeffCocycles (W.comp red))) (x : ↥red.ker),
+        S (HeckeEis.coeffH1Mk (W.comp red) z) (Additive.ofMul (conj x)) = (z : Gamma0 N → Wc) (x : Gamma0 N)) ∧
+      Function.Injective S ∧
+      (∀ φ : CohCarrier.H1 (N * q ^ 2) H₁ Wc, φ ∈ LinearMap.range S ↔
+        ∀ (γ y : Gamma0 N) (hy : y ∈ red.ker) (hy' : γ * y * γ⁻¹ ∈ red.ker),
+          φ (Additive.ofMul (conj ⟨γ * y * γ⁻¹, hy'⟩)) = W (red γ) (φ (Additive.ofMul (conj ⟨y, hy⟩)))) ∧
+      ∀ (ℓ : ℕ) [NeZero ℓ], Nat.Coprime ℓ (N * q) → ∀ h : ((ℓ : ZMod q) ≠ 0),
+        ∃ T : HeckeEis.coeffH1 (W.comp red) →ₗ[K] HeckeEis.coeffH1 (W.comp red),
+          HeckeEis.IsCoeffHeckeOnH1 N ℓ (W.comp red) (W (CuspidalType.diagElem q (Units.mk0 (ℓ : ZMod q) h))) T ∧
+          ∀ x : HeckeEis.coeffH1 (W.comp red),
+            S (T x) = (W (CuspidalType.diagElem q (Units.mk0 (ℓ : ZMod q) h))).toAddMonoidHom.comp
+              (CohCarrier.heckeT (N * q ^ 2) H₁ ℓ Wc (S x)) :=
+
+
+FILE S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt
+import Mathlib
+import Definitions.Def_HeckeEis_BinaryFormRep
+import Definitions.Def_Gamma0HeckeOperatorHom
+import Definitions.Def_Gamma0CoeffCohomology
+import Definitions.Def_HeckeEis_EichlerIntegral
+import Definitions.Def_ModularForm_HeckeOperatorForms
+import Theorems.Thm_HeckeEis_exists_coeffH1par_map_ringHom
+import Theorems.Thm_HeckeEis_exists_basis_coeffH1par_int_complex
+import Theorems.Thm_HeckeEis_existsEichlerShimuraMapLinear
+import Theorems.Thm_HeckeEis_eichlerShimuraMap_injective
+import Theorems.Thm_HeckeEis_eichlerShimuraMap_heckeTLin
+import Theorems.Thm_HeckeEis_coeffH1par_map_heckeT_comm
+import Theorems.Thm_HeckeEis_exists_coeffH1par_linearMap_coeffHeckeFun
+import Theorems.Thm_HeckeEis_binaryFormAlphaAdj_comp_binaryFormRepSL_heckeConj
+import Theorems.Thm_DeligneSerre_exists_modP_eigenvector_of_complex_eigenvector
+import P2M.Util
+theorem solution (N : ℕ) [NeZero N] (n : ℕ) (S : Set ℕ) (p : ℕ) [Fact p.Prime] (Q : ℕ → Prop) (a : ℕ → ℤ)
+    (𝔪' : Ideal (integralClosure ℤ ℂ)) (h𝔪' : 𝔪'.IsPrime) (hp𝔪' : (p : integralClosure ℤ ℂ) ∈ 𝔪')
+    (α : ℕ → integralClosure ℤ ℂ) (f : CuspForm (CongruenceSubgroup.Gamma0 N) ((n : ℤ) + 2)) (hf : f ≠ 0)
+    (heigen : ∀ (ℓ : ℕ) (hℓ : ℓ.Prime) (hℓS : ℓ ∉ S) (hℓN : ¬ ℓ ∣ N), Q ℓ →
+      CuspForm.heckeTLin ((n : ℤ) + 2) hℓ hℓN f = ((α ℓ : integralClosure ℤ ℂ) : ℂ) • f)
+    (hcong : ∀ (ℓ : ℕ), ℓ.Prime → ℓ ∉ S → ¬ ℓ ∣ N → Q ℓ → α ℓ - (a ℓ : integralClosure ℤ ℂ) ∈ 𝔪') :
+    ∃ y : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype),
+      (¬ ∃ y' : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype), y = (p : ℤ) • y') ∧
+      ∀ (ℓ : ℕ) (hℓ : ℓ.Prime), ℓ ∉ S → ¬ ℓ ∣ N → Q ℓ →
+        ∀ T : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype) →+ HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype),
+          (∀ z : ↥(HeckeEis.coeffParabolicCocycles ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype)),
+            ∃ w : ↥(HeckeEis.coeffParabolicCocycles ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype)),
+              haveI : NeZero ℓ :=
+
+
+FILE S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean.txt
+import Mathlib
+import Definitions.Def_Gamma0HeckeOperatorHom
+import Definitions.Def_Gamma0CoeffCohomology
+import P2M.Util
+theorem solution
+    (N : ℕ) (K : Type*) [CommRing K]
+    {V V' : Type*} [AddCommGroup V] [Module K V] [AddCommGroup V'] [Module K V']
+    (ρ : Representation K (CongruenceSubgroup.Gamma0 N) V)
+    (ρ' : Representation K (CongruenceSubgroup.Gamma0 N) V')
+    (i : V →ₗ[K] V') (r : V' →ₗ[K] V)
+    (hi : ∀ g : CongruenceSubgroup.Gamma0 N, i ∘ₗ ρ g = ρ' g ∘ₗ i)
+    (hr : ∀ g : CongruenceSubgroup.Gamma0 N, r ∘ₗ ρ' g = ρ g ∘ₗ r)
+    (hri : r ∘ₗ i = LinearMap.id) :
+    ∃ (I : HeckeEis.coeffH1par ρ →ₗ[K] HeckeEis.coeffH1par ρ')
+      (R : HeckeEis.coeffH1par ρ' →ₗ[K] HeckeEis.coeffH1par ρ),
+      R ∘ₗ I = LinearMap.id ∧
+      (∀ z : ↥(HeckeEis.coeffParabolicCocycles ρ),
+        ∃ z' : ↥(HeckeEis.coeffParabolicCocycles ρ'),
+          (z' : CongruenceSubgroup.Gamma0 N → V') = i ∘ (z : CongruenceSubgroup.Gamma0 N → V) ∧
+          I (HeckeEis.coeffH1parMk ρ z) = HeckeEis.coeffH1parMk ρ' z') ∧
+      (∀ z' : ↥(HeckeEis.coeffParabolicCocycles ρ'),
+        ∃ z : ↥(HeckeEis.coeffParabolicCocycles ρ),
+          (z : CongruenceSubgroup.Gamma0 N → V) = r ∘ (z' : CongruenceSubgroup.Gamma0 N → V') ∧
+          R (HeckeEis.coeffH1parMk ρ' z') = HeckeEis.coeffH1parMk ρ z) ∧
+      (∀ (ℓ : ℕ) [NeZero ℓ] (a : V →ₗ[K] V) (a' : V' →ₗ[K] V'), i ∘ₗ a = a' ∘ₗ i →
+        ∀ (T : HeckeEis.coeffH1par ρ →ₗ[K] HeckeEis.coeffH1par ρ)
+          (T' : HeckeEis.coeffH1par ρ' →ₗ[K] HeckeEis.coeffH1par ρ'),
+          (∀ z : ↥(HeckeEis.coeffParabolicCocycles ρ),
+            ∃ w : ↥(HeckeEis.coeffParabolicCocycles ρ),
+              (w : CongruenceSubgroup.Gamma0 N → V) = HeckeEis.coeffHeckeFun N ℓ ρ a z ∧
+              T (HeckeEis.coeffH1parMk ρ z) = HeckeEis.coeffH1parMk ρ w) →
+          (∀ z' : ↥(HeckeEis.coeffParabolicCocycles ρ'),
+            ∃ w' : ↥(HeckeEis.coeffParabolicCocycles ρ'),
+              (w' : CongruenceSubgroup.Gamma0 N → V') = HeckeEis.coeffHeckeFun N ℓ ρ' a' z' ∧
+              T' (HeckeEis.coeffH1parMk ρ' z') = HeckeEis.coeffH1parMk ρ' w') →
+          T' ∘ₗ I = I ∘ₗ T) :=
+
+
+FILE S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean.txt
+import Mathlib
+import Definitions.Def_HeckeEis_BinaryFormRep
+import Definitions.Def_Gamma0CoeffCohomology
+import Theorems.Thm_ModularGroup_exists_eq_conj_T_zpow_of_trace_sq_eq_four
+import Theorems.Thm_HeckeEis_binaryFormRepSL_neg_one_apply
+import Theorems.Thm_HeckeEis_coeffH1par_binaryFormRepSL_int_eq_zero_of_smul_eq_zero
+import Theorems.Thm_HeckeEis_mem_range_binaryFormRepSL_T_zpow_sub_one_of_prime_smul_mem
+import P2M.Util
+theorem solution (N : ℕ) [NeZero N] (n : ℕ) (p : ℕ) [Fact p.Prime] (hp : p ≠ 2) (hpN : ¬ p ∣ N) (hn : n < p)
+    (K : Type*) [Field K] [CharP K p]
+    (Φ : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype) →+ HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL K n).comp (CongruenceSubgroup.Gamma0 N).subtype))
+    (hΦ : (∀ z : ↥(HeckeEis.coeffParabolicCocycles ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype)), ∃ w : ↥(HeckeEis.coeffParabolicCocycles ((HeckeEis.binaryFormRepSL K n).comp (CongruenceSubgroup.Gamma0 N).subtype)),
+        (∀ g : CongruenceSubgroup.Gamma0 N, ((w : CongruenceSubgroup.Gamma0 N → ↥(HeckeEis.BinaryForm K n)) g : MvPolynomial (Fin 2) K)
+            = MvPolynomial.map (Int.castRingHom K) (((z : CongruenceSubgroup.Gamma0 N → ↥(HeckeEis.BinaryForm ℤ n)) g : MvPolynomial (Fin 2) ℤ))) ∧
+        Φ (HeckeEis.coeffH1parMk _ z) = HeckeEis.coeffH1parMk _ w))
+    (y : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype)) (hy : Φ y = 0) :
+    ∃ y' : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype), y = (p : ℤ) • y' :=
+
+
+FILE S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean.txt
+import Mathlib
+import Definitions.Def_Gamma0CoeffCohomology
+import P2M.Util
+theorem solution
+    (K : Type*) [CommRing K] (V : Type*) [AddCommGroup V] [Module K V]
+    (ρ : Representation K (Matrix.SpecialLinearGroup (Fin 2) ℤ) V) (x y : V)
+    (hx : x + ρ ModularGroup.S x = 0)
+    (hy : y + ρ (ModularGroup.S * ModularGroup.T) y
+        + ρ (ModularGroup.S * ModularGroup.T) (ρ (ModularGroup.S * ModularGroup.T) y) = 0) :
+    ∃! z : ↥(HeckeEis.coeffCocycles ρ),
+      (z : Matrix.SpecialLinearGroup (Fin 2) ℤ → V) ModularGroup.S = x
+        ∧ (z : Matrix.SpecialLinearGroup (Fin 2) ℤ → V) (ModularGroup.S * ModularGroup.T) = y :=
+
+
+FILE S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean.txt
+import Mathlib
+import P2M.Util
+theorem solution
+    {F : Type*} [Group F] [IsFreeGroup F] (R : Subgroup F) [R.Normal] [R.FiniteIndex]
+    (hR : ∀ x y : F, x * y * x⁻¹ * y⁻¹ ∈ R) (A : Type*) [CommGroup A] :
+    Function.Surjective (fun χ : ↥R →* A => MonoidHom.transfer χ) ∧
+    ∀ χ : ↥R →* A, MonoidHom.transfer χ = 1 ↔
+      χ ∈ Subgroup.closure {ψ : ↥R →* A | ∃ (g : F) (χ' : ↥R →* A),
+        ψ = (χ'.comp (MulAut.conjNormal g : MulAut ↥R).toMonoidHom) / χ'} :=
+
+
+FILE S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean.txt
+import Definitions.Def_HeckeEis_DegeneracyTransfers
+import Definitions.Def_ModularCurve_PeriodMap
+import Definitions.Def_ModularCurve_PDPairing
+import Theorems.Thm_ModularCurve_PDPairing_exists_forall_smul_eq_pairZ_and_perfect_mod_three
+import Theorems.Thm_ModularCurve_PDPairing_isFreeGroup_Gamma_four
+import Theorems.Thm_ModularCurve_PDPairing_pairZFun_heckeT0_comm
+import Theorems.Thm_ModularCurve_PDPairing_pairZFun_jDeg0_iDeg0
+import Theorems.Thm_HeckeEis_coresHom_eq_transfer
+import P2M.Util
+theorem solution
+    (N q : ℕ) [NeZero N] [NeZero q] (hq : q.Prime) (hqN : ¬ q ∣ N)
+    (hTpar : ∀ (M ℓ : ℕ) [NeZero ℓ] (φ : Additive (Gamma0 M) →+ ℤ),
+      ModularCurve.Period.IsParabolicHom (Gamma0 M) φ →
+        ModularCurve.Period.IsParabolicHom (Gamma0 M) (HeckeEis.heckeOperatorHom M ℓ ℤ φ))
+    (hrespar₀ : ∀ y ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ,
+      HeckeEis.pullbackHom (Ihara.ι₀ N q) y ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ)
+    (hrespar₁ : ∀ y ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ,
+      HeckeEis.pullbackHom (Ihara.ι₁ N q) y ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ)
+    (hβpar₀ : ∀ x ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ,
+      HeckeEis.degeneracyTransfer₀ N q ℤ hq hqN x ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ)
+    (hβpar₁ : ∀ x ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ,
+      HeckeEis.degeneracyTransfer₁ N q ℤ x ∈ ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ) :
+    ∃ (pair₁ : ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ →ₗ[ℤ]
+        ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ →ₗ[ℤ] ℤ)
+      (pair₀ : ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ →ₗ[ℤ]
+        ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ →ₗ[ℤ] ℤ),
+      ((∀ x, (∀ y, (3 : ℤ) ∣ pair₁ x y) → ∃ x', x = (3 : ℤ) • x') ∧
+        (∀ y, (∀ x, (3 : ℤ) ∣ pair₁ x y) → ∃ y', y = (3 : ℤ) • y')) ∧
+      ((∀ x, (∀ y, (3 : ℤ) ∣ pair₀ x y) → ∃ x', x = (3 : ℤ) • x') ∧
+        (∀ y, (∀ x, (3 : ℤ) ∣ pair₀ x y) → ∃ y', y = (3 : ℤ) • y')) ∧
+      (∀ (ℓ : ℕ) [NeZero ℓ], ℓ.Prime → ¬ ℓ ∣ N * q →
+        ∀ x y : ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ,
+          pair₁ ⟨HeckeEis.heckeOperatorHom (N * q) ℓ ℤ x, hTpar (N * q) ℓ x x.2⟩ y =
+            pair₁ x ⟨HeckeEis.heckeOperatorHom (N * q) ℓ ℤ y, hTpar (N * q) ℓ y y.2⟩) ∧
+      (∀ (ℓ : ℕ) [NeZero ℓ], ℓ.Prime → ¬ ℓ ∣ N * q →
+        ∀ x y : ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ,
+          pair₀ ⟨HeckeEis.heckeOperatorHom N ℓ ℤ x, hTpar N ℓ x x.2⟩ y =
+            pair₀ x ⟨HeckeEis.heckeOperatorHom N ℓ ℤ y, hTpar N ℓ y y.2⟩) ∧
+      (∀ (x : ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ)
+        (y : ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ),
+          pair₀ ⟨HeckeEis.degeneracyTransfer₀ N q ℤ hq hqN x, hβpar₀ x x.2⟩ y =
+            pair₁ x ⟨HeckeEis.pullbackHom (Ihara.ι₀ N q) y, hrespar₀ y y.2⟩) ∧
+      (∀ (x : ModularCurve.Period.parabolicHoms ℤ (Gamma0 (N * q)) ℤ)
+        (y : ModularCurve.Period.parabolicHoms ℤ (Gamma0 N) ℤ),
+          pair₀ ⟨HeckeEis.degeneracyTransfer₁ N q ℤ x, hβpar₁ x x.2⟩ y =
+            pair₁ x ⟨HeckeEis.pullbackHom (Ihara.ι₁ N q) y, hrespar₁ y y.2⟩) :=
+
+
+FILE S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_PeriodMap
+import Theorems.Thm_ModularGroup_exists_apply_eq_sub_of_apply_neg_eq
+import Theorems.Thm_ModularGroup_exists_eq_conj_T_zpow_of_trace_sq_eq_four
+import P2M.Util
+theorem solution (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] (hneg : (-1 : SL(2, ℤ)) ∈ Γ)
+    (f : SL(2, ℤ) ⧸ Γ → ℤ)
+    (hf : ∀ e : SL(2, ℤ) ⧸ Γ → ℤ, (∀ q, e (ModularGroup.T • q) = e q) →
+      ∑ᶠ q, f q * (e q - e (ModularGroup.S • q)) = 0) :
+    ∃ φ : Additive Γ →+ ℤ, ModularCurve.Period.IsParabolicHom Γ φ ∧
+      ∃ a b : SL(2, ℤ) → ℤ, (∀ g, a (ModularGroup.S * g) = a g) ∧
+        (∀ g, b (ModularGroup.S * ModularGroup.T * g) = b g) ∧
+        (∀ (g : SL(2, ℤ)) (γ : Γ), a (g * γ) = a g + φ (Additive.ofMul γ)) ∧
+        (∀ (g : SL(2, ℤ)) (γ : Γ), b (g * γ) = b g + φ (Additive.ofMul γ)) ∧
+        ∀ g, f (QuotientGroup.mk g) = b g - a g :=
+
+
+FILE S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean.txt
+import Mathlib
+import Definitions.Def_ModularCurve_PeriodMap
+import Theorems.Thm_ModularCurve_Period_exists_basis_parabolicHoms_of_isAddTorsionFree
+import P2M.Util
+theorem solution
+    (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+    (IP : ModularCurve.Period.parabolicHoms ℤ Γ ℤ →ₗ[ℤ] ModularCurve.Period.parabolicHoms ℤ Γ ℤ →ₗ[ℤ] ℤ)
+    (hIP : Function.Bijective IP) (hIPf : Function.Bijective IP.flip)
+    (R : Type*) [CommRing R] [IsAddTorsionFree R] :
+    ∃ B : ModularCurve.Period.parabolicHoms R Γ R →ₗ[R] ModularCurve.Period.parabolicHoms R Γ R →ₗ[R] R,
+      Function.Bijective B ∧ Function.Bijective B.flip ∧
+      (∀ (x y : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) (x' y' : ModularCurve.Period.parabolicHoms R Γ R),
+        ((x' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+          (Int.castAddHom R).comp ((x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ) →
+        ((y' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+          (Int.castAddHom R).comp ((y : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ) →
+        B x' y' = (IP x y : R)) ∧
+      (∀ (T T' : ModularCurve.Period.parabolicHoms ℤ Γ ℤ →ₗ[ℤ] ModularCurve.Period.parabolicHoms ℤ Γ ℤ)
+          (S S' : ModularCurve.Period.parabolicHoms R Γ R →ₗ[R] ModularCurve.Period.parabolicHoms R Γ R),
+        (∀ x y : ModularCurve.Period.parabolicHoms ℤ Γ ℤ, IP (T x) y = IP x (T' y)) →
+        (∀ (x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) (x' : ModularCurve.Period.parabolicHoms R Γ R),
+          ((x' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+            (Int.castAddHom R).comp ((x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ) →
+          ((S x' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+            (Int.castAddHom R).comp ((T x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ)) →
+        (∀ (x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) (x' : ModularCurve.Period.parabolicHoms R Γ R),
+          ((x' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+            (Int.castAddHom R).comp ((x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ) →
+          ((S' x' : ModularCurve.Period.parabolicHoms R Γ R) : Additive Γ →+ R) =
+            (Int.castAddHom R).comp ((T' x : ModularCurve.Period.parabolicHoms ℤ Γ ℤ) : Additive Γ →+ ℤ)) →
+        ∀ x' y' : ModularCurve.Period.parabolicHoms R Γ R, B (S x') y' = B x' (S' y')) :=

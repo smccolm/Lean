@@ -1,0 +1,102 @@
+import SourceGammaOneEisensteinLattice1484d
+
+/-! DUB-17/18 -> original all-weight association -> Gamma1 degree
+preservation -> integral Eisenstein separators. Split the actual integer
+lattice sum into its positive and negative first coordinates, then reuse
+Mathlib's proved Lipschitz formula. The residue zero case is explicitly
+excluded because only nonzero unit classes are required for separation.
+The class splitting is adapted from anthropics/fermats-last-theorem,
+Apache-2.0, commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open UpperHalfPlane hiding I
+open EisensteinSeries Complex
+
+/-- The weight-four Lipschitz normalization, retained literally. -/
+def kappa : ℂ := (-2 * Real.pi * I) ^ (4 : ℕ) / (3 : ℕ).factorial
+
+theorem kappa_ne_zero : kappa ≠ 0 := by
+  unfold kappa
+  apply div_ne_zero
+  · exact pow_ne_zero _ (by norm_num [Real.pi_ne_zero])
+  · exact_mod_cast Nat.factorial_ne_zero 3
+
+private theorem split_class (N : ℕ) (b : ZMod N) (F : ℤ → ℂ) (hF : Summable F) :
+    ∑' c : {c : ℤ // (c : ZMod N) = b}, F c.1 =
+      (if (0 : ZMod N) = b then F 0 else 0) +
+        ∑' c : ℕ+, (if ((c : ℕ) : ZMod N) = b then F c else 0) +
+        ∑' c : ℕ+, (if ((-((c : ℕ) : ℤ) : ℤ) : ZMod N) = b
+          then F (-((c : ℕ) : ℤ)) else 0) := by
+  classical
+  let G : ℤ → ℂ := fun c => if (c : ZMod N) = b then F c else 0
+  have hG : Summable G := by
+    refine Summable.of_norm_bounded hF.norm fun c => ?_
+    dsimp [G]
+    split_ifs <;> simp
+  have h1 : (∑' c : {c : ℤ // (c : ZMod N) = b}, F c.1) = ∑' c : ℤ, G c := by
+    rw [show (∑' c : {c : ℤ // (c : ZMod N) = b}, F c.1) =
+      ∑' c : ({c : ℤ | (c : ZMod N) = b} : Set ℤ), F c from rfl, tsum_subtype]
+    exact tsum_congr fun _ => by simp only [Set.indicator_apply, Set.mem_setOf_eq, G]
+  have hs1 : Summable fun n : ℕ => G n := hG.comp_injective Nat.cast_injective
+  have hs2 : Summable fun n : ℕ => G (-(n + 1)) :=
+    hG.comp_injective (i := fun n : ℕ => (-(n + 1) : ℤ)) (fun m n h => by simpa using h)
+  rw [h1, tsum_of_nat_of_neg_add_one hs1 hs2, hs1.tsum_eq_zero_add]
+  congr 1
+  · congr 1
+    · simp [G]
+    · rw [tsum_pnat_eq_tsum_succ (f := fun c : ℕ =>
+        if (c : ZMod N) = b then F c else 0)]
+      simp [G]
+  · rw [tsum_pnat_eq_tsum_succ (f := fun c : ℕ =>
+      if ((-(c : ℤ) : ℤ) : ZMod N) = b then F (-(c : ℤ)) else 0)]
+    refine tsum_congr fun c => ?_
+    simp [G]
+
+private theorem integer_row_positive (m : ℕ+) (z : ℍ) :
+    (∑' d : ℤ, (((m : ℂ) * z + d) ^ (4 : ℕ))⁻¹) =
+      kappa * ∑' d : ℕ+, (d : ℂ) ^ (3 : ℕ) *
+        cexp (2 * Real.pi * I * z) ^ (m * d : ℕ) := by
+  have h := EisensteinSeries.qExpansion_identity_pnat (k := 3) (by norm_num)
+    (⟨m * z, by simpa using z.2⟩ : ℍ)
+  simp only [one_div] at h
+  rw [h]
+  congr 1
+  refine tsum_congr fun d => ?_
+  rw [← Complex.exp_nat_mul, ← Complex.exp_nat_mul]
+  congr 2
+  push_cast
+  ring
+
+private theorem integer_row_even (m : ℤ) (z : ℍ) :
+    (∑' d : ℤ, ((((-m : ℤ) : ℂ) * z + d) ^ (4 : ℕ))⁻¹) =
+      ∑' d : ℤ, (((m : ℂ) * z + d) ^ (4 : ℕ))⁻¹ := by
+  rw [← tsum_comp_neg]
+  refine tsum_congr fun d => ?_
+  push_cast
+  congr 1
+  ring
+
+theorem rowSum_eq_positive_series (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) (z : ℍ) :
+    rowSum N c z =
+      kappa * (∑' m : ℕ+, if ((m : ℕ) : ZMod N) = c then
+        ∑' d : ℕ+, (d : ℂ) ^ (3 : ℕ) * cexp (2 * Real.pi * I * z) ^ (m * d : ℕ) else 0) +
+      kappa * (∑' m : ℕ+, if ((m : ℕ) : ZMod N) = -c then
+        ∑' d : ℕ+, (d : ℂ) ^ (3 : ℕ) * cexp (2 * Real.pi * I * z) ^ (m * d : ℕ) else 0) := by
+  classical
+  have hs : Summable fun m : ℤ => ∑' d : ℤ,
+      (((m : ℂ) * z + d) ^ (4 : ℕ))⁻¹ := by
+    simpa only [eisSummand, Matrix.cons_val_zero, Matrix.cons_val_one, zpow_neg, zpow_ofNat]
+      using (summable_prod_eisSummand (k := 4) (by norm_num) z).prod
+  rw [rowSum_eq_integer_lattice, split_class N c _ hs, if_neg (Ne.symm hc), zero_add,
+    ← tsum_mul_left, ← tsum_mul_left]
+  congr 1
+  · refine tsum_congr fun m => ?_
+    split_ifs <;> simp [integer_row_positive]
+  · refine tsum_congr fun m => ?_
+    rw [integer_row_even]
+    simp only [Int.cast_neg, Int.cast_natCast, neg_eq_iff_eq_neg]
+    split_ifs <;> simp [integer_row_positive]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

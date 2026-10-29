@@ -1,0 +1,7 @@
+### Actual the actual continuous arithmetic fixed-determinant universal representation — 9 October 2026
+
+Construct the genuine continuous universal arithmetic representation in the actual determinant quotient. Its determinant is the prescribed original character after coefficient change at every original arithmetic Galois element. Reduction through the true coefficient residue field is proved to recover the entire original residual representation.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticFixedDeterminantRepresentation](Extension/Dubon2026/ArithmeticFixedDeterminantRepresentation.lean).

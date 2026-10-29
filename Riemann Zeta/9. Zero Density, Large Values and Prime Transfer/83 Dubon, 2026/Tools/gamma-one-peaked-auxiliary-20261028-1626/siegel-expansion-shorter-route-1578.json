@@ -1,0 +1,58 @@
+{
+  "recordedUTC": "2026-10-29T01:57:59.723615+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> literal Siegel product integral Fourier expansion and level-cleared leading inverse.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean.txt",
+      "sha256": "FD8487F547BE7165566DBD5D1E7AD5E98C272E046CBD21F570FAD18B50368D44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantProductExpansion.lean",
+      "sha256": "F760BC1810031BFD90E265C31E3DEDBD9989522C057C2A2BFD1D05FA14EFE2F2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantIntegralExpansion.lean",
+      "sha256": "BAD1520E5AE5BCD28FE138526FBFB19047EAC5D10DDD2BC55116652ECAC16693"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEtaProductTransport.lean",
+      "sha256": "D624FF4DA82E7F1773388F1A27F70602270FE1AE15028012745E96D4F6BA5FA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerSeriesProduct.lean",
+      "sha256": "0F21255FEE550F387AB0D2953099A90E63422EB2CF0EBC653783CEF25ADDFDD6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRealizedPowerSeries.lean",
+      "sha256": "E2C80E84F3E12085779DA4277023928159805246264CAB231CD8EEAD14D79939"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\DedekindEta.lean",
+      "sha256": "8BA4B530E882F6CE0B0984B41B60D705532D369AC8FD3B1F54BA0D3EA24B6EF5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\TaylorSeries.lean",
+      "sha256": "EDCC741C916D79BB3F4E66D93A1652CB7C53B5C440BF961F1D2A61D5B2D556D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\LocallyUniformLimit.lean",
+      "sha256": "0F15F53C70A8DCDD9AB2F25353AAACB5242FF1F57212744349F56AAE8DF20792"
+    }
+  ],
+  "selectedRoute": "Adapt the existing native discriminant argument: use stabilized coefficients of actual finite polynomial products, locally uniform convergence on the open unit disc, convergence of polynomial derivatives and native Taylor expansion. The two linear factors of each residue-selected Siegel polynomial give the uniform bound 3*norm(x). The original final contract asks for actual integral coefficients, exact HasSum, the specified constant coefficient, level-cleared integral inverse and cusp limit; it does not require the candidate internal formal-infinite-product definition W. Stabilized finite-product coefficients plus the exact analytic HasSum meet this contract without a new general formal infinite-product mapping theory.",
+  "deferred": [
+    "Candidate generic formal product W/map_W/continuous_map machinery.",
+    "Candidate Pabs/Mfam coefficient majorant infrastructure and dominated power-series coefficient summation.",
+    "Any unused scalar or topology generalizations."
+  ],
+  "nativeReuse": "Existing power-series multiplication and cusp limit are exact reused theorems. Native local uniform product convergence and Taylor theorem handle the analytic passage. Existing private discriminant helper proofs inform the minimal necessary generalization, but are not claimed as directly importable public lemmas.",
+  "assumptionsToDischarge": [
+    "A literal finite-product coefficient stabilizes once the truncation reaches its index.",
+    "The residue-selected polynomial products converge locally uniformly on the unit disc.",
+    "The stabilized coefficients give the exact analytic product series.",
+    "Every coefficient is integral and the source constant term has level-cleared integral inverse."
+  ],
+  "boundary": "Route assessment only. Each bound will be proved for the actual Siegel factors before claiming an integral Fourier expansion. Peaked auxiliary existence and all remaining acceptance conditions stay open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

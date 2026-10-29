@@ -1,0 +1,57 @@
+import Dubon2026.SourceGammaOneTwistedContinuity
+import Dubon2026.ContinuousGaloisFaithfulFiniteFactor
+import Dubon2026.SourceRationalLocalValuation
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+finite homogeneous-coefficient Galois realization. Apply the existing
+faithful fixed-field construction to the proved continuous original Tate
+dual action. Its values are units because the source is a group. The
+factor is an actual finite Galois subfield of the same algebraic closure,
+and its faithfulness is retained for subsequent unramified descent. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+
+private theorem continuous_monoid_faithful_factor {K Ω A : Type*}
+    [Field K] [Field Ω] [Algebra K Ω] [IsGalois K Ω] [Monoid A]
+    (ρ : Gal(Ω/K) →* A) (hc : @Continuous _ _ _ ⊥ ρ.toFun) :
+    ∃ F : FiniteGaloisIntermediateField K Ω,
+      ∃ ψ : Gal(F/K) →* Aˣ, Function.Injective ψ ∧
+        ∀ σ : Gal(Ω/K), ψ (AlgEquiv.restrictNormalHom F σ) = ρ.toHomUnits σ := by
+  letI : TopologicalSpace A := ⊥
+  letI : DiscreteTopology A := ⟨rfl⟩
+  have ho : IsOpen {σ : Gal(Ω/K) | ρ σ = 1} :=
+    hc.isOpen_preimage {a | a = 1} (isOpen_discrete _)
+  have he : (ρ.toHomUnits.ker : Set Gal(Ω/K)) = {σ | ρ σ = 1} := by
+    ext σ
+    change ρ.toHomUnits σ = 1 ↔ ρ σ = 1
+    exact Units.ext_iff
+  exact galois_open_kernel_faithful_finite_factor ρ.toHomUnits (he.symm ▸ ho)
+
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "J" => Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar)
+local notation "T" => TateModule p J
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+private local instance (F : FiniteGaloisIntermediateField ℚ Qbar)
+    (α : Algebra ℚ F) : @IsGalois ℚ _ F _ α := by
+  have he : F.algebra' = α := Subsingleton.elim _ _
+  exact Eq.mp (congrArg (fun β : Algebra ℚ F => @IsGalois ℚ _ F _ β) he) F.isGalois
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryArithmeticTateGaloisRep_faithful_finite_factor :
+    ∃ F : FiniteGaloisIntermediateField ℚ Qbar,
+      ∃ ψ : Gal(F/ℚ) →* (Module.End (ZMod N) (T →ₗ[ℤ_[p]] V))ˣ,
+        Function.Injective ψ ∧ ∀ σ : Gal(Qbar/ℚ),
+          ψ (AlgEquiv.restrictNormalHom F σ) = (binaryArithmeticTateGaloisRep Q p n w).toHomUnits σ := by
+  exact continuous_monoid_faithful_factor (binaryArithmeticTateGaloisRep Q p n w)
+    (binaryArithmeticTateGaloisRep_continuous Q p n w)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

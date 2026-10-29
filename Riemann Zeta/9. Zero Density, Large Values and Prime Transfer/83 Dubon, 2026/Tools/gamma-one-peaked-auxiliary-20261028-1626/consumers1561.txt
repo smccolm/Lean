@@ -1,0 +1,19 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+variable {Ω : Type*} [Field Ω] [Algebra K Ω]
+
+/-- Exact original-object consumer of `originalUnramifiedGaloisStage_nonempty`. -/
+theorem actual_unramified_galois_stage_nonempty_originalUnramifiedGaloisStage_nonempty_source (a : 𝓞 K) :
+    Nonempty (OriginalUnramifiedGaloisStage (Ω := Ω) a) :=
+  originalUnramifiedGaloisStage_nonempty a
+
+end
+

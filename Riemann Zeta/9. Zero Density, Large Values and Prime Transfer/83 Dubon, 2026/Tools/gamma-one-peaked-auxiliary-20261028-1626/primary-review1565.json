@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "CyclotomicUnramifiedPrimes",
+  "mathematics": "The actual conductor exclusion identifies an original rational prime not dividing the conductor. The pinned rational cyclotomic ramification theorem gives index one over Z, and actual prime-local formal unramifiedness transfers through the original integer-ring tower to give index one over O(Q). No base-ring ramification-index identity is assumed.",
+  "boundary": "Actual cyclotomic stage inclusion and all-open arithmetic character finiteness remain open. Specialization to the chosen algebraic closure and the original maximal arithmetic extension, final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "cyclotomic-unramified-stage-draft-review-20261009.json; exact pinned APIs inspected. No external Lean code imported.",
+  "productionFixes": [
+    "Exposed the original height-one under-prime LiesOver instance through its literal ideal-under definition."
+  ],
+  "productionLog": "cyclotomicPrimes1565b-focus.log"
+}

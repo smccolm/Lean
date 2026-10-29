@@ -1,0 +1,57 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 26,
+  "queries": 49,
+  "theorems": 45,
+  "constructions": 4,
+  "exhaustiveScratchChecks": 81,
+  "proofValueChecks": 99,
+  "scopes": 3,
+  "receipts": {
+    "source-gamma-one-inertia-1-scratch-receipt.json": "10C46E538883A340E91B64DD1BD9CA1F635DD8EFF28ED2D97EFA5A125266FEC6",
+    "source-gamma-one-frobenius-1-scratch-receipt.json": "8F25CF0241B3A41B12110108432520EA36FCF85BE8F5FD554E6FA71D764D2469",
+    "source-gamma-one-arithmetic-1-scratch-receipt.json": "F7A5DDC14EF57EBFEFDDBE07EEC36F2D4F79CB66357E1CD4379BBA7E1DA787AE"
+  },
+  "expectedConsumers": 26662,
+  "expectedConstructions": 2857,
+  "fullGoal": "Actual Gamma1 j-coordinate degree equality and actual genus preservation remain open. The Frobenius and inertia statements remain conditional on those narrower geometric inputs. Combined-diamond fixedness, genuine global finite Galois/Hecke-character realization, parabolic character realization or a faithful alternative, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. The newly derived twisted coefficient relation does not silently discharge the earlier differently normalized conditional relation. Acceptance stays 16/20; DUB-17--20 OPEN; all twenty acceptance tests are unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_tate_frobenius_9123.py",
+      "sha256": "A6AD92ED0709B05B1DB0E88AC3B32AFA33761110954C0079936663F196AF96BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_frobenius_production_ownership_9123.py",
+      "sha256": "7CCF742F2D6B3E63F08DABD25FEF7949C78F9AA00AF013EC876FA27CD6E7E747"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_frobenius_global_ownership_9123.py",
+      "sha256": "FB6F8868A907E91E1B1CCE943D5A74E9DBC9AC7ECB97E556D1A6A99AC095EFF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_tate_frobenius_ownership_9123.py",
+      "sha256": "0E278E5F812DCFB9EC4243BEEDDC8418816C192770EED4DEC164992CCB438FC7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_tate_frobenius_9123.py",
+      "sha256": "96635358D593ED91B816FE85EFA301C8A24026F432A90FF245DEDFF76833E3C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_frobenius_9123.ps1",
+      "sha256": "09F117F7549EB3DE25C93702318D20BBC373B6E4B26771A6EE426B7C3E44A94D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_tate_frobenius_9123.ps1",
+      "sha256": "415375425998E7F3EF638CF1FCFE3DBF1065BE20639CFB4CA9B1564B91C42536"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_tate_frobenius_canonical_9123.py",
+      "sha256": "24862C22D65DC5452DC5D9F569038DB78E0723BFEA231AE54E4ACAB1F22C9281"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_gamma_one_tate_frobenius_9123.py",
+      "sha256": "BD83B44EDFD2061AFEB5936A72E8F3052604488B8674AF6AF0226DE3791B654B"
+    }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,54 @@
+import SourceGammaOneResiduePicard1375a
+import SourceGammaOneNormDiamondOrientation1377b
+import Dubon2026.SourceGammaOneHeckePicard
+import Dubon2026.SourceCurveReductionPicardR2
+
+/-! DUB-17/18 -> original Gamma1 Frobenius -> descent of the proved
+integer-divisor correspondence. Apply the actual Picard quotient to one
+literal divisor equality. The subsequent original norm consumer supplies
+that equality on every finite torsion class; no compatibility is postulated. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup ConstantField
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M p : ℕ) [NeZero M] [NeZero p]
+local notation "Γ" => Gamma1 M
+local notation "FF" => laurentBaseChange Qbar (x1FunctionField M)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem hecke_picard_reduction_mk_of_divisor_eq
+    (R : ConstantReduction A FF Fb) (g : Gamma0 M) (d : A.decompositionSubgroup ℚ)
+    (D : Divisor.degZero (K := Qbar) (F := FF))
+    (hdiv : R.divMap (heckeDivisor Qbar M p D.val) =
+      decompositionResidueDivisorEquiv A Γ d
+        (R.divMap (fieldDivisorEquiv (arithmeticDiamondAut M g) D.val)) +
+      p • (decompositionResidueDivisorEquiv A Γ d).symm (R.divMap D.val)) :
+    R.pic0Map (heckePicard Qbar M p (Pic0.mk D)) =
+      decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d
+        (R.pic0Map (arithmeticDiamondPicard M g⁻¹ (Pic0.mk D))) +
+      p • decompositionResiduePicard A Γ (by simp [Gamma1_mem, ModularGroup.T]) d⁻¹
+        (R.pic0Map (Pic0.mk D)) := by
+  have hT : ModularGroup.T ∈ Γ := by simp [Gamma1_mem, ModularGroup.T]
+  let E := fieldDegZeroEquiv (arithmeticDiamondAut M g)
+    (functionFieldOver_residue_bijective Γ hT)
+    (functionFieldOver_residue_bijective Γ hT) D
+  have hdiamond : arithmeticDiamondPicard M g⁻¹ (Pic0.mk D) = Pic0.mk E :=
+    arithmeticDiamondPicard_inverse_lift_mk M g D
+  rw [hdiamond]
+  change Pic0.mk (R.degZeroMap ⟨heckeDivisor Qbar M p D.val,
+    heckeDivisor_mem_degZero Qbar M p D.property⟩) =
+    Pic0.mk (decompositionResidueDegZero A Γ hT d (R.degZeroMap E)) +
+      p • Pic0.mk (decompositionResidueDegZero A Γ hT d⁻¹ (R.degZeroMap D))
+  rw [← map_nsmul, ← map_add]
+  apply congrArg Pic0.mk
+  apply Subtype.ext
+  change R.divMap (heckeDivisor Qbar M p D.val) =
+    decompositionResidueDivisorEquiv A Γ d
+      (R.divMap (fieldDivisorEquiv (arithmeticDiamondAut M g) D.val)) +
+    p • decompositionResidueDivisorEquiv A Γ d⁻¹ (R.divMap D.val)
+  rw [← decompositionResidueDivisorEquiv_symm]
+  exact hdiv
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

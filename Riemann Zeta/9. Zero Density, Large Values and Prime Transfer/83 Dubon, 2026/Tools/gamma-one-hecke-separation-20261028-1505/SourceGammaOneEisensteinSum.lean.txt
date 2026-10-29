@@ -1,0 +1,102 @@
+import SourceIntegralEisensteinModular
+
+/-! DUB-17/18 -> original Gamma1 coordinate-degree preservation -> integral
+Eisenstein separation. Sum the genuine weight-four congruence forms over the
+second residue coordinate. Its exact Gamma0 slash formula proves Gamma1
+invariance. Subsequent coefficient work uses this sum directly, avoiding a
+general additive-character Fourier expansion.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups CongruenceSubgroup ModularForm Manifold Matrix
+
+/-- The actual sum of congruence lattice series over the second coordinate. -/
+def rowSum (N : ℕ) [NeZero N] (c : ZMod N) : ℍ → ℂ :=
+  ∑ b : ZMod N, series N ![c, b]
+
+private theorem vecMul_pair {N : ℕ} (c b : ZMod N) (γ : SL(2, ℤ)) :
+    (![c, b] ᵥ* γ : Fin 2 → ZMod N) =
+      ![c * (γ 0 0 : ZMod N) + b * (γ 1 0 : ZMod N),
+        c * (γ 0 1 : ZMod N) + b * (γ 1 1 : ZMod N)] := by
+  ext i
+  fin_cases i <;> simp [Matrix.vecMul, dotProduct, Fin.sum_univ_two]
+
+private theorem affine_bijective {N : ℕ} [NeZero N] (c : ZMod N)
+    {γ : SL(2, ℤ)} (hγ : γ ∈ Gamma0 N) :
+    Function.Bijective (fun b : ZMod N => c * (γ 0 1 : ZMod N) + b * (γ 1 1 : ZMod N)) := by
+  have hdet := Matrix.SpecialLinearGroup.det_coe γ
+  rw [Matrix.det_fin_two] at hdet
+  have h := congrArg (fun z : ℤ => (z : ZMod N)) hdet
+  simp only [Int.cast_sub, Int.cast_mul, Int.cast_one] at h
+  have hc : (γ 1 0 : ZMod N) = 0 := Gamma0_mem.mp hγ
+  rw [hc, mul_zero, sub_zero, mul_comm] at h
+  obtain ⟨u, hu⟩ := IsUnit.of_mul_eq_one _ h
+  apply (Finite.injective_iff_bijective).mp
+  intro b b' hb
+  have hb' : b * (γ 1 1 : ZMod N) = b' * (γ 1 1 : ZMod N) := add_left_cancel hb
+  rw [← hu] at hb'
+  exact (Units.mul_left_inj u).mp hb'
+
+private theorem finite_sum_slash {ι : Type*} (s : Finset ι)
+    (F : ι → ℍ → ℂ) (γ : SL(2, ℤ)) :
+    (∑ i ∈ s, F i) ∣[(4 : ℤ)] γ = ∑ i ∈ s, F i ∣[(4 : ℤ)] γ := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simp [SlashAction.zero_slash]
+  | insert a s ha ih => rw [Finset.sum_insert ha, Finset.sum_insert ha, SlashAction.add_slash, ih]
+
+theorem rowSum_slash (N : ℕ) [NeZero N] (c : ZMod N) (γ : SL(2, ℤ))
+    (hγ : γ ∈ Gamma0 N) :
+    rowSum N c ∣[(4 : ℤ)] γ = rowSum N (c * (γ 0 0 : ZMod N)) := by
+  rw [rowSum, rowSum, finite_sum_slash]
+  have hsl (b : ZMod N) : series N ![c, b] ∣[(4 : ℤ)] γ =
+      series N ![c * (γ 0 0 : ZMod N), c * (γ 0 1 : ZMod N) + b * (γ 1 1 : ZMod N)] := by
+    rw [series_slash, vecMul_pair, Gamma0_mem.mp hγ, mul_zero, add_zero]
+  simp_rw [hsl]
+  exact Fintype.sum_bijective _ (affine_bijective c hγ) _ _ fun _ => rfl
+
+private theorem coe_finite_sum {N : ℕ} {ι : Type*} (s : Finset ι)
+    (F : ι → ModularForm Γ(N) 4) : (⇑(∑ i ∈ s, F i) : ℍ → ℂ) = ∑ i ∈ s, (⇑(F i) : ℍ → ℂ) := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simp
+  | insert a s ha ih => rw [Finset.sum_insert ha, Finset.sum_insert ha, ModularForm.coe_add, ih]
+
+private def principalRowSum (N : ℕ) [NeZero N] (c : ZMod N) : ModularForm Γ(N) 4 :=
+  ∑ b : ZMod N, modularForm N ![c, b]
+
+private theorem principalRowSum_coe (N : ℕ) [NeZero N] (c : ZMod N) :
+    (principalRowSum N c : ℍ → ℂ) = rowSum N c := by
+  rw [principalRowSum, coe_finite_sum, rowSum]
+  exact Finset.sum_congr rfl fun _ _ => modularForm_coe _ _
+
+/-- The same weight-four row sum as a modular form on the original Gamma1. -/
+def gammaOneRowSum (N : ℕ) [NeZero N] (c : ZMod N) :
+    ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) 4 where
+  toFun := rowSum N c
+  slash_action_eq' A hA := by
+    obtain ⟨γ, hγ, rfl⟩ := hA
+    have h := rowSum_slash N c γ (Gamma1_in_Gamma0 N hγ)
+    have he := (Gamma1_mem N γ).mp hγ
+    simp only [he.1, mul_one] at h
+    rwa [ModularForm.SL_slash] at h
+  holo' := by
+    change MDiff (rowSum N c)
+    rw [← principalRowSum_coe]
+    exact (principalRowSum N c).holo'
+  bdd_at_cusps' {cusp} hc := by
+    have hc' : IsCusp cusp Γ(N) := by
+      rw [Subgroup.IsArithmetic.isCusp_iff_isCusp_SL2Z] at hc ⊢
+      exact hc
+    change cusp.IsBoundedAt (rowSum N c) (4 : ℤ)
+    rw [← principalRowSum_coe]
+    exact (principalRowSum N c).bdd_at_cusps' hc'
+
+theorem gammaOneRowSum_coe (N : ℕ) [NeZero N] (c : ZMod N) :
+    (gammaOneRowSum N c : ℍ → ℂ) = rowSum N c := rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.IntegralEisenstein

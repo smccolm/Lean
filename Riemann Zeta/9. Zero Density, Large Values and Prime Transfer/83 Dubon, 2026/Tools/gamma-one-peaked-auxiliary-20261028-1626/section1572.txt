@@ -1,0 +1,7 @@
+### Actual the original rational arithmetic Galois group — 9 October 2026
+
+Specialize the actual unramified union to the chosen AlgebraicClosure Q, derive its Galois structure from its original normal finite stages, and bundle its actual automorphism group with the original Krull topology. The exact finite Galois containment criterion and all-open original prime-character finiteness specialize to that same rational arithmetic group. No abstract group or character-finiteness certificate replaces it.
+
+Final framed deformation-functor assembly and fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [RationalArithmeticGaloisGroup](Extension/Dubon2026/RationalArithmeticGaloisGroup.lean).

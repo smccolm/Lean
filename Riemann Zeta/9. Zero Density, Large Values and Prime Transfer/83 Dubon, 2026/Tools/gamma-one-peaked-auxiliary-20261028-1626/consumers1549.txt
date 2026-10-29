@@ -1,0 +1,25 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+  [Algebra K L]
+
+/-- Exact original-object consumer of `numberField_localizedIntegers_finite_unramified`. -/
+theorem actual_number_field_localized_integer_algebras_numberField_localizedIntegers_finite_unramified_source
+    (a : 𝓞 K) (Rₐ Sₐ : Type*) [CommRing Rₐ] [CommRing Sₐ]
+    [Algebra (𝓞 K) Rₐ] [Algebra (𝓞 K) Sₐ] [Algebra (𝓞 L) Sₐ]
+    [Algebra Rₐ Sₐ] [IsScalarTower (𝓞 K) (𝓞 L) Sₐ]
+    [IsScalarTower (𝓞 K) Rₐ Sₐ]
+    [IsLocalization.Away a Rₐ]
+    [IsLocalization.Away (algebraMap (𝓞 K) (𝓞 L) a) Sₐ]
+    (hunram : ∀ w : HeightOneSpectrum (𝓞 L), algebraMap (𝓞 K) (𝓞 L) a ∉ w.asIdeal →
+      (w.asIdeal.under (𝓞 K)).ramificationIdx w.asIdeal = 1) :
+    Module.Finite Rₐ Sₐ ∧ Algebra.FormallyUnramified Rₐ Sₐ :=
+  numberField_localizedIntegers_finite_unramified a Rₐ Sₐ hunram
+
+end
+

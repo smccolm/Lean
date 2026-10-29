@@ -1,0 +1,29 @@
+import SourceGammaOneHeckePrincipalNorm
+import SourceGammaOneResidueDivisors
+import SourceGammaOneHeckeResidueNorm
+import SourceGammaOneIntegralDivisorReduction
+import SourceGammaOneHeckeIntegralAgreement
+import SourceGammaOneHeckeTorsionDivisors
+import SourceGammaOneResiduePicard
+import SourceGammaOneReductionPicardEquivariance
+import SourceGammaOneNormDiamondOrientation
+import SourceGammaOneHeckePicardDescent
+import SourceGammaOneHeckeTorsionPicard
+import SourceTorsionReductionDiamond
+import SourceGammaOnePicardFrobeniusRelation
+import SourceTateTorsionQuadratic
+import SourceGammaOneTateFrobeniusRelation
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneHeckePrincipalNorm, `SourceGammaOneResidueDivisors, `SourceGammaOneHeckeResidueNorm, `SourceGammaOneIntegralDivisorReduction, `SourceGammaOneHeckeIntegralAgreement, `SourceGammaOneHeckeTorsionDivisors, `SourceGammaOneResiduePicard, `SourceGammaOneReductionPicardEquivariance, `SourceGammaOneNormDiamondOrientation, `SourceGammaOneHeckePicardDescent, `SourceGammaOneHeckeTorsionPicard, `SourceTorsionReductionDiamond, `SourceGammaOnePicardFrobeniusRelation, `SourceTateTorsionQuadratic, `SourceGammaOneTateFrobeniusRelation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

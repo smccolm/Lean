@@ -1,0 +1,3004 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-tate-frobenius-promotion-route-1402.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-tate-frobenius-promotion-route-1402.json",
+      "sha256": "3488DC47E6B3D21E8E7F43A249922F420DC9F7F2844CF18275304C63851BE921"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\HomogeneousDiagonalAction-verified1375.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/HomogeneousDiagonalAction-verified1375.lean.txt",
+      "sha256": "8D2CE541A4B90197CE611C04E363EA74A40617649E80943D82B5AF494DCD1ACE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\HomogeneousDimension-verified1375.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/HomogeneousDimension-verified1375.lean.txt",
+      "sha256": "2987B108817FE928C4F03757A62B4D46CF5B356EBB3CF820F1D108B359E6FFAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\HomogeneousMonomialBasis-verified1375.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/HomogeneousMonomialBasis-verified1375.lean.txt",
+      "sha256": "F3EB9112E21EB83980D81902831AAE561640A597F67D0CD7CA01F27806DBF2E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Inspect1367.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/Inspect1367.lean.txt",
+      "sha256": "74EC791EC709E5D91E520E8A6351C1931E2D8CD91B7F0CA483E0E4C2EC414451"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\MatrixPolynomialAction-verified1375.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/MatrixPolynomialAction-verified1375.lean.txt",
+      "sha256": "0F5BA1F806467D0E39BABA89C3D0F8B5AFA7B55BE5A37845D89CF716D2134B49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Preflight1397.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/Preflight1397.lean.txt",
+      "sha256": "5C3E3B61B4A8D33419B1B9119981551D8257F976B58626147415775F611E3B10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticAudit1.lean.txt",
+      "sha256": "49FE5F727DC4A51B567B466A2450C043FEC80EC6F5203216019D0B4ACB716F60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticAudit1.log",
+      "sha256": "757A248A0FD3AE7D7813477ED741B0023F3182FD3A0B352FB9841F7A87359E0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts.lean.txt",
+      "sha256": "EAE0F8091F7A0ACFB17039C0B139A76C8CDCEECB5D3A08B264A90112592A6AF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts1359a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts1359a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts1359a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts1359a.lean.txt",
+      "sha256": "EAE0F8091F7A0ACFB17039C0B139A76C8CDCEECB5D3A08B264A90112592A6AF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticCharts1359a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticCharts1359a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1.lean.txt",
+      "sha256": "721ABC29B277BED741FC86CC37C85B82BAB80703A184FA1F994FA5724E3C588F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticDependencyAudit1.log",
+      "sha256": "A8630C47E4823DD9C89E418ABB12AED79EB326E48CC33D7214D3A6A1F2ECD567"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius-1396.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius-1396.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius-1396.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius-1396.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius.lean.txt",
+      "sha256": "75C0FCE9EFACD005156D75D0985698E0F4265E9E907C9CFF7EEB4F19392B0C6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392a.lean.txt",
+      "sha256": "558EF079B02B5DE62C7C481F5AC8568BB454E4DCFA1D09ACDBBCDBE248E0E7B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392a.log",
+      "sha256": "30CAF963A79F1C2B5DE3950D663E408A260D56D1B2E3D96CC3C1FB4B1599E433"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392b.lean.txt",
+      "sha256": "7032B339ABD9628BA45876D6B843BB0FBED732E5C57760AF9AB06A1A47389B84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392b.log",
+      "sha256": "65D686BDE7E8604F9D78231958179CE082CF5C2FD21EA59E9A6364ECA3D8767E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392c.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392c.lean.txt",
+      "sha256": "B251EF5FFFF1D10A10532CC93949A75DEF5E676D09BC440D8D04C2975F63DF57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392c.log",
+      "sha256": "317ACACB5AF0C8720C8DE4AE6551C1A679390EE805EE9F6E063A91C7580BC706"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392d.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392d.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392d.lean.txt",
+      "sha256": "EEFF868B63E86055ECE4579E4256C89A0B696A55351EF65EF46CE7FEED5EB92C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticFrobenius1392d.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticFrobenius1392d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticScratchOwnership1397.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticScratchOwnership1397.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticScratchOwnership1397.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticScratchOwnership1397.lean.txt",
+      "sha256": "3FE276095830F43A72EC0B60D55B041E3F8DF83A7BB21C1F1B9B45462922DED3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticScratchOwnership1397.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneArithmeticScratchOwnership1397.log",
+      "sha256": "45AA782CC4E4E10C9E17217FEEED1ED83D8E042E641BD0FCE005A0BA08548024"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientFrobenius1386a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneCoefficientFrobenius1386a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientFrobenius1386a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneCoefficientFrobenius1386a.lean.txt",
+      "sha256": "0E65FE09016A4239B71E85866EFBE3B5400A9185C72682D53F9FBCB2D35437C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoefficientFrobenius1386a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneCoefficientFrobenius1386a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplementaryDiamond1385a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneComplementaryDiamond1385a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplementaryDiamond1385a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneComplementaryDiamond1385a.lean.txt",
+      "sha256": "1BE55B7F09B9AF7FCA249EE0B003DA581972D457EF886ACC77828693A8CF6B93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneComplementaryDiamond1385a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneComplementaryDiamond1385a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts.lean.txt",
+      "sha256": "D27C84298F6DAAE912F3ED2ADE3723E28F94BF91BB3F35E36BDD8A646C8AE149"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts1362a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts1362a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts1362a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts1362a.lean.txt",
+      "sha256": "C5C032D615D2C061B1C9B8D7A0BA50EEB054105673E9A826C108EAE4C28B47E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantReductionCharts1362a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneConstantReductionCharts1362a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts.lean.txt",
+      "sha256": "0FDE41A31690806043C96AD2AEAB42A61A63BD6743A19EFB39325EEDF31F06DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361a.lean.txt",
+      "sha256": "0E478483A8FA6795AC1889A98AE8A8F34AC33385645901E8E956CAB7BE717DE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361a.log",
+      "sha256": "7B81F09AA3C75EB8941E72B9E904BEBC6A2E47939AE7A90D9718E5DAF69EACFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361b.lean.txt",
+      "sha256": "5CBE60E1D12C8E6EEBBB9BCBBA63588B620F5E752D420D4DF0782DEB05E5E407"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDecompositionCharts1361b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneDecompositionCharts1361b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusAudit1.lean.txt",
+      "sha256": "BA1CDF5C43D383E328A5D7B3BAD6A898836FDF91C6224E6C8DAC3CA0DACB27C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusAudit1.log",
+      "sha256": "7D29089CC97973815623F4E344C808A23F7D79B873F59DBA9ABE675855961614"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1.lean.txt",
+      "sha256": "514828AB19882BA1DCC0890E92E818BCCE16C9829DEABAE0980759CA5A78FBA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusDependencyAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusDependencyAudit1.log",
+      "sha256": "154F699D841DB6F624A33DD678DDED1CA859DC357632586FA6A426075189C56D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusScratchOwnership1395.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusScratchOwnership1395.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusScratchOwnership1395.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusScratchOwnership1395.lean.txt",
+      "sha256": "8029E810226FB0B751058308818F5F0AAC9BB698FD30EA0CA6C4854C7D67E176"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFrobeniusScratchOwnership1395.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneFrobeniusScratchOwnership1395.log",
+      "sha256": "F57BFCF874D09CC694580722EB99C4205DDE04B89047E2A8962040D4EB4F54F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius-1396.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius-1396.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius-1396.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius-1396.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius.lean.txt",
+      "sha256": "B2104F10BD4FC5A5DD659950F9CD2175D7F14019C7E8D7E533C309D78530826E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393a.lean.txt",
+      "sha256": "858637E0CED10D16560E255AA57B25890CA3549C5CB9DC42241C279BDC223338"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393b.lean.txt",
+      "sha256": "80E2F303635AE16B4005ADA575B7CBA349607572989FA3BEA98FFD4C8F4377FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393b.log",
+      "sha256": "FF993197C1A407E3C52BC58A0E08B4426D8C37B9A21DAD311EA870D36A6C1246"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393c.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393c.lean.txt",
+      "sha256": "32B95C30791BC46A1A2B2A3E1E48818D63B23FBDCE3D11A1C527E97824F7ED40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricArithmeticFrobenius1393c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricArithmeticFrobenius1393c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCoefficientFrobenius1388a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneGeometricCoefficientFrobenius1388a.lean.txt",
+      "sha256": "16CC23B1D3CDB5CD34757EDB4ED82D21780B965C3C7C2A0CBC386BCE8DBAB393"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement.lean.txt",
+      "sha256": "54AF46D6A0F9E14C18EF386CC123B555936F19C8CBC408F369C557EAA409B1E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement1373a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement1373a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement1373a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement1373a.lean.txt",
+      "sha256": "7884B421CD06AD6C9E93D5139F4B30C9B2016FBC7B64D0F369C74ABC8DAE45AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeIntegralAgreement1373a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeIntegralAgreement1373a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent.lean.txt",
+      "sha256": "076D1206045B3F6F7C7056AD22C9E280A138CE91352F95F9DA3350D353F71F90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381a.lean.txt",
+      "sha256": "C6A7BDED9D746C84EA6A6962EF74FCAAF3D707029847D4A517317C1165A94B2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381a.log",
+      "sha256": "F3FCD4D52391FBDA7A75DB73631C4689BCC82DE99BE8A1B4556752F7AD282BCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381b-diagnostics.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381b-diagnostics.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381b-diagnostics.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381b-diagnostics.log",
+      "sha256": "8F3252B52659EE31CEA2BC1687DB7BE84D7D70B04B2185ACD0E06F1695F80EC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381b.lean.txt",
+      "sha256": "127506B6BA339F7A3E85F25396B2CAD0ECBD24F8ECB1EC6C907119135E0FE786"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381b.log",
+      "sha256": "C1731F5BCA78D77BE422407A6F19E7DD908365A2279DC54399FC80EE91923A5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381c.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381c.lean.txt",
+      "sha256": "AA68BC9F16A71F175F7313B848FA4F85FD23C8362DC290B7C87A44F74172D467"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381c.log",
+      "sha256": "B6CEE75548D1DDFB6D724C494E685096FEAF97F920599AB0D96421BE39581156"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381d.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381d.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381d.lean.txt",
+      "sha256": "A0D67DF41524BF1CC0A9DD8F7B715BC198180BC2DEEC848849AC66C0B8FFCA85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381d.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381d.log",
+      "sha256": "EDFF3E660CEEE14B515BE3C520AC0096B990960878BBD11D9FDB9DCC7F4480B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381e.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381e.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381e.lean.txt",
+      "sha256": "182030B23EBA55309C9EE5DD06F73988316DDC10CE3F0A8886C45AC12D8FF149"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381e.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381e.log",
+      "sha256": "B0A71E4221BB4595EFC552F54966E43A5B25FFCFEFF8A66B5F82A0B193098B3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381f.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381f.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381f.lean.txt",
+      "sha256": "DE566DA5BB3B8B42954A345CFCB3A83436BD24B9AAAEA16EA1C74A0840EE9587"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDescent1381f.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePicardDescent1381f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm.lean.txt",
+      "sha256": "3A3643DB2C2F2D5273A56A4819857ED30E37F82B2BC3B2A662A0326F91BD6073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369a.lean.txt",
+      "sha256": "EF516E4D93A02043E4561517B25842339908CD93A885DEE6DE843B716564814B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369a.log",
+      "sha256": "A989370F214A5398870831003C0BF20C9EECC5FD9A1047370E34CEFC497244F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369b.lean.txt",
+      "sha256": "3A3643DB2C2F2D5273A56A4819857ED30E37F82B2BC3B2A662A0326F91BD6073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePrincipalNorm1369b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckePrincipalNorm1369b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm.lean.txt",
+      "sha256": "5BDB4C967C1B75EBEEA44400C88FAB998B222D440226AF17367966F298BD9E21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm1371a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm1371a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm1371a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm1371a.lean.txt",
+      "sha256": "5BDB4C967C1B75EBEEA44400C88FAB998B222D440226AF17367966F298BD9E21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeResidueNorm1371a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeResidueNorm1371a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors.lean.txt",
+      "sha256": "5A97534F6E3A9A446F83D873D3C585683CB7759E6A58FE7FDA5BE5F2A387CEEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors1374a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors1374a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors1374a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors1374a.lean.txt",
+      "sha256": "F8E6CE82B3A946BE3738CF3ECD6B48A947FFDC63923B2DF2FC037AC2DEE21056"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionDivisors1374a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionDivisors1374a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard.lean.txt",
+      "sha256": "3AA330161AB442F9BE6DBF85426362D1526A57F82C1FB92EC19D27BE827CA847"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378a.lean.txt",
+      "sha256": "36A6BAB5641272DE3976F523E36725A1CD19D77AF6C33C87382990CC08D951C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378b.lean.txt",
+      "sha256": "572680487E0E1D0D015D49003EE2B8C83CADF34AB547898BED31EC4A4B319A34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378b.log",
+      "sha256": "EE069F1383C262F8D787A6E6ECE8B9BF9120996A7D7CA47AC68AD578C8C62B09"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378c.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378c.lean.txt",
+      "sha256": "BA9381CB9EDA96DB374EBB389FE7A51F6E69EA2AEAA56D443F7EA971D2AB39B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378c.log",
+      "sha256": "303B5883FA870B5535A1F7E0035C5941A889CAF025406DA1A4DB2D23740D7E35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378d.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378d.lean.txt",
+      "sha256": "23F65C8F6A10A892D1071FD60185F3240924586DDDDBA28FC89CD54694BB69B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378e.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378e.lean.txt",
+      "sha256": "74ECAA582168A33E21BFD8901F5354C0EBA61A3CD28C1AAEE7A71A8019340175"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378f.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378f.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378f.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378f.lean.txt",
+      "sha256": "808C8494D46B865332E4DA5630AD61C407A2F198D82824CA688C6993B6878F1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378f.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378f.log",
+      "sha256": "D40DE54B2C179D21C88EA6943A1E18D0D00D190A5E2CD4F85FA4AA345EFD7EC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378g.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378g.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378g.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378g.lean.txt",
+      "sha256": "B99FA9F3894D0B8052B363A0333292DEEFC7C87EE03003751ACAFA80CDA07F29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378g.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378g.log",
+      "sha256": "0131B377F2AE14446A5D565E917E1A6476D580AC66795DB0A629720FC2EAFFD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378h.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378h.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378h.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378h.lean.txt",
+      "sha256": "A6B486DD12F43F66BC7A0CAE88354AAE1B34EDFC2F91DC6711868F78B3D050B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTorsionPicard1378h.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneHeckeTorsionPicard1378h.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaAudit1.lean.txt",
+      "sha256": "E8005160831772EC57D3B3B33EB97A8C456200043F8CBF661285F8F5D2C2BA13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaAudit1.log",
+      "sha256": "0D5A06CA537A9F1C6118128A5796677EBD7A4DE1A5A13B726217878DC6670C29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1.lean.txt",
+      "sha256": "80FC33A75C843D918EBEA38A8F049EAB519570373DD5871A0520A85611A3E38B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaDependencyAudit1.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaDependencyAudit1.log",
+      "sha256": "80193C9C5F41A7DB60E66A553E7AD14BC70BAEA35273E224EF8B73B4F7D70D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard.lean.txt",
+      "sha256": "505EFDF0E2B36D25BF9D5838719CC57AF8422A9092A63434A45848402364ADB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365a.lean.txt",
+      "sha256": "B1275DF3643C8125671CD3A0FB164546530BE7F8BBE030A5D817757CD71AB9C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365b.lean.txt",
+      "sha256": "DFE759CD1ECBB2E699FB8752F1CA2B4E6E20D9516A676364839D2290818E1E31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365b.log",
+      "sha256": "4DD21A47BD6F98248EDB385A3AFD7BC4509D0FC98391A5659161867F6A1B0507"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365c.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365c.lean.txt",
+      "sha256": "F86F02736E89464005882F6ED8CA9CFA4811964D03FB6551DBC8633FF0C24EA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPicard1365c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPicard1365c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction.lean.txt",
+      "sha256": "33DB103BB63A88F3579C5BDB310F776A2A6CE663CE07708CBB8D97BDF7FC9391"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364a.lean.txt",
+      "sha256": "1AF152152E1F480EBC7E83EE9520D84C212A42666A346034A7FA677A602EE906"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364a.log",
+      "sha256": "46EC19ABAA8923757FAD70C9A577310CAEAE8040616F6D381832D4B7EF966579"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364b.lean.txt",
+      "sha256": "977B52A45F297DCA4AC759722D78663720409CECC8BC65EB20CA99F6DBEEB55E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaPlaceReduction1364b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaPlaceReduction1364b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaScratchOwnership1368.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaScratchOwnership1368.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaScratchOwnership1368.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaScratchOwnership1368.lean.txt",
+      "sha256": "DB609465CBA1FF03A647D5B43E8CE65C0C9889F2341F96E71836FAA7E28CB121"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInertiaScratchOwnership1368.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneInertiaScratchOwnership1368.log",
+      "sha256": "E7836C656D10690B70197D31670B2F1C17FE35BAB9177C3FA59AE0799E3D93E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction.lean.txt",
+      "sha256": "E59E874403551429C91A605C38B6430CB043D87BBE483E66AD0FA0B0D9998D17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction1372a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction1372a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction1372a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction1372a.lean.txt",
+      "sha256": "E59E874403551429C91A605C38B6430CB043D87BBE483E66AD0FA0B0D9998D17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralDivisorReduction1372a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneIntegralDivisorReduction1372a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation.lean.txt",
+      "sha256": "2C0596A4207232619EF1193CB67BB8A84A53DC4F90359FF7E1B05986D84529DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377a.lean.txt",
+      "sha256": "52C7DD7D072935E6467912A86E3E3CB55C5EAFBA49114CFEB26DA86071C907E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377a.log",
+      "sha256": "9F0261E87EA9EC44FDCCD0C2CFFA5C846EAFD611336EF9F10D3326B5AA50B0A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377b.lean.txt",
+      "sha256": "2C0596A4207232619EF1193CB67BB8A84A53DC4F90359FF7E1B05986D84529DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormDiamondOrientation1377b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneNormDiamondOrientation1377b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation.lean.txt",
+      "sha256": "B30985A07A83E3C15573EFE8BBFBAB119D3CD470717434118C4E7F252D845A80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379a.lean.txt",
+      "sha256": "47FC4A75E80E0B58A41540FC6BA6D461A76EB896BEE6CE196A85717530042240"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379b.lean.txt",
+      "sha256": "63FDB1CC11528E3B7096E51D748A890BBFA5A3C4B2E50E4D8835A4AFF799870B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379c.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379c.lean.txt",
+      "sha256": "B227130227227A7EE73349DCE8E1DDE136F0848A7AF959D56B3199097C0BA7BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379d.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379d.lean.txt",
+      "sha256": "A4095F6C46F07F8FEC2E8CA9568F4D900D78ACAA84DC553CDD7F0A8C3090C30D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379e.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379e.lean.txt",
+      "sha256": "A36A2386AB88E65A690E47D88A291E19F77B786E2B705210BB7A63F5A95F39D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379f.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379f.lean.txt",
+      "sha256": "751228759B6BC6155A3444CDE2B8271FF193BF58279DA36A279FE4EB5F147401"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379g.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379g.lean.txt",
+      "sha256": "1CDD85614CC82771228F566366DE71E5301031DAB64215336C2D4813ECC857BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379h.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379h.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379h.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379h.lean.txt",
+      "sha256": "4AEC695093A7B9CC69C9A35B5EE78A7EC9E0B763E03445EE5437C14BF9B38629"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379h.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379h.log",
+      "sha256": "FC7AF25F7F3FC1178556605055C991BD1EEB6C937770EE92B25D3E4B331EF037"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379i.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379i.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379i.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379i.lean.txt",
+      "sha256": "4A25EF8BB4BC3DA7136FB8FFD257A7FB88893B66D84C38A2F2D3D90ED1CB336F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379i.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379i.log",
+      "sha256": "94604B8F951DFFD4A7EEE71C8C95C6ABD94C8D4618CE3DA95F2DCF99E3A18469"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379j.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379j.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379j.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379j.lean.txt",
+      "sha256": "2BE8D98A7A2489B9136D701CB1D0EB3BEA39F05F702F69CF127F417E8A536AED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379j.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379j.log",
+      "sha256": "A031FF88187FA78E7E8589DFACC213DE0193B46E4D1BB48562DFD86C0F7F939B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379k.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379k.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379k.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379k.lean.txt",
+      "sha256": "EA134BD3F456FB6A262581B0F4E558A478E009134B455740F0B379A1E7D50D1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379k.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379k.log",
+      "sha256": "DAE70E24AEBB682DE842BFC686DF0683AC60F98485D724101375F28B814F6A11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379l.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379l.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379l.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379l.lean.txt",
+      "sha256": "658B75F26A095C0ABB92CAAFA3F28EA40CD7AE75D3BFC15DA0430BFED93C3335"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379l.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379l.log",
+      "sha256": "8548A4405D944366666811BD5F0268F70FD638E1F85A1119743F1C89BD9B5E93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379m.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379m.lean.txt",
+      "sha256": "2790A9E5EC7A0538DE6D0BACDE4FA34468F1AD493E2E6A475FC5BCAE36408650"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379n.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379n.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379n.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379n.lean.txt",
+      "sha256": "A2D62E96191E061432CA17AA43A672128AFF75800C8004B8EE77B16B336C3524"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardFrobeniusRelation1379n.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOnePicardFrobeniusRelation1379n.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance.lean.txt",
+      "sha256": "974893CB3D66F1EA0A860C2380323FEC301EAA7762F6526761D34947AEE69EAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376a.lean.txt",
+      "sha256": "D98FCA038C0BC9481395C78FB6B8268944E730151370C8D024F3210C65AFE4EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376a.log",
+      "sha256": "B4D3F60B1CB3338BBDCCB966A31476339769BCE83EE3676B7DA40314C5E90D35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376b.lean.txt",
+      "sha256": "346877652604FF1186FBAC79738E0587025FB4CC1970A97527D9B8882B8331C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376b.log",
+      "sha256": "1D18F9B4D5A417E888F2398D3DAB2C34CAC4946D8D24A0B974559CCD8C0028BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376c.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376c.lean.txt",
+      "sha256": "A697E727E8D005DBDCDB9C7566FC579201E96A2BA422D180CEC53B8526623646"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneReductionPicardEquivariance1376c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneReductionPicardEquivariance1376c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors.lean.txt",
+      "sha256": "1378CCEB3B3C99AFA7D784D51C94351811FCD3A823291ADC29A84178AF4176AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors1370a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors1370a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors1370a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors1370a.lean.txt",
+      "sha256": "1378CCEB3B3C99AFA7D784D51C94351811FCD3A823291ADC29A84178AF4176AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueDivisors1370a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResidueDivisors1370a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard.lean.txt",
+      "sha256": "BB10EA65DB42AB7368B28458F88318A27BBB8DFD0621C6B096A67CC6431BBFEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard1375a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard1375a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard1375a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard1375a.lean.txt",
+      "sha256": "D653A6386EB7A4BBBD32697BD1B0307E4FABE250B5079853DDFD65745C73383C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePicard1375a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneResiduePicard1375a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts.lean.txt",
+      "sha256": "029B641BB22C408D6193FF662850E9D4DC3233AED275D6D8E2C7602E98497898"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts1360a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts1360a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts1360a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts1360a.lean.txt",
+      "sha256": "029B641BB22C408D6193FF662850E9D4DC3233AED275D6D8E2C7602E98497898"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationCharts1360a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationCharts1360a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance.lean.txt",
+      "sha256": "8F976E295A9AEDA0EC0F39068AF3ACB15EA0D52617D3C54BBA1EBFF5E2C3207C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance1363a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance1363a.lean.txt",
+      "sha256": "39C495F415FCACADB55B3B9E7AEB6FEC98EFBC4FAE3CF54BE522CA6BFBBEFDAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance1363b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance1363b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance1363b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance1363b.lean.txt",
+      "sha256": "BC911B92BCD1F45EF20346EA5E61C1F0D951E82CAC570F30D045BAFEC6586840"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationEquivariance1363b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneSpecializationEquivariance1363b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation.lean.txt",
+      "sha256": "C6452EB1D85A7907043BA22D976608FDABA486C8B2499FA99972C3B71910AA23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380a.lean.txt",
+      "sha256": "94AF02656DF36DFF54F5C9A1BD8E6C5C4108290EDCA5A931441BAD3F29AEA276"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380b.lean.txt",
+      "sha256": "9BBEFCBF435EC1C67871F5059D89332FCA6603C1AA1A5BE48CD2CC00C9E75C63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380c.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380c.lean.txt",
+      "sha256": "A3075518CB82EF70CC9A7AD6A19E696120360973F68D81A81A06A59414D5A08E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380d.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380d.lean.txt",
+      "sha256": "EDD04FF1F57AB385DD273DA9A6CF02E23A5F5CDCADD08D504E161C42D0F13C73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380e.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380e.lean.txt",
+      "sha256": "33723436F2FAB491AA0FB486FC4B220DB96B3F9E69A04BED5C4022DF309EB2C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380f.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380f.lean.txt",
+      "sha256": "76F3DC2B66119504A1B24DAB15A50325A330A3401B421D7064C92EF7B638708A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380g.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380g.lean.txt",
+      "sha256": "311BF18E8669941D614469A1E63A00DF720876B729F25C1F0189B5D1626CB651"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380h.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380h.lean.txt",
+      "sha256": "5596F8708784A5969500D8F49FE217DF1775A76781CDC94E5E3BA772F7A46276"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380i.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380i.lean.txt",
+      "sha256": "194A393AA7EBF2CEC6545B3A4BF41F261E2D9AE2AA9583873A307CC64020060A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380j.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380j.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380j.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380j.lean.txt",
+      "sha256": "BFEE7F5C29F59F57248D1B8B2C5B30443B4ADB5B566607E257FB441FFB1E5896"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380j.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380j.log",
+      "sha256": "A868C899144EB5C93FC4ACE7B8EDF9225F1F119A6A9D599C9EBF3CAADFC1854D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380k.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380k.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380k.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380k.lean.txt",
+      "sha256": "A4C305995523BC1D7749CAF47909DC78C58EC934D89EC2DB7DEDF2AD117610AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380k.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380k.log",
+      "sha256": "5D7789491F799C3FC79E9CB76B0ECE38FE40B1D6C4A88A6DA8363980A351426C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380l.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380l.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380l.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380l.lean.txt",
+      "sha256": "3A37D21A44F0938114C963442690328FAC1E25FB5A0BC313A37EA193BFEB3DE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380l.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380l.log",
+      "sha256": "4504F9CCED2AD19D9B2825636C99D6578DD6707D20BA5AEA75C4B45B1CA006E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380m.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380m.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380m.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380m.lean.txt",
+      "sha256": "121F36AF35564B2C89CB46B54BFBDFAEE46CB508420E616C4BDF0FC07CAD2E6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380m.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380m.log",
+      "sha256": "05EB67750447323ADCFA57F9940F9D625C7BDB0C2ADC8AD0AB4C85580694FD7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380n.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380n.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380n.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380n.lean.txt",
+      "sha256": "84D3D7E7900D03AA42AC597EF43EC474394137C9DE3841FD0E0F0F6B5E25E0C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateFrobeniusRelation1380n.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateFrobeniusRelation1380n.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia-1367.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia-1367.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia-1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia-1367.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia.lean.txt",
+      "sha256": "23FF3A074593CC3669BD0C82373532C675B28C08CCF97871C75C82118640D363"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia1366a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia1366a.lean.txt",
+      "sha256": "0C53D90174581857CD70363449F0E05CBA4EC53DC8F2AFD7DD16E363A27FFA22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia1366b.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia1366b.lean.txt",
+      "sha256": "B35CA0D8A5211638E81DB7785C1B61F70DBB6AE43C37297F50F441827F541D3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia1366c.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia1366c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia1366c.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia1366c.lean.txt",
+      "sha256": "C91C95EAD9FC3FF58AB2FEBB0872EB04B80608580730020FEE89852277E89C34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateInertia1366c.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceGammaOneTateInertia1366c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousComplementaryHecke1384a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceHomogeneousComplementaryHecke1384a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousComplementaryHecke1384a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceHomogeneousComplementaryHecke1384a.lean.txt",
+      "sha256": "EDA0D2252987681F33D532F9023C31225974DB94B0C771FEE74D9BDCB52B6CA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHomogeneousComplementaryHecke1384a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceHomogeneousComplementaryHecke1384a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic-1396.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic-1396.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic-1396.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic-1396.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic.lean.txt",
+      "sha256": "4052DE1344C6032B07D9B6D089EF3B0CC77EB8668854D445DF2E8BE1EAF831BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic1391a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic1391a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic1391a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic1391a.lean.txt",
+      "sha256": "34E207121DB342F7F2B1CFA48DA25680B1074E32A677D0F63CF1CBBB06787A16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualArithmeticQuadratic1391a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualArithmeticQuadratic1391a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualDiamondQuadratic1383a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualDiamondQuadratic1383a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualDiamondQuadratic1383a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualDiamondQuadratic1383a.lean.txt",
+      "sha256": "90591621D6513E012727822641C40AD84C137405932EDA2A758A6E2EDA06C9EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateDualDiamondQuadratic1383a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateDualDiamondQuadratic1383a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic.lean.txt",
+      "sha256": "2B073CD2EC7068290AAB3C2817F3CF45348FF772FBDBAF39218A79C8D656DC79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic1390a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic1390a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic1390a.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic1390a.lean.txt",
+      "sha256": "1169CAEDB94E83C8FEEAD158D659EF234721900CCBDFDA8EDD6EB6C10D5515A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorsionQuadratic1390a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTateTorsionQuadratic1390a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond-1394.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond-1394.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond-1394.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond-1394.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond.lean.txt",
+      "sha256": "B0E66E49934DFA1F03B93F628D6C8B621191C69E206AE28D9861C571677F663D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389a.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389a.lean.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389a.lean.txt",
+      "sha256": "47A8A5F30969C8F6C781218E30D3FF5F98CD8A06ADE52A6BE55339118BCCC2C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389a.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389a.log",
+      "sha256": "66DC82202637C7DAB3EFA956E2DA1D6166145EB50D720B39693770B0D20D55AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389b.exit",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389b.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389b.lean.txt",
+      "sha256": "B0E66E49934DFA1F03B93F628D6C8B621191C69E206AE28D9861C571677F663D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionReductionDiamond1389b.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/SourceTorsionReductionDiamond1389b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\UniversalMatrixPolynomial-verified1375.lean",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/UniversalMatrixPolynomial-verified1375.lean.txt",
+      "sha256": "CBAAFD0C00AE5DB6046EC023697C3DDF38132B72057A9CF83D15DB565F47ED45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380a-focus.log",
+      "sha256": "C87921F278C5D12BAD7221D424CEBEE44B0860ACDDAC2F5EB4FEC090327CC22C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380b-focus.log",
+      "sha256": "D8784D41920D5DFA91B641F799606F0BA4CE50658E0AD54E7EE0CDC15D3F1FF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380c-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380c-focus.log",
+      "sha256": "D62B7FCACAC36B227049BD414A2714FFAA29DF5BDAC8082901842A3A83870B82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380d-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380d-focus.log",
+      "sha256": "BD33FF9F55D59CD3423868621D2FC30C4C3C8CE7A33391563E8C213E98D5FD4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380e-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380e-focus.log",
+      "sha256": "B98EE80EA6FA760B3EAF1FF4624313C32A94E5BCA15F2CD0C0FB6928FA8B75EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380f-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380f-focus.log",
+      "sha256": "F7B7AB331EAB9F16DDA549FD092D9B75F58B3CC80C6A50E798EC9C40C5B12B8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380g-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380g-focus.log",
+      "sha256": "A10211415C4EC57E69741C95668FCCF93DBFC907EED1C472588AF0AD76A7BFD2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380h-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380h-focus.log",
+      "sha256": "6A99E830164BDAE5FDC656FF253E16488F79FA82547F51273FDFCC777E44904C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380i-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380i-focus.log",
+      "sha256": "1BD510F3C6A7529D19C695B10E5EBD8C585FC34340A721486779BB4ABDE759D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380j-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380j-focus.log",
+      "sha256": "33B61F1B0AE213073F1372D61C05385C256DC56AEED6068686D8FDDB2503CAFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic1380k-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/arithmetic1380k-focus.log",
+      "sha256": "C9D8BBDEF38973DCDDCA59D3599BF517AE05DFC8932F5CAAC4DBDD9460D17BFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_arithmetic_1397.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/audit_gamma_one_arithmetic_1397.ps1",
+      "sha256": "402217BFCF71A7C3B1E7195487AD00C533D78630233FAB561E93FF416731F366"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_frobenius_1395.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/audit_gamma_one_frobenius_1395.ps1",
+      "sha256": "A3D2E748725281B6C48F2E806C1A813AE956007F783C576813DF1A871117F789"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_inertia_1368.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/audit_gamma_one_inertia_1368.ps1",
+      "sha256": "F20C033BFDDC948B2734CA5F6F1EE0FBD47AE6FCF7FEE5B51A16DB5D34A614A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_canonical_1396.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_arithmetic_canonical_1396.ps1",
+      "sha256": "59DFDFCF43BD7F754A7F73342C728FCB62230C35CA12E1C4235320A56F1AE468"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_frobenius_1392.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_arithmetic_frobenius_1392.ps1",
+      "sha256": "B08097EE7415114BEBBBC0E42C565B8522A5E3FB7F9727ED1F920368F78ADE59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_frobenius_1392b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_arithmetic_frobenius_1392b.ps1",
+      "sha256": "C79BE0F07692C550F9276F61E97A52257AF93582E2450F3D29070513AE986C91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_frobenius_1392c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_arithmetic_frobenius_1392c.ps1",
+      "sha256": "4D390A6D95F5AA7A81032CC09B65DDF89675BE4CC5E8348723EB61B436AC3192"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_frobenius_1392d.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_arithmetic_frobenius_1392d.ps1",
+      "sha256": "019C6F1F0F47EF46F69FA8DF0D37235B28767D178459DC38D717D68018128075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_chart_transport_1361.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_chart_transport_1361.ps1",
+      "sha256": "7C1D32CC4BA1A27DE7ADFB16778829DC711325BB77736E6A058B13C80B518D82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_chart_transport_1361b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_chart_transport_1361b.ps1",
+      "sha256": "3263C89C56B0FD841979F3B56A9831A38E2BC2DCE18D68BCF71B3099D4C30F53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_coefficient_frobenius_1386.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_coefficient_frobenius_1386.ps1",
+      "sha256": "D1A6C4DA0FD80CE1D67A8EAD65B14D1329899D5CEA446759DCC2DA99BD675F80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_complementary_1384.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_complementary_1384.ps1",
+      "sha256": "255EA6F945EEA73E85A064783955300354A07E288DFE0E235CEE81A734E40F44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_canonical_1394.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_canonical_1394.ps1",
+      "sha256": "13ED01E75144D94B964ED4ACA32D7B47A2510C8F330407EBB30C8D993A66E950"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_consumers_1382.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_consumers_1382.ps1",
+      "sha256": "2654B550CDA9BD9D6ECBD50F717D71E8A586FAACC782E6C3164578D534965678"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_consumers_1387.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_consumers_1387.ps1",
+      "sha256": "48AF3D6F63ED6E91CFCB58591995929FCE814733C8E217C203614821511C5FE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_divisors_1369.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_divisors_1369.ps1",
+      "sha256": "A68478C5D1F4DE2930FE8B3B8531FE8285B4CC90654F1D45607756481FA5830D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_field_1379i.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_field_1379i.ps1",
+      "sha256": "9E216DF6BA6A4987D5D55329935EE9231A85DD84F3D92A9F7FFCD64C87B8003C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_field_1379j.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_field_1379j.ps1",
+      "sha256": "70C29DED774C3107C6F75DCC3EADD3B73C75E816B5FD9C1390EB0B7C18C95E76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_frobenius_norm_1371.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_frobenius_norm_1371.ps1",
+      "sha256": "626D2DFC2AD9517E479C28C0716FD264396E100A40FF078710E56EAA5C24C2AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_geometric_arithmetic_1393.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_geometric_arithmetic_1393.ps1",
+      "sha256": "3AC5883CA68722053A1FCD7322ED2BFA12CD29E4541D903F3C4D4FD1E7BAC380"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_geometric_arithmetic_1393b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_geometric_arithmetic_1393b.ps1",
+      "sha256": "A051AFF09E4FCA95B632CC07866A54C9C5B15A382C7432356A698CD377EE8864"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_geometric_arithmetic_1393c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_geometric_arithmetic_1393c.ps1",
+      "sha256": "FFBC238017FC2DAB7ECF3AE0107E05928956265CD25D35537E11938858B18025"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_integral_agreement_1372.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_hecke_integral_agreement_1372.ps1",
+      "sha256": "1A99017468B4E3177C5760C709F2566ED5A6778ABB450D08C99F53C970D4435D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_torsion_1374.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_hecke_torsion_1374.ps1",
+      "sha256": "A40A92E761CE5C86B93215466FE46B94B6AB4959D6BCF85569F5964C18E6EB02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_inertia_1359.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_inertia_1359.ps1",
+      "sha256": "F8DCEC43BA537A41604D58222A295FDD30C450B8BDA80FD48A9A411B1637653A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_inertia_canonical_1367.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_inertia_canonical_1367.ps1",
+      "sha256": "1EE24C22337F7E0008E007133D5A30B9C372C226EC144819967566E9288F2899"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_actions_1376.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_actions_1376.ps1",
+      "sha256": "61A2A35B30EC162F9DDED852B400C83B2779A416B6312F3395A4C17774CCC244"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_actions_1376b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_actions_1376b.ps1",
+      "sha256": "EC06466D4DB1C48FE62A0602D9C18D0B7016FDCDF1B07DCE07B0ABE876CC3A4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_actions_1376c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_actions_1376c.ps1",
+      "sha256": "C9F641AE6E143B670B3BE23CC20768CA1B9E26958FDF80323C6D9FB6A98F67AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1378c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1378c.ps1",
+      "sha256": "E4FA9B2E4704BF6A57B6D629019FCC09530F58B797A8DEFCE9FD67C8A5C35A5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381.ps1",
+      "sha256": "283EC1D39CF036EB0718F00228D97EFCE1A6F59430E2253B802FD0FB8D96CB9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381b.ps1",
+      "sha256": "106783DED0D1EFC34357341F1E9FB5F28333F49B6B92E9A8A1E7D0D41F2D6E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381c.ps1",
+      "sha256": "5268C0AC5B2FDB60BE93F6A9DCC8E2306CB2BCA6C31C04FAC38AAB00CCF04072"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381d.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381d.ps1",
+      "sha256": "F1EB06013CD66B8B562D1D6C957FA81C5D5ECCC46DADA66B0716ED3555524132"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381e.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381e.ps1",
+      "sha256": "7C5B0843761586281C1AE75EE4E4FF73437F1A1CAF3B810D0BC9DCB0CF4D52F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_descent_1381f.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_descent_1381f.ps1",
+      "sha256": "DEAEDB73661712F3A0D1DF963DBF1F285B707D0263AC7CC1C0591466A8E1F30D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_frobenius_1377b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_frobenius_1377b.ps1",
+      "sha256": "0323C9A421446116BF44B6A94C5030A30996F1AEC13F3976BDFC7200D78A35A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_frobenius_1378.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_frobenius_1378.ps1",
+      "sha256": "E2911487268C3D311EB6C4E636A701F79A192B6D5B60C9EC3DEBE0238C7315EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_frobenius_1378b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_frobenius_1378b.ps1",
+      "sha256": "2B15EE13429AAEC925676BD85BDCE5A673E2CEAEF61DC78B18EC49B7ADF557E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_relation_1379k.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_relation_1379k.ps1",
+      "sha256": "D6E2156138B6A3EEF2E70C5520C787610654BCAE03F65AAA29315C9C1ABF233F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_relation_1379m.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_relation_1379m.ps1",
+      "sha256": "5CDE1ED60A111330D7AD24AAE9CD5631C4CBF170B55A48021AF119ECFA3ABFCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_relation_1389b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_picard_relation_1389b.ps1",
+      "sha256": "BA1DD75CC3A52CED53C1E6B6E894669430116F3B36B87E0358AD07A91BB0BBC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_inertia_1364.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_inertia_1364.ps1",
+      "sha256": "E4B1CE139AD5A214B95EEB7F40150507C4E0A1093A585A26F596418F6C6FAA65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_inertia_1364b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_inertia_1364b.ps1",
+      "sha256": "C114CE49E4B96EEB6ACD89069598433E8786FB2725B49343E2F995ABAAB34F9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_inertia_1365c.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_inertia_1365c.ps1",
+      "sha256": "7522FEDFE7AAC1720CDFD3F5F20B5AA9CECCDA143A14A7639150508DD86863B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_relation_1380n.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_relation_1380n.ps1",
+      "sha256": "FBEE8248604577A729733C448E2116C9602EA3F0BCF42368881AFFE5908F8CC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_tate_relation_1390.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_tate_relation_1390.ps1",
+      "sha256": "4F9CA3A144E17EA762ED172A394E91C0C13298D83B107D75FC980B76A5D5F8FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_torsion_picard_1378h.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/build_gamma_one_torsion_picard_1378h.ps1",
+      "sha256": "67DEAFB1DB425B4619270AB7EEA27182ACF5301BEBBC56334AB410F123F8CC40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367a-focus.log",
+      "sha256": "83747FECF0618E59A8687594DBFC85887A61773CA552412F9F92F0EE60FFB9F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367b-focus.log",
+      "sha256": "268EC842CDC2E7F20DA99E7322A9D1AF28166E43FB3677E7A42575B3BF4425B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367c-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367c-focus.log",
+      "sha256": "942F0BCF0FDDB165FFEEA3808FBFC812E7DEB471B37465A089D008F6E7054571"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367d-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367d-focus.log",
+      "sha256": "3614A1A4AA8672E66FB0F2F9BB186DD24EB4EF40AA0F1BEE2D98D259FDCCCB18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367e-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367e-focus.log",
+      "sha256": "3AC51A74083605574E140EBA9E56C24135584715899C2B5E82E29B6683930ADB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367f-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367f-focus.log",
+      "sha256": "964C4C2A001B13E28F87CB28CDCE2F71E20920A68394F4B42E947A2D4ACE7F7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367g-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367g-focus.log",
+      "sha256": "E0A707C8685FEA96AA98C76DECD04C1F96968FCAE999104A365B0138B4F86296"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367h-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367h-focus.log",
+      "sha256": "419F443BBAA5466AF60394FBC0FF28AD8772C3D50F66084F8D8D5E0D6C79F9FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367i-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367i-focus.log",
+      "sha256": "19CA8B5F9FB767FB1A14DD77C0E581C21961485D6E7EEF2C725F88F204E65138"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367j-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367j-focus.log",
+      "sha256": "D2A067FC6007D1FCA10CF0AAF7A629C9806A0F01247776D88EBDFBE137B2E32C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367k-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367k-focus.log",
+      "sha256": "0FB94ADD0AD5B49C38BB5FDDD316CD631115CD51DFD06240AFCC9B4F0B971339"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367l-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367l-focus.log",
+      "sha256": "B3C49F92C8E88AA21B09326A0C4D980B3DE469FC3D3441058FAAD2107B15D03C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367m-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367m-focus.log",
+      "sha256": "602BBD4421B84148E78B3BCC5B5567155F64A814D56DA4DD308A21D04FC7DD0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367n-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367n-focus.log",
+      "sha256": "6F04A7A99C72ABE12F762AD1AD99D4079AA206D5E09CD31657B0CF3CD2E404EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient1367o-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/coefficient1367o-focus.log",
+      "sha256": "2120D87DEC4A5B22540229FAEFD1194891306982B23E3D6B5751AE82825A5E00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1367-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1367-focus.log",
+      "sha256": "16E1A215625E9BEDFE962CB2C3AF5F20053853FF09464FFDE331F13DBF9E50C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1367.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1367.txt",
+      "sha256": "E3411EB2B7E2B138CE297B30AC289FB9EAB10AEAB0F5BAB4F971DE2326CE488D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1375-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1375-focus.log",
+      "sha256": "C01B1FF2DED236339449B2F78DCD98E428352A09E4BC7AE851CC1ACFE361B3E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1375.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1375.txt",
+      "sha256": "CD5A8FDBBE50B7931C9B6DE5BFB1CDC0A8E09E854A0A96099AE57B00057344CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1380.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1380.txt",
+      "sha256": "40C4A0DA3DA9C6DBCD35390EDF89226D1A28586821E48A0AE2FA8C131E9CE80E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1380a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1380a-focus.log",
+      "sha256": "FED992320405E39E80FC45EB40236F0062D687EEF61B29955ECDF5DA2177090B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1380b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1380b-focus.log",
+      "sha256": "758E0C88F489881071DFAEA33E057B2EAD176E5578F04718B24E021F60EA77C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1389-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1389-focus.log",
+      "sha256": "9A79FF844DE377C25916E1190CD1C60179CA5F79B6792C1663DFE7342ECC2FA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1389.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1389.txt",
+      "sha256": "E30E9BF443355C97AF111D9DCB9BA5C06E0F0C5736A7869BB0A628659FD04F7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1393-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1393-focus.log",
+      "sha256": "1AFCFFF5EEC818B93B32D40E4BD7C5F893B2A8B7F7CA45BB6280CFC2E472A667"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1393.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1393.txt",
+      "sha256": "F60FD6A5D7954A3013640A458EEA17B9F555A45F4CFF81CFCAABE0D732C90C52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1393b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1393b-focus.log",
+      "sha256": "F3241BCECD9D300531C33FDDF613C9B0B8B77E166EC55F3FC9B887C8FA0F5CFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1397-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1397-focus.log",
+      "sha256": "411A1C32B97B8F47B7D1099C31C4545D779F1C63D85B28BA230714E5CE90C0BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1397.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/consumers1397.txt",
+      "sha256": "7FEAFF2A19243B2CA36DD4ECACAB2A6D432A345932AC80B5012AF405F61AC568"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deformation1397-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/deformation1397-focus.log",
+      "sha256": "F511349B52278EF8FB0684B24B4EB51ED0FE42D7084598DB4541F7E27205E238"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deformation1397b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/deformation1397b-focus.log",
+      "sha256": "729AAE5D38CD361F0D7C8AF3CC0F3DED41AE622139650990A03ED4AD1473B025"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deformation1397c-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/deformation1397c-focus.log",
+      "sha256": "78679EAF03855DCD2D359C830F80686B66749027FD5697678EDD4D3E72352E3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deformation1397d-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/deformation1397d-focus.log",
+      "sha256": "D1E8203824A7048D049A35F4E47FD24FC426DB878C0C08D4A50185DA28ED01D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deformation1397e-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/deformation1397e-focus.log",
+      "sha256": "6DCD8ABBA813D178EC386A4DB507132E29EF128C8C53CDF83CA2A53A311BC8D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389a-focus.log",
+      "sha256": "C454C075D9F8B720391F5F5AD4EFBFDC53234143A77E09C61F0FB2CED72D4A85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389b-focus.log",
+      "sha256": "745D411BC8A0E02AD9929A2FFE9EB094E4665158456377DA5FA9F995587B2ED0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389c-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389c-focus.log",
+      "sha256": "ACF08CA705BC5057190FD8BF8E8B03B53D54D6D840CFBAB2FC1A5F8749D3EBEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389d-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389d-focus.log",
+      "sha256": "E63608CED2B865B1116D4F299E43C23E8112B31EF5258B01E93934D37079BA30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389e-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389e-focus.log",
+      "sha256": "9DD2CC219CE087D78D2E2564F50AC23E833C764C9025FAF8B3B9320F5D55ECA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389f-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389f-focus.log",
+      "sha256": "5D399057BA4B00670C0EB436ED1D5E8271D68EA6DE47E81701E11849FA0F7508"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\determinant1389g-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/determinant1389g-focus.log",
+      "sha256": "2FEB3BBDFD44FBF510FD9D50E80EDF65AF822EDFBA1780AC569A26F29BEC3904"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_picard_descent_1381b.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_picard_descent_1381b.ps1",
+      "sha256": "6086524397598E7CC015B92A7346DE6CECDCA5170E5B7EAA15574588ECB1B95C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_picard_descent_1381d.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_picard_descent_1381d.py",
+      "sha256": "91256FFCF7AE4C9C629F3247FF892F7AD7106AF151BD66FC4A5C320671A505C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_picard_relation_1379l.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_picard_relation_1379l.ps1",
+      "sha256": "A018FAC3E61FB60A5C1E812B13F73447BB56C34DC077779B35E72D94FA3D799E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_picard_relation_1379l.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_picard_relation_1379l.py",
+      "sha256": "5E8B765C1016C66FFE3A1C24FD88FD47B9A0E784A10CBBDDC26AB8E8BEE07523"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_tate_relation_1380l.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_tate_relation_1380l.ps1",
+      "sha256": "D0D6204809BD42220A0A3C38814E9946E79E8B42996CAD9A437417E1B01080A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_tate_relation_1380l.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_tate_relation_1380l.py",
+      "sha256": "D37F535ECE514BB6EFE8892524EE25E9C9F7B3B55B4345F402CC9A225D50F002"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_tate_relation_1380m.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_tate_relation_1380m.ps1",
+      "sha256": "E991CC976E57597C7D1F129FE6260C92D6B2B0DEB6B873D0388EC9B9C9852D31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_tate_relation_1380m.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_tate_relation_1380m.py",
+      "sha256": "BC45E61DC993DA6BBE629FC20D4D3A1261D27F8F1AFBD2C6BA1792C565620594"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_torsion_picard_1378g.ps1",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_torsion_picard_1378g.ps1",
+      "sha256": "825FFBB512F6FBD3A8A5DAC8F4169DAB67B0DCA0056D2D7213C818513341BF5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\diagnose_gamma_one_torsion_picard_1378g.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/diagnose_gamma_one_torsion_picard_1378g.py",
+      "sha256": "3E34D1D4C8F80719DD2C5071FD622B1DD979EEED440E9B26D4124D1691CAF92C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1367.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1367.py",
+      "sha256": "AA8AD885FB544D60579AA78292550797CC2EB060FCE31E23657AC21C6DC4D2EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1371.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1371.py",
+      "sha256": "591940465E4E0F467ECFD4224681813B8596C357389815E4767A73B6E55E98DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1375.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1375.py",
+      "sha256": "7B5F779E988BF95A0ADE4107F2C86EF866041773F1BA375C169970C8E423721C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1380.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1380.py",
+      "sha256": "83966A834D1C755B162C34B1367F65BE3CD65616976A6DD76AD2A00A0F58C701"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1387.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1387.py",
+      "sha256": "1D5D8F0990065194C214B5FBF7D7EDAE96F40D023589A4F0C179ACB3B31A4A02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1389.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1389.py",
+      "sha256": "5DCEB7AF343B51CF4642232ABC284C34707F62A79B0EF126A323718B31888238"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1393.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1393.py",
+      "sha256": "41206534487F1EE4BCE4431FA55E57CCFDF497DD37EA44E067CBA9921502FBD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/docs1397.py",
+      "sha256": "EEEE23D2B0CB9456AAC88AB2C3CF62867E57C4442C026AADA1CFAFB19473D19D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1367-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1367-console.log",
+      "sha256": "0CAEA9017DFF6622180033ABC67A72F4B5BF12F67EEB9A1CE4DCE50CC23253BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1375-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1375-console.log",
+      "sha256": "C4DC37B61AA3BA81A6E84B35C5727F55E357184CC790B86EA925DE17BCCFB3FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1380-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1380-console.log",
+      "sha256": "B07A3510033E823BA91A673DD85D2752641670ACBE9A04AD457DA4F97EF4EF11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1389-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1389-console.log",
+      "sha256": "94D23BEEFF35E3FA984C8EE63F19820A1D5F5E7557E1AE9EFDB2C77779FAC674"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1393-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1393-console.log",
+      "sha256": "B7E51BB3EC9E192FC4AD715BC98DBB47FBEC6F37F0A514344638B4388259CF25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1397-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/foundation1397-console.log",
+      "sha256": "C9BEDF656A382200F82BABCA004DD4FA4DB96152DABB92BBC0A26229D5EF7E6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-frobenius-route-1393.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-arithmetic-frobenius-route-1393.json",
+      "sha256": "5A5829299716F5077B7A24CFF26B3D398F22B7291F7FC35C3DED79FF5A04C6ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-versions-1396.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-arithmetic-versions-1396.json",
+      "sha256": "68E565E5D34EB3532DC2359C4662A74B69A089ACD268AC505C3DA6E7F6A03F57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-frobenius-divisor-route-1369.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-frobenius-divisor-route-1369.json",
+      "sha256": "BDA73C8F612BC58226254660600623311603E99DA4BEF0E446902E04F27732FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-frobenius-versions-1394.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-frobenius-versions-1394.json",
+      "sha256": "9541755227EC478F1293A8EE94205620E1AE73F9F25E4365608A2A9AF368D6D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-inertia-route-1359.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-inertia-route-1359.json",
+      "sha256": "A4C08C5C6A406F25F08B2FAB3038BEE50668B182CE429C5A53782269A5499284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-inertia-versions-1367.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/gamma-one-inertia-versions-1367.json",
+      "sha256": "8ADEA05A5823BF86058DEB13AE7F8F30E0664586D73D296B6B35461EDAAA6FCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect1367.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/inspect1367.log",
+      "sha256": "CBB2653348AB3E3CA78E1BC8DBC92B9376067786FDD249FBEAB137435A8C238B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1367.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1367.txt",
+      "sha256": "988B24B1387C6F24B5B806724608D28D5A9A457B54B708BDE4180B6DB6C2B732"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1371.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1371.txt",
+      "sha256": "1C361BE9A854C59396D04BC6FA4847F5F28441C2837C87163C82E1D69E99D37C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1375.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1375.txt",
+      "sha256": "59E3E7F6E7AFD8E41AE5E751CEE3D14ADF884454B39F0FBB0FBC79343DB0C38E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1380.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1380.txt",
+      "sha256": "A13C65C719AF95483B6C3E74B86ADEC51E9981ED8E892B1970DFFD8ED42276E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1387.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1387.txt",
+      "sha256": "2E3B3F98ED6632ACBD346E8748E29453F7BE427E8620F50FD8D9A070A9799F00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1389.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1389.txt",
+      "sha256": "00017FEF2EE282C1541903EFF1D9EF7FA4E874B5595BA1E076F9D98450813F6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1393.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1393.txt",
+      "sha256": "68D8D85D4E1D306D3BBBCA672D3BFC2A91BA082C62EE0142001326B5D2912A31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1397.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/math1397.txt",
+      "sha256": "2DF004CA10FC061A5EF2FE8F133F6D88D80D4F8C281F17418CC8C6667ACF8682"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1367-draft.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1367-draft.json",
+      "sha256": "3D1FB2784730F2C0719BFF7BF5A2A695377A10DDD36F7B013484A397ED5E443D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1367.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1367.json",
+      "sha256": "DA6A05B83D3827150F854545A46C2C9B7109F6556A2C2EA555E2C3A9CDA09799"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1375.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1375.json",
+      "sha256": "32EF4C49988CBB29CD7CB44A15C56F1BE8985180A7C67898CCE135C9B773E26B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1380.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1380.json",
+      "sha256": "7AF9823DB923F9124AB79EC8C3392CB308BF014E018766423D916C6D91736249"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1387.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1387.json",
+      "sha256": "27BDAD94AD0ADF0C908C49FE366C0980680C182C001095F576273041310787FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1389.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1389.json",
+      "sha256": "8EAB8B2A59C6C0E5DCB1540AAA1721048FBAD5C89AC875472C093067AB8F156B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1393.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1393.json",
+      "sha256": "F085235C90883805F2FD454175ABD263D80B70A8B927C60D4A803C348DD399B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1397.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/modules1397.json",
+      "sha256": "5E5D45779B3249842B1BB170AC1E888F31BE98A6AE802CFB6A32F6A3BBA3476F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\natural1393a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/natural1393a-focus.log",
+      "sha256": "31FC9031395D0086C07AEEBD52AD4B24ABAC5539AE8164072F09479ED5AB9386"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\natural1393b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/natural1393b-focus.log",
+      "sha256": "B19EA579D7C9891294713313FD6B0B21ECA436C0D081467224A70EB894655F7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1367-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1367-console.log",
+      "sha256": "0B826262887365DC77769532C01796E2FE3B24D94E483BD51F62597851EA6BFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1375-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1375-console.log",
+      "sha256": "A9BD7C8FB99CA50F4AD4D50E04E771453734D0111B1FFA353795BF0B9EBDAA9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1380-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1380-console.log",
+      "sha256": "741BAD6514DF3750756975C5FA9BE6EE550810FA94E3A33A89AC4CE64B2B04B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1389-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1389-console.log",
+      "sha256": "E9E953FAD56A26A9D406E4F776D7F30BDB3D42FFDCC15E7D93B4968C3CC48C9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1393-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1393-console.log",
+      "sha256": "6F7BFAB0ED313379ADD2314DAD589C9056EFBB47333E968A1AAE4E936E625392"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1397-console.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/paper1397-console.log",
+      "sha256": "2C49ABD394B2C2976EAD871DA5C97E087AD538EAF268928373855B1608D2547C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight1397.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/preflight1397.log",
+      "sha256": "E2F23F7A2170FDD85E6F718EEE46480388BF41FEA9CA5861B3CDF2D834E01A52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1367.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1367.py",
+      "sha256": "DBEB2392B3D5230B28D460012CF33BC6A4E251ED8A7EDCC9C81EA6948C2AFE57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1371.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1371.py",
+      "sha256": "608648B256751AC551BC1DB9B6C2307BF78DDD81C40CD2A53137FB93B6929AA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1375.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1375.py",
+      "sha256": "7DAC481DA687C15750B33E1A30A386F1D93A937D99A928DBF9C0DCE8D1626779"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1380.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1380.py",
+      "sha256": "13073A3FA5BC42AD0370375BD7301168B278D9FF58B1CDDAA2516DBC1AB8542B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1387.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1387.py",
+      "sha256": "9FCF8B9D038E261140EA42447126534C3D8643135A4479455F37CD2F39F22566"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1389.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1389.py",
+      "sha256": "C026BBAB37C7DF4941855989525A9549DB83145A31B6214D388CBF22D186802E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1393.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1393.py",
+      "sha256": "0407051660BE58BE7A82D71F66965C642BFDA617DB243FBA45DAFA42C6D845C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare1397.py",
+      "sha256": "BB719E3D3AD7F230BB90CFA2A70BB898B420E42BBAD845FBD51A46410ADC507B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_audit_1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_arithmetic_audit_1397.py",
+      "sha256": "50572B5716AEEC6E7E181FCC9694AE0945BCBB191CF3AC28D75FB9E4AE9B6048"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_canonical_1396.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_arithmetic_canonical_1396.py",
+      "sha256": "135637F2CE2808DC09D4B883D0FD874B5C2F7D2FCD53CD72D9C38382D1E80218"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_frobenius_1392.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_arithmetic_frobenius_1392.py",
+      "sha256": "3689B6F997B416EE8A9176CF8839500AC583CAE3F4EB135BCDDEBFE8848C2D7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_chart_transport_1361.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_chart_transport_1361.py",
+      "sha256": "8F6F634C0D67ACAC1664ABE877A2F5575D34B1AEC5EC45A41C10A7D6BB48D95B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_coefficient_frobenius_1386.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_coefficient_frobenius_1386.py",
+      "sha256": "7981BE065444CCFF6E365B37F06A7683C7AF32C8EEA74D6F6A193C66D8D450F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_complementary_1384.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_complementary_1384.py",
+      "sha256": "73CD9EFAD0178FD4A5B0158E05EBA195FEDE722B900F45189B252794CEA1A9CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_audit_1395.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_audit_1395.py",
+      "sha256": "5990BE510178BC144F4A3557A60D59032A7F8868706139F62634AB50B1A3A5DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_canonical_1394.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_canonical_1394.py",
+      "sha256": "192DD18C9F566825658681DA850335BD1BF88DC79CF16934BF8B64CDA71986C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_consumers_1382.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_consumers_1382.py",
+      "sha256": "E8DDDD3A4BF1F70A64A3A9328A1B1FF284553038C1CD32ED023F8F65CE82A0DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_consumers_1387.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_consumers_1387.py",
+      "sha256": "4CB9E3B0115BA4BFBC5F7F44603D966A6A37C6DE5D99A24A44B009ECB13A592B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_divisors_1369.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_divisors_1369.py",
+      "sha256": "B0E83D04C67BEEAFB7DF3BD95571526E3C409E7E8A0B5C9C24391FA21CE02AC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_frobenius_norm_1371.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_frobenius_norm_1371.py",
+      "sha256": "FED0E8114CD89416CA14302B555BDC8DC791452AC52551EDDF8C0B97FD87A54E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_geometric_arithmetic_1393.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_geometric_arithmetic_1393.py",
+      "sha256": "E5FB90D8962D972F7173B43BD40AF5A1B67BA48A42D495DEC866A7C1A59D7A58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_integral_agreement_1372.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_hecke_integral_agreement_1372.py",
+      "sha256": "1317AEFA51EEF5F077C27166283D56E1795DA9F85B8AF873563571AA147FEEFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_torsion_1374.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_hecke_torsion_1374.py",
+      "sha256": "4B19428AE2EE312ED3DB0F80C2E952E051AD478A5C69CAA78CA3A488DF72507A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_inertia_1359.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_inertia_1359.py",
+      "sha256": "FDAB713C5FB4049B7FADABE25610F8F0B8357C7D5B0E49EEB138C7941BABC0EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_inertia_audit_1368.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_inertia_audit_1368.py",
+      "sha256": "4BA49C80628AF2479B904178FE5A8A18C0B566DD69E8F75BC681727590595E45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_inertia_canonical_1367.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_inertia_canonical_1367.py",
+      "sha256": "98B3C1BB6AB35FD3E6787F139CD0BCFDB7205E24C5C99A2BD429CDAD187CAB35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_actions_1376.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_picard_actions_1376.py",
+      "sha256": "B993F3E6021D90D5C802E18ED3E0288B8CC5DADB999DB640EB48FAD1BBA3FC00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_picard_frobenius_1378.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_picard_frobenius_1378.py",
+      "sha256": "C9E03C94D92B99FE70BF9029D33F68C6DD60D12D650F145261DCC976456DA8DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_tate_inertia_1364.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/prepare_gamma_one_tate_inertia_1364.py",
+      "sha256": "9AC131C77BE60130CED6FE4D0D70275BC6067B200A7E18BA7EF2BB0A79FB49B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1375.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1375.json",
+      "sha256": "1035F6898FDEB919ECF8F545C3113379A537FE5F0115DA593DAF4BE828D1B016"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1380.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1380.json",
+      "sha256": "54AE641A5B811FCA6EF943A3B0748EDC99D7CEF974C912775402F8A98D7BC5BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1387.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1387.json",
+      "sha256": "C12FFE8A9AD87C6AF9E26776A7942E8C807173D512CCC8965C0364D9EA09BE5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1389.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1389.json",
+      "sha256": "E1E6E713D80D339F6CA52A29664B55C1B5CB8FA02766F004C3372B3EE948B5E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1393.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1393.json",
+      "sha256": "D3FB3B96C17937A9499E4C5114660BB90EB939A97DF95EC8538EB679CABAD068"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1397.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/primary-review1397.json",
+      "sha256": "530CBF01E154CB77E4837C366861E75049D11A4A82954F75F5B7F104FFDD3E98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375a-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375a-focus.log",
+      "sha256": "8F3761B7EEE0AC157059B6E2F220D6945A8163EA27556212D2CC5910361323DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375b-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375b-focus.log",
+      "sha256": "5D26A829051AA34AC24335BCA211C8801B2D7B41BCA64FB8A994EB2DD9DBDECC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375c-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375c-focus.log",
+      "sha256": "D46003A5C77BB7CB491068E55084C62F89167DE5666095C1D66B26EB9EAC685B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375d-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375d-focus.log",
+      "sha256": "9BD57E46889F53D65C0729EBF13FB6BE485579581323EC9382CBBA0D5FFD4C36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375e-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375e-focus.log",
+      "sha256": "6B9BF219185ED4BBF73A6597D3F2BBF458DCA317774B6A2C5ACF70B78C27F97E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\quotient1375f-focus.log",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/quotient1375f-focus.log",
+      "sha256": "B5534EA2D75D6DC74461801669FFB8B0FB4A9B001B2FA5B82A5D2C169232EAC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1367.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1367.py",
+      "sha256": "31E0B3641B9067FA50569AB7A27A123B3D80558CE280C2213BBF01885D3E3B29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1371.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1371.py",
+      "sha256": "7473FB28B841205C09EDCC2F41ACB1482F23BE01CB19437EEEA995B931C76325"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1375.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1375.py",
+      "sha256": "E8CCB9C94BE330C0C0A78BD43775502CC89FA83DDFAFA059022775905B81A764"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1380.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1380.py",
+      "sha256": "B4BE4D3D724B64003368B1B7D39659C4359CF10CFDBE7A7CEF965E351643531E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1387.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1387.py",
+      "sha256": "B8D5D78525B9AAC6ADBAA79E5446C8CC332E6990DF3FCC2F15FB95339C61934B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1389.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1389.py",
+      "sha256": "41FF63B0D4EBFC53BB1FB4E12DBA1E3F40C955AABA9C29F3AA0D6368AE693F5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1393.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1393.py",
+      "sha256": "A9357A1228EDEE27338F690C95908C249A86D39C979E5AF90C006BC789D6896F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record1397.py",
+      "sha256": "AB6660342D2CF8A91728100393C9C141B2236EBCF2D3EF85D041C23195D9F6BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_arithmetic_1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record_gamma_one_arithmetic_1397.py",
+      "sha256": "1349525804311FB0EBA5168E77F358B97644A97341116CF303C6113DF9FEA653"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_frobenius_1395.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record_gamma_one_frobenius_1395.py",
+      "sha256": "372661BD91A329C16A5F080127E7A0D1BF1DDE01540F0358E3E69716D3C74D83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_inertia_1368.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/record_gamma_one_inertia_1368.py",
+      "sha256": "21140434C1959106049695609D1EAC9BCC00B6A356B8387314636731EC020776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1367.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1367.py",
+      "sha256": "85E0DE46C25E670557F152B8DD8DC37A994437C146AC4E77C9308EE71C6400EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1371.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1371.py",
+      "sha256": "82903375A7E8043A9DCEB9CA1CD4552E0421FE3B78CBF7F06C30656A71BD69B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1375.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1375.py",
+      "sha256": "B16399F999E0D76A971089310496B836843616FDC39482041CB0A2160F5B9A47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1380.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1380.py",
+      "sha256": "31166113D113419DA2969F2F25C6C7ABE1A946BCD5CC09A8872BA0B05391269B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1387.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1387.py",
+      "sha256": "7F0A3B62B09BED3FC2DAC5D6F28C81B14716CAF4AE3E7EDA4E933E88E1E51D27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1389.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1389.py",
+      "sha256": "83EEE28D49E5D100432CE5E2953139049E03A1D37587DD5665D0481A1538AEE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1393.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1393.py",
+      "sha256": "5071740B1A27D09AE014AC5AE3D90011F67524BDE7880811FDB6ED9DDDE8D326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1397.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/register1397.py",
+      "sha256": "C642132F01076CB6A649C7E01DF7618E332BA2C31A7D52065A5479581CAAC271"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1367.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1367.json",
+      "sha256": "601E8A039B1EC6B5F2FEE2849706EE37E448AA85561F17ACDA3CF51282F3FA36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1375.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1375.json",
+      "sha256": "7A66A10727A0F0A8C014C40A3019A4CF8B625330DF33BABECBD4E0C95AE9F0D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1380.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1380.json",
+      "sha256": "5091DC375E46E9BE2CBBFE8A73C941F45F6114B92C147F6B38B77DF1D02467C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1389.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1389.json",
+      "sha256": "A424E67C316402ED410DACBBA608D88C27C419038FCEC6128E81C041997B0FB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1393.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1393.json",
+      "sha256": "1D127D8895EE291D940C2EA78594FD57DAF76FA8EEC334E6D247AFCFE27C57A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1397.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/registrations1397.json",
+      "sha256": "D0309365CCE5F40454F6600069447661AA295051151107EE75A3760A02F502A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1367.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1367.txt",
+      "sha256": "22D37F8E5FC08ED33C2F324F2497FFF002B155C718C4B87D40345D7FE901D5B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1371.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1371.txt",
+      "sha256": "9698AFDDB580330475A97C6A05C572677E68B1F45117707D71576277E0794D05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1375.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1375.txt",
+      "sha256": "D8C919F5142B4EC4A4E2D54160AD68AACBC06F1B460B4EFCE78384825C3586A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1380.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1380.txt",
+      "sha256": "7B96CF4198BA0878E5E43CCCC4267375C2E1D1B59C520FD746D253472109E8D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1387.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1387.txt",
+      "sha256": "518EF3425F9E0942179564D1646B2193F78E62F8A9529AA823A41CE1BED3201E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1389.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1389.txt",
+      "sha256": "518EF3425F9E0942179564D1646B2193F78E62F8A9529AA823A41CE1BED3201E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1393.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1393.txt",
+      "sha256": "518EF3425F9E0942179564D1646B2193F78E62F8A9529AA823A41CE1BED3201E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1397.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/remaining1397.txt",
+      "sha256": "49DE67351E13600A47D3A05732380F21B9387041142C11DEE1788B048ADC4157"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_arithmetic_frobenius_1392b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_arithmetic_frobenius_1392b.py",
+      "sha256": "DE4892BBD94990FBCA75DF328B69A3A2ECB8F8786ADE67AD5B15F879E8AA9643"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_arithmetic_frobenius_1392c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_arithmetic_frobenius_1392c.py",
+      "sha256": "8C75D2DBA883FA89F00FF5E49CBC03611FEC3598F0A8A9BB5B01AF310D69A9D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_arithmetic_frobenius_1392d.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_arithmetic_frobenius_1392d.py",
+      "sha256": "F3E4A6CF2A4C0C9D37F1581A7C06DF0B0A373985423E6E0005551ABB6C52821D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_chart_transport_1361b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_chart_transport_1361b.py",
+      "sha256": "7C4BA585CCD8C9F86EA929FBFE58C0E6ED88E1918384C1B2AC20AB674F9659B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_frobenius_field_1379i.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_frobenius_field_1379i.py",
+      "sha256": "CA07B43EB9B23092D4932068C53892017A8007659D7E4F17B28F9EEF6BA33420"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_frobenius_field_1379j.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_frobenius_field_1379j.py",
+      "sha256": "2D61FFB8ABDD021A9BB2C6B5BA4C63A491C77F8B881CACDCAFBE6D88BB4A5DEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_geometric_arithmetic_1393b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_geometric_arithmetic_1393b.py",
+      "sha256": "8F2C031B762E190869A092B748967FC2EFC95E0E339068D15776C506104C124D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_geometric_arithmetic_1393c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_geometric_arithmetic_1393c.py",
+      "sha256": "85688236AAB20DCFF0488F19152C73D870540E6CBE417D544BB1BD6091E814A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_actions_1376b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_actions_1376b.py",
+      "sha256": "EFA4F3F5A39FF073A300D6D6D6E1AA0184C1F2C85FC1D09E09C29F1BB0BC178E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_actions_1376c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_actions_1376c.py",
+      "sha256": "217D75FEBAFC49BC9BE234EB5B489AF183EC29B9A3E8485055156E7B1E8F48C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_descent_1378c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_descent_1378c.py",
+      "sha256": "7286B11FA87462AF7E466A0BDCCC339BFE70A1D33B1786F658EF919C372C1C76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_descent_1381b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_descent_1381b.py",
+      "sha256": "C8E767EDE523CB5DE3CD9D5048A42C5AEC6FD5028002D1F635E2900DCCB6B032"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_descent_1381c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_descent_1381c.py",
+      "sha256": "8CC7B35FD7F319935CF2B285FC108DD491AD2915B5BE189AF840612FAF76A4C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_descent_1381e.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_descent_1381e.py",
+      "sha256": "9FB48FC0A484B21028EBE3105F611DBE52237FCD174ED4B7AD9887E20D974757"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_descent_1381f.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_descent_1381f.py",
+      "sha256": "CB9147B1B25440090CC538358FC697B423065332B13C5C76C061DB70AF287C5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_frobenius_1377b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_frobenius_1377b.py",
+      "sha256": "FF4FDA2282F161F9C13B923838ED42C7FADC617860935A3694482098533874B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_relation_1379k.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_relation_1379k.py",
+      "sha256": "639BD93A27A41396396A047E9678425E420F97E3AC1E951869C176F64A594E26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_relation_1379m.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_relation_1379m.py",
+      "sha256": "F31D67F14DB766A070408A13D81CAFF0DFCE1D933789811704CA360102754151"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_picard_relation_1389b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_picard_relation_1389b.py",
+      "sha256": "788BFC0549A6F223B0891E1C8F11DBA76EC2CA3DD2453CF6DC4EB2708BD1F68C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_tate_inertia_1364b.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_tate_inertia_1364b.py",
+      "sha256": "FC34CE402F7E8FB582AE811781110804005C018F71396114F8E7CE478F631F4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_tate_inertia_1365c.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_tate_inertia_1365c.py",
+      "sha256": "0769E7928DB94738FB84FD3B55B2B2A9A022DDB7E5ABD052541D5DA27C061635"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_tate_relation_1380n.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_tate_relation_1380n.py",
+      "sha256": "0C522CD30CDC97AD25316022C8024AB5039383D20EB6C7A16FF295D0D959E7A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_tate_relation_1390.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_tate_relation_1390.py",
+      "sha256": "E67189F560F6E3FABDC5F6C926C16531F55820A50B8FACAC9C3E07985F9E4B7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\revise_gamma_one_torsion_picard_1378h.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/revise_gamma_one_torsion_picard_1378h.py",
+      "sha256": "2BB20C279789102ED936C3889D2E507E49416AFE8B60A3BEFDF67B75554A40FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1367.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1367.txt",
+      "sha256": "DA69C83796632B2FB9CE5A7C8689556ABE085902C77E42141C8928C4C787CCA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1375.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1375.txt",
+      "sha256": "CA6675FA22DD05757DFBA0C697C9FE9AC04CA38E3A53ECF703D19E2A25091AFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1380.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1380.txt",
+      "sha256": "DE5472823B2283E4C3B8DB7B4DA17E391C5E151DCC52C6C68838C8B92F54BD96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1389.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1389.txt",
+      "sha256": "7369F22F8860D3821E3FC6CB28DDF6ED5AE4DC38A6E642BF6BFF8968DDEC75A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1393.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1393.txt",
+      "sha256": "D9AD48138965976087F18E15CB7D0A4534B30F3680056551574C1B760CA1F627"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1397.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/section1397.txt",
+      "sha256": "D38E7072B19BC782034C7C7A922575C0C8FC0EDF5765682929F4A97209D4702E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-1-audit-config.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-arithmetic-1-audit-config.json",
+      "sha256": "5F34897C36BE34E886DF70CFCDACB82B67CA50CB96AD6E6146C5DF1549830F59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-arithmetic-1-reuse-review-20261028.json",
+      "sha256": "B351435F14FB1C18A6FD0DC23CD7AA026F16DA8EE8FE5A9FD3A33364565EDB33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-arithmetic-1-scratch-receipt.json",
+      "sha256": "F7A5DDC14EF57EBFEFDDBE07EEC36F2D4F79CB66357E1CD4379BBA7E1DA787AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-audit-route-1397.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-arithmetic-audit-route-1397.json",
+      "sha256": "6541EC3218BC66CD9C2F2252EB70D73D4056CD6F4F5153199BD6127E6EA98595"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-1-audit-config.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-frobenius-1-audit-config.json",
+      "sha256": "FF9715198F42FDBA08B02BB464CCC46C637CB0E84E76BFE493B72E84BA722ACD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-frobenius-1-reuse-review-20261028.json",
+      "sha256": "C6444A87A9CCAEC2F79076A9AF18327D6239CA9D0C0E29AEFA4D2AA5D85C4A1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-frobenius-1-scratch-receipt.json",
+      "sha256": "8F25CF0241B3A41B12110108432520EA36FCF85BE8F5FD554E6FA71D764D2469"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-audit-route-1395.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-frobenius-audit-route-1395.json",
+      "sha256": "73364ED824CD068B19F96646FB9E2DF9D8C507C1F6599DC571799D331B5CAF48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-1-audit-config.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-inertia-1-audit-config.json",
+      "sha256": "B4A7F9687A233EF8E99FDC7BC3973DF7582B369194BA2D3794073C019D3E3D34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-inertia-1-reuse-review-20261028.json",
+      "sha256": "3C3288118AEF32658CDEA5E208D51FBD8133FF36FEC3434D1631E3BC5317673A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-inertia-1-scratch-receipt.json",
+      "sha256": "10C46E538883A340E91B64DD1BD9CA1F635DD8EFF28ED2D97EFA5A125266FEC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-audit-route-1368.json",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/source-gamma-one-inertia-audit-route-1368.json",
+      "sha256": "B8F3CA8A5FB407A9E8A948B2CFCA5448492CB952A4CB21C6CE4B65A99BBFA9D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\split_gamma_one_picard_descent_1381.py",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/split_gamma_one_picard_descent_1381.py",
+      "sha256": "870A98FF1C58DA0259889DD0558FB9824326FE81150868F8B53C1F5FB2C71856"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1367.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1367.txt",
+      "sha256": "209C05257EAD97335087EDD88FE248CB6D8D9F2CC9ACA5744362CAC0CDF1D5DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1375.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1375.txt",
+      "sha256": "31F069EEAAAA3B65919AE670D12CE91BCD9122557C1043E9931DD2D2BE2C3223"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1380.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1380.txt",
+      "sha256": "2181589C1DABFF792F606468A499F31AB6C780C4340FEEA194D810AB018DBD58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1389.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1389.txt",
+      "sha256": "718D6AB2754EC6BDD5C66BBFB716346AA55F031DF8A340D28D7068672316C62E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1393.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1393.txt",
+      "sha256": "D3B8EBFD71DAA6FA90C26F36F6B7C70EC493565B3FB4C47FF21720ED37B3F7CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1397.txt",
+      "path": "Tools/gamma-one-tate-frobenius-20261028-1402/status1397.txt",
+      "sha256": "16156D1B0A5A0DF1C7C61EC3E217C39274557FEB22CB75209A23531D5B6B786D"
+    }
+  ]
+}

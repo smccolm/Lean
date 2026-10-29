@@ -1,0 +1,115 @@
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_coordinate_value`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_coordinate_value_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (a : (AdeleRing ℤ ℚ)ˣ) :
+    ψ a = ψ (rationalIdeleRealEmbedding (rationalIdeleRealHom a)) *
+      ψ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom
+        (finiteIdeleIntegralUnitPart (rationalIdeleFiniteHom a)))) :=
+  adelicQuadraticCharacter_coordinate_value ψ hq hp a
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_eq_of_integral`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_eq_of_integral_source
+    (ψ φ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hψq : ∀ a, ψ a ^ 2 = 1) (hφq : ∀ a, φ a ^ 2 = 1)
+    (hψp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hφp : ∀ q : ℚˣ, φ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hi : ∀ u : finiteAdeleIntegerSubringˣ,
+      ψ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom u)) =
+        φ (rationalIdeleFiniteEmbedding (Units.map finiteAdeleIntegerSubring.subtype.toMonoidHom u))) : ψ = φ :=
+  adelicQuadraticCharacter_eq_of_integral ψ φ hψq hφq hψp hφp hi
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicDirichletCharacter_quadratic`. -/
+theorem actual_fullCharacter_adelicDirichletCharacter_quadratic_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) (a : (AdeleRing ℤ ℚ)ˣ) :
+    adelicDirichletCharacter χ a ^ 2 = 1 :=
+  adelicDirichletCharacter_quadratic χ hχ a
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_dirichlet_exists`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_dirichlet_exists_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1) :
+    ∃ D : ℕ+, ∃ χ : DirichletCharacter ℂ D, χ.IsQuadratic ∧ ψ = adelicDirichletCharacter χ :=
+  adelicQuadraticCharacter_dirichlet_exists ψ hc hq hp
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `dirichlet_changeLevel_integral_residue`. -/
+theorem actual_fullCharacter_dirichlet_changeLevel_integral_residue_source {M D : ℕ} [NeZero M] [NeZero D]
+    (χ : DirichletCharacter ℂ M) (h : M ∣ D) (u : finiteAdeleIntegerSubringˣ) :
+    DirichletCharacter.changeLevel h χ (finiteAdeleResidue D u.val) = χ (finiteAdeleResidue M u.val) :=
+  dirichlet_changeLevel_integral_residue χ h u
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicDirichletCharacter_primitive`. -/
+theorem actual_fullCharacter_adelicDirichletCharacter_primitive_source {D : ℕ} [NeZero D]
+    (χ : DirichletCharacter ℂ D) (hχ : χ.IsQuadratic) :
+    letI : NeZero χ.conductor := ⟨χ.conductor_ne_zero⟩
+    adelicDirichletCharacter χ.primitiveCharacter = adelicDirichletCharacter χ :=
+  adelicDirichletCharacter_primitive χ hχ
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `adelicQuadraticCharacter_primitive_exists`. -/
+theorem actual_fullCharacter_adelicQuadraticCharacter_primitive_exists_source (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hne : ψ ≠ 1) :
+    ∃ D : ℕ+, ∃ χ : DirichletCharacter ℂ D,
+      χ.IsPrimitive ∧ χ ≠ 1 ∧ χ.IsQuadratic ∧ ψ = adelicDirichletCharacter χ :=
+  adelicQuadraticCharacter_primitive_exists ψ hc hq hp hne
+
+end
+
+section
+
+open NumberField IsDedekindDomain Matrix
+
+/-- Exact source consumer of `nonCM_no_adelicQuadraticSelfTwist`. -/
+theorem actual_fullCharacter_nonCM_no_adelicQuadraticSelfTwist_source {N : ℕ} [NeZero N] {k : ℤ}
+    (F : NonCMPrimitiveCuspForm N k) (ψ : (AdeleRing ℤ ℚ)ˣ →* ℂ)
+    (hc : Continuous ψ) (hq : ∀ a, ψ a ^ 2 = 1)
+    (hp : ∀ q : ℚˣ, ψ (Units.map (algebraMap ℚ (AdeleRing ℤ ℚ)).toMonoidHom q) = 1)
+    (hne : ψ ≠ 1)
+    (T : Representation.IntertwiningMap (adelicCyclicHilbertRepresentation F.toCuspForm)
+      (scalarTwistRepresentation (adelicCyclicHilbertRepresentation F.toCuspForm)
+        (ψ.comp GeneralLinearGroup.det))) : ¬ Function.Injective T :=
+  nonCM_no_adelicQuadraticSelfTwist F ψ hc hq hp hne T
+
+end

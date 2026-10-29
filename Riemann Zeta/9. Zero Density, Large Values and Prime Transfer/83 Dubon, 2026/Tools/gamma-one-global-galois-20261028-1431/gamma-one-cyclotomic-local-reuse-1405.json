@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-28T20:30:42.096685+00:00",
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 finite Hecke-character realization -> genuine cyclotomic/Tate Galois action with actual Frobenius and inertia.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationFrobeniusRoots.lean",
+      "sha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceValuationCyclotomicFrobenius.lean",
+      "sha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalCyclotomicAction.lean",
+      "sha256": "6FA18DC07E9C2571108BBB70A2F38A1DD334918B5DA7ADEE72248CF7856AAD76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\LocalResidueRootSeparation.lean",
+      "sha256": "8B24F3023EAA80CA7143BEFC91AB1DECA65532B26CF9EBF74C6C84EA3B370622"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueArithmetic.lean",
+      "sha256": "ED0DCAF45E8904EABA2EA61DF131AA63999E433AE775BFE4B82C2D2C0D44EE34"
+    }
+  ],
+  "selected": "Native valuation_frobenius_root already applies to every residue-invertible root order at the exact arbitrary source valuation. Apply the primitive-root exponent characterization directly; set q=1 for inertia. No new valuation-root integrality, root separation, local field, or cyclotomic foundation is needed.",
+  "discharge": "Derive the actual finite cyclotomic exponent at original residue Frobenius and its triviality on original inertia. These discharge the cyclotomic-value hypothesis in the genuine Galois/Frobenius comparison and its inertia consumer.",
+  "remaining": "Coordinate-degree and genus preservation, combined-diamond and finite Hecke-character realization, original arithmetic/unramified descent, all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false
+}

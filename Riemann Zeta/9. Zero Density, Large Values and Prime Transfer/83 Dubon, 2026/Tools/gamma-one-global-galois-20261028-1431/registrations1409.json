@@ -1,0 +1,20 @@
+[
+  "Dubon2026.representationFromCoordinates_evaluation",
+  "Dubon2026.representationCoordinateEvaluation_fromCoordinates",
+  "Dubon2026.representationCoordinateEvaluation_natural",
+  "Dubon2026.representationPolynomialEvaluation_one",
+  "Dubon2026.representationPolynomialEvaluation_mul",
+  "Dubon2026.representationCoordinateIdeal_le_ker",
+  "Dubon2026.representationCoordinateEvaluation_entry",
+  "Dubon2026.universalMatrixRepresentation_evaluation",
+  "Dubon2026.representationCoordinateOneRelation_zero",
+  "Dubon2026.representationCoordinateMulRelation_zero",
+  "Dubon2026.representationCoordinateMatrix_one",
+  "Dubon2026.representationCoordinateMatrix_mul",
+  "Dubon2026.universalMatrixRepresentation_entry",
+  "Dubon2026.representationCoordinateMatrix_isUnit",
+  "Dubon2026.SemanticRegression.actual_coordinate_representation_representationCoordinateMatrix_mul_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_representation_universalMatrixRepresentation_entry_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_representation_universalMatrixRepresentation_evaluation_source",
+  "Dubon2026.SemanticRegression.actual_coordinate_representation_representationCoordinateEvaluation_fromCoordinates_source"
+]

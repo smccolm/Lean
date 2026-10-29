@@ -1,0 +1,1899 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-picard-reduction-promotion-route-1358.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/gamma-one-picard-reduction-promotion-route-1358.json",
+      "sha256": "CA772E485B1F14D90259A96691CA9A40CE589D8197FDE3E61AAA588291076583"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum.lean.txt",
+      "sha256": "344296E76F73258B9C45491075ABAAEE291F3F9311AC29F0665069CE775F8137"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum1328a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum1328a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum1328a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum1328a.lean.txt",
+      "sha256": "B65750EFB50FFA2AEE9FB2F93AC8C8698F220EA915CBF13B1FD76986DB026C3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparatingGenusMaximum1328a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceCurveSeparatingGenusMaximum1328a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss.lean.txt",
+      "sha256": "BCEB70E18B181990603F26D7F8C4425699B6335F6AD71C67CB1521A1D183A67C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss1351a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss1351a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss1351a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss1351a.lean.txt",
+      "sha256": "0E69F3B788B47759C87B13F2A2DF5311C4EFA60BE16CEC600E16C824595FF14F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondGauss1351a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneDiamondGauss1351a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormAudit1.lean.txt",
+      "sha256": "8D4BA6FE71C167962AF0A340B687B4DB9BC0D804D59EA6C073095732DF2607F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormAudit1.log",
+      "sha256": "2BB3855A8A0EBCC8892D845F80247B0D4DC55CD9C3641C22AA593BC988B575F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormDependencyAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormDependencyAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormDependencyAudit1.lean.txt",
+      "sha256": "DA77763D90A49C4CB40E0050B844378F976E9F8264BB08AA0336BBEB3A0DA9E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormDependencyAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormDependencyAudit1.log",
+      "sha256": "582D8B2FE472AAC369B1A5E1D35BFA3C58CF1880991199ECAE61519CD8725DCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormScratchOwnership1357.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormScratchOwnership1357.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormScratchOwnership1357.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormScratchOwnership1357.lean.txt",
+      "sha256": "6FCF1BDD896B05FBF4EF31F9CB72E12B850498B82A1323C50857C169E008934C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGaussNormScratchOwnership1357.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGaussNormScratchOwnership1357.log",
+      "sha256": "439F14FC28F9523613A1C8D1CF3B217493CD8FCC95A1CADF8051284D02D1D24D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization.lean.txt",
+      "sha256": "D1373551585924BD6D5A652D2C270760C8266D007B4D9E26E6E6B90EBEA199C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331a.lean.txt",
+      "sha256": "52027C23AC3F5A990A09C7325B230685DB1CBA83D6974729D7A1685DFEF6F994"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331a.log",
+      "sha256": "DBE5F15C14D72A3931F53FE2CD28FE54E4743D1762822362F5C5E3FCC9B936F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331b.lean.txt",
+      "sha256": "2AA32B3A813F7F92663527E0D85DBC0EADFD58013DF5587903CA944A4BC0D682"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331b.log",
+      "sha256": "A46E20479DD28DC63420035080E24DE71347F6B3CEB7F63774CC90B7D1579F35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331c.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331c.lean.txt",
+      "sha256": "07AE1076C37059DF02D7CE53256492F04654AB19350A30124A98315C530C3B34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331c.log",
+      "sha256": "49F43F6E09EEC342F8F84327D51085F08538A62D5644314E0E57E1BCBFC60D68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331d.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331d.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331d.lean.txt",
+      "sha256": "18264D710F3DA02CF8379CC8BDE22DD3240F582658BEC1B252E42C13015DAB63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusSpecialization1331d.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneGenusSpecialization1331d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct.lean.txt",
+      "sha256": "61317CE531486552D0D0AD2412A12A25A583C23815BEB25F8EDD63A05D5118E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353a.lean.txt",
+      "sha256": "9C6C35A854E020D1B863ABC15650FCFB906964B3438708B3BD900C0FE94B5734"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353a.log",
+      "sha256": "0F8720F728BB8CF5B54DF680B0611C65EBF72A6AF81A613DE94B5FB9F37947A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353b.lean.txt",
+      "sha256": "61317CE531486552D0D0AD2412A12A25A583C23815BEB25F8EDD63A05D5118E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFractionProduct1353b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeFractionProduct1353b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm.lean.txt",
+      "sha256": "112C1BFFD400E8FD1A8331F478747C01157D18F0073FCB2FFBABD588AA9E144A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354a.lean.txt",
+      "sha256": "3C68BCAC1AD211A9F3179EDC5DC40CEC930EA9D761CB25AEC94B64DBDF4226E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354a.log",
+      "sha256": "C13C21E7E1C4A8CE592291072ACA4B603A073303948180F24383B174CF78AA7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354b.lean.txt",
+      "sha256": "296A605E773F017738B71DF72931CD6636E5EDA673635D16638A4CAF723A2949"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354b.log",
+      "sha256": "0276D86FEB3326F1F365617A6880AF3A09D46DBF20ADC9FBA4FAF826CE6CAB8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354c.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354c.lean.txt",
+      "sha256": "C747AD5A38CADEB58318E536211A637206B92456E591544129079A7B0BD47F39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussNorm1354c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussNorm1354c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection.lean.txt",
+      "sha256": "0E035753FFF8FF8C0C07C45D858B3043A5FA69327B25B16824B11810B3549FC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352a.lean.txt",
+      "sha256": "ABFD67E8A4A2BA0419920D7179BFC1983039339CBE52D40EF2814C8F73A04FEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352a.log",
+      "sha256": "D325B9683D7D6A466D553E45BB2598AB2BFEA26592BB893915B7F8A84019D25F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352b.lean.txt",
+      "sha256": "0D4C550B624DA13E33FB256FB0A20731FD88045A3452C0434CB5F53E18D117D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352b.log",
+      "sha256": "BCFDF34C7DFD7F7B1DBA675157D7F4CAB5E858FE6D5F87F23C717906CA4FE06A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352c.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352c.lean.txt",
+      "sha256": "CEBE028FDE27B918CC001AB0BFE29ACA522832044148FEAA2301590771C50AC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352c.log",
+      "sha256": "13B82C5E52F416EB05AE4851625DD451731FE8776744C38E58FB041F4E630003"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352d.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352d.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352d.lean.txt",
+      "sha256": "0BC51104209530B0C920105A4F2FB867F5251A32AA91F3790043006B315B8947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352d.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352d.log",
+      "sha256": "021BA5A09ECA2D3B0F03F5CD6BC2D2F6D4776B5EC0865401497B9A97B5C10BE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352e.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352e.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352e.lean.txt",
+      "sha256": "2B6DDFB92F2B51505E94925856EA06EDE264DE3D650D8AC8AB65F0C0563705EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352e.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352e.log",
+      "sha256": "670E55BB5254888D5361079025B3DAF1B245C1855D52687A7119F4D5FAC1B272"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352f.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352f.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352f.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352f.lean.txt",
+      "sha256": "0692BF43F6A1704EA6A7B95EF64CCB3DA879BC6A33EC46B50FBAFCD30D57EBF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGaussReflection1352f.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneHeckeGaussReflection1352f.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337a.lean.txt",
+      "sha256": "AE4FDCE040B9BB0F5AEF50B0AC0E1B3BFCB690EE6229AD5E4BBF8363F39508BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337a.log",
+      "sha256": "AB4285F21B0A62BDD02BAA2EE7C70D3A2A8230343BBAB834103B3C2E33DCBAC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337b.lean.txt",
+      "sha256": "D05617105B74D9420165435E359DEE54136F7F180F42CB0C01B2DA7C2D291B69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337b.log",
+      "sha256": "F95D4C71A348EC6B3C0F2345917891CC32BC01A4D8270104C0983FB971E541A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337c.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337c.lean.txt",
+      "sha256": "8C9F4A8A40D9E08656DFB930DEA84B90D35573B1D84EFC2F39DDAF0AB92723AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartDimension1337c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartDimension1337c.log",
+      "sha256": "92593D98B2D4428E4EE975D97268A7D720D7776D0D35AAB5CAE97436A1FABC54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartSpaces1339a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartSpaces1339a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartSpaces1339a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartSpaces1339a.lean.txt",
+      "sha256": "00DF9662AF35BDA6305B66A651922314EBD23E8DA3A2FC4F20F86E514C430FB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJointChartSpaces1339a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneJointChartSpaces1339a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerAudit1.lean.txt",
+      "sha256": "7F7D454C39BA3542A87BF3937496795ED8C56082619C19F8E6E2E260AFFDF5D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerAudit1.log",
+      "sha256": "09DCAC0692A7F0735E2117D8491E3C25573A7ECAA56708BD308E4F164FE7BA0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree.lean.txt",
+      "sha256": "24EF96D77D8B74D6295939347BBD7DB5034CF9B2A73E0F04A03BB21D1F50F0DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree1335a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree1335a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree1335a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree1335a.lean.txt",
+      "sha256": "D44E0DC2FFAB407ECB1357252361ABA9EAD6BF756D38653E1A968E784EC9AE2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree1335a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDegree1335a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDependencyAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDependencyAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDependencyAudit1.lean.txt",
+      "sha256": "0C9E6E1BD21C0762F8F914057466C504632841D8CEABDA1540B012D3A28E227E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDependencyAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerDependencyAudit1.log",
+      "sha256": "A14088539ADB4D235C3589F143F7DA0E61721631FE703E5A2DF478186F79AD12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus.lean.txt",
+      "sha256": "980C87276AAFD0D75D10FA906BAE442DF221312D2548237DA2B47FE6F9EAA950"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus1336a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus1336a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus1336a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus1336a.lean.txt",
+      "sha256": "8A6F665EC120797DAB61302F6A1A609514A927F1FCE59103EB0DE069C3B92705"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus1336a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerGenus1336a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting.lean.txt",
+      "sha256": "E83C953E46B7A3DC7AF11E3452D41751B76DBE625526C665DF4B8E9F97DD4394"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344a.lean.txt",
+      "sha256": "058EB8795C72B33C610F23EE159AA907C99D0CF02EC4735CE0EA0E8AEB927F29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344a.log",
+      "sha256": "34039BC9D3DB3AC4FE64ECCC8D6ED5ADC838F92A1F6473BDB5A57B27989EADB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344b.lean.txt",
+      "sha256": "711A9E85BF390BD35AC2F8E3B1EE93A90A0E95A1532C70132FA42FC80BE05812"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344b.log",
+      "sha256": "C4618FF254D3A4A5BB96104EAD65D4D53B6C3BE8D896559C4C18CF60A49DA59A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344c.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344c.lean.txt",
+      "sha256": "3FFA8591BBB4AEAA95B8F31DEC716C68AB2091CEF9F13BAA7B996E2EBEE17B39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344c.log",
+      "sha256": "39A58D23D7BDFF4762C4B6189C8735079ECF9101383DDF1322E850C9CA06363D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344d.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344d.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344d.lean.txt",
+      "sha256": "F23920E48C289D969F6F4D7A4A0516F70784BD0A3C23138D43B59A3B0DC576E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1344d.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1344d.log",
+      "sha256": "3A4B87A467E7A06F7556C21F5FAE3842C509BBD8A65A364BA676A4FD2648A75F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347a.lean.txt",
+      "sha256": "8E7158B7C277273CCB37E84D7F48325A17DF49CB2AFC25A7BAADBD08EE94EB0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347a.log",
+      "sha256": "58D5E37FEEBEBF893C4ECEE42233D32147CD0FC813C8898C39C7787AF4863052"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347b.lean.txt",
+      "sha256": "5C45B02733E353C2E7A910D4E8224B4254D6766DA5484606B71EAE51667379D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting1347b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerPowerLifting1347b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus.lean.txt",
+      "sha256": "D77AB76F14865E589050E6EC4799B3278DB75232AAFAB7EDC97ECB8629368DED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus1344e.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus1344e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus1344e.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus1344e.lean.txt",
+      "sha256": "0FB7B476D4B09C6618A5FD1E7A9CB238EED3436E7817CB0D25CBFADA0639988E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus1344e.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerResidueGenus1344e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerScratchOwnership1349.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerScratchOwnership1349.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerScratchOwnership1349.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerScratchOwnership1349.lean.txt",
+      "sha256": "79EAE24D46B64E7677A4509A3A40CC8B4245BBCD3C7FAB90760863F4457FEF50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerScratchOwnership1349.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneKummerScratchOwnership1349.log",
+      "sha256": "0E5D333FCB8308CD5607025735425C3DFAE207E80BB8D78E76B0394EA8030889"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization.lean.txt",
+      "sha256": "60DA51745E7254DEC52F894CCE1AFF7AF4C570CDCA0C0A14FC44BEA309FA4AD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332a.lean.txt",
+      "sha256": "F52C090DCCBA356BA378C4FFE8F4903D4F31808EBDFD7423F371B5BFDD5A102B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332a.log",
+      "sha256": "CB67804FADF1FC3F1D676D8C8ED6D00C5216430A9B1FA285C481D4842B8A44E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332b.lean.txt",
+      "sha256": "BBF19D9F160CC0B0B454FDEFB19BF6F0ADDB85B2CB3B853DB522797BF0071B63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalSpecialization1332b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneOriginalSpecialization1332b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel.lean.txt",
+      "sha256": "A9F671B21E7A90020B8B317DD008F2DCE96986A8C3BF696FC45669D22F20CB3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345a.lean.txt",
+      "sha256": "28241B0E3C19986B50F8E5D795B70748AF7B17AEADA854560C70AF327EBC5BFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345a.log",
+      "sha256": "6F10DC0DDB9F0603C004E1312AC54B055B3D873E120B6707C089432CEE77616C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345b.lean.txt",
+      "sha256": "B7CAF787804157F6782569EC65ED82B53F49D9256679C752C473CC8D45B0AE1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel1345b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardPrimeKernel1345b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion.lean.txt",
+      "sha256": "D3FB872E45B5926DDF239AA7F0BDD40AD198C3CF777A8BD3D94B900A24C0162E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion1346a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion1346a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion1346a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion1346a.lean.txt",
+      "sha256": "94620DC8ED3C4E30C3B1F2CD8D159F74E8D4E01CAA004A70CD91D52E215F964D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion1346a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOnePicardTorsion1346a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry.lean.txt",
+      "sha256": "EA4CF62ED725D3520F0A81E4AF4B90DF1A58DA5C39A2EE038AB0F822A9A60C59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a-run2.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a-run2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a-run2.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a-run2.log",
+      "sha256": "EFC181156B39BD29E7BBBDE07279112CF52BABDC27E03B368344FF9F062990E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a-run3.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a-run3.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a-run3.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a-run3.log",
+      "sha256": "04730B111CCFC04A5A069830FA0C9CD2C4E8CA6239EF4317CF9640B4CC4BD5CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a.lean.txt",
+      "sha256": "605EADD67AF683FE6AB3287E8DFD430EDE22F72765686FBEACF195FDD55F0639"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327a.log",
+      "sha256": "00075AC73EB471737BBFD97A0AC2CF74BD0DE3F1D0F8D301B8C4E42CE94B0BCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327b.lean.txt",
+      "sha256": "325019C8B5F02C3B0422A2D3EDCC63FDDF03EA987E6F653B873AFE3CFAD30FA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueGeometry1327b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneResidueGeometry1327b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationAudit1.lean.txt",
+      "sha256": "A68BEB1DA553D333648C19984927D0A76A5F0EEA555164D693D85B7B46D29488"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationAudit1.log",
+      "sha256": "4E4DF5325508BEF763DF511E5E675319C63D65E8742AEB7784A2EFB3B7406A03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationDependencyAudit1.lean.txt",
+      "sha256": "4CE95221FC0C693AC25933D6854B20A10AD11BF8E2E5320BC4076F5945053031"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationDependencyAudit1.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationDependencyAudit1.log",
+      "sha256": "5B269B7601D21F4F63FD4F6FEAD8F617C540B52DE4FA266D7A6A05959E23010E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationScratchOwnership1334.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationScratchOwnership1334.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationScratchOwnership1334.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationScratchOwnership1334.lean.txt",
+      "sha256": "7C674F997C35F3D764D681052DD00AE652D9EB85F46E00AD621EF6DE6C8D4B1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSpecializationScratchOwnership1334.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceGammaOneSpecializationScratchOwnership1334.log",
+      "sha256": "4C3D3D930DF12293E453C5383BAE93FF957C666B9A70F1B7CDD87A37AB061335"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension.lean.txt",
+      "sha256": "13649EF5AFB6B6C9D274BC5D4D760E54CFB2BAEC41DB8402AF1E288D71CF17A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension1341a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension1341a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension1341a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension1341a.lean.txt",
+      "sha256": "52F140D37B68040E622351F435132F1F9D56E981E914C2F5B814708E08D35EDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension1341a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableChartDimension1341a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants.lean.txt",
+      "sha256": "E2D66AAC28E57FEF78700FDFDCF235B82C5D3C8564AA5BF4906442B3A63C83D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340a.lean.txt",
+      "sha256": "8C4E75BC8601234CC50ABDFB8A2EE89F2354254CBD5C52F064710894C73927F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340a.log",
+      "sha256": "CA16022B7E10D0C95859E0234503487D5D783B4EB4E88CF9E764035644C26D9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340b.lean.txt",
+      "sha256": "84E03B955384EDE054E8FE9FDAF9F960DBCC424D88B4AC2CD989E7D31434E3CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants1340b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableConstants1340b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap.lean.txt",
+      "sha256": "7275BDCE41E42D98AEA2D1D741D418F7F34C7ACA2AE3169E78932494FA24C331"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap1338a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap1338a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap1338a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap1338a.lean.txt",
+      "sha256": "B444CAFA1AEC2DFFBEA0FE804BC83A2DCC7C55AB76C1518B985E3AC92D320B6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap1338a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableFiniteOverlap1338a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus.lean.txt",
+      "sha256": "4AE90A37E5587ED00709B86AAD978586ED1C1C94A64526F13EC48ABF6B8BCB8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus1343a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus1343a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus1343a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus1343a.lean.txt",
+      "sha256": "9BE3F76B7AF628B7FA89C769F4D806DD0F5693825E3DB2D4970BA86722EB8793"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus1343a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparableGenus1343a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension-1348.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension-1348.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension-1348.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension-1348.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension.lean.txt",
+      "sha256": "62E031316F038437B04368437AB75E85A31F6E77DD34521339A8801373C1B325"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342a.lean.txt",
+      "sha256": "4439D4739D51B718F1F5C4A3062AB09770E396A6A3667E77C329E0FAD7BB9C0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342a.log",
+      "sha256": "30D309C10ABAD2EB866B84A5975B9C6AAC877FFA9E9D77F1D7008AFC2AA4155A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342b.lean.txt",
+      "sha256": "B66D81711A52E0CD22FB70663A4EC4DBCEFD1C88388E4B5C9C1655E8CB30F50D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension1342b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceJointSeparablePoleDimension1342b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism.lean.txt",
+      "sha256": "013EEC631020010EC9B1E7E55827DE212743BBBE7C8AA21763CFB63590C53BEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350a.lean.txt",
+      "sha256": "27E54A73B312635AB0EADB3EBEF0D8CDF096DF4B1F65DA9F4A303DFF45B85B07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350a.log",
+      "sha256": "150212772CC627C427DE5F0B21EFC78B7D37EF465CAFB48786ECED955E542E08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350b.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350b.lean.txt",
+      "sha256": "013EEC631020010EC9B1E7E55827DE212743BBBE7C8AA21763CFB63590C53BEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCoordinateAutomorphism1350b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionCoordinateAutomorphism1350b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts.lean.txt",
+      "sha256": "8477E05815169F0231AA865C43EC12EF86E8B6421E4D25672D829C699D9C5E96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330a.lean.txt",
+      "sha256": "56330819FD50B57A4277DA3B651E11F1A51556E74FE6E95D0EAFBAB12F046E45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330a.log",
+      "sha256": "68066CDC2B13495309E44B8329FE64309B9AF7773242DF8773CC690D7D9932BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330b.lean.txt",
+      "sha256": "EFD182A9004B29506646B11EB2B18045FB2C25B51E9A3DDF8ADEA496364F26E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330b.log",
+      "sha256": "832352A234E0CB99AE9AABE1E67778FDDD2A6ACD69817F60E5D921F8FF182C9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330c.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330c.lean.txt",
+      "sha256": "C030168293086550916AA18C4271B50B4E82A54EEFA9677B762B61C62F679D37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusIntegralCharts1330c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusIntegralCharts1330c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting-1333.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting-1333.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting-1333.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting-1333.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting.lean.txt",
+      "sha256": "15A41D3747A4F859C4105BBCDAB6F328F3A839A03690B125CBF337C608A1D974"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329a.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329a.lean.txt",
+      "sha256": "3E7997F7A0A0FEE1F83011C6B302D77B979666B2AA023C66BF6894D5427B1F7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329a.log",
+      "sha256": "F64BC22D09522CEB752FD9261553D6E99CFB7C44881858270FEFC9A72BB55E11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329b.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329b.lean.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329b.lean.txt",
+      "sha256": "E30269CB9C79ACA54B38FD86E9347A6D9053A6CFB8830A1F4BE2F3BCF2E89ED0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329b.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329b.log",
+      "sha256": "E16A5A452C95126126B9AD89557EAA0D3F150308345AF5478D8DC8E2DD807621"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329c.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329c.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329c.lean.txt",
+      "sha256": "25EEDE5413835B57B94AFC74D4A49E36A2CAB4077C66923BFFC0723D867AAD84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionGenusPoleLifting1329c.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionGenusPoleLifting1329c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection-1356.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection-1356.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection-1356.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection-1356.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection.lean.txt",
+      "sha256": "CF1B3AC501EF30EC26E4B399725C199099EEC32757BA6DF6BAC61908842BB968"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection1355a.exit",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection1355a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection1355a.lean",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection1355a.lean.txt",
+      "sha256": "3BB27C9D720765ED15B0B7FFE050331E365823BC45FE8F371FB946672D4552FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceReductionMapReflection1355a.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/SourceReductionMapReflection1355a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_gauss_norm_1357.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/audit_gamma_one_gauss_norm_1357.ps1",
+      "sha256": "CE6C8BD55EA581E6B84013E8B25CA6D865B71245A3C3A962CCB82D67CF5C4E55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_kummer_1349.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/audit_gamma_one_kummer_1349.ps1",
+      "sha256": "35B2DE4337683D5D686DB9415C51480308F3CD527CFDFE90290CF971812F705F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_gamma_one_specialization_1334.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/audit_gamma_one_specialization_1334.ps1",
+      "sha256": "458B72BFC1A4D28D5B23752A36B4ABA4AC23F00BF4FC962F4051DEA1482BC3DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_gauss_norm_1354.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_gauss_norm_1354.ps1",
+      "sha256": "2D5689F3746AB8BDCDDC4CFC4E08C9182DCD08BBA9D055F86D3BFCD2C06D2144"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_gauss_norm_1354b.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_gauss_norm_1354b.ps1",
+      "sha256": "E291A4A33C2F8BBB5AB5D0C2AD98D57021F7ADDE9F4709A33108E083F68AA079"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_gauss_norm_1354c.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_gauss_norm_1354c.ps1",
+      "sha256": "237CD8F963BC351F4EEF4B20F5D2C603E479FCCC8E3ACAF5601DD17A0860D4A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_gauss_norm_1354d.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_gauss_norm_1354d.ps1",
+      "sha256": "128CD01740835CA326B976512E5DF3F1B4254648AA3F3796968A2A99BFC0AAAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_gauss_norm_1356.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_gauss_norm_1356.ps1",
+      "sha256": "D565437DCE345461D86B08FE10E18F88330B83E476A375B08E012BEB7AAA9A99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_kummer_1348.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_kummer_1348.ps1",
+      "sha256": "C14339A4A65E96897F51B926E135B50E84AF4AB6A5AD3FE8450BEE5245AB4108"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_kummer_consumers_1347.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_kummer_consumers_1347.ps1",
+      "sha256": "5E6EA22632DAFAFFD9FF7E867F729E4BE6B07B711FB756CDB99226DAFBD31D5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_kummer_consumers_1347b.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_kummer_consumers_1347b.ps1",
+      "sha256": "8DD09EC47DA52228F83D29CCEA04D77D1559FA2DD3C1CFD62B0B146FBAA21EA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_picard_consumers_1345b.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_picard_consumers_1345b.ps1",
+      "sha256": "9A6FB0D3112CE9108599B92341E6AB517F4F31E6A8D888DAA32F6D0FEE38E7C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_specialization_1333.ps1",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/build_gamma_one_specialization_1333.ps1",
+      "sha256": "763AF6659EBD9A67CB4BF949F617946B364C5AE950EF6D8FC9D815D2AB11F8C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1330a-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1330a-focus.log",
+      "sha256": "56263F4B92EC870F7762E9FBEF232442C561B8DDC7816DD1A5FF66EF1580BC1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1330b-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1330b-focus.log",
+      "sha256": "7A0DE3D9EE9C343A8AE67363C031D0AEC662CE64156A59E12E50A93CF5AFFD38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1330c-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1330c-focus.log",
+      "sha256": "9ED2F88F5B579F7DA240F4D4790E51667610101992B96D0F96161FE585B2158C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1330d-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1330d-focus.log",
+      "sha256": "392C7AA00879452D993DDB1395C799D9D857D0FF1802F1CF462510D6CCEA89EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1330e-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1330e-focus.log",
+      "sha256": "5C8D2B72B34473E34A83424F517F68CC070B6E950A463EF309B642CDEDC3F423"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1340a-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1340a-focus.log",
+      "sha256": "A6DF51445709C11CF8983F2E7E90C1A19BE46378E7E2F2DF5C83D16013B368F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1340b-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1340b-focus.log",
+      "sha256": "366D42528F038F3FDC01161B89400DBF0690C87AB79E57DF975D4F9ED18EAC82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1340c-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1340c-focus.log",
+      "sha256": "921C03A9252B6ACD6CF1376D0549B36562E7796279C00B927D371D63E523FE72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\classification1340d-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/classification1340d-focus.log",
+      "sha256": "C8AA31BC4B7349FB5718CC85E7F84E45703BA1EF75316DAC7033885242FE9CBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1330-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1330-focus.log",
+      "sha256": "DED219D640F71B5872E75AC546793661CFAD4670FE18899F61447C957F9C1AD6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1330.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1330.txt",
+      "sha256": "077C04F0B2A70C066DD5939A4D7E180D0B38C8E0EA1F5E88C9BBAAC3C08BDD20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1338.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1338.txt",
+      "sha256": "D009FF1B649BF10769C97EF44C72E615AB27BE02BD9C3B8C3711E3AE10838287"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1340-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1340-focus.log",
+      "sha256": "04209445BDBEFC9EBD4857260D6B06C87E6DCB675261FD6EE3360073295C6AA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1340.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1340.txt",
+      "sha256": "BC96D12A7078C41AA7A717A8C1042AEB6342929F48B742AF7B818CCB61839EBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1348.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1348.txt",
+      "sha256": "6BBF759B3B957CBF64AE97D46F587B4E4B14663C4E49C5D5991521FC7F53E669"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1349-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1349-focus.log",
+      "sha256": "772909B8E23A488D8C793B4492B69C74DBFA84128C47E99EEC8A60DA6C59CAC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1349.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/consumers1349.txt",
+      "sha256": "2374D2AF227A539C1FC665CD7E9B948B110858CCDD5B4218E2701A7EF83E3A4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1330.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/docs1330.py",
+      "sha256": "4F6AA88BD0D643592138C6C8CC95C6F1F4A0B2F84EA3E61E0581CE80CE9BFBE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1340.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/docs1340.py",
+      "sha256": "ABEC9BC24601F6ACB9DC0098E4FEA3579A11217A416916BC0E3ED0B5F10DB832"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1349.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/docs1349.py",
+      "sha256": "A9235D2A407BC6C73AEF5368C93858C2954A880F9C16F52172429374BEFC63F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1330-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/foundation1330-console.log",
+      "sha256": "2BDF612E09BB44DF5BBE5511839DEC7106E5C388D935DC1CC8C112FBFA5A0FAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1340-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/foundation1340-console.log",
+      "sha256": "3636C944970246808294B12AF08F9FFDCF7E2EC8142C5BAED3F3897FC7A4475D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1340b-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/foundation1340b-console.log",
+      "sha256": "EABCF02B81D6BB55E2CAEA80C9587F7AE635677A8F55BC753936BB00F201A00D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation1349-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/foundation1349-console.log",
+      "sha256": "3B017789E5299A4DF96F0DE4A68F5C3F3C07DF5BE09F84EE92A5798F174F39BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-gauss-norm-versions-1356.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/gamma-one-gauss-norm-versions-1356.json",
+      "sha256": "28940A4F22C2F4C0F9E13C1013CA79B66DDCB1614BBC6BC2EC1D1AC5380BA3A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-kummer-versions-1348.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/gamma-one-kummer-versions-1348.json",
+      "sha256": "A9048FADA9C81CFF2C5EEA9A4690D93FACA6620CA6F89FBDFC34221AD79CF041"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-route-review-1326.md",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/gamma-one-route-review-1326.md.txt",
+      "sha256": "F11FE86E053CE5CB3E30A13FF60CAC35AD1F5605A91224031F6E1FCFCA2955E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-specialization-versions-1333.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/gamma-one-specialization-versions-1333.json",
+      "sha256": "8F1039CBC853BA6C2A946224CEB09DA3070D4BC74E8A6237549B34D762402FE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\induced1349a-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/induced1349a-focus.log",
+      "sha256": "B0B4B8FB0460810FBACAE023266F0C735FA0422B465F70F02D7D5D5C975CFE1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\induced1349b-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/induced1349b-focus.log",
+      "sha256": "21AA17DB100483E7523771CB26008536F05D9626BB6B6512E5EB9EACA6C6FCE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\induced1349c-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/induced1349c-focus.log",
+      "sha256": "E6E3EF831996886D2D3C0FC7DDBA76C058E016416093FEEFA212AA9564ED52EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\induced1349d-focus.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/induced1349d-focus.log",
+      "sha256": "D51192C7F0BEF1D8B5E0C253C81726C6385755BFB4F2FACAFB1F76EACF2F59E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1330.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/math1330.txt",
+      "sha256": "33273871BA1826BB7E091174D42B9DED50AEC5939DF28CB41532D68A960FFA9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1338.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/math1338.txt",
+      "sha256": "B03427092AFDABAAFF4BFDD2DFD6ADC88B2D6DCBA28B903DDDB546458B7A9C67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1340.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/math1340.txt",
+      "sha256": "02425111125EBC9DABCAF3FD490EF5025298D76BD89806BDABD3445AB0A8A7CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1348.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/math1348.txt",
+      "sha256": "CA2E08C75B8F20D646315D677FEDB8111F1F88E455F1D7CE1B14A7D3EE5544F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1349.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/math1349.txt",
+      "sha256": "0F6560A079619326501BA97337C079B24EEFAA2BBD54E88F19F6E9BC71DB0B37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1330.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1330.json",
+      "sha256": "7186CDE89291CAD4406F80DB43F3B763224C61DF654A82C74D28767D2F4B0D08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1338-draft.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1338-draft.json",
+      "sha256": "2F1A4958679E239D5B250AF05EAFF321F0F6962C0962A409449EF877DE046873"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1340-draft.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1340-draft.json",
+      "sha256": "FD65823E342B3A1A746BA26F6EC8BE82058A0B490B10935EFB1DADF11552F90B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1340.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1340.json",
+      "sha256": "C08D0C9FB1E890ADC691830AEDF82AB23D9673DD785450236274212EF3993949"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1348-draft.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1348-draft.json",
+      "sha256": "324C0F50DA7D8F89168E33C851B36DD23B82C056DC8C920B45C0900EC9A46E14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1349-draft.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1349-draft.json",
+      "sha256": "A31FB41271453D261AE9FE55C58354E361410B9F3569C8210C843EA7FE120A7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1349.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/modules1349.json",
+      "sha256": "D086C9298B0FE1A78BBA23785C14222D1BEE87EED984523A5ACDDF877DBE5E85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1330-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/paper1330-console.log",
+      "sha256": "EA5146D8197872E993B3156A41512DA7CABA8E8B895D7679BA4D61DBA4E6FF39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1340-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/paper1340-console.log",
+      "sha256": "48E64E7B9DCB08A1E55812C80D2ACBFA0AFA327EC31A9FE415863EC4139B452F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper1349-console.log",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/paper1349-console.log",
+      "sha256": "44820B86770E22DB272FE36FFF5F482F4602D24B36BFA2EEA9759F6E5D68563F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_coordinate_aut_retry_1350b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_coordinate_aut_retry_1350b.py",
+      "sha256": "AE352831D2767AEF44B5E225AF8EBC80C9BA1B879B577FD23455CBBF1E490F55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fraction_product_retry_1353b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_fraction_product_retry_1353b.py",
+      "sha256": "E99481E67C72C16500E3F3809E8888A9C4AC0FA30A1413CE51C02FCC61487F65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_gauss_norm_1356.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_gauss_norm_1356.py",
+      "sha256": "663C9A2D519540FD04709EBD03D0ADA4889D863EE12748D530742C14CD03C66D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_gauss_norm_audit_1357.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_gauss_norm_audit_1357.py",
+      "sha256": "539D3C6CC81EB548494DDA0F4E800080DE9BCB7799FAF1CE08ED0274F19AF396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_kummer_1348.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_kummer_1348.py",
+      "sha256": "0CA057FD0AC1D97F061C7F9B477F60788E4B75C093998BB506A9C26AF1823373"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_kummer_audit_1349.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_kummer_audit_1349.py",
+      "sha256": "3AA3A07BAFF76A99ABBA0CA418D5B912FBCAC9D5D5AE117574E8650613EE3889"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_specialization_1333.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_specialization_1333.py",
+      "sha256": "EA67B9EFA90ABA01EF312777CFA5127C06DE8E321352344D104AB65F4C0E94E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_specialization_audit_1334.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gamma_one_specialization_audit_1334.py",
+      "sha256": "1D26751405D57A34B6F5583DFFAE78E300B922F6A1083DDB8E68FDAFB491F2D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_norm_retry_1354b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_norm_retry_1354b.py",
+      "sha256": "5660F7638061BEBC49A0D11868A87624D5BDB42B8C58C26A15DE62998FB9DC0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_norm_retry_1354c.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_norm_retry_1354c.py",
+      "sha256": "7284D91C6348FDEFFA0CAA9D54F2E713B488FDBCEF1F4012E5FFFF601E16054B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_reflection_retry_1352b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_reflection_retry_1352b.py",
+      "sha256": "53230906386BCBB3579D3AC533563233704D4EAB081D980BC3553CC4581A0260"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_reflection_retry_1352c.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_reflection_retry_1352c.py",
+      "sha256": "7D933C57C25FA568324CA95E2CFB5C1F7AF45866895003A340C762FD8DEA2848"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_reflection_retry_1352d.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_reflection_retry_1352d.py",
+      "sha256": "09A6B0DAB984BF0F37A6E365A6C3D90693C7325757653F67D399BCC7F2EDE830"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_reflection_retry_1352e.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_reflection_retry_1352e.py",
+      "sha256": "AB94772EBBF546EED8B5316CA69D11E534EFA0FF584B89FC674F4A9AADB76B93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gauss_reflection_retry_1352f.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_gauss_reflection_retry_1352f.py",
+      "sha256": "C0D07B4F8A05CAF88F1770A4D3887DAE375106CD0171B33B13099E825F48373D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_joint_retry_1341.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_joint_retry_1341.py",
+      "sha256": "0C5421F71D47566566A07912427ECC4CC2B8A78C6CC8DDC71F78B155F97899F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_kummer_split_1344e.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_kummer_split_1344e.py",
+      "sha256": "E7D81B2F9CFF5118F6E58B2B499E16B9EA026CFC151B7EB78518537F8BA30AD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_pole_retry_1342b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_pole_retry_1342b.py",
+      "sha256": "75DE2F261566CC9567D3D68B529D1C75601BBCCE46E06EF55482C66FCADB874A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_power_retry_1344b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_power_retry_1344b.py",
+      "sha256": "30AFDEF238B1645CDFB0E502209A4B12EC52BE475D001A27A66F6E1716ED4468"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_power_retry_1344c.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_power_retry_1344c.py",
+      "sha256": "2A6F4924EC73862FD42B6CEDBDB8D82854A7CC69643A92920E0BA41B41C10A56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_power_retry_1344d.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_power_retry_1344d.py",
+      "sha256": "B09213758CBD18AD1B1F3A627D32B22DB10112568C5DE6E3B495263E1E91B408"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_power_retry_1347b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_power_retry_1347b.py",
+      "sha256": "8BE6A822CF2D8EF9E003EBE5203A52B67015EF2CA2A00AD36A480D76113F218C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_prime_kernel_retry_1345b.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/prepare_prime_kernel_retry_1345b.py",
+      "sha256": "CA4A1715E759912C444FF391FA2E85326AE9CEDE3FB4CBDF6B19E76D1282780A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1330.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record1330.py",
+      "sha256": "4061424CDA78268D7C31CD4A2AD51C4973E0FE1D821E06FF417947851CDA0606"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1340.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record1340.py",
+      "sha256": "CA343E99FBF61193228020C62D6AB70C5BFA48AA5991E0925C7546924D1D15E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1349.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record1349.py",
+      "sha256": "70F753CB1CDC9DF087901B36D43FE0B71695596751BAEBC4AC2488E1A4C9BF95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_gauss_norm_1357.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record_gamma_one_gauss_norm_1357.py",
+      "sha256": "CB3D913C47612E81BC79A9513DAC640F74F85FF9E4E4F7B362BC721F47CB0532"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_kummer_1349.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record_gamma_one_kummer_1349.py",
+      "sha256": "8308E823E420594C384334413AC844F6342A75369F0719862AE5CEDE60644C8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_specialization_1334.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/record_gamma_one_specialization_1334.py",
+      "sha256": "F7610162749D230FE840F88E8B00674ECDCAEE809FC8ED645D5E17000A95F524"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1330.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/register1330.py",
+      "sha256": "66E92FC2F321362482ACBA7A2945D8802B656DE945D16EECA2DF6377005A82FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1338.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/register1338.py",
+      "sha256": "C019398CB76C60CE92470FDE9C6DA9676188438E33BA5D59679BEF768A85CBCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1340.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/register1340.py",
+      "sha256": "9144F318DBDE9F06F000D2D595908D7ADA99985784291699621B3DE940BF39E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1349.py",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/register1349.py",
+      "sha256": "2650AA4C2645A05BFA3233171C512798F516A80E239DF92DAB794FC991CF2088"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1330.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/registrations1330.json",
+      "sha256": "4B25186BDAE1F5A51588697FCD00CADCF0BC11EA3577E60CE0B989096F21954D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1340.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/registrations1340.json",
+      "sha256": "02CCEDAC127B7E8C4A5DA1D858DF41E5703690F1B395144E2E69C731A81317F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1349.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/registrations1349.json",
+      "sha256": "12FC0B582A0925BD77250DAF473482106CBEC149B029B8E36FF732264D2F48C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1330.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/remaining1330.txt",
+      "sha256": "266CE02EA0C36A9FD9A2056B3CB946C61A4699BAB8ECBBA2D3CD79C33487F6DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1338.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/remaining1338.txt",
+      "sha256": "209CFA1AFC45690BD8DC4E83CE0E956FFAD9EFCDF6674EFF9B9187FFABD84A2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1340.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/remaining1340.txt",
+      "sha256": "9DF969B73CE781E3B6CE1F394BEF83D58E5198A526B8C0EA5C48B437D8A9E56C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1348.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/remaining1348.txt",
+      "sha256": "811638F7360AEE5005E397A14756E0D748D097E43F56F36F0780284BE1855A6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1349.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/remaining1349.txt",
+      "sha256": "5309BC27F7114FDCB0A13F205BECA65BE57E146E1C2FB8D1D2F39A2EAB12A2B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1330.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/section1330.txt",
+      "sha256": "3CAF454D28FE81B66E61AD8F5DE32A404BCF423D65D7C7A250ABA320EE66EBF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1340.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/section1340.txt",
+      "sha256": "BF084078DC22F7BA2AA378F00B6E5809861E7B55E29A46023592DBF33FFCB443"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1349.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/section1349.txt",
+      "sha256": "E3529642E17BF41E10D64A486FB75C7A1B450C2818D233A4765CEC856A3D6AE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-1-audit-config.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-gauss-norm-1-audit-config.json",
+      "sha256": "65E65C719344EC8A3E9981E442766885F0ED40E0729162780D4F08BFFAE1B211"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-gauss-norm-1-reuse-review-20261028.json",
+      "sha256": "CD6C0663929955FFE906E96C964607FDB3CB3C48613FF19EB7A0A993CCE7E811"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-gauss-norm-1-scratch-receipt.json",
+      "sha256": "63EACEEE6908866F27421952D186856D26BFC1A3BCA2BDFFE2F78EA14F668A55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-audit-route-1357.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-gauss-norm-audit-route-1357.json",
+      "sha256": "3D9154A158E9A0E8C78E244E46DF64C30555BCECF3DB1E029DD2E2482279D8B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-audit-config.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-kummer-1-audit-config.json",
+      "sha256": "936EFC938A9DDD717E849F9F7D047FB14387575F8374AB927DBA41949CD24A12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-kummer-1-reuse-review-20261028.json",
+      "sha256": "38B89BF99394C6CDBC5584FA03E43FFAC603C68CF39A9FFB845754409EBCC664"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-kummer-1-scratch-receipt.json",
+      "sha256": "74CFD24CC719EB59E16077D6011357656C1187F0F7796BE0283608F845F98BDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-audit-route-1349.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-kummer-audit-route-1349.json",
+      "sha256": "158A6D11C3B4BF3A6EDA70AD5AA1F121DA8CF7031F4426650B20FE8B9D495EE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-audit-config.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-specialization-1-audit-config.json",
+      "sha256": "E52883ED5C0D7610C5FFF9E2C5690AD449E299AAC8E79B8CC8936373F6D9F799"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-reuse-review-20261028.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-specialization-1-reuse-review-20261028.json",
+      "sha256": "99DA99EB04E3C8E777A29D20B85EDF8F7B759059F00DC8AE00D1AC22A9FAA522"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-specialization-1-scratch-receipt.json",
+      "sha256": "B4A46110ECE61C258197939EFBDA9E048BACE84F19E216B553680831FAA53534"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-audit-route-1334.json",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/source-gamma-one-specialization-audit-route-1334.json",
+      "sha256": "BB7796AFF6DDBAAAC927B8FB29CFED98B2CA678A89A110070032C36CDD28AB91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1330.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/status1330.txt",
+      "sha256": "930E5EDB9E8DBE4D7B91D0075C8BB60F6F016779A7AE7109BD392225AE55350A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1340.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/status1340.txt",
+      "sha256": "25593BF923940B587C849BD82D10034FD3507BCA0E24FB88693AB2371C44519A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1349.txt",
+      "path": "Tools/gamma-one-picard-reduction-20261028-1358/status1349.txt",
+      "sha256": "ED886F176CA95EB920DAF99E0E2E8AC7F28CA1B3E12FBCD764D03D17F2EE4664"
+    }
+  ]
+}

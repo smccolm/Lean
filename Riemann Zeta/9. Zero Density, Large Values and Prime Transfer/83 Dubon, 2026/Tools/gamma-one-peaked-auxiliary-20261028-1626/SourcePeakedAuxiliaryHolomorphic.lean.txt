@@ -1,0 +1,38 @@
+import SourcePeakedAuxiliaryFunction
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> discriminant-adjusted Siegel
+modular form and its exact cusp bounds. Consume actual literal products,
+the proved finite-product cusp limit and native discriminant decay. The
+nonnegative shifted-order hypothesis is explicit and will be discharged
+when selecting the discriminant power; no auxiliary existence is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_exists_modularForm_gamma1_coe_eq_prod_siegelFun_pow_mul_discriminant_pow. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups ModularForm Manifold
+variable (N : ℕ) [NeZero N] (m : ZMod N → ZMod N → ℕ)
+
+theorem mdifferentiable_thetaFun (t : ℕ) : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (thetaFun N m t) := by
+  rw [UpperHalfPlane.mdifferentiable_iff]
+  have hΔ : DifferentiableOn ℂ (ModularForm.discriminant ∘ UpperHalfPlane.ofComplex) {z : ℂ | 0 < z.im} :=
+    UpperHalfPlane.mdifferentiable_iff.1 CuspForm.discriminant.holo'
+  have hu : DifferentiableOn ℂ (fun z : ℂ => ∏ r : ZMod N, ∏ s : ZMod N,
+      siegelFun N (r.val : ℤ) (s.val : ℤ) z ^ (12 * N * m r s)) {z : ℂ | 0 < z.im} := by
+    have h1 : ∀ r : ZMod N, DifferentiableOn ℂ (fun z : ℂ => ∏ s : ZMod N,
+        siegelFun N (r.val : ℤ) (s.val : ℤ) z ^ (12 * N * m r s)) {z : ℂ | 0 < z.im} := fun r => by
+      have h := DifferentiableOn.finsetProd (u := Finset.univ)
+        (f := fun (s : ZMod N) (z : ℂ) => siegelFun N (r.val : ℤ) (s.val : ℤ) z ^ (12 * N * m r s))
+        (fun s _ => (Siegel.differentiableOn_siegelFun N (r.val : ℤ) (s.val : ℤ)).pow _)
+      rwa [Finset.prod_fn] at h
+    have h2 := DifferentiableOn.finsetProd (u := Finset.univ)
+      (f := fun (r : ZMod N) (z : ℂ) => ∏ s : ZMod N, siegelFun N (r.val : ℤ) (s.val : ℤ) z ^ (12 * N * m r s)) (fun r _ => h1 r)
+    rwa [Finset.prod_fn] at h2
+  refine ((hu.mul (hΔ.pow t)).congr fun z hz => ?_)
+  simp only [Function.comp_apply, thetaFun, uFun, UpperHalfPlane.ofComplex_apply_of_im_pos hz, Pi.mul_apply, Pi.pow_apply]
+
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Form

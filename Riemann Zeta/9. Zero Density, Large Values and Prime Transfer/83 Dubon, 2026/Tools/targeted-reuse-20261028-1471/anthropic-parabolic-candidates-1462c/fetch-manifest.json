@@ -1,0 +1,94 @@
+{
+  "recordedUTC": "2026-10-28T23:28:16.735697+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean",
+      "sha256": "C262CA91A1DE35788557294314566420E221F627FE7DABB895823270EBD68769",
+      "bytes": 8859
+    },
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean",
+      "sha256": "4A68C28865636F9C65C6B6E6247610180B8329D22C875DD6F5F401F162C42F17",
+      "bytes": 80719
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean",
+      "sha256": "AC90A2F42B00C52B7E42DB29C22123A60154666850101B39176F8116931DB0E2",
+      "bytes": 18333
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean",
+      "sha256": "3BC2FE32A6F1C100F946C7C61BA4A63292A7932B004520EE2A9EEC231DFCCFD0",
+      "bytes": 12517
+    },
+    {
+      "path": "P2M/Sol/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean",
+      "sha256": "885A0FD512C4CD19B7426A3C393CE52D13115FEEEEA459B30D8B7686A241965C",
+      "bytes": 39098
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean",
+      "sha256": "4A24E8970EC3E16BBC425E96F5C7C5D06153DEE4C437C7EB99B3A3921D4D626E",
+      "bytes": 8081
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean",
+      "sha256": "5D41D20A7BB0495F75A677CD866762C6312EC9A7E9D7D808AD040FEE6706E93C",
+      "bytes": 40282
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "sha256": "ABA555757446C4C2EB49B2369CB711772D0C57CFBBD3D6E9FCCFE72CAC084F44",
+      "bytes": 13946
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean",
+      "sha256": "0A7E128E5011DA589FB91C5CE1C2DB97A968F30695BECE8D6A60EE5153E1CC39",
+      "bytes": 44881
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean",
+      "sha256": "502307F1788C647063D9B88EC1A37B70B50E0BDE77DE516F75D056A51654DC20",
+      "bytes": 20638
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "sha256": "0DF36032335D7EBEEC60DD90D11DBD4F7A3A7E93C99135B5EC51C7A321F0EF04",
+      "bytes": 20705
+    },
+    {
+      "path": "P2M/Sol/S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean",
+      "sha256": "C678428ACBADF967FFA231F459ECD01AAEC9A0A1551154593DCD4EFCF485B745",
+      "bytes": 15970
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

@@ -1,0 +1,7 @@
+### Actual original number-field inertia and ramification index — 9 October 2026
+
+For an actual finite Galois extension of original number fields, derive residue separability from the actual finite prime residue field. The genuine original inertia subgroup has cardinality equal to the original ramification index. Index one therefore makes the actual inertia subgroup trivial and every original inertia automorphism fixes the entire original field.
+
+Modular Galois association, local deformation conditions, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [NumberFieldInertiaRamification](Extension/Dubon2026/NumberFieldInertiaRamification.lean).

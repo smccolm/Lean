@@ -1,0 +1,12 @@
+{
+  "recordedUTC": "2026-10-28T21:12:56.373347+00:00",
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> exact finite homogeneous-valued Tate Galois action -> prescribed-support arithmetic descent.",
+  "reuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\Reuse\\Imperial\\Deformations\\Lemmas.lean",
+    "sha256": "F92FF1801023DA655FD256978E3E9F83B653A185234934693B3CD3AA37FFF21D",
+    "declaration": "ContinuousMonoidHom.toHomUnits"
+  },
+  "selected": "The already adopted Imperial continuous unit lift removes the need for a new unit-action continuity construction. Apply it inside the existing absolute_continuous_normInertia_arithmetic_descent consumer, using the actual Gamma1 norm-inertia theorem and separate degree/genus families.",
+  "productionMutation": false,
+  "rootPinsChanged": false
+}

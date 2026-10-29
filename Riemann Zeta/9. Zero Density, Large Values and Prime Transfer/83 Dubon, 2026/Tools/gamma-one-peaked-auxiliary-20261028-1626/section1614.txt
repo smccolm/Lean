@@ -1,0 +1,7 @@
+### Actual unramified fixed-determinant arithmetic first-order classes — 9 October 2026
+
+Intersect the actual determinant trace kernel with the genuine original arithmetic inertia restriction kernel. For an original residually unramified representation, this same submodule contains a continuous first-order class exactly when the entire original lifted representation has the fixed residual determinant and kills all actual inertia. Its finite dimension over every original finite arithmetic coefficient field follows from the proved finiteness of the ambient actual continuous arithmetic H1.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticUnramifiedFixedDeterminantClasses](Extension/Dubon2026/ArithmeticUnramifiedFixedDeterminantClasses.lean).

@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-10-28T14:46:47.752143+00:00",
+  "repository": "facebookresearch/atlas-lean",
+  "branch": "main",
+  "revision": "851a97f342b10a249b589531e1ec430487b2d469",
+  "commitDate": "2026-10-28T14:35:48Z",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/facebookresearch/atlas-lean",
+      "path": "repository.json",
+      "sha256": "FF3061259EDEC6845AC51578D0FF3DA27C1C6CCB48C21C9714759CAC480A2CD7",
+      "bytes": 6763
+    },
+    {
+      "url": "https://api.github.com/repos/facebookresearch/atlas-lean/commits/main",
+      "path": "commit.json",
+      "sha256": "D52C12A5EE9504B9C026E860CAB9BCE8DE786DDD4BFD69E55F311EF7277B8AE2",
+      "bytes": 12254
+    },
+    {
+      "url": "https://api.github.com/repos/facebookresearch/atlas-lean/git/trees/851a97f342b10a249b589531e1ec430487b2d469?recursive=1",
+      "path": "tree.json",
+      "sha256": "F88B235726CF93CD48E16A5B60C2ADC612E66DB5A039E61493CD976DB1342725",
+      "bytes": 4876550
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/README.md",
+      "path": "README.md.txt",
+      "sha256": "9543D721CB6CE7144A3098896C8D588F515B275396AF4B05D33CA74D3D4DB9B5",
+      "bytes": 3220
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/lean-toolchain",
+      "path": "lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/lake-manifest.json",
+      "path": "lake-manifest.json.txt",
+      "sha256": "843076DB4BBCE37806A2ABC1622DE13F06070B5ED7234A9D6B38A2F9A07CF38E",
+      "bytes": 3450
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/atlas-lean/851a97f342b10a249b589531e1ec430487b2d469/LICENSE",
+      "path": "LICENSE.txt",
+      "sha256": "FC78801EADEC58B04E0D5CABE735EB6808E23F47B0CB92B89B55792019B54131",
+      "bytes": 11463
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

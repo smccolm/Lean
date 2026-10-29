@@ -1,0 +1,10 @@
+{
+  "SourceGammaOneArithmeticCharts": "1359a",
+  "SourceGammaOneSpecializationCharts": "1360a",
+  "SourceGammaOneDecompositionCharts": "1361b",
+  "SourceGammaOneConstantReductionCharts": "1362a",
+  "SourceGammaOneSpecializationEquivariance": "1363b",
+  "SourceGammaOneInertiaPlaceReduction": "1364b",
+  "SourceGammaOneInertiaPicard": "1365c",
+  "SourceGammaOneTateInertia": "1366c"
+}

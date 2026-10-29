@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K Ω : Type*} [Field K] [Field Ω] [Algebra K Ω] [NumberField K]
+
+/-- Exact original-object consumer of `originalUnramifiedGaloisUnion_isGalois`. -/
+theorem actual_unramified_galois_stage_union_originalUnramifiedGaloisUnion_isGalois_source (a : 𝓞 K) :
+    IsGalois K (originalUnramifiedGaloisUnion (Ω := Ω) a) :=
+  originalUnramifiedGaloisUnion_isGalois a
+
+end
+

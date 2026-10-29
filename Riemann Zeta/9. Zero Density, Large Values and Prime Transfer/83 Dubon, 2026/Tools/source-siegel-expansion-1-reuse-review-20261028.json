@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> integral Siegel expansion.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-siegel-expansion-audit-route-1598.json",
+    "sha256": "8D839E5B880B81FC837599FD77796B0F7AEC0012ECD688EE4D6A71CEC219858C",
+    "review": {
+      "recordedUTC": "2026-10-29T02:29:45.412928+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> actual peaked auxiliary -> integral Siegel expansion.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\siegel-expansion-shorter-route-1578.json",
+          "sha256": "F6D385198E60E40921179DC00272090AC85266F8589027654CA6E84A8B68D575"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\siegel-expansion-trim-review-1595.json",
+          "sha256": "1E67062CE62C449EA5AA00578DF11D0FF317163B7788442BBB89131518E89FE8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Integral Siegel Expansion Assessment 2026-10-28.md",
+          "sha256": "67159F956DEC9ED886EE4C2FA8159037ECE219DCA37B6CF84FDE57C3B8C96930"
+        }
+      ],
+      "shorterRoute": "Stable finite polynomial coefficients, native locally uniform product and derivative convergence, native Taylor expansion and existing q-parameter/cusp-limit APIs replace the external general formal-product mapping and coefficient-majorant construction.",
+      "assumptionsToDischarge": [
+        "Exact normalized literal Siegel series from stable finite-product coefficients.",
+        "Every actual series coefficient is integral over the integers.",
+        "The constant coefficient is exactly the specified cyclotomic factor or one.",
+        "The level times the inverse of that constant coefficient is integral.",
+        "The normalized actual function tends to its constant coefficient at the cusp."
+      ],
+      "remaining": "Finite product expansion, discriminant adjustment, cusp orders and decay bounds, and actual peaked auxiliary existence. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain. Acceptance remains 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Exact normalized literal Siegel series from stable finite-product coefficients.",
+    "Every actual series coefficient is integral over the integers.",
+    "The constant coefficient is exactly the specified cyclotomic factor or one.",
+    "The level times the inverse of that constant coefficient is integral.",
+    "The normalized actual function tends to its constant coefficient at the cusp."
+  ],
+  "remaining": "Finite product expansion, discriminant adjustment, cusp orders and decay bounds, and actual peaked auxiliary existence. Reduced field action, degree/genus preservation, integral parabolic transfer, characteristic-zero realization, automorphy and literal higher continuation remain. Acceptance remains 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

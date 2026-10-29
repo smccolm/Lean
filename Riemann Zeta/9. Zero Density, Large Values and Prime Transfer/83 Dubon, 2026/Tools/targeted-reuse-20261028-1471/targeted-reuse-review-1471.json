@@ -1,0 +1,503 @@
+{
+  "recordedUTC": "2026-10-28T23:48:02.636905+00:00",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "headChanged": false,
+  "completeSolTreeLeanFiles": 29511,
+  "inspectedSourceFiles": 29,
+  "files": [
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean",
+      "sha256": "C262CA91A1DE35788557294314566420E221F627FE7DABB895823270EBD68769",
+      "bytes": 8859,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean",
+      "sha256": "4A68C28865636F9C65C6B6E6247610180B8329D22C875DD6F5F401F162C42F17",
+      "bytes": 80719,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean",
+      "sha256": "AC90A2F42B00C52B7E42DB29C22123A60154666850101B39176F8116931DB0E2",
+      "bytes": 18333,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 9,
+          "text": "set_option linter.unusedSectionVars false"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean",
+      "sha256": "3BC2FE32A6F1C100F946C7C61BA4A63292A7932B004520EE2A9EEC231DFCCFD0",
+      "bytes": 12517,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 62,
+          "text": "set_option maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean",
+      "sha256": "885A0FD512C4CD19B7426A3C393CE52D13115FEEEEA459B30D8B7686A241965C",
+      "bytes": 39098,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 11,
+          "text": "set_option maxHeartbeats 4000000"
+        },
+        {
+          "line": 12,
+          "text": "set_option synthInstance.maxHeartbeats 400000"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean",
+      "sha256": "4A24E8970EC3E16BBC425E96F5C7C5D06153DEE4C437C7EB99B3A3921D4D626E",
+      "bytes": 8081,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean",
+      "sha256": "5D41D20A7BB0495F75A677CD866762C6312EC9A7E9D7D808AD040FEE6706E93C",
+      "bytes": 40282,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean",
+      "sha256": "ABA555757446C4C2EB49B2369CB711772D0C57CFBBD3D6E9FCCFE72CAC084F44",
+      "bytes": 13946,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean",
+      "sha256": "0A7E128E5011DA589FB91C5CE1C2DB97A968F30695BECE8D6A60EE5153E1CC39",
+      "bytes": 44881,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 550,
+          "text": "set_option maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean",
+      "sha256": "502307F1788C647063D9B88EC1A37B70B50E0BDE77DE516F75D056A51654DC20",
+      "bytes": 20638,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean",
+      "sha256": "0DF36032335D7EBEEC60DD90D11DBD4F7A3A7E93C99135B5EC51C7A321F0EF04",
+      "bytes": 20705,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean",
+      "sha256": "C678428ACBADF967FFA231F459ECD01AAEC9A0A1551154593DCD4EFCF485B745",
+      "bytes": 15970,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 6,
+          "text": "set_option linter.unusedSectionVars false"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean",
+      "sha256": "D357D52DA80C3F75D3FD2AF5DB958843DE6B83E0E8C1FBE087F24E81167254DD",
+      "bytes": 10104,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 69,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean",
+      "sha256": "007BFAE34FD714F60CDE4D078F7B4DDDB1F3A39B1CFEEC4EA83962158ECBD055",
+      "bytes": 22767,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 45,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean",
+      "sha256": "A887FC55F53F3DDBE8327F8E5049898D6268AD26F0728CB8A8C638B28DC5E7A4",
+      "bytes": 29758,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 22,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 23,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 543,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean",
+      "sha256": "A4FB8E281DD90804DCB74EECE6E0CDE4B27A5D8E4E3B44F17D40D885C4D2CD52",
+      "bytes": 16478,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 245,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        },
+        {
+          "line": 246,
+          "text": "set_option maxHeartbeats 3200000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean",
+      "sha256": "77D22A856DFE76A47AF3600A98F4D2C11E28AE4E6F9127039CD5EA2F5812A269",
+      "bytes": 22766,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 30,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean",
+      "sha256": "2210D1896CF42F4FE14CFB0B6B239BE95C7BD3BC6CCC2CF7FB319E3FBA11F27B",
+      "bytes": 79054,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 42,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 43,
+          "text": "set_option linter.unusedVariables false"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean",
+      "sha256": "0D1ACA39A65D6605B904F5EA6C26C727C6E8D6696294A9023E00D68E6C10E43D",
+      "bytes": 34352,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 22,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 23,
+          "text": "set_option linter.unusedVariables false"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean",
+      "sha256": "C2E1D575DCC1D58478AE2B20A0C64C1193090E93C7DCC38F4CEED8086B5E43C2",
+      "bytes": 33638,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 35,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 37,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 148,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 218,
+          "text": "set_option maxHeartbeats 3200000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean",
+      "sha256": "1AC93EE8EC4F87BDE90CCFE8B37F57A3E5717D5EB114361FDC1FC8AAF81D155E",
+      "bytes": 15899,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 10,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 11,
+          "text": "set_option linter.unusedVariables false"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean",
+      "sha256": "69046BC603A61C02D34EA18E57DEA5582406E3F5B48BABD42763B18416626236",
+      "bytes": 59516,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 13,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 14,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean",
+      "sha256": "BAB9227CDB9107D0726D53B3CD813DF5FF8D8287B365E7C5411896E000EF49C0",
+      "bytes": 69188,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 22,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 24,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 812,
+          "text": "set_option maxHeartbeats 6400000 in"
+        },
+        {
+          "line": 901,
+          "text": "set_option maxHeartbeats 6400000 in"
+        },
+        {
+          "line": 1169,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        },
+        {
+          "line": 1170,
+          "text": "set_option maxHeartbeats 3200000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean",
+      "sha256": "63683AE09613FD1DC4DCDB0277C91A9E7ACFE3180331C0035862A3CB6C1692C8",
+      "bytes": 52775,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 42,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 44,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 442,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 517,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 593,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 644,
+          "text": "set_option maxHeartbeats 3200000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean",
+      "sha256": "8DBBC465A253C4A3C76426C070846D32B9875F891402CF8E75E494E96F6B60BC",
+      "bytes": 7907,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean",
+      "sha256": "A757A627F788B16FE1CD4E5B7CB42A6DBF7C924CCCAC62CFEA6138A3A0A72A75",
+      "bytes": 31708,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean",
+      "sha256": "C318F9DA75142F614BD714D5026233CDBEFE07139A284DCC40DBD4450842B8C8",
+      "bytes": 6891,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 16,
+          "text": "set_option maxHeartbeats 3200000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean",
+      "sha256": "2BE6066BFA7CB9EBB51F3DAEE21CC8AC778DDFBCC0C4F3512069B8853D17C6BC",
+      "bytes": 49082,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 40,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 41,
+          "text": "set_option linter.unusedVariables false"
+        },
+        {
+          "line": 42,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 659,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 706,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 743,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 770,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean",
+      "sha256": "5085319636FFDD9F8E7692CB1FA57E3B2F1334C2B14F30D4F3B3E2F9DD7BE4A0",
+      "bytes": 54019,
+      "lexicalMatches": [],
+      "nondefaultOptions": [
+        {
+          "line": 33,
+          "text": "set_option linter.unusedSectionVars false"
+        },
+        {
+          "line": 34,
+          "text": "set_option linter.unusedVariables false"
+        },
+        {
+          "line": 35,
+          "text": "set_option synthInstance.maxHeartbeats 1600000"
+        },
+        {
+          "line": 563,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 691,
+          "text": "set_option maxHeartbeats 3200000 in"
+        },
+        {
+          "line": 777,
+          "text": "set_option synthInstance.maxHeartbeats 1600000 in"
+        }
+      ]
+    }
+  ],
+  "externalBuild": false,
+  "externalTransitiveAxiomAudit": false,
+  "externalImport": false,
+  "productionMutation": false,
+  "scope": "Targeted theorem-statement and selected proof/dependency inspection, not certification of the external repository. Filename discovery is confined to the complete P2M/Sol subtree."
+}

@@ -1,0 +1,45 @@
+import Dubon2026.SourceGammaOneAdjacentJPolynomial
+import Dubon2026.SourceOriginalConjugateEmbedding
+
+/-! DUB-17/18 -> original Gamma1 Frobenius norm -> explicit conjugate
+embeddings. Feed the proved reverse root into the existing simple-extension
+constructor, and identify its domain by the proved original correspondence
+generation. The exact base and adjacent-coordinate equations are derived.
+The action on beta of a general lower-field element remains separate. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Polynomial IntermediateField
+variable (M p : ℕ) [Fact p.Prime]
+
+theorem adjacentJ_mem_correspondence :
+    qExpand ℚ p jq ∈ x1x0FunctionFieldC ℚ M (p * M) :=
+  gamma1_degeneracy_map_le ℚ M p
+    ⟨jq, jq_mem_qExpFunctionField (CongruenceSubgroup.Gamma1 M), rfl⟩
+
+variable [NeZero M]
+
+theorem exists_gammaOne_adjacentJ_embedding (hcop : Nat.Coprime M p) :
+    ∃ σ : x1x0FunctionFieldC ℚ M (p * M) →+* LaurentSeries ℚ,
+      (∀ (z : x1FunctionField M) (hz : (z : LaurentSeries ℚ) ∈ x1x0FunctionFieldC ℚ M (p * M)),
+        σ ⟨z, hz⟩ = qExpand ℚ p z.val) ∧
+      σ ⟨qExpand ℚ p jq, adjacentJ_mem_correspondence M p⟩ = jq := by
+  have hroot : ((minpoly (x1FunctionField M) (qExpand ℚ p jq)).map (adjacentJBase M p)).eval jq = 0 := by
+    rw [Polynomial.eval_map]
+    exact adjacentJ_minpoly_reverse_root M p hcop
+  have hrange : ∀ z : x1FunctionField M, adjacentJBase M p z ∈ (qExpand ℚ 1).range := by
+    intro z
+    exact ⟨adjacentJBase M p z, qExpand_one_apply _⟩
+  obtain ⟨τ, hbase, hnew, _⟩ := extend_simple_embedding_in_expansion_range
+    (x1FunctionField M) (adjacentJBase M p) (qExpand ℚ p jq) (adjacentJ_isIntegral M p)
+    jq hroot 1 hrange ⟨jq, qExpand_one_apply jq⟩
+  let G := IntermediateField.adjoin ℚ ((x1FunctionField M : Set (LaurentSeries ℚ)) ∪ {qExpand ℚ p jq})
+  have he : x1x0FunctionFieldC ℚ M (p * M) = G := gammaOne_adjacentJ_generation M p hcop
+  let σ : x1x0FunctionFieldC ℚ M (p * M) →+* LaurentSeries ℚ :=
+    τ.comp (Subfield.inclusion (show (x1x0FunctionFieldC ℚ M (p * M)).toSubfield ≤ G.toSubfield from he.le))
+  refine ⟨σ, ?_, ?_⟩
+  · intro z hz
+    exact hbase z (he.le hz)
+  · exact hnew (he.le (adjacentJ_mem_correspondence M p))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

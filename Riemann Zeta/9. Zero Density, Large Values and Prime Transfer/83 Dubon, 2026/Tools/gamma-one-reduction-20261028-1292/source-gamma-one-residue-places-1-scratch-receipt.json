@@ -1,0 +1,98 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T15:26:40.704332+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResiduePlaces",
+    "SourceGammaOneResiduePlaceOrders",
+    "SourceGammaOneResidueFrobeniusPlaces"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces.lean",
+      "sha256": "2AB4A8EF29D2066923BAE29E039F729E570A80D456B7BE905525945142046A84",
+      "oleanSha256": "5A111CD918A3DE21CA023B9A5A8E7C6318F7EB39AA659E74325D50ADF0F85AF9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces1288a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaces1288a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders.lean",
+      "sha256": "BE7E40B93BC3BE5BF1FA9C293D51A80FB4CC559022FCD34C28EA026FD4211A7C",
+      "oleanSha256": "007D0985DDDE1B635B9F9F17D104B3E5E0F0E14063730C87CE0357859E24DD40",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders1289a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlaceOrders1289a.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces.lean",
+      "sha256": "7C9F62FD05CD72426F3B8DA4552EDE4D42DB4CE3263A9C5D09B8BA18774DB57D",
+      "oleanSha256": "04034ABB18028B729E1C2426F825E478818395F8B300A55829279F21C80900A2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces1290a.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidueFrobeniusPlaces1290a.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_constants",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueAut_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.mem_decompositionResiduePlace_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_eq_inverse_decomposition_pow",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_comap_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace_eq_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResidueValuationEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobeniusPlace"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesAudit1.log",
+  "logSha256": "332B6B258F78F594366EEF5D45304CD1F2475EBFF450184D3FA25A94142F680B",
+  "auditSha256": "69697A71460AAB30491A23E68D8296C718C878928B89ACB0B60A845482DC7946",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesScratchOwnership1291.log",
+  "ownershipSha256": "DD73D8F5DE2FD50D991311063C375A3A97916016F1A0D25AE1F90954C8183099",
+  "exhaustiveTheorems": 45,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResiduePlacesDependencyAudit1.log",
+  "dependencyAuditSha256": "C257BA103CDBF8826B01D20A91255E845988B80AFA25F54DF714577A6EB42902",
+  "dependencyAuditSourceSha256": "2D0D982257E6B219C4F5CAE4C2D461983A602A808657EF50541DBCEA0662FCAE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlaceEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_ord_action",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.decompositionResiduePlace_eq_self_of_inertia",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.geometricFrobenius_place_order"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/Tate Frobenius and inertia -> equivariant specialization on places -> actual decomposition and geometric Frobenius on residue places.",
+  "discharged": [
+    "The actual decomposition action permutes all genuine places of the original Gamma1 residue field and preserves normalized orders with the precise inverse convention.",
+    "Original arithmetic inertia fixes the actual residue places.",
+    "For an actual decomposition element with pth-power action on residue constants, restriction along the original geometric Frobenius is exactly that decomposition permutation, with normalized orders multiplied by p."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The arithmetic Frobenius constant-action premise is explicit. The original norm identity, degree equality, genus preservation, original-to-residue place/Picard specialization and prime-to-residue torsion injectivity remain. Actions on residue places alone do not prove inertia or the Frobenius quadratic on the original Picard Tate module. Parabolic character realization, exceptional primes, coefficient-field realization, original all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-residue-places-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "6ABD5E6F5EE02F5B3A7B52A312B4733C187918852233029A28ED0385E3ABE97E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

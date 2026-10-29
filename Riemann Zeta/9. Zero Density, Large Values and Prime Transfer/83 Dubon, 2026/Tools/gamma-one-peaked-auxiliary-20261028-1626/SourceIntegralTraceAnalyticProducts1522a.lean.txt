@@ -1,0 +1,107 @@
+import SourceIntegralTraceModularForm1515a
+
+/-! DUB-17/18 -> original Gamma1 degree preservation -> even-weight
+slash integrality -> peaked auxiliary trace. Exact slash-product and
+analytic identities needed to form the three-part trace decomposition;
+no degree, genus or coefficient-integrality conclusion is assumed.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularForm_qExpansion_slash_coeff_mem_of_peaked_auxiliary. -/
+namespace Dubon2026.SourceFunctionField.IntegralTrace
+noncomputable section
+open scoped MatrixGroups ModularForm Manifold
+open UpperHalfPlane Filter Asymptotics
+section G4
+
+variable (φ ψ : UpperHalfPlane → ℂ)
+
+private theorem periodic_pow (hψp : Function.Periodic (ψ ∘ UpperHalfPlane.ofComplex) (1 : ℝ)) (r : ℕ) :
+    Function.Periodic ((ψ ^ r) ∘ UpperHalfPlane.ofComplex) (1 : ℝ) := by
+  intro w
+  have := hψp w
+  simp only [Function.comp_apply, Pi.pow_apply] at this ⊢
+  rw [this]
+
+private theorem mdifferentiable_pow (hψh : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) ψ) (r : ℕ) :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (ψ ^ r) := by
+  induction r with
+  | zero => (simp; exact mdifferentiable_const (c := (1 : ℂ)))
+  | succ r ih => simpa [pow_succ] using ih.mul hψh
+
+private theorem isBoundedAtImInfty_pow (hψb : UpperHalfPlane.IsBoundedAtImInfty ψ) (r : ℕ) :
+    UpperHalfPlane.IsBoundedAtImInfty (ψ ^ r) := by
+  induction r with
+  | zero => (have h__af := (Filter.const_boundedAtFilter UpperHalfPlane.atImInfty (1 : ℂ)); simp at h__af; exact h__af)
+  | succ r ih => (have h__af := ih.mul hψb; simp [pow_succ] at h__af ⊢; exact h__af)
+
+theorem qExpansion_one_mul_pow
+    (hφp : Function.Periodic (φ ∘ UpperHalfPlane.ofComplex) (1 : ℝ)) (hφh : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) φ)
+    (hφb : UpperHalfPlane.IsBoundedAtImInfty φ)
+    (hψp : Function.Periodic (ψ ∘ UpperHalfPlane.ofComplex) (1 : ℝ)) (hψh : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) ψ)
+    (hψb : UpperHalfPlane.IsBoundedAtImInfty ψ) (r : ℕ) :
+    UpperHalfPlane.qExpansion 1 (φ * ψ ^ r) = UpperHalfPlane.qExpansion 1 φ * UpperHalfPlane.qExpansion 1 ψ ^ r := by
+  have hψr : ∀ r : ℕ, AnalyticAt ℂ (cuspFunction 1 (ψ ^ r)) 0 := fun r =>
+    analyticAt_cuspFunction_zero one_pos (periodic_pow ψ hψp r) (mdifferentiable_pow ψ hψh r)
+      (isBoundedAtImInfty_pow ψ hψb r)
+  have hφa : AnalyticAt ℂ (cuspFunction 1 φ) 0 := analyticAt_cuspFunction_zero one_pos hφp hφh hφb
+  have hψa : AnalyticAt ℂ (cuspFunction 1 ψ) 0 := analyticAt_cuspFunction_zero one_pos hψp hψh hψb
+  have hpow : ∀ r : ℕ, UpperHalfPlane.qExpansion 1 (ψ ^ r) = UpperHalfPlane.qExpansion 1 ψ ^ r := by
+    intro r
+    induction r with
+    | zero => simp [qExpansion_one]
+    | succ r ih => rw [pow_succ, qExpansion_mul (hψr r) hψa, ih, pow_succ]
+  rw [qExpansion_mul hφa (hψr r), hpow]
+
+end G4
+
+theorem isBigO_mul_pow_exp (g θ : UpperHalfPlane → ℂ) (hg : UpperHalfPlane.IsBoundedAtImInfty g) (c : ℝ)
+    (hθ : θ =O[UpperHalfPlane.atImInfty] fun τ : UpperHalfPlane => Real.exp (-(2 * Real.pi * c) * τ.im)) (r : ℕ) :
+    (g * θ ^ r) =O[UpperHalfPlane.atImInfty]
+      fun τ : UpperHalfPlane => Real.exp (-(2 * Real.pi * ((r : ℝ) * c)) * τ.im) := by
+  have h1 : (θ ^ r) =O[UpperHalfPlane.atImInfty] fun τ : UpperHalfPlane => Real.exp (-(2 * Real.pi * c) * τ.im) ^ r := by
+    have h__af := hθ.pow r
+    simp at h__af ⊢
+    exact h__af
+  have hg' : g =O[UpperHalfPlane.atImInfty] fun _ : UpperHalfPlane => (1 : ℝ) := hg
+  have h2 : (g * θ ^ r) =O[UpperHalfPlane.atImInfty]
+      fun τ : UpperHalfPlane => (1 : ℝ) * Real.exp (-(2 * Real.pi * c) * τ.im) ^ r := hg'.mul h1
+  refine h2.trans (Asymptotics.isBigO_of_le _ fun τ => ?_)
+  rw [one_mul, ← Real.exp_nat_mul, Real.norm_eq_abs, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _),
+    abs_of_pos (Real.exp_pos _)]
+  apply le_of_eq
+  congr 1
+  ring
+
+theorem pow_slash_SL2 (w : ℤ) (A : SL(2, ℤ)) (f : UpperHalfPlane → ℂ) (r : ℕ) :
+    (f ^ r) ∣[(r : ℤ) * w] A = (f ∣[w] A) ^ r := by
+  induction r with
+  | zero =>
+    simp only [pow_zero, Nat.cast_zero, zero_mul]
+    funext τ
+    rw [ModularForm.SL_slash_apply]; simp
+  | succ r ih =>
+    rw [pow_succ, pow_succ, show ((r + 1 : ℕ) : ℤ) * w = (r : ℤ) * w + w by push_cast; ring,
+      ModularForm.mul_slash_SL2, ih]
+
+theorem mdifferentiable_finset_sum {ι : Type*} (t : Finset ι) (f : ι → UpperHalfPlane → ℂ)
+    (hf : ∀ i ∈ t, MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (f i)) :
+    MDifferentiable 𝓘(ℂ) 𝓘(ℂ) (fun τ => ∑ i ∈ t, f i τ) := by
+  classical
+  induction t using Finset.induction_on with
+  | empty => simp only [Finset.sum_empty]; exact mdifferentiable_const
+  | insert a t ha ih =>
+    simp only [Finset.sum_insert ha]
+    exact (hf a (Finset.mem_insert_self a t)).add (ih fun i hi => hf i (Finset.mem_insert_of_mem hi))
+
+theorem isBoundedAtImInfty_finset_sum {ι : Type*} (t : Finset ι) (f : ι → UpperHalfPlane → ℂ)
+    (hf : ∀ i ∈ t, UpperHalfPlane.IsBoundedAtImInfty (f i)) :
+    UpperHalfPlane.IsBoundedAtImInfty (fun τ => ∑ i ∈ t, f i τ) := by
+  classical
+  induction t using Finset.induction_on with
+  | empty => simp only [Finset.sum_empty]; exact UpperHalfPlane.atImInfty.const_boundedAtFilter 0
+  | insert a t ha ih =>
+    simp only [Finset.sum_insert ha]
+    exact (hf a (Finset.mem_insert_self a t)).add (ih fun i hi => hf i (Finset.mem_insert_of_mem hi))
+
+end
+end Dubon2026.SourceFunctionField.IntegralTrace

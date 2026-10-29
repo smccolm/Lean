@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-28T20:38:32.966619+00:00",
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> original finite Hecke-character realization -> actual source parabolic H1 restriction in the homogeneous-valued Tate dual -> combined-diamond fixedness for the derived Frobenius polynomial.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneParabolicRestriction.lean",
+      "sha256": "7BF4C14136A5AEEAEF3AED45A7364ACD86C0E2D0264479DD5194F1B8D4BF1FD1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondRestriction.lean",
+      "sha256": "7F7BCADFDCD4B7D718F9EDCD2AB7C75E4432AB0F2896359A0A3BFD690981A17D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryTateH1.lean",
+      "sha256": "896CB247EC12F82BA98F4C885640184309C2865BBE2FC88B48778017D32A42A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryDiamondTateH1.lean",
+      "sha256": "898324FCC226768B9395A98E1B062DD31D99EEDB1BBC22340D1F82FBED6856DC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneBinaryNormalizerTate.lean",
+      "sha256": "F4710AC02218BDC8989741EB91E93108D67A34F698F3ED3F5247A416B9078AD0"
+    }
+  ],
+  "selected": "Use the already proved literal restriction into binary parabolic H1 and the native Tate/H1 equivalence. The native restriction diamond theorem and Tate/H1 diamond square derive fixedness of its actual Tate preimage. No new cohomology or period model is necessary.",
+  "discharge": "Produce the actual Tate preimage of each original source parabolic class and derive combined-diamond fixedness for every actual normalizer.",
+  "remaining": "The comparison retains 3<p. Nonvanishing and the finite Hecke-character transfer remain; no nonzero class or surjectivity of restriction is claimed. Actual degree/genus, exceptional primes, finite realization, all-weight association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "productionMutation": false
+}

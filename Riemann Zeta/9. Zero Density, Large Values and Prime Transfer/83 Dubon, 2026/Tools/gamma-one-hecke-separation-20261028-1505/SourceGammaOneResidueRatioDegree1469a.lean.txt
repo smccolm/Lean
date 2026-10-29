@@ -1,0 +1,55 @@
+import SourceGammaOneIntegralRatioResidue1466e
+import Dubon2026.SourceGammaOneResidueCoordinateFinite
+import Dubon2026.SourceGammaOneHeckeCoordinateDegree
+
+/-! DUB-17/18 -> original all-weight association -> original Gamma1
+degree preservation. The characteristic-p integral-ratio field from the
+external Eisenstein separation argument is contained in the native residue
+image. Its degree over the literal reduced j is therefore bounded by the
+actual residue degree. Reuse the native finite-residue theorem and Mathlib's
+tower degree identity; no residue-degree or genus equality is presumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open IntermediateField
+open scoped MatrixGroups
+
+private theorem coordinate_degree {K E : Type*} [Field K] [Field E] [Algebra K E]
+    (F : IntermediateField K E) (x : F) :
+    Module.finrank K⟮x⟯ F = relfinrank K⟮(x : E)⟯ F := by
+  have hB : lift (IntermediateField.adjoin K ({x} : Set F)) = K⟮(x : E)⟯ :=
+    lift_adjoin_simple K F x
+  have h := relfinrank_map_map (IntermediateField.adjoin K ({x} : Set F))
+    (⊤ : IntermediateField K F) F.val
+  change relfinrank (lift (IntermediateField.adjoin K ({x} : Set F)))
+    (lift (⊤ : IntermediateField K F)) = _ at h
+  rw [hB, lift_top, relfinrank_top_right] at h
+  exact h.symm
+
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex]
+local notation "kk" => IsLocalRing.ResidueField A
+
+theorem integral_ratio_residue_coordinate_degree_le (hT : ModularGroup.T ∈ Γ) :
+    relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk Γ) ≤
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ) := by
+  haveI := (finite_residueCoordinate_and_degree_le A Γ hT).1
+  have hpos : 0 < Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ) :=
+    Module.finrank_pos
+  have he := coordinate_degree (residueImage A Γ) (residueJCoordinate A Γ)
+  change Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ) =
+    relfinrank kk⟮jqModC kk⟯ (residueImage A Γ) at he
+  rw [he] at hpos ⊢
+  have hj : kk⟮jqModC kk⟯ ≤ qExpFunctionFieldC kk Γ := by
+    rw [adjoin_simple_le_iff]
+    exact jq_mem_qExpFunctionField Γ
+  have hm := relfinrank_mul_relfinrank hj (qExpFunctionFieldC_le_residueImage A Γ)
+  exact Nat.le_of_dvd hpos (dvd_of_mul_right_eq _ hm)
+
+theorem integral_ratio_coordinate_degree_le_original (hT : ModularGroup.T ∈ Γ) :
+    relfinrank kk⟮jqModC kk⟯ (qExpFunctionFieldC kk Γ) ≤
+      Module.finrank L⟮jCoordinateOver Γ L⟯ (functionFieldOver Γ L) :=
+  (integral_ratio_residue_coordinate_degree_le A Γ hT).trans
+    (finite_residueCoordinate_and_degree_le A Γ hT).2
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

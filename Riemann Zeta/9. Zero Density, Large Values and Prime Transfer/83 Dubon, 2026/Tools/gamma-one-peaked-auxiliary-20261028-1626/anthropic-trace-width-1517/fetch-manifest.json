@@ -1,0 +1,17 @@
+{
+  "recordedUTC": "2026-10-29T00:54:06.950663+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_mul_width.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-trace-width-1517\\S_UpperHalfPlane_qExpansion_coeff_mul_width.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_UpperHalfPlane_qExpansion_coeff_mul_width.lean",
+      "sha256": "46BD37B185F6C161DA051F39C3EA42ADF1FA4660BBE0E1884A55241E66865710",
+      "bytes": 3870
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

@@ -1,0 +1,7 @@
+### Actual relative first-order points of the arithmetic local ring — 10 October 2026
+
+The proved original continuous coefficient-map universality is evaluated on the true residual dual-number algebra over the original local coefficient ring. These actual coefficient points correspond bijectively to all genuine continuous local first-order lifts. Their map onto the actual local continuous cohomology submodule is surjective, and equality of classes is precisely strict conjugacy of their entire original representations.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [ArithmeticLocalTangentPoints](Extension/Dubon2026/ArithmeticLocalTangentPoints.lean).

@@ -1,0 +1,9 @@
+### Actual unramified radical Selmer membership — 9 October 2026
+
+Three further production modules consume the genuine ideal multiplicity formula under the original extension algebraMap. At an actual prime lying over the base prime with ramification index one, the multiplicities of original principal ideals agree. The genuine multiplicity formula for integral adic valuations therefore proves their exact restriction identity. Original fraction representations and the actual commuting algebra towers extend this identity to the original fraction fields and integral-exponent valuations on their units. Applying the genuine extension-prime valuation to an original radical equation beta^n=algebraMap(a) forces n to divide the original base valuation. Consequently, if the actual radical extension has a prime of ramification index one above every original prime outside the specified set, the original power class of a belongs to the actual pinned Selmer group.
+
+The genuine ramification hypotheses are explicit and have not yet been supplied for original arithmetic Galois characters. The arithmetic Galois ramification realization, descent from adjoining roots of unity and arithmetic Mazur finiteness remain unproved. Final framed deformation-functor assembly, fixed residual presentation specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [UnramifiedFractionValuations](Extension/Dubon2026/UnramifiedFractionValuations.lean).
+- [UnramifiedIntegralValuations](Extension/Dubon2026/UnramifiedIntegralValuations.lean).
+- [UnramifiedRadicalSelmer](Extension/Dubon2026/UnramifiedRadicalSelmer.lean).

@@ -1,0 +1,24 @@
+{
+  "reviewDate": "2026-10-09",
+  "topic": "Actual finite kernel quotients and genuine symmetric-power maps on representation parameters",
+  "primarySources": [
+    {
+      "title": "The p-adic analytic space of pseudocharacters of a profinite group and pseudorepresentations over arbitrary rings",
+      "author": "Gaetan Chenevier",
+      "url": "https://arxiv.org/html/0809.0415",
+      "locations": "Section2.30, especially the discrete-coefficient finite-quotient discussion",
+      "formalUse": "For actual matrix representations, prove openness of the original kernel by continuity of the original matrix coordinates, and apply the pinned compact/open-subgroup quotient theorem. No determinant reconstruction or Amitsur theorem is inferred."
+    },
+    {
+      "title": "Symmetric power functoriality for holomorphic modular forms, II",
+      "authors": "James Newton and Jack A. Thorne",
+      "url": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+      "locations": "Introduction and section2: symmetric-power deformation and pseudodeformation maps",
+      "formalUse": "Construct the actual symmetric-power map on algebraic representation coordinate rings and original first-order lifts using previously proved coefficient and conjugacy identities. The arithmetic pseudodeformation map, complete local representability, Selmer inputs and patching are not supplied."
+    }
+  ],
+  "localApiReview": "Pinned Subgroup.quotient_finite_of_isOpen, QuotientGroup.kerLift/kerLift_mk/kerLift_injective, finite-variable polynomial Noetherianity and Ideal.Quotient.Noetherian. Existing local symmetricMatrixRepresentation_map, _conjugate and _continuous are reused exactly.",
+  "pinsChanged": false,
+  "externalLeanCodeImported": false,
+  "sourceGatesClosedByThisWork": []
+}

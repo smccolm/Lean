@@ -1,0 +1,24 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+variable {G ι K : Type} [Group G] [Fintype ι] [DecidableEq ι] [Field K]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace K] [IsTopologicalRing K]
+
+omit [IsTopologicalGroup G] in
+/-- Exact original-object consumer of `continuousTraceZeroCocycleInclusion_mem_coboundaries_iff`. -/
+theorem actual_continuous_trace_zero_coboundaries_continuousTraceZeroCocycleInclusion_mem_coboundaries_iff_source
+    (hn : (Fintype.card ι : K) ≠ 0) (ρ : G →* GeneralLinearGroup ι K)
+    (hρ : Continuous ρ) (c : continuousTraceZeroAdjointCocycles ρ) :
+    continuousTraceZeroCocycleInclusion ρ c ∈ continuousMatrixAdjointCoboundaries ρ hρ ↔
+      c ∈ continuousTraceZeroAdjointCoboundaries ρ hρ :=
+  continuousTraceZeroCocycleInclusion_mem_coboundaries_iff hn ρ hρ c
+
+end
+

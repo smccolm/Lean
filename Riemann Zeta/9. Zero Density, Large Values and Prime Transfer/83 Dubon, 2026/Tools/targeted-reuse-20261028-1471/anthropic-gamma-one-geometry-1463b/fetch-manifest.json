@@ -1,0 +1,59 @@
+{
+  "recordedUTC": "2026-10-28T23:34:24.001082+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean",
+      "sha256": "D357D52DA80C3F75D3FD2AF5DB958843DE6B83E0E8C1FBE087F24E81167254DD",
+      "bytes": 10104
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean",
+      "sha256": "007BFAE34FD714F60CDE4D078F7B4DDDB1F3A39B1CFEEC4EA83962158ECBD055",
+      "bytes": 22767
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean",
+      "sha256": "A887FC55F53F3DDBE8327F8E5049898D6268AD26F0728CB8A8C638B28DC5E7A4",
+      "bytes": 29758
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean",
+      "sha256": "A4FB8E281DD90804DCB74EECE6E0CDE4B27A5D8E4E3B44F17D40D885C4D2CD52",
+      "bytes": 16478
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean",
+      "sha256": "77D22A856DFE76A47AF3600A98F4D2C11E28AE4E6F9127039CD5EA2F5812A269",
+      "bytes": 22766
+    },
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean",
+      "sha256": "2210D1896CF42F4FE14CFB0B6B239BE95C7BD3BC6CCC2CF7FB319E3FBA11F27B",
+      "bytes": 79054
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean",
+      "sha256": "0D1ACA39A65D6605B904F5EA6C26C727C6E8D6696294A9023E00D68E6C10E43D",
+      "bytes": 34352
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

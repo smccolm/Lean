@@ -1,0 +1,96 @@
+import Dubon2026.SourceGammaOneDiamondQuotientHeckeFamily
+import Dubon2026.SourceGammaOneDiamondQuotientCharacter
+
+/-! DUB-17/18 -> original all-weight association -> finite original
+Hecke-character realization. Assemble the actual good-prime quotient
+operators from the two separate original geometric families, then descend
+the primitive form's original adic Hecke character using the original
+parabolic-transfer input. No operator family, eigensystem, character or
+nonzero vector is supplied. The three narrower geometric/transfer inputs,
+the comparison prime range and fixed exceptional integer remain explicit. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+open scoped ValuativeRel
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric algebraicLocalIntegerAction
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+private local instance : IsGalois ℚ Qbar := sourceRationalAlgebraicClosure_isGalois
+/-- The explicit conclusion consisting of an actual quotient operator family,
+its quotient square, and a character on its literal word-image algebra.
+This definition is a statement; the source consumer below proves it from
+the separate original geometric and parabolic-transfer hypotheses. -/
+def sourceQuotientOperatorCharacterData {I R W Z C : Type} [CommRing R]
+    [AddCommGroup W] [Module R W] [AddCommGroup Z] [Module R Z] [Ring C]
+    (q : W →ₗ[R] Z) (H : I → Module.End R W) (ψ : FreeAlgebra ℤ I →+* C) : Prop :=
+  ∃ Hq : I → Module.End R Z, (∀ i, (Hq i).comp q = q.comp (H i)) ∧
+    ∃ χ : (FreeAlgebra.lift ℤ Hq).range →+* C,
+      χ.comp (FreeAlgebra.lift ℤ Hq).rangeRestrict.toRingHom = ψ
+
+private theorem assemble_character {I R W Z C : Type} [CommRing R]
+    [AddCommGroup W] [Module R W] [AddCommGroup Z] [Module R Z] [Ring C]
+    (q : W →ₗ[R] Z) (H : I → Module.End R W) (ψ : FreeAlgebra ℤ I →+* C)
+    (hf : ∃ Hq : I → Module.End R Z, ∀ i, (Hq i).comp q = q.comp (H i))
+    (hc : ∀ Hq : I → Module.End R Z, (∀ i, (Hq i).comp q = q.comp (H i)) →
+      ∃ χ : (FreeAlgebra.lift ℤ Hq).range →+* C,
+        χ.comp (FreeAlgebra.lift ℤ Hq).rangeRestrict.toRingHom = ψ) :
+    ∃ Hq : I → Module.End R Z, (∀ i, (Hq i).comp q = q.comp (H i)) ∧
+      ∃ χ : (FreeAlgebra.lift ℤ Hq).range →+* C,
+        χ.comp (FreeAlgebra.lift ℤ Hq).rangeRestrict.toRingHom = ψ := by
+  obtain ⟨Hq, hH⟩ := hf
+  exact ⟨Hq, hH, hc Hq hH⟩
+
+variable (Q p n : ℕ) [NeZero Q] [Fact p.Prime] {k : ℤ}
+local notation "w" => Int.toNat (k - 2)
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver Γ Qbar))
+attribute [local instance] specializationResidueAlgebra
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+theorem exists_gammaOne_diamond_quotient_original_character_of_degree_genus_transfer
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (hlarge : 3 < p)
+    {E : Type} [Field E] [CharZero E] [ValuativeRel E] [CharP 𝓀[E] p]
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (hcop : IsCoprime (p : ℤ) (sourcePrimitiveParabolicExceptionalInteger f hk))
+    (hdeg : ∀ (ell : sourceBinaryHeckePrime (Q * N))
+      (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure ell.val ell.property.1),
+      let A := sourceRationalLocalValuation ell.val ell.property.1 e
+      let kk := IsLocalRing.ResidueField A
+      Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+        Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ))
+    (hgen : ∀ (ell : sourceBinaryHeckePrime (Q * N))
+      (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure ell.val ell.property.1),
+      let A := sourceRationalLocalValuation ell.val ell.property.1 e
+      genusFF (IsLocalRing.ResidueField A) (residueImage A Γ) =
+        genusFF Qbar (functionFieldOver Γ Qbar))
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q N w) :
+    sourceQuotientOperatorCharacterData
+      (binaryTateDiamondRelations Q p n w).mkQ (binaryTatePrimeOperators Q p n w)
+      ((sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeWord Q N w).toRingHom) := by
+  let q := (binaryTateDiamondRelations Q p n w).mkQ
+  let H := binaryTatePrimeOperators Q p n w
+  let ψ := (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+    (sourceGammaOneOriginalHeckeWord Q N w).toRingHom
+  have hs := exists_gammaOne_diamond_quotient_hecke_family_of_degree_genus_eq Q p n w
+  have h1 := hs hdeg
+  have h2 := h1 hgen
+  have h3 := assemble_character q H ψ h2
+  apply h3
+  intro Hq hH
+  have hc := binaryDiamondQuotient_original_character_of_transfer_away Q p n f hk hlarge τ hcop
+  have h4 := hc Hq hH
+  exact h4 hlift
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

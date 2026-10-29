@@ -1,0 +1,30 @@
+import Dubon2026.PrimitiveRootCyclotomicContinuity
+import Dubon2026.SourceGammaOneArithmeticTateOperators
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> the
+actual cyclotomic coefficient action on the original absolute Galois group.
+Reuse the primitive-root exponent and its proved Krull continuity; the
+character acts by the same exponent on every primitive root. -/
+namespace Dubon2026
+noncomputable section
+local notation "Qbar" => AlgebraicClosure ℚ
+
+/-- The actual finite cyclotomic exponent on the original algebraic closure. -/
+def sourceAbsoluteCyclotomicCharacter (N : ℕ) [NeZero N] :
+    (Qbar ≃ₐ[ℚ] Qbar) →ₜ* (ZMod N)ˣ := by
+  haveI : Algebra.IsAlgebraic ℚ Qbar := AlgebraicClosure.isAlgebraic ℚ
+  have hx : ∃ ζ : Qbar, IsPrimitiveRoot ζ N :=
+    HasEnoughRootsOfUnity.exists_primitiveRoot Qbar N
+  let ζ := Classical.choose hx
+  have hζ : IsPrimitiveRoot ζ N := Classical.choose_spec hx
+  exact ⟨hζ.autToPow ℚ, primitiveRootCyclotomicCharacter_continuous hζ⟩
+
+theorem sourceAbsoluteCyclotomicCharacter_apply_root (N : ℕ) [NeZero N]
+    (σ : Qbar ≃ₐ[ℚ] Qbar) {ζ : Qbar} (hζ : IsPrimitiveRoot ζ N) :
+    σ ζ = ζ ^ (sourceAbsoluteCyclotomicCharacter N σ : ZMod N).val := by
+  have hx : ∃ μ : Qbar, IsPrimitiveRoot μ N :=
+    HasEnoughRootsOfUnity.exists_primitiveRoot Qbar N
+  exact primitiveRootCyclotomicCharacter_apply_root (F := ℚ) (Classical.choose_spec hx) σ hζ
+
+end
+end Dubon2026

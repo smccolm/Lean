@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-10-28T23:37:12.446763+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean",
+      "sha256": "63683AE09613FD1DC4DCDB0277C91A9E7ACFE3180331C0035862A3CB6C1692C8",
+      "bytes": 52775
+    },
+    {
+      "path": "P2M/Sol/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean",
+      "sha256": "8DBBC465A253C4A3C76426C070846D32B9875F891402CF8E75E494E96F6B60BC",
+      "bytes": 7907
+    },
+    {
+      "path": "P2M/Sol/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean",
+      "sha256": "A757A627F788B16FE1CD4E5B7CB42A6DBF7C924CCCAC62CFEA6138A3A0A72A75",
+      "bytes": 31708
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

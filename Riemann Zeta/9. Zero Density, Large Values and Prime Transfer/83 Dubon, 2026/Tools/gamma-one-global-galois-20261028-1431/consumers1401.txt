@@ -1,0 +1,72 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {ι R : Type} [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `dualMatrixInfinitesimal_strictConjugate`. -/
+theorem actual_strict_deformation_dualMatrixInfinitesimal_strictConjugate_source (A : GeneralLinearGroup ι (DualNumber R))
+    (X : Matrix ι ι R) :
+    dualMatrixInfinitesimal (dualMatrixStrictUnit X * A * (dualMatrixStrictUnit X)⁻¹) =
+      dualMatrixInfinitesimal A + X -
+        (dualMatrixReduction A).val * X * ((dualMatrixReduction A)⁻¹).val :=
+  dualMatrixInfinitesimal_strictConjugate A X
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderConjugate_coboundary`. -/
+theorem actual_strict_deformation_matrixFirstOrderConjugate_coboundary_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ : MatrixFirstOrderLift ρ) (X : Matrix ι ι R) :
+    (fun g => matrixFirstOrderCocycle ρ τ g -
+      matrixFirstOrderCocycle ρ (matrixFirstOrderConjugate ρ τ X) g) =
+        groupCohomology.d₀₁ (matrixAdjointRep ρ) X :=
+  matrixFirstOrderConjugate_coboundary ρ τ X
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderStrictlyConjugate_iff`. -/
+theorem actual_strict_deformation_matrixFirstOrderStrictlyConjugate_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (τ σ : MatrixFirstOrderLift ρ) :
+    MatrixFirstOrderStrictlyConjugate ρ τ σ ↔
+      groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ τ) =
+        groupCohomology.H1π (matrixAdjointRep ρ) (matrixFirstOrderCocycle ρ σ) :=
+  matrixFirstOrderStrictlyConjugate_iff ρ τ σ
+
+end
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct
+
+
+variable {G ι R : Type} [Group G] [Fintype ι] [DecidableEq ι] [CommRing R]
+  [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace R] [IsTopologicalRing R]
+
+/-- Exact original-object consumer of `matrixFirstOrderLift_continuous_iff`. -/
+theorem actual_strict_deformation_matrixFirstOrderLift_continuous_iff_source (ρ : G →* GeneralLinearGroup ι R)
+    (hρ : Continuous ρ) (τ : MatrixFirstOrderLift ρ) :
+    Continuous τ.val ↔ Continuous (fun g => matrixFirstOrderCocycle ρ τ g) :=
+  matrixFirstOrderLift_continuous_iff ρ hρ τ
+
+end
+

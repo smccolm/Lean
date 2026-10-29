@@ -1,0 +1,30 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {ι O A : Type u} [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Finite (IsLocalRing.ResidueField O)]
+  [TopologicalSpace (IsLocalRing.ResidueField O)] [T2Space (IsLocalRing.ResidueField O)]
+  [CommRing A] [IsLocalRing A] [Algebra O A] [WithIdeal A]
+
+variable [IsNoetherianRing A] [IsAdicComplete (IsLocalRing.maximalIdeal A) A]
+
+/-- Exact original-object consumer of `originalFramedFiberFixedQuotientEquiv_mk`. -/
+theorem actual_original_residual_framed_fibers_originalFramedFiberFixedQuotientEquiv_mk_source
+    (hA : (WithIdeal.i : Ideal A) = IsLocalRing.maximalIdeal A)
+    (e : IsLocalRing.ResidueField A ≃ₐ[O] IsLocalRing.ResidueField O)
+    (p : ℕ) (hp : p.Prime) [CharP (IsLocalRing.ResidueField O) p]
+    (H : ProfiniteGrp.{u})
+    (σ : H →* GeneralLinearGroup ι (IsLocalRing.ResidueField O)) (hσ : Continuous σ)
+    (f : OriginalContinuousFramedFiber e H σ) (h : H) :
+    (originalFramedFiberFixedQuotientEquiv hA e p hp H σ hσ f).val
+      (QuotientGroup.mk' (fixedResidualProPKernel p H σ.ker
+        (originalResidualMatrixKernel_isClosed H σ hσ)) h) = f.val h :=
+  originalFramedFiberFixedQuotientEquiv_mk hA e p hp H σ hσ f h
+
+end
+

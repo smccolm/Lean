@@ -1,0 +1,53 @@
+import Dubon2026.SourceGammaOneHeckeGauss
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius -> norm reduction for
+integral fractions. The existing beta Gauss homomorphism and primitive
+constant normalization reflect integrality. Thus a norm's expanded product
+may be reduced using integral fraction witnesses; coefficientwise integral
+Laurent representatives are not required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open CongruenceSubgroup SourceCurve
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+  (M d : ℕ) [NeZero d]
+local notation "Γ" => Gamma1 M
+local notation "Δ" => Gamma1 M ⊓ Gamma0 (d * M)
+local notation "FF" => functionFieldOver Γ L
+local notation "GG" => functionFieldOver Δ L
+
+theorem heckeBeta_mem_gaussRing_iff (f : FF) :
+    heckeBeta L M d f ∈ coefficientGaussRing Δ A ↔ f ∈ coefficientGaussRing Γ A := by
+  refine ⟨fun hf => ?_, fun hf => heckeBeta_mem_gaussRing A M d ⟨f, hf⟩⟩
+  by_cases hf0 : f = 0
+  · simp [hf0]
+  let R := regularProlongation A Γ
+  let S := regularProlongation A Δ
+  let φ : FF →ₐ[L] GG := heckeBeta L M d
+  obtain ⟨c, hc, hcres⟩ := R.exists_smul_mem f hf0
+  have hu := R.isUnit_of_residue_ne_zero hcres
+  have hSnorm := (S.integers.valuation_eq_one_iff _).mp
+    (hu.map (heckeBetaGauss A M d))
+  change S.integers.valuation (φ (c • f)) = 1 at hSnorm
+  have hc0 : c ≠ 0 := by
+    intro hz
+    have heq : (⟨c • f, hc⟩ : R.integers) = 0 := Subtype.ext (by simp [hz])
+    exact hcres (by rw [heq, map_zero])
+  have he : algebraMap L FF c⁻¹ = f * (c • f)⁻¹ := by
+    rw [Algebra.smul_def, mul_inv, ← mul_assoc, mul_right_comm,
+      mul_inv_cancel₀ hf0, one_mul, map_inv₀]
+  have hciS : algebraMap L GG c⁻¹ ∈ S.integers := by
+    have he' := congrArg (φ) he
+    rw [(φ).commutes, map_mul, map_inv₀] at he'
+    rw [he']
+    apply S.integers.mul_mem _ _ hf
+    rw [← S.integers.valuation_le_one_iff, map_inv₀, hSnorm, inv_one]
+  have hciR : algebraMap L FF c⁻¹ ∈ R.integers :=
+    (R.algebraMap_mem_iff _).mpr ((S.algebraMap_mem_iff _).mp hciS)
+  have he' : f = algebraMap L FF c⁻¹ * (c • f) := by
+    rw [Algebra.smul_def, map_inv₀, ← mul_assoc,
+      inv_mul_cancel₀ ((_root_.map_ne_zero _).mpr hc0), one_mul]
+  rw [he']
+  exact R.integers.mul_mem _ _ hciR hc
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,41 @@
+import Dubon2026.SourceGammaOneTwistedGalois
+import Dubon2026.SourceCyclotomicHomogeneousHecke
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+finite Gamma1 Hecke-character realization. The genuine cyclotomic/Tate
+Galois action commutes with every original good-prime Hecke operator.
+Both the original Picard and homogeneous coefficient commutations are
+proved upstream; no Hecke-equivariant Galois action is postulated. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+
+private local instance : Algebra ℤ_[p] (ZMod N) :=
+  (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V :=
+  Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+
+theorem binaryArithmeticTateGaloisRep_prime (σ : Qbar ≃ₐ[ℚ] Qbar)
+    (ell : sourceBinaryHeckePrime (Q * N)) (φ : T →ₗ[ℤ_[p]] V) :
+    binaryArithmeticTateGaloisRep Q p n w σ (binaryTatePrimeOperators Q p n w ell φ) =
+      binaryTatePrimeOperators Q p n w ell (binaryArithmeticTateGaloisRep Q p n w σ φ) := by
+  letI : Fact ell.val.Prime := ⟨ell.property.1⟩
+  have h := sourceTwistedCoefficientDualAction_operator
+    (binaryCyclotomicCoefficientRep Q p n w) (arithmeticTateGaloisRep M p) σ
+    (homogeneousMatrixAction w (Matrix.diagonal ![(ell.val : ZMod N), 1]))
+    (arithmeticHeckeTate M p ell.val)
+    (arithmeticTateGaloisRep_hecke M p ell.val σ⁻¹)
+    (sourceCyclotomicHomogeneousAction_commute (ZMod N) w
+      (sourceAbsoluteCyclotomicCharacter N σ) (ell.val : ZMod N)) φ
+  exact h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,39 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+universe u
+
+variable {G ι O : Type u} [Group G] [Fintype ι] [DecidableEq ι]
+  [CommRing O] [IsLocalRing O] [Group.FG G] [IsNoetherianRing O]
+  [Finite (IsLocalRing.ResidueField O)] [TopologicalSpace (IsLocalRing.ResidueField O)]
+  [T2Space (IsLocalRing.ResidueField O)]
+
+/-- Exact original-object consumer of `completedPresentationCoefficientQuotient_localData`. -/
+theorem actual_completed_presentation_local_data_completedPresentationCoefficientQuotient_localData_source
+    (ρ : G →* GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (σ : ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G) →*
+      GeneralLinearGroup ι (IsLocalRing.ResidueField O))
+    (hσ : Continuous σ)
+    (hσeta : ∀ g, σ (ProfiniteGrp.ProfiniteCompletion.etaFn (GrpCat.of G) g) = ρ g)
+    (N : Subgroup (ProfiniteGrp.ProfiniteCompletion.completion (GrpCat.of G)))
+    (hN : N ≤ σ.ker) :
+    ∃ hlocal : IsLocalRing (CompletedPresentationCoefficientQuotient ρ N),
+      (letI := hlocal
+       ∃ e : IsLocalRing.ResidueField (CompletedPresentationCoefficientQuotient ρ N) ≃ₐ[O]
+           IsLocalRing.ResidueField O,
+         IsNoetherianRing (CompletedPresentationCoefficientQuotient ρ N) ∧
+         IsAdicComplete (IsLocalRing.maximalIdeal (CompletedPresentationCoefficientQuotient ρ N))
+           (CompletedPresentationCoefficientQuotient ρ N) ∧
+         (inferInstance : TopologicalSpace (CompletedPresentationCoefficientQuotient ρ N)) =
+           (IsLocalRing.maximalIdeal (CompletedPresentationCoefficientQuotient ρ N)).adicTopology ∧
+         ∀ r : ResidualRepresentationCompletion ρ,
+           e (IsLocalRing.residue _ (Ideal.Quotient.mk
+             (completedPresentationRelationIdeal ρ N) r)) =
+             completedResidualRepresentationEvaluation ρ r) :=
+  completedPresentationCoefficientQuotient_localData ρ σ hσ hσeta N hN
+
+end
+

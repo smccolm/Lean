@@ -1,0 +1,52 @@
+import SourceGammaOneDiamondQuotientWords
+
+/-! DUB-17/18 -> original all-weight association -> actual finite
+Hecke-character realization. Reuse the native additive word intertwiner
+for the original quotient transfer. Exact parabolic preimages then send
+every zero quotient operator word into the original parabolic reduction
+kernel. The Hecke-family square is explicit here and is to be discharged
+by the original geometric good-prime construction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve CongruenceSubgroup groupCohomology
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Qbar" => AlgebraicClosure ℚ
+local notation "V" => sourceBinaryCoefficientRep (ZMod N) Q w
+local notation "T" => TateModule p (Pic0 Qbar (functionFieldOver (Gamma1 M) Qbar))
+private local instance : Algebra ℤ_[p] (ZMod N) := (PadicInt.toZModPow (n + 1)).toAlgebra
+private local instance : Module ℤ_[p] V := Module.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : IsScalarTower ℤ_[p] (ZMod N) V :=
+  IsScalarTower.restrictScalars ℤ_[p] (ZMod N) V
+private local instance : AddCommGroup (T →ₗ[ℤ_[p]] V) := inferInstance
+private local instance : Module (ZMod N) (T →ₗ[ℤ_[p]] V) := inferInstance
+
+theorem binaryDiamondQuotientOriginalTransfer_word_kernel
+    (hlarge : 3 < p)
+    (Hq : sourceBinaryHeckePrime (Q * N) → Module.End (ZMod N) ((T →ₗ[ℤ_[p]] V) ⧸ binaryTateDiamondRelations Q p n w))
+    (hH : ∀ ell, (Hq ell).comp (binaryTateDiamondRelations Q p n w).mkQ =
+  (binaryTateDiamondRelations Q p n w).mkQ.comp (binaryTatePrimeOperators Q p n w ell))
+
+    (hlift : sourceGammaOneIntegralParabolicTransfer Q N w)
+    (a : FreeAlgebra ℤ (sourceBinaryHeckePrime (Q * N)))
+    (ha : FreeAlgebra.lift ℤ Hq a = 0)
+    (x : H1 (sourceBinaryCoefficientRep ℤ Q w))
+    (hx : x ∈ sourceParabolicH1 (Gamma0 Q) (sourceBinaryCoefficientRep ℤ Q w)) :
+    sourceBinaryH1Change (Int.castRingHom (ZMod N)) Q w
+      ((sourceGammaOneOriginalHeckeWord Q N w a).val x) = 0 := by
+  have hs := binaryDiamondQuotientOriginalTransfer_parabolic_preimage Q p n w hlarge
+  have h1 := hs hlift
+  have h2 := h1 x
+  obtain ⟨z, hz⟩ := h2 hx
+  let β := binaryDiamondQuotientOriginalTransfer Q p n w hlarge
+  let u := fun ell => sourceBinaryH1PrimeOperators (ZMod N) Q w
+    (sourceGammaOneHeckePrimeForget Q N ell)
+  have hw := binaryDiamondQuotientOriginalTransfer_word Q p n w hlarge Hq hH a z
+  have hzero := LinearMap.congr_fun ha z
+  have hzword := hw.symm.trans ((congrArg β hzero).trans (map_zero β))
+  have hc := sourceGammaOneOriginalHeckeWord_change Q N w a x
+  exact hc.trans ((congrArg (FreeAlgebra.lift ℤ u a) hz.symm).trans hzword)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

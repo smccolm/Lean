@@ -1,0 +1,51 @@
+{
+  "recordedUTC": "2026-10-29T00:24:18.407121+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight characteristic-zero association -> original Gamma1 Tate/Frobenius arithmetic realization -> exact degree/genus preservation -> signed-index lower bound -> integral Eisenstein diamond separation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFourierLinear.lean",
+      "sha256": "23ADD4FF88B5B8792E0C831693FC9D47A1F031C8C095418F0E41048280992019"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+      "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRationalBoundedDenominators.lean",
+      "sha256": "BF4FA5190BA81FACB7CDE51C768B7207BF75E5E6680DDAD9E89E3FBD02BB65D6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticIntegrality.lean",
+      "sha256": "8C72A356A93F73E2657CE54707471246E7DFCC23849876C3DBA56998F055BCD6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-review-1471.json",
+      "sha256": "74B5DFC7AB8EB07E3F4995181F8D84EAA39D6F6A9CF976284AE31D1A8F8D8EB4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-slash-dependency-review-1501.json",
+      "sha256": "9C53F2C093AA4E26801D840052B9A1D4C5E0448FC264150AFF9EDC2CDF4AB5FB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\Dubon Integral Eisenstein Reuse Assessment 2026-10-28.md",
+      "sha256": "8BB4CBF80E12812EB9785FC3AB6EF72FB78490BB615E49FBABF5B512F2BF49DD"
+    }
+  ],
+  "shorterRoute": "Specialize to weight four and Gamma1. Sum second residue classes before the Fourier calculation, reuse native Lipschitz and divisor-product identities, and separate individual signed diamond classes using E_c/E4. No general additive-character Fourier formula or GammaH coset averaging is needed. The still-open field-action integrality chain is documented explicitly.",
+  "assumptionsToDischarge": [
+    "Existence of actual holomorphic cusp-bounded weight-four congruence lattice forms.",
+    "Exact Gamma0 slash transformation of the actual Gamma1 row-sum forms.",
+    "Integral Fourier coefficients for their literal Lipschitz normalization.",
+    "Membership of E_c/E4 in the actual integral-ratio field over every field.",
+    "Separation of the identity signed diamond class for N>2 after reduction in every characteristic."
+  ],
+  "remaining": "Level-power slash integrality or a rigorous replacement is still needed for the full reduced field action. Signed-index degree lower bound, degree/genus preservation, finite-modulus parabolic transfer, required two-dimensional characteristic-zero realization, remaining local/image/regularity inputs, automorphy and literal higher continuation remain. Acceptance stays 16/20; DUB-17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

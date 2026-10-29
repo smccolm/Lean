@@ -1,0 +1,1 @@
+The actual integer-ring inclusion intertwines original Galois automorphisms with their restrictions to original normal subfields. Hence actual inertia restricts to the inertia of the genuine contracted integer-ring ideal, with no finiteness hypothesis on the whole extension.

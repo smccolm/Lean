@@ -1,0 +1,57 @@
+{
+  "status": "Prepared only. Integration requires predecessor canonical PASS and archive.",
+  "modules": 19,
+  "queries": 42,
+  "theorems": 27,
+  "constructions": 15,
+  "exhaustiveScratchChecks": 108,
+  "proofValueChecks": 60,
+  "scopes": 3,
+  "receipts": {
+    "source-frobenius-normalization-1-scratch-receipt.json": "66C74A6E560692ACA8206D17FCDAD617AAC4C9565A86C6BDCE805D31A9FB2957",
+    "source-diamond-transfer-1-scratch-receipt.json": "951FAB13BC6D856AD1E24F9672859DCBE24635DE047C1680FED402F203A35DD2",
+    "source-hecke-diamond-character-1-scratch-receipt.json": "234287D26314603BA5CF98454727CDCA506B573E8C49E4E92B3057368D0224B6"
+  },
+  "expectedConsumers": 26442,
+  "expectedConstructions": 2816,
+  "fullGoal": "Original diamond transfer invariance and the full-H1 diamond-one finite character are proved, as are exact coefficient normalization and ambient Galois/Hecke compatibility. The Gamma1 geometric Frobenius relation remains the explicit input of the conditional normalization theorem. Original parabolic preimages or a faithful alternative, parabolic character factorization, Frobenius/inertia realization, exceptional primes, coefficient-field realization and original all-weight characteristic-zero association remain. Local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. An ambient Galois representation and finite characters do not supply a two-dimensional characteristic-zero association. 16/20; DUB-17--20 OPEN; all twenty acceptance gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_frobenius_diamond_9026.py",
+      "sha256": "E50BB732B2C71E3C8506BF0AE0AA284C62D23A8411CBE57F7FABF9B5F0842317"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_diamond_production_ownership_9026.py",
+      "sha256": "DDCE256EA69D1F22AC34280A1CA4383519331EB3222097BDBA4BCBB31B1D060B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_frobenius_diamond_global_ownership_9026.py",
+      "sha256": "077D93D2A2CB29F688771ADAE5B26192755EAB120DCFE34EB902B429D07CF7E5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_frobenius_diamond_ownership_9026.py",
+      "sha256": "822528A7A8097EC3DFC439F28538DC269C106D551529C1F2350EF9AB6CB65770"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_frobenius_diamond_9026.py",
+      "sha256": "9085BAD2B4C49055720E50EBF322004A22C5B47D1479A601A59C5474B944E095"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_frobenius_diamond_9026.ps1",
+      "sha256": "77A7E369ED4D4A9DB3A775884AAB29B73D5DE475E3D78EB6EAA0F3AD2DA17864"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_frobenius_diamond_9026.ps1",
+      "sha256": "21EFFC4166DAFFE1FBED3243C52EAC744D7425CEDA645EFAB9D2F1DA4690D67C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_frobenius_diamond_canonical_9026.py",
+      "sha256": "B55BC5E2437D2A3143CFEAFEBBDB4820B50A9AB57BB39D6ED7C012FD257C6F9C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\preflight_frobenius_diamond_9026.py",
+      "sha256": "956202CBAB29227D0C81BB074E9D2C90890CACF9BA3E0E653250746EEB86E380"
+    }
+  ],
+  "productionMutation": false
+}

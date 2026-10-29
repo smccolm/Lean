@@ -1,0 +1,18 @@
+{
+  "reviewed": "2026-10-08",
+  "route": "Actual coefficient-ring symmetric-power representation, exact reduction and continuity, as foundations for the remaining arithmetic automorphy argument. No Galois association or higher automorphy is asserted.",
+  "primarySource": "https://www.numdam.org/item/10.1007/s10240-021-00126-4.pdf",
+  "sourceLocation": "Introduction, pages 118-120; actual symmetric powers of Galois representations and residual congruences in the lifting strategy.",
+  "reuse": [
+    "Pinned MatrixPolynomialAction and UniversalMatrixPolynomial are generalized rather than duplicated.",
+    "Pinned MvPolynomial.IsHomogeneous.map, map_injective, continuous_eval, Basis.repr_reindex_apply, LinearMap.toMatrixAlgEquiv and MonoidHom.toHomUnits are reused."
+  ],
+  "externalReview": {
+    "url": "https://github.com/ImperialCollegeLondon/FLT/blob/main/FLT.lean",
+    "finding": "Upstream import list includes deformation and continuous-representation foundations. Inspection does not establish an audited implementation of the required all-order symmetric automorphy theorem. No external source or new dependency imported."
+  },
+  "externalIntegrity": {
+    "url": "https://github.com/ImperialCollegeLondon/FLT/blob/main/FermatsLastTheorem.lean",
+    "finding": "The displayed current top-level dependency audit still contains incomplete-proof and declared-input dependencies. It cannot be used as an unconditional project proof."
+  }
+}

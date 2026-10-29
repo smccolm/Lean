@@ -1,0 +1,7 @@
+### Actual localized integer ramification equivalence — 9 October 2026
+
+One further production module proves both directions of the exact original ramification criterion. A formally unramified algebra between the actual compatible localizations first becomes formally unramified over the original base integer ring by composition with the genuine base localization. The actual localization equivalence and the original unramified-locus criterion then recover index one at each original finite prime outside the exceptional element. Conversely, the already constructed localized integer algebra theorem derives formal unramifiedness from precisely these original indices. No prime-local or global unramifiedness bridge is assumed.
+
+The canonical localized rings, their actual field embeddings and tensor-compositum constructions still need assembly in the original arithmetic extension. The original arithmetic Galois extension, its required cyclotomic intermediate field, all-open-subgroup Mazur finiteness, final framed deformation-functor assembly and fixed residual specialization, Galois association, local conditions, deformation Selmer inputs, patching and higher symmetric automorphy/continuation remain open. Unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [LocalizedIntegerRamificationEquivalence](Extension/Dubon2026/LocalizedIntegerRamificationEquivalence.lean).

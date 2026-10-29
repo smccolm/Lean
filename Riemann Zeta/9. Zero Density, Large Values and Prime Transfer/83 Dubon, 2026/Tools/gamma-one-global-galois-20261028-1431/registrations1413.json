@@ -1,0 +1,17 @@
+[
+  "Dubon2026.continuousMatrixRepresentation_isOpen_ker",
+  "Dubon2026.continuousMatrixRepresentation_quotient_finite",
+  "Dubon2026.continuousMatrixRepresentation_factor",
+  "Dubon2026.continuousMatrixRepresentation_quotient_injective",
+  "Dubon2026.representationCoordinateAlgebra_isNoetherian",
+  "Dubon2026.continuousMatrixRepresentation_noetherianCoordinates",
+  "Dubon2026.symmetricFirstOrderLift_strictlyConjugate",
+  "Dubon2026.symmetricFirstOrderLift_cohomology",
+  "Dubon2026.symmetricFirstOrderLift_continuous",
+  "Dubon2026.symmetricRepresentationCoordinateMap_universal",
+  "Dubon2026.symmetricRepresentationCoordinateMap_evaluation",
+  "Dubon2026.SemanticRegression.actual_finite_symmetric_parameters_continuousMatrixRepresentation_quotient_finite_source",
+  "Dubon2026.SemanticRegression.actual_finite_symmetric_parameters_continuousMatrixRepresentation_noetherianCoordinates_source",
+  "Dubon2026.SemanticRegression.actual_finite_symmetric_parameters_symmetricRepresentationCoordinateMap_evaluation_source",
+  "Dubon2026.SemanticRegression.actual_finite_symmetric_parameters_symmetricFirstOrderLift_cohomology_source"
+]

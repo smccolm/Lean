@@ -1,0 +1,315 @@
+{
+  "status": "Pinned source inspection only; no external build, import, or transitive axiom audit. No change to source contracts or completion gates.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\candidates.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/candidates.json",
+      "sha256": "91923AB01217B570E26741F51E17850412A0B5A60ADE5548F100B3FEFCEB5BB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\commit.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/commit.json",
+      "sha256": "D1E47A5D83078C9D980CAA50293F700714700EDDFAD5720956817E2D21FD9A8A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/fetch-manifest.json",
+      "sha256": "1E3FC9B391E96D3A6F4851D8EE17A22B3327C2C05287FCCC5D22AD1927043289"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\lake-manifest.json.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/lake-manifest.json.txt",
+      "sha256": "EF35EC69AE444235102DEEED4C0F69CAD58E1A3F0D00297185405BDC0C82385F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\lean-toolchain.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\LICENSE.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/LICENSE.txt",
+      "sha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\README.md.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/README.md.txt",
+      "sha256": "ED0A346FB46D98FE1AEB6F83B0C7227F22DDD9C009CD859E14D14C50E4103FFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\repository.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/repository.json",
+      "sha256": "F329DDF5C17CE98DA117591B228E67DFB16872A711AFDA6B69142115E76FC8A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-curves--main\\tree.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-curves--main/tree.json",
+      "sha256": "B20D3BFB0FD4BF3F80E4B4441FCFBFB083A97C9CE91B81E0A42FB5130962F3D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\candidates.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/candidates.json",
+      "sha256": "45A21E9E217F1461561F3E263BC85969A8EDA2FEBF605C9AE72E7E074E5680DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\commit.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/commit.json",
+      "sha256": "AE05676EB621B67710C74EB39D9CAC6A26421143C266CC8DD9136DF112ADA2C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/fetch-manifest.json",
+      "sha256": "E0B1E1D7EFBB031D23D4A86D09B4A8469786C442E3167864C348B7EE2C580563"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\lake-manifest.json.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/lake-manifest.json.txt",
+      "sha256": "52E9DA1752A4449446C725F561AC49EBED718AC63ECC0B4E074DF8309B7F7099"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\lean-toolchain.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\LICENSE.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\README.md.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/README.md.txt",
+      "sha256": "51F534B7AC0582C5FBDEFF52396BEA0D58675429A49100BA0731322F5E8C72F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\repository.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/repository.json",
+      "sha256": "B2CBC3D53AD325890572259F4F48C5896CEF0B9F2A72B4BDF87F39B3997B64AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--elliptic-reduction--main\\tree.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--elliptic-reduction--main/tree.json",
+      "sha256": "CD826355691ABC0764C4BF79460B5F5FE97D98E6B3FF1D0B0CF1DAC76DAFED8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\candidates.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/candidates.json",
+      "sha256": "4C354CD828A26399A1842E4E826DB979129ADD527428E357E3F12AFE4488117E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\commit.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/commit.json",
+      "sha256": "748411D656BE2928D1FE4D6CFC8B1B10D7A07A860ACE9480E83AE554858C759C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/fetch-manifest.json",
+      "sha256": "DE743E49F9F2E033D000F8ED0CE0C6B5E5F7B5A078F0DC302F72BB174D92870A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\lake-manifest.json.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/lake-manifest.json.txt",
+      "sha256": "4EC2BB5EB1E2A719580F113B6096D233327AB048A954D0B5138998EFBEE427A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\lean-toolchain.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\LICENSE.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\README.md.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/README.md.txt",
+      "sha256": "774EFFA8C7E8491E4D5487C454D34740954FDD39C2591B55741774B6DB476CE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\repository.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/repository.json",
+      "sha256": "7F7A42CF90FAF1E9B73BEBE50B53AB4DFFD0F7EC0844F6C62C8A210D0D80EFAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--iut--main\\tree.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--iut--main/tree.json",
+      "sha256": "E82E904FBDF0BD6301EC68D5F6B63E90AEFF5D4EC6C3CEC6D6528A1F787B7D0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\candidates.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/candidates.json",
+      "sha256": "66EB629F2FEBC67AB02D7D0E6883C3B55ACBD5F212BD949A48D521B2630EB135"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\commit.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/commit.json",
+      "sha256": "7AA04D1B768E2372DB993A116D28C8D0F5C5EFCF77A4BB04337BB8E87624C4A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/fetch-manifest.json",
+      "sha256": "315C1E8AC8C6D1EA429EBFCD2920586533F8FA8BCC1D4EE910B7E70533F94A51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\lake-manifest.json.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/lake-manifest.json.txt",
+      "sha256": "57E5C28D3621923F4C09F39AF29DAF5F786C340B5F97F7AE2280DCFFF1848619"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\lean-toolchain.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/lean-toolchain.txt",
+      "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\LICENSE.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\README.md.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/README.md.txt",
+      "sha256": "30F9EE203E79E3C3EBF815B9048969CC2744EB23E82A0FF471B38FDBED6313BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\repository.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/repository.json",
+      "sha256": "301CB7BF475CC0991C28B86B2E41069021D9E606646DBC738A6F6D773AE3B2C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432b\\lana-agents--tate-curves-theta--main\\tree.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432b/lana-agents--tate-curves-theta--main/tree.json",
+      "sha256": "0340CFEAFE66849F894AD6E4931EEF3536D89EEF105085E5E31FE4A97153A49A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\anthropics--fermats-last-theorem\\P2M\\Sol\\S_HeckeEis_exists_coeffH1par_projLineRepSL_equiv_parabolicHoms.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/anthropics--fermats-last-theorem/P2M/Sol/S_HeckeEis_exists_coeffH1par_projLineRepSL_equiv_parabolicHoms.lean.txt",
+      "sha256": "5D19375605B630F11B7C5C43A1BD3EECBE3E231FD23D6E23AE87C6FE94352F19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\anthropics--fermats-last-theorem\\P2M\\Sol\\S_HeckeEis_exists_modularForm_coeffCocycles_sub_cocycle_mem_coeffParabolicCocycles.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/anthropics--fermats-last-theorem/P2M/Sol/S_HeckeEis_exists_modularForm_coeffCocycles_sub_cocycle_mem_coeffParabolicCocycles.lean.txt",
+      "sha256": "1C951542915A7E5BFF4FBE5786F755CC1C9CC66118CA1BE34CD367D757D6A507"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/fetch-manifest.json",
+      "sha256": "683F300D8DCFD4E366833F00C681DF933795EF3B121AB41BAB172681A4B43B9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Reduction\\GoodReductionCriterion.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--elliptic-curves/EllipticCurves/Reduction/GoodReductionCriterion.lean.txt",
+      "sha256": "3F224844541F534BCED155C0894FB342B5AFC65276D00610442BC36693461B33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Reduction\\NeronOggShafarevich.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--elliptic-curves/EllipticCurves/Reduction/NeronOggShafarevich.lean.txt",
+      "sha256": "291E8E95962079BB72249DB8AF949533B33C6EEC450936CEB7DECE1D3BA2517A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-curves\\EllipticCurves\\Torsion\\StructureGeneral.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--elliptic-curves/EllipticCurves/Torsion/StructureGeneral.lean.txt",
+      "sha256": "2BDA93ED4DC9482FA929DE0D90C6517A564F6097DAE5EC5130EA4ECB84A082EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--elliptic-reduction\\EllipticReduction\\Basic.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--elliptic-reduction/EllipticReduction/Basic.lean.txt",
+      "sha256": "8CECA740CFFBC58F7ABC2B208B4E6C8812B0F31E9AE95C15E04866E40A6ED0DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\Converse\\ReductionType.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--tate-curves-theta/TateCurvesTheta/Converse/ReductionType.lean.txt",
+      "sha256": "298517C9D4B9C1E812AE3AECD7E4F46476BBE9D0EA9BBB6C2D99AA8AA1D06057"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TateUniformization.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--tate-curves-theta/TateCurvesTheta/TateCurve/TateUniformization.lean.txt",
+      "sha256": "B76192BC35A24075238CB61F9BE165938C1997662A3A16A813A8F11E49439DE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432d\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\WeierstrassIdentity.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432d/lana-agents--tate-curves-theta/TateCurvesTheta/TateCurve/WeierstrassIdentity.lean.txt",
+      "sha256": "AEC1AAAA03BA255485364B72BB746C14A2A0B1BB27ECDDF682A6A07C66F70A4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\fetch-manifest.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432e/fetch-manifest.json",
+      "sha256": "4298FB069452BBD608C810F87B9FFD96430AE5E9748D5D37DA36AC3C4D7B40A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\DefectVanishing.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432e/lana-agents--tate-curves-theta/TateCurvesTheta/TateCurve/DefectVanishing.lean.txt",
+      "sha256": "95EB60016B24AB1226E62BEFA9FA336C0E0A6D7D5A3470CDB51DA324B900C55F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TatePointMem.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432e/lana-agents--tate-curves-theta/TateCurvesTheta/TateCurve/TatePointMem.lean.txt",
+      "sha256": "F849181ACCB75D8FEC9A18450CB6D62173EEC9BE95EF7F15F449823E35865C68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-1432e\\lana-agents--tate-curves-theta\\TateCurvesTheta\\TateCurve\\TatePointOnCurve.lean.txt",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-1432e/lana-agents--tate-curves-theta/TateCurvesTheta/TateCurve/TatePointOnCurve.lean.txt",
+      "sha256": "03EF1FC1F3513658A854F0744B026D56E6F9CFE3AD5BFAE6715BB2382474542D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\lana-reuse-review-1432.json",
+      "path": "Tools/additional-reuse-20261028-1432/lana-reuse-review-1432.json",
+      "sha256": "23469EC2D3EA5ED0EA4D33CC3BD929E87DF4DA5A466D56A7C0D49AA6A8BD78BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_lana_candidates_1432c.py",
+      "path": "Tools/additional-reuse-20261028-1432/fetch_lana_candidates_1432c.py",
+      "sha256": "3EE67D81091525E554EA3ED37C8D21B796B399DBC8FAEC44FEEBA197046EBF7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_lana_candidates_1432d.py",
+      "path": "Tools/additional-reuse-20261028-1432/fetch_lana_candidates_1432d.py",
+      "sha256": "825F4E847C9C22C3C6887DF57E003989FCFB5D18443518CE77D7CA50698ABEE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_lana_identity_1432e.py",
+      "path": "Tools/additional-reuse-20261028-1432/fetch_lana_identity_1432e.py",
+      "sha256": "997591150FE77C4C3D5FAC8805AED9E1011A9C36256E07D6EF4E7E92763F2A8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_lana_reuse_1432.py",
+      "path": "Tools/additional-reuse-20261028-1432/fetch_lana_reuse_1432.py",
+      "sha256": "B35136D1ED03E2F32D3E241081C7BCDCF46F26F7DBEA121160B3434E686D4103"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_lana_reuse_1432b.py",
+      "path": "Tools/additional-reuse-20261028-1432/fetch_lana_reuse_1432b.py",
+      "sha256": "6B1ACA47D387C1D25BEC47B86CEBC4571FAA986C7594140AA11815F9B2B84A55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_lana_candidates_retry_1432d.py",
+      "path": "Tools/additional-reuse-20261028-1432/prepare_lana_candidates_retry_1432d.py",
+      "sha256": "6BF4D592BBE66CB5B1BF619FD09BDD883D1CA61115C790E961E533BE9A13AF93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_lana_identity_fetch_1432e.py",
+      "path": "Tools/additional-reuse-20261028-1432/prepare_lana_identity_fetch_1432e.py",
+      "sha256": "C65DCCB699CC24F34421875A3B4FD34B728DBBF5AF1C4626A0F9BDAA24D5EACB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_lana_reuse_fetch_1432.py",
+      "path": "Tools/additional-reuse-20261028-1432/prepare_lana_reuse_fetch_1432.py",
+      "sha256": "4887132697F265F88BBBF7EF69BEBFA78D94BF901FD97FF39823093CFA3AD295"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_lana_reuse_retry_1432.py",
+      "path": "Tools/additional-reuse-20261028-1432/prepare_lana_reuse_retry_1432.py",
+      "sha256": "12D742A5DEDB179EDE1402582BF9CE264D8CC246350323640201943E70434088"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_lana_reuse_1432.py",
+      "path": "Tools/additional-reuse-20261028-1432/record_lana_reuse_1432.py",
+      "sha256": "15D6DC83D4F167BE3646CEF5766BA223896B30B4C6D8415CD03700C00BEB451D"
+    }
+  ],
+  "reviewSha256": "23469EC2D3EA5ED0EA4D33CC3BD929E87DF4DA5A466D56A7C0D49AA6A8BD78BC",
+  "productionModules": 9123,
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

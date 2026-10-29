@@ -1,0 +1,97 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T22:52:45.752756+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneTateTransfer",
+    "SourceGammaOneDiamondQuotientTransfer",
+    "SourceGammaOneDiamondQuotientNonzero",
+    "SourceGammaOneDiamondQuotientAssembly"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateTransfer.lean",
+      "sha256": "1863BADBB67EC10D069C9F4E0C4CF4C77E7CDB4581451F39F66C78B60AD9C6C7",
+      "oleanSha256": "B66E082167B5785C8ECE85C43C5A386E0D7E3312C66BD373236FADBAC83B86A7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateTransfer-1446.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTateTransfer-1446.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientTransfer.lean",
+      "sha256": "6664B4A88AC6081B93AA44959DD4687B25EF7D81F76BF44583230AA2054E8956",
+      "oleanSha256": "357EB1D1EA4988613661063264BEF7F5F4481B5517DB357479B08BFEACC3B4BA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientTransfer-1446.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientTransfer-1446.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientNonzero.lean",
+      "sha256": "70EBC5426FBC847930D0E47C72CA3F92F7247BFBB82515AD5570D6F24B251FE6",
+      "oleanSha256": "516E8D77114A15922EC14A3538374CD2B247715FE265F20FB4372404227B5FF4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientNonzero-1446.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientNonzero-1446.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientAssembly.lean",
+      "sha256": "AA2C8746F7C214EA0EFFA6E59A5571CFD22BFB1E798890FE4ABCADC6523B163D",
+      "oleanSha256": "2A6919F6A9FAE536533BC97168D0780B672144D134790E99FB89D0275519A688",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientAssembly-1446.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondQuotientAssembly-1446.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_le_transfer_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_parabolic_preimage",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_nontrivial_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_transfer_frobenius",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_diamond",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer_hecke",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateDiamondRelations_le_transfer_ker",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_hecke_of_intertwining",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer_parabolic_preimage",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_nontrivial_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_transfer_frobenius"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryTateOriginalTransfer",
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotientOriginalTransfer"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransferAudit1.log",
+  "logSha256": "AF043D24E48FCF3121F6B7E4F249FBAA5CA1DBCBC3A20EC781A9FC66D5EE260B",
+  "auditSha256": "758F63FE20B84F6C0F7DEC593C2EE03F2EF6FF8670A8A2D6E40E0BE50D222763",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransferScratchOwnership1447.log",
+  "ownershipSha256": "8FE37F7060CAFD88B25F55992CE1BD1C883EFDD6985A8CD81D248297D4A97629",
+  "exhaustiveTheorems": 41,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondTransferDependencyAudit1.log",
+  "dependencyAuditSha256": "01209E9CCA432F1031DC3FE8985FAF2D8A768DC3E4418A6D90B26AD93314D987",
+  "dependencyAuditSourceSha256": "8E6BF452C11F6AA07F4888F8F1526F3C6687FC006C53A27F513EB9D43883AE2C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.binaryDiamondQuotient_nontrivial_of_transfer_away",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_diamond_quotient_original_transfer_frobenius"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> automorphy -> original all-weight association -> actual finite Hecke-character realization -> original transfer through the diamond quotient",
+  "discharged": [
+    "Compose the actual Tate/parabolic-H1 comparison and original transfer; derive its diamond invariance and original Hecke compatibility.",
+    "Derive factorization through the genuine diamond quotient and its exact parabolic preimages from the original separately identified lifting input.",
+    "Derive nonzero quotient from the original unital adic character and parabolic congruence, away from the fixed exceptional integer.",
+    "Consume the geometric quotient Hecke/Frobenius witness to derive its original transfer square; no operator descent or square is supplied."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Original parabolic-preimage theorem remains open; transfer uses 3<p and nonvanishing also excludes the original fixed exceptional integer. Degree/genus preservation remains in the geometric Hecke/Frobenius witness, not in the independent transfer/nonvanishing deductions. Two-dimensional original character realization, all-weight characteristic-zero association and all remaining gates are open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-transfer-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "F0B007F3605A003C459D37653D02CE534AE2E6C691D82C067B93B1EFFF113FFA",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

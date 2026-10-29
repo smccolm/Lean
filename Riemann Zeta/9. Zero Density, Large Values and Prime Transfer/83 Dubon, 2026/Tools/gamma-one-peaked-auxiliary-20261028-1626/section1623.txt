@@ -1,0 +1,7 @@
+### Actual trace-zero coefficient representation — 10 October 2026
+
+Construct the actual kernel of matrix trace in the original coefficient module. Original matrix conjugation preserves trace, so the same actual adjoint representation restricts to this genuine submodule. Its actual degree-zero coboundary includes as the same full adjoint matrix coboundary.
+
+Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.
+
+- [TraceZeroAdjointRepresentation](Extension/Dubon2026/TraceZeroAdjointRepresentation.lean).

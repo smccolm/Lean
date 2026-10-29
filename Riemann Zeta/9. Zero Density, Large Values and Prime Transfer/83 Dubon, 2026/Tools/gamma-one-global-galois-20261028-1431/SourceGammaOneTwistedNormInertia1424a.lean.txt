@@ -1,0 +1,50 @@
+import SourceGammaOneTwistedGaloisInertia
+import Dubon2026.SourceRationalLocalValuation
+import Dubon2026.SourceOriginalTateInertia
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> prescribed
+arithmetic descent of the actual finite Tate-dual action. The original
+global-to-local embedding gives its literal pulled-back valuation. Native
+residue-characteristic and inertia-transport results discharge the local
+inputs to the actual Gamma1 inertia theorem. Only the original coordinate
+degree and genus equalities at that same valuation remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve CongruenceSubgroup IntermediateField
+attribute [local instance] rationalPrimeLocalField_charZero
+  rationalPrimeOriginalNorm rationalPrimeOriginalNorm_ultrametric
+  rationalPrimeOriginalClosureNorm rationalPrimeOriginalClosureNormedAlgebra
+  rationalPrimeOriginalClosureNorm_ultrametric
+attribute [local instance 1100] rationalPrimeOriginalNormedField
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (Q p n w : ℕ) [NeZero Q] [Fact p.Prime]
+local notation "N" => p ^ (n + 1)
+local notation "M" => Q * N ^ 2
+local notation "Γ" => Gamma1 M
+variable (q : ℕ) (hq : q.Prime) (hqp : ¬q ∣ Q * p)
+variable (e : Qbar →ₐ[ℚ] rationalPrimeLocalClosure q hq)
+local notation "A" => sourceRationalLocalValuation q hq e
+local notation "kk" => IsLocalRing.ResidueField A
+attribute [local instance] specializationResidueAlgebra
+
+theorem binaryArithmeticTateGaloisRep_normInertia_of_degree_genus_eq
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ (residueImage A Γ))
+    (hgen : genusFF kk (residueImage A Γ) = genusFF Qbar (functionFieldOver Γ Qbar))
+    (g : Gal(rationalPrimeLocalClosure q hq/rationalPrimeLocalField q hq))
+    (hg : g ∈ rationalPrimeNormInertia q hq) :
+    binaryArithmeticTateGaloisRep Q p n w (embeddedNormalGaloisRestriction e g) = 1 := by
+  letI := GaussReduction.residue_charP_of_prime_mem_nonunits A q hq
+    (sourceRationalLocalValuation_prime q hq e)
+  have hp : (p : kk) ≠ 0 := by
+    rw [Ne, CharP.cast_eq_zero_iff _ q]
+    exact fun h => hqp (dvd_mul_of_dvd_right h Q)
+  have hs := gammaOne_binaryArithmeticTateGaloisRep_eq_one_of_inertia_of_degree_genus_eq
+    Q p n w A
+  have h1 := hs hdeg
+  have h2 := h1 hgen
+  exact h2 hp (embeddedNormalGaloisRestriction e g)
+    (sourceRationalLocalValuation_inertia q hq e g hg)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

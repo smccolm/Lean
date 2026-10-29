@@ -1,0 +1,97 @@
+{
+  "recordedUTC": "2026-10-28T16:26:29.970128+00:00",
+  "chain": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 geometric Tate Frobenius -> actual Hecke norm reduction -> original reverse-map diamond identification and complete expanded norm product.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeAlphaGerms.lean",
+      "sha256": "71708FD7FCD24D14A1FEAB30A00EF70B0B98F002CD111D68DC68817ABCAE73FC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeBetaGerms.lean",
+      "sha256": "94DE58B868397CB96D343A5BD5A7C5C5096F35D13C2DC154EE6A9C41CA89ED74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRatioRealization.lean",
+      "sha256": "DBEAB89A2AEB8EAAB02B3802BB36DA7A2276EF61AC153564B15CC3CD613F9806"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticPlaceInvariance.lean",
+      "sha256": "FE2C884244A4A0EB037BCCDBA0C27E106D8D5319013802C5E9B2801E03D1F1BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneQuotientCuspSeries.lean",
+      "sha256": "ED7A8CFCF5396045663088E1D2242812157CB741E17EA7F37DFF265F87804311"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInvariantAnalyticJPolynomial.lean",
+      "sha256": "50635853FF86EEC72575189A0C18A75856E77CF9E39D05D21BCCB6E8546B052D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJPrimeNonpolynomial.lean",
+      "sha256": "545AB5E555D67419F9A7703F552FDBCE6D78A17D910878CF4F535466F1B4D0FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspLaurentPolynomial.lean",
+      "sha256": "2E197B55970B01ABB5AD00E10A752AA2D1581D3D0D11642962F90E26A10BB31F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalPrimeStepDegree.lean",
+      "sha256": "9253985EFB6140FDFB835BF6E4306D937299C02FA11D902CDFE37AD4621F403E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimePowerRelativeStep.lean",
+      "sha256": "BD2B884FE78FC0F3B8930372051D2B107B8B2092B274019051497282A740CD12"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralPrimeLaurentRoots.lean",
+      "sha256": "D425339BEB89B0D6E1A622A56B58EBF2146107B757C262C7454AC08016979DD7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinPrimePolynomial.lean",
+      "sha256": "B416C2804525F233B11F7F7F8849C3FDED47E2138DA629A8CFC77467080084B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinEmbedding.lean",
+      "sha256": "D31328D39C3AA842E22C6EB18ACE83956AA07842936757132D0398B521BF416F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinInvolution.lean",
+      "sha256": "A16B19DCF466FED1B297835B6CE93C52D41EDA3466202396728D0EA8E37C9500"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTensorCoefficientEquivR2.lean",
+      "sha256": "9422BC370A75D91617395D2A64642EFC0E9C5D2B0B242A25CFBAAE526C2506E4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+      "sha256": "EAD4F897C7E28D960ED31D5F20A76DC536087479043221A90026D4CF4F4D99D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeNormEmbeddings.lean",
+      "sha256": "D47A21A1D428DEA12283AD597AC3E7A9DD88739ABF6F3E00310160350E536D61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeEmbeddingCensus.lean",
+      "sha256": "F38948E97A6EFF67B1BEEC20785D52ADE73669D779B09AFFD237DE7FA908F311"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeNormProduct.lean",
+      "sha256": "7E6A45D463AA8A6B68D31B2257D2B5EEA5CA696A24E71647442A2AA460842CF5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeLaurentNormExtraction.lean",
+      "sha256": "E02BC3F001113716FB476E399329C50B96401E4CCCC345BFA7806A6C1C27D6CE"
+    }
+  ],
+  "shorterRoute": "Native coprime modular reduction proves the actual subgroup join. Original modular-ratio germs transfer hypothetical adjacent-j membership to analytic invariance. Native cusp bounds and level-one polynomial classification, Laurent uniqueness and the positive-coefficient obstruction prove nonmembership. Reusing the rational prime-step theorem and actual alpha degree gives original simple-extension generation. The exact modular polynomial and reverse root feed the existing embedding constructor; preimage/map field closure proves preservation. Its square fixes j, so the already finite original j-extension gives surjectivity, without claiming involutivity. Native tensor coefficient extension and distinct Laurent conjugates then give all p+1 embeddings and the exact norm product. This avoids a general new modular-curve generator, scheme or Jacobian development. No proof limits, root pins or mathematical scope changed.",
+  "assumptionsToDischarge": [
+    "For every nonzero M and prime p coprime to M, the original Gamma1 field excludes j(q^p), over both complex and rational coefficients.",
+    "The original correspondence field is exactly the original lower field with j(q^p) adjoined, of degree p+1; the exact modular polynomial and reverse adjacent root are derived.",
+    "An actual original-field reverse automorphism exists with the full forward Hecke equation and reverse j-coordinate equation, over rational and algebraic coefficient fields.",
+    "The p twists and final q-expansion form the complete original embedding census; the actual norm is their literal Laurent product, with no assumed generator, embedding-completeness or norm-product premise."
+  ],
+  "remaining": "The norm product retains the constructed reverse automorphism. Its value on general beta inputs must still be identified with the exact original diamond action; no involution or Gamma0 reverse formula is claimed. The resulting diamond-correct norm reduction, residue degree equality, genus preservation, original-to-residue place/Picard specialization and torsion injectivity remain. Consequently original geometric Tate Frobenius/inertia, parabolic character realization, exceptional primes, coefficient-field realization, all-weight characteristic-zero association, automorphy and literal higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false
+}

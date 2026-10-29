@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-10-28T23:35:55.799374+00:00",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean",
+      "sha256": "C2E1D575DCC1D58478AE2B20A0C64C1193090E93C7DCC38F4CEED8086B5E43C2",
+      "bytes": 33638
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean",
+      "sha256": "1AC93EE8EC4F87BDE90CCFE8B37F57A3E5717D5EB114361FDC1FC8AAF81D155E",
+      "bytes": 15899
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean",
+      "sha256": "69046BC603A61C02D34EA18E57DEA5582406E3F5B48BABD42763B18416626236",
+      "bytes": 59516
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean",
+      "sha256": "BAB9227CDB9107D0726D53B3CD813DF5FF8D8287B365E7C5411896E000EF49C0",
+      "bytes": 69188
+    }
+  ],
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

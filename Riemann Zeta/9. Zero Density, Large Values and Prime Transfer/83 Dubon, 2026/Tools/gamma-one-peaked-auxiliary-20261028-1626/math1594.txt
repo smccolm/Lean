@@ -1,0 +1,1 @@
+The actual surjective first-coordinate algebra map of the original dual-number algebra induces a true equivalence of its residue field with the base-field residue field. Genuine coefficient reduction is proved to equal the original first coordinate followed by the actual base residue map.

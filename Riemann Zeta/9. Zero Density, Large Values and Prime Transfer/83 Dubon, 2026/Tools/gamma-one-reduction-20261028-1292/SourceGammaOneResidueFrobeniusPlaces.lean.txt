@@ -1,0 +1,63 @@
+import SourceGammaOneResidueFrobenius
+import SourceGammaOneResiduePlaceOrders
+
+/-! DUB-17/18 -> original Gamma1 geometric Tate quadratic -> residue
+Frobenius correspondence. Literal restriction along geometric Frobenius
+equals the original decomposition permutation of residue places, and its
+normalized order is multiplied by p. This removes the place-action and
+ramification inputs for that component; the original norm identity,
+Picard specialization and torsion injectivity are still required.
+-/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar)
+  (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+variable (p : ℕ) [Fact p.Prime] [CharP (IsLocalRing.ResidueField A) p]
+  (d : A.decompositionSubgroup ℚ) (hd : ∀ a : IsLocalRing.ResidueField A, d • a = a ^ p)
+
+theorem geometricFrobenius_eq_inverse_decomposition_pow (f : Fb) :
+    geometricFrobenius A Γ p d hd f = (decompositionResidueAut A Γ d⁻¹ f) ^ p := by
+  rw [decompositionResidueAut_inv]
+  rfl
+
+theorem geometricFrobenius_comap_eq (P : Place kk Fb) :
+    P.toValuationSubring.comap (geometricFrobenius A Γ p d hd).toRingHom =
+      (decompositionResiduePlace A Γ d P).toValuationSubring := by
+  ext f
+  change geometricFrobenius A Γ p d hd f ∈ P.toValuationSubring ↔
+    decompositionResidueAut A Γ d⁻¹ f ∈ P.toValuationSubring
+  rw [geometricFrobenius_eq_inverse_decomposition_pow,
+    ← ValuationSubring.valuation_le_one_iff, ← ValuationSubring.valuation_le_one_iff,
+    Valuation.map_pow, pow_le_one_iff (Fact.out : p.Prime).ne_zero]
+
+/-- Literal restriction of an actual residue place along geometric Frobenius. -/
+def geometricFrobeniusPlace (P : Place kk Fb) : Place kk Fb where
+  toValuationSubring := P.toValuationSubring.comap (geometricFrobenius A Γ p d hd).toRingHom
+  algebraMap_mem' a := by
+    change geometricFrobenius A Γ p d hd (algebraMap kk Fb a) ∈ P.toValuationSubring
+    rw [AlgHom.commutes]
+    exact P.algebraMap_mem' a
+  ne_top' := by
+    rw [geometricFrobenius_comap_eq]
+    exact (decompositionResiduePlace A Γ d P).ne_top'
+  isPrincipalIdealRing' := by
+    rw [geometricFrobenius_comap_eq]
+    exact (decompositionResiduePlace A Γ d P).isPrincipalIdealRing'
+
+theorem geometricFrobeniusPlace_eq_decomposition (P : Place kk Fb) :
+    geometricFrobeniusPlace A Γ p d hd P = decompositionResiduePlace A Γ d P := by
+  apply Place.ext
+  exact geometricFrobenius_comap_eq A Γ p d hd P
+
+theorem geometricFrobenius_place_order (P : Place kk Fb) (f : Fb) :
+    P.ord (geometricFrobenius A Γ p d hd f) =
+      (p : ℤ) * (geometricFrobeniusPlace A Γ p d hd P).ord f := by
+  rw [geometricFrobeniusPlace_eq_decomposition, decompositionResiduePlace_ord,
+    geometricFrobenius_eq_inverse_decomposition_pow, ← zpow_natCast, P.ord_zpow]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

@@ -1,0 +1,160 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-28T18:40:13.174766+00:00",
+  "date": "2026-10-28 America/Vancouver",
+  "modules": [
+    "SourceGammaOneKummerDegree",
+    "SourceGammaOneKummerGenus",
+    "SourceJointSeparableFiniteOverlap",
+    "SourceJointSeparableConstants",
+    "SourceJointSeparableChartDimension",
+    "SourceJointSeparablePoleDimension",
+    "SourceJointSeparableGenus",
+    "SourceGammaOneKummerResidueGenus",
+    "SourceGammaOneKummerPowerLifting",
+    "SourceGammaOnePicardPrimeKernel",
+    "SourceGammaOnePicardTorsion"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree.lean",
+      "sha256": "24EF96D77D8B74D6295939347BBD7DB5034CF9B2A73E0F04A03BB21D1F50F0DC",
+      "oleanSha256": "E3A222E101D6B4BEA6E04AAEF67BF9A1144D4A3A6460E2BF702A872F446ECB98",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDegree-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus.lean",
+      "sha256": "980C87276AAFD0D75D10FA906BAE442DF221312D2548237DA2B47FE6F9EAA950",
+      "oleanSha256": "3DFDD484CE4965CCBDB18FB6A62AE5EB1C6F69C59B89B2FFB9CA94BCF7A4130A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerGenus-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap.lean",
+      "sha256": "7275BDCE41E42D98AEA2D1D741D418F7F34C7ACA2AE3169E78932494FA24C331",
+      "oleanSha256": "114428A9D650CBF418F789F26777123A490F60157270FD62CC72739BAE1AF268",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableFiniteOverlap-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants.lean",
+      "sha256": "E2D66AAC28E57FEF78700FDFDCF235B82C5D3C8564AA5BF4906442B3A63C83D6",
+      "oleanSha256": "B87EE75D22D55D44CD2E1CB65EFFEE16148DF656366B1D51EE0A38235BD44530",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableConstants-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension.lean",
+      "sha256": "13649EF5AFB6B6C9D274BC5D4D760E54CFB2BAEC41DB8402AF1E288D71CF17A2",
+      "oleanSha256": "61910A69B30A1CC73E31F1EAF1CB32A0E0F83CA3E549998F7D284F00D37475A6",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableChartDimension-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension.lean",
+      "sha256": "62E031316F038437B04368437AB75E85A31F6E77DD34521339A8801373C1B325",
+      "oleanSha256": "285990954D280BD3EA794783A3B6D1FECB9E95DD307731367D22164B070773BD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparablePoleDimension-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus.lean",
+      "sha256": "4AE90A37E5587ED00709B86AAD978586ED1C1C94A64526F13EC48ABF6B8BCB8B",
+      "oleanSha256": "A6C51D0D150378135127212A6B44B181D35E807352E998ED8F936A7093949592",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceJointSeparableGenus-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus.lean",
+      "sha256": "D77AB76F14865E589050E6EC4799B3278DB75232AAFAB7EDC97ECB8629368DED",
+      "oleanSha256": "56430523ACEEAD99B8089367A9128369D3EA6FF7C86E6C90CD5C944CA7382031",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerResidueGenus-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting.lean",
+      "sha256": "E83C953E46B7A3DC7AF11E3452D41751B76DBE625526C665DF4B8E9F97DD4394",
+      "oleanSha256": "74E965FF973B0902BE51112274A529ED821903FFD6E73163D03DD50557CAEBF2",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerPowerLifting-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel.lean",
+      "sha256": "A9F671B21E7A90020B8B317DD008F2DCE96986A8C3BF696FC45669D22F20CB3F",
+      "oleanSha256": "FD7C91649648959C2AC73E57EB44DCE4E7A1D0AF81B299C0A5670F243218CC61",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardPrimeKernel-1348.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion.lean",
+      "sha256": "D3FB872E45B5926DDF239AA7F0BDD40AD198C3CF777A8BD3D94B900A24C0162E",
+      "oleanSha256": "E4112B6431720A0FF70E163E1A54A6046CA3610313F2A7BE369A10CA007E1D12",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion-1348.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePicardTorsion-1348.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_degree_and_unramified",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_genus_sub_one",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_separating_residue_coordinates",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_separating_residue_coordinates",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.eventual_chart_dimension_of_separating_residue_coordinate",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.pole_dimension_bound_of_separating_residue_coordinate",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_kummer_residue_genus_inequality_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_exists_power_of_residue_power_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_residue_lSpace_zero_eq_range",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_torsion_injective_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOnePowerLiftOriginalAlgebra"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_degree_and_unramified",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_kummer_genus_sub_one",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_separating_residue_coordinates",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_separating_residue_coordinates",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.eventual_chart_dimension_of_separating_residue_coordinate",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.pole_dimension_bound_of_separating_residue_coordinate",
+    "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.genus_inequality_of_separating_residue_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_kummer_residue_genus_inequality_of_degree_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_exists_power_of_residue_power_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_residue_lSpace_zero_eq_range",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_prime_torsion_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_pic0_eq_zero_of_torsion_of_degree_genus_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_torsion_injective_of_degree_genus_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOnePowerLiftOriginalAlgebra"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerAudit1.log",
+  "logSha256": "09DCAC0692A7F0735E2117D8491E3C25573A7ECAA56708BD308E4F164FE7BA0B",
+  "auditSha256": "7F7D454C39BA3542A87BF3937496795ED8C56082619C19F8E6E2E260AFFDF5D7",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerScratchOwnership1349.log",
+  "ownershipSha256": "0E5D333FCB8308CD5607025735425C3DFAE207E80BB8D78E76B0394EA8030889",
+  "exhaustiveTheorems": 18,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 44,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneKummerDependencyAudit1.log",
+  "dependencyAuditSha256": "A14088539ADB4D235C3589F143F7DA0E61721631FE703E5A2DF478186F79AD12",
+  "dependencyAuditSourceSha256": "0C9E6E1BD21C0762F8F914057466C504632841D8CEABDA1540B012D3A28E227E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.exists_gammaOne_picard_torsion_injective_of_degree_genus_eq"
+  ],
+  "dependency": "DUB17 Theorem 2.6 / DUB18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 Picard/H1/Tate realization -> Frobenius/inertia -> prime-to-residue Picard specialization injectivity.",
+  "discharged": [
+    "The actual original Gamma1 Kummer cover has degree q, is unramified, and satisfies g(E)-1=q*(g(F)-1).",
+    "Separating reduced j and total degree derive finite overlap, common constants, joint residue/pole dimensions and q*g(residue)<=g(E).",
+    "Actual coordinate-degree and genus equality force prime-root lifting and trivial prime-order and all invertible-order Picard kernels.",
+    "The constructed original constant reduction, with exactly the original coefficient regular prolongation, has an injective map on every invertible Picard torsion subgroup."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual original Gamma1 coordinate-degree equality and genus preservation remain explicit geometric inputs; they and diamond integrality are not proved here. Original Tate Frobenius/inertia, arithmetic realization, all-weight association, automorphy and full higher continuation remain. 16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-reuse-review-20261028.json",
+  "reuseReviewSha256": "38B89BF99394C6CDBC5584FA03E43FFAC603C68CF39A9FFB845754409EBCC664",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

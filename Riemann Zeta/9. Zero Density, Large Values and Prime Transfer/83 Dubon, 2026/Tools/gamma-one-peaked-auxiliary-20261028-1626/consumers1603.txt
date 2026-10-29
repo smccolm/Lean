@@ -1,0 +1,16 @@
+
+section
+
+open IsDedekindDomain Matrix Module
+open scoped TensorProduct NumberField nonZeroDivisors
+
+
+variable {K L : Type*} [Field K] [Field L] [Algebra K L] [Algebra.IsIntegral K L]
+
+/-- Exact original-object consumer of `integral_inertia_isClosed`. -/
+theorem actual_integral_inertia_closed_integral_inertia_isClosed_source (P : Ideal (𝓞 L)) :
+    IsClosed (P.inertia Gal(L/K) : Set Gal(L/K)) :=
+  integral_inertia_isClosed P
+
+end
+

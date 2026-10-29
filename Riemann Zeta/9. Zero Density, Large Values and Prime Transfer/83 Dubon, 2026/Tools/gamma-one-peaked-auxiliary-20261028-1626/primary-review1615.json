@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "status": "Focused production compilation passed with actual exit0 consumed and zero diagnostics; exact consumers and expanded sequential verification pending.",
+  "module": "ArithmeticLocalFirstOrderClasses",
+  "mathematics": "The original continuous first-order lifts satisfying the genuine determinant and inertia equations map onto the actual simultaneous local cohomology submodule. Equality of these original local classes is proved equivalent to conjugation of the entire original representations by a genuine invertible dual-number matrix reducing to the identity. The quotient by this proved strict-conjugacy relation is equivalent to the actual local cohomology submodule.",
+  "boundary": "Modular Galois association, local deformation conditions at exceptional primes, deformation Selmer inputs and patching remain open. Higher symmetric automorphy and continuation, unconditional Deligne, non-CM Sato-Tate and the final modular application remain open. DUB-01-16 remain accepted; DUB-17-20 remain OPEN.",
+  "primaryReview": "Exact production continuousMatrixFirstOrderClass_surjective and continuousMatrixFirstOrderClass_eq_iff, actual determinant/inertia membership criteria, and pinned Setoid.quotientKerEquivOfSurjective inspected. No external Lean code imported.",
+  "primarySources": [
+    "https://people.math.harvard.edu/~kisin/notes/notes.pdf",
+    "https://math.stanford.edu/~conrad/modseminar/pdf/L07.pdf"
+  ],
+  "sourceBoundary": "Actual restricted continuous first-order lifts and actual strict conjugacy by residue-identity dual-number matrices. No modular association or complete Selmer/patching conclusion.",
+  "livePrimaryRecheck": "actual-local-first-order-route-20261009.json; Kisin 1.1.2/1.3.1 and Bellovin 3.1/4.1 read. Citations provide background, not Lean proof evidence.",
+  "productionFixes": [
+    "Beta-normalized the genuine surjective first-order class equality before transporting the proved local-submodule membership."
+  ],
+  "productionLog": "localFirstOrderClasses1615b-focus.log"
+}

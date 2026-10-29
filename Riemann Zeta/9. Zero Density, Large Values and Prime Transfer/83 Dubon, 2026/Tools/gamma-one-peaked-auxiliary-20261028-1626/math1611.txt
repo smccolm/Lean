@@ -1,0 +1,1 @@
+At every original group element with identity residual matrix, the actual first-order dual-number representation is the identity exactly when its original adjoint cocycle vanishes. The proved original reconstruction recovers the whole lifted matrix. Consequently original subgroup triviality is equivalent to original cocycle vanishing on that entire subgroup.

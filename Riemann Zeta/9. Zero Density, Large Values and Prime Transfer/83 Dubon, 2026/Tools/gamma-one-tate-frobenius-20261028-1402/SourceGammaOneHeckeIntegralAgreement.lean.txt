@@ -1,0 +1,71 @@
+import SourceGammaOneHeckePrincipalNorm
+import SourceGammaOneResidueDivisors
+import SourceGammaOneHeckeResidueNorm
+import SourceGammaOneIntegralDivisorReduction
+import Dubon2026.SourceGammaOneDiamondPicard
+
+/-! DUB-17/18 -> original Gamma1 Tate Frobenius quadratic -> Hecke
+specialization on principal divisors. The actual norm reduction and exact
+residue order formulas prove the correspondence identity. The field diamond
+is used with its literal orientation; its lower-right label satisfies p*d=1.
+No good reduction of the upper Hecke correspondence or norm comparison is
+assumed. Coordinate-degree equality and the actual base specialization are
+the narrower geometric inputs of this principal-divisor consumer. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction
+noncomputable section
+open SourceCurve IntermediateField CongruenceSubgroup ConstantField
+attribute [local instance] specializationResidueAlgebra HeckeNorm.alphaAlgebra HeckeNorm.alphaModule
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (M p : ℕ) [NeZero M] [Fact p.Prime]
+  [CharP (IsLocalRing.ResidueField A) p]
+local notation "Γ" => Gamma1 M
+local notation "FF" => laurentBaseChange Qbar (x1FunctionField M)
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "Fb" => residueImage A Γ
+
+theorem exists_gammaOne_hecke_reduction_integral_principal_of_degree_eq
+    (hcop : Nat.Coprime M p)
+    (hdeg : Module.finrank Qbar⟮jCoordinateOver Γ Qbar⟯ (functionFieldOver Γ Qbar) =
+      Module.finrank kk⟮residueJCoordinate A Γ⟯ Fb)
+    (d : A.decompositionSubgroup ℚ) (hd : ∀ a : kk, d • a = a ^ p) :
+    ∃ g : Gamma0 M, (p : ZMod M) * (g.val 1 1 : ZMod M) = 1 ∧
+      ∀ (R : ConstantReduction A (functionFieldOver Γ Qbar) Fb),
+        R.toRegularProlongation = regularProlongation A Γ →
+        ∀ f : coefficientGaussRing Γ A, residueToImage A Γ f ≠ 0 →
+          R.divMap (heckeDivisor Qbar M p (principalDivisor M Qbar f.val)) =
+            decompositionResidueDivisorEquiv A Γ d
+              (R.divMap (fieldDivisorEquiv (arithmeticDiamondAut M g) (principalDivisor M Qbar f.val))) +
+            p • (decompositionResidueDivisorEquiv A Γ d).symm
+              (R.divMap (principalDivisor M Qbar f.val)) := by
+  obtain ⟨g, hlabel, hnorm⟩ := exists_gammaOne_hecke_residue_norm_of_degree_eq A M p hcop hdeg d hd
+  refine ⟨g, hlabel, fun R hR f hf => ?_⟩
+  obtain ⟨hn, hred, hne⟩ := hnorm f
+  have hf0 : f.val ≠ 0 := by
+    intro hz
+    have hz' : f = 0 := Subtype.ext hz
+    exact hf (by rw [hz', map_zero])
+  let u := arithmeticDiamondGauss A M hdeg g f
+  have hu : residueToImage A Γ u ≠ 0 := arithmeticDiamondGauss_residue_ne_zero A M hdeg g f hf
+  have hdiamond (Q : Place kk Fb) :
+      R.divMap (fieldDivisorEquiv (arithmeticDiamondAut M g) (principalDivisor M Qbar f.val)) Q =
+        Q.ord (residueToImage A Γ u) := by
+    apply gammaOne_reduction_integral_divisor_order A M R hR u hu
+    exact divisorTransform_orders (arithmeticDiamondAut M g) (fun _ => rfl)
+  have horiginal (Q : Place kk Fb) :
+      R.divMap (principalDivisor M Qbar f.val) Q = Q.ord (residueToImage A Γ f) :=
+    gammaOne_reduction_integral_divisor_order A M R hR f hf _ (fun _ => rfl) Q
+  rw [heckeDivisor_principal_norm Qbar M p f.val hf0]
+  ext Q
+  rw [gammaOne_reduction_integral_divisor_order A M R hR
+    ⟨Algebra.norm FF (heckeBeta Qbar M p f.val), hn⟩ (hne hf) _ (fun _ => rfl) Q]
+  change Q.ord (residueToImage A Γ ⟨Algebra.norm FF (heckeBeta Qbar M p f.val), hn⟩) =
+    decompositionResidueDivisorEquiv A Γ d
+      (R.divMap (fieldDivisorEquiv (arithmeticDiamondAut M g) (principalDivisor M Qbar f.val))) Q +
+    (p • (decompositionResidueDivisorEquiv A Γ d).symm
+      (R.divMap (principalDivisor M Qbar f.val))) Q
+  rw [hred, decompositionResidueDivisorEquiv_order A Γ d _ _ hdiamond Q,
+    geometricFrobenius_inverse_divisor_order A Γ p d hd _ _ horiginal Q]
+  exact Q.ord_mul ((map_ne_zero _).mpr hu) ((map_ne_zero _).mpr hf)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction

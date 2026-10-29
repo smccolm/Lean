@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-28 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Gamma1 Picard/H1/Tate realization -> exact arithmetic Frobenius-Hecke quadratic relation.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-frobenius-audit-route-1395.json",
+    "sha256": "73364ED824CD068B19F96646FB9E2DF9D8C507C1F6599DC571799D331B5CAF48",
+    "review": {
+      "recordedUTC": "2026-10-28T20:11:59.558530+00:00",
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> original all-weight arithmetic association -> original Gamma1 Picard/H1/Tate realization -> exact arithmetic Frobenius-Hecke quadratic relation.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-frobenius-divisor-route-1369.json",
+          "sha256": "BDA73C8F612BC58226254660600623311603E99DA4BEF0E446902E04F27732FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-frobenius-route-1393.json",
+          "sha256": "5A5829299716F5077B7A24CFF26B3D398F22B7291F7FC35C3DED79FF5A04C6ED"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeIntegralAgreement.lean",
+          "sha256": "EF8DE380ADD791414F1FE8E7B409E1F97FDF03AFD8262DE22BA2DE972A62E591"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionDivisorAgreement.lean",
+          "sha256": "5FCC796A0A28C6EB2C8ADC40FCB169F129AB13483CFA0308146E914B0561DC31"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeTorsionReduction.lean",
+          "sha256": "AA753445A14CB91503F6E1519BAF51CB51520E469A79AEF23350B39F86C310CF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePrincipalNorm.lean",
+          "sha256": "A281E311709C679CF18C1163285D902AA1C7771A3AF9280443D476E20C575317"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondencePrincipalOrder.lean",
+          "sha256": "C56726DEB4538FD30891131F99C4BA2E26F7034E8EE930B647B9D49B1699DC15"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckePicard.lean",
+          "sha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResidueFrobeniusPlaces.lean",
+          "sha256": "7012C6D4853BF5D0CE4606C2D22CC1F32B6543FAE9772491A9732835625AC01F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneResiduePlaceOrders.lean",
+          "sha256": "6B4588C00F08F0674C84DA011CF8DA00D2E6B050AEEFA5521389B8DD15CAF4AD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDiamondPicard.lean",
+          "sha256": "004CA8D763E778517AFBB8D361606B1B8D21A98FCA52BC205C76978E82403062"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFieldEquivPicard.lean",
+          "sha256": "B08ADC99810F8418727D743C0F4443B4E7E182A60817C9DC7AC1099470E0F23A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrincipalDivisorTransport.lean",
+          "sha256": "D0954572CF81E8772AC3777EF44D7909333F8E0C781F66CE6CDB11E15AB84576"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePrincipalDivisorIdentities.lean",
+          "sha256": "D7B91EFF6D432EB623F9FE99B3B5D733A1F6EB34121B3145279E15C80BD64EA5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-specialization-1-scratch-receipt.json",
+          "sha256": "B4A46110ECE61C258197939EFBDA9E048BACE84F19E216B553680831FAA53534"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-kummer-1-scratch-receipt.json",
+          "sha256": "74CFD24CC719EB59E16077D6011357656C1187F0F7796BE0283608F845F98BDF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-gauss-norm-1-scratch-receipt.json",
+          "sha256": "63EACEEE6908866F27421952D186856D26BFC1A3BCA2BDFFE2F78EA14F668A55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-inertia-1-scratch-receipt.json",
+          "sha256": "10C46E538883A340E91B64DD1BD9CA1F635DD8EFF28ED2D97EFA5A125266FEC6"
+        }
+      ],
+      "shorterRoute": "The existing Gamma0 proof compares actual Hecke principal divisors via the literal norm, then uses torsion-freeness of the target integer divisor group to cancel a principal multiple. Reuse this route on original Gamma1 fields. The new Gauss norm works on all valuation integers, so native primitive constant normalization replaces the stronger coefficientwise-integral Laurent fraction decomposition. No good-reduction model of the upper Hecke correspondence is needed for this comparison.",
+      "assumptionsToDischarge": [
+        "The actual original Gamma1 Hecke divisor correspondence equals the divisor of the literal alpha norm of beta.",
+        "The actual residue norm gives coefficient-Frobenius diamond plus p times inverse coefficient Frobenius on integral principal divisors.",
+        "Primitive constant normalization and torsion-free integer-divisor cancellation extend the equality to every finite Picard torsion class without an upper-correspondence good-reduction model.",
+        "The same equivariant specialization and invertible-torsion injection transport the identity to original Picard torsion and actual Tate sequences: H*F = F*F*D + p, with Picard diamond label p."
+      ],
+      "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain. The derived twisted coefficient relation does not close the previously conditional differently normalized relation. Its inverse-action coefficient normalization, global Galois realization, parabolic and coefficient/character realization, all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "externalBuild": false,
+      "externalImport": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual original Gamma1 Hecke divisor correspondence equals the divisor of the literal alpha norm of beta.",
+    "The actual residue norm gives coefficient-Frobenius diamond plus p times inverse coefficient Frobenius on integral principal divisors.",
+    "Primitive constant normalization and torsion-free integer-divisor cancellation extend the equality to every finite Picard torsion class without an upper-correspondence good-reduction model.",
+    "The same equivariant specialization and invertible-torsion injection transport the identity to original Picard torsion and actual Tate sequences: H*F = F*F*D + p, with Picard diamond label p."
+  ],
+  "remaining": "Actual original Gamma1 coordinate-degree equality and genus preservation remain. The derived twisted coefficient relation does not close the previously conditional differently normalized relation. Its inverse-action coefficient normalization, global Galois realization, parabolic and coefficient/character realization, all-weight two-dimensional association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

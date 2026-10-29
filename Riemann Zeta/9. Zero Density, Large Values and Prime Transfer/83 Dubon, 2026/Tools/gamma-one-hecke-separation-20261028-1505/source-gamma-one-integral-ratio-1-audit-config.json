@@ -1,0 +1,66 @@
+{
+  "modules": [
+    "SourceGammaOneIntegralRatioResidue",
+    "SourceGammaOneIntegralJRatio",
+    "SourceGammaOneResidueRatioDegree",
+    "SourceGammaOneIntegralRatioDegreeAssembly"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.intFormRatiosC_subset_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.qExpFunctionFieldC_le_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.jqModC_mem_integralRatioField",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.residue_coordinate_degree_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_residue_coordinate_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.integral_ratio_coordinate_degree_le_original",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.gammaOne_degree_and_residueField_of_integral_ratio_index",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.div_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_mem_residueImage",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.resHom_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CoefficientReduction.finite_residueCoordinate_and_degree_le",
+    "Dubon2026.SourceFunctionField.GammaOne.coordinate_finrank_eq_relfinrank",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_coordinate_relfinrank_eq_index",
+    "Dubon2026.SourceFunctionField.dedekindEtaUnit_mul_inv",
+    "Dubon2026.SourceFunctionField.qExpansion_E4_eq_map_eisenstein4",
+    "Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit",
+    "IntermediateField.relfinrank_mul_relfinrank",
+    "IntermediateField.relfinrank_eq_one_iff",
+    "Dubon2026.SourceFunctionField.GaussReduction.\u03b9_eq_zero_iff"
+  ],
+  "localModules": [
+    "SourceGammaOneIntegralRatioResidue",
+    "SourceGammaOneIntegralJRatio",
+    "SourceGammaOneResidueRatioDegree",
+    "SourceGammaOneIntegralRatioDegreeAssembly"
+  ],
+  "separatelyAxiomChecked": [],
+  "compileEvidence": {
+    "SourceGammaOneIntegralRatioResidue": "SourceGammaOneIntegralRatioResidue-1480",
+    "SourceGammaOneIntegralJRatio": "SourceGammaOneIntegralJRatio-1480",
+    "SourceGammaOneResidueRatioDegree": "SourceGammaOneResidueRatioDegree-1480",
+    "SourceGammaOneIntegralRatioDegreeAssembly": "SourceGammaOneIntegralRatioDegreeAssembly-1480"
+  }
+}

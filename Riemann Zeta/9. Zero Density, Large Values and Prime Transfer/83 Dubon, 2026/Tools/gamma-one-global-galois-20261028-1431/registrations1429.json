@@ -1,0 +1,15 @@
+[
+  "Dubon2026.integralCoordinateMap_comap_maximal",
+  "Dubon2026.integralCoordinateMap_isUnit",
+  "Dubon2026.integralRepresentationCoordinates_isUnit",
+  "Dubon2026.residualRepresentationCoordinateEvaluation_surjective",
+  "Dubon2026.residualRepresentationCoordinateIdeal_isMaximal",
+  "Dubon2026.residualRepresentationCoordinateQuotientEquiv_mk",
+  "Dubon2026.symmetricTangentCohomologyLift_ker",
+  "Dubon2026.symmetricAdjointCohomologyMap_class",
+  "Dubon2026.symmetricAdjointCohomologyMap_firstOrder",
+  "Dubon2026.SemanticRegression.actual_symmetric_cohomology_residual_symmetricTangentCohomologyLift_ker_source",
+  "Dubon2026.SemanticRegression.actual_symmetric_cohomology_residual_symmetricAdjointCohomologyMap_firstOrder_source",
+  "Dubon2026.SemanticRegression.actual_symmetric_cohomology_residual_residualRepresentationCoordinateQuotientEquiv_mk_source",
+  "Dubon2026.SemanticRegression.actual_symmetric_cohomology_residual_integralRepresentationCoordinates_isUnit_source"
+]

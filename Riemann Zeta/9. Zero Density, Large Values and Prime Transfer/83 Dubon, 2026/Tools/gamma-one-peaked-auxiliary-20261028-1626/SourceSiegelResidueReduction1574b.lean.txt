@@ -1,0 +1,123 @@
+import SourceSiegelLevelShifts1573a
+import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+
+/-! DUB-17/18 -> original Gamma1 degree/genus preservation -> level-power
+slash integrality -> actual peaked auxiliary -> Gamma1-invariant Siegel
+product. Prove the literal level shifts of the actual Siegel factors,
+reduce integer indices to residue representatives, and show that the
+source 12*N exponents kill all derived root-of-unity multipliers. Then
+the already constructed exponent translation invariance gives the actual
+Gamma1 invariance. No arbitrary multiplier or product invariance premise
+is introduced. Common analytic product facts are reused.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, revision
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_SiegelUnit_siegelFun_add_level and
+S_ModularCurve_SiegelUnit_prod_siegelFun_pow_specialLinearGroup_smul.
+The upstream unused-section-variable suppression is not adopted. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel
+noncomputable section
+open Complex
+open scoped Real MatrixGroups
+
+variable (N : ℕ) [NeZero N]
+
+theorem natCast_ne_zero : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+
+/-- The actual multiplier for a shift of the second Siegel index by the level. -/
+noncomputable def dS (r : ℤ) : ℂ := Complex.exp (Real.pi * Complex.I * ((r : ℂ) - (N : ℂ)) / (N : ℂ))
+
+/-- The actual multiplier for a shift of the first Siegel index by the level. -/
+noncomputable def dR (s : ℤ) : ℂ := -Complex.exp (-(Real.pi * Complex.I * (s : ℂ) / (N : ℂ)))
+
+omit [NeZero N] in
+theorem dS_ne_zero (r : ℤ) : dS N r ≠ 0 := Complex.exp_ne_zero _
+
+omit [NeZero N] in
+theorem dR_ne_zero (s : ℤ) : dR N s ≠ 0 := neg_ne_zero.mpr (Complex.exp_ne_zero _)
+
+theorem dS_pow (r : ℤ) : dS N r ^ (2 * N) = 1 := by
+  rw [dS, ← Complex.exp_nat_mul]
+  have h : ((2 * N : ℕ) : ℂ) * (Real.pi * Complex.I * ((r : ℂ) - (N : ℂ)) / (N : ℂ)) =
+      ((r - N : ℤ) : ℂ) * (2 * Real.pi * Complex.I) := by
+    have hN := natCast_ne_zero N
+    push_cast
+    field_simp
+  rw [h]
+  exact Complex.exp_int_mul_two_pi_mul_I _
+
+theorem dR_pow (s : ℤ) : dR N s ^ (2 * N) = 1 := by
+  rw [dR, neg_pow, show (-1 : ℂ) ^ (2 * N) = 1 from (even_two_mul N).neg_one_pow, one_mul, ← Complex.exp_nat_mul]
+  have h : ((2 * N : ℕ) : ℂ) * (-(Real.pi * Complex.I * (s : ℂ) / (N : ℂ))) = ((-s : ℤ) : ℂ) * (2 * Real.pi * Complex.I) := by
+    have hN := natCast_ne_zero N
+    push_cast
+    field_simp
+  rw [h]
+  exact Complex.exp_int_mul_two_pi_mul_I _
+
+omit [NeZero N] in
+theorem siegelFun_add_nat_mul_snd (r s : ℤ) (z : ℂ) :
+    ∀ k : ℕ, siegelFun N r (s + k * N) z = dS N r ^ k * siegelFun N r s z
+  | 0 => by simp
+  | k + 1 => by
+      have h := (siegelFun_add_level N r (s + k * N)).1 z
+      rw [show s + ((k + 1 : ℕ) : ℤ) * N = s + k * N + N by push_cast; ring, h,
+        siegelFun_add_nat_mul_snd r s z k, pow_succ, dS]
+      ring
+
+omit [NeZero N] in
+theorem siegelFun_add_int_mul_snd (r s : ℤ) (z : ℂ) (k : ℤ) :
+    siegelFun N r (s + k * N) z = dS N r ^ k * siegelFun N r s z := by
+  obtain ⟨n, rfl | rfl⟩ := Int.eq_nat_or_neg k
+  · rw [zpow_natCast]; exact siegelFun_add_nat_mul_snd N r s z n
+  · have h := siegelFun_add_nat_mul_snd N r (s + -(n : ℤ) * N) z n
+    rw [show s + -(n : ℤ) * N + (n : ℤ) * N = s by ring] at h
+    rw [zpow_neg, zpow_natCast, h, ← mul_assoc, inv_mul_cancel₀ (pow_ne_zero _ (dS_ne_zero N r)), one_mul]
+
+omit [NeZero N] in
+theorem siegelFun_add_nat_mul_fst (r s : ℤ) (τ : UpperHalfPlane) :
+    ∀ k : ℕ, siegelFun N (r + k * N) s (τ : ℂ) = dR N s ^ k * siegelFun N r s (τ : ℂ)
+  | 0 => by simp
+  | k + 1 => by
+      have h := (siegelFun_add_level N (r + k * N) s).2 τ
+      rw [show r + ((k + 1 : ℕ) : ℤ) * N = r + k * N + N by push_cast; ring, h,
+        siegelFun_add_nat_mul_fst r s τ k, pow_succ, dR]
+      ring
+
+omit [NeZero N] in
+theorem siegelFun_add_int_mul_fst (r s : ℤ) (τ : UpperHalfPlane) (k : ℤ) :
+    siegelFun N (r + k * N) s (τ : ℂ) = dR N s ^ k * siegelFun N r s (τ : ℂ) := by
+  obtain ⟨n, rfl | rfl⟩ := Int.eq_nat_or_neg k
+  · rw [zpow_natCast]; exact siegelFun_add_nat_mul_fst N r s τ n
+  · have h := siegelFun_add_nat_mul_fst N (r + -(n : ℤ) * N) s τ n
+    rw [show r + -(n : ℤ) * N + (n : ℤ) * N = r by ring] at h
+    rw [zpow_neg, zpow_natCast, h, ← mul_assoc, inv_mul_cancel₀ (pow_ne_zero _ (dR_ne_zero N s)), one_mul]
+
+theorem intCast_zmod_val (a : ℤ) : (((a : ZMod N).val : ℕ) : ℤ) = a % N := ZMod.val_intCast a
+
+theorem exists_siegelFun_eq_mul_reduced (a b : ℤ) (τ : UpperHalfPlane) :
+    ∃ ζ : ℂ, ζ ^ (2 * N) = 1 ∧
+      siegelFun N a b (τ : ℂ) = ζ * siegelFun N (((a : ZMod N).val : ℕ) : ℤ) (((b : ZMod N).val : ℕ) : ℤ) (τ : ℂ) := by
+  set a' : ℤ := (((a : ZMod N).val : ℕ) : ℤ) with ha'
+  set b' : ℤ := (((b : ZMod N).val : ℕ) : ℤ) with hb'
+  have ha : a = a' + (a / N) * N := by rw [ha', intCast_zmod_val, mul_comm]; exact (Int.emod_add_mul_ediv a N).symm
+  have hb : b = b' + (b / N) * N := by rw [hb', intCast_zmod_val, mul_comm]; exact (Int.emod_add_mul_ediv b N).symm
+  have h1 : siegelFun N a b (τ : ℂ) = dS N a ^ (b / N) * siegelFun N a b' (τ : ℂ) := by
+    conv_lhs => rw [hb]
+    exact siegelFun_add_int_mul_snd N a b' (τ : ℂ) (b / N)
+  have h2 : siegelFun N a b' (τ : ℂ) = dR N b' ^ (a / N) * siegelFun N a' b' (τ : ℂ) := by
+    conv_lhs => rw [ha]
+    exact siegelFun_add_int_mul_fst N a' b' τ (a / N)
+  refine ⟨dS N a ^ (b / N) * dR N b' ^ (a / N), ?_, ?_⟩
+  · rw [mul_pow, ← zpow_natCast, ← zpow_natCast (dR N b' ^ (a / N)), ← zpow_mul, ← zpow_mul, mul_comm (b / N),
+      mul_comm (a / N), zpow_mul, zpow_mul, zpow_natCast, zpow_natCast, dS_pow, dR_pow, one_zpow, one_zpow, mul_one]
+  · rw [h1, h2]
+    ring
+
+omit [NeZero N] in
+theorem pow_twelve_mul_eq_one {μ ζ : ℂ} (hμ : μ ^ 12 = 1) (hζ : ζ ^ (2 * N) = 1) (m : ℕ) :
+    (μ * ζ) ^ (12 * N * m) = 1 := by
+  rw [mul_pow, show 12 * N * m = 12 * (N * m) by ring, pow_mul, hμ, one_pow, one_mul,
+    show 12 * (N * m) = (2 * N) * (6 * m) by ring, pow_mul, hζ, one_pow]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.PeakedAuxiliary.Siegel

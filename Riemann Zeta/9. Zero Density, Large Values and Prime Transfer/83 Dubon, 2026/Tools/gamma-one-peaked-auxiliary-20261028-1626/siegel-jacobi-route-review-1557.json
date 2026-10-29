@@ -1,0 +1,82 @@
+{
+  "recordedUTC": "2026-10-29T01:43:02.546602+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original Gamma1 degree/genus preservation -> reduced field action -> level-power slash integrality -> peaked auxiliary existence -> actual Siegel-product holomorphy and SL2 transformation -> Jacobi theta triple-product identity -> finite Gaussian product identity and dominated finite-sum limit.",
+  "sources": [
+    {
+      "path": "P2M/Sol/S_jacobiTheta_two_eq_tprod.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_jacobiTheta_two_eq_tprod.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_jacobiTheta_two_eq_tprod.lean",
+      "sha256": "A9FD0397884FD11A0807D93224414ADA897FC16200713348F704F49743D65498",
+      "bytes": 30346,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun.lean",
+      "sha256": "FD8487F547BE7165566DBD5D1E7AD5E98C272E046CBD21F570FAD18B50368D44",
+      "bytes": 54217,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_hasSum_qParam_mul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_hasSum_qParam_mul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_hasSum_qParam_mul.lean",
+      "sha256": "F4BA460F37A5E226BFADAFF9D29D83CD9E260EACDB87B4AF6CF187AD9ACD42BC",
+      "bytes": 4303,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_siegelFun_specialLinearGroup_smul.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_siegelFun_specialLinearGroup_smul.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_siegelFun_specialLinearGroup_smul.lean",
+      "sha256": "DF9578668B475FED923C55A9CB6A63FE88F4F40D0864F6053CDDA574913196FF",
+      "bytes": 19326,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_SiegelUnit_siegelFun_add_level.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\anthropic-siegel-dependencies-1553\\S_ModularCurve_SiegelUnit_siegelFun_add_level.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_SiegelUnit_siegelFun_add_level.lean",
+      "sha256": "D968AC294010F409BB162EC27FF96D83D61EE62473ED222AA7BBE9ED754C585E",
+      "bytes": 6307,
+      "lexicalMatches": [],
+      "nondefaultOptions": []
+    }
+  ],
+  "nativeReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerSeriesProduct.lean",
+      "sha256": "0F21255FEE550F387AB0D2953099A90E63422EB2CF0EBC653783CEF25ADDFDD6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRealizedPowerSeries.lean",
+      "sha256": "E2C80E84F3E12085779DA4277023928159805246264CAB231CD8EEAD14D79939"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\JacobiTheta\\TwoVariable.lean",
+      "sha256": "940E2AEB7EB8F5A32C42CDBA45584CCE5DFB0F540DB18C57E9F0A771EFBA7A7B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\DedekindEta.lean",
+      "sha256": "8BA4B530E882F6CE0B0984B41B60D705532D369AC8FD3B1F54BA0D3EA24B6EF5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Normed\\Group\\Tannery.lean",
+      "sha256": "66C96A4B51E6EC44920FFCE04FCF23BBFE128C5F6E470895D5ADBE9933843CF0"
+    }
+  ],
+  "assessment": "The exact q-expansion product theorem and cusp-limit theorem already exist natively and will be reused. Native Jacobi theta supplies its analytic and modular transformation API, and native eta supplies geometric-product convergence. Searches found no Jacobi triple-product identity or Gaussian q-binomial API in the pinned native tree. The source product identity supplies the missing equality between the literal Siegel infinite product and the existing analytic theta function; prove only its finite identity, convergence bounds and theta specialization, retaining the native source objects. No broader q-series theory is planned.",
+  "assumptionsToDischarge": [
+    "The actual Jacobi theta series equals the required convergent infinite product.",
+    "The actual Siegel function defined by its literal product has the needed holomorphy and SL2 transformation law."
+  ],
+  "boundary": "A route review, not a proof of the Siegel product or a closed acceptance gate. The finite exponent theorem is separately proved; actual product expansions, leading units and auxiliary existence remain open. External source texts are not imported, and no external transitive audit is claimed.",
+  "externalBuild": false,
+  "externalImport": false,
+  "productionMutation": false
+}

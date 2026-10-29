@@ -1,0 +1,527 @@
+{
+  "status": "Pinned source inspection; original Gamma1 integral Eisenstein degree/genus route selected for native adaptation. No external build, direct import or transitive upstream axiom audit. Exact finite-modulus parabolic transfer remains unresolved.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\head.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-tree-1462/head.json",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\p2m-tree.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-tree-1462/p2m-tree.json",
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\review-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-tree-1462/review-manifest.json",
+      "sha256": "18C735EB4D1D570023FC1A571AFDEA82A501745C80F87F730EFF28E17683AB82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\root-tree.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-tree-1462/root-tree.json",
+      "sha256": "9239C5E0A3233EAECE666EDE409CED7362255C32A130C9556902C260577E642C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-tree-1462\\sol-tree.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-tree-1462/sol-tree.json",
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\fetch-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/fetch-manifest.json",
+      "sha256": "7A03A8A8BB55C17D32AE75CB3ECEE46DD3FA658EC5C98F7B0C0BDEE7E539DBE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_CohCarrier_exists_linearMap_baseChange_parabolicHoms_top_comp_eq_comp_heckeTL_restrict_baseChange.lean.txt",
+      "sha256": "C262CA91A1DE35788557294314566420E221F627FE7DABB895823270EBD68769"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_CohCarrier_exists_perfect_selfAdjoint_degeneracyAdjoint_pairing_parabolicHoms.lean.txt",
+      "sha256": "4A68C28865636F9C65C6B6E6247610180B8329D22C875DD6F5F401F162C42F17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_groupCohomology_subsingleton_H1_dual_traceZero_of_toMatrix_eq_conj_specialLinearGroup_map.lean.txt",
+      "sha256": "0DF36032335D7EBEEC60DD90D11DBD4F7A3A7E93C99135B5EC51C7A321F0EF04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_HeckeEis_exists_coeffH1_restrict_injective_range_iff_equivariant_heckeT_of_charZero.lean.txt",
+      "sha256": "5D41D20A7BB0495F75A677CD866762C6312EC9A7E9D7D808AD040FEE6706E93C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_HeckeEis_exists_coeffH1par_int_modp_eigenclass_of_eigenform.lean.txt",
+      "sha256": "ABA555757446C4C2EB49B2369CB711772D0C57CFBBD3D6E9FCCFE72CAC084F44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_HeckeEis_exists_coeffH1par_map_of_equivariant_retraction.lean.txt",
+      "sha256": "4A24E8970EC3E16BBC425E96F5C7C5D06153DEE4C437C7EB99B3A3921D4D626E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_HeckeEis_exists_eq_prime_smul_of_coeffH1par_map_eq_zero.lean.txt",
+      "sha256": "0A7E128E5011DA589FB91C5CE1C2DB97A968F30695BECE8D6A60EE5153E1CC39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_HeckeEis_existsUnique_coeffCocycles_sl2z_apply_S_ST_eq.lean.txt",
+      "sha256": "502307F1788C647063D9B88EC1A37B70B50E0BDE77DE516F75D056A51654DC20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_IsFreeGroup_surjective_transfer_and_transfer_eq_one_iff_mem_closure.lean.txt",
+      "sha256": "C678428ACBADF967FFA231F459ECD01AAEC9A0A1551154593DCD4EFCF485B745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_LevelRaising_exists_parabolicPairings_perfect_mod_three.lean.txt",
+      "sha256": "885A0FD512C4CD19B7426A3C393CE52D13115FEEEEA459B30D8B7686A241965C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_ModularCurve_CupPairing_exists_isParabolicHom_eq_sub_of_forall_finsum_eq_zero.lean.txt",
+      "sha256": "AC90A2F42B00C52B7E42DB29C22123A60154666850101B39176F8116931DB0E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-candidates-1462c\\S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-candidates-1462c/S_ModularCurve_Period_exists_perfectPairing_parabolicHoms_baseChange.lean.txt",
+      "sha256": "3BC2FE32A6F1C100F946C7C61BA4A63292A7932B004520EE2A9EEC231DFCCFD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\fetch-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/fetch-manifest.json",
+      "sha256": "5CC325C21B6BA1673B4C795389D4EC7C63D389049CFC9FABC4EA6A03CAF1E32F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_CohCarrier_exists_galoisModule_parabolicHoms_to_dual_charInvolution_frobenius.lean.txt",
+      "sha256": "2210D1896CF42F4FE14CFB0B6B239BE95C7BD3BC6CCC2CF7FB319E3FBA11F27B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_exists_heckeEquivariant_parabolicHoms_to_dual_tateModule_jH_charInvolution.lean.txt",
+      "sha256": "0D1ACA39A65D6605B904F5EA6C26C727C6E8D6696294A9023E00D68E6C10E43D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_exists_transcendental_and_reductionInputsQExpModL_gammaH_of_not_dvd.lean.txt",
+      "sha256": "77D22A856DFE76A47AF3600A98F4D2C11E28AE4E6F9127039CD5EA2F5812A269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_finrank_gammaH_le_finrank_gammaH_residueField_of_not_dvd.lean.txt",
+      "sha256": "D357D52DA80C3F75D3FD2AF5DB958843DE6B83E0E8C1FBE087F24E81167254DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_genusFF_gammaH_residueField_eq_of_not_dvd.lean.txt",
+      "sha256": "007BFAE34FD714F60CDE4D078F7B4DDDB1F3A39B1CFEEC4EA83962158ECBD055"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField.lean.txt",
+      "sha256": "A887FC55F53F3DDBE8327F8E5049898D6268AD26F0728CB8A8C638B28DC5E7A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-geometry-1463b\\S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-geometry-1463b/S_ModularCurve_index_gammaH_le_finrank_adjoin_jqModC_qExpFunctionFieldC_residueField_comap.lean.txt",
+      "sha256": "A4FB8E281DD90804DCB74EECE6E0CDE4B27A5D8E4E3B44F17D40D885C4D2CD52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\fetch-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-dependencies-1464/fetch-manifest.json",
+      "sha256": "2D850FD09A1718602E9FC9FA493B0E2F4DE5D0FB4F4EE684B16CC6352ADD055C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-dependencies-1464/S_ModularCurve_exists_gamma1_eisenstein_isIntegralQExp_and_slash_eq.lean.txt",
+      "sha256": "1AC93EE8EC4F87BDE90CCFE8B37F57A3E5717D5EB114361FDC1FC8AAF81D155E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-dependencies-1464/S_ModularCurve_exists_monoidHom_gamma0_algEquiv_qExpFunctionFieldC_zmod.lean.txt",
+      "sha256": "69046BC603A61C02D34EA18E57DEA5582406E3F5B48BABD42763B18416626236"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-dependencies-1464/S_ModularCurve_genusFF_xHFunctionFieldC_eq_genusFF_xHFunctionFieldBar_of_not_dvd.lean.txt",
+      "sha256": "C2E1D575DCC1D58478AE2B20A0C64C1193090E93C7DCC38F4CEED8086B5E43C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-dependencies-1464\\S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-dependencies-1464/S_ModularCurve_reductionInputsQExpModL_of_finrank_le_of_genusFF_eq.lean.txt",
+      "sha256": "BAB9227CDB9107D0726D53B3CD813DF5FF8D8287B365E7C5411896E000EF49C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\fetch-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-degree-genus-leaves-1465/fetch-manifest.json",
+      "sha256": "C0E98DC8108B026A67B38B0B5668302B2DD501E3AFD02FD0FF80B12A5D42D39C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-degree-genus-leaves-1465/S_EisensteinSeries_exists_modularForm_coe_eq_eisensteinG.lean.txt",
+      "sha256": "8DBBC465A253C4A3C76426C070846D32B9875F891402CF8E75E494E96F6B60BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-degree-genus-leaves-1465/S_EisensteinSeries_qExpansion_eisensteinG_coeff.lean.txt",
+      "sha256": "A757A627F788B16FE1CD4E5B7CB42A6DBF7C924CCCAC62CFEA6138A3A0A72A75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-degree-genus-leaves-1465\\S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-degree-genus-leaves-1465/S_ModularCurve_genusFF_xHFunctionFieldBar_le_genusFF_xHFunctionFieldC_of_not_dvd.lean.txt",
+      "sha256": "63683AE09613FD1DC4DCDB0277C91A9E7ACFE3180331C0035862A3CB6C1692C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\fetch-manifest.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-integral-slash-1467/fetch-manifest.json",
+      "sha256": "1A9760E2BF1924796357C684C7FD84A731B7EBF326FC644F2890D44075183026"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-integral-slash-1467/S_ModularCurve_card_fibres_jqModC_qExpFunctionFieldC_gammaH_le_natCard_doubleCoset.lean.txt",
+      "sha256": "5085319636FFDD9F8E7692CB1FA57E3B2F1334C2B14F30D4F3B3E2F9DD7BE4A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-integral-slash-1467/S_ModularCurve_exists_isIntegralQExp_level_pow_smul_slash_of_mem_Gamma0.lean.txt",
+      "sha256": "C318F9DA75142F614BD714D5026233CDBEFE07139A284DCC40DBD4450842B8C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-integral-slash-1467\\S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-integral-slash-1467/S_ModularCurve_two_mul_index_le_sum_ordDiff_D_add_natCard_doubleCoset_of_lt_five.lean.txt",
+      "sha256": "2BE6066BFA7CB9EBB51F3DAEE21CC8AC778DDFBCC0C4F3512069B8853D17C6BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-exact-obligation-name-search-1463.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-exact-obligation-name-search-1463.json",
+      "sha256": "759BEDBC010903B064728458EB739873B7E7C386758E7B2651E21E8903BE754D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-degree-reading-1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-gamma-one-degree-reading-1464.txt",
+      "sha256": "FA323E6430D492FE7DD06BDF2120DEC9204E36108C4A40EC7054FA7EC988ECBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-geometry-solutions-1463c.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-geometry-solutions-1463c.txt",
+      "sha256": "534A2BD6150023CA5243CED6F2CD38D2A40CF212B379C4C1623E7EF91FBD632F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-name-search-1462b.json",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-name-search-1462b.json",
+      "sha256": "AC0946B717574EDA9FDC53D94C63FFF402BC2E5A7D6BA5B741FB51E250BB4118"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-parabolic-signatures-1462d.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/anthropic-parabolic-signatures-1462d.txt",
+      "sha256": "F1B41845DE778080AEBDF59D4C895C602A34D2C003326AF08FC88ABA3B74D490"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1462.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/consumers1462.txt",
+      "sha256": "31A67808BFD1290FC4173E4EF7FCB28683ACD758DC372E4952BBB04FDC3AF848"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/consumers1464.txt",
+      "sha256": "640A570EC1B255534BEE3893427F84CD81E0B40BEDEFF6FE227F73705C6537EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers1466.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/consumers1466.txt",
+      "sha256": "ECDBCD0D74A844319FBEB4F7776E5ABA31B0608B5FBE0B81BB039F08AC314D55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1462.py",
+      "path": "Tools/targeted-reuse-20261028-1471/docs1462.py",
+      "sha256": "C8E13F13DCC60BED53E2E9BDB0E40D280F44D547A8CD8DC7FED2B683E1BE6EF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/docs1464.py",
+      "sha256": "BDF094F5340836BBE3115E3B4DD2BAC9169B445BD925500167B547C0D9885FA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\docs1466.py",
+      "path": "Tools/targeted-reuse-20261028-1471/docs1466.py",
+      "sha256": "9EE4231A713727D583643430BB616DDE4D04F37FE0DDAD87FB692DC2B7CB4AD6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_degree_genus_leaves_1465.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_degree_genus_leaves_1465.py",
+      "sha256": "35D377DA1D1CD3FBB777FC4836B0478031B3756112A563F2A6982D8794148536"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_gamma_one_geometry_1463b.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_gamma_one_geometry_1463b.py",
+      "sha256": "6500896247020719D8281C314678061243B13B1A459499AEE9C6ADBB94BB4677"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_geometry_dependencies_1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_geometry_dependencies_1464.py",
+      "sha256": "AC4C5617ABBE85F7C0DCE7268015675176048332C7AD7633D652CDAA51725302"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_integral_slash_1467.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_integral_slash_1467.py",
+      "sha256": "900AB476A3EF8514EBE5E7FEABF3381E1DC75C71A3EEE37FF4054A04CE53270B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_parabolic_candidates_1462c.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_parabolic_candidates_1462c.py",
+      "sha256": "D9853ACEC77A45DC528AF5B8F1509A9464B81898B1ED596A84B6BB47DAD059D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_anthropic_parabolic_tree_1462.py",
+      "path": "Tools/targeted-reuse-20261028-1471/fetch_anthropic_parabolic_tree_1462.py",
+      "sha256": "FC89353B99E083ED842DE1202BBED9C1F37058091AF32BE9F413B9A6C1F61969"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect_anthropic_geometry_1463c.py",
+      "path": "Tools/targeted-reuse-20261028-1471/inspect_anthropic_geometry_1463c.py",
+      "sha256": "0340D940E72A45D11476F53C70E7FFC0472B8DA3F1BC75A274E839391F61CA61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect_anthropic_parabolic_signatures_1462d.py",
+      "path": "Tools/targeted-reuse-20261028-1471/inspect_anthropic_parabolic_signatures_1462d.py",
+      "sha256": "6030D3E2A215DC27FC96F39EB618575E670B2F32586E418497A0334D39914F81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1462.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/math1462.txt",
+      "sha256": "0F4481EE6B550B4F7CBFE9CF6FF9410A7ED595FF16A0E30BE161F29626DA4797"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/math1464.txt",
+      "sha256": "5BEA88A75C94651E784433425D541CEED64539168DC5DB73B2375C1EAB6009CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\math1466.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/math1466.txt",
+      "sha256": "1F4B823C11F45E79029B992B88ED307830193E0BDA4615AD67D470E5A222389C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1462.json",
+      "path": "Tools/targeted-reuse-20261028-1471/modules1462.json",
+      "sha256": "653A99146F4BC948E0C593DB857C9DCBC8BE1036D84466521C1B6506DE6539CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1464.json",
+      "path": "Tools/targeted-reuse-20261028-1471/modules1464.json",
+      "sha256": "6D0E13C6993C67F3BFD76C36BB0F008475AFB24F54FB165E809AF18F37063915"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules1466.json",
+      "path": "Tools/targeted-reuse-20261028-1471/modules1466.json",
+      "sha256": "80150D463DB0AFA40BE06CA101766CCC9751B64684C415799A902FC2D8FF0281"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1462.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare1462.py",
+      "sha256": "25C61E187B2CDE2DE7CEC0DEBC128789DF4136394E1FE02B6F678D90445F9971"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare1464.py",
+      "sha256": "24C0FC39CBACE5BF2F0C2AB015F72B151407118ABE0AB9CFA4AEE6B48BE2DB1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare1466.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare1466.py",
+      "sha256": "CE0A38FDBAF4D61E3C38C57C7D897CAC1AD5E78CE3346C26FEDA2669847C8D59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_anthropic_degree_genus_leaf_fetch_1465.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_anthropic_degree_genus_leaf_fetch_1465.py",
+      "sha256": "4DE1E66A6F08426EA311E60295DFB3763D12280838509BF4FAB6C81357E6A92A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_anthropic_geometry_dependency_fetch_1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_anthropic_geometry_dependency_fetch_1464.py",
+      "sha256": "023D1D0F0578D8E738B73585E1B7144C9B4ED0E0CD211217CFB03C65D15D075F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_anthropic_integral_slash_fetch_1467.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_anthropic_integral_slash_fetch_1467.py",
+      "sha256": "6CA2D6CF0D20191BE3B81B68839A2D23E3916809CC398BFCD9E738AFBB6FADE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ratio_residue_1466b.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_gamma_one_ratio_residue_1466b.py",
+      "sha256": "CEA99D3E0E09EF691C1B9EC1BC3EE837A23AC6877239493242FA88BC31B72CA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ratio_residue_1466c.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_gamma_one_ratio_residue_1466c.py",
+      "sha256": "00ABB0681A9D0B9BDC62987C36510706158A84A20C45D9C9A1064196F16EC78E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ratio_residue_1466d.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_gamma_one_ratio_residue_1466d.py",
+      "sha256": "738AC84B9A995D5AB0F07C02770CE36B84C1695D363071951274556BF6149B6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ratio_residue_1466e.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_gamma_one_ratio_residue_1466e.py",
+      "sha256": "E8F251B7AA386B276068806B1EA5A40331702A5DE1EF7357BDF7B39157C6B148"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_targeted_reuse_review_1471.py",
+      "path": "Tools/targeted-reuse-20261028-1471/prepare_targeted_reuse_review_1471.py",
+      "sha256": "3A30C83E157B4BFC2704E6963AA7ECF89CF99505C0FACF498F66D5647DC447FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1462.json",
+      "path": "Tools/targeted-reuse-20261028-1471/primary-review1462.json",
+      "sha256": "7C2B983107491CD7744474C44E320D816F2EBB8C1B0C1C1E0AC43C38E1C6C6E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1464.json",
+      "path": "Tools/targeted-reuse-20261028-1471/primary-review1464.json",
+      "sha256": "F58B1ED2D3AD34032B4956E92E7038B1A9E0C3D8D408CFA59B9E2B00E48CC970"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primary-review1466.json",
+      "path": "Tools/targeted-reuse-20261028-1471/primary-review1466.json",
+      "sha256": "758F1DEE76694D8CB85AEA34F249EFEB7885D59CC8E42BC3B031DEAF0C0793F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1462.py",
+      "path": "Tools/targeted-reuse-20261028-1471/record1462.py",
+      "sha256": "6C400F833485C4E7A80B8FB10380DC357E763F458E017CB88454640069FC0DA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/record1464.py",
+      "sha256": "CF100DC5BBE1A3A1DEDFEE92C52283FEFC9CFCB65950231B9936957954B94F54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record1466.py",
+      "path": "Tools/targeted-reuse-20261028-1471/record1466.py",
+      "sha256": "FD0F68602030F3A077B20AB3461728D59FA0CEC23BC1DE6887B2AD438C2E0E13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1462.py",
+      "path": "Tools/targeted-reuse-20261028-1471/register1462.py",
+      "sha256": "9C64D8C858E19F9ABD0FA42A2F736A70F1294D94EEA61B166BE6BC875FA4A4C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1464.py",
+      "path": "Tools/targeted-reuse-20261028-1471/register1464.py",
+      "sha256": "D1B15405E426E4518CBA5704B44D30D1E7B0770F758A6D534CFCF2A38C1559FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register1466.py",
+      "path": "Tools/targeted-reuse-20261028-1471/register1466.py",
+      "sha256": "CB15C559C62129DC7417E2DC8EAF35950164957D89B6C8E9C193A22FA7DD6CD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1462.json",
+      "path": "Tools/targeted-reuse-20261028-1471/registrations1462.json",
+      "sha256": "211B4439E6E3934D92CEFE1B28AA8747567E2A2420D55C243C36002E1076D7F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1464.json",
+      "path": "Tools/targeted-reuse-20261028-1471/registrations1464.json",
+      "sha256": "D6A8D34D9785117307CAE8BAD98AC457DD999076FCA153119F76A4A932771268"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations1466.json",
+      "path": "Tools/targeted-reuse-20261028-1471/registrations1466.json",
+      "sha256": "D157717B5763C23E06013D7EF57F2F9A8F161720EAC630966DEFB4E599F0C508"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1462.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/remaining1462.txt",
+      "sha256": "F4A35A6CBB926DB889CA9EECEA32035D917D1EFBA60EC91778B6480597922DFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/remaining1464.txt",
+      "sha256": "2A02043E89510E17157EC221DECE8A9DD4B63B700253D540EB800B0EE71B927B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\remaining1466.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/remaining1466.txt",
+      "sha256": "4093BB79F99B732BC116CE94885CA63551FD2C1805B608B4FB57075DFF2B1750"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\search_anthropic_exact_obligations_1463.py",
+      "path": "Tools/targeted-reuse-20261028-1471/search_anthropic_exact_obligations_1463.py",
+      "sha256": "8B83E981E822F9844DEC70BDEE1516EFA79A3335FEED09FBA19BFFE8DC69CD33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\search_anthropic_parabolic_names_1462b.py",
+      "path": "Tools/targeted-reuse-20261028-1471/search_anthropic_parabolic_names_1462b.py",
+      "sha256": "2E8417E36A72D8EAA816AF73794CCC39BD3A88D69D330C33F432DDB0AB36DC3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1462.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/section1462.txt",
+      "sha256": "A83E46A35335CB700E84DEBCECB8B19DC4F1C159AD3E91AA0D6EC9F9B563B375"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/section1464.txt",
+      "sha256": "43B322EBD5B1EA86C1ECFCC20ACD62F7F790520008873FFEB9D90F3A6F8E806C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section1466.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/section1466.txt",
+      "sha256": "58B2D768CFD06662F7ED4FAF56E85DF13789491993E10C8054D7AD98A18959A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue1466a.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/SourceGammaOneIntegralRatioResidue1466a.lean.txt",
+      "sha256": "7DF3C870281426F72E500812490DFE8419A9CA46FBFEC6E3E85F6F1A8F50103C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue1466b.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/SourceGammaOneIntegralRatioResidue1466b.lean.txt",
+      "sha256": "86B952ADB1DA6AA88D9CED63B5EC79F1AF8F7540C5F9E528215989F79F833223"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue1466c.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/SourceGammaOneIntegralRatioResidue1466c.lean.txt",
+      "sha256": "6DFD82748FE86988030AECED4AF171EBEE56F3ECAEC6765D5751C6E92D92E1DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralRatioResidue1466d.lean.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/SourceGammaOneIntegralRatioResidue1466d.lean.txt",
+      "sha256": "9B03019D75DFE9939B69CF9EF60D0CCA3962F021EE918FC0582B193F83EEB1FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1462.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/status1462.txt",
+      "sha256": "D061EBFF0EDFEA24D384F591F539FBEB141AB8019DB866F046C540C55502A019"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1464.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/status1464.txt",
+      "sha256": "1ABD9E402CCD15B54192A8170CAE579E6184682F39C82442E43F88D225C2CD2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status1466.txt",
+      "path": "Tools/targeted-reuse-20261028-1471/status1466.txt",
+      "sha256": "4932A4D773D07F795B8104F295F810CDF7D107BCC141085CCF97645BC4A3B2BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\targeted-reuse-review-1471.json",
+      "path": "Tools/targeted-reuse-20261028-1471/targeted-reuse-review-1471.json",
+      "sha256": "74B5DFC7AB8EB07E3F4995181F8D84EAA39D6F6A9CF976284AE31D1A8F8D8EB4"
+    }
+  ],
+  "reviewSha256": "74B5DFC7AB8EB07E3F4995181F8D84EAA39D6F6A9CF976284AE31D1A8F8D8EB4",
+  "reportSha256": "F908B7A63B4EA2CC77CC1F5D6EDA82CB6A7337E9C988A525C054381DC1A16268",
+  "productionModules": 9149,
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "acceptance": "16/20; DUB-17--20 OPEN"
+}
