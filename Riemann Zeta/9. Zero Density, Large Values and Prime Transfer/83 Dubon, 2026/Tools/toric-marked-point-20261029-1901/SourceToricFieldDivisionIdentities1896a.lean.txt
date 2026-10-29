@@ -1,0 +1,71 @@
+import SourceToricResidueMultiplicationIdentity1895a
+import Dubon2026.SourceEllipticNumeratorCoprime
+import Dubon2026.SourceEllipticVeluTwoSurjective
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> marked-point chart. Embed the proved residue power-series
+identities into an algebraically closed extension of the actual Laurent
+field. The chart only uses abscissae and identifies points up to sign, so
+this extension permits use of the native ordinate-existence and coprime
+multiplication-polynomial theorems without full Tate uniformization. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve Polynomial HahnSeries GammaOne.ToricFourier
+
+/-- The natural inclusion of coefficient power series into a Laurent-field extension. -/
+def seriesToField (K L : Type*) [Field K] [Field L] [Algebra (LaurentSeries K) L] :
+    PowerSeries K →+* L :=
+  (algebraMap (LaurentSeries K) L).comp (ofPowerSeries ℤ K)
+
+theorem map_tatePowerSeries_toField (K L : Type*) [Field K] [Field L]
+    [Algebra (LaurentSeries K) L] :
+    (tatePowerSeries.map (PowerSeries.map (Int.castRingHom K))).map (seriesToField K L) =
+      (tateLaurent K).baseChange L := by
+  rw [WeierstrassCurve.map_map]
+  rfl
+
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] (hℓN : ¬ ℓ ∣ N)
+  (K L : Type*) [Field K] [IsAlgClosed K] [CharP K ℓ] [Field L]
+  [Algebra (LaurentSeries K) L]
+
+theorem tateField_eval_ΨSq {ζ : K} (hζ : IsPrimitiveRoot ζ N)
+    (c : ZMod N) (hc : c ≠ 0) :
+    (((tateLaurent K).baseChange L).ΨSq N).eval
+      (seriesToField K L (xS (ζ ^ c.val))) = 0 := by
+  have h := congrArg (seriesToField K L)
+    (tatePowerSeries_residue_eval_ΨSq N ℓ hℓN K hζ c hc)
+  rw [map_zero, ← Polynomial.eval_map_apply, ← WeierstrassCurve.map_ΨSq,
+    map_tatePowerSeries_toField] at h
+  exact h
+
+theorem tateField_mul_eval {ζ : K} (hζ : IsPrimitiveRoot ζ N)
+    (c : ZMod N) (hc : c ≠ 0) (m : ℕ) (hmc : (m : ZMod N) * c ≠ 0) :
+    seriesToField K L (xS (ζ ^ ((m : ZMod N) * c).val)) *
+      (((tateLaurent K).baseChange L).ΨSq m).eval
+        (seriesToField K L (xS (ζ ^ c.val))) =
+      (((tateLaurent K).baseChange L).Φ m).eval
+        (seriesToField K L (xS (ζ ^ c.val))) := by
+  have h := congrArg (seriesToField K L)
+    (tatePowerSeries_residue_mul_eval N ℓ hℓN K hζ c hc m hmc)
+  rw [map_mul, ← Polynomial.eval_map_apply, ← Polynomial.eval_map_apply,
+    ← WeierstrassCurve.map_ΨSq, ← WeierstrassCurve.map_Φ,
+    map_tatePowerSeries_toField] at h
+  exact h
+
+theorem tateField_eval_ΨSq_ne_zero [IsAlgClosed L] {ζ : K}
+    (hζ : IsPrimitiveRoot ζ N) (c : ZMod N) (hc : c ≠ 0)
+    (m : ℕ) (hm : 0 < m) (hmc : (m : ZMod N) * c ≠ 0) :
+    (((tateLaurent K).baseChange L).ΨSq m).eval
+      (seriesToField K L (xS (ζ ^ c.val))) ≠ 0 := by
+  classical
+  intro hΨ
+  have hΦ : (((tateLaurent K).baseChange L).Φ m).eval
+      (seriesToField K L (xS (ζ ^ c.val))) = 0 := by
+    rw [← tateField_mul_eval N ℓ hℓN K L hζ c hc m hmc, hΨ, mul_zero]
+  obtain ⟨a, b, hab⟩ := SourceEllipticTorsion.isCoprime_Φ_ΨSq (tateLaurent K) (K := L) hm
+  have he := congrArg (Polynomial.eval (seriesToField K L (xS (ζ ^ c.val)))) hab
+  simp only [eval_add, eval_mul, hΦ, hΨ, mul_zero, zero_add, eval_one] at he
+  exact zero_ne_one he
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

@@ -1,0 +1,111 @@
+import SourceMarkedTorsionSignClasses
+import SourceMarkedTorsionSignedIndex
+import SourceMarkedTorsionActualCount
+import SourceMarkedChartEmbeddingConjugacy
+import SourceMarkedChartPointTransport
+import SourceMarkedChartDiamondNormalization
+import SourceMarkedChartOriginalDiamond
+import SourceMarkedCyclicRootTransitivity
+import SourceMarkedCyclicGeneratorConjugacy
+import SourceMarkedTorsionGeneratorUnit
+import SourceMarkedPointSignTransitivity
+import SourceMarkedChartOriginalSignOrbit
+import SourceMarkedChartStabilizerActions
+import SourceMarkedStabilizerIndexComparison
+import SourceMarkedChartStabilizerEquality
+import SourceMarkedChartOriginalStabilizerEquality
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.SignClasses
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.signPair_eq_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.mapSignClasses
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.mapSignClasses_injective
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.torsionSignClassesEquiv
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.natCard_signClasses_of_torsion_equiv
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_coprime
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_eq_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_neg
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.gammaOne_mem_iff_residueColumn
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn_eq_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn_neg
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass_eq_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass_surjective
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.natCard_residue_signClasses
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.actual_point_signClasses_card
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.actual_point_signClasses_finite
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.coordinate_algHom_ext
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_normalized_embedding_conjugacy
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.point_map_eq_or_neg_of_invariant_values
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.gamma0Unit_surjective
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.originalResidueDiamond_fixes_j
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_diamond_up_to_sign
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.modularPolynomial_irreducible_coordinate
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_modular_root_conjugacy
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_cyclic_generator_conjugacy
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.val_intCast_nsmul_of_order
+#print axioms Dubon2026.SourceFunctionField.MarkedTorsion.exists_unit_multiple_of_equal_order
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_point_conjugacy_up_to_sign_of_unit_moves
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_transitive_up_to_sign
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.signClassGaloisAction
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.signClass_smul_eq_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.signClass_stabilizer_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingAction
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbedding_stabilizer_iff
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.stabilizer_eq_of_transitive_and_card_bound
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.point_field_stabilizers_iff_of_card_bound
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_equality
+
+private def runMarkedChartStabilizerAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceMarkedTorsionSignClasses, `SourceMarkedTorsionSignedIndex, `SourceMarkedTorsionActualCount, `SourceMarkedChartEmbeddingConjugacy, `SourceMarkedChartPointTransport, `SourceMarkedChartDiamondNormalization, `SourceMarkedChartOriginalDiamond, `SourceMarkedCyclicRootTransitivity, `SourceMarkedCyclicGeneratorConjugacy, `SourceMarkedTorsionGeneratorUnit, `SourceMarkedPointSignTransitivity, `SourceMarkedChartOriginalSignOrbit, `SourceMarkedChartStabilizerActions, `SourceMarkedStabilizerIndexComparison, `SourceMarkedChartStabilizerEquality, `SourceMarkedChartOriginalStabilizerEquality]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.MarkedTorsion.signPair_eq_iff, `Dubon2026.SourceFunctionField.MarkedTorsion.mapSignClasses_injective, `Dubon2026.SourceFunctionField.MarkedTorsion.natCard_signClasses_of_torsion_equiv, `Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_coprime, `Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_eq_iff, `Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn_neg, `Dubon2026.SourceFunctionField.MarkedTorsion.gammaOne_mem_iff_residueColumn, `Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn_eq_iff, `Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn_neg, `Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass_eq_iff, `Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass_surjective, `Dubon2026.SourceFunctionField.MarkedTorsion.natCard_residue_signClasses, `Dubon2026.SourceFunctionField.MarkedTorsion.actual_point_signClasses_card, `Dubon2026.SourceFunctionField.MarkedTorsion.actual_point_signClasses_finite, `Dubon2026.SourceFunctionField.MarkedChart.coordinate_algHom_ext, `Dubon2026.SourceFunctionField.MarkedChart.exists_normalized_embedding_conjugacy, `Dubon2026.SourceFunctionField.MarkedChart.point_map_eq_or_neg_of_invariant_values, `Dubon2026.SourceFunctionField.MarkedChart.gamma0Unit_surjective, `Dubon2026.SourceFunctionField.MarkedChart.originalResidueDiamond_fixes_j, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_diamond_up_to_sign, `Dubon2026.SourceFunctionField.MarkedChart.modularPolynomial_irreducible_coordinate, `Dubon2026.SourceFunctionField.MarkedChart.exists_modular_root_conjugacy, `Dubon2026.SourceFunctionField.MarkedChart.exists_cyclic_generator_conjugacy, `Dubon2026.SourceFunctionField.MarkedTorsion.val_intCast_nsmul_of_order, `Dubon2026.SourceFunctionField.MarkedTorsion.exists_unit_multiple_of_equal_order, `Dubon2026.SourceFunctionField.MarkedChart.exists_point_conjugacy_up_to_sign_of_unit_moves, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_transitive_up_to_sign, `Dubon2026.SourceFunctionField.MarkedChart.signClass_smul_eq_iff, `Dubon2026.SourceFunctionField.MarkedChart.signClass_stabilizer_iff, `Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbedding_stabilizer_iff, `Dubon2026.SourceFunctionField.MarkedChart.stabilizer_eq_of_transitive_and_card_bound, `Dubon2026.SourceFunctionField.MarkedChart.point_field_stabilizers_iff_of_card_bound, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_equality]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.MarkedTorsion.SignClasses, `Dubon2026.SourceFunctionField.MarkedTorsion.mapSignClasses, `Dubon2026.SourceFunctionField.MarkedTorsion.torsionSignClassesEquiv, `Dubon2026.SourceFunctionField.MarkedTorsion.firstColumn, `Dubon2026.SourceFunctionField.MarkedTorsion.residueColumn, `Dubon2026.SourceFunctionField.MarkedTorsion.columnSignClass, `Dubon2026.SourceFunctionField.MarkedChart.signClassGaloisAction, `Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingAction]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Marked chart stabilizer postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Marked chart stabilizer theorems discovered"
+  logInfo m!"SOURCE MARKED CHART STABILIZER AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runMarkedChartStabilizerAudit
+
+#lint in SourceMarkedTorsionSignClasses
+#lint in SourceMarkedTorsionSignedIndex
+#lint in SourceMarkedTorsionActualCount
+#lint in SourceMarkedChartEmbeddingConjugacy
+#lint in SourceMarkedChartPointTransport
+#lint in SourceMarkedChartDiamondNormalization
+#lint in SourceMarkedChartOriginalDiamond
+#lint in SourceMarkedCyclicRootTransitivity
+#lint in SourceMarkedCyclicGeneratorConjugacy
+#lint in SourceMarkedTorsionGeneratorUnit
+#lint in SourceMarkedPointSignTransitivity
+#lint in SourceMarkedChartOriginalSignOrbit
+#lint in SourceMarkedChartStabilizerActions
+#lint in SourceMarkedStabilizerIndexComparison
+#lint in SourceMarkedChartStabilizerEquality
+#lint in SourceMarkedChartOriginalStabilizerEquality

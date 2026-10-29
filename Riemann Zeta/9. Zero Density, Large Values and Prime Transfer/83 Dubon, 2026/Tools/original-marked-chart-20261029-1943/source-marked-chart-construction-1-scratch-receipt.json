@@ -1,0 +1,193 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T16:39:17.690956+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceTateOriginalJCoordinate",
+    "SourceMarkedChartCoordinateEmbedding",
+    "SourceMarkedChartVariableInvariants",
+    "SourceMarkedChartEqualJTransfer",
+    "SourceMarkedChartInvariantSeparation",
+    "SourceMarkedChartFieldDescent",
+    "SourceMarkedChartTorsionDescent",
+    "SourceMarkedChartEmbeddingBound",
+    "SourceMarkedChartResidueDegree",
+    "SourceMarkedChartDescendedPoint",
+    "SourceMarkedChartOriginalConstruction",
+    "SourceMarkedChartStabilizerInclusion",
+    "SourceMarkedChartOriginalStabilizer"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate.lean",
+      "sha256": "C71BCC9F2CDFB00FFB6D89DBC460E0B7B8729142FC7F085C4750C2EBC735CA73",
+      "oleanSha256": "3A780263AD4F28D33591ED2B23DA7D85998CA41DAEFA24684ACBE151E6EA6E81",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding.lean",
+      "sha256": "9A8477199F754FF0363FC1D42DBDB1F8A4125B2DA6E340A6B0CEE54898DBFB31",
+      "oleanSha256": "13409284ABFEA679848A57D9541DA81A04A881F73D1C1F45C9913CA11D1B7A82",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants.lean",
+      "sha256": "34D0F3B441D81FFB60F9CB2BAF20907A1A912DBA87C3DB612C691A814A90F2E8",
+      "oleanSha256": "14427E8B509C92D20A387903D0026AE0A8581C6B073005F5813BD2B4185E7D9F",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer.lean",
+      "sha256": "EE03C90C41F1A23883604CBED4B1AA5A4FFE43B6C21294F451A55444BCFFF926",
+      "oleanSha256": "5BED64B3C8780DB3DBEE41D0CE0C4689B7089E76F3518B5305D0191805BEC452",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation.lean",
+      "sha256": "3B1FAB253D40D611B261F7A486C273E06BC4CFC6F7FCA7A1D2214CB72C43CF91",
+      "oleanSha256": "89ADA11A39B385B0DFF4BB7580D0BE567744C556C4D5BC776DD09F8BAB21F5A5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent.lean",
+      "sha256": "E643BCD23B55C9BCB71ED0D6972EDA86DEAC5218130E1AE8C090966B5D4F69DF",
+      "oleanSha256": "B02DC26A7725624F4724A17F04E268030705B0CAC8F5E79DDF986441D22EEBA3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent.lean",
+      "sha256": "9C07F01C1B0F3EC6AA2F0F71EEDE2F45FD581708657E2BABC4173D61A888D171",
+      "oleanSha256": "D5F98802E2D446386B3D7BF652B1D1A37CC7290C920673535F6B9761ED325AC8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound.lean",
+      "sha256": "0388F6F45BF0F1E3AF0AF313FEE0294FC953B3BF6E2334E635EF23D7C4BC2A88",
+      "oleanSha256": "E85591480037FA0FF42270C93CB2D4BB80F99D6FC5A1E3910CBB9BA533E298A8",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree.lean",
+      "sha256": "BC99EA121BDFFD3575C96CE5D2379894D799839CA07EAE19B42A37226E64A2F5",
+      "oleanSha256": "2904A8F332FC3C75781155CF01E71BC63F388BCCA4CFE6873511F4BF7D84FED9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint.lean",
+      "sha256": "FCABF1E1AC468BF2AC65A807B342EAED8A5B9E7840B8E6318C45499D2B876675",
+      "oleanSha256": "E91ACF81F149E9CE3AFC212C26A16BA3B6F23A46EC0A76EB577F4675FC8221F9",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction.lean",
+      "sha256": "E6C29E367703C87638AD3B68515950F753A230183FE154CF584B05FDCE7F42C8",
+      "oleanSha256": "E567261CF0A322922179D764B7788292DE70AC30297605F1381A71A92ADA1538",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion.lean",
+      "sha256": "D86581C9361CD015034C1A59528D8FCDAEDCE5F7F142FB1A01FA6ABD0A09E57D",
+      "oleanSha256": "52042C5E5D167A3B7C394CA6B59DCA734C1992DB7EA99BE8AFDA7A5DDE2657BD",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion-1914.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer.lean",
+      "sha256": "77195C7DDC4CAEC64277ABB0FB5C83074618DF87CA0BD92FE542681223D4EA94",
+      "oleanSha256": "CFEED3314848F8F42677E9CF8B7AAC072E6165B1565534821ADD54048D7D2EE7",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer-1914.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer-1914.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tatePowerSeries",
+    "Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tateLaurent",
+    "Dubon2026.SourceFunctionField.ToricAnalytic.j_tateLaurent",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.c4_ne_zero_of_transcendental_j",
+    "Dubon2026.SourceFunctionField.MarkedChart.c6_ne_zero_of_transcendental_j",
+    "Dubon2026.SourceFunctionField.MarkedChart.variableChange_first_invariant",
+    "Dubon2026.SourceFunctionField.MarkedChart.variableChange_second_invariant",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_originalField_markedPoint_of_j_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.abscissa_eq_of_invariant_pair",
+    "Dubon2026.SourceFunctionField.MarkedChart.point_eq_or_neg_of_invariant_pair",
+    "Dubon2026.SourceFunctionField.MarkedChart.mem_range_of_polynomial_root",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_preimage",
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_finite_and_card_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finrank_eq_index",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_originalField_markedPoint",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_construction",
+    "Dubon2026.SourceFunctionField.MarkedChart.point_fixed_up_to_sign_of_embedding_fixed",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tatePowerSeries",
+    "Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tateLaurent",
+    "Dubon2026.SourceFunctionField.ToricAnalytic.j_tateLaurent",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.c4_ne_zero_of_transcendental_j",
+    "Dubon2026.SourceFunctionField.MarkedChart.c6_ne_zero_of_transcendental_j",
+    "Dubon2026.SourceFunctionField.MarkedChart.variableChange_first_invariant",
+    "Dubon2026.SourceFunctionField.MarkedChart.variableChange_second_invariant",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_originalField_markedPoint_of_j_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.abscissa_eq_of_invariant_pair",
+    "Dubon2026.SourceFunctionField.MarkedChart.point_eq_or_neg_of_invariant_pair",
+    "Dubon2026.SourceFunctionField.MarkedChart.mem_range_of_polynomial_root",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_preimage",
+    "Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_finite_and_card_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finrank_eq_index",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_originalField_markedPoint",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_construction",
+    "Dubon2026.SourceFunctionField.MarkedChart.point_fixed_up_to_sign_of_embedding_fixed",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionAudit1.log",
+  "logSha256": "2C224E81F677A468B3D27489905FBFAD8E06B69416F4A43C58FA154559552310",
+  "auditSha256": "552FF5A634A2B1551FAC0D37CA50734C1B9B0F9CF86C535BAA85F8D9632FAD29",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionScratchOwnership1914.log",
+  "ownershipSha256": "9A993214BB8AF9EBC49F0DC5DDFF78A6D9B3AA97E604BBB1CBA7E4710E6F1B9F",
+  "exhaustiveTheorems": 41,
+  "linterScopes": 13,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 40,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionDependencyAudit1.log",
+  "dependencyAuditSha256": "B32BBB1B3865737BE505F4510427EBC2485F3F0F3CAFF0B47D4D3B2D4526E460",
+  "dependencyAuditSourceSha256": "4E6FC0D1A4901F7E2F3E4794643C87A8E63285D26326A4E2426EE67765A544A6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "discharged": [
+    "The literal Tate j invariant equals the original jq series, by an integral discriminant identity before base change, including characteristics two and three.",
+    "An actual embedding of the original modular-function field and an exact-order point exist over the algebraic closure of the source generic j field, with all unit-multiple coordinate identities.",
+    "No scalar-compatibility certificate remains in the actual consumer: the common extension is constructed and compatibility is reflexive.",
+    "The original residue degree proves finiteness and bounds normalized field embeddings by the signed Gamma1 index.",
+    "Any generic-field automorphism fixing the constructed original-field embedding fixes its actual marked point up to sign; both coordinate invariants separate abscissae in every characteristic."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The opposite stabilizer inclusion, primitive-point Galois orbit cardinality, diamond lift, finite elliptic-fiber bounds, reverse genus, and downstream association and higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "9BC6D08994C17418A13EE247FCD4A8CC2F27445E8F017CC9DE4B713407EE9095",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

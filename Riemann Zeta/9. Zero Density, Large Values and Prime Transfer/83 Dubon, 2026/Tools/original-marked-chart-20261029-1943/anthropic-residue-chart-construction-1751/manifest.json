@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T09:57:57.505921+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\S_ModularCurve_exists_natural_diamond_algHom_qExpFunctionFieldC_gammaH_bot_of_transcendental_j.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_natural_diamond_algHom_qExpFunctionFieldC_gammaH_bot_of_transcendental_j.lean",
+      "bytes": 56274,
+      "sha256": "0A29C899F2D290F17C602139DE9590547D2B5851E105E50725AC97F458686DAE",
+      "gitBlob": "5d9e84d173e0fb1511569b7bcc304c22feff2fb0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash.lean",
+      "bytes": 59347,
+      "sha256": "7641943DAC055EB2DA87BFFC3FADB47CCCF83C22F728699FF7EBA79B4348AC19",
+      "gitBlob": "dd19959ed1dd85e67ae4dfcabad9de84de5c546c"
+    }
+  ],
+  "purpose": "Read-only pinned source review of the actual diamond-stabilizer charts over finite and cusp residue fibers. Native Galois place transitivity and fixed-field degree arguments are already available; inspect these exact remaining chart statements before expanding the reverse-genus dependency. No external import or proof options adopted.",
+  "externalBuild": false,
+  "externalImport": false
+}

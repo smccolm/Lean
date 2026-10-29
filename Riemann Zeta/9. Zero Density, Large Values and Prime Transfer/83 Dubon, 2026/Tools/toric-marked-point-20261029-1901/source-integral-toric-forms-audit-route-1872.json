@@ -1,0 +1,90 @@
+{
+  "recordedUTC": "2026-10-29T14:17:12.884131+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> Gamma1 genus preservation -> reverse genus -> finite elliptic residue fiber bounds -> actual Gamma1 marked-torsion-point chart -> original integral toric-coordinate functions.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeCuspInputs.lean",
+      "sha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeFunctionTransformationV2.lean",
+      "sha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeHolomorphy.lean",
+      "sha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeierstrassTorsionFourierExpansion.lean",
+      "sha256": "0F6B47AA646AE1BF54EC2F2B33FDF589AD4E203140C614101701F37E30B2C277"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralEisensteinModular.lean",
+      "sha256": "6358094AA041A5D2AEDB02E23A4283B8F7C50D0634C26552ABF4147425388222"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDivisionForms.lean",
+      "sha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFourierLinear.lean",
+      "sha256": "23ADD4FF88B5B8792E0C831693FC9D47A1F031C8C095418F0E41048280992019"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularNormPolynomial.lean",
+      "sha256": "CD66E1DBF537A518EA1F268B575987233B3553AE6AC9370AA322EAB472DF92A4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEisensteinFourExpansion.lean",
+      "sha256": "D7A4DE17C5A3D8719089FB22062F0C6470E05D53C7A90432A2E3C0018D5B171F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LegendreSymbol\\AddCharacter.lean",
+      "sha256": "4E58FED51F6E654B56A9113DA097C7F8CDE2EB8B58081855AFF4E740C86711AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\QExpansion.lean",
+      "sha256": "2E6E4E3D2456AB5C8C6EAD4BA3A355F76351F82E53294946FC8616590BDC1890"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\SlashActions.lean",
+      "sha256": "79FAFE9DEB69F00B10F52431FA6409AFF2111B4D306675B676902E4DC3707035"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Divisors.lean",
+      "sha256": "0CE1942EF04738088970B9F6A1EBDC51D3FB6D271BB161575BDD52B62AF4EDED"
+    }
+  ],
+  "shorterRoute": "Native wpNormZ already has the exact integral-matrix transformation, holomorphy, bounds at infinity for every nonzero torsion index, and Fourier coefficients. Construct only the weight-two Gamma1 form 12*wpNormZ at (0,c), using these native proofs and the native all-cusp criterion. Then apply the finite Fourier transform to obtain integral forms whose combinations recover the two toric invariants. Defer general Tate uniformization, non-toric slots and arbitrary-curve naturality; the eventual finite-fiber application needs the generic ofJ curve with its full-torsion field. The native qExpansionAddHom and SlashAction.sum_slash replace further finite-sum inductions. The Tate a4 coefficient series alone suffices for the quadratic invariant; Tate a6, ellipticity, non-toric slots and uniformization are deferred to the exact-order point obligation. The actual B and D forms, integer coefficients, exact Gamma0 action and literal Laurent identities are assembled without certificates.",
+  "assumptionsToDischarge": [
+    "Actual weight-two Gamma1 torsion modularity, holomorphy and all-cusp bounds are derived from native Weierstrass theorems.",
+    "Exact width-one Fourier coefficients are obtained from native width conversion and finite exponent fibers, then finite divisor sums.",
+    "Level-squared and level-fourth finite Fourier combinations construct actual weight-two B and weight-four D modular forms with explicit integer coefficients.",
+    "The actual Gamma0 slash action is the dual index permutation by the upper-left entry; literal Laurent identities reconstruct both toric invariant series in every coefficient field admitting the prescribed primitive root."
+  ],
+  "remaining": "The exact-order toric point, marked-point/original-field correspondence, finite elliptic fiber bounds and reverse genus remain required. Acceptance16/20;DUB17--20 OPEN.",
+  "externalBuild": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalReferences": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean.txt",
+      "sha256": "C4F06A97ADEA65D19400B16A9350AB87BACECAB33927C2D44F6A26C552420675",
+      "built": false,
+      "imported": false
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-tate-formal-1860b\\Def_ModularCurve_TateFormal.lean.txt",
+      "sha256": "B37CF2050E422F2982F596764F2D1A5BA94267FD1FF8D56458C890552547B2B4",
+      "built": false,
+      "imported": false
+    }
+  ],
+  "nativeReuseCorrection": "The first candidate scope duplicated the existing GammaOne.divisionForm construction. This successor directly reuses it and its Gamma0 action, retaining only the needed aliases and row identity. The first audit found missing definition docstrings and was not promoted; all definitions in this successor are documented.",
+  "boundary": "The exact-order elliptic point and original-field marked-point correspondence are not assumed or claimed. This scope proves the integral invariant forms and literal series identities they will consume."
+}

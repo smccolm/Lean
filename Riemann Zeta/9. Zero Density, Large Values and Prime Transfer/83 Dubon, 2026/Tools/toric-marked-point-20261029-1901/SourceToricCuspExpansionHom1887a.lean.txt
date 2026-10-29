@@ -1,0 +1,77 @@
+import Mathlib.NumberTheory.ModularForms.QExpansion
+import Mathlib.Algebra.Polynomial.Eval.Defs
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point -> formal division-polynomial identity.
+Package only the native width-one analytic cusp-function ring operations
+needed to transport the proved analytic polynomial identity into power
+series. Multiplicativity is Mathlib's existing qExpansion_mul theorem. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open UpperHalfPlane
+
+theorem cuspFunction_const (c : ℂ) :
+    cuspFunction 1 (fun _ : ℍ => c) = fun _ : ℂ => c := by
+  funext q
+  by_cases hq : q = 0
+  · subst q
+    simpa [cuspFunction, Periodic.cuspFunction] using
+      (show Filter.Tendsto (fun _ : ℂ => c) (nhdsWithin 0 {0}ᶜ) (nhds c) from
+        tendsto_const_nhds).limUnder_eq
+  · simp [cuspFunction, Periodic.cuspFunction, hq]
+
+/-- The ring of functions whose width-one cusp functions are analytic at zero. -/
+def cuspAnalyticRing : Subring (ℍ → ℂ) where
+  carrier := {f | AnalyticAt ℂ (cuspFunction 1 f) 0}
+  zero_mem' := by
+    change AnalyticAt ℂ (cuspFunction 1 (fun _ : ℍ => (0 : ℂ))) 0
+    rw [cuspFunction_const]
+    exact analyticAt_const
+  one_mem' := by
+    change AnalyticAt ℂ (cuspFunction 1 (fun _ : ℍ => (1 : ℂ))) 0
+    rw [cuspFunction_const]
+    exact analyticAt_const
+  add_mem' := by
+    intro f g hf hg
+    change AnalyticAt ℂ (cuspFunction 1 (f + g)) 0
+    rw [cuspFunction_add hf.continuousAt hg.continuousAt]
+    exact hf.add hg
+  mul_mem' := by
+    intro f g hf hg
+    change AnalyticAt ℂ (cuspFunction 1 (f * g)) 0
+    rw [cuspFunction_mul hf.continuousAt hg.continuousAt]
+    exact hf.mul hg
+  neg_mem' := by
+    intro f hf
+    change AnalyticAt ℂ (cuspFunction 1 (-f)) 0
+    rw [cuspFunction_neg hf.continuousAt]
+    exact hf.neg
+
+/-- Width-one q expansion as a ring homomorphism on the required analytic functions. -/
+def cuspExpansionHom : cuspAnalyticRing →+* PowerSeries ℂ where
+  toFun f := qExpansion 1 f.val
+  map_zero' := qExpansion_zero 1
+  map_one' := qExpansion_one 1
+  map_add' f g := qExpansion_add f.property g.property
+  map_mul' f g := qExpansion_mul f.property g.property
+
+/-- Evaluation of an analytic cusp function at a point of the upper half-plane. -/
+def cuspEvaluation (τ : ℍ) : cuspAnalyticRing →+* ℂ :=
+  (Pi.evalRingHom (fun _ : ℍ => ℂ) τ).comp cuspAnalyticRing.subtype
+
+/-- Complex constants in the ring of analytic cusp functions. -/
+def cuspConstant (c : ℂ) : cuspAnalyticRing :=
+  ⟨fun _ => c, by change AnalyticAt ℂ (cuspFunction 1 (fun _ : ℍ => c)) 0
+                 rw [cuspFunction_const]; exact analyticAt_const⟩
+
+theorem cuspExpansionHom_const (c : ℂ) :
+    cuspExpansionHom (cuspConstant c) = PowerSeries.C c := by
+  change qExpansion 1 (fun _ : ℍ => c) = _
+  have h1 : AnalyticAt ℂ (cuspFunction 1 (1 : ℍ → ℂ)) 0 :=
+    (1 : cuspAnalyticRing).property
+  have h := qExpansion_smul h1 c
+  simpa only [Pi.smul_def, Pi.one_apply, smul_eq_mul, mul_one,
+    qExpansion_one, Algebra.smul_def] using h
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

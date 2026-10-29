@@ -1,0 +1,7 @@
+{
+  "failedScope": 1960,
+  "cause": "VALUE traversal localModules omitted versioned upstream 1953 modules used by the accepted scratch import graph. Two required mathematical dependencies were not reached.",
+  "repair": "Include every versioned upstream algebraic-chart module in VALUE recursion. All 17 required proof edges preserved. Reuse unchanged passing exhaustive axiom/linter audit and canonical source compilations; fresh dependency audit and ownership evidence.",
+  "mathematicalSourceChanged": false,
+  "failedLogSHA256": "662EEEFAED43C01F60C785C24172A8FA5DCB2CCB66886F3BBD60598D3DFD8600"
+}

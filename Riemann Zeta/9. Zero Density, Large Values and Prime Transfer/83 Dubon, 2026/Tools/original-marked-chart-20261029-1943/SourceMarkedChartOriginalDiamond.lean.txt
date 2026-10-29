@@ -1,0 +1,67 @@
+import SourceMarkedChartOriginalStabilizer
+import SourceMarkedChartEmbeddingConjugacy
+import SourceMarkedChartPointTransport
+import SourceMarkedChartDiamondNormalization
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart -> stabilizer comparison. Extend the actual original-field diamond
+embeddings using native normality, then consume both proved coordinate
+action formulas to transport the constructed point up to sign. This needs
+neither an assumed point orbit nor a new Tate transvection construction.
+Exact point transport without the sign ambiguity remains a distinct source
+obligation; no such stronger assertion is made here. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_marked_chart_diamond_up_to_sign
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (k Ω : Type*) [Field k] [Field Ω] [DecidableEq Ω]
+    [Algebra kk k] [Algebra kk Ω] [Algebra k Ω] [IsScalarTower kk k Ω] [IsAlgClosure k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (hE : Transcendental kk E.j)
+    (hgen : IntermediateField.adjoin kk ({E.j} : Set k) = ⊤) :
+    ∃ (P : (E.baseChange Ω).toAffine.Point) (ψ : F →ₐ[kk] Ω),
+      addOrderOf P = N ∧ ψ x = algebraMap k Ω E.j ∧
+      (∀ σ : Ω ≃ₐ[k] Ω, (σ.toAlgHom.restrictScalars kk).comp ψ = ψ →
+        Affine.Point.map (W' := E) σ.toAlgHom P = P ∨
+          Affine.Point.map (W' := E) σ.toAlgHom P = -P) ∧
+      ∀ γ : Gamma0 N, ∃ σ : Ω ≃ₐ[k] Ω,
+        (σ.toAlgHom.restrictScalars kk).comp ψ =
+          ψ.comp (originalResidueDiamondAction A N ℓ hℓN γ).toAlgHom ∧
+        (Affine.Point.map (W' := E) σ.toAlgHom P =
+            (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P ∨
+          Affine.Point.map (W' := E) σ.toAlgHom P =
+            -((((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P)) := by
+  obtain ⟨ζ, P, ψ, _, hPord, hψ, hcoord, hstab⟩ :=
+    exists_original_marked_chart_stabilizer_inclusion A N ℓ hℓN hN x hx k Ω E hE hgen
+  refine ⟨P, ψ, hPord, hψ, hstab, fun γ => ?_⟩
+  letI : Normal k Ω := IsAlgClosure.normal k Ω
+  let ρ := originalResidueDiamondAction A N ℓ hℓN γ
+  obtain ⟨σ, hσ⟩ := exists_normalized_embedding_conjugacy E.j hE hgen x ψ
+    (ψ.comp ρ.toAlgHom) hψ (by
+      change ψ (originalResidueDiamondAction A N ℓ hℓN γ x) = algebraMap k Ω E.j
+      rw [originalResidueDiamond_fixes_j A N ℓ hℓN x hx γ, hψ])
+  refine ⟨σ, hσ, ?_⟩
+  letI : Fact (1 < N) := ⟨by omega⟩
+  obtain ⟨a, b, h, hP, hw1, hw2⟩ := hcoord 1
+  simp only [Units.val_one, ZMod.val_one, one_nsmul] at hP
+  obtain ⟨a', b', h', hPu, hwu1, hwu2⟩ := hcoord ((gamma0Unit N γ)⁻¹)
+  have hs1 := AlgHom.congr_fun hσ (w₁ N kk ζ 1)
+  have hs2 := AlgHom.congr_fun hσ (w₂ N kk ζ 1)
+  letI : Algebra (ZMod ℓ) kk := (ZMod.castHom (dvd_refl ℓ) kk).toAlgebra
+  change σ (ψ (w₁ N kk ζ 1)) = ψ (reducedFieldActionOver kk N ℓ hℓN γ (w₁ N kk ζ 1)) at hs1
+  change σ (ψ (w₂ N kk ζ 1)) = ψ (reducedFieldActionOver kk N ℓ hℓN γ (w₂ N kk ζ 1)) at hs2
+  rw [reducedFieldActionOver_w₁, one_mul, hw1, hwu1] at hs1
+  rw [reducedFieldActionOver_w₂, one_mul, hw2, hwu2] at hs2
+  rw [hPu, hP]
+  exact point_map_eq_or_neg_of_invariant_values E hE a b a' b' h h' σ hs1 hs2
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

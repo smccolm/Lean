@@ -1,0 +1,7 @@
+{
+  "reason": "The first a4 coefficient is independently proved and axiom-checked, but not consumed by the ellipticity proof: the linear discriminant term uses only the a6 coefficient. Remove this incorrect claimed VALUE edge; retain every source, public axiom query, all 16 linters and actual Tate ellipticity root. No mathematical proof change.",
+  "failedLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit1.log",
+  "sha256": "F54216598E2C7591552F69AA2F02C1C1BE1195877E7B97F908876BA38D942230",
+  "successor": "SourceOriginalToricCoordinatesDependencyAudit2.lean",
+  "requiredValueEdges": 56
+}

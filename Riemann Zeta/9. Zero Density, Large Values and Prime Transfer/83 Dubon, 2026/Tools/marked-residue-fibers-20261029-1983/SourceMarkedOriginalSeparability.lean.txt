@@ -1,0 +1,34 @@
+import SourceMarkedChartResidueDegree
+import Dubon2026.SourceGammaOneResidueSeparability
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> natural marked
+chart descent. The original residue field is separable over its literal j
+coordinate. Reuse the proved finite residue degree, the simple Laurent pole,
+and the native perfect-constant separating-coordinate criterion. This supplies
+separable polynomials for chart values, so Galois-fixed values descend even
+when the target full-torsion field is not perfect. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open IntermediateField CongruenceSubgroup GammaOne
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+    (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_coordinate_isSeparable [PerfectField kk] (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    Algebra.IsSeparable (adjoin kk ({x} : Set F)) F := by
+  let J := adjoin kk ({x} : Set F)
+  letI : FiniteDimensional J F := original_coordinate_finite A N ℓ hℓN x hx
+  letI : Algebra.IsIntegral J F := Algebra.IsIntegral.of_finite J F
+  letI : CharP F ℓ := charP_of_injective_algebraMap (algebraMap kk F).injective ℓ
+  letI : PerfectRing kk ℓ := PerfectField.toPerfectRing ℓ
+  refine ⟨fun y => SourceCurve.isSeparable_of_forall_pow_ne ℓ ?_
+    (Algebra.IsIntegral.isIntegral (R := J) y)⟩
+  intro u hu
+  apply pow_ne_jqModC kk ℓ (Fact.out : ℓ.Prime).two_le (u : LaurentSeries kk)
+  exact (congrArg (fun z : F => (z : LaurentSeries kk)) hu).trans hx
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

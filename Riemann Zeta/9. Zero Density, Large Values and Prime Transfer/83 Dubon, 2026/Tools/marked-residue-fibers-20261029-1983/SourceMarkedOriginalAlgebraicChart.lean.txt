@@ -1,0 +1,111 @@
+import SourceMarkedOriginalNaturalChart1938b
+import SourceMarkedOriginalSeparability
+import SourceMarkedRationalPointDescent
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart over the finite Galois torsion field. The exact finite-fiber consumer
+uses ofJ over K(j), and its torsion field is algebraic over K(j). Descend
+the generic chart to every such algebraic extension, preserving its exact
+Galois and diamond covariance and separation up to sign. Original-coordinate
+separability and actual point covariance discharge fixed-value descent.
+No chart, stabilizer, full-torsion, or perfect-target certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_natural_marked_chart_algebraic
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (k Ω : Type*) [Field k] [Field Ω] [DecidableEq Ω]
+    [Algebra kk k] [Algebra kk Ω] [Algebra k Ω] [IsScalarTower kk k Ω]
+    [Algebra.IsAlgebraic k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (hE : Transcendental kk E.j)
+    (hgen : IntermediateField.adjoin kk ({E.j} : Set k) = ⊤) :
+    ∃ Ψ : {P : (E.baseChange Ω).toAffine.Point // addOrderOf P = N} →
+        {ψ : F →ₐ[kk] Ω // ψ x = algebraMap k Ω E.j},
+      (∀ (σ : Ω ≃ₐ[k] Ω) P P', P'.val = Affine.Point.map (W' := E) σ.toAlgHom P.val →
+        (Ψ P').val = (σ.toAlgHom.restrictScalars kk).comp (Ψ P).val) ∧
+      (∀ (γ : Gamma0 N) P P',
+        P'.val = (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P.val →
+        (Ψ P').val = (Ψ P).val.comp (originalResidueDiamondAction A N ℓ hℓN γ).toAlgHom) ∧
+      (∀ P P', P'.val = -P.val → Ψ P' = Ψ P) ∧
+      (∀ P P', Ψ P' = Ψ P → P'.val = P.val ∨ P'.val = -P.val) := by
+  classical
+  let B := AlgebraicClosure Ω
+  letI : IsAlgClosure k B := ⟨inferInstance, Algebra.IsAlgebraic.trans k Ω B⟩
+  obtain ⟨Φ, hnat, hdia, hneg, hsep⟩ :=
+    exists_original_natural_marked_chart_generic A N ℓ hℓN hN x hx k B E hE hgen
+  letI := valuation_residue_isAlgClosed A
+  letI := original_coordinate_isSeparable A N ℓ hℓN x hx
+  obtain ⟨Ψ, hΨ⟩ := exists_descended_marked_chart (Ω := Ω) E N x Φ hnat
+  let ι := IsScalarTower.toAlgHom k Ω B
+  let liftP : {P : (E.baseChange Ω).toAffine.Point // addOrderOf P = N} →
+      {Q : (E.baseChange B).toAffine.Point // addOrderOf Q = N} :=
+    fun P => ⟨Affine.Point.map (W' := E) ι P.val,
+      (addOrderOf_injective _ (Affine.Point.map_injective ι) P.val).trans P.property⟩
+  have hf (P : {P : (E.baseChange Ω).toAffine.Point // addOrderOf P = N}) (f : F) :
+      algebraMap Ω B ((Ψ P).val f) = (Φ (liftP P)).val f :=
+    AlgHom.congr_fun (hΨ P (liftP P) rfl) f
+  refine ⟨Ψ, ?_, ?_, ?_, ?_⟩
+  · intro σ P P' h
+    let σM : B ≃+* B := IsAlgClosure.equivOfEquiv B B σ.toRingEquiv
+    have hσM (z : Ω) : σM (algebraMap Ω B z) = algebraMap Ω B (σ z) :=
+      IsAlgClosure.equivOfEquiv_algebraMap B B σ.toRingEquiv z
+    let σb : B ≃ₐ[k] B := AlgEquiv.ofRingEquiv (f := σM) fun c => by
+      rw [IsScalarTower.algebraMap_apply k Ω B, hσM, σ.commutes]
+    have hσb (z : Ω) : σb (algebraMap Ω B z) = algebraMap Ω B (σ z) := hσM z
+    have hc : ι.comp σ.toAlgHom = σb.toAlgHom.comp ι := by
+      ext z
+      exact (hσb z).symm
+    have hp : (liftP P').val = Affine.Point.map (W' := E) σb.toAlgHom (liftP P).val := by
+      change Affine.Point.map ι P'.val = Affine.Point.map _ (Affine.Point.map ι P.val)
+      rw [h, Affine.Point.map_map, Affine.Point.map_map, hc]
+    apply AlgHom.ext
+    intro f
+    apply (algebraMap Ω B).injective
+    change algebraMap Ω B ((Ψ P').val f) = algebraMap Ω B (σ ((Ψ P).val f))
+    rw [hf, ← hσb, hf]
+    exact AlgHom.congr_fun (hnat σb (liftP P) (liftP P') hp) f
+  · intro γ P P' h
+    have hp : (liftP P').val =
+        (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • (liftP P).val := by
+      change Affine.Point.map ι P'.val = _
+      rw [h, map_nsmul]
+    apply AlgHom.ext
+    intro f
+    apply (algebraMap Ω B).injective
+    change algebraMap Ω B ((Ψ P').val f) =
+      algebraMap Ω B ((Ψ P).val (originalResidueDiamondAction A N ℓ hℓN γ f))
+    rw [hf, hf]
+    exact AlgHom.congr_fun (hdia γ (liftP P) (liftP P') hp) f
+  · intro P P' h
+    have hp : (liftP P').val = -(liftP P).val := by
+      change Affine.Point.map ι P'.val = -(Affine.Point.map ι P.val)
+      rw [h, map_neg]
+    apply Subtype.ext
+    apply AlgHom.ext
+    intro f
+    apply (algebraMap Ω B).injective
+    rw [hf, hf, hneg (liftP P) (liftP P') hp]
+  · intro P P' h
+    have he : Φ (liftP P') = Φ (liftP P) := by
+      apply Subtype.ext
+      apply AlgHom.ext
+      intro f
+      rw [← hf, ← hf, h]
+    rcases hsep (liftP P) (liftP P') he with hp | hp
+    · exact Or.inl (Affine.Point.map_injective ι hp)
+    · right
+      apply Affine.Point.map_injective ι
+      change Affine.Point.map ι P'.val = Affine.Point.map ι (-P.val)
+      rw [map_neg]
+      exact hp
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

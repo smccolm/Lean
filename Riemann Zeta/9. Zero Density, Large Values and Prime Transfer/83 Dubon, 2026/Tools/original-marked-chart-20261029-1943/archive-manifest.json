@@ -1,0 +1,2164 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Original Marked Chart Assessment 2026-10-29.md",
+      "path": "Tools/original-marked-chart-20261029-1943/Dubon Original Marked Chart Assessment 2026-10-29.md.txt",
+      "sha256": "E42EEC4C93E5FABB1DD7A3E2A4B677BB6E8EB10464582961E549A7871BCCEB47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionAudit1.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionAudit1.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.lean.txt",
+      "sha256": "552FF5A634A2B1551FAC0D37CA50734C1B9B0F9CF86C535BAA85F8D9632FAD29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionAudit1.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.log",
+      "sha256": "2C224E81F677A468B3D27489905FBFAD8E06B69416F4A43C58FA154559552310"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionDependencyAudit1.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionDependencyAudit1.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.lean.txt",
+      "sha256": "4E6FC0D1A4901F7E2F3E4794643C87A8E63285D26326A4E2426EE67765A544A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionDependencyAudit1.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.log",
+      "sha256": "B32BBB1B3865737BE505F4510427EBC2485F3F0F3CAFF0B47D4D3B2D4526E460"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionScratchOwnership1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionScratchOwnership1914.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.lean.txt",
+      "sha256": "84CFAA35AE97756CA1F53FC3486FDB8B3ECC3EC86BF3868534F8573143EA2639"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartConstructionScratchOwnership1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.log",
+      "sha256": "9A993214BB8AF9EBC49F0DC5DDFF78A6D9B3AA97E604BBB1CBA7E4710E6F1B9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding.lean.txt",
+      "sha256": "9A8477199F754FF0363FC1D42DBDB1F8A4125B2DA6E340A6B0CEE54898DBFB31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding1902a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding1902a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.lean.txt",
+      "sha256": "2970BEDF7977851E01B3A05D602A31F59C8C64A0743E102D9BDEF46EA33EC70F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartCoordinateEmbedding1902a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint.lean.txt",
+      "sha256": "FCABF1E1AC468BF2AC65A807B342EAED8A5B9E7840B8E6318C45499D2B876675"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.lean.txt",
+      "sha256": "8A4F115589CF6DB413FCFD4EEDF1BFA106039B47CAFFCC3D6E1C2E13F222C0E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.log",
+      "sha256": "D922F50A4D56E5FA534756F0D58F64ACDF39A6B4878494F9E2F6801586D2B878"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.lean.txt",
+      "sha256": "CC8563F636B05B947ED22C4CC284E34A6EAD179C9803CB7947E14C6760C11DF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.log",
+      "sha256": "DA23E18127FB4DA62BFBC172FA81B96687C54485BE7944D1C07ED2C7723B50F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910c.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.lean.txt",
+      "sha256": "1ACFB9B6EDB11FFCC160C1C56E40DDE3EB646F1459FAC550FA7A037F05E639B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.log",
+      "sha256": "B4F3C26B7CB244174912BA13485AEB992232E4088BD58BEF075EF74B32B9755C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910d.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910d.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.lean.txt",
+      "sha256": "6F8DE48B63C31FD809995B457CFADB9BB72AB09186BB1E86D3A7C958CD7EF4B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910d.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.log",
+      "sha256": "C964585ADB2E273A906FF8F69461A8CDFC24534F921939337843E2CD02ECF5D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910e.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910e.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.lean.txt",
+      "sha256": "81DF32840A4688DD50A1DB2537D40C9395DC9257F71CA7265109ACE20B0068AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDescendedPoint1910e.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-failed1933.lean.txt",
+      "sha256": "FA3EE674564375D518CAA709DC174B3CAB8B42A62ABE435D07A5AB9D2A023326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization.lean.txt",
+      "sha256": "FA3EE674564375D518CAA709DC174B3CAB8B42A62ABE435D07A5AB9D2A023326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.lean.txt",
+      "sha256": "F49C6B8DEEEE985B457D0E8AE96F900F084A879DF328FC132BCD1BB4619BF947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.lean.txt",
+      "sha256": "FA3EE674564375D518CAA709DC174B3CAB8B42A62ABE435D07A5AB9D2A023326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound.lean.txt",
+      "sha256": "0388F6F45BF0F1E3AF0AF313FEE0294FC953B3BF6E2334E635EF23D7C4BC2A88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound1908a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound1908a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.lean.txt",
+      "sha256": "03FA55BD3340CEC358B0EEEB19C6E0939ED8FF8578BDF1897B8FA92FACD3EB3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingBound1908a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-failed1933.lean.txt",
+      "sha256": "DC5F1B68C86FF45310E7905AA18A60BF36D9657DF2852F668CAF74C132047F0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy.lean.txt",
+      "sha256": "DC5F1B68C86FF45310E7905AA18A60BF36D9657DF2852F668CAF74C132047F0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.lean.txt",
+      "sha256": "674F116057763D5FF9587466CB019774D7DE42EBA45864DB21142FAFD77FB448"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.log",
+      "sha256": "5D8272F6DA5A62FBADD89A85C56CC6AA4057CF0FEE31B0D59C9EB8E397C87502"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.lean.txt",
+      "sha256": "DC5F1B68C86FF45310E7905AA18A60BF36D9657DF2852F668CAF74C132047F0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer.lean.txt",
+      "sha256": "EE03C90C41F1A23883604CBED4B1AA5A4FFE43B6C21294F451A55444BCFFF926"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.lean.txt",
+      "sha256": "95C05A11CF27FFFAC9F212CB38DE6C6F606C0A8E43119529E270932EB425726B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.log",
+      "sha256": "A41207D91AA94CA04BCD2404AB206FF986B1123E67716529EABFEE980465BD62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.lean.txt",
+      "sha256": "7FBD07BFF5750C68696005707D055563940E286FA68F8AE962FEAD5E8A621385"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.log",
+      "sha256": "E472973CF7E25A5A5080B8421FC74BB38AD25DABBE7AFC9B3EB940008C850D94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904c.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.lean.txt",
+      "sha256": "E4E74C578B1CFF6284187B3E4ECF3B2323274F79ABC4940FF1F5A88A6611E3AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEqualJTransfer1904c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent.lean.txt",
+      "sha256": "E643BCD23B55C9BCB71ED0D6972EDA86DEAC5218130E1AE8C090966B5D4F69DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.lean.txt",
+      "sha256": "D1338A7C9EDE759AC87C4E6694E412BB2EACC17DF820242BF7F5F8ED745657A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.log",
+      "sha256": "6C75D95AFD78928C99851E578477E1819549CD36DF70B599474BCC205981FE06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.lean.txt",
+      "sha256": "E643BCD23B55C9BCB71ED0D6972EDA86DEAC5218130E1AE8C090966B5D4F69DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFieldDescent1906b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation.lean.txt",
+      "sha256": "3B1FAB253D40D611B261F7A486C273E06BC4CFC6F7FCA7A1D2214CB72C43CF91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.lean.txt",
+      "sha256": "26786F1466732AFE873F22B0D84C337D747B54C0268DA1A84FA30D6215F62414"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.log",
+      "sha256": "E6D2092D274EBC60FBCAC55FDAC85F903DB75969642CEEF3DE4A91A74DD4ACFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.lean.txt",
+      "sha256": "E38B44A23657465505B2762EC6B202292E2CB1A91A19472238C49FA829838551"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartInvariantSeparation1905b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction.lean.txt",
+      "sha256": "E6C29E367703C87638AD3B68515950F753A230183FE154CF584B05FDCE7F42C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.lean.txt",
+      "sha256": "6C3ADA70D14D21A9A56BFBFFE759706CAB99F8C5C4908530B954E549256EDE70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.log",
+      "sha256": "EBFDF64CBADADDD2378AC443E5591CC95F20708F83864D1F5351B6FF0C508296"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.lean.txt",
+      "sha256": "96B0A7A8CC5E94211B08D918A2F33D1D025B7772DD29FB0429039F82DE2072C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.log",
+      "sha256": "24D6403A5E142EC7D90C191FD81AE656A220FBAFAEE2E75574A6EBF1737C7A41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911c.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.lean.txt",
+      "sha256": "0B95C4E69F24E3389F2B2729621ED888618B4A150396A220523A53150EB61822"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalConstruction1911c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-failed1933.lean.txt",
+      "sha256": "DA84AE5A5AE70789CBE1A816E1550254D3DD14624EB72ED0D65108DB40F1532B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond.lean.txt",
+      "sha256": "DA84AE5A5AE70789CBE1A816E1550254D3DD14624EB72ED0D65108DB40F1532B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.lean.txt",
+      "sha256": "5AA3EB672B89256DD22A8387E8AE1AEEBFA3E3D9DC253FCDDBBE25E61913F762"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.log",
+      "sha256": "FB1A949E53284F0FD8AF631B4834D8FB1747B51ECF9396C614C478B30666CDD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.lean.txt",
+      "sha256": "0FDF4C7595C8F03A3ED3C493CAF5C7AB86CA9FDDD6B03E6E9E19DBF874ACD05A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-failed1933.lean.txt",
+      "sha256": "36F10D93D2B8BB6F6C458A3BBF79C78ED0CDE002B4BE4B857244355C4B2C6BA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit.lean.txt",
+      "sha256": "36F10D93D2B8BB6F6C458A3BBF79C78ED0CDE002B4BE4B857244355C4B2C6BA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit1928a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit1928a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.lean.txt",
+      "sha256": "7B8922AEDDD38CD768EA8A194E86A12CB03338DA9822471B26A18C34ABBCF9D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit1928a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer.lean.txt",
+      "sha256": "77195C7DDC4CAEC64277ABB0FB5C83074618DF87CA0BD92FE542681223D4EA94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer1913a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer1913a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.lean.txt",
+      "sha256": "310216D629FCE0B7A7DD4F231FA3961F9373B1BD2CB68D3EE32B48E3B3149B0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizer1913a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-failed1933.lean.txt",
+      "sha256": "AF2375FE33270124103BD3C39A985F4F2E5F638E44284259E11037B56F38D475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality.lean.txt",
+      "sha256": "AF2375FE33270124103BD3C39A985F4F2E5F638E44284259E11037B56F38D475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.lean.txt",
+      "sha256": "38A68AC9836C8BAC8F234200C9C901AE3DDDC4257D6B14B605A662517D1D0CB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.lean.txt",
+      "sha256": "F950B1BD0B6A647ED81BD524EDFED637249D8AB6D74DBB1897A8C428912E0407"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-failed1933.lean.txt",
+      "sha256": "0CAFAED665370B6F6161D231F195B510EFE8D15C48A60E7BAF4E25E19F9FA789"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport.lean.txt",
+      "sha256": "0CAFAED665370B6F6161D231F195B510EFE8D15C48A60E7BAF4E25E19F9FA789"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport1921a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport1921a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.lean.txt",
+      "sha256": "00B5C415EC0CA1ABC5F7CE998769E9055FA6C6140B28A88071D1CEF0B0C04854"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport1921a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree.lean.txt",
+      "sha256": "BC99EA121BDFFD3575C96CE5D2379894D799839CA07EAE19B42A37226E64A2F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.lean.txt",
+      "sha256": "C5BFA13516DDA809101F0395A9DFDD8F540307C800AD642C3DC44F5A631F64E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.log",
+      "sha256": "7E55CB7EAD07C850702AA91A34DF2FD50711283EFCA9565C5DF4BB2CFE5E824F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.lean.txt",
+      "sha256": "8844D9458CE70FA6F8E3AD32CC7F1462E34F3DA4A9331BB536BA013E6A64B76E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.log",
+      "sha256": "CECD881EC565B4AFDA647B8EB36B0ACB7C04801E91D30DEAC5EBD59FEA3241FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909c.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.lean.txt",
+      "sha256": "2615BD3A0B8FB003B25ECAB0AEDC813F4E1B34EEC3EFADEC074C7716CBABD9D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.log",
+      "sha256": "14F192C02F7BAE046BAA8B5CF4C1F2CD1BF699A09E5BBCA24AE705487FE7C370"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909d.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909d.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.lean.txt",
+      "sha256": "FD40E48A5634ECB2DECA7DEDA491E49E3FC7955A6266C4109EBD009419BC0877"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartResidueDegree1909d.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-failed1933.lean.txt",
+      "sha256": "C62A5A28BC5B00FE3C9CA4EC4CC864C12356A381ED59E9B1EACF07CF2A1580AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions.lean.txt",
+      "sha256": "88F6194AE5DB089B0E25BF21538360413A9E5F3953E4BCB2EF9DC2DDD0FFA14A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.lean.txt",
+      "sha256": "C7E4BBBC8E315429BEAAA5A998AA1929484ABC0926EFC79F2C2AE307E52DB54B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.log",
+      "sha256": "FAB7C15CBF324CAFAA8CA3A6556FA598F453867C85885DB4FD8DF72B0F82A068"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.lean.txt",
+      "sha256": "C5A64EC045C3216026F384F390E90B2166C29AB18623115F7A1C788F9AC15C7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.log",
+      "sha256": "0A0EB0DBBDBDC1093F1B64DF7E368643F9190EC20B018DAF2D76B7C99C050926"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929c.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.lean.txt",
+      "sha256": "A6098BBCE82E8CE7D28A7DD1E031B44E19C3A251EDAE961BE04BE2DB59DBA8F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.log",
+      "sha256": "F47E1C1C088DC86E0440B220E0EF2745F9DA577E81DEF3C914A4CCB852373456"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929d.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929d.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.lean.txt",
+      "sha256": "C22496675E8504688E28F0667B6BB2A826A7DBD8EA0F2935274C5F52388A7B8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929d.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929e.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929e.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.lean.txt",
+      "sha256": "96FA72840FD0E5ED7F7C2D10597716D0B6100084AA45ED8DB82FC8AC990E9153"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929e.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit1.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit1.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.lean.txt",
+      "sha256": "31E1B2758495D9EBF6A3D2C13807F7DC5D71E81732AD57A0CF4A6A8883D8BAF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit1.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.log",
+      "sha256": "7D7D4F7A2F24EBE0820FA5C6DA657ACF091FAD834B4632A5F8DB717BBBE2A8DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit2.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit2.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.lean.txt",
+      "sha256": "31E1B2758495D9EBF6A3D2C13807F7DC5D71E81732AD57A0CF4A6A8883D8BAF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerAudit2.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.log",
+      "sha256": "58470B9CE6369B04766139EC9591255BEA2DB8688EDF943AFD19F6DC7B1AD894"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerDependencyAudit1.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit1.lean.txt",
+      "sha256": "806961DE54444E3BB0B68E7DC4632DF57B256AF23D7159BF22A664ECF1C0A6FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerDependencyAudit2.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerDependencyAudit2.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.lean.txt",
+      "sha256": "806961DE54444E3BB0B68E7DC4632DF57B256AF23D7159BF22A664ECF1C0A6FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerDependencyAudit2.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.log",
+      "sha256": "80AB53492A3C975660028C84210B3244553C91F4B1A3E125425F8D1785FB76F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-failed1933.lean.txt",
+      "sha256": "220703AFB91255D9A3DE8D7A3538710F23D407EC918ACDD9F576CF5C2A7BAD24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality.lean.txt",
+      "sha256": "220703AFB91255D9A3DE8D7A3538710F23D407EC918ACDD9F576CF5C2A7BAD24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.lean.txt",
+      "sha256": "F473CC458DE04689A892DEB7EBBB1C86BD8AA9B3CE350830CA0F5B1A82423589"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.lean.txt",
+      "sha256": "5B43D8049CC57CF5C0B50860C21E1D08508C315F1F90F16D5F5775686CAEB433"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion.lean.txt",
+      "sha256": "D86581C9361CD015034C1A59528D8FCDAEDCE5F7F142FB1A01FA6ABD0A09E57D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion1912a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion1912a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.lean.txt",
+      "sha256": "AB4213F30CA3B6E39D18E50014230C368CE8AB0FD71E412181802254DEDE48C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerInclusion1912a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerScratchOwnership1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerScratchOwnership1934.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.lean.txt",
+      "sha256": "AE2FF149931C129D79FD82B11165A39D88BDE766F7167C78FFE461FECE978946"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerScratchOwnership1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.log",
+      "sha256": "3C71D69D5BBDBD58CFCE251708F8ADAF4D206B5FF7DB5FB2B3A8FEFF0528E2A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent.lean.txt",
+      "sha256": "9C07F01C1B0F3EC6AA2F0F71EEDE2F45FD581708657E2BABC4173D61A888D171"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.lean.txt",
+      "sha256": "9D09653DA85F948E8AADAACAD14A9529EE338C57BEC844B7D2142000F8696621"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.log",
+      "sha256": "D3EF597E67C769F5EC4B7CB1E43D6A69FC6A9AE3B001B7ED80E360D6BF5973AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.lean.txt",
+      "sha256": "9C07F01C1B0F3EC6AA2F0F71EEDE2F45FD581708657E2BABC4173D61A888D171"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartTorsionDescent1907b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants.lean.txt",
+      "sha256": "34D0F3B441D81FFB60F9CB2BAF20907A1A912DBA87C3DB612C691A814A90F2E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.lean.txt",
+      "sha256": "9490E5919802F2DB9E1CD7EF1E9AB1031E3DA7816AAB109A885D55244E846A8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.log",
+      "sha256": "6A2EB05AFBED8E19A5F38452F247F8EE112DD56E55C9BE1014E070A8E86713C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.lean.txt",
+      "sha256": "34D0F3B441D81FFB60F9CB2BAF20907A1A912DBA87C3DB612C691A814A90F2E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartVariableInvariants1903b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-failed1933.lean.txt",
+      "sha256": "E76F2230A442F74EC0D2844994DE5D818A74393A7464EC9AD18CF5A885764C84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy.lean.txt",
+      "sha256": "E76F2230A442F74EC0D2844994DE5D818A74393A7464EC9AD18CF5A885764C84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.lean.txt",
+      "sha256": "7255A99EC470FA2FD66409CC0F8D806EECD4A85DF34B1DE9CE6FD72FEE530C88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.log",
+      "sha256": "F5BC274AFE57AEB39FA2F1C86BDB36C68D2A7F5A64DC0CC6DE0CDBEF0A34EAAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.lean.txt",
+      "sha256": "A2820E5C26B9D01D97D938902C515D05F535F5A4EFFF91E6597053915B2140D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-failed1933.lean.txt",
+      "sha256": "E2662F65CAC8CC5A8A7F630CDA2E7374A5CE09AF027B53BDD17CEBA80C411F36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity.lean.txt",
+      "sha256": "E2662F65CAC8CC5A8A7F630CDA2E7374A5CE09AF027B53BDD17CEBA80C411F36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.lean.txt",
+      "sha256": "D1009B5251CC51A5AD838393150E72172BF49ABF278DCEC6354A49D0B620F898"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.log",
+      "sha256": "613A4CCA46E93CBF33D38135C53540FB0D001692A83EF9D2375F8BA4D246C9EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.lean.txt",
+      "sha256": "E2662F65CAC8CC5A8A7F630CDA2E7374A5CE09AF027B53BDD17CEBA80C411F36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartAudit1.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartAudit1.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.lean.txt",
+      "sha256": "0A49DD31FE074138EB1093731A749CA48F6EAAA08641995E8B86AD99DA5D3ED1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartAudit1.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.log",
+      "sha256": "E71B0E98CC7A9B9F13CEC9D0FB5C9C8C7A03B02BE8510ACB45A2439231973D6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartDependencyAudit1.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartDependencyAudit1.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.lean.txt",
+      "sha256": "0B7624B202E42E969F8751FC1D371E37123576024EDCB5A13376055EB9B29DDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartDependencyAudit1.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.log",
+      "sha256": "EB215BB6863A076705BF2A1616DE9583E3FD5F9C261DA331532D709913A9675B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartScratchOwnership1939.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartScratchOwnership1939.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.lean.txt",
+      "sha256": "9AEDCCBA370FA4F5E3388A92550917B4C82779DB17A944E37A67ECB7C5A11307"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartScratchOwnership1939.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.log",
+      "sha256": "543F11E7106AED4A975D66A22D6AFFDCECC13BEFCD74FA50CFC8733B5CB20803"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart-1939.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart-1939.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart-1939.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart-1939.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart.lean.txt",
+      "sha256": "5614A977413017CA5BF1B5962DE9146AE2C20B10ACB1416D81190BC379D523C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart1936a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart1936a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.lean.txt",
+      "sha256": "3B3E779FC4298D78BEE1D7EA2DB2625126DD447BF9536BF94B4D76F92700B5BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart1936a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap-1939.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap-1939.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap-1939.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap-1939.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap.lean.txt",
+      "sha256": "753DDFD28FC5C8AA3D0E414D728BE738FF3BFE5D48DCDF50980FC16A65A7B033"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap1935a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap1935a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.lean.txt",
+      "sha256": "41F19E3E087C6A32E32B3620A78BF75BE783A8DA5F4E2450E65EDEC582E14129"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap1935a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart-1939.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart-1939.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart-1939.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart-1939.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart.lean.txt",
+      "sha256": "7A16FFD20760AEC471FB5D589B91319688C2995238948B8C9C26770AD79E44EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.lean.txt",
+      "sha256": "9A6FCB336E7F5D29E03DF27DC3303763D780F4A5036A71715EA02D7443D2E3E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.log",
+      "sha256": "B4A60C4DB04537D21B1470D3EB1462599E4D5065B33F76830865337483966B9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.lean.txt",
+      "sha256": "E62128138005944A243C3877D56B010B2A3AF408FAF6F2D2AB01C451DFA3B0EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-failed1933.lean.txt",
+      "sha256": "8CF304F3C06C5CA0BDE8754A877E8C0D50F05990748375B3C1E1B6CBDCC63155"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity.lean.txt",
+      "sha256": "8CF304F3C06C5CA0BDE8754A877E8C0D50F05990748375B3C1E1B6CBDCC63155"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity1927a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity1927a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.lean.txt",
+      "sha256": "D8826498276385A98D8E4197C2918891010CA3DFF64BA23D1DEF7AF9A66B1990"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity1927a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond-1939.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond-1939.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond-1939.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond-1939.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond.lean.txt",
+      "sha256": "A3FEC06399AE2B736700599AF6B8E718DE991ED998B12F1DAE4776BDBCDA3E3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond1937a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond1937a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.lean.txt",
+      "sha256": "7EE65A14BB48BFBBBB823D7DD7D9F4B4FAE08324C4FAD6C5BD722D5FB5B01329"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond1937a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-failed1933.lean.txt",
+      "sha256": "A0069CB2390A88F80EDBD3D0DDEF9C81C17F20A9B11C4974CCE318C7D091EC2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison.lean.txt",
+      "sha256": "A0069CB2390A88F80EDBD3D0DDEF9C81C17F20A9B11C4974CCE318C7D091EC2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.lean.txt",
+      "sha256": "6AC6559488B15EA66A65221BB21FE869BBD0FB29023C75D18D385F9911A6BD0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.log",
+      "sha256": "53F983CACEDD3CC5CE5B8F3B38835A1E94112AECA5EC1238CE98A83CCFE01E4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.lean.txt",
+      "sha256": "A0069CB2390A88F80EDBD3D0DDEF9C81C17F20A9B11C4974CCE318C7D091EC2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-failed1933.lean.txt",
+      "sha256": "180E695D18C77149665965E7C9253B6365B692D6FA73424F3D33BB012FBA8745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount.lean.txt",
+      "sha256": "180E695D18C77149665965E7C9253B6365B692D6FA73424F3D33BB012FBA8745"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.lean.txt",
+      "sha256": "694B2314302D2482248F14A792D0FE6EA6850F4B8E91F486A75995A776070BD3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.log",
+      "sha256": "99A59125555D5B1D7E6E2674D939873C3BC78B1277D52126F3FE76425EBA5C6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.lean.txt",
+      "sha256": "749328E2C18F73A5018F4D669F628315628425275181488F8F125E460B5517B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-failed1933.lean.txt",
+      "sha256": "8A8F324D423BB73DA73235E1815F5347BA377FB6A875C7BA80BA1771AEE79617"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit.lean.txt",
+      "sha256": "8A8F324D423BB73DA73235E1815F5347BA377FB6A875C7BA80BA1771AEE79617"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit1926a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit1926a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.lean.txt",
+      "sha256": "607C8C4F232E665380406465D5E2717850CE1B9A7811582B133D8004BCF9B701"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit1926a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-failed1933.lean.txt",
+      "sha256": "C75985957B16C8E24028BDAA8D86748597F9B9ED549DDF345FB136E426C626B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses.lean.txt",
+      "sha256": "C75985957B16C8E24028BDAA8D86748597F9B9ED549DDF345FB136E426C626B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses1916a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses1916a.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.lean.txt",
+      "sha256": "CFF807E8EF73F29B32367425DCFFAE4E4F257ED80173F4291529B0C42C37F7CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses1916a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex-1933.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1933.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex-1933.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1933.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex-1934.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1934.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex-1934.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1934.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex-failed1933.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-failed1933.lean.txt",
+      "sha256": "341068A13743F6247E444AB2B3CFAADDA416FDA164F3776300E8CBAE7579D09B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex.lean.txt",
+      "sha256": "341068A13743F6247E444AB2B3CFAADDA416FDA164F3776300E8CBAE7579D09B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.lean.txt",
+      "sha256": "DFD67E6568776ED9E5269B22432BA0C70D998D1735683F4F483F0912F50928E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.log",
+      "sha256": "39157F53E1F7B9AB2FDD3C25AFD6FEFCA70EC452118319250A0EB6C860B76BF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917b.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.lean.txt",
+      "sha256": "E0C33124F0ED0C0B53791ABEA820940146D2BF9B0A7A9900C38B45D40BB6C0D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate-1914.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate-1914.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate-1914.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate-1914.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate.lean.txt",
+      "sha256": "C71BCC9F2CDFB00FFB6D89DBC460E0B7B8729142FC7F085C4750C2EBC735CA73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900a.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900a.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.lean.txt",
+      "sha256": "0402FD985F776E07E6D2880477BE03DF13849EF22EA84B5288A7B182F6997E44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900a.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.log",
+      "sha256": "1FA99C4E3CDEB1692F32D0F093A314D8187CB4DCD1F29DABB99736848AB2A868"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900b.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900b.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.lean.txt",
+      "sha256": "FCCDA1C9521804D89974AFB72E892A784449E34DFFF52F2451812EED31953304"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900b.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.log",
+      "sha256": "64A202C7EBA1CF0937F8A2168C15A90B4AFC60C1DE1C573FC4095CAFA5B2C456"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900c.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900c.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.lean.txt",
+      "sha256": "902388921ABF10D3A5AB34FF92136B58C71BEB2563A0FA58AA55BF65FFBFF68D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900c.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.log",
+      "sha256": "A6FAF8DEA40EF8E6C2397DF8CD9D31521A9425BBD5B53DAF5CED8F8C342365DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900d.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900d.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.lean.txt",
+      "sha256": "B92D10C648570702E1D32326CAFAA205C3EF990F98694D454CCD35B36B1C0FE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900d.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.log",
+      "sha256": "EBA0D2473B8C27C44F34E12D7BD7089AD539A45C4ABB67C94A9E668F2796EBB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900e.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900e.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.lean.txt",
+      "sha256": "7391F43578ABAE7B8F681CC0E0F2EEE7456FFF17F68A908B9B968F575358F044"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900e.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.log",
+      "sha256": "01B3A7992FEC469A2795F568578523F80F4586DE9C5BD96EB2AF2F9A1091B98A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900f.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900f.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.lean.txt",
+      "sha256": "A3F071E8AA31BEE13163F3244C1510F8702C017401A52E6A1DA3860A324BD526"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900f.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.log",
+      "sha256": "977050F09D751A7DD01C58FB0C330DFC535AC45FD2761E16B5CC4B67D12F7DDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900g.exit",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900g.lean",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.lean.txt",
+      "sha256": "C71BCC9F2CDFB00FFB6D89DBC460E0B7B8729142FC7F085C4750C2EBC735CA73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateOriginalJCoordinate1900g.log",
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-point-chart-1846\\S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-gamma-one-point-chart-1846/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "sha256": "B706DC14788CEC3F561C6DE0DBBEEA1BF0E48FE48A59A81C4EAB5591DCE301BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-point-chart-1846\\manifest.json",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-gamma-one-point-chart-1846/manifest.json",
+      "sha256": "7C1A571473DEC45E73BD97B7A58F88BA82793BF914B24C783A03F766558695F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-point-orbit-1915\\S_AddCommGroup_natCard_torsionOrbit_gammaH_eq_index.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/S_AddCommGroup_natCard_torsionOrbit_gammaH_eq_index.lean.txt",
+      "sha256": "D7CD1FCA3C54C52BA1FDF594AAB292BB9500F82C0544EC88C901517F16DEF05A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-point-orbit-1915\\S_WeierstrassCurve_exists_algEquiv_map_eq_of_addOrderOf_eq_of_transcendental_j.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/S_WeierstrassCurve_exists_algEquiv_map_eq_of_addOrderOf_eq_of_transcendental_j.lean.txt",
+      "sha256": "BD33EF02D755071F9A3BF6D0F7891AFD065C6C565DFD86FF0980265DE095641E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-point-orbit-1915\\sources.json",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/sources.json",
+      "sha256": "7CDE9ADEB520145EE35AF6B1C857480D6FA4339B9EC8E5AB22203150D0296973"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-transvection-1919\\S_AddAut_exists_mem_apply_eq_of_addOrderOf_eq_of_transvection_mem.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/S_AddAut_exists_mem_apply_eq_of_addOrderOf_eq_of_transvection_mem.lean.txt",
+      "sha256": "DD379CB4AFABA3A78988FB2A7D2AB94B6D50E06DA98C100F722FB64BFD2D9E42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-transvection-1919\\S_WeierstrassCurve_exists_algEquiv_map_eq_smul_and_map_eq_smul_add_of_transcendental_j.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/S_WeierstrassCurve_exists_algEquiv_map_eq_smul_and_map_eq_smul_add_of_transcendental_j.lean.txt",
+      "sha256": "1D40A85B501E86460CA27D5DFB64DB62268EC3326BEB232153061D4AF63BB40C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-transvection-1919\\sources.json",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/sources.json",
+      "sha256": "4A74C76861A46074360F2A5A28C6C1985D1C4D7063AC36431A28735B1689B869"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash.lean.txt",
+      "sha256": "7641943DAC055EB2DA87BFFC3FADB47CCCF83C22F728699FF7EBA79B4348AC19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\S_ModularCurve_exists_natural_diamond_algHom_qExpFunctionFieldC_gammaH_bot_of_transcendental_j.lean.txt",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/S_ModularCurve_exists_natural_diamond_algHom_qExpFunctionFieldC_gammaH_bot_of_transcendental_j.lean.txt",
+      "sha256": "0A29C899F2D290F17C602139DE9590547D2B5851E105E50725AC97F458686DAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-residue-chart-construction-1751\\manifest.json",
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/manifest.json",
+      "sha256": "4B2E1DEA12532879536650C383F71D7AA3D4E9EF80F94263D58DF43D8EB870A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_chart_construction_1914.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_construction_1914.ps1",
+      "sha256": "C9751D1EAFD40D54BE88A47346A0563F2034111CD9B83639D5B19152830B830C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_chart_stabilizer_1933.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_stabilizer_1933.ps1",
+      "sha256": "CF8A0508A62905E8E574E7B4FE3E0DE3688FACF220EC47070461229308213DB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_chart_stabilizer_1934.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_stabilizer_1934.ps1",
+      "sha256": "9ABB3B71662417BB85CF6B04F1A51E0974BBFAB63BBDB3637A24C9FD1DB97A34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_natural_chart_1939.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_natural_chart_1939.ps1",
+      "sha256": "967AF79362256B7B0B16093B7C1285BF959D43606B6A16F050E199C95FD42C38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_chart_construction_canonical_1914.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_construction_canonical_1914.ps1",
+      "sha256": "845E7CDEB365D5BBCBF014A31FF2F2CDAE8C97A3F585A650F0D818196043243C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_chart_stabilizer_canonical_1933.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_stabilizer_canonical_1933.ps1",
+      "sha256": "95097BD445C9A559C0F0DB034142303B7F3BB3BF1BF70BEA29797D157449A7DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_chart_stabilizer_canonical_1934.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_stabilizer_canonical_1934.ps1",
+      "sha256": "6AC982557D09E8244B24503ED3CA5F2FFDA1814F330928C054EE54C292F894FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_natural_chart_canonical_1939.ps1",
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_natural_chart_canonical_1939.ps1",
+      "sha256": "089CF4BCA9F4532A6EEBC218DD347606F9E783F2EF7861E586B9A80C42207EE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-chart-construction-versions-1914.json",
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-construction-versions-1914.json",
+      "sha256": "50DB3CA8E26C2103BC42FDADD8291E804F89C96B1262221CFBD67E1AC5B67E98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-chart-stabilizer-versions-1933.json",
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-stabilizer-versions-1933.json",
+      "sha256": "F730F904F081431D7C67BD91BBD57E745D4E56DC44D91813AB3683237083D6F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-chart-stabilizer-versions-1934.json",
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-stabilizer-versions-1934.json",
+      "sha256": "FB7E7CBFCF42067745A8D4EC4F1F9EE25BCFBE7F60F9758D5BC91D5BAAE716D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-natural-chart-versions-1939.json",
+      "path": "Tools/original-marked-chart-20261029-1943/marked-natural-chart-versions-1939.json",
+      "sha256": "F74CD61D2F075D5F79D507FE0F17C696D86B56A30FE2BFB737A384D76ECA9980"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-marked-chart-promotion-route-1943.json",
+      "path": "Tools/original-marked-chart-20261029-1943/original-marked-chart-promotion-route-1943.json",
+      "sha256": "66917BBC2D8029D91D775489F010E85761B454D20EF01E0E9832955234A9CCD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_chart_construction_audit_1914.py",
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_construction_audit_1914.py",
+      "sha256": "9AB3270EF0035AC184771877628BA331A14BDF04ACC69F5FDB01D6C23DE1A82D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_chart_stabilizer_audit_1933.py",
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_stabilizer_audit_1933.py",
+      "sha256": "17CEFF4C33E9BF99B4E8A294877A24C9273B83FF538B63BAD0807752D13A3004"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_chart_stabilizer_audit_1934.py",
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_stabilizer_audit_1934.py",
+      "sha256": "67C6C61D7CD4F1B1AA6D7211BD9B4CA8F3B3C5793FC8BE1730BF85E4E4B7595E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_natural_chart_audit_1939.py",
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_natural_chart_audit_1939.py",
+      "sha256": "0FE26CDDE24B3920076B1BB33E0FEA660B63BDAE18AC0E7AD8E2D9D97468F055"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_chart_construction_1914.py",
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_construction_1914.py",
+      "sha256": "B3EEE653B61D6B76B026DFF543FD46078353F5C57CB6AF8923464A3BD7530A49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_chart_stabilizer_1933.py",
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_stabilizer_1933.py",
+      "sha256": "D64EF5354A3EB5FAF963B95B95E55FB1646A01E08B65EC76314B95C5CBBFBA15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_chart_stabilizer_1934.py",
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_stabilizer_1934.py",
+      "sha256": "02CF9D4AD5A1ABE9D80BB0AA84E3F33CA83D0660FC11147B352A5C3AD7F9AB24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_natural_chart_1939.py",
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_natural_chart_1939.py",
+      "sha256": "2C164F63DDE42C619B453F77C95DBA956386E29492D79DC345AD1B31179DB67A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-1-audit-config.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-audit-config.json",
+      "sha256": "C3DFCE791FB2431B44557A02EC9AACE1DF2F88FECF5EC8089D463E2AFAB405E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-1-reuse-review-20261029.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-reuse-review-20261029.json",
+      "sha256": "9BC6D08994C17418A13EE247FCD4A8CC2F27445E8F017CC9DE4B713407EE9095"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-1-scratch-receipt.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-scratch-receipt.json",
+      "sha256": "4F65BCEBE48BA23C78D7EC99C918B73A2FC98C8CE5AB69DED31A0C2A1613CA0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-audit-route-1914.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-audit-route-1914.json",
+      "sha256": "F55948E69AD438434763F98AD6CCA6C3F9FD9964883509A40465292E1F7FA475"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-1-audit-config.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-1-audit-config.json",
+      "sha256": "CE42A0838C27F756A7171EFAD0605B06E299F157B7DC6BC7530C08C638E59F1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-2-audit-config.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-audit-config.json",
+      "sha256": "E6AF2282DAF7A877657BCAAB8FBFB29419F8C2A310C927CF68C4589EDB503270"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-2-reuse-review-20261029.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-reuse-review-20261029.json",
+      "sha256": "BBDAFC061D85C0E93820D8AD7EFA2E0B1E80D22090240B821DCAC849CAAAD5D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-2-scratch-receipt.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-scratch-receipt.json",
+      "sha256": "7EAE85E0CC6DF676908BDAECB217DAD0DC546536673B8ACCFA7E35CF97BB8353"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-audit-route-1933.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-audit-route-1933.json",
+      "sha256": "A3537162D988A2A7A40039018D97A9EB13C6A3C72C468BE45F8738D550BD176B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-stabilizer-audit-route-1934.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-audit-route-1934.json",
+      "sha256": "0A6528CAEB51E6F0B2B508D8381A21EEBD7EACF1240A65E08A5DD4855D69346A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-natural-chart-1-audit-config.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-audit-config.json",
+      "sha256": "6F060F93397CB90B81D03F01E596F3CD94C6208CFA324F4777154D3BA7429392"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-natural-chart-1-reuse-review-20261029.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-reuse-review-20261029.json",
+      "sha256": "DDE40A33245027FABEC5BA87991C0D13C963BF95A0A6E79D4EA8991F23393F74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-natural-chart-1-scratch-receipt.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-scratch-receipt.json",
+      "sha256": "F0552D451B4B6CAD6F3CD16143E68B20C071BF8FD9D2F6D714E2E6053F970983"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-natural-chart-audit-route-1939.json",
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-audit-route-1939.json",
+      "sha256": "A9F10406A6AA6C74B9D464B279E2CB8FBAC7B18399F9F59D9AA06CD3269EFB87"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+import Dubon2026.SourceMarkedOriginalAlgebraicChart
+import Dubon2026.SourceMarkedFullTorsionPointLift
+import Dubon2026.SourceMarkedChartNormalExhaustion
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart over the actual normal full-torsion field. The algebraic-target chart
+has exact Galois and diamond covariance and separates points up to sign.
+The proved original generic point descends by native full-torsion lifting;
+normal-embedding conjugacy then proves exhaustion. The finite Galois field
+constructed for the source fiber argument supplies normality and full
+torsion. No chart or stabilizer certificate is assumed. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_natural_marked_chart_full_torsion
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (k Ω : Type*) [Field k] [Field Ω] [DecidableEq Ω]
+    [Algebra kk k] [Algebra kk Ω] [Algebra k Ω] [IsScalarTower kk k Ω] [Normal k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (hE : Transcendental kk E.j)
+    (hgen : IntermediateField.adjoin kk ({E.j} : Set k) = ⊤)
+    (hfull : Nat.card {P : (E.baseChange Ω).toAffine.Point // N • P = 0} = N ^ 2) :
+    ∃ Ψ : {P : (E.baseChange Ω).toAffine.Point // addOrderOf P = N} →
+        {ψ : F →ₐ[kk] Ω // ψ x = algebraMap k Ω E.j},
+      (∀ (σ : Ω ≃ₐ[k] Ω) P P', P'.val = Affine.Point.map (W' := E) σ.toAlgHom P.val →
+        (Ψ P').val = (σ.toAlgHom.restrictScalars kk).comp (Ψ P).val) ∧
+      (∀ (γ : Gamma0 N) P P',
+        P'.val = (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P.val →
+        (Ψ P').val = (Ψ P).val.comp (originalResidueDiamondAction A N ℓ hℓN γ).toAlgHom) ∧
+      (∀ P P', P'.val = -P.val → Ψ P' = Ψ P) ∧
+      (∀ P P', Ψ P' = Ψ P → P'.val = P.val ∨ P'.val = -P.val) ∧
+      Function.Surjective Ψ := by
+  classical
+  obtain ⟨Ψ, hnat, hdia, hneg, hsep⟩ :=
+    exists_original_natural_marked_chart_algebraic A N ℓ hℓN hN x hx k Ω E hE hgen
+  let B := AlgebraicClosure Ω
+  letI : IsAlgClosure k B := ⟨inferInstance, Algebra.IsAlgebraic.trans k Ω B⟩
+  obtain ⟨Q, _, hQ, _⟩ :=
+    exists_original_marked_chart_stabilizer_equality A N ℓ hℓN hN x hx k B E hE hgen
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  have hNB : (N : B) ≠ 0 := by
+    simpa only [map_natCast] using (map_ne_zero (algebraMap kk B)).mpr hNK
+  obtain ⟨P, hP, _⟩ := exists_exactOrder_baseChange_preimage_of_full_torsion
+    (Ω := Ω) E N hNB hfull Q hQ
+  exact ⟨Ψ, hnat, hdia, hneg, hsep,
+    natural_marked_chart_surjective_of_normal E N x hE hgen P hP Ψ hnat⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

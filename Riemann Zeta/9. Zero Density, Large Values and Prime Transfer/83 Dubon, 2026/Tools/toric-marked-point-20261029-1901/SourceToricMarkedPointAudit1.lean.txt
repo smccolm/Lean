@@ -1,0 +1,134 @@
+import SourceToricAnalyticCurve
+import SourceToricAnalyticTorsion
+import SourceToricAnalyticDivisionRoot
+import SourceToricCuspExpansionHom
+import SourceToricCuspDivisionIdentity
+import SourceTateCoefficientNormalization
+import SourceToricComplexSeriesDivision
+import SourceToricCoefficientLocalization
+import SourceToricLocalizedSeries
+import SourceToricResidueDivisionIdentity
+import SourceToricAnalyticMultiplication
+import SourceToricResidueMultiplicationIdentity
+import SourceToricFieldDivisionIdentities
+import SourceToricExactOrderPoint
+import SourceToricMarkedPointCoordinates
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.lambda
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.lambda_ne_zero
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateChange
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₁
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₂
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₃
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₄
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₆
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_nsmul_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_one_order
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_nsmul
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_eq_some
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_divisionForm_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspFunction_const
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspAnalyticRing
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspEvaluation
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspConstant
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_const
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspE4
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspE6
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspToricX
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_evaluate
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspToricX_evaluate
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionTateCurve_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateA6_eisenstein_identity
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_tateA4_complex
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_tateA6_complex
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_E4
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_E6
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionTateCurve
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionToricX
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_complex_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.ToricCoefficientRing
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.integralZeta
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex_algebraMap
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex_injective
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.levelInverse
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_levelInverse
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.localizedToricX
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_localizedToricX
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_localizedTateCurve
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.coefficientResidue
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.coefficientResidue_algebraMap
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_residue_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_congr
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_mul
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_divisionForm_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_complex_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_residue_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.seriesToField
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.map_tatePowerSeries_toField
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateField_eval_ΨSq
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateField_mul_eval
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.tateField_eval_ΨSq_ne_zero
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.exists_exactOrder_toric_point
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.exists_originalField_markedToricCoordinates
+
+private def runToricMarkedPointAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceToricAnalyticCurve, `SourceToricAnalyticTorsion, `SourceToricAnalyticDivisionRoot, `SourceToricCuspExpansionHom, `SourceToricCuspDivisionIdentity, `SourceTateCoefficientNormalization, `SourceToricComplexSeriesDivision, `SourceToricCoefficientLocalization, `SourceToricLocalizedSeries, `SourceToricResidueDivisionIdentity, `SourceToricAnalyticMultiplication, `SourceToricResidueMultiplicationIdentity, `SourceToricFieldDivisionIdentities, `SourceToricExactOrderPoint, `SourceToricMarkedPointCoordinates]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.ToricAnalytic.lambda_ne_zero, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₁, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₂, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₃, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₄, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_a₆, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_nsmul_eq_zero_iff, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_one_order, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_nsmul, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_eq_some, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_divisionForm_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspFunction_const, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_const, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_evaluate, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspToricX_evaluate, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionTateCurve_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.tateA6_eisenstein_identity, `Dubon2026.SourceFunctionField.ToricAnalytic.map_tateA4_complex, `Dubon2026.SourceFunctionField.ToricAnalytic.map_tateA6_complex, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_E4, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom_E6, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionTateCurve, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionToricX, `Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_complex_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex_algebraMap, `Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex_injective, `Dubon2026.SourceFunctionField.ToricAnalytic.map_levelInverse, `Dubon2026.SourceFunctionField.ToricAnalytic.map_localizedToricX, `Dubon2026.SourceFunctionField.ToricAnalytic.map_localizedTateCurve, `Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.coefficientResidue_algebraMap, `Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_residue_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_congr, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom_fraction_mul, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve_divisionForm_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_complex_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.tatePowerSeries_residue_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.map_tatePowerSeries_toField, `Dubon2026.SourceFunctionField.ToricAnalytic.tateField_eval_ΨSq, `Dubon2026.SourceFunctionField.ToricAnalytic.tateField_mul_eval, `Dubon2026.SourceFunctionField.ToricAnalytic.tateField_eval_ΨSq_ne_zero, `Dubon2026.SourceFunctionField.ToricAnalytic.exists_exactOrder_toric_point, `Dubon2026.SourceFunctionField.ToricAnalytic.exists_originalField_markedToricCoordinates]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.ToricAnalytic.lambda, `Dubon2026.SourceFunctionField.ToricAnalytic.tateChange, `Dubon2026.SourceFunctionField.ToricAnalytic.tateCurve, `Dubon2026.SourceFunctionField.ToricAnalytic.toricPeriodHom, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspAnalyticRing, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspExpansionHom, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspEvaluation, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspConstant, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspE4, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspE6, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspTateCurve, `Dubon2026.SourceFunctionField.ToricAnalytic.cuspToricX, `Dubon2026.SourceFunctionField.ToricAnalytic.ToricCoefficientRing, `Dubon2026.SourceFunctionField.ToricAnalytic.integralZeta, `Dubon2026.SourceFunctionField.ToricAnalytic.coefficientComplex, `Dubon2026.SourceFunctionField.ToricAnalytic.levelInverse, `Dubon2026.SourceFunctionField.ToricAnalytic.localizedToricX, `Dubon2026.SourceFunctionField.ToricAnalytic.localizedTateCurve, `Dubon2026.SourceFunctionField.ToricAnalytic.coefficientResidue, `Dubon2026.SourceFunctionField.ToricAnalytic.seriesToField]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Toric marked point postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Toric marked point theorems discovered"
+  logInfo m!"SOURCE TORIC MARKED POINT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runToricMarkedPointAudit
+
+#lint in SourceToricAnalyticCurve
+#lint in SourceToricAnalyticTorsion
+#lint in SourceToricAnalyticDivisionRoot
+#lint in SourceToricCuspExpansionHom
+#lint in SourceToricCuspDivisionIdentity
+#lint in SourceTateCoefficientNormalization
+#lint in SourceToricComplexSeriesDivision
+#lint in SourceToricCoefficientLocalization
+#lint in SourceToricLocalizedSeries
+#lint in SourceToricResidueDivisionIdentity
+#lint in SourceToricAnalyticMultiplication
+#lint in SourceToricResidueMultiplicationIdentity
+#lint in SourceToricFieldDivisionIdentities
+#lint in SourceToricExactOrderPoint
+#lint in SourceToricMarkedPointCoordinates

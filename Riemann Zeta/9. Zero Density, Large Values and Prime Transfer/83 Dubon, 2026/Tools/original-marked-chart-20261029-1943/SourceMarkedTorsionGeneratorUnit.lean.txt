@@ -1,0 +1,41 @@
+import SourceMarkedTorsionSignClasses
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart -> sign-class Galois transitivity. A cyclic generator obtained from
+the proved modular-root conjugacy is an actual residue-unit multiple.
+Native additive-order formulas provide the unit, so generator normalization
+can consume the already constructed diamond moves. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+
+theorem val_intCast_nsmul_of_order {G : Type*} [AddCommGroup G]
+    (N : ℕ) [NeZero N] (P : G) (hP : addOrderOf P = N) (n : ℤ) :
+    (n : ZMod N).val • P = n • P := by
+  rw [← natCast_zsmul, ZMod.val_intCast, ← hP]
+  exact mod_addOrderOf_zsmul P n
+
+theorem exists_unit_multiple_of_equal_order {G : Type*} [AddCommGroup G]
+    (N : ℕ) [NeZero N] (P : G) (hP : addOrderOf P = N) (n : ℤ)
+    (hn : addOrderOf (n • P) = N) :
+    ∃ u : (ZMod N)ˣ, (u : ZMod N).val • P = n • P := by
+  let t := (n : ZMod N).val
+  have hv : t • P = n • P := val_intCast_nsmul_of_order N P hP n
+  have hfin : IsOfFinAddOrder P := isOfFinAddOrder_iff_nsmul_eq_zero.mpr
+    ⟨N, NeZero.pos N, by rw [← hP]; exact addOrderOf_nsmul_eq_zero P⟩
+  have hd : N / Nat.gcd N t = N := by
+    rw [← hP, ← hfin.addOrderOf_nsmul P t, hv, hn, hP]
+  have hm : Nat.gcd N t * N = N := by
+    calc Nat.gcd N t * N = Nat.gcd N t * (N / Nat.gcd N t) := by rw [hd]
+         _ = N := Nat.mul_div_cancel' (Nat.gcd_dvd_left N t)
+  have hc : Nat.Coprime N t :=
+    Nat.eq_of_mul_eq_mul_right (NeZero.pos N) (hm.trans (one_mul N).symm)
+  have hu : IsUnit (n : ZMod N) := by
+    rw [← ZMod.natCast_zmod_val (n : ZMod N)]
+    exact (ZMod.isUnit_iff_coprime t N).mpr hc.symm
+  obtain ⟨u, hu⟩ := hu
+  refine ⟨u, ?_⟩
+  rw [hu]
+  exact hv
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

@@ -1,0 +1,45 @@
+import SourceMarkedChartEmbeddingBound1908a
+import Dubon2026.SourceOriginalResidueCoordinateIndex
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original-field
+marked-point chart. The proved original residue degree supplies finiteness
+over the literal j coordinate and the exact signed Gamma1 index. It therefore
+discharges the finite-degree assumption in the normalized embedding count.
+The actual valuation residue image and its integral-ratio field are retained. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open IntermediateField CongruenceSubgroup GammaOne IntegralDiamond
+open scoped IntermediateField
+variable {L : Type*} [Field L] [Algebra ℚ L] (A : ValuationSubring L)
+    (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime] [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := F.toSubalgebra.algebra
+
+theorem original_coordinate_finrank_eq_index (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    Module.finrank (adjoin kk ({x} : Set F)) F = (plusMinus (Gamma1 N)).index := by
+  have h := relfinrank_map_map (adjoin kk ({x} : Set F)) (⊤ : IntermediateField kk F) F.val
+  change relfinrank (lift (adjoin kk ({x} : Set F))) (lift (⊤ : IntermediateField kk F)) = _ at h
+  rw [lift_adjoin_simple, lift_top, relfinrank_top_right, hx] at h
+  exact h.symm.trans (residue_original_coordinate_degree_eq_signed_index A N ℓ hℓN)
+
+theorem original_coordinate_finite (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    FiniteDimensional (adjoin kk ({x} : Set F)) F := by
+  apply Module.finite_of_finrank_pos
+  rw [original_coordinate_finrank_eq_index A N ℓ hℓN x hx]
+  letI : (plusMinus (Gamma1 N)).FiniteIndex := Subgroup.finiteIndex_of_le (le_plusMinus _)
+  exact Nat.pos_of_ne_zero Subgroup.FiniteIndex.index_ne_zero
+
+theorem original_normalized_embeddings_finite_and_card_le (hℓN : ¬ ℓ ∣ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (Ω : Type*) [Field Ω] [Algebra kk Ω] (c : Ω) :
+    Finite {ψ : F →ₐ[kk] Ω // ψ x = c} ∧
+      Nat.card {ψ : F →ₐ[kk] Ω // ψ x = c} ≤ (plusMinus (Gamma1 N)).index := by
+  letI := original_coordinate_finite A N ℓ hℓN x hx
+  obtain ⟨hf, hc⟩ := normalized_embeddings_finite_and_card_le x c
+  exact ⟨hf, hc.trans_eq (original_coordinate_finrank_eq_index A N ℓ hℓN x hx)⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

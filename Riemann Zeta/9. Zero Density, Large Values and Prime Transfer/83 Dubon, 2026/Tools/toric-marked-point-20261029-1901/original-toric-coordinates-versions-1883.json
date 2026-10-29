@@ -1,0 +1,82 @@
+[
+  {
+    "version": "SourceTateIntegralCoefficients1873a",
+    "module": "SourceTateIntegralCoefficients",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients1873a.lean",
+    "originalSha256": "5438C447345D64BC364CB7C844D0BF2101A245363261F7EF5143470D210935A3",
+    "canonicalSha256": "5438C447345D64BC364CB7C844D0BF2101A245363261F7EF5143470D210935A3",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceTateIntegralCurve1874a",
+    "module": "SourceTateIntegralCurve",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve1874a.lean",
+    "originalSha256": "76CC543C051DD9E07BAA33948EA26CFAC6123F0CA89A5CD8BC3C5BA0585ECCA3",
+    "canonicalSha256": "8E8296A37BEBF3B1B561CFCD44C087D149F58C9C8B013EDE36087DEC5999072D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceTateEisensteinInvariants1875b",
+    "module": "SourceTateEisensteinInvariants",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875b.lean",
+    "originalSha256": "E4D1F3008EE7AF1F66BB81563A6F4ADDBDAFF85304CECF98EC5D5EFBAC224452",
+    "canonicalSha256": "1C2B144E77C33CDEE7C17B58AC2767B1E467FE6D1FD2D3E3835D18C26B784DC1",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricOriginalRatios1876a",
+    "module": "SourceGammaOneToricOriginalRatios",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios1876a.lean",
+    "originalSha256": "CAAF07083E728B512BDB9610692C877EBD62D32AD0E2952A827363AD5D2496B2",
+    "canonicalSha256": "EF3099A8C1D928850872709B0FF9BEA9A0516D1BFADF77D8B390E1BA463EE274",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricOriginalCoordinates1877a",
+    "module": "SourceGammaOneToricOriginalCoordinates",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates1877a.lean",
+    "originalSha256": "62CA0AB7BB83F3A779201B5DCF8AAFD915B364A591229D20685C3DE77A079997",
+    "canonicalSha256": "8AB112C65F61C0A708A307A1B5A679408C5091ACC104BBCB2701D514B72F2F54",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricOriginalCoordinateValues1878b",
+    "module": "SourceGammaOneToricOriginalCoordinateValues",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878b.lean",
+    "originalSha256": "FF7515CDD9D6838646F4CD92046358493681129F6C871B388FC7861C584FCCFA",
+    "canonicalSha256": "38084A956D04C347D2034E92F6AD38DD07ADC687637CDFB6589D1558BB0E802B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceIntegralDiamondScalarRatioAction1879a",
+    "module": "SourceIntegralDiamondScalarRatioAction",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction1879a.lean",
+    "originalSha256": "1A8370D84117CB36C25B54F840450A74C3035503E35E0BA98BBB02835B1CECBD",
+    "canonicalSha256": "E705B18F4AF6688CC4DFD110FC19F6E948408A7AB840A8092E07226FC81C498D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricRatioDiamond1880a",
+    "module": "SourceGammaOneToricRatioDiamond",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond1880a.lean",
+    "originalSha256": "89B9FB9654E95DF87ACA1A85A70F722EC7F09078478EE27DCEBE3BC7DAF0BE10",
+    "canonicalSha256": "FF0202475B99EF1B4960861CD1417FAFE18877597544552DD3CE5FF8F0C61C84",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricCoordinateDiamond1881b",
+    "module": "SourceGammaOneToricCoordinateDiamond",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881b.lean",
+    "originalSha256": "75A359CAB8D78F9AAAE9A3A34F2F7570EA7326DFB6CF0525BB0497CBE21DA953",
+    "canonicalSha256": "9FDED8D2B10D08B3A59603BB32BC61CB49A1BD11592CB94392DAC756B734AE23",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneOriginalToricCoordinates1882a",
+    "module": "SourceGammaOneOriginalToricCoordinates",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates1882a.lean",
+    "originalSha256": "31E8BC9DFF94676256ED07C8FC7F593B67DFD4911586C4CB13AF09BED0E6102A",
+    "canonicalSha256": "1E2060631954850907EDE4C3787F6BA18811CA9FC64CCE7636737B2790D3E73C",
+    "mathematicalBodyIdentical": true
+  }
+]

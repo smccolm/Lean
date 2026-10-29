@@ -1,0 +1,51 @@
+import SourceToricLocalizedSeries
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point. Descend the proved complex identity
+through the injective coefficient map, then specialize using the native
+prescribed primitive-root reduction. This proves the literal Tate-series
+division identity in every positive characteristic away from N, including
+two and three; exact torsion order and the point chart remain separate. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve Polynomial SourceFricke GammaOne.ToricFourier
+local notation "Zbar" => integralClosure ℤ ℂ
+
+theorem localizedTateCurve_eval_ΨSq (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    ((localizedTateCurve N).ΨSq N).eval (localizedToricX N c) = 0 := by
+  apply PowerSeries.map_injective (coefficientComplex N) (coefficientComplex_injective N)
+  rw [map_zero, ← Polynomial.eval_map_apply, ← WeierstrassCurve.map_ΨSq,
+    map_localizedTateCurve,
+    map_localizedToricX N c hc (coefficientComplex N)
+      (isPrimitiveRoot_zetaN (NeZero.ne N)) (coefficientComplex_algebraMap N (integralZeta N))]
+  exact tatePowerSeries_complex_eval_ΨSq N c hc
+
+/-- Specialization of the localized coefficient ring along an actual algebraic-integer reduction. -/
+def coefficientResidue (N : ℕ) {K : Type*} [Field K] (φ : Zbar →+* K)
+    (hN : (N : K) ≠ 0) : ToricCoefficientRing N →+* K :=
+  IsLocalization.Away.lift (N : Zbar) (g := φ)
+    (by simpa only [map_natCast] using isUnit_iff_ne_zero.mpr hN)
+
+theorem coefficientResidue_algebraMap (N : ℕ) {K : Type*} [Field K]
+    (φ : Zbar →+* K) (hN : (N : K) ≠ 0) (a : Zbar) :
+    coefficientResidue N φ hN (algebraMap Zbar (ToricCoefficientRing N) a) = φ a :=
+  IsLocalization.Away.lift_eq _ _ _
+
+theorem tatePowerSeries_residue_eval_ΨSq (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    (hℓN : ¬ ℓ ∣ N) (K : Type*) [Field K] [IsAlgClosed K] [CharP K ℓ]
+    {ζ : K} (hζ : IsPrimitiveRoot ζ N) (c : ZMod N) (hc : c ≠ 0) :
+    ((tatePowerSeries.map (PowerSeries.map (Int.castRingHom K))).ΨSq N).eval
+      (xS (ζ ^ c.val)) = 0 := by
+  obtain ⟨φ, hφ⟩ := IntegralSlash.exists_algebraicIntegerReduction_primitiveRoot
+    N ℓ hℓN K ζ hζ
+  have hroot : φ (integralZeta N) = ζ := hφ (integralZeta N) rfl
+  let f := coefficientResidue N φ (GammaOne.ToricFourier.natCast_ne_zero hζ)
+  have hf : f (algebraMap Zbar (ToricCoefficientRing N) (integralZeta N)) = ζ :=
+    (coefficientResidue_algebraMap N φ _ _).trans hroot
+  have h := congrArg (PowerSeries.map f) (localizedTateCurve_eval_ΨSq N c hc)
+  rw [map_zero, ← Polynomial.eval_map_apply, ← WeierstrassCurve.map_ΨSq,
+    map_localizedTateCurve, map_localizedToricX N c hc f hζ hf] at h
+  exact h
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

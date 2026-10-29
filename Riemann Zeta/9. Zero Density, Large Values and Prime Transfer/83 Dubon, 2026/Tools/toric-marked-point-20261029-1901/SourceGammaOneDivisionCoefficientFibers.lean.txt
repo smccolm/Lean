@@ -1,0 +1,62 @@
+import SourceGammaOneDivisionFourier
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> marked-point finite
+charts -> integral toric invariants. Reduce the already proved torsion
+Fourier coefficient to its actual positive integer product fiber. The
+finite support comes from the existing exponent-fiber theorem; there is
+no further convergence or analytic expansion hypothesis. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricForms
+noncomputable section
+open SourceFricke
+variable (N : ℕ) [NeZero N] (b n : ℕ)
+
+theorem wpQCoeff_zero_first_product_fiber :
+    wpQCoeff N 0 b (N * n) =
+      (if n = 0 then 1 / 12 + zetaN N ^ b / (1 - zetaN N ^ b) ^ 2 else 0) +
+      ∑' p : ℕ+ × ℕ+, if (p.1 : ℕ) * (p.2 : ℕ) = n then
+        ((p.2 : ℕ) : ℂ) *
+          (zetaN N ^ (b * (p.2 : ℕ)) + (zetaN N)⁻¹ ^ (b * (p.2 : ℕ)) - 2) else 0 := by
+  classical
+  let F : WpIdx → ℂ := fun i =>
+    if wpMonExp N 0 i = N * n then wpMonCoeff N 0 b i else 0
+  have hs : Summable F := by
+    apply summable_of_hasFiniteSupport
+    refine (finite_wpMonExp_fiber (a₁ := 0) (NeZero.pos N) (N * n)).subset ?_
+    intro i hi
+    change wpMonExp N 0 i = N * n
+    by_contra h
+    exact hi (by simp only [F, if_neg h])
+  have hsL := hs.comp_injective Sum.inl_injective
+  have hsR := hs.comp_injective Sum.inr_injective
+  have hsRL := hsR.comp_injective Sum.inl_injective
+  have hsRR := hsR.comp_injective Sum.inr_injective
+  have heq : wpQCoeff N 0 b (N * n) = ∑' i, F i := by
+    rw [wpQCoeff, tsum_subtype]
+    apply tsum_congr
+    intro i
+    simp only [Set.indicator, Set.mem_preimage, Set.mem_singleton_iff, F]
+  have hr := hsRL.tsum_sum hsRR
+  dsimp only [Function.comp_apply] at hr
+  rw [heq, hsL.tsum_sum hsR, hr]
+  have hhead : (∑' u : Unit, F (Sum.inl u)) =
+      if n = 0 then 1 / 12 + zetaN N ^ b / (1 - zetaN N ^ b) ^ 2 else 0 := by
+    simp [F, wpMonExp, wpMonCoeff, (NeZero.ne N), eq_comm]
+  have hzero : (∑' m : ℕ+, F (Sum.inr (Sum.inl m))) = 0 := by
+    simp [F, wpMonCoeff]
+  rw [hhead, hzero, zero_add]
+  congr 1
+  have hprod := hsRR.tsum_prod
+  dsimp only [Function.comp_apply] at hprod
+  rw [hprod]
+  apply tsum_congr
+  intro p
+  rw [tsum_fintype, Fin.sum_univ_three]
+  have hx : (p.1 : ℕ) * N * (p.2 : ℕ) = N * n ↔
+      (p.1 : ℕ) * (p.2 : ℕ) = n := by
+    rw [mul_comm (p.1 : ℕ) N, mul_assoc, Nat.mul_left_cancel_iff (NeZero.pos N)]
+  simp only [F, wpMonExp, wpMonCoeff, Nat.add_zero, Nat.sub_zero,
+    Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val, hx]
+  split_ifs <;> ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricForms

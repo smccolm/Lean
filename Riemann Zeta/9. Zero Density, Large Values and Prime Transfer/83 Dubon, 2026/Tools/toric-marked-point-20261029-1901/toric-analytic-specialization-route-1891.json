@@ -1,0 +1,36 @@
+{
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> original all-weight association -> Gamma1 genus preservation -> reverse genus -> finite elliptic residue fibers -> exact-order toric point -> transfer of the actual Tate division-polynomial identity to residue characteristic.",
+  "discharged": "The native periodModelHom and exact lattice kernel now prove complex exact order N; native qExpansion_mul and polynomial coefficient maps prove the literal complex Tate-series division-polynomial identity, with zero-diagnostic focused builds.",
+  "shorterRoute": "Reuse SourcePrescribedPrimitiveRootReduction to obtain the existing algebraic-integer reduction carrying the standard complex primitive root to the chosen residue root. Localize the actual algebraic-integer ring only at N, and use the already proved integer xT coefficient polynomials to avoid denominators 1-zeta. Inject the localization into complex numbers, descend the proved identity by power-series map injectivity, and specialize it through the reduction homomorphism. This replaces a new universal cyclotomic/localization proof and general nonarchimedean Tate uniformization.",
+  "boundary": "Positive-characteristic division identity, exact-order point, marked-point chart and finite elliptic fiber bounds remain unproved. No gate closes from the complex identity alone.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrescribedPrimitiveRootReduction.lean",
+      "sha256": "9B94F87AECC2250353213992F23CB5913ACB18D8911619897A5E09DC12339E0B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralReductionExtension.lean",
+      "sha256": "C5B990EA49F90209565261ACFFAC735B9CB4A4E926E2ED8455175EEE5ACC927E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticComplexUniformization.lean",
+      "sha256": "0F18085652D2CF2842BF9EE250E3C430E5F20473407628637A2D2355254C6DA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionDivisionRoot.lean",
+      "sha256": "AC03C8C90EA7123D25EFF4617F3BF6E5A728FFD66E32969A5E369F5972D23F7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegralCoefficientPolynomials.lean",
+      "sha256": "AD5F1F389BA64BC5CC20DDAD9FB0ADDDC2593E20FFBA2F94A81FEAC42D56A79E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Localization\\Away\\Basic.lean",
+      "sha256": "0890C81BF204939AE07E4B825E787C15CB3AD1D8706703D03D4BF03C3D5B1C2F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\AlgebraicGeometry\\EllipticCurve\\DivisionPolynomial\\Basic.lean",
+      "sha256": "CE562BEC0FF58394C7E7E082645A7ABD685AB53EDE970371F695BDB16850E4E4"
+    }
+  ]
+}

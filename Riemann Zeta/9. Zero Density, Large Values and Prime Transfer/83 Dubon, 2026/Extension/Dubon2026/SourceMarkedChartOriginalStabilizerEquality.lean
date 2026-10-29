@@ -1,0 +1,57 @@
+import Dubon2026.SourceMarkedChartOriginalSignOrbit
+import Dubon2026.SourceMarkedChartStabilizerEquality
+import Dubon2026.SourceMarkedTorsionActualCount
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart. The actual constructed original-field embedding has exactly the
+stabilizer of its exact-order point up to sign. The original residue degree,
+native torsion structure, signed Gamma1 count, and constructed sign orbit
+discharge every premise of the index comparison. The original diamond
+action also lifts with point transport up to sign. Exact unsigned transport
+and the finite elliptic-fiber bounds remain separate source obligations. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_marked_chart_stabilizer_equality
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (k Ω : Type*) [Field k] [Field Ω] [DecidableEq Ω]
+    [Algebra kk k] [Algebra kk Ω] [Algebra k Ω] [IsScalarTower kk k Ω] [IsAlgClosure k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (hE : Transcendental kk E.j)
+    (hgen : IntermediateField.adjoin kk ({E.j} : Set k) = ⊤) :
+    ∃ (P : (E.baseChange Ω).toAffine.Point) (ψ : F →ₐ[kk] Ω),
+      addOrderOf P = N ∧ ψ x = algebraMap k Ω E.j ∧
+      (∀ σ : Ω ≃ₐ[k] Ω,
+        (Affine.Point.map (W' := E) σ.toAlgHom P = P ∨
+          Affine.Point.map (W' := E) σ.toAlgHom P = -P) ↔
+          (σ.toAlgHom.restrictScalars kk).comp ψ = ψ) ∧
+      ∀ γ : Gamma0 N, ∃ σ : Ω ≃ₐ[k] Ω,
+        (σ.toAlgHom.restrictScalars kk).comp ψ =
+          ψ.comp (originalResidueDiamondAction A N ℓ hℓN γ).toAlgHom ∧
+        (Affine.Point.map (W' := E) σ.toAlgHom P =
+            (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P ∨
+          Affine.Point.map (W' := E) σ.toAlgHom P =
+            -((((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P)) := by
+  obtain ⟨P, ψ, hP, hψ, hfix, htrans, hdiamond⟩ :=
+    exists_original_marked_chart_transitive_up_to_sign A N ℓ hℓN hN x hx k Ω E hE hgen
+  obtain ⟨hf, hc⟩ := original_normalized_embeddings_finite_and_card_le A N ℓ hℓN x hx Ω
+    (algebraMap k Ω E.j)
+  letI := hf
+  letI : IsAlgClosed Ω := IsAlgClosure.isAlgClosed k
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  have hNΩ : (N : Ω) ≠ 0 := by
+    simpa only [map_natCast] using (map_ne_zero (algebraMap kk Ω)).mpr hNK
+  have hcount := MarkedTorsion.actual_point_signClasses_card E N hNΩ
+  refine ⟨P, ψ, hP, hψ, ?_, hdiamond⟩
+  exact point_field_stabilizers_iff_of_card_bound E N x P hP ψ hψ hfix htrans
+    (hc.trans_eq hcount.symm)
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

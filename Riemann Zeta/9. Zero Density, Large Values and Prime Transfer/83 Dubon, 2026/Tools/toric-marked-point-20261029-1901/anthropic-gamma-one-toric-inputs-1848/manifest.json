@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T13:19:30.979914+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\S_ModularCurve_exists_point_tateLaurent_nsmul_eq_toricPoint_of_isPrimitiveRoot.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_point_tateLaurent_nsmul_eq_toricPoint_of_isPrimitiveRoot.lean",
+      "bytes": 44243,
+      "sha256": "D7AAD4BFA92A2596387575FA934F410B6E27DE35AE39AEB6AB2401F9D41CE096",
+      "gitBlob": "56255cd05d7f7ec9e897bec36009fdad28cf93c2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean",
+      "bytes": 18068,
+      "sha256": "546AA60B7142964A8D5CA4562D09FE32889998261ED86D4254E4BCDAF746E527",
+      "gitBlob": "fb3522ad34f701fa44634d288eb35b4c1826cef4"
+    }
+  ],
+  "purpose": "DUB17/18 -> original genus equality -> finite residue fiber bounds -> actual Gamma1 marked-point correspondence -> original-field toric invariants and exact-order point. Compare with native normalized Weierstrass expansions and integral modular forms; no general Tate uniformization planned.",
+  "externalBuild": false,
+  "externalImport": false
+}

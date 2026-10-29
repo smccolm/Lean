@@ -1,0 +1,9 @@
+{
+  "stage": "Exhaustive axiom and sixteen-linter audit",
+  "error": "Definition documentation missing; no failed mathematical proof or forbidden axiom reported.",
+  "auditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit1.log",
+  "auditSha256": "9590B5D25544EE2C20D5E0DA667CA1304D58DEBE8E20A09043E41D9685F45320",
+  "productionMutation": false,
+  "nativeReuseCorrection": "Existing SourceGammaOneDivisionForms supplies the exact torsion form; successor directly reuses it.",
+  "successor": "prepare_integral_toric_forms_audit_1872.py"
+}

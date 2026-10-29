@@ -146182,6 +146182,5114 @@
     {
       "path": "Tools/original-residue-cusp-bounds-20261029-1854/canonical-evidence-9410.json",
       "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/Dubon Toric Marked Point Assessment 2026-10-29.md.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve-1883.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve-1883.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials-1872.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials-1872.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity-1899.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity-1899.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-point-chart-1846/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-point-chart-1846/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/S_ModularCurve_exists_point_tateLaurent_nsmul_eq_toricPoint_of_isPrimitiveRoot.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-tate-formal-1860b/Def_ModularCurve_TateFormal.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-tate-formal-1860b/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-addition-1870/S_ModularCurve_toricPoint_add_toricPoint_of_charZero.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-addition-1870/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/Def_ModularCurve_TateSlots.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_integral_toric_forms_1869.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_integral_toric_forms_1872.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883b.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883c.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/audit_toric_marked_point_1899.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/build_integral_toric_forms_canonical_1869.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/build_integral_toric_forms_canonical_1872.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/build_original_toric_coordinates_canonical_1883.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-audit-failure-1869.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-preparation-failure-1869.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-superseded-source-archive-1872.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-versions-1869.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-versions-1872.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-audit-failure-1883.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-dependency-failure-1883.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-versions-1883.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1869.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1869b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1872.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_original_toric_coordinates_audit_1883.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_integral_toric_forms_1869.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_integral_toric_forms_1872.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883c.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_toric_marked_point_1899.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-audit-route-1869.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-audit-route-1872.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-audit-route-1883.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-audit-route-1899.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/toric-analytic-specialization-route-1891.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-promotion-route-1901.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-versions-1899.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneDivisionToricForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneDivisionFourier.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneDivisionCoefficientFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneDivisionDivisorCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricFourierCharacters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricIntegerFourierTransform.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricIntegralCoefficientPolynomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneNormalizedDivisionForm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateA4Series.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricIntegerCoefficientFamilies.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralToricWeightTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralToricWeightFour.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralToricSlash.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralToricReconstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralToricForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateIntegralCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateIntegralCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateEisensteinInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneToricOriginalRatios.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneToricOriginalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneToricOriginalCoordinateValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralDiamondScalarRatioAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneToricRatioDiamond.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneToricCoordinateDiamond.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneOriginalToricCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricAnalyticCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricAnalyticTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricAnalyticDivisionRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricCuspExpansionHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricCuspDivisionIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateCoefficientNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricComplexSeriesDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricCoefficientLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricLocalizedSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricResidueDivisionIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricAnalyticMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricResidueMultiplicationIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricFieldDivisionIdentities.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricExactOrderPoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceToricMarkedPointCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-integral-toric-forms-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-toric-coordinates-3-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-toric-marked-point-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-toric-marked-point.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dubon Toric Marked Point Assessment 2026-10-29.md",
+      "role": "root"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/build_toric_marked_point_9450.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/compare_toric_marked_point_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/integrate_source_toric_marked_point_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/preflight_toric_marked_point_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_toric_marked_point_global_ownership_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_toric_marked_point_production_ownership_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/record_source_toric_marked_point_9450.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-ownership-comparison-9450.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-production-build-9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-production-build-9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-scratch-ownership-9450.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-preexecution-review-9450.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-preflight-9450.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/verify_toric_marked_point_9450.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/toric-marked-point-20261029-1901/canonical-evidence-9450.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/Dubon Original Marked Chart Assessment 2026-10-29.md.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionScratchOwnership1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartCoordinateEmbedding1902a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDescendedPoint1910e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartDiamondNormalization1922b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingBound1908a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEmbeddingConjugacy1920b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartEqualJTransfer1904c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartFieldDescent1906b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartInvariantSeparation1905b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalConstruction1911c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalDiamond1923b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalSignOrbit1928a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizer1913a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartOriginalStabilizerEquality1932b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartPointTransport1921a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartResidueDegree1909d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerActions1929e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerEquality1931b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerInclusion1912a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerScratchOwnership1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartTorsionDescent1907b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartVariableInvariants1903b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicGeneratorConjugacy1925b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedCyclicRootTransitivity1924b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartScratchOwnership1939.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart-1939.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart-1939.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalSignChart1936a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap-1939.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap-1939.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOrbitMap1935a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart-1939.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart-1939.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedOriginalNaturalChart1938b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedPointSignTransitivity1927a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond-1939.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond-1939.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedSignChartDiamond1937a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedStabilizerIndexComparison1930b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionActualCount1918b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionGeneratorUnit1926a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignClasses1916a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1933.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1933.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1934.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-1934.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex-failed1933.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedTorsionSignedIndex1917b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate-1914.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate-1914.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900f.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceTateOriginalJCoordinate1900g.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-gamma-one-point-chart-1846/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-gamma-one-point-chart-1846/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/S_AddCommGroup_natCard_torsionOrbit_gammaH_eq_index.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/S_WeierstrassCurve_exists_algEquiv_map_eq_of_addOrderOf_eq_of_transcendental_j.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-point-orbit-1915/sources.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/S_AddAut_exists_mem_apply_eq_of_addOrderOf_eq_of_transvection_mem.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/S_WeierstrassCurve_exists_algEquiv_map_eq_smul_and_map_eq_smul_add_of_transcendental_j.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-primitive-transvection-1919/sources.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_coe_eq_div_of_map_eq_smul_qExpansion_slash.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/S_ModularCurve_exists_natural_diamond_algHom_qExpFunctionFieldC_gammaH_bot_of_transcendental_j.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/anthropic-residue-chart-construction-1751/manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_construction_1914.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_stabilizer_1933.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_chart_stabilizer_1934.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/audit_marked_natural_chart_1939.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_construction_canonical_1914.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_stabilizer_canonical_1933.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_chart_stabilizer_canonical_1934.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/build_marked_natural_chart_canonical_1939.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-construction-versions-1914.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-stabilizer-versions-1933.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/marked-chart-stabilizer-versions-1934.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/marked-natural-chart-versions-1939.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/original-marked-chart-promotion-route-1943.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_construction_audit_1914.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_stabilizer_audit_1933.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_chart_stabilizer_audit_1934.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_marked_natural_chart_audit_1939.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_construction_1914.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_stabilizer_1933.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_chart_stabilizer_1934.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/record_marked_natural_chart_1939.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-construction-audit-route-1914.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-audit-route-1933.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-chart-stabilizer-audit-route-1934.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-marked-natural-chart-audit-route-1939.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateOriginalJCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartCoordinateEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartVariableInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartEqualJTransfer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartInvariantSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartFieldDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartTorsionDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartEmbeddingBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartResidueDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartDescendedPoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartOriginalConstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartStabilizerInclusion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartOriginalStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedTorsionSignClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedTorsionSignedIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedTorsionActualCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartEmbeddingConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartPointTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartDiamondNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartOriginalDiamond.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedCyclicRootTransitivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedCyclicGeneratorConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedTorsionGeneratorUnit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedPointSignTransitivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartOriginalSignOrbit.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartStabilizerActions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedStabilizerIndexComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartStabilizerEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartOriginalStabilizerEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOrbitMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedNaturalSignChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSignChartDiamond.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalNaturalChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-marked-chart-construction-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-marked-chart-stabilizer-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-marked-natural-chart-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-marked-chart.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dubon Original Marked Chart Assessment 2026-10-29.md",
+      "role": "root"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/build_original_marked_chart_9483.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/compare_original_marked_chart_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/integrate_source_original_marked_chart_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/original-marked-chart-preexecution-review-9483.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/original-marked-chart-preflight-9483.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/preflight_original_marked_chart_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_original_marked_chart_global_ownership_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/prepare_original_marked_chart_production_ownership_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/record_source_original_marked_chart_9483.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-original-marked-chart-ownership-comparison-9483.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-original-marked-chart-production-build-9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-original-marked-chart-production-build-9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/source-original-marked-chart-scratch-ownership-9483.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1Production9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1Production9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartConstructionDependencyAudit1Production9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2Production9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2Production9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedChartStabilizerDependencyAudit2Production9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1Production9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1Production9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceMarkedNaturalChartDependencyAudit1Production9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartGlobalOwnership9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartGlobalOwnership9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartGlobalOwnership9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartOwnership9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartOwnership9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartOwnership9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartProductionAudit9483.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartProductionAudit9483.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/SourceOriginalMarkedChartProductionAudit9483.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/verify_original_marked_chart_9483.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-marked-chart-20261029-1943/canonical-evidence-9483.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/Dubon Marked Residue Fibers Assessment 2026-10-29.md.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart-1960.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart-1960.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent-1953.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent-1953.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv-1974.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv-1974.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/anthropic-diamond-place-charts-1746/S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_algebraic_chart_1953.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_exceptional_fibers_1974.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_fiber_chart_1960.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_fiber_chart_1963.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_algebraic_chart_canonical_1953.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_exceptional_fibers_canonical_1974.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_fiber_chart_canonical_1960.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-algebraic-chart-route-1950.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-algebraic-chart-versions-1953.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-exceptional-fibers-versions-1974.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-fiber-chart-audit-successor-1963.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-fiber-chart-versions-1960.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-residue-fibers-promotion-route-1983.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_algebraic_chart_audit_1953.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_exceptional_fibers_audit_1974.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_fiber_chart_audit_1960.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_algebraic_chart_1953.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_exceptional_fibers_1974.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_fiber_chart_1960.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_fiber_chart_1963.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-audit-route-1953.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-audit-route-1974.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-audit-route-1960.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/marked-residue-fibers-20261029-1983/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalSeparability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSeparableChartValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSeparableEmbeddingDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedRationalPointDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalAlgebraicChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedFullTorsionPointLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartNormalExhaustion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalFullTorsionChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartPlaceOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalOfJChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalPlaceChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedFullTorsionNonempty.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedChartFiberSurjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalFiberChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSignPermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSignFreeOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedSignFiberFactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedPeriodicFiberBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedTorsionReductionEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedQuadraticFiberBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedReducedFiberChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalResidueFiberFive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalTameFiberBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedFullInertiaLifts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalResidueFiberTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMarkedOriginalResidueFiberThree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-marked-algebraic-chart-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-marked-fiber-chart-2-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-marked-exceptional-fibers-1-reuse-review-20261029.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-marked-residue-fibers.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dubon Marked Residue Fibers Assessment 2026-10-29.md",
+      "role": "root"
     }
   ],
   "statusDocuments": [
@@ -155639,7 +160747,106 @@
     "SourceOriginalResidueCuspFamilyExhaustion",
     "SourceOriginalResidueCuspOrbitSurjection",
     "SourceOriginalResidueCuspCount",
-    "SourceOriginalResidueImageCuspCount"
+    "SourceOriginalResidueImageCuspCount",
+    "SourceGammaOneDivisionToricForms",
+    "SourceGammaOneDivisionFourier",
+    "SourceGammaOneDivisionCoefficientFibers",
+    "SourceGammaOneDivisionDivisorCoefficients",
+    "SourceToricFourierCharacters",
+    "SourceToricIntegerFourierTransform",
+    "SourceToricIntegralCoefficientPolynomials",
+    "SourceGammaOneNormalizedDivisionForm",
+    "SourceTateA4Series",
+    "SourceToricIntegerCoefficientFamilies",
+    "SourceGammaOneIntegralToricWeightTwo",
+    "SourceGammaOneIntegralToricWeightFour",
+    "SourceGammaOneIntegralToricSlash",
+    "SourceGammaOneIntegralToricReconstruction",
+    "SourceGammaOneIntegralToricForms",
+    "SourceTateIntegralCoefficients",
+    "SourceTateIntegralCurve",
+    "SourceTateEisensteinInvariants",
+    "SourceGammaOneToricOriginalRatios",
+    "SourceGammaOneToricOriginalCoordinates",
+    "SourceGammaOneToricOriginalCoordinateValues",
+    "SourceIntegralDiamondScalarRatioAction",
+    "SourceGammaOneToricRatioDiamond",
+    "SourceGammaOneToricCoordinateDiamond",
+    "SourceGammaOneOriginalToricCoordinates",
+    "SourceToricAnalyticCurve",
+    "SourceToricAnalyticTorsion",
+    "SourceToricAnalyticDivisionRoot",
+    "SourceToricCuspExpansionHom",
+    "SourceToricCuspDivisionIdentity",
+    "SourceTateCoefficientNormalization",
+    "SourceToricComplexSeriesDivision",
+    "SourceToricCoefficientLocalization",
+    "SourceToricLocalizedSeries",
+    "SourceToricResidueDivisionIdentity",
+    "SourceToricAnalyticMultiplication",
+    "SourceToricResidueMultiplicationIdentity",
+    "SourceToricFieldDivisionIdentities",
+    "SourceToricExactOrderPoint",
+    "SourceToricMarkedPointCoordinates",
+    "SourceTateOriginalJCoordinate",
+    "SourceMarkedChartCoordinateEmbedding",
+    "SourceMarkedChartVariableInvariants",
+    "SourceMarkedChartEqualJTransfer",
+    "SourceMarkedChartInvariantSeparation",
+    "SourceMarkedChartFieldDescent",
+    "SourceMarkedChartTorsionDescent",
+    "SourceMarkedChartEmbeddingBound",
+    "SourceMarkedChartResidueDegree",
+    "SourceMarkedChartDescendedPoint",
+    "SourceMarkedChartOriginalConstruction",
+    "SourceMarkedChartStabilizerInclusion",
+    "SourceMarkedChartOriginalStabilizer",
+    "SourceMarkedTorsionSignClasses",
+    "SourceMarkedTorsionSignedIndex",
+    "SourceMarkedTorsionActualCount",
+    "SourceMarkedChartEmbeddingConjugacy",
+    "SourceMarkedChartPointTransport",
+    "SourceMarkedChartDiamondNormalization",
+    "SourceMarkedChartOriginalDiamond",
+    "SourceMarkedCyclicRootTransitivity",
+    "SourceMarkedCyclicGeneratorConjugacy",
+    "SourceMarkedTorsionGeneratorUnit",
+    "SourceMarkedPointSignTransitivity",
+    "SourceMarkedChartOriginalSignOrbit",
+    "SourceMarkedChartStabilizerActions",
+    "SourceMarkedStabilizerIndexComparison",
+    "SourceMarkedChartStabilizerEquality",
+    "SourceMarkedChartOriginalStabilizerEquality",
+    "SourceMarkedOrbitMap",
+    "SourceMarkedNaturalSignChart",
+    "SourceMarkedSignChartDiamond",
+    "SourceMarkedOriginalNaturalChart",
+    "SourceMarkedOriginalSeparability",
+    "SourceMarkedSeparableChartValues",
+    "SourceMarkedSeparableEmbeddingDescent",
+    "SourceMarkedRationalPointDescent",
+    "SourceMarkedOriginalAlgebraicChart",
+    "SourceMarkedFullTorsionPointLift",
+    "SourceMarkedChartNormalExhaustion",
+    "SourceMarkedOriginalFullTorsionChart",
+    "SourceMarkedChartPlaceOrbits",
+    "SourceMarkedOriginalOfJChart",
+    "SourceMarkedOriginalPlaceChart",
+    "SourceMarkedFullTorsionNonempty",
+    "SourceMarkedChartFiberSurjection",
+    "SourceMarkedOriginalFiberChart",
+    "SourceMarkedSignPermutation",
+    "SourceMarkedSignFreeOrbits",
+    "SourceMarkedSignFiberFactor",
+    "SourceMarkedPeriodicFiberBound",
+    "SourceMarkedTorsionReductionEquiv",
+    "SourceMarkedQuadraticFiberBounds",
+    "SourceMarkedReducedFiberChart",
+    "SourceMarkedOriginalResidueFiberFive",
+    "SourceMarkedOriginalTameFiberBounds",
+    "SourceMarkedFullInertiaLifts",
+    "SourceMarkedOriginalResidueFiberTwo",
+    "SourceMarkedOriginalResidueFiberThree"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

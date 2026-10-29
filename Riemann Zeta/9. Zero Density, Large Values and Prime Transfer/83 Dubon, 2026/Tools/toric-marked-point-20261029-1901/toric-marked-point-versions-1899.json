@@ -1,0 +1,122 @@
+[
+  {
+    "version": "SourceToricAnalyticCurve1884c",
+    "module": "SourceToricAnalyticCurve",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884c.lean",
+    "originalSha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A",
+    "canonicalSha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricAnalyticTorsion1885a",
+    "module": "SourceToricAnalyticTorsion",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion1885a.lean",
+    "originalSha256": "8683AAAFA444794C206545B4C7D59EF43639EA3E854929DC2DAB18FE57D288CD",
+    "canonicalSha256": "E470FD8822219E31733214D50B72A2BFB5D9B4A7B457DABC185A7EE5AADB996E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricAnalyticDivisionRoot1886b",
+    "module": "SourceToricAnalyticDivisionRoot",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886b.lean",
+    "originalSha256": "35A9FF91FF16B0E7AAEAFACFBD9FA4006ACD0B9DD54CE2FA2423C3B8B7E5BA05",
+    "canonicalSha256": "75DCAC1AA91977E7DF6AC828B649AD3AEBD3AE30A24C4146F33E4231D9B4FFB6",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricCuspExpansionHom1887b",
+    "module": "SourceToricCuspExpansionHom",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887b.lean",
+    "originalSha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006",
+    "canonicalSha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricCuspDivisionIdentity1888b",
+    "module": "SourceToricCuspDivisionIdentity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888b.lean",
+    "originalSha256": "34B91A634711079AC38812DDD8F8D15955AF4A9C504692F08CEA1CB5703FFC45",
+    "canonicalSha256": "DE93A7C5294EA839B15B6376DAB3E10087A539831A249E9C358B0C3161BC12A8",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceTateCoefficientNormalization1889a",
+    "module": "SourceTateCoefficientNormalization",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization1889a.lean",
+    "originalSha256": "79C09C8A71EADE4939A072B1F0C9A9B562B9804945E5370D6CFAC4DC96E6C78D",
+    "canonicalSha256": "79C09C8A71EADE4939A072B1F0C9A9B562B9804945E5370D6CFAC4DC96E6C78D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricComplexSeriesDivision1890b",
+    "module": "SourceToricComplexSeriesDivision",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890b.lean",
+    "originalSha256": "F80E6FA84427BBA6C957E0E51E380EA264F7F94CF8D631E89E91E00A8F5E40E4",
+    "canonicalSha256": "007A716AC6CE06D09671404E966E9424525E22684475953A95799E253F9B3454",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricCoefficientLocalization1891a",
+    "module": "SourceToricCoefficientLocalization",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization1891a.lean",
+    "originalSha256": "EACB0E085B752251095EE19E40EE8EDABEE527A91C81874F0CB9742A8AE12DB5",
+    "canonicalSha256": "7950B6CF8339164ACE5769E55165EEAD76785EDBE6D4A1B1CDC92FF1828A59E6",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricLocalizedSeries1892a",
+    "module": "SourceToricLocalizedSeries",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries1892a.lean",
+    "originalSha256": "3E5F587D157E2AEBD054A1C07741AD43AE450DF102B4BB090A09E669B12433A7",
+    "canonicalSha256": "60CD80CAFF2528B630AE7B211653142D762E504370521DC6D9DCC76C013FC9AC",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricResidueDivisionIdentity1893a",
+    "module": "SourceToricResidueDivisionIdentity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity1893a.lean",
+    "originalSha256": "B6DD40D03EA16D7BE429A12913841253E5EB875D486911497AF3401E83D05431",
+    "canonicalSha256": "A77ACAFC507DD747E7A285FDD960860E2BE7DC6E497FE4AD29BB3A98A3CCC60D",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricAnalyticMultiplication1894a",
+    "module": "SourceToricAnalyticMultiplication",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication1894a.lean",
+    "originalSha256": "276184F9E05882FF94990D2C1302C8DE9C63896CC14A56BF37C50CD701E9C5C4",
+    "canonicalSha256": "EF7D120950BE29BDDDB3B8880E0459DF173D156A51C1E319A6DEBAA2AB4714DB",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricResidueMultiplicationIdentity1895a",
+    "module": "SourceToricResidueMultiplicationIdentity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity1895a.lean",
+    "originalSha256": "B650A26439A5D5828BF0692DAFE2285185F84FB3C14E7B94385ED79FC0A338BF",
+    "canonicalSha256": "2E63AFAADA30189D68A2631B1B9E8F8AD0D2B1C95DB454A07EC88992DF6725B1",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricFieldDivisionIdentities1896b",
+    "module": "SourceToricFieldDivisionIdentities",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896b.lean",
+    "originalSha256": "84C5E5583681E0E36B48A56B80DFCA2DFF654E5C7756E556D33BBF34A5C47C23",
+    "canonicalSha256": "778336BD30F569641E3286AC944EC34567E78A18E294162FABF5665A66699A29",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricExactOrderPoint1897c",
+    "module": "SourceToricExactOrderPoint",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897c.lean",
+    "originalSha256": "1563BFE8B4ECC9F6290D00439B3A2CC85CE9F7EA8FD476BC702FD077734AB3E9",
+    "canonicalSha256": "9E23059DB8CE6370350E1F79CADDAC4E5CE827436667441E5DFAD7382C2DB243",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceToricMarkedPointCoordinates1898c",
+    "module": "SourceToricMarkedPointCoordinates",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898c.lean",
+    "originalSha256": "A8F3D90450E67413700D04B54FDEAC691B1ECA82BD9CF99347A14C30B25E9930",
+    "canonicalSha256": "C429E23C01991CB5F04E75CB56B985D4799CB142A83CEF7D807E1EBD9A57E421",
+    "mathematicalBodyIdentical": true
+  }
+]

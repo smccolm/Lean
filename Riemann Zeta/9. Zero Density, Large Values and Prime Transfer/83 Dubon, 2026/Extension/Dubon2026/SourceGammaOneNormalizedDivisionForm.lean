@@ -1,0 +1,55 @@
+import Dubon2026.SourceGammaOneDivisionDivisorCoefficients
+import Dubon2026.SourceToricIntegralCoefficientPolynomials
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> integral toric coordinates. Normalize the actual native torsion
+form by twelve and identify its width-one Fourier coefficients with the
+integer-polynomial construction. The zero-index value is defined to be
+the zero form so the finite Fourier family is defined on all of ZMod N;
+all coordinate and integrality applications use nonzero indices. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricFourier
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceFricke ToricForms
+open scoped MatrixGroups ModularForm Manifold
+variable (N : ℕ) [NeZero N]
+
+/-- Twelve times the existing division form at nonzero indices, extended by zero at index zero. -/
+def W (c : ZMod N) : ModularForm (Gamma1 N) 2 :=
+  if hc : c = 0 then 0 else (12 : ℂ) • torsionWeightTwo N c hc
+
+theorem W_of_ne_zero (c : ZMod N) (hc : c ≠ 0) :
+    W N c = (12 : ℂ) • torsionWeightTwo N c hc := by
+  simp only [W, dif_neg hc]
+
+theorem W_slash (c : ZMod N) (γ : SL(2, ℤ)) (hγ : γ ∈ Gamma0 N) :
+    (W N c : ℍ → ℂ) ∣[(2 : ℤ)] γ = (W N (c * (γ 1 1 : ZMod N)) : ℍ → ℂ) := by
+  by_cases hc : c = 0
+  · subst c
+    simp [W, SlashAction.zero_slash]
+  · have hc' : c * (γ 1 1 : ZMod N) ≠ 0 := by
+      intro h
+      have hidx : (![0, c] : Fin 2 → ZMod N) ≠ 0 := fun he => hc (congrFun he 1)
+      have hv := vecMulSL_ne_zero hidx γ
+      rw [vecMulSL_zero_first c γ hγ, h] at hv
+      exact hv (by ext i; fin_cases i <;> rfl)
+    rw [W_of_ne_zero N c hc, W_of_ne_zero N _ hc', ModularForm.IsGLPos.coe_smul,
+      ModularForm.IsGLPos.coe_smul, ModularForm.SL_smul_slash, torsionWeightTwo_slash c hc γ hγ hc']
+
+theorem qExpansion_W_coeff (c : ZMod N) (hc : c ≠ 0) (n : ℕ) :
+    (qExpansion 1 (W N c)).coeff n =
+      wcoef (ψ (isPrimitiveRoot_zetaN (NeZero.ne N)) c) n := by
+  rw [W_of_ne_zero N c hc, ModularForm.IsGLPos.coe_smul,
+    ModularForm.qExpansion_smul zero_lt_one (gammaOne_one_mem_strictPeriods N),
+    map_smul, smul_eq_mul, torsionWeightTwo_qExpansion_coeff,
+    wpQCoeff_zero_first_divisor_sum]
+  simp only [wcoef, xcoef, ψ_apply, pow_mul, inv_pow]
+  by_cases hn : n = 0
+  · subst n
+    simp only [ite_true, Nat.divisors_zero, Finset.sum_empty, add_zero]
+    ring
+  · simp only [if_neg hn, zero_add]
+    simp_rw [mul_sub, Finset.sum_sub_distrib, ← Finset.sum_mul]
+    ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricFourier

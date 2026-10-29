@@ -1,0 +1,19 @@
+{
+  "status": "Prepared only; predecessor9450 canonical PASS and archive are mandatory preflight inputs.",
+  "modules": 33,
+  "queries": 67,
+  "theorems": 59,
+  "constructions": 8,
+  "exhaustiveScratchChecks": 103,
+  "proofValueChecks": 117,
+  "scopes": 3,
+  "receipts": {
+    "source-marked-chart-construction-1-scratch-receipt.json": "4F65BCEBE48BA23C78D7EC99C918B73A2FC98C8CE5AB69DED31A0C2A1613CA0E",
+    "source-marked-chart-stabilizer-2-scratch-receipt.json": "7EAE85E0CC6DF676908BDAECB217DAD0DC546536673B8ACCFA7E35CF97BB8353",
+    "source-marked-natural-chart-1-scratch-receipt.json": "F0552D451B4B6CAD6F3CD16143E68B20C071BF8FD9D2F6D714E2E6053F970983"
+  },
+  "expectedConsumers": 27609,
+  "expectedConstructions": 3050,
+  "fullGoal": "Descent of this chart to arbitrary fields containing full level-N torsion, finite elliptic-fiber bounds and reverse genus remain open. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "productionMutation": false
+}

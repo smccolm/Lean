@@ -1,0 +1,137 @@
+[
+  {
+    "version": "SourceGammaOneTorsionWeightTwo1852c",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms1871a.lean",
+    "module": "SourceGammaOneDivisionToricForms",
+    "originalSha256": "A734B58E2C98CB245C0BCDAB0822960DD9B571397510195CDA13E9AAE983E3F1",
+    "canonicalSha256": "C8E0E7A56276748ABC33EE35BCDB217DFE53C6AA231CA50BA6D21B14BF684E4C",
+    "mathematicalBodyIdenticalExceptNativeReuse": false,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneTorsionFourierWidth1853a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionFourierWidth1853a.lean",
+    "module": "SourceGammaOneDivisionFourier",
+    "originalSha256": "EA0D3F66ABCC41E7B284E0E5EE1782E8B9A40FB2A22783E737ADADE0039C4ECF",
+    "canonicalSha256": "33CAAC25904144BA31801EC961DC600F17B4344E25C9963FA37895C1ADA4C2B2",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneTorsionCoefficientFibers1855b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionCoefficientFibers1855b.lean",
+    "module": "SourceGammaOneDivisionCoefficientFibers",
+    "originalSha256": "09CDE02F32BC255C359C7BB52401FE7D0ECFC84394774880D483B4E37BB7ED77",
+    "canonicalSha256": "EB879A17E8E9A7E95458FD4F2076D06EEF82C7F532304A1DCD675FACC6A22878",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneTorsionDivisorCoefficients1856b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTorsionDivisorCoefficients1856b.lean",
+    "module": "SourceGammaOneDivisionDivisorCoefficients",
+    "originalSha256": "FF73523E792518DB1E4E5BD2CA159B7B6C87E192EA095DD8A8F400A5F79CEF88",
+    "canonicalSha256": "7AABD553AAED707A4F87E1ED23D998791786678090607C3425BF4BFB397BC80E",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceToricFourierCharacter1857a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierCharacter1857a.lean",
+    "module": "SourceToricFourierCharacters",
+    "originalSha256": "35D41F59FBCEEB418EF572EA4695D2CE2B61F4E54389B0E5A1CCBC173A6586B8",
+    "canonicalSha256": "15B24F2B0FB8E21E3842F41E305B6B025F3651B21D37BE41419F7CA0B77EF76B",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceToricFourierIntegralTransform1858a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierIntegralTransform1858a.lean",
+    "module": "SourceToricIntegerFourierTransform",
+    "originalSha256": "18567D439ECF916FB312BEC7781E0CD3425740E0D38EC67653A9E91D6BDA7561",
+    "canonicalSha256": "1223FA5B023117C9148CAE5E6A8ED0433434093E38DC9E433D605CC6E4663B2B",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceToricFourierCoefficientPolynomials1859b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierCoefficientPolynomials1859b.lean",
+    "module": "SourceToricIntegralCoefficientPolynomials",
+    "originalSha256": "C0D264AD4F8C09F5C957EB122A5593174D7AD6385F107A7F6B52441096D7DFA2",
+    "canonicalSha256": "AD5F1F389BA64BC5CC20DDAD9FB0ADDDC2593E20FFBA2F94A81FEAC42D56A79E",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneToricWeightTwo1861b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricWeightTwo1861b.lean",
+    "module": "SourceGammaOneNormalizedDivisionForm",
+    "originalSha256": "54B6F16D0DF759485665E69D12361987BC8C209BBF213FF7D71642B65406028C",
+    "canonicalSha256": "F41C3873CB083BFE01B865EDDD62952499DF2CF517A9567251BE0E926461B66D",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceTateFourCoefficient1862a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceTateFourCoefficient1862a.lean",
+    "module": "SourceTateA4Series",
+    "originalSha256": "6B61C2DE1EA991561497B922359663953D6DBAE91A4CF7C0E92223341437B8DE",
+    "canonicalSha256": "E66BC9C383E200829A0D0D8EEF6CFE10A716A796B9E6162FFDB7FB244EA97B60",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceToricFourierIntegerFamilies1863a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierIntegerFamilies1863a.lean",
+    "module": "SourceToricIntegerCoefficientFamilies",
+    "originalSha256": "244AA0EE9423DA6559918361C0DA1641C9A654069CCEC7B6D39C94CA3D07D917",
+    "canonicalSha256": "6DA00CBB78929F52227518188B7BC60BF0222CAA0E7F0F92589488165E87467E",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneToricIntegralWeightTwo1864b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricIntegralWeightTwo1864b.lean",
+    "module": "SourceGammaOneIntegralToricWeightTwo",
+    "originalSha256": "1230BECC8A5DA20B77BDF70355286A97F856DBE9F2BFC3440566655CABBCF69F",
+    "canonicalSha256": "963B4EF980C49E32FF60B850F377FA5D7CD75224C93EAEB41AFC38C8B47699C6",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneToricIntegralWeightFour1865b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricIntegralWeightFour1865b.lean",
+    "module": "SourceGammaOneIntegralToricWeightFour",
+    "originalSha256": "A5BD1F67274FDC729EF9EA9F2C6175152C10F3150886D52F0C4DBAC5A70E59E5",
+    "canonicalSha256": "9E8E4B0ED4115AD71298C1E90E7DF8D8AD1F6DBB2BEE2564A1F4C52A868DEE57",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneToricIntegralSlash1866b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricIntegralSlash1866b.lean",
+    "module": "SourceGammaOneIntegralToricSlash",
+    "originalSha256": "6FD24532546525776C96B622BE61EB523CECA53D50A98A55CC10E57BDD03F36D",
+    "canonicalSha256": "2DD7E86CA7455DAEC2A285030B68BEF5D6CC64F209B941C91C63ABE8294C74A6",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneToricSeriesReconstruction1867a",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricSeriesReconstruction1867a.lean",
+    "module": "SourceGammaOneIntegralToricReconstruction",
+    "originalSha256": "91A8E9D9428FB6725B1530A6536CE188B9DC4FC7A1C8B6DDD572013E1B76775D",
+    "canonicalSha256": "8CA25FF830402265CCDBD446EB435AB42915F6C5961721F663A70C4AA33B3D98",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  },
+  {
+    "version": "SourceGammaOneIntegralToricInvariantForms1868b",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricInvariantForms1868b.lean",
+    "module": "SourceGammaOneIntegralToricForms",
+    "originalSha256": "A1FC317CF2A9B8690164B5E810BBB320B0C20C126F23B7999F461BFA40E5C3E9",
+    "canonicalSha256": "A168E10F8F7F016B869AAB441013BBA84F7FB93738ED7B41F950AAA1C05AB11C",
+    "mathematicalBodyIdenticalExceptNativeReuse": true,
+    "preparationChanges": "Definition documentation; root reuses divisionForm and omits two unnecessary wrappers."
+  }
+]

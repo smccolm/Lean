@@ -1,0 +1,51 @@
+import Dubon2026.SourceTateEisensteinInvariants
+import Dubon2026.SourceIntegerJEulerNormalization
+import Dubon2026.SourceIntegralSlashNormalizedCoordinate
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> original-field/full-torsion chart. Identify the literal Tate
+curve's j invariant with the repository's original integral j series.
+The discriminant equality is proved over integers before base change, so
+no inversion of 1728 in residue characteristics two or three is needed. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve HahnSeries UpperHalfPlane ModularForm IntegralSlash
+
+theorem discriminant_tatePowerSeries : tatePowerSeries.Δ = discriminantSeries := by
+  have hi : Function.Injective (laurentOfInt ℂ) := by
+    intro p q hpq
+    apply PowerSeries.map_injective (Int.castRingHom ℂ) (Int.cast_injective (α := ℂ))
+    apply HahnSeries.ofPowerSeries_injective (Γ := ℤ) (R := ℂ)
+    exact hpq
+  apply hi
+  have hn : (1728 : LaurentSeries ℂ) ≠ 0 := by
+    intro h
+    have hc := congrArg (fun f : LaurentSeries ℂ => f.coeff 0) h
+    dsimp only at hc
+    rw [← HahnSeries.single_zero_ofNat 1728, HahnSeries.coeff_single_same,
+      HahnSeries.coeff_zero] at hc
+    exact (by norm_num : (1728 : ℂ) ≠ 0) hc
+  apply mul_left_cancel₀ hn
+  have ht := congrArg (laurentOfInt ℂ) tatePowerSeries.c_relation
+  rw [c4_tatePowerSeries, c6_tatePowerSeries, neg_sq] at ht
+  simp only [map_mul, map_ofNat, map_sub, map_pow] at ht
+  rw [ht]
+  have hd := ModularQDerivative.laurent_discriminant_relation
+  rw [qExpansion_E4_eq_map_eisenstein4, SourceFricke.qExpansion_E6_eq_map_eisenstein6,
+    qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit] at hd
+  exact hd.symm
+
+theorem discriminant_tateLaurent (K : Type*) [CommRing K] :
+    (tateLaurent K).Δ = laurentOfInt K discriminantSeries := by
+  rw [tateLaurent, WeierstrassCurve.map_Δ, discriminant_tatePowerSeries]
+
+theorem j_tateLaurent (K : Type*) [Field K] : (tateLaurent K).j = jqModC K := by
+  rw [WeierstrassCurve.j, Units.val_inv_eq_inv_val, WeierstrassCurve.coe_Δ',
+    c4_tateLaurent, discriminant_tateLaurent, jqModC_eq_discriminant_normalized,
+    ← map_pow]
+  change ((laurentOfInt K) discriminantSeries)⁻¹ * (laurentOfInt K) (eisenstein4 ^ 3) =
+    (laurentOfInt K) (eisenstein4 ^ 3) / (laurentOfInt K) discriminantSeries
+  rw [div_eq_mul_inv, mul_comm]
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

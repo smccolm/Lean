@@ -1,0 +1,32 @@
+import Dubon2026.SourceGammaOneDivisionToricForms
+import Dubon2026.SourceQExpansionPeriodWidth
+import Dubon2026.SourceGammaOneFourierLinear
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite residue fibers
+-> marked-point chart -> integral toric invariants. Identify the literal
+width-one coefficients of the constructed weight-two torsion form with the
+already proved torsion Fourier coefficients. Native sparse width conversion
+supplies the exact index N*n; no new analytic expansion is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricForms
+noncomputable section
+open UpperHalfPlane SourceFricke
+open scoped ModularForm MatrixGroups
+variable {N : ℕ} [NeZero N]
+
+theorem torsionWeightTwo_qExpansion_coeff (c : ZMod N) (hc : c ≠ 0) (n : ℕ) :
+    (qExpansion 1 (torsionWeightTwo N c hc)).coeff n =
+      wpQCoeff N 0 c.val (N * n) := by
+  let f := torsionWeightTwo N c hc
+  have hp := SlashInvariantFormClass.periodic_comp_ofComplex f (gammaOne_one_mem_strictPeriods N)
+  have h := qExpansion_coeff_width (f : ℍ → ℂ) (NeZero.ne N) hp f.holo'
+    (ModularFormClass.bdd_at_infty f) (N * n)
+  have ha : (![0, c] : Fin 2 → ZMod N) ≠ 0 := by
+    intro h0
+    exact hc (congrFun h0 1)
+  rw [if_pos (dvd_mul_right N n), Nat.mul_div_right n (NeZero.pos N)] at h
+  change (qExpansion N (wpNormZ N ![0, c])).coeff (N * n) = _ at h
+  rw [qExpansion_wpNormZ_coeff _ ha] at h
+  simpa only [Matrix.cons_val_zero, Matrix.cons_val_one, ZMod.val_zero] using h.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricForms

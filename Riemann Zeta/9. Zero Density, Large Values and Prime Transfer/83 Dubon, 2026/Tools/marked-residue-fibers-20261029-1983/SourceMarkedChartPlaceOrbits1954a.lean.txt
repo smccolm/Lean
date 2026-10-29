@@ -1,0 +1,50 @@
+import Dubon2026.SourceRationalCoordinatePlaceOrbits
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+point place orbits. Reuse the native rational-coordinate place/inertia
+theorem. Exact chart covariance and separation up to sign identify equal
+restricted original-field places with the actual inertia orbit on marked
+points modulo sign. The constructed original chart supplies both inputs. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve SourceCurve
+
+theorem marked_chart_restrict_eq_iff_inertia_sign
+    {K F M : Type*} [Field K] [IsAlgClosed K] [Field F] [Field M] [DecidableEq M]
+    [Algebra K F] [Algebra K M] [Algebra (RatFunc K) M]
+    [IsScalarTower K (RatFunc K) M] [FiniteDimensional (RatFunc K) M] [IsGalois (RatFunc K) M]
+    (E : WeierstrassCurve (RatFunc K)) (N : ℕ) (x : F) (hx : Transcendental K x)
+    (Φ : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N} →
+      {φ : F →ₐ[K] M // φ x = algebraMap (RatFunc K) M RatFunc.X})
+    (hnat : ∀ (σ : M ≃ₐ[RatFunc K] M) P P',
+      P'.val = Affine.Point.map (W' := E) σ.toAlgHom P.val →
+      (Φ P').val = (σ.toAlgHom.restrictScalars K).comp (Φ P).val)
+    (hsep : ∀ P P', Φ P' = Φ P ↔ P'.val = P.val ∨ P'.val = -P.val)
+    (w : Place K M)
+    (P P' : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N}) :
+    Place.restrictAlongFinite (Φ P').val
+        (Place.finite_galois_along_coordinate x hx (Φ P').val (Φ P').property).1 w =
+      Place.restrictAlongFinite (Φ P).val
+        (Place.finite_galois_along_coordinate x hx (Φ P).val (Φ P).property).1 w ↔
+    ∃ σ : w.toValuationSubring.inertiaSubgroup (RatFunc K),
+      P'.val = Affine.Point.map (W' := E) σ.val.val.toAlgHom P.val ∨
+        P'.val = -(Affine.Point.map (W' := E) σ.val.val.toAlgHom P.val) := by
+  rw [Place.restrictAlongFinite_eq_iff_inertia x hx (Φ P).val (Φ P').val
+    (Φ P).property (Φ P').property w]
+  constructor
+  · rintro ⟨σ, hσ⟩
+    let Q : {Q : (E.baseChange M).toAffine.Point // addOrderOf Q = N} :=
+      ⟨Affine.Point.map (W' := E) σ.val.val.toAlgHom P.val,
+        (addOrderOf_injective _ (Affine.Point.map_injective _) P.val).trans P.property⟩
+    refine ⟨σ, (hsep Q P').mp (Subtype.ext ?_)⟩
+    exact hσ.trans (hnat σ.val.val P Q rfl).symm
+  · rintro ⟨σ, hσ⟩
+    let Q : {Q : (E.baseChange M).toAffine.Point // addOrderOf Q = N} :=
+      ⟨Affine.Point.map (W' := E) σ.val.val.toAlgHom P.val,
+        (addOrderOf_injective _ (Affine.Point.map_injective _) P.val).trans P.property⟩
+    have he : Φ P' = Φ Q := (hsep Q P').mpr hσ
+    exact ⟨σ, (congrArg Subtype.val he).trans (hnat σ.val.val P Q rfl)⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

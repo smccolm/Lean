@@ -1,0 +1,30 @@
+import SourceMarkedTorsionSignClasses
+import SourceMarkedTorsionSignedIndex
+import SourceMarkedTorsionActualCount
+import SourceMarkedChartEmbeddingConjugacy
+import SourceMarkedChartPointTransport
+import SourceMarkedChartDiamondNormalization
+import SourceMarkedChartOriginalDiamond
+import SourceMarkedCyclicRootTransitivity
+import SourceMarkedCyclicGeneratorConjugacy
+import SourceMarkedTorsionGeneratorUnit
+import SourceMarkedPointSignTransitivity
+import SourceMarkedChartOriginalSignOrbit
+import SourceMarkedChartStabilizerActions
+import SourceMarkedStabilizerIndexComparison
+import SourceMarkedChartStabilizerEquality
+import SourceMarkedChartOriginalStabilizerEquality
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceMarkedTorsionSignClasses, `SourceMarkedTorsionSignedIndex, `SourceMarkedTorsionActualCount, `SourceMarkedChartEmbeddingConjugacy, `SourceMarkedChartPointTransport, `SourceMarkedChartDiamondNormalization, `SourceMarkedChartOriginalDiamond, `SourceMarkedCyclicRootTransitivity, `SourceMarkedCyclicGeneratorConjugacy, `SourceMarkedTorsionGeneratorUnit, `SourceMarkedPointSignTransitivity, `SourceMarkedChartOriginalSignOrbit, `SourceMarkedChartStabilizerActions, `SourceMarkedStabilizerIndexComparison, `SourceMarkedChartStabilizerEquality, `SourceMarkedChartOriginalStabilizerEquality]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

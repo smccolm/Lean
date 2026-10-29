@@ -1,0 +1,40 @@
+import SourceMarkedSeparableChartValues1945a
+import Dubon2026.SourceSeparableFixedRootDescent
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> natural chart
+descent. Descend a normalized original-field embedding from an algebraic
+closure when its values are Galois-fixed. The preceding separable-polynomial
+construction and native fixed-root descent discharge range membership, so
+the target need not be perfect or algebraically closed. Chart covariance
+will supply the explicitly stated fixedness premise for rational points. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open IntermediateField
+
+theorem exists_descended_separable_coordinate_embedding
+    {K F Ω B : Type*} [Field K] [Field F] [Field Ω] [Field B]
+    [Algebra K F] [Algebra K Ω] [Algebra K B] [Algebra Ω B]
+    [IsScalarTower K Ω B] [IsAlgClosure Ω B]
+    (x : F) [Algebra.IsSeparable (adjoin K ({x} : Set F)) F]
+    (θ : F →ₐ[K] B) (c : Ω) (hx : θ x = algebraMap Ω B c)
+    (hfix : ∀ (σ : B ≃ₐ[Ω] B) (f : F), σ (θ f) = θ f) :
+    ∃ ψ : F →ₐ[K] Ω,
+      (IsScalarTower.toAlgHom K Ω B).comp ψ = θ ∧ ψ x = c := by
+  let ι : Ω →ₐ[K] B := IsScalarTower.toAlgHom K Ω B
+  have hrange : ∀ f : F, θ f ∈ ι.range := by
+    intro f
+    obtain ⟨q, hq, hroot⟩ :=
+      exists_separable_polynomial_for_coordinate_embedding x θ ι c hx f
+    exact SourceEllipticVelu.separable_root_mem_range_of_fixed (θ f) q hq hroot
+      (fun σ => hfix σ f)
+  let e : Ω ≃ₐ[K] ι.range := AlgEquiv.ofInjective ι ι.injective
+  let ψ : F →ₐ[K] Ω := e.symm.toAlgHom.comp (θ.codRestrict ι.range hrange)
+  have he : ι.comp ψ = θ := by
+    ext f
+    change ι (e.symm ⟨θ f, hrange f⟩) = θ f
+    exact congrArg Subtype.val (e.apply_symm_apply ⟨θ f, hrange f⟩)
+  refine ⟨ψ, he, ι.injective ?_⟩
+  exact (AlgHom.congr_fun he x).trans hx
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

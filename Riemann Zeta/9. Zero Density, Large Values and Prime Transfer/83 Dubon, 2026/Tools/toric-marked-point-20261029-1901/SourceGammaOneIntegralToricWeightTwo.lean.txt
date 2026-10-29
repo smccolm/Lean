@@ -1,0 +1,67 @@
+import SourceGammaOneNormalizedDivisionForm
+import SourceToricIntegerCoefficientFamilies
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> integral toric coordinates. Construct the actual weight-two
+finite Fourier forms B and prove their literal integer q expansions.
+Native qExpansionAddHom supplies finite-sum linearity. Adapted from the
+Apache-2.0 Anthropic FLT ToricFourier proof at commit
+6e837e75355538c7f80bab5b956861e86c4eacc2, with native torsion forms. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricFourier
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceFricke ModularForm
+open scoped MatrixGroups ModularForm Manifold
+variable (M : ℕ) [NeZero M]
+local notation "Γ₁ᴳ" => ((Gamma1 M : Subgroup SL(2, ℤ)) : Subgroup (GL (Fin 2) ℝ))
+
+theorem qExpansion_W (t : ZMod M) (ht : t ≠ 0) : qExpansion 1 (W M t) = wS (ψ (isPrimitiveRoot_zetaN (NeZero.ne M)) t) := by
+  ext n
+  rw [qExpansion_W_coeff M t ht, wS, PowerSeries.coeff_mk]
+
+omit [NeZero M] in
+theorem coe_finset_sum {k : ℤ} {ι : Type*} (s : Finset ι) (G : ι → ModularForm Γ₁ᴳ k) :
+    (⇑(∑ i ∈ s, G i) : ℍ → ℂ) = ∑ i ∈ s, (⇑(G i) : ℍ → ℂ) := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simp
+  | insert a s ha ih => rw [Finset.sum_insert ha, Finset.sum_insert ha, ModularForm.coe_add, ih]
+
+omit [NeZero M] in
+theorem qExpansion_finset_sum {k : ℤ} {ι : Type*} (s : Finset ι) (G : ι → ModularForm Γ₁ᴳ k) :
+    qExpansion 1 (⇑(∑ i ∈ s, G i)) = ∑ i ∈ s, qExpansion 1 (⇑(G i)) :=
+  map_sum (ModularForm.qExpansionAddHom one_pos (gammaOne_one_mem_strictPeriods M) k) G s
+
+omit [NeZero M] in
+theorem qExpansion_smul' {k : ℤ} (c : ℂ) (f : ModularForm Γ₁ᴳ k) :
+    qExpansion 1 (⇑(c • f)) = c • qExpansion 1 (⇑f) := by
+  rw [IsGLPos.coe_smul]
+  exact ModularForm.qExpansion_smul one_pos (gammaOne_one_mem_strictPeriods M) c f
+
+/-- The finite set of nonzero residue classes modulo the level. -/
+abbrev nz : Finset (ZMod M) := Finset.univ.filter fun a : ZMod M => a ≠ 0
+
+/-- The level-squared finite Fourier combination of the actual weight-two division forms. -/
+def B (c : ZMod M) : ModularForm Γ₁ᴳ 2 :=
+  ((M : ℂ) ^ 2) • ∑ t ∈ nz M, (ψ (isPrimitiveRoot_zetaN (NeZero.ne M)) (-(t * c))) • W M t
+
+theorem coe_B (c : ZMod M) :
+    (⇑(B M c) : ℍ → ℂ) = ((M : ℂ) ^ 2) • ∑ t ∈ nz M, (ψ (isPrimitiveRoot_zetaN (NeZero.ne M)) (-(t * c))) • (⇑(W M t) : ℍ → ℂ) := by
+  rw [B, IsGLPos.coe_smul, coe_finset_sum]
+  simp only [IsGLPos.coe_smul]
+
+theorem qExpansion_B_coeff (c : ZMod M) (n : ℕ) :
+    (qExpansion 1 (B M c)).coeff n = ((bZ M c n : ℤ) : ℂ) := by
+  rw [B, qExpansion_smul', qExpansion_finset_sum, bZ_eq_sum (isPrimitiveRoot_zetaN (NeZero.ne M))]
+  simp only [map_smul, map_sum, smul_eq_mul, Finset.mul_sum]
+  refine Finset.sum_congr rfl fun t ht => ?_
+  rw [qExpansion_smul', map_smul, smul_eq_mul, qExpansion_W_coeff M t (Finset.mem_filter.mp ht).2]
+  ring
+
+theorem isIntegralQExp_B (c : ZMod M) : IsIntegralQExp (⇑(B M c)) (PowerSeries.mk (bZ M c)) := by
+  change (PowerSeries.mk (bZ M c)).map (Int.castRingHom ℂ) = qExpansion 1 (B M c)
+  ext n
+  rw [PowerSeries.coeff_map, PowerSeries.coeff_mk, qExpansion_B_coeff]
+  rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricFourier

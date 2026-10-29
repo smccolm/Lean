@@ -1,0 +1,84 @@
+import SourceGammaOneToricOriginalCoordinates1877a
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> marked-point chart. Identify the constructed original-field
+coordinates with the exact linear and quadratic toric Laurent invariants.
+The Fourier reconstruction is consumed from the proved native forms;
+there is no reconstruction hypothesis. Adapted from Anthropic FLT,
+Apache-2.0, commit 6e837e75355538c7f80bab5b956861e86c4eacc2. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates
+noncomputable section
+open CongruenceSubgroup HahnSeries ToricFourier SourceFricke
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M] {K : Type*} [Field K]
+local notation "F̄" => qExpFunctionFieldC K (Gamma1 M)
+
+theorem coe_w₁ {ζ : K} (hζ : IsPrimitiveRoot ζ M) (hM : 2 ≤ M)
+    (t : (ZMod M)ˣ) :
+    ((w₁ M K ζ t : F̄) : LaurentSeries K) =
+      (tateLaurent K).c₄ * (1 + 12 * ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val))) /
+        (tateLaurent K).c₆ := by
+  have hid := weightTwo_series K hζ (t : ZMod M) (unit_ne_zero M hM t)
+  have e : ∀ (r : K) (x : LaurentSeries K),
+      r • x = algebraMap K (LaurentSeries K) r * x := by
+    intro r x
+    have hC : algebraMap K (LaurentSeries K) r = HahnSeries.C r := by
+      show HahnSeries.ofPowerSeries ℤ K (algebraMap K (PowerSeries K) r) = _
+      simp
+    rw [hC]
+    exact HahnSeries.C_mul_eq_smul.symm
+  simp only [e] at hid
+  have hMne := natCast_laurent_ne_zero M K hζ
+  set Y : LaurentSeries K := 1 + 12 * ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val)) with hY
+  have hcoe : ((w₁ M K ζ t : F̄) : LaurentSeries K) =
+      algebraMap K (LaurentSeries K) (-((M : K)⁻¹ ^ 3)) *
+        ∑ c : ZMod M, algebraMap K (LaurentSeries K) (ζ ^ ((t : ZMod M) * c).val) *
+          (intSeriesC K (PowerSeries.mk (bZ M c) * eisenstein4) / intSeriesC K eisenstein6) := by
+    simp only [w₁, IntermediateField.coe_mul, IntermediateField.coe_sum, coe_algebraMap, coe_β]
+  have hsum : ∑ c : ZMod M, algebraMap K (LaurentSeries K) (ζ ^ ((t : ZMod M) * c).val) *
+      (intSeriesC K (PowerSeries.mk (bZ M c) * eisenstein4) / intSeriesC K eisenstein6) =
+      (M : LaurentSeries K) ^ 3 * Y * ((tateLaurent K).c₄ / -(tateLaurent K).c₆) := by
+    rw [hid, Finset.sum_mul]
+    refine Finset.sum_congr rfl fun c _ => ?_
+    rw [intSeriesC_mul, intSeriesC_eisenstein4 K, intSeriesC_eisenstein6 K]
+    ring
+  rw [hcoe, hsum, map_neg, map_pow, map_inv₀, map_natCast, div_neg, mul_neg, neg_mul_neg, ← mul_assoc,
+    ← mul_assoc, ← mul_pow, inv_mul_cancel₀ hMne, one_pow, one_mul, mul_div_assoc', mul_comm Y]
+
+theorem coe_w₂ {ζ : K} (hζ : IsPrimitiveRoot ζ M) (hM : 2 ≤ M)
+    (t : (ZMod M)ˣ) :
+    ((w₂ M K ζ t : F̄) : LaurentSeries K) =
+      (ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val)) +
+          6 * ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val)) ^ 2 + 2 * (tateLaurent K).a₄) /
+        (tateLaurent K).c₄ := by
+  have hid := weightFour_series K hζ (t : ZMod M) (unit_ne_zero M hM t)
+  have e : ∀ (r : K) (x : LaurentSeries K),
+      r • x = algebraMap K (LaurentSeries K) r * x := by
+    intro r x
+    have hC : algebraMap K (LaurentSeries K) r = HahnSeries.C r := by
+      show HahnSeries.ofPowerSeries ℤ K (algebraMap K (PowerSeries K) r) = _
+      simp
+    rw [hC]
+    exact HahnSeries.C_mul_eq_smul.symm
+  simp only [e] at hid
+  have hMne := natCast_laurent_ne_zero M K hζ
+  set Y : LaurentSeries K := ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val)) +
+      6 * ofPowerSeries ℤ K (xS (ζ ^ (t : ZMod M).val)) ^ 2 + 2 * (tateLaurent K).a₄ with hY
+  change (M : LaurentSeries K) ^ 5 * Y = _ at hid
+  have hcoe : ((w₂ M K ζ t : F̄) : LaurentSeries K) =
+      algebraMap K (LaurentSeries K) ((M : K)⁻¹ ^ 5) *
+        ∑ c : ZMod M, algebraMap K (LaurentSeries K) (ζ ^ ((t : ZMod M) * c).val) *
+          (intSeriesC K (PowerSeries.mk (dZ M c)) / intSeriesC K eisenstein4) := by
+    simp only [w₂, IntermediateField.coe_mul, IntermediateField.coe_sum, coe_algebraMap, coe_δ]
+  have hsum : ∑ c : ZMod M, algebraMap K (LaurentSeries K) (ζ ^ ((t : ZMod M) * c).val) *
+      (intSeriesC K (PowerSeries.mk (dZ M c)) / intSeriesC K eisenstein4) =
+      (M : LaurentSeries K) ^ 5 * Y / (tateLaurent K).c₄ := by
+    rw [hid, Finset.sum_div]
+    refine Finset.sum_congr rfl fun c _ => ?_
+    rw [intSeriesC_eisenstein4 K]
+    ring
+  rw [hcoe, hsum, map_pow, map_inv₀, map_natCast, mul_div_assoc, ← mul_assoc, ← mul_pow,
+    inv_mul_cancel₀ hMne, one_pow, one_mul]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates

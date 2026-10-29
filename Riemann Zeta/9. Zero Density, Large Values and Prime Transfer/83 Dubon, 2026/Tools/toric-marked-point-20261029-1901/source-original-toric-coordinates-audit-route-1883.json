@@ -1,0 +1,71 @@
+{
+  "recordedUTC": "2026-10-29T14:50:16.179707+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight association -> Gamma1 genus preservation -> reverse genus -> finite elliptic residue fibers -> actual Gamma1 marked-point chart -> original-field toric coordinates and literal Tate curve.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDivisionForms.lean",
+      "sha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralDiamondScalarNormalizedAction.lean",
+      "sha256": "19F06F8B6169367142F94F0760C4B7B260088EAD303F3FCA167E95F6676CAAB9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegerJEulerNormalization.lean",
+      "sha256": "143F937F8E686022EF9A48EFC349E05C63270A67FD7909E41C95C136C9CAD15F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodUniformization.lean",
+      "sha256": "0C9622A3547F74D2CFBC4968D931B9801FD6BBEFEFE85D88ECBF0E313C330D11"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticVariableAddEquiv.lean",
+      "sha256": "967322B9E59230BDEAC8C7EB9568BF315E064B4F85FC9C2C5CCFBBF112AE6591"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionDivisionRoot.lean",
+      "sha256": "AC03C8C90EA7123D25EFF4617F3BF6E5A728FFD66E32969A5E369F5972D23F7D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionReductionCoordinates.lean",
+      "sha256": "16CAEDD764FA5D5219F945F66B37F73CB16B72D99246E42489725407A2E1DC0D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Units\\Hom.lean",
+      "sha256": "5636001F65A35CD6663041EB6AE3A0E354897DD95976193E8D8E26F14856CBE2"
+    }
+  ],
+  "shorterRoute": "Reuse the accepted integral B,D forms, original same-weight-ratio membership and actual prime-field/scalar-extended diamond action. Mathlib Gamma0Map.toHomUnits and finite sum reindexing supply the exact index action without constructing a second Gamma0 character. Native Eisenstein series identify the literal Tate c4 and c6. Full nonarchimedean uniformization and general non-toric slots are deferred while the native complex period uniformization/division-polynomial/good-reduction route is assessed.",
+  "assumptionsToDischarge": [
+    "Literal integral Tate a6 coefficients, c4=E4 and c6=-E6, with ellipticity in every coefficient characteristic proved from the discriminant leading coefficient.",
+    "Both toric invariant functions are constructed as actual same-weight integral modular-form ratios in the original Gamma1 field.",
+    "Their exact Laurent-series values follow from the proved integer Fourier reconstruction.",
+    "The original residue diamond action is proved on those field elements; no ratio-action or compatibility certificate is assumed."
+  ],
+  "remaining": "The exact-order toric point, marked-point/original-field correspondence, finite elliptic fiber bounds and reverse genus remain required. Acceptance16/20;DUB17--20 OPEN.",
+  "boundary": "Scratch audit only. No point, finite-fiber bound or completed gate is claimed.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalReferences": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-tate-formal-1860b\\Def_ModularCurve_TateFormal.lean.txt",
+      "sha256": "B37CF2050E422F2982F596764F2D1A5BA94267FD1FF8D56458C890552547B2B4",
+      "built": false,
+      "imported": false
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean.txt",
+      "sha256": "546AA60B7142964A8D5CA4562D09FE32889998261ED86D4254E4BCDAF746E527",
+      "built": false,
+      "imported": false
+    }
+  ]
+}

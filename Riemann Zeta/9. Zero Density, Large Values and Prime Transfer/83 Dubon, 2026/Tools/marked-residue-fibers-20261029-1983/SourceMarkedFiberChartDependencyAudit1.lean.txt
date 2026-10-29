@@ -1,0 +1,33 @@
+import SourceMarkedChartPlaceOrbits
+import SourceMarkedOriginalOfJChart
+import SourceMarkedOriginalPlaceChart
+import SourceMarkedFullTorsionNonempty
+import SourceMarkedChartFiberSurjection
+import SourceMarkedOriginalFiberChart
+import Mathlib.Tactic
+
+open Lean
+
+private def runMarkedFiberChartDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart]
+  let localModules : Array Name := #[`SourceMarkedChartPlaceOrbits, `SourceMarkedOriginalOfJChart, `SourceMarkedOriginalPlaceChart, `SourceMarkedFullTorsionNonempty, `SourceMarkedChartFiberSurjection, `SourceMarkedOriginalFiberChart, `SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms, `SourceTateIntegralCoefficients, `SourceTateIntegralCurve, `SourceTateEisensteinInvariants, `SourceGammaOneToricOriginalRatios, `SourceGammaOneToricOriginalCoordinates, `SourceGammaOneToricOriginalCoordinateValues, `SourceIntegralDiamondScalarRatioAction, `SourceGammaOneToricRatioDiamond, `SourceGammaOneToricCoordinateDiamond, `SourceGammaOneOriginalToricCoordinates, `SourceToricAnalyticCurve, `SourceToricAnalyticTorsion, `SourceToricAnalyticDivisionRoot, `SourceToricCuspExpansionHom, `SourceToricCuspDivisionIdentity, `SourceTateCoefficientNormalization, `SourceToricComplexSeriesDivision, `SourceToricCoefficientLocalization, `SourceToricLocalizedSeries, `SourceToricResidueDivisionIdentity, `SourceToricAnalyticMultiplication, `SourceToricResidueMultiplicationIdentity, `SourceToricFieldDivisionIdentities, `SourceToricExactOrderPoint, `SourceToricMarkedPointCoordinates, `SourceTateOriginalJCoordinate, `SourceMarkedChartCoordinateEmbedding, `SourceMarkedChartVariableInvariants, `SourceMarkedChartEqualJTransfer, `SourceMarkedChartInvariantSeparation, `SourceMarkedChartFieldDescent, `SourceMarkedChartTorsionDescent, `SourceMarkedChartEmbeddingBound, `SourceMarkedChartResidueDegree, `SourceMarkedChartDescendedPoint, `SourceMarkedChartOriginalConstruction, `SourceMarkedChartStabilizerInclusion, `SourceMarkedChartOriginalStabilizer, `SourceMarkedTorsionSignClasses, `SourceMarkedTorsionSignedIndex, `SourceMarkedTorsionActualCount, `SourceMarkedChartEmbeddingConjugacy, `SourceMarkedChartPointTransport, `SourceMarkedChartDiamondNormalization, `SourceMarkedChartOriginalDiamond, `SourceMarkedCyclicRootTransitivity, `SourceMarkedCyclicGeneratorConjugacy, `SourceMarkedTorsionGeneratorUnit, `SourceMarkedPointSignTransitivity, `SourceMarkedChartOriginalSignOrbit, `SourceMarkedChartStabilizerActions, `SourceMarkedStabilizerIndexComparison, `SourceMarkedChartStabilizerEquality, `SourceMarkedChartOriginalStabilizerEquality, `SourceMarkedOrbitMap, `SourceMarkedNaturalSignChart, `SourceMarkedSignChartDiamond, `SourceMarkedOriginalNaturalChart, `SourceMarkedOriginalSeparability, `SourceMarkedSeparableChartValues, `SourceMarkedSeparableEmbeddingDescent, `SourceMarkedRationalPointDescent, `SourceMarkedOriginalAlgebraicChart, `SourceMarkedFullTorsionPointLift, `SourceMarkedChartNormalExhaustion, `SourceMarkedOriginalFullTorsionChart]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic, `Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal, `Dubon2026.SourceCurve.Place.restrictAlongFinite_eq_iff_inertia, `Dubon2026.SourceCurve.Place.exists_coordinate_embedding_restrict_eq, `Dubon2026.SourceCurve.finite_galois_along_coordinate, `Dubon2026.SourceEllipticVelu.nonempty_cyclic_subgroups_of_full_torsion, `WeierstrassCurve.ofJ_j, `RatFunc.transcendental_X, `RatFunc.adjoin_X, `isAddCyclic_iff_exists_addOrderOf_eq_natCard]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MARKED FIBER CHART DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual original Gamma1 finite-j-fiber chart. The ofJ model discharges generic-j and base-field-generation assumptions. Normal chart exhaustion and native place lifting prove fiber surjectivity. The native inertia theorem identifies equal places exactly with signed inertia orbits. The full-torsion count supplies a marked point. Original diamond covariance is exact. Finite elliptic cardinal bounds and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runMarkedFiberChartDependencyAudit

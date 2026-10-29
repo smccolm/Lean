@@ -1,0 +1,10 @@
+{
+  "recordedUTC": "2026-10-29T14:07:33.571981+00:00",
+  "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_toricPoint_add_toricPoint_of_charZero.lean",
+  "bytes": 37324,
+  "sha256": "CDF998F820037A43F362828DB39BE80498F7AE918285814938667B43FE7235AF",
+  "gitBlob": "b3ed75fbab4808f331c49b290f0181296876462e",
+  "inertReference": true,
+  "built": false,
+  "imported": false
+}

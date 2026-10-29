@@ -1,0 +1,8 @@
+{
+  "reason": "Registration classified Prop-valued ellipticity instance as a construction. Lean records it as a theorem. All ten 16-linter scopes pass. Successor audit classifies it as a theorem; no mathematical source, proof body or audit standard changes.",
+  "failedLog": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit1.log",
+    "sha256": "65BB427A5B9A0AD233DFEF84FEE76EFCD20B14271B43A4A16DD389869A2FEFAF"
+  },
+  "successor": "SourceOriginalToricCoordinatesAudit2.lean"
+}

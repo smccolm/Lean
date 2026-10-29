@@ -1,0 +1,47 @@
+import SourceMarkedOriginalFiberChart
+import SourceMarkedReducedFiberChart1968c
+import Dubon2026.SourceEllipticPrescribedFullInertiaImage
+
+/-! DUB-17/18 -> reverse original genus -> finite elliptic residue fibers.
+The native prescribed specialization constructs the actual finite Galois
+torsion field, full torsion, positive-order place and inertia lifts.
+The original Gamma1 marked chart and literal torsion reduction now give a
+surjective residue-point chart invariant under every curve automorphism.
+In characteristic at least five, none of these geometric inputs remains
+an assumed chart, count, orbit or stabilizer certificate. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup SourceCurve SourceEllipticStabilizer
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_residue_marked_fiber_of_five_le
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N) (hℓ : 5 ≤ ℓ)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    [DecidableEq kk] (E₀ : WeierstrassCurve kk) [E₀.IsElliptic] :
+    ∃ g : {P : E₀.toAffine.Point // addOrderOf P = N} →
+        {v : Place kk F // 0 < v.ord (x - algebraMap kk F E₀.j)},
+      Function.Surjective g ∧
+      (∀ P Q, Q.val = -P.val → g Q = g P) ∧
+      ∀ (δ : VariableChange kk) (hδ : δ • E₀ = E₀) P Q,
+        Q.val = stabilizerPointEquiv E₀ δ hδ P.val → g Q = g P := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  let Ω := AlgebraicClosure (RatFunc kk)
+  obtain ⟨M, hfd, hgal, hcard, w, decRes, e, W, κ, hκ, hW, γ, hγ, θ, ρ, Ψ,
+    hw, hθ, _, _, _, _, _, _, _, hfull, _⟩ :=
+    SourceEllipticDivisionField.exists_prescribed_ofJ_full_inertia_image kk Ω ℓ hℓ N hNK E₀
+  letI := hfd
+  letI := hgal
+  obtain ⟨f, hf, horbit, _⟩ := exists_original_marked_fiber_chart A N ℓ hℓN hN x hx
+    M hcard w E₀.j hw
+  exact exists_reduced_marked_fiber_chart (ofJ (RatFunc.X : RatFunc kk)) E₀ N hNK
+    w.toValuationSubring θ hθ hcard f hf (fun P Q h => (horbit P Q).mpr h) hfull
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

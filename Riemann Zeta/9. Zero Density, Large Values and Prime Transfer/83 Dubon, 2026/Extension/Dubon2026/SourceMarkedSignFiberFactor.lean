@@ -1,0 +1,44 @@
+import Dubon2026.SourceMarkedSignPermutation
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic residue fibers.
+Factor the actual marked-point fiber map through its sign classes.
+Surjectivity and invariance under the exceptional point automorphism
+are retained, ready for the existing finite cyclic orbit count. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+variable {A Y : Type*} [AddCommGroup A] (N : ℕ)
+
+theorem exists_signClass_fiber_factor
+    (f : {P : A // addOrderOf P = N} → Y) (hf : Function.Surjective f)
+    (hneg : ∀ P Q, Q.val = -P.val → f Q = f P) (e : A ≃+ A)
+    (he : ∀ P Q, Q.val = e P.val → f Q = f P) :
+    ∃ F : SignClasses A N → Y, Function.Surjective F ∧
+      (∀ P, F ⟨{P.val, -P.val}, P.val, P.property, rfl⟩ = f P) ∧
+      ∀ s, F (signClassesEquiv N e s) = F s := by
+  classical
+  let P : SignClasses A N → {P : A // addOrderOf P = N} :=
+    fun s => ⟨s.property.choose, s.property.choose_spec.1⟩
+  have hp (s : SignClasses A N) : s.val = {(P s).val, -(P s).val} :=
+    s.property.choose_spec.2
+  let F : SignClasses A N → Y := fun s => f (P s)
+  have hF (s : SignClasses A N) (Q : {P : A // addOrderOf P = N})
+      (hQ : s.val = {Q.val, -Q.val}) : F s = f Q := by
+    rcases (signPair_eq_iff (P s).val Q.val).mp ((hp s).symm.trans hQ) with h | h
+    · exact congrArg f (Subtype.ext h)
+    · exact hneg Q (P s) h
+  refine ⟨F, ?_, ?_, ?_⟩
+  · intro y
+    obtain ⟨Q, rfl⟩ := hf y
+    exact ⟨⟨{Q.val, -Q.val}, Q.val, Q.property, rfl⟩, hF _ Q rfl⟩
+  · intro Q
+    exact hF _ Q rfl
+  · intro s
+    let Q : {P : A // addOrderOf P = N} :=
+      ⟨e (P s).val, (addOrderOf_injective e.toAddMonoidHom e.injective (P s).val).trans (P s).property⟩
+    have hQ : (signClassesEquiv N e s).val = {Q.val, -Q.val} := by
+      change e '' s.val = _
+      rw [hp, Set.image_pair, map_neg]
+    exact (hF _ Q hQ).trans (he (P s) Q rfl)
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

@@ -1,0 +1,76 @@
+import SourceGammaOneToricOriginalCoordinateValues1878b
+import SourceGammaOneToricRatioDiamond1880a
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> marked-point chart. The original-field toric coordinates carry
+the actual residue diamond action. The finite Fourier reindexing uses
+Mathlib's units lift of the existing Gamma0 homomorphism. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates
+noncomputable section
+open CongruenceSubgroup ToricFourier IntegralDiamond ReducedDegreeTransport
+open scoped MatrixGroups
+attribute [local instance] originalFieldScalarAlgebra
+variable (N : ℕ) [NeZero N]
+
+/-- The lower-right-entry unit of a Gamma0 matrix, using Mathlib's group-to-units lift. -/
+abbrev gamma0Unit : Gamma0 N →* (ZMod N)ˣ := (Gamma0Map N).toHomUnits
+
+theorem coe_gamma0Unit (γ : Gamma0 N) :
+    (gamma0Unit N γ : ZMod N) = (γ.val 1 1 : ZMod N) := rfl
+
+theorem coe_inv_gamma0Unit (γ : Gamma0 N) :
+    ((gamma0Unit N γ)⁻¹ : ZMod N) = (γ.val 0 0 : ZMod N) := by
+  change (Gamma0Map N γ⁻¹ : ZMod N) = _
+  simp only [Gamma0Map, MonoidHom.coe_mk, OneHom.coe_mk,
+    InvMemClass.coe_inv, Matrix.SpecialLinearGroup.SL2_inv_expl]
+  rfl
+
+variable (K : Type*) [Field K]
+local notation "F̄" => qExpFunctionFieldC K (Gamma1 N)
+local notation "ι" => algebraMap K F̄
+
+theorem sum_reindex (ζ : K) (G : ZMod N → F̄) (t : ZMod N) (u : (ZMod N)ˣ) :
+    (∑ c : ZMod N, ι (ζ ^ (t * c).val) * G (c * (u : ZMod N))) =
+      ∑ c : ZMod N, ι (ζ ^ ((t * (u⁻¹ : ZMod N)) * c).val) * G c := by
+  have h (c : ZMod N) :
+      ι (ζ ^ (t * c).val) * G (c * (u : ZMod N)) =
+        (fun x : ZMod N => ι (ζ ^ ((t * (u⁻¹ : ZMod N)) * x).val) * G x)
+          (Units.mulRight u c) := by
+    change _ = ι (ζ ^ ((t * (u⁻¹ : ZMod N)) * (c * (u : ZMod N))).val) *
+      G (c * (u : ZMod N))
+    congr 4
+    rw [mul_assoc, ← mul_assoc (u⁻¹ : ZMod N), mul_comm (u⁻¹ : ZMod N) c,
+      mul_assoc c, Units.inv_mul, mul_one]
+  rw [Finset.sum_congr rfl (fun c _ => h c)]
+  exact Equiv.sum_comp (Units.mulRight u) _
+
+variable (ℓ : ℕ) [Fact ℓ.Prime] [Algebra (ZMod ℓ) K] (hℓN : ¬ ℓ ∣ N)
+
+theorem reducedFieldActionOver_w₁ (γ : Gamma0 N) (ζ : K) (t : (ZMod N)ˣ) :
+    reducedFieldActionOver K N ℓ hℓN γ (w₁ N K ζ t) =
+      w₁ N K ζ (t * (gamma0Unit N γ)⁻¹) := by
+  have key (c : ZMod N) : reducedFieldActionOver K N ℓ hℓN γ (β N K c) =
+      β N K (c * (gamma0Unit N γ : ZMod N)) := by
+    have h := reducedFieldActionOver_β K N ℓ hℓN γ
+      (c * (gamma0Unit N γ : ZMod N))
+    rw [← coe_inv_gamma0Unit N γ, mul_assoc, Units.mul_inv, mul_one] at h
+    exact h
+  rw [w₁, map_mul, AlgEquiv.commutes, map_sum]
+  simp_rw [map_mul, AlgEquiv.commutes, key]
+  rw [sum_reindex N K, w₁, Units.val_mul]
+
+theorem reducedFieldActionOver_w₂ (γ : Gamma0 N) (ζ : K) (t : (ZMod N)ˣ) :
+    reducedFieldActionOver K N ℓ hℓN γ (w₂ N K ζ t) =
+      w₂ N K ζ (t * (gamma0Unit N γ)⁻¹) := by
+  have key (c : ZMod N) : reducedFieldActionOver K N ℓ hℓN γ (δ N K c) =
+      δ N K (c * (gamma0Unit N γ : ZMod N)) := by
+    have h := reducedFieldActionOver_δ K N ℓ hℓN γ
+      (c * (gamma0Unit N γ : ZMod N))
+    rw [← coe_inv_gamma0Unit N γ, mul_assoc, Units.mul_inv, mul_one] at h
+    exact h
+  rw [w₂, map_mul, AlgEquiv.commutes, map_sum]
+  simp_rw [map_mul, AlgEquiv.commutes, key]
+  rw [sum_reindex N K, w₂, Units.val_mul]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates

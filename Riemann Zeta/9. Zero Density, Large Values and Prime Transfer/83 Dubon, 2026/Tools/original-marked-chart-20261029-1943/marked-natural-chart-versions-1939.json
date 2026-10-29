@@ -1,0 +1,34 @@
+[
+  {
+    "version": "SourceMarkedOrbitMap1935a",
+    "module": "SourceMarkedOrbitMap",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap1935a.lean",
+    "originalSha256": "41F19E3E087C6A32E32B3620A78BF75BE783A8DA5F4E2450E65EDEC582E14129",
+    "canonicalSha256": "753DDFD28FC5C8AA3D0E414D728BE738FF3BFE5D48DCDF50980FC16A65A7B033",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedNaturalSignChart1936a",
+    "module": "SourceMarkedNaturalSignChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart1936a.lean",
+    "originalSha256": "3B3E779FC4298D78BEE1D7EA2DB2625126DD447BF9536BF94B4D76F92700B5BE",
+    "canonicalSha256": "5614A977413017CA5BF1B5962DE9146AE2C20B10ACB1416D81190BC379D523C9",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedSignChartDiamond1937a",
+    "module": "SourceMarkedSignChartDiamond",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond1937a.lean",
+    "originalSha256": "7EE65A14BB48BFBBBB823D7DD7D9F4B4FAE08324C4FAD6C5BD722D5FB5B01329",
+    "canonicalSha256": "A3FEC06399AE2B736700599AF6B8E718DE991ED998B12F1DAE4776BDBCDA3E3C",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalNaturalChart1938b",
+    "module": "SourceMarkedOriginalNaturalChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart1938b.lean",
+    "originalSha256": "E62128138005944A243C3877D56B010B2A3AF408FAF6F2D2AB01C451DFA3B0EC",
+    "canonicalSha256": "7A16FFD20760AEC471FB5D589B91319688C2995238948B8C9C26770AD79E44EB",
+    "mathematicalBodyIdentical": true
+  }
+]

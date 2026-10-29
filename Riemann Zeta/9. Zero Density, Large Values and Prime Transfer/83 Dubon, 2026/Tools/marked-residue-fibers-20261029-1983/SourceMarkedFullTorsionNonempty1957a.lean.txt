@@ -1,0 +1,28 @@
+import Dubon2026.SourceEllipticFullTorsionNonemptyCyclic
+import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> surjectivity
+of the original marked-place chart. The already proved nonempty cyclic
+kernel family supplies a generator of exact order N in the actual
+full-torsion field. This gives the initial normalized embedding needed
+by the native place-fiber lifting theorem, with no chosen-point premise. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve
+
+theorem exists_exactOrder_point_of_full_torsion
+    {K : Type*} [Field K] [DecidableEq K] (W : WeierstrassCurve K) [W.IsElliptic]
+    (N : ℕ) (hN : (N : K) ≠ 0)
+    (hfull : Nat.card {P : W.toAffine.Point // N • P = 0} = N ^ 2) :
+    ∃ P : W.toAffine.Point, addOrderOf P = N := by
+  classical
+  obtain ⟨⟨S, hcyc, hcard⟩⟩ :=
+    SourceEllipticVelu.nonempty_cyclic_subgroups_of_full_torsion
+      (L := AlgebraicClosure K) W N hN hfull
+  obtain ⟨P, hP⟩ := (isAddCyclic_iff_exists_addOrderOf_eq_natCard (α := S)).mp hcyc
+  refine ⟨P.val, ?_⟩
+  rw [← addOrderOf_injective S.subtype Subtype.val_injective]
+  exact hP.trans hcard
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

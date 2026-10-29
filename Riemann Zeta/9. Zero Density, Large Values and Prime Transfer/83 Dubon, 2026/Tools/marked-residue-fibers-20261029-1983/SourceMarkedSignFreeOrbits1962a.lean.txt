@@ -1,0 +1,71 @@
+import SourceMarkedSignPermutation1961b
+
+/-! DUB-17/18 -> reverse original genus -> finite elliptic fiber bounds.
+For N greater than three, the actual quartic and cubic point identities
+exclude fixed primitive sign classes. Existing Burnside counts therefore
+give the exact factors two and three without an adapted torsion basis.
+The low levels and the wild differential bounds remain separate inputs. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+variable {A : Type*} [AddCommGroup A] (N : ℕ) (hN : 3 < N)
+
+theorem signClassesEquiv_ne_self_of_square_neg (e : A ≃+ A)
+    (he : ∀ P, e (e P) = -P) (s : SignClasses A N) :
+    signClassesEquiv N e s ≠ s := by
+  intro hs
+  obtain ⟨P, hP, hpair⟩ := s.property
+  have hp : ({e P, -(e P)} : Set A) = {P, -P} := by
+    have h := congrArg Subtype.val hs
+    change e '' s.val = s.val at h
+    simpa only [hpair, Set.image_pair, map_neg] using h
+  have htw : e (e P) = P := by
+    rcases (signPair_eq_iff (e P) P).mp hp with h | h
+    · rw [h, h]
+    · rw [h, map_neg, h, neg_neg]
+  have hkill : 2 • P = 0 := by
+    have hn : -P = P := (he P).symm.trans htw
+    rw [two_nsmul, ← hn, neg_add_cancel]
+  have hd : N ∣ 2 := hP ▸ addOrderOf_dvd_iff_nsmul_eq_zero.mpr hkill
+  have := Nat.le_of_dvd (by decide : 0 < 2) hd
+  omega
+
+theorem signClassesEquiv_ne_self_of_cubic (e : A ≃+ A)
+    (he : ∀ P, e (e P) + e P + P = 0) (s : SignClasses A N) :
+    signClassesEquiv N e s ≠ s := by
+  intro hs
+  obtain ⟨P, hP, hpair⟩ := s.property
+  have hp : ({e P, -(e P)} : Set A) = {P, -P} := by
+    have h := congrArg Subtype.val hs
+    change e '' s.val = s.val at h
+    simpa only [hpair, Set.image_pair, map_neg] using h
+  rcases (signPair_eq_iff (e P) P).mp hp with h | h
+  · have hkill : 3 • P = 0 := by
+      have hh := he P
+      rw [h, h] at hh
+      simpa only [show 3 = 2 + 1 from rfl, add_nsmul, two_nsmul, one_nsmul] using hh
+    have hd : N ∣ 3 := hP ▸ addOrderOf_dvd_iff_nsmul_eq_zero.mpr hkill
+    have := Nat.le_of_dvd (by decide : 0 < 3) hd
+    omega
+  · have hh := he P
+    rw [h, map_neg, h, neg_neg, add_neg_cancel, zero_add] at hh
+    have hn : N = 1 := hP.symm.trans (hh ▸ addOrderOf_zero)
+    omega
+
+theorem two_mul_card_marked_quartic_orbits [Finite (SignClasses A N)] (e : A ≃+ A)
+    (he : ∀ P, e (e P) = -P) :
+    2 * Nat.card (SourceManin.Orb (signClassesEquiv N e)) = Nat.card (SignClasses A N) := by
+  letI : IsEmpty {s : SignClasses A N // signClassesEquiv N e s = s} :=
+    ⟨fun s => signClassesEquiv_ne_self_of_square_neg N hN e he s.val s.property⟩
+  simpa using SourceManin.two_mul_natCard_orb (signClassesEquiv N e)
+    (signClassesEquiv_square N e he)
+
+theorem three_mul_card_marked_cubic_orbits [Finite (SignClasses A N)] (e : A ≃+ A)
+    (he : ∀ P, e (e P) + e P + P = 0) :
+    3 * Nat.card (SourceManin.Orb (signClassesEquiv N e)) = Nat.card (SignClasses A N) := by
+  letI : IsEmpty {s : SignClasses A N // signClassesEquiv N e s = s} :=
+    ⟨fun s => signClassesEquiv_ne_self_of_cubic N hN e he s.val s.property⟩
+  simpa using SourceManin.three_mul_natCard_orb (signClassesEquiv N e)
+    (signClassesEquiv_cube N e he)
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

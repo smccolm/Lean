@@ -1,0 +1,48 @@
+{
+  "recordedUTC": "2026-10-29T17:56:55.171242+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "shorterRoute": "The actual finite elliptic-fiber consumer uses ofJ over K(t) and a finite Galois torsion field. Descent to an algebraic extension of the j field suffices for that exact consumer. Original-coordinate separability and native fixed-root descent avoid arbitrary coefficient-curve transport. Normalized-embedding conjugacy proves exhaustion without repeating a torsion/sign-class count. The compiling but incidental variable-change Galois modules 1940-1942 are deferred.",
+  "assumptionsToDischarge": [
+    "Original-coordinate separability derives from its finite degree and simple Laurent pole.",
+    "Galois covariance fixes every embedding value attached to a rational point.",
+    "Separable fixed-root descent supplies the embedding in the actual torsion field.",
+    "Native full-torsion lifting supplies an exact-order point from the actual N-squared count.",
+    "Normality and generation of the base field by j make all normalized embeddings conjugate and hence prove exhaustion."
+  ],
+  "remaining": "Apply the chart to the actual finite Galois torsion-reduction data, prove finite elliptic place-fiber bounds and reverse genus, then continue original association and higher continuation. Level-one chart special cases remain to be handled if the exact consumer needs them. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Eight focused modules compile; exhaustive audit, promotion and assembled verification pending. The final full-torsion chart derives its Galois/diamond covariance, sign invariance, separation and exhaustion; its explicit normality and full-torsion premises are upstream data supplied by the source finite-field construction.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePerfectSeparatingCoordinate.lean",
+      "sha256": "E3CB098A1B09B6A1A4E3252E6977B147B64A8F0DAFA31D6FC27518152F58B99F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoordinateNotPower.lean",
+      "sha256": "A5CCF6EEA80EE03B23BE891155876894D13AF93ACDC559AAD5A67444699E4684"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSeparableFixedRootDescent.lean",
+      "sha256": "150A455388575CCD170996F5340EC61C515FA2F3178E54399A5162E6776CF603"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticSpecializationTorsionRange.lean",
+      "sha256": "53428D4D8B925E5F64FF2F7F5B7BE60158C0AC2430160AD2435385A42461C044"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IsAlgClosed\\Basic.lean",
+      "sha256": "D2B68358C83D98742A4D665E45D7B0B63405B660667687AE7FB1D41DC6CEC671"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IsAlgClosed\\AlgebraicClosure.lean",
+      "sha256": "3430DDE53EFF40B3D075E05EA2EFEF24FE63FEDC07BC7C8E990F85596F38FCB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\marked-algebraic-chart-route-1950.json",
+      "sha256": "EB37DCE7812E1725D819E0CDFB4E9123B7E5631AAE9CFF300F05A5ABAD6704EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean.txt",
+      "sha256": "BA0368354C022F02890EC363D1562776A45DB472334B41A5D21A670D89495E0C"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> actual original-field marked-fiber chart.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-audit-route-1960.json",
+    "sha256": "576B06B71F47D2B533C770E403BF369ED881E60D83EBE9E0227F9BDF1E633968",
+    "review": {
+      "recordedUTC": "2026-10-29T18:18:34.839978+00:00",
+      "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> actual original-field marked-fiber chart.",
+      "shorterRoute": "Use the actual finite Galois torsion field of the ofJ(X) curve over RatFunc K. Reuse native normalized embedding exhaustion and finite-place lifting instead of another coordinate presentation. Reuse the native inertia/restriction theorem for exact equality of original Gamma1 places. Existing prescribed specialization constructions supply the upstream finite field, full torsion and positive-order place in every characteristic.",
+      "assumptionsToDischarge": [
+        "ofJ_j, transcendental_X and adjoin_X discharge the generic-j and generated-base-field inputs.",
+        "The actual full-torsion cardinal supplies a point of exact order N.",
+        "Normalized-embedding exhaustion discharges the coverage assumption in the place-lifting consumer.",
+        "Native finite-place inertia conjugacy discharges the place-equality classification.",
+        "Original diamond embedding covariance implies original diamond covariance of actual places."
+      ],
+      "remaining": "Connect the native prescribed full-inertia specialization data and derive finite elliptic cardinal bounds, then reverse genus and the remaining original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+      "boundary": "Six focused modules compile; exhaustive audit, promotion and assembled verification pending. The final chart is surjective on the original finite j fiber and its equality relation is exactly actual inertia transport up to sign. Its finite Galois field, N-squared torsion and positive-order inputs are explicit native upstream data.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinatePlaceOrbits.lean",
+          "sha256": "BAD4A43DD7E4074AC73F25362E8CA1F0D55E1580FADA029356782728B9669514"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateFiberSurjectivity.lean",
+          "sha256": "A3F52B42FA1E51DF8968EE5C047A12BDAC7608BC52607380F02BF38DF02A2CB9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionNonemptyCyclic.lean",
+          "sha256": "BA3D6E879AB29EC69BF6C64F2765CA08D03EAD353D0E356E10B43839DDB9A7AA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPrescribedFullInertiaImage.lean",
+          "sha256": "A4978F8E738166C878A5855848FE6FEF6E706ABDA106C8EB03169BD89F183938"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharTwoFullInertiaImage.lean",
+          "sha256": "06403DE0E7D0489AE88C7D09274E08DB5CAD63036C76B300CC435E778A8E0A7C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeFullInertiaImage.lean",
+          "sha256": "C56226BB732F49E3FBA1472055AD0371D9E395E142A1E3415183AE3C2A9233BC"
+        }
+      ]
+    }
+  },
+  "discharged": [
+    "ofJ_j, transcendental_X and adjoin_X discharge the generic-j and generated-base-field inputs.",
+    "The actual full-torsion cardinal supplies a point of exact order N.",
+    "Normalized-embedding exhaustion discharges the coverage assumption in the place-lifting consumer.",
+    "Native finite-place inertia conjugacy discharges the place-equality classification.",
+    "Original diamond embedding covariance implies original diamond covariance of actual places."
+  ],
+  "remaining": "Connect the native prescribed full-inertia specialization data and derive finite elliptic cardinal bounds, then reverse genus and the remaining original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

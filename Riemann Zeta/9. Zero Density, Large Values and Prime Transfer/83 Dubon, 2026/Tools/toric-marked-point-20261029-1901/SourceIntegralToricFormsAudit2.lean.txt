@@ -1,0 +1,161 @@
+import SourceGammaOneDivisionToricForms
+import SourceGammaOneDivisionFourier
+import SourceGammaOneDivisionCoefficientFibers
+import SourceGammaOneDivisionDivisorCoefficients
+import SourceToricFourierCharacters
+import SourceToricIntegerFourierTransform
+import SourceToricIntegralCoefficientPolynomials
+import SourceGammaOneNormalizedDivisionForm
+import SourceTateA4Series
+import SourceToricIntegerCoefficientFamilies
+import SourceGammaOneIntegralToricWeightTwo
+import SourceGammaOneIntegralToricWeightFour
+import SourceGammaOneIntegralToricSlash
+import SourceGammaOneIntegralToricReconstruction
+import SourceGammaOneIntegralToricForms
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.vecMulSL_zero_first
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_qExpansion_coeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_product_fiber
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.tsum_pnat_product_eq_divisor_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_divisor_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_isPrimitive
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_eq_one_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.natCast_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow_M
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_ne_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.one_sub_ψ_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.geom_ψ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow_sub_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.avg
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_aeval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.four
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.filter_ne_zero_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_filter_aeval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fourier_inversion
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.S1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_S1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.one_sub_mul_S1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.inv_formula
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xcoef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_xT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wcoef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_wT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W_of_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W_coeff
+#print axioms Dubon2026.SourceFunctionField.tateA4
+#print axioms Dubon2026.SourceFunctionField.coeff_tateA4
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.eisenstein4_map_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.a4Z
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fcoef
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_fT
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.bZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.dZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.bZ_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.dZ_eq_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_bZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_dZ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xS
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS_eq'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS_eq'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_finset_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_finset_sum
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_smul'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.nz
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_B
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_B_coeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_B
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.E4Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_E4Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_E4Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.E4Γ_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Wsq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_Wsq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_Fform
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform_coeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_D
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_D_coeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_D
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.det_mod
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_reindex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.intSeriesC_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.smul_ofPowerSeries
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightTwo_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightFour_series
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricFourier.exists_integralToricInvariantForms
+
+private def runIntegralToricFormsAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ToricForms.vecMulSL_zero_first, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_qExpansion_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_product_fiber, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.tsum_pnat_product_eq_divisor_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_divisor_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_apply, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_isPrimitive, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_eq_one_iff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_mul, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.natCast_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow_M, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_ne_one, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.one_sub_ψ_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.geom_ψ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ_pow_sub_one, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_aeval, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.filter_ne_zero_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_filter_aeval, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fourier_inversion, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_S1, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.one_sub_mul_S1, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.inv_formula, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_xT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_wT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W_of_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W_coeff, `Dubon2026.SourceFunctionField.coeff_tateA4, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.eisenstein4_map_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_fT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.bZ_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.dZ_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_bZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_dZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS_eq', `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS_eq', `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_finset_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_finset_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_smul', `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_B, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_B_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_B, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_E4Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_E4Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.E4Γ_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_Wsq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_Fform, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.coe_D, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_D_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_D, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.det_mod, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_reindex, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.intSeriesC_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.smul_ofPowerSeries, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightTwo_series, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightFour_series, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.exists_integralToricInvariantForms]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.ψ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.avg, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.four, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.S1, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xcoef, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wcoef, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W, `Dubon2026.SourceFunctionField.tateA4, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.a4Z, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fcoef, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.bZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.dZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.xS, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.wS, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fS, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.nz, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.E4Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Wsq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Integral toric forms postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Integral toric forms theorems discovered"
+  logInfo m!"SOURCE INTEGRAL TORIC FORMS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runIntegralToricFormsAudit
+
+#lint in SourceGammaOneDivisionToricForms
+#lint in SourceGammaOneDivisionFourier
+#lint in SourceGammaOneDivisionCoefficientFibers
+#lint in SourceGammaOneDivisionDivisorCoefficients
+#lint in SourceToricFourierCharacters
+#lint in SourceToricIntegerFourierTransform
+#lint in SourceToricIntegralCoefficientPolynomials
+#lint in SourceGammaOneNormalizedDivisionForm
+#lint in SourceTateA4Series
+#lint in SourceToricIntegerCoefficientFamilies
+#lint in SourceGammaOneIntegralToricWeightTwo
+#lint in SourceGammaOneIntegralToricWeightFour
+#lint in SourceGammaOneIntegralToricSlash
+#lint in SourceGammaOneIntegralToricReconstruction
+#lint in SourceGammaOneIntegralToricForms

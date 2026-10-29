@@ -1,0 +1,41 @@
+import SourceMarkedSignFreeOrbits
+import SourceMarkedSignFiberFactor
+import SourceMarkedPeriodicFiberBound
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers. A surjective
+actual marked-point chart invariant under sign and the exceptional
+automorphism has at most one target per corresponding sign-class orbit.
+For N greater than three, the proved absence of fixed classes gives the
+precise factors two and three used by the tame genus inequality. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+variable {A Y : Type*} [AddCommGroup A] (N : ℕ) (hN : 3 < N)
+    [Finite (SignClasses A N)]
+include hN
+
+theorem two_mul_card_fiber_le_signClasses
+    (f : {P : A // addOrderOf P = N} → Y) (hf : Function.Surjective f)
+    (hneg : ∀ P Q, Q.val = -P.val → f Q = f P) (e : A ≃+ A)
+    (he : ∀ P Q, Q.val = e P.val → f Q = f P)
+    (hsq : ∀ P, e (e P) = -P) :
+    2 * Nat.card Y ≤ Nat.card (SignClasses A N) := by
+  obtain ⟨F, hF, _, hinv⟩ := exists_signClass_fiber_factor N f hf hneg e he
+  have hc := card_le_periodic_orbits_of_surjective (signClassesEquiv N e) 2
+    (by decide) (signClassesEquiv_square N e hsq) F hF hinv
+  exact (Nat.mul_le_mul_left 2 hc).trans_eq
+    (two_mul_card_marked_quartic_orbits N hN e hsq)
+
+theorem three_mul_card_fiber_le_signClasses
+    (f : {P : A // addOrderOf P = N} → Y) (hf : Function.Surjective f)
+    (hneg : ∀ P Q, Q.val = -P.val → f Q = f P) (e : A ≃+ A)
+    (he : ∀ P Q, Q.val = e P.val → f Q = f P)
+    (hcub : ∀ P, e (e P) + e P + P = 0) :
+    3 * Nat.card Y ≤ Nat.card (SignClasses A N) := by
+  obtain ⟨F, hF, _, hinv⟩ := exists_signClass_fiber_factor N f hf hneg e he
+  have hc := card_le_periodic_orbits_of_surjective (signClassesEquiv N e) 3
+    (by decide) (signClassesEquiv_cube N e hcub) F hF hinv
+  exact (Nat.mul_le_mul_left 3 hc).trans_eq
+    (three_mul_card_marked_cubic_orbits N hN e hcub)
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

@@ -1,0 +1,86 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T17:39:31.560834+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceMarkedOrbitMap",
+    "SourceMarkedNaturalSignChart",
+    "SourceMarkedSignChartDiamond",
+    "SourceMarkedOriginalNaturalChart"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap.lean",
+      "sha256": "753DDFD28FC5C8AA3D0E414D728BE738FF3BFE5D48DCDF50980FC16A65A7B033",
+      "oleanSha256": "3F147C18273B85732F5445BE7EDB957C6A8C4D0ACCA158225978B3A548221A16",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap-1939.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOrbitMap-1939.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart.lean",
+      "sha256": "5614A977413017CA5BF1B5962DE9146AE2C20B10ACB1416D81190BC379D523C9",
+      "oleanSha256": "FC00CA04C3E58CA3236445B428371DBC13831102030BCA73CC72972D19F6ECB0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart-1939.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalSignChart-1939.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond.lean",
+      "sha256": "A3FEC06399AE2B736700599AF6B8E718DE991ED998B12F1DAE4776BDBCDA3E3C",
+      "oleanSha256": "AB79C8EDA374BB6BC6E6C999692DCE7615A19EA8A27A33F41285F7C603A9A77D",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond-1939.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignChartDiamond-1939.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart.lean",
+      "sha256": "7A16FFD20760AEC471FB5D589B91319688C2995238948B8C9C26770AD79E44EB",
+      "oleanSha256": "9EFC3E69230915ABC904827B3B3FD275BB858F4AF3C1EE9D83ED4F3AD2870B30",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart-1939.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalNaturalChart-1939.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers",
+    "Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers",
+    "Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartAudit1.log",
+  "logSha256": "E71B0E98CC7A9B9F13CEC9D0FB5C9C8C7A03B02BE8510ACB45A2439231973D6C",
+  "auditSha256": "0A49DD31FE074138EB1093731A749CA48F6EAAA08641995E8B86AD99DA5D3ED1",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartScratchOwnership1939.log",
+  "ownershipSha256": "543F11E7106AED4A975D66A22D6AFFDCECC13BEFCD74FA50CFC8733B5CB20803",
+  "exhaustiveTheorems": 6,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedNaturalChartDependencyAudit1.log",
+  "dependencyAuditSha256": "EB215BB6863A076705BF2A1616DE9583E3FD5F9C261DA331532D709913A9675B",
+  "dependencyAuditSourceSha256": "0B7624B202E42E969F8751FC1D371E37123576024EDCB5A13376055EB9B29DDE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "discharged": [
+    "The number of actual exact-order elliptic points up to sign is the signed Gamma1 index, with a torsion basis derived from the existing torsion theorem.",
+    "The original residue diamond action fixes the j coordinate and realizes all residue-unit labels by native integral SL2 lifting.",
+    "Every normalized original-field embedding is conjugate by a base-field Galois automorphism, using the native normal-extension theorem.",
+    "The constructed exact-order point is transported by diamond lifts according to the original coordinate action, up to sign.",
+    "The actual all-level cyclic-quotient correspondence and irreducible modular polynomial produce cyclic-generator conjugacy.",
+    "The actual constructed point has a Galois orbit containing every exact-order point up to sign, with no orbit or generator-move certificate left in the original-field consumer.",
+    "The actual original-field embedding stabilizer equals the actual point stabilizer up to sign; both finite-degree and point-count premises are discharged."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The generic-field chart output is exact. Descent to arbitrary fields with full level-N torsion, finite elliptic fibers, reverse genus, association and higher continuation remain open. The stronger external unsigned transport helper is unnecessary for this exact chart output and is deferred. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-natural-chart-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "DDE40A33245027FABEC5BA87991C0D13C963BF95A0A6E79D4EA8991F23393F74",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

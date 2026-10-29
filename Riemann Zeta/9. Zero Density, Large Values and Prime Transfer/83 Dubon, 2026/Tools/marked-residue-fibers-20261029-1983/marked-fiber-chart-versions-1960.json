@@ -1,0 +1,50 @@
+[
+  {
+    "version": "SourceMarkedChartPlaceOrbits1954b",
+    "module": "SourceMarkedChartPlaceOrbits",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954b.lean",
+    "originalSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+    "canonicalSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalOfJChart1955e",
+    "module": "SourceMarkedOriginalOfJChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955e.lean",
+    "originalSha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+    "canonicalSha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalPlaceChart1956a",
+    "module": "SourceMarkedOriginalPlaceChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart1956a.lean",
+    "originalSha256": "3155763CDD0208E76AACCC904FEB6023B70F8BFB11F9EA36B73BA4F73D5F7F88",
+    "canonicalSha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedFullTorsionNonempty1957c",
+    "module": "SourceMarkedFullTorsionNonempty",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957c.lean",
+    "originalSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+    "canonicalSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartFiberSurjection1958b",
+    "module": "SourceMarkedChartFiberSurjection",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958b.lean",
+    "originalSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+    "canonicalSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalFiberChart1959a",
+    "module": "SourceMarkedOriginalFiberChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart1959a.lean",
+    "originalSha256": "0881875D9BCDE4B1DC088BB343EDB1DE259D13774D99D80137E3E53DDA8CEE5C",
+    "canonicalSha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105",
+    "mathematicalBodyIdentical": true
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "modules": [
+    "SourceMarkedChartPlaceOrbits",
+    "SourceMarkedOriginalOfJChart",
+    "SourceMarkedOriginalPlaceChart",
+    "SourceMarkedFullTorsionNonempty",
+    "SourceMarkedChartFiberSurjection",
+    "SourceMarkedOriginalFiberChart"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceCurve.Place.restrictAlongFinite_eq_iff_inertia",
+    "Dubon2026.SourceCurve.Place.exists_coordinate_embedding_restrict_eq",
+    "Dubon2026.SourceCurve.finite_galois_along_coordinate",
+    "Dubon2026.SourceEllipticVelu.nonempty_cyclic_subgroups_of_full_torsion",
+    "WeierstrassCurve.ofJ_j",
+    "RatFunc.transcendental_X",
+    "RatFunc.adjoin_X",
+    "isAddCyclic_iff_exists_addOrderOf_eq_natCard"
+  ],
+  "compileEvidence": {
+    "SourceMarkedChartPlaceOrbits": "SourceMarkedChartPlaceOrbits-1960",
+    "SourceMarkedOriginalOfJChart": "SourceMarkedOriginalOfJChart-1960",
+    "SourceMarkedOriginalPlaceChart": "SourceMarkedOriginalPlaceChart-1960",
+    "SourceMarkedFullTorsionNonempty": "SourceMarkedFullTorsionNonempty-1960",
+    "SourceMarkedChartFiberSurjection": "SourceMarkedChartFiberSurjection-1960",
+    "SourceMarkedOriginalFiberChart": "SourceMarkedOriginalFiberChart-1960"
+  },
+  "separatelyAxiomChecked": []
+}

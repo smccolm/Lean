@@ -1,0 +1,47 @@
+import Dubon2026.SourceEllipticVariableAddEquiv
+import Dubon2026.SourceEllipticStabilizerInvariantBounds
+import Mathlib.RingTheory.Algebraic.Basic
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> marked-point
+chart. Transport the two original toric coordinate functions through the
+actual variable change to a generic elliptic curve. The integral invariant
+formulas remain valid in characteristics two and three. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve SourceEllipticVariableChange
+variable {K : Type*} [Field K]
+
+theorem c4_ne_zero_of_transcendental_j {R : Type*} [Field R] [Algebra R K]
+    (W : WeierstrassCurve K) [W.IsElliptic] (hW : Transcendental R W.j) : W.c₄ ≠ 0 := by
+  intro h
+  exact hW (W.j_eq_zero h ▸ isAlgebraic_zero)
+
+theorem c6_ne_zero_of_transcendental_j {R : Type*} [Field R] [Algebra R K]
+    (W : WeierstrassCurve K) [W.IsElliptic] (hW : Transcendental R W.j) : W.c₆ ≠ 0 := by
+  apply SourceEllipticStabilizer.c6_ne_zero_of_j_ne_1728 W
+  intro h
+  apply hW
+  rw [h]
+  simpa only [map_ofNat] using (isAlgebraic_algebraMap (R := R) (A := K) (1728 : R))
+
+theorem variableChange_first_invariant (W : WeierstrassCurve K) (C : VariableChange K)
+    (hc : W.c₆ ≠ 0) (x : K) :
+    (C • W).c₄ * (12 * x + (C • W).b₂) / (C • W).c₆ =
+      W.c₄ * (12 * ((C.u : K) ^ 2 * x + C.r) + W.b₂) / W.c₆ := by
+  rw [variableChange_c₄, variableChange_c₆, variableChange_b₂]
+  simp only [Units.val_inv_eq_inv_val]
+  field_simp
+  <;> ring
+
+theorem variableChange_second_invariant (W : WeierstrassCurve K) (C : VariableChange K)
+    (hc : W.c₄ ≠ 0) (x : K) :
+    (6 * x ^ 2 + (C • W).b₂ * x + (C • W).b₄) / (C • W).c₄ =
+      (6 * ((C.u : K) ^ 2 * x + C.r) ^ 2 +
+        W.b₂ * ((C.u : K) ^ 2 * x + C.r) + W.b₄) / W.c₄ := by
+  rw [variableChange_c₄, variableChange_b₂, variableChange_b₄]
+  simp only [Units.val_inv_eq_inv_val]
+  field_simp
+  <;> ring
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

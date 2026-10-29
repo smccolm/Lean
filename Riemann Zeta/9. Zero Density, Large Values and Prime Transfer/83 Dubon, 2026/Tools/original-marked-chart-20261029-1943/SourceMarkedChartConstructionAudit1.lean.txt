@@ -1,0 +1,86 @@
+import SourceTateOriginalJCoordinate
+import SourceMarkedChartCoordinateEmbedding
+import SourceMarkedChartVariableInvariants
+import SourceMarkedChartEqualJTransfer
+import SourceMarkedChartInvariantSeparation
+import SourceMarkedChartFieldDescent
+import SourceMarkedChartTorsionDescent
+import SourceMarkedChartEmbeddingBound
+import SourceMarkedChartResidueDegree
+import SourceMarkedChartDescendedPoint
+import SourceMarkedChartOriginalConstruction
+import SourceMarkedChartStabilizerInclusion
+import SourceMarkedChartOriginalStabilizer
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tatePowerSeries
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tateLaurent
+#print axioms Dubon2026.SourceFunctionField.ToricAnalytic.j_tateLaurent
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_coordinate_embedding
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.c4_ne_zero_of_transcendental_j
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.c6_ne_zero_of_transcendental_j
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.variableChange_first_invariant
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.variableChange_second_invariant
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_originalField_markedPoint_of_j_eq
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.abscissa_eq_of_invariant_pair
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.point_eq_or_neg_of_invariant_pair
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.mem_range_of_polynomial_root
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_descended_coordinate_embedding
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_preimage
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_finite_and_card_le
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finrank_eq_index
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_descended_originalField_markedPoint
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_construction
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.point_fixed_up_to_sign_of_embedding_fixed
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion
+
+private def runMarkedChartConstructionAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceTateOriginalJCoordinate, `SourceMarkedChartCoordinateEmbedding, `SourceMarkedChartVariableInvariants, `SourceMarkedChartEqualJTransfer, `SourceMarkedChartInvariantSeparation, `SourceMarkedChartFieldDescent, `SourceMarkedChartTorsionDescent, `SourceMarkedChartEmbeddingBound, `SourceMarkedChartResidueDegree, `SourceMarkedChartDescendedPoint, `SourceMarkedChartOriginalConstruction, `SourceMarkedChartStabilizerInclusion, `SourceMarkedChartOriginalStabilizer]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tatePowerSeries, `Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tateLaurent, `Dubon2026.SourceFunctionField.ToricAnalytic.j_tateLaurent, `Dubon2026.SourceFunctionField.MarkedChart.exists_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.c4_ne_zero_of_transcendental_j, `Dubon2026.SourceFunctionField.MarkedChart.c6_ne_zero_of_transcendental_j, `Dubon2026.SourceFunctionField.MarkedChart.variableChange_first_invariant, `Dubon2026.SourceFunctionField.MarkedChart.variableChange_second_invariant, `Dubon2026.SourceFunctionField.MarkedChart.exists_originalField_markedPoint_of_j_eq, `Dubon2026.SourceFunctionField.MarkedChart.abscissa_eq_of_invariant_pair, `Dubon2026.SourceFunctionField.MarkedChart.point_eq_or_neg_of_invariant_pair, `Dubon2026.SourceFunctionField.MarkedChart.mem_range_of_polynomial_root, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_preimage, `Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_finite_and_card_le, `Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finrank_eq_index, `Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite, `Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_originalField_markedPoint, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_construction, `Dubon2026.SourceFunctionField.MarkedChart.point_fixed_up_to_sign_of_embedding_fixed, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Marked chart construction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Marked chart construction theorems discovered"
+  logInfo m!"SOURCE MARKED CHART CONSTRUCTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runMarkedChartConstructionAudit
+
+#lint in SourceTateOriginalJCoordinate
+#lint in SourceMarkedChartCoordinateEmbedding
+#lint in SourceMarkedChartVariableInvariants
+#lint in SourceMarkedChartEqualJTransfer
+#lint in SourceMarkedChartInvariantSeparation
+#lint in SourceMarkedChartFieldDescent
+#lint in SourceMarkedChartTorsionDescent
+#lint in SourceMarkedChartEmbeddingBound
+#lint in SourceMarkedChartResidueDegree
+#lint in SourceMarkedChartDescendedPoint
+#lint in SourceMarkedChartOriginalConstruction
+#lint in SourceMarkedChartStabilizerInclusion
+#lint in SourceMarkedChartOriginalStabilizer

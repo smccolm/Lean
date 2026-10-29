@@ -1,0 +1,29 @@
+import SourceMarkedTorsionSignedIndex1917b
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart -> stabilizer comparison. The actual elliptic torsion structure,
+proved upstream from torsion cardinalities, supplies the basis needed by
+the signed Gamma1 index count. No basis or orbit-count certificate is a
+hypothesis. Galois transitivity is a separate remaining obligation. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+open CongruenceSubgroup GammaOne
+
+theorem actual_point_signClasses_card
+    {F K : Type*} [Field F] [Field K] [Algebra F K] [IsAlgClosed K] [DecidableEq K]
+    (W : WeierstrassCurve F) [W.IsElliptic] (N : ℕ) [NeZero N] (hN : (N : K) ≠ 0) :
+    Nat.card (SignClasses (W.baseChange K).toAffine.Point N) =
+      (plusMinus (Gamma1 N)).index := by
+  obtain ⟨e⟩ := SourceEllipticTorsionStructure.actual_torsion_structure W hN
+  exact (natCard_signClasses_of_torsion_equiv e).trans (natCard_residue_signClasses N)
+
+theorem actual_point_signClasses_finite
+    {F K : Type*} [Field F] [Field K] [Algebra F K] [IsAlgClosed K] [DecidableEq K]
+    (W : WeierstrassCurve F) [W.IsElliptic] (N : ℕ) [NeZero N] (hN : (N : K) ≠ 0) :
+    Finite (SignClasses (W.baseChange K).toAffine.Point N) := by
+  apply Nat.finite_of_card_ne_zero
+  rw [actual_point_signClasses_card W N hN]
+  exact Subgroup.FiniteIndex.index_ne_zero
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

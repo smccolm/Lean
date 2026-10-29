@@ -1,0 +1,18 @@
+{
+  "recordedUTC": "2026-10-29T16:33:04.535164+00:00",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WeierstrassCurve_exists_algEquiv_map_eq_of_addOrderOf_eq_of_transcendental_j.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-point-orbit-1915\\S_WeierstrassCurve_exists_algEquiv_map_eq_of_addOrderOf_eq_of_transcendental_j.lean.txt",
+      "sha256": "BD33EF02D755071F9A3BF6D0F7891AFD065C6C565DFD86FF0980265DE095641E",
+      "bytes": 38097
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AddCommGroup_natCard_torsionOrbit_gammaH_eq_index.lean",
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-primitive-point-orbit-1915\\S_AddCommGroup_natCard_torsionOrbit_gammaH_eq_index.lean.txt",
+      "sha256": "D7CD1FCA3C54C52BA1FDF594AAB292BB9500F82C0544EC88C901517F16DEF05A",
+      "bytes": 14892
+    }
+  ]
+}

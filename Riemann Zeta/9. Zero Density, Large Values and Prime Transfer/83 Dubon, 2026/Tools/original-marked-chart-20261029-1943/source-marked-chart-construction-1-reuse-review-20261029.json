@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-29 America/Vancouver",
+  "sourceDependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-marked-chart-construction-audit-route-1914.json",
+    "sha256": "F55948E69AD438434763F98AD6CCA6C3F9FD9964883509A40465292E1F7FA475",
+    "review": {
+      "recordedUTC": "2026-10-29T16:31:45.732700+00:00",
+      "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+      "shorterRoute": "Use the existing rational-coordinate embedding and native transcendental rational-function equivalence instead of reconstructing fraction fields; use the proved exact Tate point and native equal-j variable change; descend the field embedding by algebraically closed polynomial roots and the point by the existing torsion specialization theorem; bound normalized embeddings by native adjoin extensionality and card_algHom_le_finrank. This avoids a new equalizer/cardinality framework and additional torsion census. The final consumer constructs every chart input from the actual residue field and original Gamma1 field.",
+      "assumptionsToDischarge": [
+        "The literal Tate j invariant equals the original jq series, by an integral discriminant identity before base change, including characteristics two and three.",
+        "An actual embedding of the original modular-function field and an exact-order point exist over the algebraic closure of the source generic j field, with all unit-multiple coordinate identities.",
+        "No scalar-compatibility certificate remains in the actual consumer: the common extension is constructed and compatibility is reflexive.",
+        "The original residue degree proves finiteness and bounds normalized field embeddings by the signed Gamma1 index.",
+        "Any generic-field automorphism fixing the constructed original-field embedding fixes its actual marked point up to sign; both coordinate invariants separate abscissae in every characteristic."
+      ],
+      "remaining": "The opposite stabilizer inclusion, primitive-point Galois orbit cardinality, diamond lift, finite elliptic-fiber bounds, reverse genus, and downstream association and higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+      "boundary": "Scratch-audited scope only after the checks pass; promotion and assembled verification pending. Only one stabilizer inclusion is claimed.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalShiftPowerSpan.lean",
+          "sha256": "87F6A943579628458351892986CD75B4305FE2D911D67D7A279BE16B4616373C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticVariableAddEquiv.lean",
+          "sha256": "967322B9E59230BDEAC8C7EB9568BF315E064B4F85FC9C2C5CCFBBF112AE6591"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStabilizerInvariantBounds.lean",
+          "sha256": "821DF5ABE4C0B45B9F8F7B5983E762A031871B9794D705EE8A7FABDAB3CC9897"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStandardTorsion.lean",
+          "sha256": "408DF39839B06960933F8E26616C8AC842581D3588C775D2C5E00C1238401247"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueClosedValuationField.lean",
+          "sha256": "5F854D27FED03F44D676B84E250F391FA89FF5482D5C1D6A32208465B1E73B65"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\FreeModule\\Finite\\Matrix.lean",
+          "sha256": "C669487F0171F91EE7D31254DEB3A7A18F59487EC0E203EF9DE2D76C73AF4F9C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Basic.lean",
+          "sha256": "D6D316B6CE84C8764227C7BAB52DE839D08422316C14946424C737C1FB73F40C"
+        }
+      ]
+    }
+  },
+  "discharged": [
+    "The literal Tate j invariant equals the original jq series, by an integral discriminant identity before base change, including characteristics two and three.",
+    "An actual embedding of the original modular-function field and an exact-order point exist over the algebraic closure of the source generic j field, with all unit-multiple coordinate identities.",
+    "No scalar-compatibility certificate remains in the actual consumer: the common extension is constructed and compatibility is reflexive.",
+    "The original residue degree proves finiteness and bounds normalized field embeddings by the signed Gamma1 index.",
+    "Any generic-field automorphism fixing the constructed original-field embedding fixes its actual marked point up to sign; both coordinate invariants separate abscissae in every characteristic."
+  ],
+  "remaining": "The opposite stabilizer inclusion, primitive-point Galois orbit cardinality, diamond lift, finite elliptic-fiber bounds, reverse genus, and downstream association and higher continuation remain required. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

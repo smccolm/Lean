@@ -1,0 +1,547 @@
+{
+  "status": "Canonical PASS of the original-field toric coordinates, actual diamond action and exact-order marked point with matching invariants. Scratch failures and fresh successors are preserved. All mathematical bodies remain identical to their scratch-audited form after import qualification; no verification requirement weakened.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_toric_marked_point_9450.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/build_toric_marked_point_9450.ps1",
+      "sha256": "38FE3F37A6BC0AE3E0BD509855589E7DC38CDB894E80B26D8B428B6DEF17086B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_toric_marked_point_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/compare_toric_marked_point_9450.py",
+      "sha256": "CD487866DBAB7DA6AE064E05E3C60E35F17D5A92CF95E2895CC287A84BD43794"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_toric_marked_point_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/integrate_source_toric_marked_point_9450.py",
+      "sha256": "485EDDBAC4DF4D21B1FA1558D43390E727357232AC680A19E17E8C82365C39C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\preflight_toric_marked_point_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/preflight_toric_marked_point_9450.py",
+      "sha256": "0C778B6CFED402F372637279DFB50449F0E7035B19B02D738E9BEF8AE1D3AAE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_toric_marked_point_global_ownership_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_toric_marked_point_global_ownership_9450.py",
+      "sha256": "CA01F0DEDDB25A668F70CFB201E4F8566740AB2BBC73385934E88D87408DC51E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_toric_marked_point_production_ownership_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_toric_marked_point_production_ownership_9450.py",
+      "sha256": "B280FEA90DB35AD4824BDD57F88DA1FEBC872A5E856A0B669531B28BF4879CB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_toric_marked_point_9450.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_source_toric_marked_point_9450.py",
+      "sha256": "64EFB1BAB49CDD5D6F0FD8EB54DDC864CB4E5A4F70488DEAC04272B8EC6458B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-ownership-comparison-9450.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-ownership-comparison-9450.json",
+      "sha256": "9A88B97ACE933B56A9C55C41D4EBF8088571DDEA9E98EEC605EFAC119D558DD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-production-build-9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-production-build-9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-production-build-9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-production-build-9450.log",
+      "sha256": "C676FC0DA36CABF2435315D41462EBF521F60E9DAEF3D6F7D1AB6E37DF8A6C2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-scratch-ownership-9450.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-scratch-ownership-9450.json",
+      "sha256": "D869BDC52267F57A62EF549F9D5CB46309BE0BD662584A2229B02CACDC753093"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2Production9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2Production9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.lean.txt",
+      "sha256": "6F9DA8687EAED68950E7C7B3905B9B01C0EDBB510854191AAB95C39D0D4011B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2Production9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2Production9450.log",
+      "sha256": "C7B4DC377788F5DA099545D9A440553162E2AA5A9DF6F3B57121A644341544FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2Production9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2Production9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.lean.txt",
+      "sha256": "3182D0B6186E49DC5DFD55545F736E32B34F4FF275E94802D8295CFEBDA89AC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2Production9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2Production9450.log",
+      "sha256": "29F696CBA7E1E1185AA7939296B77E9EC8A260265CB9827B32D281DE88C4A4A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1Production9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1Production9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.lean.txt",
+      "sha256": "E3461A4ADC9C301FB6BD24EEAA9E15CAD37BB1B1EAC3DFF4F1E028E49FC2A2A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1Production9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1Production9450.log",
+      "sha256": "E94280C3F0E839AE57D3413B2C54849B408410B43FDC68B4477B02233A15D35D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointGlobalOwnership9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointGlobalOwnership9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.lean.txt",
+      "sha256": "BBD3509025252A0722A52AFD24BA8C5FA09FF597DFB64C74F2CDBB17A0D5A511"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointGlobalOwnership9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointGlobalOwnership9450.log",
+      "sha256": "2C7106CA48E3C9C270EF3FC151AC0E3020A16579AB753CD40EC731B547B36262"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointOwnership9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointOwnership9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.lean.txt",
+      "sha256": "FEB0AAC7006DD0E58830B0484937327BA21B82604DB4899AEDF0B170B9A62916"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointOwnership9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointOwnership9450.log",
+      "sha256": "211180E792E07D4254C1FE8F808E9974781865F7AE3237E9C352052EAB9CE263"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointProductionAudit9450.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointProductionAudit9450.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.lean.txt",
+      "sha256": "BAEACA339495734A5689AFB61FD8D9BD9CFC9EDB3DD324D1A4EAAFFC00087800"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointProductionAudit9450.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointProductionAudit9450.log",
+      "sha256": "DD79169E662264A4298A20BAF0D4763694AA623E3C2FC8EE7172D406A0F02801"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\toric-marked-point-preexecution-review-9450.json",
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-preexecution-review-9450.json",
+      "sha256": "08B7814A3FFAA2A68AB4A19F8824FAEFD09E374CBB95E76CC93730911882540A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\toric-marked-point-preflight-9450.json",
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-preflight-9450.json",
+      "sha256": "2A548772A544974977EC297E447F75F47EFB1B616A8556BD1C12E05DECF84149"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_toric_marked_point_9450.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/verify_toric_marked_point_9450.ps1",
+      "sha256": "045398AE936792FA5ED43AD9D14EBCE087A3A4176C810D4000982C7A4750D731"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-29T17:15:47.955417+00:00",
+    "log": "logs/dubon-build-20261029-090510-105.log",
+    "sha256": "6D200A6B4C423C22057C3F8E5980D83D1B49F4DBEA001F5535F08B93510A9F30",
+    "bytes": 15703960,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9450,
+    "projectTheorems": 59809,
+    "registeredConsumers": 27550,
+    "registeredConstructions": 3042,
+    "declarations": 36589,
+    "generated": 39484,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261029_085947.log",
+    "foundationSha256": "9894F188BFB8A8931C08211C4DA0B6009F1DBA09A80DAA1413212F3E6A4DD765",
+    "countReconciliation": {
+      "previousTheorems": 59477,
+      "focusedTheorems": 332,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 332,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointGlobalOwnership9450.log",
+      "globalOwnershipSha256": "2C7106CA48E3C9C270EF3FC151AC0E3020A16579AB753CD40EC731B547B36262",
+      "globalOwnershipSourceSha256": "BBD3509025252A0722A52AFD24BA8C5FA09FF597DFB64C74F2CDBB17A0D5A511",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointOwnership9450.log",
+      "ownershipSha256": "211180E792E07D4254C1FE8F808E9974781865F7AE3237E9C352052EAB9CE263"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 332,
+      "scratchDistinct": 332,
+      "generatedNameRenamings": {},
+      "productionFocused": 332,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneDivisionToricForms",
+            "SourceGammaOneDivisionFourier",
+            "SourceGammaOneDivisionCoefficientFibers",
+            "SourceGammaOneDivisionDivisorCoefficients",
+            "SourceToricFourierCharacters",
+            "SourceToricIntegerFourierTransform",
+            "SourceToricIntegralCoefficientPolynomials",
+            "SourceGammaOneNormalizedDivisionForm",
+            "SourceTateA4Series",
+            "SourceToricIntegerCoefficientFamilies",
+            "SourceGammaOneIntegralToricWeightTwo",
+            "SourceGammaOneIntegralToricWeightFour",
+            "SourceGammaOneIntegralToricSlash",
+            "SourceGammaOneIntegralToricReconstruction",
+            "SourceGammaOneIntegralToricForms"
+          ],
+          "count": 129,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsScratchOwnership1872.log",
+            "sha256": "D02DFA7DB3B245CBF55E5AEDF2CA60F67293A06EB22D50CA36AF4B260FC8E90F",
+            "sourceSha256": "153D7EBD9C16126609FF9C2E8593A7B22D104BC123DA4004E260AA247875D94A"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateIntegralCoefficients",
+            "SourceTateIntegralCurve",
+            "SourceTateEisensteinInvariants",
+            "SourceGammaOneToricOriginalRatios",
+            "SourceGammaOneToricOriginalCoordinates",
+            "SourceGammaOneToricOriginalCoordinateValues",
+            "SourceIntegralDiamondScalarRatioAction",
+            "SourceGammaOneToricRatioDiamond",
+            "SourceGammaOneToricCoordinateDiamond",
+            "SourceGammaOneOriginalToricCoordinates"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesScratchOwnership1883.log",
+            "sha256": "4E5AF47AED57D2B843A03AF520E6DD2BE93EBA2A8914E3DF5C8E7E96C0AF1C74",
+            "sourceSha256": "862B9EE846BB44B946721AEB7B4B517E28376D0AEBDC4EC29B197B8BBC28F6C7"
+          }
+        },
+        {
+          "modules": [
+            "SourceToricAnalyticCurve",
+            "SourceToricAnalyticTorsion",
+            "SourceToricAnalyticDivisionRoot",
+            "SourceToricCuspExpansionHom",
+            "SourceToricCuspDivisionIdentity",
+            "SourceTateCoefficientNormalization",
+            "SourceToricComplexSeriesDivision",
+            "SourceToricCoefficientLocalization",
+            "SourceToricLocalizedSeries",
+            "SourceToricResidueDivisionIdentity",
+            "SourceToricAnalyticMultiplication",
+            "SourceToricResidueMultiplicationIdentity",
+            "SourceToricFieldDivisionIdentities",
+            "SourceToricExactOrderPoint",
+            "SourceToricMarkedPointCoordinates"
+          ],
+          "count": 130,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointScratchOwnership1899.log",
+            "sha256": "29F9682634733081D59C2F85D212F06DC768B17E66D94A3A3F392C8D9EC835CB",
+            "sourceSha256": "B3716947BA3E70542404A48CDDA52BF256F5E4E230224F550878FB0658A0B391"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointOwnership9450.log",
+        "sha256": "211180E792E07D4254C1FE8F808E9974781865F7AE3237E9C352052EAB9CE263",
+        "sourceSha256": "FEB0AAC7006DD0E58830B0484937327BA21B82604DB4899AEDF0B170B9A62916"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-064933-200.log",
+        "sha256": "77D795EF69352A7292F7CC0E07C39F5D121827EA795F4BCBD8407844E55E7E1A"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 40 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneDivisionToricForms",
+            "scratchSha256": "C8E0E7A56276748ABC33EE35BCDB217DFE53C6AA231CA50BA6D21B14BF684E4C",
+            "productionSha256": "C8E0E7A56276748ABC33EE35BCDB217DFE53C6AA231CA50BA6D21B14BF684E4C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisionFourier",
+            "scratchSha256": "33CAAC25904144BA31801EC961DC600F17B4344E25C9963FA37895C1ADA4C2B2",
+            "productionSha256": "719391FE6176EF049C0E0FA9D573C6F35BBF30A0A0BF7721EC0EC0C9B4A4FF92",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisionCoefficientFibers",
+            "scratchSha256": "EB879A17E8E9A7E95458FD4F2076D06EEF82C7F532304A1DCD675FACC6A22878",
+            "productionSha256": "09B3A349B17943FE83DD740356C95B75D94FF17C5A70194AD34C3ED7F002D6C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDivisionDivisorCoefficients",
+            "scratchSha256": "7AABD553AAED707A4F87E1ED23D998791786678090607C3425BF4BFB397BC80E",
+            "productionSha256": "23F995891E7A14FFC0718AA33667E546F0BF60591546383F5C0DF80CD5AA1BDF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricFourierCharacters",
+            "scratchSha256": "15B24F2B0FB8E21E3842F41E305B6B025F3651B21D37BE41419F7CA0B77EF76B",
+            "productionSha256": "15B24F2B0FB8E21E3842F41E305B6B025F3651B21D37BE41419F7CA0B77EF76B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricIntegerFourierTransform",
+            "scratchSha256": "1223FA5B023117C9148CAE5E6A8ED0433434093E38DC9E433D605CC6E4663B2B",
+            "productionSha256": "03532FBFD562620269BCF1FD8ABE56EE0D86A7AA331D46F2C2E76A5C68F2574A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricIntegralCoefficientPolynomials",
+            "scratchSha256": "AD5F1F389BA64BC5CC20DDAD9FB0ADDDC2593E20FFBA2F94A81FEAC42D56A79E",
+            "productionSha256": "BAAB14B10B0DFDA00A04654CB889FA6E801FA38A382CDD6ED2D5B609167AC341",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneNormalizedDivisionForm",
+            "scratchSha256": "F41C3873CB083BFE01B865EDDD62952499DF2CF517A9567251BE0E926461B66D",
+            "productionSha256": "77A0A023FA26DA933DC621E725AF1332E98DCA2432AA98E465D39DE826160792",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateA4Series",
+            "scratchSha256": "E66BC9C383E200829A0D0D8EEF6CFE10A716A796B9E6162FFDB7FB244EA97B60",
+            "productionSha256": "E66BC9C383E200829A0D0D8EEF6CFE10A716A796B9E6162FFDB7FB244EA97B60",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricIntegerCoefficientFamilies",
+            "scratchSha256": "6DA00CBB78929F52227518188B7BC60BF0222CAA0E7F0F92589488165E87467E",
+            "productionSha256": "50DD27DC1E19B430876BA2038CACD7CBCFE51BC35FF510B53C090286924D73EF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralToricWeightTwo",
+            "scratchSha256": "963B4EF980C49E32FF60B850F377FA5D7CD75224C93EAEB41AFC38C8B47699C6",
+            "productionSha256": "8462C290F8D7566CABEFF643A5200F3E95B97E08D2A2C422C83F0938AFC7B0C0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralToricWeightFour",
+            "scratchSha256": "9E8E4B0ED4115AD71298C1E90E7DF8D8AD1F6DBB2BEE2564A1F4C52A868DEE57",
+            "productionSha256": "8884891EE1D00768F0113EFFF6789D4169055D99AC5BDB378323A7A10A61861C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralToricSlash",
+            "scratchSha256": "2DD7E86CA7455DAEC2A285030B68BEF5D6CC64F209B941C91C63ABE8294C74A6",
+            "productionSha256": "BE964F09AC625684BD9CA56158770DCF98C2F7934DF2CEC9B573434249953B1C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralToricReconstruction",
+            "scratchSha256": "8CA25FF830402265CCDBD446EB435AB42915F6C5961721F663A70C4AA33B3D98",
+            "productionSha256": "2A7ECBE11FBD2DA2190E2269CE908B2FBA8A4148CD4F3FC74C373AA15BA86A88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntegralToricForms",
+            "scratchSha256": "A168E10F8F7F016B869AAB441013BBA84F7FB93738ED7B41F950AAA1C05AB11C",
+            "productionSha256": "32BB921BED890DF3ED950F73BCC8858F8F314044C6FABD3E21EEA4366DBBB6C7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateIntegralCoefficients",
+            "scratchSha256": "5438C447345D64BC364CB7C844D0BF2101A245363261F7EF5143470D210935A3",
+            "productionSha256": "7D321C382F1903403EA7BC7F8D67055E487B14B2C9B39BADC20A7DECF2109C69",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateIntegralCurve",
+            "scratchSha256": "8E8296A37BEBF3B1B561CFCD44C087D149F58C9C8B013EDE36087DEC5999072D",
+            "productionSha256": "5B1EB6EA427C7D223E7EA6F731704CAD8AA73F3285B4E60526DA2DFF4EC18E59",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateEisensteinInvariants",
+            "scratchSha256": "1C2B144E77C33CDEE7C17B58AC2767B1E467FE6D1FD2D3E3835D18C26B784DC1",
+            "productionSha256": "28F61F8210310D7207980C2108C169364FD6B1FD82C6C083617DE638FD1A4348",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneToricOriginalRatios",
+            "scratchSha256": "EF3099A8C1D928850872709B0FF9BEA9A0516D1BFADF77D8B390E1BA463EE274",
+            "productionSha256": "67F592AA8F808D2E9F5D959A262A1BE2123614CBC516D85A2F27DABFF63689D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneToricOriginalCoordinates",
+            "scratchSha256": "8AB112C65F61C0A708A307A1B5A679408C5091ACC104BBCB2701D514B72F2F54",
+            "productionSha256": "8ECC88EF81B3C60A154523B05FDEA7D5F9594A2D1FD0C5FC170D6DC64DC4BD0B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneToricOriginalCoordinateValues",
+            "scratchSha256": "38084A956D04C347D2034E92F6AD38DD07ADC687637CDFB6589D1558BB0E802B",
+            "productionSha256": "4EAF56FEE8CAADB1D6BAE93497AF71608B51894E225094D7B0D8246FA3FF4AFD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralDiamondScalarRatioAction",
+            "scratchSha256": "E705B18F4AF6688CC4DFD110FC19F6E948408A7AB840A8092E07226FC81C498D",
+            "productionSha256": "E705B18F4AF6688CC4DFD110FC19F6E948408A7AB840A8092E07226FC81C498D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneToricRatioDiamond",
+            "scratchSha256": "FF0202475B99EF1B4960861CD1417FAFE18877597544552DD3CE5FF8F0C61C84",
+            "productionSha256": "67086D535BC783B271D9575216FBB6BD7F8304D12A8B3B0CE1DA0B96F1BA40DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneToricCoordinateDiamond",
+            "scratchSha256": "9FDED8D2B10D08B3A59603BB32BC61CB49A1BD11592CB94392DAC756B734AE23",
+            "productionSha256": "A6925230246701047BDA242B73329D130D693F6EC403E294123427F1C5667AE6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalToricCoordinates",
+            "scratchSha256": "1E2060631954850907EDE4C3787F6BA18811CA9FC64CCE7636737B2790D3E73C",
+            "productionSha256": "DE37025C4431ECDEBB3B76DC954947605E948338F00F6EB4462FF257FC78DA70",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricAnalyticCurve",
+            "scratchSha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A",
+            "productionSha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricAnalyticTorsion",
+            "scratchSha256": "E470FD8822219E31733214D50B72A2BFB5D9B4A7B457DABC185A7EE5AADB996E",
+            "productionSha256": "3D02C53B8D7677D671C3642483E5D5FC328AE1D894A28F01BC8BFFB125AFCA6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricAnalyticDivisionRoot",
+            "scratchSha256": "75DCAC1AA91977E7DF6AC828B649AD3AEBD3AE30A24C4146F33E4231D9B4FFB6",
+            "productionSha256": "99547E5EAFFA797972ABB5B33DB79199D164F434F73A510E036DC3309B61AE0C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricCuspExpansionHom",
+            "scratchSha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006",
+            "productionSha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricCuspDivisionIdentity",
+            "scratchSha256": "DE93A7C5294EA839B15B6376DAB3E10087A539831A249E9C358B0C3161BC12A8",
+            "productionSha256": "E65B3E67B59C7AB8A9E65C0444BAB0DEED3D3DDFA8D986ADE762BA4DF8E1D9CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceTateCoefficientNormalization",
+            "scratchSha256": "79C09C8A71EADE4939A072B1F0C9A9B562B9804945E5370D6CFAC4DC96E6C78D",
+            "productionSha256": "DA466C5AF1F19B2EC0DC94FDC05CC7E20627DF3E391CE71766338E88624B761B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricComplexSeriesDivision",
+            "scratchSha256": "007A716AC6CE06D09671404E966E9424525E22684475953A95799E253F9B3454",
+            "productionSha256": "6E821BBFB23F543533BFFFD4CA87154725D4D9482541998F16531AF8E5FC098F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricCoefficientLocalization",
+            "scratchSha256": "7950B6CF8339164ACE5769E55165EEAD76785EDBE6D4A1B1CDC92FF1828A59E6",
+            "productionSha256": "6BB4BB261858E40D7059C3C71391107A665C2E6582B2FC15CEEFFCFA745CDEEE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricLocalizedSeries",
+            "scratchSha256": "60CD80CAFF2528B630AE7B211653142D762E504370521DC6D9DCC76C013FC9AC",
+            "productionSha256": "0260EDB5D5598CD83BD2F0C6661809B1C27281B0A189CE21FF907B05DAD7F702",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricResidueDivisionIdentity",
+            "scratchSha256": "A77ACAFC507DD747E7A285FDD960860E2BE7DC6E497FE4AD29BB3A98A3CCC60D",
+            "productionSha256": "1E0E139430912F5372CE944FE58CD2283F3DBAC7AFD7F7F9798A2D357BB23568",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricAnalyticMultiplication",
+            "scratchSha256": "EF7D120950BE29BDDDB3B8880E0459DF173D156A51C1E319A6DEBAA2AB4714DB",
+            "productionSha256": "BC761FDD161A66491C4239A3EE505BC62B8B836683BDE02754AFB1C5A835DDCD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricResidueMultiplicationIdentity",
+            "scratchSha256": "2E63AFAADA30189D68A2631B1B9E8F8AD0D2B1C95DB454A07EC88992DF6725B1",
+            "productionSha256": "478106831D07D42899C95FA452805F9E134541230BC2396F95AE786319A5D0AF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricFieldDivisionIdentities",
+            "scratchSha256": "778336BD30F569641E3286AC944EC34567E78A18E294162FABF5665A66699A29",
+            "productionSha256": "1B03805AD6DAE64AF0D0F781100378B3823300E9E6139DB1C12B69977869DDD3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricExactOrderPoint",
+            "scratchSha256": "9E23059DB8CE6370350E1F79CADDAC4E5CE827436667441E5DFAD7382C2DB243",
+            "productionSha256": "FEA6296B444735BCCEBCB12FF9568C52ABCE466BF3E470E1696C28CDE4E6D73F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceToricMarkedPointCoordinates",
+            "scratchSha256": "C429E23C01991CB5F04E75CB56B985D4799CB142A83CEF7D807E1EBD9A57E421",
+            "productionSha256": "2A5DA62413DC237C53ADAA969A8EFECB4BAE146E3A08C5A72949AF61DA116E4E",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 332 distinct names from 332 exhaustive scratch checks are retained: 332 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The original-field/full-torsion chart identification and stabilizer comparison, finite elliptic fiber bounds including characteristics two and three, and reverse genus remain open. The previously proved residue cusp upper bound is retained. Original genus preservation, integral parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged."
+  },
+  "largeCanonicalConsoleEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-9450-console.log",
+      "sha256": "BF4D66F65928320DB92DCB7B965FFC219E61A5049BAC1F457231B097B3928361"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-9450-console.log",
+      "sha256": "233707D311438DBF24BD739B54B381072E36624CD27BFFF95D3C143285F5DE19"
+    }
+  ]
+}

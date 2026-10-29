@@ -1,0 +1,60 @@
+import Dubon2026.SourceMarkedChartStabilizerActions
+import Dubon2026.SourceMarkedStabilizerIndexComparison
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart -> reverse stabilizer inclusion. Apply the finite-index comparison
+to the literal original-field embeddings and point sign classes. The
+actual consumer supplies the finite degree, exact point-class count,
+constructed one-sided inclusion, and constructed transitive sign orbit. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve MarkedTorsion
+
+theorem point_field_stabilizers_iff_of_card_bound
+    {K k F Ω : Type*} [Field K] [Field k] [Field F] [Field Ω] [DecidableEq Ω]
+    [Algebra K k] [Algebra K F] [Algebra K Ω] [Algebra k Ω] [IsScalarTower K k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (N : ℕ) (x : F)
+    (P : (E.baseChange Ω).toAffine.Point) (hP : addOrderOf P = N)
+    (ψ : F →ₐ[K] Ω) (hψ : ψ x = algebraMap k Ω E.j)
+    [Finite {φ : F →ₐ[K] Ω // φ x = algebraMap k Ω E.j}]
+    (hfix : ∀ σ : Ω ≃ₐ[k] Ω, (σ.toAlgHom.restrictScalars K).comp ψ = ψ →
+      Affine.Point.map (W' := E) σ.toAlgHom P = P ∨
+        Affine.Point.map (W' := E) σ.toAlgHom P = -P)
+    (htrans : ∀ Q : (E.baseChange Ω).toAffine.Point, addOrderOf Q = N →
+      ∃ σ : Ω ≃ₐ[k] Ω, Affine.Point.map (W' := E) σ.toAlgHom P = Q ∨
+        Affine.Point.map (W' := E) σ.toAlgHom P = -Q)
+    (hcard : Nat.card {φ : F →ₐ[K] Ω // φ x = algebraMap k Ω E.j} ≤
+      Nat.card (SignClasses (E.baseChange Ω).toAffine.Point N)) :
+    ∀ σ : Ω ≃ₐ[k] Ω,
+      (Affine.Point.map (W' := E) σ.toAlgHom P = P ∨
+        Affine.Point.map (W' := E) σ.toAlgHom P = -P) ↔
+      (σ.toAlgHom.restrictScalars K).comp ψ = ψ := by
+  let X := {φ : F →ₐ[K] Ω // φ x = algebraMap k Ω E.j}
+  let Y := {s : Set (E.baseChange Ω).toAffine.Point // ∃ Q : (E.baseChange Ω).toAffine.Point,
+    addOrderOf Q = N ∧ s = {Q, -Q}}
+  letI : MulAction (Ω ≃ₐ[k] Ω) X := normalizedEmbeddingAction x E.j
+  letI : MulAction (Ω ≃ₐ[k] Ω) Y := signClassGaloisAction E N
+  let ξ : X := ⟨ψ, hψ⟩
+  let η : Y := ⟨{P, -P}, P, hP, rfl⟩
+  have hle : MulAction.stabilizer (Ω ≃ₐ[k] Ω) ξ ≤ MulAction.stabilizer (Ω ≃ₐ[k] Ω) η := by
+    intro σ hσ
+    apply (signClass_stabilizer_iff E N P hP σ).mpr
+    exact hfix σ ((normalizedEmbedding_stabilizer_iff x E.j ψ hψ σ).mp hσ)
+  have ht : ∀ z : Y, ∃ σ : Ω ≃ₐ[k] Ω, σ • η = z := by
+    rintro ⟨s, Q, hQ, hs⟩
+    obtain ⟨σ, hσ⟩ := htrans Q hQ
+    refine ⟨σ, Subtype.ext ?_⟩
+    have he := (signClass_smul_eq_iff E N P Q hP hQ σ).mpr hσ
+    exact (congrArg Subtype.val he).trans hs.symm
+  have heq := stabilizer_eq_of_transitive_and_card_bound ξ η hle ht hcard
+  intro σ
+  constructor
+  · intro hσ
+    apply (normalizedEmbedding_stabilizer_iff x E.j ψ hψ σ).mp
+    change σ ∈ MulAction.stabilizer (Ω ≃ₐ[k] Ω) ξ
+    rw [heq]
+    exact (signClass_stabilizer_iff E N P hP σ).mpr hσ
+  · exact hfix σ
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

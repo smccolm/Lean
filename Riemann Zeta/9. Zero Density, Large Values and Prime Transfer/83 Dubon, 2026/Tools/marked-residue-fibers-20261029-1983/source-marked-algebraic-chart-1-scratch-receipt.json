@@ -1,0 +1,124 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T18:03:16.748008+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceMarkedOriginalSeparability",
+    "SourceMarkedSeparableChartValues",
+    "SourceMarkedSeparableEmbeddingDescent",
+    "SourceMarkedRationalPointDescent",
+    "SourceMarkedOriginalAlgebraicChart",
+    "SourceMarkedFullTorsionPointLift",
+    "SourceMarkedChartNormalExhaustion",
+    "SourceMarkedOriginalFullTorsionChart"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability.lean",
+      "sha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+      "oleanSha256": "0E24B68D2A325D50F69F6D5A64B0A0C81D929495F96E2A909A6569C96491EE89",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues.lean",
+      "sha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+      "oleanSha256": "35A36110FE90AEDBF4A2FBDD8965D73DFDA0555D5B338D7677C6103D3B225BEA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent.lean",
+      "sha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0",
+      "oleanSha256": "360B7C32A561D1CEC059AB8D867B9BB58793C1D389E5AA823ED8051B07C6ABF5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent.lean",
+      "sha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3",
+      "oleanSha256": "919ECC3C9911A65AEEFDCA417E48DF1D38F762AA0137BD20A461A14950C70FEA",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart.lean",
+      "sha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2",
+      "oleanSha256": "90F11623060B5499F7228269C334B8371147076BF8D7ECFB1909152D2CA22BF3",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift.lean",
+      "sha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+      "oleanSha256": "8F067B229305C9E2670059EDDC6E957560A8EE22BEDB0232FE2D4451F241F2C4",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion.lean",
+      "sha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8",
+      "oleanSha256": "57F60AE754E6538730F3F7FE4F780AE221FD5B917C10D8A1D03FB02F606AF099",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart.lean",
+      "sha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B",
+      "oleanSha256": "B33D1BFA861C35B944EF08109231A6A17C230479CEFF0C9DCA9FC46EC2C84A61",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartAudit1.log",
+  "logSha256": "4A3D0AF01FC1FB935E7856BDBCE996101B9087DA2E57262D9B2DD96D271B3287",
+  "auditSha256": "BEF994483EB5F19188E54E2D599FAD67D1BE66521F126448E278D87E6F583CDD",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.log",
+  "ownershipSha256": "555867B3CB9EB0E3D388DACCA8B55ED0CEDDD2196D2489ABED59BF0BF124EDCB",
+  "exhaustiveTheorems": 12,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1.log",
+  "dependencyAuditSha256": "45DC028D8958B505CD48CC063BEB57B144D601B3F0CD6AA50CA9B6515BB20220",
+  "dependencyAuditSourceSha256": "A4B66A450ADABB42CBB00F55688F0695711734E04A46AB9C78BA94AB9D991AC2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "discharged": [
+    "Original-coordinate separability derives from its finite degree and simple Laurent pole.",
+    "Galois covariance fixes every embedding value attached to a rational point.",
+    "Separable fixed-root descent supplies the embedding in the actual torsion field.",
+    "Native full-torsion lifting supplies an exact-order point from the actual N-squared count.",
+    "Normality and generation of the base field by j make all normalized embeddings conjugate and hence prove exhaustion."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Apply the chart to the actual finite Galois torsion-reduction data, prove finite elliptic place-fiber bounds and reverse genus, then continue original association and higher continuation. Level-one chart special cases remain to be handled if the exact consumer needs them. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-1-reuse-review-20261029.json",
+  "reuseReviewSha256": "A7D4F3B2C222D9A30E745A802AA4A1AD68F5DC1A0CE845F111800E11F82A190A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

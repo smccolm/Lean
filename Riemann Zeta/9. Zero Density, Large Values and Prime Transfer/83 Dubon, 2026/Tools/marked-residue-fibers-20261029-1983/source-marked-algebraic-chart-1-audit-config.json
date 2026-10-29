@@ -1,0 +1,67 @@
+{
+  "modules": [
+    "SourceMarkedOriginalSeparability",
+    "SourceMarkedSeparableChartValues",
+    "SourceMarkedSeparableEmbeddingDescent",
+    "SourceMarkedRationalPointDescent",
+    "SourceMarkedOriginalAlgebraicChart",
+    "SourceMarkedFullTorsionPointLift",
+    "SourceMarkedChartNormalExhaustion",
+    "SourceMarkedOriginalFullTorsionChart"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_equality",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_normalized_embedding_conjugacy",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite",
+    "Dubon2026.SourceCurve.isSeparable_of_forall_pow_ne",
+    "Dubon2026.SourceFunctionField.pow_ne_jqModC",
+    "Dubon2026.SourceEllipticVelu.separable_root_mem_range_of_fixed",
+    "Dubon2026.SourceEllipticReduction.torsion_mem_specialization_range",
+    "IsAlgClosure.equivOfEquiv",
+    "IsAlgClosure.equivOfEquiv_algebraMap"
+  ],
+  "compileEvidence": {
+    "SourceMarkedOriginalSeparability": "SourceMarkedOriginalSeparability-1953",
+    "SourceMarkedSeparableChartValues": "SourceMarkedSeparableChartValues-1953",
+    "SourceMarkedSeparableEmbeddingDescent": "SourceMarkedSeparableEmbeddingDescent-1953",
+    "SourceMarkedRationalPointDescent": "SourceMarkedRationalPointDescent-1953",
+    "SourceMarkedOriginalAlgebraicChart": "SourceMarkedOriginalAlgebraicChart-1953",
+    "SourceMarkedFullTorsionPointLift": "SourceMarkedFullTorsionPointLift-1953",
+    "SourceMarkedChartNormalExhaustion": "SourceMarkedChartNormalExhaustion-1953",
+    "SourceMarkedOriginalFullTorsionChart": "SourceMarkedOriginalFullTorsionChart-1953"
+  },
+  "separatelyAxiomChecked": []
+}

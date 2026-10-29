@@ -1,0 +1,31 @@
+import SourceMarkedOrbitMap
+import SourceMarkedNaturalSignChart
+import SourceMarkedSignChartDiamond
+import SourceMarkedOriginalNaturalChart
+import Mathlib.Tactic
+
+open Lean
+
+private def runMarkedNaturalChartDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic]
+  let localModules : Array Name := #[`SourceMarkedOrbitMap, `SourceMarkedNaturalSignChart, `SourceMarkedSignChartDiamond, `SourceMarkedOriginalNaturalChart, `SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms, `SourceTateIntegralCoefficients, `SourceTateIntegralCurve, `SourceTateEisensteinInvariants, `SourceGammaOneToricOriginalRatios, `SourceGammaOneToricOriginalCoordinates, `SourceGammaOneToricOriginalCoordinateValues, `SourceIntegralDiamondScalarRatioAction, `SourceGammaOneToricRatioDiamond, `SourceGammaOneToricCoordinateDiamond, `SourceGammaOneOriginalToricCoordinates, `SourceToricAnalyticCurve, `SourceToricAnalyticTorsion, `SourceToricAnalyticDivisionRoot, `SourceToricCuspExpansionHom, `SourceToricCuspDivisionIdentity, `SourceTateCoefficientNormalization, `SourceToricComplexSeriesDivision, `SourceToricCoefficientLocalization, `SourceToricLocalizedSeries, `SourceToricResidueDivisionIdentity, `SourceToricAnalyticMultiplication, `SourceToricResidueMultiplicationIdentity, `SourceToricFieldDivisionIdentities, `SourceToricExactOrderPoint, `SourceToricMarkedPointCoordinates, `SourceTateOriginalJCoordinate, `SourceMarkedChartCoordinateEmbedding, `SourceMarkedChartVariableInvariants, `SourceMarkedChartEqualJTransfer, `SourceMarkedChartInvariantSeparation, `SourceMarkedChartFieldDescent, `SourceMarkedChartTorsionDescent, `SourceMarkedChartEmbeddingBound, `SourceMarkedChartResidueDegree, `SourceMarkedChartDescendedPoint, `SourceMarkedChartOriginalConstruction, `SourceMarkedChartStabilizerInclusion, `SourceMarkedChartOriginalStabilizer, `SourceMarkedTorsionSignClasses, `SourceMarkedTorsionSignedIndex, `SourceMarkedTorsionActualCount, `SourceMarkedChartEmbeddingConjugacy, `SourceMarkedChartPointTransport, `SourceMarkedChartDiamondNormalization, `SourceMarkedChartOriginalDiamond, `SourceMarkedCyclicRootTransitivity, `SourceMarkedCyclicGeneratorConjugacy, `SourceMarkedTorsionGeneratorUnit, `SourceMarkedPointSignTransitivity, `SourceMarkedChartOriginalSignOrbit, `SourceMarkedChartStabilizerActions, `SourceMarkedStabilizerIndexComparison, `SourceMarkedChartStabilizerEquality, `SourceMarkedChartOriginalStabilizerEquality]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq, `Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers, `Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_equality, `Dubon2026.SourceFunctionField.MarkedChart.exists_point_conjugacy_up_to_sign_of_unit_moves, `Dubon2026.SourceFunctionField.MarkedChart.gamma0Unit_surjective, `Dubon2026.SourceFunctionField.MarkedChart.signClassGaloisAction, `Dubon2026.SourceFunctionField.MarkedChart.signClass_smul_eq_iff, `Dubon2026.SourceFunctionField.MarkedChart.signClass_stabilizer_iff, `Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingAction, `Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbedding_stabilizer_iff, `Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingLocalAction, `Dubon2026.SourceFunctionField.MarkedTorsion.signPair_eq_iff]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MARKED NATURAL CHART DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual original-field natural chart over the generic j field. Equal stabilizers and signed transitivity construct an injective equivariant map on the actual sign classes. Signed diamond lifts prove exact diamond covariance of the chart, without an unsigned lift. Arbitrary full-torsion field descent, finite elliptic fibers, and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runMarkedNaturalChartDependencyAudit

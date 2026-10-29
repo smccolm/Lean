@@ -1,0 +1,49 @@
+import Dubon2026.SourceGammaOneToricOriginalRatios
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> marked-point chart. Construct the two finite Fourier coordinate
+combinations inside the actual original Gamma1 field. Their coefficients
+are the proved integral ratios, not separately assumed field elements. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates
+noncomputable section
+open CongruenceSubgroup HahnSeries ToricFourier
+open scoped MatrixGroups
+variable (M : ℕ) [NeZero M] (K : Type*) [Field K]
+local notation "F̄" => qExpFunctionFieldC K (Gamma1 M)
+local notation "ι" => algebraMap K F̄
+
+theorem intSeriesC_eisenstein4 : intSeriesC K eisenstein4 = (tateLaurent K).c₄ :=
+  (c4_tateLaurent K).symm
+
+theorem intSeriesC_eisenstein6 :
+    intSeriesC K SourceFricke.eisenstein6 = -(tateLaurent K).c₆ := by
+  rw [c6_tateLaurent, neg_neg]
+  rfl
+
+theorem natCast_laurent_ne_zero {ζ : K} (hζ : IsPrimitiveRoot ζ M) :
+    (M : LaurentSeries K) ≠ 0 := by
+  rw [← map_natCast (algebraMap K (LaurentSeries K)) M]
+  exact (map_ne_zero_iff _ (algebraMap K (LaurentSeries K)).injective).mpr
+    (ToricFourier.natCast_ne_zero hζ)
+
+omit [NeZero M] in
+theorem coe_algebraMap (r : K) :
+    ((ι r : F̄) : LaurentSeries K) = algebraMap K (LaurentSeries K) r := rfl
+
+/-- The original-field Fourier combination recovering c4 times the linear toric invariant over c6. -/
+def w₁ (ζ : K) (t : (ZMod M)ˣ) : F̄ :=
+  ι (-((M : K)⁻¹ ^ 3)) *
+    ∑ c : ZMod M, ι (ζ ^ ((t : ZMod M) * c).val) * β M K c
+
+/-- The original-field Fourier combination recovering the quadratic toric invariant over c4. -/
+def w₂ (ζ : K) (t : (ZMod M)ˣ) : F̄ :=
+  ι ((M : K)⁻¹ ^ 5) *
+    ∑ c : ZMod M, ι (ζ ^ ((t : ZMod M) * c).val) * δ M K c
+
+omit [NeZero M] in
+theorem unit_ne_zero (hM : 2 ≤ M) (t : (ZMod M)ˣ) : (t : ZMod M) ≠ 0 := by
+  haveI : Nontrivial (ZMod M) := ZMod.nontrivial_iff.mpr (by omega)
+  exact t.ne_zero
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates

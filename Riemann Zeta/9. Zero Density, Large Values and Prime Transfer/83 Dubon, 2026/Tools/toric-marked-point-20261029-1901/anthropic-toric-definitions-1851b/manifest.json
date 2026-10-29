@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-29T13:22:03.988997+00:00",
+  "pin": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\Def_ModularCurve_TateSlots.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_TateSlots.lean",
+      "bytes": 8679,
+      "sha256": "A51770331D14BD7E60A83AA2E87FA7717C0AD3D9B57D4787AAF450953505CD86",
+      "gitBlob": "d58c508246bcac23a1e9992ec0a94d7a0999d0d1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean",
+      "bytes": 29054,
+      "sha256": "C4F06A97ADEA65D19400B16A9350AB87BACECAB33927C2D44F6A26C552420675",
+      "gitBlob": "9fa1f28230335d29f17774a12b35bc8c3ee10a32"
+    }
+  ],
+  "purpose": "Inspect exact toric coefficient definitions and the finite Fourier transform linking them to actual integral Gamma1 forms. Required for the marked-point chart in the DUB17/18 finite residue fiber bounds; compare native integral Eisenstein and Weierstrass Fourier proofs before adaptation.",
+  "externalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,78 @@
+import SourceMarkedChartCoordinateEmbedding1902a
+import SourceMarkedChartResidueDegree1909d
+import SourceMarkedChartDescendedPoint1910e
+import Dubon2026.SourceResidueClosedValuationField
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original-field
+marked-point chart. Assemble its construction for the actual valuation
+residue field and a generic elliptic curve whose j generates the base.
+The primitive root, Laurent/j-field embedding, original coordinate-degree
+finiteness, common algebraic closure, exact-order point and both original
+function coordinates are constructed. Stabilizer equality and the finite
+fiber census remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_marked_chart_construction
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (k Ω : Type*) [Field k] [Field Ω] [DecidableEq Ω]
+    [Algebra kk k] [Algebra kk Ω] [Algebra k Ω] [IsScalarTower kk k Ω] [IsAlgClosure k Ω]
+    (E : WeierstrassCurve k) [E.IsElliptic] (hE : Transcendental kk E.j)
+    (hgen : IntermediateField.adjoin kk ({E.j} : Set k) = ⊤) :
+    ∃ (ζ : kk) (P : (E.baseChange Ω).toAffine.Point) (ψ : F →ₐ[kk] Ω),
+      IsPrimitiveRoot ζ N ∧ addOrderOf P = N ∧ ψ x = algebraMap k Ω E.j ∧
+      ∀ t : (ZMod N)ˣ, ∃ (a b : Ω) (h : (E.baseChange Ω).toAffine.Nonsingular a b),
+        (t : ZMod N).val • P = Affine.Point.some a b h ∧
+        ψ (w₁ N kk ζ t) = (E.baseChange Ω).c₄ * (12 * a + (E.baseChange Ω).b₂) /
+          (E.baseChange Ω).c₆ ∧
+        ψ (w₂ N kk ζ t) = (6 * a ^ 2 + (E.baseChange Ω).b₂ * a + (E.baseChange Ω).b₄) /
+          (E.baseChange Ω).c₄ := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  letI : IsAlgClosed Ω := IsAlgClosure.isAlgClosed k
+  letI : Algebra.IsAlgebraic k Ω := IsAlgClosure.isAlgebraic
+  letI : FiniteDimensional (IntermediateField.adjoin kk ({x} : Set F)) F :=
+    original_coordinate_finite A N ℓ hℓN x hx
+  letI : Algebra.IsAlgebraic (IntermediateField.adjoin kk ({x} : Set F)) F :=
+    Algebra.IsAlgebraic.of_finite (IntermediateField.adjoin kk ({x} : Set F)) F
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  letI : NeZero (N : kk) := ⟨hNK⟩
+  obtain ⟨ζ, hζ⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot kk N
+  obtain ⟨ι, hι⟩ := exists_coordinate_embedding E.j hE hgen (jqModC kk)
+    (transcendental_jqModC kk)
+  let B := AlgebraicClosure (LaurentSeries kk)
+  let cB : kk →+* B := (algebraMap (LaurentSeries kk) B).comp (algebraMap kk (LaurentSeries kk))
+  letI : Algebra kk B := cB.toAlgebra
+  let ιB : k →+* B := (algebraMap (LaurentSeries kk) B).comp ι.toRingHom
+  letI : Algebra k B := ιB.toAlgebra
+  let η : Ω →ₐ[k] B := IsAlgClosed.lift
+  let ηK : Ω →ₐ[kk] B :=
+    { η.toRingHom with
+      commutes' := fun c => by
+        change η (algebraMap kk Ω c) = algebraMap kk B c
+        rw [IsScalarTower.algebraMap_apply kk k Ω, η.commutes]
+        change algebraMap (LaurentSeries kk) B (ι (algebraMap kk k c)) =
+          algebraMap (LaurentSeries kk) B (algebraMap kk (LaurentSeries kk) c)
+        rw [ι.commutes] }
+  have hconst (c : kk) : algebraMap (LaurentSeries kk) B (algebraMap kk (LaurentSeries kk) c) =
+      algebraMap kk B c := rfl
+  have hj : ηK (E.baseChange Ω).j = algebraMap (LaurentSeries kk) B (jqModC kk) := by
+    change η ((E.map (algebraMap k Ω)).j) = _
+    rw [WeierstrassCurve.map_j, η.commutes]
+    change algebraMap (LaurentSeries kk) B (ι E.j) = _
+    rw [hι]
+  obtain ⟨P, ψ, hP, hψ, -, hcoord⟩ := exists_descended_originalField_markedPoint
+    N ℓ kk Ω B hℓN hN hζ x hx hconst ηK (E.baseChange Ω) hj
+  refine ⟨ζ, P, ψ, hζ, hP, ?_, hcoord⟩
+  simpa only [WeierstrassCurve.baseChange, WeierstrassCurve.map_j] using hψ
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

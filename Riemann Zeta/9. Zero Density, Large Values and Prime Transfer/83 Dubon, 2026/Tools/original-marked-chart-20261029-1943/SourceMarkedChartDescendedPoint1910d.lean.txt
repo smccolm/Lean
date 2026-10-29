@@ -1,0 +1,82 @@
+import SourceMarkedChartEqualJTransfer1904c
+import SourceMarkedChartFieldDescent1906b
+import SourceMarkedChartTorsionDescent1907b
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original-field
+marked-point chart. Descend both the actual original-field embedding and
+the constructed exact-order point into the same algebraically closed j
+field. Injectivity transports the two original modular-function coordinates.
+The algebraicity premise is the narrower original degree obligation, proved
+for the actual residue field in SourceMarkedChartResidueDegree. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralSlash
+open SourceEllipticVelu.OddDiscriminant
+variable (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+variable (K Ω B : Type*) [Field K] [IsAlgClosed K] [CharP K ℓ]
+    [Field Ω] [IsAlgClosed Ω] [DecidableEq Ω] [Algebra K Ω]
+    [Field B] [IsAlgClosed B] [DecidableEq B] [Algebra (LaurentSeries K) B]
+    [Algebra K B] [hTower : IsScalarTower K (LaurentSeries K) B]
+local notation "F" => qExpFunctionFieldC K (Gamma1 N)
+private local instance : Algebra K F := (F).toSubalgebra.algebra
+
+include hTower in
+theorem exists_descended_originalField_markedPoint
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N) {ζ : K} (hζ : IsPrimitiveRoot ζ N)
+    (x : F) (hx : (x : LaurentSeries K) = jqModC K)
+    [Algebra.IsAlgebraic (IntermediateField.adjoin K ({x} : Set F)) F]
+    (ι : Ω →ₐ[K] B) (E : WeierstrassCurve Ω) [E.IsElliptic]
+    (hj : ι E.j = algebraMap (LaurentSeries K) B (jqModC K)) :
+    ∃ (P : E.toAffine.Point) (ψ : F →ₐ[K] Ω),
+      addOrderOf P = N ∧ ψ x = E.j ∧
+      (∀ f : F, ι (ψ f) = algebraMap (LaurentSeries K) B (f : LaurentSeries K)) ∧
+      ∀ t : (ZMod N)ˣ, ∃ (a b : Ω) (h : E.toAffine.Nonsingular a b),
+        (t : ZMod N).val • P = Affine.Point.some a b h ∧
+        ψ (w₁ N K ζ t) = E.c₄ * (12 * a + E.b₂) / E.c₆ ∧
+        ψ (w₂ N K ζ t) = (6 * a ^ 2 + E.b₂ * a + E.b₄) / E.c₄ := by
+  let ρ : LaurentSeries K →ₐ[K] B :=
+    @IsScalarTower.toAlgHom K (LaurentSeries K) B _ _ _ _ _ _ hTower
+  let θ : F →ₐ[K] B := ρ.comp (F).val
+  have hθ : θ x = ι E.j := by
+    change algebraMap (LaurentSeries K) B (x : LaurentSeries K) = ι E.j
+    rw [hx, hj]
+  obtain ⟨ψ, hψ, hψx⟩ := exists_descended_coordinate_embedding x θ ι E.j hθ
+  have hψf (f : F) : ι (ψ f) = algebraMap (LaurentSeries K) B (f : LaurentSeries K) :=
+    AlgHom.congr_fun hψ f
+  have hjB : (E.map ι.toRingHom).j = algebraMap (LaurentSeries K) B (jqModC K) := by
+    rw [WeierstrassCurve.map_j]
+    exact hj
+  obtain ⟨PB, hPB, hcoord⟩ := exists_originalField_markedPoint_of_j_eq N ℓ hℓN hN K B hζ
+    (E.map ι.toRingHom) hjB
+  have hNK : (N : K) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff K ℓ N).mp h)
+  have hNΩ : (N : Ω) ≠ 0 := by
+    rw [← map_natCast (algebraMap K Ω)]
+    exact (map_ne_zero (algebraMap K Ω)).mpr hNK
+  obtain ⟨P, hPord, hP⟩ := exists_exactOrder_point_preimage E ι.toRingHom N hNΩ PB hPB
+  refine ⟨P, ψ, hPord, hψx, hψf, fun t => ?_⟩
+  obtain ⟨aB, bB, hB, hPt, hw1, hw2⟩ := hcoord t
+  have he : pointMapHom ι.toRingHom E ((t : ZMod N).val • P) = Affine.Point.some aB bB hB := by
+    rw [map_nsmul, hP, hPt]
+  cases hp : (t : ZMod N).val • P with
+  | zero =>
+      rw [hp] at he
+      change Affine.Point.zero = Affine.Point.some aB bB hB at he
+      cases he
+  | some a b h =>
+      have ha : ι a = aB := by
+        rw [hp] at he
+        exact (Affine.Point.some.inj he).1
+      refine ⟨a, b, h, rfl, ι.injective ?_, ι.injective ?_⟩
+      · change ι (ψ (w₁ N K ζ t)) = ι (E.c₄ * (12 * a + E.b₂) / E.c₆)
+        rw [hψf]
+        rw [← ha] at hw1
+        simpa only [map_div₀, map_mul, map_add, map_ofNat, WeierstrassCurve.map_c₄,
+          WeierstrassCurve.map_c₆, WeierstrassCurve.map_b₂] using hw1
+      · change ι (ψ (w₂ N K ζ t)) = ι ((6 * a ^ 2 + E.b₂ * a + E.b₄) / E.c₄)
+        rw [hψf]
+        rw [← ha] at hw2
+        simpa only [map_div₀, map_mul, map_add, map_pow, map_ofNat, WeierstrassCurve.map_c₄,
+          WeierstrassCurve.map_b₂, WeierstrassCurve.map_b₄] using hw2
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

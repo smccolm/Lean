@@ -1,0 +1,34 @@
+import Mathlib.GroupTheory.Index
+import Mathlib.Data.Set.Card
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart -> reverse stabilizer inclusion. Native orbit-stabilizer and strict
+antitonicity of finite subgroup indices close the comparison once the
+proved sign orbit and original normalized-embedding bound are supplied.
+This avoids reproducing the reference's relative-index arithmetic. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+
+theorem stabilizer_eq_of_transitive_and_card_bound
+    {G X Y : Type*} [Group G] [MulAction G X] [MulAction G Y] [Finite X]
+    (x : X) (y : Y) (hle : MulAction.stabilizer G x ≤ MulAction.stabilizer G y)
+    (htrans : ∀ z : Y, ∃ g : G, g • y = z) (hcard : Nat.card X ≤ Nat.card Y) :
+    MulAction.stabilizer G x = MulAction.stabilizer G y := by
+  letI : Finite (G ⧸ MulAction.stabilizer G x) :=
+    Finite.of_equiv (MulAction.orbit G x) (MulAction.orbitEquivQuotientStabilizer G x)
+  letI : (MulAction.stabilizer G x).FiniteIndex := inferInstance
+  have hx : (MulAction.stabilizer G x).index ≤ Nat.card X := by
+    calc (MulAction.stabilizer G x).index = (MulAction.orbit G x).ncard :=
+           MulAction.index_stabilizer G x
+         _ ≤ (Set.univ : Set X).ncard := Set.ncard_mono (Set.subset_univ _)
+         _ = Nat.card X := Set.ncard_univ
+  have horbit : MulAction.orbit G y = Set.univ :=
+    Set.eq_univ_of_forall fun z => MulAction.mem_orbit_iff.mpr (htrans z)
+  have hy : (MulAction.stabilizer G y).index = Nat.card Y := by
+    rw [MulAction.index_stabilizer, horbit, Set.ncard_univ]
+  have hindex : (MulAction.stabilizer G x).index ≤ (MulAction.stabilizer G y).index :=
+    (hx.trans hcard).trans_eq hy.symm
+  apply le_antisymm hle
+  by_contra hnot
+  exact (not_lt_of_ge hindex) (Subgroup.index_strictAnti (lt_of_le_not_ge hle hnot))
+
+end Dubon2026.SourceFunctionField.MarkedChart

@@ -1,0 +1,101 @@
+import SourceToricIntegralCoefficientPolynomials
+import SourceTateA4Series
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> integral toric coordinates. Explicit integer Fourier coefficient
+families reconstruct the linear and quadratic toric invariants over every
+field with the prescribed primitive root. The quadratic convolution uses
+the literal Tate a4 series. Adapted from the Apache-2.0 Anthropic FLT
+ToricFourier proof, commit 6e837e75355538c7f80bab5b956861e86c4eacc2. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricFourier
+noncomputable section
+open Polynomial
+variable {F : Type*} [Field F] {M : ℕ} [NeZero M] {z : F} (hz : IsPrimitiveRoot z M)
+
+/-- The integer coefficient of the literal Tate a4 series. -/
+def a4Z (n : ℕ) : ℤ := PowerSeries.coeff n tateA4
+
+/-- The coefficients of the quadratic toric invariant x plus six x squared plus two a4. -/
+def fcoef (u : F) (n : ℕ) : F :=
+  xcoef u n + 6 * (∑ p ∈ Finset.HasAntidiagonal.antidiagonal n, xcoef u p.1 * xcoef u p.2) + 2 * (a4Z n : ℤ)
+
+/-- An integer polynomial representing the level-fourth quadratic toric coefficient. -/
+def fT (M : ℕ) (n : ℕ) : ℤ[X] :=
+  C ((M : ℤ) ^ 2) * xT M n + C 6 * (∑ p ∈ Finset.HasAntidiagonal.antidiagonal n, xT M p.1 * xT M p.2) +
+    C (2 * (M : ℤ) ^ 4 * a4Z n)
+
+theorem aeval_fT {a : ZMod M} (ha : a ≠ 0) (n : ℕ) :
+    aeval (ψ hz a) (fT M n) = (M : F) ^ 4 * fcoef (ψ hz a) n := by
+  have h : ∀ p ∈ Finset.HasAntidiagonal.antidiagonal n, aeval (ψ hz a) (xT M p.1 * xT M p.2) =
+      (M : F) ^ 4 * (xcoef (ψ hz a) p.1 * xcoef (ψ hz a) p.2) := by
+    intro p _
+    rw [map_mul, aeval_xT hz ha, aeval_xT hz ha]; ring
+  rw [fT, map_add, map_add, map_mul, map_mul, map_sum, Finset.sum_congr rfl h, ← Finset.mul_sum,
+    aeval_xT hz ha, fcoef]
+  simp only [eq_intCast, map_pow, map_natCast, map_ofNat, map_mul, map_intCast]
+  ring
+
+/-- The explicit integer Fourier coefficients of the weight-two forms B. -/
+def bZ (M : ℕ) (c : ZMod M) (n : ℕ) : ℤ := four M c (wT M n)
+
+/-- The explicit integer Fourier coefficients of the weight-four forms D. -/
+def dZ (M : ℕ) (c : ZMod M) (n : ℕ) : ℤ := four M c (fT M n)
+
+theorem bZ_eq_sum (c : ZMod M) (n : ℕ) :
+    ((bZ M c n : ℤ) : F) = ∑ a ∈ Finset.univ.filter (fun a : ZMod M => a ≠ 0),
+      ψ hz (-(a * c)) * ((M : F) ^ 2 * wcoef (ψ hz a) n) := by
+  rw [bZ, ← sum_filter_aeval hz]
+  refine Finset.sum_congr rfl fun a ha => ?_
+  rw [aeval_wT hz (Finset.mem_filter.mp ha).2]
+
+theorem dZ_eq_sum (c : ZMod M) (n : ℕ) :
+    ((dZ M c n : ℤ) : F) = ∑ a ∈ Finset.univ.filter (fun a : ZMod M => a ≠ 0),
+      ψ hz (-(a * c)) * ((M : F) ^ 4 * fcoef (ψ hz a) n) := by
+  rw [dZ, ← sum_filter_aeval hz]
+  refine Finset.sum_congr rfl fun a ha => ?_
+  rw [aeval_fT hz (Finset.mem_filter.mp ha).2]
+
+theorem sum_ψ_bZ (s : ZMod M) (hs : s ≠ 0) (n : ℕ) :
+    ∑ c : ZMod M, ψ hz (s * c) * ((bZ M c n : ℤ) : F) = (M : F) ^ 3 * wcoef (ψ hz s) n := by
+  simp_rw [bZ_eq_sum hz]
+  rw [fourier_inversion hz (fun a => (M : F) ^ 2 * wcoef (ψ hz a) n) s hs]
+  ring
+
+theorem sum_ψ_dZ (s : ZMod M) (hs : s ≠ 0) (n : ℕ) :
+    ∑ c : ZMod M, ψ hz (s * c) * ((dZ M c n : ℤ) : F) = (M : F) ^ 5 * fcoef (ψ hz s) n := by
+  simp_rw [dZ_eq_sum hz]
+  rw [fourier_inversion hz (fun a => (M : F) ^ 4 * fcoef (ψ hz a) n) s hs]
+  ring
+
+/-- The toric x-coordinate power series defined by its divisor-sum coefficients. -/
+def xS (u : F) : PowerSeries F := PowerSeries.mk (xcoef u)
+
+/-- The normalized weight-two toric invariant power series. -/
+def wS (u : F) : PowerSeries F := PowerSeries.mk (wcoef u)
+
+/-- The quadratic weight-four toric invariant power series. -/
+def fS (u : F) : PowerSeries F := PowerSeries.mk (fcoef u)
+
+theorem wS_eq (u : F) : wS u = 1 + PowerSeries.C (12 : F) * xS u := by
+  ext n
+  simp only [wS, xS, PowerSeries.coeff_mk, map_add, PowerSeries.coeff_one, PowerSeries.coeff_C_mul,
+    wcoef]
+
+theorem fS_eq (u : F) :
+    fS u = xS u + PowerSeries.C (6 : F) * (xS u * xS u) +
+      PowerSeries.C (2 : F) * (tateA4.map (Int.castRingHom F)) := by
+  ext n
+  rw [map_add, map_add, PowerSeries.coeff_C_mul, PowerSeries.coeff_C_mul, PowerSeries.coeff_mul,
+    PowerSeries.coeff_map]
+  simp only [fS, xS, PowerSeries.coeff_mk, fcoef, a4Z, eq_intCast]
+
+theorem wS_eq' (u : F) : wS u = 1 + 12 * xS u := by
+  rw [wS_eq, show PowerSeries.C (12 : F) = (12 : PowerSeries F) from map_ofNat _ 12]
+
+theorem fS_eq' (u : F) :
+    fS u = xS u + 6 * (xS u * xS u) + 2 * (tateA4.map (Int.castRingHom F)) := by
+  rw [fS_eq, show PowerSeries.C (6 : F) = (6 : PowerSeries F) from map_ofNat _ 6,
+    show PowerSeries.C (2 : F) = (2 : PowerSeries F) from map_ofNat _ 2]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricFourier

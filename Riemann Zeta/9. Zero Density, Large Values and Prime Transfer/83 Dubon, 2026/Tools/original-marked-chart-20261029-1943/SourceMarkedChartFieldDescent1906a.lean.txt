@@ -1,0 +1,75 @@
+import Mathlib.FieldTheory.IsAlgClosed.Basic
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+import Mathlib.Algebra.Polynomial.Lifts
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original-field
+marked-point chart. Descend the Laurent embedding into the algebraic
+closure of the actual j field. Algebraicity over that coordinate, rather
+than a field-identification certificate, proves every image lies in the
+embedded algebraically closed field. Native polynomial lifts and splitting
+of polynomials give the required range statement.
+Adapted from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open Polynomial IntermediateField
+
+theorem mem_range_of_polynomial_root {R L : Type*} [Field R] [Field L] [IsAlgClosed R]
+    (i : R →+* L) (q : R[X]) (hq : q ≠ 0) (z : L) (hz : q.eval₂ i z = 0) :
+    z ∈ Set.range i := by
+  classical
+  have hmem : z ∈ (q.map i).roots := (mem_roots_map_of_injective i.injective hq).2 hz
+  rw [(IsAlgClosed.splits q).roots_map i, Multiset.mem_map] at hmem
+  obtain ⟨a, -, rfl⟩ := hmem
+  exact ⟨a, rfl⟩
+
+theorem exists_descended_coordinate_embedding {K F Ω L : Type*}
+    [Field K] [Field F] [Field Ω] [Field L] [IsAlgClosed Ω]
+    [Algebra K F] [Algebra K Ω] [Algebra K L]
+    (x : F) [Algebra.IsAlgebraic (adjoin K ({x} : Set F)) F]
+    (θ : F →ₐ[K] L) (ι : Ω →ₐ[K] L) (c : Ω) (hx : θ x = ι c) :
+    ∃ ψ : F →ₐ[K] Ω, ι.comp ψ = θ ∧ ψ x = c := by
+  let Kx := adjoin K ({x} : Set F)
+  have hrange : ∀ f : F, θ f ∈ ι.range := by
+    intro f
+    have hint : IsIntegral Kx f := Algebra.IsIntegral.isIntegral f
+    let φ : Kx →+* L := θ.toRingHom.comp (algebraMap Kx F)
+    have hroot : ((minpoly Kx f).map φ).eval (θ f) = 0 := by
+      rw [eval_map]
+      change eval₂ (θ.toRingHom.comp (algebraMap Kx F)) (θ.toRingHom f) (minpoly Kx f) = 0
+      rw [← hom_eval₂, ← aeval_def, minpoly.aeval, map_zero]
+    have hcoef : ∀ z : Kx, φ z ∈ Set.range ι := by
+      let T : IntermediateField K F := comap θ ι.fieldRange
+      have hle : Kx ≤ T := by
+        apply adjoin_le_iff.mpr
+        rintro y (rfl : y = x)
+        change θ x ∈ ι.fieldRange
+        exact ⟨c, hx.symm⟩
+      intro z
+      exact AlgHom.mem_fieldRange.mp (hle z.property)
+    have hlift : (minpoly Kx f).map φ ∈ lifts (ι : Ω →+* L) := by
+      rw [lifts_iff_coeff_lifts]
+      intro n
+      rw [coeff_map]
+      exact hcoef _
+    obtain ⟨q, hq⟩ := (mem_lifts _).mp hlift
+    have hq0 : q ≠ 0 := by
+      intro h0
+      rw [h0, map_zero] at hq
+      exact (Polynomial.map_ne_zero (minpoly.ne_zero hint)) hq.symm
+    have hz : q.eval₂ (ι : Ω →+* L) (θ f) = 0 := by
+      rw [← eval_map, hq]
+      exact hroot
+    exact mem_range_of_polynomial_root ι.toRingHom q hq0 (θ f) hz
+  let e : Ω ≃ₐ[K] ι.range := AlgEquiv.ofInjective ι ι.injective
+  let ψ : F →ₐ[K] Ω := e.symm.toAlgHom.comp (θ.codRestrict ι.range hrange)
+  have he : ι.comp ψ = θ := by
+    ext f
+    change ι (e.symm ⟨θ f, hrange f⟩) = θ f
+    exact congrArg Subtype.val (e.apply_symm_apply ⟨θ f, hrange f⟩)
+  refine ⟨ψ, he, ι.injective ?_⟩
+  exact (AlgHom.congr_fun he x).trans hx
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

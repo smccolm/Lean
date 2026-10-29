@@ -1,0 +1,1081 @@
+{
+  "date": "29 October 2026",
+  "modules": [
+    "Dubon2026.SourceMarkedOriginalSeparability",
+    "Dubon2026.SourceMarkedSeparableChartValues",
+    "Dubon2026.SourceMarkedSeparableEmbeddingDescent",
+    "Dubon2026.SourceMarkedRationalPointDescent",
+    "Dubon2026.SourceMarkedOriginalAlgebraicChart",
+    "Dubon2026.SourceMarkedFullTorsionPointLift",
+    "Dubon2026.SourceMarkedChartNormalExhaustion",
+    "Dubon2026.SourceMarkedOriginalFullTorsionChart",
+    "Dubon2026.SourceMarkedChartPlaceOrbits",
+    "Dubon2026.SourceMarkedOriginalOfJChart",
+    "Dubon2026.SourceMarkedOriginalPlaceChart",
+    "Dubon2026.SourceMarkedFullTorsionNonempty",
+    "Dubon2026.SourceMarkedChartFiberSurjection",
+    "Dubon2026.SourceMarkedOriginalFiberChart",
+    "Dubon2026.SourceMarkedSignPermutation",
+    "Dubon2026.SourceMarkedSignFreeOrbits",
+    "Dubon2026.SourceMarkedSignFiberFactor",
+    "Dubon2026.SourceMarkedPeriodicFiberBound",
+    "Dubon2026.SourceMarkedTorsionReductionEquiv",
+    "Dubon2026.SourceMarkedQuadraticFiberBounds",
+    "Dubon2026.SourceMarkedReducedFiberChart",
+    "Dubon2026.SourceMarkedOriginalResidueFiberFive",
+    "Dubon2026.SourceMarkedOriginalTameFiberBounds",
+    "Dubon2026.SourceMarkedFullInertiaLifts",
+    "Dubon2026.SourceMarkedOriginalResidueFiberTwo",
+    "Dubon2026.SourceMarkedOriginalResidueFiberThree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> actual finite elliptic residue fibers.",
+  "discharged": "The original Gamma1 marked-point chart descends to a finite normal field containing full level-N torsion and exhausts all normalized embeddings. Native place lifting and inertia identify its actual finite j fibers, with exact original diamond covariance. Native full-inertia specialization and torsion reduction then construct actual residue-point fiber charts in every positive residue characteristic away from the level, including two and three, for N at least two. For N greater than three and residue characteristic at least five, twice the cardinality of the original j=1728 fiber and three times the cardinality of the original j=0 fiber are each at most the signed Gamma1 index. These bounds have no chart, torsion-count, stabilizer, finite-field or inertia-lift premises.",
+  "boundary": "Wild characteristic-two and characteristic-three numerical fiber/different census, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 9,509-module scope: all thirteen retained regressions, 59,974 exhaustive theorem checks, 27,642 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T18:03:16.748008+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceMarkedOriginalSeparability",
+        "SourceMarkedSeparableChartValues",
+        "SourceMarkedSeparableEmbeddingDescent",
+        "SourceMarkedRationalPointDescent",
+        "SourceMarkedOriginalAlgebraicChart",
+        "SourceMarkedFullTorsionPointLift",
+        "SourceMarkedChartNormalExhaustion",
+        "SourceMarkedOriginalFullTorsionChart"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability.lean",
+          "sha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+          "oleanSha256": "0E24B68D2A325D50F69F6D5A64B0A0C81D929495F96E2A909A6569C96491EE89",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues.lean",
+          "sha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+          "oleanSha256": "35A36110FE90AEDBF4A2FBDD8965D73DFDA0555D5B338D7677C6103D3B225BEA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent.lean",
+          "sha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0",
+          "oleanSha256": "360B7C32A561D1CEC059AB8D867B9BB58793C1D389E5AA823ED8051B07C6ABF5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent.lean",
+          "sha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3",
+          "oleanSha256": "919ECC3C9911A65AEEFDCA417E48DF1D38F762AA0137BD20A461A14950C70FEA",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart.lean",
+          "sha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2",
+          "oleanSha256": "90F11623060B5499F7228269C334B8371147076BF8D7ECFB1909152D2CA22BF3",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift.lean",
+          "sha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+          "oleanSha256": "8F067B229305C9E2670059EDDC6E957560A8EE22BEDB0232FE2D4451F241F2C4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion.lean",
+          "sha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8",
+          "oleanSha256": "57F60AE754E6538730F3F7FE4F780AE221FD5B917C10D8A1D03FB02F606AF099",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart.lean",
+          "sha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B",
+          "oleanSha256": "B33D1BFA861C35B944EF08109231A6A17C230479CEFF0C9DCA9FC46EC2C84A61",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+        "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_isSeparable",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_separable_polynomial_for_coordinate_embedding",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_separable_coordinate_embedding",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_descended_marked_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_algebraic",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_baseChange_preimage_of_full_torsion",
+        "Dubon2026.SourceFunctionField.MarkedChart.natural_marked_chart_surjective_of_normal",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartAudit1.log",
+      "logSha256": "4A3D0AF01FC1FB935E7856BDBCE996101B9087DA2E57262D9B2DD96D271B3287",
+      "auditSha256": "BEF994483EB5F19188E54E2D599FAD67D1BE66521F126448E278D87E6F583CDD",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.log",
+      "ownershipSha256": "555867B3CB9EB0E3D388DACCA8B55ED0CEDDD2196D2489ABED59BF0BF124EDCB",
+      "exhaustiveTheorems": 12,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1.log",
+      "dependencyAuditSha256": "45DC028D8958B505CD48CC063BEB57B144D601B3F0CD6AA50CA9B6515BB20220",
+      "dependencyAuditSourceSha256": "A4B66A450ADABB42CBB00F55688F0695711734E04A46AB9C78BA94AB9D991AC2",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+      ],
+      "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+      "discharged": [
+        "Original-coordinate separability derives from its finite degree and simple Laurent pole.",
+        "Galois covariance fixes every embedding value attached to a rational point.",
+        "Separable fixed-root descent supplies the embedding in the actual torsion field.",
+        "Native full-torsion lifting supplies an exact-order point from the actual N-squared count.",
+        "Normality and generation of the base field by j make all normalized embeddings conjugate and hence prove exhaustion."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Apply the chart to the actual finite Galois torsion-reduction data, prove finite elliptic place-fiber bounds and reverse genus, then continue original association and higher continuation. Level-one chart special cases remain to be handled if the exact consumer needs them. Acceptance16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-1-reuse-review-20261029.json",
+      "reuseReviewSha256": "A7D4F3B2C222D9A30E745A802AA4A1AD68F5DC1A0CE845F111800E11F82A190A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-29T18:26:10.671759+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceMarkedChartPlaceOrbits",
+        "SourceMarkedOriginalOfJChart",
+        "SourceMarkedOriginalPlaceChart",
+        "SourceMarkedFullTorsionNonempty",
+        "SourceMarkedChartFiberSurjection",
+        "SourceMarkedOriginalFiberChart"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits.lean",
+          "sha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+          "oleanSha256": "71356E5075B343CAC21765F8FC0D74A60FF482BE62648CC6726676462A24EEA0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart.lean",
+          "sha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+          "oleanSha256": "A994DF60DCEE66CDF9FB7A4D65AC6A735430054F9D06ADA202DAA57F73E883A5",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart.lean",
+          "sha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA",
+          "oleanSha256": "0C96D92DD7210788AE8991FD6294740B629230636B09D9CB589BC777BCF3DE67",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty.lean",
+          "sha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+          "oleanSha256": "175A6C7C9FB6BD8E5D8068445B47C2BC8155A55F95B65E92D03B7FC42379F32A",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection.lean",
+          "sha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+          "oleanSha256": "F11B9BE65166FD5ECDA1CFC3D880D55F4B5C5792E4AC6B0EFB4E79DDADF1CB71",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart.lean",
+          "sha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105",
+          "oleanSha256": "FAF7B7F5816A5E235B0DDD6716C06D60BB24C996D356DD97D681E5B433B5FBEE",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartAudit1.log",
+      "logSha256": "D19FA8AB904E168A23225956DA954CBB554FAE96B41A27133A79875776D083DA",
+      "auditSha256": "45444B96010E07F34317342227447C3CB7257188454C304745EF5F781A8603EA",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.log",
+      "ownershipSha256": "C6DA76F8B2AD86B92AD3C76782471D8F58F7AF830C66D5538A544A0F821F14F3",
+      "exhaustiveTheorems": 12,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2.log",
+      "dependencyAuditSha256": "C04DE2DBE7DF11F8C4251B2FA8BC7100C57766CCA02580BF610A875D2DD9B6A9",
+      "dependencyAuditSourceSha256": "B8BDA8DAD26B7530D4D424F011754940D07FA6F0DEAB5EF6369439D9A334BFF4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+      ],
+      "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> actual original-field marked-fiber chart.",
+      "discharged": [
+        "ofJ_j, transcendental_X and adjoin_X discharge the generic-j and generated-base-field inputs.",
+        "The actual full-torsion cardinal supplies a point of exact order N.",
+        "Normalized-embedding exhaustion discharges the coverage assumption in the place-lifting consumer.",
+        "Native finite-place inertia conjugacy discharges the place-equality classification.",
+        "Original diamond embedding covariance implies original diamond covariance of actual places."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Connect the native prescribed full-inertia specialization data and derive finite elliptic cardinal bounds, then reverse genus and the remaining original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-2-reuse-review-20261029.json",
+      "reuseReviewSha256": "F50E6CEF0ADF3F2C45FB997890E408BE14F51EE288C54CA9170D6FF48935F7FB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair"
+      ],
+      "recordedUTC": "2026-10-29T18:55:12.248260+00:00",
+      "date": "2026-10-29 America/Vancouver",
+      "modules": [
+        "SourceMarkedSignPermutation",
+        "SourceMarkedSignFreeOrbits",
+        "SourceMarkedSignFiberFactor",
+        "SourceMarkedPeriodicFiberBound",
+        "SourceMarkedTorsionReductionEquiv",
+        "SourceMarkedQuadraticFiberBounds",
+        "SourceMarkedReducedFiberChart",
+        "SourceMarkedOriginalResidueFiberFive",
+        "SourceMarkedOriginalTameFiberBounds",
+        "SourceMarkedFullInertiaLifts",
+        "SourceMarkedOriginalResidueFiberTwo",
+        "SourceMarkedOriginalResidueFiberThree"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation.lean",
+          "sha256": "91D634E3E280C362E81446806DE185D611E2B15406924B0B98F9D91CFFCC1D44",
+          "oleanSha256": "BF6C4D9E6EE53A6AB49D3ECD46080BA18CC03F21AE06838E577AEFED92048FE2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits.lean",
+          "sha256": "B6E3D354A458911FD3954AD13BB8C968D088FB546C1A4A98C745396011BF6C25",
+          "oleanSha256": "C28FBA51CCAC039D82F33F73EC40D966E19ABD6B6C62892C40D0380756133A93",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor.lean",
+          "sha256": "A8CE0C7AEFA6209518B08B9A21B21F2FAF725AEE774E0FCC8CE5A194C5D2F307",
+          "oleanSha256": "8AC9A8847A858A6D2A99CAE543E47E977FA47922EE6DD66F9F0D0F8D47DF3728",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound.lean",
+          "sha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3",
+          "oleanSha256": "6B805D9CA710B2D67064E64FC3D18C1497DF79682DF3F8CFB5D3122398BA0146",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv.lean",
+          "sha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81",
+          "oleanSha256": "E25DD244CDABEF602F0E7E15368E63C87C57BB6F3404BD89681035D6188803D0",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds.lean",
+          "sha256": "C723F707838083EC8E954D33CBC7E868B7C410BFF93E6D5A5AD6ACEC6B2707AE",
+          "oleanSha256": "725631CB4D0BBCBBF1F62E385065003A99314F6E011905D3ED27105242F28FC1",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart.lean",
+          "sha256": "62FD2F03E1B366E1FB8EC7BCF90CD6BB7F1678BC634BD192DE03DA71887D9279",
+          "oleanSha256": "31BAE84DFAEC3E579A5DDEA713D12D93AD3CC51F89FAF6ACAE55036EEFDA9DA4",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive.lean",
+          "sha256": "5DBECBAE7436933AB9C7D00DC4C2D1A273A2B1B9A825A50B17BF3F05387D452B",
+          "oleanSha256": "136319B023FE3071CBAB4C765900E87323C35E9281EDFBCF9637EFEF02FA27C6",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds.lean",
+          "sha256": "7BEF72E85A051EEF061D1DAF3421E69B2432BF6419089EF1FA50BE0039FA6062",
+          "oleanSha256": "111FB4B6161DB6B36FA10AE8575AC0434D0118CC50051835F57A7D0EC6377E6F",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts.lean",
+          "sha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4",
+          "oleanSha256": "77EF547D9DED2F8B81E3FBD3C48279A7B74A98CD982159DACAA73580D34F7499",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo.lean",
+          "sha256": "1A8D384D150FDAFAB8802947CF9DE4DD20AC3EA07E5EDBA6D195707857E0621D",
+          "oleanSha256": "F7193764975992264099406835AFF816E2C326C0FA0419C231BD07E5C7F0CEF2",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo-1974.exit"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree.lean",
+          "sha256": "64F568D3BF58AC118238644A33AB84B49F67C12499D328A709347A01E646C5B6",
+          "oleanSha256": "33826E7115A7415A1919FABBAB40144397EDB30A10300C08563687E9E4CA7C42",
+          "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree-1974.log",
+          "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree-1974.exit"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_square",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_cube",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_square_neg",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_cubic",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_marked_quartic_orbits",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_marked_cubic_orbits",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.exists_signClass_fiber_factor",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.card_le_periodic_orbits_of_surjective",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_reduction_equiv",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_fiber_le_signClasses",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_fiber_le_signClasses",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_reduced_marked_fiber_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.full_inertia_image_signed_point_lifts",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_square",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_cube",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_square_neg",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_ne_self_of_cubic",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_marked_quartic_orbits",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_marked_cubic_orbits",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.exists_signClass_fiber_factor",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.card_le_periodic_orbits_of_surjective",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_reduction_equiv",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.two_mul_card_fiber_le_signClasses",
+        "Dubon2026.SourceFunctionField.MarkedTorsion.three_mul_card_fiber_le_signClasses",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_reduced_marked_fiber_chart",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.full_inertia_image_signed_point_lifts",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersAudit1.log",
+      "logSha256": "A61AE3A5264A041C5E57D5D842F6140FE5160B1D6D3E1D40249779147C1551CD",
+      "auditSha256": "8BC0D7DF862BCF17AE9173F68C50B2E7DF5FED1D086B6944A591D59DD9B446A1",
+      "exit": 0,
+      "diagnostics": 0,
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.log",
+      "ownershipSha256": "56BAEAA967FF66272F7DDFAF8DF7800FCE4634334D4B9AFE8759DE03E9E79269",
+      "exhaustiveTheorems": 39,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersDependencyAudit1.log",
+      "dependencyAuditSha256": "FA6909801453EF33CA6618CA6E005E835A0018A49FB07A6A153FAA2754651F3C",
+      "dependencyAuditSourceSha256": "192AD517E6CFAE8DDCDADA793CF937ED5C2B082908B9C37CF21A773199615D9B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two",
+        "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three"
+      ],
+      "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> actual original Gamma1 elliptic residue fibers.",
+      "discharged": [
+        "Native specialization constructs all finite Galois, full torsion and positive-order inputs of the original chart.",
+        "The actual N-squared torsion count and native torsion theorem make reduction bijective on exact-order points.",
+        "Full inertia image up to sign yields invariance under actual residue-curve automorphisms.",
+        "For N greater than three, quartic and cubic identities exclude fixed sign classes.",
+        "Native finite orbit counts and the actual signed Gamma1 index count derive the two tame numerical bounds."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Handle small levels without losing the all-level contract, derive the wild differential contributions, and assemble reverse genus; then continue original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-exceptional-fibers-1-reuse-review-20261029.json",
+      "reuseReviewSha256": "0861098FF173015C8587512EB8F5FE634B9BA579B38491D8CC60331E0CEE65DB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-marked-algebraic-chart-1-reuse-review-20261029.json",
+    "Tools/source-marked-fiber-chart-2-reuse-review-20261029.json",
+    "Tools/source-marked-exceptional-fibers-1-reuse-review-20261029.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/marked-residue-fibers-20261029-1983/marked-residue-fibers-promotion-route-1983.json",
+    "sha256": "CE3F5498A508F4C797FBA622234546BA2E7D339CC09868FFC27AA444AF9019BD"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/marked-residue-fibers-20261029-1983/archive-manifest.json",
+    "sha256": "7CEBE5EF02B55EB09B3E38B4D243D1A94518386478E4A29279E8FBE635C286DD",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt9509": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1Production9509.log",
+        "sha256": "45DC028D8958B505CD48CC063BEB57B144D601B3F0CD6AA50CA9B6515BB20220",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_full_torsion"
+        ],
+        "sourceSha256": "717C8C4B633E0E5F9C7202C189A93AC1FAC8043C5FAF5B6098187B13A95890DC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2Production9509.log",
+        "sha256": "C04DE2DBE7DF11F8C4251B2FA8BC7100C57766CCA02580BF610A875D2DD9B6A9",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+        ],
+        "sourceSha256": "034EEC7A28906F1194A0ED7AE0E41A3D2E543D0D0980857C2732E76B78BA5331"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersDependencyAudit1Production9509.log",
+        "sha256": "FA6909801453EF33CA6618CA6E005E835A0018A49FB07A6A153FAA2754651F3C",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.MarkedChart.original_two_mul_card_j_1728_fiber_le_of_five_le",
+          "Dubon2026.SourceFunctionField.MarkedChart.original_three_mul_card_j_zero_fiber_le_of_five_le",
+          "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_two",
+          "Dubon2026.SourceFunctionField.MarkedChart.exists_original_residue_marked_fiber_of_char_three"
+        ],
+        "sourceSha256": "C518525D0E1512FF2E7521974B8305583D6AFB3BB19705CE3842CBFEA4F2E4D2"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedResidueFibersProductionAudit9509.log",
+    "sha256": "6926120D1A95FC50511F6540B93C4713D7881CF2B2B95BE874418BE8356B9C63",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-marked-residue-fibers-production-build-9509.log",
+    "aggregateSha256": "0D3E0BE2A68AB0E3557CEB8C2A9B126107BAFDD9FC766C3A8772A71999F5341A",
+    "productionModules": 9509,
+    "incrementModules": 26,
+    "axiomChecks": 34,
+    "exhaustiveIncrementTheorems": 63,
+    "linterScopes": 26,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 63,
+    "productionReuse": "Only canonical and versioned scratch imports are qualified to their registered production modules. All audited statements, proof bodies and comments remain identical. Original function fields and actual modular forms are retained; no assumption or completion criterion is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 63,
+      "scratchDistinct": 63,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalAlgebraicChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalAlgebraicChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFiberChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFiberChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFullTorsionChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFullTorsionChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalOfJChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalOfJChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalPlaceChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalPlaceChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberFive._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberFive._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberThree._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberThree._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberTwo._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberTwo._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalTameFiberBounds._proof_1": "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalTameFiberBounds._proof_2": "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2"
+      },
+      "productionFocused": 63,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceMarkedOriginalSeparability",
+            "SourceMarkedSeparableChartValues",
+            "SourceMarkedSeparableEmbeddingDescent",
+            "SourceMarkedRationalPointDescent",
+            "SourceMarkedOriginalAlgebraicChart",
+            "SourceMarkedFullTorsionPointLift",
+            "SourceMarkedChartNormalExhaustion",
+            "SourceMarkedOriginalFullTorsionChart"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.log",
+            "sha256": "555867B3CB9EB0E3D388DACCA8B55ED0CEDDD2196D2489ABED59BF0BF124EDCB",
+            "sourceSha256": "9997E5BEEC9B2D595C5CDAA3FF48EFC57F92A0768B77974CBC6FDE4DB269CB7F"
+          }
+        },
+        {
+          "modules": [
+            "SourceMarkedChartPlaceOrbits",
+            "SourceMarkedOriginalOfJChart",
+            "SourceMarkedOriginalPlaceChart",
+            "SourceMarkedFullTorsionNonempty",
+            "SourceMarkedChartFiberSurjection",
+            "SourceMarkedOriginalFiberChart"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.log",
+            "sha256": "C6DA76F8B2AD86B92AD3C76782471D8F58F7AF830C66D5538A544A0F821F14F3",
+            "sourceSha256": "A1A0AB18AC8851894CA8F2BFE3109C2C5CB3802EE41BF6E3D16445BC31BFCB6F"
+          }
+        },
+        {
+          "modules": [
+            "SourceMarkedSignPermutation",
+            "SourceMarkedSignFreeOrbits",
+            "SourceMarkedSignFiberFactor",
+            "SourceMarkedPeriodicFiberBound",
+            "SourceMarkedTorsionReductionEquiv",
+            "SourceMarkedQuadraticFiberBounds",
+            "SourceMarkedReducedFiberChart",
+            "SourceMarkedOriginalResidueFiberFive",
+            "SourceMarkedOriginalTameFiberBounds",
+            "SourceMarkedFullInertiaLifts",
+            "SourceMarkedOriginalResidueFiberTwo",
+            "SourceMarkedOriginalResidueFiberThree"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.log",
+            "sha256": "56BAEAA967FF66272F7DDFAF8DF7800FCE4634334D4B9AFE8759DE03E9E79269",
+            "sourceSha256": "3E113EFDFC036CD3ECDF2861C0B14A398F5D926C9EB35D41363D654111F7486A"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedResidueFibersOwnership9509.log",
+        "sha256": "E01508C04ED6F319E2A7A3063BA1887E20A8D3EA20DDBC8CF0B269738881172F",
+        "sourceSha256": "72392654BE4C28F5B7A6F92CA79EB2DF32F6C79B2BA05EAB84389E2A41C12063"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-105634-059.log",
+        "sha256": "554AECA43270BEA00C1F84FA704BDDB478FE8A0FCB6E5B03181A1EB49E16EEAC"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceMarkedOriginalSeparability",
+            "scratchSha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+            "productionSha256": "7A9DFFAEFC3DA7B05AFFC95ADC71E83F68F2CAE7F8EB5F7F05A37EF0FE8F0AA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSeparableChartValues",
+            "scratchSha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+            "productionSha256": "DA0B5E687219F0E20F21C0B192064BFA6A375D06CB050DA3A59000393DEEB8C7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSeparableEmbeddingDescent",
+            "scratchSha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0",
+            "productionSha256": "D79F09B667047C29E8CD2CF22867C5147D95C8294E3ACEFD30D5C7C20A42535C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedRationalPointDescent",
+            "scratchSha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3",
+            "productionSha256": "8E32CC70A09F3237CA7C3034219EC333C474EFAD443C9750160AC8966361DB0D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalAlgebraicChart",
+            "scratchSha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2",
+            "productionSha256": "D69612E73A4461325344C8542CE1FE7079E4FB7F680ABD52DF36A4D79F6467FF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullTorsionPointLift",
+            "scratchSha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+            "productionSha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartNormalExhaustion",
+            "scratchSha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8",
+            "productionSha256": "3AB0DF77793623E5E107AD8BB258EC64FD4749371A349108ADFB1DFCD680581A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalFullTorsionChart",
+            "scratchSha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B",
+            "productionSha256": "CF291DB24E91DFFA7B568F3D23A18C055E510ED4DE43C7EA1F22CFF09BE474D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartPlaceOrbits",
+            "scratchSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+            "productionSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalOfJChart",
+            "scratchSha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+            "productionSha256": "B3126558123FE453FBD02B2305E00455D41DCDBC743B02D2BE3DE02415EF9701",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalPlaceChart",
+            "scratchSha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA",
+            "productionSha256": "EDB2BE296AD843CC7645EDF9E90573ABA7832F1DCA4DFF451696EF845C4CC024",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullTorsionNonempty",
+            "scratchSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+            "productionSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartFiberSurjection",
+            "scratchSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+            "productionSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalFiberChart",
+            "scratchSha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105",
+            "productionSha256": "39D5859175109644AB30731B767225DD1C5D72D9FCAE0AD015F8A8F87ED3082F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignPermutation",
+            "scratchSha256": "91D634E3E280C362E81446806DE185D611E2B15406924B0B98F9D91CFFCC1D44",
+            "productionSha256": "AD9878C3B3078EB61817DD6500DE0D17BC69DE3FE80EBEB10076478D76BA3B2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignFreeOrbits",
+            "scratchSha256": "B6E3D354A458911FD3954AD13BB8C968D088FB546C1A4A98C745396011BF6C25",
+            "productionSha256": "22D0454032CF7FA2688CCE860BB5CFABD9153766AF6B5509FD7DC0832E83262E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignFiberFactor",
+            "scratchSha256": "A8CE0C7AEFA6209518B08B9A21B21F2FAF725AEE774E0FCC8CE5A194C5D2F307",
+            "productionSha256": "33FB88A1E6815493ABD20CB95E6F3C4E5062A44A77F8F2F891E37CC1711EC525",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedPeriodicFiberBound",
+            "scratchSha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3",
+            "productionSha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedTorsionReductionEquiv",
+            "scratchSha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81",
+            "productionSha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedQuadraticFiberBounds",
+            "scratchSha256": "C723F707838083EC8E954D33CBC7E868B7C410BFF93E6D5A5AD6ACEC6B2707AE",
+            "productionSha256": "BF8127388F9A435AFDA107E206033ADE47B2C65ECB39344DC0301CF588A0EC69",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedReducedFiberChart",
+            "scratchSha256": "62FD2F03E1B366E1FB8EC7BCF90CD6BB7F1678BC634BD192DE03DA71887D9279",
+            "productionSha256": "FFE7998FFD641EBE02811F0E1DAF4F1B996786B85836740D8D54515FE8842535",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberFive",
+            "scratchSha256": "5DBECBAE7436933AB9C7D00DC4C2D1A273A2B1B9A825A50B17BF3F05387D452B",
+            "productionSha256": "DADEA564EC777FA6AAB3C5BA95615A998E02C01316669F9E06FA9B74D3BC4143",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalTameFiberBounds",
+            "scratchSha256": "7BEF72E85A051EEF061D1DAF3421E69B2432BF6419089EF1FA50BE0039FA6062",
+            "productionSha256": "63C35BB219B6A4177161257CB52B81A77118E4C09C2DFA648A9D48923E870B3D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullInertiaLifts",
+            "scratchSha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4",
+            "productionSha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberTwo",
+            "scratchSha256": "1A8D384D150FDAFAB8802947CF9DE4DD20AC3EA07E5EDBA6D195707857E0621D",
+            "productionSha256": "BE1799E390E715EA898A90E5C82DB0183F0AEB0081DD333B2E4AE80BB3BE29C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberThree",
+            "scratchSha256": "64F568D3BF58AC118238644A33AB84B49F67C12499D328A709347A01E646C5B6",
+            "productionSha256": "F2D311A0835D694229F33F543B70BA65F96286E601CAC94B18015ED617B3C00D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 63 distinct names from 63 exhaustive scratch checks are retained: 63 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Wild characteristic-two and characteristic-three numerical fiber/different census, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged."
+  },
+  "receipt9509": {
+    "recordedUTC": "2026-10-29T20:32:02.594444+00:00",
+    "log": "logs/dubon-build-20261029-122748-842.log",
+    "sha256": "3DE8AAE706F9408919F5C5EC39FC49A7619FBA618F2174F671EA7119DB276F85",
+    "bytes": 15762591,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 9509,
+    "projectTheorems": 59974,
+    "registeredConsumers": 27642,
+    "registeredConstructions": 3051,
+    "declarations": 36691,
+    "generated": 39725,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261029_122256.log",
+    "foundationSha256": "1A60248223342EAC3919BC637B6D6F01D388CA76E02BA86D2C2B7BB20DA06AC6",
+    "countReconciliation": {
+      "previousTheorems": 59911,
+      "focusedTheorems": 63,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 63,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedResidueFibersGlobalOwnership9509.log",
+      "globalOwnershipSha256": "A6C1986815AA5342A02A05912FB66336949F644B050827A3F5059492CEE5D289",
+      "globalOwnershipSourceSha256": "51D38DE0C05AD269CA661B5DA9D15BA8AA2BCFC2534638E4DDEFF1118B58D807",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedResidueFibersOwnership9509.log",
+      "ownershipSha256": "E01508C04ED6F319E2A7A3063BA1887E20A8D3EA20DDBC8CF0B269738881172F"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 63,
+      "scratchDistinct": 63,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalAlgebraicChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalAlgebraicChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalAlgebraicChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFiberChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFiberChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalFiberChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFullTorsionChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalFullTorsionChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalFullTorsionChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalOfJChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalOfJChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalOfJChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalPlaceChart._proof_1": "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalPlaceChart._proof_2": "_private.Dubon2026.SourceMarkedOriginalPlaceChart.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberFive._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberFive._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberFive.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberThree._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberThree._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberThree.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberTwo._proof_1": "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalResidueFiberTwo._proof_2": "_private.Dubon2026.SourceMarkedOriginalResidueFiberTwo.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2",
+        "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalTameFiberBounds._proof_1": "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_1",
+        "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1_sourceMarkedOriginalTameFiberBounds._proof_2": "_private.Dubon2026.SourceMarkedOriginalTameFiberBounds.0.Dubon2026.SourceFunctionField.MarkedChart.instAlgebraResidueFieldSubtypeAlgebraicClosureRatMemValuationSubringLaurentSeriesIntermediateFieldQExpFunctionFieldCGamma1._proof_2"
+      },
+      "productionFocused": 63,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceMarkedOriginalSeparability",
+            "SourceMarkedSeparableChartValues",
+            "SourceMarkedSeparableEmbeddingDescent",
+            "SourceMarkedRationalPointDescent",
+            "SourceMarkedOriginalAlgebraicChart",
+            "SourceMarkedFullTorsionPointLift",
+            "SourceMarkedChartNormalExhaustion",
+            "SourceMarkedOriginalFullTorsionChart"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.log",
+            "sha256": "555867B3CB9EB0E3D388DACCA8B55ED0CEDDD2196D2489ABED59BF0BF124EDCB",
+            "sourceSha256": "9997E5BEEC9B2D595C5CDAA3FF48EFC57F92A0768B77974CBC6FDE4DB269CB7F"
+          }
+        },
+        {
+          "modules": [
+            "SourceMarkedChartPlaceOrbits",
+            "SourceMarkedOriginalOfJChart",
+            "SourceMarkedOriginalPlaceChart",
+            "SourceMarkedFullTorsionNonempty",
+            "SourceMarkedChartFiberSurjection",
+            "SourceMarkedOriginalFiberChart"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.log",
+            "sha256": "C6DA76F8B2AD86B92AD3C76782471D8F58F7AF830C66D5538A544A0F821F14F3",
+            "sourceSha256": "A1A0AB18AC8851894CA8F2BFE3109C2C5CB3802EE41BF6E3D16445BC31BFCB6F"
+          }
+        },
+        {
+          "modules": [
+            "SourceMarkedSignPermutation",
+            "SourceMarkedSignFreeOrbits",
+            "SourceMarkedSignFiberFactor",
+            "SourceMarkedPeriodicFiberBound",
+            "SourceMarkedTorsionReductionEquiv",
+            "SourceMarkedQuadraticFiberBounds",
+            "SourceMarkedReducedFiberChart",
+            "SourceMarkedOriginalResidueFiberFive",
+            "SourceMarkedOriginalTameFiberBounds",
+            "SourceMarkedFullInertiaLifts",
+            "SourceMarkedOriginalResidueFiberTwo",
+            "SourceMarkedOriginalResidueFiberThree"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.log",
+            "sha256": "56BAEAA967FF66272F7DDFAF8DF7800FCE4634334D4B9AFE8759DE03E9E79269",
+            "sourceSha256": "3E113EFDFC036CD3ECDF2861C0B14A398F5D926C9EB35D41363D654111F7486A"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedResidueFibersOwnership9509.log",
+        "sha256": "E01508C04ED6F319E2A7A3063BA1887E20A8D3EA20DDBC8CF0B269738881172F",
+        "sourceSha256": "72392654BE4C28F5B7A6F92CA79EB2DF32F6C79B2BA05EAB84389E2A41C12063"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261029-105634-059.log",
+        "sha256": "554AECA43270BEA00C1F84FA704BDDB478FE8A0FCB6E5B03181A1EB49E16EEAC"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceMarkedOriginalSeparability",
+            "scratchSha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+            "productionSha256": "7A9DFFAEFC3DA7B05AFFC95ADC71E83F68F2CAE7F8EB5F7F05A37EF0FE8F0AA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSeparableChartValues",
+            "scratchSha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+            "productionSha256": "DA0B5E687219F0E20F21C0B192064BFA6A375D06CB050DA3A59000393DEEB8C7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSeparableEmbeddingDescent",
+            "scratchSha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0",
+            "productionSha256": "D79F09B667047C29E8CD2CF22867C5147D95C8294E3ACEFD30D5C7C20A42535C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedRationalPointDescent",
+            "scratchSha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3",
+            "productionSha256": "8E32CC70A09F3237CA7C3034219EC333C474EFAD443C9750160AC8966361DB0D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalAlgebraicChart",
+            "scratchSha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2",
+            "productionSha256": "D69612E73A4461325344C8542CE1FE7079E4FB7F680ABD52DF36A4D79F6467FF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullTorsionPointLift",
+            "scratchSha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+            "productionSha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartNormalExhaustion",
+            "scratchSha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8",
+            "productionSha256": "3AB0DF77793623E5E107AD8BB258EC64FD4749371A349108ADFB1DFCD680581A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalFullTorsionChart",
+            "scratchSha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B",
+            "productionSha256": "CF291DB24E91DFFA7B568F3D23A18C055E510ED4DE43C7EA1F22CFF09BE474D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartPlaceOrbits",
+            "scratchSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+            "productionSha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalOfJChart",
+            "scratchSha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+            "productionSha256": "B3126558123FE453FBD02B2305E00455D41DCDBC743B02D2BE3DE02415EF9701",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalPlaceChart",
+            "scratchSha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA",
+            "productionSha256": "EDB2BE296AD843CC7645EDF9E90573ABA7832F1DCA4DFF451696EF845C4CC024",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullTorsionNonempty",
+            "scratchSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+            "productionSha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedChartFiberSurjection",
+            "scratchSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+            "productionSha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalFiberChart",
+            "scratchSha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105",
+            "productionSha256": "39D5859175109644AB30731B767225DD1C5D72D9FCAE0AD015F8A8F87ED3082F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignPermutation",
+            "scratchSha256": "91D634E3E280C362E81446806DE185D611E2B15406924B0B98F9D91CFFCC1D44",
+            "productionSha256": "AD9878C3B3078EB61817DD6500DE0D17BC69DE3FE80EBEB10076478D76BA3B2F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignFreeOrbits",
+            "scratchSha256": "B6E3D354A458911FD3954AD13BB8C968D088FB546C1A4A98C745396011BF6C25",
+            "productionSha256": "22D0454032CF7FA2688CCE860BB5CFABD9153766AF6B5509FD7DC0832E83262E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedSignFiberFactor",
+            "scratchSha256": "A8CE0C7AEFA6209518B08B9A21B21F2FAF725AEE774E0FCC8CE5A194C5D2F307",
+            "productionSha256": "33FB88A1E6815493ABD20CB95E6F3C4E5062A44A77F8F2F891E37CC1711EC525",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedPeriodicFiberBound",
+            "scratchSha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3",
+            "productionSha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedTorsionReductionEquiv",
+            "scratchSha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81",
+            "productionSha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedQuadraticFiberBounds",
+            "scratchSha256": "C723F707838083EC8E954D33CBC7E868B7C410BFF93E6D5A5AD6ACEC6B2707AE",
+            "productionSha256": "BF8127388F9A435AFDA107E206033ADE47B2C65ECB39344DC0301CF588A0EC69",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedReducedFiberChart",
+            "scratchSha256": "62FD2F03E1B366E1FB8EC7BCF90CD6BB7F1678BC634BD192DE03DA71887D9279",
+            "productionSha256": "FFE7998FFD641EBE02811F0E1DAF4F1B996786B85836740D8D54515FE8842535",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberFive",
+            "scratchSha256": "5DBECBAE7436933AB9C7D00DC4C2D1A273A2B1B9A825A50B17BF3F05387D452B",
+            "productionSha256": "DADEA564EC777FA6AAB3C5BA95615A998E02C01316669F9E06FA9B74D3BC4143",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalTameFiberBounds",
+            "scratchSha256": "7BEF72E85A051EEF061D1DAF3421E69B2432BF6419089EF1FA50BE0039FA6062",
+            "productionSha256": "63C35BB219B6A4177161257CB52B81A77118E4C09C2DFA648A9D48923E870B3D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedFullInertiaLifts",
+            "scratchSha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4",
+            "productionSha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberTwo",
+            "scratchSha256": "1A8D384D150FDAFAB8802947CF9DE4DD20AC3EA07E5EDBA6D195707857E0621D",
+            "productionSha256": "BE1799E390E715EA898A90E5C82DB0183F0AEB0081DD333B2E4AE80BB3BE29C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMarkedOriginalResidueFiberThree",
+            "scratchSha256": "64F568D3BF58AC118238644A33AB84B49F67C12499D328A709347A01E646C5B6",
+            "productionSha256": "F2D311A0835D694229F33F543B70BA65F96286E601CAC94B18015ED617B3C00D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 63 distinct names from 63 exhaustive scratch checks are retained: 63 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Wild characteristic-two and characteristic-three numerical fiber/different census, the remaining small levels and reverse genus remain open in production. Original genus preservation, parabolic transfer, exceptional-prime removal, two-dimensional characteristic-zero realization, original all-weight association, remaining local/image/regularity inputs, automorphy and literal higher continuation remain required. Acceptance stays 16/20; DUB-17--20 OPEN; every original source and verification criterion is unchanged."
+  }
+}

@@ -1,0 +1,66 @@
+import SourceToricCuspExpansionHom
+import SourceToricAnalyticDivisionRoot
+import Dubon2026.SourceGammaOneFourierLinear
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point -> formal division-polynomial identity.
+Construct the literal analytic Tate coefficients in the cusp-function ring,
+then transport the proved pointwise division identity with the existing
+polynomial and Weierstrass coefficient-map theorems. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve UpperHalfPlane ModularForm SourceFricke
+open scoped MatrixGroups
+
+/-- The actual E4 function viewed in the width-one analytic cusp ring. -/
+def cuspE4 : cuspAnalyticRing :=
+  ⟨E₄, ModularFormClass.analyticAt_cuspFunction_zero E₄ one_pos one_mem_strictPeriods_SL⟩
+
+/-- The actual E6 function viewed in the width-one analytic cusp ring. -/
+def cuspE6 : cuspAnalyticRing :=
+  ⟨E₆, ModularFormClass.analyticAt_cuspFunction_zero E₆ one_pos one_mem_strictPeriods_SL⟩
+
+/-- The normalized Tate coefficients as actual analytic functions. -/
+def cuspTateCurve : WeierstrassCurve cuspAnalyticRing :=
+  ⟨1, 0, 0, cuspConstant (1 / 48) * (1 - cuspE4),
+    cuspConstant (1 / 1728) * (2 * cuspE6 + 1 - 3 * cuspE4)⟩
+
+/-- The literal division-form abscissa shifted by one twelfth. -/
+def cuspToricX (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) : cuspAnalyticRing :=
+  ⟨GammaOne.divisionForm N c hc,
+    ModularFormClass.analyticAt_cuspFunction_zero (GammaOne.divisionForm N c hc)
+      one_pos (gammaOne_one_mem_strictPeriods N)⟩ - cuspConstant (1 / 12)
+
+theorem cuspTateCurve_evaluate (τ : ℍ) :
+    cuspTateCurve.map (cuspEvaluation τ) = tateCurve τ := by
+  ext
+  · exact (tateCurve_a₁ τ).symm
+  · exact (tateCurve_a₂ τ).symm
+  · exact (tateCurve_a₃ τ).symm
+  · rw [tateCurve_a₄]
+    change (1 / 48 : ℂ) * (1 - E₄ τ) = _
+    ring
+  · rw [tateCurve_a₆]
+    change (1 / 1728 : ℂ) * (2 * E₆ τ + 1 - 3 * E₄ τ) = _
+    ring
+
+theorem cuspToricX_evaluate (τ : ℍ) (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    cuspEvaluation τ (cuspToricX N c hc) = GammaOne.divisionForm N c hc τ - 1 / 12 := rfl
+
+theorem cuspTateCurve_eval_ΨSq (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    (cuspTateCurve.ΨSq N).eval (cuspToricX N c hc) = 0 := by
+  apply Subtype.ext
+  funext τ
+  have h := tateCurve_divisionForm_eval_ΨSq τ N c hc
+  rw [← cuspTateCurve_evaluate τ, ← cuspToricX_evaluate τ N c hc,
+    WeierstrassCurve.map_ΨSq, Polynomial.eval_map_apply] at h
+  exact h
+
+theorem cuspExpansionTateCurve_eval_ΨSq (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    ((cuspTateCurve.map cuspExpansionHom).ΨSq N).eval
+      (cuspExpansionHom (cuspToricX N c hc)) = 0 := by
+  rw [WeierstrassCurve.map_ΨSq, Polynomial.eval_map_apply,
+    cuspTateCurve_eval_ΨSq, map_zero]
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

@@ -1,0 +1,51 @@
+import SourceToricAnalyticTorsion1885a
+import Dubon2026.SourceEllipticTorsionDivisionRoot
+import Dubon2026.SourceFrickeTorsionLattice
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point -> formal division-polynomial identity.
+The native complex period point has the literal normalized division-form
+abscissa. Its torsion law therefore proves the actual division-polynomial
+identity, without assuming any formal Tate point or uniformization. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve UpperHalfPlane SourceEllipticPeriod SourceEllipticVariableChange
+open scoped PeriodPair
+
+theorem toricPeriodHom_fraction_eq_some (τ : ℍ) (N : ℕ) [NeZero N]
+    (c : ZMod N) (hc : c ≠ 0) :
+    ∃ (y : ℂ) (h : (tateCurve τ).toAffine.Nonsingular
+        (GammaOne.divisionForm N c hc τ - 1 / 12) y),
+      toricPeriodHom τ ((c.val : ℂ) / N) =
+        WeierstrassCurve.Affine.Point.some _ y h := by
+  have hz : (c.val : ℂ) / N ∉ (PeriodLattice.ofTau τ).lattice := by
+    have h := SourceFricke.frickeTorsionPt_notMem τ (![0, c] : Fin 2 → ZMod N)
+      (by intro he; exact hc (congrFun he 1))
+    simpa only [SourceFricke.frickeTorsionPt, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, ZMod.val_zero,
+      Nat.cast_zero, zero_mul, zero_add] using h
+  have hx : vcXInv tateChange (℘[PeriodLattice.ofTau τ] ((c.val : ℂ) / N)) =
+      GammaOne.divisionForm N c hc τ - 1 / 12 := by
+    rw [GammaOne.divisionForm_apply]
+    change lambda⁻¹ ^ 2 * (℘[PeriodLattice.ofTau τ] ((c.val : ℂ) / N) - lambda ^ 2 / 12) =
+      (lambda ^ 2)⁻¹ * ℘[PeriodLattice.ofTau τ] ((c.val : ℂ) / N) - 1 / 12
+    field_simp [lambda_ne_zero]
+  have he := periodModelHom_apply (PeriodLattice.ofTau τ) tateChange ((c.val : ℂ) / N)
+  rw [periodPoint_of_notMem _ hz] at he
+  change toricPeriodHom τ ((c.val : ℂ) / N) = .some _ _ _ at he
+  rw [← hx]
+  exact ⟨_, _, he⟩
+
+theorem tateCurve_divisionForm_eval_ΨSq (τ : ℍ) (N : ℕ) [NeZero N]
+    (c : ZMod N) (hc : c ≠ 0) :
+    ((tateCurve τ).ΨSq N).eval (GammaOne.divisionForm N c hc τ - 1 / 12) = 0 := by
+  classical
+  obtain ⟨y, h, he⟩ := toricPeriodHom_fraction_eq_some τ N c hc
+  have hn : N • toricPeriodHom τ ((c.val : ℂ) / N) = 0 := by
+    simpa only [Int.cast_natCast] using
+      (toricPeriodHom_nsmul_eq_zero_iff τ N (c.val : ℤ) N).mpr (dvd_mul_right _ _)
+  rw [he] at hn
+  exact (SourceEllipticDivisionField.nsmul_eq_zero_iff_division_eval _ h N).mp hn
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

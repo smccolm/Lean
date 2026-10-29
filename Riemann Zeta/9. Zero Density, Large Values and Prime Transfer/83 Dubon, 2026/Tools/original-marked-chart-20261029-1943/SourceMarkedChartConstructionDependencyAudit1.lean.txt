@@ -1,0 +1,40 @@
+import SourceTateOriginalJCoordinate
+import SourceMarkedChartCoordinateEmbedding
+import SourceMarkedChartVariableInvariants
+import SourceMarkedChartEqualJTransfer
+import SourceMarkedChartInvariantSeparation
+import SourceMarkedChartFieldDescent
+import SourceMarkedChartTorsionDescent
+import SourceMarkedChartEmbeddingBound
+import SourceMarkedChartResidueDegree
+import SourceMarkedChartDescendedPoint
+import SourceMarkedChartOriginalConstruction
+import SourceMarkedChartStabilizerInclusion
+import SourceMarkedChartOriginalStabilizer
+import Mathlib.Tactic
+
+open Lean
+
+private def runMarkedChartConstructionDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion, `Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le]
+  let localModules : Array Name := #[`SourceTateOriginalJCoordinate, `SourceMarkedChartCoordinateEmbedding, `SourceMarkedChartVariableInvariants, `SourceMarkedChartEqualJTransfer, `SourceMarkedChartInvariantSeparation, `SourceMarkedChartFieldDescent, `SourceMarkedChartTorsionDescent, `SourceMarkedChartEmbeddingBound, `SourceMarkedChartResidueDegree, `SourceMarkedChartDescendedPoint, `SourceMarkedChartOriginalConstruction, `SourceMarkedChartStabilizerInclusion, `SourceMarkedChartOriginalStabilizer, `SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms, `SourceTateIntegralCoefficients, `SourceTateIntegralCurve, `SourceTateEisensteinInvariants, `SourceGammaOneToricOriginalRatios, `SourceGammaOneToricOriginalCoordinates, `SourceGammaOneToricOriginalCoordinateValues, `SourceIntegralDiamondScalarRatioAction, `SourceGammaOneToricRatioDiamond, `SourceGammaOneToricCoordinateDiamond, `SourceGammaOneOriginalToricCoordinates, `SourceToricAnalyticCurve, `SourceToricAnalyticTorsion, `SourceToricAnalyticDivisionRoot, `SourceToricCuspExpansionHom, `SourceToricCuspDivisionIdentity, `SourceTateCoefficientNormalization, `SourceToricComplexSeriesDivision, `SourceToricCoefficientLocalization, `SourceToricLocalizedSeries, `SourceToricResidueDivisionIdentity, `SourceToricAnalyticMultiplication, `SourceToricResidueMultiplicationIdentity, `SourceToricFieldDivisionIdentities, `SourceToricExactOrderPoint, `SourceToricMarkedPointCoordinates]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tatePowerSeries, `Dubon2026.SourceFunctionField.ToricAnalytic.discriminant_tateLaurent, `Dubon2026.SourceFunctionField.ToricAnalytic.j_tateLaurent, `Dubon2026.SourceFunctionField.MarkedChart.exists_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.c4_ne_zero_of_transcendental_j, `Dubon2026.SourceFunctionField.MarkedChart.c6_ne_zero_of_transcendental_j, `Dubon2026.SourceFunctionField.MarkedChart.variableChange_first_invariant, `Dubon2026.SourceFunctionField.MarkedChart.variableChange_second_invariant, `Dubon2026.SourceFunctionField.MarkedChart.exists_originalField_markedPoint_of_j_eq, `Dubon2026.SourceFunctionField.MarkedChart.abscissa_eq_of_invariant_pair, `Dubon2026.SourceFunctionField.MarkedChart.mem_range_of_polynomial_root, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_coordinate_embedding, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_preimage, `Dubon2026.SourceFunctionField.MarkedChart.normalized_embeddings_finite_and_card_le, `Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finrank_eq_index, `Dubon2026.SourceFunctionField.MarkedChart.original_coordinate_finite, `Dubon2026.SourceFunctionField.MarkedChart.original_normalized_embeddings_finite_and_card_le, `Dubon2026.SourceFunctionField.MarkedChart.exists_descended_originalField_markedPoint, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_construction, `Dubon2026.SourceFunctionField.MarkedChart.point_fixed_up_to_sign_of_embedding_fixed, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_inclusion, `Dubon2026.SourceFunctionField.ToricAnalytic.exists_originalField_markedToricCoordinates, `Dubon2026.SourceFunctionField.IntegralDiamond.residue_original_coordinate_degree_eq_signed_index, `Dubon2026.SourceFunctionField.valuation_residue_isAlgClosed, `Dubon2026.SourceFunctionField.IntegralSlash.jqModC_eq_discriminant_normalized, `Dubon2026.SourceCurve.rationalCoordinateEmbedding, `Dubon2026.SourceCurve.rationalCoordinateEmbedding_X, `RatFunc.algEquivOfTranscendental, `Dubon2026.SourceEllipticVariableChange.variableChangeAddEquiv, `Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom, `Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom_injective, `Dubon2026.SourceEllipticReduction.torsion_mem_specialization_range, `Dubon2026.SourceEllipticTorsion.actual_torsion_cardinality, `Dubon2026.SourceEllipticStabilizer.c6_ne_zero_of_j_ne_1728, `WeierstrassCurve.exists_variableChange_of_j_eq, `WeierstrassCurve.Affine.Point.X_eq_iff, `card_algHom_le_finrank, `IntermediateField.adjoin_algHom_ext, `IsAlgClosed.lift, `HasEnoughRootsOfUnity.exists_primitiveRoot]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE MARKED CHART CONSTRUCTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual original-field point construction, one stabilizer inclusion, and normalized embedding bound. Native equal-j transfer, torsion descent, coordinate-field embedding, and residue degree discharge the construction premises. The opposite stabilizer inclusion, orbit cardinality, finite elliptic fibers, and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runMarkedChartConstructionDependencyAudit

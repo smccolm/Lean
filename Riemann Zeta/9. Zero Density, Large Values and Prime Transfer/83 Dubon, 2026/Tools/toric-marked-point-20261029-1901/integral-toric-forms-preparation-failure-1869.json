@@ -1,0 +1,7 @@
+{
+  "stage": "Python parsing before execution",
+  "error": "PowerShell Windows paths in generated runner were in a non-raw Python string.",
+  "filesGenerated": false,
+  "productionMutation": false,
+  "successor": "prepare_integral_toric_forms_audit_1869b.py"
+}

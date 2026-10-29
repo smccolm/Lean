@@ -1,0 +1,61 @@
+{
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> original all-weight association -> Gamma1 genus preservation -> reverse genus -> finite elliptic residue fibers -> exact-order toric point -> transfer of the actual Tate division-polynomial identity to residue characteristic.",
+  "discharged": "The native periodModelHom and exact lattice kernel now prove complex exact order N; native qExpansion_mul and polynomial coefficient maps prove the literal complex Tate-series division-polynomial identity, with zero-diagnostic focused builds.",
+  "shorterRoute": "Reuse SourcePrescribedPrimitiveRootReduction to obtain the existing algebraic-integer reduction carrying the standard complex primitive root to the chosen residue root. Localize the actual algebraic-integer ring only at N, and use the already proved integer xT coefficient polynomials to avoid denominators 1-zeta. Inject the localization into complex numbers, descend the proved identity by power-series map injectivity, and specialize it through the reduction homomorphism. This replaces a new universal cyclotomic/localization proof and general nonarchimedean Tate uniformization. The native Phi/PsiSq coprimality excludes all smaller torsion orders after the multiplication identities are specialized. Choose the ordinate in an algebraically closed extension of the original Laurent field. The final chart needs coordinates up to sign and already works over an algebraically closed generic torsion field; the proof therefore does not require a new Laurent-valued ordinate series or general nonarchimedean uniformization. Exact original-field coordinates are preserved by the natural injective Laurent embedding.",
+  "boundary": "Scratch-audited scope only; promotion and assembled verification pending. Exact-order point is constructed over an algebraically closed extension of the actual Laurent field; no Laurent-valued ordinate or completed finite-fiber chart is claimed.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrescribedPrimitiveRootReduction.lean",
+      "sha256": "9B94F87AECC2250353213992F23CB5913ACB18D8911619897A5E09DC12339E0B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralReductionExtension.lean",
+      "sha256": "C5B990EA49F90209565261ACFFAC735B9CB4A4E926E2ED8455175EEE5ACC927E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticComplexUniformization.lean",
+      "sha256": "0F18085652D2CF2842BF9EE250E3C430E5F20473407628637A2D2355254C6DA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionDivisionRoot.lean",
+      "sha256": "AC03C8C90EA7123D25EFF4617F3BF6E5A728FFD66E32969A5E369F5972D23F7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegralCoefficientPolynomials.lean",
+      "sha256": "AD5F1F389BA64BC5CC20DDAD9FB0ADDDC2593E20FFBA2F94A81FEAC42D56A79E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Localization\\Away\\Basic.lean",
+      "sha256": "0890C81BF204939AE07E4B825E787C15CB3AD1D8706703D03D4BF03C3D5B1C2F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\AlgebraicGeometry\\EllipticCurve\\DivisionPolynomial\\Basic.lean",
+      "sha256": "CE562BEC0FF58394C7E7E082645A7ABD685AB53EDE970371F695BDB16850E4E4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticNumeratorCoprime.lean",
+      "sha256": "1AE6B53BE38ECC51970CB9CB7E9FA629A5B431D9956414C1D76D373D66B567A4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticExceptionalDivision.lean",
+      "sha256": "2D82BDD00832CD348D37F0B5BA2DD82C03565592435A738B15C788509C7022BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticVeluTwoSurjective.lean",
+      "sha256": "2AD762CA1737CCEFAD13A7F8381A526734ED30C16C7E2AED5D0240B72B7A96FA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStandardTorsion.lean",
+      "sha256": "408DF39839B06960933F8E26616C8AC842581D3588C775D2C5E00C1238401247"
+    }
+  ],
+  "recordedUTC": "2026-10-29T15:33:36.686702+00:00",
+  "assumptionsToDischarge": [
+    "Exact complex torsion and its normalized abscissae follow from the existing period-model homomorphism and lattice kernel.",
+    "The literal Tate-series division and multiplication identities follow from the proved complex identities through native q expansion and polynomial maps.",
+    "The same identities hold in every residue characteristic away from N, including two and three, by the existing prescribed-root reduction and localization only at N.",
+    "An actual point of exact order N in an algebraically closed Laurent-field extension has all prescribed unit-multiple abscissae, by native ordinate existence and Phi/PsiSq coprimality.",
+    "The two functions already constructed in the original Gamma1 field equal the two actual marked-point invariants after the natural Laurent-field embedding."
+  ],
+  "remaining": "The original-field/full-torsion chart identification, stabilizer comparison, finite elliptic fiber bounds and reverse genus remain required. Acceptance16/20;DUB17--20 OPEN."
+}

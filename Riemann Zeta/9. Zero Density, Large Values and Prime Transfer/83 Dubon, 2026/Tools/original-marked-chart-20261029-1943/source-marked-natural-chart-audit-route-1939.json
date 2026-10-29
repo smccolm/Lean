@@ -1,0 +1,62 @@
+{
+  "recordedUTC": "2026-10-29T17:34:23.224445+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> original-field marked-point chart and its stabilizers.",
+  "shorterRoute": "Native normal-field extension conjugates normalized original-field embeddings. The already proved diamond coordinate formulas supply every unit generator move up to sign. The native all-level cyclic-quotient bijection, equivariance, and original modular-polynomial irreducibility supply cyclic moves. Combining them proves the required transitive sign orbit without importing or expanding the references full Tate transvection and finite-matrix monodromy developments. Native torsion structure and integral SL2 reduction identify the actual sign-class count with the signed Gamma1 index; native strict antitonicity of subgroup indices then proves equality of the actual point and embedding stabilizers. The stronger unsigned orbit and exact diamond transport remain open, not weakened or silently discharged.",
+  "assumptionsToDischarge": [
+    "The number of actual exact-order elliptic points up to sign is the signed Gamma1 index, with a torsion basis derived from the existing torsion theorem.",
+    "The original residue diamond action fixes the j coordinate and realizes all residue-unit labels by native integral SL2 lifting.",
+    "Every normalized original-field embedding is conjugate by a base-field Galois automorphism, using the native normal-extension theorem.",
+    "The constructed exact-order point is transported by diamond lifts according to the original coordinate action, up to sign.",
+    "The actual all-level cyclic-quotient correspondence and irreducible modular polynomial produce cyclic-generator conjugacy.",
+    "The actual constructed point has a Galois orbit containing every exact-order point up to sign, with no orbit or generator-move certificate left in the original-field consumer.",
+    "The actual original-field embedding stabilizer equals the actual point stabilizer up to sign; both finite-degree and point-count premises are discharged."
+  ],
+  "remaining": "The generic-field chart output is exact. Descent to arbitrary fields with full level-N torsion, finite elliptic fibers, reverse genus, association and higher continuation remain open. The stronger external unsigned transport helper is unnecessary for this exact chart output and is deferred. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Four focused modules compile; exhaustive audit, promotion and assembled verification pending. Exact generic-field Galois and diamond chart covariance, sign invariance and separation are proved.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCyclicPairOrder.lean",
+      "sha256": "DB0A86F8F14F7DF142740431976AC3F03EDF725AFAD6080B6723E74DEDA2E3F7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionStructure.lean",
+      "sha256": "CF03D612293EDDD3D455A52F9C3DFACACC7389F0E93A3AC0F8CC7FA3560DAE97"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralGenericIrreducibility.lean",
+      "sha256": "653C251C55D2E4C99A14E8D25A4E40C1C5AB304DAFAB1EC62023B8B7D63091EC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticAllLevelCyclicRootBijection.lean",
+      "sha256": "C0DF583B11ED07F557D25EB8C12F06051CBF1DB09BC3B4688C303CB65167B90B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticAllLevelCyclicEquivariance.lean",
+      "sha256": "5290C3B7872D2776741095D0F9AD71347260F0351D0A3188275FF4A3014C95CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFixedCurvePointMap.lean",
+      "sha256": "A52DEF60E390B63196DEBBD48899C1FF75A511CA7B168E4B6339AA00DDE6DC82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralDiamondScalarBaseFixed.lean",
+      "sha256": "BEF286F881851F0FA72BE96222C1A55C57120FFDF2D16193F1ECA25D0C06719B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Normal\\Basic.lean",
+      "sha256": "E9A988F2EB305666287D7037F522984B33822678E7D665737171CCAA74AAB9F1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\Index.lean",
+      "sha256": "7BBC19576301CC71FDEE53914526ECE929D48CBB04C6AEF7F344711DDC375E6F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\OrderOfElement.lean",
+      "sha256": "E1DAA65D815EA3752BDE0C3DD56E3EE803C940F596DB873F69B10A983E6EEA41"
+    }
+  ]
+}

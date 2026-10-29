@@ -1,0 +1,1684 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Toric Marked Point Assessment 2026-10-29.md",
+      "path": "Tools/toric-marked-point-20261029-1901/Dubon Toric Marked Point Assessment 2026-10-29.md.txt",
+      "sha256": "4CB1F2893922CBD61D43DA223592BDC539DECE43FCCA11B86ED9E74B252BAAE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionCoefficientFibers-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionCoefficientFibers-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionCoefficientFibers.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionCoefficientFibers.lean.txt",
+      "sha256": "EB879A17E8E9A7E95458FD4F2076D06EEF82C7F532304A1DCD675FACC6A22878"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionDivisorCoefficients-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionDivisorCoefficients-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionDivisorCoefficients.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionDivisorCoefficients.lean.txt",
+      "sha256": "7AABD553AAED707A4F87E1ED23D998791786678090607C3425BF4BFB397BC80E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFourier-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFourier-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFourier.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionFourier.lean.txt",
+      "sha256": "33CAAC25904144BA31801EC961DC600F17B4344E25C9963FA37895C1ADA4C2B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms.lean.txt",
+      "sha256": "C8E0E7A56276748ABC33EE35BCDB217DFE53C6AA231CA50BA6D21B14BF684E4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms1871a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms1871a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.lean.txt",
+      "sha256": "A734B58E2C98CB245C0BCDAB0822960DD9B571397510195CDA13E9AAE983E3F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionToricForms1871a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneDivisionToricForms1871a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricForms-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricForms-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricForms.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricForms.lean.txt",
+      "sha256": "A168E10F8F7F016B869AAB441013BBA84F7FB93738ED7B41F950AAA1C05AB11C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricReconstruction-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricReconstruction-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricReconstruction.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricReconstruction.lean.txt",
+      "sha256": "8CA25FF830402265CCDBD446EB435AB42915F6C5961721F663A70C4AA33B3D98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricSlash-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricSlash-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricSlash.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricSlash.lean.txt",
+      "sha256": "2DD7E86CA7455DAEC2A285030B68BEF5D6CC64F209B941C91C63ABE8294C74A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightFour-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightFour-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightFour.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightFour.lean.txt",
+      "sha256": "9E8E4B0ED4115AD71298C1E90E7DF8D8AD1F6DBB2BEE2564A1F4C52A868DEE57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightTwo-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightTwo-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralToricWeightTwo.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneIntegralToricWeightTwo.lean.txt",
+      "sha256": "963B4EF980C49E32FF60B850F377FA5D7CD75224C93EAEB41AFC38C8B47699C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedDivisionForm-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedDivisionForm-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedDivisionForm.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneNormalizedDivisionForm.lean.txt",
+      "sha256": "F41C3873CB083BFE01B865EDDD62952499DF2CF517A9567251BE0E926461B66D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates.lean.txt",
+      "sha256": "1E2060631954850907EDE4C3787F6BA18811CA9FC64CCE7636737B2790D3E73C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates1882a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates1882a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.lean.txt",
+      "sha256": "31E8BC9DFF94676256ED07C8FC7F593B67DFD4911586C4CB13AF09BED0E6102A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalToricCoordinates1882a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneOriginalToricCoordinates1882a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond.lean.txt",
+      "sha256": "9FDED8D2B10D08B3A59603BB32BC61CB49A1BD11592CB94392DAC756B734AE23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.lean.txt",
+      "sha256": "3B5E345F68B0FE3F743C044FA15BED420AC5F6D84FC81621538F049F2DDBA208"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881a.log",
+      "sha256": "D944419245B037D4B1C95BACA87C42E8F2CFF1DD9C43988936CBC356FCCC38B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.lean.txt",
+      "sha256": "75A359CAB8D78F9AAAE9A3A34F2F7570EA7326DFB6CF0525BB0497CBE21DA953"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricCoordinateDiamond1881b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricCoordinateDiamond1881b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues.lean.txt",
+      "sha256": "38084A956D04C347D2034E92F6AD38DD07ADC687637CDFB6589D1558BB0E802B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.lean.txt",
+      "sha256": "7E630E0A9154BFEB28E04300023A614DAB83EA8A0BF452D86A3106A23D98DCF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878a.log",
+      "sha256": "891A0F41F32B51F8EE8F0837D2EBCE6799688D653A8176FAEED251C628E69A32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.lean.txt",
+      "sha256": "FF7515CDD9D6838646F4CD92046358493681129F6C871B388FC7861C584FCCFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinateValues1878b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinateValues1878b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates.lean.txt",
+      "sha256": "8AB112C65F61C0A708A307A1B5A679408C5091ACC104BBCB2701D514B72F2F54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates1877a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates1877a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.lean.txt",
+      "sha256": "62CA0AB7BB83F3A779201B5DCF8AAFD915B364A591229D20685C3DE77A079997"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalCoordinates1877a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalCoordinates1877a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios.lean.txt",
+      "sha256": "EF3099A8C1D928850872709B0FF9BEA9A0516D1BFADF77D8B390E1BA463EE274"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios1876a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios1876a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.lean.txt",
+      "sha256": "CAAF07083E728B512BDB9610692C877EBD62D32AD0E2952A827363AD5D2496B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricOriginalRatios1876a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricOriginalRatios1876a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond.lean.txt",
+      "sha256": "FF0202475B99EF1B4960861CD1417FAFE18877597544552DD3CE5FF8F0C61C84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond1880a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond1880a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.lean.txt",
+      "sha256": "89B9FB9654E95DF87ACA1A85A70F722EC7F09078478EE27DCEBE3BC7DAF0BE10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneToricRatioDiamond1880a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceGammaOneToricRatioDiamond1880a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction.lean.txt",
+      "sha256": "E705B18F4AF6688CC4DFD110FC19F6E948408A7AB840A8092E07226FC81C498D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction1879a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction1879a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.lean.txt",
+      "sha256": "1A8370D84117CB36C25B54F840450A74C3035503E35E0BA98BBB02835B1CECBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralDiamondScalarRatioAction1879a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralDiamondScalarRatioAction1879a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit1.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit1.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.lean.txt",
+      "sha256": "4AADEF7B7CF8FD2CB5044DEB74F5994AF7355A1D8AD5203382ED1416D7CD68BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit1.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit1.log",
+      "sha256": "9590B5D25544EE2C20D5E0DA667CA1304D58DEBE8E20A09043E41D9685F45320"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit2.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit2.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.lean.txt",
+      "sha256": "11E1B5D0D250FA3ACF46EDC2EE558D4EA4FBB29C2027BEA2777346A98679910A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsAudit2.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsAudit2.log",
+      "sha256": "341F410A3104461FAD6E542FE33583E35EEDA15DACD75795017539E74159369E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit1.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit1.lean.txt",
+      "sha256": "5A087DF8378B67DC1AA0E124D473D068CC72FE852B2C3C9145381A39BE21B7B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.lean.txt",
+      "sha256": "76E97FCE2BC09015BFF0AFE12E50C5647243BBA15BF206BCF52403DD6BD7BA07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsDependencyAudit2.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsDependencyAudit2.log",
+      "sha256": "C7B4DC377788F5DA099545D9A440553162E2AA5A9DF6F3B57121A644341544FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsScratchOwnership1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsScratchOwnership1872.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.lean.txt",
+      "sha256": "153D7EBD9C16126609FF9C2E8593A7B22D104BC123DA4004E260AA247875D94A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralToricFormsScratchOwnership1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceIntegralToricFormsScratchOwnership1872.log",
+      "sha256": "D02DFA7DB3B245CBF55E5AEDF2CA60F67293A06EB22D50CA36AF4B260FC8E90F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit1.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit1.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.lean.txt",
+      "sha256": "A902510B4530304604BE547B24897DF8EAE4CB00FE49CB98DEF898CEEC347947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit1.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit1.log",
+      "sha256": "65BB427A5B9A0AD233DFEF84FEE76EFCD20B14271B43A4A16DD389869A2FEFAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit2.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit2.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.lean.txt",
+      "sha256": "386C9FC3FD2100820E62BC52C0330E2F6C0FA1E8A66F7472E1D413D460C7C126"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesAudit2.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesAudit2.log",
+      "sha256": "62B1183B7898B04C7A5692AD4577EF17BB2B289BDF240FF6A317A53AA5F4C40C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit1.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit1.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.lean.txt",
+      "sha256": "CED8C7B6DADB1D8395A81BA94201F27C2A44415820D3C2A4864A69384BA10AF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit1.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit1.log",
+      "sha256": "F54216598E2C7591552F69AA2F02C1C1BE1195877E7B97F908876BA38D942230"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.lean.txt",
+      "sha256": "D774DB540C5A783529DE53E3DEC56AAC4D0C5DD662BC0CC6CAF179E96C52C695"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesDependencyAudit2.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesDependencyAudit2.log",
+      "sha256": "29F696CBA7E1E1185AA7939296B77E9EC8A260265CB9827B32D281DE88C4A4A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesScratchOwnership1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesScratchOwnership1883.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.lean.txt",
+      "sha256": "862B9EE846BB44B946721AEB7B4B517E28376D0AEBDC4EC29B197B8BBC28F6C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalToricCoordinatesScratchOwnership1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceOriginalToricCoordinatesScratchOwnership1883.log",
+      "sha256": "4E5AF47AED57D2B843A03AF520E6DD2BE93EBA2A8914E3DF5C8E7E96C0AF1C74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateA4Series-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateA4Series-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateA4Series.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateA4Series.lean.txt",
+      "sha256": "E66BC9C383E200829A0D0D8EEF6CFE10A716A796B9E6162FFDB7FB244EA97B60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization.lean.txt",
+      "sha256": "79C09C8A71EADE4939A072B1F0C9A9B562B9804945E5370D6CFAC4DC96E6C78D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization1889a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization1889a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.lean.txt",
+      "sha256": "79C09C8A71EADE4939A072B1F0C9A9B562B9804945E5370D6CFAC4DC96E6C78D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateCoefficientNormalization1889a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateCoefficientNormalization1889a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants.lean.txt",
+      "sha256": "1C2B144E77C33CDEE7C17B58AC2767B1E467FE6D1FD2D3E3835D18C26B784DC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.lean.txt",
+      "sha256": "4B9FA9E84585C21685D74E1D615510ACE81DD15F015715D2FF2049396F412B36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875a.log",
+      "sha256": "50BE9A45A8593FCDF402B559F61DBAE9B0880B46BBE9DA9CF6D5130D555CF4EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.lean.txt",
+      "sha256": "E4D1F3008EE7AF1F66BB81563A6F4ADDBDAFF85304CECF98EC5D5EFBAC224452"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateEisensteinInvariants1875b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateEisensteinInvariants1875b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients.lean.txt",
+      "sha256": "5438C447345D64BC364CB7C844D0BF2101A245363261F7EF5143470D210935A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients1873a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients1873a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.lean.txt",
+      "sha256": "5438C447345D64BC364CB7C844D0BF2101A245363261F7EF5143470D210935A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCoefficients1873a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCoefficients1873a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve-1883.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve-1883.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve-1883.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve-1883.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve.lean.txt",
+      "sha256": "8E8296A37BEBF3B1B561CFCD44C087D149F58C9C8B013EDE36087DEC5999072D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve1874a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve1874a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.lean.txt",
+      "sha256": "76CC543C051DD9E07BAA33948EA26CFAC6123F0CA89A5CD8BC3C5BA0585ECCA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTateIntegralCurve1874a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceTateIntegralCurve1874a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve.lean.txt",
+      "sha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.lean.txt",
+      "sha256": "EA58E36EC6F793C0C126AA74014524C0149E43F7D62CCEDC55877E0B7327CEB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884a.log",
+      "sha256": "33638E78161C43A7C1CB9030EC2C01AF5A24C2BCBAE081450DDA7A7903A710CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884b.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.lean.txt",
+      "sha256": "2886E521E8973F9F4DD0CF3FD903C37D74899551B98E07AA4CC3FF68BA255756"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884b.log",
+      "sha256": "5612CD4C2C06B413E81BA03CF2A79A16F754D85F1C611F4BA15266C890D11FE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884c.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884c.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.lean.txt",
+      "sha256": "E003E1EF3DC3055891B7CAB6C0D1444BE24669C5D53D5AAEB96BFF79B7BEBB4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticCurve1884c.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticCurve1884c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot.lean.txt",
+      "sha256": "75DCAC1AA91977E7DF6AC828B649AD3AEBD3AE30A24C4146F33E4231D9B4FFB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.lean.txt",
+      "sha256": "48A4EA5FFF5BED648CCA80664C973A959B3F7569E285CD0623DF2B31A3169D6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886a.log",
+      "sha256": "112953095E9DEB3D90A5E2C98A15F9C4D9F4C4DCF8B8A992E70668ED7A6707C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.lean.txt",
+      "sha256": "35A9FF91FF16B0E7AAEAFACFBD9FA4006ACD0B9DD54CE2FA2423C3B8B7E5BA05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticDivisionRoot1886b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticDivisionRoot1886b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication.lean.txt",
+      "sha256": "EF7D120950BE29BDDDB3B8880E0459DF173D156A51C1E319A6DEBAA2AB4714DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication1894a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication1894a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.lean.txt",
+      "sha256": "276184F9E05882FF94990D2C1302C8DE9C63896CC14A56BF37C50CD701E9C5C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticMultiplication1894a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticMultiplication1894a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion.lean.txt",
+      "sha256": "E470FD8822219E31733214D50B72A2BFB5D9B4A7B457DABC185A7EE5AADB996E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion1885a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion1885a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.lean.txt",
+      "sha256": "8683AAAFA444794C206545B4C7D59EF43639EA3E854929DC2DAB18FE57D288CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricAnalyticTorsion1885a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricAnalyticTorsion1885a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization.lean.txt",
+      "sha256": "7950B6CF8339164ACE5769E55165EEAD76785EDBE6D4A1B1CDC92FF1828A59E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization1891a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization1891a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.lean.txt",
+      "sha256": "EACB0E085B752251095EE19E40EE8EDABEE527A91C81874F0CB9742A8AE12DB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCoefficientLocalization1891a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCoefficientLocalization1891a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision.lean.txt",
+      "sha256": "007A716AC6CE06D09671404E966E9424525E22684475953A95799E253F9B3454"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.lean.txt",
+      "sha256": "7A18C7460BEB590233644F4B10693189C47C0B5876049F8E1D7516BDF61E25AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890a.log",
+      "sha256": "2EDE469A53AEDF88AA6E791E8B7C2675D75B150EAF085B6B297956B14CF49591"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.lean.txt",
+      "sha256": "F80E6FA84427BBA6C957E0E51E380EA264F7F94CF8D631E89E91E00A8F5E40E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricComplexSeriesDivision1890b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricComplexSeriesDivision1890b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity.lean.txt",
+      "sha256": "DE93A7C5294EA839B15B6376DAB3E10087A539831A249E9C358B0C3161BC12A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.lean.txt",
+      "sha256": "5EEBEE23B759CBB0A9C185553472BC0CF2031BE5EAB4007B5617B828260B46CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888a.log",
+      "sha256": "49B771B19F17ADDE298DBF676CD2EF12AAA4D8649183365C9D2C38807985DE5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.lean.txt",
+      "sha256": "34B91A634711079AC38812DDD8F8D15955AF4A9C504692F08CEA1CB5703FFC45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspDivisionIdentity1888b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspDivisionIdentity1888b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom.lean.txt",
+      "sha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.lean.txt",
+      "sha256": "AB2D2C576BCAD62B2CBD3A3FFDCE5DDF5F88378BC1BFDE0492C5530AE4DA0E90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887a.log",
+      "sha256": "6B807451E73B6D971D326C981D463F6059B616E5B22FB1BE4247055E8CEADC59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.lean.txt",
+      "sha256": "5C3223BC432AE312C06428C3EF71266C3DD436FA53CB42EBFB2FE361AEB28006"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricCuspExpansionHom1887b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricCuspExpansionHom1887b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint.lean.txt",
+      "sha256": "9E23059DB8CE6370350E1F79CADDAC4E5CE827436667441E5DFAD7382C2DB243"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.lean.txt",
+      "sha256": "10817A50F33CBD084C20BA7F4B24371925B28D9633AA34E15A952B7C47319690"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897a.log",
+      "sha256": "5B821FA7125CDD972EF57C0D820984F7381B581A787096F972AB65D454A4C25F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897b.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.lean.txt",
+      "sha256": "9C24F9C4B2E8DECF952D19803B152CAB158C25E620FB05EEE529B4299283AF7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897b.log",
+      "sha256": "E2258B49F73EC8D3FF91DD3F03ED9158F4022247CB9553EE342F93CCA6526BAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897c.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897c.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.lean.txt",
+      "sha256": "1563BFE8B4ECC9F6290D00439B3A2CC85CE9F7EA8FD476BC702FD077734AB3E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricExactOrderPoint1897c.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricExactOrderPoint1897c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities.lean.txt",
+      "sha256": "778336BD30F569641E3286AC944EC34567E78A18E294162FABF5665A66699A29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.lean.txt",
+      "sha256": "8446C47ADD95358A3011160A770B343C0B9A00772B8F86F29958D448780933AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896a.log",
+      "sha256": "CEC69D3C149100EEEC3F3438E24026E0EDCE4AED12CBDE0BA9B6D46EBDA61CC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896b.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.lean.txt",
+      "sha256": "84C5E5583681E0E36B48A56B80DFCA2DFF654E5C7756E556D33BBF34A5C47C23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFieldDivisionIdentities1896b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFieldDivisionIdentities1896b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierCharacters-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierCharacters-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricFourierCharacters.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricFourierCharacters.lean.txt",
+      "sha256": "15B24F2B0FB8E21E3842F41E305B6B025F3651B21D37BE41419F7CA0B77EF76B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerCoefficientFamilies-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerCoefficientFamilies-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerCoefficientFamilies.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerCoefficientFamilies.lean.txt",
+      "sha256": "6DA00CBB78929F52227518188B7BC60BF0222CAA0E7F0F92589488165E87467E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerFourierTransform-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerFourierTransform-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegerFourierTransform.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegerFourierTransform.lean.txt",
+      "sha256": "1223FA5B023117C9148CAE5E6A8ED0433434093E38DC9E433D605CC6E4663B2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegralCoefficientPolynomials-1872.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials-1872.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegralCoefficientPolynomials-1872.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials-1872.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricIntegralCoefficientPolynomials.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricIntegralCoefficientPolynomials.lean.txt",
+      "sha256": "AD5F1F389BA64BC5CC20DDAD9FB0ADDDC2593E20FFBA2F94A81FEAC42D56A79E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries.lean.txt",
+      "sha256": "60CD80CAFF2528B630AE7B211653142D762E504370521DC6D9DCC76C013FC9AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries1892a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries1892a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.lean.txt",
+      "sha256": "3E5F587D157E2AEBD054A1C07741AD43AE450DF102B4BB090A09E669B12433A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricLocalizedSeries1892a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricLocalizedSeries1892a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointAudit1.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointAudit1.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.lean.txt",
+      "sha256": "191AC04F2BADE45F13596F7C8333357A63D80CECFAF6B2615796C69DEE0B7302"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointAudit1.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointAudit1.log",
+      "sha256": "DA4EAADC6745795ED6CCDAE326C8078848A0F83AC0D991E29534F48AB6694E8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates.lean.txt",
+      "sha256": "C429E23C01991CB5F04E75CB56B985D4799CB142A83CEF7D807E1EBD9A57E421"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898a.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.lean.txt",
+      "sha256": "A3DF62B967800724EA588EE2DAB5C9F274371E40AF24CCAC57F5863B464EF1E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898a.log",
+      "sha256": "B66FBF6E3DB7BEB8548F283DC4355255C6A17C0051B8EF8954480AE0D955945A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898b.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898b.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.lean.txt",
+      "sha256": "70FC5331C887AEE77A610BD2327C9FC0666B0D5B0DF16759520B99DFCB5A6D70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898b.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898b.log",
+      "sha256": "08E1251C42AA1A54D19E9B799EC764E5720D1A04B611981F3B76182EC3E817EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898c.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898c.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.lean.txt",
+      "sha256": "A8F3D90450E67413700D04B54FDEAC691B1ECA82BD9CF99347A14C30B25E9930"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointCoordinates1898c.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointCoordinates1898c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.lean.txt",
+      "sha256": "C00ED8EB5B4B9CCFBED07AED21F10EB3E9C0AE49B045257B44D0003210FB1030"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointDependencyAudit1.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointDependencyAudit1.log",
+      "sha256": "E94280C3F0E839AE57D3413B2C54849B408410B43FDC68B4477B02233A15D35D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointScratchOwnership1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointScratchOwnership1899.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.lean.txt",
+      "sha256": "B3716947BA3E70542404A48CDDA52BF256F5E4E230224F550878FB0658A0B391"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricMarkedPointScratchOwnership1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricMarkedPointScratchOwnership1899.log",
+      "sha256": "29F9682634733081D59C2F85D212F06DC768B17E66D94A3A3F392C8D9EC835CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity.lean.txt",
+      "sha256": "A77ACAFC507DD747E7A285FDD960860E2BE7DC6E497FE4AD29BB3A98A3CCC60D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity1893a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity1893a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.lean.txt",
+      "sha256": "B6DD40D03EA16D7BE429A12913841253E5EB875D486911497AF3401E83D05431"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueDivisionIdentity1893a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueDivisionIdentity1893a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity-1899.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity-1899.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity-1899.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity-1899.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity.lean.txt",
+      "sha256": "2E63AFAADA30189D68A2631B1B9E8F8AD0D2B1C95DB454A07EC88992DF6725B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity1895a.exit",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity1895a.lean",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.lean.txt",
+      "sha256": "B650A26439A5D5828BF0692DAFE2285185F84FB3C14E7B94385ED79FC0A338BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceToricResidueMultiplicationIdentity1895a.log",
+      "path": "Tools/toric-marked-point-20261029-1901/SourceToricResidueMultiplicationIdentity1895a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-point-chart-1846\\S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-point-chart-1846/S_ModularCurve_exists_algHom_qExpFunctionFieldC_gammaH_bot_comp_eq_iff_and_comp_diamondPullbackModL_of_transcendental_j.lean.txt",
+      "sha256": "B706DC14788CEC3F561C6DE0DBBEEA1BF0E48FE48A59A81C4EAB5591DCE301BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-point-chart-1846\\manifest.json",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-point-chart-1846/manifest.json",
+      "sha256": "7C1A571473DEC45E73BD97B7A58F88BA82793BF914B24C783A03F766558695F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\S_ModularCurve_exists_point_tateLaurent_nsmul_eq_toricPoint_of_isPrimitiveRoot.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/S_ModularCurve_exists_point_tateLaurent_nsmul_eq_toricPoint_of_isPrimitiveRoot.lean.txt",
+      "sha256": "D7AAD4BFA92A2596387575FA934F410B6E27DE35AE39AEB6AB2401F9D41CE096"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/S_ModularCurve_exists_qExpFunctionFieldC_gammaH_bot_coe_eq_toricPoint_pow_and_diamondPullbackModL_apply_eq.lean.txt",
+      "sha256": "546AA60B7142964A8D5CA4562D09FE32889998261ED86D4254E4BCDAF746E527"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-gamma-one-toric-inputs-1848\\manifest.json",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-gamma-one-toric-inputs-1848/manifest.json",
+      "sha256": "BBF40A07024883A2D79BA12124D95B309393267C2EC33D7CF695A2861F4C9411"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-tate-formal-1860b\\Def_ModularCurve_TateFormal.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-tate-formal-1860b/Def_ModularCurve_TateFormal.lean.txt",
+      "sha256": "B37CF2050E422F2982F596764F2D1A5BA94267FD1FF8D56458C890552547B2B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-tate-formal-1860b\\manifest.json",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-tate-formal-1860b/manifest.json",
+      "sha256": "FCBCD7BF1D17734E336B601560B4063EA114E8E616C57ADE39C1D53D957CC6B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-addition-1870\\S_ModularCurve_toricPoint_add_toricPoint_of_charZero.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-addition-1870/S_ModularCurve_toricPoint_add_toricPoint_of_charZero.lean.txt",
+      "sha256": "CDF998F820037A43F362828DB39BE80498F7AE918285814938667B43FE7235AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-addition-1870\\manifest.json",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-addition-1870/manifest.json",
+      "sha256": "CAE5DC75CD1A8C786D4BBC7E6082B188C825F50A32A3002CE0AA399BC2B8DE91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\Def_ModularCurve_TateSlots.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/Def_ModularCurve_TateSlots.lean.txt",
+      "sha256": "A51770331D14BD7E60A83AA2E87FA7717C0AD3D9B57D4787AAF450953505CD86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean.txt",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/S_ModularCurve_exists_gamma1_isIntegralQExp_fourier_and_toricPoint_eq_sum.lean.txt",
+      "sha256": "C4F06A97ADEA65D19400B16A9350AB87BACECAB33927C2D44F6A26C552420675"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-toric-definitions-1851b\\manifest.json",
+      "path": "Tools/toric-marked-point-20261029-1901/anthropic-toric-definitions-1851b/manifest.json",
+      "sha256": "B0F9055A00BDFD0F21E6EAEF43706EE10626528E2B6717DF6E1B8D9060CF8C24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_integral_toric_forms_1869.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_integral_toric_forms_1869.ps1",
+      "sha256": "8C64C44CB8C5329DEC359D4FCCB176409830B9199350852E5D241EEE5E92C87B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_integral_toric_forms_1872.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_integral_toric_forms_1872.ps1",
+      "sha256": "EE58F82213CD217E6EDEA561E85DA71BE822B1483D3FF9DD998C033EF4F025F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_toric_coordinates_1883.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883.ps1",
+      "sha256": "F9D617377352047A2C7C1988F6309B460058F0E99C1A567482FDF47C5C615D11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_toric_coordinates_1883b.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883b.ps1",
+      "sha256": "B2DE49585E11AF12967B734891A68A4581997B8F046D9B47F8DB07BEC9C68E08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_original_toric_coordinates_1883c.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_original_toric_coordinates_1883c.ps1",
+      "sha256": "32B0B3AB7301589C6B66AF53564AB83C490A3351B08711ED98427DFC16D71320"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_toric_marked_point_1899.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/audit_toric_marked_point_1899.ps1",
+      "sha256": "3D4684B32990501CFF01AF31C04E5C2A76036D4446D5F00D32C262492BCDDB22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_integral_toric_forms_canonical_1869.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/build_integral_toric_forms_canonical_1869.ps1",
+      "sha256": "551339D33A43A31822DDEB5775FC61BA567FB843C5FE6AED539EBF73306CE846"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_integral_toric_forms_canonical_1872.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/build_integral_toric_forms_canonical_1872.ps1",
+      "sha256": "FA5AAD453E2036F8D2A78E4032A614553DC1B61372ACEDE7E80480746BCCC4FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_original_toric_coordinates_canonical_1883.ps1",
+      "path": "Tools/toric-marked-point-20261029-1901/build_original_toric_coordinates_canonical_1883.ps1",
+      "sha256": "18922C782D0DABCFF56CB88E25A3C3C3FB3A60B67A978895C430BB1364EC6C15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-toric-forms-audit-failure-1869.json",
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-audit-failure-1869.json",
+      "sha256": "AE8A7C2B394DD49657286109C57E8BA0771B41C291981AA6F23AFCDBFD42B051"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-toric-forms-preparation-failure-1869.json",
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-preparation-failure-1869.json",
+      "sha256": "EAB3F2A2D435B571C3663A634455FEB7EB1285726A5A7B33657C80C33F9B8CA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-toric-forms-superseded-source-archive-1872.json",
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-superseded-source-archive-1872.json",
+      "sha256": "B9B5623ED93EDF3FD0189588316D5D4C8515651E3662126E7AEA8F6A73E99484"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-toric-forms-versions-1869.json",
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-versions-1869.json",
+      "sha256": "9ECB81C644F11583D04C6490AFDA00871E7B5270591778FBEA5BF6FE4FA1D552"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-toric-forms-versions-1872.json",
+      "path": "Tools/toric-marked-point-20261029-1901/integral-toric-forms-versions-1872.json",
+      "sha256": "4D35D9E7E0687E30C3E4A587AFFEB283F83FB71CE2BC61FFAB8A48B2982F85BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-toric-coordinates-audit-failure-1883.json",
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-audit-failure-1883.json",
+      "sha256": "64AF691F02C204FBB2EFB168E7B1802CE4BB29D980AF0AB4621E38D29A78862F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-toric-coordinates-dependency-failure-1883.json",
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-dependency-failure-1883.json",
+      "sha256": "6147A42EFB4527C0FD16C47E727F1AA8C9A344ADAD32D22AA61A2C705B799490"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-toric-coordinates-versions-1883.json",
+      "path": "Tools/toric-marked-point-20261029-1901/original-toric-coordinates-versions-1883.json",
+      "sha256": "AD8CA76718F3B0B40D70532318B4B251222AE6F427606FE0F414FDD554ED7769"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_toric_forms_audit_1869.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1869.py",
+      "sha256": "0BD3DE8DF0C785C46700D0CF4D249503F7B3D13130FCA8A846200CFDF1E8F953"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_toric_forms_audit_1869b.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1869b.py",
+      "sha256": "1B31125763B51F7DEE9A5D8AB8ED0E3EC88A8CCE136F97A8E79E344D51F03439"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_toric_forms_audit_1872.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_integral_toric_forms_audit_1872.py",
+      "sha256": "308B8A32FE72960E0CA5ABA178FA16B7C30E2F2366B379624314864DD7A366F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_toric_coordinates_audit_1883.py",
+      "path": "Tools/toric-marked-point-20261029-1901/prepare_original_toric_coordinates_audit_1883.py",
+      "sha256": "3F6CDC8550D4C64F3B02C3D6B4921F58501666176ACC39E24D9DC1C1C0D7F2CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_integral_toric_forms_1869.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_integral_toric_forms_1869.py",
+      "sha256": "ECD0F90499657A2BF0F42E46E3581E145AC19EB10A2E8B7C426119F5B788AFAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_integral_toric_forms_1872.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_integral_toric_forms_1872.py",
+      "sha256": "0C4E2A933A3538D9E77B8334B4B4FA38D3E25953DADF923E81B9B840238EC7D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_toric_coordinates_1883.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883.py",
+      "sha256": "4AFF4403592F698458E91A70871D43495198AA9C19C974D6C8135A0D09A7C70B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_toric_coordinates_1883b.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883b.py",
+      "sha256": "9CDC01EED65DA4B6212774CBAB1994427FD18E5505ACE4D6D1CE86E60F88A968"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_toric_coordinates_1883c.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_original_toric_coordinates_1883c.py",
+      "sha256": "452609395317F70E87C45D53509D29FCAF05439343CC3A7B5706045510BFC0D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_toric_marked_point_1899.py",
+      "path": "Tools/toric-marked-point-20261029-1901/record_toric_marked_point_1899.py",
+      "sha256": "D73A5DCED4FAB89E819C312436E02A28663DCA43A160D8A3111CED6600CD84FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-1-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-1-audit-config.json",
+      "sha256": "85A96473A7EC4C4AEC12D0ED955B5038678D71ABCD2427BAD84041DBE7BD2AE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-2-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-audit-config.json",
+      "sha256": "5204D804B4C60E3876BA886AB4403320EE90F165E553FC0386FEC87E9F74D40E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-2-reuse-review-20261029.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-reuse-review-20261029.json",
+      "sha256": "2D66AEEB992622EC599783CD4588C39BECE802B74C672305D3B4473560C1E51E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-2-scratch-receipt.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-2-scratch-receipt.json",
+      "sha256": "859483F6B6AD8B4D6A49C4D8EB66F0036320A8A45876F48372C948308CC7AF48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-audit-route-1869.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-audit-route-1869.json",
+      "sha256": "F464775922DEE30C6BAD118D3BAEA0AF9389F08C08E029701CBE955FC38A2EA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-integral-toric-forms-audit-route-1872.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-integral-toric-forms-audit-route-1872.json",
+      "sha256": "C7F66DDEAC4880F04F571AC80673A8CAEBE83FCFA0AE22E4965BAA5FCFD56DAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-1-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-1-audit-config.json",
+      "sha256": "F28CCB5FE33AF433AF0CB952937CE9174964755681887B93B0BA539ED3C72AA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-2-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-2-audit-config.json",
+      "sha256": "0361257E70A2F6C8B15AC26A2697E09220CF30D8B6AE71DFDD067A578DE9C71E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-3-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-audit-config.json",
+      "sha256": "680E4093A8EC879FF86493B297E740BFD9FE6B6F46E26170FC331C3165291988"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-3-reuse-review-20261029.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-reuse-review-20261029.json",
+      "sha256": "0EB00DE23C0CE0D8E3E988B94C74F24888D55FF1CCC2114D03E2662A5791B342"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-3-scratch-receipt.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-3-scratch-receipt.json",
+      "sha256": "53E6CD3C2893482A517D2543E7ADF6AF366AB2EDE0F388B122FEA90B0B28890E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-toric-coordinates-audit-route-1883.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-original-toric-coordinates-audit-route-1883.json",
+      "sha256": "A40F69548C1105A56BB505A97B52C91D396D0F5D59F5C5DA70D52013E569D28E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-1-audit-config.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-audit-config.json",
+      "sha256": "C3630EEE0DF49834C14C1CF76382EF09FD4B1229E0745E4F9E44422C6D850A40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-1-reuse-review-20261029.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-reuse-review-20261029.json",
+      "sha256": "BDF9FB7360630EE55E259D4D042BE046F78BBBA874699C8F6E2693C8B3822A1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-1-scratch-receipt.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-1-scratch-receipt.json",
+      "sha256": "990FB59357224BD399D983D7A78C89DA64905CBEAAAA361A74CED8E9316763BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-toric-marked-point-audit-route-1899.json",
+      "path": "Tools/toric-marked-point-20261029-1901/source-toric-marked-point-audit-route-1899.json",
+      "sha256": "AC2A650AC059CDAF6CADAAAA1FBB0F84A42D8A9613CD485EF3901B0AF78A8AB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\toric-analytic-specialization-route-1891.json",
+      "path": "Tools/toric-marked-point-20261029-1901/toric-analytic-specialization-route-1891.json",
+      "sha256": "6C55883804D6F2E33724845152392A79FF7A90CC0DF1D62E312C6FEAC0885416"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\toric-marked-point-promotion-route-1901.json",
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-promotion-route-1901.json",
+      "sha256": "4898ABA05333F0C7DAA2B113965CB3D3D3B857FB23E6414391DFB696C0FB4E93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\toric-marked-point-versions-1899.json",
+      "path": "Tools/toric-marked-point-20261029-1901/toric-marked-point-versions-1899.json",
+      "sha256": "619F44A4BE67D4FC35A20017CFDC4F99D6C86D3F7B75AF0F333C48034FE85079"
+    }
+  ]
+}

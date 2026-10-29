@@ -1,0 +1,42 @@
+import Dubon2026.SourceTateEisensteinInvariants
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point -> formal division-polynomial identity.
+Identify the two analytic Tate coefficient normalizations with the literal
+integer power series using the already proved c4 and c6 identities. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve PowerSeries
+
+theorem tateA6_eisenstein_identity :
+    1728 * tateA6 = 2 * SourceFricke.eisenstein6 + 1 - 3 * eisenstein4 := by
+  have h4 := c4_tatePowerSeries
+  have h6 := c6_tatePowerSeries
+  simp only [WeierstrassCurve.c₄, WeierstrassCurve.c₆, WeierstrassCurve.b₂,
+    WeierstrassCurve.b₄, WeierstrassCurve.b₆, tatePowerSeries_a₁,
+    tatePowerSeries_a₂, tatePowerSeries_a₃, tatePowerSeries_a₄, tatePowerSeries_a₆] at h4 h6
+  linear_combination -2 * h6 - 3 * h4
+
+theorem map_tateA4_complex :
+    tateA4.map (Int.castRingHom ℂ) =
+      C (1 / 48 : ℂ) * (1 - eisenstein4.map (Int.castRingHom ℂ)) := by
+  rw [GammaOne.ToricFourier.eisenstein4_map_eq ℂ]
+  have h : C (1 / 48 : ℂ) * (48 : PowerSeries ℂ) = 1 := by
+    rw [← map_ofNat C 48, ← map_mul]
+    norm_num
+  linear_combination -tateA4.map (Int.castRingHom ℂ) * h
+
+theorem map_tateA6_complex :
+    tateA6.map (Int.castRingHom ℂ) =
+      C (1 / 1728 : ℂ) * (2 * SourceFricke.eisenstein6.map (Int.castRingHom ℂ) +
+        1 - 3 * eisenstein4.map (Int.castRingHom ℂ)) := by
+  have he := congrArg (PowerSeries.map (Int.castRingHom ℂ)) tateA6_eisenstein_identity
+  simp only [map_mul, map_add, map_sub, map_one, map_ofNat] at he
+  rw [← he]
+  have h : C (1 / 1728 : ℂ) * (1728 : PowerSeries ℂ) = 1 := by
+    rw [← map_ofNat C 1728, ← map_mul]
+    norm_num
+  rw [← mul_assoc, h, one_mul]
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

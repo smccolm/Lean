@@ -1,0 +1,66 @@
+[
+  {
+    "version": "SourceMarkedOriginalSeparability1944b",
+    "module": "SourceMarkedOriginalSeparability",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944b.lean",
+    "originalSha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+    "canonicalSha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedSeparableChartValues1945b",
+    "module": "SourceMarkedSeparableChartValues",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945b.lean",
+    "originalSha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+    "canonicalSha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedSeparableEmbeddingDescent1946b",
+    "module": "SourceMarkedSeparableEmbeddingDescent",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946b.lean",
+    "originalSha256": "AC0D77F25F93C19E432A5BFAFDDB48DA8B8A7A201C8366EB2B941A720D31353A",
+    "canonicalSha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedRationalPointDescent1947b",
+    "module": "SourceMarkedRationalPointDescent",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947b.lean",
+    "originalSha256": "E6294A4E4A48F6184558AE49A3730A07871B136B9FF8D21099299F1F79A82A0F",
+    "canonicalSha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalAlgebraicChart1948d",
+    "module": "SourceMarkedOriginalAlgebraicChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948d.lean",
+    "originalSha256": "C67BC95FBB4D544C8665D92CF9C7C04CC826F30BAA39C6240AD1EAEBA257AC9D",
+    "canonicalSha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedFullTorsionPointLift1949a",
+    "module": "SourceMarkedFullTorsionPointLift",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift1949a.lean",
+    "originalSha256": "90E693470BA3B060CAC6FFE605BBCA5D73F773CB61BE7F548B884DDA698F5A41",
+    "canonicalSha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartNormalExhaustion1951a",
+    "module": "SourceMarkedChartNormalExhaustion",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion1951a.lean",
+    "originalSha256": "00D8F9ED749765ED1F3D4A3FB8A6C7708BD1BDE15AB7ADCEF45836250BBF3458",
+    "canonicalSha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedOriginalFullTorsionChart1952a",
+    "module": "SourceMarkedOriginalFullTorsionChart",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart1952a.lean",
+    "originalSha256": "96662EB4EA03F2A5C66AE871AA4B56D057321B311270263EB147E00BB2BC5D10",
+    "canonicalSha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B",
+    "mathematicalBodyIdentical": true
+  }
+]

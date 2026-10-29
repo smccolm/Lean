@@ -1,0 +1,58 @@
+import Dubon2026.SourceToricComplexSeriesDivision
+import Dubon2026.SourcePrescribedPrimitiveRootReduction
+import Mathlib.RingTheory.Localization.Away.Basic
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point -> residue specialization. Use the actual
+algebraic-integer ring localized only at the level. Its complex embedding
+is injective; the already proved primitive-root reduction will supply the
+residue map. No new cyclotomic extension or uniformization is constructed. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open SourceFricke GammaOne.ToricFourier
+local notation "Zbar" => integralClosure ℤ ℂ
+
+/-- The actual complex algebraic integers with the level inverted. -/
+abbrev ToricCoefficientRing (N : ℕ) := Localization.Away (N : Zbar)
+
+/-- The standard complex primitive root as an actual algebraic integer. -/
+def integralZeta (N : ℕ) [NeZero N] : Zbar :=
+  ⟨zetaN N, (isPrimitiveRoot_zetaN (NeZero.ne N)).isIntegral (NeZero.pos N)⟩
+
+/-- The injective complex specialization of the localized coefficient ring. -/
+def coefficientComplex (N : ℕ) [NeZero N] : ToricCoefficientRing N →+* ℂ :=
+  IsLocalization.Away.lift (N : Zbar) (g := algebraMap Zbar ℂ)
+    (by simpa only [map_natCast] using
+      (isUnit_iff_ne_zero.mpr (Nat.cast_ne_zero.mpr (NeZero.ne N)) : IsUnit (N : ℂ)))
+
+theorem coefficientComplex_algebraMap (N : ℕ) [NeZero N] (a : Zbar) :
+    coefficientComplex N (algebraMap Zbar (ToricCoefficientRing N) a) = (a : ℂ) :=
+  IsLocalization.Away.lift_eq _ _ _
+
+theorem coefficientComplex_injective (N : ℕ) [NeZero N] :
+    Function.Injective (coefficientComplex N) := by
+  rw [IsLocalization.injective_iff_map_algebraMap_eq
+    (M := Submonoid.powers (N : Zbar))]
+  intro a b
+  constructor
+  · intro h
+    exact congrArg (coefficientComplex N) h
+  · intro h
+    rw [coefficientComplex_algebraMap, coefficientComplex_algebraMap] at h
+    exact congrArg (algebraMap Zbar (ToricCoefficientRing N)) (Subtype.ext h)
+
+/-- The canonical inverse of the level in the localized coefficient ring. -/
+def levelInverse (N : ℕ) : ToricCoefficientRing N :=
+  IsLocalization.Away.invSelf (N : Zbar)
+
+theorem map_levelInverse (N : ℕ) {K : Type*} [Field K]
+    (f : ToricCoefficientRing N →+* K) (hN : (N : K) ≠ 0) :
+    f (levelInverse N) = (N : K)⁻¹ := by
+  have h := congrArg f (IsLocalization.Away.mul_invSelf (S := ToricCoefficientRing N) (N : Zbar))
+  simp only [map_mul, map_natCast, map_one] at h
+  apply mul_left_cancel₀ hN
+  rw [mul_inv_cancel₀ hN]
+  exact h
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

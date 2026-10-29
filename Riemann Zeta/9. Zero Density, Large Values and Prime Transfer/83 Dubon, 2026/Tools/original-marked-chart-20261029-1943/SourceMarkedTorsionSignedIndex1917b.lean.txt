@@ -1,0 +1,145 @@
+import SourceMarkedTorsionSignClasses1916a
+import Dubon2026.SourceIntegralDiamondSignedMembership
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> marked-chart
+stabilizer comparison. Identify sign classes of exact-order residue pairs
+with cosets of the original signed Gamma1 subgroup. Reuse native integral
+SL2 reduction and the already proved coprime/exact-order equivalence.
+This avoids the reference's general subgroup-of-units orbit action. -/
+namespace Dubon2026.SourceFunctionField.MarkedTorsion
+noncomputable section
+open Matrix CongruenceSubgroup GammaOne SourceEllipticCyclicCount
+open scoped MatrixGroups
+
+/-- The first column of an actual determinant-one matrix. -/
+def firstColumn {R : Type*} [CommRing R] (g : SL(2, R)) : R × R :=
+  (g.val 0 0, g.val 1 0)
+
+theorem firstColumn_coprime {R : Type*} [CommRing R] (g : SL(2, R)) :
+    IsCoprime (firstColumn g).1 (firstColumn g).2 := by
+  refine ⟨g.val 1 1, -g.val 0 1, ?_⟩
+  have h := g.det_coe
+  rw [Matrix.det_fin_two] at h
+  change g.val 1 1 * g.val 0 0 + -g.val 0 1 * g.val 1 0 = 1
+  linear_combination h
+
+theorem firstColumn_eq_iff {R : Type*} [CommRing R] (A B : SL(2, R)) :
+    firstColumn A = firstColumn B ↔ firstColumn (A⁻¹ * B) = (1, 0) := by
+  constructor
+  · intro h
+    have h0 : A.val 0 0 = B.val 0 0 := congrArg Prod.fst h
+    have h1 : A.val 1 0 = B.val 1 0 := congrArg Prod.snd h
+    apply Prod.ext
+    · change ((A⁻¹).val * B.val) 0 0 = 1
+      rw [SpecialLinearGroup.SL2_inv_expl A, (Matrix.two_mul_expl _ B.val).1]
+      simp only [Matrix.cons_val_one, Matrix.cons_val_zero]
+      rw [← h0, ← h1]
+      have hd := A.det_coe
+      rw [Matrix.det_fin_two] at hd
+      linear_combination hd
+    · change ((A⁻¹).val * B.val) 1 0 = 0
+      rw [SpecialLinearGroup.SL2_inv_expl A, (Matrix.two_mul_expl _ B.val).2.2.1]
+      simp only [Matrix.cons_val_one, Matrix.cons_val_zero]
+      rw [← h0, ← h1]
+      ring
+  · intro h
+    have h0 : (A⁻¹ * B).val 0 0 = 1 := congrArg Prod.fst h
+    have h1 : (A⁻¹ * B).val 1 0 = 0 := congrArg Prod.snd h
+    have hb : B = A * (A⁻¹ * B) := (mul_inv_cancel_left A B).symm
+    apply Prod.ext
+    · change A.val 0 0 = B.val 0 0
+      conv_rhs => rw [hb]
+      change A.val 0 0 = (A.val * (A⁻¹ * B).val) 0 0
+      rw [(Matrix.two_mul_expl A.val _).1, h0, h1]
+      ring
+    · change A.val 1 0 = B.val 1 0
+      conv_rhs => rw [hb]
+      change A.val 1 0 = (A.val * (A⁻¹ * B).val) 1 0
+      rw [(Matrix.two_mul_expl A.val _).2.2.1, h0, h1]
+      ring
+
+theorem firstColumn_neg {R : Type*} [CommRing R] (g : SL(2, R)) :
+    firstColumn (-g) = -firstColumn g := rfl
+
+/-- The original integral matrix's reduced first column. -/
+def residueColumn (N : ℕ) (g : SL(2, ℤ)) : ZMod N × ZMod N :=
+  firstColumn (SpecialLinearGroup.map (Int.castRingHom (ZMod N)) g)
+
+theorem gammaOne_mem_iff_residueColumn (N : ℕ) (g : SL(2, ℤ)) :
+    g ∈ Gamma1 N ↔ residueColumn N g = (1, 0) := by
+  rw [Gamma1_mem]
+  constructor
+  · rintro ⟨h0, _, h1⟩
+    exact Prod.ext h0 h1
+  · intro h
+    have h0 : (g.val 0 0 : ZMod N) = 1 := congrArg Prod.fst h
+    have h1 : (g.val 1 0 : ZMod N) = 0 := congrArg Prod.snd h
+    refine ⟨h0, ?_, h1⟩
+    have hd := congrArg (Int.castRingHom (ZMod N)) g.det_coe
+    rw [Matrix.det_fin_two] at hd
+    simpa only [map_sub, map_mul, map_one, Int.coe_castRingHom, h0, h1,
+      one_mul, mul_zero, sub_zero] using hd
+
+theorem residueColumn_eq_iff (N : ℕ) (A B : SL(2, ℤ)) :
+    residueColumn N A = residueColumn N B ↔ A⁻¹ * B ∈ Gamma1 N := by
+  rw [gammaOne_mem_iff_residueColumn]
+  unfold residueColumn
+  rw [map_mul, map_inv]
+  exact firstColumn_eq_iff _ _
+
+theorem residueColumn_neg (N : ℕ) (g : SL(2, ℤ)) :
+    residueColumn N (-g) = -residueColumn N g := by
+  apply Prod.ext <;> simp [residueColumn, firstColumn]
+
+/-- An integral matrix gives the actual sign class of its reduced column. -/
+def columnSignClass (N : ℕ) (g : SL(2, ℤ)) : SignClasses (ZMod N × ZMod N) N :=
+  ⟨{residueColumn N g, -residueColumn N g}, residueColumn N g,
+    coprime_addOrderOf_eq N (firstColumn_coprime (SpecialLinearGroup.map (Int.castRingHom (ZMod N)) g)), rfl⟩
+
+theorem columnSignClass_eq_iff (N : ℕ) (A B : SL(2, ℤ)) :
+    columnSignClass N A = columnSignClass N B ↔ A⁻¹ * B ∈ plusMinus (Gamma1 N) := by
+  have he : columnSignClass N A = columnSignClass N B ↔
+      (columnSignClass N A).val = (columnSignClass N B).val := Subtype.ext_iff
+  rw [he]
+  change ({residueColumn N A, -residueColumn N A} : Set (ZMod N × ZMod N)) =
+    {residueColumn N B, -residueColumn N B} ↔ _
+  rw [signPair_eq_iff, ← residueColumn_neg N B, residueColumn_eq_iff,
+    residueColumn_eq_iff, mul_neg, mem_plusMinus_iff]
+
+theorem columnSignClass_surjective (N : ℕ) [NeZero N] :
+    Function.Surjective (columnSignClass N) := by
+  intro s
+  obtain ⟨v, hv, hs⟩ := s.property
+  obtain ⟨x, y, hxy⟩ := isCoprime_of_addOrderOf_eq N hv
+  let B : SL(2, ZMod N) := ⟨!![v.1, -y; v.2, x], by
+    rw [Matrix.det_fin_two_of]
+    linear_combination hxy⟩
+  obtain ⟨g, hg⟩ := SL2Reduction.SL2_reduction_surjective N B
+  refine ⟨g, Subtype.ext ?_⟩
+  change ({residueColumn N g, -residueColumn N g} : Set (ZMod N × ZMod N)) = s.val
+  have hc : residueColumn N g = v := by
+    unfold residueColumn
+    rw [hg]
+    rfl
+  rw [hc, hs]
+
+theorem natCard_residue_signClasses (N : ℕ) [NeZero N] :
+    Nat.card (SignClasses (ZMod N × ZMod N) N) = (plusMinus (Gamma1 N)).index := by
+  rw [Subgroup.index_eq_card]
+  have hwd : ∀ A B : SL(2, ℤ), QuotientGroup.leftRel (plusMinus (Gamma1 N)) A B →
+      columnSignClass N A = columnSignClass N B := by
+    intro A B h
+    exact (columnSignClass_eq_iff N A B).mpr ((QuotientGroup.leftRel_apply).mp h)
+  symm
+  apply Nat.card_eq_of_bijective (fun q => Quotient.liftOn' q (columnSignClass N) hwd)
+  constructor
+  · intro q q'
+    refine Quotient.inductionOn₂' q q' ?_
+    intro A B h
+    exact QuotientGroup.eq.mpr ((columnSignClass_eq_iff N A B).mp h)
+  · intro s
+    obtain ⟨g, hg⟩ := columnSignClass_surjective N s
+    exact ⟨QuotientGroup.mk g, hg⟩
+
+end
+end Dubon2026.SourceFunctionField.MarkedTorsion

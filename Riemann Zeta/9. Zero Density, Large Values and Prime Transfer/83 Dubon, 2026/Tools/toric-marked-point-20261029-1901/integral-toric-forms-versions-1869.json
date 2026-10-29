@@ -1,0 +1,107 @@
+[
+  {
+    "version": "SourceGammaOneTorsionWeightTwo1852c",
+    "module": "SourceGammaOneTorsionWeightTwo",
+    "originalSha256": "DF6F230642DE10DE02C480FA74B7532CF3EBE586ABF6CBC5F688E291D16A7C56",
+    "canonicalSha256": "DF6F230642DE10DE02C480FA74B7532CF3EBE586ABF6CBC5F688E291D16A7C56",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneTorsionFourierWidth1853a",
+    "module": "SourceGammaOneTorsionFourierWidth",
+    "originalSha256": "EA0D3F66ABCC41E7B284E0E5EE1782E8B9A40FB2A22783E737ADADE0039C4ECF",
+    "canonicalSha256": "EEE6F300162314D715CBFA5CFB8E60B6CA23ADE6BCD194F5BCC1F76643AFE98B",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneTorsionCoefficientFibers1855b",
+    "module": "SourceGammaOneTorsionCoefficientFibers",
+    "originalSha256": "09CDE02F32BC255C359C7BB52401FE7D0ECFC84394774880D483B4E37BB7ED77",
+    "canonicalSha256": "372CC2E0A2F83595B8AFCC5F92A40A6BF8602BE790391277ADD063767060B69D",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneTorsionDivisorCoefficients1856b",
+    "module": "SourceGammaOneTorsionDivisorCoefficients",
+    "originalSha256": "FF73523E792518DB1E4E5BD2CA159B7B6C87E192EA095DD8A8F400A5F79CEF88",
+    "canonicalSha256": "C681C9D077AFF163D097C98DE0E57E08F1AE3171C2DF8CEED1F1CF3077C4AB81",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceToricFourierCharacter1857a",
+    "module": "SourceToricFourierCharacter",
+    "originalSha256": "35D41F59FBCEEB418EF572EA4695D2CE2B61F4E54389B0E5A1CCBC173A6586B8",
+    "canonicalSha256": "35D41F59FBCEEB418EF572EA4695D2CE2B61F4E54389B0E5A1CCBC173A6586B8",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceToricFourierIntegralTransform1858a",
+    "module": "SourceToricFourierIntegralTransform",
+    "originalSha256": "18567D439ECF916FB312BEC7781E0CD3425740E0D38EC67653A9E91D6BDA7561",
+    "canonicalSha256": "C1219AB85763895A63E96456C4ED5A8313C574905DEEAA93D6C72B81A3EE2E47",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceToricFourierCoefficientPolynomials1859b",
+    "module": "SourceToricFourierCoefficientPolynomials",
+    "originalSha256": "C0D264AD4F8C09F5C957EB122A5593174D7AD6385F107A7F6B52441096D7DFA2",
+    "canonicalSha256": "CDFED7C47E35F006CEFE4AEA0CCA04A033DF7A47742FDC188B2146B31D589ECA",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricWeightTwo1861b",
+    "module": "SourceGammaOneToricWeightTwo",
+    "originalSha256": "54B6F16D0DF759485665E69D12361987BC8C209BBF213FF7D71642B65406028C",
+    "canonicalSha256": "33BE53AA3C7D0AB7177180738DD0F83778640E8F1E92867AABEC72DC5E9EE867",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceTateFourCoefficient1862a",
+    "module": "SourceTateFourCoefficient",
+    "originalSha256": "6B61C2DE1EA991561497B922359663953D6DBAE91A4CF7C0E92223341437B8DE",
+    "canonicalSha256": "6B61C2DE1EA991561497B922359663953D6DBAE91A4CF7C0E92223341437B8DE",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceToricFourierIntegerFamilies1863a",
+    "module": "SourceToricFourierIntegerFamilies",
+    "originalSha256": "244AA0EE9423DA6559918361C0DA1641C9A654069CCEC7B6D39C94CA3D07D917",
+    "canonicalSha256": "FDD40AAC7D8ABCDD1993DB6D3FFD0878C7B04DEA896DC8C23B612BD2225A00DE",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricIntegralWeightTwo1864b",
+    "module": "SourceGammaOneToricIntegralWeightTwo",
+    "originalSha256": "1230BECC8A5DA20B77BDF70355286A97F856DBE9F2BFC3440566655CABBCF69F",
+    "canonicalSha256": "E261D1EFB0F8A3E1F9740F3FBD0C991DF513CABCCC8A1D876F2492F4FC444ED4",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricIntegralWeightFour1865b",
+    "module": "SourceGammaOneToricIntegralWeightFour",
+    "originalSha256": "A5BD1F67274FDC729EF9EA9F2C6175152C10F3150886D52F0C4DBAC5A70E59E5",
+    "canonicalSha256": "0CB554A5E308BD3A1F6BB5668A1BBBBF4B656F71A2C1FB10319FBE9CF8C74E0C",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricIntegralSlash1866b",
+    "module": "SourceGammaOneToricIntegralSlash",
+    "originalSha256": "6FD24532546525776C96B622BE61EB523CECA53D50A98A55CC10E57BDD03F36D",
+    "canonicalSha256": "50F080A5B067459F71995C2BDD72BC769B3A3288E3B8D016A3FB14D9C841D847",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneToricSeriesReconstruction1867a",
+    "module": "SourceGammaOneToricSeriesReconstruction",
+    "originalSha256": "91A8E9D9428FB6725B1530A6536CE188B9DC4FC7A1C8B6DDD572013E1B76775D",
+    "canonicalSha256": "03E153A08F63620FE9D7058B53FA2E5362D8E86E6F964A1E810D5E601BB39972",
+    "bodyIdentical": true
+  },
+  {
+    "version": "SourceGammaOneIntegralToricInvariantForms1868b",
+    "module": "SourceGammaOneIntegralToricInvariantForms",
+    "originalSha256": "A1FC317CF2A9B8690164B5E810BBB320B0C20C126F23B7999F461BFA40E5C3E9",
+    "canonicalSha256": "972AA49270DB4194EF35413A8C50AC72809707095566FA7BD9A6E30E9075F971",
+    "bodyIdentical": true
+  }
+]

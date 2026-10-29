@@ -1,0 +1,47 @@
+{
+  "modules": [
+    "SourceMarkedOrbitMap",
+    "SourceMarkedNaturalSignChart",
+    "SourceMarkedSignChartDiamond",
+    "SourceMarkedOriginalNaturalChart"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers",
+    "Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers",
+    "Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_injective_equivariant_map_of_stabilizer_eq",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_natural_sign_chart_of_stabilizers",
+    "Dubon2026.SourceFunctionField.MarkedChart.sign_chart_diamond_of_signed_lift",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_natural_marked_chart_generic",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_chart_stabilizer_equality",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_point_conjugacy_up_to_sign_of_unit_moves",
+    "Dubon2026.SourceFunctionField.MarkedChart.gamma0Unit_surjective",
+    "Dubon2026.SourceFunctionField.MarkedChart.signClassGaloisAction",
+    "Dubon2026.SourceFunctionField.MarkedChart.signClass_smul_eq_iff",
+    "Dubon2026.SourceFunctionField.MarkedChart.signClass_stabilizer_iff",
+    "Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingAction",
+    "Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbedding_stabilizer_iff",
+    "Dubon2026.SourceFunctionField.MarkedChart.normalizedEmbeddingLocalAction",
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signPair_eq_iff"
+  ],
+  "compileEvidence": {
+    "SourceMarkedOrbitMap": "SourceMarkedOrbitMap-1939",
+    "SourceMarkedNaturalSignChart": "SourceMarkedNaturalSignChart-1939",
+    "SourceMarkedSignChartDiamond": "SourceMarkedSignChartDiamond-1939",
+    "SourceMarkedOriginalNaturalChart": "SourceMarkedOriginalNaturalChart-1939"
+  },
+  "separatelyAxiomChecked": []
+}

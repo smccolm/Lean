@@ -1,0 +1,90 @@
+import Dubon2026.SourceGammaOneIntegralToricForms
+import Dubon2026.SourceTateEisensteinInvariants
+import Dubon2026.SourceIntegerJEulerNormalization
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> marked-point chart. The constructed integral forms give actual
+same-weight ratios in the original Gamma1 function field. No replacement
+field or assumed membership is used. Native modular-form restriction,
+integer E4/E6 expansions and original ratio membership are reused. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceFricke ModularForm ToricFourier HahnSeries
+open scoped MatrixGroups ModularForm Manifold
+variable (M : ℕ) [NeZero M]
+
+/-- The original level-one E6 form restricted to Gamma1. -/
+def E6Γ : ModularForm (Gamma1 M) 6 :=
+  ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 M)) E₆
+
+omit [NeZero M] in
+theorem isIntegralQExp_E6Γ : IsIntegralQExp (E6Γ M) eisenstein6 :=
+  qExpansion_E6_eq_map_eisenstein6.symm
+
+omit [NeZero M] in
+theorem isIntegralQExp_E4Γ : IsIntegralQExp (E4Γ M) eisenstein4 :=
+  qExpansion_E4_eq_map_eisenstein4.symm
+
+/-- The integral weight-six numerator obtained by multiplying B by E4. -/
+def f6 (c : ZMod M) : ModularForm (Gamma1 M) 6 :=
+  ((B M c).mul (E4Γ M)).mcast (by norm_num)
+
+theorem coe_f6 (c : ZMod M) :
+    (f6 M c : ℍ → ℂ) = (B M c : ℍ → ℂ) * (E₄ : ℍ → ℂ) := rfl
+
+theorem isIntegralQExp_f6 (c : ZMod M) :
+    IsIntegralQExp (f6 M c) (PowerSeries.mk (bZ M c) * eisenstein4) := by
+  change (PowerSeries.mk (bZ M c) * eisenstein4).map (Int.castRingHom ℂ) =
+    qExpansion 1 ((B M c).mul (E4Γ M))
+  rw [map_mul, ModularForm.qExpansion_mul one_pos (gammaOne_one_mem_strictPeriods M),
+    ← isIntegralQExp_B M c, qExpansion_E4Γ]
+
+theorem f6_slash (c : ZMod M) (γ : SL(2, ℤ)) (hγ : γ ∈ Gamma0 M) :
+    (f6 M c : ℍ → ℂ) ∣[(6 : ℤ)] γ =
+      (f6 M (c * (γ 0 0 : ZMod M)) : ℍ → ℂ) := by
+  rw [coe_f6, coe_f6, show (6 : ℤ) = 2 + 4 from rfl,
+    ModularForm.mul_slash_SL2, B_slash M c γ hγ]
+  have he : (E₄ : ℍ → ℂ) ∣[(4 : ℤ)] γ = E₄ := by
+    rw [ModularForm.SL_slash]
+    exact SlashInvariantFormClass.slash_action_eq E₄ _ ⟨γ, rfl⟩
+  rw [he]
+
+variable (K : Type*) [Field K]
+
+theorem intSeriesC_ne_zero_of_constantCoeff {p : PowerSeries ℤ}
+    (hp : PowerSeries.constantCoeff p = 1) : intSeriesC K p ≠ 0 := by
+  intro h
+  have h1 := congrArg (fun z : LaurentSeries K => z.coeff 0) h
+  simp only [intSeriesC, HahnSeries.coeff_zero] at h1
+  rw [show (0 : ℤ) = ((0 : ℕ) : ℤ) from rfl, HahnSeries.ofPowerSeries_apply_coeff,
+    PowerSeries.coeff_map, PowerSeries.coeff_zero_eq_constantCoeff_apply, hp, map_one] at h1
+  exact one_ne_zero h1
+
+theorem intSeriesC_eisenstein4_ne_zero : intSeriesC K eisenstein4 ≠ 0 :=
+  intSeriesC_ne_zero_of_constantCoeff K constantCoeff_eisenstein4
+
+theorem intSeriesC_eisenstein6_ne_zero : intSeriesC K eisenstein6 ≠ 0 :=
+  intSeriesC_ne_zero_of_constantCoeff K constantCoeff_eisenstein6
+
+/-- The actual original-field ratio of the weight-six numerator to E6. -/
+def β (c : ZMod M) : qExpFunctionFieldC K (Gamma1 M) :=
+  ⟨intSeriesC K (PowerSeries.mk (bZ M c) * eisenstein4) / intSeriesC K eisenstein6,
+    div_mem_qExpFunctionFieldC (f6 M c) (E6Γ M) (isIntegralQExp_f6 M c)
+      (isIntegralQExp_E6Γ M) (intSeriesC_eisenstein6_ne_zero K)⟩
+
+/-- The actual original-field ratio of the integral weight-four form D to E4. -/
+def δ (c : ZMod M) : qExpFunctionFieldC K (Gamma1 M) :=
+  ⟨intSeriesC K (PowerSeries.mk (dZ M c)) / intSeriesC K eisenstein4,
+    div_mem_qExpFunctionFieldC (D M c) (E4Γ M) (isIntegralQExp_D M c)
+      (isIntegralQExp_E4Γ M) (intSeriesC_eisenstein4_ne_zero K)⟩
+
+theorem coe_β (c : ZMod M) :
+    (β M K c : LaurentSeries K) =
+      intSeriesC K (PowerSeries.mk (bZ M c) * eisenstein4) / intSeriesC K eisenstein6 := rfl
+
+theorem coe_δ (c : ZMod M) :
+    (δ M K c : LaurentSeries K) =
+      intSeriesC K (PowerSeries.mk (dZ M c)) / intSeriesC K eisenstein4 := rfl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates

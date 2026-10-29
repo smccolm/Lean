@@ -1,0 +1,119 @@
+import SourceTateIntegralCoefficients
+import SourceTateIntegralCurve
+import SourceTateEisensteinInvariants
+import SourceGammaOneToricOriginalRatios
+import SourceGammaOneToricOriginalCoordinates
+import SourceGammaOneToricOriginalCoordinateValues
+import SourceIntegralDiamondScalarRatioAction
+import SourceGammaOneToricRatioDiamond
+import SourceGammaOneToricCoordinateDiamond
+import SourceGammaOneOriginalToricCoordinates
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.tateB
+#print axioms Dubon2026.SourceFunctionField.twelve_mul_tateB
+#print axioms Dubon2026.SourceFunctionField.tateA6
+#print axioms Dubon2026.SourceFunctionField.coeff_tateA6
+#print axioms Dubon2026.SourceFunctionField.coeff_zero_tateA4
+#print axioms Dubon2026.SourceFunctionField.coeff_zero_tateA6
+#print axioms Dubon2026.SourceFunctionField.constantCoeff_tateA4
+#print axioms Dubon2026.SourceFunctionField.constantCoeff_tateA6
+#print axioms Dubon2026.SourceFunctionField.coeff_one_tateA4
+#print axioms Dubon2026.SourceFunctionField.coeff_one_tateA6
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries_a₁
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries_a₂
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries_a₃
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries_a₄
+#print axioms Dubon2026.SourceFunctionField.tatePowerSeries_a₆
+#print axioms Dubon2026.SourceFunctionField.laurentOfInt
+#print axioms Dubon2026.SourceFunctionField.laurentOfInt_apply
+#print axioms Dubon2026.SourceFunctionField.tateLaurent
+#print axioms Dubon2026.SourceFunctionField.tateLaurent_a₄
+#print axioms Dubon2026.SourceFunctionField.tateLaurent_a₆
+#print axioms Dubon2026.SourceFunctionField.instIsElliptic_tateLaurent
+#print axioms Dubon2026.SourceFunctionField.c4_tatePowerSeries
+#print axioms Dubon2026.SourceFunctionField.c6_tatePowerSeries
+#print axioms Dubon2026.SourceFunctionField.c4_tateLaurent
+#print axioms Dubon2026.SourceFunctionField.c6_tateLaurent
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.E6Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_E6Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_E4Γ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.f6
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_f6
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_f6
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.f6_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_ne_zero_of_constantCoeff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein4_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein6_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.β
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.δ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_β
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_δ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein4
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein6
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.natCast_laurent_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.w₁
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.w₂
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.unit_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_w₁
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_w₂
+#print axioms Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_integral_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_β_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_δ_inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_β
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_δ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.gamma0Unit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_gamma0Unit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_inv_gamma0Unit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.sum_reindex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_w₁
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_w₂
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.exists_originalToricCoordinates
+
+private def runOriginalToricCoordinatesAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceTateIntegralCoefficients, `SourceTateIntegralCurve, `SourceTateEisensteinInvariants, `SourceGammaOneToricOriginalRatios, `SourceGammaOneToricOriginalCoordinates, `SourceGammaOneToricOriginalCoordinateValues, `SourceIntegralDiamondScalarRatioAction, `SourceGammaOneToricRatioDiamond, `SourceGammaOneToricCoordinateDiamond, `SourceGammaOneOriginalToricCoordinates]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.twelve_mul_tateB, `Dubon2026.SourceFunctionField.coeff_tateA6, `Dubon2026.SourceFunctionField.coeff_zero_tateA4, `Dubon2026.SourceFunctionField.coeff_zero_tateA6, `Dubon2026.SourceFunctionField.constantCoeff_tateA4, `Dubon2026.SourceFunctionField.constantCoeff_tateA6, `Dubon2026.SourceFunctionField.coeff_one_tateA4, `Dubon2026.SourceFunctionField.coeff_one_tateA6, `Dubon2026.SourceFunctionField.tatePowerSeries_a₁, `Dubon2026.SourceFunctionField.tatePowerSeries_a₂, `Dubon2026.SourceFunctionField.tatePowerSeries_a₃, `Dubon2026.SourceFunctionField.tatePowerSeries_a₄, `Dubon2026.SourceFunctionField.tatePowerSeries_a₆, `Dubon2026.SourceFunctionField.laurentOfInt_apply, `Dubon2026.SourceFunctionField.tateLaurent_a₄, `Dubon2026.SourceFunctionField.tateLaurent_a₆, `Dubon2026.SourceFunctionField.c4_tatePowerSeries, `Dubon2026.SourceFunctionField.c6_tatePowerSeries, `Dubon2026.SourceFunctionField.c4_tateLaurent, `Dubon2026.SourceFunctionField.c6_tateLaurent, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_E6Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_E4Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_f6, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.isIntegralQExp_f6, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.f6_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_ne_zero_of_constantCoeff, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein4_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein6_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_β, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_δ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein4, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.intSeriesC_eisenstein6, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.natCast_laurent_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.unit_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_w₁, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_w₂, `Dubon2026.SourceFunctionField.IntegralDiamond.reducedFieldActionOver_integral_ratio, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_β_inv, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_δ_inv, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_β, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_δ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_gamma0Unit, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.coe_inv_gamma0Unit, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.sum_reindex, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_w₁, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.reducedFieldActionOver_w₂, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.exists_originalToricCoordinates]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.tateB, `Dubon2026.SourceFunctionField.tateA6, `Dubon2026.SourceFunctionField.tatePowerSeries, `Dubon2026.SourceFunctionField.laurentOfInt, `Dubon2026.SourceFunctionField.tateLaurent, `Dubon2026.SourceFunctionField.instIsElliptic_tateLaurent, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.E6Γ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.f6, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.β, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.δ, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.w₁, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.w₂, `Dubon2026.SourceFunctionField.GammaOne.ToricCoordinates.gamma0Unit]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original toric coordinates postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original toric coordinates theorems discovered"
+  logInfo m!"SOURCE ORIGINAL TORIC COORDINATES AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runOriginalToricCoordinatesAudit
+
+#lint in SourceTateIntegralCoefficients
+#lint in SourceTateIntegralCurve
+#lint in SourceTateEisensteinInvariants
+#lint in SourceGammaOneToricOriginalRatios
+#lint in SourceGammaOneToricOriginalCoordinates
+#lint in SourceGammaOneToricOriginalCoordinateValues
+#lint in SourceIntegralDiamondScalarRatioAction
+#lint in SourceGammaOneToricRatioDiamond
+#lint in SourceGammaOneToricCoordinateDiamond
+#lint in SourceGammaOneOriginalToricCoordinates

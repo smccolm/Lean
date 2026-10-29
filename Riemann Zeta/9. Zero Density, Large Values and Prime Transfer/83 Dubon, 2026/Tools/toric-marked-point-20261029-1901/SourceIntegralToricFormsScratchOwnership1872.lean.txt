@@ -1,0 +1,29 @@
+import SourceGammaOneDivisionToricForms
+import SourceGammaOneDivisionFourier
+import SourceGammaOneDivisionCoefficientFibers
+import SourceGammaOneDivisionDivisorCoefficients
+import SourceToricFourierCharacters
+import SourceToricIntegerFourierTransform
+import SourceToricIntegralCoefficientPolynomials
+import SourceGammaOneNormalizedDivisionForm
+import SourceTateA4Series
+import SourceToricIntegerCoefficientFamilies
+import SourceGammaOneIntegralToricWeightTwo
+import SourceGammaOneIntegralToricWeightFour
+import SourceGammaOneIntegralToricSlash
+import SourceGammaOneIntegralToricReconstruction
+import SourceGammaOneIntegralToricForms
+import Mathlib.Tactic
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

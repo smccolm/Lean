@@ -1,0 +1,46 @@
+import SourceToricAnalyticCurve
+import Dubon2026.SourceEllipticStandardTorsion
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point. The existing period-model homomorphism
+and exact lattice kernel prove the full-order complex toric point for every
+nonzero level. This is the analytic input to the required formal-series
+specialization, not a claimed positive-characteristic specialization. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve UpperHalfPlane SourceEllipticPeriod
+
+/-- The native period-model homomorphism for the explicitly normalized analytic Tate curve. -/
+abbrev toricPeriodHom (τ : ℍ) : ℂ →+ (tateCurve τ).toAffine.Point :=
+  periodModelHom (PeriodLattice.ofTau τ) tateChange
+
+theorem toricPeriodHom_nsmul_eq_zero_iff (τ : ℍ) (N : ℕ) [NeZero N]
+    (a : ℤ) (m : ℕ) :
+    m • toricPeriodHom τ ((a : ℂ) / N) = 0 ↔ (N : ℤ) ∣ (m : ℤ) * a := by
+  change m • periodModelHom (PeriodLattice.ofTau τ) tateChange ((a : ℂ) / N) = 0 ↔ _
+  rw [← map_nsmul, ← AddMonoidHom.mem_ker, ker_periodModelHom]
+  change m • ((a : ℂ) / N) ∈ (PeriodLattice.ofTau τ).lattice ↔ _
+  have he : m • ((a : ℂ) / N) =
+      ((0 : ℤ) * (τ : ℂ) + (((m : ℤ) * a : ℤ) : ℂ)) / N := by
+    simp only [nsmul_eq_mul, Int.cast_mul, Int.cast_natCast, Int.cast_zero, zero_mul,
+      zero_add, mul_div_assoc]
+  rw [he, fraction_mem_period_lattice_iff]
+  simp only [dvd_zero, true_and]
+
+theorem toricPeriodHom_one_order (τ : ℍ) (N : ℕ) [NeZero N] :
+    addOrderOf (toricPeriodHom τ (1 / N)) = N := by
+  have hm (m : ℕ) : m • toricPeriodHom τ (1 / N) = 0 ↔ N ∣ m := by
+    simpa only [Int.cast_one, mul_one, Int.natCast_dvd_natCast] using
+      toricPeriodHom_nsmul_eq_zero_iff τ N 1 m
+  apply Nat.dvd_antisymm
+  · exact addOrderOf_dvd_of_nsmul_eq_zero ((hm N).mpr dvd_rfl)
+  · exact (hm _).mp (addOrderOf_nsmul_eq_zero _)
+
+theorem toricPeriodHom_fraction_nsmul (τ : ℍ) (N : ℕ) (m : ℕ) :
+    m • toricPeriodHom τ (1 / N) = toricPeriodHom τ ((m : ℂ) / N) := by
+  rw [← map_nsmul]
+  congr 1
+  simp only [nsmul_eq_mul, mul_one_div]
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

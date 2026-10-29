@@ -1,0 +1,130 @@
+[
+  {
+    "version": "SourceMarkedTorsionSignClasses1916a",
+    "module": "SourceMarkedTorsionSignClasses",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignClasses1916a.lean",
+    "originalSha256": "CFF807E8EF73F29B32367425DCFFAE4E4F257ED80173F4291529B0C42C37F7CD",
+    "canonicalSha256": "C75985957B16C8E24028BDAA8D86748597F9B9ED549DDF345FB136E426C626B7",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedTorsionSignedIndex1917b",
+    "module": "SourceMarkedTorsionSignedIndex",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionSignedIndex1917b.lean",
+    "originalSha256": "E0C33124F0ED0C0B53791ABEA820940146D2BF9B0A7A9900C38B45D40BB6C0D4",
+    "canonicalSha256": "341068A13743F6247E444AB2B3CFAADDA416FDA164F3776300E8CBAE7579D09B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedTorsionActualCount1918b",
+    "module": "SourceMarkedTorsionActualCount",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionActualCount1918b.lean",
+    "originalSha256": "749328E2C18F73A5018F4D669F628315628425275181488F8F125E460B5517B7",
+    "canonicalSha256": "180E695D18C77149665965E7C9253B6365B692D6FA73424F3D33BB012FBA8745",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartEmbeddingConjugacy1920b",
+    "module": "SourceMarkedChartEmbeddingConjugacy",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartEmbeddingConjugacy1920b.lean",
+    "originalSha256": "DC5F1B68C86FF45310E7905AA18A60BF36D9657DF2852F668CAF74C132047F0E",
+    "canonicalSha256": "DC5F1B68C86FF45310E7905AA18A60BF36D9657DF2852F668CAF74C132047F0E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartPointTransport1921a",
+    "module": "SourceMarkedChartPointTransport",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPointTransport1921a.lean",
+    "originalSha256": "00B5C415EC0CA1ABC5F7CE998769E9055FA6C6140B28A88071D1CEF0B0C04854",
+    "canonicalSha256": "0CAFAED665370B6F6161D231F195B510EFE8D15C48A60E7BAF4E25E19F9FA789",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartDiamondNormalization1922b",
+    "module": "SourceMarkedChartDiamondNormalization",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartDiamondNormalization1922b.lean",
+    "originalSha256": "FA3EE674564375D518CAA709DC174B3CAB8B42A62ABE435D07A5AB9D2A023326",
+    "canonicalSha256": "FA3EE674564375D518CAA709DC174B3CAB8B42A62ABE435D07A5AB9D2A023326",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartOriginalDiamond1923b",
+    "module": "SourceMarkedChartOriginalDiamond",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalDiamond1923b.lean",
+    "originalSha256": "0FDF4C7595C8F03A3ED3C493CAF5C7AB86CA9FDDD6B03E6E9E19DBF874ACD05A",
+    "canonicalSha256": "DA84AE5A5AE70789CBE1A816E1550254D3DD14624EB72ED0D65108DB40F1532B",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedCyclicRootTransitivity1924b",
+    "module": "SourceMarkedCyclicRootTransitivity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicRootTransitivity1924b.lean",
+    "originalSha256": "E2662F65CAC8CC5A8A7F630CDA2E7374A5CE09AF027B53BDD17CEBA80C411F36",
+    "canonicalSha256": "E2662F65CAC8CC5A8A7F630CDA2E7374A5CE09AF027B53BDD17CEBA80C411F36",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedCyclicGeneratorConjugacy1925b",
+    "module": "SourceMarkedCyclicGeneratorConjugacy",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedCyclicGeneratorConjugacy1925b.lean",
+    "originalSha256": "A2820E5C26B9D01D97D938902C515D05F535F5A4EFFF91E6597053915B2140D8",
+    "canonicalSha256": "E76F2230A442F74EC0D2844994DE5D818A74393A7464EC9AD18CF5A885764C84",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedTorsionGeneratorUnit1926a",
+    "module": "SourceMarkedTorsionGeneratorUnit",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionGeneratorUnit1926a.lean",
+    "originalSha256": "607C8C4F232E665380406465D5E2717850CE1B9A7811582B133D8004BCF9B701",
+    "canonicalSha256": "8A8F324D423BB73DA73235E1815F5347BA377FB6A875C7BA80BA1771AEE79617",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedPointSignTransitivity1927a",
+    "module": "SourceMarkedPointSignTransitivity",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPointSignTransitivity1927a.lean",
+    "originalSha256": "D8826498276385A98D8E4197C2918891010CA3DFF64BA23D1DEF7AF9A66B1990",
+    "canonicalSha256": "8CF304F3C06C5CA0BDE8754A877E8C0D50F05990748375B3C1E1B6CBDCC63155",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartOriginalSignOrbit1928a",
+    "module": "SourceMarkedChartOriginalSignOrbit",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalSignOrbit1928a.lean",
+    "originalSha256": "7B8922AEDDD38CD768EA8A194E86A12CB03338DA9822471B26A18C34ABBCF9D8",
+    "canonicalSha256": "36F10D93D2B8BB6F6C458A3BBF79C78ED0CDE002B4BE4B857244355C4B2C6BA4",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartStabilizerActions1929d",
+    "module": "SourceMarkedChartStabilizerActions",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerActions1929d.lean",
+    "originalSha256": "C22496675E8504688E28F0667B6BB2A826A7DBD8EA0F2935274C5F52388A7B8E",
+    "canonicalSha256": "C62A5A28BC5B00FE3C9CA4EC4CC864C12356A381ED59E9B1EACF07CF2A1580AB",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedStabilizerIndexComparison1930b",
+    "module": "SourceMarkedStabilizerIndexComparison",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedStabilizerIndexComparison1930b.lean",
+    "originalSha256": "A0069CB2390A88F80EDBD3D0DDEF9C81C17F20A9B11C4974CCE318C7D091EC2E",
+    "canonicalSha256": "A0069CB2390A88F80EDBD3D0DDEF9C81C17F20A9B11C4974CCE318C7D091EC2E",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartStabilizerEquality1931a",
+    "module": "SourceMarkedChartStabilizerEquality",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartStabilizerEquality1931a.lean",
+    "originalSha256": "F473CC458DE04689A892DEB7EBBB1C86BD8AA9B3CE350830CA0F5B1A82423589",
+    "canonicalSha256": "220703AFB91255D9A3DE8D7A3538710F23D407EC918ACDD9F576CF5C2A7BAD24",
+    "mathematicalBodyIdentical": true
+  },
+  {
+    "version": "SourceMarkedChartOriginalStabilizerEquality1932a",
+    "module": "SourceMarkedChartOriginalStabilizerEquality",
+    "sourcePath": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartOriginalStabilizerEquality1932a.lean",
+    "originalSha256": "38A68AC9836C8BAC8F234200C9C901AE3DDDC4257D6B14B605A662517D1D0CB9",
+    "canonicalSha256": "AF2375FE33270124103BD3C39A985F4F2E5F638E44284259E11037B56F38D475",
+    "mathematicalBodyIdentical": true
+  }
+]

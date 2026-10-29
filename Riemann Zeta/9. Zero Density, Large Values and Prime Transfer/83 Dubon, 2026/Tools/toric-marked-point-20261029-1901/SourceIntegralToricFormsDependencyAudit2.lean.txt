@@ -1,0 +1,42 @@
+import SourceGammaOneDivisionToricForms
+import SourceGammaOneDivisionFourier
+import SourceGammaOneDivisionCoefficientFibers
+import SourceGammaOneDivisionDivisorCoefficients
+import SourceToricFourierCharacters
+import SourceToricIntegerFourierTransform
+import SourceToricIntegralCoefficientPolynomials
+import SourceGammaOneNormalizedDivisionForm
+import SourceTateA4Series
+import SourceToricIntegerCoefficientFamilies
+import SourceGammaOneIntegralToricWeightTwo
+import SourceGammaOneIntegralToricWeightFour
+import SourceGammaOneIntegralToricSlash
+import SourceGammaOneIntegralToricReconstruction
+import SourceGammaOneIntegralToricForms
+import Mathlib.Tactic
+
+open Lean
+
+private def runIntegralToricFormsDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ToricFourier.exists_integralToricInvariantForms]
+  let localModules : Array Name := #[`SourceGammaOneDivisionToricForms, `SourceGammaOneDivisionFourier, `SourceGammaOneDivisionCoefficientFibers, `SourceGammaOneDivisionDivisorCoefficients, `SourceToricFourierCharacters, `SourceToricIntegerFourierTransform, `SourceToricIntegralCoefficientPolynomials, `SourceGammaOneNormalizedDivisionForm, `SourceTateA4Series, `SourceToricIntegerCoefficientFamilies, `SourceGammaOneIntegralToricWeightTwo, `SourceGammaOneIntegralToricWeightFour, `SourceGammaOneIntegralToricSlash, `SourceGammaOneIntegralToricReconstruction, `SourceGammaOneIntegralToricForms]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ToricFourier.exists_integralToricInvariantForms, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.vecMulSL_zero_first, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.torsionWeightTwo_qExpansion_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_product_fiber, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.tsum_pnat_product_eq_divisor_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricForms.wpQCoeff_zero_first_divisor_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.W_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_W, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_B, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.isIntegralQExp_D, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_B_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_D_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.B_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.D_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_reindex, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.det_mod, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.Fform_slash, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_Fform_coeff, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.qExpansion_finset_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_wT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_xT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.inv_formula, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.one_sub_mul_S1, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.aeval_fT, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.bZ_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.dZ_eq_sum, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_bZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_dZ, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_filter_aeval, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_aeval, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.fourier_inversion, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.sum_ψ_mul, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.eisenstein4_map_eq, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightTwo_series, `Dubon2026.SourceFunctionField.GammaOne.ToricFourier.weightFour_series, `Dubon2026.SourceFricke.mdifferentiable_wpNormZ, `Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ, `Dubon2026.SourceFricke.wpNormZ_slash, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff, `Dubon2026.SourceFricke.qExpansion_coeff_width, `Dubon2026.SourceFricke.finite_wpMonExp_fiber, `Dubon2026.SourceFunctionField.qExpansion_E4_eq_map_eisenstein4, `ModularForm.qExpansionAddHom, `SlashAction.sum_slash, `AddChar.sum_mulShift, `Nat.sum_divisorsAntidiagonal', `Dubon2026.SourceFunctionField.GammaOne.divisionForm, `Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0, `Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE INTEGRAL TORIC FORMS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the VALUE closure of the actual integral toric invariant forms. Native analytic torsion forms, exact Fourier coefficients, integer polynomial transforms, actual E4 and the diamond action are consumed. Exact-order points, finite elliptic fibers and reverse genus remain open; DUB17--20 OPEN."
+
+#eval runIntegralToricFormsDependencyAudit

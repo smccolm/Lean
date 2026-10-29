@@ -1,0 +1,67 @@
+import SourceMarkedOriginalFullTorsionChart1952a
+import Mathlib.FieldTheory.RatFunc.IntermediateField
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> original marked
+chart for the source's ofJ(X) specialization. The literal j equation,
+transcendence and generation of the base field follow from native ofJ and
+rational-function APIs. The already constructed normal full-torsion chart
+then supplies the exact source input, without a generic-coordinate premise. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_ofJ_full_torsion_chart
+    (hℓN : ¬ ℓ ∣ N) (hN : 2 ≤ N) [DecidableEq (RatFunc kk)]
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk)
+    (M : Type*) [Field M] [DecidableEq M] [Algebra kk M] [Algebra (RatFunc kk) M]
+    [IsScalarTower kk (RatFunc kk) M] [Normal (RatFunc kk) M]
+    (hfull : Nat.card {P : ((ofJ (RatFunc.X : RatFunc kk)).baseChange M).toAffine.Point //
+      N • P = 0} = N ^ 2) :
+    let E := ofJ (RatFunc.X : RatFunc kk)
+    ∃ Ψ : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N} →
+        {ψ : F →ₐ[kk] M // ψ x = algebraMap (RatFunc kk) M RatFunc.X},
+      (∀ (σ : M ≃ₐ[RatFunc kk] M) P P', P'.val = Affine.Point.map (W' := E) σ.toAlgHom P.val →
+        (Ψ P').val = (σ.toAlgHom.restrictScalars kk).comp (Ψ P).val) ∧
+      (∀ (γ : Gamma0 N) P P',
+        P'.val = (((gamma0Unit N γ)⁻¹ : (ZMod N)ˣ) : ZMod N).val • P.val →
+        (Ψ P').val = (Ψ P).val.comp (originalResidueDiamondAction A N ℓ hℓN γ).toAlgHom) ∧
+      (∀ P P', P'.val = -P.val → Ψ P' = Ψ P) ∧
+      (∀ P P', Ψ P' = Ψ P → P'.val = P.val ∨ P'.val = -P.val) ∧
+      Function.Surjective Ψ := by
+  have hE : Transcendental kk (ofJ (RatFunc.X : RatFunc kk)).j := by
+    rw [ofJ_j]
+    exact RatFunc.transcendental_X
+  have hgen : IntermediateField.adjoin kk
+      ({(ofJ (RatFunc.X : RatFunc kk)).j} : Set (RatFunc kk)) = ⊤ := by
+    rw [ofJ_j]
+    exact RatFunc.adjoin_X
+  obtain ⟨Φ, hnat, hdia, hneg, hsep, hsurj⟩ :=
+    exists_original_natural_marked_chart_full_torsion
+      A N ℓ hℓN hN x hx (RatFunc kk) M (ofJ RatFunc.X) hE hgen hfull
+  let Ψ : {P : ((ofJ (RatFunc.X : RatFunc kk)).baseChange M).toAffine.Point //
+      addOrderOf P = N} → {ψ : F →ₐ[kk] M // ψ x = algebraMap (RatFunc kk) M RatFunc.X} :=
+    fun P => ⟨(Φ P).val, by
+      have h := (Φ P).property
+      rw [ofJ_j] at h
+      exact h⟩
+  refine ⟨Ψ, hnat, hdia, ?_, ?_, ?_⟩
+  · intro P P' h
+    exact Subtype.ext (congrArg Subtype.val (hneg P P' h))
+  · intro P P' h
+    exact hsep P P' (Subtype.ext (congrArg Subtype.val h))
+  · intro ψ
+    have hψ : ψ.val x = algebraMap (RatFunc kk) M (ofJ (RatFunc.X : RatFunc kk)).j := by
+      rw [ofJ_j]
+      exact ψ.property
+    obtain ⟨P, hP⟩ := hsurj ⟨ψ.val, hψ⟩
+    exact ⟨P, Subtype.ext (congrArg Subtype.val hP)⟩
+
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

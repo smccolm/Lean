@@ -1,0 +1,77 @@
+import SourceMarkedOriginalResidueFiberFive1969e
+import SourceMarkedQuadraticFiberBounds1967b
+import Dubon2026.SourceMarkedTorsionActualCount
+import Dubon2026.SourceEllipticExceptionalJValues
+import Dubon2026.SourceEllipticCubicAction
+
+/-! DUB-17/18 -> reverse original genus -> tame elliptic fiber bounds.
+The actual prescribed reduction and original Gamma1 chart discharge all
+geometric input assumptions. Native exceptional curve automorphisms and
+their quadratic relations, together with the original signed-index point
+count, prove the two required numerical bounds for N greater than three.
+Small levels and characteristics two and three remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup SourceCurve SourceEllipticStabilizer
+open SourceEllipticExceptional MarkedTorsion GammaOne GammaOne.ToricCoordinates IntegralDiamond
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N ℓ : ℕ) [NeZero N] [Fact ℓ.Prime]
+    [CharP (IsLocalRing.ResidueField A) ℓ]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem original_two_mul_card_j_1728_fiber_le_of_five_le
+    (hℓN : ¬ ℓ ∣ N) (hN : 3 < N) (hℓ : 5 ≤ ℓ)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    2 * Nat.card {v : Place kk F // 0 < v.ord (x - algebraMap kk F 1728)} ≤
+      (plusMinus (Gamma1 N)).index := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  have h2 : (2 : kk) ≠ 0 :=
+    (SourceEllipticReduction.isUnit_two_three_of_five_le kk kk ℓ hℓ).1.ne_zero
+  letI : (EA (1 : kk)).IsElliptic := isElliptic_EA 1 one_ne_zero h2
+  obtain ⟨u, hu⟩ := exists_quartic_scaling (K := kk)
+  have hfix := quartic_change_fixes u hu (1 : kk)
+  obtain ⟨g, hg, hneg, hcurve⟩ := exists_original_residue_marked_fiber_of_five_le
+    A N ℓ hℓN (by omega) hℓ x hx (EA (1 : kk))
+  have hc : Nat.card (SignClasses (EA (1 : kk)).toAffine.Point N) =
+      (plusMinus (Gamma1 N)).index := by
+    simpa only [WeierstrassCurve.baseChange, Algebra.algebraMap_self, WeierstrassCurve.map_id]
+      using actual_point_signClasses_card (EA (1 : kk)) N hNK
+  letI : Finite (SignClasses (EA (1 : kk)).toAffine.Point N) :=
+    Nat.finite_of_card_ne_zero (hc.trans_ne Subgroup.FiniteIndex.index_ne_zero)
+  have hb := two_mul_card_fiber_le_signClasses N hN g hg hneg
+    (stabilizerPointEquiv (EA (1 : kk)) ⟨u, 0, 0, 0⟩ hfix)
+    (hcurve ⟨u, 0, 0, 0⟩ hfix) (quartic_action_square 1 u hu)
+  rw [hc, quartic_j] at hb
+  exact hb
+
+theorem original_three_mul_card_j_zero_fiber_le_of_five_le
+    (hℓN : ¬ ℓ ∣ N) (hN : 3 < N) (hℓ : 5 ≤ ℓ)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) :
+    3 * Nat.card {v : Place kk F // 0 < v.ord x} ≤ (plusMinus (Gamma1 N)).index := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  have hNK : (N : kk) ≠ 0 := fun h => hℓN ((CharP.cast_eq_zero_iff kk ℓ N).mp h)
+  obtain ⟨h2, h3⟩ := SourceEllipticReduction.isUnit_two_three_of_five_le kk kk ℓ hℓ
+  letI : (EB (1 : kk)).IsElliptic := isElliptic_EB 1 one_ne_zero h2.ne_zero h3.ne_zero
+  obtain ⟨u, hu, hu1⟩ := exists_cubic_scaling (K := kk) h3.ne_zero
+  have hfix := cubic_change_fixes u hu (1 : kk)
+  obtain ⟨g, hg, hneg, hcurve⟩ := exists_original_residue_marked_fiber_of_five_le
+    A N ℓ hℓN (by omega) hℓ x hx (EB (1 : kk))
+  have hc : Nat.card (SignClasses (EB (1 : kk)).toAffine.Point N) =
+      (plusMinus (Gamma1 N)).index := by
+    simpa only [WeierstrassCurve.baseChange, Algebra.algebraMap_self, WeierstrassCurve.map_id]
+      using actual_point_signClasses_card (EB (1 : kk)) N hNK
+  letI : Finite (SignClasses (EB (1 : kk)).toAffine.Point N) :=
+    Nat.finite_of_card_ne_zero (hc.trans_ne Subgroup.FiniteIndex.index_ne_zero)
+  have hb := three_mul_card_fiber_le_signClasses N hN g hg hneg
+    (stabilizerPointEquiv (EB (1 : kk)) ⟨u, 0, 0, 0⟩ hfix)
+    (hcurve ⟨u, 0, 0, 0⟩ hfix) (cubic_action_relation 1 one_ne_zero u hu hu1 h2.ne_zero)
+  rw [hc, cubic_j, map_zero, sub_zero] at hb
+  exact hb
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

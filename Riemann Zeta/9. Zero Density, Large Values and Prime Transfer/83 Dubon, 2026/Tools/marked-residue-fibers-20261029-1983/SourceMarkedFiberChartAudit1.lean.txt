@@ -1,0 +1,56 @@
+import SourceMarkedChartPlaceOrbits
+import SourceMarkedOriginalOfJChart
+import SourceMarkedOriginalPlaceChart
+import SourceMarkedFullTorsionNonempty
+import SourceMarkedChartFiberSurjection
+import SourceMarkedOriginalFiberChart
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion
+#print axioms Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart
+
+private def runMarkedFiberChartAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceMarkedChartPlaceOrbits, `SourceMarkedOriginalOfJChart, `SourceMarkedOriginalPlaceChart, `SourceMarkedFullTorsionNonempty, `SourceMarkedChartFiberSurjection, `SourceMarkedOriginalFiberChart]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart, `Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion, `Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion, `Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Marked algebraic chart postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Marked algebraic chart theorems discovered"
+  logInfo m!"SOURCE MARKED FIBER CHART AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runMarkedFiberChartAudit
+
+#lint in SourceMarkedChartPlaceOrbits
+#lint in SourceMarkedOriginalOfJChart
+#lint in SourceMarkedOriginalPlaceChart
+#lint in SourceMarkedFullTorsionNonempty
+#lint in SourceMarkedChartFiberSurjection
+#lint in SourceMarkedOriginalFiberChart

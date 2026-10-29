@@ -1,0 +1,55 @@
+import SourceToricCuspDivisionIdentity1888b
+import SourceTateCoefficientNormalization1889a
+import SourceGammaOneIntegralToricWeightTwo
+import Dubon2026.SourceIntegerJEulerNormalization
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> exact-order toric point. Identify the coefficient and abscissa
+q expansions with the literal Tate series, obtaining its division-polynomial
+identity over complex power series from the native analytic torsion point.
+Specialization to other characteristics and exact order there remain required. -/
+namespace Dubon2026.SourceFunctionField.ToricAnalytic
+noncomputable section
+open WeierstrassCurve UpperHalfPlane SourceFricke GammaOne.ToricForms GammaOne.ToricFourier
+
+theorem cuspExpansionHom_E4 :
+    cuspExpansionHom cuspE4 = eisenstein4.map (Int.castRingHom ℂ) :=
+  qExpansion_E4_eq_map_eisenstein4
+
+theorem cuspExpansionHom_E6 :
+    cuspExpansionHom cuspE6 = SourceFricke.eisenstein6.map (Int.castRingHom ℂ) :=
+  SourceFricke.qExpansion_E6_eq_map_eisenstein6
+
+theorem cuspExpansionTateCurve :
+    cuspTateCurve.map cuspExpansionHom =
+      tatePowerSeries.map (PowerSeries.mapRingHom (Int.castRingHom ℂ)) := by
+  ext <;> simp only [WeierstrassCurve.map, cuspTateCurve, tatePowerSeries,
+    map_one, map_zero, map_mul, map_sub, map_add, map_ofNat,
+    cuspExpansionHom_const, cuspExpansionHom_E4, cuspExpansionHom_E6,
+    PowerSeries.mapRingHom_apply, map_tateA4_complex, map_tateA6_complex]
+
+theorem cuspExpansionToricX (N : ℕ) [NeZero N] (c : ZMod N) (hc : c ≠ 0) :
+    cuspExpansionHom (cuspToricX N c hc) = xS (zetaN N ^ c.val) := by
+  rw [cuspToricX, map_sub, cuspExpansionHom_const]
+  ext n
+  change (qExpansion 1 (torsionWeightTwo N c hc) - PowerSeries.C (1 / 12 : ℂ)).coeff n = _
+  rw [map_sub, PowerSeries.coeff_C, torsionWeightTwo_qExpansion_coeff,
+    wpQCoeff_zero_first_divisor_sum]
+  simp only [xS, PowerSeries.coeff_mk, xcoef, pow_mul, inv_pow]
+  by_cases hn : n = 0
+  · subst n
+    simp only [ite_true, Nat.divisors_zero, Finset.sum_empty, add_zero]
+    ring
+  · simp only [if_neg hn, zero_add, sub_zero]
+    simp_rw [mul_sub, Finset.sum_sub_distrib, ← Finset.sum_mul]
+    ring
+
+theorem tatePowerSeries_complex_eval_ΨSq (N : ℕ) [NeZero N]
+    (c : ZMod N) (hc : c ≠ 0) :
+    ((tatePowerSeries.map (PowerSeries.mapRingHom (Int.castRingHom ℂ))).ΨSq N).eval
+      (xS (zetaN N ^ c.val)) = 0 := by
+  rw [← cuspExpansionTateCurve, ← cuspExpansionToricX N c hc]
+  exact cuspExpansionTateCurve_eval_ΨSq N c hc
+
+end
+end Dubon2026.SourceFunctionField.ToricAnalytic

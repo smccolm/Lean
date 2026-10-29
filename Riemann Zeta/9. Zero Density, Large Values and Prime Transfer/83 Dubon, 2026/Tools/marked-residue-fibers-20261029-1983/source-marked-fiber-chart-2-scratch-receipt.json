@@ -1,0 +1,104 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-29T18:26:10.671759+00:00",
+  "date": "2026-10-29 America/Vancouver",
+  "modules": [
+    "SourceMarkedChartPlaceOrbits",
+    "SourceMarkedOriginalOfJChart",
+    "SourceMarkedOriginalPlaceChart",
+    "SourceMarkedFullTorsionNonempty",
+    "SourceMarkedChartFiberSurjection",
+    "SourceMarkedOriginalFiberChart"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits.lean",
+      "sha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74",
+      "oleanSha256": "71356E5075B343CAC21765F8FC0D74A60FF482BE62648CC6726676462A24EEA0",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart.lean",
+      "sha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3",
+      "oleanSha256": "A994DF60DCEE66CDF9FB7A4D65AC6A735430054F9D06ADA202DAA57F73E883A5",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart.lean",
+      "sha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA",
+      "oleanSha256": "0C96D92DD7210788AE8991FD6294740B629230636B09D9CB589BC777BCF3DE67",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty.lean",
+      "sha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4",
+      "oleanSha256": "175A6C7C9FB6BD8E5D8068445B47C2BC8155A55F95B65E92D03B7FC42379F32A",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection.lean",
+      "sha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4",
+      "oleanSha256": "F11B9BE65166FD5ECDA1CFC3D880D55F4B5C5792E4AC6B0EFB4E79DDADF1CB71",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.exit"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart.lean",
+      "sha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105",
+      "oleanSha256": "FAF7B7F5816A5E235B0DDD6716C06D60BB24C996D356DD97D681E5B433B5FBEE",
+      "compileLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.log",
+      "compileExit": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.exit"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.MarkedChart.marked_chart_restrict_eq_iff_inertia_sign",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_full_torsion_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_ofJ_place_chart",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_exactOrder_point_of_full_torsion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_marked_fiber_surjection_of_embedding_exhaustion",
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartAudit1.log",
+  "logSha256": "D19FA8AB904E168A23225956DA954CBB554FAE96B41A27133A79875776D083DA",
+  "auditSha256": "45444B96010E07F34317342227447C3CB7257188454C304745EF5F781A8603EA",
+  "exit": 0,
+  "diagnostics": 0,
+  "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.log",
+  "ownershipSha256": "C6DA76F8B2AD86B92AD3C76782471D8F58F7AF830C66D5538A544A0F821F14F3",
+  "exhaustiveTheorems": 12,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2.log",
+  "dependencyAuditSha256": "C04DE2DBE7DF11F8C4251B2FA8BC7100C57766CCA02580BF610A875D2DD9B6A9",
+  "dependencyAuditSourceSha256": "B8BDA8DAD26B7530D4D424F011754940D07FA6F0DEAB5EF6369439D9A334BFF4",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.MarkedChart.exists_original_marked_fiber_chart"
+  ],
+  "dependency": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> finite elliptic residue fibers -> actual original-field marked-fiber chart.",
+  "discharged": [
+    "ofJ_j, transcendental_X and adjoin_X discharge the generic-j and generated-base-field inputs.",
+    "The actual full-torsion cardinal supplies a point of exact order N.",
+    "Normalized-embedding exhaustion discharges the coverage assumption in the place-lifting consumer.",
+    "Native finite-place inertia conjugacy discharges the place-equality classification.",
+    "Original diamond embedding covariance implies original diamond covariance of actual places."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Connect the native prescribed full-inertia specialization data and derive finite elliptic cardinal bounds, then reverse genus and the remaining original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-2-reuse-review-20261029.json",
+  "reuseReviewSha256": "F50E6CEF0ADF3F2C45FB997890E408BE14F51EE288C54CA9170D6FF48935F7FB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

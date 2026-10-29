@@ -1,0 +1,50 @@
+import Dubon2026.SourceRationalCoordinateFiberSurjectivity
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+
+/-! DUB-17/18 -> reverse genus -> finite elliptic fibers -> surjective
+original marked-place chart. Native coordinate place lifting and positivity
+of restricted normalized orders turn exhaustion of normalized embeddings
+into exhaustion of the actual j fiber. The original chart and full-torsion
+point construction discharge the two explicit upstream inputs. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve SourceCurve
+
+theorem exists_marked_fiber_surjection_of_embedding_exhaustion
+    {K F M : Type*} [Field K] [IsAlgClosed K] [Field F] [Field M] [DecidableEq M]
+    [Algebra K F] [Algebra K M] [Algebra (RatFunc K) M]
+    [IsScalarTower K (RatFunc K) M] [FiniteDimensional (RatFunc K) M] [IsGalois (RatFunc K) M]
+    (E : WeierstrassCurve (RatFunc K)) (N : ℕ) (x : F) (hx : Transcendental K x)
+    (P₀ : (E.baseChange M).toAffine.Point) (hP₀ : addOrderOf P₀ = N)
+    (Φ : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N} →
+      {φ : F →ₐ[K] M // φ x = algebraMap (RatFunc K) M RatFunc.X})
+    (hsurj : Function.Surjective Φ) (hfinite : ∀ P, (Φ P).val.toRingHom.Finite)
+    (w : Place K M) (c : K)
+    (hw : 0 < w.ord (algebraMap (RatFunc K) M RatFunc.X - algebraMap K M c)) :
+    ∃ f : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N} →
+        {v : Place K F // 0 < v.ord (x - algebraMap K F c)},
+      (∀ P, (f P).val = Place.restrictAlongFinite (Φ P).val (hfinite P) w) ∧
+      Function.Surjective f := by
+  have hpos (P : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N}) :
+      0 < (Place.restrictAlongFinite (Φ P).val (hfinite P) w).ord (x - algebraMap K F c) := by
+    have ho := Place.ord_restrictAlongFinite (Φ P).val (hfinite P) w (x - algebraMap K F c)
+    rw [map_sub, (Φ P).property, (Φ P).val.commutes] at ho
+    rw [ho] at hw
+    exact (mul_pos_iff_of_pos_right
+      (Place.ord_restrictAlongFinite_uniformizer_pos (Φ P).val (hfinite P) w)).mp hw
+  let f : {P : (E.baseChange M).toAffine.Point // addOrderOf P = N} →
+      {v : Place K F // 0 < v.ord (x - algebraMap K F c)} :=
+    fun P => ⟨Place.restrictAlongFinite (Φ P).val (hfinite P) w, hpos P⟩
+  refine ⟨f, fun _ => rfl, ?_⟩
+  intro v
+  obtain ⟨ψ, hψ, hv⟩ := Place.exists_coordinate_embedding_restrict_eq x hx
+    (Φ ⟨P₀, hP₀⟩).val (Φ ⟨P₀, hP₀⟩).property w c hw v.val v.property
+  obtain ⟨P, hP⟩ := hsurj ⟨ψ, hψ⟩
+  refine ⟨P, Subtype.ext ?_⟩
+  change Place.restrictAlongFinite (Φ P).val (hfinite P) w = v.val
+  have he := congrArg Subtype.val hP
+  subst ψ
+  exact hv
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart

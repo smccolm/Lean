@@ -1,0 +1,63 @@
+{
+  "recordedUTC": "2026-10-29T18:45:14.294422+00:00",
+  "chain": "DUB17 Theorem2.6 / DUB18 Cor8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero association -> homogeneous Gamma1 Hecke-character realization -> original genus preservation -> reverse genus -> actual original Gamma1 elliptic residue fibers.",
+  "shorterRoute": "For N greater than three, actual quartic and cubic point identities exclude fixed primitive sign classes. Native orbit counts therefore give factors two and three without adapted torsion bases or unsigned generator transport. Native full-inertia specialization in every characteristic supplies the finite field, full torsion, positive-order place and lifts; native torsion reduction transports the original chart to actual residue points. The two tame numerical bounds are exact original-field consumers. Wild charts are assembled but their stronger differential bounds remain required.",
+  "assumptionsToDischarge": [
+    "Native specialization constructs all finite Galois, full torsion and positive-order inputs of the original chart.",
+    "The actual N-squared torsion count and native torsion theorem make reduction bijective on exact-order points.",
+    "Full inertia image up to sign yields invariance under actual residue-curve automorphisms.",
+    "For N greater than three, quartic and cubic identities exclude fixed sign classes.",
+    "Native finite orbit counts and the actual signed Gamma1 index count derive the two tame numerical bounds."
+  ],
+  "remaining": "Handle small levels without losing the all-level contract, derive the wild differential contributions, and assemble reverse genus; then continue original association and higher continuation. Acceptance16/20; DUB17--20 OPEN.",
+  "boundary": "Twelve focused modules compile; exhaustive audit, promotion and assembled verification pending. Tame bounds assume precisely N greater than three and residue characteristic at least five. Wild chart endpoints cover characteristics two and three with N at least two away from characteristic. The elementary sign-pair evaluation lemma is separately axiom-checked and is not claimed as a consumed endpoint dependency.",
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFunctionField.MarkedTorsion.signClassesEquiv_pair"
+  ],
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticSpecializationTorsionRange.lean",
+      "sha256": "53428D4D8B925E5F64FF2F7F5B7BE60158C0AC2430160AD2435385A42461C044"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPrescribedFullInertiaImage.lean",
+      "sha256": "A4978F8E738166C878A5855848FE6FEF6E706ABDA106C8EB03169BD89F183938"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharTwoFullInertiaImage.lean",
+      "sha256": "06403DE0E7D0489AE88C7D09274E08DB5CAD63036C76B300CC435E778A8E0A7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeFullInertiaImage.lean",
+      "sha256": "C56226BB732F49E3FBA1472055AD0371D9E395E142A1E3415183AE3C2A9233BC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMarkedTorsionActualCount.lean",
+      "sha256": "3F19574B72667563D47057E229D7A047A58CD46958E2AD22955A740480B1C9A0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinOrbitCount.lean",
+      "sha256": "9337C9AB742D19EA2AD277E4685581C9C43C1EE5214E1A3925DE5E32BD011CF8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCyclicOrbitClassification.lean",
+      "sha256": "3D4622B5FE4BEC191BED3670FCDCE0FF4294409DF4F20B31D0EBF5F39CFB4C51"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuarticModel.lean",
+      "sha256": "43FE57EF2606008BE91428B6370B762706EF408FD20B02B03C1A27F0DA3148D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCubicAction.lean",
+      "sha256": "873A0ADA2521B47F321E107B15223C50D8FDD829D1990F4AD4BB7C8DB7C7E1BC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharTwoDifferentialSum.lean",
+      "sha256": "4C69C7E458EF5B54E08725D00929FEA2B0EC8391BF5128C9409577D50AD6E5F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharThreeDifferentialSum.lean",
+      "sha256": "ADD8D530575AB3BF4669ABE68C48CD4DC7FE3871894C6E704E03A881C87A2890"
+    }
+  ]
+}

@@ -1,0 +1,1634 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Marked Residue Fibers Assessment 2026-10-29.md",
+      "path": "Tools/marked-residue-fibers-20261029-1983/Dubon Marked Residue Fibers Assessment 2026-10-29.md.txt",
+      "sha256": "7909F6B3CB93341A5202D81E1B07C3642C21A6A38F7D02A9541174A9F0F5BB5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartAudit1.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.lean.txt",
+      "sha256": "BEF994483EB5F19188E54E2D599FAD67D1BE66521F126448E278D87E6F583CDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartAudit1.log",
+      "sha256": "4A3D0AF01FC1FB935E7856BDBCE996101B9087DA2E57262D9B2DD96D271B3287"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.lean.txt",
+      "sha256": "A4B66A450ADABB42CBB00F55688F0695711734E04A46AB9C78BA94AB9D991AC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartDependencyAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartDependencyAudit1.log",
+      "sha256": "45DC028D8958B505CD48CC063BEB57B144D601B3F0CD6AA50CA9B6515BB20220"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.lean.txt",
+      "sha256": "9997E5BEEC9B2D595C5CDAA3FF48EFC57F92A0768B77974CBC6FDE4DB269CB7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedAlgebraicChartScratchOwnership1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedAlgebraicChartScratchOwnership1953.log",
+      "sha256": "555867B3CB9EB0E3D388DACCA8B55ED0CEDDD2196D2489ABED59BF0BF124EDCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection.lean.txt",
+      "sha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.lean.txt",
+      "sha256": "2E03712AD4CFF26241BAB477FE06C82A30F605963FAE780CE26222384661F2C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958a.log",
+      "sha256": "83DAC96A90493FD836BAC156824F64D0EA2951895E8251294217EA3C5F99BB50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.lean.txt",
+      "sha256": "1E4B9181D99E7C107207186FFB1A806C3A11DF91231A930071644BB7928D5EA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartFiberSurjection1958b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartFiberSurjection1958b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion.lean.txt",
+      "sha256": "91781AEDE4B902854BEA823AFDAD839073EA079048B857DB0902C771271496E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion1951a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion1951a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.lean.txt",
+      "sha256": "00D8F9ED749765ED1F3D4A3FB8A6C7708BD1BDE15AB7ADCEF45836250BBF3458"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartNormalExhaustion1951a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartNormalExhaustion1951a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits.lean.txt",
+      "sha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.lean.txt",
+      "sha256": "A86AE01B119BF597A55392F48D2B5FDBD0BF9A00E835067107779B12ABBF45ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954a.log",
+      "sha256": "4D9A57570322DFFA69A88DB9B8F9401D22B60E3D583F30B0043EE1FB0AAD90F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.lean.txt",
+      "sha256": "C5A6FF75C2E6E1C288408B2718A6D47401B19DFD5BB9399982A724603E667C74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedChartPlaceOrbits1954b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedChartPlaceOrbits1954b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersAudit1.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.lean.txt",
+      "sha256": "8BC0D7DF862BCF17AE9173F68C50B2E7DF5FED1D086B6944A591D59DD9B446A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersAudit1.log",
+      "sha256": "A61AE3A5264A041C5E57D5D842F6140FE5160B1D6D3E1D40249779147C1551CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersDependencyAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersDependencyAudit1.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.lean.txt",
+      "sha256": "192AD517E6CFAE8DDCDADA793CF937ED5C2B082908B9C37CF21A773199615D9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersDependencyAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersDependencyAudit1.log",
+      "sha256": "FA6909801453EF33CA6618CA6E005E835A0018A49FB07A6A153FAA2754651F3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.lean.txt",
+      "sha256": "3E113EFDFC036CD3ECDF2861C0B14A398F5D926C9EB35D41363D654111F7486A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedExceptionalFibersScratchOwnership1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedExceptionalFibersScratchOwnership1974.log",
+      "sha256": "56BAEAA967FF66272F7DDFAF8DF7800FCE4634334D4B9AFE8759DE03E9E79269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartAudit1.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.lean.txt",
+      "sha256": "45444B96010E07F34317342227447C3CB7257188454C304745EF5F781A8603EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartAudit1.log",
+      "sha256": "D19FA8AB904E168A23225956DA954CBB554FAE96B41A27133A79875776D083DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit1.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit1.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.lean.txt",
+      "sha256": "5DB139E6121FEA2FAAE73C8C4D60D1258A55A86B5E6E29E5F0317EF53DCA634B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit1.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit1.log",
+      "sha256": "662EEEFAED43C01F60C785C24172A8FA5DCB2CCB66886F3BBD60598D3DFD8600"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.lean.txt",
+      "sha256": "B8BDA8DAD26B7530D4D424F011754940D07FA6F0DEAB5EF6369439D9A334BFF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartDependencyAudit2.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartDependencyAudit2.log",
+      "sha256": "C04DE2DBE7DF11F8C4251B2FA8BC7100C57766CCA02580BF610A875D2DD9B6A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.lean.txt",
+      "sha256": "A1A0AB18AC8851894CA8F2BFE3109C2C5CB3802EE41BF6E3D16445BC31BFCB6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFiberChartScratchOwnership1963.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFiberChartScratchOwnership1963.log",
+      "sha256": "C6DA76F8B2AD86B92AD3C76782471D8F58F7AF830C66D5538A544A0F821F14F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts.lean.txt",
+      "sha256": "CD4FE73C3D87362ED346833C9CD3231E4C9BFFAE5EC662452F2747CD778295B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts1973a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts1973a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.lean.txt",
+      "sha256": "A5F48A2857D745291D8542BED4BF9040D2399A5CA730B3F73BAB5C8C59A3CBF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullInertiaLifts1973a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullInertiaLifts1973a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty.lean.txt",
+      "sha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.lean.txt",
+      "sha256": "0871E71500E6A4008CD0D3763EA7F9BDC6CBE094A68083BB345BA444EDDC519B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957a.log",
+      "sha256": "0F30A7087CC568CF098C1ECB4967A28A79D78A5110C4525B490A1A13D7FA7227"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.lean.txt",
+      "sha256": "2E27FCA9D99F81F990B32501E6BC511E5EAB6F0FDDDE3502DC017FD9B65CCC10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957b.log",
+      "sha256": "8829FF69A6982AF81A1FFB3E86E2072AAC14CE85E8674E76389E9987B4FF876B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.lean.txt",
+      "sha256": "49396D2C5154605CD75BC8EA244DE808A41FA4D84071950AD3FE801B923E2BF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionNonempty1957c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionNonempty1957c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift.lean.txt",
+      "sha256": "ADD409EC788B9492827D919659BC631AA80054B455B5FA83E07AAC77B66DEDAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift1949a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift1949a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.lean.txt",
+      "sha256": "90E693470BA3B060CAC6FFE605BBCA5D73F773CB61BE7F548B884DDA698F5A41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedFullTorsionPointLift1949a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedFullTorsionPointLift1949a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart.lean.txt",
+      "sha256": "603CE7357BC783CBB59590AA3FE4B3E91E235642A7236E97C64802B2A14622F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.lean.txt",
+      "sha256": "2277167C244CFF09096B4FC72FA5434E695CF3F4D1947F9F1345D084A38FBFE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948a.log",
+      "sha256": "E97C03CA531D436F5C4B5A2975191403424887050DE00CC76B190B2616DBB1C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.lean.txt",
+      "sha256": "AF518B10612BCB816627B12C7D28577EC109ABD0CF2D02148E189617B8AEDBCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948b.log",
+      "sha256": "05FFAEF779D045595403C154A75ADE7A140AD453952F5171B3EF8DD498D532A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948c.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.lean.txt",
+      "sha256": "0F274C57A2823D36388006A81057EE1FB27E66A218A5E40A91A9447BAF997404"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948c.log",
+      "sha256": "41514CDDA2503EE5E326D7BB083712B3A8C81561132AF590E4403DEC4C110D35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948d.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948d.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.lean.txt",
+      "sha256": "C67BC95FBB4D544C8665D92CF9C7C04CC826F30BAA39C6240AD1EAEBA257AC9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalAlgebraicChart1948d.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalAlgebraicChart1948d.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart.lean.txt",
+      "sha256": "5315E1CF2EC34E4499A5B18F43F7D6DAEA70CC1D240B9301389E471D9FBED105"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart1959a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart1959a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.lean.txt",
+      "sha256": "0881875D9BCDE4B1DC088BB343EDB1DE259D13774D99D80137E3E53DDA8CEE5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFiberChart1959a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFiberChart1959a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart.lean.txt",
+      "sha256": "D8BC2C3B29AAC5461D607C7BAC8BA6894F28C68B466218C9A242C13A0FC14F2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart1952a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart1952a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.lean.txt",
+      "sha256": "96662EB4EA03F2A5C66AE871AA4B56D057321B311270263EB147E00BB2BC5D10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalFullTorsionChart1952a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalFullTorsionChart1952a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart.lean.txt",
+      "sha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.lean.txt",
+      "sha256": "7D5D9B222D1C73C81767D609D3BF0E74BE183F36099E542EA4AAF5B6A1F321A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955a.log",
+      "sha256": "55FF04C26DFE4C05AE824EAFAEEDFBB0D15D23578CB02E9D70764020FA9794BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.lean.txt",
+      "sha256": "1C61FD0A9D96B2ACED911FC50E9D9A594AD8E283EBC31EFC42B79529447321E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955b.log",
+      "sha256": "8CF6BDCAFA8128281AFB9E5A58F13C012E50980B2C086C26C6ECFDA6B9BF267F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955c.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.lean.txt",
+      "sha256": "B19E6CE9F08804A2980FEFE14A019CDC3B2FAAA05B8A662EEC1971B3B963DA7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955c.log",
+      "sha256": "F9110EA3CFA218AF535949CC965F38D44A15463A02606E7F0833A6D51B916861"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955d.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955d.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.lean.txt",
+      "sha256": "092EC9005C0A21FFF5DF40DB19FC30B4529F1CCB2011A251744D5950D0504AB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955d.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955d.log",
+      "sha256": "0B9A26F849D4CDEC0BF7805BA2E468DF084F70ED24879BD09B5D1EEAF72BCBE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955e.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955e.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.lean.txt",
+      "sha256": "252FAF4C50ED60ABD3BDDD1F60C9EDAC167EC286D26036882D1369B9716361E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalOfJChart1955e.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalOfJChart1955e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart-1960.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart-1960.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart-1960.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart.lean.txt",
+      "sha256": "D49D99C462475ACDE840F0FFCC86329FDFD64610B74FD48F6F3E51CF934F54EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart1956a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart1956a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.lean.txt",
+      "sha256": "3155763CDD0208E76AACCC904FEB6023B70F8BFB11F9EA36B73BA4F73D5F7F88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalPlaceChart1956a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalPlaceChart1956a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive.lean.txt",
+      "sha256": "5DBECBAE7436933AB9C7D00DC4C2D1A273A2B1B9A825A50B17BF3F05387D452B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.lean.txt",
+      "sha256": "320FD3A21C0D76E683430628CAE601CEE84C7D59F7D63E10591FA8A1499D992B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969a.log",
+      "sha256": "0103C0954A36EBEF880DC444BC6134BEFF2D67276A22E1D4700E92E8B77850DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.lean.txt",
+      "sha256": "2D34282674B23112DB84C8B4D961E77144764D0462C1EBDAFBBB7BA285CA3BE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969b.log",
+      "sha256": "06AEBC2B3EF78904733B581E2DCE6F4DDE5FE16F1EE64F96A8DA7B46BEAEE9A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969c.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.lean.txt",
+      "sha256": "89C85D0D3FAA495AA443A8C485FDA5C1CD7797296CF9B8ED19BB9503FF3FE691"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969c.log",
+      "sha256": "7914DD437724404D60FC79874E4D9541C369E5F92FFED68D0A2E9D84B3C63A6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969d.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969d.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.lean.txt",
+      "sha256": "F1127EEED93AA5102651E60452642B883E3BC3E062609F912BCD8096563702DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969d.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969d.log",
+      "sha256": "06BB8846C31C59B946D6D13B75A8E954F21EA020063705DEE43206518FA64950"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969e.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969e.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.lean.txt",
+      "sha256": "D5D63C0A050564562248F7D6A3B5257133C65C7579C69A9EFF7F217060F142C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberFive1969e.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberFive1969e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree.lean.txt",
+      "sha256": "64F568D3BF58AC118238644A33AB84B49F67C12499D328A709347A01E646C5B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.lean.txt",
+      "sha256": "D3E035EF48E6AB100900915272ACF46CD7FD8E72106AECDC654184DA48122C33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972a.log",
+      "sha256": "A2D895720CCD0A9123ED5D2B2CCA96D11574B00FE5E7C11E72866BD93B91EE8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.lean.txt",
+      "sha256": "ACD9F81078865E6DD13C8DBFE82B1A5975DB6355117F17C572C3ADC964DB5A88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972b.log",
+      "sha256": "F41A2B0980457500EFF21A1C7E0A483DA3FF21E90DA54A8EB7AFF64838A45654"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.lean.txt",
+      "sha256": "69DDCFCD74F7AC45F3A42CCB6A308E517E514B3DDE7F47C95D562195681C599A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberThree1972c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberThree1972c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo.lean.txt",
+      "sha256": "1A8D384D150FDAFAB8802947CF9DE4DD20AC3EA07E5EDBA6D195707857E0621D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.lean.txt",
+      "sha256": "31E6B91417FB48B1750575E5E5529DC074D9309C79DFB14F9D272B62AE52A5C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971a.log",
+      "sha256": "E6C4D807D5E6CDC7FF680E01CD218152FD6DDB298888F9A79990E5E85B22B805"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.lean.txt",
+      "sha256": "1E35DDB4780AB1B7DF103B2A2039CB43B4B92B7778CE6ED66D9C5CF7E4399C01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971b.log",
+      "sha256": "5E77069A4928B3BE73A139FCC5F847C92AE7DCF6AF2DB5E8D3298BA03F011FF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.lean.txt",
+      "sha256": "0DBA0872AB876EBBA956BB06A7E68CE480C6863063F1A01158986D06C7B3B947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalResidueFiberTwo1971c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalResidueFiberTwo1971c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability.lean.txt",
+      "sha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.lean.txt",
+      "sha256": "D2740E02A323778DC66FEB02941331F602ADAC0B142D8B8ACEE53FDA3C09BAE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.lean.txt",
+      "sha256": "C36A33410A53B29366B8A0F1AF7B9CE2A53599B78CCCE648D274380FBFC726D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalSeparability1944b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalSeparability1944b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds.lean.txt",
+      "sha256": "7BEF72E85A051EEF061D1DAF3421E69B2432BF6419089EF1FA50BE0039FA6062"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.lean.txt",
+      "sha256": "CD63BCCC5B418FD4A8F824F3DC0D97616F795BBF0F797C5BD4DC5B5F91503F24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970a.log",
+      "sha256": "F623410D4450727E38B9B9AA1B7F122B86737630F3EB0D6B056EAF4561305DB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.lean.txt",
+      "sha256": "2099A52B7DDAF586692C0714A34E587DEA1F0BEF701BCC4A73A7C51E85E6D32E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedOriginalTameFiberBounds1970b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedOriginalTameFiberBounds1970b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound.lean.txt",
+      "sha256": "A50356FB39E46A1731D402C4225277C348E9C0BD4609ED120F73E4A4798280E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound1965a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound1965a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.lean.txt",
+      "sha256": "6426C8C2C0A339FF743F2276F5A62AAC588416E99D5EE1447620FB2BC1321EE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedPeriodicFiberBound1965a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedPeriodicFiberBound1965a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds.lean.txt",
+      "sha256": "C723F707838083EC8E954D33CBC7E868B7C410BFF93E6D5A5AD6ACEC6B2707AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.lean.txt",
+      "sha256": "9ED002CBE11125A5BD85047002B373B4996DB99DBD173F92384AF36814B60D2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967a.log",
+      "sha256": "B3C638640A2904F0A782E81AF9A2F1B3D506BB557106FA77C83BC737B5D7B361"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.lean.txt",
+      "sha256": "5417DD2C218138E658D4251E7E06318E899841A7B6A3432644634451EA31CADE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.lean.txt",
+      "sha256": "0B1D0A088B4D1FA87FD9E2E3F6AA9A71C059EEAA866716E602C136FF1ECA5AD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedQuadraticFiberBounds1967c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedQuadraticFiberBounds1967c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent.lean.txt",
+      "sha256": "6E7EBECA6CDC8E8AAE1B415FC50AB79A3CFA622FABCC37339CC53897ACA192B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.lean.txt",
+      "sha256": "C74D10B4ED5E826F4FF36676A824D2354054EDE9D70BA00167BA9B5B235AA2D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.lean.txt",
+      "sha256": "E6294A4E4A48F6184558AE49A3730A07871B136B9FF8D21099299F1F79A82A0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedRationalPointDescent1947b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedRationalPointDescent1947b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart.lean.txt",
+      "sha256": "62FD2F03E1B366E1FB8EC7BCF90CD6BB7F1678BC634BD192DE03DA71887D9279"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.lean.txt",
+      "sha256": "4D10EAC18ACBCCAE8B6E42F4C432E0EE88D40CEEDE0FE2C5CF94FB5255A30E48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968a.log",
+      "sha256": "074C1B5B8B8DB39EB0DD6B6AECEDF353988BE24D0557A6A99A998D9EAA45F934"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968b.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.lean.txt",
+      "sha256": "83FF9DFA5BED72712A6B72833C1B13E600FD6867DFF7A916BC776B197EB7D9E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968b.log",
+      "sha256": "D74454131112885C0ECB85EF352C84C7BD72DDE5EECA47D0D63EF7F69D369B6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.lean.txt",
+      "sha256": "A36DE17D44C1BAA4D189BAE87DE0DB2F8280F73D6E474DF25CE4F19C9E78B845"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedReducedFiberChart1968c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedReducedFiberChart1968c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues.lean.txt",
+      "sha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.lean.txt",
+      "sha256": "67E7D00CDDD686653B945C67CEA297519991CF686D16408250F5EC9EFC7BC6B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.lean.txt",
+      "sha256": "9006FCEC2418F452509838493853BECDE9F33919CB57539611DEFED010253296"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableChartValues1945b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableChartValues1945b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent-1953.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent-1953.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent-1953.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent.lean.txt",
+      "sha256": "020CC8F0AD2BDA7B6673D8F6CF9A28A89B0496B76903F6B96474FFD4CEEF3BF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946a.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.lean.txt",
+      "sha256": "282A798D6E8318CE48CD4A2475B451FBCAC365AC12BD263EDB076EFFF7FC8951"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946a.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.lean.txt",
+      "sha256": "AC0D77F25F93C19E432A5BFAFDDB48DA8B8A7A201C8366EB2B941A720D31353A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSeparableEmbeddingDescent1946b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSeparableEmbeddingDescent1946b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor.lean.txt",
+      "sha256": "A8CE0C7AEFA6209518B08B9A21B21F2FAF725AEE774E0FCC8CE5A194C5D2F307"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.lean.txt",
+      "sha256": "E2B35C93195F48AAE25FB06B9B6263E339C16B7974C1B14E1B7FFD4E3C723FA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964a.log",
+      "sha256": "A9A77F5808FBF028144221E7F02405F23CE44606FD3DC83A4548816433C70002"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.lean.txt",
+      "sha256": "10DEA613CDCB506EF100CE4788984A2147F5EF6131833F24BC0F1DF512DE6252"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.lean.txt",
+      "sha256": "7B7F0EB8C0EB286E7442E76C5CEE4522DD6EC420D794F698B688E9A56350C979"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFiberFactor1964c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFiberFactor1964c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits.lean.txt",
+      "sha256": "B6E3D354A458911FD3954AD13BB8C968D088FB546C1A4A98C745396011BF6C25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.lean.txt",
+      "sha256": "80BFDDA4239088A5AA13C386DE9E9F77CB405480CE0C6724ACF1C905C3F2A45B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962a.log",
+      "sha256": "9390D966DDE9C64994E736647F14647531DFCF9473B9EAAEE02A137BDD9A7047"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.lean.txt",
+      "sha256": "E7450DCF8640F5F1155652B211A83BE3F59637D93062478629550F6E4FF9EF7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.lean.txt",
+      "sha256": "0AC98B31EFE875F74FD96AEDC54E377146C191DC55D32633613C3C7FD6EE6DEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignFreeOrbits1962c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignFreeOrbits1962c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation.lean.txt",
+      "sha256": "91D634E3E280C362E81446806DE185D611E2B15406924B0B98F9D91CFFCC1D44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.lean.txt",
+      "sha256": "5AF96200E34B0009208EB06DA4777DE2F88E882A21892AB26857077D80FC2342"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961a.log",
+      "sha256": "4E56E2B5AEE322AC4EB2DDDCFB65698449BF3CE6C5404948FDF7589FB0833865"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.lean.txt",
+      "sha256": "AD9878C3B3078EB61817DD6500DE0D17BC69DE3FE80EBEB10076478D76BA3B2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961c.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961c.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.lean.txt",
+      "sha256": "91D634E3E280C362E81446806DE185D611E2B15406924B0B98F9D91CFFCC1D44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedSignPermutation1961c.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedSignPermutation1961c.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv-1974.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv-1974.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv-1974.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv-1974.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv.lean.txt",
+      "sha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966a.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966a.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.lean.txt",
+      "sha256": "A55354CCFA2090512D10FAB96D0F51A039883754D19B2B7535B4CC3C42A434CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966a.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966a.log",
+      "sha256": "50D6C546B541F7BA6E9F558F2EC34EBC00E2B1FAEF4D3D1214CE63B5C41687B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966b.exit",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966b.lean",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.lean.txt",
+      "sha256": "D6BA8D454F57F8ABA8B21B27CEF9AD34ADEC031BE5D94003C637E58AA21A8B81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceMarkedTorsionReductionEquiv1966b.log",
+      "path": "Tools/marked-residue-fibers-20261029-1983/SourceMarkedTorsionReductionEquiv1966b.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\anthropic-diamond-place-charts-1746\\S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean.txt",
+      "path": "Tools/marked-residue-fibers-20261029-1983/anthropic-diamond-place-charts-1746/S_ModularCurve_exists_injective_doubleCoset_forall_diamondPullbackModL_smul_place_eq_of_ord_pos.lean.txt",
+      "sha256": "BA0368354C022F02890EC363D1562776A45DB472334B41A5D21A670D89495E0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_algebraic_chart_1953.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_algebraic_chart_1953.ps1",
+      "sha256": "2FF5CCCAED5165023A7A04EDBFDFFEA7F330D4AC9C527765571E82FDF21CDD84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_exceptional_fibers_1974.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_exceptional_fibers_1974.ps1",
+      "sha256": "2CB9B650C6F5DFFA5E45D9B64EEF146A1881B37F950EB5A44CD04EA2EC08D6C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_fiber_chart_1960.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_fiber_chart_1960.ps1",
+      "sha256": "A15B4E6F7B34C4FB28D1008A10207D761FBB2C42AB1028EDCC4049BBD6DB9213"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\audit_marked_fiber_chart_1963.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/audit_marked_fiber_chart_1963.ps1",
+      "sha256": "023FF6AC1D39529EA83E9A9A2D59C34E5674F2C8734B6628A3C6FD61DBBE72E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_algebraic_chart_canonical_1953.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_algebraic_chart_canonical_1953.ps1",
+      "sha256": "4195BC100578729A2A872FCAB82C7E09AB264698730DF7C5F69310904BFF5D10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_exceptional_fibers_canonical_1974.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_exceptional_fibers_canonical_1974.ps1",
+      "sha256": "93B3F4636D129FBAF75FB4BFC46413A16FEBFC73A32EEB8B81B424097E56E858"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_marked_fiber_chart_canonical_1960.ps1",
+      "path": "Tools/marked-residue-fibers-20261029-1983/build_marked_fiber_chart_canonical_1960.ps1",
+      "sha256": "ABC1BCFB0D69270359EF5041975468BD4CCD2A194D9E16F8594CB2C0DF37DC8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-algebraic-chart-route-1950.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-algebraic-chart-route-1950.json",
+      "sha256": "EB37DCE7812E1725D819E0CDFB4E9123B7E5631AAE9CFF300F05A5ABAD6704EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-algebraic-chart-versions-1953.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-algebraic-chart-versions-1953.json",
+      "sha256": "305F5F27D8B45B3399DC05A0F972951C027A7BE3DD3BF6C9E6212BB22AF8A34E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-exceptional-fibers-versions-1974.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-exceptional-fibers-versions-1974.json",
+      "sha256": "53677E25B7A201F9557F00E5D520992B098DB42999960095E08AC2B6782E6E4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-fiber-chart-audit-successor-1963.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-fiber-chart-audit-successor-1963.json",
+      "sha256": "86B6535728D004E75F41D14D2E36020A910A4E2353F89A91237D70008135A4C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-fiber-chart-versions-1960.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-fiber-chart-versions-1960.json",
+      "sha256": "5A8606E9C91F319E0C8EEA4039BD4991705EB0CAAC5ACFE7FB122B03AF5E09B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\marked-residue-fibers-promotion-route-1983.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/marked-residue-fibers-promotion-route-1983.json",
+      "sha256": "CE3F5498A508F4C797FBA622234546BA2E7D339CC09868FFC27AA444AF9019BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_algebraic_chart_audit_1953.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_algebraic_chart_audit_1953.py",
+      "sha256": "9B915DEB892AAA92F42FD882390614571D5E6FCC53D54D771A7D51EF946B7FE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_exceptional_fibers_audit_1974.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_exceptional_fibers_audit_1974.py",
+      "sha256": "BAABF82AB09B8DDEB906B496DCC89B68287776B1D4AEEF92616A9F90F65C08EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_marked_fiber_chart_audit_1960.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/prepare_marked_fiber_chart_audit_1960.py",
+      "sha256": "03DFDD38E9E90AA9147551053608CF0B44EFFC7E94E2A758ED2C7719229E5BCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_algebraic_chart_1953.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_algebraic_chart_1953.py",
+      "sha256": "DC9D87AE593D3F00E07580BBDDF20F490B577E93F30ED94EC2F340FB3835CA8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_exceptional_fibers_1974.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_exceptional_fibers_1974.py",
+      "sha256": "0903C3262C622BE725FB439A4840341F9FD714AF6918220376B8774ABD5F3154"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_fiber_chart_1960.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_fiber_chart_1960.py",
+      "sha256": "7450B619FDFE2AD58B544AE6B8FC95D7FF343AFAC6F73DE49F1EB2AAD7F4B6E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_marked_fiber_chart_1963.py",
+      "path": "Tools/marked-residue-fibers-20261029-1983/record_marked_fiber_chart_1963.py",
+      "sha256": "0B28CE54D018F5A05B69EBF78A5B58D41BF9A2EA46DFFFFF32E8C3E08CA4A00E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-1-audit-config.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-audit-config.json",
+      "sha256": "7C6F1EA65826CC7535B83E41D0D36B045650C8BBAC1473271186FA28B04ABF4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-1-reuse-review-20261029.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-reuse-review-20261029.json",
+      "sha256": "A7D4F3B2C222D9A30E745A802AA4A1AD68F5DC1A0CE845F111800E11F82A190A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-1-scratch-receipt.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-1-scratch-receipt.json",
+      "sha256": "A753AA9704401026CA18678FEFA515AB88CA987F1596E5BB17F80751381E0700"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-algebraic-chart-audit-route-1953.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-algebraic-chart-audit-route-1953.json",
+      "sha256": "B6F458847EE95A22AFDDCDACFAE3327E4DCD8F03F0C9CD3BBACA95738DE4B703"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-exceptional-fibers-1-audit-config.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-audit-config.json",
+      "sha256": "559D8F408E7AEE0B9EC4551DD39586123AAD4591F6F25EA2965CBA2849240323"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-exceptional-fibers-1-reuse-review-20261029.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-reuse-review-20261029.json",
+      "sha256": "0861098FF173015C8587512EB8F5FE634B9BA579B38491D8CC60331E0CEE65DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-exceptional-fibers-1-scratch-receipt.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-1-scratch-receipt.json",
+      "sha256": "5F5C09B89D4B3B6D544B8488F13136F8A1583BB3AE5B4463DAFDC127959D19A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-exceptional-fibers-audit-route-1974.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-exceptional-fibers-audit-route-1974.json",
+      "sha256": "D060E4C423893850D2A9BA7C464FFE2795263D9BDAB453B1D60B54644763F659"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-1-audit-config.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-1-audit-config.json",
+      "sha256": "FBC8D47FAC13A2D823C63BCC064C629DBCB5F68996CB038C8E1224818310E15D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-2-audit-config.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-audit-config.json",
+      "sha256": "FBC8D47FAC13A2D823C63BCC064C629DBCB5F68996CB038C8E1224818310E15D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-2-reuse-review-20261029.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-reuse-review-20261029.json",
+      "sha256": "F50E6CEF0ADF3F2C45FB997890E408BE14F51EE288C54CA9170D6FF48935F7FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-2-scratch-receipt.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-2-scratch-receipt.json",
+      "sha256": "EBB74AF21B0CFD61E848B5142F169776DB19A06AD7A536DB7059E2F00B8E4A98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-marked-fiber-chart-audit-route-1960.json",
+      "path": "Tools/marked-residue-fibers-20261029-1983/source-marked-fiber-chart-audit-route-1960.json",
+      "sha256": "576B06B71F47D2B533C770E403BF369ED881E60D83EBE9E0227F9BDF1E633968"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+import SourceGammaOneDivisionCoefficientFibers
+
+/-! DUB-17/18 -> original Gamma1 genus preservation -> finite elliptic
+fibers -> integral toric coordinates. Identify the native torsion Fourier
+product fiber with the literal finite divisor coefficients used by the
+toric-coordinate construction. No new analytic hypothesis is introduced. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.ToricForms
+noncomputable section
+open SourceFricke
+
+theorem tsum_pnat_product_eq_divisor_sum (n : ℕ) (f : ℕ → ℂ) :
+    (∑' p : ℕ+ × ℕ+, if (p.1 : ℕ) * (p.2 : ℕ) = n then f p.2 else 0) =
+      ∑ d ∈ n.divisors, f d := by
+  classical
+  by_cases hn : n = 0
+  · subst n
+    simp [Nat.ne_of_gt (mul_pos (PNat.pos _) (PNat.pos _))]
+  let e : {p : ℕ+ × ℕ+ // (p.1 : ℕ) * (p.2 : ℕ) = n} ≃
+      {q : ℕ × ℕ // q ∈ n.divisorsAntidiagonal} :=
+    { toFun := fun p => ⟨(p.1.1, p.1.2), Nat.mem_divisorsAntidiagonal.mpr ⟨p.2, hn⟩⟩
+      invFun := fun q => ⟨
+        (⟨q.1.1, Nat.pos_of_mem_divisors (Nat.fst_mem_divisors_of_mem_antidiagonal q.2)⟩,
+         ⟨q.1.2, Nat.pos_of_mem_divisors (Nat.snd_mem_divisors_of_mem_antidiagonal q.2)⟩),
+        (Nat.mem_divisorsAntidiagonal.mp q.2).1⟩
+      left_inv := fun p => by cases p; rfl
+      right_inv := fun q => by cases q; rfl }
+  calc
+    _ = ∑' p : {p : ℕ+ × ℕ+ // (p.1 : ℕ) * (p.2 : ℕ) = n}, f p.1.2 := by
+      symm
+      simpa only [Set.indicator, Set.mem_setOf_eq] using
+        (tsum_subtype {p : ℕ+ × ℕ+ | (p.1 : ℕ) * (p.2 : ℕ) = n}
+          (fun p : ℕ+ × ℕ+ => f p.2))
+    _ = ∑' q : {q : ℕ × ℕ // q ∈ n.divisorsAntidiagonal}, f q.1.2 :=
+      e.tsum_eq (fun q => f q.1.2)
+    _ = ∑ q ∈ n.divisorsAntidiagonal, f q.2 :=
+      n.divisorsAntidiagonal.tsum_subtype (fun q => f q.2)
+    _ = ∑ d ∈ n.divisors, f d := Nat.sum_divisorsAntidiagonal' (fun _ d => f d)
+
+theorem wpQCoeff_zero_first_divisor_sum (N : ℕ) [NeZero N] (b n : ℕ) :
+    wpQCoeff N 0 b (N * n) =
+      (if n = 0 then 1 / 12 + zetaN N ^ b / (1 - zetaN N ^ b) ^ 2 else 0) +
+      ∑ d ∈ n.divisors, (d : ℂ) *
+        (zetaN N ^ (b * d) + (zetaN N)⁻¹ ^ (b * d) - 2) := by
+  rw [wpQCoeff_zero_first_product_fiber]
+  congr 1
+  exact tsum_pnat_product_eq_divisor_sum n
+    (fun d => (d : ℂ) * (zetaN N ^ (b * d) + (zetaN N)⁻¹ ^ (b * d) - 2))
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.ToricForms

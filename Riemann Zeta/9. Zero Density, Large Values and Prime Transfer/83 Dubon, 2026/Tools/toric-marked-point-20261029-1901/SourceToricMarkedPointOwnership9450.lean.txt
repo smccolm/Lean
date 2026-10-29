@@ -1,0 +1,58 @@
+import Dubon2026.SourceGammaOneDivisionToricForms
+import Dubon2026.SourceGammaOneDivisionFourier
+import Dubon2026.SourceGammaOneDivisionCoefficientFibers
+import Dubon2026.SourceGammaOneDivisionDivisorCoefficients
+import Dubon2026.SourceToricFourierCharacters
+import Dubon2026.SourceToricIntegerFourierTransform
+import Dubon2026.SourceToricIntegralCoefficientPolynomials
+import Dubon2026.SourceGammaOneNormalizedDivisionForm
+import Dubon2026.SourceTateA4Series
+import Dubon2026.SourceToricIntegerCoefficientFamilies
+import Dubon2026.SourceGammaOneIntegralToricWeightTwo
+import Dubon2026.SourceGammaOneIntegralToricWeightFour
+import Dubon2026.SourceGammaOneIntegralToricSlash
+import Dubon2026.SourceGammaOneIntegralToricReconstruction
+import Dubon2026.SourceGammaOneIntegralToricForms
+import Dubon2026.SourceTateIntegralCoefficients
+import Dubon2026.SourceTateIntegralCurve
+import Dubon2026.SourceTateEisensteinInvariants
+import Dubon2026.SourceGammaOneToricOriginalRatios
+import Dubon2026.SourceGammaOneToricOriginalCoordinates
+import Dubon2026.SourceGammaOneToricOriginalCoordinateValues
+import Dubon2026.SourceIntegralDiamondScalarRatioAction
+import Dubon2026.SourceGammaOneToricRatioDiamond
+import Dubon2026.SourceGammaOneToricCoordinateDiamond
+import Dubon2026.SourceGammaOneOriginalToricCoordinates
+import Dubon2026.SourceToricAnalyticCurve
+import Dubon2026.SourceToricAnalyticTorsion
+import Dubon2026.SourceToricAnalyticDivisionRoot
+import Dubon2026.SourceToricCuspExpansionHom
+import Dubon2026.SourceToricCuspDivisionIdentity
+import Dubon2026.SourceTateCoefficientNormalization
+import Dubon2026.SourceToricComplexSeriesDivision
+import Dubon2026.SourceToricCoefficientLocalization
+import Dubon2026.SourceToricLocalizedSeries
+import Dubon2026.SourceToricResidueDivisionIdentity
+import Dubon2026.SourceToricAnalyticMultiplication
+import Dubon2026.SourceToricResidueMultiplicationIdentity
+import Dubon2026.SourceToricFieldDivisionIdentities
+import Dubon2026.SourceToricExactOrderPoint
+import Dubon2026.SourceToricMarkedPointCoordinates
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneDivisionToricForms, `Dubon2026.SourceGammaOneDivisionFourier, `Dubon2026.SourceGammaOneDivisionCoefficientFibers, `Dubon2026.SourceGammaOneDivisionDivisorCoefficients, `Dubon2026.SourceToricFourierCharacters, `Dubon2026.SourceToricIntegerFourierTransform, `Dubon2026.SourceToricIntegralCoefficientPolynomials, `Dubon2026.SourceGammaOneNormalizedDivisionForm, `Dubon2026.SourceTateA4Series, `Dubon2026.SourceToricIntegerCoefficientFamilies, `Dubon2026.SourceGammaOneIntegralToricWeightTwo, `Dubon2026.SourceGammaOneIntegralToricWeightFour, `Dubon2026.SourceGammaOneIntegralToricSlash, `Dubon2026.SourceGammaOneIntegralToricReconstruction, `Dubon2026.SourceGammaOneIntegralToricForms, `Dubon2026.SourceTateIntegralCoefficients, `Dubon2026.SourceTateIntegralCurve, `Dubon2026.SourceTateEisensteinInvariants, `Dubon2026.SourceGammaOneToricOriginalRatios, `Dubon2026.SourceGammaOneToricOriginalCoordinates, `Dubon2026.SourceGammaOneToricOriginalCoordinateValues, `Dubon2026.SourceIntegralDiamondScalarRatioAction, `Dubon2026.SourceGammaOneToricRatioDiamond, `Dubon2026.SourceGammaOneToricCoordinateDiamond, `Dubon2026.SourceGammaOneOriginalToricCoordinates, `Dubon2026.SourceToricAnalyticCurve, `Dubon2026.SourceToricAnalyticTorsion, `Dubon2026.SourceToricAnalyticDivisionRoot, `Dubon2026.SourceToricCuspExpansionHom, `Dubon2026.SourceToricCuspDivisionIdentity, `Dubon2026.SourceTateCoefficientNormalization, `Dubon2026.SourceToricComplexSeriesDivision, `Dubon2026.SourceToricCoefficientLocalization, `Dubon2026.SourceToricLocalizedSeries, `Dubon2026.SourceToricResidueDivisionIdentity, `Dubon2026.SourceToricAnalyticMultiplication, `Dubon2026.SourceToricResidueMultiplicationIdentity, `Dubon2026.SourceToricFieldDivisionIdentities, `Dubon2026.SourceToricExactOrderPoint, `Dubon2026.SourceToricMarkedPointCoordinates]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

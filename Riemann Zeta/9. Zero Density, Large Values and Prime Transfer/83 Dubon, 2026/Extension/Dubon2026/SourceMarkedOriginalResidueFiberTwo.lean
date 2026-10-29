@@ -1,0 +1,60 @@
+import Dubon2026.SourceMarkedOriginalFiberChart
+import Dubon2026.SourceMarkedReducedFiberChart
+import Dubon2026.SourceMarkedFullInertiaLifts
+import Dubon2026.SourceEllipticCharTwoFullInertiaImage
+
+/-! DUB-17/18 -> reverse original genus -> characteristic-two elliptic
+fiber. The native exceptional specialization constructs full inertia
+image and all N-torsion. Applying the original Gamma1 chart and exact-order
+reduction gives the actual j=0 fiber as an automorphism-invariant image
+of primitive points on the exceptional residue curve. Wild differential
+orders and the numerical census remain required. -/
+namespace Dubon2026.SourceFunctionField.MarkedChart
+noncomputable section
+open WeierstrassCurve CongruenceSubgroup SourceCurve SourceEllipticStabilizer
+open GammaOne GammaOne.ToricCoordinates IntegralDiamond SourceEllipticCharTwo
+local notation "Qbar" => AlgebraicClosure ℚ
+variable (A : ValuationSubring Qbar) (N : ℕ) [NeZero N]
+    [CharP (IsLocalRing.ResidueField A) 2]
+local notation "kk" => IsLocalRing.ResidueField A
+local notation "F" => qExpFunctionFieldC kk (Gamma1 N)
+private local instance : Algebra kk F := (F).toSubalgebra.algebra
+
+theorem exists_original_residue_marked_fiber_of_char_two
+    (h2N : ¬ 2 ∣ N) (hN : 2 ≤ N)
+    (x : F) (hx : (x : LaurentSeries kk) = jqModC kk) [DecidableEq kk] :
+    ∃ g : {P : (ofJ0 kk).toAffine.Point // addOrderOf P = N} →
+        {v : Place kk F // 0 < v.ord x},
+      Function.Surjective g ∧
+      (∀ P Q, Q.val = -P.val → g Q = g P) ∧
+      ∀ (δ : VariableChange kk) (hδ : δ • ofJ0 kk = ofJ0 kk) P Q,
+        Q.val = stabilizerPointEquiv (ofJ0 kk) δ hδ P.val → g Q = g P := by
+  classical
+  letI := valuation_residue_isAlgClosed A
+  letI : Fact (Nat.Prime 2) := ⟨Nat.prime_two⟩
+  letI : Fact (IsUnit (3 : kk)) := ⟨by rw [three_eq_one]; exact isUnit_one⟩
+  have hNK : (N : kk) ≠ 0 := fun h => h2N ((CharP.cast_eq_zero_iff kk 2 N).mp h)
+  let Ω := AlgebraicClosure (RatFunc kk)
+  letI : Algebra kk Ω := inferInstanceAs (Algebra kk (AlgebraicClosure (RatFunc kk)))
+  letI : IsScalarTower kk (RatFunc kk) Ω :=
+    inferInstanceAs (IsScalarTower kk (RatFunc kk) (AlgebraicClosure (RatFunc kk)))
+  obtain ⟨M, hfd, hgal, hcard, w, decRes, e, W, κ, hκ, hW, γ, hγ, θ, ρ,
+    hw, hθ, _, _, _, heq, _, hfull, _⟩ :=
+    SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image kk Ω N hNK
+  letI : Algebra kk M := IntermediateField.algebra' M
+  letI : IsScalarTower kk (RatFunc kk) M := IntermediateField.isScalarTower M
+  letI := hfd
+  letI := hgal
+  obtain ⟨f, hf, horbit, _⟩ := exists_original_marked_fiber_chart A N 2 h2N hN x hx
+    M hcard w (ofJ0 kk).j hw
+  have hg := exists_reduced_marked_fiber_chart (ofJ (RatFunc.X : RatFunc kk)) (ofJ0 kk) N hNK
+    w.toValuationSubring θ hθ hcard f hf (fun P Q h => (horbit P Q).mpr h)
+    (full_inertia_image_signed_point_lifts (ofJ (RatFunc.X : RatFunc kk)) (ofJ0 kk) N
+      w.toValuationSubring θ ρ heq hfull)
+  have hj : (ofJ0 kk).j = 0 := ofJ0_j kk
+  have hx0 : x - algebraMap kk F (ofJ0 kk).j = x := by rw [hj, map_zero, sub_zero]
+  rw [hx0] at hg
+  exact hg
+
+end
+end Dubon2026.SourceFunctionField.MarkedChart
